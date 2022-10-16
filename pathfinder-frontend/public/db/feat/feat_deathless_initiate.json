@@ -1,0 +1,10 @@
+{
+  "id": "feat:deathless_initiate",
+  "name": "Deathless Initiate",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "For you, impending death is a call to wrath.",
+  "prerequisites": "Str 13, Con 13, orc or half-orc, Diehard, Endurance, base attack bonus +6.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @con_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027orc\u0027 OR @race \u003d\u003d \u0027half-orc\u0027) AND @feat:diehard AND @feat:endurance AND @bab \u003e\u003d 6 AND  !@feat:deathless_initiate",
+  "benefit": "You are not staggered while using the Diehard feat, but if you take a move and a standard action or a fullround action while you are at 0 or fewer hit points you take 1 point of damage. Further, while using the Diehard feat, you gain a +2 bonus on melee attacks and damage rolls.",
+  "source": "Ultimate Combat"
+}

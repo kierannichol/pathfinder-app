@@ -1,0 +1,62 @@
+.pf-feat-list {
+  $border-width: 2px;
+
+  &-item {
+
+    &-button {
+      width: 100%;
+      //border-radius: 20px !important;
+      cursor: pointer;
+      display: flex;
+      font-family: Quicksand, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      justify-content: left;
+      letter-spacing: .04em;
+      line-height: 16px;
+      margin: 0;
+      padding: 18px 18px;
+      text-align: left;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: center;
+
+      $background-color: #FFD050;
+      $text-color: darken($background-color, 45%);
+
+      background-color: $background-color;
+      border: $border-width solid $text-color;
+      border-bottom-width: 0;
+      color: $text-color;
+    }
+
+    &--expanded &-button, &--expanding &-button {
+      $background-color: lighten(#FFD050, 20%);
+      //$text-color: darken($background-color, 45%);
+
+      background-color: $background-color;
+      //border-color: darken($background-color, 45%);
+      //color: $text-color;
+    }
+
+    &--invalid &-button {
+      $background-color: #E8E4E0;
+      $text-color: darken($background-color, 45%);
+
+      background-color: $background-color;
+      border-color: $text-color;
+      color: $text-color;
+    }
+
+    &--expanded &-button, &--expanding &-button, &--collapsing &-button, &:last-of-type &-button {
+      border-bottom-width: $border-width;
+    }
+
+    &-body {
+      padding: 0.5em 2em;
+      margin-bottom: 1em;
+    }
+  }
+}

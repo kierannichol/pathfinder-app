@@ -1,0 +1,10 @@
+{
+  "id": "feat:awesome_blow",
+  "name": "Awesome Blow",
+  "types": ["FEAT_TYPE_MONSTER", "FEAT_TYPE_COMBAT"],
+  "description": "This creature can send opponents flying.",
+  "prerequisites": "Str 25, Power Attack, Improved Bull Rush, size Large or larger.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 25 AND @feat:power_attack AND @feat:improved_bull_rush AND @size \u003e\u003d 4 AND  !@feat:awesome_blow",
+  "benefit": "As a standard action, the creature may perform an awesome blow combat maneuver. If the creature\u0027s maneuver succeeds against a corporeal opponent smaller than itself, its opponent takes damage (typically slam damage plus Strength bonus) and is knocked flying 10 feet in a direction of the attacking creature\u0027s choice and falls prone. The attacking creature can only push the opponent in a straight line, and the opponent can\u0027t move closer to the attacking creature than the square it started in. If an obstacle prevents the completion of the opponent\u0027s move, the opponent and the obstacle each take 1d6 points of damage, and the opponent is knocked prone in the space adjacent to the obstacle.",
+  "source": "Bestiary"
+}

@@ -1,0 +1,77 @@
+.pf-feat-selector-dialog {
+
+  & .modal-header.title {
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-align: left;
+    font-size: 14pt;
+    width: 100%;
+
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
+    color: white;
+  }
+
+  & .modal-dialog .modal-content {
+    height: 90vh;
+  }
+
+  & .accordion-item.invalid {
+    & .accordion-button {
+      $background-color: grey;
+      $text-color: white;
+
+      background-color: $background-color;
+      border: 2px solid $text-color;
+      color: $text-color;
+
+      &::after {
+        background-image: unset;
+      }
+    }
+  }
+
+  & .accordion-item:not(.invalid) {
+    & .accordion-button {
+      &.collapsed {
+        $background-color: #FFD050;
+        $text-color: darken($background-color, 45%);
+
+        background-color: $background-color;
+        border: 2px solid $text-color;
+        color: $text-color;
+      }
+
+      &:not(.collapsed) {
+        $background-color: #FFD050;
+        $text-color: darken($background-color, 45%);
+
+        background-color: $background-color;
+        border: 2px solid $text-color;
+        color: $text-color;
+      }
+    }
+  }
+
+  & .accordion-button {
+    width: 100%;
+    border-radius: 20px !important;
+    cursor: pointer;
+    display: flex;
+    font-family: Quicksand, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: left;
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin: 0;
+    padding: 18px 18px;
+    text-align: left;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: center;
+  }
+}

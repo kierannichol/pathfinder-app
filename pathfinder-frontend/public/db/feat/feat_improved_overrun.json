@@ -1,0 +1,11 @@
+{
+  "id": "feat:improved_overrun",
+  "name": "Improved Overrun",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are skilled at running down your foes.",
+  "prerequisites": "Str 13, Power Attack, base attack bonus +1.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:power_attack AND @bab \u003e\u003d 1 AND  !@feat:improved_overrun",
+  "benefit": "You do not provoke an attack of opportunity when performing an overrun combat maneuver. In addition, you receive a +2 bonus on checks made to overrrun a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to overrun you. Targets of your overrun attempt may not choose to avoid you.",
+  "normal": "You provoke an attack of opportunity when performing an overrun combat maneuver.",
+  "source": "PFRPG Core"
+}

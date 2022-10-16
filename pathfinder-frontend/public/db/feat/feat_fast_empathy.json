@@ -1,0 +1,11 @@
+{
+  "id": "feat:fast_empathy",
+  "name": "Fast Empathy",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "Your empathic attunement to nature connects you swiftly with bestial minds.",
+  "prerequisites": "Handle Animal 5 ranks, wild empathy class feature.",
+  "prerequisitesFormula": "@skill:handle_animal \u003e\u003d 5 AND sum(@ability:*:wild_empathy) AND  !@feat:fast_empathy",
+  "benefit": "Using wild empathy is a standard action for you.",
+  "normal": "Using wild empathy requires 1 minute.",
+  "source": "Ultimate Magic"
+}

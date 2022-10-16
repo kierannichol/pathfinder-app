@@ -1,0 +1,10 @@
+{
+  "id": "feat:light_step",
+  "name": "Light Step",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "You pick your way nimbly through even the most dangerous and uneven terrain.",
+  "prerequisites": "Acrobatic Steps, Nimble Moves, elf.",
+  "prerequisitesFormula": "@feat:acrobatic_steps AND @feat:nimble_moves AND @race \u003d\u003d \u0027elf\u0027 AND  !@feat:light_step",
+  "benefit": "You can ignore the effects of difficult terrain in natural environments, as if it were normal terrain.",
+  "source": "Advanced Player\u0027s Guide"
+}

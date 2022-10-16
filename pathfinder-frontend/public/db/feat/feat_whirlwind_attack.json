@@ -1,0 +1,10 @@
+{
+  "id": "feat:whirlwind_attack",
+  "name": "Whirlwind Attack",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You can strike out at every foe within reach.",
+  "prerequisites": "Dex 13, Int 13, Combat Expertise, Dodge, Mobility, Spring Attack, base attack bonus +4.",
+  "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:dodge AND @feat:mobility AND @feat:spring_attack AND @bab \u003e\u003d 4 AND  !@feat:whirlwind_attack",
+  "benefit": "When you use the full-attack action, you can give up your regular attacks and instead make one melee attack at your highest base attack bonus against each opponent within reach. You must make a separate attack roll against each opponent. When you use the Whirlwind Attack feat, you also forfeit any bonus or extra attacks granted by other feats, spells, or abilities.",
+  "source": "PFRPG Core"
+}

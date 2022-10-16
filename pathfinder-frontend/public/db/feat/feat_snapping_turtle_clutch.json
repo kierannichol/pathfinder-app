@@ -1,0 +1,10 @@
+{
+  "id": "feat:snapping_turtle_clutch",
+  "name": "Snapping Turtle Clutch",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "Your unarmed style allows you to turn your opponent\u0027s attack into an opportunity.",
+  "prerequisites": "Snapping Turtle Style, Improved Grapple, Improved Unarmed Strike, base attack bonus +3 or monk level 3rd.",
+  "prerequisitesFormula": "(@feat:snapping_turtle_style AND @feat:improved_grapple AND @feat:improved_unarmed_strike AND @bab \u003e\u003d 3) OR @class:monk \u003e\u003d 3 AND  !@feat:snapping_turtle_clutch",
+  "benefit": "While you are using the Snapping Turtle Style feat, the shield bonus the style grants to your AC applies to your CMD and touch AC. Whenever an opponent misses you with a melee attack while you are using the Snapping Turtle Style feat, you can use an immediate action to attempt a grapple combat maneuver against that opponent, but with a -2 penalty.",
+  "source": "Ultimate Combat"
+}

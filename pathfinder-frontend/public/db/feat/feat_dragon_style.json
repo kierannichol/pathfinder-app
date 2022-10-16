@@ -1,0 +1,11 @@
+{
+  "id": "feat:dragon_style",
+  "name": "Dragon Style",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You call upon the spirit of dragonkind, gaining greater resilience, mobility, and fierceness from the blessing of these great beings.",
+  "prerequisites": "Str 15, Improved Unarmed Strike, Acrobatics 3 ranks.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 15 AND @feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 3 AND  !@feat:dragon_style",
+  "benefit": "While using this style, you gain a +2 bonus on saving throws against sleep effects, paralysis effects, and stunning effects. You ignore difficult terrain when you charge, run, or withdraw. You can also charge through squares that contain allies. Further, you can add 1-1/2 times your Strength bonus on the damage roll for your first unarmed strike on a given round.",
+  "normal": "You cannot charge or run through difficult terrain, and you cannot charge through a square that contains an ally. With an unarmed strike, you usually add your Strength bonus on damage rolls.",
+  "source": "Ultimate Combat"
+}

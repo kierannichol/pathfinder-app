@@ -1,0 +1,277 @@
+import Resolvable from "./Resolvable";
+import {DataContext} from "./DataContext";
+import {alpha, decimal, integer, key, literal, optional, term, words} from "./TokenTree";
+import TokenTree from "./TokenTree";
+import Parser from "./Parser";
+import {ResolvedValue} from "./ResolvedValue";
+type ZeroOperandFunction<T> = () => T;
+type OneOperandFunction<T> = (x: T) => T;
+type TwoOperandFunction<T> = (x: T, y: T) => T;
+type ThreeOperandFunction<T> = (x: T, y: T, z: T) => T;
+type OperandFunction<T> = ZeroOperandFunction<T> | OneOperandFunction<T> | TwoOperandFunction<T> | ThreeOperandFunction<T>;
+
+function mapIntFunction(operands: number, fn: OperandFunction<number>): OperandFunction<ResolvedValue> {
+  switch (operands) {
+    case 0: return () => ResolvedValue.of((fn as ZeroOperandFunction<number>)());
+    case 1: return (x?: ResolvedValue) => ResolvedValue.of((fn as OneOperandFunction<number>)(x?.asNumber() ?? 0));
+    case 2: return (x?: ResolvedValue, y?: ResolvedValue) => ResolvedValue.of((fn as TwoOperandFunction<number>)(x?.asNumber() ?? 0, y?.asNumber() ?? 0));
+    case 3: return (x?: ResolvedValue, y?: ResolvedValue, z?: ResolvedValue) => ResolvedValue.of((fn as ThreeOperandFunction<number>)(x?.asNumber() ?? 0, y?.asNumber() ?? 0, z?.asNumber() ?? 0));
+    default: throw new Error(`Unsupported number of operands: ${operands}`);
+  }
+}
+
+export enum Associativity {
+  Left = 1,
+  Right = 2
+}
+
+interface Node {
+
+}
+
+abstract class OperatorFunction implements Node {
+  public readonly operands: number;
+  private readonly fn: OperandFunction<ResolvedValue>;
+
+  protected constructor(operands: number, fn: OperandFunction<ResolvedValue>) {
+    this.operands = operands;
+    this.fn = fn;
+  }
+
+  execute(x?: ResolvedValue, y?: ResolvedValue, z?: ResolvedValue): ResolvedValue {
+    switch (this.operands) {
+      case 0: return (this.fn as ZeroOperandFunction<ResolvedValue>)();
+      case 1: return (this.fn as OneOperandFunction<ResolvedValue>)(x as ResolvedValue);
+      case 2: return (this.fn as TwoOperandFunction<ResolvedValue>)(x as ResolvedValue, y as ResolvedValue);
+      case 3: return (this.fn as ThreeOperandFunction<ResolvedValue>)(x as ResolvedValue, y as ResolvedValue, z as ResolvedValue);
+      default: throw new Error(`Unsupported number of operands: ${this.operands}`);
+    }
+  }
+}
+
+class Function extends OperatorFunction {
+  constructor(operands: number, fn: OperandFunction<ResolvedValue>) {
+    super(operands, fn);
+  }
+}
+
+class Operator extends OperatorFunction {
+  constructor(public readonly precedence: number,
+              public readonly associativity: Associativity,
+              operands: number, fn: OperandFunction<ResolvedValue>) {
+    super(operands, fn);
+  }
+}
+
+class Variable implements Node {
+  constructor(private readonly key: string,
+              private readonly resolver: (context: DataContext, key: string) => ResolvedValue|Resolvable|undefined) {}
+
+  resolve(context: DataContext) {
+    return this.resolver(context, this.key);
+  }
+}
+
+class Term implements Node {
+  constructor(private readonly resolver: (context: DataContext) => ResolvedValue|Resolvable|undefined) {}
+
+  resolve(context: DataContext) {
+    return this.resolver(context);
+  }
+}
+
+export class ShuntingYardParser implements Parser {
+  private readonly parser: TokenTree;
+
+  constructor() {
+    this.parser = new TokenTree()
+      .ignoreWhitespaces()
+      .add([ integer ], token => parseInt(token))
+      .add([ decimal ], token => parseFloat(token))
+      .add('(', token => token)
+      .add(')', token => token)
+      .add(',', token => token)
+      .add(literal('"', '"', '\\"'), quote => quote.slice(1,-1))
+      .add(literal("'", "'", "\\'"), quote => quote.slice(1,-1));
+  }
+
+  operator(symbol: string, precedence: number, associativity: Associativity, operands: number, fn: OperandFunction<ResolvedValue>) {
+    this.parser.add(symbol, _ => new Operator(precedence, associativity, operands, fn));
+    return this;
+  }
+
+  intOperator(symbol: string, precedence: number, associativity: Associativity, operands: number, fn: OperandFunction<number>) {
+    return this.operator(symbol, precedence, associativity, operands, mapIntFunction(operands, fn));
+  }
+
+  function(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
+    this.parser.add(name, _ => new Function(operands, fn));
+    return this;
+  }
+
+  intFunction(name: string, operands: number, fn: OperandFunction<number>) {
+    return this.function(name, operands, mapIntFunction(operands, fn));
+  }
+
+  // variable(identifier: string, extractor: (context: DataContext, key: string) => ResolvedValue|Resolvable|undefined) {
+  //   this.parser.add([ term(identifier), alpha, optional(key) ],
+  //           key => new Variable(key, (context: DataContext, key: string) =>
+  //               extractor(context, key.substring(identifier.length))));
+  //   return this;
+  // }
+
+  variable(prefix: string, suffix: string, extractor: (context: DataContext, key: string) => ResolvedValue|Resolvable|undefined) {
+    this.parser.add([ term(prefix), alpha, optional(key), term(suffix) ],
+        key => new Variable(key, (context: DataContext, key: string) =>
+            extractor(context, key.substring(prefix.length, key.length - suffix.length))));
+    return this;
+  }
+
+  term(text: string, extractor: (context: DataContext) => ResolvedValue|Resolvable|undefined) {
+    this.parser.add([ term(text) ],
+        key => new Variable(key, (context: DataContext) =>
+            extractor(context)));
+    return this;
+  }
+
+  parse(formula: string): ShuntingYard {
+    let outputBuffer: OperatorStack = [];
+    let operatorStack: OperatorStack = [];
+
+    const tokens = this.parser.parse(formula);
+
+    for (let token of tokens) {
+      if (token instanceof Operator) {
+        let operator = token;
+        let top = operatorStack.at(-1);
+        if (top instanceof Operator) {
+          if ((operator.precedence < top.precedence)
+              || (operator.associativity === Associativity.Left
+                  && operator.precedence === top.precedence)) {
+            operatorStack.pop();
+            outputBuffer.push(top);
+          }
+        }
+
+        operatorStack.push(operator);
+        continue;
+      }
+
+      if (token instanceof Function) {
+        operatorStack.push(token);
+        continue;
+      }
+
+      if (token instanceof Variable) {
+        outputBuffer.push(token);
+        continue;
+      }
+
+      if (token instanceof Term) {
+        outputBuffer.push(token);
+        continue;
+      }
+
+      switch (token) {
+        case ' ':
+        case '{':
+        case '}':
+          // ignore
+          break;
+        case ',':
+          while (operatorStack.length > 0) {
+            let next = operatorStack.pop();
+            if (next === '(') {
+              operatorStack.push(next);
+              break;
+            }
+            outputBuffer.push(next);
+          }
+          break;
+        case '(':
+          operatorStack.push(token);
+          break;
+        case ')':
+          while (operatorStack.length > 0) {
+            let next = operatorStack.pop();
+            if (next === '(') {
+              break;
+            }
+            outputBuffer.push(next);
+          }
+
+          if (operatorStack.at(-1) instanceof Function) {
+            outputBuffer.push(operatorStack.pop());
+          }
+          break;
+        default:
+          outputBuffer.push(ResolvedValue.of(token));
+      }
+    }
+
+    while (operatorStack.length > 0) {
+      outputBuffer.push(operatorStack.pop());
+    }
+
+    return new ShuntingYard(outputBuffer);
+  }
+}
+
+type OperatorStack = Array<Node|string|number|null|undefined>;
+
+export class ShuntingYard extends Resolvable {
+  private readonly stack: OperatorStack;
+
+  static parser(): ShuntingYardParser {
+    return new ShuntingYardParser();
+  }
+
+  constructor(stack: OperatorStack) {
+    super();
+    this.stack = stack;
+  }
+
+  resolve(context: DataContext = DataContext.Empty): ResolvedValue|undefined {
+    let stack: OperatorStack = [];
+    for (let i = 0; i < this.stack.length; i++) {
+      let next = this.stack[i];
+
+      if (next instanceof OperatorFunction) {
+        let func = next;
+        if (func.operands === 0) {
+          stack.push(func.execute());
+        }
+        else if (func.operands === 1) {
+          let x = stack.pop();
+          stack.push(func.execute(x as ResolvedValue));
+        }
+        else if (func.operands === 2) {
+          let b = stack.pop();
+          let a = stack.pop();
+          stack.push(func.execute(a as ResolvedValue, b as ResolvedValue));
+        }
+        else if (func.operands === 3) {
+          let c = stack.pop();
+          let b = stack.pop();
+          let a = stack.pop();
+          stack.push(func.execute(a as ResolvedValue, b as ResolvedValue, c as ResolvedValue));
+        }
+        else {
+          throw new Error("Unsupported number of operands: " + func.operands);
+        }
+        continue;
+      }
+
+      if (next instanceof Variable || next instanceof Term) {
+        next = next.resolve(context);
+        while (next instanceof Resolvable) {
+          next = next.resolve(context);
+        }
+      }
+
+      stack.push(next);
+    }
+
+    return stack.pop() as ResolvedValue;
+  }
+}

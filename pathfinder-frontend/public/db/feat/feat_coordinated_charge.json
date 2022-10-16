@@ -1,0 +1,11 @@
+{
+  "id": "feat:coordinated_charge",
+  "name": "Coordinated Charge",
+  "types": ["FEAT_TYPE_COMBAT", "FEAT_TYPE_TEAMWORK"],
+  "description": "You are an expert at leading your allies into the fray.",
+  "prerequisites": "You have at least two other teamwork feats, base attack bonus +10.",
+  "prerequisitesFormula": "@bab \u003e\u003d 10 AND  !@feat:coordinated_charge",
+  "benefit": "When an ally with this feat charges a creature that is no further away from you than your speed, you can, as an immediate action, charge that creature. You must be able to follow all of the normal charge rules.",
+  "source": "Ultimate Combat",
+  "teamwork": true
+}

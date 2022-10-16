@@ -1,0 +1,10 @@
+{
+  "id": "feat:hammer_the_gap",
+  "name": "Hammer the Gap",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You repeatedly strike the same location, causing increasing amounts of damage.",
+  "prerequisites": "Base attack bonus +6.",
+  "prerequisitesFormula": "@bab \u003e\u003d 6 AND  !@feat:hammer_the_gap",
+  "benefit": "When you take a full-attack action, each consecutive hit against the same opponent deals extra damage equal to the number of previous consecutive hits you have made against that opponent this turn. This damage is multiplied on a critical hit.",
+  "source": "Ultimate Combat"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "feat:tripping_twirl",
+  "name": "Tripping Twirl",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You can make a trip attack with a quarterstaff on all adjacent enemies.",
+  "prerequisites": "Int 13, Combat Expertise, Improved Trip, Tripping Staff, Weapon Focus (quarterstaff), Weapon Specialization (quarterstaff), base attack bonus +12.",
+  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:improved_trip AND @feat:tripping_staff AND @feat:weapon_focus#quarterstaff AND @feat:weapon_specialization#quarterstaff AND @bab \u003e\u003d 12 AND  !@feat:tripping_twirl",
+  "benefit": "As a full-round action, while wielding a quarterstaff two-handed, you can attempt a trip combat maneuver against each enemy adjacent to you.",
+  "special": "If you are a magus with the staff magus archetype, you can use spellstrike on any one trip combat maneuver you make with the staff.",
+  "source": "Ultimate Magic"
+}

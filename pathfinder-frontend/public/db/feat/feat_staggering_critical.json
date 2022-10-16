@@ -1,0 +1,11 @@
+{
+  "id": "feat:staggering_critical",
+  "name": "Staggering Critical",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "Your critical hits cause opponents to slow down.",
+  "prerequisites": "Critical Focus, base attack bonus +13.",
+  "prerequisitesFormula": "@feat:critical_focus AND @bab \u003e\u003d 13 AND  !@feat:staggering_critical",
+  "benefit": "Whenever you score a critical hit, your opponent becomes staggered for 1d4+1 rounds. A successful Fortitude save reduces the duration to 1 round. The DC of this Fortitude save is equal to 10 + your base attack bonus. The effects of this feat do not stack. Additional hits instead add to the duration.",
+  "special": "You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery.",
+  "source": "PFRPG Core"
+}
