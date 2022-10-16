@@ -1,0 +1,11 @@
+{
+  "id": "feat:improved_drag",
+  "name": "Improved Drag",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are skilled at dragging foes around the battlefield.",
+  "prerequisites": "Str 13, Power Attack, base attack bonus +1.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:power_attack AND @bab \u003e\u003d 1 AND  !@feat:improved_drag",
+  "benefit": "You do not provoke an attack of opportunity when performing a drag combat maneuver. In addition, you receive a +2 bonus on checks made to drag a foe. You also receive a +2 bonus to your Combat Maneuver Defense when an opponent tries to drag you.",
+  "normal": "You provoke an attack of opportunity when performing a drag combat maneuver.",
+  "source": "Advanced Player\u0027s Guide"
+}

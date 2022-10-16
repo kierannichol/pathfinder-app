@@ -1,0 +1,10 @@
+{
+  "id": "feat:master_combat_performer",
+  "name": "Master Combat Performer",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are a master of the techniques and weapons of the arena and the stage.",
+  "prerequisites": "Performing Combatant or at least three performance feats, base attack bonus +6.",
+  "prerequisitesFormula": "@feat:performing_combatant AND @bab \u003e\u003d 6 AND  !@feat:master_combat_performer",
+  "benefit": "You can make performance combat checks as a free action. You are proficient in all weapons with the performance special quality.",
+  "source": "Ultimate Combat"
+}

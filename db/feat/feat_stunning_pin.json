@@ -1,0 +1,10 @@
+{
+  "id": "feat:stunning_pin",
+  "name": "Stunning Pin",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You can render a pinned foe temporarily incapacitated.",
+  "prerequisites": "Improved Grapple, Improved Unarmed Strike, Stunning Fist.",
+  "prerequisitesFormula": "@feat:improved_grapple AND @feat:improved_unarmed_strike AND @feat:stunning_fist AND  !@feat:stunning_pin",
+  "benefit": "Whenever you pin an opponent, you can spend a swift action to make a Stunning Fist attempt against that opponent.",
+  "source": "Ultimate Combat"
+}

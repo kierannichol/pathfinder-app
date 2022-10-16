@@ -1,0 +1,10 @@
+{
+  "id": "feat:trample",
+  "name": "Trample",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "While mounted, you can ride down opponents and trample them under your mount.",
+  "prerequisites": "Ride 1 rank, Mounted Combat.",
+  "prerequisitesFormula": "@skill:ride \u003e\u003d 1 AND @feat:mounted_combat AND  !@feat:trample",
+  "benefit": "When you attempt to overrun an opponent while mounted, your target may not choose to avoid you. Your mount may make one hoof attack against any target you knock down, gaining the standard +4 bonus on attack rolls against prone targets.",
+  "source": "PFRPG Core"
+}

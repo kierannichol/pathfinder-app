@@ -1,0 +1,10 @@
+{
+  "id": "feat:extra_ranger_trap",
+  "name": "Extra Ranger Trap",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "You can use ranger traps more often.",
+  "prerequisites": "Trap class feature.",
+  "prerequisitesFormula": "sum(@ability:*:trap) AND  !@feat:extra_ranger_trap",
+  "benefit": "You can set ranger traps two additional times per day.",
+  "source": "Ultimate Magic"
+}

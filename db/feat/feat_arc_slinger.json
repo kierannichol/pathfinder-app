@@ -1,0 +1,10 @@
+{
+  "id": "feat:arc_slinger",
+  "name": "Arc Slinger",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You can twirl your sling in a way that maximizes its effectiveness.",
+  "prerequisites": "Point-Blank Shot, proficient with sling or halfling sling staff.",
+  "prerequisitesFormula": "@feat:point_blank_shot AND (@proficiency:sling OR @proficiency:halfling_sling_staff) AND  !@feat:arc_slinger",
+  "benefit": "When using a sling or sling staff, you reduce your penalty on ranged attack rolls due to range by 2. Point-Blank Shot\u0027s damage bonus applies within the first normal range increment of your sling (50 feet) or sling staff (80 feet).",
+  "source": "Ultimate Combat"
+}

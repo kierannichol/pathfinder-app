@@ -1,0 +1,862 @@
+{
+  "id": "feat:deadly_stroke",
+  "name": "Deadly Stroke",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "With a well-placed strike, you can bring a swift and painful end to most foes.",
+  "prerequisites": "Dazzling Display, Greater Weapon Focus, Shatter Defenses, Weapon Focus, proficiency with the selected weapon, base attack bonus +11.",
+  "benefit": "As a standard action, make a single attack with the weapon for which you have Greater Weapon Focus against a stunned or flat-footed opponent. If you hit, you deal double the normal damage and the target takes 1 point of Constitution bleed (see Appendix 2). The additional damage and bleed is not multiplied on a critical hit.",
+  "source": "PFRPG Core",
+  "options": [{
+    "id": "feat:deadly_stroke#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#club",
+    "name": "Club",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:simple_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:martial_weapon_proficiency AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#aklys AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#knuckle_axe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#barbazu_beard AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#battle_poi AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#swordbreaker_dagger AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flying_talon AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#gnome_pincher AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#halfling_rope_shot AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_boulder_helmet AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#kama AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#butterfly_knife AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#deer_horn_knife AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_maulaxe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#nunchaku AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#quadrens AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#drow_razor AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#rope_gauntlet AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sawtooth_sabre AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sai AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sanpkhang AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#siangham AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sica AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#thorn_bracer AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_war_shield AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#waveblade AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#scorpion_whip AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_heavy_axe_gauntlet AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#hooked_axe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#broken_back_seax AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#estoc AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#falcata AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flickmace AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flindbar AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#khopesh AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#knobkerrie AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_ram_hammer AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#spiral_rapier AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#rhoka AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sawtooth_sabre AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#shotel AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sickle_sword AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#split_blade_sword AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dueling_sword AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#bastard_sword AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#tongi AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_waraxe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_double_waraxe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#orc_double_axe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#butchering_axe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#gnome_battle_ladder AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#boarding_gaff AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#chain_hammer AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#spiked_chain AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#crook AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#elven_curve_blade AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_dorn_dergar AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#double_spear AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#elven_branched_spear AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#fauchard AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dire_flail AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flailpole AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flambard AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flying_blade AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#garrote AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_giant_sticker AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#gnome_hooked_hammer AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#harpoon AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_longaxe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_longhammer AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#mancatcher AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#orc_skull_ram AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#gnome_piston_maul AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#gnome_ripsaw_glaive AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#bladed_scarf AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#totem_spear AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_sphinx_hammer AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#switchscythe AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#two_bladed_sword AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_urgrosh AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#bola AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#brutal_bola AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#boomerang AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#thorn_bow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#crank_heavy_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#crank_light_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#double_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#hand_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#launching_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#repeating_heavy_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#repeating_light_crossbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#flask_thrower AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#grappling_hook AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#orc_hornbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#stormshaft_javelin AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#lasso AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#net",
+    "name": "Net",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#net AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#snag_net AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_heavy_pelletbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#dwarven_light_pelletbow AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#throwing_shield AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#shrillshaft_javelin AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#shuriken_5 AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#double_sling AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#sling_glove AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#halfling_sling_staff AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#stitched_sling AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#wrist_launcher AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }, {
+    "id": "feat:deadly_stroke#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:greater_weapon_focus AND @feat:shatter_defenses AND @feat:weapon_focus AND @feat:exotic_weapon_proficiency#heavy_wrist_launcher AND @bab \u003e\u003d 11 AND  !@feat:deadly_stroke"
+  }]
+}

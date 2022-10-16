@@ -1,0 +1,10 @@
+{
+  "id": "feat:pure_faith",
+  "name": "Pure Faith",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "Not only are you immune to disease, like most paladins, but you also are highly resilient to poisons.",
+  "prerequisites": "Divine health class feature.",
+  "prerequisitesFormula": "sum(@ability:*:divine_health) AND  !@feat:pure_faith",
+  "benefit": "You gain a +4 sacred bonus to saving throws against poison.",
+  "source": "Ultimate Magic"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "feat:improved_two_weapon_fighting",
+  "name": "Improved Two-Weapon Fighting",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are skilled at fighting with two weapons.",
+  "prerequisites": "Dex 17, Two-Weapon Fighting, base attack bonus +6.",
+  "prerequisitesFormula": "@dex_score \u003e\u003d 17 AND @feat:two_weapon_fighting AND @bab \u003e\u003d 6 AND  !@feat:improved_two_weapon_fighting",
+  "benefit": "In addition to the standard single extra attack you get with an off-hand weapon, you get a second attack with it, albeit at a -5 penalty.",
+  "normal": "Without this feat, you can only get a single extra attack with an off-hand weapon.",
+  "source": "PFRPG Core"
+}
