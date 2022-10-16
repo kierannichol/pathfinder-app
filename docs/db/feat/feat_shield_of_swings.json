@@ -1,0 +1,10 @@
+{
+  "id": "feat:shield_of_swings",
+  "name": "Shield of Swings",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "A wild frenzy of attacks serves to bolster your defenses.",
+  "prerequisites": "Str 13, Power Attack, base attack bonus +1.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:power_attack AND @bab \u003e\u003d 1 AND  !@feat:shield_of_swings",
+  "benefit": "When you take a full-attack action while wielding a two-handed weapon, you can choose to reduce the damage by 1/2 to gain a +4 shield bonus to AC and CMD until the beginning of your next turn. The reduction in damage applies until the beginning of your next turn.",
+  "source": "Advanced Player\u0027s Guide"
+}

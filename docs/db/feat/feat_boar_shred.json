@@ -1,0 +1,10 @@
+{
+  "id": "feat:boar_shred",
+  "name": "Boar Shred",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "The wounds you inf lict with your unarmed strikes bleed, giving you renewed vigor.",
+  "prerequisites": "Improved Unarmed Strike, Boar Ferocity, Boar Style, Intimidate 9 ranks.",
+  "prerequisitesFormula": "@feat:improved_unarmed_strike AND @feat:boar_ferocity AND @feat:boar_style AND @skill:intimidate \u003e\u003d 9 AND  !@feat:boar_shred",
+  "benefit": "You can make an Intimidate check to demoralize an opponent as a move action. While using Boar Style, whenever you tear an opponent\u0027s flesh, once per round at the start of that opponent\u0027s turn he takes 1d6 bleed damage. The bleed damage dealt while using Boar Style persist even if you later switch to a different style.",
+  "source": "Ultimate Combat"
+}

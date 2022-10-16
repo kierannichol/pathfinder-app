@@ -1,0 +1,863 @@
+{
+  "id": "feat:greater_weapon_focus",
+  "name": "Greater Weapon Focus",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "Choose one type of weapon (including unarmed strike or grapple) for which you have already selected Weapon Focus. You are a master at your chosen weapon.",
+  "prerequisites": "Proficiency with selected weapon, Weapon Focus with selected weapon, 8th-level fighter.",
+  "benefit": "You gain a +1 bonus on attack rolls you make using the selected weapon. This bonus stacks with other bonuses on attack rolls, including those from Weapon Focus.",
+  "special": "You can gain Greater Weapon Focus multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.",
+  "source": "PFRPG Core",
+  "options": [{
+    "id": "feat:greater_weapon_focus#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#gauntlet AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#unarmed AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#battle_aspergillum AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#brass_knife AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#brass_knuckles AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#cestus AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#dagger AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#punching_dagger AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#spiked_gauntlet AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#handwraps AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#traveling_kettle AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#hook_hand AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#kunai AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#light_mace AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#sickle AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#spring_blade AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#wooden_stake AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#club",
+    "name": "Club",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#club AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#mere_club AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#heavy_mace AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#morningstar AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#shortspear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#bayonet AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#boarding_pike AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#kumade AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#collapsible_kumade AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#lantern_staff AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#longspear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#quarterstaff AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#spear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#blowgun AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#heavy_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#light_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#dart AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#javelin AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#sling AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#stingchuck AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @feat:weapon_focus#stonebow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#axe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#throwing_axe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#blade_boot AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#whip AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#claw_blades AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#dueling_dagger AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#dogslicer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#light_hammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#gladius AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#handaxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#katar AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#kukri AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#machete AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#light_pick AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#sap AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#light_shield AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#spiked_armor AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#light_spiked_shield AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#starknife AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#short_sword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#war_razor AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#ankus AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#battleaxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#combat_scabbard AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#cutlass AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#light_flail AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#gandasa AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#klar AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#longsword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#manople AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#heavy_pick AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#rapier AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#scimitar AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#scizore AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#heavy_shield AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#heavy_spiked_shield AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#sword_cane AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#terbutje AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#trident AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#warhammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#bardiche AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#bill AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#earth_breaker AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#falchion AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#heavy_flail AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#glaive AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#greataxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#greatclub AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#greatsword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#guisarme AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#halberd AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#horsechopper AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#lance AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#ogre_hook AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#pickaxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#planson AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#ranseur AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#scythe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#syringe_spear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#ammentum AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#chakram AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#jolting_dart AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#hunga_munga AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#hurlbat AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#longbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#pilum AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @feat:weapon_focus#shortbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#aklys AND @feat:weapon_focus#aklys AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#knuckle_axe AND @feat:weapon_focus#knuckle_axe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#barbazu_beard AND @feat:weapon_focus#barbazu_beard AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#battle_poi AND @feat:weapon_focus#battle_poi AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#swordbreaker_dagger AND @feat:weapon_focus#swordbreaker_dagger AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flying_talon AND @feat:weapon_focus#flying_talon AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_pincher AND @feat:weapon_focus#gnome_pincher AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#halfling_rope_shot AND @feat:weapon_focus#halfling_rope_shot AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_boulder_helmet AND @feat:weapon_focus#dwarven_boulder_helmet AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#kama AND @feat:weapon_focus#kama AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#butterfly_knife AND @feat:weapon_focus#butterfly_knife AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#deer_horn_knife AND @feat:weapon_focus#deer_horn_knife AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_maulaxe AND @feat:weapon_focus#dwarven_maulaxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#nunchaku AND @feat:weapon_focus#nunchaku AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#quadrens AND @feat:weapon_focus#quadrens AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#drow_razor AND @feat:weapon_focus#drow_razor AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#rope_gauntlet AND @feat:weapon_focus#rope_gauntlet AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sawtooth_sabre AND @feat:weapon_focus#sawtooth_sabre AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sai AND @feat:weapon_focus#sai AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sanpkhang AND @feat:weapon_focus#sanpkhang AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#siangham AND @feat:weapon_focus#siangham AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sica AND @feat:weapon_focus#sica AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#thorn_bracer AND @feat:weapon_focus#thorn_bracer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_war_shield AND @feat:weapon_focus#dwarven_war_shield AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#waveblade AND @feat:weapon_focus#waveblade AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#scorpion_whip AND @feat:weapon_focus#scorpion_whip AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_heavy_axe_gauntlet AND @feat:weapon_focus#dwarven_heavy_axe_gauntlet AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#hooked_axe AND @feat:weapon_focus#hooked_axe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#broken_back_seax AND @feat:weapon_focus#broken_back_seax AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#estoc AND @feat:weapon_focus#estoc AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#falcata AND @feat:weapon_focus#falcata AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flickmace AND @feat:weapon_focus#flickmace AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flindbar AND @feat:weapon_focus#flindbar AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#khopesh AND @feat:weapon_focus#khopesh AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#knobkerrie AND @feat:weapon_focus#knobkerrie AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_ram_hammer AND @feat:weapon_focus#dwarven_ram_hammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#spiral_rapier AND @feat:weapon_focus#spiral_rapier AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#rhoka AND @feat:weapon_focus#rhoka AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sawtooth_sabre AND @feat:weapon_focus#sawtooth_sabre AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#shotel AND @feat:weapon_focus#shotel AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sickle_sword AND @feat:weapon_focus#sickle_sword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#split_blade_sword AND @feat:weapon_focus#split_blade_sword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dueling_sword AND @feat:weapon_focus#dueling_sword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#bastard_sword AND @feat:weapon_focus#bastard_sword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#tongi AND @feat:weapon_focus#tongi AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_waraxe AND @feat:weapon_focus#dwarven_waraxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_double_waraxe AND @feat:weapon_focus#dwarven_double_waraxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#orc_double_axe AND @feat:weapon_focus#orc_double_axe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#butchering_axe AND @feat:weapon_focus#butchering_axe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_battle_ladder AND @feat:weapon_focus#gnome_battle_ladder AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#boarding_gaff AND @feat:weapon_focus#boarding_gaff AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#chain_hammer AND @feat:weapon_focus#chain_hammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#spiked_chain AND @feat:weapon_focus#spiked_chain AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#crook AND @feat:weapon_focus#crook AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#elven_curve_blade AND @feat:weapon_focus#elven_curve_blade AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_dorn_dergar AND @feat:weapon_focus#dwarven_dorn_dergar AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#double_spear AND @feat:weapon_focus#double_spear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#elven_branched_spear AND @feat:weapon_focus#elven_branched_spear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#fauchard AND @feat:weapon_focus#fauchard AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dire_flail AND @feat:weapon_focus#dire_flail AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flailpole AND @feat:weapon_focus#flailpole AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flambard AND @feat:weapon_focus#flambard AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flying_blade AND @feat:weapon_focus#flying_blade AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#garrote AND @feat:weapon_focus#garrote AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_giant_sticker AND @feat:weapon_focus#dwarven_giant_sticker AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_hooked_hammer AND @feat:weapon_focus#gnome_hooked_hammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#harpoon AND @feat:weapon_focus#harpoon AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_longaxe AND @feat:weapon_focus#dwarven_longaxe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_longhammer AND @feat:weapon_focus#dwarven_longhammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#mancatcher AND @feat:weapon_focus#mancatcher AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#orc_skull_ram AND @feat:weapon_focus#orc_skull_ram AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_piston_maul AND @feat:weapon_focus#gnome_piston_maul AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_ripsaw_glaive AND @feat:weapon_focus#gnome_ripsaw_glaive AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#bladed_scarf AND @feat:weapon_focus#bladed_scarf AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#totem_spear AND @feat:weapon_focus#totem_spear AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_sphinx_hammer AND @feat:weapon_focus#dwarven_sphinx_hammer AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#switchscythe AND @feat:weapon_focus#switchscythe AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#two_bladed_sword AND @feat:weapon_focus#two_bladed_sword AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_urgrosh AND @feat:weapon_focus#dwarven_urgrosh AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#bola AND @feat:weapon_focus#bola AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#brutal_bola AND @feat:weapon_focus#brutal_bola AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#boomerang AND @feat:weapon_focus#boomerang AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#thorn_bow AND @feat:weapon_focus#thorn_bow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#crank_heavy_crossbow AND @feat:weapon_focus#crank_heavy_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#crank_light_crossbow AND @feat:weapon_focus#crank_light_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#double_crossbow AND @feat:weapon_focus#double_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#hand_crossbow AND @feat:weapon_focus#hand_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#launching_crossbow AND @feat:weapon_focus#launching_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#repeating_heavy_crossbow AND @feat:weapon_focus#repeating_heavy_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#repeating_light_crossbow AND @feat:weapon_focus#repeating_light_crossbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flask_thrower AND @feat:weapon_focus#flask_thrower AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#grappling_hook AND @feat:weapon_focus#grappling_hook AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#orc_hornbow AND @feat:weapon_focus#orc_hornbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#stormshaft_javelin AND @feat:weapon_focus#stormshaft_javelin AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#lasso AND @feat:weapon_focus#lasso AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#net",
+    "name": "Net",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#net AND @feat:weapon_focus#net AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#snag_net AND @feat:weapon_focus#snag_net AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_heavy_pelletbow AND @feat:weapon_focus#dwarven_heavy_pelletbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_light_pelletbow AND @feat:weapon_focus#dwarven_light_pelletbow AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#throwing_shield AND @feat:weapon_focus#throwing_shield AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#shrillshaft_javelin AND @feat:weapon_focus#shrillshaft_javelin AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#shuriken_5 AND @feat:weapon_focus#shuriken_5 AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#double_sling AND @feat:weapon_focus#double_sling AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sling_glove AND @feat:weapon_focus#sling_glove AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#halfling_sling_staff AND @feat:weapon_focus#halfling_sling_staff AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#stitched_sling AND @feat:weapon_focus#stitched_sling AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#wrist_launcher AND @feat:weapon_focus#wrist_launcher AND @class:fighter \u003e\u003d 8"
+  }, {
+    "id": "feat:greater_weapon_focus#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#heavy_wrist_launcher AND @feat:weapon_focus#heavy_wrist_launcher AND @class:fighter \u003e\u003d 8"
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "feat:snapping_turtle_shell",
+  "name": "Snapping Turtle Shell",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "Your guarding hand is almost magical in its skill at def lecting incoming blows.",
+  "prerequisites": "Snapping Turtle Clutch, Snapping Turtle Style, Improved Grapple, Improved Unarmed Strike, base attack bonus +5 or monk level 5th.",
+  "prerequisitesFormula": "(@feat:snapping_turtle_clutch AND @feat:snapping_turtle_style AND @feat:improved_grapple AND @feat:improved_unarmed_strike AND @bab \u003e\u003d 5) OR @class:monk \u003e\u003d 5 AND  !@feat:snapping_turtle_shell",
+  "benefit": "While you are using the Snapping Turtle Style feat, the shield bonus the style grants to your AC increases to +2, and your enemies take a -4 penalty on critical confirmation rolls against you.",
+  "source": "Ultimate Combat"
+}

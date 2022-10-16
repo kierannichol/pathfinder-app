@@ -1,0 +1,11 @@
+{
+  "id": "feat:sword_and_pistol",
+  "name": "Sword and Pistol",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You effortlessly pair melee and ranged weaponry.",
+  "prerequisites": "Dex 13, Point-Blank Shot, Rapid Shot, Snap Shot, Two-Weapon Fighting, base attack bonus +6.",
+  "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:point_blank_shot AND @feat:rapid_shot AND @feat:snap_shot AND @feat:two_weapon_fighting AND @bab \u003e\u003d 6 AND  !@feat:sword_and_pistol",
+  "benefit": "When you use the Two-Weapon Fighting feat while wielding a melee weapon and a crossbow or firearm, your attacks with the crossbow or firearm provoke no attacks of opportunity from foes that you threaten with your melee weapon.",
+  "normal": "Making a ranged attack provokes attacks of opportunity.",
+  "source": "Ultimate Combat"
+}

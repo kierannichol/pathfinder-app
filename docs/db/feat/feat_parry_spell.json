@@ -1,0 +1,10 @@
+{
+  "id": "feat:parry_spell",
+  "name": "Parry Spell",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "You can throw an enemy spell back at its caster.",
+  "prerequisites": "Spellcraft 15 ranks, Improved Counterspell.",
+  "prerequisitesFormula": "@skill:spellcraft \u003e\u003d 15 AND @feat:improved_counterspell AND  !@feat:parry_spell",
+  "benefit": "Whenever you successfully counter a spell, it returns back to its caster. This works exactly like the spell turning spell (Pathfinder RPG Core Rulebook page 347).",
+  "source": "Advanced Player\u0027s Guide"
+}

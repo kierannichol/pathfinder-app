@@ -1,0 +1,10 @@
+{
+  "id": "feat:pin_down",
+  "name": "Pin Down",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You easily block enemy escapes.",
+  "prerequisites": "Combat Reflexes, fighter level 11th.",
+  "prerequisitesFormula": "@feat:combat_reflexes AND @class:fighter \u003e\u003d 11 AND  !@feat:pin_down",
+  "benefit": "Whenever an opponent you threaten takes a 5-foot step or uses the withdraw action, that opponent provokes an attack of opportunity from you. If the attack hits, you deal no damage, but the targeted creature is prevented from making the move action that granted a 5-foot step or the withdraw action and does not move.",
+  "source": "Ultimate Combat"
+}

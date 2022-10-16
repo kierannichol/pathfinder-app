@@ -1,0 +1,10 @@
+{
+  "id": "feat:greater_spell_penetration",
+  "name": "Greater Spell Penetration",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "Your spells break through spell resistance much more easily than most.",
+  "prerequisites": "Spell Penetration.",
+  "prerequisitesFormula": "@feat:spell_penetration AND  !@feat:greater_spell_penetration",
+  "benefit": "You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature\u0027s spell resistance. This bonus stacks with the one from Spell Penetration.",
+  "source": "PFRPG Core"
+}

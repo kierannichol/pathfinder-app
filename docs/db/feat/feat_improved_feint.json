@@ -1,0 +1,11 @@
+{
+  "id": "feat:improved_feint",
+  "name": "Improved Feint",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are skilled at fooling your opponents in combat.",
+  "prerequisites": "Int 13, Combat Expertise.",
+  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND  !@feat:improved_feint",
+  "benefit": "You can make a Bluff check to feint in combat as a move action.",
+  "normal": "Feinting in combat is a standard action.",
+  "source": "PFRPG Core"
+}

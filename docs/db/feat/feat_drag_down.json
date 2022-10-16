@@ -1,0 +1,10 @@
+{
+  "id": "feat:drag_down",
+  "name": "Drag Down",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "When you are knocked prone, you are skilled at bringing your opponent down with you.",
+  "prerequisites": "Int 13, Combat Expertise, Improved Trip.",
+  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:improved_trip AND  !@feat:drag_down",
+  "benefit": "Whenever an opponent successfully trips you, you can attempt to trip that opponent as an immediate action.",
+  "source": "Ultimate Combat"
+}

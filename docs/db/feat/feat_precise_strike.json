@@ -1,0 +1,11 @@
+{
+  "id": "feat:precise_strike",
+  "name": "Precise Strike",
+  "types": ["FEAT_TYPE_COMBAT", "FEAT_TYPE_TEAMWORK"],
+  "description": "You are skilled at striking where it counts, as long as an ally distracts your foe.",
+  "prerequisites": "Dex 13, base attack bonus +1.",
+  "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @bab \u003e\u003d 1 AND  !@feat:precise_strike",
+  "benefit": "Whenever you and an ally who also has this feat are flanking the same the creature, you deal an additional 1d6 points of precision damage with each successful melee attack. This bonus damage stacks with other sources of precision damage, such as sneak attack. This bonus damage is not multiplied on a critical hit.",
+  "source": "Advanced Player\u0027s Guide",
+  "teamwork": true
+}

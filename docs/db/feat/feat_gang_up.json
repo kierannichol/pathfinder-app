@@ -1,0 +1,11 @@
+{
+  "id": "feat:gang_up",
+  "name": "Gang Up",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are adept at using greater numbers against foes.",
+  "prerequisites": "Int 13, Combat Expertise.",
+  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND  !@feat:gang_up",
+  "benefit": "You are considered to be flanking an opponent if at least two of your allies are threatening that opponent, regardless of your actual positioning.",
+  "normal": "You must be positioned opposite an ally to f lank an opponent.",
+  "source": "Advanced Player\u0027s Guide"
+}
