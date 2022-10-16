@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+message RaceDatabase {
+  repeated RaceData Races = 1;
+}
+
+message RaceData {
+  uint64 id = 1;
+  string name = 2;
+}

@@ -1,0 +1,142 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+message Formula {
+  Operation operation = 1;
+
+  message Operation {
+    oneof op {
+      uint32 integer_value = 1;
+      double decimal_value = 2;
+      bool boolean_value = 3;
+      string string_value = 4;
+      VariableValue variable_value = 5;
+      AddOperation add_operation = 6;
+      SubtractOperation subtract_operation = 7;
+      MultiplyOperation multiply_operation = 8;
+      DivideOperation divide_operation = 9;
+      EqualsOperation equals_operation = 10;
+      NotEqualsOperation not_equals_operation = 11;
+      GreaterThanOperation greater_than_operation = 12;
+      GreaterThanOrEqualsOperation greater_than_or_equals_operation = 13;
+      LessThanOperation less_than_operation = 14;
+      LessThanOrEqualsOperation less_than_or_equals_operation = 15;
+      AndOperation and_operation = 16;
+      OrOperation or_operation = 17;
+      NotOperation not_operation = 18;
+      AbsFunction abs_function = 19;
+      MinFunction min_function = 20;
+      MaxFunction max_function = 21;
+      FloorFunction floor_function = 22;
+      CeilFunction ceil_function = 23;
+      SignedFunction signed_function = 24;
+      ConcatFunction concat_function = 25;
+      IfFunction if_function = 26;
+    }
+
+    message VariableValue {
+      string variable_id = 1;
+    }
+
+    message AddOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message SubtractOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message MultiplyOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message DivideOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message EqualsOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message NotEqualsOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message GreaterThanOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message GreaterThanOrEqualsOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message LessThanOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message LessThanOrEqualsOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message AndOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message OrOperation {
+      Operation a = 1;
+      Operation b = 2;
+    }
+
+    message NotOperation {
+      Operation a = 1;
+    }
+
+    message AbsFunction {
+      Operation param = 1;
+    }
+
+    message MinFunction {
+      Operation param = 1;
+    }
+
+    message MaxFunction {
+      Operation param = 1;
+    }
+
+    message FloorFunction {
+      Operation param = 1;
+    }
+
+    message CeilFunction {
+      Operation param = 1;
+    }
+
+    message SignedFunction {
+      Operation param = 1;
+    }
+
+    message ConcatFunction {
+      repeated Operation params = 1;
+    }
+
+    message IfFunction {
+      Operation condition = 1;
+      Operation when_true = 2;
+      Operation when_false = 3;
+    }
+  }
+}
+

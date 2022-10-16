@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+package v2;
+
+message WeaponDatabaseDbo {
+  repeated WeaponTypeDbo WeaponTypes = 1;
+}
+
+message WeaponTypeDbo {
+  string id = 1;
+  string name = 2;
+  WeaponProficiencyDbo proficiency = 3;
+  WeaponRangeDbo range = 4;
+  WeaponGripDbo grip = 5;
+}
+
+message WeaponSummaryDbo {
+  string id = 1;
+  string name = 2;
+  WeaponProficiencyDbo proficiency = 3;
+  repeated WeaponSpecialDbo special = 4;
+  WeaponGripDbo grip = 5;
+}
+
+message WeaponDbo {
+  string id = 1;
+  string name = 2;
+  WeaponProficiencyDbo proficiency = 3;
+  repeated WeaponSpecialDbo special = 4;
+  WeaponGripDbo grip = 5;
+}
+
+enum WeaponGripDbo {
+  WEAPON_GRIP_UNARMED = 0;
+  WEAPON_GRIP_LIGHT = 1;
+  WEAPON_GRIP_ONE_HANDED = 2;
+  WEAPON_GRIP_TWO_HANDED = 3;
+  WEAPON_GRIP_RANGED = 4;
+  WEAPON_GRIP_AMMO = 5;
+}
+
+enum WeaponProficiencyDbo {
+  WEAPON_PROFICIENCY_OTHER = 0;
+  WEAPON_PROFICIENCY_SIMPLE = 1;
+  WEAPON_PROFICIENCY_MARTIAL = 2;
+  WEAPON_PROFICIENCY_EXOTIC = 3;
+}
+
+enum WeaponRangeDbo {
+  WEAPON_RANGE_NONE = 0;
+  WEAPON_RANGE_MELEE = 1;
+  WEAPON_RANGE_REACH = 2;
+  WEAPON_RANGE_RANGED = 3;
+}
+
+enum WeaponSpecialDbo {
+  WEAPON_SPECIAL_DISARM = 0;
+  WEAPON_SPECIAL_TRIP = 1;
+  WEAPON_SPECIAL_IMPROVISED = 2;
+  WEAPON_SPECIAL_BLOCKING = 3;
+  WEAPON_SPECIAL_FINESSE = 4;
+  WEAPON_SPECIAL_FRAGILE = 5;
+  WEAPON_SPECIAL_BRACE = 6;
+  WEAPON_SPECIAL_REACH = 7;
+  WEAPON_SPECIAL_PERFORMANCE = 8;
+  WEAPON_SPECIAL_GRAPPLE = 9;
+  WEAPON_SPECIAL_MONK = 10;
+  WEAPON_SPECIAL_SUNDER = 11;
+  WEAPON_SPECIAL_DISTRACTING = 12;
+  WEAPON_SPECIAL_NONLETHAL = 13;
+  WEAPON_SPECIAL_DOUBLE = 14;
+  WEAPON_SPECIAL_ATTACHED = 15;
+  WEAPON_SPECIAL_TOOL = 16;
+  WEAPON_SPECIAL_STRENGTH = 17;
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+package v2;
+
+message AbilityDatabaseDbo {
+  repeated AbilitySummaryDbo AbilitySummaries = 1;
+}
+
+message AbilitySummaryDbo {
+  string id = 1;
+  string name = 2;
+  AbilityTypeDbo type = 3;
+}
+
+enum AbilityTypeDbo {
+  ABILITY_TYPE_NONE = 0;
+  ABILITY_TYPE_EX = 1;
+  ABILITY_TYPE_SP = 2;
+  ABILITY_TYPE_SU = 3;
+}
+
+message AbilityDataDbo {
+  string id = 1;
+  string name = 2;
+  AbilityTypeDbo type = 3;
+  string description = 4;
+}
