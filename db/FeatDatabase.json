@@ -1,5 +1,5 @@
 {
-  "FeatSummaries": [{
+  "featSummaries": [{
     "id": "feat:heros_display",
     "name": "Hero\u0027s Display",
     "types": ["FEAT_TYPE_COMBAT"],
@@ -3261,7 +3261,7 @@
     "name": "Awesome Blow",
     "types": ["FEAT_TYPE_MONSTER", "FEAT_TYPE_COMBAT"],
     "prerequisites": "Str 25, Power Attack, Improved Bull Rush, size Large or larger.",
-    "prerequisitesFormula": "@str_score \u003e\u003d 25 AND @feat:power_attack AND @feat:improved_bull_rush AND @size \u003e\u003d 4 AND  !@feat:awesome_blow"
+    "prerequisitesFormula": "@str_score \u003e\u003d 25 AND @feat:power_attack AND @feat:improved_bull_rush AND @size \u003e\u003d 6 AND  !@feat:awesome_blow"
   }, {
     "id": "feat:janni_rush",
     "name": "Janni Rush",
@@ -3963,7 +3963,7 @@
     "name": "Low Profile",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Dex 13, Small size or smaller.",
-    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @size \u003c\u003d 2 AND  !@feat:low_profile"
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @size \u003c\u003d 4 AND  !@feat:low_profile"
   }, {
     "id": "feat:shake_it_off",
     "name": "Shake It Off",
@@ -4221,7 +4221,7 @@
     "name": "Underfoot",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Dodge, Mobility, Small size or smaller.",
-    "prerequisitesFormula": "@feat:dodge AND @feat:mobility AND @size \u003c\u003d 2 AND  !@feat:underfoot"
+    "prerequisitesFormula": "@feat:dodge AND @feat:mobility AND @size \u003c\u003d 4 AND  !@feat:underfoot"
   }, {
     "id": "feat:bouncing_spell",
     "name": "Bouncing Spell",
@@ -4624,7 +4624,7 @@
     "name": "Passing Trick",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Int 13, Combat Expertise, Dodge, Improved Feint, Mobility, size Small or smaller.",
-    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:dodge AND @feat:improved_feint AND @feat:mobility AND @size \u003c\u003d 2 AND  !@feat:passing_trick"
+    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:dodge AND @feat:improved_feint AND @feat:mobility AND @size \u003c\u003d 4 AND  !@feat:passing_trick"
   }, {
     "id": "feat:cartwheel_dodge",
     "name": "Cartwheel Dodge",
@@ -4711,13 +4711,13 @@
     "name": "Go Unnoticed",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Dex 13, Small size or smaller.",
-    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @size \u003c\u003d 2 AND  !@feat:go_unnoticed"
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @size \u003c\u003d 4 AND  !@feat:go_unnoticed"
   }, {
     "id": "feat:under_and_over",
     "name": "Under and Over",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Agile Maneuvers, Small size or smaller.",
-    "prerequisitesFormula": "@feat:agile_maneuvers AND @size \u003c\u003d 2 AND  !@feat:under_and_over"
+    "prerequisitesFormula": "@feat:agile_maneuvers AND @size \u003c\u003d 4 AND  !@feat:under_and_over"
   }, {
     "id": "feat:empower_spell_like_ability",
     "name": "Empower Spell-Like Ability",
@@ -9896,7 +9896,7 @@
     "name": "Snatch",
     "types": ["FEAT_TYPE_MONSTER"],
     "prerequisites": "Size Huge or larger.",
-    "prerequisitesFormula": "@size \u003e\u003d 5 AND  !@feat:snatch"
+    "prerequisitesFormula": "@size \u003e\u003d 7 AND  !@feat:snatch"
   }, {
     "id": "feat:mounted_archery",
     "name": "Mounted Archery",
@@ -10346,7 +10346,7 @@
     "name": "Taunt",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, Small size or smaller.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @size \u003c\u003d 2 AND  !@feat:taunt"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @size \u003c\u003d 4 AND  !@feat:taunt"
   }, {
     "id": "feat:grant_initiative",
     "name": "Grant Initiative",

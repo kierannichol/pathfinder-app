@@ -913,7 +913,7 @@ n
 ¥
 feat:implant_bombImplant Bomb "/Heal 5 ranks, delayed bomb alchemist discovery.*N@skill:heal >= 5 AND @alchemistdiscovery:delayed_bomb AND  !@feat:implant_bomb
 Ô
-feat:awesome_blowAwesome Blow"?Str 25, Power Attack, Improved Bull Rush, size Large or larger.*l@str_score >= 25 AND @feat:power_attack AND @feat:improved_bull_rush AND @size >= 4 AND  !@feat:awesome_blow
+feat:awesome_blowAwesome Blow"?Str 25, Power Attack, Improved Bull Rush, size Large or larger.*l@str_score >= 25 AND @feat:power_attack AND @feat:improved_bull_rush AND @size >= 6 AND  !@feat:awesome_blow
 ¡
 feat:janni_rush
 Janni Rush"aImproved Unarmed Strike, Janni Style, Janni Tempest, Acrobatics 8 ranks, Perform (dance) 8 ranks.*›@feat:improved_unarmed_strike AND @feat:janni_style AND @feat:janni_tempest AND @skill:acrobatics >= 8 AND @skill:perform:dance >= 8 AND  !@feat:janni_rush
@@ -1159,7 +1159,7 @@ _
 g
 feat:scribe_scrollScribe Scroll"Caster level 1st.*,@class:caster >= 1 AND  !@feat:scribe_scroll
 {
-feat:low_profileLow Profile"Dex 13, Small size or smaller.*7@dex_score >= 13 AND @size <= 2 AND  !@feat:low_profile
+feat:low_profileLow Profile"Dex 13, Small size or smaller.*7@dex_score >= 13 AND @size <= 4 AND  !@feat:low_profile
 ;
 feat:shake_it_offShake It Off * !@feat:shake_it_off
 o
@@ -1249,7 +1249,7 @@ d
 n
 feat:savage_displaySavage Display"Dazzling Display.*1@feat:dazzling_display AND  !@feat:savage_display
 Œ
-feat:underfoot	Underfoot"'Dodge, Mobility, Small size or smaller.*C@feat:dodge AND @feat:mobility AND @size <= 2 AND  !@feat:underfoot
+feat:underfoot	Underfoot"'Dodge, Mobility, Small size or smaller.*C@feat:dodge AND @feat:mobility AND @size <= 4 AND  !@feat:underfoot
 @
 feat:bouncing_spellBouncing Spell* !@feat:bouncing_spell
 
@@ -1394,7 +1394,7 @@ feat:smashSmash"Power Attack, half-orc.*<@feat:power_attack AND @race == '
 a
 feat:brew_potionBrew Potion"Caster level 3rd.**@class:caster >= 3 AND  !@feat:brew_potion
 Œ
-feat:passing_trickPassing Trick"QInt 13, Combat Expertise, Dodge, Improved Feint, Mobility, size Small or smaller.*@int_score >= 13 AND @feat:combat_expertise AND @feat:dodge AND @feat:improved_feint AND @feat:mobility AND @size <= 2 AND  !@feat:passing_trick
+feat:passing_trickPassing Trick"QInt 13, Combat Expertise, Dodge, Improved Feint, Mobility, size Small or smaller.*@int_score >= 13 AND @feat:combat_expertise AND @feat:dodge AND @feat:improved_feint AND @feat:mobility AND @size <= 4 AND  !@feat:passing_trick
 í
 feat:cartwheel_dodgeCartwheel Dodge "KEvasion class feature, improved evasion class feature, acrobatics 12 ranks.*tsum(@ability:*:evasion) AND sum(@ability:*:improved_evasion) AND @skill:acrobatics >= 12 AND  !@feat:cartwheel_dodge
 7
@@ -1426,9 +1426,9 @@ Eagle Eyes "!Wis 13, keen senses racial trait.*G@wis_score >= 13 AND sum(@abil
 ‡
 feat:dimensional_assaultDimensional Assault "[Ability to use the abundant step class feature or cast dimension door, Dimensional Agility.*v(sum(@ability:*:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND  !@feat:dimensional_assault
 ~
-feat:go_unnoticedGo Unnoticed "Dex 13, Small size or smaller.*8@dex_score >= 13 AND @size <= 2 AND  !@feat:go_unnoticed
+feat:go_unnoticedGo Unnoticed "Dex 13, Small size or smaller.*8@dex_score >= 13 AND @size <= 4 AND  !@feat:go_unnoticed
 ’
-feat:under_and_overUnder and Over"'Agile Maneuvers, Small size or smaller.*?@feat:agile_maneuvers AND @size <= 2 AND  !@feat:under_and_over
+feat:under_and_overUnder and Over"'Agile Maneuvers, Small size or smaller.*?@feat:agile_maneuvers AND @size <= 4 AND  !@feat:under_and_over
 ‡
 feat:empower_spell_like_abilityEmpower Spell-Like Ability"1Spell-like ability at caster level 6th or higher.*@caster_level >= 6
 @
@@ -2948,7 +2948,7 @@ O
 š
 feat:improved_repositionImproved Reposition"Int 13, Combat Expertise.*K@int_score >= 13 AND @feat:combat_expertise AND  !@feat:improved_reposition
 M
-feat:snatchSnatch"Size Huge or larger.*@size >= 5 AND  !@feat:snatch
+feat:snatchSnatch"Size Huge or larger.*@size >= 7 AND  !@feat:snatch
 
 feat:mounted_archeryMounted Archery"Ride 1 rank, Mounted Combat.*E@skill:ride >= 1 AND @feat:mounted_combat AND  !@feat:mounted_archery
 1
@@ -3111,7 +3111,7 @@ c
 feat:monastic_legacyMonastic Legacy"2Still mind class feature, Improved Unarmed Strike.*Xsum(@ability:*:still_mind) AND @feat:improved_unarmed_strike AND  !@feat:monastic_legacy
 i
 
-feat:tauntTaunt "Cha 13, Small size or smaller.*1@cha_score >= 13 AND @size <= 2 AND  !@feat:taunt
+feat:tauntTaunt "Cha 13, Small size or smaller.*1@cha_score >= 13 AND @size <= 4 AND  !@feat:taunt
 
 feat:grant_initiativeGrant Initiative "!Cunning initiative class feature.*?sum(@ability:*:cunning_initiative) AND  !@feat:grant_initiative
 ¤
