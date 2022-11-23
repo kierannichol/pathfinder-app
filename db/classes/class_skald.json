@@ -1,0 +1,246 @@
+{
+  "id": "class:skald",
+  "name": "Skald",
+  "category": "HYBRID",
+  "shortDescription": "A skald inspires his allies, and often presses forward to fight enemies in melee. Outside of combat, he’s useful as a healer and scholar, less versatile but more durable than a bard.",
+  "levels": [{
+    "levelNumber": 1,
+    "fortSave": 2,
+    "willSave": 2,
+    "specials": [{
+      "id": "ability:bardic_knowledge",
+      "name": "Bardic Knowledge",
+      "description": "A skald adds 1/2 his class level (minimum 1) on all Knowledge skill checks, and may make all Knowledge skill checks untrained."
+    }, {
+      "id": "ability:cantrips",
+      "name": "Cantrips",
+      "description": "Skalds learn a number of cantrips, or 0-level spells, as noted on Table: Skald Spells Known. These spells are cast like any other spell, but they do not consume any slots and may be used again."
+    }, {
+      "id": "ability:raging_song",
+      "name": "Raging Song",
+      "description": "A skald is trained to use music, oration, and similar performances to inspire his allies to feats of strength and ferocity. At 1st level, a skald can use this ability for a number of rounds per day equal to 3 + his Charisma modifier. For each level thereafter, he can use raging song for 2 additional rounds per day.Starting a raging song is a standard action, but it can be maintained each round as a free action. A raging song cannot be disrupted, but it ends immediately if the skald is killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action each round to maintain it. A raging song counts as the bard’s bardic performance special ability for any effect that affects bardic performances. A skald may learn bard masterpieces.A raging song has audible components, but not visual components. Affected allies must be able to hear the skald for the song to have any effect. A deaf skald has a 20% chance to fail when attempting to use a raging song. If he fails this check, the attempt still counts against his daily limit. Deaf creatures are immune to raging songs.If a raging song affects allies, when the skald begins a raging song and at the start of each ally’s turn in which they can hear the raging song, the skald’s allies must decide whether to accept or refuse its effects. This is not an action. Unconscious allies automatically accept the song. If accepted, the raging song’s effects last for that ally’s turn or until the song ends, whichever comes first.At 7th level, a skald can start a raging song as a move action instead of a standard action. At 13th level, a skald can start a raging song as a swift action instead."
+    }, {
+      "id": "ability:scribe_scroll",
+      "name": "Scribe Scroll",
+      "description": "At 1st level, a skald gains Scribe Scroll as a bonus feat."
+    }]
+  }, {
+    "levelNumber": 2,
+    "bab": 1,
+    "fortSave": 3,
+    "willSave": 3,
+    "specials": [{
+      "id": "ability:versatile_performance",
+      "name": "Versatile Performance"
+    }, {
+      "id": "ability:well_versed",
+      "name": "Well-Versed",
+      "description": "At 2nd level, the skald becomes resistant to sonic effects. The skald gains a +4 bonus on saving throws made against bardic performance, as well as all sonic or language-dependent effects."
+    }]
+  }, {
+    "levelNumber": 3,
+    "bab": 2,
+    "fortSave": 3,
+    "refSave": 1,
+    "willSave": 3,
+    "specials": [{
+      "id": "ability:rage_power",
+      "name": "Rage Powers",
+      "description": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+    }]
+  }, {
+    "levelNumber": 4,
+    "bab": 3,
+    "fortSave": 4,
+    "refSave": 1,
+    "willSave": 4,
+    "specials": [{
+      "id": "ability:uncanny_dodge",
+      "name": "Uncanny Dodge",
+      "description": "At 4th level, a skald gains the ability to react to danger before his senses would normally allow him to do so. He cannot be caught flat-footed, nor does he lose his Dex bonus to AC if the attacker is invisible. He still loses his Dexterity bonus to AC if he is immobilized. A skald with this ability can still lose his Dexterity bonus to AC if an opponent successfully uses the feint action against him.If a skald already has uncanny dodge from a different class, he automatically gains improved uncanny dodge (see below) instead."
+    }]
+  }, {
+    "levelNumber": 5,
+    "bab": 3,
+    "fortSave": 4,
+    "refSave": 1,
+    "willSave": 4,
+    "specials": [{
+      "id": "ability:spell_kenning",
+      "name": "Spell Kenning",
+      "description": "At 5th level, a skald is learned in the magic of other spellcasters, and can use his own magic to duplicate those classes’ spells. Once per day, a skald can cast any spell on the bard, cleric, or sorcerer/wizard spell list as if it were one of his skald spells known, expending a skald spell slot of the same spell level to cast the desired spell. Casting a spell with spell kenning always has a minimum casting time of 1 full round, regardless of the casting time of the spell.At 11th level, a skald can use this ability twice per day. At 17th level, he can use this ability three times per day."
+    }]
+  }, {
+    "levelNumber": 6,
+    "bab": 4,
+    "fortSave": 5,
+    "refSave": 2,
+    "willSave": 5,
+    "specials": [{
+      "id": "ability:rage_power",
+      "name": "Rage Powers",
+      "description": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+    }]
+  }, {
+    "levelNumber": 7,
+    "bab": 5,
+    "fortSave": 5,
+    "refSave": 2,
+    "willSave": 5,
+    "specials": [{
+      "id": "ability:lore_master",
+      "name": "Lore Master",
+      "description": "At 7th level, the skald becomes a master of many different types of lore, and can choose to take 10 on any Knowledge skill check that he has ranks in. Once per day, the skald can take 20 on any Knowledge skill check as a standard action, instead of spending the normal time taking 20 requires. He can use this ability to take 20 on a Knowledge skill check twice per day at 13th level and three times per day 19th level."
+    }, {
+      "id": "ability:versatile_performance",
+      "name": "Versatile Performance"
+    }]
+  }, {
+    "levelNumber": 8,
+    "bab": 6,
+    "fortSave": 6,
+    "refSave": 2,
+    "willSave": 6,
+    "specials": [{
+      "id": "ability:improved_uncanny_dodge",
+      "name": "Improved Uncanny Dodge",
+      "description": "At 8th level and higher, a skald can no longer be flanked. This defense denies enemies the ability to sneak attack the skald by flanking him, unless the attacker has at least four more levels in a class that grants sneak attack than the target has skald levels.If a character already has uncanny dodge (see above) from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum level required to flank the character."
+    }]
+  }, {
+    "levelNumber": 9,
+    "bab": 6,
+    "fortSave": 6,
+    "refSave": 3,
+    "willSave": 6,
+    "specials": [{
+      "id": "ability:rage_power",
+      "name": "Rage Powers",
+      "description": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+    }, {
+      "id": "ability:dr",
+      "name": "Damage Reduction",
+      "description": "At 9th level, a skald gains damage reduction. Subtract 1 from the damage the skald takes each time he is dealt damage from a weapon or a natural attack. At 14th and 19th levels, this damage reduction increases by 1. Damage Reduction can reduce damage to 0, but not below 0. Additionally, the skald grants this DR to all allies affected by his inspired rage."
+    }]
+  }, {
+    "levelNumber": 10,
+    "bab": 7,
+    "fortSave": 7,
+    "refSave": 3,
+    "willSave": 7
+  }, {
+    "levelNumber": 11,
+    "bab": 8,
+    "fortSave": 7,
+    "refSave": 3,
+    "willSave": 7,
+    "specials": [{
+      "id": "ability:spell_kenning",
+      "name": "Spell Kenning",
+      "description": "At 5th level, a skald is learned in the magic of other spellcasters, and can use his own magic to duplicate those classes’ spells. Once per day, a skald can cast any spell on the bard, cleric, or sorcerer/wizard spell list as if it were one of his skald spells known, expending a skald spell slot of the same spell level to cast the desired spell. Casting a spell with spell kenning always has a minimum casting time of 1 full round, regardless of the casting time of the spell.At 11th level, a skald can use this ability twice per day. At 17th level, he can use this ability three times per day."
+    }]
+  }, {
+    "levelNumber": 12,
+    "bab": 9,
+    "fortSave": 8,
+    "refSave": 4,
+    "willSave": 8,
+    "specials": [{
+      "id": "ability:rage_power",
+      "name": "Rage Powers",
+      "description": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+    }, {
+      "id": "ability:versatile_performance",
+      "name": "Versatile Performance"
+    }]
+  }, {
+    "levelNumber": 13,
+    "bab": 9,
+    "fortSave": 8,
+    "refSave": 4,
+    "willSave": 8,
+    "specials": [{
+      "id": "ability:lore_master",
+      "name": "Lore Master",
+      "description": "At 7th level, the skald becomes a master of many different types of lore, and can choose to take 10 on any Knowledge skill check that he has ranks in. Once per day, the skald can take 20 on any Knowledge skill check as a standard action, instead of spending the normal time taking 20 requires. He can use this ability to take 20 on a Knowledge skill check twice per day at 13th level and three times per day 19th level."
+    }]
+  }, {
+    "levelNumber": 14,
+    "bab": 10,
+    "fortSave": 9,
+    "refSave": 4,
+    "willSave": 9,
+    "specials": [{
+      "id": "ability:dr",
+      "name": "Damage Reduction",
+      "description": "At 9th level, a skald gains damage reduction. Subtract 1 from the damage the skald takes each time he is dealt damage from a weapon or a natural attack. At 14th and 19th levels, this damage reduction increases by 1. Damage Reduction can reduce damage to 0, but not below 0. Additionally, the skald grants this DR to all allies affected by his inspired rage."
+    }]
+  }, {
+    "levelNumber": 15,
+    "bab": 11,
+    "fortSave": 9,
+    "refSave": 5,
+    "willSave": 9,
+    "specials": [{
+      "id": "ability:rage_power",
+      "name": "Rage Powers",
+      "description": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+    }]
+  }, {
+    "levelNumber": 16,
+    "bab": 12,
+    "fortSave": 10,
+    "refSave": 5,
+    "willSave": 10
+  }, {
+    "levelNumber": 17,
+    "bab": 12,
+    "fortSave": 10,
+    "refSave": 5,
+    "willSave": 10,
+    "specials": [{
+      "id": "ability:spell_kenning",
+      "name": "Spell Kenning",
+      "description": "At 5th level, a skald is learned in the magic of other spellcasters, and can use his own magic to duplicate those classes’ spells. Once per day, a skald can cast any spell on the bard, cleric, or sorcerer/wizard spell list as if it were one of his skald spells known, expending a skald spell slot of the same spell level to cast the desired spell. Casting a spell with spell kenning always has a minimum casting time of 1 full round, regardless of the casting time of the spell.At 11th level, a skald can use this ability twice per day. At 17th level, he can use this ability three times per day."
+    }, {
+      "id": "ability:versatile_performance",
+      "name": "Versatile Performance"
+    }]
+  }, {
+    "levelNumber": 18,
+    "bab": 13,
+    "fortSave": 11,
+    "refSave": 6,
+    "willSave": 11,
+    "specials": [{
+      "id": "ability:rage_power",
+      "name": "Rage Powers",
+      "description": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald’s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power’s effects depend on the skald’s ability modifier (such as lesser spirit totem), affected allies use the skald’s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power’s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+    }]
+  }, {
+    "levelNumber": 19,
+    "bab": 14,
+    "fortSave": 11,
+    "refSave": 6,
+    "willSave": 11,
+    "specials": [{
+      "id": "ability:dr",
+      "name": "Damage Reduction",
+      "description": "At 9th level, a skald gains damage reduction. Subtract 1 from the damage the skald takes each time he is dealt damage from a weapon or a natural attack. At 14th and 19th levels, this damage reduction increases by 1. Damage Reduction can reduce damage to 0, but not below 0. Additionally, the skald grants this DR to all allies affected by his inspired rage."
+    }, {
+      "id": "ability:lore_master",
+      "name": "Lore Master",
+      "description": "At 7th level, the skald becomes a master of many different types of lore, and can choose to take 10 on any Knowledge skill check that he has ranks in. Once per day, the skald can take 20 on any Knowledge skill check as a standard action, instead of spending the normal time taking 20 requires. He can use this ability to take 20 on a Knowledge skill check twice per day at 13th level and three times per day 19th level."
+    }]
+  }, {
+    "levelNumber": 20,
+    "bab": 15,
+    "fortSave": 12,
+    "refSave": 6,
+    "willSave": 12,
+    "specials": [{
+      "id": "ability:master_skald",
+      "name": "Master Skald",
+      "description": "At 20th level, a skald’s inspired rage no longer gives allies a penalty to AC, nor limits what skills or abilities they can use. Allies with rage class abilities may use features dependent on those abilities without restriction, such as a barbarian’s rage powers and a bloodrager’s blood casting and bloodline abilities. Finally, when making a full attack, affected allies may make an additional attack each round (as if using a haste effect)."
+    }]
+  }]
+}
