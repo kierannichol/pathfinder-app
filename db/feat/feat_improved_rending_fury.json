@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "Honing the deadliness of your claws, you are a living hurricane of rending fury.",
   "prerequisites": "Rending Fury, base attack bonus +9, rend special attack.",
-  "prerequisitesFormula": "@feat:rending_fury AND @bab \u003e\u003d 9 AND sum(@ability:*:rend) AND  !@feat:improved_rending_fury",
+  "prerequisitesFormula": "@feat:rending_fury AND @bab \u003e\u003d 9 AND sum(@ability:rend) AND  !@feat:improved_rending_fury",
   "benefit": "Whenever you successfully rend an opponent, you deal an extra 1d6 damage. This damage is not multiplied on a critical hit.",
   "source": "Ultimate Combat"
 }

@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You learned to use your deity\u0027s favored weapon as part of your martial arts form.",
   "prerequisites": "Channel energy class feature, flurry of blows class feature, Weapon Focus with your deity\u0027s favored melee weapon.",
-  "prerequisitesFormula": "sum(@ability:*:channel_energy) AND sum(@ability:*:flurry_of_blows) AND @feat:weapon_focus AND  !@feat:crusaders_flurry",
+  "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND sum(@ability:flurry_of_blows) AND @feat:weapon_focus AND  !@feat:crusaders_flurry",
   "benefit": "You can use your deity\u0027s favored weapon as if it were a monk weapon.",
   "source": "Ultimate Combat"
 }

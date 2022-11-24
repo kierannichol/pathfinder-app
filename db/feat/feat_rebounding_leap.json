@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "Your riding and lancing expertise allows you to enter and leave the saddle with great speed.",
   "prerequisites": "Leaping lance class feature, Acrobatics 5 ranks, Ride 11 ranks.",
-  "prerequisitesFormula": "sum(@ability:*:leaping_lance) AND @skill:acrobatics \u003e\u003d 5 AND @skill:ride \u003e\u003d 11 AND  !@feat:rebounding_leap",
+  "prerequisitesFormula": "sum(@ability:leaping_lance) AND @skill:acrobatics \u003e\u003d 5 AND @skill:ride \u003e\u003d 11 AND  !@feat:rebounding_leap",
   "benefit": "When you succeed at the Acrobatics check to jump as part of your leaping lance class feature, you can remount your steed as a swift action.",
   "source": "Ultimate Combat"
 }

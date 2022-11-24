@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "You can take advantage of an enemy\u0027s debilitated state to attempt a coup de grace.",
   "prerequisites": "Sneak attack +5d6.",
-  "prerequisitesFormula": "sum(@ability:*:sneak_attack) \u003e\u003d 5 AND  !@feat:dastardly_finish",
+  "prerequisitesFormula": "sum(@ability:sneak_attack) \u003e\u003d 5 AND  !@feat:dastardly_finish",
   "benefit": "You can deliver a coup de grace to cowering or stunned targets.",
   "normal": "You can only coup de grace helpless targets.",
   "source": "Advanced Player\u0027s Guide"

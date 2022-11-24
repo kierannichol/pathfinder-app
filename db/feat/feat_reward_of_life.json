@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "When you lay on hands, you are also healed.",
   "prerequisites": "Lay on hands class feature.",
-  "prerequisitesFormula": "sum(@ability:*:lay_on_hands) AND  !@feat:reward_of_life",
+  "prerequisitesFormula": "sum(@ability:lay_on_hands) AND  !@feat:reward_of_life",
   "benefit": "Each time you use your lay on hands ability to heal a creature other than yourself, you heal a number of hit points equal to your Charisma bonus. This ability has no effect if you use lay on hands to harm undead.",
   "source": "Ultimate Magic"
 }

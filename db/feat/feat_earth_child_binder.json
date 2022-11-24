@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "Even the greatest giants fear your technique.",
   "prerequisites": "Wis 13, dwarf or gnome, defensive training racial trait, Earth Child Style, Earth Child Topple, Greater Trip, Improved Trip, Improved Unarmed Strike, Stunning Fist, Acrobatics 9 ranks.",
-  "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND @feat:earth_child_style AND @feat:earth_child_topple AND @feat:greater_trip AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @feat:stunning_fist AND @skill:acrobatics \u003e\u003d 9 AND  !@feat:earth_child_binder",
+  "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND @feat:earth_child_style AND @feat:earth_child_topple AND @feat:greater_trip AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @feat:stunning_fist AND @skill:acrobatics \u003e\u003d 9 AND  !@feat:earth_child_binder",
   "benefit": "You can trip a creature of the giant subtype no matter its size. While you are using Earth Child Style, when a prone creature of the giant subtype stands up and provokes an attack of opportunity from you, if you make an unarmed strike, you can declare you are making a Stunning Fist attempt after the attack hits. You gain a +4 bonus to the DC of any Stunning Fist effect you deliver in this way.",
   "normal": "You can only trip opponents who are one size category larger than you.",
   "source": "Ultimate Combat"

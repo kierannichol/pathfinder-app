@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You use your knack for avoiding damage to reposition yourself in combat.",
   "prerequisites": "Evasion class feature, improved evasion class feature, acrobatics 12 ranks.",
-  "prerequisitesFormula": "sum(@ability:*:evasion) AND sum(@ability:*:improved_evasion) AND @skill:acrobatics \u003e\u003d 12 AND  !@feat:cartwheel_dodge",
+  "prerequisitesFormula": "sum(@ability:evasion) AND sum(@ability:improved_evasion) AND @skill:acrobatics \u003e\u003d 12 AND  !@feat:cartwheel_dodge",
   "benefit": "When you successfully use improved evasion to avoid taking damage, you can move up to half your speed as an immediate action. This movement provokes attacks of opportunity as normal.",
   "source": "Ultimate Combat"
 }

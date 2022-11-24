@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You can channel divine energy more often.",
   "prerequisites": "Channel energy class feature.",
-  "prerequisitesFormula": "sum(@ability:*:channel_energy) AND  !@feat:extra_channel",
+  "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:extra_channel",
   "benefit": "You can channel energy two additional times per day.",
   "special": "If a paladin with the ability to channel positive energy takes this feat, she can use lay on hands four additional times a day, but only to channel positive energy.",
   "source": "PFRPG Core"

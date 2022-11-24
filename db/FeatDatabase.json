@@ -1085,13 +1085,13 @@
     "name": "Command Undead",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel negative energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_negative_energy) AND  !@feat:command_undead"
+    "prerequisitesFormula": "sum(@ability:channel_negative_energy) AND  !@feat:command_undead"
   }, {
     "id": "feat:channeled_revival",
     "name": "Channeled Revival",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy 6d6 (positive energy).",
-    "prerequisitesFormula": "sum(@ability:*:channel_positive_energy) \u003e\u003d 6 AND  !@feat:channeled_revival"
+    "prerequisitesFormula": "@ability:channel_positive_energy \u003e\u003d 6 AND  !@feat:channeled_revival"
   }, {
     "id": "feat:combat_style_master",
     "name": "Combat Style Master",
@@ -1109,19 +1109,19 @@
     "name": "Extra Summons",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to cast summon monster as a spell-like ability, summoner 1st.",
-    "prerequisitesFormula": "sum(@ability:*:summon_monster) AND @class:summoner \u003e\u003d 1"
+    "prerequisitesFormula": "sum(@ability:summon_monster) AND @class:summoner \u003e\u003d 1"
   }, {
     "id": "feat:extra_mercy",
     "name": "Extra Mercy",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Lay on hands class feature, mercy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands) AND sum(@ability:*:mercy)"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands) AND sum(@ability:mercy)"
   }, {
     "id": "feat:lingering_performance",
     "name": "Lingering Performance",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bardic performance class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bardic_performance) AND  !@feat:lingering_performance"
+    "prerequisitesFormula": "sum(@ability:bardic_performance) AND  !@feat:lingering_performance"
   }, {
     "id": "feat:cleave",
     "name": "Cleave",
@@ -1145,7 +1145,7 @@
     "name": "Knockout Artist",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Sneak attack class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:sneak_attack) AND @feat:improved_unarmed_strike AND  !@feat:knockout_artist"
+    "prerequisitesFormula": "sum(@ability:sneak_attack) AND @feat:improved_unarmed_strike AND  !@feat:knockout_artist"
   }, {
     "id": "feat:neckbreaker",
     "name": "Neckbreaker",
@@ -1157,13 +1157,13 @@
     "name": "Discordant Voice",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bardic performance class feature, Perform (oratory or sing) 10 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:bardic_performance) AND @skill:perform:oratory_or_sing \u003e\u003d 10 AND  !@feat:discordant_voice"
+    "prerequisitesFormula": "sum(@ability:bardic_performance) AND @skill:perform:oratory_or_sing \u003e\u003d 10 AND  !@feat:discordant_voice"
   }, {
     "id": "feat:branded_for_retribution",
     "name": "Branded for Retribution",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND  !@feat:branded_for_retribution"
+    "prerequisitesFormula": "sum(@ability:bane) AND  !@feat:branded_for_retribution"
   }, {
     "id": "feat:panther_parry",
     "name": "Panther Parry",
@@ -1216,13 +1216,13 @@
     "name": "Evolved Familiar",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Int 13, Cha 13, familiar class feature.",
-    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @cha_score \u003e\u003d 13 AND sum(@ability:*:familiar)"
+    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @cha_score \u003e\u003d 13 AND sum(@ability:familiar)"
   }, {
     "id": "feat:oracular_intuition",
     "name": "Oracular Intuition",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Mystery class feature.",
-    "prerequisitesFormula": "sum(@ability:*:mystery) AND  !@feat:oracular_intuition"
+    "prerequisitesFormula": "sum(@ability:mystery) AND  !@feat:oracular_intuition"
   }, {
     "id": "feat:widen_spell",
     "name": "Widen Spell",
@@ -2124,7 +2124,7 @@
     "name": "Harmonic Sage",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bardic performance class feature, Knowledge (engineering) 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:bardic_performance) AND @skill:knowledge:engineering \u003e\u003d 5 AND  !@feat:harmonic_sage"
+    "prerequisitesFormula": "sum(@ability:bardic_performance) AND @skill:knowledge:engineering \u003e\u003d 5 AND  !@feat:harmonic_sage"
   }, {
     "id": "feat:die_for_your_master",
     "name": "Die for Your Master",
@@ -2142,7 +2142,7 @@
     "name": "Extra Evolution",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Eidolon class feature.",
-    "prerequisitesFormula": "sum(@ability:*:eidolon) AND  !@feat:extra_evolution"
+    "prerequisitesFormula": "sum(@ability:eidolon) AND  !@feat:extra_evolution"
   }, {
     "id": "feat:expanded_arcana",
     "name": "Expanded Arcana",
@@ -3023,19 +3023,19 @@
     "name": "Quick Channel",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Knowledge (religion) 5 ranks, channel energy class feature.",
-    "prerequisitesFormula": "@skill:knowledge:religion \u003e\u003d 5 AND sum(@ability:*:channel_energy) AND  !@feat:quick_channel"
+    "prerequisitesFormula": "@skill:knowledge:religion \u003e\u003d 5 AND (@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:quick_channel"
   }, {
     "id": "feat:channeled_shield_wall",
     "name": "Channeled Shield Wall",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy, 3d6 prof iciency with a shield.",
-    "prerequisitesFormula": "(sum(@ability:*:channel_positive_energy) OR sum(@ability:*:channel_negative_energy)) AND @proficiency:shield \u003e\u003d 3 AND  !@feat:channeled_shield_wall"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND @proficiency:shield \u003e\u003d 3 AND  !@feat:channeled_shield_wall"
   }, {
     "id": "feat:practiced_tactician",
     "name": "Practiced Tactician",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Tactician class feature.",
-    "prerequisitesFormula": "sum(@ability:*:tactician)"
+    "prerequisitesFormula": "sum(@ability:tactician)"
   }, {
     "id": "feat:second_chance",
     "name": "Second Chance",
@@ -3076,19 +3076,19 @@
     "name": "Rending Fury",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Base attack bonus +6, rend special attack.",
-    "prerequisitesFormula": "@bab \u003e\u003d 6 AND sum(@ability:*:rend) AND  !@feat:rending_fury"
+    "prerequisitesFormula": "@bab \u003e\u003d 6 AND sum(@ability:rend) AND  !@feat:rending_fury"
   }, {
     "id": "feat:stone_singer",
     "name": "Stone Singer",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, bardic performance class feature, dwarf.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:bardic_performance) AND @race \u003d\u003d \u0027dwarf\u0027 AND  !@feat:stone_singer"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:bardic_performance) AND @race \u003d\u003d \u0027dwarf\u0027 AND  !@feat:stone_singer"
   }, {
     "id": "feat:elusive_redirection",
     "name": "Elusive Redirection",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Elusive target class feature, Combat Expertise, Improved Unarmed Strike, flowing monk level 12th.",
-    "prerequisitesFormula": "sum(@ability:*:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk:flowing \u003e\u003d 12 AND  !@feat:elusive_redirection"
+    "prerequisitesFormula": "sum(@ability:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk:flowing \u003e\u003d 12 AND  !@feat:elusive_redirection"
   }, {
     "id": "feat:critical_mastery",
     "name": "Critical Mastery",
@@ -3124,7 +3124,7 @@
     "name": "Raging Vitality",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Con 15, rage class feature.",
-    "prerequisitesFormula": "@con_score \u003e\u003d 15 AND sum(@ability:*:rage) AND  !@feat:raging_vitality"
+    "prerequisitesFormula": "@con_score \u003e\u003d 15 AND sum(@ability:rage) AND  !@feat:raging_vitality"
   }, {
     "id": "feat:moonlight_summons",
     "name": "Moonlight Summons",
@@ -3152,7 +3152,7 @@
     "name": "Sneaking Precision",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Sneak attack class feature, Critical Focus, any critical feat, base attack bonus +9.",
-    "prerequisitesFormula": "sum(@ability:*:sneak_attack) AND @feat:critical_focus AND @bab \u003e\u003d 9 AND  !@feat:sneaking_precision"
+    "prerequisitesFormula": "sum(@ability:sneak_attack) AND @feat:critical_focus AND @bab \u003e\u003d 9 AND  !@feat:sneaking_precision"
   }, {
     "id": "feat:combat_medic",
     "name": "Combat Medic",
@@ -3181,13 +3181,13 @@
     "name": "Insightful Gaze",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Stern gaze class feature, Sense Motive 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:stern_gaze) AND @skill:sense_motive \u003e\u003d 5 AND  !@feat:insightful_gaze"
+    "prerequisitesFormula": "sum(@ability:stern_gaze) AND @skill:sense_motive \u003e\u003d 5 AND  !@feat:insightful_gaze"
   }, {
     "id": "feat:gnome_trickster",
     "name": "Gnome Trickster",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, gnome, gnome magic racial trait.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @race \u003d\u003d \u0027gnome\u0027 AND sum(@ability:*:gnome_magic) AND  !@feat:gnome_trickster"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @race \u003d\u003d \u0027gnome\u0027 AND sum(@ability:gnome_magic) AND  !@feat:gnome_trickster"
   }, {
     "id": "feat:bull_rush_strike",
     "name": "Bull Rush Strike",
@@ -3279,25 +3279,25 @@
     "name": "Natural Spell",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wis 13, wild shape class feature.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND sum(@ability:*:wild_shape) AND  !@feat:natural_spell"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND sum(@ability:wild_shape) AND  !@feat:natural_spell"
   }, {
     "id": "feat:alignment_channel",
     "name": "Alignment Channel",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to channel energy.",
-    "prerequisitesFormula": "(sum(@ability:*:channel_positive_energy) OR sum(@ability:*:channel_negative_energy))"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy)"
   }, {
     "id": "feat:fast_drinker",
     "name": "Fast Drinker",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Con 18, drunken ki class feature.",
-    "prerequisitesFormula": "@con_score \u003e\u003d 18 AND sum(@ability:*:drunken_ki) AND  !@feat:fast_drinker"
+    "prerequisitesFormula": "@con_score \u003e\u003d 18 AND sum(@ability:drunken_ki) AND  !@feat:fast_drinker"
   }, {
     "id": "feat:warrior_priest",
     "name": "Warrior Priest",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to cast divine spells, domain or mystery class feature.",
-    "prerequisitesFormula": "@ability:divine_spellcaster AND sum(@ability:*:domain_or_mystery) AND  !@feat:warrior_priest"
+    "prerequisitesFormula": "@ability:divine_spellcaster AND sum(@ability:domain_or_mystery) AND  !@feat:warrior_priest"
   }, {
     "id": "feat:uncanny_concentration",
     "name": "Uncanny Concentration",
@@ -3309,13 +3309,13 @@
     "name": "Haunted Gnome Assault",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Cha 13, gnome magic racial trait, Haunted Gnome, Knowledge (arcana) 3 ranks.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:gnome_magic) AND @feat:haunted_gnome AND @skill:knowledge:arcana \u003e\u003d 3 AND  !@feat:haunted_gnome_assault"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @skill:knowledge:arcana \u003e\u003d 3 AND  !@feat:haunted_gnome_assault"
   }, {
     "id": "feat:dimensional_savant",
     "name": "Dimensional Savant",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Dimensional Agility, Dimensional Assault, Dimensional Dervish, ability to use the abundant step class feature or cast dimension door, base attack bonus +9.",
-    "prerequisitesFormula": "@feat:dimensional_agility AND @feat:dimensional_assault AND @feat:dimensional_dervish AND (sum(@ability:*:abundant_step) OR @spell:dimension_door) AND @bab \u003e\u003d 9 AND  !@feat:dimensional_savant"
+    "prerequisitesFormula": "@feat:dimensional_agility AND @feat:dimensional_assault AND @feat:dimensional_dervish AND (sum(@ability:abundant_step) OR @spell:dimension_door) AND @bab \u003e\u003d 9 AND  !@feat:dimensional_savant"
   }, {
     "id": "feat:efreeti_style",
     "name": "Efreeti Style",
@@ -3333,13 +3333,13 @@
     "name": "Leaf Singer",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, bardic performance class feature, elf or half-elf.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:bardic_performance) AND (@race \u003d\u003d \u0027elf\u0027 OR @race \u003d\u003d \u0027half-elf\u0027) AND  !@feat:leaf_singer"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:bardic_performance) AND (@race \u003d\u003d \u0027elf\u0027 OR @race \u003d\u003d \u0027half-elf\u0027) AND  !@feat:leaf_singer"
   }, {
     "id": "feat:wild_speech",
     "name": "Wild Speech",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Druid level 6th, wild shape class feature.",
-    "prerequisitesFormula": "@class:druid \u003e\u003d 6 AND sum(@ability:*:wild_shape) AND  !@feat:wild_speech"
+    "prerequisitesFormula": "@class:druid \u003e\u003d 6 AND sum(@ability:wild_shape) AND  !@feat:wild_speech"
   }, {
     "id": "feat:augment_summoning",
     "name": "Augment Summoning",
@@ -3357,7 +3357,7 @@
     "name": "Extra Rage Power",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Rage power class feature.",
-    "prerequisitesFormula": "sum(@ability:*:rage_power)"
+    "prerequisitesFormula": "sum(@ability:rage_power)"
   }, {
     "id": "feat:tiger_style",
     "name": "Tiger Style",
@@ -3398,7 +3398,7 @@
     "name": "Bolstered Resilience",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Damage reduction.",
-    "prerequisitesFormula": "max(@ability:*:damage_reduction) AND  !@feat:bolstered_resilience"
+    "prerequisitesFormula": "max(@ability:damage_reduction) AND  !@feat:bolstered_resilience"
   }, {
     "id": "feat:quick_reposition",
     "name": "Quick Reposition",
@@ -3416,7 +3416,7 @@
     "name": "Advanced Ranger Trap",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Trap class feature, ranger level 5th.",
-    "prerequisitesFormula": "sum(@ability:*:trap) AND @class:ranger \u003e\u003d 5 AND  !@feat:advanced_ranger_trap"
+    "prerequisitesFormula": "sum(@ability:trap) AND @class:ranger \u003e\u003d 5 AND  !@feat:advanced_ranger_trap"
   }, {
     "id": "feat:bodyguard",
     "name": "Bodyguard",
@@ -3439,7 +3439,7 @@
     "name": "Word of Healing",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Lay on hands class feature.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands) AND  !@feat:word_of_healing"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands) AND  !@feat:word_of_healing"
   }, {
     "id": "feat:rapid_grappler",
     "name": "Rapid Grappler",
@@ -3504,7 +3504,7 @@
     "name": "Extra Performance",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bardic performance class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bardic_performance)"
+    "prerequisitesFormula": "sum(@ability:bardic_performance)"
   }, {
     "id": "feat:stealthy",
     "name": "Stealthy",
@@ -3520,13 +3520,13 @@
     "name": "Guided Hand",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature, Channel Smite, proficiency with your deity\u0027s favored weapon.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND @feat:channel_smite AND  !@feat:guided_hand"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND @feat:channel_smite AND  !@feat:guided_hand"
   }, {
     "id": "feat:sorcerous_bloodstrike",
     "name": "Sorcerous Bloodstrike",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, sorcerer bloodline class feature.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:sorcerer_bloodline) AND  !@feat:sorcerous_bloodstrike"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:sorcerer_bloodline) AND  !@feat:sorcerous_bloodstrike"
   }, {
     "id": "feat:disengaging_feint",
     "name": "Disengaging Feint",
@@ -3550,7 +3550,7 @@
     "name": "Planar Wild Shape",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild shape class feature, Knowledge (planes) 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:wild_shape) AND @skill:knowledge:planes \u003e\u003d 5 AND  !@feat:planar_wild_shape"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND @skill:knowledge:planes \u003e\u003d 5 AND  !@feat:planar_wild_shape"
   }, {
     "id": "feat:improved_two_weapon_feint",
     "name": "Improved Two-Weapon Feint",
@@ -3927,7 +3927,7 @@
     "name": "Steel Soul",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Dwarf, hardy racial trait.",
-    "prerequisitesFormula": "@race \u003d\u003d \u0027Dwarf\u0027 AND sum(@ability:*:hardy) AND  !@feat:steel_soul"
+    "prerequisitesFormula": "@race \u003d\u003d \u0027Dwarf\u0027 AND sum(@ability:hardy) AND  !@feat:steel_soul"
   }, {
     "id": "feat:improved_overrun",
     "name": "Improved Overrun",
@@ -3939,7 +3939,7 @@
     "name": "Extra Arcana",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Magus arcana class feature.",
-    "prerequisitesFormula": "sum(@ability:*:magus_arcana)"
+    "prerequisitesFormula": "sum(@ability:magus_arcana)"
   }, {
     "id": "feat:cockatrice_strike",
     "name": "Cockatrice Strike",
@@ -3951,7 +3951,7 @@
     "name": "Improved Monster Lore",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Monster lore class feature.",
-    "prerequisitesFormula": "sum(@ability:*:monster_lore) AND  !@feat:improved_monster_lore"
+    "prerequisitesFormula": "sum(@ability:monster_lore) AND  !@feat:improved_monster_lore"
   }, {
     "id": "feat:scribe_scroll",
     "name": "Scribe Scroll",
@@ -3986,7 +3986,7 @@
     "name": "Crusader\u0027s Fist",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Lay on hands class feature or touch of corruption class feature, Improved Unarmed Strike, base attack bonus +6.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands_class_feature_or_touch_of_corruption) AND @feat:improved_unarmed_strike AND @bab \u003e\u003d 6 AND  !@feat:crusaders_fist"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands_class_feature_or_touch_of_corruption) AND @feat:improved_unarmed_strike AND @bab \u003e\u003d 6 AND  !@feat:crusaders_fist"
   }, {
     "id": "feat:monkey_style",
     "name": "Monkey Style",
@@ -4039,7 +4039,7 @@
     "name": "Deft Shootist Deed",
     "types": ["FEAT_TYPE_GRIT"],
     "prerequisites": "Grit class feature or Amateur Gunslinger feat, Dodge, Mobility.",
-    "prerequisitesFormula": "(sum(@ability:*:grit) OR @feat:amateur_gunslinger) AND @feat:dodge AND @feat:mobility AND  !@feat:deft_shootist_deed"
+    "prerequisitesFormula": "(sum(@ability:grit) OR @feat:amateur_gunslinger) AND @feat:dodge AND @feat:mobility AND  !@feat:deft_shootist_deed"
   }, {
     "id": "feat:repositioning_strike",
     "name": "Repositioning Strike",
@@ -4051,7 +4051,7 @@
     "name": "Extra Ranger Trap",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Trap class feature.",
-    "prerequisitesFormula": "sum(@ability:*:trap) AND  !@feat:extra_ranger_trap"
+    "prerequisitesFormula": "sum(@ability:trap) AND  !@feat:extra_ranger_trap"
   }, {
     "id": "feat:improved_feint",
     "name": "Improved Feint",
@@ -4069,7 +4069,7 @@
     "name": "No Name",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Grit class feature or Amateur Gunslinger feat, Bluff 4 ranks.",
-    "prerequisitesFormula": "(sum(@ability:*:grit) OR @feat:amateur_gunslinger) AND @skill:bluff \u003e\u003d 4 AND  !@feat:no_name"
+    "prerequisitesFormula": "(sum(@ability:grit) OR @feat:amateur_gunslinger) AND @skill:bluff \u003e\u003d 4 AND  !@feat:no_name"
   }, {
     "id": "feat:superior_summoning",
     "name": "Superior Summoning",
@@ -4098,7 +4098,7 @@
     "name": "Dimensional Agility",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to use the abundant step class feature or cast dimension door.",
-    "prerequisitesFormula": "(sum(@ability:*:abundant_step) OR @spell:dimension_door) AND  !@feat:dimensional_agility"
+    "prerequisitesFormula": "(sum(@ability:abundant_step) OR @spell:dimension_door) AND  !@feat:dimensional_agility"
   }, {
     "id": "feat:djinni_spin",
     "name": "Djinni Spin",
@@ -4139,7 +4139,7 @@
     "name": "Improved Rending Fury",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Rending Fury, base attack bonus +9, rend special attack.",
-    "prerequisitesFormula": "@feat:rending_fury AND @bab \u003e\u003d 9 AND sum(@ability:*:rend) AND  !@feat:improved_rending_fury"
+    "prerequisitesFormula": "@feat:rending_fury AND @bab \u003e\u003d 9 AND sum(@ability:rend) AND  !@feat:improved_rending_fury"
   }, {
     "id": "feat:empower_spell",
     "name": "Empower Spell",
@@ -4180,7 +4180,7 @@
     "name": "Instant Judgment",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Second judgment class feature.",
-    "prerequisitesFormula": "sum(@ability:*:second_judgment) AND  !@feat:instant_judgment"
+    "prerequisitesFormula": "sum(@ability:second_judgment) AND  !@feat:instant_judgment"
   }, {
     "id": "feat:rending_claws",
     "name": "Rending Claws",
@@ -4236,13 +4236,13 @@
     "name": "Channeling Scourge",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature, inquisitor level 1st.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND @class:inquisitor \u003e\u003d 1 AND  !@feat:channeling_scourge"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND @class:inquisitor \u003e\u003d 1 AND  !@feat:channeling_scourge"
   }, {
     "id": "feat:raging_deathblow",
     "name": "Raging Deathblow",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Greater rage class feature.",
-    "prerequisitesFormula": "sum(@ability:*:greater_rage) AND  !@feat:raging_deathblow"
+    "prerequisitesFormula": "sum(@ability:greater_rage) AND  !@feat:raging_deathblow"
   }, {
     "id": "feat:create_sanguine_elixir",
     "name": "Create Sanguine Elixir",
@@ -4330,7 +4330,7 @@
     "name": "School Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Wizard school class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:wizard_school) AND @feat:improved_unarmed_strike"
+    "prerequisitesFormula": "sum(@ability:wizard_school) AND @feat:improved_unarmed_strike"
   }, {
     "id": "feat:greater_reposition",
     "name": "Greater Reposition",
@@ -4353,7 +4353,7 @@
     "name": "Dimensional Dervish",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to use the abundant step class feature or cast dimension door, Dimensional Agility, Dimensional Assault, base attack bonus +6.",
-    "prerequisitesFormula": "(sum(@ability:*:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND @feat:dimensional_assault AND @bab \u003e\u003d 6 AND  !@feat:dimensional_dervish"
+    "prerequisitesFormula": "(sum(@ability:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND @feat:dimensional_assault AND @bab \u003e\u003d 6 AND  !@feat:dimensional_dervish"
   }, {
     "id": "feat:parry_spell",
     "name": "Parry Spell",
@@ -4365,7 +4365,7 @@
     "name": "Extra Lay On Hands",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Lay on hands class feature.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands)"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands)"
   }, {
     "id": "feat:murderers_circle",
     "name": "Murderer\u0027s Circle",
@@ -4383,7 +4383,7 @@
     "name": "Merciful Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND  !@feat:merciful_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND  !@feat:merciful_bane"
   }, {
     "id": "feat:split_major_hex",
     "name": "Split Major Hex",
@@ -4407,13 +4407,13 @@
     "name": "Extended Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND  !@feat:extended_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND  !@feat:extended_bane"
   }, {
     "id": "feat:disruptive_recall",
     "name": "Disruptive Recall",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Spell recall class feature, Spellcraft 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:spell_recall) AND @skill:spellcraft \u003e\u003d 5 AND  !@feat:disruptive_recall"
+    "prerequisitesFormula": "sum(@ability:spell_recall) AND @skill:spellcraft \u003e\u003d 5 AND  !@feat:disruptive_recall"
   }, {
     "id": "feat:drag_down",
     "name": "Drag Down",
@@ -4425,13 +4425,13 @@
     "name": "Judgment Surge",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Judgment class feature.",
-    "prerequisitesFormula": "sum(@ability:*:judgment) AND  !@feat:judgment_surge"
+    "prerequisitesFormula": "sum(@ability:judgment) AND  !@feat:judgment_surge"
   }, {
     "id": "feat:sap_master",
     "name": "Sap Master",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Sneak attack +3d6, Sap Adept.",
-    "prerequisitesFormula": "sum(@ability:*:sneak_attack) \u003e\u003d 3 AND @feat:sap_adept AND  !@feat:sap_master"
+    "prerequisitesFormula": "sum(@ability:sneak_attack) \u003e\u003d 3 AND @feat:sap_adept AND  !@feat:sap_master"
   }, {
     "id": "feat:snapping_turtle_style",
     "name": "Snapping Turtle Style",
@@ -4495,13 +4495,13 @@
     "name": "Radiant Charge",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Lay on hands class feature.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands) AND  !@feat:radiant_charge"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands) AND  !@feat:radiant_charge"
   }, {
     "id": "feat:signature_deed",
     "name": "Signature Deed",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Grit class feature, gunslinger level 11th.",
-    "prerequisitesFormula": "sum(@ability:*:grit) AND @class:gunslinger \u003e\u003d 11 AND  !@feat:signature_deed"
+    "prerequisitesFormula": "sum(@ability:grit) AND @class:gunslinger \u003e\u003d 11 AND  !@feat:signature_deed"
   }, {
     "id": "feat:greater_spell_specialization",
     "name": "Greater Spell Specialization",
@@ -4519,7 +4519,7 @@
     "name": "Eyes of Judgment",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Detect alignment class feature, caster level 6th.",
-    "prerequisitesFormula": "sum(@ability:*:detect_alignment) AND @caster_level \u003e\u003d 6 AND  !@feat:eyes_of_judgment"
+    "prerequisitesFormula": "sum(@ability:detect_alignment) AND @caster_level \u003e\u003d 6 AND  !@feat:eyes_of_judgment"
   }, {
     "id": "feat:escape_route",
     "name": "Escape Route",
@@ -4560,13 +4560,13 @@
     "name": "Nightmare Fist",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Improved Unarmed Strike, Intimidate 1 rank, ability to create magical darkness.",
-    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @skill:intimidate \u003e\u003d 1 AND sum(@ability:*:magical_darkness) AND  !@feat:nightmare_fist"
+    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @skill:intimidate \u003e\u003d 1 AND sum(@ability:magical_darkness) AND  !@feat:nightmare_fist"
   }, {
     "id": "feat:favored_judgment",
     "name": "Favored Judgment",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wis 13, judgment class feature.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND sum(@ability:*:judgment)"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND sum(@ability:judgment)"
   }, {
     "id": "feat:improved_familiar",
     "name": "Improved Familiar",
@@ -4630,7 +4630,7 @@
     "name": "Cartwheel Dodge",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Evasion class feature, improved evasion class feature, acrobatics 12 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:evasion) AND sum(@ability:*:improved_evasion) AND @skill:acrobatics \u003e\u003d 12 AND  !@feat:cartwheel_dodge"
+    "prerequisitesFormula": "sum(@ability:evasion) AND sum(@ability:improved_evasion) AND @skill:acrobatics \u003e\u003d 12 AND  !@feat:cartwheel_dodge"
   }, {
     "id": "feat:ability_focus",
     "name": "Ability Focus",
@@ -4647,13 +4647,13 @@
     "name": "Life Lure",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel positive energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_positive_energy) AND  !@feat:life_lure"
+    "prerequisitesFormula": "sum(@ability:channel_positive_energy) AND  !@feat:life_lure"
   }, {
     "id": "feat:ultimate_resolve",
     "name": "Ultimate Resolve",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Aura of resolve class feature.",
-    "prerequisitesFormula": "sum(@ability:*:aura_of_resolve) AND  !@feat:ultimate_resolve"
+    "prerequisitesFormula": "sum(@ability:aura_of_resolve) AND  !@feat:ultimate_resolve"
   }, {
     "id": "feat:disruptive",
     "name": "Disruptive",
@@ -4665,13 +4665,13 @@
     "name": "Sorcerous Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Sorcerer bloodline class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:sorcerer_bloodline) AND @feat:improved_unarmed_strike"
+    "prerequisitesFormula": "sum(@ability:sorcerer_bloodline) AND @feat:improved_unarmed_strike"
   }, {
     "id": "feat:eagle_eyes",
     "name": "Eagle Eyes",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wis 13, keen senses racial trait.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND sum(@ability:*:keen_senses) AND  !@feat:eagle_eyes"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND sum(@ability:keen_senses) AND  !@feat:eagle_eyes"
   }, {
     "id": "feat:felling_escape",
     "name": "Felling Escape",
@@ -4699,13 +4699,13 @@
     "name": "Revelation Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Revelation class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:revelation) AND @feat:improved_unarmed_strike"
+    "prerequisitesFormula": "sum(@ability:revelation) AND @feat:improved_unarmed_strike"
   }, {
     "id": "feat:dimensional_assault",
     "name": "Dimensional Assault",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to use the abundant step class feature or cast dimension door, Dimensional Agility.",
-    "prerequisitesFormula": "(sum(@ability:*:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND  !@feat:dimensional_assault"
+    "prerequisitesFormula": "(sum(@ability:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND  !@feat:dimensional_assault"
   }, {
     "id": "feat:go_unnoticed",
     "name": "Go Unnoticed",
@@ -4756,7 +4756,7 @@
     "name": "Amateur Gunslinger",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "You have no levels in a class that has the grit class feature.",
-    "prerequisitesFormula": "sum(@ability:*:you_have_no_levels_in_a_class_that_has_the_grit) AND  !@feat:amateur_gunslinger"
+    "prerequisitesFormula": "sum(@ability:you_have_no_levels_in_a_class_that_has_the_grit) AND  !@feat:amateur_gunslinger"
   }, {
     "id": "feat:ironguts",
     "name": "Ironguts",
@@ -4768,13 +4768,13 @@
     "name": "Sap Adept",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Sneak attack +1d6.",
-    "prerequisitesFormula": "sum(@ability:*:sneak_attack) \u003e\u003d 1 AND  !@feat:sap_adept"
+    "prerequisitesFormula": "sum(@ability:sneak_attack) \u003e\u003d 1 AND  !@feat:sap_adept"
   }, {
     "id": "feat:earth_child_style",
     "name": "Earth Child Style",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Wis 13, dwarf or gnome, defensive training racial trait, Improved Unarmed Strike, Acrobatics 3 ranks.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND @feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 3 AND  !@feat:earth_child_style"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND @feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 3 AND  !@feat:earth_child_style"
   }, {
     "id": "feat:master_combat_performer",
     "name": "Master Combat Performer",
@@ -5033,7 +5033,7 @@
     "name": "Extra Discovery",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Discovery class feature.",
-    "prerequisitesFormula": "sum(@ability:*:discovery)"
+    "prerequisitesFormula": "sum(@ability:discovery)"
   }, {
     "id": "feat:thanatopic_spell",
     "name": "Thanatopic Spell",
@@ -5045,7 +5045,7 @@
     "name": "Quick Wild Shape",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild shape class feature, caster level 8th.",
-    "prerequisitesFormula": "sum(@ability:*:wild_shape) AND @caster_level \u003e\u003d 8 AND  !@feat:quick_wild_shape"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND @caster_level \u003e\u003d 8 AND  !@feat:quick_wild_shape"
   }, {
     "id": "feat:missile_shield",
     "name": "Missile Shield",
@@ -5063,13 +5063,13 @@
     "name": "Adept Champion",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Smite evil class feature, base attack bonus +5.",
-    "prerequisitesFormula": "sum(@ability:*:smite_evil) AND @bab \u003e\u003d 5 AND  !@feat:adept_champion"
+    "prerequisitesFormula": "sum(@ability:smite_evil) AND @bab \u003e\u003d 5 AND  !@feat:adept_champion"
   }, {
     "id": "feat:dragonbane_aura",
     "name": "Dragonbane Aura",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Aura of courage class feature, caster level 8th.",
-    "prerequisitesFormula": "sum(@ability:*:aura_of_courage) AND @caster_level \u003e\u003d 8 AND  !@feat:dragonbane_aura"
+    "prerequisitesFormula": "sum(@ability:aura_of_courage) AND @caster_level \u003e\u003d 8 AND  !@feat:dragonbane_aura"
   }, {
     "id": "feat:extra_cantrips_or_orisons",
     "name": "Extra Cantrips or Orisons",
@@ -5087,7 +5087,7 @@
     "name": "Dimensional Maneuvers",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ability to use the abundant step class feature or cast dimension door, Dimensional Agility, Dimensional Assault, Dimensional Dervish, base attack bonus +9.",
-    "prerequisitesFormula": "(sum(@ability:*:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND @feat:dimensional_assault AND @feat:dimensional_dervish AND @bab \u003e\u003d 9 AND  !@feat:dimensional_maneuvers"
+    "prerequisitesFormula": "(sum(@ability:abundant_step) OR @spell:dimension_door) AND @feat:dimensional_agility AND @feat:dimensional_assault AND @feat:dimensional_dervish AND @bab \u003e\u003d 9 AND  !@feat:dimensional_maneuvers"
   }, {
     "id": "feat:improved_whip_mastery",
     "name": "Improved Whip Mastery",
@@ -5123,7 +5123,7 @@
     "name": "Strangler",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Dex 13, sneak attack +1d6, Improved Grapple, Improved Unarmed Strike.",
-    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND sum(@ability:*:sneak_attack) \u003e\u003d 1 AND @feat:improved_grapple AND @feat:improved_unarmed_strike AND  !@feat:strangler"
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND sum(@ability:sneak_attack) \u003e\u003d 1 AND @feat:improved_grapple AND @feat:improved_unarmed_strike AND  !@feat:strangler"
   }, {
     "id": "feat:lucky_halfling",
     "name": "Lucky Halfling",
@@ -5163,7 +5163,7 @@
     "name": "Summoner\u0027s Call",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Eidolon class feature.",
-    "prerequisitesFormula": "sum(@ability:*:eidolon) AND  !@feat:summoners_call"
+    "prerequisitesFormula": "sum(@ability:eidolon) AND  !@feat:summoners_call"
   }, {
     "id": "feat:mantis_torment",
     "name": "Mantis Torment",
@@ -5187,7 +5187,7 @@
     "name": "Thoughtful Discernment",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Discern lies class feature.",
-    "prerequisitesFormula": "sum(@ability:*:discern_lies) AND  !@feat:thoughtful_discernment"
+    "prerequisitesFormula": "sum(@ability:discern_lies) AND  !@feat:thoughtful_discernment"
   }, {
     "id": "feat:diviners_delving",
     "name": "Diviner\u0027s Delving",
@@ -5199,7 +5199,7 @@
     "name": "Prophetic Visionary",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Mystery class feature.",
-    "prerequisitesFormula": "sum(@ability:*:mystery) AND  !@feat:prophetic_visionary"
+    "prerequisitesFormula": "sum(@ability:mystery) AND  !@feat:prophetic_visionary"
   }, {
     "id": "feat:far_shot",
     "name": "Far Shot",
@@ -5222,7 +5222,7 @@
     "name": "Raging Throw",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Str 13, Con 13, rage class feature, Improved Bull Rush, Power Attack, base attack bonus +6.",
-    "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @con_score \u003e\u003d 13 AND sum(@ability:*:rage) AND @feat:improved_bull_rush AND @feat:power_attack AND @bab \u003e\u003d 6 AND  !@feat:raging_throw"
+    "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @con_score \u003e\u003d 13 AND sum(@ability:rage) AND @feat:improved_bull_rush AND @feat:power_attack AND @bab \u003e\u003d 6 AND  !@feat:raging_throw"
   }, {
     "id": "feat:improved_shield_bash",
     "name": "Improved Shield Bash",
@@ -5246,7 +5246,7 @@
     "name": "Shapeshifting Hunter",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Favored enemy class feature, wild shape class feature.",
-    "prerequisitesFormula": "sum(@ability:*:favored_enemy) AND sum(@ability:*:wild_shape) AND  !@feat:shapeshifting_hunter"
+    "prerequisitesFormula": "sum(@ability:favored_enemy) AND sum(@ability:wild_shape) AND  !@feat:shapeshifting_hunter"
   }, {
     "id": "feat:pass_for_human",
     "name": "Pass For Human",
@@ -5305,13 +5305,13 @@
     "name": "Contingent Channeling",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "True healer class feature, Selective Channeling.",
-    "prerequisitesFormula": "sum(@ability:*:true_healer) AND @feat:selective_channeling AND  !@feat:contingent_channeling"
+    "prerequisitesFormula": "sum(@ability:true_healer) AND @feat:selective_channeling AND  !@feat:contingent_channeling"
   }, {
     "id": "feat:groundling",
     "name": "Groundling",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, gnome, gnome magic racial trait.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @race \u003d\u003d \u0027gnome\u0027 AND sum(@ability:*:gnome_magic) AND  !@feat:groundling"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @race \u003d\u003d \u0027gnome\u0027 AND sum(@ability:gnome_magic) AND  !@feat:groundling"
   }, {
     "id": "feat:net_maneuvering",
     "name": "Net Maneuvering",
@@ -5323,7 +5323,7 @@
     "name": "Resilient Eidolon",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Eidolon class feature.",
-    "prerequisitesFormula": "sum(@ability:*:eidolon) AND  !@feat:resilient_eidolon"
+    "prerequisitesFormula": "sum(@ability:eidolon) AND  !@feat:resilient_eidolon"
   }, {
     "id": "feat:sickening_spell",
     "name": "Sickening Spell",
@@ -5346,7 +5346,7 @@
     "name": "Channel Smite",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Channel energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND  !@feat:channel_smite"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:channel_smite"
   }, {
     "id": "feat:mobility",
     "name": "Mobility",
@@ -5364,7 +5364,7 @@
     "name": "Greater Mercy",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, lay on hands class feature, mercy class feature.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:lay_on_hands) AND sum(@ability:*:mercy) AND  !@feat:greater_mercy"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:lay_on_hands) AND sum(@ability:mercy) AND  !@feat:greater_mercy"
   }, {
     "id": "feat:enforcer",
     "name": "Enforcer",
@@ -5376,7 +5376,7 @@
     "name": "Ultimate Mercy",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 19, Greater Mercy, lay on hands, mercy class feature.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 19 AND @feat:greater_mercy AND sum(@ability:*:lay_on_hands) AND sum(@ability:*:mercy) AND  !@feat:ultimate_mercy"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 19 AND @feat:greater_mercy AND sum(@ability:lay_on_hands) AND sum(@ability:mercy) AND  !@feat:ultimate_mercy"
   }, {
     "id": "feat:sickening_critical",
     "name": "Sickening Critical",
@@ -5388,7 +5388,7 @@
     "name": "Greater Rending Fury",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Improved Rending Fury, Rending Fury, base attack bonus +12, rend special attack.",
-    "prerequisitesFormula": "@feat:improved_rending_fury AND @feat:rending_fury AND @bab \u003e\u003d 12 AND sum(@ability:*:rend) AND  !@feat:greater_rending_fury"
+    "prerequisitesFormula": "@feat:improved_rending_fury AND @feat:rending_fury AND @bab \u003e\u003d 12 AND sum(@ability:rend) AND  !@feat:greater_rending_fury"
   }, {
     "id": "feat:stage_combatant",
     "name": "Stage Combatant",
@@ -5423,7 +5423,7 @@
     "name": "Intimidating Gaze",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13+, stern gaze class feature, Intimidate 5 ranks.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:stern_gaze) AND @skill:intimidate \u003e\u003d 5 AND  !@feat:intimidating_gaze"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:stern_gaze) AND @skill:intimidate \u003e\u003d 5 AND  !@feat:intimidating_gaze"
   }, {
     "id": "feat:whip_mastery",
     "name": "Whip Mastery",
@@ -5435,7 +5435,7 @@
     "name": "Cooperative Crafting",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "1 rank in any Craft skill, any item creation feat.",
-    "prerequisitesFormula": "min(@skill:craft:*) \u003e\u003d 1 AND  !@feat:cooperative_crafting"
+    "prerequisitesFormula": "min(@skill:craft) \u003e\u003d 1 AND  !@feat:cooperative_crafting"
   }, {
     "id": "feat:improved_dirty_trick",
     "name": "Improved Dirty Trick",
@@ -5459,13 +5459,13 @@
     "name": "Furious Finish",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Rage class feature, Vital Strike, base attack bonus +6.",
-    "prerequisitesFormula": "sum(@ability:*:rage) AND @feat:vital_strike AND @bab \u003e\u003d 6 AND  !@feat:furious_finish"
+    "prerequisitesFormula": "sum(@ability:rage) AND @feat:vital_strike AND @bab \u003e\u003d 6 AND  !@feat:furious_finish"
   }, {
     "id": "feat:righteous_healing",
     "name": "Righteous Healing",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Judgment class feature.",
-    "prerequisitesFormula": "sum(@ability:*:judgment) AND  !@feat:righteous_healing"
+    "prerequisitesFormula": "sum(@ability:judgment) AND  !@feat:righteous_healing"
   }, {
     "id": "feat:heroic_recovery",
     "name": "Heroic Recovery",
@@ -5483,7 +5483,7 @@
     "name": "Deep Drinker",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Con 13, monk level 11, drunken ki class feature.",
-    "prerequisitesFormula": "@con_score \u003e\u003d 13 AND @class:monk \u003e\u003d 11 AND sum(@ability:*:drunken_ki) AND  !@feat:deep_drinker"
+    "prerequisitesFormula": "@con_score \u003e\u003d 13 AND @class:monk \u003e\u003d 11 AND sum(@ability:drunken_ki) AND  !@feat:deep_drinker"
   }, {
     "id": "feat:step_up",
     "name": "Step Up",
@@ -5501,13 +5501,13 @@
     "name": "Spell Hex",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Major hex class feature.",
-    "prerequisitesFormula": "sum(@ability:*:major_hex) AND  !@feat:spell_hex"
+    "prerequisitesFormula": "sum(@ability:major_hex) AND  !@feat:spell_hex"
   }, {
     "id": "feat:improved_channel",
     "name": "Improved Channel",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND  !@feat:improved_channel"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:improved_channel"
   }, {
     "id": "feat:two_weapon_defense",
     "name": "Two-Weapon Defense",
@@ -5519,7 +5519,7 @@
     "name": "Earth Child Topple",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Wis 13, dwarf or gnome, defensive training racial trait, Earth Child Style, Improved Trip, Improved Unarmed Strike, Acrobatics 6 ranks.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND @feat:earth_child_style AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 6 AND  !@feat:earth_child_topple"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND @feat:earth_child_style AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 6 AND  !@feat:earth_child_topple"
   }, {
     "id": "feat:disruptive_spell",
     "name": "Disruptive Spell",
@@ -5566,7 +5566,7 @@
     "name": "Extra Rage",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Rage class feature.",
-    "prerequisitesFormula": "sum(@ability:*:rage)"
+    "prerequisitesFormula": "sum(@ability:rage)"
   }, {
     "id": "feat:persistent_spell",
     "name": "Persistent Spell",
@@ -6447,7 +6447,7 @@
     "name": "Favored Defense",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Favored enemy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:favored_enemy)"
+    "prerequisitesFormula": "sum(@ability:favored_enemy)"
   }, {
     "id": "feat:back_to_back",
     "name": "Back to Back",
@@ -6459,7 +6459,7 @@
     "name": "Double Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature, Two-Weapon Fighting.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND @feat:two_weapon_fighting AND  !@feat:double_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND @feat:two_weapon_fighting AND  !@feat:double_bane"
   }, {
     "id": "feat:gunsmithing",
     "name": "Gunsmithing",
@@ -6470,7 +6470,7 @@
     "name": "Dastardly Finish",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Sneak attack +5d6.",
-    "prerequisitesFormula": "sum(@ability:*:sneak_attack) \u003e\u003d 5 AND  !@feat:dastardly_finish"
+    "prerequisitesFormula": "sum(@ability:sneak_attack) \u003e\u003d 5 AND  !@feat:dastardly_finish"
   }, {
     "id": "feat:disengaging_flourish",
     "name": "Disengaging Flourish",
@@ -6499,7 +6499,7 @@
     "name": "Fast Empathy",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Handle Animal 5 ranks, wild empathy class feature.",
-    "prerequisitesFormula": "@skill:handle_animal \u003e\u003d 5 AND sum(@ability:*:wild_empathy) AND  !@feat:fast_empathy"
+    "prerequisitesFormula": "@skill:handle_animal \u003e\u003d 5 AND sum(@ability:wild_empathy) AND  !@feat:fast_empathy"
   }, {
     "id": "feat:deadly_aim",
     "name": "Deadly Aim",
@@ -6511,7 +6511,7 @@
     "name": "Sense Link",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bond senses class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bond_senses) AND  !@feat:sense_link"
+    "prerequisitesFormula": "sum(@ability:bond_senses) AND  !@feat:sense_link"
   }, {
     "id": "feat:team_up",
     "name": "Team Up",
@@ -6541,7 +6541,7 @@
     "name": "Selective Channeling",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, channel energy class feature.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:channel_energy) AND  !@feat:selective_channeling"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND (@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:selective_channeling"
   }, {
     "id": "feat:touch_of_serenity",
     "name": "Touch of Serenity",
@@ -6559,19 +6559,19 @@
     "name": "Sacred Summons",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Aura class feature, ability to cast summon monster.",
-    "prerequisitesFormula": "sum(@ability:*:aura) AND @spell:summon_monster AND  !@feat:sacred_summons"
+    "prerequisitesFormula": "sum(@ability:aura) AND @spell:summon_monster AND  !@feat:sacred_summons"
   }, {
     "id": "feat:ki_stand",
     "name": "Ki Stand",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ki pool.",
-    "prerequisitesFormula": "sum(@ability:*:ki_pool) AND  !@feat:ki_stand"
+    "prerequisitesFormula": "sum(@ability:ki_pool) AND  !@feat:ki_stand"
   }, {
     "id": "feat:improved_stonecunning",
     "name": "Improved Stonecunning",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wis 13, dwarf, stonecunning racial trait.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND @race \u003d\u003d \u0027dwarf\u0027 AND sum(@ability:*:stonecunning) AND  !@feat:improved_stonecunning"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND @race \u003d\u003d \u0027dwarf\u0027 AND sum(@ability:stonecunning) AND  !@feat:improved_stonecunning"
   }, {
     "id": "feat:sunlight_summons",
     "name": "Sunlight Summons",
@@ -6601,13 +6601,13 @@
     "name": "Turn Undead",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel positive energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_positive_energy) AND  !@feat:turn_undead"
+    "prerequisitesFormula": "sum(@ability:channel_positive_energy) AND  !@feat:turn_undead"
   }, {
     "id": "feat:horse_master",
     "name": "Horse Master",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Expert trainer class feature (Advanced Player\u0027s Guide 33), Ride 6 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:expert_trainer) AND @skill:ride \u003e\u003d 6 AND  !@feat:horse_master"
+    "prerequisitesFormula": "sum(@ability:expert_trainer) AND @skill:ride \u003e\u003d 6 AND  !@feat:horse_master"
   }, {
     "id": "feat:snake_style",
     "name": "Snake Style",
@@ -6648,13 +6648,13 @@
     "name": "Accursed Hex",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Hex class feature.",
-    "prerequisitesFormula": "sum(@ability:*:hex) AND  !@feat:accursed_hex"
+    "prerequisitesFormula": "sum(@ability:hex) AND  !@feat:accursed_hex"
   }, {
     "id": "feat:war_singer",
     "name": "War Singer",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, bardic performance class feature, half-orc or orc.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:bardic_performance) AND (@race \u003d\u003d \u0027half-orc\u0027 OR @race \u003d\u003d \u0027orc\u0027) AND  !@feat:war_singer"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:bardic_performance) AND (@race \u003d\u003d \u0027half-orc\u0027 OR @race \u003d\u003d \u0027orc\u0027) AND  !@feat:war_singer"
   }, {
     "id": "feat:deceptive_exchange",
     "name": "Deceptive Exchange",
@@ -6672,7 +6672,7 @@
     "name": "Vermin Heart",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild empathy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:wild_empathy) AND  !@feat:vermin_heart"
+    "prerequisitesFormula": "sum(@ability:wild_empathy) AND  !@feat:vermin_heart"
   }, {
     "id": "feat:dispelling_fist",
     "name": "Dispelling Fist",
@@ -6689,7 +6689,7 @@
     "name": "Twin Thunders Flurry",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Dwarf or gnome; defensive training racial trait; Improved Two-Weapon Fighting and Two-Weapon Fighting, or flurry of blows class feature; Twin Thunders; Weapon Focus with both wielded weapons; base attack bonus +6.",
-    "prerequisitesFormula": "(@race \u003d\u003d \u0027Dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND sum(@ability:*:or_flurry_of_blows) AND @feat:twin_thunders AND @feat:weapon_focus AND @bab \u003e\u003d 6 AND  !@feat:twin_thunders_flurry"
+    "prerequisitesFormula": "(@race \u003d\u003d \u0027Dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND sum(@ability:or_flurry_of_blows) AND @feat:twin_thunders AND @feat:weapon_focus AND @bab \u003e\u003d 6 AND  !@feat:twin_thunders_flurry"
   }, {
     "id": "feat:stone_faced",
     "name": "Stone-Faced",
@@ -6706,7 +6706,7 @@
     "name": "Extra Grit",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Grit class feature or the Amateur Gunslinger feat.",
-    "prerequisitesFormula": "(sum(@ability:*:grit) OR @feat:amateur_gunslinger)"
+    "prerequisitesFormula": "(sum(@ability:grit) OR @feat:amateur_gunslinger)"
   }, {
     "id": "feat:critical_focus",
     "name": "Critical Focus",
@@ -6730,7 +6730,7 @@
     "name": "Extra Hex",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Hex class feature.",
-    "prerequisitesFormula": "sum(@ability:*:hex)"
+    "prerequisitesFormula": "sum(@ability:hex)"
   }, {
     "id": "feat:final_embrace_master",
     "name": "Final Embrace Master",
@@ -6742,7 +6742,7 @@
     "name": "Spell Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND  !@feat:spell_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND  !@feat:spell_bane"
   }, {
     "id": "feat:improved_sunder",
     "name": "Improved Sunder",
@@ -6811,7 +6811,7 @@
     "name": "Greater Wild Empathy",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Knowledge (nature) 5 ranks, wild empathy class feature.",
-    "prerequisitesFormula": "@skill:knowledge:nature \u003e\u003d 5 AND sum(@ability:*:wild_empathy) AND  !@feat:greater_wild_empathy"
+    "prerequisitesFormula": "@skill:knowledge:nature \u003e\u003d 5 AND sum(@ability:wild_empathy) AND  !@feat:greater_wild_empathy"
   }, {
     "id": "feat:greater_blind_fight",
     "name": "Greater Blind-Fight",
@@ -7705,7 +7705,7 @@
     "name": "Hex Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Hex class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:hex) AND @feat:improved_unarmed_strike"
+    "prerequisitesFormula": "sum(@ability:hex) AND @feat:improved_unarmed_strike"
   }, {
     "id": "feat:trappers_setup",
     "name": "Trapper\u0027s Setup",
@@ -7723,7 +7723,7 @@
     "name": "Slayer\u0027s Knack",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Favored enemy class feature, base attack bonus +6.",
-    "prerequisitesFormula": "sum(@ability:*:favored_enemy) AND @bab \u003e\u003d 6"
+    "prerequisitesFormula": "sum(@ability:favored_enemy) AND @bab \u003e\u003d 6"
   }, {
     "id": "feat:tripping_twirl",
     "name": "Tripping Twirl",
@@ -7759,7 +7759,7 @@
     "name": "Rebounding Leap",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Leaping lance class feature, Acrobatics 5 ranks, Ride 11 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:leaping_lance) AND @skill:acrobatics \u003e\u003d 5 AND @skill:ride \u003e\u003d 11 AND  !@feat:rebounding_leap"
+    "prerequisitesFormula": "sum(@ability:leaping_lance) AND @skill:acrobatics \u003e\u003d 5 AND @skill:ride \u003e\u003d 11 AND  !@feat:rebounding_leap"
   }, {
     "id": "feat:two_handed_thrower",
     "name": "Two-Handed Thrower",
@@ -7801,7 +7801,7 @@
     "name": "Raging Hurler",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Rage class feature, Throw Anything.",
-    "prerequisitesFormula": "sum(@ability:*:rage) AND @feat:throw_anything AND  !@feat:raging_hurler"
+    "prerequisitesFormula": "sum(@ability:rage) AND @feat:throw_anything AND  !@feat:raging_hurler"
   }, {
     "id": "feat:improved_back_to_back",
     "name": "Improved Back to Back",
@@ -7819,19 +7819,19 @@
     "name": "Painful Anchor",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Anchoring aura class feature.",
-    "prerequisitesFormula": "sum(@ability:*:anchoring_aura) AND  !@feat:painful_anchor"
+    "prerequisitesFormula": "sum(@ability:anchoring_aura) AND  !@feat:painful_anchor"
   }, {
     "id": "feat:moonlight_stalker_feint",
     "name": "Moonlight Stalker Feint",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Int 13, Blind-Fight, Combat Expertise, Moonlight Stalker, Bluff 6 ranks, darkvision or lowlight vision racial trait.",
-    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:blind_fight AND @feat:combat_expertise AND @feat:moonlight_stalker AND @skill:bluff \u003e\u003d 6 AND @ability:sum(@ability:*:@ability:darkvision_or_lowlight_vision) AND  !@feat:moonlight_stalker_feint"
+    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:blind_fight AND @feat:combat_expertise AND @feat:moonlight_stalker AND @skill:bluff \u003e\u003d 6 AND @ability:sum(@ability:@ability:darkvision_or_lowlight_vision) AND  !@feat:moonlight_stalker_feint"
   }, {
     "id": "feat:extra_bombs",
     "name": "Extra Bombs",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bomb class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bomb)"
+    "prerequisitesFormula": "sum(@ability:bomb)"
   }, {
     "id": "feat:crippling_critical",
     "name": "Crippling Critical",
@@ -7854,7 +7854,7 @@
     "name": "Rebuffing Reduction",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Str 13, damage reduction, Improved Bull Rush, Power Attack, base attack bonus +1.",
-    "prerequisitesFormula": "@str_score \u003e\u003d 13 AND max(@ability:*:damage_reduction) AND @feat:improved_bull_rush AND @feat:power_attack AND @bab \u003e\u003d 1 AND  !@feat:rebuffing_reduction"
+    "prerequisitesFormula": "@str_score \u003e\u003d 13 AND max(@ability:damage_reduction) AND @feat:improved_bull_rush AND @feat:power_attack AND @bab \u003e\u003d 1 AND  !@feat:rebuffing_reduction"
   }, {
     "id": "feat:lightning_reflexes",
     "name": "Lightning Reflexes",
@@ -8757,7 +8757,7 @@
     "name": "Menacing Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND  !@feat:menacing_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND  !@feat:menacing_bane"
   }, {
     "id": "feat:perfect_strike",
     "name": "Perfect Strike",
@@ -8787,7 +8787,7 @@
     "name": "Master Craftsman",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "5 ranks in any Craft or Profession skill.",
-    "prerequisitesFormula": "(max(@skill:craft:*) \u003e\u003d 5 OR max(@skill:profession:*) \u003e\u003d 5) AND  !@feat:master_craftsman"
+    "prerequisitesFormula": "(max(@skill:craft) \u003e\u003d 5 OR max(@skill:profession) \u003e\u003d 5) AND  !@feat:master_craftsman"
   }, {
     "id": "feat:shared_insight",
     "name": "Shared Insight",
@@ -8799,7 +8799,7 @@
     "name": "Haunted Gnome",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Cha 13, gnome magic racial trait, Knowledge (arcana) 1 rank.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:gnome_magic) AND @skill:knowledge:arcana \u003e\u003d 1 AND  !@feat:haunted_gnome"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @skill:knowledge:arcana \u003e\u003d 1 AND  !@feat:haunted_gnome"
   }, {
     "id": "feat:reach_spell",
     "name": "Reach Spell",
@@ -8810,7 +8810,7 @@
     "name": "Fearless Aura",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Aura of courage class feature, caster level 8th.",
-    "prerequisitesFormula": "sum(@ability:*:aura_of_courage) AND @caster_level \u003e\u003d 8 AND  !@feat:fearless_aura"
+    "prerequisitesFormula": "sum(@ability:aura_of_courage) AND @caster_level \u003e\u003d 8 AND  !@feat:fearless_aura"
   }, {
     "id": "feat:deft_hands",
     "name": "Deft Hands",
@@ -8821,7 +8821,7 @@
     "name": "Crusader\u0027s Flurry",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature, flurry of blows class feature, Weapon Focus with your deity\u0027s favored melee weapon.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND sum(@ability:*:flurry_of_blows) AND @feat:weapon_focus AND  !@feat:crusaders_flurry"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND sum(@ability:flurry_of_blows) AND @feat:weapon_focus AND  !@feat:crusaders_flurry"
   }, {
     "id": "feat:deathless_master",
     "name": "Deathless Master",
@@ -8833,7 +8833,7 @@
     "name": "Earth Child Binder",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Wis 13, dwarf or gnome, defensive training racial trait, Earth Child Style, Earth Child Topple, Greater Trip, Improved Trip, Improved Unarmed Strike, Stunning Fist, Acrobatics 9 ranks.",
-    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND @feat:earth_child_style AND @feat:earth_child_topple AND @feat:greater_trip AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @feat:stunning_fist AND @skill:acrobatics \u003e\u003d 9 AND  !@feat:earth_child_binder"
+    "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race \u003d\u003d \u0027dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND @feat:earth_child_style AND @feat:earth_child_topple AND @feat:greater_trip AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @feat:stunning_fist AND @skill:acrobatics \u003e\u003d 9 AND  !@feat:earth_child_binder"
   }, {
     "id": "feat:racial_heritage",
     "name": "Racial Heritage",
@@ -8904,7 +8904,7 @@
     "name": "Extra Rogue Talent",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Rogue talent class feature.",
-    "prerequisitesFormula": "sum(@ability:*:rogue_talent)"
+    "prerequisitesFormula": "sum(@ability:rogue_talent)"
   }, {
     "id": "feat:broken_wing_gambit",
     "name": "Broken Wing Gambit",
@@ -8921,13 +8921,13 @@
     "name": "Extra Channel",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND  !@feat:extra_channel"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:extra_channel"
   }, {
     "id": "feat:gliding_steps",
     "name": "Gliding Steps",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Dodge, Mobility, Nimble Moves, ki pool.",
-    "prerequisitesFormula": "@feat:dodge AND @feat:mobility AND @feat:nimble_moves AND sum(@ability:*:ki_pool) AND  !@feat:gliding_steps"
+    "prerequisitesFormula": "@feat:dodge AND @feat:mobility AND @feat:nimble_moves AND sum(@ability:ki_pool) AND  !@feat:gliding_steps"
   }, {
     "id": "feat:wingover",
     "name": "Wingover",
@@ -9809,7 +9809,7 @@
     "name": "Pinpoint Poisoner",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Poison use class feature, Craft (alchemy) 6 ranks, Adder Strike, Improved Unarmed Strike, Two-Weapon Fighting or flurry of blows class feature.",
-    "prerequisitesFormula": "sum(@ability:*:poison_use) AND @skill:craft:alchemy \u003e\u003d 6 AND @feat:adder_strike AND @feat:improved_unarmed_strike AND sum(@ability:*:two_weapon_fighting_or_flurry_of_blows) AND  !@feat:pinpoint_poisoner"
+    "prerequisitesFormula": "sum(@ability:poison_use) AND @skill:craft:alchemy \u003e\u003d 6 AND @feat:adder_strike AND @feat:improved_unarmed_strike AND sum(@ability:two_weapon_fighting_or_flurry_of_blows) AND  !@feat:pinpoint_poisoner"
   }, {
     "id": "feat:shield_of_swings",
     "name": "Shield of Swings",
@@ -9872,13 +9872,13 @@
     "name": "Shapeshifter Foil",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Knowledge (arcana) 5 ranks or Knowledge (nature) 5 ranks, ability to use any polymorph effect.",
-    "prerequisitesFormula": "(@skill:knowledge:arcana \u003e\u003d 5 OR @skill:knowledge:nature \u003e\u003d 5) AND max(@ability:*:polymorph) AND  !@feat:shapeshifter_foil"
+    "prerequisitesFormula": "(@skill:knowledge:arcana \u003e\u003d 5 OR @skill:knowledge:nature \u003e\u003d 5) AND max(@ability:polymorph) AND  !@feat:shapeshifter_foil"
   }, {
     "id": "feat:sin_seer",
     "name": "Sin Seer",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Detect undead paladin class feature.",
-    "prerequisitesFormula": "sum(@ability:*:detect_undead_paladin) AND  !@feat:sin_seer"
+    "prerequisitesFormula": "sum(@ability:detect_undead_paladin) AND  !@feat:sin_seer"
   }, {
     "id": "feat:felling_smash",
     "name": "Felling Smash",
@@ -9919,7 +9919,7 @@
     "name": "Aspect of the Beast",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "wild shape class feature, see Special.",
-    "prerequisitesFormula": "sum(@ability:*:wild_shape) AND  !@feat:aspect_of_the_beast"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND  !@feat:aspect_of_the_beast"
   }, {
     "id": "feat:improved_eldritch_heritage",
     "name": "Improved Eldritch Heritage",
@@ -9937,7 +9937,7 @@
     "name": "Extra Revelation",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Revelation class feature.",
-    "prerequisitesFormula": "sum(@ability:*:revelation)"
+    "prerequisitesFormula": "sum(@ability:revelation)"
   }, {
     "id": "feat:keen_scent",
     "name": "Keen Scent",
@@ -9955,7 +9955,7 @@
     "name": "Pure Faith",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Divine health class feature.",
-    "prerequisitesFormula": "sum(@ability:*:divine_health) AND  !@feat:pure_faith"
+    "prerequisitesFormula": "sum(@ability:divine_health) AND  !@feat:pure_faith"
   }, {
     "id": "feat:improved_precise_shot",
     "name": "Improved Precise Shot",
@@ -9985,7 +9985,7 @@
     "name": "Adder Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Poison use class feature, Craft (alchemy) 1 rank, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:poison_use) AND @skill:craft:alchemy \u003e\u003d 1 AND @feat:improved_unarmed_strike AND  !@feat:adder_strike"
+    "prerequisitesFormula": "sum(@ability:poison_use) AND @skill:craft:alchemy \u003e\u003d 1 AND @feat:improved_unarmed_strike AND  !@feat:adder_strike"
   }, {
     "id": "feat:strike_back",
     "name": "Strike Back",
@@ -10008,7 +10008,7 @@
     "name": "Twin Thunders Master",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Dwarf or gnome; defensive training racial trait; Improved Two-Weapon Fighting and Two-Weapon Fighting, or flurry of blows class feature; Twin Thunders; Twin Thunders Flurry; Weapon Focus with both wielded weapons; base attack bonus +9.",
-    "prerequisitesFormula": "(@race \u003d\u003d \u0027Dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND sum(@ability:*:or_flurry_of_blows) AND @feat:twin_thunders AND @feat:twin_thunders_flurry AND @feat:weapon_focus AND @bab \u003e\u003d 9 AND  !@feat:twin_thunders_master"
+    "prerequisitesFormula": "(@race \u003d\u003d \u0027Dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND sum(@ability:or_flurry_of_blows) AND @feat:twin_thunders AND @feat:twin_thunders_flurry AND @feat:weapon_focus AND @bab \u003e\u003d 9 AND  !@feat:twin_thunders_master"
   }, {
     "id": "feat:two_weapon_rend",
     "name": "Two-Weapon Rend",
@@ -10042,7 +10042,7 @@
     "name": "Haunted Gnome Shroud",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Cha 13, gnome magic racial trait, Haunted Gnome, Haunted Gnome Assault, Knowledge (arcana) 6 ranks.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:*:gnome_magic) AND @feat:haunted_gnome AND @feat:haunted_gnome_assault AND @skill:knowledge:arcana \u003e\u003d 6 AND  !@feat:haunted_gnome_shroud"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @feat:haunted_gnome_assault AND @skill:knowledge:arcana \u003e\u003d 6 AND  !@feat:haunted_gnome_shroud"
   }, {
     "id": "feat:stabbing_shot",
     "name": "Stabbing Shot",
@@ -10122,7 +10122,7 @@
     "name": "Extra Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND  !@feat:extra_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND  !@feat:extra_bane"
   }, {
     "id": "feat:bleeding_critical",
     "name": "Bleeding Critical",
@@ -10134,7 +10134,7 @@
     "name": "Domain Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Domain class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:domain) AND @feat:improved_unarmed_strike"
+    "prerequisitesFormula": "sum(@ability:domain) AND @feat:improved_unarmed_strike"
   }, {
     "id": "feat:greater_shield_focus",
     "name": "Greater Shield Focus",
@@ -10152,7 +10152,7 @@
     "name": "Exploit Lore",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Monster lore class feature, base attack bonus +11.",
-    "prerequisitesFormula": "sum(@ability:*:monster_lore) AND @bab \u003e\u003d 11 AND  !@feat:exploit_lore"
+    "prerequisitesFormula": "sum(@ability:monster_lore) AND @bab \u003e\u003d 11 AND  !@feat:exploit_lore"
   }, {
     "id": "feat:greater_spell_focus",
     "name": "Greater Spell Focus",
@@ -10164,7 +10164,7 @@
     "name": "Intimidating Bane",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bane class feature, Dazzling Display, Weapon Focus, character level 8th.",
-    "prerequisitesFormula": "sum(@ability:*:bane) AND @feat:dazzling_display AND @feat:weapon_focus AND @level \u003e\u003d 8 AND  !@feat:intimidating_bane"
+    "prerequisitesFormula": "sum(@ability:bane) AND @feat:dazzling_display AND @feat:weapon_focus AND @level \u003e\u003d 8 AND  !@feat:intimidating_bane"
   }, {
     "id": "feat:toppling_spell",
     "name": "Toppling Spell",
@@ -10215,7 +10215,7 @@
     "name": "Focused Eidolon",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Shield ally class feature.",
-    "prerequisitesFormula": "sum(@ability:*:shield_ally) AND  !@feat:focused_eidolon"
+    "prerequisitesFormula": "sum(@ability:shield_ally) AND  !@feat:focused_eidolon"
   }, {
     "id": "feat:greater_dirty_trick",
     "name": "Greater Dirty Trick",
@@ -10245,7 +10245,7 @@
     "name": "Versatile Channeler",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature, necromancer or neutrally aligned cleric (see below).",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND (@alignment \u003d\u003d \u0027ng\u0027 OR @alignment \u003d\u003d \u0027n\u0027 OR @alignment \u003d\u003d \u0027ne\u0027) AND  !@feat:versatile_channeler"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND (@alignment \u003d\u003d \u0027ng\u0027 OR @alignment \u003d\u003d \u0027n\u0027 OR @alignment \u003d\u003d \u0027ne\u0027) AND  !@feat:versatile_channeler"
   }, {
     "id": "feat:two_weapon_feint",
     "name": "Two-Weapon Feint",
@@ -10311,7 +10311,7 @@
     "name": "Extra Arcane Pool",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Arcane pool class feature.",
-    "prerequisitesFormula": "sum(@ability:*:arcane_pool)"
+    "prerequisitesFormula": "sum(@ability:arcane_pool)"
   }, {
     "id": "feat:rime_spell",
     "name": "Rime Spell",
@@ -10340,7 +10340,7 @@
     "name": "Monastic Legacy",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Still mind class feature, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:*:still_mind) AND @feat:improved_unarmed_strike AND  !@feat:monastic_legacy"
+    "prerequisitesFormula": "sum(@ability:still_mind) AND @feat:improved_unarmed_strike AND  !@feat:monastic_legacy"
   }, {
     "id": "feat:taunt",
     "name": "Taunt",
@@ -10352,7 +10352,7 @@
     "name": "Grant Initiative",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cunning initiative class feature.",
-    "prerequisitesFormula": "sum(@ability:*:cunning_initiative) AND  !@feat:grant_initiative"
+    "prerequisitesFormula": "sum(@ability:cunning_initiative) AND  !@feat:grant_initiative"
   }, {
     "id": "feat:greater_two_weapon_fighting",
     "name": "Greater Two-Weapon Fighting",
@@ -10381,13 +10381,13 @@
     "name": "Shared Judgment",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Second judgment class feature.",
-    "prerequisitesFormula": "sum(@ability:*:second_judgment) AND  !@feat:shared_judgment"
+    "prerequisitesFormula": "sum(@ability:second_judgment) AND  !@feat:shared_judgment"
   }, {
     "id": "feat:twin_thunders",
     "name": "Twin Thunders",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Dwarf or gnome, defensive training racial trait, Two-Weapon Fighting or flurry of blows class feature, Weapon Focus with both wielded weapons.",
-    "prerequisitesFormula": "(@race \u003d\u003d \u0027Dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:*:defensive_training) AND sum(@ability:*:two_weapon_fighting_or_flurry_of_blows) AND @feat:weapon_focus AND  !@feat:twin_thunders"
+    "prerequisitesFormula": "(@race \u003d\u003d \u0027Dwarf\u0027 OR @race \u003d\u003d \u0027gnome\u0027) AND sum(@ability:defensive_training) AND sum(@ability:two_weapon_fighting_or_flurry_of_blows) AND @feat:weapon_focus AND  !@feat:twin_thunders"
   }, {
     "id": "feat:medusas_wrath",
     "name": "Medusa\u0027s Wrath",
@@ -10422,7 +10422,7 @@
     "name": "Powerful Shape",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild shape class feature, druid level 8th.",
-    "prerequisitesFormula": "sum(@ability:*:wild_shape) AND @class:druid \u003e\u003d 8 AND  !@feat:powerful_shape"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND @class:druid \u003e\u003d 8 AND  !@feat:powerful_shape"
   }, {
     "id": "feat:spirited_charge",
     "name": "Spirited Charge",
@@ -10440,7 +10440,7 @@
     "name": "Ricochet Shot Deed",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Grit class feature or Amateur Gunslinger feat, Blind-Fight.",
-    "prerequisitesFormula": "(sum(@ability:*:grit) OR @feat:amateur_gunslinger) AND @feat:blind_fight AND  !@feat:ricochet_shot_deed"
+    "prerequisitesFormula": "(sum(@ability:grit) OR @feat:amateur_gunslinger) AND @feat:blind_fight AND  !@feat:ricochet_shot_deed"
   }, {
     "id": "feat:crane_riposte",
     "name": "Crane Riposte",
@@ -10452,7 +10452,7 @@
     "name": "Shaping Focus",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild shape class feature, Knowledge (nature) 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:*:wild_shape) AND @skill:knowledge:nature \u003e\u003d 5 AND  !@feat:shaping_focus"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND @skill:knowledge:nature \u003e\u003d 5 AND  !@feat:shaping_focus"
   }, {
     "id": "feat:fight_on",
     "name": "Fight On",
@@ -10470,7 +10470,7 @@
     "name": "Reward of Life",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Lay on hands class feature.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands) AND  !@feat:reward_of_life"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands) AND  !@feat:reward_of_life"
   }, {
     "id": "feat:throw_anything",
     "name": "Throw Anything",
@@ -10516,7 +10516,7 @@
     "name": "Extra Ki",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ki pool class feature.",
-    "prerequisitesFormula": "sum(@ability:*:ki_pool)"
+    "prerequisitesFormula": "sum(@ability:ki_pool)"
   }, {
     "id": "feat:chokehold",
     "name": "Chokehold",
@@ -10550,7 +10550,7 @@
     "name": "Unsanctioned Detection",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Detect evil class feature.",
-    "prerequisitesFormula": "sum(@ability:*:detect_evil) AND  !@feat:unsanctioned_detection"
+    "prerequisitesFormula": "sum(@ability:detect_evil) AND  !@feat:unsanctioned_detection"
   }, {
     "id": "feat:precise_strike",
     "name": "Precise Strike",
@@ -10591,7 +10591,7 @@
     "name": "Mystic Stride",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Dex 15, Nimble Moves, woodland stride class feature.",
-    "prerequisitesFormula": "@dex_score \u003e\u003d 15 AND @feat:nimble_moves AND sum(@ability:*:woodland_stride) AND  !@feat:mystic_stride"
+    "prerequisitesFormula": "@dex_score \u003e\u003d 15 AND @feat:nimble_moves AND sum(@ability:woodland_stride) AND  !@feat:mystic_stride"
   }, {
     "id": "feat:following_step",
     "name": "Following Step",
@@ -10603,7 +10603,7 @@
     "name": "Leaping Shot Deed",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Dex 13, grit class feature or Amateur Gunslinger feat, Dodge, Mobility, base attack bonus +4.",
-    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND (sum(@ability:*:grit) OR @feat:amateur_gunslinger) AND @feat:dodge AND @feat:mobility AND @bab \u003e\u003d 4 AND  !@feat:leaping_shot_deed"
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND (sum(@ability:grit) OR @feat:amateur_gunslinger) AND @feat:dodge AND @feat:mobility AND @bab \u003e\u003d 4 AND  !@feat:leaping_shot_deed"
   }, {
     "id": "feat:dragon_ferocity",
     "name": "Dragon Ferocity",
@@ -10626,7 +10626,7 @@
     "name": "Raging Brutality",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Str 13, rage class feature, Power Attack, base attack bonus +12.",
-    "prerequisitesFormula": "@str_score \u003e\u003d 13 AND sum(@ability:*:rage) AND @feat:power_attack AND @bab \u003e\u003d 12 AND  !@feat:raging_brutality"
+    "prerequisitesFormula": "@str_score \u003e\u003d 13 AND sum(@ability:rage) AND @feat:power_attack AND @bab \u003e\u003d 12 AND  !@feat:raging_brutality"
   }, {
     "id": "feat:charge_through",
     "name": "Charge Through",
@@ -10638,7 +10638,7 @@
     "name": "Sharp Senses",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Keen senses racial trait.",
-    "prerequisitesFormula": "sum(@ability:*:keen_senses) AND  !@feat:sharp_senses"
+    "prerequisitesFormula": "sum(@ability:keen_senses) AND  !@feat:sharp_senses"
   }, {
     "id": "feat:merciful_spell",
     "name": "Merciful Spell",
@@ -10649,7 +10649,7 @@
     "name": "Greater Channel Smite",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature, Channel Smite, base attack bonus +8.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy) AND @feat:channel_smite AND @bab \u003e\u003d 8 AND  !@feat:greater_channel_smite"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND @feat:channel_smite AND @bab \u003e\u003d 8 AND  !@feat:greater_channel_smite"
   }, {
     "id": "feat:improved_two_weapon_fighting",
     "name": "Improved Two-Weapon Fighting",
@@ -10667,7 +10667,7 @@
     "name": "Secret Stash Deed",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Grit class feature or Amateur Gunslinger feat, Sleight of Hand 1 rank.",
-    "prerequisitesFormula": "(sum(@ability:*:grit) OR @feat:amateur_gunslinger) AND @skill:sleight_of_hand \u003e\u003d 1 AND  !@feat:secret_stash_deed"
+    "prerequisitesFormula": "(sum(@ability:grit) OR @feat:amateur_gunslinger) AND @skill:sleight_of_hand \u003e\u003d 1 AND  !@feat:secret_stash_deed"
   }, {
     "id": "feat:betrayer",
     "name": "Betrayer",
@@ -10703,13 +10703,13 @@
     "name": "Abundant Revelations",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Mystery class feature.",
-    "prerequisitesFormula": "sum(@ability:*:mystery)"
+    "prerequisitesFormula": "sum(@ability:mystery)"
   }, {
     "id": "feat:vigilant_eidolon",
     "name": "Vigilant Eidolon",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Eidolon class feature.",
-    "prerequisitesFormula": "sum(@ability:*:eidolon) AND  !@feat:vigilant_eidolon"
+    "prerequisitesFormula": "sum(@ability:eidolon) AND  !@feat:vigilant_eidolon"
   }, {
     "id": "feat:deafening_critical",
     "name": "Deafening Critical",
@@ -10733,7 +10733,7 @@
     "name": "Elemental Channel",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Channel energy class feature.",
-    "prerequisitesFormula": "sum(@ability:*:channel_energy)"
+    "prerequisitesFormula": "(@ability:channel_positive_energy OR @ability:channel_negative_energy)"
   }, {
     "id": "feat:improved_great_fortitude",
     "name": "Improved Great Fortitude",
@@ -10804,7 +10804,7 @@
     "name": "Reward of Grace",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Lay on hands class feature.",
-    "prerequisitesFormula": "sum(@ability:*:lay_on_hands) AND  !@feat:reward_of_grace"
+    "prerequisitesFormula": "sum(@ability:lay_on_hands) AND  !@feat:reward_of_grace"
   }, {
     "id": "feat:greater_shield_specialization",
     "name": "Greater Shield Specialization",
@@ -10856,6 +10856,6 @@
     "name": "Deny Death",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Ki pool, Endurance",
-    "prerequisitesFormula": "sum(@ability:*:ki_pool) AND @feat:endurance AND  !@feat:deny_death"
+    "prerequisitesFormula": "sum(@ability:ki_pool) AND @feat:endurance AND  !@feat:deny_death"
   }]
 }

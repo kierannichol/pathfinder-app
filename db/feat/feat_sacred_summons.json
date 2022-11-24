@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "The minions of your divine patrons stand ready to answer your call.",
   "prerequisites": "Aura class feature, ability to cast summon monster.",
-  "prerequisitesFormula": "sum(@ability:*:aura) AND @spell:summon_monster AND  !@feat:sacred_summons",
+  "prerequisitesFormula": "sum(@ability:aura) AND @spell:summon_monster AND  !@feat:sacred_summons",
   "benefit": "When using summon monster to summon creatures whose alignment subtype or subtypes exactly match your aura, you may cast the spell as a standard action instead of with a casting time of 1 round.",
   "source": "Ultimate Magic"
 }
