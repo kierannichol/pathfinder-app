@@ -1,6 +1,7 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
 import Trait from "../Trait";
 import CustomTrait from "../traits/CustomTrait";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 class RagePowerChoice extends CharacterChoice {
   public readonly type = ChoiceType.RAGE_POWER;
@@ -10,21 +11,28 @@ class RagePowerChoice extends CharacterChoice {
     return new RagePowerChoice(level, dependsOn, current);
   }
 
-  private constructor(private readonly level: number, public dependsOn: string|undefined, public readonly current = '') {
+  public withValue(value: string): RagePowerChoice {
+    return new RagePowerChoice(this.level, this.dependsOn, value);
+  }
+
+  private constructor(public readonly level: number, public dependsOn: string|undefined, public readonly current = '') {
     super();
     this.key = `level${level}:ragepower`;
   }
+}
 
-  traits(): Trait[] {
-    return [ CustomTrait.of(`ragepower:${this.current}`, true, this.level) ];
+export class RagePowerChoiceProcessor implements ICharacterChoiceProcessor<RagePowerChoice> {
+  public readonly supportedChoiceType = ChoiceType.RAGE_POWER;
+
+  async traits(choice: RagePowerChoice): Promise<Trait[]> {
+    return [ CustomTrait.of(choice.current, true, choice.level) ];
   }
 
-  select(value: string): CharacterChoice[] {
+  async select(choice: RagePowerChoice, value: string): Promise<CharacterChoice[]> {
     return [
-      new RagePowerChoice(this.level, this.dependsOn, value)
+      choice.withValue(value)
     ]
   }
-
 }
 
 export default RagePowerChoice;

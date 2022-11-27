@@ -13,10 +13,6 @@
     color: white;
   }
 
-  & .modal-dialog .modal-content {
-    height: 90vh;
-  }
-
   & .accordion-item.invalid {
     & .accordion-button {
       $background-color: grey;
@@ -73,5 +69,15 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: center;
+  }
+
+  @media only screen and (min-width: 768px) {
+    & .modal-dialog .modal-content {
+      height: 90vh;
+    }
+
+    &--footer {
+      display: block;
+    }
   }
 }

@@ -17,8 +17,8 @@ import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.db.Feat;
 import pathfinder.generator.db.FeatSourceDatabase;
+import pathfinder.generator.model.Feat;
 import pathfinder.util.Function3;
 import pathfinder.util.Function4;
 import pathfinder.util.Function5;
@@ -43,7 +43,7 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("Catch Off-Guard or Throw Anything", "(@feat:catch_off_guard OR @feat:throw_anything)"),
                     ReplaceText.map("Dodge, Close Quarters Thrower or Point-Blank Master", "(@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master)"),
                     ReplaceText.map("weapon expertise class feature or Quick Draw", "(@feat:weapon_expertise OR @feat:quick_draw)"),
-                    ReplaceText.map("Grit class feature or the Amateur Gunslinger feat", "(sum(@ability:*:grit) OR @feat:amateur_gunslinger)"),
+                    ReplaceText.map("Grit class feature or the Amateur Gunslinger feat", "(sum(@ability:grit) OR @feat:amateur_gunslinger)"),
                     ReplaceText.map("Ability Focus \\(%s\\)".formatted(NAME_GROUP), name ->"@feat:ability_focus#%s".formatted(partialId(name))),
                     ReplaceText.map("Weapon Focus \\(%s\\)".formatted(NAME_GROUP), name ->"@feat:weapon_focus#%s".formatted(partialId(name))),
                     ReplaceText.map("Weapon Specialization \\(%s\\)".formatted(NAME_GROUP), name ->"@feat:weapon_specialization#%s".formatted(partialId(name))),
@@ -68,18 +68,19 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("^(\\w[\\w -]+) level (\\d+)(?:th|st|rd|nd)$", (className, level) -> "@class:" + partialId(className) + " >= " + level),
                     ReplaceText.map("Natural armor", "@armor:natural"),
                     ReplaceText.map("Proficient with armor or shield", "(@feat:light_armor_proficiency OR @feat:shield_proficiency)"),
-                    ReplaceText.map("Grit class feature or Amateur Gunslinger feat", "(sum(@ability:*:grit) OR @feat:amateur_gunslinger)"),
-                    ReplaceText.map("[Aa]bility to use the abundant step class feature or cast dimension door", "(sum(@ability:*:abundant_step) OR @spell:dimension_door)"),
+                    ReplaceText.map("Grit class feature or Amateur Gunslinger feat", "(sum(@ability:grit) OR @feat:amateur_gunslinger)"),
+                    ReplaceText.map("[Cc]hannel energy class feature","(@ability:channel_positive_energy OR @ability:channel_negative_energy)"),
+                    ReplaceText.map("[Aa]bility to use the abundant step class feature or cast dimension door", "(sum(@ability:abundant_step) OR @spell:dimension_door)"),
                     ReplaceText.map("Weapon Specialization with selected ranged weapon", "@feat:weapon_specialization#selected_ranged_weapon"),
-                    ReplaceText.map("(\\w[\\w -]+) class feature", ability -> "sum(@ability:*:" + partialId(ability) + ")"),
-                    ReplaceText.map("Channel energy (\\d+)d6 \\(positive energy\\)", rank -> "sum(@ability:*:channel_positive_energy) >= " + rank),
-                    ReplaceText.map("Channel energy (\\d+)d6 \\(negative energy\\)", rank -> "sum(@ability:*:channel_negative_energy) >= " + rank),
-                    ReplaceText.map("(?:Ability to )?[Cc]hannel energy","(sum(@ability:*:channel_positive_energy) OR sum(@ability:*:channel_negative_energy))"),
+                    ReplaceText.map("(\\w[\\w -]+) class feature", ability -> "sum(@ability:" + partialId(ability) + ")"),
+                    ReplaceText.map("Channel energy (\\d+)d6 \\(positive energy\\)", rank -> "@ability:channel_positive_energy >= " + rank),
+                    ReplaceText.map("Channel energy (\\d+)d6 \\(negative energy\\)", rank -> "@ability:channel_negative_energy >= " + rank),
+                    ReplaceText.map("(?:Ability to )?[Cc]hannel energy","(@ability:channel_positive_energy OR @ability:channel_negative_energy)"),
                     ReplaceText.map("(?:ability|able) to (?:cast|prepare) (\\d+)(?:th|st|rd|nd)-level spells", level -> "@spells_per_day:" + level + " > 0"),
 //                    ReplaceText.map("ability to prepare (\\d+)(?:th|st|rd|nd)-level spells", level -> "@spells_per_day:" + level + " > 0"),
                     ReplaceText.map("Spell-like ability at caster level (\\d+)(?:th|st|rd|nd) or higher", level -> "@caster_level >= " + level),
                     ReplaceText.map("Spell-like ability at CL %s or higher".formatted(LEVEL_GROUP), level -> "@caster_level >= " + level),
-                    ReplaceText.map("Ability to cast (\\w[\\w -']+) as a spell-like ability", spell -> "sum(@ability:*:" + partialId(spell) + ")"),
+                    ReplaceText.map("Ability to cast (\\w[\\w -']+) as a spell-like ability", spell -> "sum(@ability:" + partialId(spell) + ")"),
                     ReplaceText.map("ability to cast consecrate or desecrate", "(@spell:consecrate OR @spell:desecrate)"),
                     ReplaceText.map("Ability to cast (\\w[\\w]+) spells", type -> "@ability:" + partialId(type) + "_spellcaster"),
                     ReplaceText.map("(\\w[\\w]+) spellcaster", type -> "@ability:" + partialId(type) + "_spellcaster"),
@@ -113,25 +114,25 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("(?:the )?ability to cast %s".formatted(NAME_GROUP), spellName -> "@spell:%s".formatted(partialId(spellName))),
 
                     // class abilities
-                    ReplaceText.map("lay on hands", "sum(@ability:*:lay_on_hands)"),
-                    ReplaceText.map("ki pool", "sum(@ability:*:ki_pool)"),
+                    ReplaceText.map("lay on hands", "sum(@ability:lay_on_hands)"),
+                    ReplaceText.map("ki pool", "sum(@ability:ki_pool)"),
                     ReplaceText.map("%s magus arcana".formatted(NAME_GROUP), name -> "@magus_arcana:" + partialId(name)),
                     ReplaceText.map("%s discovery".formatted(NAME_GROUP), name -> "@discovery:" + partialId(name)),
                     ReplaceText.map("%s class ability".formatted(NAME_GROUP), name -> "@feat:" + partialId(name)),
-                    ReplaceText.map("ability to use any polymorph effect", "max(@ability:*:polymorph)"),
+                    ReplaceText.map("ability to use any polymorph effect", "max(@ability:polymorph)"),
 
                     // skills
-                    ReplaceText.map("%s \\(%s\\) (\\d+) ranks? or %s \\(%s\\) (\\d+) ranks?".formatted(NAME_GROUP, NAME_GROUP, NAME_GROUP, NAME_GROUP), (category1, skill1, rank1, category2, skill2, rank2) -> "(@skill:%s:%s >= %s OR @skill:%s:%s >= %s)".formatted(partialId(category1), partialId(skill1), rank1, partialId(category2), partialId(skill2), rank2)),
-                    ReplaceText.map("%s (\\d+) ranks? or %s \\(%s\\) (\\d+) ranks?".formatted(NAME_GROUP, NAME_GROUP, NAME_GROUP), (category1, rank1, category2, skill2, rank2) -> "(@skill:%s >= %s OR @skill:%s:%s >= %s)".formatted(partialId(category1), rank1, partialId(category2), partialId(skill2), rank2)),
-                    ReplaceText.map("Profession \\((\\w[\\w -']+)\\) (\\d+) ranks?", (type, ranks) -> "@skill:profession:" + partialId(type) + " >= " + ranks),
+                    ReplaceText.map("%s \\(%s\\) (\\d+) ranks? or %s \\(%s\\) (\\d+) ranks?".formatted(NAME_GROUP, NAME_GROUP, NAME_GROUP, NAME_GROUP), (category1, skill1, rank1, category2, skill2, rank2) -> "(@skill:%s#%s >= %s OR @skill:%s#%s >= %s)".formatted(partialId(category1), partialId(skill1), rank1, partialId(category2), partialId(skill2), rank2)),
+                    ReplaceText.map("%s (\\d+) ranks? or %s \\(%s\\) (\\d+) ranks?".formatted(NAME_GROUP, NAME_GROUP, NAME_GROUP), (category1, rank1, category2, skill2, rank2) -> "(@skill:%s >= %s OR @skill:%s#%s >= %s)".formatted(partialId(category1), rank1, partialId(category2), partialId(skill2), rank2)),
+                    ReplaceText.map("Profession \\((\\w[\\w -']+)\\) (\\d+) ranks?", (type, ranks) -> "@skill:profession#" + partialId(type) + " >= " + ranks),
                     ReplaceText.map("(\\w[\\w -']+) (\\d+) ranks?", (skill, ranks) -> "@skill:" + partialId(skill) + " >= " + ranks),
-                    ReplaceText.map("Knowledge \\((\\w[\\w -']+)\\) (\\d+) ranks?", (type, ranks) -> "@skill:knowledge:" + partialId(type) + " >= " + ranks),
-                    ReplaceText.map("Knowledge \\((\\w[\\w -']+), (\\w[\\w -']+), (\\w[\\w -']+), (\\w[\\w -']+), or (\\w[\\w -']+)\\) (\\d+) ranks?", (skill1, skill2, skill3, skill4, skill5, ranks) -> "(@skill:knowledge:" + partialId(skill1) + " >= " + ranks + " OR @skill:knowledge:" + partialId(skill2) + " >= " + ranks + " OR @skill:knowledge:" + partialId(skill3) + " >= " + ranks + " OR @skill:knowledge:" + partialId(skill4) + " >= " + ranks + " OR @skill:knowledge:" + partialId(skill5) + " >= " + ranks + ")"),
-                    ReplaceText.map("Perform \\((\\w[\\w -']+)\\) (\\d+) ranks?", (skill, ranks) -> "@skill:perform:" + partialId(skill) + " >= " + ranks),
-                    ReplaceText.map("Perform \\((\\w[\\w -']+) or (\\w[\\w -']+)\\) (\\d+) ranks?", (skill1, skill2, ranks) -> "(@skill:perform:" + partialId(skill1) + " >= " + ranks + " OR @skill:perform:" + partialId(skill2) + " >= " + ranks + ")"),
-                    ReplaceText.map("(\\d+) ranks? in any Craft skill", (ranks) -> "min(@skill:craft:*) >= " + ranks),
-                    ReplaceText.map("Craft \\((\\w[\\w -']+)\\) (\\d+) ranks?", (skill, ranks) -> "@skill:craft:" + partialId(skill) + " >= " + ranks),
-                    ReplaceText.map("(\\d+) ranks? in any Craft or Profession skill", ranks -> "(max(@skill:craft:*) >= %s OR max(@skill:profession:*) >= %s)".formatted(ranks, ranks)),
+                    ReplaceText.map("Knowledge \\((\\w[\\w -']+)\\) (\\d+) ranks?", (type, ranks) -> "@skill:knowledge_" + partialId(type) + " >= " + ranks),
+                    ReplaceText.map("Knowledge \\((\\w[\\w -']+), (\\w[\\w -']+), (\\w[\\w -']+), (\\w[\\w -']+), or (\\w[\\w -']+)\\) (\\d+) ranks?", (skill1, skill2, skill3, skill4, skill5, ranks) -> "(@skill:knowledge_" + partialId(skill1) + " >= " + ranks + " OR @skill:knowledge_" + partialId(skill2) + " >= " + ranks + " OR @skill:knowledge_" + partialId(skill3) + " >= " + ranks + " OR @skill:knowledge_" + partialId(skill4) + " >= " + ranks + " OR @skill:knowledge_" + partialId(skill5) + " >= " + ranks + ")"),
+                    ReplaceText.map("Perform \\((\\w[\\w -']+)\\) (\\d+) ranks?", (skill, ranks) -> "@skill:perform#" + partialId(skill) + " >= " + ranks),
+                    ReplaceText.map("Perform \\((\\w[\\w -']+) or (\\w[\\w -']+)\\) (\\d+) ranks?", (skill1, skill2, ranks) -> "(@skill:perform#" + partialId(skill1) + " >= " + ranks + " OR @skill:perform#" + partialId(skill2) + " >= " + ranks + ")"),
+                    ReplaceText.map("(\\d+) ranks? in any Craft skill", (ranks) -> "min(@skill:craft) >= " + ranks),
+                    ReplaceText.map("Craft \\((\\w[\\w -']+)\\) (\\d+) ranks?", (skill, ranks) -> "@skill:craft#" + partialId(skill) + " >= " + ranks),
+                    ReplaceText.map("(\\d+) ranks? in any Craft or Profession skill", ranks -> "(max(@skill:craft) >= %s OR max(@skill:profession) >= %s)".formatted(ranks, ranks)),
                     ReplaceText.map("Ride rank (\\d+)", rank -> "@skill:ride >= %s".formatted(rank)),
 
                     // races
@@ -139,8 +140,8 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("%s,? or %s".formatted(RACE_GROUP, RACE_GROUP), (r1, r2) -> "(@race == '%s' OR @race == '%s')".formatted(r1, r2)),
                     ReplaceText.map("^%1$s$".formatted(RACE_GROUP), r1 -> "@race == '%s'".formatted(r1)),
 
-                    ReplaceText.map("%1$s %1$s archetype".formatted(NAME_GROUP), (archetype, className) -> "@archetype:%s:%s > 0".formatted(className, archetype)),
-                    ReplaceText.map("flowing monk level 12th", "@archetype:monk:flowing >= 12"), // TODO: fix this
+                    ReplaceText.map("%1$s %1$s archetype".formatted(NAME_GROUP), (archetype, className) -> "@archetype:%s#%s > 0".formatted(className, archetype)),
+                    ReplaceText.map("flowing monk level 12th", "@archetype:monk#flowing >= 12"), // TODO: fix this
                     ReplaceText.map("summoner 1st", "@class:summoner >= 1"),
                     ReplaceText.map("%s level %s".formatted(CLASS_GROUP, LEVEL_GROUP), (className, level) -> "@class:%s >= %s".formatted(partialId(className), level)),
                     ReplaceText.map("%s class".formatted(CLASS_GROUP), (className) -> "@class:%s".formatted(partialId(className))),
@@ -154,19 +155,19 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("Weapon Focus \\((\\w[\\w -']+)\\)", weapon -> "@feat:weapon_focus#" + partialId(weapon)),
                     ReplaceText.map("Spell [Ff]ocus \\((\\w[\\w -']+)\\)", type -> "@feat:spell_focus#" + partialId(type)),
                     ReplaceText.map("Point Blank Shot", "@feat:point_blank_shot"),
-                    ReplaceText.map("rend special attack", "sum(@ability:*:rend)"),
-                    ReplaceText.map("Sneak attack \\+(\\d+)d6", rank -> "sum(@ability:*:sneak_attack) >= " + rank),
-                    ReplaceText.map("size Large or larger", "@size >= 4"),
-                    ReplaceText.map("Small size or smaller", "@size <= 2"),
-                    ReplaceText.map("size Small or smaller", "@size <= 2"),
-                    ReplaceText.map("Size Huge or larger", "@size >= 5"),
+                    ReplaceText.map("rend special attack", "sum(@ability:rend)"),
+                    ReplaceText.map("Sneak attack \\+(\\d+)d6", rank -> "sum(@ability:sneak_attack) >= " + rank),
+                    ReplaceText.map("size Large or larger", "@size >= 6"),
+                    ReplaceText.map("Small size or smaller", "@size <= 4"),
+                    ReplaceText.map("size Small or smaller", "@size <= 4"),
+                    ReplaceText.map("Size Huge or larger", "@size >= 7"),
                     ReplaceText.map("Fly speed", "@speed:fly > 0"),
-                    ReplaceText.map("ability to create magical darkness", "sum(@ability:*:magical_darkness)"),
+                    ReplaceText.map("ability to create magical darkness", "sum(@ability:magical_darkness)"),
                     ReplaceText.map("darkvision or low-light vision racial trait", "(@ability:darkvision OR @ability:low_light_vision)"),
                     ReplaceText.map("darkvision", "@ability:darkvision"),
                     ReplaceText.map("darkvision (\\d+) feet", feet -> "@ability:darkvision >= " + feet),
                     ReplaceText.map("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)"),
-                    ReplaceText.map("Damage reduction", "max(@ability:*:damage_reduction)"),
+                    ReplaceText.map("Damage reduction", "max(@ability:damage_reduction)"),
                     ReplaceText.map(" with selected (\\w[\\w -']+) weapon", type -> "#selected_" + partialId(type) + "_weapon"),
                     ReplaceText.map(" with selected weapon", "#selected_weapon"),
                     ReplaceText.map("ability to acquire an animal companion, eidolon, familiar, or special mount", ""), // TODO: fix this
@@ -188,7 +189,7 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("(\\d+)\\+? years old", age -> "@age >= " + age),
 
                     // very generic
-                    ReplaceText.map("(\\w[\\w -']+) racial trait", trait -> "sum(@ability:*:" + partialId(trait) + ")"),
+                    ReplaceText.map("(\\w[\\w -']+) racial trait", trait -> "sum(@ability:" + partialId(trait) + ")"),
                     ReplaceText.map(" and ", " AND ")
             )
 //            .sorted(Comparator.comparingInt(a -> -a.pattern().pattern().length()))

@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You channel all of your rage into one massive blow to crush your enemy.",
   "prerequisites": "Rage class feature, Vital Strike, base attack bonus +6.",
-  "prerequisitesFormula": "sum(@ability:*:rage) AND @feat:vital_strike AND @bab \u003e\u003d 6 AND  !@feat:furious_finish",
+  "prerequisitesFormula": "sum(@ability:rage) AND @feat:vital_strike AND @bab \u003e\u003d 6 AND  !@feat:furious_finish",
   "benefit": "While raging, when you use the Vital Strike feat, you can choose not to roll your damage dice and instead deal damage equal to the maximum roll possible on those damage dice. If you do, your rage immediately ends, and you are fatigued (even if you would not normally be).",
   "source": "Ultimate Combat"
 }

@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.underlined {
+  composes: underlined from "./CharacterSheet.module.scss";
+}
+
+.label {
+  composes: label from "./CharacterSheet.module.scss";
+  color: dimgray;
+}

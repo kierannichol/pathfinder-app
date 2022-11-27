@@ -2,8 +2,8 @@ package pathfinder.parser.db;
 
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
-import pathfinder.generator.db.WeaponProficiency;
-import pathfinder.generator.db.WeaponRange;
+import pathfinder.generator.model.WeaponProficiency;
+import pathfinder.generator.model.WeaponRange;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.util.StringUtils;
 

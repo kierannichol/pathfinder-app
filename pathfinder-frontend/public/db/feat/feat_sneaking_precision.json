@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "Your knowledge of your enemies\u0027 vulnerable spots is especially punishing.",
   "prerequisites": "Sneak attack class feature, Critical Focus, any critical feat, base attack bonus +9.",
-  "prerequisitesFormula": "sum(@ability:*:sneak_attack) AND @feat:critical_focus AND @bab \u003e\u003d 9 AND  !@feat:sneaking_precision",
+  "prerequisitesFormula": "sum(@ability:sneak_attack) AND @feat:critical_focus AND @bab \u003e\u003d 9 AND  !@feat:sneaking_precision",
   "benefit": "Whenever you successfully sneak attack an opponent for a second time on your turn, you can spend a swift action to apply the effects of one critical feat you know to that opponent.",
   "source": "Ultimate Combat"
 }

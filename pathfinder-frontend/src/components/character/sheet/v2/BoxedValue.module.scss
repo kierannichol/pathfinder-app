@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid black;
+  min-width: var(--col-height);
+
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+
+  position: relative;
+}
+
+.label {
+  padding: 0 2px;
+  font-size: 8pt;
+  line-height: 8pt;
+  font-weight: 700;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+
+  justify-self: start;
+  align-self: end;
+
+  position: absolute;
+  color: gray;
+  font-variant-caps: all-petite-caps;
+}

@@ -20,3 +20,12 @@ export const saveState = (id: string, state: any) => {
     console.error("error writing local state: ", err);
   }
 }
+
+export const deleteState = (id: string) => {
+  try {
+    localStorage.removeItem(id)
+  } catch (err) {
+    // ignore write errors
+    console.error("error deleting local state: ", err);
+  }
+}

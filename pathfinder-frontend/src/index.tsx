@@ -1,38 +1,67 @@
+import {GoogleOAuthProvider} from "@react-oauth/google";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {createHashRouter, RouterProvider} from "react-router-dom";
+import {CharacterRepositoryContextProvider} from "./app/reactCharacter";
+import {PathfinderDatabaseContextProvider} from "./database/v2/PathfinderDatabase";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Routes, useParams} from "react-router-dom";
-import CharacterEditView from "./views/CharacterEditView";
-import {Provider} from "react-redux";
-import store from './app/store'
-import CharacterListView from "./views/CharacterListView";
+import reportWebVitals from "./reportWebVitals";
+import CharacterEditRoute from "./routes/characterEdit";
+import CharacterListRoute from "./routes/characterList";
+import CharacterSheetRoute from "./routes/characterSheet";
+import CharacterSheetV2Route, {characterSheetV2Loader} from "./routes/characterSheetV2";
+import {loginLoader, LoginRoute} from "./routes/loginRoute";
+import LayoutRoute from "./routes/root";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
-root.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App/>}>
-            <Route path="/" element={<CharacterListView />} />
-            <Route path="character/edit/:id" element={<CharacterEditPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </Provider>
-);
 
-function CharacterEditPage() {
-  let { id } = useParams();
-  if (id === undefined) {
-    throw Error("No character ID specified");
-  }
-  return <CharacterEditView characterId={id} />
-}
+const routes = [
+  {
+    path: "/",
+    element: <LayoutRoute />,
+    children: [
+      {
+        path: "/",
+        element: <CharacterListRoute />
+      },
+      {
+        path: "/login",
+        element: <LoginRoute />,
+        loader: loginLoader
+      },
+      {
+        path: "character/edit/:id",
+        element: <CharacterEditRoute />
+      }
+    ]
+  },
+  {
+    path: "character/sheet/:id/:level",
+    element: <CharacterSheetRoute />
+  },
+  {
+    path: "character/sheet/v2/:id/:level",
+    element: <CharacterSheetV2Route />,
+    loader: characterSheetV2Loader
+  },
+];
+
+const router = createHashRouter(routes);
+
+const clientId = "740015667994-sm7d6frk97un3v09bk2nr5dqakg5pnhc.apps.googleusercontent.com";
+
+root.render(
+  <GoogleOAuthProvider clientId={clientId}>
+      <PathfinderDatabaseContextProvider>
+        <CharacterRepositoryContextProvider>
+          <RouterProvider router={router}/>
+        </CharacterRepositoryContextProvider>
+      </PathfinderDatabaseContextProvider>
+  </GoogleOAuthProvider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

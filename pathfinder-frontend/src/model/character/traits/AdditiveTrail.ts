@@ -1,5 +1,5 @@
-import Trait from "../Trait";
 import {DataContextState} from "../../../logic/DataContext";
+import Trait from "../Trait";
 
 export default class AdditiveTrait implements Trait {
 

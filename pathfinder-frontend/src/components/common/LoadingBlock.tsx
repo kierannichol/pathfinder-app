@@ -1,12 +1,11 @@
-import {Spinner} from "react-bootstrap";
+import styles from "./LoadingBlock.module.scss";
 
 function LoadingBlock() {
-  return (
-      <div className={"h-100 align-items-center"}>
-        <Spinner animation={"border"}>
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>);
+  return <div className={styles.loading}>
+          <div/>
+          <div/>
+          <div/>
+        </div>
 }
 
 export default LoadingBlock;

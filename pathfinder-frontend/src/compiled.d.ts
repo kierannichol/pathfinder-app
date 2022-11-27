@@ -1,549 +1,376 @@
 import * as $protobuf from "protobufjs";
 import Long = require("long");
-/** Properties of a RaceDatabase. */
-export interface IRaceDatabase {
+/** Namespace v2. */
+export namespace v2 {
 
-    /** RaceDatabase Races */
-    Races?: (RaceData[]|null);
-}
+    /** Properties of a RaceDatabaseDbo. */
+    interface IRaceDatabaseDbo {
 
-/** Represents a RaceDatabase. */
-export class RaceDatabase implements IRaceDatabase {
-
-    /**
-     * Constructs a new RaceDatabase.
-     * @param [properties] Properties to set
-     */
-    constructor(properties?: IRaceDatabase);
-
-    /** RaceDatabase Races. */
-    public Races: RaceData[];
-
-    /**
-     * Creates a new RaceDatabase instance using the specified properties.
-     * @param [properties] Properties to set
-     * @returns RaceDatabase instance
-     */
-    public static create(properties?: IRaceDatabase): RaceDatabase;
-
-    /**
-     * Encodes the specified RaceDatabase message. Does not implicitly {@link RaceDatabase.verify|verify} messages.
-     * @param message RaceDatabase message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encode(message: RaceDatabase, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Encodes the specified RaceDatabase message, length delimited. Does not implicitly {@link RaceDatabase.verify|verify} messages.
-     * @param message RaceDatabase message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encodeDelimited(message: RaceDatabase, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Decodes a RaceDatabase message from the specified reader or buffer.
-     * @param reader Reader or buffer to decode from
-     * @param [length] Message length if known beforehand
-     * @returns RaceDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): RaceDatabase;
-
-    /**
-     * Decodes a RaceDatabase message from the specified reader or buffer, length delimited.
-     * @param reader Reader or buffer to decode from
-     * @returns RaceDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): RaceDatabase;
-
-    /**
-     * Verifies a RaceDatabase message.
-     * @param message Plain object to verify
-     * @returns `null` if valid, otherwise the reason why it is not
-     */
-    public static verify(message: { [k: string]: any }): (string|null);
-
-    /**
-     * Creates a RaceDatabase message from a plain object. Also converts values to their respective internal types.
-     * @param object Plain object
-     * @returns RaceDatabase
-     */
-    public static fromObject(object: { [k: string]: any }): RaceDatabase;
-
-    /**
-     * Creates a plain object from a RaceDatabase message. Also converts values to other types if specified.
-     * @param message RaceDatabase
-     * @param [options] Conversion options
-     * @returns Plain object
-     */
-    public static toObject(message: RaceDatabase, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-    /**
-     * Converts this RaceDatabase to JSON.
-     * @returns JSON object
-     */
-    public toJSON(): { [k: string]: any };
-
-    /**
-     * Gets the default type url for RaceDatabase
-     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns The default type url
-     */
-    public static getTypeUrl(typeUrlPrefix?: string): string;
-}
-
-/** Properties of a RaceData. */
-export interface IRaceData {
-
-    /** RaceData id */
-    id?: (number|Long|null);
-
-    /** RaceData name */
-    name?: (string|null);
-}
-
-/** Represents a RaceData. */
-export class RaceData implements IRaceData {
-
-    /**
-     * Constructs a new RaceData.
-     * @param [properties] Properties to set
-     */
-    constructor(properties?: IRaceData);
-
-    /** RaceData id. */
-    public id: (number|Long);
-
-    /** RaceData name. */
-    public name: string;
-
-    /**
-     * Creates a new RaceData instance using the specified properties.
-     * @param [properties] Properties to set
-     * @returns RaceData instance
-     */
-    public static create(properties?: IRaceData): RaceData;
-
-    /**
-     * Encodes the specified RaceData message. Does not implicitly {@link RaceData.verify|verify} messages.
-     * @param message RaceData message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encode(message: RaceData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Encodes the specified RaceData message, length delimited. Does not implicitly {@link RaceData.verify|verify} messages.
-     * @param message RaceData message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encodeDelimited(message: RaceData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Decodes a RaceData message from the specified reader or buffer.
-     * @param reader Reader or buffer to decode from
-     * @param [length] Message length if known beforehand
-     * @returns RaceData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): RaceData;
-
-    /**
-     * Decodes a RaceData message from the specified reader or buffer, length delimited.
-     * @param reader Reader or buffer to decode from
-     * @returns RaceData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): RaceData;
-
-    /**
-     * Verifies a RaceData message.
-     * @param message Plain object to verify
-     * @returns `null` if valid, otherwise the reason why it is not
-     */
-    public static verify(message: { [k: string]: any }): (string|null);
-
-    /**
-     * Creates a RaceData message from a plain object. Also converts values to their respective internal types.
-     * @param object Plain object
-     * @returns RaceData
-     */
-    public static fromObject(object: { [k: string]: any }): RaceData;
-
-    /**
-     * Creates a plain object from a RaceData message. Also converts values to other types if specified.
-     * @param message RaceData
-     * @param [options] Conversion options
-     * @returns Plain object
-     */
-    public static toObject(message: RaceData, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-    /**
-     * Converts this RaceData to JSON.
-     * @returns JSON object
-     */
-    public toJSON(): { [k: string]: any };
-
-    /**
-     * Gets the default type url for RaceData
-     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns The default type url
-     */
-    public static getTypeUrl(typeUrlPrefix?: string): string;
-}
-
-/** Properties of a ClassDatabase. */
-export interface IClassDatabase {
-
-    /** ClassDatabase classes */
-    classes?: (ClassData[]|null);
-}
-
-/** Represents a ClassDatabase. */
-export class ClassDatabase implements IClassDatabase {
-
-    /**
-     * Constructs a new ClassDatabase.
-     * @param [properties] Properties to set
-     */
-    constructor(properties?: IClassDatabase);
-
-    /** ClassDatabase classes. */
-    public classes: ClassData[];
-
-    /**
-     * Creates a new ClassDatabase instance using the specified properties.
-     * @param [properties] Properties to set
-     * @returns ClassDatabase instance
-     */
-    public static create(properties?: IClassDatabase): ClassDatabase;
-
-    /**
-     * Encodes the specified ClassDatabase message. Does not implicitly {@link ClassDatabase.verify|verify} messages.
-     * @param message ClassDatabase message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encode(message: ClassDatabase, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Encodes the specified ClassDatabase message, length delimited. Does not implicitly {@link ClassDatabase.verify|verify} messages.
-     * @param message ClassDatabase message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encodeDelimited(message: ClassDatabase, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Decodes a ClassDatabase message from the specified reader or buffer.
-     * @param reader Reader or buffer to decode from
-     * @param [length] Message length if known beforehand
-     * @returns ClassDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ClassDatabase;
-
-    /**
-     * Decodes a ClassDatabase message from the specified reader or buffer, length delimited.
-     * @param reader Reader or buffer to decode from
-     * @returns ClassDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ClassDatabase;
-
-    /**
-     * Verifies a ClassDatabase message.
-     * @param message Plain object to verify
-     * @returns `null` if valid, otherwise the reason why it is not
-     */
-    public static verify(message: { [k: string]: any }): (string|null);
-
-    /**
-     * Creates a ClassDatabase message from a plain object. Also converts values to their respective internal types.
-     * @param object Plain object
-     * @returns ClassDatabase
-     */
-    public static fromObject(object: { [k: string]: any }): ClassDatabase;
-
-    /**
-     * Creates a plain object from a ClassDatabase message. Also converts values to other types if specified.
-     * @param message ClassDatabase
-     * @param [options] Conversion options
-     * @returns Plain object
-     */
-    public static toObject(message: ClassDatabase, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-    /**
-     * Converts this ClassDatabase to JSON.
-     * @returns JSON object
-     */
-    public toJSON(): { [k: string]: any };
-
-    /**
-     * Gets the default type url for ClassDatabase
-     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns The default type url
-     */
-    public static getTypeUrl(typeUrlPrefix?: string): string;
-}
-
-/** Properties of a ClassData. */
-export interface IClassData {
-
-    /** ClassData id */
-    id?: (string|null);
-
-    /** ClassData name */
-    name?: (string|null);
-
-    /** ClassData levels */
-    levels?: (ClassData.Level[]|null);
-}
-
-/** Represents a ClassData. */
-export class ClassData implements IClassData {
-
-    /**
-     * Constructs a new ClassData.
-     * @param [properties] Properties to set
-     */
-    constructor(properties?: IClassData);
-
-    /** ClassData id. */
-    public id: string;
-
-    /** ClassData name. */
-    public name: string;
-
-    /** ClassData levels. */
-    public levels: ClassData.Level[];
-
-    /**
-     * Creates a new ClassData instance using the specified properties.
-     * @param [properties] Properties to set
-     * @returns ClassData instance
-     */
-    public static create(properties?: IClassData): ClassData;
-
-    /**
-     * Encodes the specified ClassData message. Does not implicitly {@link ClassData.verify|verify} messages.
-     * @param message ClassData message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encode(message: ClassData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Encodes the specified ClassData message, length delimited. Does not implicitly {@link ClassData.verify|verify} messages.
-     * @param message ClassData message or plain object to encode
-     * @param [writer] Writer to encode to
-     * @returns Writer
-     */
-    public static encodeDelimited(message: ClassData, writer?: $protobuf.Writer): $protobuf.Writer;
-
-    /**
-     * Decodes a ClassData message from the specified reader or buffer.
-     * @param reader Reader or buffer to decode from
-     * @param [length] Message length if known beforehand
-     * @returns ClassData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ClassData;
-
-    /**
-     * Decodes a ClassData message from the specified reader or buffer, length delimited.
-     * @param reader Reader or buffer to decode from
-     * @returns ClassData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ClassData;
-
-    /**
-     * Verifies a ClassData message.
-     * @param message Plain object to verify
-     * @returns `null` if valid, otherwise the reason why it is not
-     */
-    public static verify(message: { [k: string]: any }): (string|null);
-
-    /**
-     * Creates a ClassData message from a plain object. Also converts values to their respective internal types.
-     * @param object Plain object
-     * @returns ClassData
-     */
-    public static fromObject(object: { [k: string]: any }): ClassData;
-
-    /**
-     * Creates a plain object from a ClassData message. Also converts values to other types if specified.
-     * @param message ClassData
-     * @param [options] Conversion options
-     * @returns Plain object
-     */
-    public static toObject(message: ClassData, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-    /**
-     * Converts this ClassData to JSON.
-     * @returns JSON object
-     */
-    public toJSON(): { [k: string]: any };
-
-    /**
-     * Gets the default type url for ClassData
-     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns The default type url
-     */
-    public static getTypeUrl(typeUrlPrefix?: string): string;
-}
-
-export namespace ClassData {
-
-    /** Properties of a Level. */
-    interface ILevel {
-
-        /** Level levelNumber */
-        levelNumber?: (number|null);
-
-        /** Level bab */
-        bab?: (number|null);
-
-        /** Level fortSave */
-        fortSave?: (number|null);
-
-        /** Level refSave */
-        refSave?: (number|null);
-
-        /** Level willSave */
-        willSave?: (number|null);
-
-        /** Level special */
-        special?: (string[]|null);
+        /** RaceDatabaseDbo raceSummaries */
+        raceSummaries?: (v2.RaceSummaryDbo[]|null);
     }
 
-    /** Represents a Level. */
-    class Level implements ILevel {
+    /** Represents a RaceDatabaseDbo. */
+    class RaceDatabaseDbo implements IRaceDatabaseDbo {
 
         /**
-         * Constructs a new Level.
+         * Constructs a new RaceDatabaseDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: ClassData.ILevel);
+        constructor(properties?: v2.IRaceDatabaseDbo);
 
-        /** Level levelNumber. */
-        public levelNumber: number;
-
-        /** Level bab. */
-        public bab: number;
-
-        /** Level fortSave. */
-        public fortSave: number;
-
-        /** Level refSave. */
-        public refSave: number;
-
-        /** Level willSave. */
-        public willSave: number;
-
-        /** Level special. */
-        public special: string[];
+        /** RaceDatabaseDbo raceSummaries. */
+        public raceSummaries: v2.RaceSummaryDbo[];
 
         /**
-         * Creates a new Level instance using the specified properties.
+         * Creates a new RaceDatabaseDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns Level instance
+         * @returns RaceDatabaseDbo instance
          */
-        public static create(properties?: ClassData.ILevel): ClassData.Level;
+        public static create(properties?: v2.IRaceDatabaseDbo): v2.RaceDatabaseDbo;
 
         /**
-         * Encodes the specified Level message. Does not implicitly {@link ClassData.Level.verify|verify} messages.
-         * @param message Level message or plain object to encode
+         * Encodes the specified RaceDatabaseDbo message. Does not implicitly {@link v2.RaceDatabaseDbo.verify|verify} messages.
+         * @param message RaceDatabaseDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: ClassData.Level, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: v2.RaceDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified Level message, length delimited. Does not implicitly {@link ClassData.Level.verify|verify} messages.
-         * @param message Level message or plain object to encode
+         * Encodes the specified RaceDatabaseDbo message, length delimited. Does not implicitly {@link v2.RaceDatabaseDbo.verify|verify} messages.
+         * @param message RaceDatabaseDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: ClassData.Level, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: v2.RaceDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a Level message from the specified reader or buffer.
+         * Decodes a RaceDatabaseDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns Level
+         * @returns RaceDatabaseDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ClassData.Level;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.RaceDatabaseDbo;
 
         /**
-         * Decodes a Level message from the specified reader or buffer, length delimited.
+         * Decodes a RaceDatabaseDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns Level
+         * @returns RaceDatabaseDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ClassData.Level;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.RaceDatabaseDbo;
 
         /**
-         * Verifies a Level message.
+         * Verifies a RaceDatabaseDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a Level message from a plain object. Also converts values to their respective internal types.
+         * Creates a RaceDatabaseDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns Level
+         * @returns RaceDatabaseDbo
          */
-        public static fromObject(object: { [k: string]: any }): ClassData.Level;
+        public static fromObject(object: { [k: string]: any }): v2.RaceDatabaseDbo;
 
         /**
-         * Creates a plain object from a Level message. Also converts values to other types if specified.
-         * @param message Level
+         * Creates a plain object from a RaceDatabaseDbo message. Also converts values to other types if specified.
+         * @param message RaceDatabaseDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: ClassData.Level, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: v2.RaceDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this Level to JSON.
+         * Converts this RaceDatabaseDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for Level
+         * Gets the default type url for RaceDatabaseDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
-}
 
-/** Namespace v2. */
-export namespace v2 {
+    /** Properties of a RaceSummaryDbo. */
+    interface IRaceSummaryDbo {
+
+        /** RaceSummaryDbo id */
+        id?: (string|null);
+
+        /** RaceSummaryDbo name */
+        name?: (string|null);
+
+        /** RaceSummaryDbo size */
+        size?: (number|null);
+
+        /** RaceSummaryDbo type */
+        type?: (string|null);
+
+        /** RaceSummaryDbo speed */
+        speed?: (number|null);
+
+        /** RaceSummaryDbo languages */
+        languages?: (string[]|null);
+
+        /** RaceSummaryDbo traits */
+        traits?: (string[]|null);
+    }
+
+    /** Represents a RaceSummaryDbo. */
+    class RaceSummaryDbo implements IRaceSummaryDbo {
+
+        /**
+         * Constructs a new RaceSummaryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IRaceSummaryDbo);
+
+        /** RaceSummaryDbo id. */
+        public id: string;
+
+        /** RaceSummaryDbo name. */
+        public name: string;
+
+        /** RaceSummaryDbo size. */
+        public size: number;
+
+        /** RaceSummaryDbo type. */
+        public type: string;
+
+        /** RaceSummaryDbo speed. */
+        public speed: number;
+
+        /** RaceSummaryDbo languages. */
+        public languages: string[];
+
+        /** RaceSummaryDbo traits. */
+        public traits: string[];
+
+        /**
+         * Creates a new RaceSummaryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns RaceSummaryDbo instance
+         */
+        public static create(properties?: v2.IRaceSummaryDbo): v2.RaceSummaryDbo;
+
+        /**
+         * Encodes the specified RaceSummaryDbo message. Does not implicitly {@link v2.RaceSummaryDbo.verify|verify} messages.
+         * @param message RaceSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.RaceSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified RaceSummaryDbo message, length delimited. Does not implicitly {@link v2.RaceSummaryDbo.verify|verify} messages.
+         * @param message RaceSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.RaceSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a RaceSummaryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns RaceSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.RaceSummaryDbo;
+
+        /**
+         * Decodes a RaceSummaryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RaceSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.RaceSummaryDbo;
+
+        /**
+         * Verifies a RaceSummaryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a RaceSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns RaceSummaryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.RaceSummaryDbo;
+
+        /**
+         * Creates a plain object from a RaceSummaryDbo message. Also converts values to other types if specified.
+         * @param message RaceSummaryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.RaceSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this RaceSummaryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for RaceSummaryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a RaceDataDbo. */
+    interface IRaceDataDbo {
+
+        /** RaceDataDbo id */
+        id?: (string|null);
+
+        /** RaceDataDbo name */
+        name?: (string|null);
+
+        /** RaceDataDbo size */
+        size?: (number|null);
+
+        /** RaceDataDbo type */
+        type?: (string|null);
+
+        /** RaceDataDbo speed */
+        speed?: (number|null);
+
+        /** RaceDataDbo languages */
+        languages?: (string[]|null);
+
+        /** RaceDataDbo traits */
+        traits?: (string[]|null);
+    }
+
+    /** Represents a RaceDataDbo. */
+    class RaceDataDbo implements IRaceDataDbo {
+
+        /**
+         * Constructs a new RaceDataDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IRaceDataDbo);
+
+        /** RaceDataDbo id. */
+        public id: string;
+
+        /** RaceDataDbo name. */
+        public name: string;
+
+        /** RaceDataDbo size. */
+        public size: number;
+
+        /** RaceDataDbo type. */
+        public type: string;
+
+        /** RaceDataDbo speed. */
+        public speed: number;
+
+        /** RaceDataDbo languages. */
+        public languages: string[];
+
+        /** RaceDataDbo traits. */
+        public traits: string[];
+
+        /**
+         * Creates a new RaceDataDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns RaceDataDbo instance
+         */
+        public static create(properties?: v2.IRaceDataDbo): v2.RaceDataDbo;
+
+        /**
+         * Encodes the specified RaceDataDbo message. Does not implicitly {@link v2.RaceDataDbo.verify|verify} messages.
+         * @param message RaceDataDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.RaceDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified RaceDataDbo message, length delimited. Does not implicitly {@link v2.RaceDataDbo.verify|verify} messages.
+         * @param message RaceDataDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.RaceDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a RaceDataDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns RaceDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.RaceDataDbo;
+
+        /**
+         * Decodes a RaceDataDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns RaceDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.RaceDataDbo;
+
+        /**
+         * Verifies a RaceDataDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a RaceDataDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns RaceDataDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.RaceDataDbo;
+
+        /**
+         * Creates a plain object from a RaceDataDbo message. Also converts values to other types if specified.
+         * @param message RaceDataDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.RaceDataDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this RaceDataDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for RaceDataDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
 
     /** Properties of an AbilityDatabaseDbo. */
     interface IAbilityDatabaseDbo {
 
-        /** AbilityDatabaseDbo AbilitySummaries */
-        AbilitySummaries?: (v2.AbilitySummaryDbo[]|null);
+        /** AbilityDatabaseDbo abilitySummaries */
+        abilitySummaries?: (v2.AbilitySummaryDbo[]|null);
     }
 
     /** Represents an AbilityDatabaseDbo. */
@@ -555,8 +382,8 @@ export namespace v2 {
          */
         constructor(properties?: v2.IAbilityDatabaseDbo);
 
-        /** AbilityDatabaseDbo AbilitySummaries. */
-        public AbilitySummaries: v2.AbilitySummaryDbo[];
+        /** AbilityDatabaseDbo abilitySummaries. */
+        public abilitySummaries: v2.AbilitySummaryDbo[];
 
         /**
          * Creates a new AbilityDatabaseDbo instance using the specified properties.
@@ -647,6 +474,9 @@ export namespace v2 {
 
         /** AbilitySummaryDbo type */
         type?: (v2.AbilityTypeDbo|null);
+
+        /** AbilitySummaryDbo prerequisitesFormula */
+        prerequisitesFormula?: (string|null);
     }
 
     /** Represents an AbilitySummaryDbo. */
@@ -666,6 +496,9 @@ export namespace v2 {
 
         /** AbilitySummaryDbo type. */
         public type: v2.AbilityTypeDbo;
+
+        /** AbilitySummaryDbo prerequisitesFormula. */
+        public prerequisitesFormula: string;
 
         /**
          * Creates a new AbilitySummaryDbo instance using the specified properties.
@@ -765,6 +598,9 @@ export namespace v2 {
         /** AbilityDataDbo type */
         type?: (v2.AbilityTypeDbo|null);
 
+        /** AbilityDataDbo prerequisitesFormula */
+        prerequisitesFormula?: (string|null);
+
         /** AbilityDataDbo description */
         description?: (string|null);
     }
@@ -786,6 +622,9 @@ export namespace v2 {
 
         /** AbilityDataDbo type. */
         public type: v2.AbilityTypeDbo;
+
+        /** AbilityDataDbo prerequisitesFormula. */
+        public prerequisitesFormula: string;
 
         /** AbilityDataDbo description. */
         public description: string;
@@ -868,11 +707,583 @@ export namespace v2 {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    /** Properties of a ClassDatabaseDbo. */
+    interface IClassDatabaseDbo {
+
+        /** ClassDatabaseDbo classSummaries */
+        classSummaries?: (v2.ClassSummaryDbo[]|null);
+    }
+
+    /** Represents a ClassDatabaseDbo. */
+    class ClassDatabaseDbo implements IClassDatabaseDbo {
+
+        /**
+         * Constructs a new ClassDatabaseDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IClassDatabaseDbo);
+
+        /** ClassDatabaseDbo classSummaries. */
+        public classSummaries: v2.ClassSummaryDbo[];
+
+        /**
+         * Creates a new ClassDatabaseDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ClassDatabaseDbo instance
+         */
+        public static create(properties?: v2.IClassDatabaseDbo): v2.ClassDatabaseDbo;
+
+        /**
+         * Encodes the specified ClassDatabaseDbo message. Does not implicitly {@link v2.ClassDatabaseDbo.verify|verify} messages.
+         * @param message ClassDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.ClassDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ClassDatabaseDbo message, length delimited. Does not implicitly {@link v2.ClassDatabaseDbo.verify|verify} messages.
+         * @param message ClassDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.ClassDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ClassDatabaseDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ClassDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassDatabaseDbo;
+
+        /**
+         * Decodes a ClassDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ClassDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassDatabaseDbo;
+
+        /**
+         * Verifies a ClassDatabaseDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ClassDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ClassDatabaseDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.ClassDatabaseDbo;
+
+        /**
+         * Creates a plain object from a ClassDatabaseDbo message. Also converts values to other types if specified.
+         * @param message ClassDatabaseDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.ClassDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ClassDatabaseDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ClassDatabaseDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ClassSummaryDbo. */
+    interface IClassSummaryDbo {
+
+        /** ClassSummaryDbo id */
+        id?: (string|null);
+
+        /** ClassSummaryDbo name */
+        name?: (string|null);
+
+        /** ClassSummaryDbo category */
+        category?: (v2.ClassCategoryDbo|null);
+    }
+
+    /** Represents a ClassSummaryDbo. */
+    class ClassSummaryDbo implements IClassSummaryDbo {
+
+        /**
+         * Constructs a new ClassSummaryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IClassSummaryDbo);
+
+        /** ClassSummaryDbo id. */
+        public id: string;
+
+        /** ClassSummaryDbo name. */
+        public name: string;
+
+        /** ClassSummaryDbo category. */
+        public category: v2.ClassCategoryDbo;
+
+        /**
+         * Creates a new ClassSummaryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ClassSummaryDbo instance
+         */
+        public static create(properties?: v2.IClassSummaryDbo): v2.ClassSummaryDbo;
+
+        /**
+         * Encodes the specified ClassSummaryDbo message. Does not implicitly {@link v2.ClassSummaryDbo.verify|verify} messages.
+         * @param message ClassSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.ClassSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ClassSummaryDbo message, length delimited. Does not implicitly {@link v2.ClassSummaryDbo.verify|verify} messages.
+         * @param message ClassSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.ClassSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ClassSummaryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ClassSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassSummaryDbo;
+
+        /**
+         * Decodes a ClassSummaryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ClassSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassSummaryDbo;
+
+        /**
+         * Verifies a ClassSummaryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ClassSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ClassSummaryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.ClassSummaryDbo;
+
+        /**
+         * Creates a plain object from a ClassSummaryDbo message. Also converts values to other types if specified.
+         * @param message ClassSummaryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.ClassSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ClassSummaryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ClassSummaryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ClassDataDbo. */
+    interface IClassDataDbo {
+
+        /** ClassDataDbo id */
+        id?: (string|null);
+
+        /** ClassDataDbo name */
+        name?: (string|null);
+
+        /** ClassDataDbo category */
+        category?: (v2.ClassCategoryDbo|null);
+
+        /** ClassDataDbo shortDescription */
+        shortDescription?: (string|null);
+
+        /** ClassDataDbo levels */
+        levels?: (v2.ClassLevelDbo[]|null);
+    }
+
+    /** Represents a ClassDataDbo. */
+    class ClassDataDbo implements IClassDataDbo {
+
+        /**
+         * Constructs a new ClassDataDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IClassDataDbo);
+
+        /** ClassDataDbo id. */
+        public id: string;
+
+        /** ClassDataDbo name. */
+        public name: string;
+
+        /** ClassDataDbo category. */
+        public category: v2.ClassCategoryDbo;
+
+        /** ClassDataDbo shortDescription. */
+        public shortDescription: string;
+
+        /** ClassDataDbo levels. */
+        public levels: v2.ClassLevelDbo[];
+
+        /**
+         * Creates a new ClassDataDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ClassDataDbo instance
+         */
+        public static create(properties?: v2.IClassDataDbo): v2.ClassDataDbo;
+
+        /**
+         * Encodes the specified ClassDataDbo message. Does not implicitly {@link v2.ClassDataDbo.verify|verify} messages.
+         * @param message ClassDataDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.ClassDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ClassDataDbo message, length delimited. Does not implicitly {@link v2.ClassDataDbo.verify|verify} messages.
+         * @param message ClassDataDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.ClassDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ClassDataDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ClassDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassDataDbo;
+
+        /**
+         * Decodes a ClassDataDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ClassDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassDataDbo;
+
+        /**
+         * Verifies a ClassDataDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ClassDataDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ClassDataDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.ClassDataDbo;
+
+        /**
+         * Creates a plain object from a ClassDataDbo message. Also converts values to other types if specified.
+         * @param message ClassDataDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.ClassDataDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ClassDataDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ClassDataDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** ClassCategoryDbo enum. */
+    enum ClassCategoryDbo {
+        UNKNOWN = 0,
+        CORE = 1,
+        BASE = 2,
+        HYBRID = 3,
+        UNCHAINED = 4
+    }
+
+    /** Properties of a ClassLevelDbo. */
+    interface IClassLevelDbo {
+
+        /** ClassLevelDbo levelNumber */
+        levelNumber?: (number|null);
+
+        /** ClassLevelDbo bab */
+        bab?: (number|null);
+
+        /** ClassLevelDbo fortSave */
+        fortSave?: (number|null);
+
+        /** ClassLevelDbo refSave */
+        refSave?: (number|null);
+
+        /** ClassLevelDbo willSave */
+        willSave?: (number|null);
+
+        /** ClassLevelDbo specials */
+        specials?: (v2.SpecialDbo[]|null);
+    }
+
+    /** Represents a ClassLevelDbo. */
+    class ClassLevelDbo implements IClassLevelDbo {
+
+        /**
+         * Constructs a new ClassLevelDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IClassLevelDbo);
+
+        /** ClassLevelDbo levelNumber. */
+        public levelNumber: number;
+
+        /** ClassLevelDbo bab. */
+        public bab: number;
+
+        /** ClassLevelDbo fortSave. */
+        public fortSave: number;
+
+        /** ClassLevelDbo refSave. */
+        public refSave: number;
+
+        /** ClassLevelDbo willSave. */
+        public willSave: number;
+
+        /** ClassLevelDbo specials. */
+        public specials: v2.SpecialDbo[];
+
+        /**
+         * Creates a new ClassLevelDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ClassLevelDbo instance
+         */
+        public static create(properties?: v2.IClassLevelDbo): v2.ClassLevelDbo;
+
+        /**
+         * Encodes the specified ClassLevelDbo message. Does not implicitly {@link v2.ClassLevelDbo.verify|verify} messages.
+         * @param message ClassLevelDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.ClassLevelDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ClassLevelDbo message, length delimited. Does not implicitly {@link v2.ClassLevelDbo.verify|verify} messages.
+         * @param message ClassLevelDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.ClassLevelDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ClassLevelDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ClassLevelDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassLevelDbo;
+
+        /**
+         * Decodes a ClassLevelDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ClassLevelDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassLevelDbo;
+
+        /**
+         * Verifies a ClassLevelDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ClassLevelDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ClassLevelDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.ClassLevelDbo;
+
+        /**
+         * Creates a plain object from a ClassLevelDbo message. Also converts values to other types if specified.
+         * @param message ClassLevelDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.ClassLevelDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ClassLevelDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ClassLevelDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a SpecialDbo. */
+    interface ISpecialDbo {
+
+        /** SpecialDbo id */
+        id?: (string|null);
+
+        /** SpecialDbo name */
+        name?: (string|null);
+
+        /** SpecialDbo description */
+        description?: (string|null);
+    }
+
+    /** Represents a SpecialDbo. */
+    class SpecialDbo implements ISpecialDbo {
+
+        /**
+         * Constructs a new SpecialDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ISpecialDbo);
+
+        /** SpecialDbo id. */
+        public id: string;
+
+        /** SpecialDbo name. */
+        public name: string;
+
+        /** SpecialDbo description. */
+        public description: string;
+
+        /**
+         * Creates a new SpecialDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SpecialDbo instance
+         */
+        public static create(properties?: v2.ISpecialDbo): v2.SpecialDbo;
+
+        /**
+         * Encodes the specified SpecialDbo message. Does not implicitly {@link v2.SpecialDbo.verify|verify} messages.
+         * @param message SpecialDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.SpecialDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SpecialDbo message, length delimited. Does not implicitly {@link v2.SpecialDbo.verify|verify} messages.
+         * @param message SpecialDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.SpecialDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SpecialDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SpecialDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SpecialDbo;
+
+        /**
+         * Decodes a SpecialDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SpecialDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SpecialDbo;
+
+        /**
+         * Verifies a SpecialDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SpecialDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SpecialDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.SpecialDbo;
+
+        /**
+         * Creates a plain object from a SpecialDbo message. Also converts values to other types if specified.
+         * @param message SpecialDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.SpecialDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SpecialDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SpecialDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of a WeaponDatabaseDbo. */
     interface IWeaponDatabaseDbo {
 
-        /** WeaponDatabaseDbo WeaponTypes */
-        WeaponTypes?: (v2.WeaponTypeDbo[]|null);
+        /** WeaponDatabaseDbo weaponTypes */
+        weaponTypes?: (v2.WeaponTypeDbo[]|null);
     }
 
     /** Represents a WeaponDatabaseDbo. */
@@ -884,8 +1295,8 @@ export namespace v2 {
          */
         constructor(properties?: v2.IWeaponDatabaseDbo);
 
-        /** WeaponDatabaseDbo WeaponTypes. */
-        public WeaponTypes: v2.WeaponTypeDbo[];
+        /** WeaponDatabaseDbo weaponTypes. */
+        public weaponTypes: v2.WeaponTypeDbo[];
 
         /**
          * Creates a new WeaponDatabaseDbo instance using the specified properties.
@@ -1379,8 +1790,8 @@ export namespace v2 {
     /** Properties of a FeatDatabaseDbo. */
     interface IFeatDatabaseDbo {
 
-        /** FeatDatabaseDbo FeatSummaries */
-        FeatSummaries?: (v2.FeatSummaryDbo[]|null);
+        /** FeatDatabaseDbo featSummaries */
+        featSummaries?: (v2.FeatSummaryDbo[]|null);
     }
 
     /** Represents a FeatDatabaseDbo. */
@@ -1392,8 +1803,8 @@ export namespace v2 {
          */
         constructor(properties?: v2.IFeatDatabaseDbo);
 
-        /** FeatDatabaseDbo FeatSummaries. */
-        public FeatSummaries: v2.FeatSummaryDbo[];
+        /** FeatDatabaseDbo featSummaries. */
+        public featSummaries: v2.FeatSummaryDbo[];
 
         /**
          * Creates a new FeatDatabaseDbo instance using the specified properties.

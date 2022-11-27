@@ -11,8 +11,7 @@ public class NameToIdConverter {
     }
 
     public static String classId(String name) {
-        return partialId(name);
-//        return generateId(AttributeType.CLASS, name);
+        return generateId(AttributeType.CLASS, name);
     }
 
     public static String proficiencyId(String name) {
@@ -27,10 +26,14 @@ public class NameToIdConverter {
     public static String partialId(String name) {
         return name
                 .toLowerCase()
+                .replaceAll(" \\(Su\\)", "")
+                .replaceAll(" \\(Sp\\)", "")
+                .replaceAll(" \\(Ex\\)", "")
                 .replaceAll("/[$a-z0-9]/", "")
                 .replaceAll("\'", "")
                 .replace(' ', '_')
                 .replaceAll(",", "")
+                .replace("’", "")
                 .replace('/', '_')
                 .replaceAll("\\(", "")
                 .replaceAll("\\)", "")

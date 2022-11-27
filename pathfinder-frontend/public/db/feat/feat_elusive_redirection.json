@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You can redirect an attack back at your assailant or into an adjacent enemy.",
   "prerequisites": "Elusive target class feature, Combat Expertise, Improved Unarmed Strike, flowing monk level 12th.",
-  "prerequisitesFormula": "sum(@ability:*:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk:flowing \u003e\u003d 12 AND  !@feat:elusive_redirection",
+  "prerequisitesFormula": "sum(@ability:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk#flowing \u003e\u003d 12 AND  !@feat:elusive_redirection",
   "benefit": "When you successfully use your elusive target class feature to avoid taking damage, you can spend an immediate action and an additional point from your ki pool to redirect that attack back at your attacker or toward any other opponent adjacent to you and your attacker. This attack uses the same attack roll as the original attack, but it targets the opponent you choose.",
   "source": "Ultimate Combat"
 }

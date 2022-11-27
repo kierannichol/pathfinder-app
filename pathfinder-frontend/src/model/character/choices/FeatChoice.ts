@@ -1,28 +1,36 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
 import Trait from "../Trait";
 import FeatTrait from "../traits/FeatTrait";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 class FeatChoice extends CharacterChoice {
   public readonly type = ChoiceType.FEAT;
 
-  constructor(private readonly level: number, public readonly key: string, public readonly dependsOn: string|undefined, public readonly current = '') {
+  public withValue(value: string): FeatChoice {
+    return new FeatChoice(this.level, this.key, this.dependsOn, value);
+  }
+
+  constructor(public readonly level: number, public readonly key: string, public readonly dependsOn: string|undefined, public readonly current = '') {
     super();
   }
+}
 
-  select(value: string): CharacterChoice[] {
-    return [
-        new FeatChoice(this.level, this.key, this.dependsOn, value)
-    ]
+export class FeatChoiceProcessor implements ICharacterChoiceProcessor<FeatChoice> {
+  public readonly supportedChoiceType = ChoiceType.FEAT;
+
+  async select(choice: FeatChoice, value: string): Promise<CharacterChoice[]> {
+    return [ choice.withValue(value) ];
   }
 
-  traits(): Trait[] {
-    if (this.current === '') {
+  async traits(choice: FeatChoice): Promise<Trait[]> {
+    if (choice.current === '') {
       return [];
     }
     return [
-        new FeatTrait(this.level, this.current)
+      FeatTrait.of(choice.level, choice.current)
     ];
   }
+
 }
 
 export default FeatChoice;

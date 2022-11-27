@@ -1,48 +1,46 @@
 import {useState} from "react";
 import {Button, ListGroup} from "react-bootstrap";
-import {useNavigate} from "react-router-dom";
-import {loadState, saveState} from "../app/localStorage";
+import * as Icon from 'react-bootstrap-icons';
+import {Link, useNavigate} from "react-router-dom";
+import {useCharacterRepository} from "../app/reactCharacter";
+import {useAsyncMemo} from "../app/reactHooks";
 import NewCharacterDialog from "../components/character/NewCharacterDialog";
-import {HeaderRow} from "../components/Rows";
-import {Character, PackedCharacter} from "../model/character/Character";
+import LoadingBlock from "../components/common/LoadingBlock";
+import {HeaderRow} from "../components/GridHelpers";
+import {Character} from "../model/character/Character";
 import CharacterChoice from "../model/character/choices/CharacterChoice";
 import "./CharacterListView.scss";
 
-function loadAllCharacters(): Character[] {
-  // localStorage.clear();
-  const characters: Character[] = [];
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (key !== null) {
-      const loadedState = loadState<PackedCharacter>(key);
-      if (loadedState !== undefined) {
-        characters.push(Character.unpack(loadedState));
-      }
-    }
-  }
-  return characters;
-}
-
 function CharacterListView() {
   const navigate = useNavigate();
+  const characterRepository = useCharacterRepository();
 
-  const [ characterList, setCharacterList ] = useState(() => loadAllCharacters());
+  const [ characterList ] = useAsyncMemo(() => characterRepository.list(), []);
+
+  const isLoaded = characterList !== undefined;
 
   const handleCreate = (characterName: string) => {
+    if (characterList === undefined) {
+      return;
+    }
     const id = `${characterList.length + 1}`;
-    const newCharacter = new Character(id)
-        .select(CharacterChoice.CHARACTER_NAME, characterName);
-    saveState(`character-${id}`, newCharacter.pack());
-    // setCharacterList(loadAllCharacters());
-    navigate(`/character/edit/${id}`);
+    characterRepository.create()
+        .then(async (newCharacter) => {
+          newCharacter = await newCharacter.select(CharacterChoice.CHARACTER_NAME, characterName);
+          characterRepository.save(newCharacter)
+              .then(() => navigate(`/character/edit/${id}`));
+        });
   };
 
   return (<main>
     <HeaderRow>Characters</HeaderRow>
     <ListGroup>
-      {characterList.map(character => <CharacterItemRow key={character.id} character={character} />)}
+      {characterList?.map(character => <CharacterItemRow key={character.id} character={character} />)
+          ?? <div className="d-flex justify-content-center"><LoadingBlock/></div>}
+      <ListGroup.Item>
+        <AddCharacterButton disabled={!isLoaded} onCreate={handleCreate}/>
+      </ListGroup.Item>
     </ListGroup>
-    <AddCharacterButton onCreate={handleCreate}/>
   </main>);
 }
 
@@ -51,16 +49,33 @@ interface CharacterItemRowProps {
 }
 
 function CharacterItemRow({ character }: CharacterItemRowProps) {
-  return <ListGroup.Item action href={`/character/edit/${character.id}`}>
-    {character.getChoice(CharacterChoice.CHARACTER_NAME)}
+  const characterRepository = useCharacterRepository()
+  const [ deleting, setDeleting ] = useState(false)
+
+  const deleteAction = () => {
+    setDeleting(true)
+    characterRepository.delete(character.id)
+        .then(() => setDeleting(false))
+  }
+
+  return <ListGroup.Item>
+    <div className="d-flex flex-row w-100 align-items-center">
+      <Link className="d-flex flex-grow-1" to={`/character/edit/${character.id}`}>
+        {character.getChoice(CharacterChoice.CHARACTER_NAME)}
+      </Link>
+      <Link to={'#'} className="d-flex ms-3" onClick={_ => deleteAction()}>
+        {deleting ? <LoadingBlock/> : <Icon.XLg />}
+      </Link>
+    </div>
   </ListGroup.Item>
 }
 
 interface AddCharacterButtonProps {
   onCreate: (name: string) => void;
+  disabled?: boolean;
 }
 
-function AddCharacterButton({ onCreate }: AddCharacterButtonProps) {
+function AddCharacterButton({ onCreate, disabled = false }: AddCharacterButtonProps) {
   const [ show, setShow ] = useState(false);
 
   function handleCreate(characterName: string) {
@@ -73,7 +88,7 @@ function AddCharacterButton({ onCreate }: AddCharacterButtonProps) {
   }
 
   return (<>
-    <Button onClick={_ => setShow(true)}>+ Character</Button>
+    <Button disabled={disabled} onClick={_ => setShow(true)} size="lg">+ Character</Button>
     {show && <NewCharacterDialog show={show}
                                  onCreate={handleCreate}
                                  onCancel={handleCancel} />}

@@ -1,5 +1,6 @@
 import React, {useCallback, useContext, useEffect, useMemo, useState} from "react";
 import {Accordion, AccordionContext, Button, useAccordionButton} from "react-bootstrap";
+import {AccordionEventKey} from "react-bootstrap/AccordionContext";
 import {useFeatOnScreen} from "../../../database/v2/FeatDatabase";
 import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
 import {Feat, FeatSummary} from "../../../model/character/Feat";
@@ -34,18 +35,18 @@ export default function FeatSelectionList({ value, onChange, feats, characterAtL
     return () => clearFeatList();
     }, [characterAtLevel, feats]);
 
-  const handleSelect = (eventKey: string|undefined) => {
-    onChange?.(eventKey);
+  const handleChangeSelection = (eventKey: AccordionEventKey) => {
+    onChange?.(typeof eventKey === "string" ? eventKey : undefined);
   }
 
   return (<Accordion defaultActiveKey={value}
                      className={'pf-feat-list'}
+                     onSelect={handleChangeSelection}
                      flush={false}>
     {availableFeats.map(feat => <FeatAccordionOption
         key={feat.id}
         featId={feat.id}
         characterAtLevel={characterAtLevel}
-        onSelect={featId => handleSelect(featId?.toString())}
     />)}
   </Accordion>);
 }
@@ -53,10 +54,9 @@ export default function FeatSelectionList({ value, onChange, feats, characterAtL
 type FeatOptionProps = {
   featId: string;
   characterAtLevel: CharacterAtLevel;
-  onSelect?: (value: string) => void;
 }
 
-function FeatAccordionOption({ featId, characterAtLevel, onSelect }: FeatOptionProps) {
+function FeatAccordionOption({ featId, characterAtLevel }: FeatOptionProps) {
   const { activeEventKey } = useContext(AccordionContext);
   const [ feat, itemElementRef ] = useFeatOnScreen(featId);
 
@@ -75,9 +75,6 @@ function FeatAccordionOption({ featId, characterAtLevel, onSelect }: FeatOptionP
   const featLabel = useMemo(() => feat?.displayName(), [featId]);
 
   const isValidFeat = useMemo(() => feat?.isValidFor(characterAtLevel) ?? false, [featId, characterAtLevel]);
-  
-  const validFeatOptions = useMemo(() => feat?.options.filter(option => option.isValidFor(characterAtLevel)) ?? [],
-      [featId, characterAtLevel]);
 
   const selectFeatButton = useAccordionButton(featId);
 
@@ -132,16 +129,9 @@ function FeatAccordionOption({ featId, characterAtLevel, onSelect }: FeatOptionP
         >
           <div className={'pf-feat-list-item-body'} ref={elementShownRef}>
             {feat instanceof Feat && <>
-              <div className={'d-grid'}>
-                {!feat.hasOptions() && <Button
-                    variant={'primary'}
-                    size={'lg'}
-                    disabled={!isValidFeat}
-                    onClick={_ => onSelect?.(featId)}>Select</Button>}
-              </div>
               <FeatDescription feat={feat} characterAtLevel={characterAtLevel} />
-              {feat.hasOptions() && <div>{validFeatOptions.map(option =>
-                  <FeatOptionButton option={option} onSelect={onSelect} />)}</div>}
+              {/*{feat.hasOptions() && <div>{validFeatOptions.map(option =>*/}
+              {/*    <FeatOptionButton option={option} onSelect={onSelect} />)}</div>}*/}
             </>}
           </div>
         </Accordion.Collapse>

@@ -1,0 +1,32 @@
+.pfsc-armor-class-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & .label {
+    width: 6rem;
+  }
+
+  & .heading {
+    text-align: center;
+    justify-content: center;
+  }
+
+  & .section-row {
+    width: 100%;
+    display: flex;
+
+    & > div {
+      margin: var(--pf-grid-spacing);
+    }
+
+    & > span {
+      margin: var(--pf-grid-spacing) 0;
+      color: var(--pf-cell-border-color);
+    }
+
+    & > div:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.pf-character-edit-view {
+
+  & fieldset>input, & fieldset>select {
+    margin-bottom: 0.5rem;
+  }
+
+  & fieldset>input:last-child, & fieldset>select:last-child {
+    margin-bottom: 1rem;
+  }
+
+  input {
+    $background-color: white;
+    $text-color: dimgray;
+    $border-width: 2px;
+
+    width: 100%;
+    display: flex;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: left;
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin: 0;
+    padding: 18px 18px;
+    text-align: left;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: center;
+    height: 56px;
+
+    background-color: $background-color;
+    border: $border-width solid $text-color;
+    color: $text-color;
+  }
+}

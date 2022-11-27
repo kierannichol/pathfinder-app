@@ -33,7 +33,7 @@ class EnglishTextLookup implements ITextLookup {
     'RACE_HUMAN_NAME': 'Human',
     'RACE_DWARF_NAME': 'Dwarf',
     'FEAT_LABEL': 'Feat',
-    'HUMAN_BONUS_FEAT_LABEL': 'Bonus Feat (Human)',
+    'RACE_BONUS_FEAT_LABEL': 'Bonus Feat (Race)',
     'FIGHTER_BONUS_FEAT_LABEL': 'Bonus Feat (Fighter)',
     'RAGEPOWER_LABEL': 'Rage Power',
     'ROGUETALENT_LABEL': 'Rogue Talent',

@@ -1,5 +1,5 @@
-import Trait from "../Trait";
 import {DataContextState} from "../../../logic/DataContext";
+import Trait from "../Trait";
 
 export default class RacialAsiTrait implements Trait {
 
@@ -7,7 +7,7 @@ export default class RacialAsiTrait implements Trait {
   }
 
   applyTo(level: number, state: DataContextState): void {
-    state[this.attribute + '_race_asi'] = this.amount;
+    state[this.attribute + ':race_asi'] = this.amount;
   }
 
 }

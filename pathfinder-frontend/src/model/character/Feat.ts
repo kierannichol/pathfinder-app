@@ -1,32 +1,14 @@
-import {Formula} from "../../logic/Formula";
-import Resolvable from "../../logic/Resolvable";
-import {Attribute} from "./Attribute";
-import {CharacterAtLevel} from "./CharacterAtLevel";
+import {Ability, AbilitySummary} from "./Ability";
+import Type = Ability.Type;
 
-export class FeatSummary implements Attribute {
+export class FeatSummary extends AbilitySummary {
 
   public constructor(public readonly id: string,
                      public readonly name: string,
                      public readonly types: Feat.Type[],
-                     protected readonly prerequisitesFormula: Resolvable,
-                     public readonly prerequisitesFormulaText: string,
+                     public readonly prerequisites_formula: string,
                      public readonly options: Feat.Option[]) {
-  }
-
-  public isValidFor(characterAtLevel: CharacterAtLevel): boolean {
-    if (!(this.prerequisitesFormula.resolve(characterAtLevel)?.asBoolean() ?? false)) {
-      return false;
-    }
-    for (const option of this.options) {
-      if (option.isValidFor(characterAtLevel)) {
-        return true;
-      }
-    }
-    return true;
-  }
-
-  public hasOptions(): boolean {
-    return this.options.length > 0;
+    super(id, name, Type.None, prerequisites_formula);
   }
 
   displayName(): string {
@@ -73,10 +55,9 @@ export class Feat extends FeatSummary {
                       public readonly normal: string,
                       public readonly special: string,
                       public readonly note: string,
-                      protected readonly prerequisitesFormula: Resolvable,
-                      public readonly prerequisitesFormulaText: string,
+                      public readonly prerequisites_formula: string,
                       public readonly options: Feat.Option[]) {
-    super(id, name, types, prerequisitesFormula, prerequisitesFormulaText, options);
+    super(id, name, types, prerequisites_formula, options);
   }
 }
 
@@ -99,16 +80,42 @@ export namespace Feat {
   }
 
   export class Option {
-    protected readonly prerequisitesFormula: Resolvable
 
-    public constructor(public readonly id: string, public readonly name: string, public readonly prerequisitesFormulaText: string) {
-      this.prerequisitesFormula = prerequisitesFormulaText === ''
-          ? Resolvable.just(true)
-          : Formula.parse(prerequisitesFormulaText);
+    public constructor(public readonly id: string, public readonly name: string, public readonly prerequisites_formula: string) {
     }
 
-    public isValidFor(characterAtLevel: CharacterAtLevel): boolean {
-      return this.prerequisitesFormula.resolve(characterAtLevel)?.asBoolean() ?? false;
+    public toFeatSummary(parent: FeatSummary): FeatSummary {
+      const prerequisitesFormulaText = [ parent.prerequisites_formula,
+        this.prerequisites_formula,
+        `!@${this.id}` ]
+        .filter(x => x !== '')
+        .join(" AND ");
+
+      return new FeatSummary(this.id,
+          parent.name + ': ' + this.name,
+          parent.types,
+          prerequisitesFormulaText,
+          []);
+    }
+
+    public toFeat(parent: Feat): Feat {
+      const prerequisitesFormulaText = [ parent.prerequisites_formula,
+        this.prerequisites_formula,
+        `!@${this.id}` ]
+      .filter(x => x !== '')
+      .join(" AND ");
+
+      return new Feat(this.id,
+          parent.name + ': ' + this.name,
+          parent.types,
+          parent.description,
+          parent.prerequisites,
+          parent.benefit,
+          parent.normal,
+          parent.special,
+          parent.note,
+          prerequisitesFormulaText,
+          []);
     }
   }
 }

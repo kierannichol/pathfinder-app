@@ -1,18 +1,18 @@
-import Trait from "../Trait";
 import {DataContextState} from "../../../logic/DataContext";
-import {ClassData} from "../../../compiled";
+import {CharacterClass} from "../CharacterClass";
+import Trait from "../Trait";
 import NoTrait from "./NoTrait";
 
 export default class ClassTraits implements Trait {
 
-  static of(classData: ClassData|null): Trait {
+  static of(classData: CharacterClass|null): Trait {
     if (classData === null) {
       return NoTrait;
     }
     return new ClassTraits(classData);
   }
 
-  private constructor(private readonly classData: ClassData) {
+  private constructor(private readonly classData: CharacterClass) {
   }
 
   applyTo(level: number, state: DataContextState): void {
@@ -20,14 +20,17 @@ export default class ClassTraits implements Trait {
       return;
     }
 
-    const levelData = this.classData.levels[level - 1];
+    const levelData = this.classData.level(level);
+    if (levelData === undefined) {
+      return;
+    }
 
     state[`class_at_${level}`] = this.classData.id;
-    state[`class:${this.classData.id}`] = level;
+    state[this.classData.id] = level;
     state['bab'] = levelData.bab;
-    state['fort_save'] = levelData.fortSave;
-    state['reflex_save'] = levelData.refSave;
-    state['will_save'] = levelData.willSave;
+    state['fort:base'] = levelData.fortSave;
+    state['ref:base'] = levelData.refSave;
+    state['will:base'] = levelData.willSave;
   }
 
 }

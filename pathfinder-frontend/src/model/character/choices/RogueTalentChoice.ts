@@ -1,20 +1,29 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
 import Trait from "../Trait";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 export default class RogueTalentChoice extends CharacterChoice {
   public readonly type = ChoiceType.ROGUE_TALENT;
 
-  constructor(private readonly level: number, public readonly key: string, public dependsOn: string|undefined, public readonly current = '') {
+  public withValue(value: string): RogueTalentChoice {
+    return new RogueTalentChoice(this.level, this.key, this.dependsOn, value);
+  }
+
+  constructor(public readonly level: number, public readonly key: string, public dependsOn: string | undefined, public readonly current = '') {
     super();
   }
+}
 
-  select(value: string): CharacterChoice[] {
+export class RogueTalentChoiceProcessor implements ICharacterChoiceProcessor<RogueTalentChoice> {
+  public readonly supportedChoiceType = ChoiceType.ROGUE_TALENT;
+
+  async select(choice: RogueTalentChoice, value: string): Promise<CharacterChoice[]> {
     return [
-      new RogueTalentChoice(this.level, this.key, this.dependsOn, value)
-    ]
+      choice.withValue(value)
+    ];
   }
 
-  traits(): Trait[] {
+  async traits(choice: RogueTalentChoice): Promise<Trait[]> {
     return [];
   }
 }

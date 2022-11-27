@@ -1,20 +1,8 @@
 import {List} from "immutable";
 import CharacterState from "../../database/CharacterState";
 import {CharacterAtLevel} from "./CharacterAtLevel";
-import CharacterBaseAttributeChoice from "./choices/CharacterBaseAttributeChoice";
 import CharacterChoice from "./choices/CharacterChoice";
-import CharacterClassChoice from "./choices/CharacterClassChoice";
-import CharacterNameChoice from "./choices/CharacterNameChoice";
-import CharacterRaceChoice from "./choices/CharacterRaceChoice";
-import Trait from "./Trait";
-
-const initialChoices: CharacterChoice<any>[] = [
-    new CharacterNameChoice(),
-    new CharacterClassChoice(),
-    new CharacterRaceChoice(),
-  ...CharacterState.Abilities.map(ability =>
-        new CharacterBaseAttributeChoice(`level0:${ability}_base`, `${ability}_base`, '10')),
-];
+import CharacterChoiceProcessorCollection from "./choices/CharacterChoiceProcessorCollection";
 
 export type PackedCharacter = {
   id: string;
@@ -24,18 +12,15 @@ export type PackedCharacter = {
 export class Character {
   public static readonly ABILITIES = CharacterState.Abilities;
 
-  private readonly choices: List<CharacterChoice<any>>;
-  private readonly traits: List<Trait>;
-
   constructor(public readonly id: string,
-              choices: List<CharacterChoice<any>> = List(initialChoices)) {
-    this.choices = choices;
-    this.traits = List();
+              private readonly choices: List<CharacterChoice>,
+              private readonly processors: CharacterChoiceProcessorCollection) {
   }
 
-  public static unpack(packed: PackedCharacter): Character {
-    return new Character(packed.id,
-        List(Character.selectAll(initialChoices, packed.choices)));
+  public async unpack(packed: PackedCharacter): Promise<Character> {
+    return new Character(this.id,
+        List(await Character.selectAll(this.processors, this.choices, packed.choices)),
+        this.processors);
   }
 
   public pack(): PackedCharacter {
@@ -44,15 +29,22 @@ export class Character {
     return packed;
   }
 
-  public select(key: string, value: any): Character {
-    return new Character(this.id, this.choices
-      .filter(choice => choice.dependsOn !== key)
-      .flatMap(choice => {
-        if (choice.key !== key) {
-          return [ choice ];
-        }
-        return choice.select(value);
-      }));
+  public async select(key: string, value: any): Promise<Character> {
+    const choices: CharacterChoice[] = [];
+    for (let i = 0; i < this.choices.size; i++) {
+      let choice = this.choices.get(i);
+      if (choice === undefined || choice.dependsOn === key) {
+        continue;
+      }
+      if (choice.key !== key) {
+        choices.push(choice);
+        continue;
+      }
+
+      choices.push(...await this.processors.select(choice, value));
+    }
+
+    return new Character(this.id, List(choices), this.processors);
   }
 
   public hasChoice(key: string): boolean {
@@ -71,26 +63,31 @@ export class Character {
         });
   }
 
-  atLevel(level:number): CharacterAtLevel {
+  async atLevel(level:number): Promise<CharacterAtLevel> {
     let levelState = { ...CharacterState.InitialState };
     levelState['character_level'] = level;
 
-    this.choices.forEach(choice => choice.traits().forEach(trait => trait.applyTo(level, levelState)));
+    for (let choice of this.choices.toArray()) {
+      const traits = await this.processors.traits(choice);
+      traits.forEach(trait => trait.applyTo(level, levelState));
+    }
     return new CharacterAtLevel(level, levelState);
   }
 
-  private static selectAll(choices: CharacterChoice<any>[], values: {[key: string]: any}): CharacterChoice<any>[] {
-    return choices.flatMap(choice => {
+  private static async selectAll(processors: CharacterChoiceProcessorCollection, choices: List<CharacterChoice>, values: {[key: string]: any}): Promise<List<CharacterChoice>> {
+    const choiceKeys = choices.map(choice => choice.key);
+    const selectedChoices = (await Promise.all(choices.map(choice => {
       if (choice.key in values) {
-        const selectedChoices = choice.select(values[choice.key]);
-        const currentChoiceIndex = selectedChoices.findIndex(c => c.key === choice.key);
-        if (currentChoiceIndex !== -1) {
-          const currentChoice = selectedChoices.splice(currentChoiceIndex, 1);
-          return [ ...currentChoice, ...this.selectAll(selectedChoices, values) ];
-        }
-        return this.selectAll(selectedChoices, values);
+        return processors.select(choice, values[choice.key]);
       }
       return [ choice ];
-    });
+    }))).flat();
+    const alreadySelectedChoices = selectedChoices.filter(choice => choiceKeys.contains(choice.key));
+    const newlyProducedChoices = selectedChoices.filter(choice => !choiceKeys.contains(choice.key));
+
+    const selectedNewlyProducedChoices = newlyProducedChoices.length > 0
+        ? await this.selectAll(processors, List(newlyProducedChoices), values)
+        : List<CharacterChoice>();
+    return List(alreadySelectedChoices).concat(selectedNewlyProducedChoices);
   }
 }

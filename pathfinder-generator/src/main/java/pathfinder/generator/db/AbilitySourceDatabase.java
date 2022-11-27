@@ -15,7 +15,8 @@ import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.db.AbilitySourceDatabase.Ability.Type;
+import pathfinder.generator.model.Ability;
+import pathfinder.generator.model.Ability.Type;
 
 @Component("Ability Source Database")
 @RequiredArgsConstructor
@@ -65,19 +66,5 @@ public class AbilitySourceDatabase {
             return Type.NONE;
         }
         return Ability.Type.valueOf(abilityTypeString.toUpperCase());
-    }
-
-    public record Ability(
-            String id,
-            String name,
-            Type type,
-            String description
-    ) {
-        public enum Type {
-            NONE,
-            EX,
-            SP,
-            SU
-        }
     }
 }

@@ -1,21 +1,24 @@
-import {Form} from "react-bootstrap";
 import React from "react";
-import TextLookup from "../../model/TextLookup";
+import {Form} from "react-bootstrap";
+import {useRaceDatabase} from "../../database/v2/RaceDatabase";
 
 interface CharacterRaceChoiceInputProps {
-  value: string,
-  onChange: (changed: string) => void
+  id?: string;
+  value: string;
+  onChange: (changed: string) => void;
 }
 
-function CharacterRaceChoiceInput({value, onChange}: CharacterRaceChoiceInputProps) {
+function CharacterRaceChoiceInput({id, value, onChange}: CharacterRaceChoiceInputProps) {
+  const raceDatabase = useRaceDatabase();
+
   return (
-      <Form.Select size="lg"
+      <Form.Select id={id}
+                   size="lg"
                    value={value}
                    placeholder='Race'
                    onChange={event => onChange(event.target.value)}>
         <option value=""></option>
-        {['human', 'dwarf']
-        .map(raceId => <option key={raceId} value={raceId}>{TextLookup.get(`RACE_${raceId}_NAME`)}</option>)}
+        {raceDatabase.all.map(race => <option key={race.id} value={race.id}>{race.name}</option>)}
       </Form.Select>
   );
 }

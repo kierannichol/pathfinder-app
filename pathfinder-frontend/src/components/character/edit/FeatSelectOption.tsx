@@ -1,10 +1,10 @@
-import FeatureBlock from "../base/FeatureBlock";
 import {useEffect, useState} from "react";
-import {useFeatDatabase} from "../../../database/v2/FeatDatabase";
-import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
-import Expression from "../../../logic/Expression";
 import ReactMarkdown from "react-markdown";
+import {useFeatDatabase} from "../../../database/v2/FeatDatabase";
+import Expression from "../../../logic/Expression";
+import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
 import {Feat} from "../../../model/character/Feat";
+import FeatureBlock from "../base/FeatureBlock";
 
 interface FeatSelectOptionProps {
   feat: string|Feat;
@@ -85,7 +85,7 @@ function formatFeatDescription(feat: Feat | undefined, characterAtLevel: Charact
   const markdown = [];
   {feat.description !== '' && markdown.push(`_${feat.description}_`)}
   {feat.prerequisites !== '' && markdown.push(`**Prerequisites:** ${feat.prerequisites}`)}
-  {feat.prerequisitesFormulaText !== '' && markdown.push(`**Prerequisite Formula:** \`${feat.prerequisitesFormulaText}\``)}
+  {feat.prerequisites_formula !== '' && markdown.push(`**Prerequisite Formula:** \`${feat.prerequisites_formula}\``)}
   {feat.benefit !== '' && markdown.push(`**Benefit:** ${feat.benefit}`)}
   {feat.normal !== '' && markdown.push(`**Normal:** ${feat.normal}`)}
   {feat.special !== '' && markdown.push(`**Special:** ${feat.special}`)}

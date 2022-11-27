@@ -1,6 +1,7 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
 import Trait from "../Trait";
 import MercyTrait from "../traits/MercyTrait";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 export default class MercyChoice extends CharacterChoice {
   public readonly type: ChoiceType = ChoiceType.MERCY;
@@ -10,20 +11,24 @@ export default class MercyChoice extends CharacterChoice {
     return new MercyChoice(level, classId, dependsOn, current);
   }
 
-  private constructor(private readonly level: number, private readonly classId: string, public dependsOn: string|undefined, public readonly current = '') {
+  private constructor(public readonly level: number, public readonly classId: string, public dependsOn: string|undefined, public readonly current = '') {
     super();
     this.key = `level${level}:${classId}:mercy`;
   }
+}
 
-  select(value: string): CharacterChoice[] {
+export class MercyChoiceProcessor implements ICharacterChoiceProcessor<MercyChoice> {
+  public readonly supportedChoiceType = ChoiceType.MERCY;
+
+  async select(choice: MercyChoice, value: string): Promise<CharacterChoice[]> {
     return [
-        new MercyChoice(this.level, this.classId, this.dependsOn, value)
+      MercyChoice.of(choice.level, choice.classId, choice.dependsOn, value)
     ];
   }
 
-  traits(): Trait[] {
+  async traits(choice: MercyChoice): Promise<Trait[]> {
     return [
-        MercyTrait(this.current, this.classId, this.level)
+      MercyTrait(choice.current, choice.classId, choice.level)
     ];
   }
 }

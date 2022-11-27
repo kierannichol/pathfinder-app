@@ -1,11 +1,11 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
-import {DataContextState} from "../../../logic/DataContext";
 import Trait from "../Trait";
 import RacialAsiTrait from "../traits/RacialAsiTrait";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 class RaceAbilityScoreIncreaseChoice extends CharacterChoice {
   public readonly key = CharacterChoice.RACE_ABILITY_SCORE_INCREASE;
-  public readonly type = ChoiceType.ABILITY_SCORE;
+  public readonly type = ChoiceType.RACE_ABILITY_SCORE;
   public readonly dependsOn = CharacterChoice.RACE;
 
   constructor(private readonly value: string = '') {
@@ -15,19 +15,23 @@ class RaceAbilityScoreIncreaseChoice extends CharacterChoice {
   get current(): string {
     return this.value;
   }
+}
 
-  select(value: string): CharacterChoice[] {
+export class RaceAbilityScoreIncreaseChoiceProcessor implements ICharacterChoiceProcessor<RaceAbilityScoreIncreaseChoice> {
+  public readonly supportedChoiceType = ChoiceType.RACE_ABILITY_SCORE;
+
+  async select(choice: RaceAbilityScoreIncreaseChoice, value: string): Promise<CharacterChoice[]> {
     return [
-        new RaceAbilityScoreIncreaseChoice(value)
+      new RaceAbilityScoreIncreaseChoice(value)
     ];
   }
 
-  traits(): Trait[] {
-    if (this.current === '') {
+  async traits(choice: RaceAbilityScoreIncreaseChoice): Promise<Trait[]> {
+    if (choice.current === '') {
       return [];
     }
     return [
-        new RacialAsiTrait(this.current, 2)
+      new RacialAsiTrait(choice.current, 2)
     ]
   }
 }

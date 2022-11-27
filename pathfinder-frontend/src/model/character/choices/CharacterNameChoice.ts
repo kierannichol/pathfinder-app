@@ -1,11 +1,11 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
-import {DataContextState} from "../../../logic/DataContext";
 import Trait from "../Trait";
 import CustomTrait from "../traits/CustomTrait";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 export default class CharacterNameChoice extends CharacterChoice {
   public readonly key = CharacterChoice.CHARACTER_NAME;
-  public readonly type = ChoiceType.TEXT;
+  public readonly type = ChoiceType.CHARACTER_NAME;
   public readonly dependsOn = undefined;
 
   constructor(private readonly value: string = '') {
@@ -15,14 +15,19 @@ export default class CharacterNameChoice extends CharacterChoice {
   get current(): string {
     return this.value;
   }
+}
 
-  select(value: string): CharacterChoice[] {
+export class CharacterNameChoiceProcessor implements ICharacterChoiceProcessor<CharacterNameChoice> {
+  public readonly supportedChoiceType = ChoiceType.CHARACTER_NAME;
+
+  async select(choice: CharacterNameChoice, value: string): Promise<CharacterChoice[]> {
     return [
-        new CharacterNameChoice(value)
+      new CharacterNameChoice(value)
     ];
   }
 
-  traits(): Trait[] {
-    return [ CustomTrait.of('character_name', this.current) ];
+  async traits(choice: CharacterNameChoice): Promise<Trait[]> {
+    return [ CustomTrait.of('character_name', choice.current) ];
   }
+
 }

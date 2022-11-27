@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import pathfinder.data.v2.WeaponDatabaseDbo;
 import pathfinder.data.v2.WeaponTypeDbo;
 import pathfinder.generator.db.WeaponSourceDatabase;
-import pathfinder.generator.db.encode.WeaponTypeEncoder;
+import pathfinder.generator.encode.WeaponTypeEncoder;
 import pathfinder.generator.spring.OutputPathValue;
 
 @Service("Weapon Database Generator")

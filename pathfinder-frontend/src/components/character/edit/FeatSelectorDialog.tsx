@@ -1,7 +1,7 @@
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {useEffect, useMemo, useState} from "react";
-import {Modal, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
+import {Button, Modal, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
 import {useFeatDatabase} from "../../../database/v2/FeatDatabase";
 import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
 import {Feat} from "../../../model/character/Feat";
@@ -38,9 +38,10 @@ export default function FeatSelectorDialog({ show, value, characterAtLevel, onSe
 
   const hasQuery = useMemo(() => query.trim().length > 0, [query]);
 
-  const handleSelect = (featId: string|undefined) => {
-    setSelected(featId);
-    featId && onSelect?.(featId);
+  const hasSelection = selected !== undefined && selected !== '';
+
+  function handleConfirmSelection() {
+    onSelect?.(selected ?? '');
   }
 
   const feats = useMemo(() => {
@@ -71,6 +72,7 @@ export default function FeatSelectorDialog({ show, value, characterAtLevel, onSe
       centered={true}
       size={'lg'}
       scrollable={true}
+      fullscreen={'md-down'}
       className={'pf-feat-selector-dialog'}
   >
     <Modal.Header className={'title'} closeButton={true} closeVariant={'white'}>
@@ -95,11 +97,12 @@ export default function FeatSelectorDialog({ show, value, characterAtLevel, onSe
       <FeatSelectionList
           value={selected}
           feats={feats}
-          onChange={handleSelect}
+          onChange={setSelected}
           characterAtLevel={characterWithoutSelectedFeat} />
     </Modal.Body>
 
-    <Modal.Footer>
+    <Modal.Footer className={'pf-feat-selector-dialog--footer'}>
+      <Button size="lg" className="w-100" disabled={!hasSelection} onClick={handleConfirmSelection}>Select</Button>
     </Modal.Footer>
 
   </Modal>);

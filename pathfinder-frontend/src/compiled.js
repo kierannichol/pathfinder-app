@@ -9,988 +9,34 @@ var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.ut
 // Exported root namespace
 var $root = $protobuf.roots["../pathfinder-generator/src/main/proto"] || ($protobuf.roots["../pathfinder-generator/src/main/proto"] = {});
 
-$root.RaceDatabase = (function() {
+$root.v2 = (function() {
 
     /**
-     * Properties of a RaceDatabase.
-     * @exports IRaceDatabase
-     * @interface IRaceDatabase
-     * @property {Array.<RaceData>|null} [Races] RaceDatabase Races
+     * Namespace v2.
+     * @exports v2
+     * @namespace
      */
+    var v2 = {};
 
-    /**
-     * Constructs a new RaceDatabase.
-     * @exports RaceDatabase
-     * @classdesc Represents a RaceDatabase.
-     * @implements IRaceDatabase
-     * @constructor
-     * @param {IRaceDatabase=} [properties] Properties to set
-     */
-    function RaceDatabase(properties) {
-        this.Races = [];
-        if (properties)
-            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                if (properties[keys[i]] != null)
-                    this[keys[i]] = properties[keys[i]];
-    }
-
-    /**
-     * RaceDatabase Races.
-     * @member {Array.<RaceData>} Races
-     * @memberof RaceDatabase
-     * @instance
-     */
-    RaceDatabase.prototype.Races = $util.emptyArray;
-
-    /**
-     * Creates a new RaceDatabase instance using the specified properties.
-     * @function create
-     * @memberof RaceDatabase
-     * @static
-     * @param {IRaceDatabase=} [properties] Properties to set
-     * @returns {RaceDatabase} RaceDatabase instance
-     */
-    RaceDatabase.create = function create(properties) {
-        return new RaceDatabase(properties);
-    };
-
-    /**
-     * Encodes the specified RaceDatabase message. Does not implicitly {@link RaceDatabase.verify|verify} messages.
-     * @function encode
-     * @memberof RaceDatabase
-     * @static
-     * @param {RaceDatabase} message RaceDatabase message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    RaceDatabase.encode = function encode(message, writer) {
-        if (!writer)
-            writer = $Writer.create();
-        if (message.Races != null && message.Races.length)
-            for (var i = 0; i < message.Races.length; ++i)
-                $root.RaceData.encode(message.Races[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-        return writer;
-    };
-
-    /**
-     * Encodes the specified RaceDatabase message, length delimited. Does not implicitly {@link RaceDatabase.verify|verify} messages.
-     * @function encodeDelimited
-     * @memberof RaceDatabase
-     * @static
-     * @param {RaceDatabase} message RaceDatabase message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    RaceDatabase.encodeDelimited = function encodeDelimited(message, writer) {
-        return this.encode(message, writer).ldelim();
-    };
-
-    /**
-     * Decodes a RaceDatabase message from the specified reader or buffer.
-     * @function decode
-     * @memberof RaceDatabase
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @param {number} [length] Message length if known beforehand
-     * @returns {RaceDatabase} RaceDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    RaceDatabase.decode = function decode(reader, length) {
-        if (!(reader instanceof $Reader))
-            reader = $Reader.create(reader);
-        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.RaceDatabase();
-        while (reader.pos < end) {
-            var tag = reader.uint32();
-            switch (tag >>> 3) {
-            case 1: {
-                    if (!(message.Races && message.Races.length))
-                        message.Races = [];
-                    message.Races.push($root.RaceData.decode(reader, reader.uint32()));
-                    break;
-                }
-            default:
-                reader.skipType(tag & 7);
-                break;
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Decodes a RaceDatabase message from the specified reader or buffer, length delimited.
-     * @function decodeDelimited
-     * @memberof RaceDatabase
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {RaceDatabase} RaceDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    RaceDatabase.decodeDelimited = function decodeDelimited(reader) {
-        if (!(reader instanceof $Reader))
-            reader = new $Reader(reader);
-        return this.decode(reader, reader.uint32());
-    };
-
-    /**
-     * Verifies a RaceDatabase message.
-     * @function verify
-     * @memberof RaceDatabase
-     * @static
-     * @param {Object.<string,*>} message Plain object to verify
-     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-     */
-    RaceDatabase.verify = function verify(message) {
-        if (typeof message !== "object" || message === null)
-            return "object expected";
-        if (message.Races != null && message.hasOwnProperty("Races")) {
-            if (!Array.isArray(message.Races))
-                return "Races: array expected";
-            for (var i = 0; i < message.Races.length; ++i) {
-                var error = $root.RaceData.verify(message.Races[i]);
-                if (error)
-                    return "Races." + error;
-            }
-        }
-        return null;
-    };
-
-    /**
-     * Creates a RaceDatabase message from a plain object. Also converts values to their respective internal types.
-     * @function fromObject
-     * @memberof RaceDatabase
-     * @static
-     * @param {Object.<string,*>} object Plain object
-     * @returns {RaceDatabase} RaceDatabase
-     */
-    RaceDatabase.fromObject = function fromObject(object) {
-        if (object instanceof $root.RaceDatabase)
-            return object;
-        var message = new $root.RaceDatabase();
-        if (object.Races) {
-            if (!Array.isArray(object.Races))
-                throw TypeError(".RaceDatabase.Races: array expected");
-            message.Races = [];
-            for (var i = 0; i < object.Races.length; ++i) {
-                if (typeof object.Races[i] !== "object")
-                    throw TypeError(".RaceDatabase.Races: object expected");
-                message.Races[i] = $root.RaceData.fromObject(object.Races[i]);
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Creates a plain object from a RaceDatabase message. Also converts values to other types if specified.
-     * @function toObject
-     * @memberof RaceDatabase
-     * @static
-     * @param {RaceDatabase} message RaceDatabase
-     * @param {$protobuf.IConversionOptions} [options] Conversion options
-     * @returns {Object.<string,*>} Plain object
-     */
-    RaceDatabase.toObject = function toObject(message, options) {
-        if (!options)
-            options = {};
-        var object = {};
-        if (options.arrays || options.defaults)
-            object.Races = [];
-        if (message.Races && message.Races.length) {
-            object.Races = [];
-            for (var j = 0; j < message.Races.length; ++j)
-                object.Races[j] = $root.RaceData.toObject(message.Races[j], options);
-        }
-        return object;
-    };
-
-    /**
-     * Converts this RaceDatabase to JSON.
-     * @function toJSON
-     * @memberof RaceDatabase
-     * @instance
-     * @returns {Object.<string,*>} JSON object
-     */
-    RaceDatabase.prototype.toJSON = function toJSON() {
-        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-    };
-
-    /**
-     * Gets the default type url for RaceDatabase
-     * @function getTypeUrl
-     * @memberof RaceDatabase
-     * @static
-     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns {string} The default type url
-     */
-    RaceDatabase.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
-        if (typeUrlPrefix === undefined) {
-            typeUrlPrefix = "type.googleapis.com";
-        }
-        return typeUrlPrefix + "/RaceDatabase";
-    };
-
-    return RaceDatabase;
-})();
-
-$root.RaceData = (function() {
-
-    /**
-     * Properties of a RaceData.
-     * @exports IRaceData
-     * @interface IRaceData
-     * @property {number|Long|null} [id] RaceData id
-     * @property {string|null} [name] RaceData name
-     */
-
-    /**
-     * Constructs a new RaceData.
-     * @exports RaceData
-     * @classdesc Represents a RaceData.
-     * @implements IRaceData
-     * @constructor
-     * @param {IRaceData=} [properties] Properties to set
-     */
-    function RaceData(properties) {
-        if (properties)
-            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                if (properties[keys[i]] != null)
-                    this[keys[i]] = properties[keys[i]];
-    }
-
-    /**
-     * RaceData id.
-     * @member {number|Long} id
-     * @memberof RaceData
-     * @instance
-     */
-    RaceData.prototype.id = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-
-    /**
-     * RaceData name.
-     * @member {string} name
-     * @memberof RaceData
-     * @instance
-     */
-    RaceData.prototype.name = "";
-
-    /**
-     * Creates a new RaceData instance using the specified properties.
-     * @function create
-     * @memberof RaceData
-     * @static
-     * @param {IRaceData=} [properties] Properties to set
-     * @returns {RaceData} RaceData instance
-     */
-    RaceData.create = function create(properties) {
-        return new RaceData(properties);
-    };
-
-    /**
-     * Encodes the specified RaceData message. Does not implicitly {@link RaceData.verify|verify} messages.
-     * @function encode
-     * @memberof RaceData
-     * @static
-     * @param {RaceData} message RaceData message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    RaceData.encode = function encode(message, writer) {
-        if (!writer)
-            writer = $Writer.create();
-        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-        if (message.name != null && Object.hasOwnProperty.call(message, "name"))
-            writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
-        return writer;
-    };
-
-    /**
-     * Encodes the specified RaceData message, length delimited. Does not implicitly {@link RaceData.verify|verify} messages.
-     * @function encodeDelimited
-     * @memberof RaceData
-     * @static
-     * @param {RaceData} message RaceData message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    RaceData.encodeDelimited = function encodeDelimited(message, writer) {
-        return this.encode(message, writer).ldelim();
-    };
-
-    /**
-     * Decodes a RaceData message from the specified reader or buffer.
-     * @function decode
-     * @memberof RaceData
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @param {number} [length] Message length if known beforehand
-     * @returns {RaceData} RaceData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    RaceData.decode = function decode(reader, length) {
-        if (!(reader instanceof $Reader))
-            reader = $Reader.create(reader);
-        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.RaceData();
-        while (reader.pos < end) {
-            var tag = reader.uint32();
-            switch (tag >>> 3) {
-            case 1: {
-                    message.id = reader.uint64();
-                    break;
-                }
-            case 2: {
-                    message.name = reader.string();
-                    break;
-                }
-            default:
-                reader.skipType(tag & 7);
-                break;
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Decodes a RaceData message from the specified reader or buffer, length delimited.
-     * @function decodeDelimited
-     * @memberof RaceData
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {RaceData} RaceData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    RaceData.decodeDelimited = function decodeDelimited(reader) {
-        if (!(reader instanceof $Reader))
-            reader = new $Reader(reader);
-        return this.decode(reader, reader.uint32());
-    };
-
-    /**
-     * Verifies a RaceData message.
-     * @function verify
-     * @memberof RaceData
-     * @static
-     * @param {Object.<string,*>} message Plain object to verify
-     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-     */
-    RaceData.verify = function verify(message) {
-        if (typeof message !== "object" || message === null)
-            return "object expected";
-        if (message.id != null && message.hasOwnProperty("id"))
-            if (!$util.isInteger(message.id) && !(message.id && $util.isInteger(message.id.low) && $util.isInteger(message.id.high)))
-                return "id: integer|Long expected";
-        if (message.name != null && message.hasOwnProperty("name"))
-            if (!$util.isString(message.name))
-                return "name: string expected";
-        return null;
-    };
-
-    /**
-     * Creates a RaceData message from a plain object. Also converts values to their respective internal types.
-     * @function fromObject
-     * @memberof RaceData
-     * @static
-     * @param {Object.<string,*>} object Plain object
-     * @returns {RaceData} RaceData
-     */
-    RaceData.fromObject = function fromObject(object) {
-        if (object instanceof $root.RaceData)
-            return object;
-        var message = new $root.RaceData();
-        if (object.id != null)
-            if ($util.Long)
-                (message.id = $util.Long.fromValue(object.id)).unsigned = true;
-            else if (typeof object.id === "string")
-                message.id = parseInt(object.id, 10);
-            else if (typeof object.id === "number")
-                message.id = object.id;
-            else if (typeof object.id === "object")
-                message.id = new $util.LongBits(object.id.low >>> 0, object.id.high >>> 0).toNumber(true);
-        if (object.name != null)
-            message.name = String(object.name);
-        return message;
-    };
-
-    /**
-     * Creates a plain object from a RaceData message. Also converts values to other types if specified.
-     * @function toObject
-     * @memberof RaceData
-     * @static
-     * @param {RaceData} message RaceData
-     * @param {$protobuf.IConversionOptions} [options] Conversion options
-     * @returns {Object.<string,*>} Plain object
-     */
-    RaceData.toObject = function toObject(message, options) {
-        if (!options)
-            options = {};
-        var object = {};
-        if (options.defaults) {
-            if ($util.Long) {
-                var long = new $util.Long(0, 0, true);
-                object.id = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-            } else
-                object.id = options.longs === String ? "0" : 0;
-            object.name = "";
-        }
-        if (message.id != null && message.hasOwnProperty("id"))
-            if (typeof message.id === "number")
-                object.id = options.longs === String ? String(message.id) : message.id;
-            else
-                object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
-        if (message.name != null && message.hasOwnProperty("name"))
-            object.name = message.name;
-        return object;
-    };
-
-    /**
-     * Converts this RaceData to JSON.
-     * @function toJSON
-     * @memberof RaceData
-     * @instance
-     * @returns {Object.<string,*>} JSON object
-     */
-    RaceData.prototype.toJSON = function toJSON() {
-        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-    };
-
-    /**
-     * Gets the default type url for RaceData
-     * @function getTypeUrl
-     * @memberof RaceData
-     * @static
-     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns {string} The default type url
-     */
-    RaceData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
-        if (typeUrlPrefix === undefined) {
-            typeUrlPrefix = "type.googleapis.com";
-        }
-        return typeUrlPrefix + "/RaceData";
-    };
-
-    return RaceData;
-})();
-
-$root.ClassDatabase = (function() {
-
-    /**
-     * Properties of a ClassDatabase.
-     * @exports IClassDatabase
-     * @interface IClassDatabase
-     * @property {Array.<ClassData>|null} [classes] ClassDatabase classes
-     */
-
-    /**
-     * Constructs a new ClassDatabase.
-     * @exports ClassDatabase
-     * @classdesc Represents a ClassDatabase.
-     * @implements IClassDatabase
-     * @constructor
-     * @param {IClassDatabase=} [properties] Properties to set
-     */
-    function ClassDatabase(properties) {
-        this.classes = [];
-        if (properties)
-            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                if (properties[keys[i]] != null)
-                    this[keys[i]] = properties[keys[i]];
-    }
-
-    /**
-     * ClassDatabase classes.
-     * @member {Array.<ClassData>} classes
-     * @memberof ClassDatabase
-     * @instance
-     */
-    ClassDatabase.prototype.classes = $util.emptyArray;
-
-    /**
-     * Creates a new ClassDatabase instance using the specified properties.
-     * @function create
-     * @memberof ClassDatabase
-     * @static
-     * @param {IClassDatabase=} [properties] Properties to set
-     * @returns {ClassDatabase} ClassDatabase instance
-     */
-    ClassDatabase.create = function create(properties) {
-        return new ClassDatabase(properties);
-    };
-
-    /**
-     * Encodes the specified ClassDatabase message. Does not implicitly {@link ClassDatabase.verify|verify} messages.
-     * @function encode
-     * @memberof ClassDatabase
-     * @static
-     * @param {ClassDatabase} message ClassDatabase message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    ClassDatabase.encode = function encode(message, writer) {
-        if (!writer)
-            writer = $Writer.create();
-        if (message.classes != null && message.classes.length)
-            for (var i = 0; i < message.classes.length; ++i)
-                $root.ClassData.encode(message.classes[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-        return writer;
-    };
-
-    /**
-     * Encodes the specified ClassDatabase message, length delimited. Does not implicitly {@link ClassDatabase.verify|verify} messages.
-     * @function encodeDelimited
-     * @memberof ClassDatabase
-     * @static
-     * @param {ClassDatabase} message ClassDatabase message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    ClassDatabase.encodeDelimited = function encodeDelimited(message, writer) {
-        return this.encode(message, writer).ldelim();
-    };
-
-    /**
-     * Decodes a ClassDatabase message from the specified reader or buffer.
-     * @function decode
-     * @memberof ClassDatabase
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @param {number} [length] Message length if known beforehand
-     * @returns {ClassDatabase} ClassDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    ClassDatabase.decode = function decode(reader, length) {
-        if (!(reader instanceof $Reader))
-            reader = $Reader.create(reader);
-        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ClassDatabase();
-        while (reader.pos < end) {
-            var tag = reader.uint32();
-            switch (tag >>> 3) {
-            case 1: {
-                    if (!(message.classes && message.classes.length))
-                        message.classes = [];
-                    message.classes.push($root.ClassData.decode(reader, reader.uint32()));
-                    break;
-                }
-            default:
-                reader.skipType(tag & 7);
-                break;
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Decodes a ClassDatabase message from the specified reader or buffer, length delimited.
-     * @function decodeDelimited
-     * @memberof ClassDatabase
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {ClassDatabase} ClassDatabase
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    ClassDatabase.decodeDelimited = function decodeDelimited(reader) {
-        if (!(reader instanceof $Reader))
-            reader = new $Reader(reader);
-        return this.decode(reader, reader.uint32());
-    };
-
-    /**
-     * Verifies a ClassDatabase message.
-     * @function verify
-     * @memberof ClassDatabase
-     * @static
-     * @param {Object.<string,*>} message Plain object to verify
-     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-     */
-    ClassDatabase.verify = function verify(message) {
-        if (typeof message !== "object" || message === null)
-            return "object expected";
-        if (message.classes != null && message.hasOwnProperty("classes")) {
-            if (!Array.isArray(message.classes))
-                return "classes: array expected";
-            for (var i = 0; i < message.classes.length; ++i) {
-                var error = $root.ClassData.verify(message.classes[i]);
-                if (error)
-                    return "classes." + error;
-            }
-        }
-        return null;
-    };
-
-    /**
-     * Creates a ClassDatabase message from a plain object. Also converts values to their respective internal types.
-     * @function fromObject
-     * @memberof ClassDatabase
-     * @static
-     * @param {Object.<string,*>} object Plain object
-     * @returns {ClassDatabase} ClassDatabase
-     */
-    ClassDatabase.fromObject = function fromObject(object) {
-        if (object instanceof $root.ClassDatabase)
-            return object;
-        var message = new $root.ClassDatabase();
-        if (object.classes) {
-            if (!Array.isArray(object.classes))
-                throw TypeError(".ClassDatabase.classes: array expected");
-            message.classes = [];
-            for (var i = 0; i < object.classes.length; ++i) {
-                if (typeof object.classes[i] !== "object")
-                    throw TypeError(".ClassDatabase.classes: object expected");
-                message.classes[i] = $root.ClassData.fromObject(object.classes[i]);
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Creates a plain object from a ClassDatabase message. Also converts values to other types if specified.
-     * @function toObject
-     * @memberof ClassDatabase
-     * @static
-     * @param {ClassDatabase} message ClassDatabase
-     * @param {$protobuf.IConversionOptions} [options] Conversion options
-     * @returns {Object.<string,*>} Plain object
-     */
-    ClassDatabase.toObject = function toObject(message, options) {
-        if (!options)
-            options = {};
-        var object = {};
-        if (options.arrays || options.defaults)
-            object.classes = [];
-        if (message.classes && message.classes.length) {
-            object.classes = [];
-            for (var j = 0; j < message.classes.length; ++j)
-                object.classes[j] = $root.ClassData.toObject(message.classes[j], options);
-        }
-        return object;
-    };
-
-    /**
-     * Converts this ClassDatabase to JSON.
-     * @function toJSON
-     * @memberof ClassDatabase
-     * @instance
-     * @returns {Object.<string,*>} JSON object
-     */
-    ClassDatabase.prototype.toJSON = function toJSON() {
-        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-    };
-
-    /**
-     * Gets the default type url for ClassDatabase
-     * @function getTypeUrl
-     * @memberof ClassDatabase
-     * @static
-     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns {string} The default type url
-     */
-    ClassDatabase.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
-        if (typeUrlPrefix === undefined) {
-            typeUrlPrefix = "type.googleapis.com";
-        }
-        return typeUrlPrefix + "/ClassDatabase";
-    };
-
-    return ClassDatabase;
-})();
-
-$root.ClassData = (function() {
-
-    /**
-     * Properties of a ClassData.
-     * @exports IClassData
-     * @interface IClassData
-     * @property {string|null} [id] ClassData id
-     * @property {string|null} [name] ClassData name
-     * @property {Array.<ClassData.Level>|null} [levels] ClassData levels
-     */
-
-    /**
-     * Constructs a new ClassData.
-     * @exports ClassData
-     * @classdesc Represents a ClassData.
-     * @implements IClassData
-     * @constructor
-     * @param {IClassData=} [properties] Properties to set
-     */
-    function ClassData(properties) {
-        this.levels = [];
-        if (properties)
-            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                if (properties[keys[i]] != null)
-                    this[keys[i]] = properties[keys[i]];
-    }
-
-    /**
-     * ClassData id.
-     * @member {string} id
-     * @memberof ClassData
-     * @instance
-     */
-    ClassData.prototype.id = "";
-
-    /**
-     * ClassData name.
-     * @member {string} name
-     * @memberof ClassData
-     * @instance
-     */
-    ClassData.prototype.name = "";
-
-    /**
-     * ClassData levels.
-     * @member {Array.<ClassData.Level>} levels
-     * @memberof ClassData
-     * @instance
-     */
-    ClassData.prototype.levels = $util.emptyArray;
-
-    /**
-     * Creates a new ClassData instance using the specified properties.
-     * @function create
-     * @memberof ClassData
-     * @static
-     * @param {IClassData=} [properties] Properties to set
-     * @returns {ClassData} ClassData instance
-     */
-    ClassData.create = function create(properties) {
-        return new ClassData(properties);
-    };
-
-    /**
-     * Encodes the specified ClassData message. Does not implicitly {@link ClassData.verify|verify} messages.
-     * @function encode
-     * @memberof ClassData
-     * @static
-     * @param {ClassData} message ClassData message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    ClassData.encode = function encode(message, writer) {
-        if (!writer)
-            writer = $Writer.create();
-        if (message.id != null && Object.hasOwnProperty.call(message, "id"))
-            writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
-        if (message.name != null && Object.hasOwnProperty.call(message, "name"))
-            writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
-        if (message.levels != null && message.levels.length)
-            for (var i = 0; i < message.levels.length; ++i)
-                $root.ClassData.Level.encode(message.levels[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-        return writer;
-    };
-
-    /**
-     * Encodes the specified ClassData message, length delimited. Does not implicitly {@link ClassData.verify|verify} messages.
-     * @function encodeDelimited
-     * @memberof ClassData
-     * @static
-     * @param {ClassData} message ClassData message or plain object to encode
-     * @param {$protobuf.Writer} [writer] Writer to encode to
-     * @returns {$protobuf.Writer} Writer
-     */
-    ClassData.encodeDelimited = function encodeDelimited(message, writer) {
-        return this.encode(message, writer).ldelim();
-    };
-
-    /**
-     * Decodes a ClassData message from the specified reader or buffer.
-     * @function decode
-     * @memberof ClassData
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @param {number} [length] Message length if known beforehand
-     * @returns {ClassData} ClassData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    ClassData.decode = function decode(reader, length) {
-        if (!(reader instanceof $Reader))
-            reader = $Reader.create(reader);
-        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ClassData();
-        while (reader.pos < end) {
-            var tag = reader.uint32();
-            switch (tag >>> 3) {
-            case 1: {
-                    message.id = reader.string();
-                    break;
-                }
-            case 2: {
-                    message.name = reader.string();
-                    break;
-                }
-            case 3: {
-                    if (!(message.levels && message.levels.length))
-                        message.levels = [];
-                    message.levels.push($root.ClassData.Level.decode(reader, reader.uint32()));
-                    break;
-                }
-            default:
-                reader.skipType(tag & 7);
-                break;
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Decodes a ClassData message from the specified reader or buffer, length delimited.
-     * @function decodeDelimited
-     * @memberof ClassData
-     * @static
-     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {ClassData} ClassData
-     * @throws {Error} If the payload is not a reader or valid buffer
-     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-     */
-    ClassData.decodeDelimited = function decodeDelimited(reader) {
-        if (!(reader instanceof $Reader))
-            reader = new $Reader(reader);
-        return this.decode(reader, reader.uint32());
-    };
-
-    /**
-     * Verifies a ClassData message.
-     * @function verify
-     * @memberof ClassData
-     * @static
-     * @param {Object.<string,*>} message Plain object to verify
-     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-     */
-    ClassData.verify = function verify(message) {
-        if (typeof message !== "object" || message === null)
-            return "object expected";
-        if (message.id != null && message.hasOwnProperty("id"))
-            if (!$util.isString(message.id))
-                return "id: string expected";
-        if (message.name != null && message.hasOwnProperty("name"))
-            if (!$util.isString(message.name))
-                return "name: string expected";
-        if (message.levels != null && message.hasOwnProperty("levels")) {
-            if (!Array.isArray(message.levels))
-                return "levels: array expected";
-            for (var i = 0; i < message.levels.length; ++i) {
-                var error = $root.ClassData.Level.verify(message.levels[i]);
-                if (error)
-                    return "levels." + error;
-            }
-        }
-        return null;
-    };
-
-    /**
-     * Creates a ClassData message from a plain object. Also converts values to their respective internal types.
-     * @function fromObject
-     * @memberof ClassData
-     * @static
-     * @param {Object.<string,*>} object Plain object
-     * @returns {ClassData} ClassData
-     */
-    ClassData.fromObject = function fromObject(object) {
-        if (object instanceof $root.ClassData)
-            return object;
-        var message = new $root.ClassData();
-        if (object.id != null)
-            message.id = String(object.id);
-        if (object.name != null)
-            message.name = String(object.name);
-        if (object.levels) {
-            if (!Array.isArray(object.levels))
-                throw TypeError(".ClassData.levels: array expected");
-            message.levels = [];
-            for (var i = 0; i < object.levels.length; ++i) {
-                if (typeof object.levels[i] !== "object")
-                    throw TypeError(".ClassData.levels: object expected");
-                message.levels[i] = $root.ClassData.Level.fromObject(object.levels[i]);
-            }
-        }
-        return message;
-    };
-
-    /**
-     * Creates a plain object from a ClassData message. Also converts values to other types if specified.
-     * @function toObject
-     * @memberof ClassData
-     * @static
-     * @param {ClassData} message ClassData
-     * @param {$protobuf.IConversionOptions} [options] Conversion options
-     * @returns {Object.<string,*>} Plain object
-     */
-    ClassData.toObject = function toObject(message, options) {
-        if (!options)
-            options = {};
-        var object = {};
-        if (options.arrays || options.defaults)
-            object.levels = [];
-        if (options.defaults) {
-            object.id = "";
-            object.name = "";
-        }
-        if (message.id != null && message.hasOwnProperty("id"))
-            object.id = message.id;
-        if (message.name != null && message.hasOwnProperty("name"))
-            object.name = message.name;
-        if (message.levels && message.levels.length) {
-            object.levels = [];
-            for (var j = 0; j < message.levels.length; ++j)
-                object.levels[j] = $root.ClassData.Level.toObject(message.levels[j], options);
-        }
-        return object;
-    };
-
-    /**
-     * Converts this ClassData to JSON.
-     * @function toJSON
-     * @memberof ClassData
-     * @instance
-     * @returns {Object.<string,*>} JSON object
-     */
-    ClassData.prototype.toJSON = function toJSON() {
-        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-    };
-
-    /**
-     * Gets the default type url for ClassData
-     * @function getTypeUrl
-     * @memberof ClassData
-     * @static
-     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-     * @returns {string} The default type url
-     */
-    ClassData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
-        if (typeUrlPrefix === undefined) {
-            typeUrlPrefix = "type.googleapis.com";
-        }
-        return typeUrlPrefix + "/ClassData";
-    };
-
-    ClassData.Level = (function() {
+    v2.RaceDatabaseDbo = (function() {
 
         /**
-         * Properties of a Level.
-         * @memberof ClassData
-         * @interface ILevel
-         * @property {number|null} [levelNumber] Level levelNumber
-         * @property {number|null} [bab] Level bab
-         * @property {number|null} [fortSave] Level fortSave
-         * @property {number|null} [refSave] Level refSave
-         * @property {number|null} [willSave] Level willSave
-         * @property {Array.<string>|null} [special] Level special
+         * Properties of a RaceDatabaseDbo.
+         * @memberof v2
+         * @interface IRaceDatabaseDbo
+         * @property {Array.<v2.RaceSummaryDbo>|null} [raceSummaries] RaceDatabaseDbo raceSummaries
          */
 
         /**
-         * Constructs a new Level.
-         * @memberof ClassData
-         * @classdesc Represents a Level.
-         * @implements ILevel
+         * Constructs a new RaceDatabaseDbo.
+         * @memberof v2
+         * @classdesc Represents a RaceDatabaseDbo.
+         * @implements IRaceDatabaseDbo
          * @constructor
-         * @param {ClassData.ILevel=} [properties] Properties to set
+         * @param {v2.IRaceDatabaseDbo=} [properties] Properties to set
          */
-        function Level(properties) {
-            this.special = [];
+        function RaceDatabaseDbo(properties) {
+            this.raceSummaries = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -998,148 +44,78 @@ $root.ClassData = (function() {
         }
 
         /**
-         * Level levelNumber.
-         * @member {number} levelNumber
-         * @memberof ClassData.Level
+         * RaceDatabaseDbo raceSummaries.
+         * @member {Array.<v2.RaceSummaryDbo>} raceSummaries
+         * @memberof v2.RaceDatabaseDbo
          * @instance
          */
-        Level.prototype.levelNumber = 0;
+        RaceDatabaseDbo.prototype.raceSummaries = $util.emptyArray;
 
         /**
-         * Level bab.
-         * @member {number} bab
-         * @memberof ClassData.Level
-         * @instance
-         */
-        Level.prototype.bab = 0;
-
-        /**
-         * Level fortSave.
-         * @member {number} fortSave
-         * @memberof ClassData.Level
-         * @instance
-         */
-        Level.prototype.fortSave = 0;
-
-        /**
-         * Level refSave.
-         * @member {number} refSave
-         * @memberof ClassData.Level
-         * @instance
-         */
-        Level.prototype.refSave = 0;
-
-        /**
-         * Level willSave.
-         * @member {number} willSave
-         * @memberof ClassData.Level
-         * @instance
-         */
-        Level.prototype.willSave = 0;
-
-        /**
-         * Level special.
-         * @member {Array.<string>} special
-         * @memberof ClassData.Level
-         * @instance
-         */
-        Level.prototype.special = $util.emptyArray;
-
-        /**
-         * Creates a new Level instance using the specified properties.
+         * Creates a new RaceDatabaseDbo instance using the specified properties.
          * @function create
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
-         * @param {ClassData.ILevel=} [properties] Properties to set
-         * @returns {ClassData.Level} Level instance
+         * @param {v2.IRaceDatabaseDbo=} [properties] Properties to set
+         * @returns {v2.RaceDatabaseDbo} RaceDatabaseDbo instance
          */
-        Level.create = function create(properties) {
-            return new Level(properties);
+        RaceDatabaseDbo.create = function create(properties) {
+            return new RaceDatabaseDbo(properties);
         };
 
         /**
-         * Encodes the specified Level message. Does not implicitly {@link ClassData.Level.verify|verify} messages.
+         * Encodes the specified RaceDatabaseDbo message. Does not implicitly {@link v2.RaceDatabaseDbo.verify|verify} messages.
          * @function encode
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
-         * @param {ClassData.Level} message Level message or plain object to encode
+         * @param {v2.RaceDatabaseDbo} message RaceDatabaseDbo message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        Level.encode = function encode(message, writer) {
+        RaceDatabaseDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.levelNumber != null && Object.hasOwnProperty.call(message, "levelNumber"))
-                writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.levelNumber);
-            if (message.bab != null && Object.hasOwnProperty.call(message, "bab"))
-                writer.uint32(/* id 2, wireType 0 =*/16).uint32(message.bab);
-            if (message.fortSave != null && Object.hasOwnProperty.call(message, "fortSave"))
-                writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.fortSave);
-            if (message.refSave != null && Object.hasOwnProperty.call(message, "refSave"))
-                writer.uint32(/* id 4, wireType 0 =*/32).uint32(message.refSave);
-            if (message.willSave != null && Object.hasOwnProperty.call(message, "willSave"))
-                writer.uint32(/* id 5, wireType 0 =*/40).uint32(message.willSave);
-            if (message.special != null && message.special.length)
-                for (var i = 0; i < message.special.length; ++i)
-                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.special[i]);
+            if (message.raceSummaries != null && message.raceSummaries.length)
+                for (var i = 0; i < message.raceSummaries.length; ++i)
+                    $root.v2.RaceSummaryDbo.encode(message.raceSummaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             return writer;
         };
 
         /**
-         * Encodes the specified Level message, length delimited. Does not implicitly {@link ClassData.Level.verify|verify} messages.
+         * Encodes the specified RaceDatabaseDbo message, length delimited. Does not implicitly {@link v2.RaceDatabaseDbo.verify|verify} messages.
          * @function encodeDelimited
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
-         * @param {ClassData.Level} message Level message or plain object to encode
+         * @param {v2.RaceDatabaseDbo} message RaceDatabaseDbo message or plain object to encode
          * @param {$protobuf.Writer} [writer] Writer to encode to
          * @returns {$protobuf.Writer} Writer
          */
-        Level.encodeDelimited = function encodeDelimited(message, writer) {
+        RaceDatabaseDbo.encodeDelimited = function encodeDelimited(message, writer) {
             return this.encode(message, writer).ldelim();
         };
 
         /**
-         * Decodes a Level message from the specified reader or buffer.
+         * Decodes a RaceDatabaseDbo message from the specified reader or buffer.
          * @function decode
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {ClassData.Level} Level
+         * @returns {v2.RaceDatabaseDbo} RaceDatabaseDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        Level.decode = function decode(reader, length) {
+        RaceDatabaseDbo.decode = function decode(reader, length) {
             if (!(reader instanceof $Reader))
                 reader = $Reader.create(reader);
-            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ClassData.Level();
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.RaceDatabaseDbo();
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
-                        message.levelNumber = reader.uint32();
-                        break;
-                    }
-                case 2: {
-                        message.bab = reader.uint32();
-                        break;
-                    }
-                case 3: {
-                        message.fortSave = reader.uint32();
-                        break;
-                    }
-                case 4: {
-                        message.refSave = reader.uint32();
-                        break;
-                    }
-                case 5: {
-                        message.willSave = reader.uint32();
-                        break;
-                    }
-                case 6: {
-                        if (!(message.special && message.special.length))
-                            message.special = [];
-                        message.special.push(reader.string());
+                        if (!(message.raceSummaries && message.raceSummaries.length))
+                            message.raceSummaries = [];
+                        message.raceSummaries.push($root.v2.RaceSummaryDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -1151,169 +127,872 @@ $root.ClassData = (function() {
         };
 
         /**
-         * Decodes a Level message from the specified reader or buffer, length delimited.
+         * Decodes a RaceDatabaseDbo message from the specified reader or buffer, length delimited.
          * @function decodeDelimited
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {ClassData.Level} Level
+         * @returns {v2.RaceDatabaseDbo} RaceDatabaseDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        Level.decodeDelimited = function decodeDelimited(reader) {
+        RaceDatabaseDbo.decodeDelimited = function decodeDelimited(reader) {
             if (!(reader instanceof $Reader))
                 reader = new $Reader(reader);
             return this.decode(reader, reader.uint32());
         };
 
         /**
-         * Verifies a Level message.
+         * Verifies a RaceDatabaseDbo message.
          * @function verify
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
          * @param {Object.<string,*>} message Plain object to verify
          * @returns {string|null} `null` if valid, otherwise the reason why it is not
          */
-        Level.verify = function verify(message) {
+        RaceDatabaseDbo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.levelNumber != null && message.hasOwnProperty("levelNumber"))
-                if (!$util.isInteger(message.levelNumber))
-                    return "levelNumber: integer expected";
-            if (message.bab != null && message.hasOwnProperty("bab"))
-                if (!$util.isInteger(message.bab))
-                    return "bab: integer expected";
-            if (message.fortSave != null && message.hasOwnProperty("fortSave"))
-                if (!$util.isInteger(message.fortSave))
-                    return "fortSave: integer expected";
-            if (message.refSave != null && message.hasOwnProperty("refSave"))
-                if (!$util.isInteger(message.refSave))
-                    return "refSave: integer expected";
-            if (message.willSave != null && message.hasOwnProperty("willSave"))
-                if (!$util.isInteger(message.willSave))
-                    return "willSave: integer expected";
-            if (message.special != null && message.hasOwnProperty("special")) {
-                if (!Array.isArray(message.special))
-                    return "special: array expected";
-                for (var i = 0; i < message.special.length; ++i)
-                    if (!$util.isString(message.special[i]))
-                        return "special: string[] expected";
+            if (message.raceSummaries != null && message.hasOwnProperty("raceSummaries")) {
+                if (!Array.isArray(message.raceSummaries))
+                    return "raceSummaries: array expected";
+                for (var i = 0; i < message.raceSummaries.length; ++i) {
+                    var error = $root.v2.RaceSummaryDbo.verify(message.raceSummaries[i]);
+                    if (error)
+                        return "raceSummaries." + error;
+                }
             }
             return null;
         };
 
         /**
-         * Creates a Level message from a plain object. Also converts values to their respective internal types.
+         * Creates a RaceDatabaseDbo message from a plain object. Also converts values to their respective internal types.
          * @function fromObject
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
          * @param {Object.<string,*>} object Plain object
-         * @returns {ClassData.Level} Level
+         * @returns {v2.RaceDatabaseDbo} RaceDatabaseDbo
          */
-        Level.fromObject = function fromObject(object) {
-            if (object instanceof $root.ClassData.Level)
+        RaceDatabaseDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.RaceDatabaseDbo)
                 return object;
-            var message = new $root.ClassData.Level();
-            if (object.levelNumber != null)
-                message.levelNumber = object.levelNumber >>> 0;
-            if (object.bab != null)
-                message.bab = object.bab >>> 0;
-            if (object.fortSave != null)
-                message.fortSave = object.fortSave >>> 0;
-            if (object.refSave != null)
-                message.refSave = object.refSave >>> 0;
-            if (object.willSave != null)
-                message.willSave = object.willSave >>> 0;
-            if (object.special) {
-                if (!Array.isArray(object.special))
-                    throw TypeError(".ClassData.Level.special: array expected");
-                message.special = [];
-                for (var i = 0; i < object.special.length; ++i)
-                    message.special[i] = String(object.special[i]);
+            var message = new $root.v2.RaceDatabaseDbo();
+            if (object.raceSummaries) {
+                if (!Array.isArray(object.raceSummaries))
+                    throw TypeError(".v2.RaceDatabaseDbo.raceSummaries: array expected");
+                message.raceSummaries = [];
+                for (var i = 0; i < object.raceSummaries.length; ++i) {
+                    if (typeof object.raceSummaries[i] !== "object")
+                        throw TypeError(".v2.RaceDatabaseDbo.raceSummaries: object expected");
+                    message.raceSummaries[i] = $root.v2.RaceSummaryDbo.fromObject(object.raceSummaries[i]);
+                }
             }
             return message;
         };
 
         /**
-         * Creates a plain object from a Level message. Also converts values to other types if specified.
+         * Creates a plain object from a RaceDatabaseDbo message. Also converts values to other types if specified.
          * @function toObject
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
-         * @param {ClassData.Level} message Level
+         * @param {v2.RaceDatabaseDbo} message RaceDatabaseDbo
          * @param {$protobuf.IConversionOptions} [options] Conversion options
          * @returns {Object.<string,*>} Plain object
          */
-        Level.toObject = function toObject(message, options) {
+        RaceDatabaseDbo.toObject = function toObject(message, options) {
             if (!options)
                 options = {};
             var object = {};
             if (options.arrays || options.defaults)
-                object.special = [];
-            if (options.defaults) {
-                object.levelNumber = 0;
-                object.bab = 0;
-                object.fortSave = 0;
-                object.refSave = 0;
-                object.willSave = 0;
-            }
-            if (message.levelNumber != null && message.hasOwnProperty("levelNumber"))
-                object.levelNumber = message.levelNumber;
-            if (message.bab != null && message.hasOwnProperty("bab"))
-                object.bab = message.bab;
-            if (message.fortSave != null && message.hasOwnProperty("fortSave"))
-                object.fortSave = message.fortSave;
-            if (message.refSave != null && message.hasOwnProperty("refSave"))
-                object.refSave = message.refSave;
-            if (message.willSave != null && message.hasOwnProperty("willSave"))
-                object.willSave = message.willSave;
-            if (message.special && message.special.length) {
-                object.special = [];
-                for (var j = 0; j < message.special.length; ++j)
-                    object.special[j] = message.special[j];
+                object.raceSummaries = [];
+            if (message.raceSummaries && message.raceSummaries.length) {
+                object.raceSummaries = [];
+                for (var j = 0; j < message.raceSummaries.length; ++j)
+                    object.raceSummaries[j] = $root.v2.RaceSummaryDbo.toObject(message.raceSummaries[j], options);
             }
             return object;
         };
 
         /**
-         * Converts this Level to JSON.
+         * Converts this RaceDatabaseDbo to JSON.
          * @function toJSON
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @instance
          * @returns {Object.<string,*>} JSON object
          */
-        Level.prototype.toJSON = function toJSON() {
+        RaceDatabaseDbo.prototype.toJSON = function toJSON() {
             return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
         };
 
         /**
-         * Gets the default type url for Level
+         * Gets the default type url for RaceDatabaseDbo
          * @function getTypeUrl
-         * @memberof ClassData.Level
+         * @memberof v2.RaceDatabaseDbo
          * @static
          * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns {string} The default type url
          */
-        Level.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        RaceDatabaseDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
             if (typeUrlPrefix === undefined) {
                 typeUrlPrefix = "type.googleapis.com";
             }
-            return typeUrlPrefix + "/ClassData.Level";
+            return typeUrlPrefix + "/v2.RaceDatabaseDbo";
         };
 
-        return Level;
+        return RaceDatabaseDbo;
     })();
 
-    return ClassData;
-})();
+    v2.RaceSummaryDbo = (function() {
 
-$root.v2 = (function() {
+        /**
+         * Properties of a RaceSummaryDbo.
+         * @memberof v2
+         * @interface IRaceSummaryDbo
+         * @property {string|null} [id] RaceSummaryDbo id
+         * @property {string|null} [name] RaceSummaryDbo name
+         * @property {number|null} [size] RaceSummaryDbo size
+         * @property {string|null} [type] RaceSummaryDbo type
+         * @property {number|null} [speed] RaceSummaryDbo speed
+         * @property {Array.<string>|null} [languages] RaceSummaryDbo languages
+         * @property {Array.<string>|null} [traits] RaceSummaryDbo traits
+         */
 
-    /**
-     * Namespace v2.
-     * @exports v2
-     * @namespace
-     */
-    var v2 = {};
+        /**
+         * Constructs a new RaceSummaryDbo.
+         * @memberof v2
+         * @classdesc Represents a RaceSummaryDbo.
+         * @implements IRaceSummaryDbo
+         * @constructor
+         * @param {v2.IRaceSummaryDbo=} [properties] Properties to set
+         */
+        function RaceSummaryDbo(properties) {
+            this.languages = [];
+            this.traits = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * RaceSummaryDbo id.
+         * @member {string} id
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.id = "";
+
+        /**
+         * RaceSummaryDbo name.
+         * @member {string} name
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.name = "";
+
+        /**
+         * RaceSummaryDbo size.
+         * @member {number} size
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.size = 0;
+
+        /**
+         * RaceSummaryDbo type.
+         * @member {string} type
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.type = "";
+
+        /**
+         * RaceSummaryDbo speed.
+         * @member {number} speed
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.speed = 0;
+
+        /**
+         * RaceSummaryDbo languages.
+         * @member {Array.<string>} languages
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.languages = $util.emptyArray;
+
+        /**
+         * RaceSummaryDbo traits.
+         * @member {Array.<string>} traits
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         */
+        RaceSummaryDbo.prototype.traits = $util.emptyArray;
+
+        /**
+         * Creates a new RaceSummaryDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {v2.IRaceSummaryDbo=} [properties] Properties to set
+         * @returns {v2.RaceSummaryDbo} RaceSummaryDbo instance
+         */
+        RaceSummaryDbo.create = function create(properties) {
+            return new RaceSummaryDbo(properties);
+        };
+
+        /**
+         * Encodes the specified RaceSummaryDbo message. Does not implicitly {@link v2.RaceSummaryDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {v2.RaceSummaryDbo} message RaceSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RaceSummaryDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.size != null && Object.hasOwnProperty.call(message, "size"))
+                writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.size);
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.type);
+            if (message.speed != null && Object.hasOwnProperty.call(message, "speed"))
+                writer.uint32(/* id 5, wireType 0 =*/40).uint32(message.speed);
+            if (message.languages != null && message.languages.length)
+                for (var i = 0; i < message.languages.length; ++i)
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.languages[i]);
+            if (message.traits != null && message.traits.length)
+                for (var i = 0; i < message.traits.length; ++i)
+                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.traits[i]);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified RaceSummaryDbo message, length delimited. Does not implicitly {@link v2.RaceSummaryDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {v2.RaceSummaryDbo} message RaceSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RaceSummaryDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a RaceSummaryDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.RaceSummaryDbo} RaceSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RaceSummaryDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.RaceSummaryDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.size = reader.uint32();
+                        break;
+                    }
+                case 4: {
+                        message.type = reader.string();
+                        break;
+                    }
+                case 5: {
+                        message.speed = reader.uint32();
+                        break;
+                    }
+                case 6: {
+                        if (!(message.languages && message.languages.length))
+                            message.languages = [];
+                        message.languages.push(reader.string());
+                        break;
+                    }
+                case 7: {
+                        if (!(message.traits && message.traits.length))
+                            message.traits = [];
+                        message.traits.push(reader.string());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a RaceSummaryDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.RaceSummaryDbo} RaceSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RaceSummaryDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a RaceSummaryDbo message.
+         * @function verify
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        RaceSummaryDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.size != null && message.hasOwnProperty("size"))
+                if (!$util.isInteger(message.size))
+                    return "size: integer expected";
+            if (message.type != null && message.hasOwnProperty("type"))
+                if (!$util.isString(message.type))
+                    return "type: string expected";
+            if (message.speed != null && message.hasOwnProperty("speed"))
+                if (!$util.isInteger(message.speed))
+                    return "speed: integer expected";
+            if (message.languages != null && message.hasOwnProperty("languages")) {
+                if (!Array.isArray(message.languages))
+                    return "languages: array expected";
+                for (var i = 0; i < message.languages.length; ++i)
+                    if (!$util.isString(message.languages[i]))
+                        return "languages: string[] expected";
+            }
+            if (message.traits != null && message.hasOwnProperty("traits")) {
+                if (!Array.isArray(message.traits))
+                    return "traits: array expected";
+                for (var i = 0; i < message.traits.length; ++i)
+                    if (!$util.isString(message.traits[i]))
+                        return "traits: string[] expected";
+            }
+            return null;
+        };
+
+        /**
+         * Creates a RaceSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.RaceSummaryDbo} RaceSummaryDbo
+         */
+        RaceSummaryDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.RaceSummaryDbo)
+                return object;
+            var message = new $root.v2.RaceSummaryDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.size != null)
+                message.size = object.size >>> 0;
+            if (object.type != null)
+                message.type = String(object.type);
+            if (object.speed != null)
+                message.speed = object.speed >>> 0;
+            if (object.languages) {
+                if (!Array.isArray(object.languages))
+                    throw TypeError(".v2.RaceSummaryDbo.languages: array expected");
+                message.languages = [];
+                for (var i = 0; i < object.languages.length; ++i)
+                    message.languages[i] = String(object.languages[i]);
+            }
+            if (object.traits) {
+                if (!Array.isArray(object.traits))
+                    throw TypeError(".v2.RaceSummaryDbo.traits: array expected");
+                message.traits = [];
+                for (var i = 0; i < object.traits.length; ++i)
+                    message.traits[i] = String(object.traits[i]);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a RaceSummaryDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {v2.RaceSummaryDbo} message RaceSummaryDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        RaceSummaryDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults) {
+                object.languages = [];
+                object.traits = [];
+            }
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.size = 0;
+                object.type = "";
+                object.speed = 0;
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.size != null && message.hasOwnProperty("size"))
+                object.size = message.size;
+            if (message.type != null && message.hasOwnProperty("type"))
+                object.type = message.type;
+            if (message.speed != null && message.hasOwnProperty("speed"))
+                object.speed = message.speed;
+            if (message.languages && message.languages.length) {
+                object.languages = [];
+                for (var j = 0; j < message.languages.length; ++j)
+                    object.languages[j] = message.languages[j];
+            }
+            if (message.traits && message.traits.length) {
+                object.traits = [];
+                for (var j = 0; j < message.traits.length; ++j)
+                    object.traits[j] = message.traits[j];
+            }
+            return object;
+        };
+
+        /**
+         * Converts this RaceSummaryDbo to JSON.
+         * @function toJSON
+         * @memberof v2.RaceSummaryDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        RaceSummaryDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for RaceSummaryDbo
+         * @function getTypeUrl
+         * @memberof v2.RaceSummaryDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        RaceSummaryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.RaceSummaryDbo";
+        };
+
+        return RaceSummaryDbo;
+    })();
+
+    v2.RaceDataDbo = (function() {
+
+        /**
+         * Properties of a RaceDataDbo.
+         * @memberof v2
+         * @interface IRaceDataDbo
+         * @property {string|null} [id] RaceDataDbo id
+         * @property {string|null} [name] RaceDataDbo name
+         * @property {number|null} [size] RaceDataDbo size
+         * @property {string|null} [type] RaceDataDbo type
+         * @property {number|null} [speed] RaceDataDbo speed
+         * @property {Array.<string>|null} [languages] RaceDataDbo languages
+         * @property {Array.<string>|null} [traits] RaceDataDbo traits
+         */
+
+        /**
+         * Constructs a new RaceDataDbo.
+         * @memberof v2
+         * @classdesc Represents a RaceDataDbo.
+         * @implements IRaceDataDbo
+         * @constructor
+         * @param {v2.IRaceDataDbo=} [properties] Properties to set
+         */
+        function RaceDataDbo(properties) {
+            this.languages = [];
+            this.traits = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * RaceDataDbo id.
+         * @member {string} id
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.id = "";
+
+        /**
+         * RaceDataDbo name.
+         * @member {string} name
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.name = "";
+
+        /**
+         * RaceDataDbo size.
+         * @member {number} size
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.size = 0;
+
+        /**
+         * RaceDataDbo type.
+         * @member {string} type
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.type = "";
+
+        /**
+         * RaceDataDbo speed.
+         * @member {number} speed
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.speed = 0;
+
+        /**
+         * RaceDataDbo languages.
+         * @member {Array.<string>} languages
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.languages = $util.emptyArray;
+
+        /**
+         * RaceDataDbo traits.
+         * @member {Array.<string>} traits
+         * @memberof v2.RaceDataDbo
+         * @instance
+         */
+        RaceDataDbo.prototype.traits = $util.emptyArray;
+
+        /**
+         * Creates a new RaceDataDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {v2.IRaceDataDbo=} [properties] Properties to set
+         * @returns {v2.RaceDataDbo} RaceDataDbo instance
+         */
+        RaceDataDbo.create = function create(properties) {
+            return new RaceDataDbo(properties);
+        };
+
+        /**
+         * Encodes the specified RaceDataDbo message. Does not implicitly {@link v2.RaceDataDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {v2.RaceDataDbo} message RaceDataDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RaceDataDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.size != null && Object.hasOwnProperty.call(message, "size"))
+                writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.size);
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.type);
+            if (message.speed != null && Object.hasOwnProperty.call(message, "speed"))
+                writer.uint32(/* id 5, wireType 0 =*/40).uint32(message.speed);
+            if (message.languages != null && message.languages.length)
+                for (var i = 0; i < message.languages.length; ++i)
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.languages[i]);
+            if (message.traits != null && message.traits.length)
+                for (var i = 0; i < message.traits.length; ++i)
+                    writer.uint32(/* id 7, wireType 2 =*/58).string(message.traits[i]);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified RaceDataDbo message, length delimited. Does not implicitly {@link v2.RaceDataDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {v2.RaceDataDbo} message RaceDataDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        RaceDataDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a RaceDataDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.RaceDataDbo} RaceDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RaceDataDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.RaceDataDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.size = reader.uint32();
+                        break;
+                    }
+                case 4: {
+                        message.type = reader.string();
+                        break;
+                    }
+                case 5: {
+                        message.speed = reader.uint32();
+                        break;
+                    }
+                case 6: {
+                        if (!(message.languages && message.languages.length))
+                            message.languages = [];
+                        message.languages.push(reader.string());
+                        break;
+                    }
+                case 7: {
+                        if (!(message.traits && message.traits.length))
+                            message.traits = [];
+                        message.traits.push(reader.string());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a RaceDataDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.RaceDataDbo} RaceDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        RaceDataDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a RaceDataDbo message.
+         * @function verify
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        RaceDataDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.size != null && message.hasOwnProperty("size"))
+                if (!$util.isInteger(message.size))
+                    return "size: integer expected";
+            if (message.type != null && message.hasOwnProperty("type"))
+                if (!$util.isString(message.type))
+                    return "type: string expected";
+            if (message.speed != null && message.hasOwnProperty("speed"))
+                if (!$util.isInteger(message.speed))
+                    return "speed: integer expected";
+            if (message.languages != null && message.hasOwnProperty("languages")) {
+                if (!Array.isArray(message.languages))
+                    return "languages: array expected";
+                for (var i = 0; i < message.languages.length; ++i)
+                    if (!$util.isString(message.languages[i]))
+                        return "languages: string[] expected";
+            }
+            if (message.traits != null && message.hasOwnProperty("traits")) {
+                if (!Array.isArray(message.traits))
+                    return "traits: array expected";
+                for (var i = 0; i < message.traits.length; ++i)
+                    if (!$util.isString(message.traits[i]))
+                        return "traits: string[] expected";
+            }
+            return null;
+        };
+
+        /**
+         * Creates a RaceDataDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.RaceDataDbo} RaceDataDbo
+         */
+        RaceDataDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.RaceDataDbo)
+                return object;
+            var message = new $root.v2.RaceDataDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.size != null)
+                message.size = object.size >>> 0;
+            if (object.type != null)
+                message.type = String(object.type);
+            if (object.speed != null)
+                message.speed = object.speed >>> 0;
+            if (object.languages) {
+                if (!Array.isArray(object.languages))
+                    throw TypeError(".v2.RaceDataDbo.languages: array expected");
+                message.languages = [];
+                for (var i = 0; i < object.languages.length; ++i)
+                    message.languages[i] = String(object.languages[i]);
+            }
+            if (object.traits) {
+                if (!Array.isArray(object.traits))
+                    throw TypeError(".v2.RaceDataDbo.traits: array expected");
+                message.traits = [];
+                for (var i = 0; i < object.traits.length; ++i)
+                    message.traits[i] = String(object.traits[i]);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a RaceDataDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {v2.RaceDataDbo} message RaceDataDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        RaceDataDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults) {
+                object.languages = [];
+                object.traits = [];
+            }
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.size = 0;
+                object.type = "";
+                object.speed = 0;
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.size != null && message.hasOwnProperty("size"))
+                object.size = message.size;
+            if (message.type != null && message.hasOwnProperty("type"))
+                object.type = message.type;
+            if (message.speed != null && message.hasOwnProperty("speed"))
+                object.speed = message.speed;
+            if (message.languages && message.languages.length) {
+                object.languages = [];
+                for (var j = 0; j < message.languages.length; ++j)
+                    object.languages[j] = message.languages[j];
+            }
+            if (message.traits && message.traits.length) {
+                object.traits = [];
+                for (var j = 0; j < message.traits.length; ++j)
+                    object.traits[j] = message.traits[j];
+            }
+            return object;
+        };
+
+        /**
+         * Converts this RaceDataDbo to JSON.
+         * @function toJSON
+         * @memberof v2.RaceDataDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        RaceDataDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for RaceDataDbo
+         * @function getTypeUrl
+         * @memberof v2.RaceDataDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        RaceDataDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.RaceDataDbo";
+        };
+
+        return RaceDataDbo;
+    })();
 
     v2.AbilityDatabaseDbo = (function() {
 
@@ -1321,7 +1000,7 @@ $root.v2 = (function() {
          * Properties of an AbilityDatabaseDbo.
          * @memberof v2
          * @interface IAbilityDatabaseDbo
-         * @property {Array.<v2.AbilitySummaryDbo>|null} [AbilitySummaries] AbilityDatabaseDbo AbilitySummaries
+         * @property {Array.<v2.AbilitySummaryDbo>|null} [abilitySummaries] AbilityDatabaseDbo abilitySummaries
          */
 
         /**
@@ -1333,7 +1012,7 @@ $root.v2 = (function() {
          * @param {v2.IAbilityDatabaseDbo=} [properties] Properties to set
          */
         function AbilityDatabaseDbo(properties) {
-            this.AbilitySummaries = [];
+            this.abilitySummaries = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -1341,12 +1020,12 @@ $root.v2 = (function() {
         }
 
         /**
-         * AbilityDatabaseDbo AbilitySummaries.
-         * @member {Array.<v2.AbilitySummaryDbo>} AbilitySummaries
+         * AbilityDatabaseDbo abilitySummaries.
+         * @member {Array.<v2.AbilitySummaryDbo>} abilitySummaries
          * @memberof v2.AbilityDatabaseDbo
          * @instance
          */
-        AbilityDatabaseDbo.prototype.AbilitySummaries = $util.emptyArray;
+        AbilityDatabaseDbo.prototype.abilitySummaries = $util.emptyArray;
 
         /**
          * Creates a new AbilityDatabaseDbo instance using the specified properties.
@@ -1372,9 +1051,9 @@ $root.v2 = (function() {
         AbilityDatabaseDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.AbilitySummaries != null && message.AbilitySummaries.length)
-                for (var i = 0; i < message.AbilitySummaries.length; ++i)
-                    $root.v2.AbilitySummaryDbo.encode(message.AbilitySummaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            if (message.abilitySummaries != null && message.abilitySummaries.length)
+                for (var i = 0; i < message.abilitySummaries.length; ++i)
+                    $root.v2.AbilitySummaryDbo.encode(message.abilitySummaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             return writer;
         };
 
@@ -1410,9 +1089,9 @@ $root.v2 = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
-                        if (!(message.AbilitySummaries && message.AbilitySummaries.length))
-                            message.AbilitySummaries = [];
-                        message.AbilitySummaries.push($root.v2.AbilitySummaryDbo.decode(reader, reader.uint32()));
+                        if (!(message.abilitySummaries && message.abilitySummaries.length))
+                            message.abilitySummaries = [];
+                        message.abilitySummaries.push($root.v2.AbilitySummaryDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -1450,13 +1129,13 @@ $root.v2 = (function() {
         AbilityDatabaseDbo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.AbilitySummaries != null && message.hasOwnProperty("AbilitySummaries")) {
-                if (!Array.isArray(message.AbilitySummaries))
-                    return "AbilitySummaries: array expected";
-                for (var i = 0; i < message.AbilitySummaries.length; ++i) {
-                    var error = $root.v2.AbilitySummaryDbo.verify(message.AbilitySummaries[i]);
+            if (message.abilitySummaries != null && message.hasOwnProperty("abilitySummaries")) {
+                if (!Array.isArray(message.abilitySummaries))
+                    return "abilitySummaries: array expected";
+                for (var i = 0; i < message.abilitySummaries.length; ++i) {
+                    var error = $root.v2.AbilitySummaryDbo.verify(message.abilitySummaries[i]);
                     if (error)
-                        return "AbilitySummaries." + error;
+                        return "abilitySummaries." + error;
                 }
             }
             return null;
@@ -1474,14 +1153,14 @@ $root.v2 = (function() {
             if (object instanceof $root.v2.AbilityDatabaseDbo)
                 return object;
             var message = new $root.v2.AbilityDatabaseDbo();
-            if (object.AbilitySummaries) {
-                if (!Array.isArray(object.AbilitySummaries))
-                    throw TypeError(".v2.AbilityDatabaseDbo.AbilitySummaries: array expected");
-                message.AbilitySummaries = [];
-                for (var i = 0; i < object.AbilitySummaries.length; ++i) {
-                    if (typeof object.AbilitySummaries[i] !== "object")
-                        throw TypeError(".v2.AbilityDatabaseDbo.AbilitySummaries: object expected");
-                    message.AbilitySummaries[i] = $root.v2.AbilitySummaryDbo.fromObject(object.AbilitySummaries[i]);
+            if (object.abilitySummaries) {
+                if (!Array.isArray(object.abilitySummaries))
+                    throw TypeError(".v2.AbilityDatabaseDbo.abilitySummaries: array expected");
+                message.abilitySummaries = [];
+                for (var i = 0; i < object.abilitySummaries.length; ++i) {
+                    if (typeof object.abilitySummaries[i] !== "object")
+                        throw TypeError(".v2.AbilityDatabaseDbo.abilitySummaries: object expected");
+                    message.abilitySummaries[i] = $root.v2.AbilitySummaryDbo.fromObject(object.abilitySummaries[i]);
                 }
             }
             return message;
@@ -1501,11 +1180,11 @@ $root.v2 = (function() {
                 options = {};
             var object = {};
             if (options.arrays || options.defaults)
-                object.AbilitySummaries = [];
-            if (message.AbilitySummaries && message.AbilitySummaries.length) {
-                object.AbilitySummaries = [];
-                for (var j = 0; j < message.AbilitySummaries.length; ++j)
-                    object.AbilitySummaries[j] = $root.v2.AbilitySummaryDbo.toObject(message.AbilitySummaries[j], options);
+                object.abilitySummaries = [];
+            if (message.abilitySummaries && message.abilitySummaries.length) {
+                object.abilitySummaries = [];
+                for (var j = 0; j < message.abilitySummaries.length; ++j)
+                    object.abilitySummaries[j] = $root.v2.AbilitySummaryDbo.toObject(message.abilitySummaries[j], options);
             }
             return object;
         };
@@ -1548,6 +1227,7 @@ $root.v2 = (function() {
          * @property {string|null} [id] AbilitySummaryDbo id
          * @property {string|null} [name] AbilitySummaryDbo name
          * @property {v2.AbilityTypeDbo|null} [type] AbilitySummaryDbo type
+         * @property {string|null} [prerequisitesFormula] AbilitySummaryDbo prerequisitesFormula
          */
 
         /**
@@ -1590,6 +1270,14 @@ $root.v2 = (function() {
         AbilitySummaryDbo.prototype.type = 0;
 
         /**
+         * AbilitySummaryDbo prerequisitesFormula.
+         * @member {string} prerequisitesFormula
+         * @memberof v2.AbilitySummaryDbo
+         * @instance
+         */
+        AbilitySummaryDbo.prototype.prerequisitesFormula = "";
+
+        /**
          * Creates a new AbilitySummaryDbo instance using the specified properties.
          * @function create
          * @memberof v2.AbilitySummaryDbo
@@ -1619,6 +1307,8 @@ $root.v2 = (function() {
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
             if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.type);
+            if (message.prerequisitesFormula != null && Object.hasOwnProperty.call(message, "prerequisitesFormula"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.prerequisitesFormula);
             return writer;
         };
 
@@ -1663,6 +1353,10 @@ $root.v2 = (function() {
                     }
                 case 3: {
                         message.type = reader.int32();
+                        break;
+                    }
+                case 4: {
+                        message.prerequisitesFormula = reader.string();
                         break;
                     }
                 default:
@@ -1716,6 +1410,9 @@ $root.v2 = (function() {
                 case 3:
                     break;
                 }
+            if (message.prerequisitesFormula != null && message.hasOwnProperty("prerequisitesFormula"))
+                if (!$util.isString(message.prerequisitesFormula))
+                    return "prerequisitesFormula: string expected";
             return null;
         };
 
@@ -1759,6 +1456,8 @@ $root.v2 = (function() {
                 message.type = 3;
                 break;
             }
+            if (object.prerequisitesFormula != null)
+                message.prerequisitesFormula = String(object.prerequisitesFormula);
             return message;
         };
 
@@ -1779,6 +1478,7 @@ $root.v2 = (function() {
                 object.id = "";
                 object.name = "";
                 object.type = options.enums === String ? "ABILITY_TYPE_NONE" : 0;
+                object.prerequisitesFormula = "";
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -1786,6 +1486,8 @@ $root.v2 = (function() {
                 object.name = message.name;
             if (message.type != null && message.hasOwnProperty("type"))
                 object.type = options.enums === String ? $root.v2.AbilityTypeDbo[message.type] === undefined ? message.type : $root.v2.AbilityTypeDbo[message.type] : message.type;
+            if (message.prerequisitesFormula != null && message.hasOwnProperty("prerequisitesFormula"))
+                object.prerequisitesFormula = message.prerequisitesFormula;
             return object;
         };
 
@@ -1845,6 +1547,7 @@ $root.v2 = (function() {
          * @property {string|null} [id] AbilityDataDbo id
          * @property {string|null} [name] AbilityDataDbo name
          * @property {v2.AbilityTypeDbo|null} [type] AbilityDataDbo type
+         * @property {string|null} [prerequisitesFormula] AbilityDataDbo prerequisitesFormula
          * @property {string|null} [description] AbilityDataDbo description
          */
 
@@ -1888,6 +1591,14 @@ $root.v2 = (function() {
         AbilityDataDbo.prototype.type = 0;
 
         /**
+         * AbilityDataDbo prerequisitesFormula.
+         * @member {string} prerequisitesFormula
+         * @memberof v2.AbilityDataDbo
+         * @instance
+         */
+        AbilityDataDbo.prototype.prerequisitesFormula = "";
+
+        /**
          * AbilityDataDbo description.
          * @member {string} description
          * @memberof v2.AbilityDataDbo
@@ -1925,8 +1636,10 @@ $root.v2 = (function() {
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
             if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.type);
+            if (message.prerequisitesFormula != null && Object.hasOwnProperty.call(message, "prerequisitesFormula"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.prerequisitesFormula);
             if (message.description != null && Object.hasOwnProperty.call(message, "description"))
-                writer.uint32(/* id 4, wireType 2 =*/34).string(message.description);
+                writer.uint32(/* id 5, wireType 2 =*/42).string(message.description);
             return writer;
         };
 
@@ -1974,6 +1687,10 @@ $root.v2 = (function() {
                         break;
                     }
                 case 4: {
+                        message.prerequisitesFormula = reader.string();
+                        break;
+                    }
+                case 5: {
                         message.description = reader.string();
                         break;
                     }
@@ -2028,6 +1745,9 @@ $root.v2 = (function() {
                 case 3:
                     break;
                 }
+            if (message.prerequisitesFormula != null && message.hasOwnProperty("prerequisitesFormula"))
+                if (!$util.isString(message.prerequisitesFormula))
+                    return "prerequisitesFormula: string expected";
             if (message.description != null && message.hasOwnProperty("description"))
                 if (!$util.isString(message.description))
                     return "description: string expected";
@@ -2074,6 +1794,8 @@ $root.v2 = (function() {
                 message.type = 3;
                 break;
             }
+            if (object.prerequisitesFormula != null)
+                message.prerequisitesFormula = String(object.prerequisitesFormula);
             if (object.description != null)
                 message.description = String(object.description);
             return message;
@@ -2096,6 +1818,7 @@ $root.v2 = (function() {
                 object.id = "";
                 object.name = "";
                 object.type = options.enums === String ? "ABILITY_TYPE_NONE" : 0;
+                object.prerequisitesFormula = "";
                 object.description = "";
             }
             if (message.id != null && message.hasOwnProperty("id"))
@@ -2104,6 +1827,8 @@ $root.v2 = (function() {
                 object.name = message.name;
             if (message.type != null && message.hasOwnProperty("type"))
                 object.type = options.enums === String ? $root.v2.AbilityTypeDbo[message.type] === undefined ? message.type : $root.v2.AbilityTypeDbo[message.type] : message.type;
+            if (message.prerequisitesFormula != null && message.hasOwnProperty("prerequisitesFormula"))
+                object.prerequisitesFormula = message.prerequisitesFormula;
             if (message.description != null && message.hasOwnProperty("description"))
                 object.description = message.description;
             return object;
@@ -2138,13 +1863,1484 @@ $root.v2 = (function() {
         return AbilityDataDbo;
     })();
 
+    v2.ClassDatabaseDbo = (function() {
+
+        /**
+         * Properties of a ClassDatabaseDbo.
+         * @memberof v2
+         * @interface IClassDatabaseDbo
+         * @property {Array.<v2.ClassSummaryDbo>|null} [classSummaries] ClassDatabaseDbo classSummaries
+         */
+
+        /**
+         * Constructs a new ClassDatabaseDbo.
+         * @memberof v2
+         * @classdesc Represents a ClassDatabaseDbo.
+         * @implements IClassDatabaseDbo
+         * @constructor
+         * @param {v2.IClassDatabaseDbo=} [properties] Properties to set
+         */
+        function ClassDatabaseDbo(properties) {
+            this.classSummaries = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ClassDatabaseDbo classSummaries.
+         * @member {Array.<v2.ClassSummaryDbo>} classSummaries
+         * @memberof v2.ClassDatabaseDbo
+         * @instance
+         */
+        ClassDatabaseDbo.prototype.classSummaries = $util.emptyArray;
+
+        /**
+         * Creates a new ClassDatabaseDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {v2.IClassDatabaseDbo=} [properties] Properties to set
+         * @returns {v2.ClassDatabaseDbo} ClassDatabaseDbo instance
+         */
+        ClassDatabaseDbo.create = function create(properties) {
+            return new ClassDatabaseDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ClassDatabaseDbo message. Does not implicitly {@link v2.ClassDatabaseDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {v2.ClassDatabaseDbo} message ClassDatabaseDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassDatabaseDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.classSummaries != null && message.classSummaries.length)
+                for (var i = 0; i < message.classSummaries.length; ++i)
+                    $root.v2.ClassSummaryDbo.encode(message.classSummaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ClassDatabaseDbo message, length delimited. Does not implicitly {@link v2.ClassDatabaseDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {v2.ClassDatabaseDbo} message ClassDatabaseDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassDatabaseDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ClassDatabaseDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.ClassDatabaseDbo} ClassDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassDatabaseDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.ClassDatabaseDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        if (!(message.classSummaries && message.classSummaries.length))
+                            message.classSummaries = [];
+                        message.classSummaries.push($root.v2.ClassSummaryDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ClassDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.ClassDatabaseDbo} ClassDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassDatabaseDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ClassDatabaseDbo message.
+         * @function verify
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ClassDatabaseDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.classSummaries != null && message.hasOwnProperty("classSummaries")) {
+                if (!Array.isArray(message.classSummaries))
+                    return "classSummaries: array expected";
+                for (var i = 0; i < message.classSummaries.length; ++i) {
+                    var error = $root.v2.ClassSummaryDbo.verify(message.classSummaries[i]);
+                    if (error)
+                        return "classSummaries." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a ClassDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.ClassDatabaseDbo} ClassDatabaseDbo
+         */
+        ClassDatabaseDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.ClassDatabaseDbo)
+                return object;
+            var message = new $root.v2.ClassDatabaseDbo();
+            if (object.classSummaries) {
+                if (!Array.isArray(object.classSummaries))
+                    throw TypeError(".v2.ClassDatabaseDbo.classSummaries: array expected");
+                message.classSummaries = [];
+                for (var i = 0; i < object.classSummaries.length; ++i) {
+                    if (typeof object.classSummaries[i] !== "object")
+                        throw TypeError(".v2.ClassDatabaseDbo.classSummaries: object expected");
+                    message.classSummaries[i] = $root.v2.ClassSummaryDbo.fromObject(object.classSummaries[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ClassDatabaseDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {v2.ClassDatabaseDbo} message ClassDatabaseDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ClassDatabaseDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults)
+                object.classSummaries = [];
+            if (message.classSummaries && message.classSummaries.length) {
+                object.classSummaries = [];
+                for (var j = 0; j < message.classSummaries.length; ++j)
+                    object.classSummaries[j] = $root.v2.ClassSummaryDbo.toObject(message.classSummaries[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this ClassDatabaseDbo to JSON.
+         * @function toJSON
+         * @memberof v2.ClassDatabaseDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ClassDatabaseDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ClassDatabaseDbo
+         * @function getTypeUrl
+         * @memberof v2.ClassDatabaseDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ClassDatabaseDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.ClassDatabaseDbo";
+        };
+
+        return ClassDatabaseDbo;
+    })();
+
+    v2.ClassSummaryDbo = (function() {
+
+        /**
+         * Properties of a ClassSummaryDbo.
+         * @memberof v2
+         * @interface IClassSummaryDbo
+         * @property {string|null} [id] ClassSummaryDbo id
+         * @property {string|null} [name] ClassSummaryDbo name
+         * @property {v2.ClassCategoryDbo|null} [category] ClassSummaryDbo category
+         */
+
+        /**
+         * Constructs a new ClassSummaryDbo.
+         * @memberof v2
+         * @classdesc Represents a ClassSummaryDbo.
+         * @implements IClassSummaryDbo
+         * @constructor
+         * @param {v2.IClassSummaryDbo=} [properties] Properties to set
+         */
+        function ClassSummaryDbo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ClassSummaryDbo id.
+         * @member {string} id
+         * @memberof v2.ClassSummaryDbo
+         * @instance
+         */
+        ClassSummaryDbo.prototype.id = "";
+
+        /**
+         * ClassSummaryDbo name.
+         * @member {string} name
+         * @memberof v2.ClassSummaryDbo
+         * @instance
+         */
+        ClassSummaryDbo.prototype.name = "";
+
+        /**
+         * ClassSummaryDbo category.
+         * @member {v2.ClassCategoryDbo} category
+         * @memberof v2.ClassSummaryDbo
+         * @instance
+         */
+        ClassSummaryDbo.prototype.category = 0;
+
+        /**
+         * Creates a new ClassSummaryDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {v2.IClassSummaryDbo=} [properties] Properties to set
+         * @returns {v2.ClassSummaryDbo} ClassSummaryDbo instance
+         */
+        ClassSummaryDbo.create = function create(properties) {
+            return new ClassSummaryDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ClassSummaryDbo message. Does not implicitly {@link v2.ClassSummaryDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {v2.ClassSummaryDbo} message ClassSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassSummaryDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.category != null && Object.hasOwnProperty.call(message, "category"))
+                writer.uint32(/* id 3, wireType 0 =*/24).int32(message.category);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ClassSummaryDbo message, length delimited. Does not implicitly {@link v2.ClassSummaryDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {v2.ClassSummaryDbo} message ClassSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassSummaryDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ClassSummaryDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.ClassSummaryDbo} ClassSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassSummaryDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.ClassSummaryDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.category = reader.int32();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ClassSummaryDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.ClassSummaryDbo} ClassSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassSummaryDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ClassSummaryDbo message.
+         * @function verify
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ClassSummaryDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.category != null && message.hasOwnProperty("category"))
+                switch (message.category) {
+                default:
+                    return "category: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    break;
+                }
+            return null;
+        };
+
+        /**
+         * Creates a ClassSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.ClassSummaryDbo} ClassSummaryDbo
+         */
+        ClassSummaryDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.ClassSummaryDbo)
+                return object;
+            var message = new $root.v2.ClassSummaryDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            switch (object.category) {
+            default:
+                if (typeof object.category === "number") {
+                    message.category = object.category;
+                    break;
+                }
+                break;
+            case "UNKNOWN":
+            case 0:
+                message.category = 0;
+                break;
+            case "CORE":
+            case 1:
+                message.category = 1;
+                break;
+            case "BASE":
+            case 2:
+                message.category = 2;
+                break;
+            case "HYBRID":
+            case 3:
+                message.category = 3;
+                break;
+            case "UNCHAINED":
+            case 4:
+                message.category = 4;
+                break;
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ClassSummaryDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {v2.ClassSummaryDbo} message ClassSummaryDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ClassSummaryDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.category = options.enums === String ? "UNKNOWN" : 0;
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.category != null && message.hasOwnProperty("category"))
+                object.category = options.enums === String ? $root.v2.ClassCategoryDbo[message.category] === undefined ? message.category : $root.v2.ClassCategoryDbo[message.category] : message.category;
+            return object;
+        };
+
+        /**
+         * Converts this ClassSummaryDbo to JSON.
+         * @function toJSON
+         * @memberof v2.ClassSummaryDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ClassSummaryDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ClassSummaryDbo
+         * @function getTypeUrl
+         * @memberof v2.ClassSummaryDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ClassSummaryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.ClassSummaryDbo";
+        };
+
+        return ClassSummaryDbo;
+    })();
+
+    v2.ClassDataDbo = (function() {
+
+        /**
+         * Properties of a ClassDataDbo.
+         * @memberof v2
+         * @interface IClassDataDbo
+         * @property {string|null} [id] ClassDataDbo id
+         * @property {string|null} [name] ClassDataDbo name
+         * @property {v2.ClassCategoryDbo|null} [category] ClassDataDbo category
+         * @property {string|null} [shortDescription] ClassDataDbo shortDescription
+         * @property {Array.<v2.ClassLevelDbo>|null} [levels] ClassDataDbo levels
+         */
+
+        /**
+         * Constructs a new ClassDataDbo.
+         * @memberof v2
+         * @classdesc Represents a ClassDataDbo.
+         * @implements IClassDataDbo
+         * @constructor
+         * @param {v2.IClassDataDbo=} [properties] Properties to set
+         */
+        function ClassDataDbo(properties) {
+            this.levels = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ClassDataDbo id.
+         * @member {string} id
+         * @memberof v2.ClassDataDbo
+         * @instance
+         */
+        ClassDataDbo.prototype.id = "";
+
+        /**
+         * ClassDataDbo name.
+         * @member {string} name
+         * @memberof v2.ClassDataDbo
+         * @instance
+         */
+        ClassDataDbo.prototype.name = "";
+
+        /**
+         * ClassDataDbo category.
+         * @member {v2.ClassCategoryDbo} category
+         * @memberof v2.ClassDataDbo
+         * @instance
+         */
+        ClassDataDbo.prototype.category = 0;
+
+        /**
+         * ClassDataDbo shortDescription.
+         * @member {string} shortDescription
+         * @memberof v2.ClassDataDbo
+         * @instance
+         */
+        ClassDataDbo.prototype.shortDescription = "";
+
+        /**
+         * ClassDataDbo levels.
+         * @member {Array.<v2.ClassLevelDbo>} levels
+         * @memberof v2.ClassDataDbo
+         * @instance
+         */
+        ClassDataDbo.prototype.levels = $util.emptyArray;
+
+        /**
+         * Creates a new ClassDataDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {v2.IClassDataDbo=} [properties] Properties to set
+         * @returns {v2.ClassDataDbo} ClassDataDbo instance
+         */
+        ClassDataDbo.create = function create(properties) {
+            return new ClassDataDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ClassDataDbo message. Does not implicitly {@link v2.ClassDataDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {v2.ClassDataDbo} message ClassDataDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassDataDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.category != null && Object.hasOwnProperty.call(message, "category"))
+                writer.uint32(/* id 3, wireType 0 =*/24).int32(message.category);
+            if (message.shortDescription != null && Object.hasOwnProperty.call(message, "shortDescription"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.shortDescription);
+            if (message.levels != null && message.levels.length)
+                for (var i = 0; i < message.levels.length; ++i)
+                    $root.v2.ClassLevelDbo.encode(message.levels[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ClassDataDbo message, length delimited. Does not implicitly {@link v2.ClassDataDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {v2.ClassDataDbo} message ClassDataDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassDataDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ClassDataDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.ClassDataDbo} ClassDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassDataDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.ClassDataDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.category = reader.int32();
+                        break;
+                    }
+                case 4: {
+                        message.shortDescription = reader.string();
+                        break;
+                    }
+                case 5: {
+                        if (!(message.levels && message.levels.length))
+                            message.levels = [];
+                        message.levels.push($root.v2.ClassLevelDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ClassDataDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.ClassDataDbo} ClassDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassDataDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ClassDataDbo message.
+         * @function verify
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ClassDataDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.category != null && message.hasOwnProperty("category"))
+                switch (message.category) {
+                default:
+                    return "category: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    break;
+                }
+            if (message.shortDescription != null && message.hasOwnProperty("shortDescription"))
+                if (!$util.isString(message.shortDescription))
+                    return "shortDescription: string expected";
+            if (message.levels != null && message.hasOwnProperty("levels")) {
+                if (!Array.isArray(message.levels))
+                    return "levels: array expected";
+                for (var i = 0; i < message.levels.length; ++i) {
+                    var error = $root.v2.ClassLevelDbo.verify(message.levels[i]);
+                    if (error)
+                        return "levels." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a ClassDataDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.ClassDataDbo} ClassDataDbo
+         */
+        ClassDataDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.ClassDataDbo)
+                return object;
+            var message = new $root.v2.ClassDataDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            switch (object.category) {
+            default:
+                if (typeof object.category === "number") {
+                    message.category = object.category;
+                    break;
+                }
+                break;
+            case "UNKNOWN":
+            case 0:
+                message.category = 0;
+                break;
+            case "CORE":
+            case 1:
+                message.category = 1;
+                break;
+            case "BASE":
+            case 2:
+                message.category = 2;
+                break;
+            case "HYBRID":
+            case 3:
+                message.category = 3;
+                break;
+            case "UNCHAINED":
+            case 4:
+                message.category = 4;
+                break;
+            }
+            if (object.shortDescription != null)
+                message.shortDescription = String(object.shortDescription);
+            if (object.levels) {
+                if (!Array.isArray(object.levels))
+                    throw TypeError(".v2.ClassDataDbo.levels: array expected");
+                message.levels = [];
+                for (var i = 0; i < object.levels.length; ++i) {
+                    if (typeof object.levels[i] !== "object")
+                        throw TypeError(".v2.ClassDataDbo.levels: object expected");
+                    message.levels[i] = $root.v2.ClassLevelDbo.fromObject(object.levels[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ClassDataDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {v2.ClassDataDbo} message ClassDataDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ClassDataDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults)
+                object.levels = [];
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.category = options.enums === String ? "UNKNOWN" : 0;
+                object.shortDescription = "";
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.category != null && message.hasOwnProperty("category"))
+                object.category = options.enums === String ? $root.v2.ClassCategoryDbo[message.category] === undefined ? message.category : $root.v2.ClassCategoryDbo[message.category] : message.category;
+            if (message.shortDescription != null && message.hasOwnProperty("shortDescription"))
+                object.shortDescription = message.shortDescription;
+            if (message.levels && message.levels.length) {
+                object.levels = [];
+                for (var j = 0; j < message.levels.length; ++j)
+                    object.levels[j] = $root.v2.ClassLevelDbo.toObject(message.levels[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this ClassDataDbo to JSON.
+         * @function toJSON
+         * @memberof v2.ClassDataDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ClassDataDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ClassDataDbo
+         * @function getTypeUrl
+         * @memberof v2.ClassDataDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ClassDataDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.ClassDataDbo";
+        };
+
+        return ClassDataDbo;
+    })();
+
+    /**
+     * ClassCategoryDbo enum.
+     * @name v2.ClassCategoryDbo
+     * @enum {number}
+     * @property {number} UNKNOWN=0 UNKNOWN value
+     * @property {number} CORE=1 CORE value
+     * @property {number} BASE=2 BASE value
+     * @property {number} HYBRID=3 HYBRID value
+     * @property {number} UNCHAINED=4 UNCHAINED value
+     */
+    v2.ClassCategoryDbo = (function() {
+        var valuesById = {}, values = Object.create(valuesById);
+        values[valuesById[0] = "UNKNOWN"] = 0;
+        values[valuesById[1] = "CORE"] = 1;
+        values[valuesById[2] = "BASE"] = 2;
+        values[valuesById[3] = "HYBRID"] = 3;
+        values[valuesById[4] = "UNCHAINED"] = 4;
+        return values;
+    })();
+
+    v2.ClassLevelDbo = (function() {
+
+        /**
+         * Properties of a ClassLevelDbo.
+         * @memberof v2
+         * @interface IClassLevelDbo
+         * @property {number|null} [levelNumber] ClassLevelDbo levelNumber
+         * @property {number|null} [bab] ClassLevelDbo bab
+         * @property {number|null} [fortSave] ClassLevelDbo fortSave
+         * @property {number|null} [refSave] ClassLevelDbo refSave
+         * @property {number|null} [willSave] ClassLevelDbo willSave
+         * @property {Array.<v2.SpecialDbo>|null} [specials] ClassLevelDbo specials
+         */
+
+        /**
+         * Constructs a new ClassLevelDbo.
+         * @memberof v2
+         * @classdesc Represents a ClassLevelDbo.
+         * @implements IClassLevelDbo
+         * @constructor
+         * @param {v2.IClassLevelDbo=} [properties] Properties to set
+         */
+        function ClassLevelDbo(properties) {
+            this.specials = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ClassLevelDbo levelNumber.
+         * @member {number} levelNumber
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         */
+        ClassLevelDbo.prototype.levelNumber = 0;
+
+        /**
+         * ClassLevelDbo bab.
+         * @member {number} bab
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         */
+        ClassLevelDbo.prototype.bab = 0;
+
+        /**
+         * ClassLevelDbo fortSave.
+         * @member {number} fortSave
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         */
+        ClassLevelDbo.prototype.fortSave = 0;
+
+        /**
+         * ClassLevelDbo refSave.
+         * @member {number} refSave
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         */
+        ClassLevelDbo.prototype.refSave = 0;
+
+        /**
+         * ClassLevelDbo willSave.
+         * @member {number} willSave
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         */
+        ClassLevelDbo.prototype.willSave = 0;
+
+        /**
+         * ClassLevelDbo specials.
+         * @member {Array.<v2.SpecialDbo>} specials
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         */
+        ClassLevelDbo.prototype.specials = $util.emptyArray;
+
+        /**
+         * Creates a new ClassLevelDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {v2.IClassLevelDbo=} [properties] Properties to set
+         * @returns {v2.ClassLevelDbo} ClassLevelDbo instance
+         */
+        ClassLevelDbo.create = function create(properties) {
+            return new ClassLevelDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ClassLevelDbo message. Does not implicitly {@link v2.ClassLevelDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {v2.ClassLevelDbo} message ClassLevelDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassLevelDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.levelNumber != null && Object.hasOwnProperty.call(message, "levelNumber"))
+                writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.levelNumber);
+            if (message.bab != null && Object.hasOwnProperty.call(message, "bab"))
+                writer.uint32(/* id 2, wireType 0 =*/16).uint32(message.bab);
+            if (message.fortSave != null && Object.hasOwnProperty.call(message, "fortSave"))
+                writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.fortSave);
+            if (message.refSave != null && Object.hasOwnProperty.call(message, "refSave"))
+                writer.uint32(/* id 4, wireType 0 =*/32).uint32(message.refSave);
+            if (message.willSave != null && Object.hasOwnProperty.call(message, "willSave"))
+                writer.uint32(/* id 5, wireType 0 =*/40).uint32(message.willSave);
+            if (message.specials != null && message.specials.length)
+                for (var i = 0; i < message.specials.length; ++i)
+                    $root.v2.SpecialDbo.encode(message.specials[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ClassLevelDbo message, length delimited. Does not implicitly {@link v2.ClassLevelDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {v2.ClassLevelDbo} message ClassLevelDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ClassLevelDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ClassLevelDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.ClassLevelDbo} ClassLevelDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassLevelDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.ClassLevelDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.levelNumber = reader.uint32();
+                        break;
+                    }
+                case 2: {
+                        message.bab = reader.uint32();
+                        break;
+                    }
+                case 3: {
+                        message.fortSave = reader.uint32();
+                        break;
+                    }
+                case 4: {
+                        message.refSave = reader.uint32();
+                        break;
+                    }
+                case 5: {
+                        message.willSave = reader.uint32();
+                        break;
+                    }
+                case 6: {
+                        if (!(message.specials && message.specials.length))
+                            message.specials = [];
+                        message.specials.push($root.v2.SpecialDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ClassLevelDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.ClassLevelDbo} ClassLevelDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ClassLevelDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ClassLevelDbo message.
+         * @function verify
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ClassLevelDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.levelNumber != null && message.hasOwnProperty("levelNumber"))
+                if (!$util.isInteger(message.levelNumber))
+                    return "levelNumber: integer expected";
+            if (message.bab != null && message.hasOwnProperty("bab"))
+                if (!$util.isInteger(message.bab))
+                    return "bab: integer expected";
+            if (message.fortSave != null && message.hasOwnProperty("fortSave"))
+                if (!$util.isInteger(message.fortSave))
+                    return "fortSave: integer expected";
+            if (message.refSave != null && message.hasOwnProperty("refSave"))
+                if (!$util.isInteger(message.refSave))
+                    return "refSave: integer expected";
+            if (message.willSave != null && message.hasOwnProperty("willSave"))
+                if (!$util.isInteger(message.willSave))
+                    return "willSave: integer expected";
+            if (message.specials != null && message.hasOwnProperty("specials")) {
+                if (!Array.isArray(message.specials))
+                    return "specials: array expected";
+                for (var i = 0; i < message.specials.length; ++i) {
+                    var error = $root.v2.SpecialDbo.verify(message.specials[i]);
+                    if (error)
+                        return "specials." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a ClassLevelDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.ClassLevelDbo} ClassLevelDbo
+         */
+        ClassLevelDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.ClassLevelDbo)
+                return object;
+            var message = new $root.v2.ClassLevelDbo();
+            if (object.levelNumber != null)
+                message.levelNumber = object.levelNumber >>> 0;
+            if (object.bab != null)
+                message.bab = object.bab >>> 0;
+            if (object.fortSave != null)
+                message.fortSave = object.fortSave >>> 0;
+            if (object.refSave != null)
+                message.refSave = object.refSave >>> 0;
+            if (object.willSave != null)
+                message.willSave = object.willSave >>> 0;
+            if (object.specials) {
+                if (!Array.isArray(object.specials))
+                    throw TypeError(".v2.ClassLevelDbo.specials: array expected");
+                message.specials = [];
+                for (var i = 0; i < object.specials.length; ++i) {
+                    if (typeof object.specials[i] !== "object")
+                        throw TypeError(".v2.ClassLevelDbo.specials: object expected");
+                    message.specials[i] = $root.v2.SpecialDbo.fromObject(object.specials[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ClassLevelDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {v2.ClassLevelDbo} message ClassLevelDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ClassLevelDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults)
+                object.specials = [];
+            if (options.defaults) {
+                object.levelNumber = 0;
+                object.bab = 0;
+                object.fortSave = 0;
+                object.refSave = 0;
+                object.willSave = 0;
+            }
+            if (message.levelNumber != null && message.hasOwnProperty("levelNumber"))
+                object.levelNumber = message.levelNumber;
+            if (message.bab != null && message.hasOwnProperty("bab"))
+                object.bab = message.bab;
+            if (message.fortSave != null && message.hasOwnProperty("fortSave"))
+                object.fortSave = message.fortSave;
+            if (message.refSave != null && message.hasOwnProperty("refSave"))
+                object.refSave = message.refSave;
+            if (message.willSave != null && message.hasOwnProperty("willSave"))
+                object.willSave = message.willSave;
+            if (message.specials && message.specials.length) {
+                object.specials = [];
+                for (var j = 0; j < message.specials.length; ++j)
+                    object.specials[j] = $root.v2.SpecialDbo.toObject(message.specials[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this ClassLevelDbo to JSON.
+         * @function toJSON
+         * @memberof v2.ClassLevelDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ClassLevelDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ClassLevelDbo
+         * @function getTypeUrl
+         * @memberof v2.ClassLevelDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ClassLevelDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.ClassLevelDbo";
+        };
+
+        return ClassLevelDbo;
+    })();
+
+    v2.SpecialDbo = (function() {
+
+        /**
+         * Properties of a SpecialDbo.
+         * @memberof v2
+         * @interface ISpecialDbo
+         * @property {string|null} [id] SpecialDbo id
+         * @property {string|null} [name] SpecialDbo name
+         * @property {string|null} [description] SpecialDbo description
+         */
+
+        /**
+         * Constructs a new SpecialDbo.
+         * @memberof v2
+         * @classdesc Represents a SpecialDbo.
+         * @implements ISpecialDbo
+         * @constructor
+         * @param {v2.ISpecialDbo=} [properties] Properties to set
+         */
+        function SpecialDbo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * SpecialDbo id.
+         * @member {string} id
+         * @memberof v2.SpecialDbo
+         * @instance
+         */
+        SpecialDbo.prototype.id = "";
+
+        /**
+         * SpecialDbo name.
+         * @member {string} name
+         * @memberof v2.SpecialDbo
+         * @instance
+         */
+        SpecialDbo.prototype.name = "";
+
+        /**
+         * SpecialDbo description.
+         * @member {string} description
+         * @memberof v2.SpecialDbo
+         * @instance
+         */
+        SpecialDbo.prototype.description = "";
+
+        /**
+         * Creates a new SpecialDbo instance using the specified properties.
+         * @function create
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {v2.ISpecialDbo=} [properties] Properties to set
+         * @returns {v2.SpecialDbo} SpecialDbo instance
+         */
+        SpecialDbo.create = function create(properties) {
+            return new SpecialDbo(properties);
+        };
+
+        /**
+         * Encodes the specified SpecialDbo message. Does not implicitly {@link v2.SpecialDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {v2.SpecialDbo} message SpecialDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        SpecialDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.description != null && Object.hasOwnProperty.call(message, "description"))
+                writer.uint32(/* id 3, wireType 2 =*/26).string(message.description);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified SpecialDbo message, length delimited. Does not implicitly {@link v2.SpecialDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {v2.SpecialDbo} message SpecialDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        SpecialDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a SpecialDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v2.SpecialDbo} SpecialDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        SpecialDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.SpecialDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.description = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a SpecialDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v2.SpecialDbo} SpecialDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        SpecialDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a SpecialDbo message.
+         * @function verify
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        SpecialDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.description != null && message.hasOwnProperty("description"))
+                if (!$util.isString(message.description))
+                    return "description: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a SpecialDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v2.SpecialDbo} SpecialDbo
+         */
+        SpecialDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v2.SpecialDbo)
+                return object;
+            var message = new $root.v2.SpecialDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.description != null)
+                message.description = String(object.description);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a SpecialDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {v2.SpecialDbo} message SpecialDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        SpecialDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.description = "";
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.description != null && message.hasOwnProperty("description"))
+                object.description = message.description;
+            return object;
+        };
+
+        /**
+         * Converts this SpecialDbo to JSON.
+         * @function toJSON
+         * @memberof v2.SpecialDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        SpecialDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for SpecialDbo
+         * @function getTypeUrl
+         * @memberof v2.SpecialDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        SpecialDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v2.SpecialDbo";
+        };
+
+        return SpecialDbo;
+    })();
+
     v2.WeaponDatabaseDbo = (function() {
 
         /**
          * Properties of a WeaponDatabaseDbo.
          * @memberof v2
          * @interface IWeaponDatabaseDbo
-         * @property {Array.<v2.WeaponTypeDbo>|null} [WeaponTypes] WeaponDatabaseDbo WeaponTypes
+         * @property {Array.<v2.WeaponTypeDbo>|null} [weaponTypes] WeaponDatabaseDbo weaponTypes
          */
 
         /**
@@ -2156,7 +3352,7 @@ $root.v2 = (function() {
          * @param {v2.IWeaponDatabaseDbo=} [properties] Properties to set
          */
         function WeaponDatabaseDbo(properties) {
-            this.WeaponTypes = [];
+            this.weaponTypes = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2164,12 +3360,12 @@ $root.v2 = (function() {
         }
 
         /**
-         * WeaponDatabaseDbo WeaponTypes.
-         * @member {Array.<v2.WeaponTypeDbo>} WeaponTypes
+         * WeaponDatabaseDbo weaponTypes.
+         * @member {Array.<v2.WeaponTypeDbo>} weaponTypes
          * @memberof v2.WeaponDatabaseDbo
          * @instance
          */
-        WeaponDatabaseDbo.prototype.WeaponTypes = $util.emptyArray;
+        WeaponDatabaseDbo.prototype.weaponTypes = $util.emptyArray;
 
         /**
          * Creates a new WeaponDatabaseDbo instance using the specified properties.
@@ -2195,9 +3391,9 @@ $root.v2 = (function() {
         WeaponDatabaseDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.WeaponTypes != null && message.WeaponTypes.length)
-                for (var i = 0; i < message.WeaponTypes.length; ++i)
-                    $root.v2.WeaponTypeDbo.encode(message.WeaponTypes[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            if (message.weaponTypes != null && message.weaponTypes.length)
+                for (var i = 0; i < message.weaponTypes.length; ++i)
+                    $root.v2.WeaponTypeDbo.encode(message.weaponTypes[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             return writer;
         };
 
@@ -2233,9 +3429,9 @@ $root.v2 = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
-                        if (!(message.WeaponTypes && message.WeaponTypes.length))
-                            message.WeaponTypes = [];
-                        message.WeaponTypes.push($root.v2.WeaponTypeDbo.decode(reader, reader.uint32()));
+                        if (!(message.weaponTypes && message.weaponTypes.length))
+                            message.weaponTypes = [];
+                        message.weaponTypes.push($root.v2.WeaponTypeDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -2273,13 +3469,13 @@ $root.v2 = (function() {
         WeaponDatabaseDbo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.WeaponTypes != null && message.hasOwnProperty("WeaponTypes")) {
-                if (!Array.isArray(message.WeaponTypes))
-                    return "WeaponTypes: array expected";
-                for (var i = 0; i < message.WeaponTypes.length; ++i) {
-                    var error = $root.v2.WeaponTypeDbo.verify(message.WeaponTypes[i]);
+            if (message.weaponTypes != null && message.hasOwnProperty("weaponTypes")) {
+                if (!Array.isArray(message.weaponTypes))
+                    return "weaponTypes: array expected";
+                for (var i = 0; i < message.weaponTypes.length; ++i) {
+                    var error = $root.v2.WeaponTypeDbo.verify(message.weaponTypes[i]);
                     if (error)
-                        return "WeaponTypes." + error;
+                        return "weaponTypes." + error;
                 }
             }
             return null;
@@ -2297,14 +3493,14 @@ $root.v2 = (function() {
             if (object instanceof $root.v2.WeaponDatabaseDbo)
                 return object;
             var message = new $root.v2.WeaponDatabaseDbo();
-            if (object.WeaponTypes) {
-                if (!Array.isArray(object.WeaponTypes))
-                    throw TypeError(".v2.WeaponDatabaseDbo.WeaponTypes: array expected");
-                message.WeaponTypes = [];
-                for (var i = 0; i < object.WeaponTypes.length; ++i) {
-                    if (typeof object.WeaponTypes[i] !== "object")
-                        throw TypeError(".v2.WeaponDatabaseDbo.WeaponTypes: object expected");
-                    message.WeaponTypes[i] = $root.v2.WeaponTypeDbo.fromObject(object.WeaponTypes[i]);
+            if (object.weaponTypes) {
+                if (!Array.isArray(object.weaponTypes))
+                    throw TypeError(".v2.WeaponDatabaseDbo.weaponTypes: array expected");
+                message.weaponTypes = [];
+                for (var i = 0; i < object.weaponTypes.length; ++i) {
+                    if (typeof object.weaponTypes[i] !== "object")
+                        throw TypeError(".v2.WeaponDatabaseDbo.weaponTypes: object expected");
+                    message.weaponTypes[i] = $root.v2.WeaponTypeDbo.fromObject(object.weaponTypes[i]);
                 }
             }
             return message;
@@ -2324,11 +3520,11 @@ $root.v2 = (function() {
                 options = {};
             var object = {};
             if (options.arrays || options.defaults)
-                object.WeaponTypes = [];
-            if (message.WeaponTypes && message.WeaponTypes.length) {
-                object.WeaponTypes = [];
-                for (var j = 0; j < message.WeaponTypes.length; ++j)
-                    object.WeaponTypes[j] = $root.v2.WeaponTypeDbo.toObject(message.WeaponTypes[j], options);
+                object.weaponTypes = [];
+            if (message.weaponTypes && message.weaponTypes.length) {
+                object.weaponTypes = [];
+                for (var j = 0; j < message.weaponTypes.length; ++j)
+                    object.weaponTypes[j] = $root.v2.WeaponTypeDbo.toObject(message.weaponTypes[j], options);
             }
             return object;
         };
@@ -3841,7 +5037,7 @@ $root.v2 = (function() {
          * Properties of a FeatDatabaseDbo.
          * @memberof v2
          * @interface IFeatDatabaseDbo
-         * @property {Array.<v2.FeatSummaryDbo>|null} [FeatSummaries] FeatDatabaseDbo FeatSummaries
+         * @property {Array.<v2.FeatSummaryDbo>|null} [featSummaries] FeatDatabaseDbo featSummaries
          */
 
         /**
@@ -3853,7 +5049,7 @@ $root.v2 = (function() {
          * @param {v2.IFeatDatabaseDbo=} [properties] Properties to set
          */
         function FeatDatabaseDbo(properties) {
-            this.FeatSummaries = [];
+            this.featSummaries = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -3861,12 +5057,12 @@ $root.v2 = (function() {
         }
 
         /**
-         * FeatDatabaseDbo FeatSummaries.
-         * @member {Array.<v2.FeatSummaryDbo>} FeatSummaries
+         * FeatDatabaseDbo featSummaries.
+         * @member {Array.<v2.FeatSummaryDbo>} featSummaries
          * @memberof v2.FeatDatabaseDbo
          * @instance
          */
-        FeatDatabaseDbo.prototype.FeatSummaries = $util.emptyArray;
+        FeatDatabaseDbo.prototype.featSummaries = $util.emptyArray;
 
         /**
          * Creates a new FeatDatabaseDbo instance using the specified properties.
@@ -3892,9 +5088,9 @@ $root.v2 = (function() {
         FeatDatabaseDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.FeatSummaries != null && message.FeatSummaries.length)
-                for (var i = 0; i < message.FeatSummaries.length; ++i)
-                    $root.v2.FeatSummaryDbo.encode(message.FeatSummaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            if (message.featSummaries != null && message.featSummaries.length)
+                for (var i = 0; i < message.featSummaries.length; ++i)
+                    $root.v2.FeatSummaryDbo.encode(message.featSummaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             return writer;
         };
 
@@ -3930,9 +5126,9 @@ $root.v2 = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
-                        if (!(message.FeatSummaries && message.FeatSummaries.length))
-                            message.FeatSummaries = [];
-                        message.FeatSummaries.push($root.v2.FeatSummaryDbo.decode(reader, reader.uint32()));
+                        if (!(message.featSummaries && message.featSummaries.length))
+                            message.featSummaries = [];
+                        message.featSummaries.push($root.v2.FeatSummaryDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -3970,13 +5166,13 @@ $root.v2 = (function() {
         FeatDatabaseDbo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.FeatSummaries != null && message.hasOwnProperty("FeatSummaries")) {
-                if (!Array.isArray(message.FeatSummaries))
-                    return "FeatSummaries: array expected";
-                for (var i = 0; i < message.FeatSummaries.length; ++i) {
-                    var error = $root.v2.FeatSummaryDbo.verify(message.FeatSummaries[i]);
+            if (message.featSummaries != null && message.hasOwnProperty("featSummaries")) {
+                if (!Array.isArray(message.featSummaries))
+                    return "featSummaries: array expected";
+                for (var i = 0; i < message.featSummaries.length; ++i) {
+                    var error = $root.v2.FeatSummaryDbo.verify(message.featSummaries[i]);
                     if (error)
-                        return "FeatSummaries." + error;
+                        return "featSummaries." + error;
                 }
             }
             return null;
@@ -3994,14 +5190,14 @@ $root.v2 = (function() {
             if (object instanceof $root.v2.FeatDatabaseDbo)
                 return object;
             var message = new $root.v2.FeatDatabaseDbo();
-            if (object.FeatSummaries) {
-                if (!Array.isArray(object.FeatSummaries))
-                    throw TypeError(".v2.FeatDatabaseDbo.FeatSummaries: array expected");
-                message.FeatSummaries = [];
-                for (var i = 0; i < object.FeatSummaries.length; ++i) {
-                    if (typeof object.FeatSummaries[i] !== "object")
-                        throw TypeError(".v2.FeatDatabaseDbo.FeatSummaries: object expected");
-                    message.FeatSummaries[i] = $root.v2.FeatSummaryDbo.fromObject(object.FeatSummaries[i]);
+            if (object.featSummaries) {
+                if (!Array.isArray(object.featSummaries))
+                    throw TypeError(".v2.FeatDatabaseDbo.featSummaries: array expected");
+                message.featSummaries = [];
+                for (var i = 0; i < object.featSummaries.length; ++i) {
+                    if (typeof object.featSummaries[i] !== "object")
+                        throw TypeError(".v2.FeatDatabaseDbo.featSummaries: object expected");
+                    message.featSummaries[i] = $root.v2.FeatSummaryDbo.fromObject(object.featSummaries[i]);
                 }
             }
             return message;
@@ -4021,11 +5217,11 @@ $root.v2 = (function() {
                 options = {};
             var object = {};
             if (options.arrays || options.defaults)
-                object.FeatSummaries = [];
-            if (message.FeatSummaries && message.FeatSummaries.length) {
-                object.FeatSummaries = [];
-                for (var j = 0; j < message.FeatSummaries.length; ++j)
-                    object.FeatSummaries[j] = $root.v2.FeatSummaryDbo.toObject(message.FeatSummaries[j], options);
+                object.featSummaries = [];
+            if (message.featSummaries && message.featSummaries.length) {
+                object.featSummaries = [];
+                for (var j = 0; j < message.featSummaries.length; ++j)
+                    object.featSummaries[j] = $root.v2.FeatSummaryDbo.toObject(message.featSummaries[j], options);
             }
             return object;
         };

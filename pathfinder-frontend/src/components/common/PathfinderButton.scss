@@ -1,0 +1,47 @@
+$border-width: 2px;
+
+@mixin pf-button-variant($background-color, $foreground-color: darken($background-color, 45%)) {
+  background-color: $background-color;
+  border-color: $foreground-color;
+  color: $foreground-color;
+}
+
+.pf-button {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: left;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px 18px;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: center;
+
+  $background-color: #C5C5C5;
+  $text-color: #505050;
+
+  background-color: $background-color;
+  border: $border-width solid $text-color;
+  color: $text-color;
+
+  align-items: center;
+
+  &--feat {
+    @include pf-button-variant(#FFD050);
+  }
+
+  &--special {
+    @include pf-button-variant(#FFD050);
+  }
+
+  &--white {
+    @include pf-button-variant(white, dimgray);
+  }
+}

@@ -1,0 +1,24 @@
+.section {
+}
+
+.label {
+  min-width: 64px;
+}
+
+.value {
+  display: flex;
+  flex: 1;
+}
+
+.touchValue {
+  composes: value;
+}
+
+.flatFootedValue {
+  composes: value;
+}
+
+.modifiersValue {
+  composes: value;
+  flex: 3;
+}

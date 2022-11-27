@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from "react";
-import {Form} from "react-bootstrap";
+import {Form, FormControlProps} from "react-bootstrap";
 
-export type Props = {
+interface CharacterNumericInput extends FormControlProps {
   value: string;
-  onchange?: (value: string) => void;
+  onCommit?: (value: string) => void;
   readonly?: boolean;
   placeholder?: string;
   isInvalid?: boolean;
-};
+}
 
-export default function CharacterNumericInput(props: Props) {
+export default function CharacterNumericInput(
+    { value, onCommit, readonly = false, placeholder, isInvalid = false, ...inputProps }: CharacterNumericInput) {
 
   const [current, setCurrent] = useState('');
-  useEffect(() => setCurrent(props.value), [props.value])
+  useEffect(() => setCurrent(value), [value])
 
   return (
       <Form.Control
@@ -20,12 +21,13 @@ export default function CharacterNumericInput(props: Props) {
           type={"text"}
           size={"lg"}
           value={current}
-          isInvalid={props.isInvalid ?? false}
-          readOnly={props.readonly ?? false}
-          tabIndex={(props.readonly ?? false) ? -1 : 0}
-          placeholder={props.placeholder}
-          onChange={event => !props.readonly && setCurrent(event.target.value)}
-          onBlur={_ => !props.readonly && props.onchange && props.onchange(current)}
+          isInvalid={isInvalid}
+          readOnly={readonly}
+          tabIndex={readonly ? -1 : 0}
+          placeholder={placeholder}
+          onChange={event => !readonly && setCurrent(event.target.value)}
+          onBlur={_ => !readonly && onCommit && onCommit(current)}
+          {...inputProps}
       />
   );
 }

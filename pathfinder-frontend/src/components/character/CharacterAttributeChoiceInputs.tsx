@@ -1,39 +1,32 @@
-import {Button, Col, InputGroup, Row} from "react-bootstrap";
-import CharacterNumericInput from "./base/CharacterNumericInput";
-import CharacterModifierTextbox from "./base/CharacterModifierTextbox";
+import {useMemo, useState} from "react";
+import {Container} from "react-bootstrap";
 import {Character} from "../../model/character/Character";
+import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
 import ValidationError from "../../model/character/ValidationError";
-import {useState} from "react";
 import TextLookup from "../../model/TextLookup";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
+import NumberSelect from "../common/NumberSelect";
+import "./CharacterAttributeChoiceInputs.scss";
 
-export type Props = {
-  character: Character
-  onchange: (character: Character) => void;
+export type CharacterAttributeChoiceInputsProps = {
+  character: Character;
+  characterAtLevel: CharacterAtLevel;
+  onCommit: (character: Promise<Character>) => void;
 };
 
-export default function CharacterAttributeChoiceInputs(props: Props) {
-  const character = props.character;
-  const character0 = character.atLevel(0);
-  const onchange = props.onchange;
-  return (<div>
-    <Row>
-      <Col lg={3} xl={2}></Col>
-      <Col className="header text-center">Base</Col>
-      <Col className="header text-center">Final</Col>
-      <Col className="header text-center">Modifier</Col>
-    </Row>
+export default function CharacterAttributeChoiceInputs(
+    { character, characterAtLevel, onCommit }: CharacterAttributeChoiceInputsProps) {
+
+  return (<Container className={'pf-attribute-choice-inputs'}>
     {Character.ABILITIES
     .map(attribute => <CharacterAttributeRow
         key={`attribute_${attribute}`}
         attributeName={attribute}
-        baseValue={character0.get(`${attribute}_base`)?.asText() ?? ''}
-        scoreValue={character0.get(`${attribute}_score`)?.asText() ?? ''}
-        modifierValue={character0.get(`${attribute}_mod`)?.asText() ?? ''}
-        onchange={value => onchange(character.select(`level0:${attribute}_base`, value))}
+        baseValue={characterAtLevel.get(`${attribute}:base`)?.asText() ?? ''}
+        scoreValue={characterAtLevel.get(`${attribute}_score`)?.asText() ?? ''}
+        modifierValue={characterAtLevel.get(`${attribute}_mod`)?.asText() ?? ''}
+        onCommit={value => onCommit(character.select(`level0:${attribute}_base`, value))}
       />)}
-  </div>)
+  </Container>)
 }
 
 export type CharacterAttributeRowProps = {
@@ -41,20 +34,17 @@ export type CharacterAttributeRowProps = {
   baseValue: string;
   scoreValue: string;
   modifierValue: string;
-  onchange: (value: string) => void;
+  onCommit: (value: string) => void;
 }
 
-function CharacterAttributeRow(props: CharacterAttributeRowProps) {
+function CharacterAttributeRow(
+    { attributeName, baseValue, scoreValue, modifierValue, onCommit }: CharacterAttributeRowProps) {
   const [ validationError, setValidationError ] = useState<string|null>(null);
-  const attributeName = props.attributeName;
-  const baseValue = props.baseValue;
-  const scoreValue = props.scoreValue;
-  const modifierValue = props.modifierValue;
 
-  const onchange = (value: string) => {
+  const handleCommit = (value: string) => {
     try {
       setValidationError(null);
-      props.onchange(value);
+      onCommit(value);
     } catch (error) {
       if (!(error instanceof ValidationError)) {
         throw error;
@@ -63,35 +53,48 @@ function CharacterAttributeRow(props: CharacterAttributeRowProps) {
     }
   };
 
-  const onMinus = (_: any) => {
-    onchange((parseInt(baseValue) - 1).toString());
+  const handleBaseValueChanged = (value: string) => {
+    handleCommit(value);
   }
 
-  const onPlus = (_: any) => {
-    onchange((parseInt(baseValue) + 1).toString());
-  }
+  const attributeLabel = useMemo(() => TextLookup.get(`ABILITY_${attributeName}_NAME_SHORT`), [attributeName]);
+  const modifierLabel = useMemo(() => modifierValue.startsWith('-') ? modifierValue : `+${modifierValue}`, [modifierValue]);
+  const bonusValue = useMemo(() => parseInt(scoreValue) - parseInt(baseValue), [scoreValue, baseValue]);
+  const bonusLabel = useMemo(() => bonusValue === 0 ? <div className="bonus-value"/> : <div className={bonusValue < 0 ? 'bonus-value--minus' : 'bonus-value--plus'}>{bonusValue < 0 ? `${bonusValue}` : `+${bonusValue}`}</div>, [bonusValue]);
 
-  return (<Row>
-    <Col lg={3} xl={2}><label>{TextLookup.get(`ABILITY_${attributeName}_NAME_SHORT`)}</label></Col>
-    <Col>
-      <InputGroup hasValidation={true}>
-        <Button onClick={onMinus}><FontAwesomeIcon icon={faMinus} /></Button>
-        <CharacterNumericInput
-          value={baseValue}
-          isInvalid={validationError != null}
-          onchange={onchange} />
-        <Button onClick={onPlus}><FontAwesomeIcon icon={faPlus} /></Button>
-      </InputGroup>
-      {validationError != null && <div className="invalid-feedback">{validationError}</div>}
-    </Col>
-    <Col>
-      <CharacterNumericInput
-          value={scoreValue}
-          readonly={true} />
-    </Col>
-    <Col>
-      <CharacterModifierTextbox
-          value={modifierValue} />
-    </Col>
-  </Row>);
+  return <div className={'attribute-score-row'}>
+    <label className={'attribute-score-label'}>{attributeLabel}</label>
+    <NumberSelect defaultValue={baseValue}
+                  min={7}
+                  max={20}
+                  onChange={handleBaseValueChanged} />
+    {/*<Button className={'base-value-minus'} onClick={onMinus}><FontAwesomeIcon icon={faMinus} /></Button>*/}
+    {/*<div className={'base-value'}>{baseValue}</div>*/}
+    {/*<Button className={'base-value-plus'} onClick={onPlus}><FontAwesomeIcon icon={faPlus} /></Button>*/}
+
+    {bonusLabel}
+    <div className="score-value">{scoreValue}</div>
+    <div className="modifier-value">({modifierLabel})</div>
+  </div>
+
+  // return (<Row className={'flex-nowrap'}>
+  //   <Col xs={1} className={'attribute-name-col'}>
+  //     <span>{TextLookup.get(`ABILITY_${attributeName}_NAME_SHORT`)}</span>
+  //   </Col>
+  //   <Col xs={2} className={'attribute-base-col flex-nowrap'}>
+  //     <InputGroup hasValidation={true} className={'flex-nowrap'}>
+  //       <Button onClick={onMinus}><FontAwesomeIcon icon={faMinus} /></Button>
+  //       <CharacterNumericInput
+  //           style={ {width: '5em'} }
+  //           value={baseValue}
+  //           isInvalid={validationError != null}
+  //           onCommit={handleCommit} />
+  //       <Button onClick={onPlus}><FontAwesomeIcon icon={faPlus} /></Button>
+  //     </InputGroup>
+  //     {validationError != null && <div className="invalid-feedback">{validationError}</div>}
+  //   </Col>
+  //   <Col className={'attribute-score-col'}>
+  //     <span>{`${scoreValue} (${formatModifier(parseInt(modifierValue))})`}</span>
+  //   </Col>
+  // </Row>);
 }

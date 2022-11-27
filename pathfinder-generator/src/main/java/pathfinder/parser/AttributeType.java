@@ -9,6 +9,7 @@ public enum AttributeType {
     CLASS("class"),
     PROFICIENCY("proficiency"),
     WEAPON("weapon"),
+    RAGE_POWER("ragepower"),
     ;
 
     @Getter private final String label;

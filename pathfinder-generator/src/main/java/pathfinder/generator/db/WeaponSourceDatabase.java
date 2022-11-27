@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
+import pathfinder.generator.model.Weapons;
 import pathfinder.parser.db.WeaponType;
 
 @Service("Weapon Source Database")

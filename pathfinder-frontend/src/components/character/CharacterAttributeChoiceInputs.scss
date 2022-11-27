@@ -1,0 +1,90 @@
+.pf-attribute-choice-inputs {
+  $col-height: 48px;
+
+  .attribute-score-row {
+    height: $col-height;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .attribute-score-label {
+    width: 4rem;
+  }
+
+  .base-value {
+    height: $col-height;
+    width: $col-height;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    align-items: center;
+
+    background-color: white;
+    border: 2px solid dimgray;
+    border-left: 0;
+    border-right: 0;
+    color: dimgray;
+  }
+
+  .base-value-minus {
+    height: $col-height;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .base-value-plus {
+    height: $col-height;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .bonus-value {
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin-left: 0.5rem;
+    width: 2.5rem;
+
+    &--plus {
+      @extend .bonus-value;
+      color: green;
+    }
+
+    &--minus {
+      @extend .bonus-value;
+      color: red;
+    }
+  }
+
+  .score-value {
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 16px;
+    color: dimgray;
+  }
+
+  .modifier-value {
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 16px;
+    color: dimgray;
+    margin-left: 0.25rem;
+  }
+}

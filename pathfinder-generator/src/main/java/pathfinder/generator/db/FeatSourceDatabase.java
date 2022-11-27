@@ -19,7 +19,8 @@ import javax.annotation.PostConstruct;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Service;
-import pathfinder.generator.db.Feat.Type;
+import pathfinder.generator.model.Feat;
+import pathfinder.generator.model.Feat.Type;
 import pathfinder.parser.NameToIdConverter;
 
 @Service("Feat Source Database")

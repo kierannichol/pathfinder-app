@@ -6,7 +6,7 @@ import ResolvedValueWithId from "../../logic/ResolvedValueWithId";
 
 export class CharacterAtLevel implements DataContext {
 
-  constructor(private readonly level: number, private readonly state: DataContextState) {
+  constructor(public readonly level: number, private readonly state: DataContextState) {
   }
 
   find(pattern: string): ResolvedValueWithId[] {

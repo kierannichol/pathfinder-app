@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "Your arcane talents go beyond the illusory.",
   "prerequisites": "Cha 13, gnome, gnome magic racial trait.",
-  "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @race \u003d\u003d \u0027gnome\u0027 AND sum(@ability:*:gnome_magic) AND  !@feat:gnome_trickster",
+  "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @race \u003d\u003d \u0027gnome\u0027 AND sum(@ability:gnome_magic) AND  !@feat:gnome_trickster",
   "benefit": "In addition to your normal gnome spell-like abilities, you also gain the following spell-like abilities: 1/day-mage hand and prestidigitation.",
   "source": "Advanced Player\u0027s Guide"
 }

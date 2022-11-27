@@ -15,7 +15,7 @@ export class WeaponDatabase {
 
   static from(database: WeaponDatabaseDbo): WeaponDatabase {
     let data: {[id: string]: WeaponType} = {};
-    for (const weapon of database.WeaponTypes) {
+    for (const weapon of database.weaponTypes) {
       data[weapon.id] = new WeaponType(
           weapon.id,
           weapon.name,

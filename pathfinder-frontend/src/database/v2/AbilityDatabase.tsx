@@ -14,10 +14,11 @@ export class AbilityDatabase {
 
   static from(database: AbilityDatabaseDbo): AbilityDatabase {
     let data: {[id: string]: AbilitySummary} = {};
-    for (const ability of database.AbilitySummaries) {
-      data['ability:' + ability.id] = new AbilitySummary('ability:' + ability.id,
+    for (const ability of database.abilitySummaries) {
+      data[ability.id] = new AbilitySummary(ability.id,
           ability.name,
-          convertAbilityType(ability.type));
+          convertAbilityType(ability.type),
+          ability.prerequisitesFormula);
     }
     return new AbilityDatabase(data);
   }
@@ -32,12 +33,13 @@ export class AbilityDatabase {
   }
 
   public async load(id: string): Promise<Ability | undefined> {
-    const loadId = id.substring('ability:'.length);
+    const loadId = idToFilename(id);
     return loadAbility(loadId).then(data => data === undefined
         ? undefined
-        : new Ability('ability:' + data.id,
+        : new Ability(data.id,
             data.name,
             convertAbilityType(data.type),
+            data.prerequisitesFormula,
             data.description));
   }
 
@@ -54,16 +56,25 @@ function convertAbilityType(dataType: AbilityTypeDbo): Ability.Type {
   }
 }
 
+let globalAbilityDatabase: Promise<AbilityDatabase> | undefined = undefined;
+
+export function withGlobalAbilityDatabase(): Promise<AbilityDatabase> {
+  if (globalAbilityDatabase === undefined) {
+    globalAbilityDatabase = loadAbilityDatabase().then(dbo => AbilityDatabase.from(dbo));
+  }
+  return globalAbilityDatabase;
+}
+
 async function loadAbilityDatabase(): Promise<AbilityDatabaseDbo> {
-  return fetch('/db/AbilityDatabase.bin', { binary: true }).then(binary =>
-      AbilityDatabaseDbo.decode(binary as Uint8Array));
+  const binary = await fetch(`${process.env.PUBLIC_URL}/db/AbilityDatabase.bin`, { binary: true });
+  return AbilityDatabaseDbo.decode(binary as Uint8Array);
 }
 
 async function loadAbility(id: string): Promise<v2.AbilityDataDbo | undefined> {
   if (id === '') {
     return new Promise<v2.AbilityDataDbo|undefined>(_ => undefined);
   }
-  return fetch(`/db/ability/${idToFilename(id)}.bin`, { binary: true }).then(binary => {
+  return fetch(`${process.env.PUBLIC_URL}/db/ability/${idToFilename(id)}.bin`, { binary: true }).then(binary => {
     return v2.AbilityDataDbo.decode(binary as Uint8Array);
   })
 }
@@ -77,12 +88,10 @@ const AbilityContext = createContext<AbilityDatabase>(AbilityDatabase.empty());
 
 export function AbilityContextProvider({ children}: any) {
   const [ database, setDatabase ] = useState<AbilityDatabase>(AbilityDatabase.empty());
-  const [ isLoading, setIsLoading ]= useState(true);
 
   useEffect(() => {
     loadAbilityDatabase().then(result => {
       setDatabase(AbilityDatabase.from(result));
-      setIsLoading(false);
     })
     .catch(error => console.error(error));
   }, []);
@@ -90,7 +99,7 @@ export function AbilityContextProvider({ children}: any) {
   return (
       <AbilityContext.Provider value={database}>
           {children}
-          </AbilityContext.Provider>
+      </AbilityContext.Provider>
   );
 }
 
@@ -107,7 +116,8 @@ export function useAbilityOnScreen(abilityId: string): [ AbilitySummary|undefine
   const [ability, setAbility] = useState<AbilitySummary|undefined>(() => database.summary(abilityId));
 
   useEffect(() => {
-    setAbility(database.summary(abilityId));
+    const ability = database.summary(abilityId);
+    setAbility(ability);
   }, [abilityId, database]);
 
   const ref = useCallback((node: HTMLDivElement) => {

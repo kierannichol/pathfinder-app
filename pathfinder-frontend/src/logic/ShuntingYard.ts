@@ -1,9 +1,10 @@
-import Resolvable from "./Resolvable";
 import {DataContext} from "./DataContext";
-import {alpha, decimal, integer, key, literal, optional, term, words} from "./TokenTree";
-import TokenTree from "./TokenTree";
 import Parser from "./Parser";
+import Resolvable from "./Resolvable";
 import {ResolvedValue} from "./ResolvedValue";
+import {ResolveError} from "./ResolveError";
+import TokenTree, {alpha, decimal, integer, key, literal, optional, term} from "./TokenTree";
+
 type ZeroOperandFunction<T> = () => T;
 type OneOperandFunction<T> = (x: T) => T;
 type TwoOperandFunction<T> = (x: T, y: T) => T;
@@ -30,10 +31,12 @@ interface Node {
 }
 
 abstract class OperatorFunction implements Node {
+  public readonly name: string;
   public readonly operands: number;
   private readonly fn: OperandFunction<ResolvedValue>;
 
-  protected constructor(operands: number, fn: OperandFunction<ResolvedValue>) {
+  protected constructor(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
+    this.name = name;
     this.operands = operands;
     this.fn = fn;
   }
@@ -50,21 +53,22 @@ abstract class OperatorFunction implements Node {
 }
 
 class Function extends OperatorFunction {
-  constructor(operands: number, fn: OperandFunction<ResolvedValue>) {
-    super(operands, fn);
+  constructor(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
+    super(name, operands, fn);
   }
 }
 
 class Operator extends OperatorFunction {
-  constructor(public readonly precedence: number,
+  constructor(public readonly name: string,
+              public readonly precedence: number,
               public readonly associativity: Associativity,
               operands: number, fn: OperandFunction<ResolvedValue>) {
-    super(operands, fn);
+    super(name, operands, fn);
   }
 }
 
 class Variable implements Node {
-  constructor(private readonly key: string,
+  constructor(public readonly key: string,
               private readonly resolver: (context: DataContext, key: string) => ResolvedValue|Resolvable|undefined) {}
 
   resolve(context: DataContext) {
@@ -82,6 +86,7 @@ class Term implements Node {
 
 export class ShuntingYardParser implements Parser {
   private readonly parser: TokenTree;
+  private bracketFn: (value: ResolvedValue) => ResolvedValue = value => value;
 
   constructor() {
     this.parser = new TokenTree()
@@ -96,7 +101,7 @@ export class ShuntingYardParser implements Parser {
   }
 
   operator(symbol: string, precedence: number, associativity: Associativity, operands: number, fn: OperandFunction<ResolvedValue>) {
-    this.parser.add(symbol, _ => new Operator(precedence, associativity, operands, fn));
+    this.parser.add(symbol, _ => new Operator(symbol, precedence, associativity, operands, fn));
     return this;
   }
 
@@ -105,7 +110,7 @@ export class ShuntingYardParser implements Parser {
   }
 
   function(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
-    this.parser.add(name, _ => new Function(operands, fn));
+    this.parser.add(name, _ => new Function(name, operands, fn));
     return this;
   }
 
@@ -131,6 +136,11 @@ export class ShuntingYardParser implements Parser {
     this.parser.add([ term(text) ],
         key => new Variable(key, (context: DataContext) =>
             extractor(context)));
+    return this;
+  }
+
+  brackets(mapFn: (value: ResolvedValue) => ResolvedValue) {
+    this.bracketFn = mapFn;
     return this;
   }
 
@@ -242,19 +252,25 @@ export class ShuntingYard extends Resolvable {
           stack.push(func.execute());
         }
         else if (func.operands === 1) {
-          let x = stack.pop();
-          stack.push(func.execute(x as ResolvedValue));
+          let x = stack.pop() as ResolvedValue;
+          if (x === undefined) throw new ResolveError(`Error executing function, ${func.name}, because parameter was undefined`);
+          stack.push(func.execute(x));
         }
         else if (func.operands === 2) {
-          let b = stack.pop();
-          let a = stack.pop();
-          stack.push(func.execute(a as ResolvedValue, b as ResolvedValue));
+          let b = stack.pop() as ResolvedValue;
+          let a = stack.pop() as ResolvedValue;
+          if (a === undefined) throw new ResolveError(`Error executing function, ${func.name}, because first parameter was undefined`);
+          if (b === undefined) throw new ResolveError(`Error executing function, ${func.name}, because second parameter was undefined`);
+          stack.push(func.execute(a, b));
         }
         else if (func.operands === 3) {
-          let c = stack.pop();
-          let b = stack.pop();
-          let a = stack.pop();
-          stack.push(func.execute(a as ResolvedValue, b as ResolvedValue, c as ResolvedValue));
+          let c = stack.pop() as ResolvedValue;
+          let b = stack.pop() as ResolvedValue;
+          let a = stack.pop() as ResolvedValue;
+          if (a === undefined) throw new ResolveError(`Error executing function, ${func.name}, because first parameter was undefined`);
+          if (b === undefined) throw new ResolveError(`Error executing function, ${func.name}, because second parameter was undefined`);
+          if (c === undefined) throw new ResolveError(`Error executing function, ${func.name}, because third parameter was undefined`);
+          stack.push(func.execute(a, b, c));
         }
         else {
           throw new Error("Unsupported number of operands: " + func.operands);

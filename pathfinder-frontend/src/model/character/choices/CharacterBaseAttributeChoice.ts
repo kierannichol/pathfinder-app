@@ -1,7 +1,8 @@
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
-import ValidationError from "../ValidationError";
 import Trait from "../Trait";
 import BaseAttributeTrait from "../traits/BaseAttributeTrait";
+import ValidationError from "../ValidationError";
+import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 export default class CharacterBaseAttributeChoice extends CharacterChoice {
   public readonly dependsOn = undefined;
@@ -14,16 +15,20 @@ export default class CharacterBaseAttributeChoice extends CharacterChoice {
   get current(): string {
     return this.value;
   }
+}
 
-  select(value: string): CharacterChoice[] {
-    this.validate(value);
+export class CharacterBaseAttributeChoiceProcessor implements ICharacterChoiceProcessor<CharacterBaseAttributeChoice> {
+  public readonly supportedChoiceType = ChoiceType.ABILITY_SCORE;
+
+  async select(choice: CharacterBaseAttributeChoice, value: string): Promise<CharacterChoice[]> {
+    // this.validate(value);
     return [
-      new CharacterBaseAttributeChoice(this.key, this.attribute, value)
+      new CharacterBaseAttributeChoice(choice.key, choice.attribute, value)
     ];
   }
 
-  traits(): Trait[] {
-    return [ new BaseAttributeTrait(this.attribute, parseInt(this.current)) ];
+  async traits(choice: CharacterBaseAttributeChoice): Promise<Trait[]> {
+    return [ new BaseAttributeTrait(choice.attribute, parseInt(choice.current)) ];
   }
 
   private validate(value: string): void {

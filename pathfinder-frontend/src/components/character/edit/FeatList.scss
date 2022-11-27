@@ -5,10 +5,8 @@
 
     &-button {
       width: 100%;
-      //border-radius: 20px !important;
       cursor: pointer;
       display: flex;
-      font-family: Quicksand, sans-serif;
       font-size: 18px;
       font-weight: 700;
       justify-content: left;
@@ -34,11 +32,7 @@
 
     &--expanded &-button, &--expanding &-button {
       $background-color: lighten(#FFD050, 20%);
-      //$text-color: darken($background-color, 45%);
-
       background-color: $background-color;
-      //border-color: darken($background-color, 45%);
-      //color: $text-color;
     }
 
     &--invalid &-button {
@@ -55,8 +49,8 @@
     }
 
     &-body {
-      padding: 0.5em 2em;
-      margin-bottom: 1em;
+      padding: 0.5rem 0.5rem;
+      margin-bottom: 0.25rem;
     }
   }
 }

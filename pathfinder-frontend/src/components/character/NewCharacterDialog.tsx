@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Button, Container, Modal} from "react-bootstrap";
-import {LabelRow} from "../Rows";
 import CharacterTextInput from "./base/CharacterTextInput";
 import "./NewCharacterDialog.scss";
 
@@ -13,8 +12,8 @@ interface NewCharacterDialogProps {
 function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProps) {
   const [ characterName, setCharacterName ] = useState('');
 
-  function handleCreate() {
-    onCreate(characterName);
+  function handleCreate(name: string) {
+    onCreate(name);
   }
 
   return (<Modal
@@ -31,17 +30,17 @@ function NewCharacterDialog({ show, onCreate, onCancel }: NewCharacterDialogProp
 
     <Modal.Body>
       <Container>
-        <LabelRow label={'Character Name'}>
-          <CharacterTextInput
-              value={characterName}
-              onchange={setCharacterName}
-              autoFocus={true} />
-        </LabelRow>
+        <label>Character Name</label>
+        <CharacterTextInput
+            value={characterName}
+            onChange={setCharacterName}
+            onEnter={handleCreate}
+            autoFocus={true} />
       </Container>
     </Modal.Body>
 
     <Modal.Footer>
-      <Button size={'lg'} onClick={_ => handleCreate()}>Create</Button>
+      <Button size={'lg'} onClick={_ => handleCreate(characterName)}>Create</Button>
     </Modal.Footer>
   </Modal>);
 }

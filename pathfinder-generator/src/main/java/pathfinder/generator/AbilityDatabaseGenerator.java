@@ -1,17 +1,23 @@
 package pathfinder.generator;
 
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import pathfinder.SourceDatabase;
 import pathfinder.data.v2.AbilityDataDbo;
 import pathfinder.data.v2.AbilityDatabaseDbo;
 import pathfinder.data.v2.AbilitySummaryDbo;
 import pathfinder.generator.db.AbilitySourceDatabase;
-import pathfinder.generator.db.encode.AbilityTypeEncoder;
+import pathfinder.generator.encode.AbilityTypeEncoder;
+import pathfinder.generator.model.Ability;
+import pathfinder.generator.model.Ability.Type;
+import pathfinder.generator.model.CharacterClass;
 import pathfinder.generator.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 
@@ -20,6 +26,7 @@ import pathfinder.util.FileUtils;
 @RequiredArgsConstructor
 public class AbilityDatabaseGenerator extends AbstractDatabaseGenerator {
     private final AbilitySourceDatabase abilitySourceDatabase;
+    private final SourceDatabase<CharacterClass> classSourceDatabase;
     private final AbilityTypeEncoder abilityTypeEncoder;
 
     @OutputPathValue private Path outputBasePath;
@@ -30,9 +37,16 @@ public class AbilityDatabaseGenerator extends AbstractDatabaseGenerator {
         FileUtils.deleteDirectory(abilityDataPath);
         Files.createDirectory(abilityDataPath);
 
+        Set<String> processedAbilityIds = new HashSet<>();
+
         var summaryDatabaseBuilder = AbilityDatabaseDbo.newBuilder();
-        abilitySourceDatabase.stream()
+        classFeatures()
                         .forEachOrdered(ability -> {
+                            if (processedAbilityIds.contains(ability.id())) {
+                                return;
+                            }
+                            processedAbilityIds.add(ability.id());
+
                             AbilitySummaryDbo summaryDbo = AbilitySummaryDbo.newBuilder()
                                     .setId(ability.id())
                                     .setName(ability.name())
@@ -49,17 +63,16 @@ public class AbilityDatabaseGenerator extends AbstractDatabaseGenerator {
                             summaryDatabaseBuilder.addAbilitySummaries(summaryDbo);
 
                             String fileName = idToFilename(ability.id());
-                            try {
-                                write(data, fileName, abilityDataPath);
-                            } catch (IOException e) {
-                                throw new UncheckedIOException(e);
-                            }
+                            write(data, fileName, abilityDataPath);
                         });
 
         write(summaryDatabaseBuilder.build(), "AbilityDatabase", outputBasePath);
     }
 
-    private static String idToFilename(String id) {
-        return id.replace(':', '_');
+    private Stream<Ability> classFeatures() throws IOException {
+        return classSourceDatabase.stream()
+                .flatMap(classDef -> classDef.levels().stream())
+                .flatMap(level -> level.specials().stream())
+                .map(special -> new Ability(special.id(), special.name(), Type.NONE, special.description()));
     }
 }

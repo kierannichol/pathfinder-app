@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import pathfinder.generator.DatabaseGenerator;
 
-@SpringBootApplication(scanBasePackages = "pathfinder.generator")
+@SpringBootApplication(scanBasePackages = { "pathfinder.generator", "pathfinder.scraper" })
 @Slf4j
 public class Application {
 

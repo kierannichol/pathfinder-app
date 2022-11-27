@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+package v2;
+
+message ClassDatabaseDbo {
+  repeated ClassSummaryDbo classSummaries = 1;
+}
+
+message ClassSummaryDbo {
+  string id = 1;
+  string name = 2;
+  ClassCategoryDbo category = 3;
+}
+
+message ClassDataDbo {
+  string id = 1;
+  string name = 2;
+  ClassCategoryDbo category = 3;
+  string short_description = 4;
+  repeated ClassLevelDbo levels = 5;
+}
+
+enum ClassCategoryDbo {
+  UNKNOWN = 0;
+  CORE = 1;
+  BASE = 2;
+  HYBRID = 3;
+  UNCHAINED = 4;
+}
+
+message ClassLevelDbo {
+  uint32 level_number = 1;
+  uint32 bab = 2;
+  uint32 fort_save = 3;
+  uint32 ref_save = 4;
+  uint32 will_save = 5;
+  repeated SpecialDbo specials = 6;
+}
+
+message SpecialDbo {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+}

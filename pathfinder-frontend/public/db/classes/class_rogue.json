@@ -1,0 +1,260 @@
+{
+  "id": "class:rogue",
+  "name": "Rogue",
+  "category": "CORE",
+  "shortDescription": "Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents.",
+  "levels": [{
+    "levelNumber": 1,
+    "refSave": 2,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }, {
+      "id": "ability:trapfinding",
+      "name": "Trapfinding",
+      "description": "A rogue adds 1/2 her level to Perception skill checks made to locate traps and to Disable Device skill checks (minimum +1). A rogue can use Disable Device to disarm magic traps."
+    }]
+  }, {
+    "levelNumber": 2,
+    "bab": 1,
+    "refSave": 3,
+    "specials": [{
+      "id": "ability:evasion",
+      "name": "Evasion",
+      "description": "At 2nd level and higher, a rogue can avoid even magical and unusual attacks with great agility. If she makes a successful Reflex saving throw against an attack that normally deals half damage on a successful save, she instead takes no damage. Evasion can be used only if the rogue is wearing light armor or no armor. A helpless rogue does not gain the benefit of evasion."
+    }, {
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }]
+  }, {
+    "levelNumber": 3,
+    "bab": 2,
+    "fortSave": 1,
+    "refSave": 3,
+    "willSave": 1,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }, {
+      "id": "ability:trap_sense",
+      "name": "Trap Sense",
+      "description": "At 3rd level, a rogue gains an intuitive sense that alerts her to danger from traps, giving her a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise to +2 when the rogue reaches 6th level, to +3 when she reaches 9th level, to +4 when she reaches 12th level, to +5 at 15th, and to +6 at 18th level. Trap sense bonuses gained from multiple classes stack."
+    }]
+  }, {
+    "levelNumber": 4,
+    "bab": 3,
+    "fortSave": 1,
+    "refSave": 4,
+    "willSave": 1,
+    "specials": [{
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }, {
+      "id": "ability:uncanny_dodge",
+      "name": "Uncanny Dodge",
+      "description": "Starting at 4th level, a rogue can react to danger before her senses would normally allow her to do so. She cannot be caught flat-footed, nor does she lose her Dex bonus to AC if the attacker is invisible. She still loses her Dexterity bonus to AC if immobilized. A rogue with this ability can still lose her Dexterity bonus to AC if an opponent successfully uses the feint action (see Combat) against her.If a rogue already has uncanny dodge from a different class, she automatically gains improved uncanny dodge (see below) instead."
+    }]
+  }, {
+    "levelNumber": 5,
+    "bab": 3,
+    "fortSave": 1,
+    "refSave": 4,
+    "willSave": 1,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }]
+  }, {
+    "levelNumber": 6,
+    "bab": 4,
+    "fortSave": 2,
+    "refSave": 5,
+    "willSave": 2,
+    "specials": [{
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }, {
+      "id": "ability:trap_sense",
+      "name": "Trap Sense",
+      "description": "At 3rd level, a rogue gains an intuitive sense that alerts her to danger from traps, giving her a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise to +2 when the rogue reaches 6th level, to +3 when she reaches 9th level, to +4 when she reaches 12th level, to +5 at 15th, and to +6 at 18th level. Trap sense bonuses gained from multiple classes stack."
+    }]
+  }, {
+    "levelNumber": 7,
+    "bab": 5,
+    "fortSave": 2,
+    "refSave": 5,
+    "willSave": 2,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }]
+  }, {
+    "levelNumber": 8,
+    "bab": 6,
+    "fortSave": 2,
+    "refSave": 6,
+    "willSave": 2,
+    "specials": [{
+      "id": "ability:improved_uncanny_dodge",
+      "name": "Improved Uncanny Dodge",
+      "description": "A rogue of 8th level or higher can no longer be flanked.This defense denies another rogue the ability to sneak attack the character by flanking her, unless the attacker has at least four more rogue levels than the target does.If a character already has uncanny dodge (see above) from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum rogue level required to flank the character."
+    }, {
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }]
+  }, {
+    "levelNumber": 9,
+    "bab": 6,
+    "fortSave": 3,
+    "refSave": 6,
+    "willSave": 3,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }, {
+      "id": "ability:trap_sense",
+      "name": "Trap Sense",
+      "description": "At 3rd level, a rogue gains an intuitive sense that alerts her to danger from traps, giving her a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise to +2 when the rogue reaches 6th level, to +3 when she reaches 9th level, to +4 when she reaches 12th level, to +5 at 15th, and to +6 at 18th level. Trap sense bonuses gained from multiple classes stack."
+    }]
+  }, {
+    "levelNumber": 10,
+    "bab": 7,
+    "fortSave": 3,
+    "refSave": 7,
+    "willSave": 3,
+    "specials": [{
+      "id": "ability:advanced_talents",
+      "name": "Advanced Talents",
+      "description": "At 10th level, and every two levels thereafter, a rogue can choose one of the following advanced talents in place of a rogue talent."
+    }, {
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }]
+  }, {
+    "levelNumber": 11,
+    "bab": 8,
+    "fortSave": 3,
+    "refSave": 7,
+    "willSave": 3,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }]
+  }, {
+    "levelNumber": 12,
+    "bab": 9,
+    "fortSave": 4,
+    "refSave": 8,
+    "willSave": 4,
+    "specials": [{
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }, {
+      "id": "ability:trap_sense",
+      "name": "Trap Sense",
+      "description": "At 3rd level, a rogue gains an intuitive sense that alerts her to danger from traps, giving her a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise to +2 when the rogue reaches 6th level, to +3 when she reaches 9th level, to +4 when she reaches 12th level, to +5 at 15th, and to +6 at 18th level. Trap sense bonuses gained from multiple classes stack."
+    }]
+  }, {
+    "levelNumber": 13,
+    "bab": 9,
+    "fortSave": 4,
+    "refSave": 8,
+    "willSave": 4,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }]
+  }, {
+    "levelNumber": 14,
+    "bab": 10,
+    "fortSave": 4,
+    "refSave": 9,
+    "willSave": 4,
+    "specials": [{
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }]
+  }, {
+    "levelNumber": 15,
+    "bab": 11,
+    "fortSave": 5,
+    "refSave": 9,
+    "willSave": 5,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }, {
+      "id": "ability:trap_sense",
+      "name": "Trap Sense",
+      "description": "At 3rd level, a rogue gains an intuitive sense that alerts her to danger from traps, giving her a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise to +2 when the rogue reaches 6th level, to +3 when she reaches 9th level, to +4 when she reaches 12th level, to +5 at 15th, and to +6 at 18th level. Trap sense bonuses gained from multiple classes stack."
+    }]
+  }, {
+    "levelNumber": 16,
+    "bab": 12,
+    "fortSave": 5,
+    "refSave": 10,
+    "willSave": 5,
+    "specials": [{
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }]
+  }, {
+    "levelNumber": 17,
+    "bab": 12,
+    "fortSave": 5,
+    "refSave": 10,
+    "willSave": 5,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }]
+  }, {
+    "levelNumber": 18,
+    "bab": 13,
+    "fortSave": 6,
+    "refSave": 11,
+    "willSave": 6,
+    "specials": [{
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }, {
+      "id": "ability:trap_sense",
+      "name": "Trap Sense",
+      "description": "At 3rd level, a rogue gains an intuitive sense that alerts her to danger from traps, giving her a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise to +2 when the rogue reaches 6th level, to +3 when she reaches 9th level, to +4 when she reaches 12th level, to +5 at 15th, and to +6 at 18th level. Trap sense bonuses gained from multiple classes stack."
+    }]
+  }, {
+    "levelNumber": 19,
+    "bab": 14,
+    "fortSave": 6,
+    "refSave": 11,
+    "willSave": 6,
+    "specials": [{
+      "id": "ability:sneak_attack",
+      "name": "Sneak Attack"
+    }]
+  }, {
+    "levelNumber": 20,
+    "bab": 15,
+    "fortSave": 6,
+    "refSave": 12,
+    "willSave": 6,
+    "specials": [{
+      "id": "ability:master_strike",
+      "name": "Master Strike",
+      "description": "Upon reaching 20th level, a rogue becomes incredibly deadly when dealing sneak attack damage. Each time the rogue deals sneak attack damage, she can choose one of the following three effects:The target can be…"
+    }, {
+      "id": "ability:rogue_talent",
+      "name": "Rogue Talents",
+      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
+    }]
+  }]
+}

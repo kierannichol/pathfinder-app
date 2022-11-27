@@ -2,16 +2,18 @@ import React, {useEffect, useState} from "react";
 import {Form} from "react-bootstrap";
 
 interface CharacterNameChoiceInputProps {
-  value: string,
-  onChange: (changed: string) => void
+  id?: string;
+  value: string;
+  onChange: (changed: string) => void;
 }
 
-function CharacterNameChoiceInput({ value, onChange }: CharacterNameChoiceInputProps) {
+function CharacterNameChoiceInput({ id, value, onChange }: CharacterNameChoiceInputProps) {
   const [current, setCurrent] = useState(value);
   useEffect(() => setCurrent(value), [value])
 
   return (
       <Form.Control
+          id={id}
           type={"text"}
           size={"lg"}
           value={current}

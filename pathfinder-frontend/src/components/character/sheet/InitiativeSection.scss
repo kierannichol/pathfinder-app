@@ -1,0 +1,31 @@
+@import "src/views/CharacterSheetPage";
+
+.pfcs-initiative-section {
+  width: 100%;
+  display: flex;
+
+  & .section-row {
+
+    & .label {
+      flex-grow: 1;
+    }
+
+    & .heading {
+      text-align: center;
+      justify-content: center;
+    }
+
+    & > div {
+      margin: var(--pf-grid-spacing);
+    }
+
+    & > span {
+      margin: var(--pf-grid-spacing) 0;
+      color: var(--pf-cell-border-color);
+    }
+
+    & > div:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

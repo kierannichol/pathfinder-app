@@ -1,0 +1,53 @@
+.pfcs-saving-throws-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  & > div:last-of-type {
+    margin-right: 0;
+  }
+
+  & .label {
+    width: 6rem;
+  }
+
+  & .heading {
+    text-align: center;
+    justify-content: center;
+    align-items: end;
+  }
+
+  & .section-row {
+    width: 100%;
+    display: flex;
+
+    &:first-of-type {
+      align-items: end;
+    }
+
+    & > div {
+      margin: var(--pf-grid-spacing);
+    }
+
+    & > span {
+      margin: var(--pf-grid-spacing) 0;
+      color: var(--pf-cell-border-color);
+    }
+  }
+
+  & .pfcs-saving-throws-modifiers {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    margin-right: 0 !important;
+
+    & .heading {
+      width: inherit;
+    }
+
+    & .value {
+      flex-grow: 1;
+      width: inherit;
+    }
+  }
+}
