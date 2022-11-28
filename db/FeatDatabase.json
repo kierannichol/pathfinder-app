@@ -1157,7 +1157,7 @@
     "name": "Discordant Voice",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bardic performance class feature, Perform (oratory or sing) 10 ranks.",
-    "prerequisitesFormula": "sum(@ability:bardic_performance) AND @skill:perform:oratory_or_sing \u003e\u003d 10 AND  !@feat:discordant_voice"
+    "prerequisitesFormula": "sum(@ability:bardic_performance) AND @skill:perform#oratory_or_sing \u003e\u003d 10 AND  !@feat:discordant_voice"
   }, {
     "id": "feat:branded_for_retribution",
     "name": "Branded for Retribution",
@@ -2124,7 +2124,7 @@
     "name": "Harmonic Sage",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Bardic performance class feature, Knowledge (engineering) 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:bardic_performance) AND @skill:knowledge:engineering \u003e\u003d 5 AND  !@feat:harmonic_sage"
+    "prerequisitesFormula": "sum(@ability:bardic_performance) AND @skill:knowledge_engineering \u003e\u003d 5 AND  !@feat:harmonic_sage"
   }, {
     "id": "feat:die_for_your_master",
     "name": "Die for Your Master",
@@ -3023,7 +3023,7 @@
     "name": "Quick Channel",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Knowledge (religion) 5 ranks, channel energy class feature.",
-    "prerequisitesFormula": "@skill:knowledge:religion \u003e\u003d 5 AND (@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:quick_channel"
+    "prerequisitesFormula": "@skill:knowledge_religion \u003e\u003d 5 AND (@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:quick_channel"
   }, {
     "id": "feat:channeled_shield_wall",
     "name": "Channeled Shield Wall",
@@ -3088,7 +3088,7 @@
     "name": "Elusive Redirection",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Elusive target class feature, Combat Expertise, Improved Unarmed Strike, flowing monk level 12th.",
-    "prerequisitesFormula": "sum(@ability:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk:flowing \u003e\u003d 12 AND  !@feat:elusive_redirection"
+    "prerequisitesFormula": "sum(@ability:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk#flowing \u003e\u003d 12 AND  !@feat:elusive_redirection"
   }, {
     "id": "feat:critical_mastery",
     "name": "Critical Mastery",
@@ -3267,7 +3267,7 @@
     "name": "Janni Rush",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Improved Unarmed Strike, Janni Style, Janni Tempest, Acrobatics 8 ranks, Perform (dance) 8 ranks.",
-    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @feat:janni_style AND @feat:janni_tempest AND @skill:acrobatics \u003e\u003d 8 AND @skill:perform:dance \u003e\u003d 8 AND  !@feat:janni_rush"
+    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @feat:janni_style AND @feat:janni_tempest AND @skill:acrobatics \u003e\u003d 8 AND @skill:perform#dance \u003e\u003d 8 AND  !@feat:janni_rush"
   }, {
     "id": "feat:penetrating_strike",
     "name": "Penetrating Strike",
@@ -3309,7 +3309,7 @@
     "name": "Haunted Gnome Assault",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Cha 13, gnome magic racial trait, Haunted Gnome, Knowledge (arcana) 3 ranks.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @skill:knowledge:arcana \u003e\u003d 3 AND  !@feat:haunted_gnome_assault"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @skill:knowledge_arcana \u003e\u003d 3 AND  !@feat:haunted_gnome_assault"
   }, {
     "id": "feat:dimensional_savant",
     "name": "Dimensional Savant",
@@ -3474,7 +3474,7 @@
     "name": "Janni Tempest",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Improved Unarmed Strike, Janni Style, Acrobatics 5 ranks, Perform (dance) 5 ranks.",
-    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @feat:janni_style AND @skill:acrobatics \u003e\u003d 5 AND @skill:perform:dance \u003e\u003d 5 AND  !@feat:janni_tempest"
+    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @feat:janni_style AND @skill:acrobatics \u003e\u003d 5 AND @skill:perform#dance \u003e\u003d 5 AND  !@feat:janni_tempest"
   }, {
     "id": "feat:dramatic_display",
     "name": "Dramatic Display",
@@ -3550,7 +3550,7 @@
     "name": "Planar Wild Shape",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild shape class feature, Knowledge (planes) 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:wild_shape) AND @skill:knowledge:planes \u003e\u003d 5 AND  !@feat:planar_wild_shape"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND @skill:knowledge_planes \u003e\u003d 5 AND  !@feat:planar_wild_shape"
   }, {
     "id": "feat:improved_two_weapon_feint",
     "name": "Improved Two-Weapon Feint",
@@ -3562,7 +3562,7 @@
     "name": "Kirin Style",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Improved Unarmed Strike, Knowledge (arcana) 6 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank.",
-    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @skill:knowledge:arcana \u003e\u003d 6 AND (@skill:knowledge:dungeoneering \u003e\u003d 1 OR @skill:knowledge:local \u003e\u003d 1 OR @skill:knowledge:nature \u003e\u003d 1 OR @skill:knowledge:planes \u003e\u003d 1 OR @skill:knowledge:religion \u003e\u003d 1) AND  !@feat:kirin_style"
+    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @skill:knowledge_arcana \u003e\u003d 6 AND (@skill:knowledge_dungeoneering \u003e\u003d 1 OR @skill:knowledge_local \u003e\u003d 1 OR @skill:knowledge_nature \u003e\u003d 1 OR @skill:knowledge_planes \u003e\u003d 1 OR @skill:knowledge_religion \u003e\u003d 1) AND  !@feat:kirin_style"
   }, {
     "id": "feat:blind_fight",
     "name": "Blind-Fight",
@@ -4168,7 +4168,7 @@
     "name": "Master Alchemist",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Craft (alchemy) 5 ranks.",
-    "prerequisitesFormula": "@skill:craft:alchemy \u003e\u003d 5 AND  !@feat:master_alchemist"
+    "prerequisitesFormula": "@skill:craft#alchemy \u003e\u003d 5 AND  !@feat:master_alchemist"
   }, {
     "id": "feat:field_repair",
     "name": "Field Repair",
@@ -4248,7 +4248,7 @@
     "name": "Create Sanguine Elixir",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 15, Brew Potion, Craft (alchemy) 12 ranks, sorcerer level 3rd.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 15 AND @feat:brew_potion AND @skill:craft:alchemy \u003e\u003d 12 AND @class:sorcerer \u003e\u003d 3 AND  !@feat:create_sanguine_elixir"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 15 AND @feat:brew_potion AND @skill:craft#alchemy \u003e\u003d 12 AND @class:sorcerer \u003e\u003d 3 AND  !@feat:create_sanguine_elixir"
   }, {
     "id": "feat:improved_vital_strike",
     "name": "Improved Vital Strike",
@@ -4693,7 +4693,7 @@
     "name": "Kirin Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Int 13, Kirin Style, Improved Unarmed Strike, Knowledge (arcana) 9 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 3 ranks.",
-    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge:arcana \u003e\u003d 9 AND (@skill:knowledge:dungeoneering \u003e\u003d 3 OR @skill:knowledge:local \u003e\u003d 3 OR @skill:knowledge:nature \u003e\u003d 3 OR @skill:knowledge:planes \u003e\u003d 3 OR @skill:knowledge:religion \u003e\u003d 3) AND  !@feat:kirin_strike"
+    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge_arcana \u003e\u003d 9 AND (@skill:knowledge_dungeoneering \u003e\u003d 3 OR @skill:knowledge_local \u003e\u003d 3 OR @skill:knowledge_nature \u003e\u003d 3 OR @skill:knowledge_planes \u003e\u003d 3 OR @skill:knowledge_religion \u003e\u003d 3) AND  !@feat:kirin_strike"
   }, {
     "id": "feat:revelation_strike",
     "name": "Revelation Strike",
@@ -5039,7 +5039,7 @@
     "name": "Thanatopic Spell",
     "types": ["FEAT_TYPE_METAMAGIC"],
     "prerequisites": "Knowledge (religion) 6 ranks, Spell Focus (necromancy).",
-    "prerequisitesFormula": "@skill:knowledge:religion \u003e\u003d 6 AND @feat:spell_focus#necromancy AND  !@feat:thanatopic_spell"
+    "prerequisitesFormula": "@skill:knowledge_religion \u003e\u003d 6 AND @feat:spell_focus#necromancy AND  !@feat:thanatopic_spell"
   }, {
     "id": "feat:quick_wild_shape",
     "name": "Quick Wild Shape",
@@ -5111,7 +5111,7 @@
     "name": "Sea Legs",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Profession (sailor) 5 ranks.",
-    "prerequisitesFormula": "@skill:profession:sailor \u003e\u003d 5 AND  !@feat:sea_legs"
+    "prerequisitesFormula": "@skill:profession#sailor \u003e\u003d 5 AND  !@feat:sea_legs"
   }, {
     "id": "feat:elven_accuracy",
     "name": "Elven Accuracy",
@@ -5152,7 +5152,7 @@
     "name": "Planar Preservationist",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Preservationist alchemist archetype.",
-    "prerequisitesFormula": "@archetype:alchemist:Preservationist \u003e 0 AND  !@feat:planar_preservationist"
+    "prerequisitesFormula": "@archetype:alchemist#Preservationist \u003e 0 AND  !@feat:planar_preservationist"
   }, {
     "id": "feat:magical_aptitude",
     "name": "Magical Aptitude",
@@ -5358,7 +5358,7 @@
     "name": "Janni Style",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Improved Unarmed Strike, Acrobatics 3 ranks, Perform (dance) 3 ranks.",
-    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 3 AND @skill:perform:dance \u003e\u003d 3 AND  !@feat:janni_style"
+    "prerequisitesFormula": "@feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 3 AND @skill:perform#dance \u003e\u003d 3 AND  !@feat:janni_style"
   }, {
     "id": "feat:greater_mercy",
     "name": "Greater Mercy",
@@ -5453,7 +5453,7 @@
     "name": "Siege Engineer",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Knowledge (engineering) 5 ranks or Profession (siege engineer) 5 ranks, proficiency with one siege engine.",
-    "prerequisitesFormula": "(@skill:knowledge:engineering \u003e\u003d 5 OR @skill:profession:siege_engineer \u003e\u003d 5) AND @proficiency:siege_engine AND  !@feat:siege_engineer"
+    "prerequisitesFormula": "(@skill:knowledge#engineering \u003e\u003d 5 OR @skill:profession#siege_engineer \u003e\u003d 5) AND @proficiency:siege_engine AND  !@feat:siege_engineer"
   }, {
     "id": "feat:furious_finish",
     "name": "Furious Finish",
@@ -5530,7 +5530,7 @@
     "name": "Threnodic Spell",
     "types": ["FEAT_TYPE_METAMAGIC"],
     "prerequisites": "Knowledge (religion) 6 ranks, Spell Focus (necromancy).",
-    "prerequisitesFormula": "@skill:knowledge:religion \u003e\u003d 6 AND @feat:spell_focus#necromancy AND  !@feat:threnodic_spell"
+    "prerequisitesFormula": "@skill:knowledge_religion \u003e\u003d 6 AND @feat:spell_focus#necromancy AND  !@feat:threnodic_spell"
   }, {
     "id": "feat:dreadful_carnage",
     "name": "Dreadful Carnage",
@@ -6811,7 +6811,7 @@
     "name": "Greater Wild Empathy",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Knowledge (nature) 5 ranks, wild empathy class feature.",
-    "prerequisitesFormula": "@skill:knowledge:nature \u003e\u003d 5 AND sum(@ability:wild_empathy) AND  !@feat:greater_wild_empathy"
+    "prerequisitesFormula": "@skill:knowledge_nature \u003e\u003d 5 AND sum(@ability:wild_empathy) AND  !@feat:greater_wild_empathy"
   }, {
     "id": "feat:greater_blind_fight",
     "name": "Greater Blind-Fight",
@@ -7711,7 +7711,7 @@
     "name": "Trapper\u0027s Setup",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Craft (traps) 5 ranks.",
-    "prerequisitesFormula": "@skill:craft:traps \u003e\u003d 5 AND  !@feat:trappers_setup"
+    "prerequisitesFormula": "@skill:craft#traps \u003e\u003d 5 AND  !@feat:trappers_setup"
   }, {
     "id": "feat:tower_shield_proficiency",
     "name": "Tower Shield Proficiency",
@@ -7848,7 +7848,7 @@
     "name": "Kirin Path",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Int 13, Kirin Strike, Kirin Style, Improved Unarmed Strike, Knowledge (arcana) 12 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 5 ranks.",
-    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:kirin_strike AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge:arcana \u003e\u003d 12 AND (@skill:knowledge:dungeoneering \u003e\u003d 5 OR @skill:knowledge:local \u003e\u003d 5 OR @skill:knowledge:nature \u003e\u003d 5 OR @skill:knowledge:planes \u003e\u003d 5 OR @skill:knowledge:religion \u003e\u003d 5) AND  !@feat:kirin_path"
+    "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:kirin_strike AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge_arcana \u003e\u003d 12 AND (@skill:knowledge_dungeoneering \u003e\u003d 5 OR @skill:knowledge_local \u003e\u003d 5 OR @skill:knowledge_nature \u003e\u003d 5 OR @skill:knowledge_planes \u003e\u003d 5 OR @skill:knowledge_religion \u003e\u003d 5) AND  !@feat:kirin_path"
   }, {
     "id": "feat:rebuffing_reduction",
     "name": "Rebuffing Reduction",
@@ -8799,7 +8799,7 @@
     "name": "Haunted Gnome",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Cha 13, gnome magic racial trait, Knowledge (arcana) 1 rank.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @skill:knowledge:arcana \u003e\u003d 1 AND  !@feat:haunted_gnome"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @skill:knowledge_arcana \u003e\u003d 1 AND  !@feat:haunted_gnome"
   }, {
     "id": "feat:reach_spell",
     "name": "Reach Spell",
@@ -9809,7 +9809,7 @@
     "name": "Pinpoint Poisoner",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Poison use class feature, Craft (alchemy) 6 ranks, Adder Strike, Improved Unarmed Strike, Two-Weapon Fighting or flurry of blows class feature.",
-    "prerequisitesFormula": "sum(@ability:poison_use) AND @skill:craft:alchemy \u003e\u003d 6 AND @feat:adder_strike AND @feat:improved_unarmed_strike AND sum(@ability:two_weapon_fighting_or_flurry_of_blows) AND  !@feat:pinpoint_poisoner"
+    "prerequisitesFormula": "sum(@ability:poison_use) AND @skill:craft#alchemy \u003e\u003d 6 AND @feat:adder_strike AND @feat:improved_unarmed_strike AND sum(@ability:two_weapon_fighting_or_flurry_of_blows) AND  !@feat:pinpoint_poisoner"
   }, {
     "id": "feat:shield_of_swings",
     "name": "Shield of Swings",
@@ -9872,7 +9872,7 @@
     "name": "Shapeshifter Foil",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Knowledge (arcana) 5 ranks or Knowledge (nature) 5 ranks, ability to use any polymorph effect.",
-    "prerequisitesFormula": "(@skill:knowledge:arcana \u003e\u003d 5 OR @skill:knowledge:nature \u003e\u003d 5) AND max(@ability:polymorph) AND  !@feat:shapeshifter_foil"
+    "prerequisitesFormula": "(@skill:knowledge#arcana \u003e\u003d 5 OR @skill:knowledge#nature \u003e\u003d 5) AND max(@ability:polymorph) AND  !@feat:shapeshifter_foil"
   }, {
     "id": "feat:sin_seer",
     "name": "Sin Seer",
@@ -9985,7 +9985,7 @@
     "name": "Adder Strike",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Poison use class feature, Craft (alchemy) 1 rank, Improved Unarmed Strike.",
-    "prerequisitesFormula": "sum(@ability:poison_use) AND @skill:craft:alchemy \u003e\u003d 1 AND @feat:improved_unarmed_strike AND  !@feat:adder_strike"
+    "prerequisitesFormula": "sum(@ability:poison_use) AND @skill:craft#alchemy \u003e\u003d 1 AND @feat:improved_unarmed_strike AND  !@feat:adder_strike"
   }, {
     "id": "feat:strike_back",
     "name": "Strike Back",
@@ -10042,7 +10042,7 @@
     "name": "Haunted Gnome Shroud",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Cha 13, gnome magic racial trait, Haunted Gnome, Haunted Gnome Assault, Knowledge (arcana) 6 ranks.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @feat:haunted_gnome_assault AND @skill:knowledge:arcana \u003e\u003d 6 AND  !@feat:haunted_gnome_shroud"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @feat:haunted_gnome_assault AND @skill:knowledge_arcana \u003e\u003d 6 AND  !@feat:haunted_gnome_shroud"
   }, {
     "id": "feat:stabbing_shot",
     "name": "Stabbing Shot",
@@ -10094,7 +10094,7 @@
     "name": "Siege Commander",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Craft (siege weapon) 5 ranks, Knowledge (engineering) 5 ranks or Profession (siege engineer) 1 rank.",
-    "prerequisitesFormula": "@skill:craft:siege_weapon \u003e\u003d 5 AND (@skill:knowledge:engineering \u003e\u003d 5 OR @skill:profession:siege_engineer \u003e\u003d 1) AND  !@feat:siege_commander"
+    "prerequisitesFormula": "@skill:craft#siege_weapon \u003e\u003d 5 AND (@skill:knowledge#engineering \u003e\u003d 5 OR @skill:profession#siege_engineer \u003e\u003d 1) AND  !@feat:siege_commander"
   }, {
     "id": "feat:wave_strike",
     "name": "Wave Strike",
@@ -10322,7 +10322,7 @@
     "name": "Siege Gunner",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Siege Engineer, Profession (siege engineer) 5 ranks.",
-    "prerequisitesFormula": "@feat:siege_engineer AND @skill:profession:siege_engineer \u003e\u003d 5 AND  !@feat:siege_gunner"
+    "prerequisitesFormula": "@feat:siege_engineer AND @skill:profession#siege_engineer \u003e\u003d 5 AND  !@feat:siege_gunner"
   }, {
     "id": "feat:mounted_combat",
     "name": "Mounted Combat",
@@ -10452,7 +10452,7 @@
     "name": "Shaping Focus",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Wild shape class feature, Knowledge (nature) 5 ranks.",
-    "prerequisitesFormula": "sum(@ability:wild_shape) AND @skill:knowledge:nature \u003e\u003d 5 AND  !@feat:shaping_focus"
+    "prerequisitesFormula": "sum(@ability:wild_shape) AND @skill:knowledge_nature \u003e\u003d 5 AND  !@feat:shaping_focus"
   }, {
     "id": "feat:fight_on",
     "name": "Fight On",
@@ -10763,13 +10763,13 @@
     "name": "Master Siege Engineer",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Siege Weapon Engineer, Knowledge (engineering) 10 ranks.",
-    "prerequisitesFormula": "@feat:siege_weapon_engineer AND @skill:knowledge:engineering \u003e\u003d 10 AND  !@feat:master_siege_engineer"
+    "prerequisitesFormula": "@feat:siege_weapon_engineer AND @skill:knowledge_engineering \u003e\u003d 10 AND  !@feat:master_siege_engineer"
   }, {
     "id": "feat:mocking_dance",
     "name": "Mocking Dance",
     "types": ["FEAT_TYPE_COMBAT"],
     "prerequisites": "Acrobatics 4 ranks or Perform (dance) 4 ranks.",
-    "prerequisitesFormula": "(@skill:acrobatics \u003e\u003d 4 OR @skill:perform:dance \u003e\u003d 4) AND  !@feat:mocking_dance"
+    "prerequisitesFormula": "(@skill:acrobatics \u003e\u003d 4 OR @skill:perform#dance \u003e\u003d 4) AND  !@feat:mocking_dance"
   }, {
     "id": "feat:lunge",
     "name": "Lunge",

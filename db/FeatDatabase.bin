@@ -315,7 +315,7 @@ $feat:point_blank_master#double_slingDouble SlingG@feat:weapon_specialization
 Ü
 feat:neckbreakerNeckbreaker"rBonebreaker, Greater Grapple, Improved Grapple, Improved Unarmed Strike, Jawbreaker, Stunning Fist, Heal 12 ranks.*Ã@feat:bonebreaker AND @feat:greater_grapple AND @feat:improved_grapple AND @feat:improved_unarmed_strike AND @feat:jawbreaker AND @feat:stunning_fist AND @skill:heal >= 12 AND  !@feat:neckbreaker
 Û
-feat:discordant_voiceDiscordant Voice "EBardic performance class feature, Perform (oratory or sing) 10 ranks.*fsum(@ability:bardic_performance) AND @skill:perform:oratory_or_sing >= 10 AND  !@feat:discordant_voice
+feat:discordant_voiceDiscordant Voice "EBardic performance class feature, Perform (oratory or sing) 10 ranks.*fsum(@ability:bardic_performance) AND @skill:perform#oratory_or_sing >= 10 AND  !@feat:discordant_voice
 ‡
 feat:branded_for_retributionBranded for Retribution "Bane class feature.*6sum(@ability:bane) AND  !@feat:branded_for_retribution
 Ž
@@ -584,7 +584,7 @@ $feat:weapon_focus#stormshaft_javelinStormshaft Javelin@@feat:exotic_weapon_p
  feat:weapon_focus#wrist_launcherWrist Launcher<@feat:exotic_weapon_proficiency#wrist_launcher AND @bab >= 1:‚
 &feat:weapon_focus#heavy_wrist_launcherHeavy Wrist LauncherB@feat:exotic_weapon_proficiency#heavy_wrist_launcher AND @bab >= 1
 Ì
-feat:harmonic_sageHarmonic Sage "BBardic performance class feature, Knowledge (engineering) 5 ranks.*`sum(@ability:bardic_performance) AND @skill:knowledge:engineering >= 5 AND  !@feat:harmonic_sage
+feat:harmonic_sageHarmonic Sage "BBardic performance class feature, Knowledge (engineering) 5 ranks.*`sum(@ability:bardic_performance) AND @skill:knowledge_engineering >= 5 AND  !@feat:harmonic_sage
 ›
 feat:die_for_your_masterDie for Your Master "#Tumor familiar alchemist discovery.*B@alchemistdiscovery:tumor_familiar AND  !@feat:die_for_your_master
 C
@@ -829,7 +829,7 @@ $feat:dazzling_display#stitched_slingStitched Slingb@feat:weapon_focus AND @f
 $feat:dazzling_display#wrist_launcherWrist Launcherb@feat:weapon_focus AND @feat:exotic_weapon_proficiency#wrist_launcher AND  !@feat:dazzling_display:¬
 *feat:dazzling_display#heavy_wrist_launcherHeavy Wrist Launcherh@feat:weapon_focus AND @feat:exotic_weapon_proficiency#heavy_wrist_launcher AND  !@feat:dazzling_display
 é
-feat:quick_channelQuick Channel ";Knowledge (religion) 5 ranks, channel energy class feature.*ƒ@skill:knowledge:religion >= 5 AND (@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:quick_channel
+feat:quick_channelQuick Channel ";Knowledge (religion) 5 ranks, channel energy class feature.*ƒ@skill:knowledge_religion >= 5 AND (@ability:channel_positive_energy OR @ability:channel_negative_energy) AND  !@feat:quick_channel
 ï
 feat:channeled_shield_wallChanneled Shield Wall "/Channel energy, 3d6 prof iciency with a shield.*…(@ability:channel_positive_energy OR @ability:channel_negative_energy) AND @proficiency:shield >= 3 AND  !@feat:channeled_shield_wall
 e
@@ -851,7 +851,7 @@ D
 »
 feat:stone_singerStone Singer "0Cha 13, bardic performance class feature, dwarf.*c@cha_score >= 13 AND sum(@ability:bardic_performance) AND @race == 'dwarf' AND  !@feat:stone_singer
 ³
-feat:elusive_redirectionElusive Redirection "aElusive target class feature, Combat Expertise, Improved Unarmed Strike, flowing monk level 12th.*›sum(@ability:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk:flowing >= 12 AND  !@feat:elusive_redirection
+feat:elusive_redirectionElusive Redirection "aElusive target class feature, Combat Expertise, Improved Unarmed Strike, flowing monk level 12th.*›sum(@ability:elusive_target) AND @feat:combat_expertise AND @feat:improved_unarmed_strike AND @archetype:monk#flowing >= 12 AND  !@feat:elusive_redirection
 µ
 feat:critical_masteryCritical Mastery";Critical Focus, any two critical feats, 14th-level fighter.*J@feat:critical_focus AND @class:fighter >= 14 AND  !@feat:critical_mastery
 
@@ -916,7 +916,7 @@ n
 feat:awesome_blowAwesome Blow"?Str 25, Power Attack, Improved Bull Rush, size Large or larger.*l@str_score >= 25 AND @feat:power_attack AND @feat:improved_bull_rush AND @size >= 6 AND  !@feat:awesome_blow
 ¡
 feat:janni_rush
-Janni Rush"aImproved Unarmed Strike, Janni Style, Janni Tempest, Acrobatics 8 ranks, Perform (dance) 8 ranks.*›@feat:improved_unarmed_strike AND @feat:janni_style AND @feat:janni_tempest AND @skill:acrobatics >= 8 AND @skill:perform:dance >= 8 AND  !@feat:janni_rush
+Janni Rush"aImproved Unarmed Strike, Janni Style, Janni Tempest, Acrobatics 8 ranks, Perform (dance) 8 ranks.*›@feat:improved_unarmed_strike AND @feat:janni_style AND @feat:janni_tempest AND @skill:acrobatics >= 8 AND @skill:perform#dance >= 8 AND  !@feat:janni_rush
 ù
 feat:penetrating_strikePenetrating Strike":Weapon Focus, 12th-level fighter, proficiency with weapon.*Š@feat:weapon_focus AND @class:fighter >= 12 AND (@feat:light_armor_proficiency OR @proficiency:light_armor) AND  !@feat:penetrating_strike
 ’
@@ -930,7 +930,7 @@ Janni Rush"aImproved Unarmed Strike, Janni Style, Janni Tempest, Acrobatics 8
 
 feat:uncanny_concentrationUncanny Concentration "Combat Casting.*6@feat:combat_casting AND  !@feat:uncanny_concentration
 
-feat:haunted_gnome_assaultHaunted Gnome Assault"LCha 13, gnome magic racial trait, Haunted Gnome, Knowledge (arcana) 3 ranks.*‰@cha_score >= 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @skill:knowledge:arcana >= 3 AND  !@feat:haunted_gnome_assault
+feat:haunted_gnome_assaultHaunted Gnome Assault"LCha 13, gnome magic racial trait, Haunted Gnome, Knowledge (arcana) 3 ranks.*‰@cha_score >= 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @skill:knowledge_arcana >= 3 AND  !@feat:haunted_gnome_assault
 Ž
 feat:dimensional_savantDimensional Savant "›Dimensional Agility, Dimensional Assault, Dimensional Dervish, ability to use the abundant step class feature or cast dimension door, base attack bonus +9.*½@feat:dimensional_agility AND @feat:dimensional_assault AND @feat:dimensional_dervish AND (sum(@ability:abundant_step) OR @spell:dimension_door) AND @bab >= 9 AND  !@feat:dimensional_savant
 «
@@ -988,7 +988,7 @@ Quick Draw"Base attack bonus +1.* @bab >= 1 AND  !@feat:quick_draw
 a
 feat:defensive_combat_trainingDefensive Combat Training*! !@feat:defensive_combat_training
 ƒ
-feat:janni_tempestJanni Tempest"RImproved Unarmed Strike, Janni Style, Acrobatics 5 ranks, Perform (dance) 5 ranks.*†@feat:improved_unarmed_strike AND @feat:janni_style AND @skill:acrobatics >= 5 AND @skill:perform:dance >= 5 AND  !@feat:janni_tempest
+feat:janni_tempestJanni Tempest"RImproved Unarmed Strike, Janni Style, Acrobatics 5 ranks, Perform (dance) 5 ranks.*†@feat:improved_unarmed_strike AND @feat:janni_style AND @skill:acrobatics >= 5 AND @skill:perform#dance >= 5 AND  !@feat:janni_tempest
 t
 feat:dramatic_displayDramatic Display"Dazzling Display.*3@feat:dazzling_display AND  !@feat:dramatic_display
 í
@@ -1014,11 +1014,11 @@ C
 å
 feat:close_quarters_throwerClose-Quarters Thrower"8Dex 13, Dodge, Weapon Focus with selected thrown weapon.*q@dex_score >= 13 AND @feat:dodge AND @feat:weapon_focus#selected_thrown_weapon AND  !@feat:close_quarters_thrower
 ¾
-feat:planar_wild_shapePlanar Wild Shape "5Wild shape class feature, Knowledge (planes) 5 ranks.*Wsum(@ability:wild_shape) AND @skill:knowledge:planes >= 5 AND  !@feat:planar_wild_shape
+feat:planar_wild_shapePlanar Wild Shape "5Wild shape class feature, Knowledge (planes) 5 ranks.*Wsum(@ability:wild_shape) AND @skill:knowledge_planes >= 5 AND  !@feat:planar_wild_shape
 æ
 feat:improved_two_weapon_feintImproved Two-Weapon Feint"jDex 17, Int 13, Combat Expertise, Improved Two-Weapon Fighting, Two-Weapon Fighting, base attack bonus +6.*¹@dex_score >= 17 AND @int_score >= 13 AND @feat:combat_expertise AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND @bab >= 6 AND  !@feat:improved_two_weapon_feint
 ¢
-feat:kirin_styleKirin Style"zImproved Unarmed Strike, Knowledge (arcana) 6 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank.*@feat:improved_unarmed_strike AND @skill:knowledge:arcana >= 6 AND (@skill:knowledge:dungeoneering >= 1 OR @skill:knowledge:local >= 1 OR @skill:knowledge:nature >= 1 OR @skill:knowledge:planes >= 1 OR @skill:knowledge:religion >= 1) AND  !@feat:kirin_style
+feat:kirin_styleKirin Style"zImproved Unarmed Strike, Knowledge (arcana) 6 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank.*@feat:improved_unarmed_strike AND @skill:knowledge_arcana >= 6 AND (@skill:knowledge_dungeoneering >= 1 OR @skill:knowledge_local >= 1 OR @skill:knowledge_nature >= 1 OR @skill:knowledge_planes >= 1 OR @skill:knowledge_religion >= 1) AND  !@feat:kirin_style
 7
 feat:blind_fightBlind-Fight* !@feat:blind_fight
 ×
@@ -1231,7 +1231,7 @@ p
 —
 feat:greater_eldritch_heritageGreater Eldritch Heritage "LCha 17, Eldritch Heritage, Improved Eldritch Heritage, character level 17th.*ˆ@cha_score >= 17 AND @feat:eldritch_heritage AND @feat:improved_eldritch_heritage AND @level >= 17 AND  !@feat:greater_eldritch_heritage
 ~
-feat:master_alchemistMaster Alchemist "Craft (alchemy) 5 ranks.*6@skill:craft:alchemy >= 5 AND  !@feat:master_alchemist
+feat:master_alchemistMaster Alchemist "Craft (alchemy) 5 ranks.*6@skill:craft#alchemy >= 5 AND  !@feat:master_alchemist
 `
 feat:field_repairField Repair "Craft 4 ranks.**@skill:craft >= 4 AND  !@feat:field_repair
 ˆ
@@ -1260,7 +1260,7 @@ feat:fleetFleet 
 ‚
 feat:raging_deathblowRaging Deathblow "Greater rage class feature.*7sum(@ability:greater_rage) AND  !@feat:raging_deathblow
 €
-feat:create_sanguine_elixirCreate Sanguine Elixir "BCha 15, Brew Potion, Craft (alchemy) 12 ranks, sorcerer level 3rd.*@cha_score >= 15 AND @feat:brew_potion AND @skill:craft:alchemy >= 12 AND @class:sorcerer >= 3 AND  !@feat:create_sanguine_elixir
+feat:create_sanguine_elixirCreate Sanguine Elixir "BCha 15, Brew Potion, Craft (alchemy) 12 ranks, sorcerer level 3rd.*@cha_score >= 15 AND @feat:brew_potion AND @skill:craft#alchemy >= 12 AND @class:sorcerer >= 3 AND  !@feat:create_sanguine_elixir
 ¡
 feat:improved_vital_strikeImproved Vital Strike"$Vital Strike, base attack bonus +11.*C@feat:vital_strike AND @bab >= 11 AND  !@feat:improved_vital_strike
 
@@ -1420,7 +1420,7 @@ Eagle Eyes "!Wis 13, keen senses racial trait.*E@wis_score >= 13 AND sum(@abil
 È
 feat:greater_dragGreater Drag":Str 13, Improved Drag, Power Attack, base attack bonus +6.*f@str_score >= 13 AND @feat:improved_drag AND @feat:power_attack AND @bab >= 6 AND  !@feat:greater_drag
 ç
-feat:kirin_strikeKirin Strike"Int 13, Kirin Style, Improved Unarmed Strike, Knowledge (arcana) 9 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 3 ranks.*­@int_score >= 13 AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge:arcana >= 9 AND (@skill:knowledge:dungeoneering >= 3 OR @skill:knowledge:local >= 3 OR @skill:knowledge:nature >= 3 OR @skill:knowledge:planes >= 3 OR @skill:knowledge:religion >= 3) AND  !@feat:kirin_strike
+feat:kirin_strikeKirin Strike"Int 13, Kirin Style, Improved Unarmed Strike, Knowledge (arcana) 9 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 3 ranks.*­@int_score >= 13 AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge_arcana >= 9 AND (@skill:knowledge_dungeoneering >= 3 OR @skill:knowledge_local >= 3 OR @skill:knowledge_nature >= 3 OR @skill:knowledge_planes >= 3 OR @skill:knowledge_religion >= 3) AND  !@feat:kirin_strike
 ž
 feat:revelation_strikeRevelation Strike"2Revelation class feature, Improved Unarmed Strike.*:sum(@ability:revelation) AND @feat:improved_unarmed_strike
 …
@@ -1523,7 +1523,7 @@ w
 ]
 feat:extra_discoveryExtra Discovery "Discovery class feature.*sum(@ability:discovery)
 Ã
-feat:thanatopic_spellThanatopic Spell"7Knowledge (religion) 6 ranks, Spell Focus (necromancy).*\@skill:knowledge:religion >= 6 AND @feat:spell_focus#necromancy AND  !@feat:thanatopic_spell
+feat:thanatopic_spellThanatopic Spell"7Knowledge (religion) 6 ranks, Spell Focus (necromancy).*\@skill:knowledge_religion >= 6 AND @feat:spell_focus#necromancy AND  !@feat:thanatopic_spell
 §
 feat:quick_wild_shapeQuick Wild Shape "+Wild shape class feature, caster level 8th.*Lsum(@ability:wild_shape) AND @caster_level >= 8 AND  !@feat:quick_wild_shape
 ƒ
@@ -1547,7 +1547,7 @@ w
 Û
 feat:quick_bull_rushQuick Bull Rush"?Str 13, Improved Bull Rush, Power Attack, base attack bonus +6.*n@str_score >= 13 AND @feat:improved_bull_rush AND @feat:power_attack AND @bab >= 6 AND  !@feat:quick_bull_rush
 n
-feat:sea_legsSea Legs "Profession (sailor) 5 ranks.*2@skill:profession:sailor >= 5 AND  !@feat:sea_legs
+feat:sea_legsSea Legs "Profession (sailor) 5 ranks.*2@skill:profession#sailor >= 5 AND  !@feat:sea_legs
 Y
 feat:elven_accuracyElven Accuracy"Elf.*)@race == 'Elf' AND  !@feat:elven_accuracy
 ï
@@ -1561,7 +1561,7 @@ F
 À
 feat:final_embraceFinal Embrace"jStr 13, Int 3; naga, serpentfolk, or creature that has the constrict special attack; base attack bonus +3.*«@str_score >= 13 AND @int_score >= 3 AND (@race == 'naga' OR @race == 'serpentfolk' OR @race == 'creature that has the constrict ') AND @bab >= 3 AND  !@feat:final_embrace
 «
-feat:planar_preservationistPlanar Preservationist "$Preservationist alchemist archetype.*K@archetype:alchemist:Preservationist > 0 AND  !@feat:planar_preservationist
+feat:planar_preservationistPlanar Preservationist "$Preservationist alchemist archetype.*K@archetype:alchemist#Preservationist > 0 AND  !@feat:planar_preservationist
 F
 feat:magical_aptitudeMagical Aptitude * !@feat:magical_aptitude
 s
@@ -1633,7 +1633,7 @@ C
 c
 feat:mobilityMobility"Dex 13, Dodge.*5@dex_score >= 13 AND @feat:dodge AND  !@feat:mobility
 Ù
-feat:janni_styleJanni Style"EImproved Unarmed Strike, Acrobatics 3 ranks, Perform (dance) 3 ranks.*n@feat:improved_unarmed_strike AND @skill:acrobatics >= 3 AND @skill:perform:dance >= 3 AND  !@feat:janni_style
+feat:janni_styleJanni Style"EImproved Unarmed Strike, Acrobatics 3 ranks, Perform (dance) 3 ranks.*n@feat:improved_unarmed_strike AND @skill:acrobatics >= 3 AND @skill:perform#dance >= 3 AND  !@feat:janni_style
 Ã
 feat:greater_mercyGreater Mercy "8Cha 13, lay on hands class feature, mercy class feature.*a@cha_score >= 13 AND sum(@ability:lay_on_hands) AND sum(@ability:mercy) AND  !@feat:greater_mercy
 ]
@@ -1665,7 +1665,7 @@ d
 Á
 feat:impact_critical_shotImpact Critical Shot"/Dex 13, Point-Blank Shot, base attack bonus +9.*Z@dex_score >= 13 AND @feat:point_blank_shot AND @bab >= 9 AND  !@feat:impact_critical_shot
 œ
-feat:siege_engineerSiege Engineer"jKnowledge (engineering) 5 ranks or Profession (siege engineer) 5 ranks, proficiency with one siege engine.*…(@skill:knowledge:engineering >= 5 OR @skill:profession:siege_engineer >= 5) AND @proficiency:siege_engine AND  !@feat:siege_engineer
+feat:siege_engineerSiege Engineer"jKnowledge (engineering) 5 ranks or Profession (siege engineer) 5 ranks, proficiency with one siege engine.*…(@skill:knowledge#engineering >= 5 OR @skill:profession#siege_engineer >= 5) AND @proficiency:siege_engine AND  !@feat:siege_engineer
 µ
 feat:furious_finishFurious Finish "7Rage class feature, Vital Strike, base attack bonus +6.*Rsum(@ability:rage) AND @feat:vital_strike AND @bab >= 6 AND  !@feat:furious_finish
 }
@@ -1691,7 +1691,7 @@ g
 F
 feat:disruptive_spellDisruptive Spell* !@feat:disruptive_spell
 À
-feat:threnodic_spellThrenodic Spell"7Knowledge (religion) 6 ranks, Spell Focus (necromancy).*[@skill:knowledge:religion >= 6 AND @feat:spell_focus#necromancy AND  !@feat:threnodic_spell
+feat:threnodic_spellThrenodic Spell"7Knowledge (religion) 6 ranks, Spell Focus (necromancy).*[@skill:knowledge_religion >= 6 AND @feat:spell_focus#necromancy AND  !@feat:threnodic_spell
 Ö
 feat:dreadful_carnageDreadful Carnage";Str 15, Power Attack, Furious Focus, base attack bonus +11.*k@str_score >= 15 AND @feat:power_attack AND @feat:furious_focus AND @bab >= 11 AND  !@feat:dreadful_carnage
 ‹
@@ -2074,7 +2074,7 @@ x
 feat:cloud_step
 Cloud Step "Spider Step, monk level 12th.*>@feat:spider_step AND @class:monk >= 12 AND  !@feat:cloud_step
 Ë
-feat:greater_wild_empathyGreater Wild Empathy "7Knowledge (nature) 5 ranks, wild empathy class feature.*\@skill:knowledge:nature >= 5 AND sum(@ability:wild_empathy) AND  !@feat:greater_wild_empathy
+feat:greater_wild_empathyGreater Wild Empathy "7Knowledge (nature) 5 ranks, wild empathy class feature.*\@skill:knowledge_nature >= 5 AND sum(@ability:wild_empathy) AND  !@feat:greater_wild_empathy
 ¶
 feat:greater_blind_fightGreater Blind-Fight"*Perception 15 ranks, Improved Blind-Fight.*V@skill:perception >= 15 AND @feat:improved_blind_fight AND  !@feat:greater_blind_fight
 Ÿ
@@ -2320,7 +2320,7 @@ g
 feat:hex_strike
 Hex Strike"+Hex class feature, Improved Unarmed Strike.*3sum(@ability:hex) AND @feat:improved_unarmed_strike
 u
-feat:trappers_setupTrapper's Setup "Craft (traps) 5 ranks.*2@skill:craft:traps >= 5 AND  !@feat:trappers_setup
+feat:trappers_setupTrapper's Setup "Craft (traps) 5 ranks.*2@skill:craft#traps >= 5 AND  !@feat:trappers_setup
 
 feat:tower_shield_proficiencyTower Shield Proficiency"Shield Proficiency.*=@feat:shield_proficiency AND  !@feat:tower_shield_proficiency
 †
@@ -2367,7 +2367,7 @@ F
 feat:concussive_spellConcussive Spell* !@feat:concussive_spell
 ˆ
 feat:kirin_path
-Kirin Path"ŸInt 13, Kirin Strike, Kirin Style, Improved Unarmed Strike, Knowledge (arcana) 12 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 5 ranks.*Ã@int_score >= 13 AND @feat:kirin_strike AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge:arcana >= 12 AND (@skill:knowledge:dungeoneering >= 5 OR @skill:knowledge:local >= 5 OR @skill:knowledge:nature >= 5 OR @skill:knowledge:planes >= 5 OR @skill:knowledge:religion >= 5) AND  !@feat:kirin_path
+Kirin Path"ŸInt 13, Kirin Strike, Kirin Style, Improved Unarmed Strike, Knowledge (arcana) 12 ranks, Knowledge (dungeoneering, local, nature, planes, or religion) 5 ranks.*Ã@int_score >= 13 AND @feat:kirin_strike AND @feat:kirin_style AND @feat:improved_unarmed_strike AND @skill:knowledge_arcana >= 12 AND (@skill:knowledge_dungeoneering >= 5 OR @skill:knowledge_local >= 5 OR @skill:knowledge_nature >= 5 OR @skill:knowledge_planes >= 5 OR @skill:knowledge_religion >= 5) AND  !@feat:kirin_path
 
 feat:rebuffing_reductionRebuffing Reduction"QStr 13, damage reduction, Improved Bull Rush, Power Attack, base attack bonus +1.*•@str_score >= 13 AND max(@ability:damage_reduction) AND @feat:improved_bull_rush AND @feat:power_attack AND @bab >= 1 AND  !@feat:rebuffing_reduction
 L
@@ -2632,7 +2632,7 @@ Snake Fang"pCombat Reflexes, Improved Unarmed Strike, Snake Sidewind, Snake S
 €
 feat:shared_insightShared Insight "Wis 13, half-elf.*C@wis_score >= 13 AND @race == 'half-elf' AND  !@feat:shared_insight
 Ï
-feat:haunted_gnomeHaunted Gnome"<Cha 13, gnome magic racial trait, Knowledge (arcana) 1 rank.*i@cha_score >= 13 AND sum(@ability:gnome_magic) AND @skill:knowledge:arcana >= 1 AND  !@feat:haunted_gnome
+feat:haunted_gnomeHaunted Gnome"<Cha 13, gnome magic racial trait, Knowledge (arcana) 1 rank.*i@cha_score >= 13 AND sum(@ability:gnome_magic) AND @skill:knowledge_arcana >= 1 AND  !@feat:haunted_gnome
 7
 feat:reach_spellReach Spell* !@feat:reach_spell
 ¨
@@ -2916,7 +2916,7 @@ $feat:weapon_specialization#thorn_bow	Thorn Bowb@feat:exotic_weapon_proficienc
 )feat:weapon_specialization#wrist_launcherWrist Launcherl@feat:exotic_weapon_proficiency#wrist_launcher AND @feat:weapon_focus#wrist_launcher AND @class:fighter >= 4:Á
 /feat:weapon_specialization#heavy_wrist_launcherHeavy Wrist Launcherx@feat:exotic_weapon_proficiency#heavy_wrist_launcher AND @feat:weapon_focus#heavy_wrist_launcher AND @class:fighter >= 4
 ‰
-feat:pinpoint_poisonerPinpoint Poisoner"Poison use class feature, Craft (alchemy) 6 ranks, Adder Strike, Improved Unarmed Strike, Two-Weapon Fighting or flurry of blows class feature.*Æsum(@ability:poison_use) AND @skill:craft:alchemy >= 6 AND @feat:adder_strike AND @feat:improved_unarmed_strike AND sum(@ability:two_weapon_fighting_or_flurry_of_blows) AND  !@feat:pinpoint_poisoner
+feat:pinpoint_poisonerPinpoint Poisoner"Poison use class feature, Craft (alchemy) 6 ranks, Adder Strike, Improved Unarmed Strike, Two-Weapon Fighting or flurry of blows class feature.*Æsum(@ability:poison_use) AND @skill:craft#alchemy >= 6 AND @feat:adder_strike AND @feat:improved_unarmed_strike AND sum(@ability:two_weapon_fighting_or_flurry_of_blows) AND  !@feat:pinpoint_poisoner
 ­
 feat:shield_of_swingsShield of Swings"+Str 13, Power Attack, base attack bonus +1.*R@str_score >= 13 AND @feat:power_attack AND @bab >= 1 AND  !@feat:shield_of_swings
 ô
@@ -2940,7 +2940,7 @@ O
 õ
 feat:shield_slamShield Slam"TImproved Shield Bash, Shield Proficiency, Two-Weapon Fighting, base attack bonus +6.*{@feat:improved_shield_bash AND @feat:shield_proficiency AND @feat:two_weapon_fighting AND @bab >= 6 AND  !@feat:shield_slam
 ˆ
-feat:shapeshifter_foilShapeshifter Foil "^Knowledge (arcana) 5 ranks or Knowledge (nature) 5 ranks, ability to use any polymorph effect.*x(@skill:knowledge:arcana >= 5 OR @skill:knowledge:nature >= 5) AND max(@ability:polymorph) AND  !@feat:shapeshifter_foil
+feat:shapeshifter_foilShapeshifter Foil "^Knowledge (arcana) 5 ranks or Knowledge (nature) 5 ranks, ability to use any polymorph effect.*x(@skill:knowledge#arcana >= 5 OR @skill:knowledge#nature >= 5) AND max(@ability:polymorph) AND  !@feat:shapeshifter_foil
 |
 feat:sin_seerSin Seer "$Detect undead paladin class feature.*8sum(@ability:detect_undead_paladin) AND  !@feat:sin_seer
 –
@@ -2980,7 +2980,7 @@ Pure Faith "Divine health class feature.*2sum(@ability:divine_health) AND  !@
 €
 feat:efreeti_touchEfreeti Touch"ƒCon 15, Wis 17, Efreeti Style, Efreeti Stance, Elemental Fist**, Improved Unarmed Strike, base attack bonus +13 or monk level 11th.*Ñ(@con_score >= 15 AND @wis_score >= 17 AND @feat:efreeti_style AND @feat:efreeti_stance AND @feat:elemental_fist AND @feat:improved_unarmed_strike AND @bab >= 13) OR @class:monk >= 11 AND  !@feat:efreeti_touch
 ã
-feat:adder_strikeAdder Strike"JPoison use class feature, Craft (alchemy) 1 rank, Improved Unarmed Strike.*qsum(@ability:poison_use) AND @skill:craft:alchemy >= 1 AND @feat:improved_unarmed_strike AND  !@feat:adder_strike
+feat:adder_strikeAdder Strike"JPoison use class feature, Craft (alchemy) 1 rank, Improved Unarmed Strike.*qsum(@ability:poison_use) AND @skill:craft#alchemy >= 1 AND @feat:improved_unarmed_strike AND  !@feat:adder_strike
 ^
 feat:strike_backStrike Back"Base attack bonus +11.*"@bab >= 11 AND  !@feat:strike_back
 F
@@ -3000,7 +3000,7 @@ q
 F
 feat:point_blank_shotPoint-Blank Shot* !@feat:point_blank_shot
 Ä
-feat:haunted_gnome_shroudHaunted Gnome Shroud"cCha 13, gnome magic racial trait, Haunted Gnome, Haunted Gnome Assault, Knowledge (arcana) 6 ranks.*¨@cha_score >= 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @feat:haunted_gnome_assault AND @skill:knowledge:arcana >= 6 AND  !@feat:haunted_gnome_shroud
+feat:haunted_gnome_shroudHaunted Gnome Shroud"cCha 13, gnome magic racial trait, Haunted Gnome, Haunted Gnome Assault, Knowledge (arcana) 6 ranks.*¨@cha_score >= 13 AND sum(@ability:gnome_magic) AND @feat:haunted_gnome AND @feat:haunted_gnome_assault AND @skill:knowledge_arcana >= 6 AND  !@feat:haunted_gnome_shroud
 w
 feat:stabbing_shotStabbing Shot"Rapid Shot, elf.*=@feat:rapid_shot AND @race == 'elf' AND  !@feat:stabbing_shot
 q
@@ -3019,7 +3019,7 @@ Alertness.*-@feat:alertness AND  !@feat:uncanny_alertness
 ¿
 feat:snatch_arrowsSnatch Arrows"0Dex 15, Deflect Arrows, Improved Unarmed Strike.*e@dex_score >= 15 AND @feat:deflect_arrows AND @feat:improved_unarmed_strike AND  !@feat:snatch_arrows
 ž
-feat:siege_commanderSiege Commander"dCraft (siege weapon) 5 ranks, Knowledge (engineering) 5 ranks or Profession (siege engineer) 1 rank.*‹@skill:craft:siege_weapon >= 5 AND (@skill:knowledge:engineering >= 5 OR @skill:profession:siege_engineer >= 1) AND  !@feat:siege_commander
+feat:siege_commanderSiege Commander"dCraft (siege weapon) 5 ranks, Knowledge (engineering) 5 ranks or Profession (siege engineer) 1 rank.*‹@skill:craft#siege_weapon >= 5 AND (@skill:knowledge#engineering >= 5 OR @skill:profession#siege_engineer >= 1) AND  !@feat:siege_commander
 »
 feat:wave_strikeWave Strike";Weapon expertise class feature or Quick Draw, Bluff 1 rank.*Z(@feat:weapon_expertise OR @feat:quick_draw) AND @skill:bluff >= 1 AND  !@feat:wave_strike
 :
@@ -3102,7 +3102,7 @@ e
 feat:rime_spell
 Rime Spell* !@feat:rime_spell
 ³
-feat:siege_gunnerSiege Gunner"4Siege Engineer, Profession (siege engineer) 5 ranks.*W@feat:siege_engineer AND @skill:profession:siege_engineer >= 5 AND  !@feat:siege_gunner
+feat:siege_gunnerSiege Gunner"4Siege Engineer, Profession (siege engineer) 5 ranks.*W@feat:siege_engineer AND @skill:profession#siege_engineer >= 5 AND  !@feat:siege_gunner
 c
 feat:mounted_combatMounted Combat"Ride 1 rank.*+@skill:ride >= 1 AND  !@feat:mounted_combat
 ¬
@@ -3147,7 +3147,7 @@ C
 ¡
 feat:crane_riposteCrane Riposte"`Crane Style, Crane Wing, Dodge, Improved Unarmed Strike, base attack bonus +8 or monk level 7th.*–(@feat:crane_style AND @feat:crane_wing AND @feat:dodge AND @feat:improved_unarmed_strike AND @bab >= 8) OR @class:monk >= 7 AND  !@feat:crane_riposte
 ²
-feat:shaping_focusShaping Focus "5Wild shape class feature, Knowledge (nature) 5 ranks.*Ssum(@ability:wild_shape) AND @skill:knowledge:nature >= 5 AND  !@feat:shaping_focus
+feat:shaping_focusShaping Focus "5Wild shape class feature, Knowledge (nature) 5 ranks.*Ssum(@ability:wild_shape) AND @skill:knowledge_nature >= 5 AND  !@feat:shaping_focus
 ¥
 feat:fight_onFight On " Con 13; dwarf, half-orc, or orc.*e@con_score >= 13 AND (@race == 'dwarf' OR @race == 'half-orc' OR @race == 'orc') AND  !@feat:fight_on
 ×
@@ -3254,9 +3254,9 @@ m
 ‡
 feat:trick_ridingTrick Riding"Ride 9 ranks, Mounted Combat.*B@skill:ride >= 9 AND @feat:mounted_combat AND  !@feat:trick_riding
 Ö
-feat:master_siege_engineerMaster Siege Engineer"8Siege Weapon Engineer, Knowledge (engineering) 10 ranks.*d@feat:siege_weapon_engineer AND @skill:knowledge:engineering >= 10 AND  !@feat:master_siege_engineer
+feat:master_siege_engineerMaster Siege Engineer"8Siege Weapon Engineer, Knowledge (engineering) 10 ranks.*d@feat:siege_weapon_engineer AND @skill:knowledge_engineering >= 10 AND  !@feat:master_siege_engineer
 §
-feat:mocking_danceMocking Dance".Acrobatics 4 ranks or Perform (dance) 4 ranks.*O(@skill:acrobatics >= 4 OR @skill:perform:dance >= 4) AND  !@feat:mocking_dance
+feat:mocking_danceMocking Dance".Acrobatics 4 ranks or Perform (dance) 4 ranks.*O(@skill:acrobatics >= 4 OR @skill:perform#dance >= 4) AND  !@feat:mocking_dance
 J
 
 feat:lungeLunge"Base attack bonus +6.*@bab >= 6 AND  !@feat:lunge
