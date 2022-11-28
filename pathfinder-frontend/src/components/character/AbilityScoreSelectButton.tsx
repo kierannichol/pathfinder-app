@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useCallback} from "react";
 import {Character} from "../../model/character/Character";
 import TextLookup from "../../model/TextLookup";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
@@ -10,11 +10,11 @@ interface AbilityScoreSelectButtonProps {
 }
 
 export default function AbilityScoreSelectButton({ value, onSelect }: AbilityScoreSelectButtonProps) {
-  const options = useMemo(() => {
+  const options = useCallback(() => {
     return Character.ABILITIES.map(ability =>
         new ChoiceSelectorOption(ability, TextLookup.get(`ABILITY_${ability}_NAME_LONG`),
             true,
             ''))
   }, []);
-  return <ChoiceSelectButton choiceName="Ability Score" value={value} options={options} onSelect={onSelect} />
+  return <ChoiceSelectButton choiceName="Ability Score" value={value} optionsFn={options} onSelect={onSelect} />
 }

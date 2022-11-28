@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useCallback} from "react";
 import {useRagePowerDatabase} from "../../database/v2/RagePowerDatabase";
 import {Ability} from "../../model/character/Ability";
 import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
@@ -13,7 +13,7 @@ interface RagePowerSelectButtonProps {
 
 export default function RagePowerSelectButton({ value, onSelect, characterAtLevel }: RagePowerSelectButtonProps) {
   const ragePowerDatabase = useRagePowerDatabase();
-  const options = useMemo(() => {
+  const optionsFn = useCallback(() => {
     const characterWithoutCurrentSelection = characterAtLevel.without(value);
     return ragePowerDatabase.all.map(ragePower =>
         new ChoiceSelectorOption(ragePower.id, ragePower.name,
@@ -21,11 +21,11 @@ export default function RagePowerSelectButton({ value, onSelect, characterAtLeve
             '',
             '',
             () => ragePowerDatabase.load(ragePower.id).then(loaded => loaded ? <RagePowerDescription ability={loaded} characterAtLevel={characterAtLevel}/> : "")))
-  }, [characterAtLevel]);
+  }, [characterAtLevel, ragePowerDatabase, value]);
   return <ChoiceSelectButton choiceName="Rage Power"
                              search={true}
                              value={value}
-                             options={options}
+                             optionsFn={optionsFn}
                              onSelect={onSelect} />
 }
 

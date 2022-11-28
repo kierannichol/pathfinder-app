@@ -1,5 +1,5 @@
 import {util} from "protobufjs";
-import {createContext, RefCallback, useCallback, useContext, useEffect, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 import {v2} from "../../compiled";
 import LoadingBlock from "../../components/common/LoadingBlock";
 import {Race, RaceSummary} from "../../model/character/Race";
@@ -37,8 +37,7 @@ export class RaceDatabase {
   }
 
   public async load(id: string): Promise<Race | undefined> {
-    const loadId = id.substring('race:'.length);
-    return loadRace(loadId).then(race => race === undefined
+    return loadRace(id).then(race => race === undefined
         ? undefined
         : new RaceSummary(id,
               race.name,
@@ -86,19 +85,16 @@ const RaceContext = createContext<RaceDatabase>(RaceDatabase.empty());
 
 export function RaceContextProvider({ children}: any) {
   const [ database, setDatabase ] = useState<RaceDatabase>(RaceDatabase.empty());
-  const [ isLoading, setIsLoading ]= useState(true);
 
   useEffect(() => {
-    loadRaceDatabase().then(result => {
-      setDatabase(RaceDatabase.from(result));
-      setIsLoading(false);
-    })
-    .catch(error => console.error(error));
+    withGlobalRaceDatabase()
+      .then(setDatabase)
+      .catch(error => console.error(error));
   }, []);
 
   return (
       <RaceContext.Provider value={database}>
-        {database.isLoaded && children || <LoadingBlock/>}
+        {(database.isLoaded && children) || <LoadingBlock/>}
       </RaceContext.Provider>
   );
 }
@@ -109,35 +105,4 @@ export function useRaceDatabase(): RaceDatabase {
     throw new Error("Context must be used within a Provider");
   }
   return context;
-}
-
-export function useRaceOnScreen(raceId: string): [ RaceSummary|undefined, RefCallback<HTMLDivElement> ] {
-  const database = useRaceDatabase();
-  const [characterClass, setRace] = useState<RaceSummary|undefined>(() => database.summary(raceId));
-
-  useEffect(() => {
-    setRace(database.summary(raceId));
-  }, [raceId, database]);
-
-  const ref = useCallback((node: HTMLDivElement) => {
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            if (!(characterClass instanceof Race)) {
-              database.load(raceId).then(found => setRace(found));
-            }
-          } else {
-            setRace(database.summary(raceId));
-          }
-        }
-    );
-
-    if (node !== null) {
-      observer.observe(node);
-    } else {
-      observer.disconnect();
-    }
-  }, [database]);
-
-  return [ characterClass, ref ];
 }

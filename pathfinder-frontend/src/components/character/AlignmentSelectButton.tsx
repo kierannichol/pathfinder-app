@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useCallback} from "react";
 import AlignmentDatabase from "../../database/AlignmentDatabase";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
 import {ChoiceSelectorOption} from "./edit/ChoiceSelectorDialog";
@@ -9,7 +9,7 @@ interface AlignmentSelectButtonProps {
 }
 
 export default function AlignmentSelectButton({ value, onSelect }: AlignmentSelectButtonProps) {
-  const options = useMemo(() => {
+  const optionsFn = useCallback(() => {
     return AlignmentDatabase.all.map(alignment =>
         new ChoiceSelectorOption(alignment.id, alignment.name,
             true,
@@ -17,5 +17,5 @@ export default function AlignmentSelectButton({ value, onSelect }: AlignmentSele
             undefined,
             undefined))
   }, []);
-  return <ChoiceSelectButton choiceName="Alignment" value={value} options={options} onSelect={onSelect} />
+  return <ChoiceSelectButton choiceName="Alignment" value={value} optionsFn={optionsFn} onSelect={onSelect} />
 }

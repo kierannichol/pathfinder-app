@@ -9,7 +9,6 @@ import './index.css';
 import reportWebVitals from "./reportWebVitals";
 import CharacterEditRoute from "./routes/characterEdit";
 import CharacterListRoute from "./routes/characterList";
-import CharacterSheetRoute from "./routes/characterSheet";
 import CharacterSheetV2Route, {characterSheetV2Loader} from "./routes/characterSheetV2";
 import {loginLoader, LoginRoute} from "./routes/loginRoute";
 import LayoutRoute from "./routes/root";
@@ -40,10 +39,6 @@ const routes = [
   },
   {
     path: "character/sheet/:id/:level",
-    element: <CharacterSheetRoute />
-  },
-  {
-    path: "character/sheet/v2/:id/:level",
     element: <CharacterSheetV2Route />,
     loader: characterSheetV2Loader
   },

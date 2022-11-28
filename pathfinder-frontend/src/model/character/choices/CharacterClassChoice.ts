@@ -7,7 +7,7 @@ import ClassTraits from "../traits/ClassTraits";
 import CustomTrait from "../traits/CustomTrait";
 import MartialWeaponProficiencyTrait from "../traits/MartialWeaponProficiencyTrait";
 import SimpleWeaponProficiencyTrait from "../traits/SimpleWeaponProficiencyTrait";
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import CharacterChoice, {ChoiceTag, ChoiceType} from "./CharacterChoice";
 import FeatChoice from "./FeatChoice";
 import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 import MercyChoice from "./MercyChoice";
@@ -132,13 +132,9 @@ export class CharacterClassChoiceProcessor implements ICharacterChoiceProcessor<
   private parseSpecial(choice: CharacterClassChoice, level: number, special: Special): CharacterChoice | Trait | undefined {
     const classId = choice.current;
     switch (special.id.toLowerCase()) {
-      case 'ability:bonus_feat': return new FeatChoice(level, `level${level}:${classId}_bonus_feat`, choice.key);
+      case 'ability:bonus_feat': return new FeatChoice(level, `level${level}:${classId}_bonus_feat`, choice.key, [ ChoiceTag.BONUS ]);
       case 'ability:mercy': return MercyChoice.of(level, classId, choice.key);
       case 'ability:rage_power': return RagePowerChoice.of(level, choice.key);
-        // case 'smite evil': return CustomTrait.of('ability:smite_evil', 1, level);
-        // case 'lay on hands': return CustomTrait.of('ability:lay_on_hands', 1, level);
-        // case 'aura of good': return CustomTrait.of('ability:aura_of_good', 1, level);
-        // default: console.log("Unknown special: " + special.toLowerCase());
       default:
         return new AdditiveTrait(special.id, 1, level);
     }

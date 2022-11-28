@@ -1,16 +1,16 @@
 import Trait from "../Trait";
 import FeatTrait from "../traits/FeatTrait";
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import CharacterChoice, {ChoiceTag, ChoiceType} from "./CharacterChoice";
 import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 class FeatChoice extends CharacterChoice {
   public readonly type = ChoiceType.FEAT;
 
   public withValue(value: string): FeatChoice {
-    return new FeatChoice(this.level, this.key, this.dependsOn, value);
+    return new FeatChoice(this.level, this.key, this.dependsOn, this.tags, value);
   }
 
-  constructor(public readonly level: number, public readonly key: string, public readonly dependsOn: string|undefined, public readonly current = '') {
+  constructor(public readonly level: number, public readonly key: string, public readonly dependsOn: string|undefined, public readonly tags: ChoiceTag[] = [], public readonly current = '') {
     super();
   }
 }

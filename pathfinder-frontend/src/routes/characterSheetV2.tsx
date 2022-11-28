@@ -33,11 +33,16 @@ export async function characterSheetV2Loader({ params }: any) {
   const classDatabase = await withGlobalCharacterClassDatabase();
   const raceDatabase = await withGlobalRaceDatabase();
 
-  return { characterAtLevel, classDatabase, raceDatabase };
+  const raceId = characterAtLevel.get('race')?.asText() ?? '';
+  const characterData = {
+    race: raceId !== '' && await raceDatabase.load(raceId)
+  }
+
+  return { characterAtLevel, classDatabase, raceDatabase, characterData };
 }
 
 export default function CharacterSheetV2Route() {
-  const { characterAtLevel, classDatabase, raceDatabase } = useLoaderData() as any;
+  const { characterAtLevel, classDatabase, raceDatabase, characterData } = useLoaderData() as any;
 
   const pageTitle = useMemo(() => characterAtLevel.get('character_name')?.asText() + ' - Pathfinder App', [characterAtLevel]);
 
@@ -46,6 +51,7 @@ export default function CharacterSheetV2Route() {
       <CharacterSheet characterAtLevel={characterAtLevel}
                       classDatabase={classDatabase}
                       raceDatabase={raceDatabase}
+                      characterData={characterData}
       />
     </RequiresAuth>
   </Page>

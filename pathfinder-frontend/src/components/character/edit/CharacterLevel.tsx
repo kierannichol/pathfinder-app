@@ -25,7 +25,7 @@ export default function CharacterLevel({ character, level, onChange }: Character
       [character, level]);
 
   const [ characterChanges ] = useAsyncMemo(async () => {
-    if (characterAtLevel == undefined) {
+    if (characterAtLevel === undefined) {
       return undefined;
     }
     return level > 1
@@ -43,7 +43,7 @@ export default function CharacterLevel({ character, level, onChange }: Character
     <legend>
       <div className={'level-title'}>{'Level ' + level}</div>
       <div className={'character-sheet-button'}>
-        <Link to={`/character/sheet/v2/${character.id}/${level}`} target={'_blank'} rel='noopener noreferrer'>
+        <Link to={`/character/sheet/${character.id}/${level}`} target={'_blank'} rel='noopener noreferrer'>
           <FontAwesomeIcon icon={faFileLines}/>
         </Link>
       </div>
@@ -61,7 +61,7 @@ export default function CharacterLevel({ character, level, onChange }: Character
             <ChoiceSelector
                 character={characterAtLevel}
                 choice={choice}
-                onchange={value => onChange(choice.key, value)} />
+                onChange={value => onChange(choice.key, value)} />
           </div>
       )}
 

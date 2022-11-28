@@ -1,38 +1,49 @@
 import {useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
+import {usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
 import PathfinderButton, {PathfinderButtonVariants} from "../../common/PathfinderButton";
 import "./ChoiceSelectButton.scss";
-import ChoiceSelectorDialog, {
-  asChoiceOptionArray,
-  ChoiceSelectorCategory,
-  ChoiceSelectorOptions
-} from "./ChoiceSelectorDialog";
+import ChoiceSelectorDialog, {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorDialog";
 
 
 interface ChoiceSelectButtonProps {
   choiceName: string;
   value: string|undefined;
   onSelect?: (featId: string) => void;
-  options: ChoiceSelectorOptions;
-  categories?: ChoiceSelectorCategory[];
+  optionsFn: () => ChoiceSelectorOptions;
+  categoriesFn?: () => ChoiceSelectorCategory[];
   variant?: PathfinderButtonVariants;
   dialogVariant?: PathfinderButtonVariants;
   search?: boolean;
 }
 
-export default function ChoiceSelectButton({ choiceName, value, onSelect, options, categories, variant = 'white', dialogVariant = 'special', search = false }: ChoiceSelectButtonProps) {
+export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, variant = 'white', dialogVariant = 'special', search = false }: ChoiceSelectButtonProps) {
+  const pathfinderDatabase = usePathfinderDatabase();
   const [show, setShow] = useState(false);
+  const [options, setOptions] = useState<ChoiceSelectorOptions>();
+  const [categories, setCategories] = useState<ChoiceSelectorCategory[]>();
 
-  const handleShow = () => setShow(true);
-  const handleCancel = () => setShow(false);
+  const handleShow = () => {
+    setOptions(optionsFn());
+    if (categoriesFn) {
+      setCategories(categoriesFn());
+    }
+    setShow(true);
+  }
+  const handleCancel = () => {
+    setShow(false);
+    setOptions(undefined);
+    setCategories(undefined);
+  }
   const handleSelect = (optionId: string) => {
     onSelect?.(optionId);
     setShow(false);
+    setOptions(undefined);
+    setCategories(undefined);
   };
 
-  const selectedName = useMemo(() =>
-          asChoiceOptionArray(options).find(option => option.id === value)?.name,
-      [value, options]);
+  const selectedName = useMemo(() => value !== '' ? pathfinderDatabase.name(value) : undefined,
+      [value, pathfinderDatabase]);
 
   const buttonLabel = selectedName ?? <><Icon.QuestionCircleFill/>&nbsp;<i> Select {choiceName}</i></>;
 
@@ -45,7 +56,7 @@ export default function ChoiceSelectButton({ choiceName, value, onSelect, option
             show={show}
             onSelect={handleSelect}
             onCancel={handleCancel}
-            options={options}
+            options={options ?? []}
             categories={categories}
             search={search} />}
     </>);

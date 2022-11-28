@@ -25,8 +25,8 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
   function updateCharacter(mappingFunction: (character: Character) => Promise<Character>) {
     mappingFunction(character)
       .then(async updated => {
-        await characterRepository.save(updated);
         setCharacter(updated);
+        await characterRepository.save(updated);
       });
   }
 
@@ -78,9 +78,8 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
       <legend>Attributes</legend>
       <div className='section'>
         <CharacterAttributeChoiceInputs
-            character={character}
             characterAtLevel={character0}
-            onCommit={character => updateCharacter(_ => character)} />
+            onCommit={(ability, value) => selectChoice(`level0:${ability}_base`, value)} />
 
         {character.hasChoice(CharacterChoice.RACE_ABILITY_SCORE_INCREASE) &&
             <>

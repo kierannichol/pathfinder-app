@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useCallback} from "react";
 import {v2} from "../../compiled";
 import {useCharacterClassDatabase} from "../../database/v2/ClassDatabase";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
@@ -12,7 +12,7 @@ interface CharacterClassSelectButtonProps {
 
 export default function CharacterClassSelectButton({ value, onSelect }: CharacterClassSelectButtonProps) {
   const classDatabase = useCharacterClassDatabase();
-  const options = useMemo(() => {
+  const optionsFn = useCallback(() => {
     return classDatabase.all.map(classSummary =>
         new ChoiceSelectorOption(classSummary.id, classSummary.name,
             true,
@@ -22,7 +22,7 @@ export default function CharacterClassSelectButton({ value, onSelect }: Characte
                 .then(classDefinition => classDefinition?.shortDescription ?? '')))
   }, [classDatabase]);
 
-  const categories = useMemo(() => {
+  const categoriesFn = useCallback(() => {
     return [
       new ChoiceSelectorCategory(ClassCategoryDbo.CORE.toString(), 'Core'),
       new ChoiceSelectorCategory(ClassCategoryDbo.BASE.toString(), 'Base'),
@@ -31,5 +31,9 @@ export default function CharacterClassSelectButton({ value, onSelect }: Characte
     ];
   }, []);
 
-  return <ChoiceSelectButton choiceName="Class" value={value} options={options} categories={categories} onSelect={onSelect} />
+  return <ChoiceSelectButton choiceName="Class"
+                             value={value}
+                             optionsFn={optionsFn}
+                             categoriesFn={categoriesFn}
+                             onSelect={onSelect} />
 }

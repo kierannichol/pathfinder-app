@@ -12,7 +12,11 @@ const AlignmentDatabase = {
       new Alignment('alignment:lg', "Lawful Good"),
       new Alignment('alignment:ln', "Lawful Neutral"),
       new Alignment('alignment:le', "Lawful Evil"),
-  ]
+  ],
+
+    find: (id: string): Alignment|undefined => {
+        return AlignmentDatabase.all.find(alignment => alignment.id === id);
+    }
 }
 
 export default AlignmentDatabase;

@@ -8,13 +8,12 @@ import NumberSelect from "../common/NumberSelect";
 import "./CharacterAttributeChoiceInputs.scss";
 
 export type CharacterAttributeChoiceInputsProps = {
-  character: Character;
   characterAtLevel: CharacterAtLevel;
-  onCommit: (character: Promise<Character>) => void;
+  onCommit: (attribute: string, value: string) => void;
 };
 
 export default function CharacterAttributeChoiceInputs(
-    { character, characterAtLevel, onCommit }: CharacterAttributeChoiceInputsProps) {
+    {characterAtLevel, onCommit }: CharacterAttributeChoiceInputsProps) {
 
   return (<Container className={'pf-attribute-choice-inputs'}>
     {Character.ABILITIES
@@ -24,7 +23,7 @@ export default function CharacterAttributeChoiceInputs(
         baseValue={characterAtLevel.get(`${attribute}:base`)?.asText() ?? ''}
         scoreValue={characterAtLevel.get(`${attribute}_score`)?.asText() ?? ''}
         modifierValue={characterAtLevel.get(`${attribute}_mod`)?.asText() ?? ''}
-        onCommit={value => onCommit(character.select(`level0:${attribute}_base`, value))}
+        onCommit={value => onCommit(attribute, value)}
       />)}
   </Container>)
 }
@@ -39,7 +38,7 @@ export type CharacterAttributeRowProps = {
 
 function CharacterAttributeRow(
     { attributeName, baseValue, scoreValue, modifierValue, onCommit }: CharacterAttributeRowProps) {
-  const [ validationError, setValidationError ] = useState<string|null>(null);
+  const [, setValidationError ] = useState<string|null>(null);
 
   const handleCommit = (value: string) => {
     try {
@@ -68,33 +67,8 @@ function CharacterAttributeRow(
                   min={7}
                   max={20}
                   onChange={handleBaseValueChanged} />
-    {/*<Button className={'base-value-minus'} onClick={onMinus}><FontAwesomeIcon icon={faMinus} /></Button>*/}
-    {/*<div className={'base-value'}>{baseValue}</div>*/}
-    {/*<Button className={'base-value-plus'} onClick={onPlus}><FontAwesomeIcon icon={faPlus} /></Button>*/}
-
     {bonusLabel}
     <div className="score-value">{scoreValue}</div>
     <div className="modifier-value">({modifierLabel})</div>
   </div>
-
-  // return (<Row className={'flex-nowrap'}>
-  //   <Col xs={1} className={'attribute-name-col'}>
-  //     <span>{TextLookup.get(`ABILITY_${attributeName}_NAME_SHORT`)}</span>
-  //   </Col>
-  //   <Col xs={2} className={'attribute-base-col flex-nowrap'}>
-  //     <InputGroup hasValidation={true} className={'flex-nowrap'}>
-  //       <Button onClick={onMinus}><FontAwesomeIcon icon={faMinus} /></Button>
-  //       <CharacterNumericInput
-  //           style={ {width: '5em'} }
-  //           value={baseValue}
-  //           isInvalid={validationError != null}
-  //           onCommit={handleCommit} />
-  //       <Button onClick={onPlus}><FontAwesomeIcon icon={faPlus} /></Button>
-  //     </InputGroup>
-  //     {validationError != null && <div className="invalid-feedback">{validationError}</div>}
-  //   </Col>
-  //   <Col className={'attribute-score-col'}>
-  //     <span>{`${scoreValue} (${formatModifier(parseInt(modifierValue))})`}</span>
-  //   </Col>
-  // </Row>);
 }

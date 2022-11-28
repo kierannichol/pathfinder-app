@@ -2,6 +2,7 @@ import {createContext, useContext} from "react";
 import {CharacterClassDatabase} from "../../../../database/v2/ClassDatabase";
 import {RaceDatabase} from "../../../../database/v2/RaceDatabase";
 import {CharacterAtLevel} from "../../../../model/character/CharacterAtLevel";
+import {Race} from "../../../../model/character/Race";
 import CharacterAtLevelDebugView from "./CharacterAtLevelDebugView";
 import styles from "./CharacterSheet.module.scss";
 import Section from "./Section";
@@ -12,12 +13,19 @@ import HealthSection from "./sections/HealthSection";
 import InitiativeSection from "./sections/InitiativeSection";
 import SavingThrowsSection from "./sections/SavingThrowsSection";
 import SkillsSection from "./sections/SkillsSection";
+import SpeedSection from "./sections/SpeedSection";
 
 type CharacterSheetContextValues = {
   characterAtLevel: CharacterAtLevel;
   classDatabase: CharacterClassDatabase;
   raceDatabase: RaceDatabase;
+  characterData: CharacterData;
 }
+
+interface CharacterData {
+  race: Race;
+}
+
 const CharacterSheetContext = createContext<CharacterSheetContextValues|undefined>(undefined);
 
 function useCharacterSheetContext(): CharacterSheetContextValues {
@@ -40,6 +48,10 @@ export function useRaceDatabase(): RaceDatabase {
   return useCharacterSheetContext().raceDatabase;
 }
 
+export function useCharacterData(): CharacterData {
+  return useCharacterSheetContext().characterData;
+}
+
 export default function CharacterSheet(values: CharacterSheetContextValues) {
   return <Section.Column className={styles.page}>
     <CharacterSheetContext.Provider value={values}>
@@ -47,7 +59,7 @@ export default function CharacterSheet(values: CharacterSheetContextValues) {
         <CharacterInfoSection className={styles.characterInfo} />
       </Section.Row>
       <Section.Row>
-        <Section.Column className={"w-50 align-self-start"}>
+        <Section.Column style={{ width: "55%" }} className={"align-self-start"}>
           <Section.Row className={"align-items-start"}>
             <AbilityScoreSection className={styles.abilityScores} />
             <Section.Column>
@@ -60,7 +72,8 @@ export default function CharacterSheet(values: CharacterSheetContextValues) {
             <SavingThrowsSection className={styles.savingThrows} />
           </Section.Column>
         </Section.Column>
-        <Section.Column className={"w-50"}>
+        <Section.Column style={{ width: "45%" }}>
+          <SpeedSection />
           <SkillsSection />
         </Section.Column>
       </Section.Row>

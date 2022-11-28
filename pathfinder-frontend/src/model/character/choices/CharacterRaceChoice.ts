@@ -3,7 +3,7 @@ import {RaceDatabase} from "../../../database/v2/RaceDatabase";
 import Trait from "../Trait";
 import CustomTrait from "../traits/CustomTrait";
 import RacialAsiTrait from "../traits/RacialAsiTrait";
-import CharacterChoice, {ChoiceType} from "./CharacterChoice";
+import CharacterChoice, {ChoiceTag, ChoiceType} from "./CharacterChoice";
 import FeatChoice from "./FeatChoice";
 import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 import RaceAbilityScoreIncreaseChoice from "./RaceAbilityScoreIncreaseChoice";
@@ -42,10 +42,11 @@ export class CharacterRaceChoiceProcessor implements ICharacterChoiceProcessor<C
           choices.push(new RaceAbilityScoreIncreaseChoice());
           break;
         case 'choice:bonus_feat':
-          choices.push(new FeatChoice(1, 'level1:race_bonus_feat', choice.key));
+          choices.push(new FeatChoice(1, 'level1:race_bonus_feat', choice.key, [ ChoiceTag.BONUS ]));
           break;
       }
     }
+
     return choices;
   }
 
@@ -72,6 +73,7 @@ export class CharacterRaceChoiceProcessor implements ICharacterChoiceProcessor<C
     traits.push(CustomTrait.of('race', choice.current));
     traits.push(CustomTrait.of('size', race.size.id));
     traits.push(CustomTrait.of('ac:size', race.size.acModifier));
+    traits.push(CustomTrait.of('speed:base', race.speed));
 
     for (let traitCode of race.traits) {
       let mappedTrait = CharacterRaceChoiceProcessor.traitCodeMap[traitCode];

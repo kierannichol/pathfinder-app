@@ -4,12 +4,12 @@
 
 .label {
   width: 150px;
-  justify-content: end;
+  justify-content: center;
 }
 
 .header {
-  flex: 1;
   align-self: end;
+  margin-bottom: -0.25rem;
 }
 
 .value {
@@ -18,8 +18,15 @@
 
 .operator {
   line-height: var(--col-height);
+  margin: 0 -0.25rem;
+}
+
+.headerDivider {
+  line-height: 0;
+  visibility: hidden;
 }
 
 .modifiersValue {
+  min-width: 100px;
   flex: 1;
 }

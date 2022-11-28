@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useCallback} from "react";
 import MercyDatabase from "../../database/MercyDatabase";
 import {Formula} from "../../logic/Formula";
 import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
@@ -12,7 +12,7 @@ interface MercySelectButtonProps {
 }
 
 export default function MercySelectButton({ value, onSelect, characterAtLevel }: MercySelectButtonProps) {
-  const options = useMemo(() => {
+  const optionsFn = useCallback(() => {
     const characterWithoutCurrentSelection = characterAtLevel.without(value);
     return Object.values(MercyDatabase).map(mercy =>
         new ChoiceSelectorOption(mercy.id, mercy.name,
@@ -21,6 +21,6 @@ export default function MercySelectButton({ value, onSelect, characterAtLevel }:
             '',
             '',
             () => Promise.resolve(mercy.description)))
-  }, [characterAtLevel]);
-  return <ChoiceSelectButton choiceName="Mercy" value={value} options={options} onSelect={onSelect} />
+  }, [characterAtLevel, value]);
+  return <ChoiceSelectButton choiceName="Mercy" value={value} optionsFn={optionsFn} onSelect={onSelect} />
 }

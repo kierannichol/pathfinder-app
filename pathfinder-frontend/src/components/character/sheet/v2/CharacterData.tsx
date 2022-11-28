@@ -23,7 +23,7 @@ export function CharacterLevel() {
     const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
     const className = classDatabase.summary(classId)?.name ?? "Unknown";
     return `${className} ${classLevel}`;
-  }, [characterAtLevel]);
+  }, [characterAtLevel, classDatabase]);
 
   return <span>{classLevelText}</span>
 }
@@ -34,7 +34,7 @@ export function Race() {
   const text = useMemo(() => {
     const raceId = characterAtLevel.get("race")?.asText() ?? '';
     return raceDatabase.summary(raceId)?.name ?? "Unknown";
-  }, [characterAtLevel]);
+  }, [characterAtLevel, raceDatabase]);
 
   return <span>{text}</span>
 }
@@ -45,7 +45,7 @@ export function Size() {
   const text = useMemo(() => {
     const raceId = characterAtLevel.get("race")?.asText() ?? '';
     return raceDatabase.summary(raceId)?.size.longName ?? "Unknown";
-  }, [characterAtLevel]);
+  }, [characterAtLevel, raceDatabase]);
 
   return <span>{text}</span>
 }
@@ -61,6 +61,6 @@ export function CharacterValue({ dataKey, lookupFn, fallback = "" }: CharacterVa
       value = lookupFn(value);
     }
     return value;
-  }, [dataKey, characterAtLevel]);
+  }, [dataKey, characterAtLevel, lookupFn]);
   return <span>{resolved ?? fallback}</span>
 }

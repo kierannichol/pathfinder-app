@@ -1,4 +1,22 @@
-abstract class CharacterChoice {
+export enum ChoiceType {
+  ALIGNMENT = 'alignment',
+  CHARACTER_NAME = 'character_name',
+  CHARACTER_RACE = 'character_race',
+  CHARACTER_CLASS = 'character_class',
+  ABILITY_SCORE = 'ability_score',
+  RACE_ABILITY_SCORE = 'race_asi',
+  FEAT = 'feat',
+  RAGE_POWER = 'rage_power',
+  ROGUE_TALENT = 'rogue_talent',
+  MERCY = 'mercy',
+  SKILL_POINT = 'skill_point',
+}
+
+export enum ChoiceTag {
+  BONUS,
+}
+
+export default abstract class CharacterChoice {
   static readonly CHARACTER_NAME = 'level0:character_name';
   static readonly CHARACTER_ALIGNMENT = 'level0:alignment';
   static readonly RACE = 'level0:race';
@@ -13,7 +31,17 @@ abstract class CharacterChoice {
 
   abstract get dependsOn(): string | undefined;
 
+  public readonly tags: ChoiceTag[] = [];
+
   get label(): string {
+    let label = this.baseLabelName();
+    if (this.tags.includes(ChoiceTag.BONUS)) {
+      label = "Bonus " + label;
+    }
+    return label;
+  }
+
+  private baseLabelName() {
     switch (this.type) {
       case ChoiceType.ABILITY_SCORE: return "Ability Score";
       case ChoiceType.CHARACTER_RACE: return "Race";
@@ -29,19 +57,3 @@ abstract class CharacterChoice {
     }
   }
 }
-
-export enum ChoiceType {
-  ALIGNMENT = 'alignment',
-  CHARACTER_NAME = 'character_name',
-  CHARACTER_RACE = 'character_race',
-  CHARACTER_CLASS = 'character_class',
-  ABILITY_SCORE = 'ability_score',
-  RACE_ABILITY_SCORE = 'race_asi',
-  FEAT = 'feat',
-  RAGE_POWER = 'rage_power',
-  ROGUE_TALENT = 'rogue_talent',
-  MERCY = 'mercy',
-  SKILL_POINT = 'skill_point',
-}
-
-export default CharacterChoice;

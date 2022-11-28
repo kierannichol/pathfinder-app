@@ -1,5 +1,3 @@
-import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useState} from "react";
 import {Button} from "react-bootstrap";
 import styles from "./NumberSelect.module.scss";
@@ -32,8 +30,8 @@ export default function NumberSelect({ defaultValue = "0", onChange, min, max }:
   }
 
   return <div className={styles.control}>
-    <Button disabled={!canMinus} className={styles.minus} onClick={onMinus}><FontAwesomeIcon icon={faMinus} /></Button>
+    <Button disabled={!canMinus} className={styles.minus} onClick={onMinus}><b>-</b></Button>
     <div className={styles.value}>{current}</div>
-    <Button disabled={!canPlus} className={styles.plus} onClick={onPlus}><FontAwesomeIcon icon={faPlus} /></Button>
+    <Button disabled={!canPlus} className={styles.plus} onClick={onPlus}><b>+</b></Button>
   </div>
 }

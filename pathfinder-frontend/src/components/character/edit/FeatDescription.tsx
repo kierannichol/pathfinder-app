@@ -24,8 +24,7 @@ export default function FeatDescription({ feat, characterAtLevel}: FeatDescripti
       <div>
         {description !== '' && <p><i>{description}</i></p>}
         {prerequisites !== '' && <p><b>Prerequisites:</b> {prerequisites}</p>}
-        {showPrerequisiteList && <p><PrerequisiteList abilitySummary={feat} characterAtLevel={characterAtLevel} /></p>}
-        {/*{prerequisitesFormulaText !== '' && <p><b>Prerequisite Formula:</b> <code>{prerequisitesFormulaText}</code></p>}*/}
+        {showPrerequisiteList && <div style={{ marginBottom: "1rem" }}><PrerequisiteList abilitySummary={feat} characterAtLevel={characterAtLevel} /></div>}
         {benefit !== '' && <p><b>Benefit:</b> {benefit}</p>}
         {normal !== '' && <p><b>Normal:</b> {normal}</p>}
         {special !== '' && <p><b>Special:</b> {special}</p>}

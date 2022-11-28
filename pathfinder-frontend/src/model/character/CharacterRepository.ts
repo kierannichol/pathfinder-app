@@ -64,9 +64,7 @@ class CharacterRepository {
     if (!user) {
       return [];
     }
-    const userId = user.id;
-
-    const packedList = await FirebaseRepository.loadAll(userId) ?? [];
+    const packedList = await FirebaseRepository.loadAll(user.id) ?? [];
     const characterList = await Promise.all(packedList.map(packed => {
       const character = new Character(packed.id, List(initialChoices), this.processors);
       return character.unpack(packed);
@@ -74,19 +72,6 @@ class CharacterRepository {
 
     this.cache = Object.fromEntries(characterList.map(character => [ character.id, character ]));
     return characterList;
-
-    // const characters: Character[] = [];
-    // for (let i = 0; i < localStorage.length; i++) {
-    //   const key = localStorage.key(i);
-    //   if (key !== null) {
-    //     const loadedState = loadState<PackedCharacter>(key);
-    //     if (loadedState !== undefined) {
-    //       const character = new Character(loadedState.id, List(initialChoices), this.processors);
-    //       characters.push(await character.unpack(loadedState));
-    //     }
-    //   }
-    // }
-    // return characters;
   }
 
   public async create(): Promise<Character> {
@@ -101,13 +86,11 @@ class CharacterRepository {
 
   public async load(id: string): Promise<Character | undefined> {
     const character = new Character(id, List(initialChoices), this.processors);
-    // const packed = loadState<PackedCharacter>(`character-${id}`);
     const user = getActiveUser();
     if (!user) {
       return character;
     }
-    const userId = user.id;
-    const packed = await FirebaseRepository.load(userId, id);
+    const packed = await FirebaseRepository.load(user.id, id);
     if (packed === undefined) {
       return character;
     }
@@ -121,7 +104,6 @@ class CharacterRepository {
 
   public async save(character: Character): Promise<void> {
     const packed = character.pack();
-    // saveState(`character-${character.id}`, packed);
     const user = getActiveUser();
     if (!user) {
       console.error('Unable to save without user logged in');
@@ -131,19 +113,16 @@ class CharacterRepository {
       this.cache = {};
     }
     this.cache[character.id] = character;
-    const userId = user.id;
-    return FirebaseRepository.save(userId, packed);
+    return FirebaseRepository.save(user.id, packed);
   }
 
   public async delete(id: string): Promise<void> {
-    // deleteState(`character-${id}`);
     const user = getActiveUser();
     if (!user) {
       console.error('Unable to save without user logged in');
       return;
     }
-    const userId = user.id;
-    await FirebaseRepository.delete(userId, id);
+    await FirebaseRepository.delete(user.id, id);
     if (this.cache !== undefined) {
       delete this.cache[id];
     }
