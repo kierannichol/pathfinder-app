@@ -67,10 +67,11 @@ export class Character {
     let levelState = { ...CharacterState.InitialState };
     levelState['character_level'] = level;
 
-    for (let choice of this.choices.toArray()) {
-      const traits = await this.processors.traits(choice);
-      traits.forEach(trait => trait.applyTo(level, levelState));
-    }
+    const traits = (await Promise.all(this.choices.map(choice =>
+        this.processors.traits(choice)))).flat();
+
+    traits.forEach(trait => trait.applyTo(level, levelState));
+
     return new CharacterAtLevel(level, levelState);
   }
 
