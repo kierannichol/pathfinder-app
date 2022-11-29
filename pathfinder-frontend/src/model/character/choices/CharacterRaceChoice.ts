@@ -72,6 +72,7 @@ export class CharacterRaceChoiceProcessor implements ICharacterChoiceProcessor<C
 
     traits.push(CustomTrait.of('race', choice.current));
     traits.push(CustomTrait.of('size', race.size.id));
+    traits.push(CustomTrait.of('size_mod', race.size.acModifier));
     traits.push(CustomTrait.of('ac:size', race.size.acModifier));
     traits.push(CustomTrait.of('speed:base', race.speed));
 

@@ -2,9 +2,9 @@ import {HTMLAttributes} from "react";
 import classNames from "../../../../../app/classNames";
 import SkillDatabase from "../../../../../database/SkillDatabase";
 import {useCharacterAtLevel} from "../CharacterSheet";
-import Label from "../Label";
-import Section from "../Section";
-import UnderlinedValue from "../UnderlinedValue";
+import Label from "../common/Label";
+import Section from "../common/Section";
+import UnderlinedValue from "../common/UnderlinedValue";
 import styles from "./SkillsSection.module.scss";
 
 export default function SkillsSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
@@ -22,6 +22,12 @@ export default function SkillsSection({ className, ...divProps }: HTMLAttributes
         <div className={styles.operator}>+</div>
         <UnderlinedValue className={styles.value}></UnderlinedValue>
       </Section.Row>)}
+
+      <Section.Column className="no-gap">
+        <div className={classNames("title", styles.title)}>Conditional Modifiers:</div>
+        <UnderlinedValue className={styles.modifierLine} />
+        <UnderlinedValue className={styles.modifierLine} />
+      </Section.Column>
     </Section.Column>
   </Section>
 }

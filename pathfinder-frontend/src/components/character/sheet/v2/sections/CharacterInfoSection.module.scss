@@ -1,12 +1,10 @@
 .section {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+}
 
-  &>div {
-    height: 54px;
-    padding: 0 0.5rem;
-  }
+.row {
+  align-items: flex-end;
 }
 
 .characterName {
@@ -14,7 +12,7 @@
 }
 
 .alignment {
-  min-width: 20%;
+  flex-grow: 1;
 }
 
 .playerName {
@@ -22,7 +20,7 @@
 }
 
 .characterLevel {
-  min-width: 60%;
+  flex-grow: 1;
 }
 
 .deity {
@@ -34,7 +32,7 @@
 }
 
 .race {
-  min-width: 30%;
+  flex-grow: 1;
 }
 
 .size {

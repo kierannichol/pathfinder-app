@@ -1,10 +1,10 @@
 import {HTMLAttributes} from "react";
 import classNames from "../../../../../app/classNames";
-import BoxedValue from "../BoxedValue";
-import * as CharacterData from "../CharacterData";
-import Header from "../Header";
-import Label from "../Label";
-import Section from "../Section";
+import BoxedValue from "../common/BoxedValue";
+import * as CharacterData from "../common/CharacterData";
+import Header from "../common/Header";
+import Label from "../common/Label";
+import Section from "../common/Section";
 import styles from "./SpeedSection.module.scss";
 
 export default function SpeedSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
@@ -19,7 +19,7 @@ export default function SpeedSection({ className, ...divProps }: HTMLAttributes<
           <CharacterData.Value dataKey={'speed:armor'} />
         </BoxedValue>
       </Section.Row>
-      <Section.Row>
+      <Section.Row className={styles.headerRow}>
         <Header className={classNames(styles.label, styles.header)}></Header>
         <Header className={classNames(styles.value, styles.header)}>Base Speed</Header>
         <Header className={classNames(styles.value, styles.header)}>With Armor</Header>

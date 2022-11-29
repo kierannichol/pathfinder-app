@@ -1,16 +1,16 @@
 import {DetailedHTMLProps, HTMLAttributes, useMemo} from "react";
 import classNames from "../../../../../app/classNames";
-import BoxedValue from "../BoxedValue";
 import {useCharacterAtLevel} from "../CharacterSheet";
-import Header from "../Header";
-import Label from "../Label";
-import Section from "../Section";
+import BoxedValue from "../common/BoxedValue";
+import Header from "../common/Header";
+import Label from "../common/Label";
+import Section from "../common/Section";
 import styles from "./AbilityScoreSection.module.scss";
 
 export default function AbilityScoreSection({ className, ...divProps }: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) {
   return <Section className={classNames(styles.section, className)} {...divProps}>
     <Section.Column>
-      <Section.Column className="half-gap">
+      <Section.Column className="header-gap">
         <Section.Row>
           <Header className={styles.header}>Ability Name</Header>
           <Header className={styles.header}>Ability Score</Header>

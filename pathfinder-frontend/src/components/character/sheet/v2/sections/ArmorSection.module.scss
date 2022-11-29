@@ -2,12 +2,16 @@
 }
 
 .label {
-  min-width: 64px;
+  min-width: var(--col-height);
 }
 
 .value {
-  display: flex;
-  flex: 1;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.scalar {
+  margin: 0 -0.25em;
 }
 
 .touchValue {

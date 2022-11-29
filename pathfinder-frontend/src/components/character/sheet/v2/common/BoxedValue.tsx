@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import classNames from "../../../../app/classNames";
+import classNames from "../../../../../app/classNames";
 import styles from "./BoxedValue.module.scss";
 
 interface BoxedValueProps {

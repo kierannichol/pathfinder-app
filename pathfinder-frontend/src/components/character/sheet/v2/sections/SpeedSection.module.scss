@@ -1,20 +1,26 @@
 .label {
-  width: 150px;
+  flex-basis: 5rem;
 }
 
 .header {
   margin-top: -0.5rem;
 }
 
+.headerRow {
+  margin-bottom: -0.25rem;
+}
+
 .value {
-  flex: 1;
+  flex-grow: 1;
+  flex-basis: 2rem;
 }
 
 .valueFly {
   @extend .value;
-  flex: 2;
+  flex-grow: 1;
+  flex-basis: 4rem;
 }
 
 .modifiers {
-  flex: 1;
+  flex-grow: 1;
 }

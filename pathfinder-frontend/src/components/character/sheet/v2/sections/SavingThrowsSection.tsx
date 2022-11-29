@@ -1,10 +1,10 @@
 import {HTMLAttributes} from "react";
 import classNames from "../../../../../app/classNames";
-import BoxedValue from "../BoxedValue";
-import * as CharacterData from "../CharacterData";
-import Header from "../Header";
-import Label from "../Label";
-import Section from "../Section";
+import BoxedValue from "../common/BoxedValue";
+import * as CharacterData from "../common/CharacterData";
+import Header from "../common/Header";
+import Label from "../common/Label";
+import Section from "../common/Section";
 import styles from "./SavingThrowsSection.module.scss";
 
 export default function SavingThrowsSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {

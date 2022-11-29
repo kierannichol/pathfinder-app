@@ -1,5 +1,5 @@
 import {HTMLAttributes} from "react";
-import classNames from "../../../../app/classNames";
+import classNames from "../../../../../app/classNames";
 import styles from "./Header.module.scss";
 
 interface HeaderProps extends HTMLAttributes<HTMLDivElement> {

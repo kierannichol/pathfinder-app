@@ -11,8 +11,13 @@ const initialState: DataContextState = {
   'ref_save': '{sum(@ref:*) + @dex_mod}',
   'will_save': '{sum(@will:*) + @wis_mod}',
 
-  'ac_total': '{10 + sum(@ac:*)}',
+  'initiative': '{@dex_mod + @initiative:misc}',
+
+  'ac': '{10 + sum(@ac:*)}',
   'ac:size': '{2^abs(5-@size)-1}',
+
+  'cmb': '{@bab + @str_mod + @size_mod}',
+  'cmd': '{@bab + @str_mod + @dex_mod + @size_mod + 10}',
 
   ...characterAbilities.reduce((state, ability) => ({
     ...state,

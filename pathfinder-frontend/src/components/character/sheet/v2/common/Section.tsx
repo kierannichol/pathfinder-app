@@ -1,5 +1,5 @@
 import {DetailedHTMLProps, HTMLAttributes} from "react";
-import classNames from "../../../../app/classNames";
+import classNames from "../../../../../app/classNames";
 import styles from "./Section.module.scss";
 
 const Section = ({ className, children, ...divProps }: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => {

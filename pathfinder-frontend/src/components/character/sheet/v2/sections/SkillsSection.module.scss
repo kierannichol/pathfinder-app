@@ -1,28 +1,38 @@
 .skillRow {
   align-items: end;
-  height: 1.5rem;
+  height: 9pt;
 }
 
 .skillName {
   display: flex;
-  flex: 2;
-  min-width: 250px;
+  font-size: 8pt;
+  line-height: 8pt;
+  font-variant-caps: small-caps;
+  flex: 1;
+  min-width: 2em;
 }
 
 .value {
   text-align: center;
   display: flex;
-  flex: 1;
+  width: 2em;
   font-weight: 700;
 }
 
 .abilityName {
   display: inline-block;
-  font-size: 125%;
-  width: 40px;
+  width: 2em;
 }
 
 .operator {
+  margin: 0 -0.5em;
   font-variant: small-caps;
 }
 
+.title {
+  margin-bottom: -0.25rem;
+}
+
+.modifierLine {
+  height: 17px;
+}

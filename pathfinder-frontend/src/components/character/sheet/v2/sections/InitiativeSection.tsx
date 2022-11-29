@@ -1,28 +1,28 @@
 import {HTMLAttributes} from "react";
 import classNames from "../../../../../app/classNames";
-import BoxedValue from "../BoxedValue";
-import Header from "../Header";
-import Label from "../Label";
-import Section from "../Section";
+import CaptionedBoxedValue from "../common/CaptionedBoxedValue";
+import * as CharacterData from "../common/CharacterData";
+import Label from "../common/Label";
+import Operator from "../common/Operator";
+import Section from "../common/Section";
 import styles from "./InitiativeSection.module.scss";
 
 export default function InitiativeSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
   return <Section className={classNames(styles.section, className)} {...divProps}>
     <Label className={styles.label}>Initiative</Label>
     <Section.Row>
-      <Section.Row>
-        <Section.Column className="no-gap">
-          <BoxedValue className={styles.total} />
-          <Header>Total</Header>
-        </Section.Column>
-        <Section.Column className="no-gap">
-          <BoxedValue className={styles.dexModifier} />
-          <Header>DEX Modifier</Header>
-        </Section.Column>
-        <Section.Column className="no-gap">
-          <BoxedValue className={styles.miscModifier} />
-          <Header>Misc Modifier</Header>
-        </Section.Column>
+      <Section.Row className={"align-items-start"}>
+        <CaptionedBoxedValue captionBottom="Total" className={styles.value}>
+          <CharacterData.Initiative />
+        </CaptionedBoxedValue>
+        <Operator>=</Operator>
+        <CaptionedBoxedValue captionBottom="DEX Modifier" className={styles.value}>
+          <CharacterData.DexterityMod />
+        </CaptionedBoxedValue>
+        <Operator>+</Operator>
+        <CaptionedBoxedValue captionBottom="Misc Modifier" className={styles.value}>
+          <CharacterData.Value dataKey="initiative:misc" />
+        </CaptionedBoxedValue>
       </Section.Row>
     </Section.Row>
   </Section>

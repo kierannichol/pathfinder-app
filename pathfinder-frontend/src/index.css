@@ -9,6 +9,12 @@ body {
   font-size: 14pt;
 }
 
+@media print {
+  @page {
+    size: letter;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
