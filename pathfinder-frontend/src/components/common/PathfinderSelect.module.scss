@@ -31,15 +31,13 @@
   vertical-align: center;
 
   background-color: var(--pf-select-background-color);
-  border-width: var(--pf-select-border-width);
-  border-style: solid;
-  border-color: var(--pf-select-text-color);
-  border-bottom-width: 0;
+  border: var(--pf-select-border-width) solid var(--pf-select-text-color);
+  border-bottom: 0;
   color: var(--pf-select-text-color);
 }
 
 .expanded, .expanding, .collapsing, .item:last-of-type .button {
-  border-bottom-width: var(--pf-select-border-width);
+  border-bottom: var(--pf-select-border-width) solid var(--pf-select-text-color);
 }
 
 .body {
