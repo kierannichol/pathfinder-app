@@ -1,5 +1,13 @@
 {
   "raceSummaries": [{
+    "id": "race:elf",
+    "name": "Elf",
+    "size": 5,
+    "type": "humanoid:elf",
+    "speed": 30,
+    "languages": ["Common", "Elven"],
+    "traits": ["trait:dex_plus_2", "trait:int_plus_2", "trait:con_minus_2"]
+  }, {
     "id": "race:gnome",
     "name": "Gnome",
     "size": 4,
@@ -7,6 +15,14 @@
     "speed": 20,
     "languages": ["Common", "Gnome", "Sylvan"],
     "traits": ["trait:con_plus_2", "trait:cha_plus_2", "trait:str_minus_2"]
+  }, {
+    "id": "race:dwarf",
+    "name": "Dwarf",
+    "size": 5,
+    "type": "humanoid:dwarf",
+    "speed": 20,
+    "languages": ["Common", "Dwarven"],
+    "traits": ["trait:con_plus_2", "trait:wis_plus_2", "trait:cha_minus_2", "ability:darkvision", "ability:defensive_traiting", "ability:hardy", "ability:stability", "ability:greed", "ability:stonecunning", "proficiency:battleaxe", "proficiency:heavy_pick", "proficiency:warhammer"]
   }, {
     "id": "race:human",
     "name": "Human",
@@ -22,21 +38,5 @@
     "type": "humanoid:orc",
     "speed": 30,
     "languages": ["Common"]
-  }, {
-    "id": "race:dwarf",
-    "name": "Dwarf",
-    "size": 5,
-    "type": "humanoid:dwarf",
-    "speed": 20,
-    "languages": ["Common", "Dwarven"],
-    "traits": ["trait:con_plus_2", "trait:wis_plus_2", "trait:cha_minus_2", "ability:darkvision", "ability:defensive_traiting", "ability:hardy", "ability:stability", "ability:greed", "ability:stonecunning", "proficiency:battleaxe", "proficiency:heavy_pick", "proficiency:warhammer"]
-  }, {
-    "id": "race:elf",
-    "name": "Elf",
-    "size": 5,
-    "type": "humanoid:elf",
-    "speed": 30,
-    "languages": ["Common", "Elven"],
-    "traits": ["trait:dex_plus_2", "trait:int_plus_2", "trait:con_minus_2"]
   }]
 }
