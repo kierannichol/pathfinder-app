@@ -33,14 +33,17 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper<List<Character
     private static final Pattern BAB_PATTERN = Pattern.compile("^\\+(\\d+).*$");
     private static final Pattern SPELLS_PER_DAY_PATTERN = Pattern.compile("^([-+]?\\d+).*$");
 
+    private final List<CharacterClass> cached = new ArrayList<>();
+
     @Override
     public List<CharacterClass> scrape() throws IOException {
-        List<CharacterClass> classes = new ArrayList<>();
-        classes.addAll(scrapeType(Type.CORE, new URL("https://www.d20pfsrd.com/classes/core-classes/")));
-        classes.addAll(scrapeType(Type.BASE, new URL("https://www.d20pfsrd.com/classes/base-classes/")));
-        classes.addAll(scrapeType(Type.HYBRID, new URL("https://www.d20pfsrd.com/classes/hybrid-classes/")));
-        classes.addAll(scrapeType(Type.UNCHAINED, new URL("https://www.d20pfsrd.com/classes/unchained-classes/")));
-        return classes;
+        if (cached.isEmpty()) {
+            cached.addAll(scrapeType(Type.CORE, new URL("https://www.d20pfsrd.com/classes/core-classes/")));
+            cached.addAll(scrapeType(Type.BASE, new URL("https://www.d20pfsrd.com/classes/base-classes/")));
+            cached.addAll(scrapeType(Type.HYBRID, new URL("https://www.d20pfsrd.com/classes/hybrid-classes/")));
+            cached.addAll(scrapeType(Type.UNCHAINED, new URL("https://www.d20pfsrd.com/classes/unchained-classes/")));
+        }
+        return cached;
     }
 
     @Override
@@ -74,9 +77,11 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper<List<Character
         Map<String, Special> specialMap = scrapeSpecialsDefinitions(document);
         List<Level> levels = parseLevels(document, specialMap);
 
+        List<String> classSkills = parseClassSkills(document);
+
         String shortDescription = scrapeShortDescription(document);
 
-        return new CharacterClass(id, name, shortDescription, type, levels);
+        return new CharacterClass(id, name, shortDescription, type, levels, classSkills);
     }
 
     private String scrapeShortDescription(Document document) {
@@ -244,5 +249,20 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper<List<Character
             throw new IllegalArgumentException("Not a valid spells per day: " + str);
         }
         return parseInt(matcher.group(1));
+    }
+
+    private List<String> parseClassSkills(Document document) {
+        Element headerText = document.getElementById("Class_Skills");
+        if (headerText == null) {
+            headerText = document.getElementById("Class_skills");
+        }
+        Element header = headerText.parent();
+        Element skillsParagraph = header.nextElementSibling();
+        return skillsParagraph.select("a")
+                .stream().filter(link -> link.attr("href").startsWith("https://www.d20pfsrd.com/skills/"))
+                .map(Element::text)
+                .map(NameToIdConverter::skillId)
+                .toList();
+
     }
 }

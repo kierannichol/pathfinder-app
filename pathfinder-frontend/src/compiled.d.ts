@@ -930,6 +930,9 @@ export namespace v2 {
 
         /** ClassDataDbo levels */
         levels?: (v2.ClassLevelDbo[]|null);
+
+        /** ClassDataDbo skills */
+        skills?: (string[]|null);
     }
 
     /** Represents a ClassDataDbo. */
@@ -955,6 +958,9 @@ export namespace v2 {
 
         /** ClassDataDbo levels. */
         public levels: v2.ClassLevelDbo[];
+
+        /** ClassDataDbo skills. */
+        public skills: string[];
 
         /**
          * Creates a new ClassDataDbo instance using the specified properties.

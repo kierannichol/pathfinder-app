@@ -18,6 +18,7 @@ public class ClassDataEncoder implements Encoder<CharacterClass, ClassDataDbo> {
         builder.setName(characterClass.name());
         builder.setShortDescription(characterClass.shortDescription());
         builder.setCategory(ClassCategoryDbo.valueOf(characterClass.type().name()));
+        builder.addAllSkills(characterClass.skills());
         for (var level : characterClass.levels()) {
             builder.addLevels(ClassLevelDbo.newBuilder()
                     .setLevelNumber(level.level())

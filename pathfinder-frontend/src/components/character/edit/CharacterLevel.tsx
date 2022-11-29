@@ -66,7 +66,7 @@ export default function CharacterLevel({ character, level, onChange }: Character
       )}
 
         {specialIds.length > 0 && <>
-          <label>Specials</label>
+          <label>Special Abilities</label>
           <CharacterTraitList classIds={[ characterAtLevel.get(`class_at_${level}`)?.asText() ?? '' ]} level={level} />
           </>}
     </div>

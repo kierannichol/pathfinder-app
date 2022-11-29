@@ -7,12 +7,12 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import pathfinder.SourceDatabase;
 import pathfinder.data.v2.ClassDatabaseDbo;
 import pathfinder.generator.encode.ClassDataEncoder;
 import pathfinder.generator.encode.ClassSummaryEncoder;
 import pathfinder.generator.model.CharacterClass;
 import pathfinder.generator.spring.OutputPathValue;
-import pathfinder.scraper.WebScraper;
 import pathfinder.util.FileUtils;
 
 @Service("Class Database Generator")
@@ -20,8 +20,7 @@ import pathfinder.util.FileUtils;
 @RequiredArgsConstructor
 public class ClassDatabaseGenerator extends AbstractDatabaseGenerator {
 
-//    private final ClassSourceDatabase classSourceDatabase;
-    private final WebScraper<List<CharacterClass>> classScraper;
+    private final SourceDatabase<CharacterClass> classSourceDatabase;
     private final ClassSummaryEncoder classSummaryEncoder;
     private final ClassDataEncoder classDataEncoder;
 
@@ -34,7 +33,7 @@ public class ClassDatabaseGenerator extends AbstractDatabaseGenerator {
         FileUtils.deleteDirectory(classDataPath);
         Files.createDirectory(classDataPath);
 
-        List<CharacterClass> loaded = classScraper.scrape();
+        List<CharacterClass> loaded = classSourceDatabase.stream().toList();
 
         loaded.stream()
                 .map(classDataEncoder::encode)

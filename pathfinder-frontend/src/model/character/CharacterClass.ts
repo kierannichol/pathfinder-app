@@ -11,6 +11,7 @@ export class CharacterClass extends CharacterClassSummary {
               name: string,
               type: string,
               public readonly shortDescription: string,
+              public readonly skills: string[],
               public readonly levels: CharacterClass.Level[]) {
     super(id, name, type);
   }

@@ -36,3 +36,20 @@
 .modifierLine {
   height: 17px;
 }
+
+.classTrainedBox {
+  width: 8pt;
+  height: 8pt;
+
+  border: 2px solid black;
+  margin-right: -0.25rem;
+}
+
+.classTrainedBoxChecked {
+  composes: classTrainedBox;
+  background-color: dimgray;
+}
+
+.classTrainedBoxUnchecked {
+  composes: classTrainedBox;
+}

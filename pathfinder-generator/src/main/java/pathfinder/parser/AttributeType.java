@@ -8,6 +8,7 @@ public enum AttributeType {
     ABILITY("ability"),
     CLASS("class"),
     PROFICIENCY("proficiency"),
+    SKILL("skill"),
     WEAPON("weapon"),
     RAGE_POWER("ragepower"),
     ;

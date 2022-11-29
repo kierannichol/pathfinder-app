@@ -2382,6 +2382,7 @@ $root.v2 = (function() {
          * @property {v2.ClassCategoryDbo|null} [category] ClassDataDbo category
          * @property {string|null} [shortDescription] ClassDataDbo shortDescription
          * @property {Array.<v2.ClassLevelDbo>|null} [levels] ClassDataDbo levels
+         * @property {Array.<string>|null} [skills] ClassDataDbo skills
          */
 
         /**
@@ -2394,6 +2395,7 @@ $root.v2 = (function() {
          */
         function ClassDataDbo(properties) {
             this.levels = [];
+            this.skills = [];
             if (properties)
                 for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -2441,6 +2443,14 @@ $root.v2 = (function() {
         ClassDataDbo.prototype.levels = $util.emptyArray;
 
         /**
+         * ClassDataDbo skills.
+         * @member {Array.<string>} skills
+         * @memberof v2.ClassDataDbo
+         * @instance
+         */
+        ClassDataDbo.prototype.skills = $util.emptyArray;
+
+        /**
          * Creates a new ClassDataDbo instance using the specified properties.
          * @function create
          * @memberof v2.ClassDataDbo
@@ -2475,6 +2485,9 @@ $root.v2 = (function() {
             if (message.levels != null && message.levels.length)
                 for (var i = 0; i < message.levels.length; ++i)
                     $root.v2.ClassLevelDbo.encode(message.levels[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+            if (message.skills != null && message.skills.length)
+                for (var i = 0; i < message.skills.length; ++i)
+                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.skills[i]);
             return writer;
         };
 
@@ -2529,6 +2542,12 @@ $root.v2 = (function() {
                         if (!(message.levels && message.levels.length))
                             message.levels = [];
                         message.levels.push($root.v2.ClassLevelDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 6: {
+                        if (!(message.skills && message.skills.length))
+                            message.skills = [];
+                        message.skills.push(reader.string());
                         break;
                     }
                 default:
@@ -2595,6 +2614,13 @@ $root.v2 = (function() {
                         return "levels." + error;
                 }
             }
+            if (message.skills != null && message.hasOwnProperty("skills")) {
+                if (!Array.isArray(message.skills))
+                    return "skills: array expected";
+                for (var i = 0; i < message.skills.length; ++i)
+                    if (!$util.isString(message.skills[i]))
+                        return "skills: string[] expected";
+            }
             return null;
         };
 
@@ -2654,6 +2680,13 @@ $root.v2 = (function() {
                     message.levels[i] = $root.v2.ClassLevelDbo.fromObject(object.levels[i]);
                 }
             }
+            if (object.skills) {
+                if (!Array.isArray(object.skills))
+                    throw TypeError(".v2.ClassDataDbo.skills: array expected");
+                message.skills = [];
+                for (var i = 0; i < object.skills.length; ++i)
+                    message.skills[i] = String(object.skills[i]);
+            }
             return message;
         };
 
@@ -2670,8 +2703,10 @@ $root.v2 = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.arrays || options.defaults)
+            if (options.arrays || options.defaults) {
                 object.levels = [];
+                object.skills = [];
+            }
             if (options.defaults) {
                 object.id = "";
                 object.name = "";
@@ -2690,6 +2725,11 @@ $root.v2 = (function() {
                 object.levels = [];
                 for (var j = 0; j < message.levels.length; ++j)
                     object.levels[j] = $root.v2.ClassLevelDbo.toObject(message.levels[j], options);
+            }
+            if (message.skills && message.skills.length) {
+                object.skills = [];
+                for (var j = 0; j < message.skills.length; ++j)
+                    object.skills[j] = message.skills[j];
             }
             return object;
         };

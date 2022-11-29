@@ -45,6 +45,8 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
   const choicesAvailable = useMemo(() => skillChoices.filter(choice => choice.current === ''), [skillChoices]);
   const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => choice.current === skill.id), [skillChoices]);
 
+  const isTrained = useMemo(() => characterAtLevel.get(skill.id + ':trained')?.asBoolean() ?? false, [characterAtLevel, skill]);
+
   function handleSkillChanged(newValue: string) {
     const newValueNumber = parseInt(newValue);
     if (newValueNumber > current) {
@@ -62,7 +64,7 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
   }
 
   return <div className="skill-row">
-    <ClassSkillIcon checked={skill.untrained} />
+    <ClassSkillIcon checked={isTrained} />
     &nbsp;
 
     <NumberSelect defaultValue={current.toString()}
@@ -70,7 +72,7 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
                   max={Math.min(max, current + choicesAvailable.size)}
                   onChange={handleSkillChanged} />
     &nbsp;
-    {skill.name} ({current}/{max})
+    {skill.name}{!skill.untrained ? '*' : ''} ({current}/{max})
   </div>
 }
 

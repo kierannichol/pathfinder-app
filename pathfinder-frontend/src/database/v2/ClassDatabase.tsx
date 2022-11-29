@@ -50,6 +50,7 @@ export class CharacterClassDatabase {
             data.name,
             data.category.toString(),
             data.shortDescription,
+            data.skills,
             data.levels.map(l => convertCharacterClassLevel(l)) ?? []);
 
     if (this.cache.length > CharacterClassDatabase.CACHE_SIZE) {

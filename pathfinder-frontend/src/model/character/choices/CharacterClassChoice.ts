@@ -7,6 +7,7 @@ import ClassTraits from "../traits/ClassTraits";
 import CustomTrait from "../traits/CustomTrait";
 import MartialWeaponProficiencyTrait from "../traits/MartialWeaponProficiencyTrait";
 import SimpleWeaponProficiencyTrait from "../traits/SimpleWeaponProficiencyTrait";
+import TrainedSkillTrait from "../traits/TrainedSkillTrait";
 import CharacterChoice, {ChoiceTag, ChoiceType} from "./CharacterChoice";
 import FeatChoice from "./FeatChoice";
 import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
@@ -88,6 +89,9 @@ export class CharacterClassChoiceProcessor implements ICharacterChoiceProcessor<
     }
 
     const classTraits: Trait[] = [];
+
+    classDefinition.skills
+    .forEach(skill => classTraits.push(TrainedSkillTrait(skill, 0)));
 
     for (let level of classDefinition.levels) {
       level.specials

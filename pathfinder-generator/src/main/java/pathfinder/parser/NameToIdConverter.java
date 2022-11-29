@@ -18,6 +18,10 @@ public class NameToIdConverter {
         return generateId(AttributeType.PROFICIENCY, name);
     }
 
+    public static String skillId(String name) {
+        return generateId(AttributeType.SKILL, name);
+    }
+
     public static String weaponId(String name) {
         return partialId(name);
 //        return generateId(AttributeType.WEAPON, name);

@@ -1,6 +1,8 @@
-import {HTMLAttributes} from "react";
+import {HTMLAttributes, useMemo} from "react";
 import classNames from "../../../../../app/classNames";
 import SkillDatabase from "../../../../../database/SkillDatabase";
+import {CharacterAtLevel} from "../../../../../model/character/CharacterAtLevel";
+import Skill from "../../../../../model/character/Skill";
 import {useCharacterAtLevel} from "../CharacterSheet";
 import Label from "../common/Label";
 import Section from "../common/Section";
@@ -13,7 +15,8 @@ export default function SkillsSection({ className, ...divProps }: HTMLAttributes
     <Section.Column>
       <Label className={styles.label}>Skills</Label>
       {SkillDatabase.all.map(skill => <Section.Row className={styles.skillRow}>
-        <div className={styles.skillName}>{skill.name}</div>
+        <ClassTrainedBox skill={skill} characterAtLevel={characterAtLevel} />
+        <div className={styles.skillName}>{skill.name}{skill.untrained ? '' : '*'}</div>
         <UnderlinedValue className={styles.value}>{(characterAtLevel.get(skill.id)?.asNumber() ?? 0) + (characterAtLevel.get(skill.keyAbility + '_mod')?.asNumber() ?? 0)}</UnderlinedValue>
         <div className={styles.operator}>= <span className={styles.abilityName}>{skill.keyAbility}</span></div>
         <UnderlinedValue className={styles.value}>{characterAtLevel.get(skill.keyAbility + '_mod')?.asText()}</UnderlinedValue>
@@ -30,4 +33,14 @@ export default function SkillsSection({ className, ...divProps }: HTMLAttributes
       </Section.Column>
     </Section.Column>
   </Section>
+}
+
+interface ClassTrainedBoxProps {
+  skill: Skill;
+  characterAtLevel: CharacterAtLevel;
+}
+
+function ClassTrainedBox({ skill, characterAtLevel }: ClassTrainedBoxProps) {
+  const isChecked = useMemo(() => characterAtLevel.get(skill.id + ':trained')?.asBoolean() ?? false, [skill, characterAtLevel]);
+  return <div className={isChecked ? styles.classTrainedBoxChecked : styles.classTrainedBoxUnchecked} />
 }

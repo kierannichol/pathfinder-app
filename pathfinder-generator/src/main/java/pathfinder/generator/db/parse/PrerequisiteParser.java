@@ -1,5 +1,6 @@
 package pathfinder.generator.db.parse;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -16,12 +17,13 @@ import javax.annotation.PostConstruct;
 import logic.parse.Formula;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import pathfinder.SourceDatabase;
 import pathfinder.generator.db.AbilitySourceDatabase;
-import pathfinder.generator.db.ClassSourceDatabase;
 import pathfinder.generator.db.FeatSourceDatabase;
 import pathfinder.generator.db.RaceSourceDatabase;
 import pathfinder.generator.db.RagePowerSourceDatabase;
 import pathfinder.generator.model.Ability;
+import pathfinder.generator.model.CharacterClass;
 import pathfinder.util.PatternMapper;
 
 @Component("Prerequisite Parser")
@@ -38,7 +40,7 @@ public class PrerequisiteParser {
     private final FeatSourceDatabase featSourceDatabase;
     private final AbilitySourceDatabase abilitySourceDatabase;
     private final RagePowerSourceDatabase ragePowerSourceDatabase;
-    private final ClassSourceDatabase classSourceDatabase;
+    private final SourceDatabase<CharacterClass> classSourceDatabase;
     private final RaceSourceDatabase raceSourceDatabase;
 
     private final Map<String, String> specialNameToId = new HashMap<>();
@@ -79,7 +81,7 @@ public class PrerequisiteParser {
     private final PatternMapper patternMapper = new PatternMapper(GLOBAL_PATTERN_MAPPER);
 
     @PostConstruct
-    private void init() {
+    private void init() throws IOException {
         specialNameToId.clear();
         featSourceDatabase.stream().forEach(feat -> specialNameToId.put(feat.name(), feat.id()));
         Stream.concat(abilitySourceDatabase.stream(), ragePowerSourceDatabase.stream())
