@@ -4,7 +4,855 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "By drawing upon wells of savagery, you can slay your foe in creative and horrifyingly gruesome manners, intimidating nearby foes.",
   "prerequisites": "Dazzling Display, Weapon Focus.",
-  "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus AND  !@feat:gory_finish",
   "benefit": "When you use the attack action, you can use a weapon with which you have Weapon Focus to make a single attack at your highest base attack bonus. If you reduce your target to negative hit points, you can spend a swift action to make an Intimidate check to demoralize all foes within 30 feet who could see your attack.",
-  "source": "Ultimate Combat"
+  "source": "Ultimate Combat",
+  "options": [{
+    "id": "feat:gory_finish#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gauntlet"
+  }, {
+    "id": "feat:gory_finish#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#unarmed"
+  }, {
+    "id": "feat:gory_finish#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#battle_aspergillum"
+  }, {
+    "id": "feat:gory_finish#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#brass_knife"
+  }, {
+    "id": "feat:gory_finish#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#brass_knuckles"
+  }, {
+    "id": "feat:gory_finish#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#cestus"
+  }, {
+    "id": "feat:gory_finish#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dagger"
+  }, {
+    "id": "feat:gory_finish#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#punching_dagger"
+  }, {
+    "id": "feat:gory_finish#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#spiked_gauntlet"
+  }, {
+    "id": "feat:gory_finish#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#handwraps"
+  }, {
+    "id": "feat:gory_finish#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#traveling_kettle"
+  }, {
+    "id": "feat:gory_finish#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#hook_hand"
+  }, {
+    "id": "feat:gory_finish#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#kunai"
+  }, {
+    "id": "feat:gory_finish#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_mace"
+  }, {
+    "id": "feat:gory_finish#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sickle"
+  }, {
+    "id": "feat:gory_finish#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#spring_blade"
+  }, {
+    "id": "feat:gory_finish#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#wooden_stake"
+  }, {
+    "id": "feat:gory_finish#club",
+    "name": "Club",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#club"
+  }, {
+    "id": "feat:gory_finish#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#mere_club"
+  }, {
+    "id": "feat:gory_finish#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_mace"
+  }, {
+    "id": "feat:gory_finish#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#morningstar"
+  }, {
+    "id": "feat:gory_finish#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#shortspear"
+  }, {
+    "id": "feat:gory_finish#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#bayonet"
+  }, {
+    "id": "feat:gory_finish#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#boarding_pike"
+  }, {
+    "id": "feat:gory_finish#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#kumade"
+  }, {
+    "id": "feat:gory_finish#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#collapsible_kumade"
+  }, {
+    "id": "feat:gory_finish#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#lantern_staff"
+  }, {
+    "id": "feat:gory_finish#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#longspear"
+  }, {
+    "id": "feat:gory_finish#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#quarterstaff"
+  }, {
+    "id": "feat:gory_finish#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#spear"
+  }, {
+    "id": "feat:gory_finish#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#blowgun"
+  }, {
+    "id": "feat:gory_finish#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_crossbow"
+  }, {
+    "id": "feat:gory_finish#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_crossbow"
+  }, {
+    "id": "feat:gory_finish#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dart"
+  }, {
+    "id": "feat:gory_finish#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#javelin"
+  }, {
+    "id": "feat:gory_finish#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sling"
+  }, {
+    "id": "feat:gory_finish#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#stingchuck"
+  }, {
+    "id": "feat:gory_finish#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#stonebow"
+  }, {
+    "id": "feat:gory_finish#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#axe"
+  }, {
+    "id": "feat:gory_finish#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#throwing_axe"
+  }, {
+    "id": "feat:gory_finish#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#blade_boot"
+  }, {
+    "id": "feat:gory_finish#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#whip"
+  }, {
+    "id": "feat:gory_finish#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#claw_blades"
+  }, {
+    "id": "feat:gory_finish#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dueling_dagger"
+  }, {
+    "id": "feat:gory_finish#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dogslicer"
+  }, {
+    "id": "feat:gory_finish#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_hammer"
+  }, {
+    "id": "feat:gory_finish#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gladius"
+  }, {
+    "id": "feat:gory_finish#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#handaxe"
+  }, {
+    "id": "feat:gory_finish#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#katar"
+  }, {
+    "id": "feat:gory_finish#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#kukri"
+  }, {
+    "id": "feat:gory_finish#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#machete"
+  }, {
+    "id": "feat:gory_finish#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_pick"
+  }, {
+    "id": "feat:gory_finish#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sap"
+  }, {
+    "id": "feat:gory_finish#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_shield"
+  }, {
+    "id": "feat:gory_finish#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#spiked_armor"
+  }, {
+    "id": "feat:gory_finish#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_spiked_shield"
+  }, {
+    "id": "feat:gory_finish#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#starknife"
+  }, {
+    "id": "feat:gory_finish#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#short_sword"
+  }, {
+    "id": "feat:gory_finish#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#war_razor"
+  }, {
+    "id": "feat:gory_finish#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#ankus"
+  }, {
+    "id": "feat:gory_finish#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#battleaxe"
+  }, {
+    "id": "feat:gory_finish#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#combat_scabbard"
+  }, {
+    "id": "feat:gory_finish#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#cutlass"
+  }, {
+    "id": "feat:gory_finish#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#light_flail"
+  }, {
+    "id": "feat:gory_finish#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gandasa"
+  }, {
+    "id": "feat:gory_finish#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#klar"
+  }, {
+    "id": "feat:gory_finish#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#longsword"
+  }, {
+    "id": "feat:gory_finish#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#manople"
+  }, {
+    "id": "feat:gory_finish#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_pick"
+  }, {
+    "id": "feat:gory_finish#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#rapier"
+  }, {
+    "id": "feat:gory_finish#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#scimitar"
+  }, {
+    "id": "feat:gory_finish#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#scizore"
+  }, {
+    "id": "feat:gory_finish#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_shield"
+  }, {
+    "id": "feat:gory_finish#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_spiked_shield"
+  }, {
+    "id": "feat:gory_finish#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sword_cane"
+  }, {
+    "id": "feat:gory_finish#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#terbutje"
+  }, {
+    "id": "feat:gory_finish#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#trident"
+  }, {
+    "id": "feat:gory_finish#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#warhammer"
+  }, {
+    "id": "feat:gory_finish#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#bardiche"
+  }, {
+    "id": "feat:gory_finish#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#bill"
+  }, {
+    "id": "feat:gory_finish#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#earth_breaker"
+  }, {
+    "id": "feat:gory_finish#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#falchion"
+  }, {
+    "id": "feat:gory_finish#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_flail"
+  }, {
+    "id": "feat:gory_finish#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#glaive"
+  }, {
+    "id": "feat:gory_finish#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#greataxe"
+  }, {
+    "id": "feat:gory_finish#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#greatclub"
+  }, {
+    "id": "feat:gory_finish#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#greatsword"
+  }, {
+    "id": "feat:gory_finish#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#guisarme"
+  }, {
+    "id": "feat:gory_finish#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#halberd"
+  }, {
+    "id": "feat:gory_finish#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#horsechopper"
+  }, {
+    "id": "feat:gory_finish#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#lance"
+  }, {
+    "id": "feat:gory_finish#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#ogre_hook"
+  }, {
+    "id": "feat:gory_finish#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#pickaxe"
+  }, {
+    "id": "feat:gory_finish#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#planson"
+  }, {
+    "id": "feat:gory_finish#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#ranseur"
+  }, {
+    "id": "feat:gory_finish#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#scythe"
+  }, {
+    "id": "feat:gory_finish#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#syringe_spear"
+  }, {
+    "id": "feat:gory_finish#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#ammentum"
+  }, {
+    "id": "feat:gory_finish#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#chakram"
+  }, {
+    "id": "feat:gory_finish#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#jolting_dart"
+  }, {
+    "id": "feat:gory_finish#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#hunga_munga"
+  }, {
+    "id": "feat:gory_finish#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#hurlbat"
+  }, {
+    "id": "feat:gory_finish#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#longbow"
+  }, {
+    "id": "feat:gory_finish#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#pilum"
+  }, {
+    "id": "feat:gory_finish#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#shortbow"
+  }, {
+    "id": "feat:gory_finish#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#aklys"
+  }, {
+    "id": "feat:gory_finish#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#knuckle_axe"
+  }, {
+    "id": "feat:gory_finish#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#barbazu_beard"
+  }, {
+    "id": "feat:gory_finish#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#battle_poi"
+  }, {
+    "id": "feat:gory_finish#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#swordbreaker_dagger"
+  }, {
+    "id": "feat:gory_finish#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flying_talon"
+  }, {
+    "id": "feat:gory_finish#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gnome_pincher"
+  }, {
+    "id": "feat:gory_finish#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#halfling_rope_shot"
+  }, {
+    "id": "feat:gory_finish#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_boulder_helmet"
+  }, {
+    "id": "feat:gory_finish#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#kama"
+  }, {
+    "id": "feat:gory_finish#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#butterfly_knife"
+  }, {
+    "id": "feat:gory_finish#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#deer_horn_knife"
+  }, {
+    "id": "feat:gory_finish#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_maulaxe"
+  }, {
+    "id": "feat:gory_finish#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#nunchaku"
+  }, {
+    "id": "feat:gory_finish#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#quadrens"
+  }, {
+    "id": "feat:gory_finish#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#drow_razor"
+  }, {
+    "id": "feat:gory_finish#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#rope_gauntlet"
+  }, {
+    "id": "feat:gory_finish#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sawtooth_sabre"
+  }, {
+    "id": "feat:gory_finish#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sai"
+  }, {
+    "id": "feat:gory_finish#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sanpkhang"
+  }, {
+    "id": "feat:gory_finish#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#siangham"
+  }, {
+    "id": "feat:gory_finish#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sica"
+  }, {
+    "id": "feat:gory_finish#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#thorn_bracer"
+  }, {
+    "id": "feat:gory_finish#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_war_shield"
+  }, {
+    "id": "feat:gory_finish#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#waveblade"
+  }, {
+    "id": "feat:gory_finish#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#scorpion_whip"
+  }, {
+    "id": "feat:gory_finish#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_heavy_axe_gauntlet"
+  }, {
+    "id": "feat:gory_finish#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#hooked_axe"
+  }, {
+    "id": "feat:gory_finish#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#broken_back_seax"
+  }, {
+    "id": "feat:gory_finish#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#estoc"
+  }, {
+    "id": "feat:gory_finish#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#falcata"
+  }, {
+    "id": "feat:gory_finish#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flickmace"
+  }, {
+    "id": "feat:gory_finish#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flindbar"
+  }, {
+    "id": "feat:gory_finish#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#khopesh"
+  }, {
+    "id": "feat:gory_finish#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#knobkerrie"
+  }, {
+    "id": "feat:gory_finish#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_ram_hammer"
+  }, {
+    "id": "feat:gory_finish#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#spiral_rapier"
+  }, {
+    "id": "feat:gory_finish#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#rhoka"
+  }, {
+    "id": "feat:gory_finish#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#shotel"
+  }, {
+    "id": "feat:gory_finish#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sickle_sword"
+  }, {
+    "id": "feat:gory_finish#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#split_blade_sword"
+  }, {
+    "id": "feat:gory_finish#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dueling_sword"
+  }, {
+    "id": "feat:gory_finish#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#bastard_sword"
+  }, {
+    "id": "feat:gory_finish#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#tongi"
+  }, {
+    "id": "feat:gory_finish#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_waraxe"
+  }, {
+    "id": "feat:gory_finish#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_double_waraxe"
+  }, {
+    "id": "feat:gory_finish#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#orc_double_axe"
+  }, {
+    "id": "feat:gory_finish#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#butchering_axe"
+  }, {
+    "id": "feat:gory_finish#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gnome_battle_ladder"
+  }, {
+    "id": "feat:gory_finish#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#boarding_gaff"
+  }, {
+    "id": "feat:gory_finish#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#chain_hammer"
+  }, {
+    "id": "feat:gory_finish#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#spiked_chain"
+  }, {
+    "id": "feat:gory_finish#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#crook"
+  }, {
+    "id": "feat:gory_finish#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#elven_curve_blade"
+  }, {
+    "id": "feat:gory_finish#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_dorn_dergar"
+  }, {
+    "id": "feat:gory_finish#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#double_spear"
+  }, {
+    "id": "feat:gory_finish#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#elven_branched_spear"
+  }, {
+    "id": "feat:gory_finish#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#fauchard"
+  }, {
+    "id": "feat:gory_finish#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dire_flail"
+  }, {
+    "id": "feat:gory_finish#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flailpole"
+  }, {
+    "id": "feat:gory_finish#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flambard"
+  }, {
+    "id": "feat:gory_finish#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flying_blade"
+  }, {
+    "id": "feat:gory_finish#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#garrote"
+  }, {
+    "id": "feat:gory_finish#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_giant_sticker"
+  }, {
+    "id": "feat:gory_finish#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gnome_hooked_hammer"
+  }, {
+    "id": "feat:gory_finish#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#harpoon"
+  }, {
+    "id": "feat:gory_finish#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_longaxe"
+  }, {
+    "id": "feat:gory_finish#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_longhammer"
+  }, {
+    "id": "feat:gory_finish#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#mancatcher"
+  }, {
+    "id": "feat:gory_finish#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#orc_skull_ram"
+  }, {
+    "id": "feat:gory_finish#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gnome_piston_maul"
+  }, {
+    "id": "feat:gory_finish#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#gnome_ripsaw_glaive"
+  }, {
+    "id": "feat:gory_finish#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#bladed_scarf"
+  }, {
+    "id": "feat:gory_finish#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#totem_spear"
+  }, {
+    "id": "feat:gory_finish#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_sphinx_hammer"
+  }, {
+    "id": "feat:gory_finish#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#switchscythe"
+  }, {
+    "id": "feat:gory_finish#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#two_bladed_sword"
+  }, {
+    "id": "feat:gory_finish#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_urgrosh"
+  }, {
+    "id": "feat:gory_finish#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#bola"
+  }, {
+    "id": "feat:gory_finish#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#brutal_bola"
+  }, {
+    "id": "feat:gory_finish#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#boomerang"
+  }, {
+    "id": "feat:gory_finish#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#thorn_bow"
+  }, {
+    "id": "feat:gory_finish#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#crank_heavy_crossbow"
+  }, {
+    "id": "feat:gory_finish#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#crank_light_crossbow"
+  }, {
+    "id": "feat:gory_finish#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#double_crossbow"
+  }, {
+    "id": "feat:gory_finish#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#hand_crossbow"
+  }, {
+    "id": "feat:gory_finish#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#launching_crossbow"
+  }, {
+    "id": "feat:gory_finish#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#repeating_heavy_crossbow"
+  }, {
+    "id": "feat:gory_finish#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#repeating_light_crossbow"
+  }, {
+    "id": "feat:gory_finish#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#flask_thrower"
+  }, {
+    "id": "feat:gory_finish#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#grappling_hook"
+  }, {
+    "id": "feat:gory_finish#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#orc_hornbow"
+  }, {
+    "id": "feat:gory_finish#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#stormshaft_javelin"
+  }, {
+    "id": "feat:gory_finish#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#lasso"
+  }, {
+    "id": "feat:gory_finish#net",
+    "name": "Net",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#net"
+  }, {
+    "id": "feat:gory_finish#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#snag_net"
+  }, {
+    "id": "feat:gory_finish#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_heavy_pelletbow"
+  }, {
+    "id": "feat:gory_finish#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#dwarven_light_pelletbow"
+  }, {
+    "id": "feat:gory_finish#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#throwing_shield"
+  }, {
+    "id": "feat:gory_finish#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#shrillshaft_javelin"
+  }, {
+    "id": "feat:gory_finish#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#shuriken_5"
+  }, {
+    "id": "feat:gory_finish#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#double_sling"
+  }, {
+    "id": "feat:gory_finish#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#sling_glove"
+  }, {
+    "id": "feat:gory_finish#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#halfling_sling_staff"
+  }, {
+    "id": "feat:gory_finish#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#stitched_sling"
+  }, {
+    "id": "feat:gory_finish#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#wrist_launcher"
+  }, {
+    "id": "feat:gory_finish#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@feat:dazzling_display AND @feat:weapon_focus#heavy_wrist_launcher"
+  }]
 }

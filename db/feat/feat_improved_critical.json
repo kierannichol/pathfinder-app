@@ -4,8 +4,856 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "Attacks made with your chosen weapon are quite deadly.",
   "prerequisites": "Proficient with weapon, base attack bonus +8.",
-  "prerequisitesFormula": "@bab \u003e\u003d 8",
   "benefit": "When using the weapon you selected, your threat range is doubled.",
   "special": "You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon. This effect doesn\u0027t stack with any other effect that expands the threat range of a weapon.",
-  "source": "PFRPG Core"
+  "source": "PFRPG Core",
+  "options": [{
+    "id": "feat:improved_critical#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#club",
+    "name": "Club",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@feat:simple_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@feat:martial_weapon_proficiency AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#aklys AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#knuckle_axe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#barbazu_beard AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#battle_poi AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#swordbreaker_dagger AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flying_talon AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_pincher AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#halfling_rope_shot AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_boulder_helmet AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#kama AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#butterfly_knife AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#deer_horn_knife AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_maulaxe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#nunchaku AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#quadrens AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#drow_razor AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#rope_gauntlet AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sawtooth_sabre AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sai AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sanpkhang AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#siangham AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sica AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#thorn_bracer AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_war_shield AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#waveblade AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#scorpion_whip AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_heavy_axe_gauntlet AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#hooked_axe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#broken_back_seax AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#estoc AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#falcata AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flickmace AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flindbar AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#khopesh AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#knobkerrie AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_ram_hammer AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#spiral_rapier AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#rhoka AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#shotel AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sickle_sword AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#split_blade_sword AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dueling_sword AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#bastard_sword AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#tongi AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_waraxe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_double_waraxe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#orc_double_axe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#butchering_axe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_battle_ladder AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#boarding_gaff AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#chain_hammer AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#spiked_chain AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#crook AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#elven_curve_blade AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_dorn_dergar AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#double_spear AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#elven_branched_spear AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#fauchard AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dire_flail AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flailpole AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flambard AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flying_blade AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#garrote AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_giant_sticker AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_hooked_hammer AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#harpoon AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_longaxe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_longhammer AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#mancatcher AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#orc_skull_ram AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_piston_maul AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#gnome_ripsaw_glaive AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#bladed_scarf AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#totem_spear AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_sphinx_hammer AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#switchscythe AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#two_bladed_sword AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_urgrosh AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#bola AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#brutal_bola AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#boomerang AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#thorn_bow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#crank_heavy_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#crank_light_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#double_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#hand_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#launching_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#repeating_heavy_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#repeating_light_crossbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#flask_thrower AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#grappling_hook AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#orc_hornbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#stormshaft_javelin AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#lasso AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#net",
+    "name": "Net",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#net AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#snag_net AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_heavy_pelletbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#dwarven_light_pelletbow AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#throwing_shield AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#shrillshaft_javelin AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#shuriken_5 AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#double_sling AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#sling_glove AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#halfling_sling_staff AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#stitched_sling AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#wrist_launcher AND @bab \u003e\u003d 8"
+  }, {
+    "id": "feat:improved_critical#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@feat:exotic_weapon_proficiency#heavy_wrist_launcher AND @bab \u003e\u003d 8"
+  }]
 }

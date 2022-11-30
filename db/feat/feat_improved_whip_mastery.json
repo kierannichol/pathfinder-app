@@ -4,7 +4,855 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "You are able to entangle opponents with the coils of your whip.",
   "prerequisites": "Weapon Focus (whip), Whip Mastery, base attack bonus +5.",
-  "prerequisitesFormula": "@feat:weapon_focus#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5 AND  !@feat:improved_whip_mastery",
   "benefit": "While wielding a whip, you threaten the area of your natural reach plus 5 feet. You can also use a whip to grasp an unattended Small or Tiny object within your whip\u0027s reach and pull that object into your square. To do so, you must hit AC 10 with a melee touch attack. Further, you can use the whip to grasp onto an object within your whip\u0027s reach, using 5 feet of your whip as if it were a grappling hook, allowing you to use the rest of your whip to swing on like a rope. As a free action, you can release the object your whip is grasping, but you cannot use the whip to attack while the whip is grasping an object.",
-  "source": "Ultimate Combat"
+  "source": "Ultimate Combat",
+  "options": [{
+    "id": "feat:improved_whip_mastery#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#gauntlet#gauntlet#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "@feat:weapon_focus#unarmed#unarmed#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "@feat:weapon_focus#battle_aspergillum#battle_aspergillum#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "@feat:weapon_focus#brass_knife#brass_knife#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "@feat:weapon_focus#brass_knuckles#brass_knuckles#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "@feat:weapon_focus#cestus#cestus#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#dagger#dagger#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#punching_dagger#punching_dagger#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#spiked_gauntlet#spiked_gauntlet#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "@feat:weapon_focus#handwraps#handwraps#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "@feat:weapon_focus#traveling_kettle#traveling_kettle#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "@feat:weapon_focus#hook_hand#hook_hand#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "@feat:weapon_focus#kunai#kunai#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "@feat:weapon_focus#light_mace#light_mace#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "@feat:weapon_focus#sickle#sickle#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "@feat:weapon_focus#spring_blade#spring_blade#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "@feat:weapon_focus#wooden_stake#wooden_stake#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#club",
+    "name": "Club",
+    "prerequisitesFormula": "@feat:weapon_focus#club#club#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "@feat:weapon_focus#mere_club#mere_club#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_mace#heavy_mace#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "@feat:weapon_focus#morningstar#morningstar#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "@feat:weapon_focus#shortspear#shortspear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "@feat:weapon_focus#bayonet#bayonet#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "@feat:weapon_focus#boarding_pike#boarding_pike#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "@feat:weapon_focus#kumade#kumade#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "@feat:weapon_focus#collapsible_kumade#collapsible_kumade#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "@feat:weapon_focus#lantern_staff#lantern_staff#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "@feat:weapon_focus#longspear#longspear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "@feat:weapon_focus#quarterstaff#quarterstaff#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#spear#spear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@feat:weapon_focus#blowgun#blowgun#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_crossbow#heavy_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#light_crossbow#light_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@feat:weapon_focus#dart#dart#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@feat:weapon_focus#javelin#javelin#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@feat:weapon_focus#sling#sling#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@feat:weapon_focus#stingchuck#stingchuck#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@feat:weapon_focus#stonebow#stonebow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#axe#axe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#throwing_axe#throwing_axe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "@feat:weapon_focus#blade_boot#blade_boot#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "@feat:weapon_focus#whip#whip#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "@feat:weapon_focus#claw_blades#claw_blades#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#dueling_dagger#dueling_dagger#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "@feat:weapon_focus#dogslicer#dogslicer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#light_hammer#light_hammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "@feat:weapon_focus#gladius#gladius#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#handaxe#handaxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "@feat:weapon_focus#katar#katar#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "@feat:weapon_focus#kukri#kukri#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "@feat:weapon_focus#machete#machete#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "@feat:weapon_focus#light_pick#light_pick#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "@feat:weapon_focus#sap#sap#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#light_shield#light_shield#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "@feat:weapon_focus#spiked_armor#spiked_armor#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#light_spiked_shield#light_spiked_shield#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "@feat:weapon_focus#starknife#starknife#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#short_sword#short_sword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "@feat:weapon_focus#war_razor#war_razor#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "@feat:weapon_focus#ankus#ankus#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#battleaxe#battleaxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "@feat:weapon_focus#combat_scabbard#combat_scabbard#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "@feat:weapon_focus#cutlass#cutlass#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "@feat:weapon_focus#light_flail#light_flail#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "@feat:weapon_focus#gandasa#gandasa#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "@feat:weapon_focus#klar#klar#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "@feat:weapon_focus#longsword#longsword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "@feat:weapon_focus#manople#manople#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_pick#heavy_pick#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "@feat:weapon_focus#rapier#rapier#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "@feat:weapon_focus#scimitar#scimitar#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "@feat:weapon_focus#scizore#scizore#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_shield#heavy_shield#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_spiked_shield#heavy_spiked_shield#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "@feat:weapon_focus#sword_cane#sword_cane#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "@feat:weapon_focus#terbutje#terbutje#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "@feat:weapon_focus#trident#trident#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "@feat:weapon_focus#warhammer#warhammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "@feat:weapon_focus#bardiche#bardiche#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "@feat:weapon_focus#bill#bill#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "@feat:weapon_focus#earth_breaker#earth_breaker#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "@feat:weapon_focus#falchion#falchion#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_flail#heavy_flail#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "@feat:weapon_focus#glaive#glaive#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "@feat:weapon_focus#greataxe#greataxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "@feat:weapon_focus#greatclub#greatclub#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "@feat:weapon_focus#greatsword#greatsword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "@feat:weapon_focus#guisarme#guisarme#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "@feat:weapon_focus#halberd#halberd#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "@feat:weapon_focus#horsechopper#horsechopper#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "@feat:weapon_focus#lance#lance#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "@feat:weapon_focus#ogre_hook#ogre_hook#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#pickaxe#pickaxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "@feat:weapon_focus#planson#planson#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "@feat:weapon_focus#ranseur#ranseur#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "@feat:weapon_focus#scythe#scythe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#syringe_spear#syringe_spear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@feat:weapon_focus#ammentum#ammentum#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@feat:weapon_focus#chakram#chakram#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@feat:weapon_focus#jolting_dart#jolting_dart#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@feat:weapon_focus#hunga_munga#hunga_munga#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@feat:weapon_focus#hurlbat#hurlbat#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@feat:weapon_focus#longbow#longbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@feat:weapon_focus#pilum#pilum#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@feat:weapon_focus#shortbow#shortbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@feat:weapon_focus#aklys#aklys#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#knuckle_axe#knuckle_axe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "@feat:weapon_focus#barbazu_beard#barbazu_beard#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "@feat:weapon_focus#battle_poi#battle_poi#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#swordbreaker_dagger#swordbreaker_dagger#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "@feat:weapon_focus#flying_talon#flying_talon#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_pincher#gnome_pincher#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "@feat:weapon_focus#halfling_rope_shot#halfling_rope_shot#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_boulder_helmet#dwarven_boulder_helmet#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "@feat:weapon_focus#kama#kama#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "@feat:weapon_focus#butterfly_knife#butterfly_knife#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "@feat:weapon_focus#deer_horn_knife#deer_horn_knife#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_maulaxe#dwarven_maulaxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "@feat:weapon_focus#nunchaku#nunchaku#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "@feat:weapon_focus#quadrens#quadrens#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "@feat:weapon_focus#drow_razor#drow_razor#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#rope_gauntlet#rope_gauntlet#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:weapon_focus#sawtooth_sabre#sawtooth_sabre#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "@feat:weapon_focus#sai#sai#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "@feat:weapon_focus#sanpkhang#sanpkhang#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "@feat:weapon_focus#siangham#siangham#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "@feat:weapon_focus#sica#sica#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "@feat:weapon_focus#thorn_bracer#thorn_bracer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_war_shield#dwarven_war_shield#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "@feat:weapon_focus#waveblade#waveblade#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "@feat:weapon_focus#scorpion_whip#scorpion_whip#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_heavy_axe_gauntlet#dwarven_heavy_axe_gauntlet#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#hooked_axe#hooked_axe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "@feat:weapon_focus#broken_back_seax#broken_back_seax#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "@feat:weapon_focus#estoc#estoc#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "@feat:weapon_focus#falcata#falcata#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "@feat:weapon_focus#flickmace#flickmace#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "@feat:weapon_focus#flindbar#flindbar#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "@feat:weapon_focus#khopesh#khopesh#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "@feat:weapon_focus#knobkerrie#knobkerrie#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_ram_hammer#dwarven_ram_hammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "@feat:weapon_focus#spiral_rapier#spiral_rapier#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "@feat:weapon_focus#rhoka#rhoka#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "@feat:weapon_focus#shotel#shotel#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "@feat:weapon_focus#sickle_sword#sickle_sword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#split_blade_sword#split_blade_sword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#dueling_sword#dueling_sword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#bastard_sword#bastard_sword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "@feat:weapon_focus#tongi#tongi#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_waraxe#dwarven_waraxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_double_waraxe#dwarven_double_waraxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#orc_double_axe#orc_double_axe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#butchering_axe#butchering_axe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_battle_ladder#gnome_battle_ladder#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "@feat:weapon_focus#boarding_gaff#boarding_gaff#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#chain_hammer#chain_hammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "@feat:weapon_focus#spiked_chain#spiked_chain#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "@feat:weapon_focus#crook#crook#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "@feat:weapon_focus#elven_curve_blade#elven_curve_blade#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_dorn_dergar#dwarven_dorn_dergar#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#double_spear#double_spear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#elven_branched_spear#elven_branched_spear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "@feat:weapon_focus#fauchard#fauchard#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "@feat:weapon_focus#dire_flail#dire_flail#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "@feat:weapon_focus#flailpole#flailpole#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "@feat:weapon_focus#flambard#flambard#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "@feat:weapon_focus#flying_blade#flying_blade#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "@feat:weapon_focus#garrote#garrote#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_giant_sticker#dwarven_giant_sticker#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_hooked_hammer#gnome_hooked_hammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "@feat:weapon_focus#harpoon#harpoon#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_longaxe#dwarven_longaxe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_longhammer#dwarven_longhammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "@feat:weapon_focus#mancatcher#mancatcher#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "@feat:weapon_focus#orc_skull_ram#orc_skull_ram#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_piston_maul#gnome_piston_maul#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_ripsaw_glaive#gnome_ripsaw_glaive#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "@feat:weapon_focus#bladed_scarf#bladed_scarf#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#totem_spear#totem_spear#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_sphinx_hammer#dwarven_sphinx_hammer#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "@feat:weapon_focus#switchscythe#switchscythe#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#two_bladed_sword#two_bladed_sword#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_urgrosh#dwarven_urgrosh#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@feat:weapon_focus#bola#bola#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@feat:weapon_focus#brutal_bola#brutal_bola#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@feat:weapon_focus#boomerang#boomerang#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@feat:weapon_focus#thorn_bow#thorn_bow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#crank_heavy_crossbow#crank_heavy_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#crank_light_crossbow#crank_light_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#double_crossbow#double_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#hand_crossbow#hand_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#launching_crossbow#launching_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#repeating_heavy_crossbow#repeating_heavy_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#repeating_light_crossbow#repeating_light_crossbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@feat:weapon_focus#flask_thrower#flask_thrower#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@feat:weapon_focus#grappling_hook#grappling_hook#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@feat:weapon_focus#orc_hornbow#orc_hornbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@feat:weapon_focus#stormshaft_javelin#stormshaft_javelin#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@feat:weapon_focus#lasso#lasso#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#net",
+    "name": "Net",
+    "prerequisitesFormula": "@feat:weapon_focus#net#net#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@feat:weapon_focus#snag_net#snag_net#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_heavy_pelletbow#dwarven_heavy_pelletbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_light_pelletbow#dwarven_light_pelletbow#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#throwing_shield#throwing_shield#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@feat:weapon_focus#shrillshaft_javelin#shrillshaft_javelin#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@feat:weapon_focus#shuriken_5#shuriken_5#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@feat:weapon_focus#double_sling#double_sling#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@feat:weapon_focus#sling_glove#sling_glove#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@feat:weapon_focus#halfling_sling_staff#halfling_sling_staff#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@feat:weapon_focus#stitched_sling#stitched_sling#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@feat:weapon_focus#wrist_launcher#wrist_launcher#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:improved_whip_mastery#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_wrist_launcher#heavy_wrist_launcher#whip AND @feat:whip_mastery AND @bab \u003e\u003d 5"
+  }]
 }

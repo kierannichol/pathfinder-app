@@ -4,8 +4,856 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "You are a master of stage and nonlethal combats.",
   "prerequisites": "Weapon Focus, base attack bonus +5",
-  "prerequisitesFormula": "@feat:weapon_focus AND @bab \u003e\u003d 5 AND  !@feat:stage_combatant",
   "benefit": "When you make an attack with a weapon that you have Weapon Focus in, you take no penalty on the attack roll when you are attempting to make an attack that deals no damage or nonlethal damage.",
   "normal": "When making attacks that deal no damage or nonlethal damage, you take a -4 penalty on attack rolls.",
-  "source": "Ultimate Combat"
+  "source": "Ultimate Combat",
+  "options": [{
+    "id": "feat:stage_combatant#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#gauntlet AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "@feat:weapon_focus#unarmed AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "@feat:weapon_focus#battle_aspergillum AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "@feat:weapon_focus#brass_knife AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "@feat:weapon_focus#brass_knuckles AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "@feat:weapon_focus#cestus AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#dagger AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#punching_dagger AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#spiked_gauntlet AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "@feat:weapon_focus#handwraps AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "@feat:weapon_focus#traveling_kettle AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "@feat:weapon_focus#hook_hand AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "@feat:weapon_focus#kunai AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "@feat:weapon_focus#light_mace AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "@feat:weapon_focus#sickle AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "@feat:weapon_focus#spring_blade AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "@feat:weapon_focus#wooden_stake AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#club",
+    "name": "Club",
+    "prerequisitesFormula": "@feat:weapon_focus#club AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "@feat:weapon_focus#mere_club AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_mace AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "@feat:weapon_focus#morningstar AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "@feat:weapon_focus#shortspear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "@feat:weapon_focus#bayonet AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "@feat:weapon_focus#boarding_pike AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "@feat:weapon_focus#kumade AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "@feat:weapon_focus#collapsible_kumade AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "@feat:weapon_focus#lantern_staff AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "@feat:weapon_focus#longspear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "@feat:weapon_focus#quarterstaff AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#spear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@feat:weapon_focus#blowgun AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#light_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@feat:weapon_focus#dart AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@feat:weapon_focus#javelin AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@feat:weapon_focus#sling AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@feat:weapon_focus#stingchuck AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@feat:weapon_focus#stonebow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#axe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#throwing_axe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "@feat:weapon_focus#blade_boot AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "@feat:weapon_focus#whip AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "@feat:weapon_focus#claw_blades AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#dueling_dagger AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "@feat:weapon_focus#dogslicer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#light_hammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "@feat:weapon_focus#gladius AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#handaxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "@feat:weapon_focus#katar AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "@feat:weapon_focus#kukri AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "@feat:weapon_focus#machete AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "@feat:weapon_focus#light_pick AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "@feat:weapon_focus#sap AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#light_shield AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "@feat:weapon_focus#spiked_armor AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#light_spiked_shield AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "@feat:weapon_focus#starknife AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#short_sword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "@feat:weapon_focus#war_razor AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "@feat:weapon_focus#ankus AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#battleaxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "@feat:weapon_focus#combat_scabbard AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "@feat:weapon_focus#cutlass AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "@feat:weapon_focus#light_flail AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "@feat:weapon_focus#gandasa AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "@feat:weapon_focus#klar AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "@feat:weapon_focus#longsword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "@feat:weapon_focus#manople AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_pick AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "@feat:weapon_focus#rapier AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "@feat:weapon_focus#scimitar AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "@feat:weapon_focus#scizore AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_shield AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_spiked_shield AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "@feat:weapon_focus#sword_cane AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "@feat:weapon_focus#terbutje AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "@feat:weapon_focus#trident AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "@feat:weapon_focus#warhammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "@feat:weapon_focus#bardiche AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "@feat:weapon_focus#bill AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "@feat:weapon_focus#earth_breaker AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "@feat:weapon_focus#falchion AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_flail AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "@feat:weapon_focus#glaive AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "@feat:weapon_focus#greataxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "@feat:weapon_focus#greatclub AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "@feat:weapon_focus#greatsword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "@feat:weapon_focus#guisarme AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "@feat:weapon_focus#halberd AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "@feat:weapon_focus#horsechopper AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "@feat:weapon_focus#lance AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "@feat:weapon_focus#ogre_hook AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#pickaxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "@feat:weapon_focus#planson AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "@feat:weapon_focus#ranseur AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "@feat:weapon_focus#scythe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#syringe_spear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@feat:weapon_focus#ammentum AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@feat:weapon_focus#chakram AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@feat:weapon_focus#jolting_dart AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@feat:weapon_focus#hunga_munga AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@feat:weapon_focus#hurlbat AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@feat:weapon_focus#longbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@feat:weapon_focus#pilum AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@feat:weapon_focus#shortbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@feat:weapon_focus#aklys AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#knuckle_axe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "@feat:weapon_focus#barbazu_beard AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "@feat:weapon_focus#battle_poi AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "@feat:weapon_focus#swordbreaker_dagger AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "@feat:weapon_focus#flying_talon AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_pincher AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "@feat:weapon_focus#halfling_rope_shot AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_boulder_helmet AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "@feat:weapon_focus#kama AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "@feat:weapon_focus#butterfly_knife AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "@feat:weapon_focus#deer_horn_knife AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_maulaxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "@feat:weapon_focus#nunchaku AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "@feat:weapon_focus#quadrens AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "@feat:weapon_focus#drow_razor AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#rope_gauntlet AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "@feat:weapon_focus#sawtooth_sabre AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "@feat:weapon_focus#sai AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "@feat:weapon_focus#sanpkhang AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "@feat:weapon_focus#siangham AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "@feat:weapon_focus#sica AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "@feat:weapon_focus#thorn_bracer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_war_shield AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "@feat:weapon_focus#waveblade AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "@feat:weapon_focus#scorpion_whip AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_heavy_axe_gauntlet AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#hooked_axe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "@feat:weapon_focus#broken_back_seax AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "@feat:weapon_focus#estoc AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "@feat:weapon_focus#falcata AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "@feat:weapon_focus#flickmace AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "@feat:weapon_focus#flindbar AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "@feat:weapon_focus#khopesh AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "@feat:weapon_focus#knobkerrie AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_ram_hammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "@feat:weapon_focus#spiral_rapier AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "@feat:weapon_focus#rhoka AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "@feat:weapon_focus#shotel AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "@feat:weapon_focus#sickle_sword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#split_blade_sword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#dueling_sword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#bastard_sword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "@feat:weapon_focus#tongi AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_waraxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_double_waraxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#orc_double_axe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "@feat:weapon_focus#butchering_axe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_battle_ladder AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "@feat:weapon_focus#boarding_gaff AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#chain_hammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "@feat:weapon_focus#spiked_chain AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "@feat:weapon_focus#crook AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "@feat:weapon_focus#elven_curve_blade AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_dorn_dergar AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#double_spear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#elven_branched_spear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "@feat:weapon_focus#fauchard AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "@feat:weapon_focus#dire_flail AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "@feat:weapon_focus#flailpole AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "@feat:weapon_focus#flambard AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "@feat:weapon_focus#flying_blade AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "@feat:weapon_focus#garrote AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_giant_sticker AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_hooked_hammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "@feat:weapon_focus#harpoon AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_longaxe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_longhammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "@feat:weapon_focus#mancatcher AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "@feat:weapon_focus#orc_skull_ram AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_piston_maul AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "@feat:weapon_focus#gnome_ripsaw_glaive AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "@feat:weapon_focus#bladed_scarf AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "@feat:weapon_focus#totem_spear AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_sphinx_hammer AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "@feat:weapon_focus#switchscythe AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "@feat:weapon_focus#two_bladed_sword AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_urgrosh AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@feat:weapon_focus#bola AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@feat:weapon_focus#brutal_bola AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@feat:weapon_focus#boomerang AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@feat:weapon_focus#thorn_bow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#crank_heavy_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#crank_light_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#double_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#hand_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#launching_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#repeating_heavy_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@feat:weapon_focus#repeating_light_crossbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@feat:weapon_focus#flask_thrower AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@feat:weapon_focus#grappling_hook AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@feat:weapon_focus#orc_hornbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@feat:weapon_focus#stormshaft_javelin AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@feat:weapon_focus#lasso AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#net",
+    "name": "Net",
+    "prerequisitesFormula": "@feat:weapon_focus#net AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@feat:weapon_focus#snag_net AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_heavy_pelletbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@feat:weapon_focus#dwarven_light_pelletbow AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@feat:weapon_focus#throwing_shield AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@feat:weapon_focus#shrillshaft_javelin AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@feat:weapon_focus#shuriken_5 AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@feat:weapon_focus#double_sling AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@feat:weapon_focus#sling_glove AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@feat:weapon_focus#halfling_sling_staff AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@feat:weapon_focus#stitched_sling AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@feat:weapon_focus#wrist_launcher AND @bab \u003e\u003d 5"
+  }, {
+    "id": "feat:stage_combatant#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@feat:weapon_focus#heavy_wrist_launcher AND @bab \u003e\u003d 5"
+  }]
 }
