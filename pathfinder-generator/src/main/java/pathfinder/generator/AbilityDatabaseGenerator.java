@@ -15,10 +15,10 @@ import pathfinder.data.v2.AbilityDatabaseDbo;
 import pathfinder.data.v2.AbilitySummaryDbo;
 import pathfinder.generator.db.AbilitySourceDatabase;
 import pathfinder.generator.encode.AbilityTypeEncoder;
-import pathfinder.generator.model.Ability;
-import pathfinder.generator.model.Ability.Type;
-import pathfinder.generator.model.CharacterClass;
-import pathfinder.generator.spring.OutputPathValue;
+import pathfinder.model.Ability;
+import pathfinder.model.Ability.Type;
+import pathfinder.model.CharacterClass;
+import pathfinder.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 
 @Service("Ability Database Generator")

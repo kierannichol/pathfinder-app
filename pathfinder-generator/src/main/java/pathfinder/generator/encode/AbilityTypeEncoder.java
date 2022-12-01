@@ -2,8 +2,8 @@ package pathfinder.generator.encode;
 
 import org.springframework.stereotype.Component;
 import pathfinder.data.v2.AbilityTypeDbo;
-import pathfinder.generator.model.Ability;
-import pathfinder.generator.model.Ability.Type;
+import pathfinder.model.Ability;
+import pathfinder.model.Ability.Type;
 
 @Component("Ability Type Encoder")
 public class AbilityTypeEncoder implements Encoder<Ability.Type, AbilityTypeDbo> {

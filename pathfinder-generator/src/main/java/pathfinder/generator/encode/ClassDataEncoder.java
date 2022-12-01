@@ -5,8 +5,8 @@ import pathfinder.data.v2.ClassCategoryDbo;
 import pathfinder.data.v2.ClassDataDbo;
 import pathfinder.data.v2.ClassLevelDbo;
 import pathfinder.data.v2.SpecialDbo;
-import pathfinder.generator.model.CharacterClass;
-import pathfinder.generator.model.Special;
+import pathfinder.model.CharacterClass;
+import pathfinder.model.Special;
 
 @Component("Character Class Data Encoder")
 public class ClassDataEncoder implements Encoder<CharacterClass, ClassDataDbo> {

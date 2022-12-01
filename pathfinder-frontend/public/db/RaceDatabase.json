@@ -1,42 +1,283 @@
 {
   "raceSummaries": [{
+    "id": "race:dwarf",
+    "name": "Dwarf",
+    "size": 5,
+    "type": "Humanoid (dwarf)",
+    "speed": 20,
+    "languages": ["Common", " Dwarven"]
+  }, {
     "id": "race:elf",
     "name": "Elf",
     "size": 5,
-    "type": "humanoid:elf",
+    "type": "Humanoid (elf)",
     "speed": 30,
-    "languages": ["Common", "Elven"],
-    "traits": ["trait:dex_plus_2", "trait:int_plus_2", "trait:con_minus_2"]
+    "languages": ["Common", " Elven"]
   }, {
     "id": "race:gnome",
     "name": "Gnome",
     "size": 4,
-    "type": "humanoid:gnome",
+    "type": "Humanoid (gnome)",
     "speed": 20,
-    "languages": ["Common", "Gnome", "Sylvan"],
-    "traits": ["trait:con_plus_2", "trait:cha_plus_2", "trait:str_minus_2"]
+    "languages": ["Common", " Gnome", " Sylvan"]
   }, {
-    "id": "race:dwarf",
-    "name": "Dwarf",
+    "id": "race:half_elf",
+    "name": "Half-elf",
     "size": 5,
-    "type": "humanoid:dwarf",
+    "type": "Humanoid (elf, human)",
+    "speed": 30,
+    "languages": ["Common", " Elven"]
+  }, {
+    "id": "race:halfling",
+    "name": "Halfling",
+    "size": 4,
+    "type": "Humanoid (halfling)",
     "speed": 20,
-    "languages": ["Common", "Dwarven"],
-    "traits": ["trait:con_plus_2", "trait:wis_plus_2", "trait:cha_minus_2", "ability:darkvision", "ability:defensive_traiting", "ability:hardy", "ability:stability", "ability:greed", "ability:stonecunning", "proficiency:battleaxe", "proficiency:heavy_pick", "proficiency:warhammer"]
+    "languages": ["Common", " Halfling"]
+  }, {
+    "id": "race:half_orc",
+    "name": "Half-orc",
+    "size": 5,
+    "type": "Humanoid (human, orc)",
+    "speed": 30,
+    "languages": ["Common", " Orc"]
   }, {
     "id": "race:human",
     "name": "Human",
     "size": 5,
-    "type": "humanoid:human",
-    "speed": 30,
-    "languages": ["Common"],
-    "traits": ["choice:bonus_feat", "choice:asi_2"]
-  }, {
-    "id": "race:half_orc",
-    "name": "Half-Orc",
-    "size": 5,
-    "type": "humanoid:orc",
+    "type": "Humanoid (human)",
     "speed": 30,
     "languages": ["Common"]
+  }, {
+    "id": "race:aasimar",
+    "name": "Aasimar",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common", " Celestial"]
+  }, {
+    "id": "race:catfolk",
+    "name": "Catfolk",
+    "size": 5,
+    "type": "Humanoid (catfolk)",
+    "speed": 30,
+    "languages": ["Common", " Catfolk"]
+  }, {
+    "id": "race:dhampir",
+    "name": "Dhampir",
+    "size": 5,
+    "type": "Humanoid (dhampir)",
+    "speed": 30,
+    "languages": ["Common"]
+  }, {
+    "id": "race:drow",
+    "name": "Drow",
+    "size": 5,
+    "type": "Humanoid (elf)",
+    "speed": 30,
+    "languages": ["Elven", " Undercommon"]
+  }, {
+    "id": "race:fetchling",
+    "name": "Fetchling",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common"]
+  }, {
+    "id": "race:goblin",
+    "name": "Goblin",
+    "size": 4,
+    "type": "Humanoid (goblinoid)",
+    "speed": 30,
+    "languages": ["Goblin"]
+  }, {
+    "id": "race:hobgoblin",
+    "name": "Hobgoblin",
+    "size": 5,
+    "type": "Humanoid (goblinoid)",
+    "speed": 30,
+    "languages": ["Common", " Goblin"]
+  }, {
+    "id": "race:ifrit",
+    "name": "Ifrit",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common", " Ignan"]
+  }, {
+    "id": "race:kobold",
+    "name": "Kobold",
+    "size": 4,
+    "type": "Humanoid (reptilian)",
+    "speed": 30,
+    "languages": ["Draconic"]
+  }, {
+    "id": "race:orc",
+    "name": "Orc",
+    "size": 5,
+    "type": "Humanoid (orc)",
+    "speed": 30,
+    "languages": ["Common", " Orc"]
+  }, {
+    "id": "race:oread",
+    "name": "Oread",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 20,
+    "languages": ["Common", " Terran"]
+  }, {
+    "id": "race:ratfolk",
+    "name": "Ratfolk",
+    "size": 4,
+    "type": "Humanoid (ratfolk)",
+    "speed": 20,
+    "languages": ["Common"]
+  }, {
+    "id": "race:sylph",
+    "name": "Sylph",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common", " Auran"]
+  }, {
+    "id": "race:tengu",
+    "name": "Tengu",
+    "size": 5,
+    "type": "Humanoid (tengu)",
+    "speed": 30,
+    "languages": ["Common", " Tengu"]
+  }, {
+    "id": "race:tiefling",
+    "name": "Tiefling",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common", " Abyssal or Infernal"]
+  }, {
+    "id": "race:undine",
+    "name": "Undine",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common", " Aquan"]
+  }, {
+    "id": "race:changeling",
+    "name": "Changeling",
+    "size": 5,
+    "type": "Humanoid (changeling)",
+    "speed": 30,
+    "languages": ["Common"]
+  }, {
+    "id": "race:duergar",
+    "name": "Duergar",
+    "size": 5,
+    "type": "Humanoid (dwarf)",
+    "speed": 20,
+    "languages": ["Common", " Dwarven", " Undercommon"]
+  }, {
+    "id": "race:gillman",
+    "name": "Gillman",
+    "size": 5,
+    "type": "Humanoid (aquatic)",
+    "speed": 30,
+    "languages": ["Common", " Aboleth"]
+  }, {
+    "id": "race:grippli",
+    "name": "Grippli",
+    "size": 4,
+    "type": "Humanoid (grippli)",
+    "speed": 30,
+    "languages": ["Common", " Grippli"]
+  }, {
+    "id": "race:kitsune",
+    "name": "Kitsune",
+    "size": 5,
+    "type": "Humanoid (kitsune, shapechanger)",
+    "speed": 30,
+    "languages": ["Common", " Sylvan"]
+  }, {
+    "id": "race:merfolk",
+    "name": "Merfolk",
+    "size": 5,
+    "type": "Humanoid (aquatic)",
+    "speed": 5,
+    "languages": ["Common", " Aquan"]
+  }, {
+    "id": "race:nagaji",
+    "name": "Nagaji",
+    "size": 5,
+    "type": "Humanoid (reptilian)",
+    "speed": 30,
+    "languages": ["Common", " Draconic"]
+  }, {
+    "id": "race:samsaran",
+    "name": "Samsaran",
+    "size": 5,
+    "type": "Humanoid (samsaran)",
+    "speed": 30,
+    "languages": ["Common", " Samsaran"]
+  }, {
+    "id": "race:strix",
+    "name": "Strix",
+    "size": 5,
+    "type": "Humanoid (strix)",
+    "speed": 30,
+    "languages": ["Strix"]
+  }, {
+    "id": "race:suli",
+    "name": "Suli",
+    "size": 5,
+    "type": "Outsider (native)",
+    "speed": 30,
+    "languages": ["Common", " 1 elemental (Aquan", " Auran", " Ignan", " or Terran)"]
+  }, {
+    "id": "race:svirfneblin",
+    "name": "Svirfneblin",
+    "size": 4,
+    "type": "Humanoid (gnome)",
+    "speed": 20,
+    "languages": ["Gnome", " Undercommon"]
+  }, {
+    "id": "race:vanara",
+    "name": "Vanara",
+    "size": 5,
+    "type": "Humanoid (vanara)",
+    "speed": 30,
+    "languages": ["Common", " Vanaran"]
+  }, {
+    "id": "race:android",
+    "name": "Android",
+    "size": 5,
+    "type": "Humanoid (android)",
+    "speed": 30,
+    "languages": ["Common"]
+  }, {
+    "id": "race:ghoran",
+    "name": "Ghoran",
+    "size": 5,
+    "type": "Plant",
+    "speed": 30,
+    "languages": ["Common", " Sylvan"]
+  }, {
+    "id": "race:monkey_goblin",
+    "name": "Monkey Goblin",
+    "size": 4,
+    "type": "Humanoid",
+    "speed": 20,
+    "languages": ["Goblin"]
+  }, {
+    "id": "race:lashunta",
+    "name": "Lashunta",
+    "size": 5,
+    "type": "Humanoid",
+    "speed": 30,
+    "languages": ["Elven", " Lashunta"]
+  }, {
+    "id": "race:wyvaran",
+    "name": "Wyvaran",
+    "size": 5,
+    "type": "Dragon",
+    "speed": 30,
+    "languages": ["Common", " Draconic"]
   }]
 }

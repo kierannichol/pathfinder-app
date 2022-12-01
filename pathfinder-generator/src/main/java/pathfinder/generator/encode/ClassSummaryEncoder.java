@@ -3,7 +3,7 @@ package pathfinder.generator.encode;
 import org.springframework.stereotype.Component;
 import pathfinder.data.v2.ClassCategoryDbo;
 import pathfinder.data.v2.ClassSummaryDbo;
-import pathfinder.generator.model.CharacterClass;
+import pathfinder.model.CharacterClass;
 
 @Component("Character Class Summary Encoder")
 public class ClassSummaryEncoder implements Encoder<CharacterClass, ClassSummaryDbo> {

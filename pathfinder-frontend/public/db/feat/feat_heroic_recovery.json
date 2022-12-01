@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You can throw off the effects of crippling conditions.",
   "prerequisites": "Diehard, Endurance, base Fortitude save +4.",
-  "prerequisitesFormula": "@feat:diehard AND @feat:endurance AND @fort_save \u003e\u003d 4 AND  !@feat:heroic_recovery",
+  "prerequisitesFormula": "@feat:diehard AND @ability:endurance AND @fort:base \u003e\u003d 4",
   "benefit": "Once per day as a standard action you may attempt a new saving throw against a harmful condition or aff liction requiring a Fortitude save that is affecting you. If this save against the aff liction fails, there is no additional effect, but a successful save counts toward curing an aff liction such as poison or disease. You cannot use this feat to recover from instantaneous effects, effects that do not allow a saving throw, or effects that do not require a Fortitude save.",
   "source": "Advanced Player\u0027s Guide"
 }

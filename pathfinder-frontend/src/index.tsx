@@ -7,7 +7,7 @@ import {CharacterRepositoryContextProvider} from "./app/reactCharacter";
 import {PathfinderDatabaseContextProvider} from "./database/v2/PathfinderDatabase";
 import './index.css';
 import reportWebVitals from "./reportWebVitals";
-import CharacterEditRoute from "./routes/characterEdit";
+import CharacterEditRoute, {characterEditLoader} from "./routes/characterEdit";
 import CharacterListRoute from "./routes/characterList";
 import CharacterSheetV2Route, {characterSheetV2Loader} from "./routes/characterSheetV2";
 import {loginLoader, LoginRoute} from "./routes/loginRoute";
@@ -33,7 +33,8 @@ const routes = [
       },
       {
         path: "character/edit/:id",
-        element: <CharacterEditRoute />
+        element: <CharacterEditRoute />,
+        loader: characterEditLoader
       }
     ]
   },

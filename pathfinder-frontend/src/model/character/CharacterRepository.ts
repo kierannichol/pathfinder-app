@@ -76,7 +76,9 @@ class CharacterRepository {
 
   public async create(): Promise<Character> {
     const characters = await this.list()
-    const nextId = characters.length + 1;
+    const nextId = characters
+        .map(character => parseInt(character.id))
+        .reduce((a, b) => Math.max(a, b)) + 1;
     const created = new Character(`${nextId}`, List(initialChoices), this.processors);
     await this.save(created);
     this.cache = undefined;

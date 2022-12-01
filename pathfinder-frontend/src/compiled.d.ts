@@ -477,6 +477,9 @@ export namespace v2 {
 
         /** AbilitySummaryDbo prerequisitesFormula */
         prerequisitesFormula?: (string|null);
+
+        /** AbilitySummaryDbo benefit */
+        benefit?: (string|null);
     }
 
     /** Represents an AbilitySummaryDbo. */
@@ -499,6 +502,9 @@ export namespace v2 {
 
         /** AbilitySummaryDbo prerequisitesFormula. */
         public prerequisitesFormula: string;
+
+        /** AbilitySummaryDbo benefit. */
+        public benefit: string;
 
         /**
          * Creates a new AbilitySummaryDbo instance using the specified properties.
@@ -603,6 +609,9 @@ export namespace v2 {
 
         /** AbilityDataDbo description */
         description?: (string|null);
+
+        /** AbilityDataDbo benefit */
+        benefit?: (string|null);
     }
 
     /** Represents an AbilityDataDbo. */
@@ -628,6 +637,9 @@ export namespace v2 {
 
         /** AbilityDataDbo description. */
         public description: string;
+
+        /** AbilityDataDbo benefit. */
+        public benefit: string;
 
         /**
          * Creates a new AbilityDataDbo instance using the specified properties.

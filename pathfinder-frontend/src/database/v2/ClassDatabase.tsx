@@ -32,6 +32,7 @@ export class CharacterClassDatabase {
   }
 
   public summary(id: string): CharacterClassSummary | undefined {
+    console.log("Looking for class for " + id + " found " + this.data[id])
     return this.data[id];
   }
 

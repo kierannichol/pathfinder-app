@@ -1228,6 +1228,7 @@ $root.v2 = (function() {
          * @property {string|null} [name] AbilitySummaryDbo name
          * @property {v2.AbilityTypeDbo|null} [type] AbilitySummaryDbo type
          * @property {string|null} [prerequisitesFormula] AbilitySummaryDbo prerequisitesFormula
+         * @property {string|null} [benefit] AbilitySummaryDbo benefit
          */
 
         /**
@@ -1278,6 +1279,14 @@ $root.v2 = (function() {
         AbilitySummaryDbo.prototype.prerequisitesFormula = "";
 
         /**
+         * AbilitySummaryDbo benefit.
+         * @member {string} benefit
+         * @memberof v2.AbilitySummaryDbo
+         * @instance
+         */
+        AbilitySummaryDbo.prototype.benefit = "";
+
+        /**
          * Creates a new AbilitySummaryDbo instance using the specified properties.
          * @function create
          * @memberof v2.AbilitySummaryDbo
@@ -1309,6 +1318,8 @@ $root.v2 = (function() {
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.type);
             if (message.prerequisitesFormula != null && Object.hasOwnProperty.call(message, "prerequisitesFormula"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.prerequisitesFormula);
+            if (message.benefit != null && Object.hasOwnProperty.call(message, "benefit"))
+                writer.uint32(/* id 5, wireType 2 =*/42).string(message.benefit);
             return writer;
         };
 
@@ -1357,6 +1368,10 @@ $root.v2 = (function() {
                     }
                 case 4: {
                         message.prerequisitesFormula = reader.string();
+                        break;
+                    }
+                case 5: {
+                        message.benefit = reader.string();
                         break;
                     }
                 default:
@@ -1413,6 +1428,9 @@ $root.v2 = (function() {
             if (message.prerequisitesFormula != null && message.hasOwnProperty("prerequisitesFormula"))
                 if (!$util.isString(message.prerequisitesFormula))
                     return "prerequisitesFormula: string expected";
+            if (message.benefit != null && message.hasOwnProperty("benefit"))
+                if (!$util.isString(message.benefit))
+                    return "benefit: string expected";
             return null;
         };
 
@@ -1458,6 +1476,8 @@ $root.v2 = (function() {
             }
             if (object.prerequisitesFormula != null)
                 message.prerequisitesFormula = String(object.prerequisitesFormula);
+            if (object.benefit != null)
+                message.benefit = String(object.benefit);
             return message;
         };
 
@@ -1479,6 +1499,7 @@ $root.v2 = (function() {
                 object.name = "";
                 object.type = options.enums === String ? "ABILITY_TYPE_NONE" : 0;
                 object.prerequisitesFormula = "";
+                object.benefit = "";
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -1488,6 +1509,8 @@ $root.v2 = (function() {
                 object.type = options.enums === String ? $root.v2.AbilityTypeDbo[message.type] === undefined ? message.type : $root.v2.AbilityTypeDbo[message.type] : message.type;
             if (message.prerequisitesFormula != null && message.hasOwnProperty("prerequisitesFormula"))
                 object.prerequisitesFormula = message.prerequisitesFormula;
+            if (message.benefit != null && message.hasOwnProperty("benefit"))
+                object.benefit = message.benefit;
             return object;
         };
 
@@ -1549,6 +1572,7 @@ $root.v2 = (function() {
          * @property {v2.AbilityTypeDbo|null} [type] AbilityDataDbo type
          * @property {string|null} [prerequisitesFormula] AbilityDataDbo prerequisitesFormula
          * @property {string|null} [description] AbilityDataDbo description
+         * @property {string|null} [benefit] AbilityDataDbo benefit
          */
 
         /**
@@ -1607,6 +1631,14 @@ $root.v2 = (function() {
         AbilityDataDbo.prototype.description = "";
 
         /**
+         * AbilityDataDbo benefit.
+         * @member {string} benefit
+         * @memberof v2.AbilityDataDbo
+         * @instance
+         */
+        AbilityDataDbo.prototype.benefit = "";
+
+        /**
          * Creates a new AbilityDataDbo instance using the specified properties.
          * @function create
          * @memberof v2.AbilityDataDbo
@@ -1640,6 +1672,8 @@ $root.v2 = (function() {
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.prerequisitesFormula);
             if (message.description != null && Object.hasOwnProperty.call(message, "description"))
                 writer.uint32(/* id 5, wireType 2 =*/42).string(message.description);
+            if (message.benefit != null && Object.hasOwnProperty.call(message, "benefit"))
+                writer.uint32(/* id 6, wireType 2 =*/50).string(message.benefit);
             return writer;
         };
 
@@ -1692,6 +1726,10 @@ $root.v2 = (function() {
                     }
                 case 5: {
                         message.description = reader.string();
+                        break;
+                    }
+                case 6: {
+                        message.benefit = reader.string();
                         break;
                     }
                 default:
@@ -1751,6 +1789,9 @@ $root.v2 = (function() {
             if (message.description != null && message.hasOwnProperty("description"))
                 if (!$util.isString(message.description))
                     return "description: string expected";
+            if (message.benefit != null && message.hasOwnProperty("benefit"))
+                if (!$util.isString(message.benefit))
+                    return "benefit: string expected";
             return null;
         };
 
@@ -1798,6 +1839,8 @@ $root.v2 = (function() {
                 message.prerequisitesFormula = String(object.prerequisitesFormula);
             if (object.description != null)
                 message.description = String(object.description);
+            if (object.benefit != null)
+                message.benefit = String(object.benefit);
             return message;
         };
 
@@ -1820,6 +1863,7 @@ $root.v2 = (function() {
                 object.type = options.enums === String ? "ABILITY_TYPE_NONE" : 0;
                 object.prerequisitesFormula = "";
                 object.description = "";
+                object.benefit = "";
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -1831,6 +1875,8 @@ $root.v2 = (function() {
                 object.prerequisitesFormula = message.prerequisitesFormula;
             if (message.description != null && message.hasOwnProperty("description"))
                 object.description = message.description;
+            if (message.benefit != null && message.hasOwnProperty("benefit"))
+                object.benefit = message.benefit;
             return object;
         };
 

@@ -1,14 +1,25 @@
 import {Ability, AbilitySummary} from "./Ability";
 import Type = Ability.Type;
 
+function prerequisiteCombine(...clauses: string[]): string {
+  return clauses
+    .filter(x => x !== '')
+    .map(segment => "(" + segment + ")")
+    .join(" AND ");
+}
+
 export class FeatSummary extends AbilitySummary {
 
   public constructor(public readonly id: string,
                      public readonly name: string,
                      public readonly types: Feat.Type[],
-                     public readonly prerequisites_formula: string,
+                     public readonly feat_prerequisites_formula: string,
                      public readonly options: Feat.Option[]) {
-    super(id, name, Type.None, prerequisites_formula);
+    super(id, name, Type.None, prerequisiteCombine(feat_prerequisites_formula, "!@" + id));
+  }
+
+  optionsAsSummaries(): FeatSummary[] {
+    return this.options.map(option => option.toFeatSummary(this));
   }
 
   displayName(): string {
@@ -55,9 +66,9 @@ export class Feat extends FeatSummary {
                       public readonly normal: string,
                       public readonly special: string,
                       public readonly note: string,
-                      public readonly prerequisites_formula: string,
+                      public readonly feat_prerequisites_formula: string,
                       public readonly options: Feat.Option[]) {
-    super(id, name, types, prerequisites_formula, options);
+    super(id, name, types, feat_prerequisites_formula, options);
   }
 }
 
@@ -85,11 +96,9 @@ export namespace Feat {
     }
 
     public toFeatSummary(parent: FeatSummary): FeatSummary {
-      const prerequisitesFormulaText = [ parent.prerequisites_formula,
-        this.prerequisites_formula,
-        `!@${this.id}` ]
-        .filter(x => x !== '')
-        .join(" AND ");
+      const prerequisitesFormulaText = prerequisiteCombine(
+          parent.feat_prerequisites_formula,
+          this.prerequisites_formula);
 
       return new FeatSummary(this.id,
           parent.name + ': ' + this.name,
@@ -99,11 +108,9 @@ export namespace Feat {
     }
 
     public toFeat(parent: Feat): Feat {
-      const prerequisitesFormulaText = [ parent.prerequisites_formula,
-        this.prerequisites_formula,
-        `!@${this.id}` ]
-      .filter(x => x !== '')
-      .join(" AND ");
+      const prerequisitesFormulaText = prerequisiteCombine(
+          parent.feat_prerequisites_formula,
+          this.prerequisites_formula);
 
       return new Feat(this.id,
           parent.name + ': ' + this.name,

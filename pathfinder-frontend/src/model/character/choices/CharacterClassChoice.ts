@@ -13,6 +13,7 @@ import FeatChoice from "./FeatChoice";
 import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 import MercyChoice from "./MercyChoice";
 import RagePowerChoice from "./RagePowerChoice";
+import RogueTalentChoice from "./RogueTalentChoice";
 import SkillPointChoice from "./SkillPointChoice";
 import Special = CharacterClass.Special;
 
@@ -139,6 +140,7 @@ export class CharacterClassChoiceProcessor implements ICharacterChoiceProcessor<
       case 'ability:bonus_feat': return new FeatChoice(level, `level${level}:${classId}_bonus_feat`, choice.key, [ ChoiceTag.BONUS ]);
       case 'ability:mercy': return MercyChoice.of(level, classId, choice.key);
       case 'ability:rage_power': return RagePowerChoice.of(level, choice.key);
+      case 'ability:rogue_talent': return RogueTalentChoice.of(level, choice.key);
       default:
         return new AdditiveTrait(special.id, 1, level);
     }

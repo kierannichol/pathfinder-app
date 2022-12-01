@@ -2,18 +2,56 @@ import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {ReactNode, useEffect, useMemo, useState} from "react";
 import {Alert, Button, Modal, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
+import * as pfutils from "../../../util/pfutils";
 import {PathfinderButtonVariants} from "../../common/PathfinderButton";
-import PathfinderSelect from "../../common/PathfinderSelect";
 import SearchBar from "../base/SearchBar";
+import ChoiceSelectorList from "./ChoiceSelectorList";
 import styles from "./Dialog.module.scss";
 
 export class ChoiceSelectorOption {
+  private cachedIsValid: boolean|undefined;
+
   constructor(public readonly id: string,
               public readonly name: string,
-              public readonly isValid: boolean,
+              private readonly isValidFn: boolean|(() => boolean),
               public readonly category: string|string[],
               public readonly description?: ReactNode,
               public readonly descriptionFn?: () => Promise<ReactNode>) {
+  }
+
+  public get isValid(): boolean {
+    if (this.cachedIsValid === undefined) {
+      this.cachedIsValid = typeof this.isValidFn === "boolean"
+          ? this.isValidFn
+          : this.isValidFn();
+    }
+    return this.cachedIsValid;
+  }
+}
+
+export class ChoiceSelectorOptionsContainer {
+  private cachedIsValid: boolean|undefined;
+
+  constructor(public readonly id: string,
+              public readonly name: string,
+              public readonly category: string|string[],
+              public readonly options: ChoiceSelectorOptions) {
+  }
+
+  public filter(filterFn: (option: ChoiceSelectorOption|ChoiceSelectorOptionsContainer) => boolean): ChoiceSelectorOptionsContainer {
+    return new ChoiceSelectorOptionsContainer(
+        this.id,
+        this.name,
+        this.category,
+        pfutils.array(this.options).filter(filterFn)
+    );
+  }
+
+  public get isValid(): boolean {
+    if (this.cachedIsValid === undefined) {
+      this.cachedIsValid = pfutils.array(this.options).some(option => option.isValid);
+    }
+    return this.cachedIsValid;
   }
 }
 
@@ -24,9 +62,10 @@ export class ChoiceSelectorCategory {
 }
 
 export type ChoiceSelectorOptions = ChoiceSelectorOption
-    | Array<ChoiceSelectorOption>;
+    | ChoiceSelectorOptionsContainer
+    | Array<ChoiceSelectorOption|ChoiceSelectorOptionsContainer>;
 
-export function asChoiceOptionArray(options: ChoiceSelectorOptions): Array<ChoiceSelectorOption> {
+export function asChoiceOptionArray(options: ChoiceSelectorOptions): Array<ChoiceSelectorOption|ChoiceSelectorOptionsContainer> {
   return options instanceof Array
       ? options
       : [options];
@@ -47,6 +86,7 @@ interface ChoiceSelectorDialogProps {
 export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect, onCancel, options, categories = [], search = false, variant = 'special' }: ChoiceSelectorDialogProps) {
   const [selected, setSelected] = useState<string|undefined>(value);
   const [query, setQuery] = useState('');
+  const [ showInvalid, setShowInvalid ] = useState(true);
 
   const optionArray = useMemo(() => asChoiceOptionArray(options), [options]);
 
@@ -68,8 +108,9 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
 
   const hasQuery = useMemo(() => query.trim().length > 0, [query]);
 
-  const availableOptions: Array<ChoiceSelectorOption> = useMemo(() => {
+  const availableOptions: Array<ChoiceSelectorOption|ChoiceSelectorOptionsContainer> = useMemo(() => {
     let filteredOptions = optionArray;
+
     if (category !== '') {
       filteredOptions = filteredOptions.filter(option => {
         if (option.category instanceof Array) {
@@ -80,7 +121,19 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     }
 
     if (hasQuery) {
-      filteredOptions = filteredOptions.filter(option => option.name.includes(query));
+      filteredOptions = filteredOptions
+          .flatMap(option => option instanceof ChoiceSelectorOptionsContainer
+              ? option.options
+              : [ option ])
+          .filter(option => option.name.toLowerCase().includes(query.toLowerCase()));
+    }
+
+    if (!showInvalid) {
+      filteredOptions = filteredOptions
+          .filter(option => option.isValid)
+          .map(option => option instanceof ChoiceSelectorOptionsContainer
+              ? option.filter(child => child.isValid)
+              : option);
     }
 
     return filteredOptions.sort((a, b) => {
@@ -125,6 +178,7 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
         {categories.map(category =>
               <ToggleButton key={category.id} id={category.id} value={category.id}>{category.name}</ToggleButton>)}
       </ToggleButtonGroup>
+
     </Modal.Header>}
 
     {category === '' && search && <Modal.Header>
@@ -133,16 +187,10 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
 
     <Modal.Body>
       {availableOptions.length > 0 &&
-          <PathfinderSelect activeKey={selected} onChange={handleChangeSelection}>
-            {availableOptions.map(option => <PathfinderSelect.Item key={option.id}
-                                                                   itemKey={option.id}
-                                                                   label={option.name}
-                                                                   body={option.description}
-                                                                   bodyFn={option.descriptionFn}
-                                                                   disabled={!option.isValid}
-                                                                   variant={variant}
-                                                                   />)}
-          </PathfinderSelect>
+          <ChoiceSelectorList selected={selected}
+                              options={availableOptions}
+                              onSelect={handleChangeSelection}
+                              variant={variant} />
           || <Alert variant="warning">None found</Alert>}
     </Modal.Body>
 

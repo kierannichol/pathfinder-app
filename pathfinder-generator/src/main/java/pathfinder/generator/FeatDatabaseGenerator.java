@@ -14,13 +14,14 @@ import pathfinder.data.v2.FeatDbo;
 import pathfinder.data.v2.FeatOptionDbo;
 import pathfinder.data.v2.FeatSummaryDbo;
 import pathfinder.data.v2.FeatTypeDbo;
-import pathfinder.generator.db.FeatSourceDatabase;
-import pathfinder.generator.db.parse.FeatPrerequisiteParser;
-import pathfinder.generator.model.Feat;
-import pathfinder.generator.model.Feat.Type;
-import pathfinder.generator.model.Weapons;
-import pathfinder.generator.spring.OutputPathValue;
+import pathfinder.generator.db.parse.PrerequisiteParser;
+import pathfinder.model.Feat;
+import pathfinder.model.Feat.Type;
+import pathfinder.model.Sources;
+import pathfinder.model.Weapons;
 import pathfinder.parser.db.WeaponType;
+import pathfinder.source.FeatSourceDatabase;
+import pathfinder.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 import pathfinder.util.FormulaBuilder;
 import pathfinder.util.FormulaBuilder.AnyOfFormulaBuilder;
@@ -29,13 +30,18 @@ import pathfinder.util.FormulaBuilder.AnyOfFormulaBuilder;
 @RequiredArgsConstructor
 @Service("Feat Database Generator")
 public class FeatDatabaseGenerator extends AbstractDatabaseGenerator {
+    private static final boolean ENABLED = true;
     private final FeatSourceDatabase featSourceDatabase;
-    private final FeatPrerequisiteParser featPrerequisiteParser;
+    private final PrerequisiteParser featPrerequisiteParser;
 
     @OutputPathValue private Path outputBasePath;
 
     @Override
     public void generate() throws IOException {
+        if (!ENABLED) {
+            return;
+        }
+
         List<Feat> feats = featSourceDatabase.stream()
                 .toList();
 
@@ -45,8 +51,21 @@ public class FeatDatabaseGenerator extends AbstractDatabaseGenerator {
 
         var summaryDatabaseBuilder = FeatDatabaseDbo.newBuilder();
         for (Feat feat : feats) {
+            if (Sources.tryFindSourceByName(feat.source()).isEmpty()) {
+                log.warn("Skipping feat due to unknown source book: " + feat.source());
+                continue;
+            }
 
-            String originalPrerequisiteFormula = featPrerequisiteParser.extractPrerequisites(feat);
+            if (feat.types().contains(Type.UNKNOWN)) {
+                log.warn("Skipping feat due to unknown type: " + feat.name());
+                continue;
+            }
+            if (feat.types().contains(Type.STORY)) {
+//                log.warn("Skipping story feat: " + feat.name());
+                continue;
+            }
+
+            String originalPrerequisiteFormula = featPrerequisiteParser.extractPrerequisites(feat.asAbility());
             String prerequisiteFormula = originalPrerequisiteFormula;
 
             try {
@@ -78,8 +97,8 @@ public class FeatDatabaseGenerator extends AbstractDatabaseGenerator {
                         modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replaceAll("@proficiency:selected_weapon", prerequisiteBuilder.build());
                     }
 
-
-                    modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replaceAll("selected_weapon", weaponType.getId());
+                    modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replace("selected_weapon", weaponType.getId());
+                    modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replace("@" + feat.id(), "@" + feat.id() + "#" + weaponType.getId());
 
                     FeatOptionDbo option = FeatOptionDbo.newBuilder()
                             .setId(feat.id() + "#" + weaponType.getId())

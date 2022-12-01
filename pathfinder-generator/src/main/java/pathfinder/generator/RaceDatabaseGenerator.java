@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import pathfinder.data.v2.RaceDataDbo;
 import pathfinder.data.v2.RaceDatabaseDbo;
 import pathfinder.data.v2.RaceSummaryDbo;
-import pathfinder.generator.db.RaceSourceDatabase;
 import pathfinder.generator.encode.RaceDataEncoder;
 import pathfinder.generator.encode.RaceSummaryEncoder;
-import pathfinder.generator.spring.OutputPathValue;
+import pathfinder.source.RaceSourceDatabase;
+import pathfinder.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 
 @Slf4j

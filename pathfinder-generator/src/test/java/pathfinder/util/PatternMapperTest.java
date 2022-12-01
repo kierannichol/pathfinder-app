@@ -46,17 +46,36 @@ class PatternMapperTest {
         assertThat(actual).isEqualTo("(@class:barbarian >= 3 OR @ability:super_focus OR @str_score >= 5)");
     }
 
+    @Test
+    void problemsWithOrInBrackets() {
+        PatternMapper mapper = new PatternMapper()
+                .addToken("PHRASE", PHRASE_GROUP)
+                .addReplacement("{PHRASE}, {PHRASE}", "{0} AND {1}")
+                .addReplacement("{PHRASE}, {PHRASE} or {PHRASE}", "{0} OR {1} OR {2}")
+                .addReplacement("{PHRASE} or {PHRASE}", "{0} OR {1}")
+                .addReplacement("A", "@A")
+                .addReplacement("B (C or D)", "@B+")
+                ;
+
+        String given = "A, B (C or D)";
+        String expected = "@A AND @B+";
+        String actual = mapper.mapText(given);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
     private static final String RACE_GROUP = "(human|dwarf|orc|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|creature that has the constrict special attack)";
     private static final String CLASS_GROUP = "(barbarian|bard|cleric|druid|fighter|monk|paladin|ranger|rogue|sorcerer|wizard|alchemist|cavalier|gunslinger|inquisitor|magus|omdura|oracle|shifter|summoner|witch|vampire hunter|vigilante|arcanist|bloodrager|brawler|hunter|investigator|shaman|skald|slayer|swashbuckler|warpriest|witch)";
     private static final String ABILITY_SCORE_GROUP = "(str|dex|con|wis|int|cha)";
-    private static final String PHRASE_GROUP = "([a-zA-Z][\\w --']+)";
+    private static final String PHRASE_GROUP = "([a-zA-Z][\\w\\s'+\\-\\-]*(?:\\s*\\(.*?\\))?)";
     private static final String NAME_GROUP = "([a-zA-Z][\\w --']+)";
     private static final String NUMBER_GROUP = "(\\d+)\\+?";
     private static final String LEVEL_GROUP = "(\\d+)(?:th|st|rd|nd)?";
 
     @Test
     void currentProblem() {
-        String original = "Half-orc, bloody bite rage power and either the animal fury rage power or a natural bite attack";
+//        String original = "Improved Unarmed Strike, two r more style feats, base attack bonus +6 or monk level 5th.";
+        String original = "Aasimar, two, three, or four";
 
         PatternMapper mapper = new PatternMapper()
                 .addToken("NAME", NAME_GROUP)
@@ -66,9 +85,17 @@ class PatternMapperTest {
                 .addToken("CLASS", CLASS_GROUP)
                 .addToken("RACE", RACE_GROUP)
                 .addToken("PHRASE", PHRASE_GROUP)
+
+                .addReplacement("Improved Unarmed Strike", "@improved_unarmed_strike")
+                .addReplacement("two or more style feats", "@style_feats")
+                .addReplacement("base attack bonus +{NUMBER}", "@bab >= {0}")
+                .addReplacement("monk", "@class:monk")
+
                 .addReplacement("either the {PHRASE} or {PHRASE}", "({0} OR {1})")
                 .addReplacement("{PHRASE}, {PHRASE} and {PHRASE}", "({0} AND {1} AND {2})")
                 .addReplacement("{PHRASE}, {PHRASE} or {PHRASE}", "({0} OR {1} OR {2})")
+                .addReplacement("{PHRASE}, {PHRASE}, {PHRASE}, or {PHRASE}", "({0} OR {1} OR {2} OR {3})")
+                .addReplacement("{PHRASE}, {PHRASE}, {PHRASE} or {PHRASE}", "({0} OR {1} OR {2} OR {3})")
                 .addReplacement("{PHRASE} or {PHRASE}", "({0} OR {1})")
                 .addReplacement("{PHRASE}, {PHRASE}", "{0} AND {1}")
                 .addReplacement("{PHRASE}; {PHRASE}", "{0} AND {1}")
@@ -76,13 +103,10 @@ class PatternMapperTest {
                 .addReplacement("{ABILITY_SCORE} {NUMBER}", "{0} >= {1}")
                 .addReplacement("{CLASS} {LEVEL}", "{0} >= {1}")
                 .addReplacement("{CLASS} level {LEVEL}", "{0} >= {1}")
-                .addReplacement("{NAME} rage power", "{0}")
-                .addReplacement("{NAME} rage powers", "{0}")
-
-                .addReplacement("half-orc", "@race:half_orc")
-                .addReplacement("bloody bite", "@ragepower:bloody_bite")
-                .addReplacement("animal fury", "@ragepower:animal_fury")
-                .addReplacement("a natural bite attack", "@trait:bite_attack")
+                .addReplacement("One", "@ONE")
+                .addReplacement("Two", "@TWO")
+                .addReplacement("Three", "@THREE")
+                .addReplacement("Four", "@FOUR")
                 ;
 
         String actual = mapper.mapText(original);

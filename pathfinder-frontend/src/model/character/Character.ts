@@ -25,7 +25,9 @@ export class Character {
 
   public pack(): PackedCharacter {
     let packed: PackedCharacter = {id: this.id, choices: {}};
-    this.choices.forEach(choice => packed.choices[choice.key] = choice.current);
+    this.choices
+        .filter(choice => choice.current !== '')
+        .forEach(choice => packed.choices[choice.key] = choice.current);
     return packed;
   }
 

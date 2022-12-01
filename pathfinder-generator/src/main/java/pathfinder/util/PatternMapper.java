@@ -27,14 +27,19 @@ public class PatternMapper {
     }
 
     public PatternMapper addReplacement(String pattern, String replacement) {
-        replacements.add(new PatternReplacement(pattern, replacement));
+        replacements.add(new PatternReplacement(pattern, replacement, false));
+        return this;
+    }
+
+    public PatternMapper addImmediateReplacement(String pattern, String replacement) {
+        replacements.add(new PatternReplacement(pattern, replacement, true));
         return this;
     }
 
     public String mapText(String text) {
 
         for (PatternReplacement replacementEntry : replacements) {
-            Pattern regex = patternToRegEx(replacementEntry.pattern());
+            Pattern regex = patternToRegEx(replacementEntry.pattern(), replacementEntry.immediate());
             Matcher matcher = regex.matcher(text);
             if (!matcher.find()) {
                 continue;
@@ -51,14 +56,18 @@ public class PatternMapper {
         return text;
     }
 
-    private Pattern patternToRegEx(String pattern) {
+    private Pattern patternToRegEx(String pattern, boolean immediate) {
         pattern = "\\Q" + pattern + "\\E";
-        return Pattern.compile("^" + patternsByToken.entrySet()
+        pattern = patternsByToken.entrySet()
                 .stream()
                 .reduce(pattern,
                         (current, entry) -> current.replace(entry.getKey(), "\\E" + entry.getValue() + "\\Q"),
-                        (a, b) -> a) + "$", Pattern.CASE_INSENSITIVE);
+                        (a, b) -> a);
+        if (!immediate) {
+            pattern = "^" + pattern + "$";
+        }
+        return Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
     }
 
-    private record PatternReplacement(String pattern, String replacement) {}
+    private record PatternReplacement(String pattern, String replacement, boolean immediate) {}
 }

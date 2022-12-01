@@ -14,6 +14,7 @@ message AbilitySummaryDbo {
   string name = 2;
   AbilityTypeDbo type = 3;
   string prerequisites_formula = 4;
+  string benefit = 5;
 }
 
 enum AbilityTypeDbo {
@@ -29,4 +30,5 @@ message AbilityDataDbo {
   AbilityTypeDbo type = 3;
   string prerequisites_formula = 4;
   string description = 5;
+  string benefit = 6;
 }

@@ -15,12 +15,13 @@ import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.model.Ability;
-import pathfinder.generator.model.Ability.Type;
+import pathfinder.SourceDatabase;
+import pathfinder.model.Ability;
+import pathfinder.model.Ability.Type;
 
 @Component("Ability Source Database")
 @RequiredArgsConstructor
-public class AbilitySourceDatabase {
+public class AbilitySourceDatabase implements SourceDatabase<Ability> {
     private final Set<Ability> abilities = new HashSet<>();
 
     @PostConstruct

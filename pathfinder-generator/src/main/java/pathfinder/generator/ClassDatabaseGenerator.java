@@ -11,8 +11,8 @@ import pathfinder.SourceDatabase;
 import pathfinder.data.v2.ClassDatabaseDbo;
 import pathfinder.generator.encode.ClassDataEncoder;
 import pathfinder.generator.encode.ClassSummaryEncoder;
-import pathfinder.generator.model.CharacterClass;
-import pathfinder.generator.spring.OutputPathValue;
+import pathfinder.model.CharacterClass;
+import pathfinder.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 
 @Service("Class Database Generator")

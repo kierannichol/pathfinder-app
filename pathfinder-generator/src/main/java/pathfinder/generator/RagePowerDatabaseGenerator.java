@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import pathfinder.data.v2.AbilityDataDbo;
 import pathfinder.data.v2.AbilityDatabaseDbo;
@@ -12,11 +13,12 @@ import pathfinder.data.v2.AbilitySummaryDbo;
 import pathfinder.generator.db.RagePowerSourceDatabase;
 import pathfinder.generator.db.parse.PrerequisiteParser;
 import pathfinder.generator.encode.AbilityTypeEncoder;
-import pathfinder.generator.spring.OutputPathValue;
+import pathfinder.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 
 @Service("Rage Power Database Generator")
 @Slf4j
+@Lazy
 @RequiredArgsConstructor
 public class RagePowerDatabaseGenerator extends AbstractDatabaseGenerator {
     private final RagePowerSourceDatabase sourceDatabase;

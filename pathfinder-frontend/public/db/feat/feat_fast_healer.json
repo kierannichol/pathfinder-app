@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "You benefit greatly from your healing, be it from spells or natural healing.",
   "prerequisites": "Con 13, Diehard, Endurance.",
-  "prerequisitesFormula": "@con_score \u003e\u003d 13 AND @feat:diehard AND @feat:endurance AND  !@feat:fast_healer",
+  "prerequisitesFormula": "@con_score \u003e\u003d 13 AND @feat:diehard AND @ability:endurance",
   "benefit": "When you regain hit points by resting or through magical healing, you recover additional hit points equal to half your Constitution modifier (minimum +1).",
   "source": "Advanced Player\u0027s Guide"
 }

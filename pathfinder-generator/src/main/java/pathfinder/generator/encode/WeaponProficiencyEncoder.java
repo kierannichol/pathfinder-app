@@ -2,7 +2,7 @@ package pathfinder.generator.encode;
 
 import org.springframework.stereotype.Component;
 import pathfinder.data.v2.WeaponProficiencyDbo;
-import pathfinder.generator.model.WeaponProficiency;
+import pathfinder.model.WeaponProficiency;
 
 @Component("Weapon Proficiency Encoder")
 public class WeaponProficiencyEncoder implements Encoder<WeaponProficiency, WeaponProficiencyDbo> {

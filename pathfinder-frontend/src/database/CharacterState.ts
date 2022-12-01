@@ -13,8 +13,10 @@ const initialState: DataContextState = {
 
   'initiative': '{@dex_mod + @initiative:misc}',
 
-  'ac': '{10 + sum(@ac:*)}',
+  'ac': '{10 + @ac:armor + @ac:shield + @dex_mod + @ac:size + @ac:natural + @ac:deflection + @ac:misc}',
+  'ac:touch': '{10 + @dex_mod + @ac:misc}',
   'ac:size': '{2^abs(5-@size)-1}',
+  'ac:flat': '{@ac - @dex_mod}',
 
   'cmb': '{@bab + @str_mod + @size_mod}',
   'cmd': '{@bab + @str_mod + @dex_mod + @size_mod + 10}',

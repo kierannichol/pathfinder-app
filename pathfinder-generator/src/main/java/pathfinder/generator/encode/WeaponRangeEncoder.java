@@ -2,7 +2,7 @@ package pathfinder.generator.encode;
 
 import org.springframework.stereotype.Component;
 import pathfinder.data.v2.WeaponRangeDbo;
-import pathfinder.generator.model.WeaponRange;
+import pathfinder.model.WeaponRange;
 
 @Component("Weapon Range Encoder")
 public class WeaponRangeEncoder implements Encoder<WeaponRange, WeaponRangeDbo> {

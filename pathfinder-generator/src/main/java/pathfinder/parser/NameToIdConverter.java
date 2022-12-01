@@ -10,6 +10,10 @@ public class NameToIdConverter {
         return generateId(AttributeType.ABILITY, name);
     }
 
+    public static String raceId(String name) {
+        return generateId(AttributeType.RACE, name);
+    }
+
     public static String classId(String name) {
         return generateId(AttributeType.CLASS, name);
     }
@@ -41,6 +45,7 @@ public class NameToIdConverter {
                 .replace('/', '_')
                 .replaceAll("\\(", "")
                 .replaceAll("\\)", "")
+                .replaceAll("!", "")
                 .replace('-', '_');
     }
 

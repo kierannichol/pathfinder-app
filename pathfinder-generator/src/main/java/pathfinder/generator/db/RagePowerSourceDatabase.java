@@ -17,15 +17,16 @@ import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.model.Ability;
-import pathfinder.generator.model.Ability.Type;
+import pathfinder.SourceDatabase;
+import pathfinder.model.Ability;
+import pathfinder.model.Ability.Type;
 import pathfinder.parser.AttributeType;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.util.NameUtils;
 
 @Component("Rage Power Source Database")
 @RequiredArgsConstructor
-public class RagePowerSourceDatabase {
+public class RagePowerSourceDatabase implements SourceDatabase<Ability> {
 
     private static final List<String> EXCLUDED_SOURCES = List.of();//"PZO1115");
     private final Set<Ability> abilities = new HashSet<>();

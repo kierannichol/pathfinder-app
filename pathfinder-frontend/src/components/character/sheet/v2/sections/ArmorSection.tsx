@@ -22,11 +22,11 @@ export default function ArmorSection({ className, ...divProps }: HTMLAttributes<
         <PlainValue className={styles.scalar}>10</PlainValue>
         <Operator>+</Operator>
         <CaptionedBoxedValue captionBottom="Armor Bonus" className={styles.value}>
-          <CharacterValue dataKey={"ac:armor"} />
+          <CharacterValue dataKey={"ac:armor"} fallback={"0"} />
         </CaptionedBoxedValue>
         <Operator>+</Operator>
         <CaptionedBoxedValue captionBottom="Shield Bonus" className={styles.value}>
-          <CharacterValue dataKey={"ac:shield"} />
+          <CharacterValue dataKey={"ac:shield"} fallback={"0"} />
         </CaptionedBoxedValue>
         <Operator>+</Operator>
         <CaptionedBoxedValue captionBottom="Dexterity Modifier" className={styles.value}>
@@ -38,11 +38,11 @@ export default function ArmorSection({ className, ...divProps }: HTMLAttributes<
         </CaptionedBoxedValue>
         <Operator>+</Operator>
         <CaptionedBoxedValue captionBottom="Natural Armor" className={styles.value}>
-          <CharacterValue dataKey={"ac:natural"} />
+          <CharacterValue dataKey={"ac:natural"} fallback={"0"} />
         </CaptionedBoxedValue>
         <Operator>+</Operator>
         <CaptionedBoxedValue captionBottom="Deflection Bonus" className={styles.value}>
-          <CharacterValue dataKey={"ac:deflection"} />
+          <CharacterValue dataKey={"ac:deflection"} fallback={"0"} />
         </CaptionedBoxedValue>
         <Operator>+</Operator>
         <CaptionedBoxedValue captionBottom="Misc Modifier" className={styles.value}>
@@ -51,9 +51,13 @@ export default function ArmorSection({ className, ...divProps }: HTMLAttributes<
       </Section.Row>
       <Section.Row>
         <Label className={styles.label}>Touch</Label>
-        <BoxedValue className={styles.touchValue}/>
+        <BoxedValue className={styles.touchValue}>
+          <CharacterValue dataKey={"ac:touch"} />
+        </BoxedValue>
         <Label className={styles.label}>Flat-Footed</Label>
-        <BoxedValue className={styles.flatFootedValue}/>
+        <BoxedValue className={styles.flatFootedValue}>
+          <CharacterValue dataKey={"ac:flat"} />
+        </BoxedValue>
         <BoxedValue className={styles.modifiersValue} label="Modifiers"/>
       </Section.Row>
     </Section.Column>

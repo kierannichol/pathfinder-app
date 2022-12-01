@@ -1,0 +1,10 @@
+{
+  "id": "feat:orc_hewer",
+  "name": "Orc Hewer",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are ferocious at hewing your enemies, especially orcs.",
+  "prerequisites": "Str 13, Cleave, Goblin Cleaver, Power Attack, dwarf.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:cleave AND @feat:goblin_cleaver AND @feat:power_attack AND @race:dwarf",
+  "benefit": "This feat functions as Goblin Cleaver, but your additional attacks can be made against creatures your size or smaller. In addition, any such attacks that you make against humanoids (orc) gain a +2 circumstance bonus on attack rolls.",
+  "source": "Advanced Race Guide"
+}

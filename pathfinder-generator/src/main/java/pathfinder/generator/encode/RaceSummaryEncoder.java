@@ -2,7 +2,7 @@ package pathfinder.generator.encode;
 
 import org.springframework.stereotype.Component;
 import pathfinder.data.v2.RaceSummaryDbo;
-import pathfinder.generator.model.Race;
+import pathfinder.model.Race;
 
 @Component("Race Summary Encoder")
 public class RaceSummaryEncoder implements Encoder<Race, RaceSummaryDbo> {

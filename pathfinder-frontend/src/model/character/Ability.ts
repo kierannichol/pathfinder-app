@@ -14,7 +14,7 @@ export class AbilitySummary implements Attribute {
   }
 
   public isValidFor(characterAtLevel: CharacterAtLevel): boolean {
-    if (this.prerequisites_formula === '') {
+    if (this.prerequisites_formula.trim() === '') {
       return true;
     }
     const requirement = Formula.parse(this.prerequisites_formula);

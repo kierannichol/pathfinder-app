@@ -9,7 +9,7 @@ import pathfinder.data.v2.WeaponDatabaseDbo;
 import pathfinder.data.v2.WeaponTypeDbo;
 import pathfinder.generator.db.WeaponSourceDatabase;
 import pathfinder.generator.encode.WeaponTypeEncoder;
-import pathfinder.generator.spring.OutputPathValue;
+import pathfinder.spring.OutputPathValue;
 
 @Service("Weapon Database Generator")
 @RequiredArgsConstructor

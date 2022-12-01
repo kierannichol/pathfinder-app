@@ -26,15 +26,15 @@ export default function PrerequisiteList({ abilitySummary, characterAtLevel } : 
       return [];
     }
 
-    const formulaWithoutSelfReference = formulaText
-        .replace('!@' + abilitySummary.id, '')
-        .replaceAll(/\s+AND\s*$/g, '')
+    // const formulaWithoutSelfReference = formulaText
+    //     .replace('!@' + abilitySummary.id, '')
+    //     .replaceAll(/\s+AND\s*$/g, '')
+    //
+    // if (formulaWithoutSelfReference === '') {
+    //   return [];
+    // }
 
-    if (formulaWithoutSelfReference === '') {
-      return [];
-    }
-
-    return formatFormula(formulaWithoutSelfReference, characterAtLevel, pathfinderDb);
+    return formatFormula(formulaText, characterAtLevel, pathfinderDb);
   }, [formulaText, characterAtLevel]);
 
   return (<div>

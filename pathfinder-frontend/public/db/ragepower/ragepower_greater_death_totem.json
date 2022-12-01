@@ -2,6 +2,6 @@
   "id": "ragepower:greater_death_totem",
   "name": "Greater Death Totem",
   "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "(@class:barbarian OR @class:savage \u003e\u003d 12 AND @ragepower:death_totem AND @ragepower:lesser_death_totem) AND !@ragepower:greater_death_totem",
+  "prerequisitesFormula": "(@class:barbarian \u003e\u003d 12 OR @class:savage \u003e\u003d 2) AND @ragepower:death_totem AND @ragepower:lesser_death_totem",
   "description": "While raging, nearby living enemies damaged by death energies and must make Fortitude save or be sickened."
 }

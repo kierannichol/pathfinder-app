@@ -3,18 +3,21 @@ import {useAsyncMemo} from "../../app/reactHooks";
 import AlignmentDatabase from "../AlignmentDatabase";
 import SkillDatabase from "../SkillDatabase";
 import {AbilityContextProvider, AbilityDatabase, withGlobalAbilityDatabase} from "./AbilityDatabase";
+import {BaseAbilityDatabase} from "./BaseAbilityDatabase";
 import {CharacterClassContextProvider, CharacterClassDatabase, withGlobalCharacterClassDatabase} from "./ClassDatabase";
 import {FeatContextProvider, FeatDatabase, withGlobalFeatDatabase} from "./FeatDatabase";
 import {RaceContextProvider, RaceDatabase, withGlobalRaceDatabase} from "./RaceDatabase";
-import {RagePowerContextProvider, RagePowerDatabase, withGlobalRagePowerDatabase} from "./RagePowerDatabase";
+import RagePowerDatabase from "./RagePowerDatabase";
+import RogueTalentDatabase from "./RogueTalentDatabase";
 
 export class PathfinderDatabase {
 
-  public constructor(private readonly featDb: FeatDatabase,
+  public constructor(private readonly featDatabase: FeatDatabase,
                      private readonly abilityDb: AbilityDatabase,
-                     private readonly ragePowerDb: RagePowerDatabase,
+                     public readonly ragePowerDatabase: BaseAbilityDatabase,
                      private readonly classDb: CharacterClassDatabase,
-                     private readonly raceDb: RaceDatabase) {
+                     private readonly raceDb: RaceDatabase,
+                     public readonly rogueTalentDatabase: BaseAbilityDatabase) {
   }
 
   public name(id: string|undefined): string|undefined {
@@ -24,7 +27,7 @@ export class PathfinderDatabase {
     const [type] = id.split(':');
     switch (type) {
       case 'feat':
-        return this.featDb.summary(id)?.name;
+        return this.featDatabase.summary(id)?.name;
       case 'ability':
         if (id === 'ability:channel_negative_energy') {
           return 'Channel Negative Energy';
@@ -33,13 +36,15 @@ export class PathfinderDatabase {
       case 'class':
         return this.classDb.summary(id)?.name;
       case 'ragepower':
-        return this.ragePowerDb.summary(id)?.name;
+        return this.ragePowerDatabase.summary(id)?.name;
       case 'race':
         return this.raceDb.summary(id)?.name;
       case 'skill':
         return SkillDatabase.find(id)?.name;
       case 'alignment':
         return AlignmentDatabase.find(id)?.name;
+      case 'roguetalent':
+        return this.rogueTalentDatabase.summary(id)?.name;
       case 'bab':
         return 'Base Attack Bonus';
       case 'caster_level':
@@ -73,12 +78,17 @@ export class PathfinderDatabase {
 let globalPathfinderDatabase: Promise<PathfinderDatabase> | undefined = undefined;
 
 async function initializeGlobalPathfinderDatabase(): Promise<PathfinderDatabase> {
+  const allDatabases = await Promise.all([
+      withGlobalFeatDatabase(),
+      withGlobalAbilityDatabase(),
+      RagePowerDatabase.withGlobalInstance(),
+      withGlobalCharacterClassDatabase(),
+      withGlobalRaceDatabase(),
+      RogueTalentDatabase.withGlobalInstance(),
+  ]);
+
   return new PathfinderDatabase(
-      await withGlobalFeatDatabase(),
-      await withGlobalAbilityDatabase(),
-      await withGlobalRagePowerDatabase(),
-      await withGlobalCharacterClassDatabase(),
-      await withGlobalRaceDatabase(),
+      ...allDatabases
   );
 }
 
@@ -99,6 +109,7 @@ export function PathfinderDatabaseContextProvider({ children}: any) {
       RagePowerDatabase.empty(),
       CharacterClassDatabase.empty(),
       RaceDatabase.empty(),
+      RogueTalentDatabase.empty(),
   ), []);
   const [ database ] = useAsyncMemo(() => withGlobalPathfinderDatabase(), []);
 
@@ -107,11 +118,9 @@ export function PathfinderDatabaseContextProvider({ children}: any) {
         <AbilityContextProvider>
           <RaceContextProvider>
             <CharacterClassContextProvider>
-              <RagePowerContextProvider>
                 <PathfinderDatabaseContext.Provider value={database ?? empty}>
                   {children}
                 </PathfinderDatabaseContext.Provider>
-              </RagePowerContextProvider>
             </CharacterClassContextProvider>
           </RaceContextProvider>
         </AbilityContextProvider>

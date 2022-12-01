@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_COMBAT"],
   "description": "Your attacks are capable of penetrating the defenses of some creatures.",
   "prerequisites": "Weapon Focus, 12th-level fighter, proficiency with weapon.",
-  "prerequisitesFormula": "@feat:weapon_focus AND @class:fighter \u003e\u003d 12 AND (@feat:light_armor_proficiency OR @proficiency:light_armor) AND  !@feat:penetrating_strike",
+  "prerequisitesFormula": "@feat:weapon_focus AND @class:fighter \u003e\u003d 12 AND @proficiency:weapon",
   "benefit": "Your attacks made with weapons selected with Weapon Focus ignore up to 5 points of damage reduction. This feat does not apply to damage reduction without a type (such as DR 10/-).",
   "source": "PFRPG Core"
 }

@@ -16,8 +16,8 @@ import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.model.Race;
-import pathfinder.generator.model.Size;
+import pathfinder.model.Race;
+import pathfinder.model.Size;
 import pathfinder.util.CsvUtils;
 
 @Component("Race Source Database")

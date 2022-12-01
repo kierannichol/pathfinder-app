@@ -2,6 +2,13 @@ package pathfinder.util;
 
 public class NameUtils {
 
+    public static String sanitize(String name) {
+        return name
+                .replace("’", "'")
+                .replace("*", "")
+                .trim();
+    }
+
     public static String fixNameOrder(String name) {
         String[] parts = name.split(",", 2);
         if (parts.length == 1) {

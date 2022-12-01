@@ -108,7 +108,7 @@ export default class FormulaFormatter {
         .operator('/', 3, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() / b.asNumber()))
         .operator('+', 2, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() + b.asNumber()))
         .operator('-', 2, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of((a?.asNumber() ?? 0) - b.asNumber()))
-        .operator('!', 2, Associativity.Left, 1, (a:ResolvedValue) => formatBooleanOp(a, undefined, a => !a, a => `not ${a}`))
+        .operator('!', 2, Associativity.Left, 1, (a:ResolvedValue) => formatBooleanOp(a, undefined, a => !a, a => `Do not already have ${a}`))
         .operator('<', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a > b, (a, b) => `${a} less than ${b}`))
         .operator('<=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a >= b, (a, b) => `${a} is ${b} or less`))
         .operator('>', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a > b, (a, b) => `${a} greater than ${b}`))

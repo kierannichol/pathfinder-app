@@ -4,6 +4,7 @@ import CharacterTextInput from "./base/CharacterTextInput";
 import FeatSelectButton from "./edit/FeatSelectButton";
 import MercySelectButton from "./MercySelectButton";
 import RagePowerSelectButton from "./RagePowerSelectButton";
+import RogueTalentSelectButton from "./RogueTalentSelectButton";
 
 interface ChoiceSelectorProps {
   character: CharacterAtLevel;
@@ -35,6 +36,8 @@ export default function ChoiceSelector(props: ChoiceSelectorProps) {
           value={choice.current}
           onSelect={props.onChange}
           characterAtLevel={character} />
+    case ChoiceType.ROGUE_TALENT:
+      return <RogueTalentSelectButton value={choice.current} onSelect={props.onChange} characterAtLevel={character} />
   }
   return <div className="invalid-feedback">Unknown Choice</div>
 }

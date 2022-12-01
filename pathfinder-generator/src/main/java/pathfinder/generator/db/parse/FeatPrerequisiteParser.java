@@ -2,11 +2,11 @@ package pathfinder.generator.db.parse;
 
 import static pathfinder.parser.NameToIdConverter.partialId;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.regex.MatchResult;
@@ -16,15 +16,17 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.db.FeatSourceDatabase;
-import pathfinder.generator.model.Feat;
+import pathfinder.model.Feat;
+import pathfinder.source.ExcelFeatSourceDatabase;
 import pathfinder.util.Function3;
 import pathfinder.util.Function4;
 import pathfinder.util.Function5;
 import pathfinder.util.Function6;
 
 @Component("Feat Prerequisite Parser")
+@Lazy
 @RequiredArgsConstructor
 public class FeatPrerequisiteParser {
     private static final String RACE_GROUP = "(human|dwarf|orc|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|creature that has the constrict special attack)";
@@ -34,11 +36,9 @@ public class FeatPrerequisiteParser {
     private static final String NUMBER_GROUP = "(\\d+)\\+?";
     private static final String LEVEL_GROUP = "(\\d+)(?:th|st|rd|nd)?";
 
-    private final FeatSourceDatabase featSourceDatabase;
+    private final ExcelFeatSourceDatabase featSourceDatabase;
 
     private static final List<ReplaceText> RENAMES = Stream.of(
-//                    ReplaceText.map("^(.*) or (.*)$", (g1, g2) -> "(%s OR %s)".formatted(g1, g2)),
-//                    ReplaceText.map("^(.*), (.*) or (.*)$", (g1, g2, g3) -> "(%s OR %s OR %s)".formatted(g1, g2, g3)),
                     ReplaceText.map("character level (\\d+)(?:th|st|rd|nd)", level -> "@level >= " + level),
                     ReplaceText.map("Catch Off-Guard or Throw Anything", "(@feat:catch_off_guard OR @feat:throw_anything)"),
                     ReplaceText.map("Dodge, Close Quarters Thrower or Point-Blank Master", "(@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master)"),
@@ -91,7 +91,8 @@ public class FeatPrerequisiteParser {
                     ReplaceText.map("necromancer or neutrally aligned cleric", "(@alignment == 'ng' OR @alignment == 'n' OR @alignment == 'ne')"),
 
                     ReplaceText.map("weapon proficiency \\(%s\\)".formatted(NAME_GROUP), weapon -> "weapon proficiency:%s".formatted(weapon)),
-                    ReplaceText.map("Proficiency with(?: the)? selected weapon", "@proficiency:selected_weapon"),
+                    ReplaceText.map("Proficiency with(?: the)?(?: selected)? weapon", "@proficiency:selected_weapon"),
+                    ReplaceText.map("Proficient with(?: the)?(?: selected)? weapon", "@proficiency:selected_weapon"),
                     ReplaceText.map("Proficiency with(?: the)? selected shield", "@proficiency:selected_shield"),
                     ReplaceText.map("Shield Specialization with selected shield", "@feat:shield_specialization#selected_shield"),
                     ReplaceText.map("3d6 prof iciency with a shield", "@proficiency:shield >= 3"),
@@ -195,10 +196,14 @@ public class FeatPrerequisiteParser {
 //            .sorted(Comparator.comparingInt(a -> -a.pattern().pattern().length()))
             .toList();
 
+    private static final List<ReplaceText> TOUCH_UPS = Stream.of(
+            ReplaceText.map("@feat:weapon_focus", "@feat:weapon_focus#selected_weapon")
+    ).toList();
+
     private final List<ReplaceText> featRenames = new ArrayList<>();
 
     @PostConstruct
-    private void init() {
+    private void init() throws IOException {
         this.featRenames.addAll(featSourceDatabase.stream()
                 .sorted(Comparator.comparingInt(feat -> -feat.name().length()))
                 .map(feat -> ReplaceText.map("(^|\\(| AND | OR )%s($|\\)|:|#| AND | OR )".formatted(feat.name()),
@@ -207,12 +212,12 @@ public class FeatPrerequisiteParser {
 
     public String extractPrerequisites(Feat feat) {
         String parsed = parsePrerequisites(feat.prerequisites());
-        if (!feat.multiples()) {
-            if (parsed.length() > 0) {
-                parsed += " AND ";
-            }
-            parsed += " !@" + feat.id();
-        }
+//        if (!feat.multiples()) {
+//            if (parsed.length() > 0) {
+//                parsed += " AND ";
+//            }
+//            parsed += " !@" + feat.id();
+//        }
         return parsed;
     }
 
@@ -226,7 +231,7 @@ public class FeatPrerequisiteParser {
                 .replaceAll("\\(see below\\)\\.{0,1}", "")
                 .replaceAll("\\.$", "");
 
-        Function<String, String> renameFunction = text -> Stream.concat(RENAMES.stream(), featRenames.stream())
+        Function<String, String> renameFunction = text -> Stream.concat(Stream.concat(RENAMES.stream(), featRenames.stream()), TOUCH_UPS.stream())
                 .reduce(text, (String in, ReplaceText rename) -> rename.tryReplace(in), (a,b) -> a);
 
         prerequisites = renameFunction.apply(prerequisites);
@@ -234,17 +239,9 @@ public class FeatPrerequisiteParser {
         return Arrays.stream(prerequisites.split("[,;]"))
                 .map(String::trim)
                 .filter(part -> !part.isBlank())
-                .map(renameFunction::apply)
+                .map(renameFunction)
 //                .map(part -> tryFeatPrerequisite(part).orElse(part))
                 .collect(Collectors.joining(" AND "));
-    }
-
-    private Optional<String> tryFeatPrerequisite(String rawPrerequisite) {
-        return featSourceDatabase.findByName(rawPrerequisite)
-                .map(feat -> {
-                    String id = feat.id();
-                    return "@" + id;
-                });
     }
 
     private interface ReplaceText {
