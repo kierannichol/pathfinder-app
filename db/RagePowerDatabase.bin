@@ -19,8 +19,8 @@ U
 ragepower:powerful_blowPowerful Blow
 U
 !ragepower:ice_linnorm_death_curseIce Linnorm Death Curse"@class:barbarian >= 4
-h
-ragepower:bloody_biteBloody Bite"@(@race:half_orc OR @ability:animal_fury OR @ability:bite_attack)
+j
+ragepower:bloody_biteBloody Bite"B(@race:half_orc OR @ragepower:animal_fury OR @ability:bite_attack)
 Z
 ragepower:spellbreakerSpellbreaker"2@class:barbarian >= 12 AND @magusarcana:disruptive
 k
@@ -90,9 +90,9 @@ F
 ragepower:dragon_totem_wingsDragon Totem Wings"Y@class:barbarian >= 10 AND @ragepower:dragon_totem AND @ragepower:dragon_totem_resilience
 \
 ragepower:raging_flierRaging Flier"2@class:barbarian >= 6 AND @ragepower:raging_leaper
-:
+<
 ragepower:savage_jaw
-Savage Jaw"@ability:animal_fury
+Savage Jaw"@ragepower:animal_fury
 ,
 ragepower:guarded_stanceGuarded Stance
 "
@@ -116,8 +116,8 @@ g
 ragepower:energy_eruptionEnergy Eruption"7@class:barbarian >= 16 AND @ragepower:energy_absorption
 2
 ragepower:totemic_mettleTotemic Mettle"true
-`
-ragepower:penetrating_bitePenetrating Bite".@class:barbarian >= 4 AND @ability:animal_fury
+b
+ragepower:penetrating_bitePenetrating Bite"0@class:barbarian >= 4 AND @ragepower:animal_fury
 z
 #ragepower:greater_energy_resistanceGreater Energy Resistance"6@class:barbarian >= 8 AND @ragepower:energy_resistance
 L
@@ -173,8 +173,8 @@ G
 ragepower:ferocious_mountFerocious Mount
 2
 ragepower:lesser_moon_totemLesser Moon Totem
-ˆ
-ragepower:feasting_biteFeasting Bite"\@race:half_orc AND @ragepower:bloody_bite AND (@ability:animal_fury OR @ability:bite_attack)
+Š
+ragepower:feasting_biteFeasting Bite"^@race:half_orc AND @ragepower:bloody_bite AND (@ragepower:animal_fury OR @ability:bite_attack)
 K
 ragepower:fueled_by_vengeanceFueled by Vengeance"@class:barbarian >= 6
 R
@@ -238,8 +238,8 @@ Cult Totem"6@class:barbarian >= 6 AND @ragepower:lesser_cult_totem
  ragepower:good_for_what_ails_youGood for What Ails You
 ,
 ragepower:raging_climberRaging Climber
-L
-ragepower:greater_animal_furyGreater Animal Fury"@ability:animal_fury
+N
+ragepower:greater_animal_furyGreater Animal Fury"@ragepower:animal_fury
 ,
 ragepower:raging_swimmerRaging Swimmer
 0
@@ -327,8 +327,8 @@ r
  ragepower:greater_elemental_rageGreater Elemental Rage"4@class:barbarian >= 12 AND @ragepower:elemental_rage
 L
 ragepower:disemboweling_tusksDisemboweling Tusks"@class:barbarian >= 10
-z
-ragepower:dragon_totemDragon Totem"P@class:barbarian >= 6 AND @ability:animal_fury AND @ragepower:intimidating_glare
+|
+ragepower:dragon_totemDragon Totem"R@class:barbarian >= 6 AND @ragepower:animal_fury AND @ragepower:intimidating_glare
 4
 ragepower:lesser_fiend_totemLesser Fiend Totem
 2
@@ -349,9 +349,9 @@ A
 ragepower:witch_hunterWitch Hunter"@ragepower:superstition
 ?
 ragepower:boars_chargeBoar's Charge"@class:barbarian >= 12
-T
+V
 ragepower:hive_totem
-Hive Totem".@class:barbarian >= 4 AND @ability:animal_fury
+Hive Totem"0@class:barbarian >= 4 AND @ragepower:animal_fury
 .
 ragepower:savage_intuitionSavage Intuition
 B

@@ -2454,7 +2454,7 @@
     "name": "Improved Umbral Scion",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, Wis 13, Drow Nobility, Greater Drow Nobility, Improved Drow Nobility, Umbral Scion, able to use drow spell-like abilities, drow.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @wis_score \u003e\u003d 13 AND @feat:drow_nobility AND @feat:greater_drow_nobility AND @feat:improved_drow_nobility AND @feat:umbral_scion AND \"able to use drow spell-like abilities\" AND @race:drow"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @wis_score \u003e\u003d 13 AND @feat:drow_nobility AND @feat:greater_drow_nobility AND @feat:improved_drow_nobility AND @feat:umbral_scion AND \"Able to use drow spell-like abilities\" AND @race:drow"
   }, {
     "id": "feat:extra_performance",
     "name": "Extra Performance",
@@ -3062,7 +3062,7 @@
     "name": "Drow Nobility",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Able to use drow spell-like abilities, drow.",
-    "prerequisitesFormula": "\"able to use drow spell-like abilities\" AND @race:drow"
+    "prerequisitesFormula": "\"Able to use drow spell-like abilities\" AND @race:drow"
   }, {
     "id": "feat:coordinated_maneuvers",
     "name": "Coordinated Maneuvers",
@@ -3296,7 +3296,7 @@
     "name": "Improved Share Spells",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Spellcraft 10 ranks, ability to acquire an animal companion, eidolon, familiar, or special mount.",
-    "prerequisitesFormula": "(@skill:spellcraft \u003e\u003d 10 OR @ability:animal_companion OR @ability:eidolon OR @roguetalent:familiar OR \"special mount\")"
+    "prerequisitesFormula": "(@skill:spellcraft \u003e\u003d 10 OR @ability:animal_companion OR @ability:eidolon OR @roguetalent:familiar OR \"Special mount\")"
   }, {
     "id": "feat:inexplicable_luck",
     "name": "Inexplicable Luck",
@@ -4992,7 +4992,7 @@
     "name": "Neither Elf nor Human",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Exile\u0027s Path, Seen and Unseen, character level 11th, half-elf.",
-    "prerequisitesFormula": "@feat:exiles_path AND @ability:seen_and_unseen AND @character_level \u003e\u003d 11 AND @race:half_elf"
+    "prerequisitesFormula": "@feat:exiles_path AND @feat:seen_and_unseen AND @character_level \u003e\u003d 11 AND @race:half_elf"
   }, {
     "id": "feat:extra_hex",
     "name": "Extra Hex",
@@ -5954,7 +5954,7 @@
     "name": "Umbral Scion",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, Wis 13, Drow Nobility, Greater Drow Nobility, Improved Drow Nobility, able to use drow spell-like abilities, drow.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @wis_score \u003e\u003d 13 AND @feat:drow_nobility AND @feat:greater_drow_nobility AND @feat:improved_drow_nobility AND \"able to use drow spell-like abilities\" AND @race:drow"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @wis_score \u003e\u003d 13 AND @feat:drow_nobility AND @feat:greater_drow_nobility AND @feat:improved_drow_nobility AND \"Able to use drow spell-like abilities\" AND @race:drow"
   }, {
     "id": "feat:cloud_gazer",
     "name": "Cloud Gazer",
@@ -7034,7 +7034,7 @@
     "name": "Greater Drow Nobility",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, Drow Nobility, Improved Drow Nobility, able to use drow spell-like abilities, drow.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @feat:drow_nobility AND @feat:improved_drow_nobility AND \"able to use drow spell-like abilities\" AND @race:drow"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @feat:drow_nobility AND @feat:improved_drow_nobility AND \"Able to use drow spell-like abilities\" AND @race:drow"
   }, {
     "id": "feat:risky_striker",
     "name": "Risky Striker",
@@ -8308,7 +8308,7 @@
     "name": "Improved Drow Nobility",
     "types": ["FEAT_TYPE_GENERAL"],
     "prerequisites": "Cha 13, Drow Nobility, able to use drow spell-like abilities, drow.",
-    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @feat:drow_nobility AND \"able to use drow spell-like abilities\" AND @race:drow"
+    "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @feat:drow_nobility AND \"Able to use drow spell-like abilities\" AND @race:drow"
   }, {
     "id": "feat:taunt",
     "name": "Taunt",

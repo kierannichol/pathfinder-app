@@ -49,7 +49,7 @@
     "id": "ragepower:bloody_bite",
     "name": "Bloody Bite",
     "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "(@race:half_orc OR @ability:animal_fury OR @ability:bite_attack)"
+    "prerequisitesFormula": "(@race:half_orc OR @ragepower:animal_fury OR @ability:bite_attack)"
   }, {
     "id": "ragepower:spellbreaker",
     "name": "Spellbreaker",
@@ -210,7 +210,7 @@
     "id": "ragepower:savage_jaw",
     "name": "Savage Jaw",
     "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@ability:animal_fury"
+    "prerequisitesFormula": "@ragepower:animal_fury"
   }, {
     "id": "ragepower:guarded_stance",
     "name": "Guarded Stance",
@@ -264,7 +264,7 @@
     "id": "ragepower:penetrating_bite",
     "name": "Penetrating Bite",
     "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @ability:animal_fury"
+    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @ragepower:animal_fury"
   }, {
     "id": "ragepower:greater_energy_resistance",
     "name": "Greater Energy Resistance",
@@ -393,7 +393,7 @@
     "id": "ragepower:feasting_bite",
     "name": "Feasting Bite",
     "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@race:half_orc AND @ragepower:bloody_bite AND (@ability:animal_fury OR @ability:bite_attack)"
+    "prerequisitesFormula": "@race:half_orc AND @ragepower:bloody_bite AND (@ragepower:animal_fury OR @ability:bite_attack)"
   }, {
     "id": "ragepower:fueled_by_vengeance",
     "name": "Fueled by Vengeance",
@@ -541,7 +541,7 @@
     "id": "ragepower:greater_animal_fury",
     "name": "Greater Animal Fury",
     "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@ability:animal_fury"
+    "prerequisitesFormula": "@ragepower:animal_fury"
   }, {
     "id": "ragepower:raging_swimmer",
     "name": "Raging Swimmer",
@@ -748,7 +748,7 @@
     "id": "ragepower:dragon_totem",
     "name": "Dragon Totem",
     "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @ability:animal_fury AND @ragepower:intimidating_glare"
+    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @ragepower:animal_fury AND @ragepower:intimidating_glare"
   }, {
     "id": "ragepower:lesser_fiend_totem",
     "name": "Lesser Fiend Totem",
@@ -799,7 +799,7 @@
     "id": "ragepower:hive_totem",
     "name": "Hive Totem",
     "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @ability:animal_fury"
+    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @ragepower:animal_fury"
   }, {
     "id": "ragepower:savage_intuition",
     "name": "Savage Intuition"
