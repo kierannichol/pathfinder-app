@@ -1,0 +1,10 @@
+{
+  "id": "feat:channel_force",
+  "name": "Channel Force",
+  "types": ["FEAT_TYPE_GENERAL"],
+  "description": "Your channel is bolstered by your faith, allowing you to move and damage your foes.",
+  "prerequisites": "Aasimar, channel energy 2d6.",
+  "prerequisitesFormula": "@race:aasimar AND (@ability:channel_positive_energy \u003e\u003d 2 OR @ability:channel_negative_energy \u003e\u003d 2)",
+  "benefit": "When you channel energy to deal damage, you may choose to affect only a single target within 30 feet. In addition to dealing damage, if that single target fails its saving throw, you may pull or push (Pathfinder RPG Bestiary 303) the target up to 5 feet for every 2d6 points of channel energy damage you are capable of dealing.",
+  "source": "Advanced Race Guide"
+}

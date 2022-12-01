@@ -1,276 +1,0 @@
-
-feat:false_openingFalse Opening"kWhen you make a ranged attack while threatened, you can fool your opponent into thinking he has an opening.*fDex 13, Dodge, Close Quarters Thrower or Point-Blank Master, Weapon Focus with selected ranged weapon.:èChoose a ranged weapon or a thrown weapon. When you make a ranged attack using that weapon, you can choose to provoke an attack of opportunity from one or more opponents who threaten you. You gain a +4 dodge bonus against such attacks. An opponent that makes such an attack and misses you loses his Dexterity bonus to AC against you until the end of your turn.RUltimate Combatj¿
-feat:false_opening#gauntletGauntlet•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gauntlet#selected_ranged_weaponj¼
-feat:false_opening#unarmedUnarmed”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#unarmed#selected_ranged_weaponjÝ
-%feat:false_opening#battle_aspergillumBattle AspergillumŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#battle_aspergillum#selected_ranged_weaponjÈ
-feat:false_opening#brass_knifeBrass Knife˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#brass_knife#selected_ranged_weaponjÑ
-!feat:false_opening#brass_knucklesBrass Knuckles›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#brass_knuckles#selected_ranged_weaponj¹
-feat:false_opening#cestusCestus“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#cestus#selected_ranged_weaponj¹
-feat:false_opening#daggerDagger“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dagger#selected_ranged_weaponjÔ
-"feat:false_opening#punching_daggerPunching Daggerœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#punching_dagger#selected_ranged_weaponjÔ
-"feat:false_opening#spiked_gauntletSpiked Gauntletœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#spiked_gauntlet#selected_ranged_weaponjÂ
-feat:false_opening#handwraps	Handwraps–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#handwraps#selected_ranged_weaponj×
-#feat:false_opening#traveling_kettleTraveling Kettle@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#traveling_kettle#selected_ranged_weaponjÂ
-feat:false_opening#hook_hand	Hook Hand–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hook_hand#selected_ranged_weaponj¶
-feat:false_opening#kunaiKunai’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#kunai#selected_ranged_weaponjÅ
-feat:false_opening#light_mace
-Light Mace—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_mace#selected_ranged_weaponj¹
-feat:false_opening#sickleSickle“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sickle#selected_ranged_weaponjË
-feat:false_opening#spring_bladeSpring Blade™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#spring_blade#selected_ranged_weaponjË
-feat:false_opening#wooden_stakeWooden Stake™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#wooden_stake#selected_ranged_weaponj³
-feat:false_opening#clubClub‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#club#selected_ranged_weaponjÂ
-feat:false_opening#mere_club	Mere Club–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#mere_club#selected_ranged_weaponjÅ
-feat:false_opening#heavy_mace
-Heavy Mace—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_mace#selected_ranged_weaponjÈ
-feat:false_opening#morningstarMorningstar˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#morningstar#selected_ranged_weaponjÅ
-feat:false_opening#shortspear
-Shortspear—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shortspear#selected_ranged_weaponj¼
-feat:false_opening#bayonetBayonet”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bayonet#selected_ranged_weaponjÎ
- feat:false_opening#boarding_pikeBoarding Pikeš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#boarding_pike#selected_ranged_weaponj¹
-feat:false_opening#kumadeKumade“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#kumade#selected_ranged_weaponjÝ
-%feat:false_opening#collapsible_kumadeCollapsible KumadeŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#collapsible_kumade#selected_ranged_weaponjÎ
- feat:false_opening#lantern_staffLantern Staffš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#lantern_staff#selected_ranged_weaponjÂ
-feat:false_opening#longspear	Longspear–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#longspear#selected_ranged_weaponjË
-feat:false_opening#quarterstaffQuarterstaff™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#quarterstaff#selected_ranged_weaponj¶
-feat:false_opening#spearSpear’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#spear#selected_ranged_weaponj¼
-feat:false_opening#blowgunBlowgun”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#blowgun#selected_ranged_weaponjÑ
-!feat:false_opening#heavy_crossbowHeavy Crossbow›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_crossbow#selected_ranged_weaponjÑ
-!feat:false_opening#light_crossbowLight Crossbow›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_crossbow#selected_ranged_weaponj³
-feat:false_opening#dartDart‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dart#selected_ranged_weaponj¼
-feat:false_opening#javelinJavelin”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#javelin#selected_ranged_weaponj¶
-feat:false_opening#slingSling’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sling#selected_ranged_weaponjÅ
-feat:false_opening#stingchuck
-Stingchuck—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stingchuck#selected_ranged_weaponj¿
-feat:false_opening#stonebowStonebow•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stonebow#selected_ranged_weaponj°
-feat:false_opening#axeAxe@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#axe#selected_ranged_weaponjË
-feat:false_opening#throwing_axeThrowing Axe™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#throwing_axe#selected_ranged_weaponjÅ
-feat:false_opening#blade_boot
-Blade Boot—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#blade_boot#selected_ranged_weaponj³
-feat:false_opening#whipWhip‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#whip#selected_ranged_weaponjÈ
-feat:false_opening#claw_bladesClaw Blades˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#claw_blades#selected_ranged_weaponjÑ
-!feat:false_opening#dueling_daggerDueling Dagger›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dueling_dagger#selected_ranged_weaponjÂ
-feat:false_opening#dogslicer	Dogslicer–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dogslicer#selected_ranged_weaponjË
-feat:false_opening#light_hammerLight Hammer™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_hammer#selected_ranged_weaponj¼
-feat:false_opening#gladiusGladius”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gladius#selected_ranged_weaponj¼
-feat:false_opening#handaxeHandaxe”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#handaxe#selected_ranged_weaponj¶
-feat:false_opening#katarKatar’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#katar#selected_ranged_weaponj¶
-feat:false_opening#kukriKukri’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#kukri#selected_ranged_weaponj¼
-feat:false_opening#macheteMachete”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#machete#selected_ranged_weaponjÅ
-feat:false_opening#light_pick
-Light Pick—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_pick#selected_ranged_weaponj°
-feat:false_opening#sapSap@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sap#selected_ranged_weaponjË
-feat:false_opening#light_shieldLight Shield™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_shield#selected_ranged_weaponjË
-feat:false_opening#spiked_armorSpiked Armor™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#spiked_armor#selected_ranged_weaponjà
-&feat:false_opening#light_spiked_shieldLight Spiked Shield @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_spiked_shield#selected_ranged_weaponjÂ
-feat:false_opening#starknife	Starknife–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#starknife#selected_ranged_weaponjÈ
-feat:false_opening#short_swordShort Sword˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#short_sword#selected_ranged_weaponjÂ
-feat:false_opening#war_razor	War Razor–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#war_razor#selected_ranged_weaponj¶
-feat:false_opening#ankusAnkus’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#ankus#selected_ranged_weaponjÂ
-feat:false_opening#battleaxe	Battleaxe–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#battleaxe#selected_ranged_weaponjÔ
-"feat:false_opening#combat_scabbardCombat Scabbardœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#combat_scabbard#selected_ranged_weaponj¼
-feat:false_opening#cutlassCutlass”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#cutlass#selected_ranged_weaponjÈ
-feat:false_opening#light_flailLight Flail˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_flail#selected_ranged_weaponj¼
-feat:false_opening#gandasaGandasa”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gandasa#selected_ranged_weaponj³
-feat:false_opening#klarKlar‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#klar#selected_ranged_weaponjÂ
-feat:false_opening#longsword	Longsword–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#longsword#selected_ranged_weaponj¼
-feat:false_opening#manopleManople”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#manople#selected_ranged_weaponjÅ
-feat:false_opening#heavy_pick
-Heavy Pick—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_pick#selected_ranged_weaponj¹
-feat:false_opening#rapierRapier“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#rapier#selected_ranged_weaponj¿
-feat:false_opening#scimitarScimitar•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#scimitar#selected_ranged_weaponj¼
-feat:false_opening#scizoreScizore”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#scizore#selected_ranged_weaponjË
-feat:false_opening#heavy_shieldHeavy Shield™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_shield#selected_ranged_weaponjà
-&feat:false_opening#heavy_spiked_shieldHeavy Spiked Shield @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_spiked_shield#selected_ranged_weaponjÅ
-feat:false_opening#sword_cane
-Sword Cane—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sword_cane#selected_ranged_weaponj¿
-feat:false_opening#terbutjeTerbutje•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#terbutje#selected_ranged_weaponj¼
-feat:false_opening#tridentTrident”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#trident#selected_ranged_weaponjÂ
-feat:false_opening#warhammer	Warhammer–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#warhammer#selected_ranged_weaponj¿
-feat:false_opening#bardicheBardiche•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bardiche#selected_ranged_weaponj³
-feat:false_opening#billBill‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bill#selected_ranged_weaponjÎ
- feat:false_opening#earth_breakerEarth Breakerš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#earth_breaker#selected_ranged_weaponj¿
-feat:false_opening#falchionFalchion•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#falchion#selected_ranged_weaponjÈ
-feat:false_opening#heavy_flailHeavy Flail˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_flail#selected_ranged_weaponj¹
-feat:false_opening#glaiveGlaive“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#glaive#selected_ranged_weaponj¿
-feat:false_opening#greataxeGreataxe•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#greataxe#selected_ranged_weaponjÂ
-feat:false_opening#greatclub	Greatclub–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#greatclub#selected_ranged_weaponjÅ
-feat:false_opening#greatsword
-Greatsword—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#greatsword#selected_ranged_weaponj¿
-feat:false_opening#guisarmeGuisarme•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#guisarme#selected_ranged_weaponj¼
-feat:false_opening#halberdHalberd”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#halberd#selected_ranged_weaponjË
-feat:false_opening#horsechopperHorsechopper™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#horsechopper#selected_ranged_weaponj¶
-feat:false_opening#lanceLance’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#lance#selected_ranged_weaponjÂ
-feat:false_opening#ogre_hook	Ogre Hook–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#ogre_hook#selected_ranged_weaponj¼
-feat:false_opening#pickaxePickaxe”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#pickaxe#selected_ranged_weaponj¼
-feat:false_opening#plansonPlanson”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#planson#selected_ranged_weaponj¼
-feat:false_opening#ranseurRanseur”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#ranseur#selected_ranged_weaponj¹
-feat:false_opening#scytheScythe“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#scythe#selected_ranged_weaponjÎ
- feat:false_opening#syringe_spearSyringe Spearš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#syringe_spear#selected_ranged_weaponj¿
-feat:false_opening#ammentumAmmentum•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#ammentum#selected_ranged_weaponj¼
-feat:false_opening#chakramChakram”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#chakram#selected_ranged_weaponjË
-feat:false_opening#jolting_dartJolting Dart™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#jolting_dart#selected_ranged_weaponjÈ
-feat:false_opening#hunga_mungaHunga Munga˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hunga_munga#selected_ranged_weaponj¼
-feat:false_opening#hurlbatHurlbat”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hurlbat#selected_ranged_weaponj¼
-feat:false_opening#longbowLongbow”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#longbow#selected_ranged_weaponj¶
-feat:false_opening#pilumPilum’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#pilum#selected_ranged_weaponj¿
-feat:false_opening#shortbowShortbow•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shortbow#selected_ranged_weaponj¶
-feat:false_opening#aklysAklys’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#aklys#selected_ranged_weaponjÈ
-feat:false_opening#knuckle_axeKnuckle Axe˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#knuckle_axe#selected_ranged_weaponjÎ
- feat:false_opening#barbazu_beardBarbazu Beardš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#barbazu_beard#selected_ranged_weaponjÅ
-feat:false_opening#battle_poi
-Battle Poi—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#battle_poi#selected_ranged_weaponjà
-&feat:false_opening#swordbreaker_daggerSwordbreaker Dagger @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#swordbreaker_dagger#selected_ranged_weaponjË
-feat:false_opening#flying_talonFlying Talon™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flying_talon#selected_ranged_weaponjÎ
- feat:false_opening#gnome_pincherGnome Pincherš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gnome_pincher#selected_ranged_weaponjÝ
-%feat:false_opening#halfling_rope_shotHalfling Rope-shotŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#halfling_rope_shot#selected_ranged_weaponjé
-)feat:false_opening#dwarven_boulder_helmetDwarven Boulder Helmet£@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_boulder_helmet#selected_ranged_weaponj³
-feat:false_opening#kamaKama‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#kama#selected_ranged_weaponjÔ
-"feat:false_opening#butterfly_knifeButterfly Knifeœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#butterfly_knife#selected_ranged_weaponjÔ
-"feat:false_opening#deer_horn_knifeDeer Horn Knifeœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#deer_horn_knife#selected_ranged_weaponjÔ
-"feat:false_opening#dwarven_maulaxeDwarven Maulaxeœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_maulaxe#selected_ranged_weaponj¿
-feat:false_opening#nunchakuNunchaku•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#nunchaku#selected_ranged_weaponj¿
-feat:false_opening#quadrensQuadrens•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#quadrens#selected_ranged_weaponjÅ
-feat:false_opening#drow_razor
-Drow Razor—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#drow_razor#selected_ranged_weaponjÎ
- feat:false_opening#rope_gauntletRope Gauntletš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#rope_gauntlet#selected_ranged_weaponjÑ
-!feat:false_opening#sawtooth_sabreSawtooth Sabre›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sawtooth_sabre#selected_ranged_weaponj°
-feat:false_opening#saiSai@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sai#selected_ranged_weaponjÂ
-feat:false_opening#sanpkhang	Sanpkhang–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sanpkhang#selected_ranged_weaponj¿
-feat:false_opening#sianghamSiangham•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#siangham#selected_ranged_weaponj³
-feat:false_opening#sicaSica‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sica#selected_ranged_weaponjË
-feat:false_opening#thorn_bracerThorn Bracer™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#thorn_bracer#selected_ranged_weaponjÝ
-%feat:false_opening#dwarven_war_shieldDwarven War-shieldŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_war_shield#selected_ranged_weaponjÂ
-feat:false_opening#waveblade	Waveblade–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#waveblade#selected_ranged_weaponjÎ
- feat:false_opening#scorpion_whipScorpion Whipš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#scorpion_whip#selected_ranged_weaponjõ
--feat:false_opening#dwarven_heavy_axe_gauntletDwarven Heavy Axe-Gauntlet§@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_heavy_axe_gauntlet#selected_ranged_weaponjÅ
-feat:false_opening#hooked_axe
-Hooked Axe—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hooked_axe#selected_ranged_weaponj×
-#feat:false_opening#broken_back_seaxBroken-back Seax@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#broken_back_seax#selected_ranged_weaponj¶
-feat:false_opening#estocEstoc’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#estoc#selected_ranged_weaponj¼
-feat:false_opening#falcataFalcata”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#falcata#selected_ranged_weaponjÂ
-feat:false_opening#flickmace	Flickmace–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flickmace#selected_ranged_weaponj¿
-feat:false_opening#flindbarFlindbar•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flindbar#selected_ranged_weaponj¼
-feat:false_opening#khopeshKhopesh”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#khopesh#selected_ranged_weaponjÅ
-feat:false_opening#knobkerrie
-Knobkerrie—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#knobkerrie#selected_ranged_weaponjÝ
-%feat:false_opening#dwarven_ram_hammerDwarven Ram HammerŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_ram_hammer#selected_ranged_weaponjÎ
- feat:false_opening#spiral_rapierSpiral Rapierš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#spiral_rapier#selected_ranged_weaponj¶
-feat:false_opening#rhokaRhoka’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#rhoka#selected_ranged_weaponj¹
-feat:false_opening#shotelShotel“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shotel#selected_ranged_weaponjË
-feat:false_opening#sickle_swordSickle-sword™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sickle_sword#selected_ranged_weaponjÚ
-$feat:false_opening#split_blade_swordSplit-blade Swordž@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#split_blade_sword#selected_ranged_weaponjÎ
- feat:false_opening#dueling_swordDueling Swordš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dueling_sword#selected_ranged_weaponjÎ
- feat:false_opening#bastard_swordBastard Swordš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bastard_sword#selected_ranged_weaponj¶
-feat:false_opening#tongiTongi’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#tongi#selected_ranged_weaponjÑ
-!feat:false_opening#dwarven_waraxeDwarven Waraxe›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_waraxe#selected_ranged_weaponjæ
-(feat:false_opening#dwarven_double_waraxeDwarven Double Waraxe¢@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_double_waraxe#selected_ranged_weaponjÑ
-!feat:false_opening#orc_double_axeOrc Double Axe›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#orc_double_axe#selected_ranged_weaponjÑ
-!feat:false_opening#butchering_axeButchering Axe›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#butchering_axe#selected_ranged_weaponjà
-&feat:false_opening#gnome_battle_ladderGnome Battle Ladder @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gnome_battle_ladder#selected_ranged_weaponjÎ
- feat:false_opening#boarding_gaffBoarding Gaffš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#boarding_gaff#selected_ranged_weaponjË
-feat:false_opening#chain_hammerChain-hammer™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#chain_hammer#selected_ranged_weaponjË
-feat:false_opening#spiked_chainSpiked Chain™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#spiked_chain#selected_ranged_weaponj¶
-feat:false_opening#crookCrook’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#crook#selected_ranged_weaponjÚ
-$feat:false_opening#elven_curve_bladeElven Curve Bladež@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#elven_curve_blade#selected_ranged_weaponjà
-&feat:false_opening#dwarven_dorn_dergarDwarven Dorn-Dergar @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_dorn_dergar#selected_ranged_weaponjË
-feat:false_opening#double_spearDouble Spear™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#double_spear#selected_ranged_weaponjã
-'feat:false_opening#elven_branched_spearElven Branched Spear¡@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#elven_branched_spear#selected_ranged_weaponj¿
-feat:false_opening#fauchardFauchard•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#fauchard#selected_ranged_weaponjÅ
-feat:false_opening#dire_flail
-Dire Flail—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dire_flail#selected_ranged_weaponjÂ
-feat:false_opening#flailpole	Flailpole–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flailpole#selected_ranged_weaponj¿
-feat:false_opening#flambardFlambard•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flambard#selected_ranged_weaponjË
-feat:false_opening#flying_bladeFlying Blade™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flying_blade#selected_ranged_weaponj¼
-feat:false_opening#garroteGarrote”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#garrote#selected_ranged_weaponjæ
-(feat:false_opening#dwarven_giant_stickerDwarven Giant-Sticker¢@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_giant_sticker#selected_ranged_weaponjà
-&feat:false_opening#gnome_hooked_hammerGnome Hooked Hammer @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gnome_hooked_hammer#selected_ranged_weaponj¼
-feat:false_opening#harpoonHarpoon”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#harpoon#selected_ranged_weaponjÔ
-"feat:false_opening#dwarven_longaxeDwarven Longaxeœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_longaxe#selected_ranged_weaponjÝ
-%feat:false_opening#dwarven_longhammerDwarven LonghammerŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_longhammer#selected_ranged_weaponjÅ
-feat:false_opening#mancatcher
-Mancatcher—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#mancatcher#selected_ranged_weaponjÎ
- feat:false_opening#orc_skull_ramOrc Skull Ramš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#orc_skull_ram#selected_ranged_weaponjÚ
-$feat:false_opening#gnome_piston_maulGnome Piston Maulž@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gnome_piston_maul#selected_ranged_weaponjà
-&feat:false_opening#gnome_ripsaw_glaiveGnome Ripsaw Glaive @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#gnome_ripsaw_glaive#selected_ranged_weaponjË
-feat:false_opening#bladed_scarfBladed Scarf™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bladed_scarf#selected_ranged_weaponjÈ
-feat:false_opening#totem_spearTotem Spear˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#totem_spear#selected_ranged_weaponjæ
-(feat:false_opening#dwarven_sphinx_hammerDwarven Sphinx Hammer¢@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_sphinx_hammer#selected_ranged_weaponjË
-feat:false_opening#switchscytheSwitchscythe™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#switchscythe#selected_ranged_weaponj×
-#feat:false_opening#two_bladed_swordTwo-bladed Sword@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#two_bladed_sword#selected_ranged_weaponjÔ
-"feat:false_opening#dwarven_urgroshDwarven Urgroshœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_urgrosh#selected_ranged_weaponj³
-feat:false_opening#bolaBola‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bola#selected_ranged_weaponjÈ
-feat:false_opening#brutal_bolaBrutal Bola˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#brutal_bola#selected_ranged_weaponjÂ
-feat:false_opening#boomerang	Boomerang–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#boomerang#selected_ranged_weaponjÂ
-feat:false_opening#thorn_bow	Thorn Bow–@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#thorn_bow#selected_ranged_weaponjå
-'feat:false_opening#crank_heavy_crossbowCrank (heavy) Crossbow¡@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#crank_heavy_crossbow#selected_ranged_weaponjå
-'feat:false_opening#crank_light_crossbowCrank (light) Crossbow¡@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#crank_light_crossbow#selected_ranged_weaponjÔ
-"feat:false_opening#double_crossbowDouble Crossbowœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#double_crossbow#selected_ranged_weaponjÎ
- feat:false_opening#hand_crossbowHand Crossbowš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hand_crossbow#selected_ranged_weaponjÝ
-%feat:false_opening#launching_crossbowLaunching CrossbowŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#launching_crossbow#selected_ranged_weaponjï
-+feat:false_opening#repeating_heavy_crossbowRepeating Heavy Crossbow¥@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#repeating_heavy_crossbow#selected_ranged_weaponjï
-+feat:false_opening#repeating_light_crossbowRepeating Light Crossbow¥@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#repeating_light_crossbow#selected_ranged_weaponjÎ
- feat:false_opening#flask_throwerFlask Throwerš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flask_thrower#selected_ranged_weaponjÑ
-!feat:false_opening#grappling_hookGrappling Hook›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#grappling_hook#selected_ranged_weaponjÈ
-feat:false_opening#orc_hornbowOrc Hornbow˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#orc_hornbow#selected_ranged_weaponjÝ
-%feat:false_opening#stormshaft_javelinStormshaft JavelinŸ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stormshaft_javelin#selected_ranged_weaponj¶
-feat:false_opening#lassoLasso’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#lasso#selected_ranged_weaponj°
-feat:false_opening#netNet@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#net#selected_ranged_weaponj¿
-feat:false_opening#snag_netSnag Net•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#snag_net#selected_ranged_weaponjì
-*feat:false_opening#dwarven_heavy_pelletbowDwarven Heavy Pelletbow¤@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_heavy_pelletbow#selected_ranged_weaponjì
-*feat:false_opening#dwarven_light_pelletbowDwarven Light Pelletbow¤@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_light_pelletbow#selected_ranged_weaponjÔ
-"feat:false_opening#throwing_shieldThrowing Shieldœ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#throwing_shield#selected_ranged_weaponjà
-&feat:false_opening#shrillshaft_javelinShrillshaft Javelin @dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shrillshaft_javelin#selected_ranged_weaponjÇ
-feat:false_opening#shuriken_5Shuriken (5)—@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shuriken_5#selected_ranged_weaponjË
-feat:false_opening#double_slingDouble Sling™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#double_sling#selected_ranged_weaponjÈ
-feat:false_opening#sling_gloveSling Glove˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sling_glove#selected_ranged_weaponjã
-'feat:false_opening#halfling_sling_staffHalfling Sling Staff¡@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#halfling_sling_staff#selected_ranged_weaponjÑ
-!feat:false_opening#stitched_slingStitched Sling›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stitched_sling#selected_ranged_weaponjÑ
-!feat:false_opening#wrist_launcherWrist Launcher›@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#wrist_launcher#selected_ranged_weaponjã
-'feat:false_opening#heavy_wrist_launcherHeavy Wrist Launcher¡@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_wrist_launcher#selected_ranged_weaponjµ
-feat:false_opening#blowgunBlowgun@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#blowgunjÊ
-!feat:false_opening#heavy_crossbowHeavy Crossbow”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#heavy_crossbowjÊ
-!feat:false_opening#light_crossbowLight Crossbow”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#light_crossbowj¬
-feat:false_opening#dartDartŠ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#dartjµ
-feat:false_opening#javelinJavelin@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#javelinj¯
-feat:false_opening#slingSling‹@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#slingj¾
-feat:false_opening#stingchuck
-Stingchuck@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#stingchuckj¸
-feat:false_opening#stonebowStonebowŽ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#stonebowj¸
-feat:false_opening#ammentumAmmentumŽ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#ammentumjµ
-feat:false_opening#chakramChakram@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#chakramjÄ
-feat:false_opening#jolting_dartJolting Dart’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#jolting_dartjÁ
-feat:false_opening#hunga_mungaHunga Munga‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#hunga_mungajµ
-feat:false_opening#hurlbatHurlbat@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#hurlbatjµ
-feat:false_opening#longbowLongbow@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#longbowj¯
-feat:false_opening#pilumPilum‹@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#pilumj¸
-feat:false_opening#shortbowShortbowŽ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#shortbowj¯
-feat:false_opening#aklysAklys‹@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#aklysj¬
-feat:false_opening#bolaBolaŠ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#bolajÁ
-feat:false_opening#brutal_bolaBrutal Bola‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#brutal_bolaj»
-feat:false_opening#boomerang	Boomerang@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#boomerangj»
-feat:false_opening#thorn_bow	Thorn Bow@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#thorn_bowjÞ
-'feat:false_opening#crank_heavy_crossbowCrank (heavy) Crossbowš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#crank_heavy_crossbowjÞ
-'feat:false_opening#crank_light_crossbowCrank (light) Crossbowš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#crank_light_crossbowjÍ
-"feat:false_opening#double_crossbowDouble Crossbow•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#double_crossbowjÇ
- feat:false_opening#hand_crossbowHand Crossbow“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#hand_crossbowjÖ
-%feat:false_opening#launching_crossbowLaunching Crossbow˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#launching_crossbowjè
-+feat:false_opening#repeating_heavy_crossbowRepeating Heavy Crossbowž@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#repeating_heavy_crossbowjè
-+feat:false_opening#repeating_light_crossbowRepeating Light Crossbowž@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#repeating_light_crossbowjÇ
- feat:false_opening#flask_throwerFlask Thrower“@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#flask_throwerjÊ
-!feat:false_opening#grappling_hookGrappling Hook”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#grappling_hookjÁ
-feat:false_opening#orc_hornbowOrc Hornbow‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#orc_hornbowjÖ
-%feat:false_opening#stormshaft_javelinStormshaft Javelin˜@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#stormshaft_javelinj¯
-feat:false_opening#lassoLasso‹@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#lassoj©
-feat:false_opening#netNet‰@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#netj¸
-feat:false_opening#snag_netSnag NetŽ@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#snag_netjå
-*feat:false_opening#dwarven_heavy_pelletbowDwarven Heavy Pelletbow@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#dwarven_heavy_pelletbowjå
-*feat:false_opening#dwarven_light_pelletbowDwarven Light Pelletbow@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#dwarven_light_pelletbowjÍ
-"feat:false_opening#throwing_shieldThrowing Shield•@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#throwing_shieldjÙ
-&feat:false_opening#shrillshaft_javelinShrillshaft Javelin™@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#shrillshaft_javelinjÀ
-feat:false_opening#shuriken_5Shuriken (5)@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#shuriken_5jÄ
-feat:false_opening#double_slingDouble Sling’@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#double_slingjÁ
-feat:false_opening#sling_gloveSling Glove‘@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#sling_glovejÜ
-'feat:false_opening#halfling_sling_staffHalfling Sling Staffš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#halfling_sling_staffjÊ
-!feat:false_opening#stitched_slingStitched Sling”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#stitched_slingjÊ
-!feat:false_opening#wrist_launcherWrist Launcher”@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#wrist_launcherjÜ
-'feat:false_opening#heavy_wrist_launcherHeavy Wrist Launcherš@dex_score >= 13 AND (@feat:dodge OR @feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#selected_weapon#heavy_wrist_launcher

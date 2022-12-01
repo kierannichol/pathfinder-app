@@ -1,0 +1,10 @@
+{
+  "id": "feat:improved_surprise_follow_through",
+  "name": "Improved Surprise Follow-Through",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You follow up an attack with a surprising series of sweeping blows.",
+  "prerequisites": "Str 13, Cleave, Great Cleave, Power Attack, Surprise Follow Through, base attack bonus +8.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:cleave AND @feat:great_cleave AND @feat:power_attack AND @ability:surprise_follow_through AND @bab \u003e\u003d 8",
+  "benefit": "When using Great Cleave, each opponent you attack on your turn (other than the first) is denied his Dexterity bonus against you.",
+  "source": "Advanced Race Guide"
+}

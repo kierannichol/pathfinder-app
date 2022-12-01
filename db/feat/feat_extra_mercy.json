@@ -4,7 +4,7 @@
   "types": ["FEAT_TYPE_GENERAL"],
   "description": "Your lay on hands ability adds an additional mercy.",
   "prerequisites": "Lay on hands class feature, mercy class feature.",
-  "prerequisitesFormula": "sum(@ability:lay_on_hands) AND sum(@ability:mercy)",
+  "prerequisitesFormula": "@ability:lay_on_hands AND @ability:mercy",
   "benefit": "Select one additional mercy for which you qualify. When you use lay on hands to heal damage to one target, it also receives the additional effects of this mercy.",
   "special": "You can gain this feat multiple times. Its effects do not stack. Each time you take this feat, select a new mercy.",
   "source": "PFRPG Core"
