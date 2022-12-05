@@ -1,0 +1,25 @@
+{
+  "id": "spell:mass_inflict_serious_wounds",
+  "name": "Mass Inflict Serious Wounds",
+  "type": "ABILITY_TYPE_SP",
+  "school": "necromancy",
+  "range": {
+    "category": "CLOSE"
+  },
+  "targets": "one creature/level, no two of which can be more than 30 ft. apart",
+  "duration": "instantaneous",
+  "description": "This spell functions like mass inflict light wounds, except that it deals 3d8 points of damage + 1 point per caster level (maximum +35).",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 7
+  }, {
+    "classId": "class:oracle",
+    "level": 7
+  }, {
+    "classId": "class:shaman",
+    "level": 7
+  }, {
+    "classId": "class:witch",
+    "level": 8
+  }]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "spell:greater_shield_of_fortification",
+  "name": "Greater Shield of Fortification",
+  "type": "ABILITY_TYPE_SP",
+  "school": "abjuration",
+  "range": {
+    "category": "TOUCH"
+  },
+  "targets": "creature touched",
+  "duration": "1 minute/level",
+  "description": "This spell functions as shield of fortification, except there is a 50% chance that the critical hit or sneak attack is negated and damage is instead be rolled normally, rather than 25%.",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 4
+  }, {
+    "classId": "class:inquisitor",
+    "level": 3
+  }, {
+    "classId": "class:oracle",
+    "level": 4
+  }, {
+    "classId": "class:paladin",
+    "level": 3
+  }, {
+    "classId": "class:warpriest",
+    "level": 4
+  }]
+}

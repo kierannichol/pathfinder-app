@@ -1,0 +1,31 @@
+{
+  "id": "spell:inflict_serious_wounds",
+  "name": "Inflict Serious Wounds",
+  "type": "ABILITY_TYPE_SP",
+  "school": "necromancy",
+  "range": {
+    "category": "TOUCH"
+  },
+  "targets": "creature touched",
+  "duration": "instantaneous",
+  "description": "This spell functions like inflict light wounds, except that it deals 3d8 + 1 point per caster level (maximum +15).Mythic Inflict Serious Wounds",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 3
+  }, {
+    "classId": "class:inquisitor",
+    "level": 3
+  }, {
+    "classId": "class:oracle",
+    "level": 3
+  }, {
+    "classId": "class:shaman",
+    "level": 3
+  }, {
+    "classId": "class:warpriest",
+    "level": 3
+  }, {
+    "classId": "class:witch",
+    "level": 4
+  }]
+}

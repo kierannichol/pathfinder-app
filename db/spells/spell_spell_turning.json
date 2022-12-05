@@ -1,0 +1,25 @@
+{
+  "id": "spell:spell_turning",
+  "name": "Spell Turning",
+  "type": "ABILITY_TYPE_SP",
+  "school": "abjuration",
+  "range": {
+    "category": "PERSONAL"
+  },
+  "targets": "you",
+  "duration": "until expended or 10 min./level",
+  "description": "Spells and spell-like effects targeted on you are turned back upon the original caster. The abjuration turns only spells that have you as a target. Effect and area spells are not affected. Spell turning also fails to stop touch range spells. From seven to ten (1d4+6) spell levels are affected by the turning. The exact number is rolled secretly.",
+  "level": [{
+    "classId": "class:arcanist",
+    "level": 7
+  }, {
+    "classId": "class:sorcerer",
+    "level": 7
+  }, {
+    "classId": "class:summoner",
+    "level": 5
+  }, {
+    "classId": "class:wizard",
+    "level": 7
+  }]
+}
