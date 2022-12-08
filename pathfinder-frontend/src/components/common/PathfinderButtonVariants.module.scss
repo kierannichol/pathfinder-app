@@ -1,0 +1,32 @@
+// Variants
+
+.default {
+  --pf-button-background-color: white;
+  --pf-button-text-color: dimgray;
+  --pf-button-selected-background-color: var(--bs-primary);
+  --pf-button-selected-text-color: white;
+}
+
+.white {
+  @extend .default;
+}
+
+.feat {
+  --pf-button-background-color: #FFD050;
+  --pf-button-text-color: #6A4D00;
+  --pf-button-selected-background-color: #FFF0B3;
+  --pf-button-selected-text-color: #663700;
+}
+
+.special {
+  --pf-button-background-color: #c7ddfe;
+  --pf-button-text-color: #045adc;
+}
+
+.rage_power {
+  @extend .special;
+}
+
+.witch_hex {
+  @extend .special;
+}

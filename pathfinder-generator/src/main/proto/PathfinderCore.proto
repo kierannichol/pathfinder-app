@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+enum AbilityScoreDbo {
+  ABILITY_SCORE_UNKNOWN = 0;
+  ABILITY_SCORE_STR = 1;
+  ABILITY_SCORE_DEX = 2;
+  ABILITY_SCORE_CON = 3;
+  ABILITY_SCORE_INT = 4;
+  ABILITY_SCORE_WIS = 5;
+  ABILITY_SCORE_CHA = 6;
+}
+
+enum ActionTypeDbo {
+  ACTION_TYPE_UNKNOWN = 0;
+  ACTION_TYPE_IMMEDIATE = 1;
+  ACTION_TYPE_FREE = 2;
+  ACTION_TYPE_SWIFT = 3;
+  ACTION_TYPE_MOVE = 4;
+  ACTION_TYPE_STANDARD = 5;
+  ACTION_TYPE_FULL_ROUND = 6;
+}
+
+message RangeDbo {
+  enum Category {
+    PERSONAL = 0;
+    TOUCH = 1;
+    CLOSE = 2;
+    MEDIUM = 3;
+    LONG = 4;
+    UNLIMITED = 5;
+  }
+
+  oneof Distance {
+    Category category = 1;
+    uint32 feet = 2;
+  }
+}

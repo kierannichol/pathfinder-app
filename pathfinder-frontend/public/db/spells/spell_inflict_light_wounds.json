@@ -1,0 +1,31 @@
+{
+  "id": "spell:inflict_light_wounds",
+  "name": "Inflict Light Wounds",
+  "type": "ABILITY_TYPE_SP",
+  "school": "necromancy",
+  "range": {
+    "category": "TOUCH"
+  },
+  "targets": "creature touched",
+  "duration": "instantaneous",
+  "description": "When laying your hand upon a creature, you channel negative energy that deals 1d8 points of damage + 1 point per caster level (maximum +5).",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 1
+  }, {
+    "classId": "class:inquisitor",
+    "level": 1
+  }, {
+    "classId": "class:oracle",
+    "level": 1
+  }, {
+    "classId": "class:shaman",
+    "level": 1
+  }, {
+    "classId": "class:warpriest",
+    "level": 1
+  }, {
+    "classId": "class:witch",
+    "level": 1
+  }]
+}

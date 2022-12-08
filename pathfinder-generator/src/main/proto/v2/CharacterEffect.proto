@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+import "v2/CharacterChoice.proto";
+import "v2/AbilityDatabase.proto";
+
+package v2;
+
+message CharacterEffectDbo {
+
+  message ModifyFeatureEffect {
+    string featureId = 1;
+    int32 delta = 2;
+  }
+
+  message SetFeatureEffect {
+    string featureId = 1;
+    int32 value = 2;
+  }
+
+  message GrantChoiceEffect {
+    CharacterChoiceDbo choice = 1;
+  }
+
+  message GrantAbilityEffect {
+    string abilityId = 1;
+  }
+
+  message GrantFeatEffect {
+    string featId = 1;
+  }
+
+  uint32 level = 1;
+
+  oneof effect {
+    ModifyFeatureEffect modifyFeature = 100;
+    SetFeatureEffect setFeature = 101;
+    GrantChoiceEffect grantChoice = 102;
+    GrantAbilityEffect grantAbility = 103;
+    GrantFeatEffect grantFeat = 104;
+  }
+}

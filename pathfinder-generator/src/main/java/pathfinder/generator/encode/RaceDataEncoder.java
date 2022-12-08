@@ -16,7 +16,7 @@ public class RaceDataEncoder implements Encoder<Race, RaceDataDbo> {
                 .setType(race.type())
                 .setSpeed(race.speed())
                 .addAllLanguages(race.languages())
-                .addAllTraits(race.traits())
+                .addAllTraits(race.modifiers())
                 .build();
     }
 }

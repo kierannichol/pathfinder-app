@@ -45,7 +45,7 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
   const choicesAvailable = useMemo(() => skillChoices.filter(choice => choice.current === ''), [skillChoices]);
   const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => choice.current === skill.id), [skillChoices]);
 
-  const isTrained = useMemo(() => characterAtLevel.get(skill.id + ':trained')?.asBoolean() ?? false, [characterAtLevel, skill]);
+  const isTrained = useMemo(() => characterAtLevel.get("trained:" + skill.id)?.asBoolean() ?? false, [characterAtLevel, skill]);
 
   function handleSkillChanged(newValue: string) {
     const newValueNumber = parseInt(newValue);

@@ -16,7 +16,7 @@ public class RaceSummaryEncoder implements Encoder<Race, RaceSummaryDbo> {
                 .setType(race.type())
                 .setSpeed(race.speed())
                 .addAllLanguages(race.languages())
-                .addAllTraits(race.traits())
+                .addAllTraits(race.modifiers())
                 .build();
     }
 }

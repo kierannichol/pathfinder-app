@@ -35,7 +35,7 @@ export class FeatDatabase {
       return undefined;
     }
 
-    return feat.options.find(o => o.id === id)?.toFeatSummary(feat);
+    return feat.options.find(o => o.id === id)?.toFeatSummary(feat) ?? feat;
   }
 
   public async get(id: string): Promise<Feat | undefined> {
@@ -49,7 +49,7 @@ export class FeatDatabase {
       });
 
     if (optionId) {
-      return feat?.options.find(o => o.id === id)?.toFeat(feat);
+      return feat?.options.find(o => o.id === id)?.toFeat(feat) ?? feat;
     }
     return feat;
   }

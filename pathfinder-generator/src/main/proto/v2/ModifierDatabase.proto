@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+package v2;
+
+import "v2/CharacterEffect.proto";
+
+message ModifierDatabaseDbo {
+  repeated ModifierSummaryDbo summaries = 1;
+}
+
+message ModifierSummaryDbo {
+  string id = 1;
+  string name = 2;
+}
+
+message ModifierDetailsDbo {
+  string id = 1;
+  string name = 2;
+  repeated CharacterEffectDbo effects = 3;
+
+  string descriptionText = 100;
+  string effectText = 101;
+}

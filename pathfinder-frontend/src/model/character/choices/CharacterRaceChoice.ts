@@ -11,14 +11,22 @@ import RaceAbilityScoreIncreaseChoice from "./RaceAbilityScoreIncreaseChoice";
 class CharacterRaceChoice extends CharacterChoice {
   public readonly key = CharacterChoice.RACE;
   public readonly type = ChoiceType.CHARACTER_RACE;
-  public readonly dependsOn = undefined;
+  public readonly label = "Race";
 
-  constructor(private readonly value: string = '') {
+  constructor(public readonly dependsOn: string | undefined = undefined, private readonly value: string = '') {
     super();
   }
 
   get current(): string {
     return this.value;
+  }
+
+  withValue(value: string): CharacterRaceChoice {
+    return new CharacterRaceChoice(this.dependsOn, value);
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new CharacterRaceChoice(dependsOn, this.current);
   }
 }
 
@@ -29,7 +37,7 @@ export class CharacterRaceChoiceProcessor implements ICharacterChoiceProcessor<C
   }
 
   async select(choice: CharacterRaceChoice, value: string): Promise<CharacterChoice[]> {
-    const choices: CharacterChoice[] = [ new CharacterRaceChoice(value) ];
+    const choices: CharacterChoice[] = [ choice.withValue(value) ];
 
     const race = this.raceDatabase.summary(value);
     if (race === undefined) {
@@ -38,10 +46,10 @@ export class CharacterRaceChoiceProcessor implements ICharacterChoiceProcessor<C
 
     for (let trait of race.traits) {
       switch (trait) {
-        case 'choice:asi_2':
+        case 'modifier:asi_2':
           choices.push(new RaceAbilityScoreIncreaseChoice());
           break;
-        case 'choice:bonus_feat':
+        case 'modifier:bonus_feat':
           choices.push(new FeatChoice(1, 'level1:race_bonus_feat', choice.key, [ ChoiceTag.BONUS ]));
           break;
       }
@@ -53,12 +61,12 @@ export class CharacterRaceChoiceProcessor implements ICharacterChoiceProcessor<C
   private static readonly traitCodeMap: {[traitCode:string]: Trait} = {
     ...CharacterState.Abilities.reduce((state, ability) => ({
       ...state,
-      [`trait:${ability}_plus_1`]: new RacialAsiTrait(ability, 1),
-      [`trait:${ability}_minus_1`]: new RacialAsiTrait(ability, -1),
-      [`trait:${ability}_plus_2`]: new RacialAsiTrait(ability, 2),
-      [`trait:${ability}_minus_2`]: new RacialAsiTrait(ability, -2),
-      [`trait:${ability}_plus_3`]: new RacialAsiTrait(ability, 3),
-      [`trait:${ability}_minus_3`]: new RacialAsiTrait(ability, -3),
+      [`modifier:${ability}_plus_2`]: new RacialAsiTrait(ability, 2),
+      [`modifier:${ability}_minus_2`]: new RacialAsiTrait(ability, -2),
+      ['modifier:low_light_vision']: CustomTrait.of('ability:low_light_vision', 30),
+      ['modifier:darkvision']: CustomTrait.of('ability:darkvision', 30),
+      ['modifier:darkvision_60']: CustomTrait.of('ability:darkvision', 60),
+      ['modifier:darkvision_120']: CustomTrait.of('ability:darkvision', 120),
     }), {})
   };
 

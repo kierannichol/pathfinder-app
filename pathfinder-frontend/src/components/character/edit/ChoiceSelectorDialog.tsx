@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {ReactNode, useEffect, useMemo, useState} from "react";
 import {Alert, Button, Modal, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
 import * as pfutils from "../../../util/pfutils";
-import {PathfinderButtonVariants} from "../../common/PathfinderButton";
 import SearchBar from "../base/SearchBar";
 import ChoiceSelectorList from "./ChoiceSelectorList";
 import styles from "./Dialog.module.scss";
@@ -80,7 +79,7 @@ interface ChoiceSelectorDialogProps {
   options: ChoiceSelectorOptions;
   categories?: ChoiceSelectorCategory[];
   search?: boolean;
-  variant?: PathfinderButtonVariants;
+  variant?: string;
 }
 
 export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect, onCancel, options, categories = [], search = false, variant = 'special' }: ChoiceSelectorDialogProps) {

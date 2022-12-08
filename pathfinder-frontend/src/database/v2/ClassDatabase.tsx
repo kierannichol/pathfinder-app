@@ -3,9 +3,9 @@ import {createContext, RefCallback, useCallback, useContext, useEffect, useState
 import {v2} from "../../compiled";
 import LoadingBlock from "../../components/common/LoadingBlock";
 import {CharacterClass, CharacterClassSummary} from "../../model/character/CharacterClass";
+import {decodeEffectList} from "./decoder";
 import fetch = util.fetch;
 import CharacterClassDatabaseDbo = v2.ClassDatabaseDbo;
-import ClassLevelDbo = v2.ClassLevelDbo;
 
 export class CharacterClassDatabase {
   private static readonly CACHE_SIZE = 5;
@@ -17,7 +17,7 @@ export class CharacterClassDatabase {
 
   static from(database: CharacterClassDatabaseDbo): CharacterClassDatabase {
     let data: {[id: string]: CharacterClassSummary} = {};
-    for (const characterClass of database.classSummaries) {
+    for (const characterClass of database.summaries) {
       const id = characterClass.id;
       data[id] = new CharacterClassSummary(id,
           characterClass.name,
@@ -32,7 +32,6 @@ export class CharacterClassDatabase {
   }
 
   public summary(id: string): CharacterClassSummary | undefined {
-    console.log("Looking for class for " + id + " found " + this.data[id])
     return this.data[id];
   }
 
@@ -51,8 +50,7 @@ export class CharacterClassDatabase {
             data.name,
             data.category.toString(),
             data.shortDescription,
-            data.skills,
-            data.levels.map(l => convertCharacterClassLevel(l)) ?? []);
+            decodeEffectList(data.effects));
 
     if (this.cache.length > CharacterClassDatabase.CACHE_SIZE) {
       this.cache.pop();
@@ -65,18 +63,6 @@ export class CharacterClassDatabase {
   private constructor(private readonly data: {[id:string]: CharacterClassSummary},
                       public readonly isLoaded: boolean) {
   }
-}
-
-function convertCharacterClassLevel(dataType: ClassLevelDbo): CharacterClass.Level {
-  return new CharacterClass.Level(
-      dataType.levelNumber,
-      dataType.bab,
-      dataType.fortSave,
-      dataType.refSave,
-      dataType.willSave,
-      dataType.specials?.map(specialDbo =>
-          new CharacterClass.Special(specialDbo.id, specialDbo.name, specialDbo.description)) ?? []
-  );
 }
 
 let globalCharacterClassDatabase: Promise<CharacterClassDatabase> | undefined = undefined;
@@ -98,12 +84,17 @@ async function loadCharacterClassDatabase(): Promise<CharacterClassDatabaseDbo> 
       CharacterClassDatabaseDbo.decode(binary as Uint8Array));
 }
 
-async function loadCharacterClass(id: string): Promise<v2.ClassDataDbo | undefined> {
+async function loadCharacterClass(id: string): Promise<v2.ClassDetailsDbo | undefined> {
   if (id === '') {
-    return new Promise<v2.ClassDataDbo|undefined>(_ => undefined);
+    return new Promise<v2.ClassDetailsDbo|undefined>(_ => undefined);
   }
   return fetch(`${process.env.PUBLIC_URL}/db/classes/${idToFilename(id)}.bin`, { binary: true }).then(binary => {
-    return v2.ClassDataDbo.decode(binary as Uint8Array);
+    try {
+      return v2.ClassDetailsDbo.decode(binary as Uint8Array);
+    } catch (e) {
+      console.warn(e);
+      return undefined;
+    }
   })
 }
 

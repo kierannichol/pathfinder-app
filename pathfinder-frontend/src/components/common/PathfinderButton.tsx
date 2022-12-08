@@ -1,17 +1,26 @@
 import React from "react";
-import "./PathfinderButton.scss";
-
-export type PathfinderButtonVariants = 'grey' | 'white' | 'feat' | 'special' | 'ragepower';
+import classNames from "../../app/classNames";
+import styles from "./PathfinderButton.module.scss";
+import variants from "./PathfinderButtonVariants.module.scss";
 
 interface PathfinderButtonProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  variant?: PathfinderButtonVariants;
+  variant?: string;
+  disabled?: boolean;
 }
 
-function PathfinderButton({ variant, ...divProps }: PathfinderButtonProps) {
+function PathfinderButton({ variant = 'default', className, disabled = false, ...divProps }: PathfinderButtonProps) {
+  const buttonClassNames = [ styles.button, className ];
+  if (variant && !disabled) {
+    buttonClassNames.push(variants[variant]);
+  }
+  if (disabled) {
+    buttonClassNames.push(styles.disabled);
+  }
+
   return (
       <div
-        className={`pf-button pf-button--${variant}`}
-        {...divProps}>
+          {...divProps}
+          className={classNames(...buttonClassNames)}>
     </div>);
 }
 

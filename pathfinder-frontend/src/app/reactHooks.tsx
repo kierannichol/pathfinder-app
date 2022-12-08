@@ -37,6 +37,7 @@ export function useAsyncMemo<T>(promiseFn: () => Promise<T|undefined>, deps?: De
         setResult(result);
       }
     }).catch(error => {
+      console.error(error);
       if (mounted) {
         setError(error);
       }

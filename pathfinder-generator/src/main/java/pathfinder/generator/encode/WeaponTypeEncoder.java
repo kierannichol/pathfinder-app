@@ -14,10 +14,10 @@ public class WeaponTypeEncoder implements Encoder<WeaponType, WeaponTypeDbo> {
     @Override
     public WeaponTypeDbo encode(WeaponType weaponType) {
         var builder = WeaponTypeDbo.newBuilder()
-                .setId(weaponType.getId())
-                .setName(weaponType.getName())
-                .setProficiency(weaponProficiencyEncoder.encode(weaponType.getRequiredProficiency()))
-                .setRange(weaponRangeEncoder.encode(weaponType.getRange()));
+                .setId(weaponType.id())
+                .setName(weaponType.name())
+                .setProficiency(weaponProficiencyEncoder.encode(weaponType.requiredProficiency()))
+                .setRange(weaponRangeEncoder.encode(weaponType.range()));
         return builder.build();
     }
 }

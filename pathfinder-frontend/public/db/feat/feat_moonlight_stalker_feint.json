@@ -1,0 +1,11 @@
+{
+  "id": "feat:moonlight_stalker_feint",
+  "name": "Moonlight Stalker Feint",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You strike through the shadows so quickly that your opponent can barely react to your attacks.",
+  "prerequisites": "Int 13, Blind-Fight, Combat Expertise, Moonlight Stalker, Bluff 6 ranks, darkvision or lowlight vision racial trait.",
+  "prerequisitesFormula": "(@int_score \u003e\u003d 13 OR @feat:blind_fight OR @feat:combat_expertise OR @feat:moonlight_stalker OR @skill:bluff \u003e\u003d 6 OR @spell:darkvision OR @ability:low_light_vision)",
+  "benefit": "Once per round, against an opponent from whom you have concealment, you can spend a swift action to make a Bluff check to feint.",
+  "normal": "Feinting is a standard action.",
+  "source": "PZO1118"
+}

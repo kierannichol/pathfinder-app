@@ -1,0 +1,31 @@
+{
+  "id": "spell:spell_resistance",
+  "name": "Spell Resistance",
+  "type": "ABILITY_TYPE_SP",
+  "school": "abjuration",
+  "range": {
+    "category": "TOUCH"
+  },
+  "targets": "creature touched",
+  "duration": "1 min./level",
+  "description": "The target gains spell resistance equal to 12 + your caster level.",
+  "level": [{
+    "classId": "class:alchemist",
+    "level": 5
+  }, {
+    "classId": "class:cleric",
+    "level": 5
+  }, {
+    "classId": "class:inquisitor",
+    "level": 5
+  }, {
+    "classId": "class:investigator",
+    "level": 5
+  }, {
+    "classId": "class:oracle",
+    "level": 5
+  }, {
+    "classId": "class:warpriest",
+    "level": 5
+  }]
+}

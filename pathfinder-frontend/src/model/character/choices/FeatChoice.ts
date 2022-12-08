@@ -5,6 +5,7 @@ import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 class FeatChoice extends CharacterChoice {
   public readonly type = ChoiceType.FEAT;
+  public readonly label = "Feat";
 
   public withValue(value: string): FeatChoice {
     return new FeatChoice(this.level, this.key, this.dependsOn, this.tags, value);
@@ -12,6 +13,10 @@ class FeatChoice extends CharacterChoice {
 
   constructor(public readonly level: number, public readonly key: string, public readonly dependsOn: string|undefined, public readonly tags: ChoiceTag[] = [], public readonly current = '') {
     super();
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new FeatChoice(this.level, this.key, dependsOn, this.tags, this.current);
   }
 }
 

@@ -6,14 +6,18 @@ import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 export default class CharacterNameChoice extends CharacterChoice {
   public readonly key = CharacterChoice.CHARACTER_NAME;
   public readonly type = ChoiceType.CHARACTER_NAME;
-  public readonly dependsOn = undefined;
+  public readonly label = "Character Name";
 
-  constructor(private readonly value: string = '') {
+  constructor(public readonly dependsOn: string | undefined = undefined, private readonly value: string = '') {
     super();
   }
 
   get current(): string {
     return this.value;
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new CharacterNameChoice(dependsOn, this.current);
   }
 }
 
@@ -22,7 +26,7 @@ export class CharacterNameChoiceProcessor implements ICharacterChoiceProcessor<C
 
   async select(choice: CharacterNameChoice, value: string): Promise<CharacterChoice[]> {
     return [
-      new CharacterNameChoice(value)
+      new CharacterNameChoice(choice.dependsOn, value)
     ];
   }
 

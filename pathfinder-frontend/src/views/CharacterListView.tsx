@@ -15,7 +15,8 @@ function CharacterListView() {
   const navigate = useNavigate();
   const characterRepository = useCharacterRepository();
 
-  const [ characterList ] = useAsyncMemo(() => characterRepository.list(), []);
+  const [ characterList ] = useAsyncMemo(() => characterRepository.list(),
+      [ characterRepository ]);
 
   const isLoaded = characterList !== undefined;
 
@@ -51,6 +52,8 @@ interface CharacterItemRowProps {
 function CharacterItemRow({ character }: CharacterItemRowProps) {
   const characterRepository = useCharacterRepository()
   const [ deleting, setDeleting ] = useState(false)
+
+  console.log(character);
 
   const deleteAction = () => {
     setDeleting(true)

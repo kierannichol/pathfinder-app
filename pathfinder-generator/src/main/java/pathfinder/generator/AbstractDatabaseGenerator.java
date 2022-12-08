@@ -6,8 +6,61 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+import pathfinder.model.FeatureModel;
+import pathfinder.model.v3.Sourced;
+import pathfinder.spring.OutputPathValue;
+import pathfinder.util.FileUtils;
 
-public abstract class AbstractDatabaseGenerator implements DatabaseGenerator {
+public abstract class AbstractDatabaseGenerator<MODEL extends FeatureModel, SUMMARY extends Message, DETAILED extends Message> implements DatabaseGenerator {
+    protected static final Predicate<Sourced> KNOWN_SOURCES = sourced -> sourced.source() != null;
+
+    @OutputPathValue
+    private Path outputBasePath;
+
+    protected abstract Stream<MODEL> streamModels() throws IOException;
+    protected abstract String getRelativeOutputPath();
+    protected abstract String getOutputDatabaseName();
+    protected abstract SUMMARY encodedSummary(MODEL model);
+    protected abstract DETAILED encodedDetailed(MODEL model, SUMMARY summary);
+    protected abstract Message createSummaryDatabase(List<SUMMARY> summaries);
+
+    @Override
+    public void generate() throws IOException {
+        String relativeOutputPath = getRelativeOutputPath();
+        Path detailedDataPath = (relativeOutputPath != null && !relativeOutputPath.isBlank())
+                ? outputBasePath.resolve(relativeOutputPath)
+                : outputBasePath;
+
+        if (!detailedDataPath.equals(outputBasePath)) {
+            FileUtils.deleteDirectory(detailedDataPath);
+            Files.createDirectory(detailedDataPath);
+        }
+
+        List<SUMMARY> summaries = new ArrayList<>();
+        streamModels()
+                .distinct()
+                .forEachOrdered(model -> {
+                    SUMMARY summary = encodedSummary(model);
+                    if (summary != null) {
+                        summaries.add(summary);
+                    }
+
+                    DETAILED detailed = encodedDetailed(model, summary);
+                    if (detailed != null) {
+                        String fileName = idToFilename(model.id());
+                        write(detailed, fileName, detailedDataPath);
+                    }
+                });
+
+        Message database = createSummaryDatabase(summaries);
+        if (database != null) {
+            write(database, getOutputDatabaseName(), outputBasePath);
+        }
+    }
 
     protected void write(Message message, String name, Path outputPath) throws UncheckedIOException {
         try {
@@ -21,6 +74,8 @@ public abstract class AbstractDatabaseGenerator implements DatabaseGenerator {
     }
 
     protected static String idToFilename(String id) {
-        return id.replace(':', '_');
+        return id
+                .replace(':', '_')
+                .replace('#', '_');
     }
 }

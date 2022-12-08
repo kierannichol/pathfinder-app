@@ -3,179 +3,710 @@
   "name": "Cleric",
   "category": "CORE",
   "shortDescription": "More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies’ prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need. As their powers are influenced by their faith, all clerics must focus their worship upon a divine source. While the vast majority of clerics revere a specific deity, a small number dedicate themselves to a divine concept worthy of devotion—such as battle, death, justice, or knowledge—free of a deific abstraction. (Work with your GM if you prefer this path to selecting a specific deity.)",
-  "levels": [{
-    "levelNumber": 1,
-    "fortSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:aura",
-      "name": "Aura",
-      "description": "A cleric of a chaotic, evil, good, or lawful deity has a particularly powerful aura corresponding to the deity’s alignment (see detect evil for details)."
-    }, {
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }, {
-      "id": "ability:domains",
-      "name": "Domains",
-      "description": "A cleric’s deity influences her alignment, what magic she can perform, her values, and how others see her. A cleric chooses two domains from among those belonging to her deity. A cleric can select an alignment domain (Chaos, Evil, Good, or Law) only if her alignment matches that domain. If a cleric is not devoted to a particular deity, she still selects two domains to represent her spiritual inclinations and abilities (subject to GM approval). The restriction on alignment domains still applies.Each domain grants a number of domain powers, dependent upon the level of the cleric, as well as a number of bonus spells. A cleric gains one domain spell slot for each level of cleric spell she can cast, from 1st on up. Each day, a cleric can prepare one of the spells from her two domains in that slot. If a domain spell is not on the cleric spell list, a cleric can prepare it only in her domain spell slot. Domain spells cannot be used to cast spells spontaneously.In addition, a cleric gains the listed powers from both of her domains, if she is of a high enough level. Unless otherwise noted, activating a domain power is a standard action."
-    }, {
-      "id": "ability:orisons",
-      "name": "Orisons",
-      "description": "Orisons"
-    }, {
-      "id": "ability:spontaneous_casting",
-      "name": "Spontaneous Casting",
-      "description": "A good cleric (or a neutral cleric of a good deity) can channel stored spell energy into healing spells that she did not prepare ahead of time. The cleric can “lose” any prepared spell that is not an orison or domain spell in order to cast any cure spell of the same spell level or lower (a cure spell is any spell with “cure” in its name).An evil cleric (or a neutral cleric of an evil deity) can’t convert prepared spells to cure spells but can convert them to inflict spells (an inflict spell is one with “inflict” in its name).A cleric who is neither good nor evil and whose deity is neither good nor evil can convert spells to either cure spells or inflict spells (player’s choice). Once the player makes this choice, it cannot be reversed. This choice also determines whether the cleric channels positive or negative energy (see channel energy)."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 1,
-    "fortSave": 3,
-    "willSave": 3
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 2,
-    "fortSave": 3,
-    "refSave": 1,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 3,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 4
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 3,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 4,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 5
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 5,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 6,
-    "fortSave": 6,
-    "refSave": 2,
-    "willSave": 6
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 6,
-    "fortSave": 6,
-    "refSave": 3,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 7,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 7
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 8,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:appraise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 9,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 8
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 9,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 8,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:diplomacy",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 10,
-    "fortSave": 9,
-    "refSave": 4,
-    "willSave": 9
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:heal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 11,
-    "fortSave": 9,
-    "refSave": 5,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 12,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 10
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 12,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 10,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 13,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 11
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 14,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:channel_energy",
-      "name": "Channel Energy"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 15,
-    "fortSave": 12,
-    "refSave": 6,
-    "willSave": 12
-  }],
-  "skills": ["skill:appraise", "skill:craft", "skill:diplomacy", "skill:heal", "skill:knowledge", "skill:knowledge", "skill:knowledge", "skill:knowledge", "skill:knowledge", "skill:linguistics", "skill:profession", "skill:sense_motive", "skill:spellcraft"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:linguistics",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sense_motive",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:spellcraft",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:aura#cleric"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:domains#cleric"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:orisons#cleric"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:spontaneous_casting#cleric"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:channel_energy#cleric"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 12
+    }
+  }]
 }

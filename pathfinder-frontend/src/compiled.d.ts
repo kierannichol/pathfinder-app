@@ -719,11 +719,1258 @@ export namespace v2 {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    /** Properties of a CharacterEffectDbo. */
+    interface ICharacterEffectDbo {
+
+        /** CharacterEffectDbo level */
+        level?: (number|null);
+
+        /** CharacterEffectDbo modifyFeature */
+        modifyFeature?: (v2.CharacterEffectDbo.ModifyFeatureEffect|null);
+
+        /** CharacterEffectDbo setFeature */
+        setFeature?: (v2.CharacterEffectDbo.SetFeatureEffect|null);
+
+        /** CharacterEffectDbo grantChoice */
+        grantChoice?: (v2.CharacterEffectDbo.GrantChoiceEffect|null);
+
+        /** CharacterEffectDbo grantAbility */
+        grantAbility?: (v2.CharacterEffectDbo.GrantAbilityEffect|null);
+
+        /** CharacterEffectDbo grantFeat */
+        grantFeat?: (v2.CharacterEffectDbo.GrantFeatEffect|null);
+    }
+
+    /** Represents a CharacterEffectDbo. */
+    class CharacterEffectDbo implements ICharacterEffectDbo {
+
+        /**
+         * Constructs a new CharacterEffectDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ICharacterEffectDbo);
+
+        /** CharacterEffectDbo level. */
+        public level: number;
+
+        /** CharacterEffectDbo modifyFeature. */
+        public modifyFeature?: (v2.CharacterEffectDbo.ModifyFeatureEffect|null);
+
+        /** CharacterEffectDbo setFeature. */
+        public setFeature?: (v2.CharacterEffectDbo.SetFeatureEffect|null);
+
+        /** CharacterEffectDbo grantChoice. */
+        public grantChoice?: (v2.CharacterEffectDbo.GrantChoiceEffect|null);
+
+        /** CharacterEffectDbo grantAbility. */
+        public grantAbility?: (v2.CharacterEffectDbo.GrantAbilityEffect|null);
+
+        /** CharacterEffectDbo grantFeat. */
+        public grantFeat?: (v2.CharacterEffectDbo.GrantFeatEffect|null);
+
+        /** CharacterEffectDbo effect. */
+        public effect?: ("modifyFeature"|"setFeature"|"grantChoice"|"grantAbility"|"grantFeat");
+
+        /**
+         * Creates a new CharacterEffectDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns CharacterEffectDbo instance
+         */
+        public static create(properties?: v2.ICharacterEffectDbo): v2.CharacterEffectDbo;
+
+        /**
+         * Encodes the specified CharacterEffectDbo message. Does not implicitly {@link v2.CharacterEffectDbo.verify|verify} messages.
+         * @param message CharacterEffectDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.CharacterEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified CharacterEffectDbo message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.verify|verify} messages.
+         * @param message CharacterEffectDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.CharacterEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a CharacterEffectDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns CharacterEffectDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo;
+
+        /**
+         * Decodes a CharacterEffectDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns CharacterEffectDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo;
+
+        /**
+         * Verifies a CharacterEffectDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a CharacterEffectDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns CharacterEffectDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo;
+
+        /**
+         * Creates a plain object from a CharacterEffectDbo message. Also converts values to other types if specified.
+         * @param message CharacterEffectDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.CharacterEffectDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this CharacterEffectDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for CharacterEffectDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace CharacterEffectDbo {
+
+        /** Properties of a ModifyFeatureEffect. */
+        interface IModifyFeatureEffect {
+
+            /** ModifyFeatureEffect featureId */
+            featureId?: (string|null);
+
+            /** ModifyFeatureEffect delta */
+            delta?: (number|null);
+        }
+
+        /** Represents a ModifyFeatureEffect. */
+        class ModifyFeatureEffect implements IModifyFeatureEffect {
+
+            /**
+             * Constructs a new ModifyFeatureEffect.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterEffectDbo.IModifyFeatureEffect);
+
+            /** ModifyFeatureEffect featureId. */
+            public featureId: string;
+
+            /** ModifyFeatureEffect delta. */
+            public delta: number;
+
+            /**
+             * Creates a new ModifyFeatureEffect instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ModifyFeatureEffect instance
+             */
+            public static create(properties?: v2.CharacterEffectDbo.IModifyFeatureEffect): v2.CharacterEffectDbo.ModifyFeatureEffect;
+
+            /**
+             * Encodes the specified ModifyFeatureEffect message. Does not implicitly {@link v2.CharacterEffectDbo.ModifyFeatureEffect.verify|verify} messages.
+             * @param message ModifyFeatureEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterEffectDbo.ModifyFeatureEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ModifyFeatureEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.ModifyFeatureEffect.verify|verify} messages.
+             * @param message ModifyFeatureEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterEffectDbo.ModifyFeatureEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ModifyFeatureEffect message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ModifyFeatureEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo.ModifyFeatureEffect;
+
+            /**
+             * Decodes a ModifyFeatureEffect message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ModifyFeatureEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo.ModifyFeatureEffect;
+
+            /**
+             * Verifies a ModifyFeatureEffect message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ModifyFeatureEffect message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ModifyFeatureEffect
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo.ModifyFeatureEffect;
+
+            /**
+             * Creates a plain object from a ModifyFeatureEffect message. Also converts values to other types if specified.
+             * @param message ModifyFeatureEffect
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterEffectDbo.ModifyFeatureEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ModifyFeatureEffect to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ModifyFeatureEffect
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a SetFeatureEffect. */
+        interface ISetFeatureEffect {
+
+            /** SetFeatureEffect featureId */
+            featureId?: (string|null);
+
+            /** SetFeatureEffect value */
+            value?: (number|null);
+        }
+
+        /** Represents a SetFeatureEffect. */
+        class SetFeatureEffect implements ISetFeatureEffect {
+
+            /**
+             * Constructs a new SetFeatureEffect.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterEffectDbo.ISetFeatureEffect);
+
+            /** SetFeatureEffect featureId. */
+            public featureId: string;
+
+            /** SetFeatureEffect value. */
+            public value: number;
+
+            /**
+             * Creates a new SetFeatureEffect instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns SetFeatureEffect instance
+             */
+            public static create(properties?: v2.CharacterEffectDbo.ISetFeatureEffect): v2.CharacterEffectDbo.SetFeatureEffect;
+
+            /**
+             * Encodes the specified SetFeatureEffect message. Does not implicitly {@link v2.CharacterEffectDbo.SetFeatureEffect.verify|verify} messages.
+             * @param message SetFeatureEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterEffectDbo.SetFeatureEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified SetFeatureEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.SetFeatureEffect.verify|verify} messages.
+             * @param message SetFeatureEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterEffectDbo.SetFeatureEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a SetFeatureEffect message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns SetFeatureEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo.SetFeatureEffect;
+
+            /**
+             * Decodes a SetFeatureEffect message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns SetFeatureEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo.SetFeatureEffect;
+
+            /**
+             * Verifies a SetFeatureEffect message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a SetFeatureEffect message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns SetFeatureEffect
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo.SetFeatureEffect;
+
+            /**
+             * Creates a plain object from a SetFeatureEffect message. Also converts values to other types if specified.
+             * @param message SetFeatureEffect
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterEffectDbo.SetFeatureEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this SetFeatureEffect to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for SetFeatureEffect
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a GrantChoiceEffect. */
+        interface IGrantChoiceEffect {
+
+            /** GrantChoiceEffect choice */
+            choice?: (v2.CharacterChoiceDbo|null);
+        }
+
+        /** Represents a GrantChoiceEffect. */
+        class GrantChoiceEffect implements IGrantChoiceEffect {
+
+            /**
+             * Constructs a new GrantChoiceEffect.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterEffectDbo.IGrantChoiceEffect);
+
+            /** GrantChoiceEffect choice. */
+            public choice?: (v2.CharacterChoiceDbo|null);
+
+            /**
+             * Creates a new GrantChoiceEffect instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns GrantChoiceEffect instance
+             */
+            public static create(properties?: v2.CharacterEffectDbo.IGrantChoiceEffect): v2.CharacterEffectDbo.GrantChoiceEffect;
+
+            /**
+             * Encodes the specified GrantChoiceEffect message. Does not implicitly {@link v2.CharacterEffectDbo.GrantChoiceEffect.verify|verify} messages.
+             * @param message GrantChoiceEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterEffectDbo.GrantChoiceEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GrantChoiceEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.GrantChoiceEffect.verify|verify} messages.
+             * @param message GrantChoiceEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterEffectDbo.GrantChoiceEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GrantChoiceEffect message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns GrantChoiceEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo.GrantChoiceEffect;
+
+            /**
+             * Decodes a GrantChoiceEffect message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns GrantChoiceEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo.GrantChoiceEffect;
+
+            /**
+             * Verifies a GrantChoiceEffect message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GrantChoiceEffect message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GrantChoiceEffect
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo.GrantChoiceEffect;
+
+            /**
+             * Creates a plain object from a GrantChoiceEffect message. Also converts values to other types if specified.
+             * @param message GrantChoiceEffect
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterEffectDbo.GrantChoiceEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GrantChoiceEffect to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for GrantChoiceEffect
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a GrantAbilityEffect. */
+        interface IGrantAbilityEffect {
+
+            /** GrantAbilityEffect abilityId */
+            abilityId?: (string|null);
+        }
+
+        /** Represents a GrantAbilityEffect. */
+        class GrantAbilityEffect implements IGrantAbilityEffect {
+
+            /**
+             * Constructs a new GrantAbilityEffect.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterEffectDbo.IGrantAbilityEffect);
+
+            /** GrantAbilityEffect abilityId. */
+            public abilityId: string;
+
+            /**
+             * Creates a new GrantAbilityEffect instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns GrantAbilityEffect instance
+             */
+            public static create(properties?: v2.CharacterEffectDbo.IGrantAbilityEffect): v2.CharacterEffectDbo.GrantAbilityEffect;
+
+            /**
+             * Encodes the specified GrantAbilityEffect message. Does not implicitly {@link v2.CharacterEffectDbo.GrantAbilityEffect.verify|verify} messages.
+             * @param message GrantAbilityEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterEffectDbo.GrantAbilityEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GrantAbilityEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.GrantAbilityEffect.verify|verify} messages.
+             * @param message GrantAbilityEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterEffectDbo.GrantAbilityEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GrantAbilityEffect message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns GrantAbilityEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo.GrantAbilityEffect;
+
+            /**
+             * Decodes a GrantAbilityEffect message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns GrantAbilityEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo.GrantAbilityEffect;
+
+            /**
+             * Verifies a GrantAbilityEffect message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GrantAbilityEffect message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GrantAbilityEffect
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo.GrantAbilityEffect;
+
+            /**
+             * Creates a plain object from a GrantAbilityEffect message. Also converts values to other types if specified.
+             * @param message GrantAbilityEffect
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterEffectDbo.GrantAbilityEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GrantAbilityEffect to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for GrantAbilityEffect
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a GrantFeatEffect. */
+        interface IGrantFeatEffect {
+
+            /** GrantFeatEffect featId */
+            featId?: (string|null);
+        }
+
+        /** Represents a GrantFeatEffect. */
+        class GrantFeatEffect implements IGrantFeatEffect {
+
+            /**
+             * Constructs a new GrantFeatEffect.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterEffectDbo.IGrantFeatEffect);
+
+            /** GrantFeatEffect featId. */
+            public featId: string;
+
+            /**
+             * Creates a new GrantFeatEffect instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns GrantFeatEffect instance
+             */
+            public static create(properties?: v2.CharacterEffectDbo.IGrantFeatEffect): v2.CharacterEffectDbo.GrantFeatEffect;
+
+            /**
+             * Encodes the specified GrantFeatEffect message. Does not implicitly {@link v2.CharacterEffectDbo.GrantFeatEffect.verify|verify} messages.
+             * @param message GrantFeatEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterEffectDbo.GrantFeatEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified GrantFeatEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.GrantFeatEffect.verify|verify} messages.
+             * @param message GrantFeatEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterEffectDbo.GrantFeatEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a GrantFeatEffect message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns GrantFeatEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo.GrantFeatEffect;
+
+            /**
+             * Decodes a GrantFeatEffect message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns GrantFeatEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo.GrantFeatEffect;
+
+            /**
+             * Verifies a GrantFeatEffect message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a GrantFeatEffect message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns GrantFeatEffect
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo.GrantFeatEffect;
+
+            /**
+             * Creates a plain object from a GrantFeatEffect message. Also converts values to other types if specified.
+             * @param message GrantFeatEffect
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterEffectDbo.GrantFeatEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this GrantFeatEffect to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for GrantFeatEffect
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+    }
+
+    /** Properties of a SpellDatabaseDbo. */
+    interface ISpellDatabaseDbo {
+
+        /** SpellDatabaseDbo spellSummaries */
+        spellSummaries?: (v2.SpellSummaryDbo[]|null);
+    }
+
+    /** Represents a SpellDatabaseDbo. */
+    class SpellDatabaseDbo implements ISpellDatabaseDbo {
+
+        /**
+         * Constructs a new SpellDatabaseDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ISpellDatabaseDbo);
+
+        /** SpellDatabaseDbo spellSummaries. */
+        public spellSummaries: v2.SpellSummaryDbo[];
+
+        /**
+         * Creates a new SpellDatabaseDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SpellDatabaseDbo instance
+         */
+        public static create(properties?: v2.ISpellDatabaseDbo): v2.SpellDatabaseDbo;
+
+        /**
+         * Encodes the specified SpellDatabaseDbo message. Does not implicitly {@link v2.SpellDatabaseDbo.verify|verify} messages.
+         * @param message SpellDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.SpellDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SpellDatabaseDbo message, length delimited. Does not implicitly {@link v2.SpellDatabaseDbo.verify|verify} messages.
+         * @param message SpellDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.SpellDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SpellDatabaseDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SpellDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SpellDatabaseDbo;
+
+        /**
+         * Decodes a SpellDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SpellDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SpellDatabaseDbo;
+
+        /**
+         * Verifies a SpellDatabaseDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SpellDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SpellDatabaseDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.SpellDatabaseDbo;
+
+        /**
+         * Creates a plain object from a SpellDatabaseDbo message. Also converts values to other types if specified.
+         * @param message SpellDatabaseDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.SpellDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SpellDatabaseDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SpellDatabaseDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a SpellSummaryDbo. */
+    interface ISpellSummaryDbo {
+
+        /** SpellSummaryDbo id */
+        id?: (string|null);
+
+        /** SpellSummaryDbo name */
+        name?: (string|null);
+
+        /** SpellSummaryDbo type */
+        type?: (v2.AbilityTypeDbo|null);
+
+        /** SpellSummaryDbo prerequisitesFormula */
+        prerequisitesFormula?: (string|null);
+
+        /** SpellSummaryDbo level */
+        level?: (v2.SpellLevelDbo[]|null);
+    }
+
+    /** Represents a SpellSummaryDbo. */
+    class SpellSummaryDbo implements ISpellSummaryDbo {
+
+        /**
+         * Constructs a new SpellSummaryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ISpellSummaryDbo);
+
+        /** SpellSummaryDbo id. */
+        public id: string;
+
+        /** SpellSummaryDbo name. */
+        public name: string;
+
+        /** SpellSummaryDbo type. */
+        public type: v2.AbilityTypeDbo;
+
+        /** SpellSummaryDbo prerequisitesFormula. */
+        public prerequisitesFormula: string;
+
+        /** SpellSummaryDbo level. */
+        public level: v2.SpellLevelDbo[];
+
+        /**
+         * Creates a new SpellSummaryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SpellSummaryDbo instance
+         */
+        public static create(properties?: v2.ISpellSummaryDbo): v2.SpellSummaryDbo;
+
+        /**
+         * Encodes the specified SpellSummaryDbo message. Does not implicitly {@link v2.SpellSummaryDbo.verify|verify} messages.
+         * @param message SpellSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.SpellSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SpellSummaryDbo message, length delimited. Does not implicitly {@link v2.SpellSummaryDbo.verify|verify} messages.
+         * @param message SpellSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.SpellSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SpellSummaryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SpellSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SpellSummaryDbo;
+
+        /**
+         * Decodes a SpellSummaryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SpellSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SpellSummaryDbo;
+
+        /**
+         * Verifies a SpellSummaryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SpellSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SpellSummaryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.SpellSummaryDbo;
+
+        /**
+         * Creates a plain object from a SpellSummaryDbo message. Also converts values to other types if specified.
+         * @param message SpellSummaryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.SpellSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SpellSummaryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SpellSummaryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a SpellDataDbo. */
+    interface ISpellDataDbo {
+
+        /** SpellDataDbo id */
+        id?: (string|null);
+
+        /** SpellDataDbo name */
+        name?: (string|null);
+
+        /** SpellDataDbo type */
+        type?: (v2.AbilityTypeDbo|null);
+
+        /** SpellDataDbo school */
+        school?: (string|null);
+
+        /** SpellDataDbo castingTime */
+        castingTime?: (ActionTypeDbo|null);
+
+        /** SpellDataDbo range */
+        range?: (RangeDbo|null);
+
+        /** SpellDataDbo area */
+        area?: (string|null);
+
+        /** SpellDataDbo targets */
+        targets?: (string|null);
+
+        /** SpellDataDbo effect */
+        effect?: (string|null);
+
+        /** SpellDataDbo duration */
+        duration?: (string|null);
+
+        /** SpellDataDbo savingThrow */
+        savingThrow?: (v2.SavingThrowDbo|null);
+
+        /** SpellDataDbo description */
+        description?: (string|null);
+
+        /** SpellDataDbo notes */
+        notes?: (string|null);
+
+        /** SpellDataDbo prerequisitesFormula */
+        prerequisitesFormula?: (string|null);
+
+        /** SpellDataDbo level */
+        level?: (v2.SpellLevelDbo[]|null);
+    }
+
+    /** Represents a SpellDataDbo. */
+    class SpellDataDbo implements ISpellDataDbo {
+
+        /**
+         * Constructs a new SpellDataDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ISpellDataDbo);
+
+        /** SpellDataDbo id. */
+        public id: string;
+
+        /** SpellDataDbo name. */
+        public name: string;
+
+        /** SpellDataDbo type. */
+        public type: v2.AbilityTypeDbo;
+
+        /** SpellDataDbo school. */
+        public school: string;
+
+        /** SpellDataDbo castingTime. */
+        public castingTime: ActionTypeDbo;
+
+        /** SpellDataDbo range. */
+        public range?: (RangeDbo|null);
+
+        /** SpellDataDbo area. */
+        public area: string;
+
+        /** SpellDataDbo targets. */
+        public targets: string;
+
+        /** SpellDataDbo effect. */
+        public effect: string;
+
+        /** SpellDataDbo duration. */
+        public duration: string;
+
+        /** SpellDataDbo savingThrow. */
+        public savingThrow?: (v2.SavingThrowDbo|null);
+
+        /** SpellDataDbo description. */
+        public description: string;
+
+        /** SpellDataDbo notes. */
+        public notes: string;
+
+        /** SpellDataDbo prerequisitesFormula. */
+        public prerequisitesFormula: string;
+
+        /** SpellDataDbo level. */
+        public level: v2.SpellLevelDbo[];
+
+        /**
+         * Creates a new SpellDataDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SpellDataDbo instance
+         */
+        public static create(properties?: v2.ISpellDataDbo): v2.SpellDataDbo;
+
+        /**
+         * Encodes the specified SpellDataDbo message. Does not implicitly {@link v2.SpellDataDbo.verify|verify} messages.
+         * @param message SpellDataDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.SpellDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SpellDataDbo message, length delimited. Does not implicitly {@link v2.SpellDataDbo.verify|verify} messages.
+         * @param message SpellDataDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.SpellDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SpellDataDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SpellDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SpellDataDbo;
+
+        /**
+         * Decodes a SpellDataDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SpellDataDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SpellDataDbo;
+
+        /**
+         * Verifies a SpellDataDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SpellDataDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SpellDataDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.SpellDataDbo;
+
+        /**
+         * Creates a plain object from a SpellDataDbo message. Also converts values to other types if specified.
+         * @param message SpellDataDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.SpellDataDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SpellDataDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SpellDataDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a SpellLevelDbo. */
+    interface ISpellLevelDbo {
+
+        /** SpellLevelDbo classId */
+        classId?: (string|null);
+
+        /** SpellLevelDbo level */
+        level?: (number|null);
+    }
+
+    /** Represents a SpellLevelDbo. */
+    class SpellLevelDbo implements ISpellLevelDbo {
+
+        /**
+         * Constructs a new SpellLevelDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ISpellLevelDbo);
+
+        /** SpellLevelDbo classId. */
+        public classId: string;
+
+        /** SpellLevelDbo level. */
+        public level: number;
+
+        /**
+         * Creates a new SpellLevelDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SpellLevelDbo instance
+         */
+        public static create(properties?: v2.ISpellLevelDbo): v2.SpellLevelDbo;
+
+        /**
+         * Encodes the specified SpellLevelDbo message. Does not implicitly {@link v2.SpellLevelDbo.verify|verify} messages.
+         * @param message SpellLevelDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.SpellLevelDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SpellLevelDbo message, length delimited. Does not implicitly {@link v2.SpellLevelDbo.verify|verify} messages.
+         * @param message SpellLevelDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.SpellLevelDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SpellLevelDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SpellLevelDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SpellLevelDbo;
+
+        /**
+         * Decodes a SpellLevelDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SpellLevelDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SpellLevelDbo;
+
+        /**
+         * Verifies a SpellLevelDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SpellLevelDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SpellLevelDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.SpellLevelDbo;
+
+        /**
+         * Creates a plain object from a SpellLevelDbo message. Also converts values to other types if specified.
+         * @param message SpellLevelDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.SpellLevelDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SpellLevelDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SpellLevelDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a SavingThrowDbo. */
+    interface ISavingThrowDbo {
+
+        /** SavingThrowDbo ability */
+        ability?: (AbilityScoreDbo|null);
+
+        /** SavingThrowDbo dc */
+        dc?: (number|null);
+    }
+
+    /** Represents a SavingThrowDbo. */
+    class SavingThrowDbo implements ISavingThrowDbo {
+
+        /**
+         * Constructs a new SavingThrowDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ISavingThrowDbo);
+
+        /** SavingThrowDbo ability. */
+        public ability: AbilityScoreDbo;
+
+        /** SavingThrowDbo dc. */
+        public dc: number;
+
+        /**
+         * Creates a new SavingThrowDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SavingThrowDbo instance
+         */
+        public static create(properties?: v2.ISavingThrowDbo): v2.SavingThrowDbo;
+
+        /**
+         * Encodes the specified SavingThrowDbo message. Does not implicitly {@link v2.SavingThrowDbo.verify|verify} messages.
+         * @param message SavingThrowDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.SavingThrowDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SavingThrowDbo message, length delimited. Does not implicitly {@link v2.SavingThrowDbo.verify|verify} messages.
+         * @param message SavingThrowDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.SavingThrowDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SavingThrowDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SavingThrowDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SavingThrowDbo;
+
+        /**
+         * Decodes a SavingThrowDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SavingThrowDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SavingThrowDbo;
+
+        /**
+         * Verifies a SavingThrowDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SavingThrowDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SavingThrowDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.SavingThrowDbo;
+
+        /**
+         * Creates a plain object from a SavingThrowDbo message. Also converts values to other types if specified.
+         * @param message SavingThrowDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.SavingThrowDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SavingThrowDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SavingThrowDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace SavingThrowDbo {
+
+        /** Type enum. */
+        enum Type {
+            NEGATES = 0,
+            PARTIAL = 1,
+            HALF = 2,
+            NONE = 3,
+            DISBELIEF = 4
+        }
+    }
+
     /** Properties of a ClassDatabaseDbo. */
     interface IClassDatabaseDbo {
 
-        /** ClassDatabaseDbo classSummaries */
-        classSummaries?: (v2.ClassSummaryDbo[]|null);
+        /** ClassDatabaseDbo summaries */
+        summaries?: (v2.ClassSummaryDbo[]|null);
     }
 
     /** Represents a ClassDatabaseDbo. */
@@ -735,8 +1982,8 @@ export namespace v2 {
          */
         constructor(properties?: v2.IClassDatabaseDbo);
 
-        /** ClassDatabaseDbo classSummaries. */
-        public classSummaries: v2.ClassSummaryDbo[];
+        /** ClassDatabaseDbo summaries. */
+        public summaries: v2.ClassSummaryDbo[];
 
         /**
          * Creates a new ClassDatabaseDbo instance using the specified properties.
@@ -925,127 +2172,121 @@ export namespace v2 {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a ClassDataDbo. */
-    interface IClassDataDbo {
+    /** Properties of a ClassDetailsDbo. */
+    interface IClassDetailsDbo {
 
-        /** ClassDataDbo id */
+        /** ClassDetailsDbo id */
         id?: (string|null);
 
-        /** ClassDataDbo name */
+        /** ClassDetailsDbo name */
         name?: (string|null);
 
-        /** ClassDataDbo category */
+        /** ClassDetailsDbo category */
         category?: (v2.ClassCategoryDbo|null);
 
-        /** ClassDataDbo shortDescription */
+        /** ClassDetailsDbo shortDescription */
         shortDescription?: (string|null);
 
-        /** ClassDataDbo levels */
-        levels?: (v2.ClassLevelDbo[]|null);
-
-        /** ClassDataDbo skills */
-        skills?: (string[]|null);
+        /** ClassDetailsDbo effects */
+        effects?: (v2.CharacterEffectDbo[]|null);
     }
 
-    /** Represents a ClassDataDbo. */
-    class ClassDataDbo implements IClassDataDbo {
+    /** Represents a ClassDetailsDbo. */
+    class ClassDetailsDbo implements IClassDetailsDbo {
 
         /**
-         * Constructs a new ClassDataDbo.
+         * Constructs a new ClassDetailsDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: v2.IClassDataDbo);
+        constructor(properties?: v2.IClassDetailsDbo);
 
-        /** ClassDataDbo id. */
+        /** ClassDetailsDbo id. */
         public id: string;
 
-        /** ClassDataDbo name. */
+        /** ClassDetailsDbo name. */
         public name: string;
 
-        /** ClassDataDbo category. */
+        /** ClassDetailsDbo category. */
         public category: v2.ClassCategoryDbo;
 
-        /** ClassDataDbo shortDescription. */
+        /** ClassDetailsDbo shortDescription. */
         public shortDescription: string;
 
-        /** ClassDataDbo levels. */
-        public levels: v2.ClassLevelDbo[];
-
-        /** ClassDataDbo skills. */
-        public skills: string[];
+        /** ClassDetailsDbo effects. */
+        public effects: v2.CharacterEffectDbo[];
 
         /**
-         * Creates a new ClassDataDbo instance using the specified properties.
+         * Creates a new ClassDetailsDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns ClassDataDbo instance
+         * @returns ClassDetailsDbo instance
          */
-        public static create(properties?: v2.IClassDataDbo): v2.ClassDataDbo;
+        public static create(properties?: v2.IClassDetailsDbo): v2.ClassDetailsDbo;
 
         /**
-         * Encodes the specified ClassDataDbo message. Does not implicitly {@link v2.ClassDataDbo.verify|verify} messages.
-         * @param message ClassDataDbo message or plain object to encode
+         * Encodes the specified ClassDetailsDbo message. Does not implicitly {@link v2.ClassDetailsDbo.verify|verify} messages.
+         * @param message ClassDetailsDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: v2.ClassDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: v2.ClassDetailsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ClassDataDbo message, length delimited. Does not implicitly {@link v2.ClassDataDbo.verify|verify} messages.
-         * @param message ClassDataDbo message or plain object to encode
+         * Encodes the specified ClassDetailsDbo message, length delimited. Does not implicitly {@link v2.ClassDetailsDbo.verify|verify} messages.
+         * @param message ClassDetailsDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: v2.ClassDataDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: v2.ClassDetailsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a ClassDataDbo message from the specified reader or buffer.
+         * Decodes a ClassDetailsDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns ClassDataDbo
+         * @returns ClassDetailsDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassDataDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassDetailsDbo;
 
         /**
-         * Decodes a ClassDataDbo message from the specified reader or buffer, length delimited.
+         * Decodes a ClassDetailsDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns ClassDataDbo
+         * @returns ClassDetailsDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassDataDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassDetailsDbo;
 
         /**
-         * Verifies a ClassDataDbo message.
+         * Verifies a ClassDetailsDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a ClassDataDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a ClassDetailsDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns ClassDataDbo
+         * @returns ClassDetailsDbo
          */
-        public static fromObject(object: { [k: string]: any }): v2.ClassDataDbo;
+        public static fromObject(object: { [k: string]: any }): v2.ClassDetailsDbo;
 
         /**
-         * Creates a plain object from a ClassDataDbo message. Also converts values to other types if specified.
-         * @param message ClassDataDbo
+         * Creates a plain object from a ClassDetailsDbo message. Also converts values to other types if specified.
+         * @param message ClassDetailsDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: v2.ClassDataDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: v2.ClassDetailsDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this ClassDataDbo to JSON.
+         * Converts this ClassDetailsDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for ClassDataDbo
+         * Gets the default type url for ClassDetailsDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
@@ -1061,240 +2302,846 @@ export namespace v2 {
         UNCHAINED = 4
     }
 
-    /** Properties of a ClassLevelDbo. */
-    interface IClassLevelDbo {
+    /** Properties of a ModifierDatabaseDbo. */
+    interface IModifierDatabaseDbo {
 
-        /** ClassLevelDbo levelNumber */
-        levelNumber?: (number|null);
-
-        /** ClassLevelDbo bab */
-        bab?: (number|null);
-
-        /** ClassLevelDbo fortSave */
-        fortSave?: (number|null);
-
-        /** ClassLevelDbo refSave */
-        refSave?: (number|null);
-
-        /** ClassLevelDbo willSave */
-        willSave?: (number|null);
-
-        /** ClassLevelDbo specials */
-        specials?: (v2.SpecialDbo[]|null);
+        /** ModifierDatabaseDbo summaries */
+        summaries?: (v2.ModifierSummaryDbo[]|null);
     }
 
-    /** Represents a ClassLevelDbo. */
-    class ClassLevelDbo implements IClassLevelDbo {
+    /** Represents a ModifierDatabaseDbo. */
+    class ModifierDatabaseDbo implements IModifierDatabaseDbo {
 
         /**
-         * Constructs a new ClassLevelDbo.
+         * Constructs a new ModifierDatabaseDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: v2.IClassLevelDbo);
+        constructor(properties?: v2.IModifierDatabaseDbo);
 
-        /** ClassLevelDbo levelNumber. */
-        public levelNumber: number;
-
-        /** ClassLevelDbo bab. */
-        public bab: number;
-
-        /** ClassLevelDbo fortSave. */
-        public fortSave: number;
-
-        /** ClassLevelDbo refSave. */
-        public refSave: number;
-
-        /** ClassLevelDbo willSave. */
-        public willSave: number;
-
-        /** ClassLevelDbo specials. */
-        public specials: v2.SpecialDbo[];
+        /** ModifierDatabaseDbo summaries. */
+        public summaries: v2.ModifierSummaryDbo[];
 
         /**
-         * Creates a new ClassLevelDbo instance using the specified properties.
+         * Creates a new ModifierDatabaseDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns ClassLevelDbo instance
+         * @returns ModifierDatabaseDbo instance
          */
-        public static create(properties?: v2.IClassLevelDbo): v2.ClassLevelDbo;
+        public static create(properties?: v2.IModifierDatabaseDbo): v2.ModifierDatabaseDbo;
 
         /**
-         * Encodes the specified ClassLevelDbo message. Does not implicitly {@link v2.ClassLevelDbo.verify|verify} messages.
-         * @param message ClassLevelDbo message or plain object to encode
+         * Encodes the specified ModifierDatabaseDbo message. Does not implicitly {@link v2.ModifierDatabaseDbo.verify|verify} messages.
+         * @param message ModifierDatabaseDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: v2.ClassLevelDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: v2.ModifierDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ClassLevelDbo message, length delimited. Does not implicitly {@link v2.ClassLevelDbo.verify|verify} messages.
-         * @param message ClassLevelDbo message or plain object to encode
+         * Encodes the specified ModifierDatabaseDbo message, length delimited. Does not implicitly {@link v2.ModifierDatabaseDbo.verify|verify} messages.
+         * @param message ModifierDatabaseDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: v2.ClassLevelDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: v2.ModifierDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a ClassLevelDbo message from the specified reader or buffer.
+         * Decodes a ModifierDatabaseDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns ClassLevelDbo
+         * @returns ModifierDatabaseDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ClassLevelDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ModifierDatabaseDbo;
 
         /**
-         * Decodes a ClassLevelDbo message from the specified reader or buffer, length delimited.
+         * Decodes a ModifierDatabaseDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns ClassLevelDbo
+         * @returns ModifierDatabaseDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ClassLevelDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ModifierDatabaseDbo;
 
         /**
-         * Verifies a ClassLevelDbo message.
+         * Verifies a ModifierDatabaseDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a ClassLevelDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a ModifierDatabaseDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns ClassLevelDbo
+         * @returns ModifierDatabaseDbo
          */
-        public static fromObject(object: { [k: string]: any }): v2.ClassLevelDbo;
+        public static fromObject(object: { [k: string]: any }): v2.ModifierDatabaseDbo;
 
         /**
-         * Creates a plain object from a ClassLevelDbo message. Also converts values to other types if specified.
-         * @param message ClassLevelDbo
+         * Creates a plain object from a ModifierDatabaseDbo message. Also converts values to other types if specified.
+         * @param message ModifierDatabaseDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: v2.ClassLevelDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: v2.ModifierDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this ClassLevelDbo to JSON.
+         * Converts this ModifierDatabaseDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for ClassLevelDbo
+         * Gets the default type url for ModifierDatabaseDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a SpecialDbo. */
-    interface ISpecialDbo {
+    /** Properties of a ModifierSummaryDbo. */
+    interface IModifierSummaryDbo {
 
-        /** SpecialDbo id */
+        /** ModifierSummaryDbo id */
         id?: (string|null);
 
-        /** SpecialDbo name */
+        /** ModifierSummaryDbo name */
         name?: (string|null);
-
-        /** SpecialDbo description */
-        description?: (string|null);
     }
 
-    /** Represents a SpecialDbo. */
-    class SpecialDbo implements ISpecialDbo {
+    /** Represents a ModifierSummaryDbo. */
+    class ModifierSummaryDbo implements IModifierSummaryDbo {
 
         /**
-         * Constructs a new SpecialDbo.
+         * Constructs a new ModifierSummaryDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: v2.ISpecialDbo);
+        constructor(properties?: v2.IModifierSummaryDbo);
 
-        /** SpecialDbo id. */
+        /** ModifierSummaryDbo id. */
         public id: string;
 
-        /** SpecialDbo name. */
+        /** ModifierSummaryDbo name. */
         public name: string;
 
-        /** SpecialDbo description. */
-        public description: string;
-
         /**
-         * Creates a new SpecialDbo instance using the specified properties.
+         * Creates a new ModifierSummaryDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns SpecialDbo instance
+         * @returns ModifierSummaryDbo instance
          */
-        public static create(properties?: v2.ISpecialDbo): v2.SpecialDbo;
+        public static create(properties?: v2.IModifierSummaryDbo): v2.ModifierSummaryDbo;
 
         /**
-         * Encodes the specified SpecialDbo message. Does not implicitly {@link v2.SpecialDbo.verify|verify} messages.
-         * @param message SpecialDbo message or plain object to encode
+         * Encodes the specified ModifierSummaryDbo message. Does not implicitly {@link v2.ModifierSummaryDbo.verify|verify} messages.
+         * @param message ModifierSummaryDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: v2.SpecialDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: v2.ModifierSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified SpecialDbo message, length delimited. Does not implicitly {@link v2.SpecialDbo.verify|verify} messages.
-         * @param message SpecialDbo message or plain object to encode
+         * Encodes the specified ModifierSummaryDbo message, length delimited. Does not implicitly {@link v2.ModifierSummaryDbo.verify|verify} messages.
+         * @param message ModifierSummaryDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: v2.SpecialDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: v2.ModifierSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a SpecialDbo message from the specified reader or buffer.
+         * Decodes a ModifierSummaryDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns SpecialDbo
+         * @returns ModifierSummaryDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.SpecialDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ModifierSummaryDbo;
 
         /**
-         * Decodes a SpecialDbo message from the specified reader or buffer, length delimited.
+         * Decodes a ModifierSummaryDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns SpecialDbo
+         * @returns ModifierSummaryDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.SpecialDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ModifierSummaryDbo;
 
         /**
-         * Verifies a SpecialDbo message.
+         * Verifies a ModifierSummaryDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a SpecialDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a ModifierSummaryDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns SpecialDbo
+         * @returns ModifierSummaryDbo
          */
-        public static fromObject(object: { [k: string]: any }): v2.SpecialDbo;
+        public static fromObject(object: { [k: string]: any }): v2.ModifierSummaryDbo;
 
         /**
-         * Creates a plain object from a SpecialDbo message. Also converts values to other types if specified.
-         * @param message SpecialDbo
+         * Creates a plain object from a ModifierSummaryDbo message. Also converts values to other types if specified.
+         * @param message ModifierSummaryDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: v2.SpecialDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: v2.ModifierSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this SpecialDbo to JSON.
+         * Converts this ModifierSummaryDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for SpecialDbo
+         * Gets the default type url for ModifierSummaryDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ModifierDetailsDbo. */
+    interface IModifierDetailsDbo {
+
+        /** ModifierDetailsDbo id */
+        id?: (string|null);
+
+        /** ModifierDetailsDbo name */
+        name?: (string|null);
+
+        /** ModifierDetailsDbo effects */
+        effects?: (v2.CharacterEffectDbo[]|null);
+
+        /** ModifierDetailsDbo descriptionText */
+        descriptionText?: (string|null);
+
+        /** ModifierDetailsDbo effectText */
+        effectText?: (string|null);
+    }
+
+    /** Represents a ModifierDetailsDbo. */
+    class ModifierDetailsDbo implements IModifierDetailsDbo {
+
+        /**
+         * Constructs a new ModifierDetailsDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.IModifierDetailsDbo);
+
+        /** ModifierDetailsDbo id. */
+        public id: string;
+
+        /** ModifierDetailsDbo name. */
+        public name: string;
+
+        /** ModifierDetailsDbo effects. */
+        public effects: v2.CharacterEffectDbo[];
+
+        /** ModifierDetailsDbo descriptionText. */
+        public descriptionText: string;
+
+        /** ModifierDetailsDbo effectText. */
+        public effectText: string;
+
+        /**
+         * Creates a new ModifierDetailsDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ModifierDetailsDbo instance
+         */
+        public static create(properties?: v2.IModifierDetailsDbo): v2.ModifierDetailsDbo;
+
+        /**
+         * Encodes the specified ModifierDetailsDbo message. Does not implicitly {@link v2.ModifierDetailsDbo.verify|verify} messages.
+         * @param message ModifierDetailsDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.ModifierDetailsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ModifierDetailsDbo message, length delimited. Does not implicitly {@link v2.ModifierDetailsDbo.verify|verify} messages.
+         * @param message ModifierDetailsDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.ModifierDetailsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ModifierDetailsDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ModifierDetailsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.ModifierDetailsDbo;
+
+        /**
+         * Decodes a ModifierDetailsDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ModifierDetailsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.ModifierDetailsDbo;
+
+        /**
+         * Verifies a ModifierDetailsDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ModifierDetailsDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ModifierDetailsDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.ModifierDetailsDbo;
+
+        /**
+         * Creates a plain object from a ModifierDetailsDbo message. Also converts values to other types if specified.
+         * @param message ModifierDetailsDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.ModifierDetailsDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ModifierDetailsDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ModifierDetailsDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a CharacterChoiceDbo. */
+    interface ICharacterChoiceDbo {
+
+        /** CharacterChoiceDbo key */
+        key?: (string|null);
+
+        /** CharacterChoiceDbo label */
+        label?: (string|null);
+
+        /** CharacterChoiceDbo AbilityScoreIncrease */
+        AbilityScoreIncrease?: (v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null);
+
+        /** CharacterChoiceDbo Feat */
+        Feat?: (v2.CharacterChoiceDbo.FeatChoice|null);
+
+        /** CharacterChoiceDbo Ability */
+        Ability?: (v2.CharacterChoiceDbo.AbilityChoice|null);
+
+        /** CharacterChoiceDbo Modifier */
+        Modifier?: (v2.CharacterChoiceDbo.ModifierChoice|null);
+    }
+
+    /** Represents a CharacterChoiceDbo. */
+    class CharacterChoiceDbo implements ICharacterChoiceDbo {
+
+        /**
+         * Constructs a new CharacterChoiceDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v2.ICharacterChoiceDbo);
+
+        /** CharacterChoiceDbo key. */
+        public key: string;
+
+        /** CharacterChoiceDbo label. */
+        public label: string;
+
+        /** CharacterChoiceDbo AbilityScoreIncrease. */
+        public AbilityScoreIncrease?: (v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null);
+
+        /** CharacterChoiceDbo Feat. */
+        public Feat?: (v2.CharacterChoiceDbo.FeatChoice|null);
+
+        /** CharacterChoiceDbo Ability. */
+        public Ability?: (v2.CharacterChoiceDbo.AbilityChoice|null);
+
+        /** CharacterChoiceDbo Modifier. */
+        public Modifier?: (v2.CharacterChoiceDbo.ModifierChoice|null);
+
+        /** CharacterChoiceDbo effect. */
+        public effect?: ("AbilityScoreIncrease"|"Feat"|"Ability"|"Modifier");
+
+        /**
+         * Creates a new CharacterChoiceDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns CharacterChoiceDbo instance
+         */
+        public static create(properties?: v2.ICharacterChoiceDbo): v2.CharacterChoiceDbo;
+
+        /**
+         * Encodes the specified CharacterChoiceDbo message. Does not implicitly {@link v2.CharacterChoiceDbo.verify|verify} messages.
+         * @param message CharacterChoiceDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v2.CharacterChoiceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified CharacterChoiceDbo message, length delimited. Does not implicitly {@link v2.CharacterChoiceDbo.verify|verify} messages.
+         * @param message CharacterChoiceDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v2.CharacterChoiceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a CharacterChoiceDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns CharacterChoiceDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterChoiceDbo;
+
+        /**
+         * Decodes a CharacterChoiceDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns CharacterChoiceDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterChoiceDbo;
+
+        /**
+         * Verifies a CharacterChoiceDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a CharacterChoiceDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns CharacterChoiceDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v2.CharacterChoiceDbo;
+
+        /**
+         * Creates a plain object from a CharacterChoiceDbo message. Also converts values to other types if specified.
+         * @param message CharacterChoiceDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v2.CharacterChoiceDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this CharacterChoiceDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for CharacterChoiceDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace CharacterChoiceDbo {
+
+        /** Properties of an AbilityScoreIncreaseChoice. */
+        interface IAbilityScoreIncreaseChoice {
+
+            /** AbilityScoreIncreaseChoice delta */
+            delta?: (number|null);
+        }
+
+        /** Represents an AbilityScoreIncreaseChoice. */
+        class AbilityScoreIncreaseChoice implements IAbilityScoreIncreaseChoice {
+
+            /**
+             * Constructs a new AbilityScoreIncreaseChoice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterChoiceDbo.IAbilityScoreIncreaseChoice);
+
+            /** AbilityScoreIncreaseChoice delta. */
+            public delta: number;
+
+            /**
+             * Creates a new AbilityScoreIncreaseChoice instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AbilityScoreIncreaseChoice instance
+             */
+            public static create(properties?: v2.CharacterChoiceDbo.IAbilityScoreIncreaseChoice): v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice;
+
+            /**
+             * Encodes the specified AbilityScoreIncreaseChoice message. Does not implicitly {@link v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.verify|verify} messages.
+             * @param message AbilityScoreIncreaseChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AbilityScoreIncreaseChoice message, length delimited. Does not implicitly {@link v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.verify|verify} messages.
+             * @param message AbilityScoreIncreaseChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AbilityScoreIncreaseChoice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AbilityScoreIncreaseChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice;
+
+            /**
+             * Decodes an AbilityScoreIncreaseChoice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AbilityScoreIncreaseChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice;
+
+            /**
+             * Verifies an AbilityScoreIncreaseChoice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AbilityScoreIncreaseChoice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AbilityScoreIncreaseChoice
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice;
+
+            /**
+             * Creates a plain object from an AbilityScoreIncreaseChoice message. Also converts values to other types if specified.
+             * @param message AbilityScoreIncreaseChoice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AbilityScoreIncreaseChoice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AbilityScoreIncreaseChoice
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a FeatChoice. */
+        interface IFeatChoice {
+
+            /** FeatChoice featIds */
+            featIds?: (string[]|null);
+        }
+
+        /** Represents a FeatChoice. */
+        class FeatChoice implements IFeatChoice {
+
+            /**
+             * Constructs a new FeatChoice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterChoiceDbo.IFeatChoice);
+
+            /** FeatChoice featIds. */
+            public featIds: string[];
+
+            /**
+             * Creates a new FeatChoice instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns FeatChoice instance
+             */
+            public static create(properties?: v2.CharacterChoiceDbo.IFeatChoice): v2.CharacterChoiceDbo.FeatChoice;
+
+            /**
+             * Encodes the specified FeatChoice message. Does not implicitly {@link v2.CharacterChoiceDbo.FeatChoice.verify|verify} messages.
+             * @param message FeatChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterChoiceDbo.FeatChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified FeatChoice message, length delimited. Does not implicitly {@link v2.CharacterChoiceDbo.FeatChoice.verify|verify} messages.
+             * @param message FeatChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterChoiceDbo.FeatChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a FeatChoice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns FeatChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterChoiceDbo.FeatChoice;
+
+            /**
+             * Decodes a FeatChoice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns FeatChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterChoiceDbo.FeatChoice;
+
+            /**
+             * Verifies a FeatChoice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a FeatChoice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns FeatChoice
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterChoiceDbo.FeatChoice;
+
+            /**
+             * Creates a plain object from a FeatChoice message. Also converts values to other types if specified.
+             * @param message FeatChoice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterChoiceDbo.FeatChoice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this FeatChoice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for FeatChoice
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an AbilityChoice. */
+        interface IAbilityChoice {
+
+            /** AbilityChoice abilityIds */
+            abilityIds?: (string[]|null);
+        }
+
+        /** Represents an AbilityChoice. */
+        class AbilityChoice implements IAbilityChoice {
+
+            /**
+             * Constructs a new AbilityChoice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterChoiceDbo.IAbilityChoice);
+
+            /** AbilityChoice abilityIds. */
+            public abilityIds: string[];
+
+            /**
+             * Creates a new AbilityChoice instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AbilityChoice instance
+             */
+            public static create(properties?: v2.CharacterChoiceDbo.IAbilityChoice): v2.CharacterChoiceDbo.AbilityChoice;
+
+            /**
+             * Encodes the specified AbilityChoice message. Does not implicitly {@link v2.CharacterChoiceDbo.AbilityChoice.verify|verify} messages.
+             * @param message AbilityChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterChoiceDbo.AbilityChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AbilityChoice message, length delimited. Does not implicitly {@link v2.CharacterChoiceDbo.AbilityChoice.verify|verify} messages.
+             * @param message AbilityChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterChoiceDbo.AbilityChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AbilityChoice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AbilityChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterChoiceDbo.AbilityChoice;
+
+            /**
+             * Decodes an AbilityChoice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AbilityChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterChoiceDbo.AbilityChoice;
+
+            /**
+             * Verifies an AbilityChoice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AbilityChoice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AbilityChoice
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterChoiceDbo.AbilityChoice;
+
+            /**
+             * Creates a plain object from an AbilityChoice message. Also converts values to other types if specified.
+             * @param message AbilityChoice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterChoiceDbo.AbilityChoice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AbilityChoice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AbilityChoice
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a ModifierChoice. */
+        interface IModifierChoice {
+
+            /** ModifierChoice modifierIds */
+            modifierIds?: (string[]|null);
+        }
+
+        /** Represents a ModifierChoice. */
+        class ModifierChoice implements IModifierChoice {
+
+            /**
+             * Constructs a new ModifierChoice.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterChoiceDbo.IModifierChoice);
+
+            /** ModifierChoice modifierIds. */
+            public modifierIds: string[];
+
+            /**
+             * Creates a new ModifierChoice instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ModifierChoice instance
+             */
+            public static create(properties?: v2.CharacterChoiceDbo.IModifierChoice): v2.CharacterChoiceDbo.ModifierChoice;
+
+            /**
+             * Encodes the specified ModifierChoice message. Does not implicitly {@link v2.CharacterChoiceDbo.ModifierChoice.verify|verify} messages.
+             * @param message ModifierChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterChoiceDbo.ModifierChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ModifierChoice message, length delimited. Does not implicitly {@link v2.CharacterChoiceDbo.ModifierChoice.verify|verify} messages.
+             * @param message ModifierChoice message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterChoiceDbo.ModifierChoice, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ModifierChoice message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ModifierChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterChoiceDbo.ModifierChoice;
+
+            /**
+             * Decodes a ModifierChoice message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ModifierChoice
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterChoiceDbo.ModifierChoice;
+
+            /**
+             * Verifies a ModifierChoice message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ModifierChoice message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ModifierChoice
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterChoiceDbo.ModifierChoice;
+
+            /**
+             * Creates a plain object from a ModifierChoice message. Also converts values to other types if specified.
+             * @param message ModifierChoice
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterChoiceDbo.ModifierChoice, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ModifierChoice to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ModifierChoice
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
     }
 
     /** Properties of a WeaponDatabaseDbo. */
@@ -2202,6 +4049,9 @@ export namespace v2 {
 
         /** FeatDbo options */
         options?: (v2.FeatOptionDbo[]|null);
+
+        /** FeatDbo effects */
+        effects?: (v2.CharacterEffectDbo[]|null);
     }
 
     /** Represents a FeatDbo. */
@@ -2251,6 +4101,9 @@ export namespace v2 {
 
         /** FeatDbo options. */
         public options: v2.FeatOptionDbo[];
+
+        /** FeatDbo effects. */
+        public effects: v2.CharacterEffectDbo[];
 
         /**
          * Creates a new FeatDbo instance using the specified properties.
@@ -4902,14 +6755,135 @@ export namespace Formula {
     }
 }
 
-/** Properties of a Die. */
-export interface IDie {
+/** AbilityScoreDbo enum. */
+export enum AbilityScoreDbo {
+    ABILITY_SCORE_UNKNOWN = 0,
+    ABILITY_SCORE_STR = 1,
+    ABILITY_SCORE_DEX = 2,
+    ABILITY_SCORE_CON = 3,
+    ABILITY_SCORE_INT = 4,
+    ABILITY_SCORE_WIS = 5,
+    ABILITY_SCORE_CHA = 6
+}
 
-    /** Die count */
-    count?: (number|null);
+/** ActionTypeDbo enum. */
+export enum ActionTypeDbo {
+    ACTION_TYPE_UNKNOWN = 0,
+    ACTION_TYPE_IMMEDIATE = 1,
+    ACTION_TYPE_FREE = 2,
+    ACTION_TYPE_SWIFT = 3,
+    ACTION_TYPE_MOVE = 4,
+    ACTION_TYPE_STANDARD = 5,
+    ACTION_TYPE_FULL_ROUND = 6
+}
 
-    /** Die sides */
-    sides?: (number|null);
+/** Represents a RangeDbo. */
+export class RangeDbo implements IRangeDbo {
+
+    /**
+     * Constructs a new RangeDbo.
+     * @param [properties] Properties to set
+     */
+    constructor(properties?: IRangeDbo);
+
+    /** RangeDbo category. */
+    public category?: (RangeDbo.Category|null);
+
+    /** RangeDbo feet. */
+    public feet?: (number|null);
+
+    /** RangeDbo Distance. */
+    public Distance?: ("category"|"feet");
+
+    /**
+     * Creates a new RangeDbo instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns RangeDbo instance
+     */
+    public static create(properties?: IRangeDbo): RangeDbo;
+
+    /**
+     * Encodes the specified RangeDbo message. Does not implicitly {@link RangeDbo.verify|verify} messages.
+     * @param message RangeDbo message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(message: RangeDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified RangeDbo message, length delimited. Does not implicitly {@link RangeDbo.verify|verify} messages.
+     * @param message RangeDbo message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: RangeDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a RangeDbo message from the specified reader or buffer.
+     * @param reader Reader or buffer to decode from
+     * @param [length] Message length if known beforehand
+     * @returns RangeDbo
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): RangeDbo;
+
+    /**
+     * Decodes a RangeDbo message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns RangeDbo
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): RangeDbo;
+
+    /**
+     * Verifies a RangeDbo message.
+     * @param message Plain object to verify
+     * @returns `null` if valid, otherwise the reason why it is not
+     */
+    public static verify(message: { [k: string]: any }): (string|null);
+
+    /**
+     * Creates a RangeDbo message from a plain object. Also converts values to their respective internal types.
+     * @param object Plain object
+     * @returns RangeDbo
+     */
+    public static fromObject(object: { [k: string]: any }): RangeDbo;
+
+    /**
+     * Creates a plain object from a RangeDbo message. Also converts values to other types if specified.
+     * @param message RangeDbo
+     * @param [options] Conversion options
+     * @returns Plain object
+     */
+    public static toObject(message: RangeDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+    /**
+     * Converts this RangeDbo to JSON.
+     * @returns JSON object
+     */
+    public toJSON(): { [k: string]: any };
+
+    /**
+     * Gets the default type url for RangeDbo
+     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns The default type url
+     */
+    public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+export namespace RangeDbo {
+
+    /** Category enum. */
+    enum Category {
+        PERSONAL = 0,
+        TOUCH = 1,
+        CLOSE = 2,
+        MEDIUM = 3,
+        LONG = 4,
+        UNLIMITED = 5
+    }
 }
 
 /** Represents a Die. */

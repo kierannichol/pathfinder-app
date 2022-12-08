@@ -1,6 +1,5 @@
 import {createContext, useContext, useMemo, useState} from "react";
-import {useCharacterClassDatabase, withGlobalCharacterClassDatabase} from "../database/v2/ClassDatabase";
-import {useRaceDatabase, withGlobalRaceDatabase} from "../database/v2/RaceDatabase";
+import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v2/PathfinderDatabase";
 import CharacterRepository from "../model/character/CharacterRepository";
 
 const CharacterRepositoryContext = createContext<CharacterRepository|undefined>(undefined);
@@ -8,11 +7,8 @@ const CharacterRepositoryContext = createContext<CharacterRepository|undefined>(
 let globalCharacterRepository: Promise<CharacterRepository> | undefined = undefined;
 
 async function initializeCharacterRepository() {
-  const dbs = await Promise.all([
-      withGlobalCharacterClassDatabase(),
-      withGlobalRaceDatabase()
-  ]);
-  return new CharacterRepository(dbs[0], dbs[1]);
+  const dbs = await withGlobalPathfinderDatabase();
+  return new CharacterRepository(dbs);
 }
 
 export function withGlobalCharacterRepository() {
@@ -24,17 +20,13 @@ export function withGlobalCharacterRepository() {
 
 export function CharacterRepositoryContextProvider({ children }: any) {
   const [ modified, setModified ] = useState({})
-  const classDatabase = useCharacterClassDatabase();
-  const raceDatabase = useRaceDatabase();
+  const pathfinderDatabase = usePathfinderDatabase();
   const repository = useMemo(() => {
-    if (!classDatabase.isLoaded || !raceDatabase.isLoaded) {
-      return undefined;
-    }
-    const repository = new CharacterRepository(classDatabase, raceDatabase);
+    const repository = new CharacterRepository(pathfinderDatabase);
     repository.onCharacterListChanged(() => setModified({}))
     return repository
       },
-      [classDatabase, raceDatabase, modified]);
+      [pathfinderDatabase, modified]);
 
   return (
       <CharacterRepositoryContext.Provider value={repository}>

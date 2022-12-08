@@ -1,33 +1,57 @@
 package pathfinder.generator;
 
+import com.google.protobuf.Message;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pathfinder.data.v2.WeaponDatabaseDbo;
+import pathfinder.data.v2.WeaponDbo;
 import pathfinder.data.v2.WeaponTypeDbo;
 import pathfinder.generator.db.WeaponSourceDatabase;
 import pathfinder.generator.encode.WeaponTypeEncoder;
-import pathfinder.spring.OutputPathValue;
+import pathfinder.parser.db.WeaponType;
+import pathfinder.spring.ConditionalOnGeneratorEnabled;
 
 @Service("Weapon Database Generator")
+@ConditionalOnGeneratorEnabled("weapon")
 @RequiredArgsConstructor
-public class WeaponDatabaseGenerator extends AbstractDatabaseGenerator {
+public class WeaponDatabaseGenerator extends AbstractDatabaseGenerator<WeaponType, WeaponTypeDbo, WeaponDbo> {
     private final WeaponSourceDatabase weaponSourceDatabase;
     private final WeaponTypeEncoder weaponTypeEncoder;
 
-    @OutputPathValue
-    private Path outputBasePath;
+    @Override
+    protected Stream<WeaponType> streamModels() throws IOException {
+        return weaponSourceDatabase.streamWeaponTypes()
+                .sorted(Comparator.comparing(WeaponType::name));
+    }
 
     @Override
-    public void generate() throws IOException {
-        WeaponDatabaseDbo.Builder weaponDatabaseDbo = WeaponDatabaseDbo.newBuilder();
+    protected String getRelativeOutputPath() {
+        return null;
+    }
 
-        weaponTypeEncoder.encodeStream(weaponSourceDatabase.streamWeaponTypes())
-                .sorted(Comparator.comparing(WeaponTypeDbo::getName))
-                .forEachOrdered(weaponDatabaseDbo::addWeaponTypes);
+    @Override
+    protected String getOutputDatabaseName() {
+        return "WeaponDatabase";
+    }
 
-        write(weaponDatabaseDbo.build(), "WeaponDatabase", outputBasePath);
+    @Override
+    protected WeaponTypeDbo encodedSummary(WeaponType model) {
+        return weaponTypeEncoder.encode(model);
+    }
+
+    @Override
+    protected WeaponDbo encodedDetailed(WeaponType model, WeaponTypeDbo summary) {
+        return null;
+    }
+
+    @Override
+    protected Message createSummaryDatabase(List<WeaponTypeDbo> weaponTypeDbos) {
+        return WeaponDatabaseDbo.newBuilder()
+                .addAllWeaponTypes(weaponTypeDbos)
+                .build();
     }
 }

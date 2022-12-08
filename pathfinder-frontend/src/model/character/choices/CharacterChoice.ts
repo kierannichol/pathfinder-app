@@ -5,11 +5,22 @@ export enum ChoiceType {
   CHARACTER_CLASS = 'character_class',
   ABILITY_SCORE = 'ability_score',
   RACE_ABILITY_SCORE = 'race_asi',
+  EFFECT_ABILITY_SCORE = 'effect_asi',
   FEAT = 'feat',
+  ABILITY = 'ability',
   RAGE_POWER = 'rage_power',
   ROGUE_TALENT = 'rogue_talent',
+  MAGUS_ARCANA = 'magus_arcana',
+  ALCHEMIST_DISCOVERY = 'alchemist_discovery',
+  WITCH_HEX = 'witch_hex',
+  BARDIC_MASTERPIECE = 'masterpiece',
+  SORCERER_BLOODLINE = 'bloodline',
+  BLOODLINE_POWER = 'bloodline_power',
+  BLOODLINE_SPELL = 'bloodline_spell',
+  BLOODLINE_FEAT = 'bloodline_feat',
   MERCY = 'mercy',
   SKILL_POINT = 'skill_point',
+  MODIFIER = 'modifier',
 }
 
 export enum ChoiceTag {
@@ -33,27 +44,7 @@ export default abstract class CharacterChoice {
 
   public readonly tags: ChoiceTag[] = [];
 
-  get label(): string {
-    let label = this.baseLabelName();
-    if (this.tags.includes(ChoiceTag.BONUS)) {
-      label = "Bonus " + label;
-    }
-    return label;
-  }
+  abstract get label(): string;
 
-  private baseLabelName() {
-    switch (this.type) {
-      case ChoiceType.ABILITY_SCORE: return "Ability Score";
-      case ChoiceType.CHARACTER_RACE: return "Race";
-      case ChoiceType.CHARACTER_NAME: return "Character Name";
-      case ChoiceType.CHARACTER_CLASS: return "Class";
-      case ChoiceType.RACE_ABILITY_SCORE: return "Race Ability Score";
-      case ChoiceType.MERCY: return "Mercy";
-      case ChoiceType.RAGE_POWER: return "Rage Power";
-      case ChoiceType.FEAT: return "Feat";
-      case ChoiceType.ROGUE_TALENT: return "Rogue Talent";
-      case ChoiceType.ALIGNMENT: return "Alignment";
-      default: return `#!${this.type}#`.toUpperCase();
-    }
-  }
+  abstract withDependsOn(dependsOn: string | undefined): CharacterChoice;
 }

@@ -5,7 +5,7 @@ import {AccordionEventKey} from "react-bootstrap/AccordionContext";
 import classNames from "../../app/classNames";
 import {useOnScreen} from "../../app/reactHooks";
 import LoadingBlock from "./LoadingBlock";
-import {PathfinderButtonVariants} from "./PathfinderButton";
+import PathfinderButton from "./PathfinderButton";
 import styles from "./PathfinderSelect.module.scss";
 
 type SelectChildType = ReactElement<PathfinderSelectItemProps>|ReactElement<PathfinderSelectItemProps>[];
@@ -35,7 +35,7 @@ interface PathfinderSelectItemProps {
   bodyFn?: () => Promise<ReactNode>;
   body?: ReactNode;
   disabled?: boolean;
-  variant?: PathfinderButtonVariants;
+  variant?: string;
 }
 
 function PathfinderSelectItem({ itemKey, label, bodyFn, body, disabled = false, variant = 'special' }: PathfinderSelectItemProps) {
@@ -51,20 +51,17 @@ function PathfinderSelectItemWithoutBody({ itemKey, label, disabled, variant }: 
   const selectOptionButton = useAccordionButton(itemKey);
 
   const itemClassNames = [ styles.item ];
-  const buttonClassNames = [ styles.button ]
-  if (variant) {
-    buttonClassNames.push(styles[variant]);
-  }
+  const buttonClassNames = [ styles.button, styles.collapsed ];
   if (isActive) {
     buttonClassNames.push(styles.active);
-  }
-  if (disabled) {
-    buttonClassNames.push(styles.invalid);
   }
 
   return (
       <div className={classNames(...itemClassNames)}>
-        <div className={classNames(...buttonClassNames)} onClick={selectOptionButton}>{label}</div>
+        <PathfinderButton variant={variant}
+                          disabled={disabled}
+                          className={classNames(...buttonClassNames)}
+                          onClick={selectOptionButton}>{label}</PathfinderButton>
       </div>);
 }
 
@@ -77,6 +74,7 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, 
   const [ expanded, setExpanded ] = useState(isActive);
   const [ expanding, setExpanding ] = useState(false);
   const [ collapsing, setCollapsing ] = useState(false);
+  const [ collapsed, setCollapsed ] = useState(!isActive);
 
   const [ bodyState, setBodyState ] = useState<ReactNode>(body);
   useEffect(() => {
@@ -103,33 +101,34 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, 
   const selectOptionButton = useAccordionButton(itemKey);
 
   const handleExpanding = () => {
-    scrollToElement(elementRef);
+    // scrollToElement(elementRef);
     setExpanding(true);
     setExpanded(false);
     setCollapsing(false);
+    setCollapsed(false);
   }
 
   const handleExpanded = () => {
     setExpanding(false);
     setExpanded(true);
+    setCollapsed(false);
   }
 
   const handleCollapsing = () => {
     setExpanding(false);
     setExpanded(false);
     setCollapsing(true);
+    setCollapsed(false);
   }
 
   const handleCollapsed = () => {
     setCollapsing(false);
     setExpanded(false);
+    setCollapsed(true);
   }
 
   const itemClassNames = [ styles.item ];
   const buttonClassNames = [ styles.button ]
-  if (variant) {
-    buttonClassNames.push(styles[variant]);
-  }
   if (expanded) {
     buttonClassNames.push(styles.expanded);
   }
@@ -139,16 +138,16 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, 
   if (collapsing) {
     buttonClassNames.push(styles.collapsing);
   }
+  if (collapsed) {
+    buttonClassNames.push(styles.collapsed);
+  }
   if (isActive) {
     buttonClassNames.push(styles.active);
-  }
-  if (disabled) {
-    buttonClassNames.push(styles.disabled);
   }
 
   return (
       <div className={classNames(...itemClassNames)} ref={elementRef}>
-        <div className={classNames(...buttonClassNames)} onClick={selectOptionButton}>{label}</div>
+        <PathfinderButton variant={variant} disabled={disabled} className={classNames(...buttonClassNames)} onClick={selectOptionButton}>{label}</PathfinderButton>
         <Accordion.Collapse eventKey={itemKey}
                             appear={isActive}
                             onEntering={_ => handleExpanding()}
@@ -165,7 +164,7 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, 
 interface PathfinderSelectItemContainerProps {
   label: ReactNode;
   disabled?: boolean;
-  variant?: PathfinderButtonVariants;
+  variant?: string;
   childrenFn: () => SelectChildType;
 }
 
@@ -176,6 +175,7 @@ function PathfinderSelectItemContainer({ label, childrenFn, disabled, variant }:
   const [ expanded, setExpanded ] = useState(false);
   const [ expanding, setExpanding ] = useState(false);
   const [ collapsing, setCollapsing ] = useState(false);
+  const [ collapsed, setCollapsed ] = useState(true);
   const [ open, setOpen ] = useState(false);
 
   const [ bodyState, setBodyState ] = useState<ReactNode>(<LoadingBlock/>);
@@ -186,34 +186,35 @@ function PathfinderSelectItemContainer({ label, childrenFn, disabled, variant }:
 
   const handleExpanding = () => {
     setBodyState(childrenFn());
-    scrollToElement(elementRef);
+    // scrollToElement(elementRef);
     setExpanding(true);
     setExpanded(false);
     setCollapsing(false);
+    setCollapsed(false);
   }
 
   const handleExpanded = () => {
     setExpanding(false);
     setExpanded(true);
+    setCollapsed(false);
   }
 
   const handleCollapsing = () => {
     setExpanding(false);
     setExpanded(false);
     setCollapsing(true);
+    setCollapsed(false);
   }
 
   const handleCollapsed = () => {
     setCollapsing(false);
     setExpanded(false);
+    setCollapsed(true);
     setBodyState(<LoadingBlock/>);
   }
 
   const itemClassNames = [ styles.item ];
   const buttonClassNames = [ styles.button ]
-  if (variant) {
-    buttonClassNames.push(styles[variant]);
-  }
   if (expanded) {
     buttonClassNames.push(styles.expanded);
   }
@@ -223,15 +224,15 @@ function PathfinderSelectItemContainer({ label, childrenFn, disabled, variant }:
   if (collapsing) {
     buttonClassNames.push(styles.collapsing);
   }
-  if (disabled) {
-    buttonClassNames.push(styles.disabled);
+  if (collapsed) {
+    buttonClassNames.push(styles.collapsed);
   }
 
   const openIcon = open ? <Icons.CaretDownFill /> : <Icons.CaretRightFill />;
 
   return (
       <div className={classNames(...itemClassNames)} ref={elementRef}>
-        <div className={classNames(...buttonClassNames)} onClick={_ => handleToggleOpen()}>{openIcon} {label}</div>
+        <PathfinderButton variant={variant} disabled={disabled} className={classNames(...buttonClassNames)} onClick={_ => handleToggleOpen()}>{openIcon} {label}</PathfinderButton>
         <Collapse in={open}
                   onEntering={_ => handleExpanding()}
                   onEntered={_ => handleExpanded()}

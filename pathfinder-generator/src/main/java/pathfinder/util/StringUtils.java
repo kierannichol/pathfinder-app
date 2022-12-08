@@ -1,6 +1,10 @@
 package pathfinder.util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StringUtils {
+    private static final Pattern LEVEL_PATTERN = Pattern.compile("(\\d+)(?:th|st|rd|nd)?");
 
     public static String toCamelCase(String s) {
         StringBuilder builder = new StringBuilder(s.length());
@@ -24,5 +28,22 @@ public class StringUtils {
         }
         builder.append(parts[0].trim());
         return builder.toString();
+    }
+
+    public static String sanitize(String str) {
+        return str
+                .replace("’", "'")
+                .replace("—", "--")
+                .replace("”", "\"")
+                .trim();
+    }
+
+    public static int parseLevel(String str) {
+        Matcher matcher = LEVEL_PATTERN.matcher(str);
+        if (!matcher.find()) {
+            return Integer.parseInt(str);
+        }
+
+        return Integer.parseInt(matcher.group(1));
     }
 }

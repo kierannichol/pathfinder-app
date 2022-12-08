@@ -6,14 +6,18 @@ import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 export default class CharacterAlignmentChoice extends CharacterChoice {
   public readonly key = CharacterChoice.CHARACTER_ALIGNMENT;
   public readonly type = ChoiceType.ALIGNMENT;
-  public readonly dependsOn = undefined;
+  public readonly label = "Alignment";
 
-  constructor(private readonly value: string = '') {
+  constructor(public readonly dependsOn: string | undefined = undefined, private readonly value: string = '') {
     super();
   }
 
   get current(): string {
     return this.value;
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new CharacterAlignmentChoice(dependsOn, this.current);
   }
 }
 
@@ -22,7 +26,7 @@ export class CharacterAlignmentChoiceProcessor implements ICharacterChoiceProces
 
   async select(choice: CharacterAlignmentChoice, value: string): Promise<CharacterChoice[]> {
     return [
-      new CharacterAlignmentChoice(value)
+      new CharacterAlignmentChoice(choice.dependsOn, value)
     ];
   }
 

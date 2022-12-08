@@ -1,15 +1,18 @@
 package pathfinder.app;
 
-import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import pathfinder.generator.DatabaseGenerator;
+import pathfinder.generator.ClassDatabaseGenerator;
 
-@SpringBootApplication(scanBasePackages = { "pathfinder.generator", "pathfinder.source" })
+@SpringBootApplication(scanBasePackages = {
+        "pathfinder.encoder",
+        "pathfinder.generator",
+        "pathfinder.source"
+})
 @Slf4j
 public class Application {
 
@@ -20,14 +23,22 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
+//            ctx.getBean(CompleteAbilityDatabaseGenerator.class).generate();
+            ctx.getBean(ClassDatabaseGenerator.class).generate();
+//            ctx.getBean(FeatDatabaseGenerator.class).generate();
 
-//            ctx.getBean(RogueTalentGenerator.class).generate();
+//            ctx.getBean(NethysSpellsScraper.class).stream()
+//                    .forEach(spell -> log.info(spell.name()));
 
-            Map<String, DatabaseGenerator> generators = ctx.getBeansOfType(DatabaseGenerator.class);
-            for (Map.Entry<String, DatabaseGenerator> entry : generators.entrySet()) {
-                log.info("Running {}...", entry.getKey());
-                entry.getValue().generate();
-            }
+//            for (Ability ability : scraped) {
+//                log.info(ability.toString());
+//            }
+
+//            Map<String, DatabaseGenerator> generators = ctx.getBeansOfType(DatabaseGenerator.class);
+//            for (Map.Entry<String, DatabaseGenerator> entry : generators.entrySet()) {
+//                log.info("Running {}...", entry.getKey());
+//                entry.getValue().generate();
+//            }
         };
     }
 

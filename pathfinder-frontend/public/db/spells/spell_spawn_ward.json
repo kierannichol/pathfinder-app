@@ -1,0 +1,22 @@
+{
+  "id": "spell:spawn_ward",
+  "name": "Spawn Ward",
+  "type": "ABILITY_TYPE_SP",
+  "school": "necromancy",
+  "range": {
+    "category": "TOUCH"
+  },
+  "targets": "creature touched",
+  "duration": "10 minutes/level",
+  "description": "The target becomes resistant to the effects of energy drain and blood drain attacks made by undead creatures, and cannot be made into undead spawn if killed while the spell is in effect.",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 5
+  }, {
+    "classId": "class:inquisitor",
+    "level": 5
+  }, {
+    "classId": "class:oracle",
+    "level": 5
+  }]
+}

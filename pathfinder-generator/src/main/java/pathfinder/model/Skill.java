@@ -6,6 +6,6 @@ public record Skill(String id,
                     String name,
                     boolean untrained,
                     boolean armorCheckPenalty,
-                    String keyAbility) implements Serializable {
+                    String keyAbility) implements Serializable, FeatureModel {
 
 }

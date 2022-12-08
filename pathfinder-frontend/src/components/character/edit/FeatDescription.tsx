@@ -2,6 +2,7 @@ import React, {useMemo} from "react";
 import Expression from "../../../logic/Expression";
 import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
 import {Feat} from "../../../model/character/Feat";
+import styles from "./AbilityDescription.module.scss";
 import PrerequisiteList from "./PrerequisiteList";
 
 interface FeatDescriptionProps {
@@ -18,13 +19,18 @@ export default function FeatDescription({ feat, characterAtLevel}: FeatDescripti
   const special = useMemo(() => (feat && Expression.parse(feat.special).resolve(characterAtLevel)?.asText()) ?? feat?.special, [feat, characterAtLevel]);
   const note = useMemo(() => (feat && Expression.parse(feat.note).resolve(characterAtLevel)?.asText()) ?? feat?.note, [feat, characterAtLevel]);
 
+  const isValid = useMemo(() => (feat && feat.isValidFor(characterAtLevel)), [feat, characterAtLevel]);
+
   const showPrerequisiteList = true;//useMemo(() => !feat.isValidFor(characterAtLevel), [feat, characterAtLevel]);
 
   return (
       <div>
+        {showPrerequisiteList && feat.prerequisites_formula !== '' && <div className={isValid ? styles.prerequisitesValid : styles.prerequisitesInvalid}>
+          <div className={styles.prerequisiteHeader}>Prerequisites</div>
+          <PrerequisiteList formula={feat.prerequisites_formula} characterAtLevel={characterAtLevel} />
+        </div>}
         {description !== '' && <p><i>{description}</i></p>}
-        {prerequisites !== '' && <p><b>Prerequisites:</b> {prerequisites}</p>}
-        {showPrerequisiteList && <div style={{ marginBottom: "1rem" }}><PrerequisiteList abilitySummary={feat} characterAtLevel={characterAtLevel} /></div>}
+        {/*{prerequisites !== '' && <p><b>Prerequisites:</b> {prerequisites}</p>}*/}
         {benefit !== '' && <p><b>Benefit:</b> {benefit}</p>}
         {normal !== '' && <p><b>Normal:</b> {normal}</p>}
         {special !== '' && <p><b>Special:</b> {special}</p>}

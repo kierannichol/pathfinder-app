@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+package v2;
+
+import "PathfinderCore.proto";
+import "v2/AbilityDatabase.proto";
+
+message SpellDatabaseDbo {
+  repeated SpellSummaryDbo spellSummaries = 1;
+}
+
+message SpellSummaryDbo {
+  string id = 1;
+  string name = 2;
+  AbilityTypeDbo type = 3;
+  string prerequisites_formula = 4;
+  repeated SpellLevelDbo level = 5;
+}
+
+message SpellDataDbo {
+  string id = 1;
+  string name = 2;
+  AbilityTypeDbo type = 3;
+  string school = 4;
+  ActionTypeDbo casting_time = 5;
+  RangeDbo range = 6;
+  string area = 7;
+  string targets = 8;
+  string effect = 9;
+  string duration = 10;
+  SavingThrowDbo saving_throw = 11;
+  string description = 12;
+  string notes = 13;
+  string prerequisites_formula = 14;
+  repeated SpellLevelDbo level = 15;
+}
+
+message SpellLevelDbo {
+  string classId = 1;
+  uint32 level = 2;
+}
+
+message SavingThrowDbo {
+  enum Type {
+    NEGATES = 0;
+    PARTIAL = 1;
+    HALF = 2;
+    NONE = 3;
+    DISBELIEF = 4;
+  }
+
+  AbilityScoreDbo ability = 1;
+  uint32 dc = 2;
+}

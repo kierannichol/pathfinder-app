@@ -3,295 +3,1001 @@
   "name": "Unchained Rogue",
   "category": "UNCHAINED",
   "shortDescription": "Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents.",
-  "levels": [{
-    "levelNumber": 1,
-    "refSave": 2,
-    "specials": [{
-      "id": "ability:finesse_training",
-      "name": "Finesse Training",
-      "description": "At 1st level, a rogue gains Weapon Finesse as a bonus feat. In addition, starting at 3rd level, she can select any one type of weapon that can be used with Weapon Finesse (such as rapiers or daggers). Once this choice is made, it cannot be changed. Whenever she makes a successful melee attack with the selected weapon, she adds her Dexterity modifier instead of her Strength modifier to the damage roll. If any effect would prevent the rogue from adding her Strength modifier to the damage roll, she does not add her Dexterity modifier. The rogue can select a second weapon at 11th level and a third at 19th level."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }, {
-      "id": "ability:trapfinding",
-      "name": "Trapfinding",
-      "description": "A rogue adds 1/2 her level on Perception checks to locate traps and on Disable Device checks (minimum +1). A rogue can use Disable Device to disarm magic traps."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 1,
-    "refSave": 3,
-    "specials": [{
-      "id": "ability:evasion",
-      "name": "Evasion",
-      "description": "At 2nd level, a rogue can avoid even magical and unusual attacks with great agility. If she succeeds at a Reflex saving throw against an attack that normally deals half damage on a successful save, she instead takes no damage. Evasion can be used only if the rogue is wearing light armor or no armor. A helpless rogue does not gain the benefit of evasion."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 2,
-    "fortSave": 1,
-    "refSave": 3,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:danger_sense",
-      "name": "Danger Sense",
-      "description": "At 3rd level, a rogue gains a +1 bonus on Reflex saves to avoid traps and a +1 dodge bonus to AC against attacks made by traps. In addition, she gains a +1 bonus on Perception checks to avoid being surprised by a foe. These bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at 18th level). This ability counts as trap sense for the purpose of any feat or class prerequisite, and can be replaced by any archetype class feature that replaces trap sense. The bonuses gained from this ability stack with those gained from trap sense (from another class)."
-    }, {
-      "id": "ability:finesse_training",
-      "name": "Finesse Training",
-      "description": "At 1st level, a rogue gains Weapon Finesse as a bonus feat. In addition, starting at 3rd level, she can select any one type of weapon that can be used with Weapon Finesse (such as rapiers or daggers). Once this choice is made, it cannot be changed. Whenever she makes a successful melee attack with the selected weapon, she adds her Dexterity modifier instead of her Strength modifier to the damage roll. If any effect would prevent the rogue from adding her Strength modifier to the damage roll, she does not add her Dexterity modifier. The rogue can select a second weapon at 11th level and a third at 19th level."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 3,
-    "fortSave": 1,
-    "refSave": 4,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:debilitating_injury",
-      "name": "Debilitating Injury",
-      "description": "At 4th level, whenever a rogue deals sneak attack damage to a foe, she can also debilitate the target of her attack, causing it to take a penalty for 1 round (this is in addition to any penalty caused by a rogue talent or other special ability). The rogue can choose to apply any one of the following penalties when the damage is dealt."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }, {
-      "id": "ability:uncanny_dodge",
-      "name": "Uncanny Dodge",
-      "description": "At 4th level, a rogue can react to danger before her senses would normally allow her to do so. She cannot be caught flat-footed, nor does she lose her Dexterity bonus to AC if the attacker is invisible. She still loses her Dexterity bonus to AC if immobilized. A rogue with this ability can still lose her Dexterity bonus to AC if an opponent successfully uses the feint action against her.If a rogue already has uncanny dodge from a different class, she automatically gains improved uncanny dodge (see below) instead."
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 3,
-    "fortSave": 1,
-    "refSave": 4,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:rogues_edge",
-      "name": "Rogue’s Edge",
-      "description": "At 5th level, a rogue has mastered a single skill beyond that skill’s normal boundaries, gaining results that others can only dream about. She gains the skill unlock powers for that skill as appropriate for her number of ranks in that skill. At 10th, 15th, and 20th levels, she chooses an additional skill and gains skill unlock powers for that skill as well."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 4,
-    "fortSave": 2,
-    "refSave": 5,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:danger_sense",
-      "name": "Danger Sense",
-      "description": "At 3rd level, a rogue gains a +1 bonus on Reflex saves to avoid traps and a +1 dodge bonus to AC against attacks made by traps. In addition, she gains a +1 bonus on Perception checks to avoid being surprised by a foe. These bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at 18th level). This ability counts as trap sense for the purpose of any feat or class prerequisite, and can be replaced by any archetype class feature that replaces trap sense. The bonuses gained from this ability stack with those gained from trap sense (from another class)."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 5,
-    "fortSave": 2,
-    "refSave": 5,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 6,
-    "fortSave": 2,
-    "refSave": 6,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:improved_uncanny_dodge",
-      "name": "Improved Uncanny Dodge",
-      "description": "At 8th level, a rogue can no longer be flanked.This defense denies another rogue the ability to sneak attack the character by flanking her, unless the attacker has at least four more rogue levels than the target does.If a character already has uncanny dodge from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum rogue level required to flank the character."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 6,
-    "fortSave": 3,
-    "refSave": 6,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:danger_sense",
-      "name": "Danger Sense",
-      "description": "At 3rd level, a rogue gains a +1 bonus on Reflex saves to avoid traps and a +1 dodge bonus to AC against attacks made by traps. In addition, she gains a +1 bonus on Perception checks to avoid being surprised by a foe. These bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at 18th level). This ability counts as trap sense for the purpose of any feat or class prerequisite, and can be replaced by any archetype class feature that replaces trap sense. The bonuses gained from this ability stack with those gained from trap sense (from another class)."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 7,
-    "fortSave": 3,
-    "refSave": 7,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:advanced_talents",
-      "name": "Advanced Talents",
-      "description": "At 10th level and every 2 levels thereafter, a rogue can choose one of the following advanced talents in place of a rogue talent."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }, {
-      "id": "ability:rogues_edge",
-      "name": "Rogue’s Edge",
-      "description": "At 5th level, a rogue has mastered a single skill beyond that skill’s normal boundaries, gaining results that others can only dream about. She gains the skill unlock powers for that skill as appropriate for her number of ranks in that skill. At 10th, 15th, and 20th levels, she chooses an additional skill and gains skill unlock powers for that skill as well."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 8,
-    "fortSave": 3,
-    "refSave": 7,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:finesse_training",
-      "name": "Finesse Training",
-      "description": "At 1st level, a rogue gains Weapon Finesse as a bonus feat. In addition, starting at 3rd level, she can select any one type of weapon that can be used with Weapon Finesse (such as rapiers or daggers). Once this choice is made, it cannot be changed. Whenever she makes a successful melee attack with the selected weapon, she adds her Dexterity modifier instead of her Strength modifier to the damage roll. If any effect would prevent the rogue from adding her Strength modifier to the damage roll, she does not add her Dexterity modifier. The rogue can select a second weapon at 11th level and a third at 19th level."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:acrobatics",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 9,
-    "fortSave": 4,
-    "refSave": 8,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:danger_sense",
-      "name": "Danger Sense",
-      "description": "At 3rd level, a rogue gains a +1 bonus on Reflex saves to avoid traps and a +1 dodge bonus to AC against attacks made by traps. In addition, she gains a +1 bonus on Perception checks to avoid being surprised by a foe. These bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at 18th level). This ability counts as trap sense for the purpose of any feat or class prerequisite, and can be replaced by any archetype class feature that replaces trap sense. The bonuses gained from this ability stack with those gained from trap sense (from another class)."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:appraise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 9,
-    "fortSave": 4,
-    "refSave": 8,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:bluff",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 10,
-    "fortSave": 4,
-    "refSave": 9,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:climb",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 11,
-    "fortSave": 5,
-    "refSave": 9,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:danger_sense",
-      "name": "Danger Sense",
-      "description": "At 3rd level, a rogue gains a +1 bonus on Reflex saves to avoid traps and a +1 dodge bonus to AC against attacks made by traps. In addition, she gains a +1 bonus on Perception checks to avoid being surprised by a foe. These bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at 18th level). This ability counts as trap sense for the purpose of any feat or class prerequisite, and can be replaced by any archetype class feature that replaces trap sense. The bonuses gained from this ability stack with those gained from trap sense (from another class)."
-    }, {
-      "id": "ability:rogues_edge",
-      "name": "Rogue’s Edge",
-      "description": "At 5th level, a rogue has mastered a single skill beyond that skill’s normal boundaries, gaining results that others can only dream about. She gains the skill unlock powers for that skill as appropriate for her number of ranks in that skill. At 10th, 15th, and 20th levels, she chooses an additional skill and gains skill unlock powers for that skill as well."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 12,
-    "fortSave": 5,
-    "refSave": 10,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:diplomacy",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 12,
-    "fortSave": 5,
-    "refSave": 10,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:disable_device",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 13,
-    "fortSave": 6,
-    "refSave": 11,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:danger_sense",
-      "name": "Danger Sense",
-      "description": "At 3rd level, a rogue gains a +1 bonus on Reflex saves to avoid traps and a +1 dodge bonus to AC against attacks made by traps. In addition, she gains a +1 bonus on Perception checks to avoid being surprised by a foe. These bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at 18th level). This ability counts as trap sense for the purpose of any feat or class prerequisite, and can be replaced by any archetype class feature that replaces trap sense. The bonuses gained from this ability stack with those gained from trap sense (from another class)."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:disguise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 14,
-    "fortSave": 6,
-    "refSave": 11,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:finesse_training",
-      "name": "Finesse Training",
-      "description": "At 1st level, a rogue gains Weapon Finesse as a bonus feat. In addition, starting at 3rd level, she can select any one type of weapon that can be used with Weapon Finesse (such as rapiers or daggers). Once this choice is made, it cannot be changed. Whenever she makes a successful melee attack with the selected weapon, she adds her Dexterity modifier instead of her Strength modifier to the damage roll. If any effect would prevent the rogue from adding her Strength modifier to the damage roll, she does not add her Dexterity modifier. The rogue can select a second weapon at 11th level and a third at 19th level."
-    }, {
-      "id": "ability:sneak_attack",
-      "name": "Sneak Attack"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:escape_artist",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 15,
-    "fortSave": 6,
-    "refSave": 12,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:master_strike",
-      "name": "Master Strike",
-      "description": "At 20th level, an rogue becomes incredibly deadly when dealing sneak attack damage. Each time the rogue deals sneak attack damage, she can choose one of the following three effects: the target can be put to sleep for 1d4 hours, paralyzed for 2d6 rounds, or slain. Regardless of the effect chosen, the target can attempt a Fortitude save to negate the additional effect. The DC of this save is equal to 10 + 1/2 the rogue’s level + the rogue’s Dexterity modifier. Once a creature has been the target of a master strike, regardless of whether or not the save is successful, that creature is immune to that rogue’s master strike for 24 hours. Creatures that are immune to sneak attack damage are also immune to this ability."
-    }, {
-      "id": "ability:rogue_talent",
-      "name": "Rogue Talents",
-      "description": "As a rogue gains experience, she learns a number of talents that aid her and confound her foes. Starting at 2nd level, a rogue gains one rogue talent. She gains an additional rogue talent for every 2 levels of rogue attained after 2nd level. A rogue cannot select an individual talent more than once.Talents marked with an asterisk add effects to a rogue’s sneak attack. Only one of these talents can be applied to an individual attack, and the decision must be made before the attack roll is made.A rogue cannot choose a ninja trick with the same name as a rogue talent."
-    }, {
-      "id": "ability:rogues_edge",
-      "name": "Rogue’s Edge",
-      "description": "At 5th level, a rogue has mastered a single skill beyond that skill’s normal boundaries, gaining results that others can only dream about. She gains the skill unlock powers for that skill as appropriate for her number of ranks in that skill. At 10th, 15th, and 20th levels, she chooses an additional skill and gains skill unlock powers for that skill as well."
-    }]
-  }],
-  "skills": ["skill:acrobatics", "skill:appraise", "skill:bluff", "skill:climb", "skill:craft", "skill:diplomacy", "skill:disable_device", "skill:disguise", "skill:escape_artist", "skill:intimidate", "skill:knowledge", "skill:knowledge", "skill:linguistics", "skill:perception", "skill:perform", "skill:profession", "skill:sense_motive", "skill:sleight_of_hand", "skill:stealth", "skill:swim", "skill:use_magic_device"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:intimidate",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:linguistics",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perception",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perform",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sense_motive",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sleight_of_hand",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:stealth",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:swim",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:use_magic_device",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:finesse_training#unchained_rogue"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:trapfinding#unchained_rogue"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:evasion#unchained_rogue"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 2,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:danger_sense#unchained_rogue"
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:finesse_training#unchained_rogue"
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:debilitating_injury#unchained_rogue"
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:uncanny_dodge#unchained_rogue"
+    }
+  }, {
+    "level": 4,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:rogues_edge#unchained_rogue"
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:danger_sense#unchained_rogue"
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 6,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:improved_uncanny_dodge#unchained_rogue"
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 8,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:danger_sense#unchained_rogue"
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:advanced_talents#unchained_rogue"
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:rogues_edge#unchained_rogue"
+    }
+  }, {
+    "level": 10,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:finesse_training#unchained_rogue"
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:danger_sense#unchained_rogue"
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 12,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 14,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:danger_sense#unchained_rogue"
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:rogues_edge#unchained_rogue"
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 16,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:danger_sense#unchained_rogue"
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 18,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:finesse_training#unchained_rogue"
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:sneak_attack#unchained_rogue"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:master_strike#unchained_rogue"
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:rogue_talent#unchained_rogue"
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:rogues_edge#unchained_rogue"
+    }
+  }, {
+    "level": 20,
+    "grantChoice": {
+      "choice": {
+        "key": "rogue_talent",
+        "label": "Rogue Talent",
+        "Ability": {
+          "abilityIds": ["rogue_talent:acrobatic_assist", "rogue_talent:acrobatic_stunt", "rogue_talent:accurate_poisoner", "rogue_talent:ambuscading_grapple", "rogue_talent:armor_piercer", "rogue_talent:assault_leader", "rogue_talent:bardic_pretender", "rogue_talent:befuddling_strike", "rogue_talent:black_market_connections", "rogue_talent:bleeding_attack", "rogue_talent:bomber", "rogue_talent:bombers_discovery", "rogue_talent:camouflage", "rogue_talent:canny_observer", "rogue_talent:card_sharp", "rogue_talent:careful_stab", "rogue_talent:castling", "rogue_talent:charmer", "rogue_talent:climbing_stunt", "rogue_talent:cloying_shades", "rogue_talent:coax_information", "rogue_talent:combat_swipe", "rogue_talent:combat_trick", "rogue_talent:convincing_lie", "rogue_talent:cunning_trigger", "rogue_talent:dampen_presence", "rogue_talent:deft_palm", "rogue_talent:demand_attention", "rogue_talent:demon_lantern", "rogue_talent:developed_poison_immunity", "rogue_talent:disabling_stunt", "rogue_talent:disease_use", "rogue_talent:distracting_attack", "rogue_talent:eerie_disappearance", "rogue_talent:eldritch_conduit", "rogue_talent:emboldening_strike", "rogue_talent:escaping_stunt", "rogue_talent:esoteric_scholar", "rogue_talent:expert_cypher", "rogue_talent:expert_leaper", "rogue_talent:extinguishing_strike", "rogue_talent:extra_earthcraft", "rogue_talent:face_in_the_crowd", "rogue_talent:false_attacker", "rogue_talent:false_friend", "rogue_talent:fast_fingers", "rogue_talent:fast_getaway", "rogue_talent:fast_picks", "rogue_talent:fast_stealth", "rogue_talent:favored_terrain", "rogue_talent:feint_from_shadows", "rogue_talent:finesse_rogue", "rogue_talent:firearm_training", "rogue_talent:flying_stunt", "rogue_talent:focusing_attack", "rogue_talent:follow_clues", "rogue_talent:fortified_position", "rogue_talent:getaway_artist", "rogue_talent:gloom_magic", "rogue_talent:got_your_back", "rogue_talent:greater_gloom_magic", "rogue_talent:green_tongue", "rogue_talent:grig_jig", "rogue_talent:grit", "rogue_talent:guileful_polyglot", "rogue_talent:hairpin_trick", "rogue_talent:hard_to_fool", "rogue_talent:heads_up", "rogue_talent:hold_breath", "rogue_talent:honeyed_words", "rogue_talent:innocent_facade", "rogue_talent:iron_guts", "rogue_talent:just_a_face_in_the_crowd", "rogue_talent:ki_pool", "rogue_talent:knockout_queen", "rogue_talent:last_ditch_effort", "rogue_talent:lasting_poison", "rogue_talent:ledge_walker", "rogue_talent:lingering_poison", "rogue_talent:major_magic", "rogue_talent:mien_of_despair", "rogue_talent:minor_magic", "rogue_talent:nimble_climber", "rogue_talent:ninja_trick", "rogue_talent:obfuscate_story", "rogue_talent:obscuring_blow", "rogue_talent:occult_dungeoneer", "rogue_talent:occult_mysticism", "rogue_talent:offensive_defense", "rogue_talent:one_of_those_faces", "rogue_talent:papercraft_tools", "rogue_talent:peerless_maneuver", "rogue_talent:philologist", "rogue_talent:pierce_the_darkness", "rogue_talent:poison_use", "rogue_talent:positioning_attack", "rogue_talent:powerful_sneak", "rogue_talent:quick_disable", "rogue_talent:quick_disguise", "rogue_talent:quick_scrounge", "rogue_talent:quick_trapsmith", "rogue_talent:rapid_boost", "rogue_talent:rapid_perception", "rogue_talent:resiliency", "rogue_talent:riding_stunt", "rogue_talent:rogue_crawl", "rogue_talent:rope_master", "rogue_talent:sacred_sneak_attack", "rogue_talent:sacrifice_self", "rogue_talent:scavenger", "rogue_talent:scrying_familiarity", "rogue_talent:scry_slip", "rogue_talent:set_up", "rogue_talent:shadows_chill", "rogue_talent:shadow_duplicate", "rogue_talent:shove_aside", "rogue_talent:signature_poison", "rogue_talent:silencing_strike", "rogue_talent:sleight_of_hand_stunt", "rogue_talent:slow_reactions", "rogue_talent:snap_shot", "rogue_talent:sneak_training", "rogue_talent:sneaky_maneuver", "rogue_talent:snipers_eye", "rogue_talent:spell_storing", "rogue_talent:stand_up", "rogue_talent:steal_the_story", "rogue_talent:stealth_stunt", "rogue_talent:stem_the_flow", "rogue_talent:strong_impression", "rogue_talent:strong_stroke", "rogue_talent:superior_sniper", "rogue_talent:suppress_poison", "rogue_talent:surprise_attack", "rogue_talent:survivalist", "rogue_talent:swift_poison", "rogue_talent:swift_tracker", "rogue_talent:swimming_stunt", "rogue_talent:terrain_mastery", "rogue_talent:the_whole_time", "rogue_talent:toxic_regurgitation", "rogue_talent:trap_spotter", "rogue_talent:umbral_gear", "rogue_talent:unbalancing_trick", "rogue_talent:underhanded", "rogue_talent:underhanded_trick", "rogue_talent:wall_scramble", "rogue_talent:weapon_training", "rogue_talent:wild_magic", "rogue_talent:without_a_trace", "rogue_talent:abduction_artist", "rogue_talent:acrobatic_charge", "rogue_talent:advanced_trap_training", "rogue_talent:aerial_acrobatics", "rogue_talent:armor_mastery", "rogue_talent:artful_guile", "rogue_talent:artistic_talent", "rogue_talent:calculated_hit", "rogue_talent:combat_escapist", "rogue_talent:dirty_strike", "rogue_talent:distracted_shot", "rogue_talent:feint_expert", "rogue_talent:hidden_flight", "rogue_talent:honest_lies", "rogue_talent:lethal_acrobatics", "rogue_talent:magic_adept", "rogue_talent:major_alchemy", "rogue_talent:major_artistic_talent", "rogue_talent:maneuver_mastery", "rogue_talent:melee_archer", "rogue_talent:minor_alchemy", "rogue_talent:sprint", "rogue_talent:superior_senses", "rogue_talent:throw_off_balance", "rogue_talent:trap_training", "rogue_talent:trick_shot", "rogue_talent:wall_jumper", "rogue_talent:wall_mastery", "rogue_talent:improved_ki_pool", "rogue_talent:rogues_finesse", "rogue_talent:constellation_aspects", "rogue_talent:fortify_skill", "rogue_talent:hide_supernatural_abilities", "rogue_talent:monstrous_aspects", "rogue_talent:occult_feat", "rogue_talent:brute_malice", "rogue_talent:coldhearted_precision", "rogue_talent:crippling_missile", "rogue_talent:crippling_shot", "rogue_talent:defenses_aplenty", "rogue_talent:deadly_tricks", "rogue_talent:fearsome_tattoos", "rogue_talent:jaunters_filch", "rogue_talent:jaunters_hop", "rogue_talent:jaunters_mastery", "rogue_talent:jaunters_prison", "rogue_talent:jaunters_rein", "rogue_talent:jaunters_slice", "rogue_talent:jaunters_strike", "rogue_talent:jaunters_wink", "rogue_talent:read_tells", "rogue_talent:samurai_trained", "rogue_talent:smarter_and_harder", "rogue_talent:tear_the_wound", "rogue_talent:tricky_combatant", "rogue_talent:wasps_sting", "rogue_talent:against_the_wall", "rogue_talent:aligned_disguise", "rogue_talent:another_day", "rogue_talent:blinding_strike", "rogue_talent:confounding_blades", "rogue_talent:crippling_strike", "rogue_talent:dance_of_disorienting_shadows", "rogue_talent:deadly_cocktail", "rogue_talent:deadly_sneak", "rogue_talent:defensive_roll", "rogue_talent:dispelling_attack", "rogue_talent:entanglement_of_blades", "rogue_talent:familiar", "rogue_talent:fast_tumble", "rogue_talent:founders_blessing", "rogue_talent:frugal_trapsmith", "rogue_talent:feat", "rogue_talent:getaway_master", "rogue_talent:glib_facade", "rogue_talent:hamstring_strike", "rogue_talent:hard_minded", "rogue_talent:harrow_strike", "rogue_talent:hide_in_plain_sight", "rogue_talent:hunters_surprise", "rogue_talent:improved_shadows_chill", "rogue_talent:knock_out_blow", "rogue_talent:improved_evasion", "rogue_talent:master_of_disguise", "rogue_talent:master_tricks", "rogue_talent:opportunist", "rogue_talent:petrifying_strike", "rogue_talent:redirect_attack", "rogue_talent:reflexive_shadow_shield", "rogue_talent:rumormonger", "rogue_talent:resonating_rumbles", "rogue_talent:see_in_darkness", "rogue_talent:shrinewalk", "rogue_talent:skill_mastery", "rogue_talent:slippery_mind", "rogue_talent:stealthy_sniper", "rogue_talent:stony_skin", "rogue_talent:thoughtful_reexamining", "rogue_talent:unlock_ki", "rogue_talent:unwitting_ally", "rogue_talent:weapon_snatcher", "rogue_talent:center_of_combat", "rogue_talent:combat_snatcher", "rogue_talent:concussive_strike", "rogue_talent:devastating_sneak", "rogue_talent:eviscerating_strike", "rogue_talent:fascinate", "rogue_talent:group_feint", "rogue_talent:improved_familiar", "rogue_talent:leg_strike", "rogue_talent:magebane_attack", "rogue_talent:magical_traps", "rogue_talent:master_sniper", "rogue_talent:mutagen", "rogue_talent:opportunistic_archer", "rogue_talent:poison_use", "rogue_talent:quick_poison", "rogue_talent:quiet_death", "rogue_talent:scroll_rogue", "rogue_talent:swift_kick", "rogue_talent:tactical_master", "rogue_talent:trap_master", "rogue_talent:wand_rogue", "rogue_talent:jaunters_juxtaposition", "rogue_talent:jaunters_labyrinth", "rogue_talent:jaunters_ostracism", "rogue_talent:jaunters_rally", "rogue_talent:jaunters_removal", "rogue_talent:jaunters_retreat", "rogue_talent:jaunters_seeking", "rogue_talent:jaunters_stride", "rogue_talent:jaunters_terminus", "rogue_talent:jaunters_tomb", "rogue_talent:jaunters_void", "rogue_talent:jaunters_wake", "rogue_talent:reckless_charge", "rogue_talent:vengeful"]
+        }
+      }
+    }
+  }]
 }

@@ -1,15 +1,17 @@
 package pathfinder.generator;
 
+import java.io.IOException;
+import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-import pathfinder.SourceDatabase;
 import pathfinder.model.Ability;
-import pathfinder.model.Sources;
 import pathfinder.source.RogueTalentSourceDatabase;
+import pathfinder.spring.ConditionalOnGeneratorEnabled;
 
 @Service("Rogue Talent Database Generator")
+@ConditionalOnGeneratorEnabled("rogue.talent")
 @Slf4j
 @Lazy
 @RequiredArgsConstructor
@@ -18,8 +20,9 @@ public class RogueTalentGenerator extends AbstractAbilityDatabaseGenerator {
     private final RogueTalentSourceDatabase sourceDatabase;
 
     @Override
-    protected SourceDatabase<Ability> getAbilitySourceDatabase() {
-        return sourceDatabase;
+    protected Stream<Ability> streamModels() throws IOException {
+        return sourceDatabase.streamAbilities()
+                .filter(KNOWN_SOURCES);
     }
 
     @Override
@@ -30,10 +33,5 @@ public class RogueTalentGenerator extends AbstractAbilityDatabaseGenerator {
     @Override
     protected String getOutputDatabaseName() {
         return "RogueTalentDatabase";
-    }
-
-    @Override
-    protected boolean filterAbilities(Ability ability) {
-        return Sources.tryFindSourceByCode(ability.source()).isPresent();
     }
 }

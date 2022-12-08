@@ -2,6 +2,7 @@ package pathfinder.model;
 
 import java.io.Serializable;
 import java.util.List;
+import pathfinder.model.v3.Sourced;
 
 public record Feat(String id,
                    String name,
@@ -11,13 +12,21 @@ public record Feat(String id,
                    String benefit,
                    String normal,
                    String special,
-                   String source,
+                   Source source,
                    boolean teamwork,
                    String note,
-                   boolean multiples) implements Serializable {
+                   List<CharacterEffect> effects,
+                   boolean multiples) implements Serializable, FeatureModel, Sourced {
 
     public Ability asAbility() {
-        return new Ability(id, name, Ability.Type.NONE, description, prerequisites, "", source);
+        return Ability.builder()
+                .id(id)
+                .name(name)
+                .type(Ability.Type.NONE)
+                .description(description)
+                .prerequisites(prerequisites)
+                .source(source)
+                .build();
     }
 
     public enum Type {

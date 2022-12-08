@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import lombok.Builder;
+import pathfinder.model.v3.Sourced;
 
 @Builder
 public record Ability(
@@ -13,15 +14,11 @@ public record Ability(
         String description,
         String prerequisites,
         String benefit,
-        String source
-) implements Serializable {
-    public Ability(String id, String name, Type type, String description, String prerequisites) {
-        this(id, name, type, description, prerequisites, "", "");
-    }
-    public Ability(String id, String name, Type type, String description) {
-        this(id, name, type, description, "");
-    }
-
+        String normal,
+        String special,
+        String note,
+        Source source
+) implements Serializable, FeatureModel, Sourced {
     public enum Type {
         NONE,
         EX,
@@ -38,16 +35,6 @@ public record Ability(
                 return Type.valueOf(typeText.toUpperCase());
             }
             return Type.NONE;
-//            if (name.endsWith("(Ex)")) {
-//                return Type.EX;
-//            }
-//            if (name.endsWith(("(Sp)"))) {
-//                return Type.SP;
-//            }
-//            if (name.endsWith("(Su)")) {
-//                return Type.SU;
-//            }
-//            return Type.NONE;
         }
 
         public static String removeTypeFromName(String name) {

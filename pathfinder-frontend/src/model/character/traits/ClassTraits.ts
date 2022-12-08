@@ -20,17 +20,8 @@ export default class ClassTraits implements Trait {
       return;
     }
 
-    const levelData = this.classData.level(level);
-    if (levelData === undefined) {
-      return;
-    }
-
     state[`class_at_${level}`] = this.classData.id;
     state[this.classData.id] = level;
-    state['bab'] = levelData.bab;
-    state['fort:base'] = levelData.fortSave;
-    state['ref:base'] = levelData.refSave;
-    state['will:base'] = levelData.willSave;
   }
 
 }

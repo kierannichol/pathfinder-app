@@ -3,239 +3,756 @@
   "name": "Fighter",
   "category": "CORE",
   "shortDescription": "Fighters excel at combat—defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.",
-  "levels": [{
-    "levelNumber": 1,
-    "bab": 1,
-    "fortSave": 2,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 2,
-    "fortSave": 3,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }, {
-      "id": "ability:bravery",
-      "name": "Bravery",
-      "description": "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against fear. This bonus increases by +1 for every four levels beyond 2nd."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 3,
-    "fortSave": 3,
-    "refSave": 1,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:armor_training",
-      "name": "Armor Training",
-      "description": "Starting at 3rd level, a fighter learns to be more maneuverable while wearing armor. Whenever he is wearing armor, he reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter can also move at his normal speed while wearing medium armor. At 7th level, a fighter can move at his normal speed while wearing heavy armor.Advanced Armor Training: Beginning at 7th level, instead of increasing the benefits provided by armor training (reducing his armor’s check penalty by 1 and increasing its maximum Dexterity bonus by 1), a fighter can choose an advanced armor training option (see Advanced Armor Training below) . If the fighter does so, he still gains the ability to move at his normal speed while wearing medium armor at 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player Companion: Armor Master’s Handbook"
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 4,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 5,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:weapon_training",
-      "name": "Weapon Training",
-      "description": "Starting at 5th level, a fighter can select one group of weapons, as noted below. Whenever he attacks with a weapon from this group, he gains a +1 bonus on attack and damage rolls.Every four levels thereafter (9th*, 13th, and 17th), a fighter becomes further trained in another group of weapons. He gains a +1 bonus on attack and damage rolls when using a weapon from this group. In addition, the bonuses granted by previous weapon groups increase by +1 each. For example, when a fighter reaches 9th level, he receives a +1 bonus on attack and damage rolls with one weapon group and a +2 bonus on attack and damage rolls with the weapon group selected at 5th level. Bonuses granted from overlapping groups do not stack. Take the highest bonus granted for a weapon if it resides in two or more groups.A fighter also adds this bonus to any combat maneuver checks made with weapons from his group. This bonus also applies to the fighter’s Combat Maneuver Defense when defending against disarm and sunder attempts made against weapons from this group.Advanced Weapon Training: Beginning at 9th level, instead of selecting an additional fighter weapon group, a fighter can choose an advanced weapon training option (see Advanced Weapon Training below) for one fighter weapon group that he previously selected with the weapon training class feature. Source: Pathfinder Player Companion: Weapon Master’s HandbookWeapon groups are defined as follows (GMs may add other weapons to these groups, or add entirely new groups):"
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 6,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }, {
-      "id": "ability:bravery",
-      "name": "Bravery",
-      "description": "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against fear. This bonus increases by +1 for every four levels beyond 2nd."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 7,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:armor_training",
-      "name": "Armor Training",
-      "description": "Starting at 3rd level, a fighter learns to be more maneuverable while wearing armor. Whenever he is wearing armor, he reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter can also move at his normal speed while wearing medium armor. At 7th level, a fighter can move at his normal speed while wearing heavy armor.Advanced Armor Training: Beginning at 7th level, instead of increasing the benefits provided by armor training (reducing his armor’s check penalty by 1 and increasing its maximum Dexterity bonus by 1), a fighter can choose an advanced armor training option (see Advanced Armor Training below) . If the fighter does so, he still gains the ability to move at his normal speed while wearing medium armor at 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player Companion: Armor Master’s Handbook"
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 8,
-    "fortSave": 6,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 9,
-    "fortSave": 6,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:weapon_training",
-      "name": "Weapon Training",
-      "description": "Starting at 5th level, a fighter can select one group of weapons, as noted below. Whenever he attacks with a weapon from this group, he gains a +1 bonus on attack and damage rolls.Every four levels thereafter (9th*, 13th, and 17th), a fighter becomes further trained in another group of weapons. He gains a +1 bonus on attack and damage rolls when using a weapon from this group. In addition, the bonuses granted by previous weapon groups increase by +1 each. For example, when a fighter reaches 9th level, he receives a +1 bonus on attack and damage rolls with one weapon group and a +2 bonus on attack and damage rolls with the weapon group selected at 5th level. Bonuses granted from overlapping groups do not stack. Take the highest bonus granted for a weapon if it resides in two or more groups.A fighter also adds this bonus to any combat maneuver checks made with weapons from his group. This bonus also applies to the fighter’s Combat Maneuver Defense when defending against disarm and sunder attempts made against weapons from this group.Advanced Weapon Training: Beginning at 9th level, instead of selecting an additional fighter weapon group, a fighter can choose an advanced weapon training option (see Advanced Weapon Training below) for one fighter weapon group that he previously selected with the weapon training class feature. Source: Pathfinder Player Companion: Weapon Master’s HandbookWeapon groups are defined as follows (GMs may add other weapons to these groups, or add entirely new groups):"
-    }, {
-      "id": "ability:advanced_weapon_training*",
-      "name": "Advanced Weapon Training",
-      "description": "Source: Pathfinder Player Companion: Weapon Master’s HandbookHighly skilled and experienced fighters can gain advanced weapon training, learning techniques and applications of the weapon training class feature that give them special benefits in exchange for specializing in a smaller number of fighter weapon groups.Beginning at 9th level, instead of selecting an additional fighter weapon group, a fighter can choose an advanced weapon training option for one fighter weapon group that he previously selected with the weapon training class feature.The fighter’s weapon training bonus still increases for weapons from all fighter weapon groups he previously selected with weapon training. A fighter also adds this bonus to any combat maneuver checks made with weapons from this group. This bonus also applies to the fighter’s Combat Maneuver Defense when defending against disarm and sunder attempts made against weapons from this group.Some advance weapon training options can be selected only if the fighter meets the option’s prerequisites.Advanced weapon training options function only when the fighter is wielding a weapon from the associated group, unless otherwise noted, and use his weapon training bonus for the associated weapon group. Any bonuses on attack rolls and damage rolls granted by advanced weapon training apply only on attack rolls and damage rolls from weapons in the associated group. A fighter with an archetype that replaces weapon training cannot select advanced weapon training options."
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 10,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }, {
-      "id": "ability:bravery",
-      "name": "Bravery",
-      "description": "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against fear. This bonus increases by +1 for every four levels beyond 2nd."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 11,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:armor_training",
-      "name": "Armor Training",
-      "description": "Starting at 3rd level, a fighter learns to be more maneuverable while wearing armor. Whenever he is wearing armor, he reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter can also move at his normal speed while wearing medium armor. At 7th level, a fighter can move at his normal speed while wearing heavy armor.Advanced Armor Training: Beginning at 7th level, instead of increasing the benefits provided by armor training (reducing his armor’s check penalty by 1 and increasing its maximum Dexterity bonus by 1), a fighter can choose an advanced armor training option (see Advanced Armor Training below) . If the fighter does so, he still gains the ability to move at his normal speed while wearing medium armor at 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player Companion: Armor Master’s Handbook"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:climb",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 12,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 13,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:weapon_training",
-      "name": "Weapon Training",
-      "description": "Starting at 5th level, a fighter can select one group of weapons, as noted below. Whenever he attacks with a weapon from this group, he gains a +1 bonus on attack and damage rolls.Every four levels thereafter (9th*, 13th, and 17th), a fighter becomes further trained in another group of weapons. He gains a +1 bonus on attack and damage rolls when using a weapon from this group. In addition, the bonuses granted by previous weapon groups increase by +1 each. For example, when a fighter reaches 9th level, he receives a +1 bonus on attack and damage rolls with one weapon group and a +2 bonus on attack and damage rolls with the weapon group selected at 5th level. Bonuses granted from overlapping groups do not stack. Take the highest bonus granted for a weapon if it resides in two or more groups.A fighter also adds this bonus to any combat maneuver checks made with weapons from his group. This bonus also applies to the fighter’s Combat Maneuver Defense when defending against disarm and sunder attempts made against weapons from this group.Advanced Weapon Training: Beginning at 9th level, instead of selecting an additional fighter weapon group, a fighter can choose an advanced weapon training option (see Advanced Weapon Training below) for one fighter weapon group that he previously selected with the weapon training class feature. Source: Pathfinder Player Companion: Weapon Master’s HandbookWeapon groups are defined as follows (GMs may add other weapons to these groups, or add entirely new groups):"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:handle_animal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 14,
-    "fortSave": 9,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }, {
-      "id": "ability:bravery",
-      "name": "Bravery",
-      "description": "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against fear. This bonus increases by +1 for every four levels beyond 2nd."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:intimidate",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 15,
-    "fortSave": 9,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:armor_training",
-      "name": "Armor Training",
-      "description": "Starting at 3rd level, a fighter learns to be more maneuverable while wearing armor. Whenever he is wearing armor, he reduces the armor check penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter can also move at his normal speed while wearing medium armor. At 7th level, a fighter can move at his normal speed while wearing heavy armor.Advanced Armor Training: Beginning at 7th level, instead of increasing the benefits provided by armor training (reducing his armor’s check penalty by 1 and increasing its maximum Dexterity bonus by 1), a fighter can choose an advanced armor training option (see Advanced Armor Training below) . If the fighter does so, he still gains the ability to move at his normal speed while wearing medium armor at 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player Companion: Armor Master’s Handbook"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 16,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 17,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:weapon_training",
-      "name": "Weapon Training",
-      "description": "Starting at 5th level, a fighter can select one group of weapons, as noted below. Whenever he attacks with a weapon from this group, he gains a +1 bonus on attack and damage rolls.Every four levels thereafter (9th*, 13th, and 17th), a fighter becomes further trained in another group of weapons. He gains a +1 bonus on attack and damage rolls when using a weapon from this group. In addition, the bonuses granted by previous weapon groups increase by +1 each. For example, when a fighter reaches 9th level, he receives a +1 bonus on attack and damage rolls with one weapon group and a +2 bonus on attack and damage rolls with the weapon group selected at 5th level. Bonuses granted from overlapping groups do not stack. Take the highest bonus granted for a weapon if it resides in two or more groups.A fighter also adds this bonus to any combat maneuver checks made with weapons from his group. This bonus also applies to the fighter’s Combat Maneuver Defense when defending against disarm and sunder attempts made against weapons from this group.Advanced Weapon Training: Beginning at 9th level, instead of selecting an additional fighter weapon group, a fighter can choose an advanced weapon training option (see Advanced Weapon Training below) for one fighter weapon group that he previously selected with the weapon training class feature. Source: Pathfinder Player Companion: Weapon Master’s HandbookWeapon groups are defined as follows (GMs may add other weapons to these groups, or add entirely new groups):"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 18,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }, {
-      "id": "ability:bravery",
-      "name": "Bravery",
-      "description": "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against fear. This bonus increases by +1 for every four levels beyond 2nd."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:ride",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 19,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:armor_mastery",
-      "name": "Armor Mastery",
-      "description": "At 19th level, a fighter gains damage reduction 5/— whenever he is wearing armor or using a shield."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:survival",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 20,
-    "fortSave": 12,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats"
-    }, {
-      "id": "ability:weapon_mastery",
-      "name": "Weapon Mastery",
-      "description": "At 20th level, a fighter chooses one weapon, such as the longsword, greataxe, or longbow. Any attacks made with that weapon automatically confirm all critical threats and have their damage multiplier increased by 1 (×2 becomes ×3, for example). In addition, he cannot be disarmed while wielding a weapon of this type."
-    }]
-  }],
-  "skills": ["skill:climb", "skill:craft", "skill:handle_animal", "skill:intimidate", "skill:knowledge", "skill:knowledge", "skill:profession", "skill:ride", "skill:survival", "skill:swim"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:swim",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:bravery#fighter"
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:armor_training#fighter"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:weapon_training#fighter"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:bravery#fighter"
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:armor_training#fighter"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:weapon_training#fighter"
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:advanced_weapon_training#fighter"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:bravery#fighter"
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:armor_training#fighter"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:weapon_training#fighter"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:bravery#fighter"
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:armor_training#fighter"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 16
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 17
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:weapon_training#fighter"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 18
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:bravery#fighter"
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 19
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:armor_mastery#fighter"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 20
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#fighter"
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:weapon_mastery#fighter"
+    }
+  }]
 }

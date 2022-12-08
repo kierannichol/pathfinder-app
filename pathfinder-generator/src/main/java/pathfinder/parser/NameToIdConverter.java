@@ -45,11 +45,14 @@ public class NameToIdConverter {
                 .replace('/', '_')
                 .replaceAll("\\(", "")
                 .replaceAll("\\)", "")
+                .replaceAll("\\[", "")
+                .replaceAll("]", "")
                 .replaceAll("!", "")
-                .replace('-', '_');
+                .replace('-', '_')
+                .replace("&", "and");
     }
 
     public static String generateId(AttributeType type, String name) {
-        return type.getLabel() + ":" + partialId(name);
+        return type.key() + ":" + partialId(name);
     }
 }

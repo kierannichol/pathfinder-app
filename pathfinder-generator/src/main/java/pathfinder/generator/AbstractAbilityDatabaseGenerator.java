@@ -1,20 +1,16 @@
 package pathfinder.generator;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.google.protobuf.Message;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import pathfinder.SourceDatabase;
 import pathfinder.data.v2.AbilityDataDbo;
 import pathfinder.data.v2.AbilityDatabaseDbo;
 import pathfinder.data.v2.AbilitySummaryDbo;
 import pathfinder.generator.db.parse.PrerequisiteParser;
 import pathfinder.generator.encode.AbilityTypeEncoder;
 import pathfinder.model.Ability;
-import pathfinder.spring.OutputPathValue;
-import pathfinder.util.FileUtils;
 
-public abstract class AbstractAbilityDatabaseGenerator extends AbstractDatabaseGenerator {
+public abstract class AbstractAbilityDatabaseGenerator extends AbstractDatabaseGenerator<Ability, AbilitySummaryDbo, AbilityDataDbo> {
 
     @Autowired
     protected PrerequisiteParser prerequisiteParser;
@@ -22,47 +18,33 @@ public abstract class AbstractAbilityDatabaseGenerator extends AbstractDatabaseG
     @Autowired
     protected AbilityTypeEncoder abilityTypeEncoder;
 
-    @OutputPathValue
-    private Path outputBasePath;
+    @Override
+    protected AbilitySummaryDbo encodedSummary(Ability ability) {
+        String prerequisiteFormula = prerequisiteParser.extractPrerequisites(ability);
 
-    protected abstract SourceDatabase<Ability> getAbilitySourceDatabase();
-    protected abstract String getRelativeOutputPath();
-    protected abstract String getOutputDatabaseName();
-    protected abstract boolean filterAbilities(Ability ability);
+        return AbilitySummaryDbo.newBuilder()
+                .setId(ability.id())
+                .setName(ability.name())
+                .setType(abilityTypeEncoder.encode(ability.type()))
+                .setPrerequisitesFormula(prerequisiteFormula)
+                .build();
+    }
 
     @Override
-    public void generate() throws IOException {
-        Path abilityDataPath = outputBasePath.resolve(getRelativeOutputPath());
-        FileUtils.deleteDirectory(abilityDataPath);
-        Files.createDirectory(abilityDataPath);
+    protected AbilityDataDbo encodedDetailed(Ability model, AbilitySummaryDbo summary) {
+        return AbilityDataDbo.newBuilder()
+                .setId(summary.getId())
+                .setName(summary.getName())
+                .setType(summary.getType())
+                .setPrerequisitesFormula(summary.getPrerequisitesFormula())
+                .setDescription(model.description())
+                .build();
+    }
 
-        var summaryDatabaseBuilder = AbilityDatabaseDbo.newBuilder();
-        getAbilitySourceDatabase().stream()
-                .filter(this::filterAbilities)
-                .forEachOrdered(ability -> {
-                    String prerequisiteFormula = prerequisiteParser.extractPrerequisites(ability);
-
-                    AbilitySummaryDbo summaryDbo = AbilitySummaryDbo.newBuilder()
-                            .setId(ability.id())
-                            .setName(ability.name())
-                            .setType(abilityTypeEncoder.encode(ability.type()))
-                            .setPrerequisitesFormula(prerequisiteFormula)
-                            .build();
-
-                    AbilityDataDbo data = AbilityDataDbo.newBuilder()
-                            .setId(ability.id())
-                            .setName(ability.name())
-                            .setDescription(ability.description())
-                            .setType(abilityTypeEncoder.encode(ability.type()))
-                            .setPrerequisitesFormula(prerequisiteFormula)
-                            .build();
-
-                    summaryDatabaseBuilder.addAbilitySummaries(summaryDbo);
-
-                    String fileName = idToFilename(ability.id());
-                    write(data, fileName, abilityDataPath);
-                });
-
-        write(summaryDatabaseBuilder.build(), getOutputDatabaseName(), outputBasePath);
+    @Override
+    protected Message createSummaryDatabase(List<AbilitySummaryDbo> abilitySummaryDbos) {
+        return AbilityDatabaseDbo.newBuilder()
+                .addAllAbilitySummaries(abilitySummaryDbos)
+                .build();
     }
 }

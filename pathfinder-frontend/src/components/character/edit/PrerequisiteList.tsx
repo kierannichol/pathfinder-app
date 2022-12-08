@@ -1,4 +1,4 @@
-import {faCircleCheck, faCircleXmark} from "@fortawesome/free-solid-svg-icons";
+import {faCircleCheck, faCircleQuestion, faCircleXmark} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {ReactNode, useMemo} from "react";
 import {PathfinderDatabase, usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
@@ -8,18 +8,17 @@ import FormulaTreeFormatter, {
   TreeNodeValue
 } from "../../../logic/FormulaTreeFormatter";
 import {ResolvedValue} from "../../../logic/ResolvedValue";
-import {AbilitySummary} from "../../../model/character/Ability";
 import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
 
 interface PrerequisiteListProps {
-  abilitySummary: AbilitySummary;
+  formula: string;
   characterAtLevel: CharacterAtLevel;
 }
 
-export default function PrerequisiteList({ abilitySummary, characterAtLevel } : PrerequisiteListProps) {
+export default function PrerequisiteList({ formula, characterAtLevel } : PrerequisiteListProps) {
   const pathfinderDb = usePathfinderDatabase();
 
-  const formulaText = abilitySummary.prerequisites_formula;
+  const formulaText = formula;
 
   const block = useMemo(() => {
     if (formulaText === undefined || formulaText === '') {
@@ -27,8 +26,7 @@ export default function PrerequisiteList({ abilitySummary, characterAtLevel } : 
     }
 
     // const formulaWithoutSelfReference = formulaText
-    //     .replace('!@' + abilitySummary.id, '')
-    //     .replaceAll(/\s+AND\s*$/g, '')
+    //     .replaceAll(new RegExp("(\\s*AND)?\\s*\\(!@" + abilitySummary.id + "\\)$", "g"), '')
     //
     // if (formulaWithoutSelfReference === '') {
     //   return [];
@@ -52,8 +50,9 @@ function formatFormula(formula: string, characterAtLevel: CharacterAtLevel, path
     return formula;
   }
 
-  const checkMark = <FontAwesomeIcon style={{ color: 'green' }} icon={faCircleCheck} />
-  const xMark = <FontAwesomeIcon style={{ color: 'red' }} icon={faCircleXmark} />
+  const checkMark = <FontAwesomeIcon style={{ color: 'var(--bs-success)' }} icon={faCircleCheck} />
+  const xMark = <FontAwesomeIcon style={{ color: 'var(--bs-danger)' }} icon={faCircleXmark} />
+  const unknownMark = <FontAwesomeIcon style={{ color: 'var(--bs-warning)' }} icon={faCircleQuestion} />
 
   function formatNode(node: ResolvedValue|undefined): ReactNode {
     if (node === undefined) {
@@ -80,7 +79,7 @@ function formatFormula(formula: string, characterAtLevel: CharacterAtLevel, path
       return html
     }
 
-    return <span>{node.asText()}</span>
+    return <span>{unknownMark} {node.asText()}</span>
   }
 
   return <div>{formatNode(tree)}</div>

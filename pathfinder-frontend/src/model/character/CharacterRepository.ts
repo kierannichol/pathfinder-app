@@ -2,24 +2,24 @@ import {List} from "immutable";
 import {getActiveUser} from "../../app/auth";
 import {FirebaseRepository} from "../../app/firebase";
 import CharacterState from "../../database/CharacterState";
-import {CharacterClassDatabase} from "../../database/v2/ClassDatabase";
-import {RaceDatabase} from "../../database/v2/RaceDatabase";
+import {PathfinderDatabase} from "../../database/v2/PathfinderDatabase";
 import {Character} from "./Character";
+import AbilityChoice from "./choices/AbilityChoice";
 import CharacterAlignmentChoice, {CharacterAlignmentChoiceProcessor} from "./choices/CharacterAlignmentChoice";
 import CharacterBaseAttributeChoice, {
   CharacterBaseAttributeChoiceProcessor
 } from "./choices/CharacterBaseAttributeChoice";
-import CharacterChoice from "./choices/CharacterChoice";
+import CharacterChoice, {ChoiceType} from "./choices/CharacterChoice";
 import CharacterChoiceProcessorCollection from "./choices/CharacterChoiceProcessorCollection";
 import CharacterClassChoice, {CharacterClassChoiceProcessor} from "./choices/CharacterClassChoice";
 import CharacterNameChoice, {CharacterNameChoiceProcessor} from "./choices/CharacterNameChoice";
 import CharacterRaceChoice, {CharacterRaceChoiceProcessor} from "./choices/CharacterRaceChoice";
+import {EffectAbilityScoreIncreaseChoiceProcessor} from "./choices/EffectAbilityScoreIncreaseChoice";
 import {FeatChoiceProcessor} from "./choices/FeatChoice";
-import {MercyChoiceProcessor} from "./choices/MercyChoice";
+import ModifierChoice from "./choices/ModifierChoice";
 import {RaceAbilityScoreIncreaseChoiceProcessor} from "./choices/RaceAbilityScoreIncreaseChoice";
-import {RagePowerChoiceProcessor} from "./choices/RagePowerChoice";
-import {RogueTalentChoiceProcessor} from "./choices/RogueTalentChoice";
 import {SkillPointChoiceProcessor} from "./choices/SkillPointChoice";
+import SpellChoice from "./choices/SpellChoice";
 
 const initialChoices: CharacterChoice[] = [
     new CharacterNameChoice(),
@@ -35,19 +35,20 @@ class CharacterRepository {
   private characterListChangedListeners: (() => void)[] = []
   private cache?: {[id: string]: Character} = undefined;
 
-  public constructor(classDatabase: CharacterClassDatabase, raceDatabase: RaceDatabase) {
+  public constructor(pathfinderDatabase: PathfinderDatabase) {
     this.processors = new CharacterChoiceProcessorCollection([
         new CharacterNameChoiceProcessor(),
         new CharacterAlignmentChoiceProcessor(),
-        new CharacterClassChoiceProcessor(classDatabase),
-        new CharacterRaceChoiceProcessor(raceDatabase),
+        new CharacterClassChoiceProcessor(pathfinderDatabase.classDb),
+        new CharacterRaceChoiceProcessor(pathfinderDatabase.raceDb),
         new CharacterBaseAttributeChoiceProcessor(),
         new RaceAbilityScoreIncreaseChoiceProcessor(),
+        new EffectAbilityScoreIncreaseChoiceProcessor(),
         new FeatChoiceProcessor(),
-        new MercyChoiceProcessor(),
-        new RagePowerChoiceProcessor(),
-        new RogueTalentChoiceProcessor(),
         new SkillPointChoiceProcessor(),
+        AbilityChoice.processor(ChoiceType.ABILITY),
+        SpellChoice.processor(ChoiceType.WITCH_HEX),
+        ModifierChoice.processor(ChoiceType.SORCERER_BLOODLINE, pathfinderDatabase.sorcererBloodlineDataSource),
     ]);
   }
 
@@ -76,7 +77,7 @@ class CharacterRepository {
 
   public async create(): Promise<Character> {
     const characters = await this.list()
-    const nextId = characters
+    const nextId = characters.length == 0 ? 1 : characters
         .map(character => parseInt(character.id))
         .reduce((a, b) => Math.max(a, b)) + 1;
     const created = new Character(`${nextId}`, List(initialChoices), this.processors);

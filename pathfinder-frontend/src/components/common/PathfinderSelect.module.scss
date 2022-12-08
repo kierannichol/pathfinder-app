@@ -6,38 +6,12 @@
 
 }
 
-.button {
-  --pf-select-background-color: #c7ddfe;
-  --pf-select-text-color: #045adc;
-  --pf-select-selected-background-color: var(--pf-select-background-color);
-  --pf-select-selected-text-color: var(--pf-select-text-color);
-  --pf-select-border-width: 2px;
-
-  width: 100%;
-  cursor: pointer;
-  display: flex;
-  font-size: 18px;
-  font-weight: 700;
-  justify-content: left;
-  letter-spacing: .04em;
-  line-height: 16px;
-  margin: 0;
-  padding: 18px 18px;
-  text-align: left;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: center;
-
-  background-color: var(--pf-select-background-color);
-  border: var(--pf-select-border-width) solid var(--pf-select-text-color);
+.collapsed {
   border-bottom: 0;
-  color: var(--pf-select-text-color);
 }
 
 .expanded, .expanding, .collapsing, .item:last-child .button {
-  border-bottom: var(--pf-select-border-width) solid var(--pf-select-text-color);
+  border-bottom: var(--pf-button-border-width) solid var(--pf-button-text-color);
 }
 
 .body {
@@ -48,24 +22,13 @@
 // Button Colors
 
 .active {
-  background-color: var(--pf-select-selected-background-color);
-  color: var(--pf-select-selected-text-color);
-}
-
-.feat {
-  --pf-select-background-color: #FFD050;
-  --pf-select-text-color: #6A4D00;
-  --pf-select-selected-background-color: #FFF0B3;
-  --pf-select-selected-text-color: #663700;
-}
-
-.special {
-  --pf-select-selected-background-color: #EFF5FF;
+  background-color: var(--pf-button-selected-background-color);
+  color: var(--pf-button-selected-text-color);
 }
 
 .disabled {
-  --pf-select-background-color: #E8E4E0;
-  --pf-select-text-color: dimgray;
-  --pf-select-selected-background-color: #E8E4E0;
-  --pf-select-selected-text-color: dimgray;
+  --pf-button-background-color: #E8E4E0;
+  --pf-button-text-color: dimgray;
+  --pf-button-selected-background-color: #E8E4E0;
+  --pf-button-selected-text-color: dimgray;
 }

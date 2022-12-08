@@ -1,12 +1,11 @@
 import React from "react";
 import * as pfutils from "../../../util/pfutils";
-import {PathfinderButtonVariants} from "../../common/PathfinderButton";
 import PathfinderSelect from "../../common/PathfinderSelect";
 import {ChoiceSelectorOption, ChoiceSelectorOptionsContainer} from "./ChoiceSelectorDialog";
 
 interface ChoiceSelectorListProps {
   options: (ChoiceSelectorOption|ChoiceSelectorOptionsContainer)[];
-  variant?: PathfinderButtonVariants;
+  variant?: string;
   selected?: string|undefined;
   onSelect?: (optionId: string|undefined) => void;
 }

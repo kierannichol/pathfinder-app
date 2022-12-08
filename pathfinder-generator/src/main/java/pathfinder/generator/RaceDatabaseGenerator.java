@@ -1,8 +1,9 @@
 package pathfinder.generator;
 
+import com.google.protobuf.Message;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.util.List;
+import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -11,39 +12,48 @@ import pathfinder.data.v2.RaceDatabaseDbo;
 import pathfinder.data.v2.RaceSummaryDbo;
 import pathfinder.generator.encode.RaceDataEncoder;
 import pathfinder.generator.encode.RaceSummaryEncoder;
+import pathfinder.model.Race;
 import pathfinder.source.RaceSourceDatabase;
-import pathfinder.spring.OutputPathValue;
-import pathfinder.util.FileUtils;
+import pathfinder.spring.ConditionalOnGeneratorEnabled;
 
 @Slf4j
 @RequiredArgsConstructor
 @Service("Race Database Generator")
-public class RaceDatabaseGenerator extends AbstractDatabaseGenerator {
+@ConditionalOnGeneratorEnabled("race")
+public class RaceDatabaseGenerator extends AbstractDatabaseGenerator<Race, RaceSummaryDbo, RaceDataDbo> {
     private final RaceSourceDatabase raceSourceDatabase;
     private final RaceSummaryEncoder raceSummaryEncoder;
     private final RaceDataEncoder raceDataEncoder;
 
-    @OutputPathValue
-    private Path outputBasePath;
+    @Override
+    protected Stream<Race> streamModels() throws IOException {
+        return raceSourceDatabase.streamRaces();
+    }
 
     @Override
-    public void generate() throws IOException {
-        Path raceDataPath = outputBasePath.resolve("race");
-        FileUtils.deleteDirectory(raceDataPath);
-        Files.createDirectory(raceDataPath);
+    protected String getRelativeOutputPath() {
+        return "race";
+    }
 
-        var summaryDatabaseBuilder = RaceDatabaseDbo.newBuilder();
-        raceSourceDatabase.stream()
-                .forEachOrdered(race -> {
-                    RaceSummaryDbo summaryDbo = raceSummaryEncoder.encode(race);
-                    RaceDataDbo data = raceDataEncoder.encode(race);
+    @Override
+    protected String getOutputDatabaseName() {
+        return "RaceDatabase";
+    }
 
-                    summaryDatabaseBuilder.addRaceSummaries(summaryDbo);
+    @Override
+    protected RaceSummaryDbo encodedSummary(Race race) {
+        return raceSummaryEncoder.encode(race);
+    }
 
-                    String fileName = idToFilename(race.id());
-                    write(data, fileName, raceDataPath);
-                });
+    @Override
+    protected RaceDataDbo encodedDetailed(Race race, RaceSummaryDbo raceSummaryDbo) {
+        return raceDataEncoder.encode(race);
+    }
 
-        write(summaryDatabaseBuilder.build(), "RaceDatabase", outputBasePath);
+    @Override
+    protected Message createSummaryDatabase(List<RaceSummaryDbo> raceSummaryDbos) {
+        return RaceDatabaseDbo.newBuilder()
+                .addAllRaceSummaries(raceSummaryDbos)
+                .build();
     }
 }

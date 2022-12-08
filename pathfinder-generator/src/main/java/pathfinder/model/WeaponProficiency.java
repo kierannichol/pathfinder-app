@@ -1,14 +1,15 @@
 package pathfinder.model;
 
+import lombok.Getter;
 import pathfinder.parser.NameToIdConverter;
 
-public enum WeaponProficiency {
+public enum WeaponProficiency implements FeatureModel {
     OTHER("Other"),
     SIMPLE("Simple"),
     MARTIAL("Martial"),
     EXOTIC("Exotic");
 
-    private final String id;
+    @Getter private final String id;
     private final String name;
 
     WeaponProficiency(String name) {

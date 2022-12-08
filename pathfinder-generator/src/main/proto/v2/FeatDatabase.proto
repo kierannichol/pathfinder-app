@@ -5,6 +5,8 @@ option java_package = "pathfinder.data.v2";
 
 package v2;
 
+import "v2/CharacterEffect.proto";
+
 message FeatDatabaseDbo {
   repeated FeatSummaryDbo featSummaries = 1;
 }
@@ -55,4 +57,5 @@ message FeatDbo {
   bool teamwork = 11;
   string note = 12;
   repeated FeatOptionDbo options = 13;
+  repeated CharacterEffectDbo effects = 14;
 }

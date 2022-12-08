@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v2";
+
+package v2;
+
+message CharacterChoiceDbo {
+  message AbilityScoreIncreaseChoice {
+    int32 delta = 1;
+  }
+
+  message FeatChoice {
+    repeated string featIds = 1;
+  }
+
+  message AbilityChoice {
+    repeated string abilityIds = 1;
+  }
+
+  message ModifierChoice {
+    repeated string modifierIds = 1;
+  }
+
+  string key = 1;
+  string label = 2;
+
+  oneof effect {
+    AbilityScoreIncreaseChoice AbilityScoreIncrease = 100;
+    FeatChoice Feat = 101;
+    AbilityChoice Ability = 102;
+    ModifierChoice Modifier = 103;
+  }
+}

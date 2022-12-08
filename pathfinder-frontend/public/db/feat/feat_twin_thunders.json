@@ -1,0 +1,858 @@
+{
+  "id": "feat:twin_thunders",
+  "name": "Twin Thunders",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "When you fight giants, your powerful blows combine with skills learned from generations of your people to quickly even the odds.",
+  "prerequisites": "Dwarf or gnome, defensive training racial trait, Two-Weapon Fighting or flurry of blows class feature, Weapon Focus with both wielded weapons.",
+  "benefit": "Once per round, when wielding a bludgeoning weapon in each hand against a creature with the giant subtype, if you hit the creature with your off-hand weapon after you hit with your primary weapon, roll the damage dice for your off-hand weapon twice and add the results together before adding any bonuses. Such extra weapon damage dice are not multiplied on a critical hit.",
+  "source": "PZO1118",
+  "options": [{
+    "id": "feat:twin_thunders#gauntlet",
+    "name": "Gauntlet",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gauntlet"
+  }, {
+    "id": "feat:twin_thunders#unarmed",
+    "name": "Unarmed",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#unarmed"
+  }, {
+    "id": "feat:twin_thunders#battle_aspergillum",
+    "name": "Battle Aspergillum",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#battle_aspergillum"
+  }, {
+    "id": "feat:twin_thunders#brass_knife",
+    "name": "Brass Knife",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#brass_knife"
+  }, {
+    "id": "feat:twin_thunders#brass_knuckles",
+    "name": "Brass Knuckles",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#brass_knuckles"
+  }, {
+    "id": "feat:twin_thunders#cestus",
+    "name": "Cestus",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#cestus"
+  }, {
+    "id": "feat:twin_thunders#dagger",
+    "name": "Dagger",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dagger"
+  }, {
+    "id": "feat:twin_thunders#punching_dagger",
+    "name": "Punching Dagger",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#punching_dagger"
+  }, {
+    "id": "feat:twin_thunders#spiked_gauntlet",
+    "name": "Spiked Gauntlet",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#spiked_gauntlet"
+  }, {
+    "id": "feat:twin_thunders#handwraps",
+    "name": "Handwraps",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#handwraps"
+  }, {
+    "id": "feat:twin_thunders#traveling_kettle",
+    "name": "Traveling Kettle",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#traveling_kettle"
+  }, {
+    "id": "feat:twin_thunders#hook_hand",
+    "name": "Hook Hand",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#hook_hand"
+  }, {
+    "id": "feat:twin_thunders#kunai",
+    "name": "Kunai",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#kunai"
+  }, {
+    "id": "feat:twin_thunders#light_mace",
+    "name": "Light Mace",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_mace"
+  }, {
+    "id": "feat:twin_thunders#sickle",
+    "name": "Sickle",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sickle"
+  }, {
+    "id": "feat:twin_thunders#spring_blade",
+    "name": "Spring Blade",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#spring_blade"
+  }, {
+    "id": "feat:twin_thunders#wooden_stake",
+    "name": "Wooden Stake",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#wooden_stake"
+  }, {
+    "id": "feat:twin_thunders#club",
+    "name": "Club",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#club"
+  }, {
+    "id": "feat:twin_thunders#mere_club",
+    "name": "Mere Club",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#mere_club"
+  }, {
+    "id": "feat:twin_thunders#heavy_mace",
+    "name": "Heavy Mace",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_mace"
+  }, {
+    "id": "feat:twin_thunders#morningstar",
+    "name": "Morningstar",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#morningstar"
+  }, {
+    "id": "feat:twin_thunders#shortspear",
+    "name": "Shortspear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#shortspear"
+  }, {
+    "id": "feat:twin_thunders#bayonet",
+    "name": "Bayonet",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#bayonet"
+  }, {
+    "id": "feat:twin_thunders#boarding_pike",
+    "name": "Boarding Pike",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#boarding_pike"
+  }, {
+    "id": "feat:twin_thunders#kumade",
+    "name": "Kumade",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#kumade"
+  }, {
+    "id": "feat:twin_thunders#collapsible_kumade",
+    "name": "Collapsible Kumade",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#collapsible_kumade"
+  }, {
+    "id": "feat:twin_thunders#lantern_staff",
+    "name": "Lantern Staff",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#lantern_staff"
+  }, {
+    "id": "feat:twin_thunders#longspear",
+    "name": "Longspear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#longspear"
+  }, {
+    "id": "feat:twin_thunders#quarterstaff",
+    "name": "Quarterstaff",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#quarterstaff"
+  }, {
+    "id": "feat:twin_thunders#spear",
+    "name": "Spear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#spear"
+  }, {
+    "id": "feat:twin_thunders#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#blowgun"
+  }, {
+    "id": "feat:twin_thunders#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_crossbow"
+  }, {
+    "id": "feat:twin_thunders#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_crossbow"
+  }, {
+    "id": "feat:twin_thunders#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dart"
+  }, {
+    "id": "feat:twin_thunders#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#javelin"
+  }, {
+    "id": "feat:twin_thunders#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sling"
+  }, {
+    "id": "feat:twin_thunders#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#stingchuck"
+  }, {
+    "id": "feat:twin_thunders#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#stonebow"
+  }, {
+    "id": "feat:twin_thunders#axe",
+    "name": "Axe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#axe"
+  }, {
+    "id": "feat:twin_thunders#throwing_axe",
+    "name": "Throwing Axe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#throwing_axe"
+  }, {
+    "id": "feat:twin_thunders#blade_boot",
+    "name": "Blade Boot",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#blade_boot"
+  }, {
+    "id": "feat:twin_thunders#whip",
+    "name": "Whip",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#whip"
+  }, {
+    "id": "feat:twin_thunders#claw_blades",
+    "name": "Claw Blades",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#claw_blades"
+  }, {
+    "id": "feat:twin_thunders#dueling_dagger",
+    "name": "Dueling Dagger",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dueling_dagger"
+  }, {
+    "id": "feat:twin_thunders#dogslicer",
+    "name": "Dogslicer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dogslicer"
+  }, {
+    "id": "feat:twin_thunders#light_hammer",
+    "name": "Light Hammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_hammer"
+  }, {
+    "id": "feat:twin_thunders#gladius",
+    "name": "Gladius",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gladius"
+  }, {
+    "id": "feat:twin_thunders#handaxe",
+    "name": "Handaxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#handaxe"
+  }, {
+    "id": "feat:twin_thunders#katar",
+    "name": "Katar",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#katar"
+  }, {
+    "id": "feat:twin_thunders#kukri",
+    "name": "Kukri",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#kukri"
+  }, {
+    "id": "feat:twin_thunders#machete",
+    "name": "Machete",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#machete"
+  }, {
+    "id": "feat:twin_thunders#light_pick",
+    "name": "Light Pick",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_pick"
+  }, {
+    "id": "feat:twin_thunders#sap",
+    "name": "Sap",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sap"
+  }, {
+    "id": "feat:twin_thunders#light_shield",
+    "name": "Light Shield",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_shield"
+  }, {
+    "id": "feat:twin_thunders#spiked_armor",
+    "name": "Spiked Armor",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#spiked_armor"
+  }, {
+    "id": "feat:twin_thunders#light_spiked_shield",
+    "name": "Light Spiked Shield",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_spiked_shield"
+  }, {
+    "id": "feat:twin_thunders#starknife",
+    "name": "Starknife",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#starknife"
+  }, {
+    "id": "feat:twin_thunders#short_sword",
+    "name": "Short Sword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#short_sword"
+  }, {
+    "id": "feat:twin_thunders#war_razor",
+    "name": "War Razor",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#war_razor"
+  }, {
+    "id": "feat:twin_thunders#ankus",
+    "name": "Ankus",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#ankus"
+  }, {
+    "id": "feat:twin_thunders#battleaxe",
+    "name": "Battleaxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#battleaxe"
+  }, {
+    "id": "feat:twin_thunders#combat_scabbard",
+    "name": "Combat Scabbard",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#combat_scabbard"
+  }, {
+    "id": "feat:twin_thunders#cutlass",
+    "name": "Cutlass",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#cutlass"
+  }, {
+    "id": "feat:twin_thunders#light_flail",
+    "name": "Light Flail",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#light_flail"
+  }, {
+    "id": "feat:twin_thunders#gandasa",
+    "name": "Gandasa",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gandasa"
+  }, {
+    "id": "feat:twin_thunders#klar",
+    "name": "Klar",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#klar"
+  }, {
+    "id": "feat:twin_thunders#longsword",
+    "name": "Longsword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#longsword"
+  }, {
+    "id": "feat:twin_thunders#manople",
+    "name": "Manople",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#manople"
+  }, {
+    "id": "feat:twin_thunders#heavy_pick",
+    "name": "Heavy Pick",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_pick"
+  }, {
+    "id": "feat:twin_thunders#rapier",
+    "name": "Rapier",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#rapier"
+  }, {
+    "id": "feat:twin_thunders#scimitar",
+    "name": "Scimitar",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#scimitar"
+  }, {
+    "id": "feat:twin_thunders#scizore",
+    "name": "Scizore",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#scizore"
+  }, {
+    "id": "feat:twin_thunders#heavy_shield",
+    "name": "Heavy Shield",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_shield"
+  }, {
+    "id": "feat:twin_thunders#heavy_spiked_shield",
+    "name": "Heavy Spiked Shield",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_spiked_shield"
+  }, {
+    "id": "feat:twin_thunders#sword_cane",
+    "name": "Sword Cane",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sword_cane"
+  }, {
+    "id": "feat:twin_thunders#terbutje",
+    "name": "Terbutje",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#terbutje"
+  }, {
+    "id": "feat:twin_thunders#trident",
+    "name": "Trident",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#trident"
+  }, {
+    "id": "feat:twin_thunders#warhammer",
+    "name": "Warhammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#warhammer"
+  }, {
+    "id": "feat:twin_thunders#bardiche",
+    "name": "Bardiche",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#bardiche"
+  }, {
+    "id": "feat:twin_thunders#bill",
+    "name": "Bill",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#bill"
+  }, {
+    "id": "feat:twin_thunders#earth_breaker",
+    "name": "Earth Breaker",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#earth_breaker"
+  }, {
+    "id": "feat:twin_thunders#falchion",
+    "name": "Falchion",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#falchion"
+  }, {
+    "id": "feat:twin_thunders#heavy_flail",
+    "name": "Heavy Flail",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_flail"
+  }, {
+    "id": "feat:twin_thunders#glaive",
+    "name": "Glaive",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#glaive"
+  }, {
+    "id": "feat:twin_thunders#greataxe",
+    "name": "Greataxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#greataxe"
+  }, {
+    "id": "feat:twin_thunders#greatclub",
+    "name": "Greatclub",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#greatclub"
+  }, {
+    "id": "feat:twin_thunders#greatsword",
+    "name": "Greatsword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#greatsword"
+  }, {
+    "id": "feat:twin_thunders#guisarme",
+    "name": "Guisarme",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#guisarme"
+  }, {
+    "id": "feat:twin_thunders#halberd",
+    "name": "Halberd",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#halberd"
+  }, {
+    "id": "feat:twin_thunders#horsechopper",
+    "name": "Horsechopper",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#horsechopper"
+  }, {
+    "id": "feat:twin_thunders#lance",
+    "name": "Lance",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#lance"
+  }, {
+    "id": "feat:twin_thunders#ogre_hook",
+    "name": "Ogre Hook",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#ogre_hook"
+  }, {
+    "id": "feat:twin_thunders#pickaxe",
+    "name": "Pickaxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#pickaxe"
+  }, {
+    "id": "feat:twin_thunders#planson",
+    "name": "Planson",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#planson"
+  }, {
+    "id": "feat:twin_thunders#ranseur",
+    "name": "Ranseur",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#ranseur"
+  }, {
+    "id": "feat:twin_thunders#scythe",
+    "name": "Scythe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#scythe"
+  }, {
+    "id": "feat:twin_thunders#syringe_spear",
+    "name": "Syringe Spear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#syringe_spear"
+  }, {
+    "id": "feat:twin_thunders#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#ammentum"
+  }, {
+    "id": "feat:twin_thunders#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#chakram"
+  }, {
+    "id": "feat:twin_thunders#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#jolting_dart"
+  }, {
+    "id": "feat:twin_thunders#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#hunga_munga"
+  }, {
+    "id": "feat:twin_thunders#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#hurlbat"
+  }, {
+    "id": "feat:twin_thunders#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#longbow"
+  }, {
+    "id": "feat:twin_thunders#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#pilum"
+  }, {
+    "id": "feat:twin_thunders#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#shortbow"
+  }, {
+    "id": "feat:twin_thunders#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#aklys"
+  }, {
+    "id": "feat:twin_thunders#knuckle_axe",
+    "name": "Knuckle Axe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#knuckle_axe"
+  }, {
+    "id": "feat:twin_thunders#barbazu_beard",
+    "name": "Barbazu Beard",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#barbazu_beard"
+  }, {
+    "id": "feat:twin_thunders#battle_poi",
+    "name": "Battle Poi",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#battle_poi"
+  }, {
+    "id": "feat:twin_thunders#swordbreaker_dagger",
+    "name": "Swordbreaker Dagger",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#swordbreaker_dagger"
+  }, {
+    "id": "feat:twin_thunders#flying_talon",
+    "name": "Flying Talon",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flying_talon"
+  }, {
+    "id": "feat:twin_thunders#gnome_pincher",
+    "name": "Gnome Pincher",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gnome_pincher"
+  }, {
+    "id": "feat:twin_thunders#halfling_rope_shot",
+    "name": "Halfling Rope-shot",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#halfling_rope_shot"
+  }, {
+    "id": "feat:twin_thunders#dwarven_boulder_helmet",
+    "name": "Dwarven Boulder Helmet",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_boulder_helmet"
+  }, {
+    "id": "feat:twin_thunders#kama",
+    "name": "Kama",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#kama"
+  }, {
+    "id": "feat:twin_thunders#butterfly_knife",
+    "name": "Butterfly Knife",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#butterfly_knife"
+  }, {
+    "id": "feat:twin_thunders#deer_horn_knife",
+    "name": "Deer Horn Knife",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#deer_horn_knife"
+  }, {
+    "id": "feat:twin_thunders#dwarven_maulaxe",
+    "name": "Dwarven Maulaxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_maulaxe"
+  }, {
+    "id": "feat:twin_thunders#nunchaku",
+    "name": "Nunchaku",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#nunchaku"
+  }, {
+    "id": "feat:twin_thunders#quadrens",
+    "name": "Quadrens",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#quadrens"
+  }, {
+    "id": "feat:twin_thunders#drow_razor",
+    "name": "Drow Razor",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#drow_razor"
+  }, {
+    "id": "feat:twin_thunders#rope_gauntlet",
+    "name": "Rope Gauntlet",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#rope_gauntlet"
+  }, {
+    "id": "feat:twin_thunders#sawtooth_sabre",
+    "name": "Sawtooth Sabre",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sawtooth_sabre"
+  }, {
+    "id": "feat:twin_thunders#sai",
+    "name": "Sai",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sai"
+  }, {
+    "id": "feat:twin_thunders#sanpkhang",
+    "name": "Sanpkhang",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sanpkhang"
+  }, {
+    "id": "feat:twin_thunders#siangham",
+    "name": "Siangham",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#siangham"
+  }, {
+    "id": "feat:twin_thunders#sica",
+    "name": "Sica",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sica"
+  }, {
+    "id": "feat:twin_thunders#thorn_bracer",
+    "name": "Thorn Bracer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#thorn_bracer"
+  }, {
+    "id": "feat:twin_thunders#dwarven_war_shield",
+    "name": "Dwarven War-shield",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_war_shield"
+  }, {
+    "id": "feat:twin_thunders#waveblade",
+    "name": "Waveblade",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#waveblade"
+  }, {
+    "id": "feat:twin_thunders#scorpion_whip",
+    "name": "Scorpion Whip",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#scorpion_whip"
+  }, {
+    "id": "feat:twin_thunders#dwarven_heavy_axe_gauntlet",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_heavy_axe_gauntlet"
+  }, {
+    "id": "feat:twin_thunders#hooked_axe",
+    "name": "Hooked Axe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#hooked_axe"
+  }, {
+    "id": "feat:twin_thunders#broken_back_seax",
+    "name": "Broken-back Seax",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#broken_back_seax"
+  }, {
+    "id": "feat:twin_thunders#estoc",
+    "name": "Estoc",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#estoc"
+  }, {
+    "id": "feat:twin_thunders#falcata",
+    "name": "Falcata",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#falcata"
+  }, {
+    "id": "feat:twin_thunders#flickmace",
+    "name": "Flickmace",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flickmace"
+  }, {
+    "id": "feat:twin_thunders#flindbar",
+    "name": "Flindbar",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flindbar"
+  }, {
+    "id": "feat:twin_thunders#khopesh",
+    "name": "Khopesh",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#khopesh"
+  }, {
+    "id": "feat:twin_thunders#knobkerrie",
+    "name": "Knobkerrie",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#knobkerrie"
+  }, {
+    "id": "feat:twin_thunders#dwarven_ram_hammer",
+    "name": "Dwarven Ram Hammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_ram_hammer"
+  }, {
+    "id": "feat:twin_thunders#spiral_rapier",
+    "name": "Spiral Rapier",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#spiral_rapier"
+  }, {
+    "id": "feat:twin_thunders#rhoka",
+    "name": "Rhoka",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#rhoka"
+  }, {
+    "id": "feat:twin_thunders#shotel",
+    "name": "Shotel",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#shotel"
+  }, {
+    "id": "feat:twin_thunders#sickle_sword",
+    "name": "Sickle-sword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sickle_sword"
+  }, {
+    "id": "feat:twin_thunders#split_blade_sword",
+    "name": "Split-blade Sword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#split_blade_sword"
+  }, {
+    "id": "feat:twin_thunders#dueling_sword",
+    "name": "Dueling Sword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dueling_sword"
+  }, {
+    "id": "feat:twin_thunders#bastard_sword",
+    "name": "Bastard Sword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#bastard_sword"
+  }, {
+    "id": "feat:twin_thunders#tongi",
+    "name": "Tongi",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#tongi"
+  }, {
+    "id": "feat:twin_thunders#dwarven_waraxe",
+    "name": "Dwarven Waraxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_waraxe"
+  }, {
+    "id": "feat:twin_thunders#dwarven_double_waraxe",
+    "name": "Dwarven Double Waraxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_double_waraxe"
+  }, {
+    "id": "feat:twin_thunders#orc_double_axe",
+    "name": "Orc Double Axe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#orc_double_axe"
+  }, {
+    "id": "feat:twin_thunders#butchering_axe",
+    "name": "Butchering Axe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#butchering_axe"
+  }, {
+    "id": "feat:twin_thunders#gnome_battle_ladder",
+    "name": "Gnome Battle Ladder",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gnome_battle_ladder"
+  }, {
+    "id": "feat:twin_thunders#boarding_gaff",
+    "name": "Boarding Gaff",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#boarding_gaff"
+  }, {
+    "id": "feat:twin_thunders#chain_hammer",
+    "name": "Chain-hammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#chain_hammer"
+  }, {
+    "id": "feat:twin_thunders#spiked_chain",
+    "name": "Spiked Chain",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#spiked_chain"
+  }, {
+    "id": "feat:twin_thunders#crook",
+    "name": "Crook",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#crook"
+  }, {
+    "id": "feat:twin_thunders#elven_curve_blade",
+    "name": "Elven Curve Blade",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#elven_curve_blade"
+  }, {
+    "id": "feat:twin_thunders#dwarven_dorn_dergar",
+    "name": "Dwarven Dorn-Dergar",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_dorn_dergar"
+  }, {
+    "id": "feat:twin_thunders#double_spear",
+    "name": "Double Spear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#double_spear"
+  }, {
+    "id": "feat:twin_thunders#elven_branched_spear",
+    "name": "Elven Branched Spear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#elven_branched_spear"
+  }, {
+    "id": "feat:twin_thunders#fauchard",
+    "name": "Fauchard",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#fauchard"
+  }, {
+    "id": "feat:twin_thunders#dire_flail",
+    "name": "Dire Flail",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dire_flail"
+  }, {
+    "id": "feat:twin_thunders#flailpole",
+    "name": "Flailpole",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flailpole"
+  }, {
+    "id": "feat:twin_thunders#flambard",
+    "name": "Flambard",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flambard"
+  }, {
+    "id": "feat:twin_thunders#flying_blade",
+    "name": "Flying Blade",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flying_blade"
+  }, {
+    "id": "feat:twin_thunders#garrote",
+    "name": "Garrote",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#garrote"
+  }, {
+    "id": "feat:twin_thunders#dwarven_giant_sticker",
+    "name": "Dwarven Giant-Sticker",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_giant_sticker"
+  }, {
+    "id": "feat:twin_thunders#gnome_hooked_hammer",
+    "name": "Gnome Hooked Hammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gnome_hooked_hammer"
+  }, {
+    "id": "feat:twin_thunders#harpoon",
+    "name": "Harpoon",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#harpoon"
+  }, {
+    "id": "feat:twin_thunders#dwarven_longaxe",
+    "name": "Dwarven Longaxe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_longaxe"
+  }, {
+    "id": "feat:twin_thunders#dwarven_longhammer",
+    "name": "Dwarven Longhammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_longhammer"
+  }, {
+    "id": "feat:twin_thunders#mancatcher",
+    "name": "Mancatcher",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#mancatcher"
+  }, {
+    "id": "feat:twin_thunders#orc_skull_ram",
+    "name": "Orc Skull Ram",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#orc_skull_ram"
+  }, {
+    "id": "feat:twin_thunders#gnome_piston_maul",
+    "name": "Gnome Piston Maul",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gnome_piston_maul"
+  }, {
+    "id": "feat:twin_thunders#gnome_ripsaw_glaive",
+    "name": "Gnome Ripsaw Glaive",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#gnome_ripsaw_glaive"
+  }, {
+    "id": "feat:twin_thunders#bladed_scarf",
+    "name": "Bladed Scarf",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#bladed_scarf"
+  }, {
+    "id": "feat:twin_thunders#totem_spear",
+    "name": "Totem Spear",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#totem_spear"
+  }, {
+    "id": "feat:twin_thunders#dwarven_sphinx_hammer",
+    "name": "Dwarven Sphinx Hammer",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_sphinx_hammer"
+  }, {
+    "id": "feat:twin_thunders#switchscythe",
+    "name": "Switchscythe",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#switchscythe"
+  }, {
+    "id": "feat:twin_thunders#two_bladed_sword",
+    "name": "Two-bladed Sword",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#two_bladed_sword"
+  }, {
+    "id": "feat:twin_thunders#dwarven_urgrosh",
+    "name": "Dwarven Urgrosh",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_urgrosh"
+  }, {
+    "id": "feat:twin_thunders#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#bola"
+  }, {
+    "id": "feat:twin_thunders#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#brutal_bola"
+  }, {
+    "id": "feat:twin_thunders#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#boomerang"
+  }, {
+    "id": "feat:twin_thunders#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#thorn_bow"
+  }, {
+    "id": "feat:twin_thunders#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#crank_heavy_crossbow"
+  }, {
+    "id": "feat:twin_thunders#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#crank_light_crossbow"
+  }, {
+    "id": "feat:twin_thunders#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#double_crossbow"
+  }, {
+    "id": "feat:twin_thunders#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#hand_crossbow"
+  }, {
+    "id": "feat:twin_thunders#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#launching_crossbow"
+  }, {
+    "id": "feat:twin_thunders#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#repeating_heavy_crossbow"
+  }, {
+    "id": "feat:twin_thunders#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#repeating_light_crossbow"
+  }, {
+    "id": "feat:twin_thunders#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#flask_thrower"
+  }, {
+    "id": "feat:twin_thunders#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#grappling_hook"
+  }, {
+    "id": "feat:twin_thunders#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#orc_hornbow"
+  }, {
+    "id": "feat:twin_thunders#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#stormshaft_javelin"
+  }, {
+    "id": "feat:twin_thunders#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#lasso"
+  }, {
+    "id": "feat:twin_thunders#net",
+    "name": "Net",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#net"
+  }, {
+    "id": "feat:twin_thunders#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#snag_net"
+  }, {
+    "id": "feat:twin_thunders#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_heavy_pelletbow"
+  }, {
+    "id": "feat:twin_thunders#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#dwarven_light_pelletbow"
+  }, {
+    "id": "feat:twin_thunders#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#throwing_shield"
+  }, {
+    "id": "feat:twin_thunders#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#shrillshaft_javelin"
+  }, {
+    "id": "feat:twin_thunders#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#shuriken_5"
+  }, {
+    "id": "feat:twin_thunders#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#double_sling"
+  }, {
+    "id": "feat:twin_thunders#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#sling_glove"
+  }, {
+    "id": "feat:twin_thunders#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#halfling_sling_staff"
+  }, {
+    "id": "feat:twin_thunders#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#stitched_sling"
+  }, {
+    "id": "feat:twin_thunders#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#wrist_launcher"
+  }, {
+    "id": "feat:twin_thunders#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "(@race:dwarf OR @race:gnome) AND @ability:defensive_training AND (@feat:two_weapon_fighting OR @ability:flurry_of_blows#unchained_monk) AND @feat:weapon_focus#heavy_wrist_launcher"
+  }]
+}

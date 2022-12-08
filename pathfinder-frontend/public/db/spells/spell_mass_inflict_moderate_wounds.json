@@ -1,0 +1,31 @@
+{
+  "id": "spell:mass_inflict_moderate_wounds",
+  "name": "Mass Inflict Moderate Wounds",
+  "type": "ABILITY_TYPE_SP",
+  "school": "necromancy",
+  "range": {
+    "category": "CLOSE"
+  },
+  "targets": "one creature/level, no two of which can be more than 30 ft. apart",
+  "duration": "instantaneous",
+  "description": "This spell functions like mass inflict light wounds, except that it deals 2d8 points of damage + 1 point per caster level (maximum +30).",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 6
+  }, {
+    "classId": "class:inquisitor",
+    "level": 6
+  }, {
+    "classId": "class:oracle",
+    "level": 6
+  }, {
+    "classId": "class:shaman",
+    "level": 6
+  }, {
+    "classId": "class:warpriest",
+    "level": 6
+  }, {
+    "classId": "class:witch",
+    "level": 7
+  }]
+}

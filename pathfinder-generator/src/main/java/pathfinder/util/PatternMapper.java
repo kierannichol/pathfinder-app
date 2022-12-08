@@ -69,5 +69,10 @@ public class PatternMapper {
         return Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
     }
 
+    public void addAll(PatternMapper other) {
+        this.patternsByToken.putAll(other.patternsByToken);
+        this.replacements.addAll(other.replacements);
+    }
+
     private record PatternReplacement(String pattern, String replacement, boolean immediate) {}
 }

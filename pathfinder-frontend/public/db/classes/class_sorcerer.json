@@ -3,208 +3,720 @@
   "name": "Sorcerer",
   "category": "CORE",
   "shortDescription": "Sorcerers excel at casting a selection of favored spells frequently, making them powerful battle mages. As they become familiar with a specific and ever-widening set of spells, sorcerers often discover new and versatile ways of making use of magics other spellcasters might overlook. Their bloodlines also grant them additional abilities, assuring that no two sorcerers are ever quite alike.",
-  "levels": [{
-    "levelNumber": 1,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:bloodline_power",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:cantrips",
-      "name": "Cantrips",
-      "description": "Sorcerers learn a number of cantrips, or 0-level spells, as noted on Table: Sorcerer Spells Known under “Spells Known.” These spells are cast like any other spell, but they do not consume any slots and may be used again."
-    }, {
-      "id": "ability:eschew_materials",
-      "name": "Eschew Materials",
-      "description": "A sorcerer gains Eschew Materials as a bonus feat at 1st level."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 1,
-    "willSave": 3
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 1,
-    "fortSave": 1,
-    "refSave": 1,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:bloodline_power",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 2,
-    "fortSave": 1,
-    "refSave": 1,
-    "willSave": 4
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 2,
-    "fortSave": 1,
-    "refSave": 1,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 3,
-    "fortSave": 2,
-    "refSave": 2,
-    "willSave": 5
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 3,
-    "fortSave": 2,
-    "refSave": 2,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:bloodline_feat",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 4,
-    "fortSave": 2,
-    "refSave": 2,
-    "willSave": 6
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 4,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:bloodline_power",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 5,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 7
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 5,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:appraise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 6,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 8
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:bluff",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 6,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 8,
-    "specials": [{
-      "id": "ability:bloodline_feat",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 7,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 9
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:fly",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 7,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:bloodline_power",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:intimidate",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 8,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 10
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 8,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 10,
-    "specials": [{
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 9,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 11
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:spellcraft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 9,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:bloodline_feat",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }, {
-      "id": "ability:bloodline_spell",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:use_magic_device",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 10,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 12,
-    "specials": [{
-      "id": "ability:bloodline_power",
-      "name": "Bloodline",
-      "description": "Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family’s past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-    }]
-  }],
-  "skills": ["skill:appraise", "skill:bluff", "skill:craft", "skill:fly", "skill:intimidate", "skill:knowledge", "skill:profession", "skill:spellcraft", "skill:use_magic_device"]
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_power#sorcerer"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:cantrips#sorcerer"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:eschew_materials#sorcerer"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_power#sorcerer"
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_feat#sorcerer"
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_power#sorcerer"
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_feat#sorcerer"
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_power#sorcerer"
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_feat#sorcerer"
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_spell#sorcerer"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:bloodline_power#sorcerer"
+    }
+  }, {
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "key": "bloodline",
+        "label": "Bloodline",
+        "Modifier": {
+          "modifierIds": ["bloodline:aberrant_bloodline", "bloodline:abyssal_bloodline", "bloodline:accursed_bloodline", "bloodline:aquatic_bloodline", "bloodline:arcane_bloodline", "bloodline:astral_bloodline", "bloodline:boreal_bloodline", "bloodline:celestial_bloodline", "bloodline:daemon_bloodline", "bloodline:deep_earth_bloodline", "bloodline:destined_bloodline", "bloodline:div_bloodline", "bloodline:djinni_bloodline", "bloodline:draconic_bloodline", "bloodline:dreamspun_bloodline", "bloodline:ectoplasm_bloodline", "bloodline:efreeti_bloodline", "bloodline:elemental_bloodline", "bloodline:fey_bloodline", "bloodline:ghoul_bloodline", "bloodline:harrow_bloodline", "bloodline:imperious_bloodline", "bloodline:impossible_bloodline", "bloodline:infernal_bloodline", "bloodline:kobold_sorcerer_bloodline", "bloodline:maestro_bloodline", "bloodline:marid_bloodline", "bloodline:martyred_bloodline", "bloodline:naga_bloodline", "bloodline:nanite_bloodline", "bloodline:oni_bloodline", "bloodline:orc_bloodline", "bloodline:pestilence_bloodline", "bloodline:phoenix_bloodline", "bloodline:possessed_bloodline", "bloodline:protean_bloodline", "bloodline:psychic_bloodline", "bloodline:rakshasa_bloodline", "bloodline:salamander_bloodline", "bloodline:scorpion_bloodline", "bloodline:serpentine_bloodline", "bloodline:shadow_bloodline", "bloodline:shaitan_bloodline", "bloodline:shapechanger_bloodline", "bloodline:solar_bloodline", "bloodline:starsoul_bloodline", "bloodline:stormborn_bloodline", "bloodline:undead_bloodline", "bloodline:unicorn_bloodline", "bloodline:verdant_bloodline", "bloodline:vestige_bloodline"]
+        }
+      }
+    }
+  }]
 }

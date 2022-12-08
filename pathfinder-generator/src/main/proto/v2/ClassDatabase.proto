@@ -5,8 +5,10 @@ option java_package = "pathfinder.data.v2";
 
 package v2;
 
+import "v2/CharacterEffect.proto";
+
 message ClassDatabaseDbo {
-  repeated ClassSummaryDbo classSummaries = 1;
+  repeated ClassSummaryDbo summaries = 1;
 }
 
 message ClassSummaryDbo {
@@ -15,13 +17,14 @@ message ClassSummaryDbo {
   ClassCategoryDbo category = 3;
 }
 
-message ClassDataDbo {
+message ClassDetailsDbo {
   string id = 1;
   string name = 2;
   ClassCategoryDbo category = 3;
-  string short_description = 4;
-  repeated ClassLevelDbo levels = 5;
-  repeated string skills = 6;
+
+  string short_description = 50;
+
+  repeated CharacterEffectDbo effects = 100;
 }
 
 enum ClassCategoryDbo {
@@ -30,19 +33,4 @@ enum ClassCategoryDbo {
   BASE = 2;
   HYBRID = 3;
   UNCHAINED = 4;
-}
-
-message ClassLevelDbo {
-  uint32 level_number = 1;
-  uint32 bab = 2;
-  uint32 fort_save = 3;
-  uint32 ref_save = 4;
-  uint32 will_save = 5;
-  repeated SpecialDbo specials = 6;
-}
-
-message SpecialDbo {
-  string id = 1;
-  string name = 2;
-  string description = 3;
 }

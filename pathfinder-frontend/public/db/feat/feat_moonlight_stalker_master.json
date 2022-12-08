@@ -1,0 +1,10 @@
+{
+  "id": "feat:moonlight_stalker_master",
+  "name": "Moonlight Stalker Master",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You leave your opponents swinging at shadows while you slide elusively through the darkness.",
+  "prerequisites": "Int 13, Blind-Fight, Combat Expertise, Improved Feint, Moonlight Stalker, Moonlight Stalker Feint, Bluff 9 ranks, darkvision or low-light vision racial trait.",
+  "prerequisitesFormula": "(@int_score \u003e\u003d 13 OR @feat:blind_fight OR @feat:combat_expertise OR @feat:improved_feint OR @feat:moonlight_stalker OR @feat:moonlight_stalker_feint OR @skill:bluff \u003e\u003d 9 OR @spell:darkvision OR @rage_power:low_light_vision)",
+  "benefit": "While you have concealment, your opponents\u0027 miss chance against you increases by 10%. If an opponent misses you due to your concealment, you can spend an immediate action to move 5 feet, this movement does not provoke attacks of opportunity and does not count as a 5-foot step.",
+  "source": "PZO1118"
+}

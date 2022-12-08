@@ -1,8 +1,8 @@
 import Trait from "../Trait";
-import CustomTrait from "./CustomTrait";
+import BooleanTrait from "./BooleanTrait";
 
 function TrainedSkillTrait(skillId: string, level: number): Trait {
-  return CustomTrait.of(skillId + ":trained", 1, level)
+  return BooleanTrait.of("trained:" + skillId, true, level)
 }
 
 export default TrainedSkillTrait;

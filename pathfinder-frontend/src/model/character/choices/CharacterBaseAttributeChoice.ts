@@ -5,15 +5,19 @@ import CharacterChoice, {ChoiceType} from "./CharacterChoice";
 import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 
 export default class CharacterBaseAttributeChoice extends CharacterChoice {
-  public readonly dependsOn = undefined;
   public readonly type = ChoiceType.ABILITY_SCORE;
+  public readonly label = "Base Attribute"
 
-  constructor(public readonly key: string, public readonly attribute: string, private readonly value: string = '10') {
+  constructor(public readonly key: string, public readonly attribute: string, public readonly dependsOn: string | undefined, private readonly value: string = '10') {
     super();
   }
 
   get current(): string {
     return this.value;
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new CharacterBaseAttributeChoice(this.key, this.attribute, dependsOn, this.current);
   }
 }
 
@@ -23,7 +27,7 @@ export class CharacterBaseAttributeChoiceProcessor implements ICharacterChoicePr
   async select(choice: CharacterBaseAttributeChoice, value: string): Promise<CharacterChoice[]> {
     // this.validate(value);
     return [
-      new CharacterBaseAttributeChoice(choice.key, choice.attribute, value)
+      new CharacterBaseAttributeChoice(choice.key, choice.attribute, choice.dependsOn, value)
     ];
   }
 

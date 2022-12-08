@@ -1,10 +1,9 @@
 import {useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
 import {usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
-import PathfinderButton, {PathfinderButtonVariants} from "../../common/PathfinderButton";
+import PathfinderButton from "../../common/PathfinderButton";
 import "./ChoiceSelectButton.scss";
 import ChoiceSelectorDialog, {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorDialog";
-
 
 interface ChoiceSelectButtonProps {
   choiceName: string;
@@ -12,12 +11,12 @@ interface ChoiceSelectButtonProps {
   onSelect?: (featId: string) => void;
   optionsFn: () => ChoiceSelectorOptions;
   categoriesFn?: () => ChoiceSelectorCategory[];
-  variant?: PathfinderButtonVariants;
-  dialogVariant?: PathfinderButtonVariants;
+  variant?: string;
+  dialogVariant?: string;
   search?: boolean;
 }
 
-export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, variant = 'white', dialogVariant = 'special', search = false }: ChoiceSelectButtonProps) {
+export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, variant = 'white', dialogVariant = variant, search = false }: ChoiceSelectButtonProps) {
   const pathfinderDatabase = usePathfinderDatabase();
   const [show, setShow] = useState(false);
   const [options, setOptions] = useState<ChoiceSelectorOptions>();

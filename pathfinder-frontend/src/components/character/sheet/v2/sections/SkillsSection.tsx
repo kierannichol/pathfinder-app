@@ -41,6 +41,6 @@ interface ClassTrainedBoxProps {
 }
 
 function ClassTrainedBox({ skill, characterAtLevel }: ClassTrainedBoxProps) {
-  const isChecked = useMemo(() => characterAtLevel.get(skill.id + ':trained')?.asBoolean() ?? false, [skill, characterAtLevel]);
+  const isChecked = useMemo(() => characterAtLevel.get("trained:" + skill.id)?.asBoolean() ?? false, [skill, characterAtLevel]);
   return <div className={isChecked ? styles.classTrainedBoxChecked : styles.classTrainedBoxUnchecked} />
 }

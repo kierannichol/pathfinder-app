@@ -11,16 +11,34 @@ public enum AttributeType {
     PROFICIENCY("proficiency"),
     SKILL("skill"),
     WEAPON("weapon"),
-    RAGE_POWER("ragepower"),
-    ROGUE_TALENT("roguetalent"),
-    MAGUS_ARCANA("magusarcana"),
-    ALCHEMIST_DISCOVERY("alchemistdiscovery"),
+    RAGE_POWER("rage_power"),
+    ROGUE_TALENT("rogue_talent"),
+    MAGUS_ARCANA("magus_arcana"),
+    ALCHEMIST_DISCOVERY("discovery"),
+    BARDIC_MASTERPIECE("masterpiece"),
+    GUNSLINGER_DEED("deed"),
+    ORACLE_MYSTERY("mystery"),
+    ORACLE_CURSE("curse"),
+    VIGILANTE_SOCIAL_TALENT("vigilante_social_talent"),
+    VIGILANTE_TALENT("vigilante_talent"),
+    WITCH_HEX("witch_hex"),
+    ARCANIST_EXPLOIT("arcanist_exploit"),
+    INVESTIGATOR_TALENT("investigator_talent"),
+    SHAMAN_HEX("shaman_hex"),
+    SLAYER_TALENT("slayer_talent"),
+    SWASHBUCKLER_DEED("swashbuckler_deed"),
+    WARPRIEST_BLESSINGS("blessing"),
+    UNCHAINED_RAGE_POWER("unchained_rage_power"),
+    UNCHAINED_KI_POWER("unchained_ki_power"),
+    UNCHAINED_ROGUE_TALENT("unchained_rogue_talent"),
+    BLOODLINE("bloodline"),
+
     SPELL("spell"),
     ;
 
-    @Getter private final String label;
+    @Getter private final String key;
 
     AttributeType(String label) {
-        this.label = label;
+        this.key = label;
     }
 }

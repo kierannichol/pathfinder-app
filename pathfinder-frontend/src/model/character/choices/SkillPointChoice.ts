@@ -6,14 +6,23 @@ import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 export default class SkillPointChoice extends CharacterChoice {
   public readonly type: ChoiceType = ChoiceType.SKILL_POINT;
   public readonly key;
+  public readonly label = "Skill Points";
 
-  static of(level: number, index: number, dependsOn: string, current: string = ''): SkillPointChoice {
+  static of(level: number, index: number, dependsOn: string | undefined, current: string = ''): SkillPointChoice {
     return new SkillPointChoice(level, index, dependsOn, current);
   }
 
-  private constructor(public readonly level: number, public readonly index:number, public readonly dependsOn: string, public readonly current = '') {
+  private constructor(public readonly level: number, public readonly index:number, public readonly dependsOn: string | undefined, public readonly current = '') {
     super();
     this.key = `level${level}:skillpoint:${index}`;
+  }
+
+  withValue(value: string): SkillPointChoice {
+    return new SkillPointChoice(this.level, this.index, this.dependsOn, value);
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new SkillPointChoice(this.level, this.index, dependsOn, this.current);
   }
 }
 
@@ -22,7 +31,7 @@ export class SkillPointChoiceProcessor implements ICharacterChoiceProcessor<Skil
 
   async select(choice: SkillPointChoice, value: string): Promise<CharacterChoice[]> {
     return [
-      SkillPointChoice.of(choice.level, choice.index, choice.dependsOn, value)
+      choice.withValue(value)
     ];
   }
 

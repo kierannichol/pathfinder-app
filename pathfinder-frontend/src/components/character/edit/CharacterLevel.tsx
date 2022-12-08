@@ -3,12 +3,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useMemo} from "react";
 import {Link} from "react-router-dom";
 import {useAsyncMemo} from "../../../app/reactHooks";
+import {usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
 import {Character} from "../../../model/character/Character";
 import {ChoiceType} from "../../../model/character/choices/CharacterChoice";
 import ChoiceSelector from "../ChoiceSelector";
 import LevelStatsDisplay from "../LevelStatsDisplay";
+import CharacterFeatureList from "./CharacterFeatureList";
 import "./CharacterLevel.scss";
-import CharacterTraitList from "./CharacterTraitList";
 import SkillEditorButton from "./SkillEditorButton";
 
 interface CharacterLevelProps {
@@ -18,6 +19,8 @@ interface CharacterLevelProps {
 }
 
 export default function CharacterLevel({ character, level, onChange }: CharacterLevelProps) {
+
+  const pathfinderDatabase = usePathfinderDatabase();
 
   const [ characterAtLevel ] = useAsyncMemo(() => character.atLevel(level), [character, level]);
   const choicesForLevel = useMemo(() => character.choicesForLevel(level)
@@ -65,10 +68,12 @@ export default function CharacterLevel({ character, level, onChange }: Character
           </div>
       )}
 
-        {specialIds.length > 0 && <>
-          <label>Special Abilities</label>
-          <CharacterTraitList classIds={[ characterAtLevel.get(`class_at_${level}`)?.asText() ?? '' ]} level={level} />
-          </>}
+      <label>New Feats</label>
+      <CharacterFeatureList featureIds={characterChanges.features('feat')} variant="special" />
+
+      <label>New Special Abilities</label>
+      {/*<CharacterTraitList classIds={[ characterAtLevel.get(`class_at_${level}`)?.asText() ?? '' ]} level={level} />*/}
+      <CharacterFeatureList featureIds={characterChanges.features('ability')} variant="special" />
     </div>
   </fieldset>
 }

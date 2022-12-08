@@ -6,14 +6,22 @@ import ICharacterChoiceProcessor from "./ICharacterChoiceProcessor";
 class RaceAbilityScoreIncreaseChoice extends CharacterChoice {
   public readonly key = CharacterChoice.RACE_ABILITY_SCORE_INCREASE;
   public readonly type = ChoiceType.RACE_ABILITY_SCORE;
-  public readonly dependsOn = CharacterChoice.RACE;
+  public readonly label = "Ability Score";
 
-  constructor(private readonly value: string = '') {
+  constructor(public readonly dependsOn: string | undefined = CharacterChoice.RACE, private readonly value: string = '') {
     super();
   }
 
   get current(): string {
     return this.value;
+  }
+
+  withValue(value: string): RaceAbilityScoreIncreaseChoice {
+    return new RaceAbilityScoreIncreaseChoice(this.dependsOn, value);
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return new RaceAbilityScoreIncreaseChoice(dependsOn, this.current);
   }
 }
 
@@ -22,7 +30,7 @@ export class RaceAbilityScoreIncreaseChoiceProcessor implements ICharacterChoice
 
   async select(choice: RaceAbilityScoreIncreaseChoice, value: string): Promise<CharacterChoice[]> {
     return [
-      new RaceAbilityScoreIncreaseChoice(value)
+      choice.withValue(value)
     ];
   }
 

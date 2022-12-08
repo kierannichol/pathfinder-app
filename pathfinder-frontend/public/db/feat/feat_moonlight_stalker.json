@@ -1,0 +1,10 @@
+{
+  "id": "feat:moonlight_stalker",
+  "name": "Moonlight Stalker",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You are adept at using shadows to conceal your attacks.",
+  "prerequisites": "Int 13, Blind-Fight, Combat Expertise, Bluff 3 ranks, darkvision or low-light vision racial trait.",
+  "prerequisitesFormula": "(@int_score \u003e\u003d 13 OR @feat:blind_fight OR @feat:combat_expertise OR @skill:bluff \u003e\u003d 3 OR @spell:darkvision OR @rage_power:low_light_vision)",
+  "benefit": "While you have concealment from an opponent, you gain a +2 bonus on attack and damage rolls against that opponent.",
+  "source": "PZO1118"
+}

@@ -34,7 +34,13 @@ class AbilityDatabaseSource {
   }
 }
 
-export class BaseAbilityDatabase {
+export interface IAbilityDatabase {
+  get all(): AbilitySummary[];
+  summary(id: string): AbilitySummary | undefined;
+  load(id: string): Promise<Ability | undefined>;
+}
+
+export class BaseAbilityDatabase implements IAbilityDatabase {
 
   static empty(detailedDataBaseUrl: string): BaseAbilityDatabase {
     return new BaseAbilityDatabase({}, detailedDataBaseUrl);
@@ -78,8 +84,13 @@ export class BaseAbilityDatabase {
     if (id === '') {
       return new Promise<v2.AbilityDataDbo|undefined>(_ => undefined);
     }
-    return fetch(`${process.env.PUBLIC_URL}/db/${this.detailedDataBaseUrl}/${idToFilename(id)}.bin`, { binary: true }).then(binary => {
+    const dataUrl = `${process.env.PUBLIC_URL}/db/${this.detailedDataBaseUrl}/${idToFilename(id)}.bin`;
+    return fetch(dataUrl, { binary: true }).then(binary => {
       return v2.AbilityDataDbo.decode(binary as Uint8Array);
+    })
+    .catch(e => {
+      console.error(`Failed to load ${dataUrl}`, e);
+      return undefined;
     })
   }
 }
@@ -95,7 +106,8 @@ function convertAbilityType(dataType: AbilityTypeDbo): Ability.Type {
 
 function idToFilename(id: string): string {
   return id
-  .replaceAll(':', '_');
+      .replaceAll(':', '_')
+      .replaceAll('#', '_');
 }
 
 export function useAbilityFromSourceOnScreen(source: AbilityDatabaseSource, abilityId: string): [ AbilitySummary|undefined, RefCallback<HTMLDivElement> ] {
