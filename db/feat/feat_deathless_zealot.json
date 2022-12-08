@@ -1,0 +1,10 @@
+{
+  "id": "feat:deathless_zealot",
+  "name": "Deathless Zealot",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "Only the most serious wounds can stop you.",
+  "prerequisites": "Str 13, Con 17, orc or half-orc, Deathless Initiate, Deathless Master, Diehard, Endurance, Ironhide**, base attack bonus +12.",
+  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @con_score \u003e\u003d 17 AND (@race:orc OR @race:half_orc) AND @feat:deathless_initiate AND @feat:deathless_master AND @feat:diehard AND @ability:endurance#ranger AND @feat:ironhide AND @bab \u003e\u003d 12",
+  "benefit": "Whenever a creature rolls to confirm a critical hit against you, it must roll twice and take the lowest result.",
+  "source": "PZO1118"
+}

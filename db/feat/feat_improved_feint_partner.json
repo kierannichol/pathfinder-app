@@ -1,0 +1,11 @@
+{
+  "id": "feat:improved_feint_partner",
+  "name": "Improved Feint Partner",
+  "types": ["FEAT_TYPE_COMBAT", "FEAT_TYPE_TEAMWORK"],
+  "description": "Knowledge of your companions\u0027 tricks and techniques allow you to take even greater advantage of your allies\u0027 feints.",
+  "prerequisites": "Bluff 1 rank, Combat Reflexes, Feint Partner, base attack bonus +6.",
+  "prerequisitesFormula": "@skill:bluff \u003e\u003d 1 AND @feat:combat_reflexes AND @feat:feint_partner AND @bab \u003e\u003d 6",
+  "benefit": "Whenever an ally who also has this feat successfully feints against an opponent, that opponent provokes an attack of opportunity from you.",
+  "source": "PZO1118",
+  "teamwork": true
+}

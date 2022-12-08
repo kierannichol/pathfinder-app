@@ -1,0 +1,194 @@
+{
+  "id": "feat:false_opening",
+  "name": "False Opening",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "When you make a ranged attack while threatened, you can fool your opponent into thinking he has an opening.",
+  "prerequisites": "Dex 13, Dodge, Close Quarters Thrower or Point-Blank Master, Weapon Focus with selected ranged weapon.",
+  "benefit": "Choose a ranged weapon or a thrown weapon. When you make a ranged attack using that weapon, you can choose to provoke an attack of opportunity from one or more opponents who threaten you. You gain a +4 dodge bonus against such attacks. An opponent that makes such an attack and misses you loses his Dexterity bonus to AC against you until the end of your turn.",
+  "source": "PZO1118",
+  "options": [{
+    "id": "feat:false_opening#blowgun",
+    "name": "Blowgun",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#blowgun"
+  }, {
+    "id": "feat:false_opening#heavy_crossbow",
+    "name": "Heavy Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_crossbow"
+  }, {
+    "id": "feat:false_opening#light_crossbow",
+    "name": "Light Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#light_crossbow"
+  }, {
+    "id": "feat:false_opening#dart",
+    "name": "Dart",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dart"
+  }, {
+    "id": "feat:false_opening#javelin",
+    "name": "Javelin",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#javelin"
+  }, {
+    "id": "feat:false_opening#sling",
+    "name": "Sling",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sling"
+  }, {
+    "id": "feat:false_opening#stingchuck",
+    "name": "Stingchuck",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stingchuck"
+  }, {
+    "id": "feat:false_opening#stonebow",
+    "name": "Stonebow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stonebow"
+  }, {
+    "id": "feat:false_opening#ammentum",
+    "name": "Ammentum",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#ammentum"
+  }, {
+    "id": "feat:false_opening#chakram",
+    "name": "Chakram",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#chakram"
+  }, {
+    "id": "feat:false_opening#jolting_dart",
+    "name": "Jolting Dart",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#jolting_dart"
+  }, {
+    "id": "feat:false_opening#hunga_munga",
+    "name": "Hunga Munga",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hunga_munga"
+  }, {
+    "id": "feat:false_opening#hurlbat",
+    "name": "Hurlbat",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hurlbat"
+  }, {
+    "id": "feat:false_opening#longbow",
+    "name": "Longbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#longbow"
+  }, {
+    "id": "feat:false_opening#pilum",
+    "name": "Pilum",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#pilum"
+  }, {
+    "id": "feat:false_opening#shortbow",
+    "name": "Shortbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shortbow"
+  }, {
+    "id": "feat:false_opening#aklys",
+    "name": "Aklys",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#aklys"
+  }, {
+    "id": "feat:false_opening#bola",
+    "name": "Bola",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#bola"
+  }, {
+    "id": "feat:false_opening#brutal_bola",
+    "name": "Brutal Bola",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#brutal_bola"
+  }, {
+    "id": "feat:false_opening#boomerang",
+    "name": "Boomerang",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#boomerang"
+  }, {
+    "id": "feat:false_opening#thorn_bow",
+    "name": "Thorn Bow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#thorn_bow"
+  }, {
+    "id": "feat:false_opening#crank_heavy_crossbow",
+    "name": "Crank (heavy) Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#crank_heavy_crossbow"
+  }, {
+    "id": "feat:false_opening#crank_light_crossbow",
+    "name": "Crank (light) Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#crank_light_crossbow"
+  }, {
+    "id": "feat:false_opening#double_crossbow",
+    "name": "Double Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#double_crossbow"
+  }, {
+    "id": "feat:false_opening#hand_crossbow",
+    "name": "Hand Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#hand_crossbow"
+  }, {
+    "id": "feat:false_opening#launching_crossbow",
+    "name": "Launching Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#launching_crossbow"
+  }, {
+    "id": "feat:false_opening#repeating_heavy_crossbow",
+    "name": "Repeating Heavy Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#repeating_heavy_crossbow"
+  }, {
+    "id": "feat:false_opening#repeating_light_crossbow",
+    "name": "Repeating Light Crossbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#repeating_light_crossbow"
+  }, {
+    "id": "feat:false_opening#flask_thrower",
+    "name": "Flask Thrower",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#flask_thrower"
+  }, {
+    "id": "feat:false_opening#grappling_hook",
+    "name": "Grappling Hook",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#grappling_hook"
+  }, {
+    "id": "feat:false_opening#orc_hornbow",
+    "name": "Orc Hornbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#orc_hornbow"
+  }, {
+    "id": "feat:false_opening#stormshaft_javelin",
+    "name": "Stormshaft Javelin",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stormshaft_javelin"
+  }, {
+    "id": "feat:false_opening#lasso",
+    "name": "Lasso",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#lasso"
+  }, {
+    "id": "feat:false_opening#net",
+    "name": "Net",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#net"
+  }, {
+    "id": "feat:false_opening#snag_net",
+    "name": "Snag Net",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#snag_net"
+  }, {
+    "id": "feat:false_opening#dwarven_heavy_pelletbow",
+    "name": "Dwarven Heavy Pelletbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_heavy_pelletbow"
+  }, {
+    "id": "feat:false_opening#dwarven_light_pelletbow",
+    "name": "Dwarven Light Pelletbow",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#dwarven_light_pelletbow"
+  }, {
+    "id": "feat:false_opening#throwing_shield",
+    "name": "Throwing Shield",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#throwing_shield"
+  }, {
+    "id": "feat:false_opening#shrillshaft_javelin",
+    "name": "Shrillshaft Javelin",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shrillshaft_javelin"
+  }, {
+    "id": "feat:false_opening#shuriken_5",
+    "name": "Shuriken (5)",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#shuriken_5"
+  }, {
+    "id": "feat:false_opening#double_sling",
+    "name": "Double Sling",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#double_sling"
+  }, {
+    "id": "feat:false_opening#sling_glove",
+    "name": "Sling Glove",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#sling_glove"
+  }, {
+    "id": "feat:false_opening#halfling_sling_staff",
+    "name": "Halfling Sling Staff",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#halfling_sling_staff"
+  }, {
+    "id": "feat:false_opening#stitched_sling",
+    "name": "Stitched Sling",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#stitched_sling"
+  }, {
+    "id": "feat:false_opening#wrist_launcher",
+    "name": "Wrist Launcher",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#wrist_launcher"
+  }, {
+    "id": "feat:false_opening#heavy_wrist_launcher",
+    "name": "Heavy Wrist Launcher",
+    "prerequisitesFormula": "@dex_score \u003e\u003d 13 AND @feat:dodge AND (@feat:close_quarters_thrower OR @feat:point_blank_master) AND @feat:weapon_focus#heavy_wrist_launcher"
+  }]
+}

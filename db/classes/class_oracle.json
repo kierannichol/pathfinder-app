@@ -3,213 +3,709 @@
   "name": "Oracle",
   "category": "BASE",
   "shortDescription": "Oracles do not usually associate with any one church or temple, instead preferring to strike out on their own, or with a small group of like-minded individuals. Oracles typically use their spells and revelations to further their understanding of their mystery, be it through fighting mighty battles or tending to the poor and sick.",
-  "levels": [{
-    "levelNumber": 1,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:mystery",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }, {
-      "id": "ability:oracles_curse",
-      "name": "Oracle\u0027s Curse",
-      "description": "Each oracle is cursed, but this curse comes with a benefit as well as a hindrance. This choice is made at 1st level, and once made, it cannot be changed. The oracle\u0027s curse cannot be removed or dispelled without the aid of a deity. An oracle\u0027s curse is based on her oracle level plus one for every two levels or Hit Dice other than oracle. Each oracle must choose one of the following curses."
-    }, {
-      "id": "ability:orisons",
-      "name": "Orisons",
-      "description": "Oracles learn a number of orisons, or 0-level spells, as noted on Table: Oracle Spells Known under “Spells Known.” These spells are cast like any other spell, but they do not consume any slots and may be used again."
-    }, {
-      "id": "ability:revelation",
-      "name": "Revelation",
-      "description": "At 1st level, 3rd level, and every four levels thereafter (7th, 11th, and so on), an oracle uncovers a new secret about her mystery that grants her powers and abilities. The oracle must select a revelation from the list of revelations available to her mystery (see FAQ at right). If a revelation is chosen at a later level, the oracle gains all of the abilities and bonuses granted by that revelation based on her current level. Unless otherwise noted, activating the power of a revelation is a standard action.Unless otherwise noted, the DC to save against these revelations is equal to 10 + 1/2 the oracle\u0027s level + the oracle\u0027s Charisma modifier."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 1,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 2,
-    "fortSave": 1,
-    "refSave": 1,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:revelation",
-      "name": "Revelation",
-      "description": "At 1st level, 3rd level, and every four levels thereafter (7th, 11th, and so on), an oracle uncovers a new secret about her mystery that grants her powers and abilities. The oracle must select a revelation from the list of revelations available to her mystery (see FAQ at right). If a revelation is chosen at a later level, the oracle gains all of the abilities and bonuses granted by that revelation based on her current level. Unless otherwise noted, activating the power of a revelation is a standard action.Unless otherwise noted, the DC to save against these revelations is equal to 10 + 1/2 the oracle\u0027s level + the oracle\u0027s Charisma modifier."
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 3,
-    "fortSave": 1,
-    "refSave": 1,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 3,
-    "fortSave": 1,
-    "refSave": 1,
-    "willSave": 4
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 4,
-    "fortSave": 2,
-    "refSave": 2,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 5,
-    "fortSave": 2,
-    "refSave": 2,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:revelation",
-      "name": "Revelation",
-      "description": "At 1st level, 3rd level, and every four levels thereafter (7th, 11th, and so on), an oracle uncovers a new secret about her mystery that grants her powers and abilities. The oracle must select a revelation from the list of revelations available to her mystery (see FAQ at right). If a revelation is chosen at a later level, the oracle gains all of the abilities and bonuses granted by that revelation based on her current level. Unless otherwise noted, activating the power of a revelation is a standard action.Unless otherwise noted, the DC to save against these revelations is equal to 10 + 1/2 the oracle\u0027s level + the oracle\u0027s Charisma modifier."
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 6,
-    "fortSave": 2,
-    "refSave": 2,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 6,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 6
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 7,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 8,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:revelation",
-      "name": "Revelation",
-      "description": "At 1st level, 3rd level, and every four levels thereafter (7th, 11th, and so on), an oracle uncovers a new secret about her mystery that grants her powers and abilities. The oracle must select a revelation from the list of revelations available to her mystery (see FAQ at right). If a revelation is chosen at a later level, the oracle gains all of the abilities and bonuses granted by that revelation based on her current level. Unless otherwise noted, activating the power of a revelation is a standard action.Unless otherwise noted, the DC to save against these revelations is equal to 10 + 1/2 the oracle\u0027s level + the oracle\u0027s Charisma modifier."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 9,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 8,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:diplomacy",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 9,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 8
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:heal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 10,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 11,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:revelation",
-      "name": "Revelation",
-      "description": "At 1st level, 3rd level, and every four levels thereafter (7th, 11th, and so on), an oracle uncovers a new secret about her mystery that grants her powers and abilities. The oracle must select a revelation from the list of revelations available to her mystery (see FAQ at right). If a revelation is chosen at a later level, the oracle gains all of the abilities and bonuses granted by that revelation based on her current level. Unless otherwise noted, activating the power of a revelation is a standard action.Unless otherwise noted, the DC to save against these revelations is equal to 10 + 1/2 the oracle\u0027s level + the oracle\u0027s Charisma modifier."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 12,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 10,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 12,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 10
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 13,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:mystery_spell",
-      "name": "Mystery",
-      "description": "Each oracle draws upon a divine mystery to grant her spells and powers. This mystery also grants additional class skills and other special abilities. This mystery can represent a devotion to one ideal, prayers to deities that support the concept, or a natural calling to champion a cause. For example, an oracle with the waves mystery might have been born at sea and found a natural calling to worship the gods of the oceans, rivers, and lakes, be they benign or malevolent. Regardless of its source, the mystery manifests in a number of ways as the oracle gains levels. An oracle must pick one mystery upon taking her first level of oracle. Once made, this choice cannot be changed.At 2nd level, and every two levels thereafter, an oracle learns an additional spell derived from her mystery. These spells are in addition to the number of spells given on Table: Oracle Spells Known. They cannot be exchanged for different spells at higher levels.Each oracle must choose from among the following mysteries."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sense_motive",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 14,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:revelation",
-      "name": "Revelation",
-      "description": "At 1st level, 3rd level, and every four levels thereafter (7th, 11th, and so on), an oracle uncovers a new secret about her mystery that grants her powers and abilities. The oracle must select a revelation from the list of revelations available to her mystery (see FAQ at right). If a revelation is chosen at a later level, the oracle gains all of the abilities and bonuses granted by that revelation based on her current level. Unless otherwise noted, activating the power of a revelation is a standard action.Unless otherwise noted, the DC to save against these revelations is equal to 10 + 1/2 the oracle\u0027s level + the oracle\u0027s Charisma modifier."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:spellcraft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 15,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 12,
-    "specials": [{
-      "id": "ability:final_revelation",
-      "name": "Final Revelation",
-      "description": "At 20th level, an oracle learns the final revelation about her mystery, granting her amazing powers and abilities. The nature of these bonuses depends upon the oracle\u0027s mystery."
-    }]
-  }],
-  "skills": ["skill:craft", "skill:diplomacy", "skill:heal", "skill:knowledge", "skill:knowledge", "skill:knowledge", "skill:profession", "skill:sense_motive", "skill:spellcraft"]
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:mystery#oracle"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:oracles_curse#oracle"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:orisons#oracle"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:revelation#oracle"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:revelation#oracle"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:revelation#oracle"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:revelation#oracle"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:revelation#oracle"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:mystery_spell#oracle"
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:revelation#oracle"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:final_revelation#oracle"
+    }
+  }]
 }

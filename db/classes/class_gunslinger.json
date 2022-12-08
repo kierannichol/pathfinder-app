@@ -3,236 +3,768 @@
   "name": "Gunslinger",
   "category": "BASE",
   "shortDescription": "Gunslingers are thunderous artillery, often found where the fighting is fiercest. Brave, clever, and frequently foolhardy, many gunslingers push to position themselves at close range, barrels blazing, to take down their foes and demoralize their enemies. Other gunslingers are masters of distant death, picking off enemies from afar with their strange and wondrous weapons.",
-  "levels": [{
-    "levelNumber": 1,
-    "bab": 1,
-    "fortSave": 2,
-    "refSave": 2,
-    "specials": [{
-      "id": "ability:deeds",
-      "name": "Deeds",
-      "description": "Gunslingers spend grit points to accomplish deeds. Most deeds grant the gunslinger some momentary bonus or effect, but there are some that provide longer-lasting effects. Some deeds stay in effect as long as the gunslinger has at least 1 grit point. The following is the list of base gunslinger deeds. A gunslinger can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the appropriate amount of grit is spent to perform the deed."
-    }, {
-      "id": "ability:grit",
-      "name": "Grit",
-      "description": "A gunslinger makes her mark upon the world with daring deeds. Some gunslingers claim they belong to a mystical way of the gun, but it\u0027s more likely that the volatile nature of firearms simply prunes the unlucky and careless from their ranks. Whatever the reason, all gunslingers have grit. In game terms, grit is a fluctuating measure of a gunslinger\u0027s ability to perform amazing actions in combat. At the start of each day, a gunslinger gains a number of grit points equal to her Wisdom modifier (minimum 1). Her grit goes up or down throughout the day, but usually cannot go higher than her Wisdom modifier (minimum 1), though some feats and magic items may affect this maximum. A gunslinger spends grit to accomplish deeds (see below), and regains grit in the following ways.Critical Hit with a Firearm: Each time the gunslinger confirms a critical hit with a firearm attack while in the heat of combat, she regains 1 grit point. Confirming a critical hit on a helpless or unaware creature or on a creature that has fewer Hit Dice than half the gunslinger\u0027s character level does not restore grit.Killing Blow with a Firearm: When the gunslinger reduces a creature to 0 or fewer hit points with a firearm attack while in the heat of combat, she regains 1 grit point. Destroying an unattended object, reducing a helpless or unaware creature to 0 or fewer hit points, or reducing a creature that has fewer Hit Dice than half the gunslinger\u0027s character level to 0 or fewer hit points does not restore any grit."
-    }, {
-      "id": "ability:gunsmith",
-      "name": "Gunsmith",
-      "description": "At 1st level, a gunslinger gains one of the following firearms of her choice: blunderbuss, musket, or pistol. Her starting weapon is battered, and only she knows how to use it properly. All other creatures treat her gun as if it had the broken condition. If the weapon already has the broken condition, it does not work at all for anyone else trying to use it. This starting weapon can only be sold for scrap (it\u0027s worth 4d10 gp when sold). The gunslinger also gains Gunsmithing as a bonus feat."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 2,
-    "fortSave": 3,
-    "refSave": 3,
-    "specials": [{
-      "id": "ability:nimble",
-      "name": "Nimble",
-      "description": "Starting at 2nd level, a gunslinger gains a +1 dodge bonus to AC while wearing light or no armor. Anything that causes the gunslinger to lose her Dexterity bonus to AC also causes the gunslinger to lose this dodge bonus. This bonus increases by +1 for every four levels beyond 2nd level (to a maximum of +5 at 18th level)."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 3,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:deeds",
-      "name": "Deeds",
-      "description": "Gunslingers spend grit points to accomplish deeds. Most deeds grant the gunslinger some momentary bonus or effect, but there are some that provide longer-lasting effects. Some deeds stay in effect as long as the gunslinger has at least 1 grit point. The following is the list of base gunslinger deeds. A gunslinger can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the appropriate amount of grit is spent to perform the deed."
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 4,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats",
-      "description": "At 4th level, and every four levels thereafter, a gunslinger gains a bonus feat in addition to those gained by normal advancement. These bonus feats must be combat or grit feats."
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 5,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:gun_training",
-      "name": "Gun Training",
-      "description": "Starting at 5th level, a gunslinger can select one specific type of firearm (such as an axe musket, blunderbuss, musket, or pistol). She gains a bonus equal to her Dexterity modifier on damage rolls when firing that type of firearm. Furthermore, when she misfires with that type of firearm, the misfire value of that firearm increases by 2 instead of 4. Every four levels thereafter (9th, 13th, and 17th), the gunslinger picks up another type of firearm, gaining these bonuses for those types as well."
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 6,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:nimble",
-      "name": "Nimble",
-      "description": "Starting at 2nd level, a gunslinger gains a +1 dodge bonus to AC while wearing light or no armor. Anything that causes the gunslinger to lose her Dexterity bonus to AC also causes the gunslinger to lose this dodge bonus. This bonus increases by +1 for every four levels beyond 2nd level (to a maximum of +5 at 18th level)."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 7,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:deeds",
-      "name": "Deeds",
-      "description": "Gunslingers spend grit points to accomplish deeds. Most deeds grant the gunslinger some momentary bonus or effect, but there are some that provide longer-lasting effects. Some deeds stay in effect as long as the gunslinger has at least 1 grit point. The following is the list of base gunslinger deeds. A gunslinger can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the appropriate amount of grit is spent to perform the deed."
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 8,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats",
-      "description": "At 4th level, and every four levels thereafter, a gunslinger gains a bonus feat in addition to those gained by normal advancement. These bonus feats must be combat or grit feats."
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 9,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:gun_training",
-      "name": "Gun Training",
-      "description": "Starting at 5th level, a gunslinger can select one specific type of firearm (such as an axe musket, blunderbuss, musket, or pistol). She gains a bonus equal to her Dexterity modifier on damage rolls when firing that type of firearm. Furthermore, when she misfires with that type of firearm, the misfire value of that firearm increases by 2 instead of 4. Every four levels thereafter (9th, 13th, and 17th), the gunslinger picks up another type of firearm, gaining these bonuses for those types as well."
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 10,
-    "fortSave": 7,
-    "refSave": 7,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:nimble",
-      "name": "Nimble",
-      "description": "Starting at 2nd level, a gunslinger gains a +1 dodge bonus to AC while wearing light or no armor. Anything that causes the gunslinger to lose her Dexterity bonus to AC also causes the gunslinger to lose this dodge bonus. This bonus increases by +1 for every four levels beyond 2nd level (to a maximum of +5 at 18th level)."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 11,
-    "fortSave": 7,
-    "refSave": 7,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:deeds",
-      "name": "Deeds",
-      "description": "Gunslingers spend grit points to accomplish deeds. Most deeds grant the gunslinger some momentary bonus or effect, but there are some that provide longer-lasting effects. Some deeds stay in effect as long as the gunslinger has at least 1 grit point. The following is the list of base gunslinger deeds. A gunslinger can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the appropriate amount of grit is spent to perform the deed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:acrobatics",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 12,
-    "fortSave": 8,
-    "refSave": 8,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats",
-      "description": "At 4th level, and every four levels thereafter, a gunslinger gains a bonus feat in addition to those gained by normal advancement. These bonus feats must be combat or grit feats."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:bluff",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 13,
-    "fortSave": 8,
-    "refSave": 8,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:gun_training",
-      "name": "Gun Training",
-      "description": "Starting at 5th level, a gunslinger can select one specific type of firearm (such as an axe musket, blunderbuss, musket, or pistol). She gains a bonus equal to her Dexterity modifier on damage rolls when firing that type of firearm. Furthermore, when she misfires with that type of firearm, the misfire value of that firearm increases by 2 instead of 4. Every four levels thereafter (9th, 13th, and 17th), the gunslinger picks up another type of firearm, gaining these bonuses for those types as well."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:climb",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 14,
-    "fortSave": 9,
-    "refSave": 9,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:nimble",
-      "name": "Nimble",
-      "description": "Starting at 2nd level, a gunslinger gains a +1 dodge bonus to AC while wearing light or no armor. Anything that causes the gunslinger to lose her Dexterity bonus to AC also causes the gunslinger to lose this dodge bonus. This bonus increases by +1 for every four levels beyond 2nd level (to a maximum of +5 at 18th level)."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 15,
-    "fortSave": 9,
-    "refSave": 9,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:deeds",
-      "name": "Deeds",
-      "description": "Gunslingers spend grit points to accomplish deeds. Most deeds grant the gunslinger some momentary bonus or effect, but there are some that provide longer-lasting effects. Some deeds stay in effect as long as the gunslinger has at least 1 grit point. The following is the list of base gunslinger deeds. A gunslinger can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the appropriate amount of grit is spent to perform the deed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:handle_animal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 16,
-    "fortSave": 10,
-    "refSave": 10,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats",
-      "description": "At 4th level, and every four levels thereafter, a gunslinger gains a bonus feat in addition to those gained by normal advancement. These bonus feats must be combat or grit feats."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:heal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 17,
-    "fortSave": 10,
-    "refSave": 10,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:gun_training",
-      "name": "Gun Training",
-      "description": "Starting at 5th level, a gunslinger can select one specific type of firearm (such as an axe musket, blunderbuss, musket, or pistol). She gains a bonus equal to her Dexterity modifier on damage rolls when firing that type of firearm. Furthermore, when she misfires with that type of firearm, the misfire value of that firearm increases by 2 instead of 4. Every four levels thereafter (9th, 13th, and 17th), the gunslinger picks up another type of firearm, gaining these bonuses for those types as well."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:intimidate",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 18,
-    "fortSave": 11,
-    "refSave": 11,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:nimble",
-      "name": "Nimble",
-      "description": "Starting at 2nd level, a gunslinger gains a +1 dodge bonus to AC while wearing light or no armor. Anything that causes the gunslinger to lose her Dexterity bonus to AC also causes the gunslinger to lose this dodge bonus. This bonus increases by +1 for every four levels beyond 2nd level (to a maximum of +5 at 18th level)."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 19,
-    "fortSave": 11,
-    "refSave": 11,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:deeds",
-      "name": "Deeds",
-      "description": "Gunslingers spend grit points to accomplish deeds. Most deeds grant the gunslinger some momentary bonus or effect, but there are some that provide longer-lasting effects. Some deeds stay in effect as long as the gunslinger has at least 1 grit point. The following is the list of base gunslinger deeds. A gunslinger can only perform deeds of her level or lower. Unless otherwise noted, a deed can be performed multiple successive times, as long as the appropriate amount of grit is spent to perform the deed."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 20,
-    "fortSave": 12,
-    "refSave": 12,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:bonus_feat",
-      "name": "Bonus Feats",
-      "description": "At 4th level, and every four levels thereafter, a gunslinger gains a bonus feat in addition to those gained by normal advancement. These bonus feats must be combat or grit feats."
-    }, {
-      "id": "ability:true_grit",
-      "name": "True Grit",
-      "description": "At 20th level, a gunslinger picks two deeds that she has access to and that she must spend grit to perform. She can perform these deeds for 1 grit point fewer (minimum 0) than usual. If the number of grit points to perform a deed is reduced to 0, the gunslinger can perform this deed as long as she has at least 1 grit point. If a deed could already be performed as long as she had at least 1 grit point, she can now perform that deed even when she has no grit points."
-    }]
-  }],
-  "skills": ["skill:acrobatics", "skill:bluff", "skill:climb", "skill:craft", "skill:handle_animal", "skill:heal", "skill:intimidate", "skill:knowledge", "skill:knowledge", "skill:perception", "skill:profession", "skill:ride", "skill:sleight_of_hand", "skill:survival", "skill:swim"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perception",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:ride",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sleight_of_hand",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:survival",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:swim",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:deeds#gunslinger"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:grit#gunslinger"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:gunsmith#gunslinger"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:nimble#gunslinger"
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:deeds#gunslinger"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#gunslinger"
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:gun_training#gunslinger"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:nimble#gunslinger"
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:deeds#gunslinger"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#gunslinger"
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:gun_training#gunslinger"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:nimble#gunslinger"
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:deeds#gunslinger"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#gunslinger"
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:gun_training#gunslinger"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:nimble#gunslinger"
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:deeds#gunslinger"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 16
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#gunslinger"
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 17
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:gun_training#gunslinger"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 18
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:nimble#gunslinger"
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 19
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:deeds#gunslinger"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 20
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:bonus_feat#gunslinger"
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:true_grit#gunslinger"
+    }
+  }]
 }

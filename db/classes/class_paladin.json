@@ -3,248 +3,753 @@
   "name": "Paladin",
   "category": "CORE",
   "shortDescription": "Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting.",
-  "levels": [{
-    "levelNumber": 1,
-    "bab": 1,
-    "fortSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:aura_of_good",
-      "name": "Aura of Good",
-      "description": "The power of a paladin\u0027s aura of good (see the detect good spell) is equal to her paladin level."
-    }, {
-      "id": "ability:detect_evil",
-      "name": "Detect Evil",
-      "description": "At will, a paladin can use detect evil, as the spell. A paladin can, as a move action, concentrate on a single item or individual within 60 feet and determine if it is evil, learning the strength of its aura as if having studied it for 3 rounds. While focusing on one individual or object, the paladin does not detect evil in any other object or individual within range."
-    }, {
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 2,
-    "fortSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:divine_grace",
-      "name": "Divine Grace",
-      "description": "At 2nd level, a paladin gains a bonus equal to her Charisma bonus (if any) on all Saving Throws."
-    }, {
-      "id": "ability:lay_on_hands",
-      "name": "Lay On Hands",
-      "description": "Beginning at 2nd level, a paladin can heal wounds (her own or those of others) by touch. Each day she can use this ability a number of times equal to 1/2 her paladin level plus her Charisma modifier. With one use of this ability, a paladin can heal 1d6 hit points of damage for every two paladin levels she possesses. Using this ability is a standard action, unless the paladin targets herself, in which case it is a swift action. Despite the name of this ability, a paladin only needs one free hand to use this ability.Alternatively, a paladin can use this healing power to deal damage to undead creatures, dealing 1d6 points of damage for every two levels the paladin possesses. Using lay on hands in this way requires a successful melee touch attack and doesn\u0027t provoke an attack of opportunity. Undead do not receive a saving throw against this damage."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 3,
-    "fortSave": 3,
-    "refSave": 1,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:aura_of_courage",
-      "name": "Aura of Courage",
-      "description": "At 3rd level, a paladin is immune to fear (magical or otherwise). Each ally within 10 feet of her gains a +4 morale bonus on saving throws against fear effects. This ability functions only while the paladin is conscious, not if she is unconscious or dead."
-    }, {
-      "id": "ability:divine_health",
-      "name": "Divine Health",
-      "description": "At 3rd level, a paladin is immune to all diseases, including supernatural and magical diseases, including mummy rot."
-    }, {
-      "id": "ability:mercy",
-      "name": "Mercy",
-      "description": "At 3rd level, and every three levels thereafter, a paladin can select one mercy. Each mercy adds an effect to the paladin\u0027s lay on hands ability. Whenever the paladin uses lay on hands to heal damage to one target, the target also receives the additional effects from all of the mercies possessed by the paladin. A mercy can remove a condition caused by a curse, disease, or poison without curing the affliction. Such conditions return after 1 hour unless the mercy actually removes the affliction that causes the condition.At 3rd level, the paladin can select from the following initial mercies."
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 4,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:channel_positive_energy",
-      "name": "Channel Positive Energy",
-      "description": "When a paladin reaches 4th level, she gains the supernatural ability to channel positive energy like a cleric. Using this ability consumes two uses of her lay on hands ability. A paladin uses her level as her effective cleric level when channeling positive energy. This is a Charisma-based ability."
-    }, {
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 5,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:divine_bond",
-      "name": "Divine Bond",
-      "description": "Upon reaching 5th level, a paladin forms a divine bond with her god. This bond can take one of two forms. Once the form is chosen, it cannot be changed.The first type of bond allows the paladin to enhance her weapon as a standard action by calling upon the aid of a celestial spirit for 1 minute per paladin level. When called, the spirit causes the weapon to shed light as a torch. At 5th level, this spirit grants the weapon a +1 enhancement bonus. For every three levels beyond 5th, the weapon gains another +1 enhancement bonus, to a maximum of +6 at 20th level. These bonuses can be added to the weapon, stacking with existing weapon bonuses to a maximum of +5, or they can be used to add any of the following weapon properties: axiomatic, brilliant energy, defending, disruption, flaming, flaming burst, holy, keen, merciful, and speed. Adding these properties consumes an amount of bonus equal to the property\u0027s cost (see Table: Melee Weapon Special Abilities). These bonuses are added to any properties the weapon already has, but duplicate abilities do not stack. If the weapon is not magical, at least a +1 enhancement bonus must be added before any other properties can be added. The bonus and properties granted by the spirit are determined when the spirit is called and cannot be changed until the spirit is called again. The celestial spirit imparts no bonuses if the weapon is held by anyone other than the paladin but resumes giving bonuses if returned to the paladin. These bonuses apply to only one end of a double weapon. A paladin can use this ability once per day at 5th level, and one additional time per day for every four levels beyond 5th, to a total of four times per day at 17th level.If a weapon bonded with a celestial spirit is destroyed, the paladin loses the use of this ability for 30 days, or until she gains a level, whichever comes first. During this 30-day period, the paladin takes a –1 penalty on attack and weapon damage rolls.The second type of bond allows a paladin to gain the service of an unusually intelligent, strong, and loyal steed to serve her in her crusade against evil. This mount is usually a heavy horse (for a Medium paladin) or a pony (for a Small paladin), although more exotic mounts, such as a boar, camel, or dog are also suitable. This mount functions as a druid\u0027s animal companion, using the paladin\u0027s level as her effective druid level. Bonded mounts have an Intelligence of at least 6.In addition to horses, a paladin may select (at the GM\u0027s discretion) some less ordinary creatures.A Medium paladin can select an elkPPC:WO, giant seahorsePPC:WO, giraffePPC:WO, yakPZO1140 or zebraPZO1140 as a bonded mount.A Small paladin can select an antelopePPC:WO, capybaraPZO1140, eohippusPZO1140, giant weaselPPC:WO, ramPPC:WO, reindeerPZO1140, stagPPC:WO, or wolfdogPZO1140 as a bonded mount.The auspice, bodyguard, racer, and totem guide archetypes are all particularly appropriate for a paladin\u0027s bonded mount.Once per day, as a full-round action, a paladin may magically call her mount to her side. This ability is the equivalent of a spell of a level equal to one-third the paladin\u0027s level. The mount immediately appears adjacent to the paladin. A paladin can use this ability once per day at 5th level, and one additional time per day for every 4 levels thereafter, for a total of four times per day at 17th level.At 11th level, the mount gains the celestial creature simple template and becomes a magical beast for the purposes of determining which spells affect it.At 15th level, a paladin\u0027s mount gains spell resistance equal to the paladin\u0027s level + 11.Should the paladin\u0027s mount die, the paladin may not summon another mount for 30 days or until she gains a paladin level, whichever comes first. During this 30-day period, the paladin takes a –1 penalty on attack and weapon damage rolls."
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 6,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:mercy",
-      "name": "Mercy",
-      "description": "At 3rd level, and every three levels thereafter, a paladin can select one mercy. Each mercy adds an effect to the paladin\u0027s lay on hands ability. Whenever the paladin uses lay on hands to heal damage to one target, the target also receives the additional effects from all of the mercies possessed by the paladin. A mercy can remove a condition caused by a curse, disease, or poison without curing the affliction. Such conditions return after 1 hour unless the mercy actually removes the affliction that causes the condition.At 3rd level, the paladin can select from the following initial mercies."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 7,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 8,
-    "fortSave": 6,
-    "refSave": 2,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:aura_of_resolve",
-      "name": "Aura of Resolve",
-      "description": "At 8th level, a paladin is immune to charm spells and spell-like abilities. Each ally within 10 feet of her gains a +4 morale bonus on saving throws against charm effects.This ability functions only while the paladin is conscious, not if she is unconscious or dead."
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 9,
-    "fortSave": 6,
-    "refSave": 3,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:mercy",
-      "name": "Mercy",
-      "description": "At 3rd level, and every three levels thereafter, a paladin can select one mercy. Each mercy adds an effect to the paladin\u0027s lay on hands ability. Whenever the paladin uses lay on hands to heal damage to one target, the target also receives the additional effects from all of the mercies possessed by the paladin. A mercy can remove a condition caused by a curse, disease, or poison without curing the affliction. Such conditions return after 1 hour unless the mercy actually removes the affliction that causes the condition.At 3rd level, the paladin can select from the following initial mercies."
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 10,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 11,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:aura_of_justice",
-      "name": "Aura of Justice",
-      "description": "At 11th level, a paladin can expend two uses of her smite evil ability to grant the ability to smite evil to all allies within 10 feet, using her bonuses. Allies must use this smite evil ability by the start of the paladin\u0027s next turn and the bonuses last for 1 minute. Using this ability is a free action. Evil creatures gain no benefit from this ability."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 12,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 8,
-    "specials": [{
-      "id": "ability:mercy",
-      "name": "Mercy",
-      "description": "At 3rd level, and every three levels thereafter, a paladin can select one mercy. Each mercy adds an effect to the paladin\u0027s lay on hands ability. Whenever the paladin uses lay on hands to heal damage to one target, the target also receives the additional effects from all of the mercies possessed by the paladin. A mercy can remove a condition caused by a curse, disease, or poison without curing the affliction. Such conditions return after 1 hour unless the mercy actually removes the affliction that causes the condition.At 3rd level, the paladin can select from the following initial mercies."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:diplomacy",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 13,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 8,
-    "specials": [{
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:handle_animal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 14,
-    "fortSave": 9,
-    "refSave": 4,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:aura_of_faith",
-      "name": "Aura of Faith",
-      "description": "At 14th level, a paladin\u0027s weapons are treated as good-aligned for the purposes of overcoming Damage Reduction. Any attack made against an enemy within 10 feet of her is treated as good-aligned for the purposes of overcoming Damage Reduction.This ability functions only while the paladin is conscious, not if she is unconscious or dead."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:heal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 15,
-    "fortSave": 9,
-    "refSave": 5,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:mercy",
-      "name": "Mercy",
-      "description": "At 3rd level, and every three levels thereafter, a paladin can select one mercy. Each mercy adds an effect to the paladin\u0027s lay on hands ability. Whenever the paladin uses lay on hands to heal damage to one target, the target also receives the additional effects from all of the mercies possessed by the paladin. A mercy can remove a condition caused by a curse, disease, or poison without curing the affliction. Such conditions return after 1 hour unless the mercy actually removes the affliction that causes the condition.At 3rd level, the paladin can select from the following initial mercies."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 16,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 10,
-    "specials": [{
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 17,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 10,
-    "specials": [{
-      "id": "ability:aura_of_righteousness",
-      "name": "Aura of Righteousness",
-      "description": "At 17th level, a paladin gains DR 5/evil and immunity to compulsion spells and spell-like abilities. Each ally within 10 feet of her gains a +4 morale bonus on saving throws against compulsion effects.This ability functions only while the paladin is conscious, not if she is unconscious or dead."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 18,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:mercy",
-      "name": "Mercy",
-      "description": "At 3rd level, and every three levels thereafter, a paladin can select one mercy. Each mercy adds an effect to the paladin\u0027s lay on hands ability. Whenever the paladin uses lay on hands to heal damage to one target, the target also receives the additional effects from all of the mercies possessed by the paladin. A mercy can remove a condition caused by a curse, disease, or poison without curing the affliction. Such conditions return after 1 hour unless the mercy actually removes the affliction that causes the condition.At 3rd level, the paladin can select from the following initial mercies."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:ride",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 19,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:smite_evil",
-      "name": "Smite Evil",
-      "description": "Once per day, a paladin can call out to the powers of good to aid her in her struggle against evil. As a swift action, the paladin chooses one target within sight to smite. If this target is evil, the paladin adds her Cha bonus (if any) to her attack rolls and adds her paladin level to all damage rolls made against the target of her smite. If the target of smite evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to 2 points of damage per level the paladin possesses. Regardless of the target, smite evil attacks automatically bypass any DR the creature might possess.In addition, while smite evil is in effect, the paladin gains a deflection bonus equal to her Charisma modifier (if any) to her AC against attacks made by the target of the smite. If the paladin targets a creature that is not evil, the smite is wasted with no effect.The smite evil effect remains until the target of the smite is dead or the next time the paladin rests and regains her uses of this ability. At 4th level, and at every three levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: Paladin, to a maximum of seven times per day at 19th level."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sense_motive",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 20,
-    "fortSave": 12,
-    "refSave": 6,
-    "willSave": 12,
-    "specials": [{
-      "id": "ability:holy_champion",
-      "name": "Holy Champion",
-      "description": "At 20th level, a paladin becomes a conduit for the power of her god. Her DR increases to 10/evil. Whenever she uses smite evil and successfully strikes an evil outsider, the outsider is also subject to a banishment, using her paladin level as the caster level (her weapon and holy symbol automatically count as objects that the subject hates). After the banishment effect and the damage from the attack is resolved, the smite immediately ends. In addition, whenever she channels positive energy or uses lay on hands to heal a creature, she heals the maximum possible amount."
-    }]
-  }],
-  "skills": ["skill:craft", "skill:diplomacy", "skill:handle_animal", "skill:heal", "skill:knowledge", "skill:knowledge", "skill:profession", "skill:ride", "skill:sense_motive", "skill:spellcraft"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:spellcraft",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:aura_of_good#paladin"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:detect_evil#paladin"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:divine_grace#paladin"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:lay_on_hands#paladin"
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:aura_of_courage#paladin"
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:divine_health#paladin"
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:mercy#paladin"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:channel_positive_energy#paladin"
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:divine_bond#paladin"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:mercy#paladin"
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:aura_of_resolve#paladin"
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:mercy#paladin"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:aura_of_justice#paladin"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:mercy#paladin"
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:aura_of_faith#paladin"
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:mercy#paladin"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 16
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 17
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:aura_of_righteousness#paladin"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 18
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:mercy#paladin"
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 19
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:smite_evil#paladin"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 20
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:holy_champion#paladin"
+    }
+  }]
 }

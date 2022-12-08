@@ -3,258 +3,876 @@
   "name": "Barbarian",
   "category": "CORE",
   "shortDescription": "Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves. With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way.",
-  "levels": [{
-    "levelNumber": 1,
-    "bab": 1,
-    "fortSave": 2,
-    "specials": [{
-      "id": "ability:fast_movement",
-      "name": "Fast Movement",
-      "description": "A barbarian\u0027s land speed is faster than the norm for her race by +10 feet. This benefit applies only when he is wearing no armor, light armor, or medium armor, and not carrying a heavy load. Apply this bonus before modifying the barbarian\u0027s speed because of any load carried or armor worn. This bonus stacks with any other bonuses to the barbarian\u0027s land speed."
-    }, {
-      "id": "ability:rage",
-      "name": "Rage",
-      "description": "A barbarian can call upon inner reserves of strength and ferocity, granting her additional combat prowess. Starting at 1st level, a barbarian can rage for a number of rounds per day equal to 4 + her Constitution modifier. At each level after 1st, she can rage for 2 additional rounds. Temporary increases to Constitution, such as those gained from rage and spells like bear\u0027s endurance, do not increase the total number of rounds that a barbarian can rage per day. A barbarian can enter rage as a free action. The total number of rounds of rage per day is renewed after resting for 8 hours, although these hours do not need to be consecutive.While in rage, a barbarian gains a +4 morale bonus to her Strength and Constitution, as well as a +2 morale bonus on Will saves. In addition, she takes a –2 penalty to Armor Class. The increase to Constitution grants the barbarian 2 hit points per Hit Dice, but these disappear when the rage ends and are not lost first like temporary hit points. While in rage, a barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration.A barbarian can end her rage as a free action and is fatigued after rage for a number of rounds equal to 2 times the number of rounds spent in the rage. A barbarian cannot enter a new rage while fatigued or exhausted but can otherwise enter rage multiple times during a single encounter or combat. If a barbarian falls unconscious, her rage immediately ends, placing her in peril of death."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 2,
-    "fortSave": 3,
-    "specials": [{
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }, {
-      "id": "ability:uncanny_dodge",
-      "name": "Uncanny Dodge",
-      "description": "At 2nd level, a barbarian gains the ability to react to danger before her senses would normally allow her to do so. She cannot be caught flat-footed, nor does she lose her Dex bonus to AC if the attacker is invisible. She still loses her Dexterity bonus to armor class if immobilized. A barbarian with this ability can still lose her Dexterity bonus to armor class if an opponent successfully uses the feint action against her.If a barbarian already has uncanny dodge from a different class, she automatically gains improved uncanny dodge (see below) instead."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 3,
-    "fortSave": 3,
-    "refSave": 1,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:trap_sense",
-      "name": "Trap Sense",
-      "description": "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to armor class against attacks made by traps. These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack."
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 4,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 5,
-    "fortSave": 4,
-    "refSave": 1,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:improved_uncanny_dodge",
-      "name": "Improved Uncanny Dodge",
-      "description": "At 5th level and higher, a barbarian can no longer be flanked. This defense denies a rogue the ability to sneak attack the barbarian by flanking her, unless the attacker has at least four more rogue levels than the target has barbarian levels.If a character already has uncanny dodge (see above) from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum rogue level required to flank the character."
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 6,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }, {
-      "id": "ability:trap_sense",
-      "name": "Trap Sense",
-      "description": "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to armor class against attacks made by traps. These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 7,
-    "fortSave": 5,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:damage_reduction",
-      "name": "Damage Reduction",
-      "description": "At 7th level, a barbarian gains damage reduction. Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0."
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 8,
-    "fortSave": 6,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 9,
-    "fortSave": 6,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:trap_sense",
-      "name": "Trap Sense",
-      "description": "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to armor class against attacks made by traps. These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack."
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 10,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:damage_reduction",
-      "name": "Damage Reduction",
-      "description": "At 7th level, a barbarian gains damage reduction. Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0."
-    }, {
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 11,
-    "fortSave": 7,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:greater_rage",
-      "name": "Greater Rage",
-      "description": "At 11th level, when a barbarian enters rage, the morale bonus to her Strength and Constitution increases to +6 and the morale bonus on her Will saves increases to +3."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:acrobatics",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 12,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }, {
-      "id": "ability:trap_sense",
-      "name": "Trap Sense",
-      "description": "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to armor class against attacks made by traps. These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:climb",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 13,
-    "fortSave": 8,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:damage_reduction",
-      "name": "Damage Reduction",
-      "description": "At 7th level, a barbarian gains damage reduction. Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 14,
-    "fortSave": 9,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:indomitable_will",
-      "name": "Indomitable Will",
-      "description": "While in rage, a barbarian of 14th level or higher gains a +4 bonus on Will saves to resist enchantment spells. This bonus stacks with all other modifiers, including the morale bonus on Will saves she also receives during her rage."
-    }, {
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:handle_animal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 15,
-    "fortSave": 9,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:trap_sense",
-      "name": "Trap Sense",
-      "description": "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to armor class against attacks made by traps. These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:intimidate",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 16,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:damage_reduction",
-      "name": "Damage Reduction",
-      "description": "At 7th level, a barbarian gains damage reduction. Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0."
-    }, {
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 17,
-    "fortSave": 10,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:tireless_rage",
-      "name": "Tireless Rage",
-      "description": "Starting at 17th level, a barbarian no longer becomes fatigued at the end of her rage."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perception",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 18,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }, {
-      "id": "ability:trap_sense",
-      "name": "Trap Sense",
-      "description": "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to armor class against attacks made by traps. These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:ride",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 19,
-    "fortSave": 11,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:damage_reduction",
-      "name": "Damage Reduction",
-      "description": "At 7th level, a barbarian gains damage reduction. Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:survival",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 20,
-    "fortSave": 12,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:mighty_rage",
-      "name": "Mighty Rage",
-      "description": "At 20th level, when a barbarian enters rage, the morale bonus to her Strength and Constitution increases to +8 and the morale bonus on her Will saves increases to +4."
-    }, {
-      "id": "ability:rage_power",
-      "name": "Rage Powers",
-      "description": "As a barbarian gains levels, she learns to use her rage in new ways. Starting at 2nd level, a barbarian gains a rage power. She gains another rage power for every two levels of barbarian attained after 2nd level. A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first. Unless otherwise noted, a barbarian cannot select an individual power more than once.Any barbarian who meets the powers\u0027 prerequisites can select and use rage powers. Totem rage powers grant powers related to a theme. A barbarian cannot select from more than one group of totem rage powers; for example, a barbarian who selects a beast totem rage power cannot later choose to gain any of the dragon totem rage powers (any rage power with “dragon totem” in its title)."
-    }]
-  }],
-  "skills": ["skill:acrobatics", "skill:climb", "skill:craft", "skill:handle_animal", "skill:intimidate", "skill:knowledge", "skill:perception", "skill:ride", "skill:survival", "skill:swim"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:swim",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:fast_movement#barbarian"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:rage#barbarian"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:uncanny_dodge#barbarian"
+    }
+  }, {
+    "level": 2,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:trap_sense#barbarian"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 4,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:improved_uncanny_dodge#barbarian"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:trap_sense#barbarian"
+    }
+  }, {
+    "level": 6,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:damage_reduction#barbarian"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 8,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:trap_sense#barbarian"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:damage_reduction#barbarian"
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 10,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:greater_rage#barbarian"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:trap_sense#barbarian"
+    }
+  }, {
+    "level": 12,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:damage_reduction#barbarian"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:indomitable_will#barbarian"
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 14,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:trap_sense#barbarian"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 16
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:damage_reduction#barbarian"
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 16,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 17
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:tireless_rage#barbarian"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 18
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:trap_sense#barbarian"
+    }
+  }, {
+    "level": 18,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 19
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:damage_reduction#barbarian"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 20
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:mighty_rage#barbarian"
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:rage_power#barbarian"
+    }
+  }, {
+    "level": 20,
+    "grantChoice": {
+      "choice": {
+        "key": "rage_power",
+        "label": "Rage Power",
+        "Ability": {
+          "abilityIds": ["rage_power:impelling_disarm", "rage_power:clear_mind", "rage_power:feasting_bite", "rage_power:ferocious_trample", "rage_power:spellbreaker", "rage_power:powerful_blow", "rage_power:lesser_cult_totem", "rage_power:energy_resistance", "rage_power:superstition", "rage_power:ferocious_beast", "rage_power:rolling_dodge", "rage_power:armor_ripper", "rage_power:lesser_fiend_totem", "rage_power:primal_scent", "rage_power:bleeding_blow", "rage_power:greater_atavism_totem", "rage_power:penetrating_bite", "rage_power:mighty_swing", "rage_power:lunar_totem", "rage_power:spirit_totem", "rage_power:totemic_mettle", "rage_power:gearbreaker", "rage_power:greater_energy_resistance", "rage_power:guarded_life", "rage_power:lesser_spire_totem", "rage_power:savage_intuition", "rage_power:unexpected_strike", "rage_power:battle_roar", "rage_power:greater_guarded_life", "rage_power:renewed_vitality", "rage_power:ronins_challenge", "rage_power:atavism_totem", "rage_power:raging_climber", "rage_power:lesser_atavism_totem", "rage_power:ice_linnorm_death_curse", "rage_power:chaos_totem", "rage_power:dragon_totem_wings", "rage_power:sunder_enchantment", "rage_power:improved_totemic_alignment", "rage_power:lesser_daemon_totem", "rage_power:fjord_linnorm_death_curse", "rage_power:cairn_linnorm_death_curse", "rage_power:dragon_totem", "rage_power:crag_linnorm_death_curse", "rage_power:fiend_totem", "rage_power:overbearing_onslaught", "rage_power:eater_of_magic", "rage_power:reckless_abandon", "rage_power:hive_totem", "rage_power:savage_jaw", "rage_power:greater_hurling", "rage_power:strength_surge", "rage_power:ancestor_totem", "rage_power:hive_totem_resilience", "rage_power:water_sense", "rage_power:disemboweling_tusks", "rage_power:hive_totem_toxicity", "rage_power:raging_flier", "rage_power:bestial_leaper", "rage_power:greater_elemental_rage", "rage_power:good_for_what_ails_you", "rage_power:greater_lunar_totem", "rage_power:feast_of_blood", "rage_power:raging_swimmer", "rage_power:daemon_totem", "rage_power:cult_totem", "rage_power:bestial_swimmer", "rage_power:greater_daemon_totem", "rage_power:dragon_totem_resilience", "rage_power:animal_fury", "rage_power:bestial_climber", "rage_power:internal_fortitude", "rage_power:greater_spire_totem", "rage_power:shadow_totem", "rage_power:night_vision", "rage_power:greater_fury_companion", "rage_power:overbearing_advance", "rage_power:flesh_wound", "rage_power:fueled_by_vengeance", "rage_power:come_and_get_me", "rage_power:beast_totem", "rage_power:lethal_accuracy", "rage_power:no_escape", "rage_power:spell_sunder", "rage_power:renewed_life", "rage_power:world_serpent_totem_unity", "rage_power:witch_hunter", "rage_power:ultimate_clarity", "rage_power:lesser_spirit_totem", "rage_power:greater_animal_fury", "rage_power:spire_totem", "rage_power:fierce_fortitude", "rage_power:greater_ronins_resolve", "rage_power:lesser_fury_companion", "rage_power:greater_celestial_totem", "rage_power:knockback", "rage_power:boars_charge", "rage_power:greater_beast_totem", "rage_power:surprise_accuracy", "rage_power:fury_companion", "rage_power:hurling", "rage_power:liquid_courage", "rage_power:scent", "rage_power:lesser_death_totem", "rage_power:inspire_ferocity", "rage_power:lesser_celestial_totem", "rage_power:greater_ground_breaker", "rage_power:taiga_linnorm_death_curse", "rage_power:sharpened_accuracy", "rage_power:greater_ferocious_mount", "rage_power:disruptive", "rage_power:raging_leaper", "rage_power:greater_brawler", "rage_power:greater_ferocious_beast", "rage_power:lesser_lunar_totem", "rage_power:greater_death_totem", "rage_power:greater_shadow_totem", "rage_power:tor_linnorm_death_curse", "rage_power:greater_cult_totem", "rage_power:energy_eruption", "rage_power:reflexive_dodge", "rage_power:bloody_bite", "rage_power:fearless_rage", "rage_power:ghost_rager", "rage_power:roaring_drunk", "rage_power:lesser_elemental_rage", "rage_power:elemental_rage", "rage_power:world_serpent_spirit", "rage_power:greater_ancestor_totem", "rage_power:breathtaker", "rage_power:increased_damage_reduction", "rage_power:intimidating_glare", "rage_power:swift_foot", "rage_power:terrifying_howl", "rage_power:greater_moon_totem", "rage_power:bloody_fist", "rage_power:lesser_moon_totem", "rage_power:tarn_linnorm_death_curse", "rage_power:moment_of_clarity", "rage_power:bloodcaster", "rage_power:death_totem", "rage_power:body_bludgeon", "rage_power:guarded_stance", "rage_power:deadly_accuracy", "rage_power:greater_ferocious_trample", "rage_power:smasher", "rage_power:roused_anger", "rage_power:savage_dirty_trick", "rage_power:regenerative_vigor", "rage_power:lesser_beast_totem", "rage_power:sprint", "rage_power:knockdown", "rage_power:perfect_clarity", "rage_power:staggering_drunk", "rage_power:deathless_frenzy", "rage_power:boasting_taunt", "rage_power:renewed_vigor", "rage_power:moon_totem", "rage_power:brawler", "rage_power:world_serpent_totem", "rage_power:greater_chaos_totem", "rage_power:ferocious_mount", "rage_power:quick_reflexes", "rage_power:energy_absorption", "rage_power:low_light_vision", "rage_power:lesser_shadow_totem", "rage_power:crippling_blow", "rage_power:lesser_chaos_totem", "rage_power:ground_breaker", "rage_power:lesser_hurling", "rage_power:spirit_steed", "rage_power:greater_spirit_totem", "rage_power:celestial_totem", "rage_power:ronins_resolve", "rage_power:lesser_ancestor_totem", "rage_power:fight_response", "rage_power:hurling_charge", "rage_power:auspicious_mark", "rage_power:greater_fiend_totem", "rage_power:raging_grappler", "rage_power:raging_skald"]
+        }
+      }
+    }
+  }]
 }

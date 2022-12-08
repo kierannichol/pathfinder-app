@@ -3,252 +3,841 @@
   "name": "Bard",
   "category": "CORE",
   "shortDescription": "Bards capably confuse and confound their foes while inspiring their allies to ever-greater daring. While accomplished with both weapons and magic, the true strength of bards lies outside melee, where they can support their companions and undermine their foes without fear of interruptions to their performances.",
-  "levels": [{
-    "levelNumber": 1,
-    "refSave": 2,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:bardic_knowledge",
-      "name": "Bardic Knowledge",
-      "description": "A bard adds half his class level (minimum 1) to all Knowledge skill checks and may make all Knowledge skill checks untrained."
-    }, {
-      "id": "ability:bardic_performance",
-      "name": "Bardic Performance",
-      "description": "A bard is trained to use the Perform skill to create magical effects on those around him, including himself if desired. He can use this ability for a number of rounds per day equal to 4 + his Charisma modifier. At each level after 1st a bard can use bardic performance for 2 additional rounds per day. Each round, the bard can produce any one of the types of bardic performance that he has mastered, as indicated by his level.Starting a bardic performance is a standard action, but it can be maintained each round as a free action. Changing a bardic performance from one effect to another requires the bard to stop the previous performance and start a new one as a standard action. A bardic performance cannot be disrupted, but it ends immediately if the bard is killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action to maintain it each round. A bard cannot have more than one bardic performance in effect at one time.At 7th level, a bard can start a bardic performance as a move action instead of a standard action. At 13th level, a bard can start a bardic performance as a swift action.Each bardic performance has audible components, visual components, or both.If a bardic performance has audible components, the targets must be able to hear the bard for the performance to have any effect, and many such performances are language dependent (as noted in the description). A deaf bard has a 20% chance to fail when attempting to use a bardic performance with an audible component. If he fails this check, the attempt still counts against his daily limit. Deaf creatures are immune to bardic performances with audible components.If a bardic performance has a visual component, the targets must have line of sight to the bard for the performance to have any effect. A blind bard has a 50% chance to fail when attempting to use a bardic performance with a visual component. If he fails this check, the attempt still counts against his daily limit. Blind creatures are immune to bardic performances with visual components.List of Bardic Performances:"
-    }, {
-      "id": "ability:cantrips",
-      "name": "Cantrips",
-      "description": "Bard\u0027s learn a number of cantrips, or 0-level spells, as noted on Table: Bard Spells Known under “Spells Known.” These spells are cast like any other spell, but they do not consume any slots and may be used again."
-    }, {
-      "id": "ability:countersong",
-      "name": "Countersong"
-    }, {
-      "id": "ability:distraction",
-      "name": "Distraction"
-    }, {
-      "id": "ability:fascinate",
-      "name": "Fascinate"
-    }, {
-      "id": "ability:inspire_courage",
-      "name": "Inspire Courage"
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 1,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:versatile_performance",
-      "name": "Versatile Performance",
-      "description": "At 2nd level, a bard can choose one type of Perform skill. He can use his bonus in that skill in place of his bonus in associated skills. When substituting in this way, the bard uses his total Perform skill bonus, including class skill bonus, in place of its associated skill\u0027s bonus, whether or not he has ranks in that skill or if it is a class skill. At 6th level, and every 4 levels thereafter, the bard can select an additional type of Perform to substitute.The types of Perform and their associated skills are: Act (Bluff, Disguise), Comedy (Bluff, Intimidate), Dance (Acrobatics, Fly), Keyboard Instruments (Diplomacy, Intimidate), Oratory (Diplomacy, Sense Motive), Percussion (Handle Animal, Intimidate), Sing (Bluff, Sense Motive), String (Bluff, Diplomacy), and Wind (Diplomacy, Handle Animal)."
-    }, {
-      "id": "ability:well_versed",
-      "name": "Well-Versed",
-      "description": "At 2nd level, the bard becomes resistant to the bardic performance of others, and to sonic effects in general. The bard gains a +4 bonus on saving throws made against bardic performance, sonic, and language-dependent effects."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 2,
-    "fortSave": 1,
-    "refSave": 3,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:inspire_competence",
-      "name": "Inspire Competence"
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 3,
-    "fortSave": 1,
-    "refSave": 4,
-    "willSave": 4
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 3,
-    "fortSave": 1,
-    "refSave": 4,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:inspire_courage",
-      "name": "Inspire Courage"
-    }, {
-      "id": "ability:lore_master",
-      "name": "Lore Master",
-      "description": "At 5th level, the bard becomes a master of lore and can take 10 on any Knowledge skill check that he has ranks in. A bard can choose not to take 10 and can instead roll normally. In addition, once per day, the bard can take 20 on any Knowledge skill check as a standard action. He can use this ability one additional time per day for every six levels he possesses beyond 5th, to a maximum of three times per day at 17th level."
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 4,
-    "fortSave": 2,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:suggestion",
-      "name": "Suggestion"
-    }, {
-      "id": "ability:versatile_performance",
-      "name": "Versatile Performance",
-      "description": "At 2nd level, a bard can choose one type of Perform skill. He can use his bonus in that skill in place of his bonus in associated skills. When substituting in this way, the bard uses his total Perform skill bonus, including class skill bonus, in place of its associated skill\u0027s bonus, whether or not he has ranks in that skill or if it is a class skill. At 6th level, and every 4 levels thereafter, the bard can select an additional type of Perform to substitute.The types of Perform and their associated skills are: Act (Bluff, Disguise), Comedy (Bluff, Intimidate), Dance (Acrobatics, Fly), Keyboard Instruments (Diplomacy, Intimidate), Oratory (Diplomacy, Sense Motive), Percussion (Handle Animal, Intimidate), Sing (Bluff, Sense Motive), String (Bluff, Diplomacy), and Wind (Diplomacy, Handle Animal)."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 5,
-    "fortSave": 2,
-    "refSave": 5,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:inspire_competence",
-      "name": "Inspire Competence"
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 6,
-    "fortSave": 2,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:dirge_of_doom",
-      "name": "Dirge of Doom"
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 6,
-    "fortSave": 3,
-    "refSave": 6,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:inspire_greatness",
-      "name": "Inspire Greatness"
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 7,
-    "fortSave": 3,
-    "refSave": 7,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:jack_of_all_trades",
-      "name": "Jack of All Trades",
-      "description": "At 10th level, the bard can use any skill, even if the skill normally requires him to be trained. At 16th level, the bard considers all skills to be class skills. At 19th level, the bard can take 10 on any skill check, even if it is not normally allowed."
-    }, {
-      "id": "ability:versatile_performance",
-      "name": "Versatile Performance",
-      "description": "At 2nd level, a bard can choose one type of Perform skill. He can use his bonus in that skill in place of his bonus in associated skills. When substituting in this way, the bard uses his total Perform skill bonus, including class skill bonus, in place of its associated skill\u0027s bonus, whether or not he has ranks in that skill or if it is a class skill. At 6th level, and every 4 levels thereafter, the bard can select an additional type of Perform to substitute.The types of Perform and their associated skills are: Act (Bluff, Disguise), Comedy (Bluff, Intimidate), Dance (Acrobatics, Fly), Keyboard Instruments (Diplomacy, Intimidate), Oratory (Diplomacy, Sense Motive), Percussion (Handle Animal, Intimidate), Sing (Bluff, Sense Motive), String (Bluff, Diplomacy), and Wind (Diplomacy, Handle Animal)."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 8,
-    "fortSave": 3,
-    "refSave": 7,
-    "willSave": 7,
-    "specials": [{
-      "id": "ability:inspire_competence",
-      "name": "Inspire Competence"
-    }, {
-      "id": "ability:inspire_courage",
-      "name": "Inspire Courage"
-    }, {
-      "id": "ability:lore_master",
-      "name": "Lore Master",
-      "description": "At 5th level, the bard becomes a master of lore and can take 10 on any Knowledge skill check that he has ranks in. A bard can choose not to take 10 and can instead roll normally. In addition, once per day, the bard can take 20 on any Knowledge skill check as a standard action. He can use this ability one additional time per day for every six levels he possesses beyond 5th, to a maximum of three times per day at 17th level."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:acrobatics",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 9,
-    "fortSave": 4,
-    "refSave": 8,
-    "willSave": 8,
-    "specials": [{
-      "id": "ability:soothing_performance",
-      "name": "Soothing Performance"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:appraise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 9,
-    "fortSave": 4,
-    "refSave": 8,
-    "willSave": 8
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:bluff",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 10,
-    "fortSave": 4,
-    "refSave": 9,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:frightening_tune",
-      "name": "Frightening Tune"
-    }, {
-      "id": "ability:versatile_performance",
-      "name": "Versatile Performance",
-      "description": "At 2nd level, a bard can choose one type of Perform skill. He can use his bonus in that skill in place of his bonus in associated skills. When substituting in this way, the bard uses his total Perform skill bonus, including class skill bonus, in place of its associated skill\u0027s bonus, whether or not he has ranks in that skill or if it is a class skill. At 6th level, and every 4 levels thereafter, the bard can select an additional type of Perform to substitute.The types of Perform and their associated skills are: Act (Bluff, Disguise), Comedy (Bluff, Intimidate), Dance (Acrobatics, Fly), Keyboard Instruments (Diplomacy, Intimidate), Oratory (Diplomacy, Sense Motive), Percussion (Handle Animal, Intimidate), Sing (Bluff, Sense Motive), String (Bluff, Diplomacy), and Wind (Diplomacy, Handle Animal)."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:climb",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 11,
-    "fortSave": 5,
-    "refSave": 9,
-    "willSave": 9,
-    "specials": [{
-      "id": "ability:inspire_competence",
-      "name": "Inspire Competence"
-    }, {
-      "id": "ability:inspire_heroics",
-      "name": "Inspire Heroics"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 12,
-    "fortSave": 5,
-    "refSave": 10,
-    "willSave": 10
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:diplomacy",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 12,
-    "fortSave": 5,
-    "refSave": 10,
-    "willSave": 10,
-    "specials": [{
-      "id": "ability:inspire_courage",
-      "name": "Inspire Courage"
-    }, {
-      "id": "ability:lore_master",
-      "name": "Lore Master",
-      "description": "At 5th level, the bard becomes a master of lore and can take 10 on any Knowledge skill check that he has ranks in. A bard can choose not to take 10 and can instead roll normally. In addition, once per day, the bard can take 20 on any Knowledge skill check as a standard action. He can use this ability one additional time per day for every six levels he possesses beyond 5th, to a maximum of three times per day at 17th level."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:disguise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 13,
-    "fortSave": 6,
-    "refSave": 11,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:mass_suggestion",
-      "name": "Mass Suggestion"
-    }, {
-      "id": "ability:versatile_performance",
-      "name": "Versatile Performance",
-      "description": "At 2nd level, a bard can choose one type of Perform skill. He can use his bonus in that skill in place of his bonus in associated skills. When substituting in this way, the bard uses his total Perform skill bonus, including class skill bonus, in place of its associated skill\u0027s bonus, whether or not he has ranks in that skill or if it is a class skill. At 6th level, and every 4 levels thereafter, the bard can select an additional type of Perform to substitute.The types of Perform and their associated skills are: Act (Bluff, Disguise), Comedy (Bluff, Intimidate), Dance (Acrobatics, Fly), Keyboard Instruments (Diplomacy, Intimidate), Oratory (Diplomacy, Sense Motive), Percussion (Handle Animal, Intimidate), Sing (Bluff, Sense Motive), String (Bluff, Diplomacy), and Wind (Diplomacy, Handle Animal)."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:escape_artist",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 14,
-    "fortSave": 6,
-    "refSave": 11,
-    "willSave": 11,
-    "specials": [{
-      "id": "ability:inspire_competence",
-      "name": "Inspire Competence"
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:intimidate",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 15,
-    "fortSave": 6,
-    "refSave": 12,
-    "willSave": 12,
-    "specials": [{
-      "id": "ability:deadly_performance",
-      "name": "Deadly Performance"
-    }]
-  }],
-  "skills": ["skill:acrobatics", "skill:appraise", "skill:bluff", "skill:climb", "skill:craft", "skill:diplomacy", "skill:disguise", "skill:escape_artist", "skill:intimidate", "skill:knowledge", "skill:linguistics", "skill:perception", "skill:perform", "skill:profession", "skill:sense_motive", "skill:sleight_of_hand", "skill:spellcraft", "skill:stealth", "skill:use_magic_device"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:linguistics",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perception",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perform",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sense_motive",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sleight_of_hand",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:spellcraft",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:stealth",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:use_magic_device",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:bardic_knowledge#bard"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:bardic_performance#bard"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:cantrips#bard"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:countersong#bard"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:distraction#bard"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:fascinate#bard"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:inspire_courage#bard"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:versatile_performance#bard"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:well_versed#bard"
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:inspire_competence#bard"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:inspire_courage#bard"
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:lore_master#bard"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:suggestion#bard"
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:versatile_performance#bard"
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:inspire_competence#bard"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:dirge_of_doom#bard"
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:inspire_greatness#bard"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:jack_of_all_trades#bard"
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:versatile_performance#bard"
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:inspire_competence#bard"
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:inspire_courage#bard"
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:lore_master#bard"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:soothing_performance#bard"
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 8
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:frightening_tune#bard"
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:versatile_performance#bard"
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:inspire_competence#bard"
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:inspire_heroics#bard"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:inspire_courage#bard"
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:lore_master#bard"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:mass_suggestion#bard"
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:versatile_performance#bard"
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:inspire_competence#bard"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:deadly_performance#bard"
+    }
+  }]
 }

@@ -1,0 +1,10 @@
+{
+  "id": "feat:disengaging_shot",
+  "name": "Disengaging Shot",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "You make one last attack before beating a hasty retreat.",
+  "prerequisites": "Int 13, Combat Expertise, Disengaging Feint, Dodge, Improved Feint, Mobility.",
+  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:disengaging_feint AND @feat:dodge AND @feat:improved_feint AND @feat:mobility",
+  "benefit": "Whenever you use Disengaging Feint or Disengaging Flourish, you can make a single melee attack against one opponent you succeeded at feinting against. That opponent is denied his Dexterity bonus to AC against this attack.",
+  "source": "PZO1118"
+}

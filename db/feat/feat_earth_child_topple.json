@@ -1,0 +1,11 @@
+{
+  "id": "feat:earth_child_topple",
+  "name": "Earth Child Topple",
+  "types": ["FEAT_TYPE_COMBAT"],
+  "description": "Your mastery of balance and momentum allows you to bring down giants with your bare hands.",
+  "prerequisites": "Wis 13, dwarf or gnome, defensive training racial trait, Earth Child Style, Improved Trip, Improved Unarmed Strike, Acrobatics 6 ranks.",
+  "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND (@race:dwarf OR @race:gnome) AND @ability:defensive_training AND @feat:earth_child_style AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @skill:acrobatics \u003e\u003d 6",
+  "benefit": "You can trip a creature of the giant subtype of up to Huge size. While using Earth Child Style, you add your Wisdom bonus on combat maneuver checks made to trip a creature of the giant subtype, as well as on attack rolls to confirm a critical hit against such a creature.",
+  "normal": "You can trip only those opponents that are one size category larger than you.",
+  "source": "PZO1118"
+}

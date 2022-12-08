@@ -3,274 +3,904 @@
   "name": "Alchemist",
   "category": "BASE",
   "shortDescription": "The alchemist’s reputation is not softened by his exuberance (some would say dangerous recklessness) in perfecting his magical extracts and potion-like creations, infusing these substances with magic siphoned from his aura and using his own body as experimental stock. Nor is it mollified by the alchemist’s almost gleeful passion for building explosive bombs and discovering strange new poisons and methods for their use. These traits, while making him a liability and risk for most civilized organizations and institutions of higher learning, seem to fit quite well with most adventuring groups.",
-  "levels": [{
-    "levelNumber": 1,
-    "fortSave": 2,
-    "refSave": 2,
-    "specials": [{
-      "id": "ability:alchemy",
-      "name": "Alchemy"
-    }, {
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }, {
-      "id": "ability:brew_potion",
-      "name": "Brew Potion",
-      "description": "At 1st level, alchemists receive Brew Potion as a bonus feat. An alchemist can brew potions of any formulae he knows (up to 3rd level), using his alchemist level as his caster level. The spell must be one that can be made into a potion. The alchemist does not need to meet the prerequisites for this feat."
-    }, {
-      "id": "ability:mutagen",
-      "name": "Mutagen",
-      "description": "At 1st level, an alchemist discovers how to create a mutagen that he can imbibe in order to heighten his physical prowess at the cost of his personality. It takes 1 hour to brew a dose of mutagen, and once brewed, it remains potent until used. An alchemist can only maintain one dose of mutagen at a time--if he brews a second dose, any existing mutagen becomes inert. As with an extract or bomb, a mutagen that is not in an alchemist\u0027s possession becomes inert until an alchemist picks it up again.When an alchemist brews a mutagen, he selects one physical ability score--either Strength, Dexterity, or Constitution. It\u0027s a standard action to drink a mutagen. Upon being imbibed, the mutagen causes the alchemist to grow bulkier and more bestial, granting him a +2 natural armor bonus and a +4 alchemical bonus to the selected ability score for 10 minutes per alchemist level. In addition, while the mutagen is in effect, the alchemist takes a –2 penalty to one of his mental ability scores. If the mutagen enhances his Strength, it applies a penalty to his Intelligence. If it enhances his Dexterity, it applies a penalty to his Wisdom. If it enhances his Constitution, it applies a penalty to his Charisma.A non-alchemist who drinks a mutagen must make a Fortitude save (DC 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier) or become nauseated for 1 hour--a non-alchemist can never gain the benefit of a mutagen, but an alchemist can gain the effects of another alchemist\u0027s mutagen if he drinks it. (Although if the other alchemist creates a different mutagen, the effects of the “stolen” mutagen immediately cease.) The effects of a mutagen do not stack. Whenever an alchemist drinks a mutagen, the effects of any previous mutagen immediately end."
-    }, {
-      "id": "ability:throw_anything",
-      "name": "Throw Anything",
-      "description": "All alchemists gain the Throw Anything feat as a bonus feat at 1st level. An alchemist adds his Intelligence modifier to damage done with splash weapons, including the splash damage if any. This bonus damage is already included in the bomb class feature."
-    }]
+  "effects": [{
+    "level": 1,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 2,
-    "bab": 1,
-    "fortSave": 3,
-    "refSave": 3,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }, {
-      "id": "ability:poison_resistance",
-      "name": "Poison Resistance",
-      "description": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison."
-    }, {
-      "id": "ability:poison_use",
-      "name": "Poison Use",
-      "description": "Alchemists are trained in the use of poison and starting at 2nd level, cannot accidentally poison themselves when applying poison to a weapon."
-    }]
+    "level": 3,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 3,
-    "bab": 2,
-    "fortSave": 3,
-    "refSave": 3,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }, {
-      "id": "ability:swift_alchemy",
-      "name": "Swift Alchemy",
-      "description": "At 3rd level, an alchemist can create alchemical items with astounding speed. It takes an alchemist half the normal amount of time to create alchemical items, and he can apply poison to a weapon as a move action."
-    }]
+    "level": 5,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 4,
-    "bab": 3,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }]
+    "level": 7,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 5,
-    "bab": 3,
-    "fortSave": 4,
-    "refSave": 4,
-    "willSave": 1,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }, {
-      "id": "ability:poison_resistance",
-      "name": "Poison Resistance",
-      "description": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison."
-    }]
+    "level": 9,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 6,
-    "bab": 4,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }, {
-      "id": "ability:swift_poisoning",
-      "name": "Swift Poisoning",
-      "description": "At 6th level, an alchemist can apply a dose of poison to a weapon as a swift action."
-    }]
+    "level": 11,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 7,
-    "bab": 5,
-    "fortSave": 5,
-    "refSave": 5,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 13,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 8,
-    "bab": 6,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 2,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }, {
-      "id": "ability:poison_resistance",
-      "name": "Poison Resistance",
-      "description": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison."
-    }]
+    "level": 15,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 9,
-    "bab": 6,
-    "fortSave": 6,
-    "refSave": 6,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 17,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 10,
-    "bab": 7,
-    "fortSave": 7,
-    "refSave": 7,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }, {
-      "id": "ability:poison_immunity",
-      "name": "Poison Resistance",
-      "description": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison."
-    }]
+    "level": 19,
+    "grantChoice": {
+      "choice": {
+        "Feat": {
+        }
+      }
+    }
   }, {
-    "levelNumber": 11,
-    "bab": 8,
-    "fortSave": 7,
-    "refSave": 7,
-    "willSave": 3,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:appraise",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 12,
-    "bab": 9,
-    "fortSave": 8,
-    "refSave": 8,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:craft",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 13,
-    "bab": 9,
-    "fortSave": 8,
-    "refSave": 8,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:disable_device",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 14,
-    "bab": 10,
-    "fortSave": 9,
-    "refSave": 9,
-    "willSave": 4,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }, {
-      "id": "ability:persistent_mutagen",
-      "name": "Persistent Mutagen",
-      "description": "At 14th level, the effects of a mutagen last for 1 hour per level."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:fly",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 15,
-    "bab": 11,
-    "fortSave": 9,
-    "refSave": 9,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:heal",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 16,
-    "bab": 12,
-    "fortSave": 10,
-    "refSave": 10,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 17,
-    "bab": 12,
-    "fortSave": 10,
-    "refSave": 10,
-    "willSave": 5,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:knowledge",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 18,
-    "bab": 13,
-    "fortSave": 11,
-    "refSave": 11,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:discovery",
-      "name": "Discovery",
-      "description": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier."
-    }, {
-      "id": "ability:instant_alchemy",
-      "name": "Instant Alchemy",
-      "description": "At 18th level, an alchemist can create alchemical items with almost supernatural speed. He can create any alchemical item as a full-round action if he succeeds at the Craft (alchemy) check and has the appropriate resources at hand to fund the creation. He can apply poison to a weapon as an immediate action."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:perception",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 19,
-    "bab": 14,
-    "fortSave": 11,
-    "refSave": 11,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:bomb",
-      "name": "Bomb",
-      "description": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else."
-    }]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:profession",
+      "delta": 1
+    }
   }, {
-    "levelNumber": 20,
-    "bab": 15,
-    "fortSave": 12,
-    "refSave": 12,
-    "willSave": 6,
-    "specials": [{
-      "id": "ability:grand_discovery",
-      "name": "Grand Discovery",
-      "description": "At 20th level, the alchemist makes a grand discovery. He immediately learns two normal discoveries, but also learns a third discovery chosen from the linked list below, representing a truly astounding alchemical breakthrough of significant import. For many alchemists, the promise of one of these grand discoveries is the primary goal of their experiments and hard work."
-    }]
-  }],
-  "skills": ["skill:appraise", "skill:craft", "skill:disable_device", "skill:fly", "skill:heal", "skill:knowledge", "skill:knowledge", "skill:perception", "skill:profession", "skill:sleight_of_hand", "skill:spellcraft", "skill:survival", "skill:use_magic_device"]
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:sleight_of_hand",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:spellcraft",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:survival",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "modifyFeature": {
+      "featureId": "skill:use_magic_device",
+      "delta": 1
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "bab"
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 2
+    }
+  }, {
+    "level": 1,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:alchemy#alchemist"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:brew_potion#alchemist"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:mutagen#alchemist"
+    }
+  }, {
+    "level": 1,
+    "grantAbility": {
+      "abilityId": "ability:throw_anything#alchemist"
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 1
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 2,
+    "setFeature": {
+      "featureId": "will:base"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:poison_resistance#alchemist"
+    }
+  }, {
+    "level": 2,
+    "grantAbility": {
+      "abilityId": "ability:poison_use#alchemist"
+    }
+  }, {
+    "level": 2,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 2
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 3
+    }
+  }, {
+    "level": 3,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 3,
+    "grantAbility": {
+      "abilityId": "ability:swift_alchemy#alchemist"
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 4,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 4,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 4,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 3
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 4
+    }
+  }, {
+    "level": 5,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 1
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 5,
+    "grantAbility": {
+      "abilityId": "ability:poison_resistance#alchemist"
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 4
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 6,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 6,
+    "grantAbility": {
+      "abilityId": "ability:swift_poisoning#alchemist"
+    }
+  }, {
+    "level": 6,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 5
+    }
+  }, {
+    "level": 7,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 7,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 8,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 2
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 8,
+    "grantAbility": {
+      "abilityId": "ability:poison_resistance#alchemist"
+    }
+  }, {
+    "level": 8,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 6
+    }
+  }, {
+    "level": 9,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 9,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 10,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 10,
+    "grantAbility": {
+      "abilityId": "ability:poison_immunity#alchemist"
+    }
+  }, {
+    "level": 10,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 8
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 7
+    }
+  }, {
+    "level": 11,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 3
+    }
+  }, {
+    "level": 11,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 12,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 12,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 12,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 9
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 8
+    }
+  }, {
+    "level": 13,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 13,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 10
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 14,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 4
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 14,
+    "grantAbility": {
+      "abilityId": "ability:persistent_mutagen#alchemist"
+    }
+  }, {
+    "level": 14,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 11
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 9
+    }
+  }, {
+    "level": 15,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 15,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 16,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 16,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 16,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 12
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 10
+    }
+  }, {
+    "level": 17,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 5
+    }
+  }, {
+    "level": 17,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 13
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 18,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:discovery#alchemist"
+    }
+  }, {
+    "level": 18,
+    "grantAbility": {
+      "abilityId": "ability:instant_alchemy#alchemist"
+    }
+  }, {
+    "level": 18,
+    "grantChoice": {
+      "choice": {
+        "key": "discovery",
+        "label": "Discovery",
+        "Ability": {
+          "abilityIds": ["discovery:acid_bomb", "discovery:alchemical_simulacrum", "discovery:alchemical_zombie", "discovery:anarchic_bomb", "discovery:axiomatic_bomb", "discovery:bitter_pill", "discovery:blackstar_bomb", "discovery:blinding_bomb", "discovery:boneshard_bomb", "discovery:bottled_ooze", "discovery:breath_weapon_bomb", "discovery:celestial_poisons", "discovery:chameleon", "discovery:change_alignment", "discovery:cognatogen", "discovery:collective_memory", "discovery:combine_extracts", "discovery:concentrate_poison", "discovery:concussive_bomb", "discovery:confusion_bomb", "discovery:constructive_dyes", "discovery:constructive_dyes_greater", "discovery:cursed_bomb", "discovery:cytillesh_bomb", "discovery:darkness_bomb", "discovery:deadly_excretions", "discovery:defoliant_bomb", "discovery:delayed_bomb", "discovery:demolition_charge", "discovery:dilution", "discovery:directed_bomb", "discovery:dispelling_bomb", "discovery:divine_inks", "discovery:divine_inks_greater", "discovery:divine_inks_improved", "discovery:doppelganger_simulacrum", "discovery:ectoplasmic_bomb", "discovery:elemental_mutagen", "discovery:elixir_of_life", "discovery:enhance_potion", "discovery:eternal_potion", "discovery:explosive_bomb", "discovery:explosive_calligraphy", "discovery:explosive_missile", "discovery:extend_potion", "discovery:fast_bombs", "discovery:feral_mutagen", "discovery:fire_brand", "discovery:flesh_eating_bomb", "discovery:force_bomb", "discovery:frost_bomb", "discovery:glassfoot_bomb", "discovery:glimmering_infusion", "discovery:grand_cognatogen", "discovery:grand_inspiring_cognatogen", "discovery:grand_mutagen", "discovery:grease_bomb", "discovery:greater_plague_bomb", "discovery:greater_alchemical_simulacrum", "discovery:greater_cognatogen", "discovery:greater_inspiring_cognatogen", "discovery:greater_mutagen", "discovery:grounding_goo", "discovery:healing_bomb", "discovery:healing_touch", "discovery:hellfire_bomb", "discovery:holy_bombs", "discovery:immolation_bomb", "discovery:inferno_bomb", "discovery:infuse_mutagen", "discovery:infusion", "discovery:inspired_bomb", "discovery:inspiring_cognatogen", "discovery:intuitive_understanding", "discovery:lingering_plague", "discovery:lingering_spirit", "discovery:living_pigment", "discovery:madness_bomb", "discovery:malignant_poison", "discovery:material_mastery", "discovery:mummification", "discovery:mutagen", "discovery:nauseating_flesh", "discovery:neutralizing_bomb", "discovery:ooze_blight", "discovery:parasitic_twin", "discovery:phantom_limb", "discovery:pheromones", "discovery:pickled_quasit", "discovery:plague_bomb", "discovery:plague_vector", "discovery:poison_bomb", "discovery:poison_conversion", "discovery:precise_bombs", "discovery:preserve_organs", "discovery:profane_bomb", "discovery:promethean_disciple", "discovery:psychoactive_bomb", "discovery:psychokinetic_tincture", "discovery:purging_mutagen", "discovery:rag_doll_mutagen", "discovery:ranged_baptism", "discovery:remedy_extract", "discovery:rocket_bomb", "discovery:sandstone_solution", "discovery:scrap_bomb", "discovery:shock_bomb", "discovery:siege_bomb", "discovery:smoke_bomb", "discovery:solid_ground", "discovery:spell_knowledge", "discovery:splitting_mutagen", "discovery:spontaneous_healing", "discovery:sticky_bomb", "discovery:sticky_poison", "discovery:stink_bomb", "discovery:strafe_bomb", "discovery:sunlight_bomb", "discovery:syringe_stirge", "discovery:tainted_infusion", "discovery:tanglefoot_bomb", "discovery:tentacle", "discovery:thorny_bomb", "discovery:tumor_familiar", "discovery:underwater_demolition", "discovery:vestigial_arm", "discovery:void_bomb", "discovery:volumizer", "discovery:wings", "discovery:awakened_intellect", "discovery:change_alignment_greater", "discovery:eternal_youth", "discovery:fast_healing", "discovery:philosophers_stone", "discovery:poison_touch", "discovery:true_mutagen", "discovery:alter_simulacrum", "discovery:blending_body", "discovery:bottled_assistant", "discovery:darkness_bomb", "discovery:extinguishing_touch", "discovery:keen_sight", "discovery:perfect_sight", "discovery:shadowmeld_compound", "discovery:terror_bomb", "discovery:umbral_bomb", "discovery:compounding_formulary", "discovery:effectual_invisibility", "discovery:invisible_bomb", "discovery:tenacious_invisibility", "discovery:transparency_mutagen", "discovery:true_invisibility", "discovery:expelling_bomb", "discovery:occult_mutagen"]
+        }
+      }
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 14
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 11
+    }
+  }, {
+    "level": 19,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 19,
+    "grantAbility": {
+      "abilityId": "ability:bomb#alchemist"
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "bab",
+      "value": 15
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "fort:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "reflex:base",
+      "value": 12
+    }
+  }, {
+    "level": 20,
+    "setFeature": {
+      "featureId": "will:base",
+      "value": 6
+    }
+  }, {
+    "level": 20,
+    "grantAbility": {
+      "abilityId": "ability:grand_discovery#alchemist"
+    }
+  }]
 }
