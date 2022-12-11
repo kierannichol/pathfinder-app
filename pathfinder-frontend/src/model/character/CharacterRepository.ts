@@ -48,7 +48,7 @@ class CharacterRepository {
         new SkillPointChoiceProcessor(),
         AbilityChoice.processor(ChoiceType.ABILITY),
         SpellChoice.processor(ChoiceType.WITCH_HEX),
-        ModifierChoice.processor(ChoiceType.SORCERER_BLOODLINE, pathfinderDatabase.sorcererBloodlineDataSource),
+        ModifierChoice.processor(ChoiceType.MODIFIER, pathfinderDatabase.modifierDatabase)
     ]);
   }
 

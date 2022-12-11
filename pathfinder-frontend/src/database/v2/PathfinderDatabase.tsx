@@ -137,6 +137,14 @@ export class PathfinderDatabase {
     }
     return name;
   }
+
+  public modifierDatabase(databaseId: string): BaseModifierDatabase {
+    switch (databaseId) {
+      case "sorcerer_bloodline":
+        return this.sorcererBloodlineDataSource;
+    }
+    return BaseModifierDatabase.empty("");
+  }
 }
 
 let globalPathfinderDatabase: Promise<PathfinderDatabase> | undefined = undefined;

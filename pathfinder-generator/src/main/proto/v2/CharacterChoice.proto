@@ -11,24 +11,24 @@ message CharacterChoiceDbo {
   }
 
   message FeatChoice {
-    repeated string featIds = 1;
+    repeated string feat_ids = 1;
   }
 
   message AbilityChoice {
-    repeated string abilityIds = 1;
+    repeated string ability_ids = 1;
   }
 
   message ModifierChoice {
-    repeated string modifierIds = 1;
+    string database_id = 1;
   }
 
   string key = 1;
   string label = 2;
 
   oneof effect {
-    AbilityScoreIncreaseChoice AbilityScoreIncrease = 100;
-    FeatChoice Feat = 101;
-    AbilityChoice Ability = 102;
-    ModifierChoice Modifier = 103;
+    AbilityScoreIncreaseChoice abilityScoreIncrease = 100;
+    FeatChoice feat = 101;
+    AbilityChoice ability = 102;
+    ModifierChoice modifier = 103;
   }
 }

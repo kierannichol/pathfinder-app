@@ -8,15 +8,21 @@ class FeatChoice extends CharacterChoice {
   public readonly label = "Feat";
 
   public withValue(value: string): FeatChoice {
-    return new FeatChoice(this.level, this.key, this.dependsOn, this.tags, value);
+    return this.copy({ current: value });
+  }
+
+  withDependsOn(dependsOn: string | undefined): CharacterChoice {
+    return this.copy({ dependsOn: dependsOn });
   }
 
   constructor(public readonly level: number, public readonly key: string, public readonly dependsOn: string|undefined, public readonly tags: ChoiceTag[] = [], public readonly current = '') {
     super();
   }
 
-  withDependsOn(dependsOn: string | undefined): CharacterChoice {
-    return new FeatChoice(this.level, this.key, dependsOn, this.tags, this.current);
+  protected copy(overrides: Partial<FeatChoice>): FeatChoice {
+    const clone = Object.create(this);
+    Object.assign(clone, overrides);
+    return clone;
   }
 }
 

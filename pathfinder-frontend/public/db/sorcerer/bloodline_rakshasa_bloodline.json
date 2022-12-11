@@ -2,68 +2,24 @@
   "id": "bloodline:rakshasa_bloodline",
   "name": "Rakshasa Bloodline",
   "effects": [{
-    "characterLevel": 1,
     "modifyFeature": {
       "featureId": "trained:skill:disguise",
       "delta": 1
     }
   }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:arcane_armor_mastery",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:arcane_armor_training",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:deceitful",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:detect_expertise",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:empower_spell",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:light_armor_proficiency",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:martial_weapon_proficiency",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:stealthy",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "addNewAbility": {
-      "ability": {
-        "id": "ability:bloodline_arcana",
-        "name": "Bloodline Arcana",
-        "description": ": Add half your sorcerer level to the Spellcraft DC for others to identify spells you cast. If their checks fail by 5 or more, they mistakenly believe you are casting an entirely different spell (selected by you when you begin casting)."
+    "grantChoice": {
+      "choice": {
+        "key": "bloodline_feat",
+        "Feat": {
+          "featIds": ["feat:arcane_armor_mastery", "feat:arcane_armor_training", "feat:deceitful", "feat:detect_expertise", "feat:empower_spell", "feat:light_armor_proficiency", "feat:martial_weapon_proficiency", "feat:stealthy"]
+        }
       }
     }
+  }, {
+    "grantAbility": {
+      "abilityId": "ability:bloodline_arcana#rakshasa_bloodline"
+    }
+  }, {
   }],
   "descriptionText": "At some point in your family\u0027s history, one of your ancestors was tainted by the influence of a rakshasa. Though most of your family seem entirely normal, you have always felt your own skin is a prison from which magic allows you to escape. Your birthright is a secret you may be forced to keep from societies that would never deal with you if your heritage were known."
 }

@@ -74,7 +74,7 @@ public class D20pfsrdOracleMysteryScraper extends AbstractD20pfsrdScraper implem
         List<CharacterEffect> found = new ArrayList<>();
         for (Skill skill : Skills.ALL) {
             if (text.contains(skill.name())) {
-                found.add(new ModifyFeatureEffect("trained:" + skill.id(), 1));
+                found.add(new ModifyFeatureEffect(level,"trained:" + skill.id(), 1));
             }
         }
         return found;
@@ -101,7 +101,7 @@ public class D20pfsrdOracleMysteryScraper extends AbstractD20pfsrdScraper implem
                     .map(Spell::id)
                     .orElseThrow(() -> new IllegalStateException("Spell not found: " + spellName));
 
-            found.add(new CharacterEffect.ModifyFeatureEffect(spellId, 1));
+            found.add(new CharacterEffect.ModifyFeatureEffect(1, spellId, 1));
         }
 
         return found;

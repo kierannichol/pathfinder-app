@@ -11,12 +11,12 @@ package v2;
 message CharacterEffectDbo {
 
   message ModifyFeatureEffect {
-    string featureId = 1;
+    string feature_id = 1;
     int32 delta = 2;
   }
 
   message SetFeatureEffect {
-    string featureId = 1;
+    string feature_id = 1;
     int32 value = 2;
   }
 
@@ -25,20 +25,27 @@ message CharacterEffectDbo {
   }
 
   message GrantAbilityEffect {
-    string abilityId = 1;
+    string ability_id = 1;
   }
 
   message GrantFeatEffect {
-    string featId = 1;
+    string feat_id = 1;
+  }
+
+  message AddChoiceOptionsEffect {
+    string choice_type = 1;
+    string database_id = 2;
+    repeated string option_ids = 3;
   }
 
   uint32 level = 1;
 
   oneof effect {
-    ModifyFeatureEffect modifyFeature = 100;
-    SetFeatureEffect setFeature = 101;
-    GrantChoiceEffect grantChoice = 102;
-    GrantAbilityEffect grantAbility = 103;
-    GrantFeatEffect grantFeat = 104;
+    ModifyFeatureEffect modify_feature = 100;
+    SetFeatureEffect set_feature = 101;
+    GrantChoiceEffect grant_choice = 102;
+    GrantAbilityEffect grant_ability = 103;
+    GrantFeatEffect grant_feat = 104;
+    AddChoiceOptionsEffect add_choice_options = 105;
   }
 }

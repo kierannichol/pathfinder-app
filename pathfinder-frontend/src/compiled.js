@@ -5974,6 +5974,7 @@ $root.v2 = (function() {
          * Properties of a ModifierDatabaseDbo.
          * @memberof v2
          * @interface IModifierDatabaseDbo
+         * @property {string|null} [databaseId] ModifierDatabaseDbo databaseId
          * @property {Array.<v2.ModifierSummaryDbo>|null} [summaries] ModifierDatabaseDbo summaries
          */
 
@@ -5992,6 +5993,14 @@ $root.v2 = (function() {
                     if (properties[keys[i]] != null)
                         this[keys[i]] = properties[keys[i]];
         }
+
+        /**
+         * ModifierDatabaseDbo databaseId.
+         * @member {string} databaseId
+         * @memberof v2.ModifierDatabaseDbo
+         * @instance
+         */
+        ModifierDatabaseDbo.prototype.databaseId = "";
 
         /**
          * ModifierDatabaseDbo summaries.
@@ -6025,9 +6034,11 @@ $root.v2 = (function() {
         ModifierDatabaseDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
+            if (message.databaseId != null && Object.hasOwnProperty.call(message, "databaseId"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.databaseId);
             if (message.summaries != null && message.summaries.length)
                 for (var i = 0; i < message.summaries.length; ++i)
-                    $root.v2.ModifierSummaryDbo.encode(message.summaries[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    $root.v2.ModifierSummaryDbo.encode(message.summaries[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
 
@@ -6063,6 +6074,10 @@ $root.v2 = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
+                        message.databaseId = reader.string();
+                        break;
+                    }
+                case 2: {
                         if (!(message.summaries && message.summaries.length))
                             message.summaries = [];
                         message.summaries.push($root.v2.ModifierSummaryDbo.decode(reader, reader.uint32()));
@@ -6103,6 +6118,9 @@ $root.v2 = (function() {
         ModifierDatabaseDbo.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
+            if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                if (!$util.isString(message.databaseId))
+                    return "databaseId: string expected";
             if (message.summaries != null && message.hasOwnProperty("summaries")) {
                 if (!Array.isArray(message.summaries))
                     return "summaries: array expected";
@@ -6127,6 +6145,8 @@ $root.v2 = (function() {
             if (object instanceof $root.v2.ModifierDatabaseDbo)
                 return object;
             var message = new $root.v2.ModifierDatabaseDbo();
+            if (object.databaseId != null)
+                message.databaseId = String(object.databaseId);
             if (object.summaries) {
                 if (!Array.isArray(object.summaries))
                     throw TypeError(".v2.ModifierDatabaseDbo.summaries: array expected");
@@ -6155,6 +6175,10 @@ $root.v2 = (function() {
             var object = {};
             if (options.arrays || options.defaults)
                 object.summaries = [];
+            if (options.defaults)
+                object.databaseId = "";
+            if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                object.databaseId = message.databaseId;
             if (message.summaries && message.summaries.length) {
                 object.summaries = [];
                 for (var j = 0; j < message.summaries.length; ++j)
@@ -7761,7 +7785,7 @@ $root.v2 = (function() {
              * Properties of a ModifierChoice.
              * @memberof v2.CharacterChoiceDbo
              * @interface IModifierChoice
-             * @property {Array.<string>|null} [modifierIds] ModifierChoice modifierIds
+             * @property {string|null} [databaseId] ModifierChoice databaseId
              */
 
             /**
@@ -7773,7 +7797,6 @@ $root.v2 = (function() {
              * @param {v2.CharacterChoiceDbo.IModifierChoice=} [properties] Properties to set
              */
             function ModifierChoice(properties) {
-                this.modifierIds = [];
                 if (properties)
                     for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -7781,12 +7804,12 @@ $root.v2 = (function() {
             }
 
             /**
-             * ModifierChoice modifierIds.
-             * @member {Array.<string>} modifierIds
+             * ModifierChoice databaseId.
+             * @member {string} databaseId
              * @memberof v2.CharacterChoiceDbo.ModifierChoice
              * @instance
              */
-            ModifierChoice.prototype.modifierIds = $util.emptyArray;
+            ModifierChoice.prototype.databaseId = "";
 
             /**
              * Creates a new ModifierChoice instance using the specified properties.
@@ -7812,9 +7835,8 @@ $root.v2 = (function() {
             ModifierChoice.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.modifierIds != null && message.modifierIds.length)
-                    for (var i = 0; i < message.modifierIds.length; ++i)
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.modifierIds[i]);
+                if (message.databaseId != null && Object.hasOwnProperty.call(message, "databaseId"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.databaseId);
                 return writer;
             };
 
@@ -7850,9 +7872,7 @@ $root.v2 = (function() {
                     var tag = reader.uint32();
                     switch (tag >>> 3) {
                     case 1: {
-                            if (!(message.modifierIds && message.modifierIds.length))
-                                message.modifierIds = [];
-                            message.modifierIds.push(reader.string());
+                            message.databaseId = reader.string();
                             break;
                         }
                     default:
@@ -7890,13 +7910,9 @@ $root.v2 = (function() {
             ModifierChoice.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.modifierIds != null && message.hasOwnProperty("modifierIds")) {
-                    if (!Array.isArray(message.modifierIds))
-                        return "modifierIds: array expected";
-                    for (var i = 0; i < message.modifierIds.length; ++i)
-                        if (!$util.isString(message.modifierIds[i]))
-                            return "modifierIds: string[] expected";
-                }
+                if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                    if (!$util.isString(message.databaseId))
+                        return "databaseId: string expected";
                 return null;
             };
 
@@ -7912,13 +7928,8 @@ $root.v2 = (function() {
                 if (object instanceof $root.v2.CharacterChoiceDbo.ModifierChoice)
                     return object;
                 var message = new $root.v2.CharacterChoiceDbo.ModifierChoice();
-                if (object.modifierIds) {
-                    if (!Array.isArray(object.modifierIds))
-                        throw TypeError(".v2.CharacterChoiceDbo.ModifierChoice.modifierIds: array expected");
-                    message.modifierIds = [];
-                    for (var i = 0; i < object.modifierIds.length; ++i)
-                        message.modifierIds[i] = String(object.modifierIds[i]);
-                }
+                if (object.databaseId != null)
+                    message.databaseId = String(object.databaseId);
                 return message;
             };
 
@@ -7935,13 +7946,10 @@ $root.v2 = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.arrays || options.defaults)
-                    object.modifierIds = [];
-                if (message.modifierIds && message.modifierIds.length) {
-                    object.modifierIds = [];
-                    for (var j = 0; j < message.modifierIds.length; ++j)
-                        object.modifierIds[j] = message.modifierIds[j];
-                }
+                if (options.defaults)
+                    object.databaseId = "";
+                if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                    object.databaseId = message.databaseId;
                 return object;
             };
 

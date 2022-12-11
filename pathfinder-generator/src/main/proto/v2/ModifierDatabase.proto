@@ -6,9 +6,11 @@ option java_package = "pathfinder.data.v2";
 package v2;
 
 import "v2/CharacterEffect.proto";
+import "v2/CharacterChoice.proto";
 
 message ModifierDatabaseDbo {
-  repeated ModifierSummaryDbo summaries = 1;
+  string database_id = 1;
+  repeated ModifierSummaryDbo summaries = 2;
 }
 
 message ModifierSummaryDbo {

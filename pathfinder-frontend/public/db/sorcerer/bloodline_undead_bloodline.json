@@ -2,68 +2,24 @@
   "id": "bloodline:undead_bloodline",
   "name": "Undead Bloodline",
   "effects": [{
-    "characterLevel": 1,
     "modifyFeature": {
       "featureId": "trained:skill:knowledge_religion",
       "delta": 1
     }
   }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:combat_casting",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:diehard",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:endurance",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:iron_will",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:skill_focus#knowledge_religion",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:spell_focus",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:still_spell",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:toughness",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "addNewAbility": {
-      "ability": {
-        "id": "ability:bloodline_arcana",
-        "name": "Bloodline Arcana",
-        "description": ": Some undead are susceptible to your mind-affecting spells. Corporeal undead that were once humanoids are treated as humanoids for the purposes of determining which spells affect them."
+    "grantChoice": {
+      "choice": {
+        "key": "bloodline_feat",
+        "Feat": {
+          "featIds": ["feat:combat_casting", "feat:diehard", "feat:endurance", "feat:iron_will", "feat:skill_focus#knowledge_religion", "feat:spell_focus", "feat:still_spell", "feat:toughness"]
+        }
       }
     }
+  }, {
+    "grantAbility": {
+      "abilityId": "ability:bloodline_arcana#undead_bloodline"
+    }
+  }, {
   }],
   "descriptionText": "The taint of the grave runs through your family. Perhaps one of your ancestors became a powerful lich or vampire, or maybe you were born dead before suddenly returning to life. Either way, the forces of death move through you and touch your every action."
 }

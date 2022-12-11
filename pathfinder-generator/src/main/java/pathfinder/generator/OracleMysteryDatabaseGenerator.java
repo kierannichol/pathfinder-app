@@ -12,7 +12,7 @@ import pathfinder.spring.ConditionalOnGeneratorEnabled;
 @Service("Oracle Mystery Database Generator")
 @ConditionalOnGeneratorEnabled("oracle.mystery")
 @RequiredArgsConstructor
-public class OracleMysteryDatabaseGenerator extends AbstractCharacterModifierDatabaseGenerator {
+public class OracleMysteryDatabaseGenerator extends AbstractModifierDatabaseGenerator {
     private final OracleMysterySourceDatabase sourceDatabase;
 
     @Override
@@ -29,5 +29,10 @@ public class OracleMysteryDatabaseGenerator extends AbstractCharacterModifierDat
     @Override
     protected String getOutputDatabaseName() {
         return "OracleMysteryDatabase";
+    }
+
+    @Override
+    protected String getDatabaseId() {
+        return "oracle_mystery";
     }
 }

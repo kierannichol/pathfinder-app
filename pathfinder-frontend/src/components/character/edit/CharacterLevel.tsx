@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useMemo} from "react";
 import {Link} from "react-router-dom";
 import {useAsyncMemo} from "../../../app/reactHooks";
-import {usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
 import {Character} from "../../../model/character/Character";
 import {ChoiceType} from "../../../model/character/choices/CharacterChoice";
 import ChoiceSelector from "../ChoiceSelector";
@@ -19,8 +18,6 @@ interface CharacterLevelProps {
 }
 
 export default function CharacterLevel({ character, level, onChange }: CharacterLevelProps) {
-
-  const pathfinderDatabase = usePathfinderDatabase();
 
   const [ characterAtLevel ] = useAsyncMemo(() => character.atLevel(level), [character, level]);
   const choicesForLevel = useMemo(() => character.choicesForLevel(level)
@@ -58,15 +55,20 @@ export default function CharacterLevel({ character, level, onChange }: Character
           characterAtLevel={characterAtLevel}
           onChange={onChange}/>
 
-      {choicesForLevel.map(choice =>
+      <div>
+        <label>Choices</label>
+      {choicesForLevel
+          .sort((a, b) => b.type.localeCompare(a.type))
+          .map(choice =>
           <div key={choice.key}>
-            <label>{choice.label}</label>
+            <label className={"label--option-type"}>{choice.label}</label>
             <ChoiceSelector
                 character={characterAtLevel}
                 choice={choice}
                 onChange={value => onChange(choice.key, value)} />
           </div>
       )}
+      </div>
 
       <label>New Feats</label>
       <CharacterFeatureList featureIds={characterChanges.features('feat')} variant="special" />

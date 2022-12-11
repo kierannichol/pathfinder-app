@@ -2,80 +2,24 @@
   "id": "bloodline:starsoul_bloodline",
   "name": "Starsoul Bloodline",
   "effects": [{
-    "characterLevel": 1,
     "modifyFeature": {
       "featureId": "trained:skill:knowledge_nature",
       "delta": 1
     }
   }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:blind_fight",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:craft_rod",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:dodge",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:endurance",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:improved_counterspell",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:improved_iron_will",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:iron_will",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:quicken_spell",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:skill_focus#perception",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:toughness",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "addNewAbility": {
-      "ability": {
-        "id": "ability:bloodline_arcana",
-        "name": "Bloodline Arcana",
-        "description": ": Whenever you cast an evocation spell, targets that fail their saves are dazzled by tiny sparkling starlights for 1 round per level of the spell."
+    "grantChoice": {
+      "choice": {
+        "key": "bloodline_feat",
+        "Feat": {
+          "featIds": ["feat:blind_fight", "feat:craft_rod", "feat:dodge", "feat:endurance", "feat:improved_counterspell", "feat:improved_iron_will", "feat:iron_will", "feat:quicken_spell", "feat:skill_focus#perception", "feat:toughness"]
+        }
       }
     }
+  }, {
+    "grantAbility": {
+      "abilityId": "ability:bloodline_arcana#starsoul_bloodline"
+    }
+  }, {
   }],
   "descriptionText": "You come from a line of stargazers and explorers who delved deeply into the darkness beyond the stars. In touching the void, the void touched them, and your mind, spirit, and body yearn to span the gulf between worlds."
 }

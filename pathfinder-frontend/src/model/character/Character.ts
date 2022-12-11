@@ -4,6 +4,8 @@ import {CharacterAtLevel} from "./CharacterAtLevel";
 import CharacterChoice from "./choices/CharacterChoice";
 import CharacterChoiceProcessorCollection from "./choices/CharacterChoiceProcessorCollection";
 
+export type PackedChoices = {[key: string]: any};
+
 export type PackedCharacter = {
   id: string;
   choices: {[key: string]: any};

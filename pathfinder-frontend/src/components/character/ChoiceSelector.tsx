@@ -2,9 +2,11 @@ import {usePathfinderDatabase} from "../../database/v2/PathfinderDatabase";
 import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
 import AbilityChoice from "../../model/character/choices/AbilityChoice";
 import CharacterChoice, {ChoiceTag, ChoiceType} from "../../model/character/choices/CharacterChoice";
+import ModifierChoice from "../../model/character/choices/ModifierChoice";
 import AbilitySelectButton from "./AbilitySelectButton";
 import CharacterTextInput from "./base/CharacterTextInput";
 import FeatSelectButton from "./edit/FeatSelectButton";
+import ModifierSelectButton from "./ModifierSelectButton";
 
 interface ChoiceSelectorProps {
   character: CharacterAtLevel;
@@ -36,6 +38,18 @@ export default function ChoiceSelector(props: ChoiceSelectorProps) {
           characterAtLevel={character}
           database={pathfinderDatabase.abilityDatabase}
           filterFn={(choice as AbilityChoice)?.filterFn}/>
+    case ChoiceType.MODIFIER: {
+      const specifics = choice as ModifierChoice;
+      if (!specifics) {
+        throw new Error("Unexpected choice");
+      }
+      return <ModifierSelectButton
+          choiceName={choice.label}
+          value={choice.current}
+          onSelect={props.onChange}
+          characterAtLevel={character}
+          database={pathfinderDatabase.modifierDatabase(specifics.databaseId)} />
+    }
     // case ChoiceType.RAGE_POWER:
     //   return <AbilitySelectButton
     //       choiceName={choice.label}

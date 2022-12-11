@@ -2,68 +2,24 @@
   "id": "bloodline:serpentine_bloodline",
   "name": "Serpentine Bloodline",
   "effects": [{
-    "characterLevel": 1,
     "modifyFeature": {
       "featureId": "trained:skill:diplomacy",
       "delta": 1
     }
   }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:combat_casting",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:combat_reflexes",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:deceitful",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:deft_hands",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:persuasive",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:silent_spell",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:skill_focus#bluff",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:stealthy",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "addNewAbility": {
-      "ability": {
-        "id": "ability:bloodline_arcana",
-        "name": "Bloodline Arcana",
-        "description": ": Your powers of compulsion can affect even bestial creatures. Whenever you cast a mind-affecting or language-dependent spell, it affects animals, magical beasts, and monstrous humanoids as if they were humanoids who understood your language."
+    "grantChoice": {
+      "choice": {
+        "key": "bloodline_feat",
+        "Feat": {
+          "featIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus#bluff", "feat:stealthy"]
+        }
       }
     }
+  }, {
+    "grantAbility": {
+      "abilityId": "ability:bloodline_arcana#serpentine_bloodline"
+    }
+  }, {
   }],
   "descriptionText": "Your bloodline carries the lingering stain of ancient serpent races that ruled when the world was young; your forebears were likely favored slaves anointed by their reptilian masters and gifted with their cold cunning and subtle manipulation. While deception and a mesmeric charm are your birthright, you may struggle for truth in spite of your heritage."
 }

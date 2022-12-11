@@ -9,7 +9,7 @@ import pathfinder.source.SorcererBloodlineSourceDatabase;
 
 @Service("Sorcerer Bloodline Database Generator")
 @RequiredArgsConstructor
-public class SorcererBloodlineDatabaseGenerator extends AbstractCharacterModifierDatabaseGenerator {
+public class SorcererBloodlineDatabaseGenerator extends AbstractModifierDatabaseGenerator {
     private final SorcererBloodlineSourceDatabase sourceDatabase;
 
     @Override
@@ -26,5 +26,10 @@ public class SorcererBloodlineDatabaseGenerator extends AbstractCharacterModifie
     @Override
     protected String getOutputDatabaseName() {
         return "SorcererBloodlineDatabase";
+    }
+
+    @Override
+    protected String getDatabaseId() {
+        return "sorcerer_bloodline";
     }
 }

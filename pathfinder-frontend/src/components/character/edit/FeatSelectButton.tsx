@@ -25,7 +25,7 @@ export default function FeatSelectButton({ value, characterAtLevel, onSelect, bo
       feat.isValidFor(characterWithoutFeat),
       feat.types.map(type => type.toString()),
       '',
-      () => featDatabase.get(feat.id)?.then(f => f && <FeatDescription feat={f} characterAtLevel={characterAtLevel} />));
+      () => featDatabase.get(feat.id)?.then(f => f && <FeatDescription feat={f} characterAtLevel={characterWithoutFeat} />));
 
   const containerFeat = (feat: FeatSummary) => new ChoiceSelectorOptionsContainer(
       feat.id,

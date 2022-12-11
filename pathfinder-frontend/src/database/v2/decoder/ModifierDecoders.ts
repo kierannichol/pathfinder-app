@@ -99,9 +99,10 @@ export function decodeChoice(dbo: CharacterChoiceDbo|undefined, level: number): 
       return ModifierChoice.of(
           dbo.label,
           dbo.key,
+          specifics.databaseId,
           level,
           undefined
-      ).withFilter(modifier => specifics?.modifierIds?.includes(modifier.id) ?? true);
+      );
     }
   }
   return undefined;

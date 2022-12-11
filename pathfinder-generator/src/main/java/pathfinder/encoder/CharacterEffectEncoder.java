@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pathfinder.data.v2.CharacterChoiceDbo;
 import pathfinder.data.v2.CharacterEffectDbo;
+import pathfinder.data.v2.CharacterEffectDbo.AddChoiceOptionsEffect;
 import pathfinder.data.v2.CharacterEffectDbo.GrantAbilityEffect;
 import pathfinder.data.v2.CharacterEffectDbo.GrantChoiceEffect;
 import pathfinder.data.v2.CharacterEffectDbo.GrantFeatEffect;
@@ -20,7 +21,8 @@ public class CharacterEffectEncoder implements Encoder<CharacterEffect, Characte
 
     @Override
     public CharacterEffectDbo encode(CharacterEffect model) {
-        var builder = CharacterEffectDbo.newBuilder();
+        var builder = CharacterEffectDbo.newBuilder()
+                .setLevel(model.level());
 
         whenType(model, CharacterEffect.ModifyFeatureEffect.class, effect ->
                 builder.setModifyFeature(ModifyFeatureEffect.newBuilder()
@@ -39,6 +41,13 @@ public class CharacterEffectEncoder implements Encoder<CharacterEffect, Characte
         whenType(model, CharacterEffect.GrantFeat.class, effect ->
                 builder.setGrantFeat(GrantFeatEffect.newBuilder()
                                 .setFeatId(effect.featId())
+                                .build()));
+
+        whenType(model, CharacterEffect.AddChoiceOptions.class, effect ->
+                builder.setAddChoiceOptions(AddChoiceOptionsEffect.newBuilder()
+                                .setChoiceType(effect.choiceType())
+                                .setDatabaseId(effect.databaseId())
+                                .addAllOptionIds(effect.optionIds())
                                 .build()));
 
         return builder.build();

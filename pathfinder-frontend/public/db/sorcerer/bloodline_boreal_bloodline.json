@@ -2,68 +2,24 @@
   "id": "bloodline:boreal_bloodline",
   "name": "Boreal Bloodline",
   "effects": [{
-    "characterLevel": 1,
     "modifyFeature": {
       "featureId": "trained:skill:survival",
       "delta": 1
     }
   }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:arcane_strike",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:diehard",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:empower_spell",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:endurance",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:exotic_weapon_proficiency",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:power_attack",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:skill_focus#intimidate",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "modifyFeature": {
-      "featureId": "feat:toughness",
-      "delta": 1
-    }
-  }, {
-    "characterLevel": 1,
-    "addNewAbility": {
-      "ability": {
-        "id": "ability:bloodline_arcana",
-        "name": "Bloodline Arcana",
-        "description": ": Whenever you cast a spell with the cold descriptor, increase the spell\u0027s save DC by 1."
+    "grantChoice": {
+      "choice": {
+        "key": "bloodline_feat",
+        "Feat": {
+          "featIds": ["feat:arcane_strike", "feat:diehard", "feat:empower_spell", "feat:endurance", "feat:exotic_weapon_proficiency", "feat:power_attack", "feat:skill_focus#intimidate", "feat:toughness"]
+        }
       }
     }
+  }, {
+    "grantAbility": {
+      "abilityId": "ability:bloodline_arcana#boreal_bloodline"
+    }
+  }, {
   }],
   "descriptionText": "Descended from inhabitants of the lands of ice and snow, you count among your ancestors giant-kin, troll-born, and frost-rimed spirits. Their savage and raw energies flow down through generations to infuse you to the marrow with the chill of the polar wind, crackling auroras, and the long winter\u0027s night."
 }

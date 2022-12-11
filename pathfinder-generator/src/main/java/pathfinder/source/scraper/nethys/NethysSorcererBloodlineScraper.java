@@ -88,9 +88,10 @@ public class NethysSorcererBloodlineScraper extends AbstractNethysScraper
         String classSkillText = findLinedContent(contents, "Class Skill");
         return Skills.ALL.stream()
                 .filter(skill -> classSkillText.contains(skill.name()))
-                .map(skill -> new CharacterEffect.ModifyFeatureEffect("trained:" + skill.id(), 1))
+                .map(skill -> new CharacterEffect.ModifyFeatureEffect(1, "trained:" + skill.id(), 1))
                 .toList();
     }
+
     private List<CharacterEffect> parseBonusFeats(Elements contents) {
         String bonusFeatText = findLinedContent(contents, "Bonus Feats");
 
@@ -100,7 +101,7 @@ public class NethysSorcererBloodlineScraper extends AbstractNethysScraper
                 .flatMap(text -> featSourceDatabase.findIdByName(text).stream())
                 .toList();
 
-        return List.of(new CharacterEffect.AddChoiceEffect(
+        return List.of(new CharacterEffect.AddChoiceEffect(1,
                 new CharacterChoice.FeatChoice("bloodline_feat", bonusFeatIds)));
     }
 
@@ -111,8 +112,8 @@ public class NethysSorcererBloodlineScraper extends AbstractNethysScraper
         String id = NameToIdConverter.abilityId(name) + "#" + bloodlineId.key;
 
         return List.of(
-                new GrantAbility(id),
-                new CharacterEffect.AddNewAbility(Ability.builder()
+                new GrantAbility(1, id),
+                new CharacterEffect.AddNewAbility(1, Ability.builder()
                         .id(id)
                         .name(name)
                         .type(Type.NONE)

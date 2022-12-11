@@ -44,7 +44,7 @@ export interface IModifierDatabase {
 export class BaseModifierDatabase implements IModifierDatabase {
 
   static empty(detailedDataBaseUrl: string): BaseModifierDatabase {
-    return new BaseModifierDatabase({}, detailedDataBaseUrl);
+    return new BaseModifierDatabase('',{}, detailedDataBaseUrl);
   }
 
   static from(database: ModifierDatabaseDbo, detailedDataBaseUrl: string): BaseModifierDatabase {
@@ -54,7 +54,7 @@ export class BaseModifierDatabase implements IModifierDatabase {
           modifier.id,
           modifier.name);
     }
-    return new BaseModifierDatabase(data, detailedDataBaseUrl);
+    return new BaseModifierDatabase(database.databaseId, data, detailedDataBaseUrl);
   }
 
   get all(): ModifierSummary[] {
@@ -79,7 +79,7 @@ export class BaseModifierDatabase implements IModifierDatabase {
               .map(x =>  x as Effect)));
   }
 
-  private constructor(private readonly data: {[id:string]: ModifierSummary}, private readonly detailedDataBaseUrl: string) {
+  private constructor(public readonly databaseId: string, private readonly data: {[id:string]: ModifierSummary}, private readonly detailedDataBaseUrl: string) {
   }
 
   private async loadModifier(id: string): Promise<ModifierDetailsDbo | undefined> {

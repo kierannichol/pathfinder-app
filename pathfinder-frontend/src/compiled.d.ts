@@ -2305,6 +2305,9 @@ export namespace v2 {
     /** Properties of a ModifierDatabaseDbo. */
     interface IModifierDatabaseDbo {
 
+        /** ModifierDatabaseDbo databaseId */
+        databaseId?: (string|null);
+
         /** ModifierDatabaseDbo summaries */
         summaries?: (v2.ModifierSummaryDbo[]|null);
     }
@@ -2317,6 +2320,9 @@ export namespace v2 {
          * @param [properties] Properties to set
          */
         constructor(properties?: v2.IModifierDatabaseDbo);
+
+        /** ModifierDatabaseDbo databaseId. */
+        public databaseId: string;
 
         /** ModifierDatabaseDbo summaries. */
         public summaries: v2.ModifierSummaryDbo[];
@@ -3049,8 +3055,8 @@ export namespace v2 {
         /** Properties of a ModifierChoice. */
         interface IModifierChoice {
 
-            /** ModifierChoice modifierIds */
-            modifierIds?: (string[]|null);
+            /** ModifierChoice databaseId */
+            databaseId?: (string|null);
         }
 
         /** Represents a ModifierChoice. */
@@ -3062,8 +3068,8 @@ export namespace v2 {
              */
             constructor(properties?: v2.CharacterChoiceDbo.IModifierChoice);
 
-            /** ModifierChoice modifierIds. */
-            public modifierIds: string[];
+            /** ModifierChoice databaseId. */
+            public databaseId: string;
 
             /**
              * Creates a new ModifierChoice instance using the specified properties.

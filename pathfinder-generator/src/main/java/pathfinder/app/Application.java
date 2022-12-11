@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import pathfinder.generator.ClassDatabaseGenerator;
+import pathfinder.generator.SorcererBloodlineDatabaseGenerator;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.encoder",
@@ -25,6 +26,8 @@ public class Application {
         return args -> {
 //            ctx.getBean(CompleteAbilityDatabaseGenerator.class).generate();
             ctx.getBean(ClassDatabaseGenerator.class).generate();
+            ctx.getBean(SorcererBloodlineDatabaseGenerator.class).generate();
+//            ctx.getBean(OracleMysteryDatabaseGenerator.class).generate();
 //            ctx.getBean(FeatDatabaseGenerator.class).generate();
 
 //            ctx.getBean(NethysSpellsScraper.class).stream()

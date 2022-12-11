@@ -19,11 +19,9 @@ import pathfinder.data.v2.ClassDetailsDbo;
 import pathfinder.generator.db.RagePowerSourceDatabase;
 import pathfinder.model.Ability;
 import pathfinder.model.CharacterClass;
-import pathfinder.model.CharacterModifier;
 import pathfinder.source.AlchemistDiscoverySourceDatabase;
 import pathfinder.source.MagusArcanaSourceDatabase;
 import pathfinder.source.RogueTalentSourceDatabase;
-import pathfinder.source.SorcererBloodlineSourceDatabase;
 
 @Component("Character Class Details Encoder")
 @RequiredArgsConstructor
@@ -33,7 +31,6 @@ public class ClassDetailsEncoder implements Encoder<CharacterClass, ClassDetails
     private final RogueTalentSourceDatabase rogueTalentSourceDatabase;
     private final MagusArcanaSourceDatabase magusArcanaSourceDatabase;
     private final AlchemistDiscoverySourceDatabase alchemistDiscoverySourceDatabase;
-    private final SorcererBloodlineSourceDatabase sorcererBloodlineSourceDatabase;
 
     @Override
     public ClassDetailsDbo encode(CharacterClass characterClass) {
@@ -142,12 +139,8 @@ public class ClassDetailsEncoder implements Encoder<CharacterClass, ClassDetails
 
         // Add choices not covered by abilities
         if (characterClass.id().equals("class:sorcerer")) {
-            try {
-                effects.add(grantModifierChoice(1, "bloodline", "Bloodline",
-                        sorcererBloodlineSourceDatabase.streamModifiers()));
-            } catch (IOException e) {
-                throw new UncheckedIOException(e);
-            }
+            effects.add(grantModifierChoice(1, "bloodline", "Bloodline",
+                    "sorcerer_bloodline"));
         }
 
         builder.addAllEffects(effects);
@@ -168,7 +161,7 @@ public class ClassDetailsEncoder implements Encoder<CharacterClass, ClassDetails
                 .build();
     }
 
-    private CharacterEffectDbo grantModifierChoice(int level, String key, String label, Stream<CharacterModifier> modifierStream) {
+    private CharacterEffectDbo grantModifierChoice(int level, String key, String label, String databaseId) {
         return CharacterEffectDbo.newBuilder()
                 .setLevel(level)
                 .setGrantChoice(GrantChoiceEffect.newBuilder()
@@ -176,9 +169,7 @@ public class ClassDetailsEncoder implements Encoder<CharacterClass, ClassDetails
                                 .setKey(key)
                                 .setLabel(label)
                                 .setModifier(CharacterChoiceDbo.ModifierChoice.newBuilder()
-                                        .addAllModifierIds(
-                                                modifierStream.map(CharacterModifier::id).toList()
-                                        ))))
+                                        .setDatabaseId(databaseId))))
                 .build();
     }
 }
