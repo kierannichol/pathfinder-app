@@ -2,6 +2,7 @@ package pathfinder.generator;
 
 import com.google.protobuf.Message;
 import com.google.protobuf.util.JsonFormat;
+import com.google.protobuf.util.JsonFormat.Printer;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
@@ -17,6 +18,8 @@ import pathfinder.util.FileUtils;
 
 public abstract class AbstractDatabaseGenerator<MODEL extends FeatureModel, SUMMARY extends Message, DETAILED extends Message> implements DatabaseGenerator {
     protected static final Predicate<Sourced> KNOWN_SOURCES = sourced -> sourced.source() != null;
+    protected static final Printer JSON_PRINTER = JsonFormat.printer()
+            .omittingInsignificantWhitespace();
 
     @OutputPathValue
     private Path outputBasePath;
@@ -67,7 +70,7 @@ public abstract class AbstractDatabaseGenerator<MODEL extends FeatureModel, SUMM
             Files.write(outputPath.resolve(name + ".bin"),
                     message.toByteArray());
             Files.writeString(outputPath.resolve(name + ".json"),
-                    JsonFormat.printer().print(message));
+                    JSON_PRINTER.print(message));
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }

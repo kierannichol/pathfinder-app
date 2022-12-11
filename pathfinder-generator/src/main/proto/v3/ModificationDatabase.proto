@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v3";
+
+package v3;
+
+message ModificationDatabaseDbo {
+  string database_id = 1;
+  repeated ModificationSummaryDbo summaries = 2;
+}
+
+message ModificationSummaryDbo {
+  string id = 1;
+  string name = 2;
+  string prerequisite_formula = 3;
+  repeated ModificationSummaryDbo children = 4;
+}
+
+message ModificationDetailsDbo {
+  string id = 1;
+  string name = 2;
+  string prerequisite_formula = 3;
+  repeated ModificationDetailsDbo children = 4;
+
+  string descriptionText = 100;
+  repeated EffectDbo effects = 101;
+}
+
+message EffectDbo {
+  message SetStateEffectDbo {
+    int32 level = 1;
+    string key = 2;
+    int32 value = 3;
+  }
+
+  message AdjustStateEffectDbo {
+    int32 level = 1;
+    string key = 2;
+    int32 delta = 3;
+  }
+
+  oneof effect {
+    SetStateEffectDbo setState = 1;
+    AdjustStateEffectDbo adjustState = 2;
+  }
+}
