@@ -1,0 +1,25 @@
+{
+  "id": "spell:guardian_of_faith",
+  "name": "Guardian Of Faith",
+  "type": "ABILITY_TYPE_SP",
+  "school": "abjuration",
+  "range": {
+    "category": "CLOSE"
+  },
+  "targets": "one ally",
+  "duration": "1 minute/level",
+  "description": "The target gains the benefit of shield of faith and your choice of protection from chaos, evil, good, or law. As a move action, the target can transfer this spell to a touched ally, who becomes the new target of the spell.  The alignment descriptor of this spell matches the alignment descriptor of the protection spell you chose when casting it. For example, granting the target protection from evil gives this spell the good descriptor.",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 4
+  }, {
+    "classId": "class:oracle_4_paladin",
+    "level": 4
+  }, {
+    "classId": "class:cleric",
+    "level": 4
+  }, {
+    "classId": "class:oracle_4_paladin",
+    "level": 4
+  }]
+}

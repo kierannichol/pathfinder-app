@@ -1,11 +1,17 @@
 {
   "id": "feat:net_adept",
   "name": "Net Adept",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You have trained to use the net as a melee weapon.",
-  "prerequisites": "Exotic Weapon Proficiency (net), base attack bonus +1.",
-  "prerequisitesFormula": "@feat:exotic_weapon_proficiency#@net AND @bab \u003e\u003d 1",
-  "benefit": "You can treat a net as a one-handed melee reach weapon with a 10-foot reach. Further, you take no penalty on melee attack rolls for using an unfolded net, and you can use one full-round action or two move actions to fold a net.",
-  "normal": "A net is a ranged weapon that imposes a -4 penalty on ranged attack rolls if it is unfolded. Folding a net takes a proficient user 2 rounds.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:exotic_weapon_proficiency#@net AND @bab \u003e\u003d 1",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You have trained to use the net as a melee weapon.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:net_adept",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can treat a net as a one-handed melee reach weapon with a 10-foot reach. Further, you take no penalty on melee attack rolls for using an unfolded net, and you can use one full-round action or two move actions to fold a net.",
+  "normalText": "A net is a ranged weapon that imposes a -4 penalty on ranged attack rolls if it is unfolded. Folding a net takes a proficient user 2 rounds."
 }

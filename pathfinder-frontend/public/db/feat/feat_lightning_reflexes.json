@@ -1,8 +1,15 @@
 {
   "id": "feat:lightning_reflexes",
   "name": "Lightning Reflexes",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have faster ref lexes than normal.",
-  "benefit": "You get a +2 bonus on all Ref lex saving throws.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have faster ref lexes than normal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:lightning_reflexes",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +2 bonus on all Ref lex saving throws."
 }

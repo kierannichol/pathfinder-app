@@ -1,6 +1,13 @@
 {
   "id": "discovery:nauseating_flesh",
   "name": "Nauseating Flesh",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 12",
-  "description": "Anything that bites the alchemist is nauseated"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 12",
+  "type": "ability",
+  "descriptionText": "Anything that bites the alchemist is nauseated",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:nauseating_flesh",
+      "delta": 1
+    }
+  }]
 }

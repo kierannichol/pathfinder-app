@@ -1,6 +1,12 @@
 {
   "id": "magus_arcana:spell_shield",
   "name": "Spell Shield",
-  "type": "ABILITY_TYPE_SU",
-  "description": "Grant yourself a shield bonus to your AC"
+  "type": "ability",
+  "descriptionText": "Grant yourself a shield bonus to your AC",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:spell_shield",
+      "delta": 1
+    }
+  }]
 }

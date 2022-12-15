@@ -1,10 +1,16 @@
 {
   "id": "feat:ride_by_attack",
   "name": "Ride-By Attack",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "While mounted and charging, you can move, strike at a foe, and then continue moving.",
-  "prerequisites": "Ride 1 rank, Mounted Combat.",
-  "prerequisitesFormula": "@skill:ride \u003e\u003d 1 AND @feat:mounted_combat",
-  "benefit": "When you are mounted and use the charge action, you may move and attack as if with a standard charge and then move again (continuing the straight line of the charge). Your total movement for the round can\u0027t exceed double your mounted speed. You and your mount do not provoke an attack of opportunity from the opponent that you attack.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@skill:ride \u003e\u003d 1 AND @feat:mounted_combat",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "While mounted and charging, you can move, strike at a foe, and then continue moving.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:ride_by_attack",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you are mounted and use the charge action, you may move and attack as if with a standard charge and then move again (continuing the straight line of the charge). Your total movement for the round can\u0027t exceed double your mounted speed. You and your mount do not provoke an attack of opportunity from the opponent that you attack."
 }

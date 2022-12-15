@@ -1,10 +1,16 @@
 {
   "id": "feat:deft_shootist_deed",
   "name": "Deft Shootist Deed",
-  "types": ["FEAT_TYPE_GRIT"],
-  "description": "You keep an eye out while focusing on your weapon, allowing you to avoid attacks while shooting and reloading firearms.",
-  "prerequisites": "Grit class feature or Amateur Gunslinger feat, Dodge, Mobility.",
-  "prerequisitesFormula": "(@ability:grit#gunslinger OR @feat:amateur_gunslinger) AND @feat:dodge AND @feat:mobility",
-  "benefit": "As long as you have at least 1 grit point, you do not provoke attacks of opportunity when shooting or reloading a firearm.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "(@rogue_talent:grit OR @feat:amateur_gunslinger) AND @feat:dodge AND @feat:mobility",
+  "type": "feat",
+  "categoryId": 9,
+  "descriptionText": "You keep an eye out while focusing on your weapon, allowing you to avoid attacks while shooting and reloading firearms.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:deft_shootist_deed",
+      "delta": 1
+    }
+  }],
+  "benefitText": "As long as you have at least 1 grit point, you do not provoke attacks of opportunity when shooting or reloading a firearm."
 }

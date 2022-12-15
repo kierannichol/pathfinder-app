@@ -1,8 +1,15 @@
 {
   "id": "feat:deft_hands",
   "name": "Deft Hands",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have exceptional manual dexterity.",
-  "benefit": "You get a +2 bonus on Disable Device and Sleight of Hand skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have exceptional manual dexterity.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:deft_hands",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +2 bonus on Disable Device and Sleight of Hand skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
 }

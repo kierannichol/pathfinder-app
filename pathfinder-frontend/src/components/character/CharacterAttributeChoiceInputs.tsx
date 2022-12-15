@@ -1,9 +1,8 @@
 import {useMemo, useState} from "react";
 import {Container} from "react-bootstrap";
-import {Character} from "../../model/character/Character";
-import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
-import ValidationError from "../../model/character/ValidationError";
+import AbilityScores from "../../database/AbilityScores";
 import TextLookup from "../../model/TextLookup";
+import CharacterAtLevel from "../../v3/model/CharacterAtLevel";
 import NumberSelect from "../common/NumberSelect";
 import "./CharacterAttributeChoiceInputs.scss";
 
@@ -16,7 +15,7 @@ export default function CharacterAttributeChoiceInputs(
     {characterAtLevel, onCommit }: CharacterAttributeChoiceInputsProps) {
 
   return (<Container className={'pf-attribute-choice-inputs'}>
-    {Character.ABILITIES
+    {AbilityScores.map(a => a.id)
     .map(attribute => <CharacterAttributeRow
         key={`attribute_${attribute}`}
         attributeName={attribute}
@@ -45,10 +44,10 @@ function CharacterAttributeRow(
       setValidationError(null);
       onCommit(value);
     } catch (error) {
-      if (!(error instanceof ValidationError)) {
-        throw error;
-      }
-      setValidationError(error.description);
+      // if (!(error instanceof ValidationError)) {
+      //   throw error;
+      // }
+      // setValidationError(error.toString);
     }
   };
 

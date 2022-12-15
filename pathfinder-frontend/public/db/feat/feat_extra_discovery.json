@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_discovery",
   "name": "Extra Discovery",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have made a new alchemical discovery.",
-  "prerequisites": "Discovery class feature.",
-  "prerequisitesFormula": "@ability:discovery#alchemist",
-  "benefit": "You gain one additional discovery. You must meet all of the prerequisites for this discovery.",
-  "special": "You can gain Extra Discovery multiple times.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:discovery#alchemist",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have made a new alchemical discovery.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_discovery",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain one additional discovery. You must meet all of the prerequisites for this discovery.",
+  "specialText": "You can gain Extra Discovery multiple times."
 }

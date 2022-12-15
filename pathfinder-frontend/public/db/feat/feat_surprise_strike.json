@@ -1,10 +1,16 @@
 {
   "id": "feat:surprise_strike",
   "name": "Surprise Strike",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You actually seem to do more damage when frantically trying to avoid your enemies.",
-  "prerequisites": "Cautious Fighter, Desperate Swing, base attack bonus +6, halfling.",
-  "prerequisitesFormula": "@feat:cautious_fighter AND @feat:desperate_swing AND @bab \u003e\u003d 6 AND @race:halfling",
-  "benefit": "Once per day, when fighting defensively or making an attack of opportunity while taking the total defense action with the Desperate Swing feat, you take no penalty on the attack roll.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@feat:cautious_fighter AND @feat:desperate_swing AND @bab \u003e\u003d 6 AND @race:halfling",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You actually seem to do more damage when frantically trying to avoid your enemies.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:surprise_strike",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Once per day, when fighting defensively or making an attack of opportunity while taking the total defense action with the Desperate Swing feat, you take no penalty on the attack roll."
 }

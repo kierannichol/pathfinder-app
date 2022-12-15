@@ -1,12 +1,18 @@
 {
   "id": "feat:bull_rush_strike",
   "name": "Bull Rush Strike",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your critical hits can push back your foes.",
-  "prerequisites": "Str 13, Improved Bull Rush, Power Attack, base attack bonus +9.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:improved_bull_rush AND @feat:power_attack AND @bab \u003e\u003d 9",
-  "benefit": "Whenever you score a critical hit with a melee attack, you can push your opponent back, in addition to the normal damage dealt by the attack. If your confirmation roll exceeds your opponent\u0027s CMD, you may push your opponent back as if from the bull rush combat maneuver. You do not need to move with the target if successful. This does not provoke an attack of opportunity.",
-  "normal": "You must perform a bull rush combat maneuver to bull rush an opponent.",
-  "special": "You can only apply the effects of one of the following feats to a given critical hit: Bull Rush Strike, Disarming Strike, Repositioning Strike, Sundering Strike, or Tripping Strike. You may choose to use this feat after you make your confirmation roll.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@str_score \u003e\u003d 13 AND @feat:improved_bull_rush AND @feat:power_attack AND @bab \u003e\u003d 9",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your critical hits can push back your foes.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:bull_rush_strike",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you score a critical hit with a melee attack, you can push your opponent back, in addition to the normal damage dealt by the attack. If your confirmation roll exceeds your opponent\u0027s CMD, you may push your opponent back as if from the bull rush combat maneuver. You do not need to move with the target if successful. This does not provoke an attack of opportunity.",
+  "normalText": "You must perform a bull rush combat maneuver to bull rush an opponent.",
+  "specialText": "You can only apply the effects of one of the following feats to a given critical hit: Bull Rush Strike, Disarming Strike, Repositioning Strike, Sundering Strike, or Tripping Strike. You may choose to use this feat after you make your confirmation roll."
 }

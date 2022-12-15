@@ -1,5 +1,12 @@
 {
   "id": "ability:cantrips#magus",
   "name": "Cantrips",
-  "description": "A magus can prepare a number of cantrips, or 0-level spells, each day, as noted on"
+  "type": "ability",
+  "descriptionText": "A magus can prepare a number of cantrips, or 0-level spells, each day, as noted on",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:cantrips#magus",
+      "delta": 1
+    }
+  }]
 }

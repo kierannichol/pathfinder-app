@@ -1,10 +1,16 @@
 {
   "id": "feat:keen_scent",
   "name": "Keen Scent",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your nose is as sensitive as that of a wild predator.",
-  "prerequisites": "Wis 13, half-orc or orc.",
-  "prerequisitesFormula": "(@wis_score \u003e\u003d 13 OR @race:half_orc OR @race:orc)",
-  "benefit": "You gain the scent special ability.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "(@wis_score \u003e\u003d 13 OR @race:half_orc OR @race:orc)",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your nose is as sensitive as that of a wild predator.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:keen_scent",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain the scent special ability."
 }

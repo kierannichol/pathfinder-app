@@ -1,10 +1,16 @@
 {
   "id": "feat:angelic_blood",
   "name": "Angelic Blood",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your blood is infused with holy power.",
-  "prerequisites": "Con 13, aasimar.",
-  "prerequisitesFormula": "@con_score \u003e\u003d 13 AND @race:aasimar",
-  "benefit": "You gain a +2 bonus on saving throws against effects with the evil descriptor and on Constitution checks to stabilize when you are reduced to negative hit points (but not dead). Furthermore, each time you take bleed or blood drain damage, each undead creature or creature with the evil subtype that is currently adjacent to you also takes 1 point of damage.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@con_score \u003e\u003d 13 AND @race:aasimar",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your blood is infused with holy power.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:angelic_blood",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain a +2 bonus on saving throws against effects with the evil descriptor and on Constitution checks to stabilize when you are reduced to negative hit points (but not dead). Furthermore, each time you take bleed or blood drain damage, each undead creature or creature with the evil subtype that is currently adjacent to you also takes 1 point of damage."
 }

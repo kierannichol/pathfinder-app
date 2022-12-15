@@ -1,11 +1,17 @@
 {
   "id": "feat:far_shot",
   "name": "Far Shot",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are more accurate at longer ranges.",
-  "prerequisites": "Point-Blank Shot.",
-  "prerequisitesFormula": "@feat:point_blank_shot",
-  "benefit": "You only suffer a -1 penalty per full range increment between you and your target when using a ranged weapon.",
-  "normal": "You suffer a -2 penalty per full range increment between you and your target.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@feat:point_blank_shot",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are more accurate at longer ranges.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:far_shot",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You only suffer a -1 penalty per full range increment between you and your target when using a ranged weapon.",
+  "normalText": "You suffer a -2 penalty per full range increment between you and your target."
 }

@@ -1,6 +1,12 @@
 {
   "id": "rage_power:auspicious_mark",
   "name": "Auspicious Mark",
-  "type": "ABILITY_TYPE_SU",
-  "description": "Gain a bonus on a roll once per rage"
+  "type": "ability",
+  "descriptionText": "Gain a bonus on a roll once per rage",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:auspicious_mark",
+      "delta": 1
+    }
+  }]
 }

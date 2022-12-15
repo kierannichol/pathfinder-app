@@ -1,6 +1,12 @@
 {
   "id": "rage_power:low_light_vision",
   "name": "Low-Light Vision",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain low-light vision while raging"
+  "type": "ability",
+  "descriptionText": "Gain low-light vision while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:low_light_vision",
+      "delta": 1
+    }
+  }]
 }

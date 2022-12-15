@@ -1,7 +1,13 @@
 {
   "id": "rage_power:spirit_totem",
   "name": "Spirit Totem",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spirit_totem",
-  "description": "Attacks against you may miss when you are raging"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spirit_totem",
+  "type": "ability",
+  "descriptionText": "Attacks against you may miss when you are raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:spirit_totem",
+      "delta": 1
+    }
+  }]
 }

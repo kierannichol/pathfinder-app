@@ -1,7 +1,13 @@
 {
   "id": "rage_power:increased_damage_reduction",
   "name": "Increased Damage Reduction",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 8",
-  "description": "Gain DR/- while raging"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "Gain DR/- while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:increased_damage_reduction",
+      "delta": 1
+    }
+  }]
 }

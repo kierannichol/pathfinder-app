@@ -1,10 +1,16 @@
 {
   "id": "feat:deny_death",
   "name": "Deny Death",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your ki is so strong that it can deny death.",
-  "prerequisites": "Ki pool, Endurance",
-  "prerequisitesFormula": "@ability:ki_pool#unchained_monk AND @ability:endurance#ranger",
-  "benefit": "As long as you have 1 ki point in your ki pool, when you fail your Constitution check to stabilize, you do not lose 1 hit point. If you succeed at the check, you can spend 1 ki point to heal 1d6 hit points. If you roll a natural 20 on the check to stabilize, you can spend 1 ki point to heal 2d6 hit points of damage instead.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@rogue_talent:ki_pool AND @ability:endurance#ranger",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your ki is so strong that it can deny death.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:deny_death",
+      "delta": 1
+    }
+  }],
+  "benefitText": "As long as you have 1 ki point in your ki pool, when you fail your Constitution check to stabilize, you do not lose 1 hit point. If you succeed at the check, you can spend 1 ki point to heal 1d6 hit points. If you roll a natural 20 on the check to stabilize, you can spend 1 ki point to heal 2d6 hit points of damage instead."
 }

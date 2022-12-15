@@ -1,6 +1,13 @@
 {
   "id": "rage_power:disruptive",
   "name": "Disruptive",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:superstition",
-  "description": "Gain the Disruptive feat as a bonus feat"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:superstition",
+  "type": "ability",
+  "descriptionText": "Gain the Disruptive feat as a bonus feat",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:disruptive",
+      "delta": 1
+    }
+  }]
 }

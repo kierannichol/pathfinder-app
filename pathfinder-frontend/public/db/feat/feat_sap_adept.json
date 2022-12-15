@@ -1,10 +1,16 @@
 {
   "id": "feat:sap_adept",
   "name": "Sap Adept",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You know just where to hit to knock the sense out of your foe.",
-  "prerequisites": "Sneak attack +1d6.",
-  "prerequisitesFormula": "@ability:sneak_attack \u003e\u003d 1",
-  "benefit": "Whenever you use a bludgeoning weapon to deal nonlethal sneak attack damage, you gain a bonus on your damage roll equal to twice the number of sneak attack damage dice you rolled.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@ability:sneak_attack \u003e\u003d 1",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You know just where to hit to knock the sense out of your foe.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sap_adept",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you use a bludgeoning weapon to deal nonlethal sneak attack damage, you gain a bonus on your damage roll equal to twice the number of sneak attack damage dice you rolled."
 }

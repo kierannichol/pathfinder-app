@@ -1,6 +1,13 @@
 {
   "id": "discovery:explosive_missile",
   "name": "Explosive Missile",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 4",
-  "description": "Infuse a piece of ammunition with a bomb"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 4",
+  "type": "ability",
+  "descriptionText": "Infuse a piece of ammunition with a bomb",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:explosive_missile",
+      "delta": 1
+    }
+  }]
 }

@@ -1,109 +1,23 @@
-import {usePathfinderDatabase} from "../../database/v2/PathfinderDatabase";
-import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
-import AbilityChoice from "../../model/character/choices/AbilityChoice";
-import CharacterChoice, {ChoiceTag, ChoiceType} from "../../model/character/choices/CharacterChoice";
-import ModifierChoice from "../../model/character/choices/ModifierChoice";
-import AbilitySelectButton from "./AbilitySelectButton";
+import CharacterAtLevel from "../../v3/model/CharacterAtLevel";
+import Choice, {SelectChoice} from "../../v3/model/Choice";
 import CharacterTextInput from "./base/CharacterTextInput";
-import FeatSelectButton from "./edit/FeatSelectButton";
-import ModifierSelectButton from "./ModifierSelectButton";
+import DataChoiceSelectButton from "./DataChoiceSelectButton";
 
 interface ChoiceSelectorProps {
-  character: CharacterAtLevel;
-  choice: CharacterChoice;
+  choice: Choice;
+  characterAtLevel: CharacterAtLevel;
   onChange: (value: string) => void;
 }
 
-export default function ChoiceSelector(props: ChoiceSelectorProps) {
-  const character = props.character;
-  const choice = props.choice;
-  const pathfinderDatabase = usePathfinderDatabase();
-  switch (choice.type) {
-    case ChoiceType.CHARACTER_NAME:
-      return <CharacterTextInput
-          value={choice.current}
-          onChange={props.onChange} />
-    case ChoiceType.FEAT:
-      return <FeatSelectButton
-          value={choice.current}
-          bonus={choice.tags.includes(ChoiceTag.BONUS)}
-          characterAtLevel={character}
-          onSelect={props.onChange} />
-    case ChoiceType.ABILITY:
-      return <AbilitySelectButton
-          choiceName={choice.label}
-          variant={"special"}
-          value={choice.current}
-          onSelect={props.onChange}
-          characterAtLevel={character}
-          database={pathfinderDatabase.abilityDatabase}
-          filterFn={(choice as AbilityChoice)?.filterFn}/>
-    case ChoiceType.MODIFIER: {
-      const specifics = choice as ModifierChoice;
-      if (!specifics) {
-        throw new Error("Unexpected choice");
-      }
-      return <ModifierSelectButton
-          choiceName={choice.label}
-          value={choice.current}
-          onSelect={props.onChange}
-          characterAtLevel={character}
-          database={pathfinderDatabase.modifierDatabase(specifics.databaseId)} />
-    }
-    // case ChoiceType.RAGE_POWER:
-    //   return <AbilitySelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.ragePowerDatabase} />
-    // case ChoiceType.MERCY:
-    //   return <MercySelectButton
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character} />
-    // case ChoiceType.ROGUE_TALENT:
-    //   return <AbilitySelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.rogueTalentDatabase} />
-    // case ChoiceType.MAGUS_ARCANA:
-    //   return <AbilitySelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.magusArcanaDatabase} />
-    // case ChoiceType.ALCHEMIST_DISCOVERY:
-    //   return <AbilitySelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.alchemistDiscoveryDatabase} />
-    // case ChoiceType.WITCH_HEX:
-    //   return <SpellSelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.witchHexDatabase} />
-    // case ChoiceType.SORCERER_BLOODLINE:
-    //   return <ModifierSelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.sorcererBloodlineDataSource} />
-    // case ChoiceType.BLOODLINE_POWER:
-    //   return <AbilitySelectButton
-    //       choiceName={choice.label}
-    //       value={choice.current}
-    //       onSelect={props.onChange}
-    //       characterAtLevel={character}
-    //       database={pathfinderDatabase.abilityDb} />
+export default function ChoiceSelector({ choice, characterAtLevel, onChange }: ChoiceSelectorProps) {
+  switch (choice.input) {
+    case "text":
+      return <CharacterTextInput value={choice.current} onChange={onChange} />
+    case "select":
+      return <DataChoiceSelectButton
+          choice={choice as SelectChoice}
+          characterAtLevel={characterAtLevel}
+          onSelect={onChange} />
   }
   return <div className="invalid-feedback">Unknown Choice</div>
 }

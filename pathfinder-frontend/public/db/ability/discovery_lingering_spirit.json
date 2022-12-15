@@ -1,6 +1,13 @@
 {
   "id": "discovery:lingering_spirit",
   "name": "Lingering Spirit",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 4",
-  "description": "You can take more damage before being killed"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 4",
+  "type": "ability",
+  "descriptionText": "You can take more damage before being killed",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:lingering_spirit",
+      "delta": 1
+    }
+  }]
 }

@@ -1,10 +1,16 @@
 {
   "id": "feat:trick_riding",
   "name": "Trick Riding",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are not only skilled at controlling a horse in combat; you can make it look like art.",
-  "prerequisites": "Ride 9 ranks, Mounted Combat.",
-  "prerequisitesFormula": "@skill:ride \u003e\u003d 9 AND @feat:mounted_combat",
-  "benefit": "While wearing light or no armor, you do not need to make Ride skill checks for any task listed in the Ride skill with a DC of 15 or lower. You do not take a -5 penalty for riding a mount bareback. You can make a check using Mounted Combat to negate a hit on your mount twice per round instead of just once.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@skill:ride \u003e\u003d 9 AND @feat:mounted_combat",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are not only skilled at controlling a horse in combat; you can make it look like art.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:trick_riding",
+      "delta": 1
+    }
+  }],
+  "benefitText": "While wearing light or no armor, you do not need to make Ride skill checks for any task listed in the Ride skill with a DC of 15 or lower. You do not take a -5 penalty for riding a mount bareback. You can make a check using Mounted Combat to negate a hit on your mount twice per round instead of just once."
 }

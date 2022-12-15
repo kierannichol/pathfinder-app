@@ -1,0 +1,19 @@
+{
+  "id": "spell:imbue_with_aura",
+  "name": "Imbue with Aura",
+  "type": "ABILITY_TYPE_SP",
+  "school": "transmutation",
+  "range": {
+    "category": "CLOSE"
+  },
+  "targets": "one creature",
+  "duration": "1 minute/level",
+  "description": "You infuse another creature with your divine aura, causing the target to radiate an aura identical to your own clerical aura. The target\u0027s actual alignment is not changed, but spells like detect evil or detect good detect only the aura, not the creature\u0027s actual alignment. For the duration of this spell, effects influenced by the target\u0027s alignment function according to the imposed aura, not the creature\u0027s actual aura. When the spell ends, the target\u0027s aura returns to normal, and alignmentaffecting magic affects it according to its actual alignment.",
+  "level": [{
+    "classId": "class:cleric",
+    "level": 2
+  }, {
+    "classId": "class:oracle",
+    "level": 2
+  }]
+}

@@ -1,9 +1,16 @@
 {
   "id": "feat:improved_counterspell",
   "name": "Improved Counterspell",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You are skilled at countering the spells of others using similar spells.",
-  "benefit": "When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell.",
-  "normal": "Without this feat, you may counter a spell only with the same spell or with a spell specifically designated as countering the target spell.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You are skilled at countering the spells of others using similar spells.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_counterspell",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell.",
+  "normalText": "Without this feat, you may counter a spell only with the same spell or with a spell specifically designated as countering the target spell."
 }

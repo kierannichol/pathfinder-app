@@ -1,6 +1,13 @@
 {
   "id": "discovery:awakened_intellect",
   "name": "Awakened Intellect",
-  "prerequisitesFormula": "@ability:grand_discovery#alchemist",
-  "description": "Gain 2 points of Intelligence"
+  "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+  "type": "ability",
+  "descriptionText": "Gain 2 points of Intelligence",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:awakened_intellect",
+      "delta": 1
+    }
+  }]
 }

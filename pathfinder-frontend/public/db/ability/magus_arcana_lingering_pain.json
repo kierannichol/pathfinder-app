@@ -1,6 +1,12 @@
 {
   "id": "magus_arcana:lingering_pain",
   "name": "Lingering Pain",
-  "type": "ABILITY_TYPE_SU",
-  "description": "Make it harder for foes you hurt to cast a spell"
+  "type": "ability",
+  "descriptionText": "Make it harder for foes you hurt to cast a spell",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:lingering_pain",
+      "delta": 1
+    }
+  }]
 }

@@ -1921,6 +1921,7 @@ $root.v2 = (function() {
          * @property {v2.CharacterEffectDbo.GrantChoiceEffect|null} [grantChoice] CharacterEffectDbo grantChoice
          * @property {v2.CharacterEffectDbo.GrantAbilityEffect|null} [grantAbility] CharacterEffectDbo grantAbility
          * @property {v2.CharacterEffectDbo.GrantFeatEffect|null} [grantFeat] CharacterEffectDbo grantFeat
+         * @property {v2.CharacterEffectDbo.AddChoiceOptionsEffect|null} [addChoiceOptions] CharacterEffectDbo addChoiceOptions
          */
 
         /**
@@ -1986,17 +1987,25 @@ $root.v2 = (function() {
          */
         CharacterEffectDbo.prototype.grantFeat = null;
 
+        /**
+         * CharacterEffectDbo addChoiceOptions.
+         * @member {v2.CharacterEffectDbo.AddChoiceOptionsEffect|null|undefined} addChoiceOptions
+         * @memberof v2.CharacterEffectDbo
+         * @instance
+         */
+        CharacterEffectDbo.prototype.addChoiceOptions = null;
+
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
 
         /**
          * CharacterEffectDbo effect.
-         * @member {"modifyFeature"|"setFeature"|"grantChoice"|"grantAbility"|"grantFeat"|undefined} effect
+         * @member {"modifyFeature"|"setFeature"|"grantChoice"|"grantAbility"|"grantFeat"|"addChoiceOptions"|undefined} effect
          * @memberof v2.CharacterEffectDbo
          * @instance
          */
         Object.defineProperty(CharacterEffectDbo.prototype, "effect", {
-            get: $util.oneOfGetter($oneOfFields = ["modifyFeature", "setFeature", "grantChoice", "grantAbility", "grantFeat"]),
+            get: $util.oneOfGetter($oneOfFields = ["modifyFeature", "setFeature", "grantChoice", "grantAbility", "grantFeat", "addChoiceOptions"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2036,6 +2045,8 @@ $root.v2 = (function() {
                 $root.v2.CharacterEffectDbo.GrantAbilityEffect.encode(message.grantAbility, writer.uint32(/* id 103, wireType 2 =*/826).fork()).ldelim();
             if (message.grantFeat != null && Object.hasOwnProperty.call(message, "grantFeat"))
                 $root.v2.CharacterEffectDbo.GrantFeatEffect.encode(message.grantFeat, writer.uint32(/* id 104, wireType 2 =*/834).fork()).ldelim();
+            if (message.addChoiceOptions != null && Object.hasOwnProperty.call(message, "addChoiceOptions"))
+                $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect.encode(message.addChoiceOptions, writer.uint32(/* id 105, wireType 2 =*/842).fork()).ldelim();
             return writer;
         };
 
@@ -2092,6 +2103,10 @@ $root.v2 = (function() {
                     }
                 case 104: {
                         message.grantFeat = $root.v2.CharacterEffectDbo.GrantFeatEffect.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 105: {
+                        message.addChoiceOptions = $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect.decode(reader, reader.uint32());
                         break;
                     }
                 default:
@@ -2181,6 +2196,16 @@ $root.v2 = (function() {
                         return "grantFeat." + error;
                 }
             }
+            if (message.addChoiceOptions != null && message.hasOwnProperty("addChoiceOptions")) {
+                if (properties.effect === 1)
+                    return "effect: multiple values";
+                properties.effect = 1;
+                {
+                    var error = $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect.verify(message.addChoiceOptions);
+                    if (error)
+                        return "addChoiceOptions." + error;
+                }
+            }
             return null;
         };
 
@@ -2222,6 +2247,11 @@ $root.v2 = (function() {
                 if (typeof object.grantFeat !== "object")
                     throw TypeError(".v2.CharacterEffectDbo.grantFeat: object expected");
                 message.grantFeat = $root.v2.CharacterEffectDbo.GrantFeatEffect.fromObject(object.grantFeat);
+            }
+            if (object.addChoiceOptions != null) {
+                if (typeof object.addChoiceOptions !== "object")
+                    throw TypeError(".v2.CharacterEffectDbo.addChoiceOptions: object expected");
+                message.addChoiceOptions = $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect.fromObject(object.addChoiceOptions);
             }
             return message;
         };
@@ -2267,6 +2297,11 @@ $root.v2 = (function() {
                 object.grantFeat = $root.v2.CharacterEffectDbo.GrantFeatEffect.toObject(message.grantFeat, options);
                 if (options.oneofs)
                     object.effect = "grantFeat";
+            }
+            if (message.addChoiceOptions != null && message.hasOwnProperty("addChoiceOptions")) {
+                object.addChoiceOptions = $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect.toObject(message.addChoiceOptions, options);
+                if (options.oneofs)
+                    object.effect = "addChoiceOptions";
             }
             return object;
         };
@@ -3363,6 +3398,273 @@ $root.v2 = (function() {
             };
 
             return GrantFeatEffect;
+        })();
+
+        CharacterEffectDbo.AddChoiceOptionsEffect = (function() {
+
+            /**
+             * Properties of an AddChoiceOptionsEffect.
+             * @memberof v2.CharacterEffectDbo
+             * @interface IAddChoiceOptionsEffect
+             * @property {string|null} [choiceType] AddChoiceOptionsEffect choiceType
+             * @property {string|null} [databaseId] AddChoiceOptionsEffect databaseId
+             * @property {Array.<string>|null} [optionIds] AddChoiceOptionsEffect optionIds
+             */
+
+            /**
+             * Constructs a new AddChoiceOptionsEffect.
+             * @memberof v2.CharacterEffectDbo
+             * @classdesc Represents an AddChoiceOptionsEffect.
+             * @implements IAddChoiceOptionsEffect
+             * @constructor
+             * @param {v2.CharacterEffectDbo.IAddChoiceOptionsEffect=} [properties] Properties to set
+             */
+            function AddChoiceOptionsEffect(properties) {
+                this.optionIds = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AddChoiceOptionsEffect choiceType.
+             * @member {string} choiceType
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @instance
+             */
+            AddChoiceOptionsEffect.prototype.choiceType = "";
+
+            /**
+             * AddChoiceOptionsEffect databaseId.
+             * @member {string} databaseId
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @instance
+             */
+            AddChoiceOptionsEffect.prototype.databaseId = "";
+
+            /**
+             * AddChoiceOptionsEffect optionIds.
+             * @member {Array.<string>} optionIds
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @instance
+             */
+            AddChoiceOptionsEffect.prototype.optionIds = $util.emptyArray;
+
+            /**
+             * Creates a new AddChoiceOptionsEffect instance using the specified properties.
+             * @function create
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {v2.CharacterEffectDbo.IAddChoiceOptionsEffect=} [properties] Properties to set
+             * @returns {v2.CharacterEffectDbo.AddChoiceOptionsEffect} AddChoiceOptionsEffect instance
+             */
+            AddChoiceOptionsEffect.create = function create(properties) {
+                return new AddChoiceOptionsEffect(properties);
+            };
+
+            /**
+             * Encodes the specified AddChoiceOptionsEffect message. Does not implicitly {@link v2.CharacterEffectDbo.AddChoiceOptionsEffect.verify|verify} messages.
+             * @function encode
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {v2.CharacterEffectDbo.AddChoiceOptionsEffect} message AddChoiceOptionsEffect message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AddChoiceOptionsEffect.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.choiceType != null && Object.hasOwnProperty.call(message, "choiceType"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.choiceType);
+                if (message.databaseId != null && Object.hasOwnProperty.call(message, "databaseId"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.databaseId);
+                if (message.optionIds != null && message.optionIds.length)
+                    for (var i = 0; i < message.optionIds.length; ++i)
+                        writer.uint32(/* id 3, wireType 2 =*/26).string(message.optionIds[i]);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AddChoiceOptionsEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.AddChoiceOptionsEffect.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {v2.CharacterEffectDbo.AddChoiceOptionsEffect} message AddChoiceOptionsEffect message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AddChoiceOptionsEffect.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AddChoiceOptionsEffect message from the specified reader or buffer.
+             * @function decode
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v2.CharacterEffectDbo.AddChoiceOptionsEffect} AddChoiceOptionsEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AddChoiceOptionsEffect.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.choiceType = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            message.databaseId = reader.string();
+                            break;
+                        }
+                    case 3: {
+                            if (!(message.optionIds && message.optionIds.length))
+                                message.optionIds = [];
+                            message.optionIds.push(reader.string());
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AddChoiceOptionsEffect message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v2.CharacterEffectDbo.AddChoiceOptionsEffect} AddChoiceOptionsEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AddChoiceOptionsEffect.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AddChoiceOptionsEffect message.
+             * @function verify
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AddChoiceOptionsEffect.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.choiceType != null && message.hasOwnProperty("choiceType"))
+                    if (!$util.isString(message.choiceType))
+                        return "choiceType: string expected";
+                if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                    if (!$util.isString(message.databaseId))
+                        return "databaseId: string expected";
+                if (message.optionIds != null && message.hasOwnProperty("optionIds")) {
+                    if (!Array.isArray(message.optionIds))
+                        return "optionIds: array expected";
+                    for (var i = 0; i < message.optionIds.length; ++i)
+                        if (!$util.isString(message.optionIds[i]))
+                            return "optionIds: string[] expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates an AddChoiceOptionsEffect message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v2.CharacterEffectDbo.AddChoiceOptionsEffect} AddChoiceOptionsEffect
+             */
+            AddChoiceOptionsEffect.fromObject = function fromObject(object) {
+                if (object instanceof $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect)
+                    return object;
+                var message = new $root.v2.CharacterEffectDbo.AddChoiceOptionsEffect();
+                if (object.choiceType != null)
+                    message.choiceType = String(object.choiceType);
+                if (object.databaseId != null)
+                    message.databaseId = String(object.databaseId);
+                if (object.optionIds) {
+                    if (!Array.isArray(object.optionIds))
+                        throw TypeError(".v2.CharacterEffectDbo.AddChoiceOptionsEffect.optionIds: array expected");
+                    message.optionIds = [];
+                    for (var i = 0; i < object.optionIds.length; ++i)
+                        message.optionIds[i] = String(object.optionIds[i]);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AddChoiceOptionsEffect message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {v2.CharacterEffectDbo.AddChoiceOptionsEffect} message AddChoiceOptionsEffect
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AddChoiceOptionsEffect.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.arrays || options.defaults)
+                    object.optionIds = [];
+                if (options.defaults) {
+                    object.choiceType = "";
+                    object.databaseId = "";
+                }
+                if (message.choiceType != null && message.hasOwnProperty("choiceType"))
+                    object.choiceType = message.choiceType;
+                if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                    object.databaseId = message.databaseId;
+                if (message.optionIds && message.optionIds.length) {
+                    object.optionIds = [];
+                    for (var j = 0; j < message.optionIds.length; ++j)
+                        object.optionIds[j] = message.optionIds[j];
+                }
+                return object;
+            };
+
+            /**
+             * Converts this AddChoiceOptionsEffect to JSON.
+             * @function toJSON
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AddChoiceOptionsEffect.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AddChoiceOptionsEffect
+             * @function getTypeUrl
+             * @memberof v2.CharacterEffectDbo.AddChoiceOptionsEffect
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AddChoiceOptionsEffect.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v2.CharacterEffectDbo.AddChoiceOptionsEffect";
+            };
+
+            return AddChoiceOptionsEffect;
         })();
 
         return CharacterEffectDbo;
@@ -6769,10 +7071,10 @@ $root.v2 = (function() {
          * @interface ICharacterChoiceDbo
          * @property {string|null} [key] CharacterChoiceDbo key
          * @property {string|null} [label] CharacterChoiceDbo label
-         * @property {v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null} [AbilityScoreIncrease] CharacterChoiceDbo AbilityScoreIncrease
-         * @property {v2.CharacterChoiceDbo.FeatChoice|null} [Feat] CharacterChoiceDbo Feat
-         * @property {v2.CharacterChoiceDbo.AbilityChoice|null} [Ability] CharacterChoiceDbo Ability
-         * @property {v2.CharacterChoiceDbo.ModifierChoice|null} [Modifier] CharacterChoiceDbo Modifier
+         * @property {v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null} [abilityScoreIncrease] CharacterChoiceDbo abilityScoreIncrease
+         * @property {v2.CharacterChoiceDbo.FeatChoice|null} [feat] CharacterChoiceDbo feat
+         * @property {v2.CharacterChoiceDbo.AbilityChoice|null} [ability] CharacterChoiceDbo ability
+         * @property {v2.CharacterChoiceDbo.ModifierChoice|null} [modifier] CharacterChoiceDbo modifier
          */
 
         /**
@@ -6807,48 +7109,48 @@ $root.v2 = (function() {
         CharacterChoiceDbo.prototype.label = "";
 
         /**
-         * CharacterChoiceDbo AbilityScoreIncrease.
-         * @member {v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null|undefined} AbilityScoreIncrease
+         * CharacterChoiceDbo abilityScoreIncrease.
+         * @member {v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null|undefined} abilityScoreIncrease
          * @memberof v2.CharacterChoiceDbo
          * @instance
          */
-        CharacterChoiceDbo.prototype.AbilityScoreIncrease = null;
+        CharacterChoiceDbo.prototype.abilityScoreIncrease = null;
 
         /**
-         * CharacterChoiceDbo Feat.
-         * @member {v2.CharacterChoiceDbo.FeatChoice|null|undefined} Feat
+         * CharacterChoiceDbo feat.
+         * @member {v2.CharacterChoiceDbo.FeatChoice|null|undefined} feat
          * @memberof v2.CharacterChoiceDbo
          * @instance
          */
-        CharacterChoiceDbo.prototype.Feat = null;
+        CharacterChoiceDbo.prototype.feat = null;
 
         /**
-         * CharacterChoiceDbo Ability.
-         * @member {v2.CharacterChoiceDbo.AbilityChoice|null|undefined} Ability
+         * CharacterChoiceDbo ability.
+         * @member {v2.CharacterChoiceDbo.AbilityChoice|null|undefined} ability
          * @memberof v2.CharacterChoiceDbo
          * @instance
          */
-        CharacterChoiceDbo.prototype.Ability = null;
+        CharacterChoiceDbo.prototype.ability = null;
 
         /**
-         * CharacterChoiceDbo Modifier.
-         * @member {v2.CharacterChoiceDbo.ModifierChoice|null|undefined} Modifier
+         * CharacterChoiceDbo modifier.
+         * @member {v2.CharacterChoiceDbo.ModifierChoice|null|undefined} modifier
          * @memberof v2.CharacterChoiceDbo
          * @instance
          */
-        CharacterChoiceDbo.prototype.Modifier = null;
+        CharacterChoiceDbo.prototype.modifier = null;
 
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
 
         /**
          * CharacterChoiceDbo effect.
-         * @member {"AbilityScoreIncrease"|"Feat"|"Ability"|"Modifier"|undefined} effect
+         * @member {"abilityScoreIncrease"|"feat"|"ability"|"modifier"|undefined} effect
          * @memberof v2.CharacterChoiceDbo
          * @instance
          */
         Object.defineProperty(CharacterChoiceDbo.prototype, "effect", {
-            get: $util.oneOfGetter($oneOfFields = ["AbilityScoreIncrease", "Feat", "Ability", "Modifier"]),
+            get: $util.oneOfGetter($oneOfFields = ["abilityScoreIncrease", "feat", "ability", "modifier"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -6880,14 +7182,14 @@ $root.v2 = (function() {
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.key);
             if (message.label != null && Object.hasOwnProperty.call(message, "label"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.label);
-            if (message.AbilityScoreIncrease != null && Object.hasOwnProperty.call(message, "AbilityScoreIncrease"))
-                $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.encode(message.AbilityScoreIncrease, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
-            if (message.Feat != null && Object.hasOwnProperty.call(message, "Feat"))
-                $root.v2.CharacterChoiceDbo.FeatChoice.encode(message.Feat, writer.uint32(/* id 101, wireType 2 =*/810).fork()).ldelim();
-            if (message.Ability != null && Object.hasOwnProperty.call(message, "Ability"))
-                $root.v2.CharacterChoiceDbo.AbilityChoice.encode(message.Ability, writer.uint32(/* id 102, wireType 2 =*/818).fork()).ldelim();
-            if (message.Modifier != null && Object.hasOwnProperty.call(message, "Modifier"))
-                $root.v2.CharacterChoiceDbo.ModifierChoice.encode(message.Modifier, writer.uint32(/* id 103, wireType 2 =*/826).fork()).ldelim();
+            if (message.abilityScoreIncrease != null && Object.hasOwnProperty.call(message, "abilityScoreIncrease"))
+                $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.encode(message.abilityScoreIncrease, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
+            if (message.feat != null && Object.hasOwnProperty.call(message, "feat"))
+                $root.v2.CharacterChoiceDbo.FeatChoice.encode(message.feat, writer.uint32(/* id 101, wireType 2 =*/810).fork()).ldelim();
+            if (message.ability != null && Object.hasOwnProperty.call(message, "ability"))
+                $root.v2.CharacterChoiceDbo.AbilityChoice.encode(message.ability, writer.uint32(/* id 102, wireType 2 =*/818).fork()).ldelim();
+            if (message.modifier != null && Object.hasOwnProperty.call(message, "modifier"))
+                $root.v2.CharacterChoiceDbo.ModifierChoice.encode(message.modifier, writer.uint32(/* id 103, wireType 2 =*/826).fork()).ldelim();
             return writer;
         };
 
@@ -6931,19 +7233,19 @@ $root.v2 = (function() {
                         break;
                     }
                 case 100: {
-                        message.AbilityScoreIncrease = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.decode(reader, reader.uint32());
+                        message.abilityScoreIncrease = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.decode(reader, reader.uint32());
                         break;
                     }
                 case 101: {
-                        message.Feat = $root.v2.CharacterChoiceDbo.FeatChoice.decode(reader, reader.uint32());
+                        message.feat = $root.v2.CharacterChoiceDbo.FeatChoice.decode(reader, reader.uint32());
                         break;
                     }
                 case 102: {
-                        message.Ability = $root.v2.CharacterChoiceDbo.AbilityChoice.decode(reader, reader.uint32());
+                        message.ability = $root.v2.CharacterChoiceDbo.AbilityChoice.decode(reader, reader.uint32());
                         break;
                     }
                 case 103: {
-                        message.Modifier = $root.v2.CharacterChoiceDbo.ModifierChoice.decode(reader, reader.uint32());
+                        message.modifier = $root.v2.CharacterChoiceDbo.ModifierChoice.decode(reader, reader.uint32());
                         break;
                     }
                 default:
@@ -6988,42 +7290,42 @@ $root.v2 = (function() {
             if (message.label != null && message.hasOwnProperty("label"))
                 if (!$util.isString(message.label))
                     return "label: string expected";
-            if (message.AbilityScoreIncrease != null && message.hasOwnProperty("AbilityScoreIncrease")) {
+            if (message.abilityScoreIncrease != null && message.hasOwnProperty("abilityScoreIncrease")) {
                 properties.effect = 1;
                 {
-                    var error = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.verify(message.AbilityScoreIncrease);
+                    var error = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.verify(message.abilityScoreIncrease);
                     if (error)
-                        return "AbilityScoreIncrease." + error;
+                        return "abilityScoreIncrease." + error;
                 }
             }
-            if (message.Feat != null && message.hasOwnProperty("Feat")) {
+            if (message.feat != null && message.hasOwnProperty("feat")) {
                 if (properties.effect === 1)
                     return "effect: multiple values";
                 properties.effect = 1;
                 {
-                    var error = $root.v2.CharacterChoiceDbo.FeatChoice.verify(message.Feat);
+                    var error = $root.v2.CharacterChoiceDbo.FeatChoice.verify(message.feat);
                     if (error)
-                        return "Feat." + error;
+                        return "feat." + error;
                 }
             }
-            if (message.Ability != null && message.hasOwnProperty("Ability")) {
+            if (message.ability != null && message.hasOwnProperty("ability")) {
                 if (properties.effect === 1)
                     return "effect: multiple values";
                 properties.effect = 1;
                 {
-                    var error = $root.v2.CharacterChoiceDbo.AbilityChoice.verify(message.Ability);
+                    var error = $root.v2.CharacterChoiceDbo.AbilityChoice.verify(message.ability);
                     if (error)
-                        return "Ability." + error;
+                        return "ability." + error;
                 }
             }
-            if (message.Modifier != null && message.hasOwnProperty("Modifier")) {
+            if (message.modifier != null && message.hasOwnProperty("modifier")) {
                 if (properties.effect === 1)
                     return "effect: multiple values";
                 properties.effect = 1;
                 {
-                    var error = $root.v2.CharacterChoiceDbo.ModifierChoice.verify(message.Modifier);
+                    var error = $root.v2.CharacterChoiceDbo.ModifierChoice.verify(message.modifier);
                     if (error)
-                        return "Modifier." + error;
+                        return "modifier." + error;
                 }
             }
             return null;
@@ -7045,25 +7347,25 @@ $root.v2 = (function() {
                 message.key = String(object.key);
             if (object.label != null)
                 message.label = String(object.label);
-            if (object.AbilityScoreIncrease != null) {
-                if (typeof object.AbilityScoreIncrease !== "object")
-                    throw TypeError(".v2.CharacterChoiceDbo.AbilityScoreIncrease: object expected");
-                message.AbilityScoreIncrease = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.fromObject(object.AbilityScoreIncrease);
+            if (object.abilityScoreIncrease != null) {
+                if (typeof object.abilityScoreIncrease !== "object")
+                    throw TypeError(".v2.CharacterChoiceDbo.abilityScoreIncrease: object expected");
+                message.abilityScoreIncrease = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.fromObject(object.abilityScoreIncrease);
             }
-            if (object.Feat != null) {
-                if (typeof object.Feat !== "object")
-                    throw TypeError(".v2.CharacterChoiceDbo.Feat: object expected");
-                message.Feat = $root.v2.CharacterChoiceDbo.FeatChoice.fromObject(object.Feat);
+            if (object.feat != null) {
+                if (typeof object.feat !== "object")
+                    throw TypeError(".v2.CharacterChoiceDbo.feat: object expected");
+                message.feat = $root.v2.CharacterChoiceDbo.FeatChoice.fromObject(object.feat);
             }
-            if (object.Ability != null) {
-                if (typeof object.Ability !== "object")
-                    throw TypeError(".v2.CharacterChoiceDbo.Ability: object expected");
-                message.Ability = $root.v2.CharacterChoiceDbo.AbilityChoice.fromObject(object.Ability);
+            if (object.ability != null) {
+                if (typeof object.ability !== "object")
+                    throw TypeError(".v2.CharacterChoiceDbo.ability: object expected");
+                message.ability = $root.v2.CharacterChoiceDbo.AbilityChoice.fromObject(object.ability);
             }
-            if (object.Modifier != null) {
-                if (typeof object.Modifier !== "object")
-                    throw TypeError(".v2.CharacterChoiceDbo.Modifier: object expected");
-                message.Modifier = $root.v2.CharacterChoiceDbo.ModifierChoice.fromObject(object.Modifier);
+            if (object.modifier != null) {
+                if (typeof object.modifier !== "object")
+                    throw TypeError(".v2.CharacterChoiceDbo.modifier: object expected");
+                message.modifier = $root.v2.CharacterChoiceDbo.ModifierChoice.fromObject(object.modifier);
             }
             return message;
         };
@@ -7089,25 +7391,25 @@ $root.v2 = (function() {
                 object.key = message.key;
             if (message.label != null && message.hasOwnProperty("label"))
                 object.label = message.label;
-            if (message.AbilityScoreIncrease != null && message.hasOwnProperty("AbilityScoreIncrease")) {
-                object.AbilityScoreIncrease = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.toObject(message.AbilityScoreIncrease, options);
+            if (message.abilityScoreIncrease != null && message.hasOwnProperty("abilityScoreIncrease")) {
+                object.abilityScoreIncrease = $root.v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice.toObject(message.abilityScoreIncrease, options);
                 if (options.oneofs)
-                    object.effect = "AbilityScoreIncrease";
+                    object.effect = "abilityScoreIncrease";
             }
-            if (message.Feat != null && message.hasOwnProperty("Feat")) {
-                object.Feat = $root.v2.CharacterChoiceDbo.FeatChoice.toObject(message.Feat, options);
+            if (message.feat != null && message.hasOwnProperty("feat")) {
+                object.feat = $root.v2.CharacterChoiceDbo.FeatChoice.toObject(message.feat, options);
                 if (options.oneofs)
-                    object.effect = "Feat";
+                    object.effect = "feat";
             }
-            if (message.Ability != null && message.hasOwnProperty("Ability")) {
-                object.Ability = $root.v2.CharacterChoiceDbo.AbilityChoice.toObject(message.Ability, options);
+            if (message.ability != null && message.hasOwnProperty("ability")) {
+                object.ability = $root.v2.CharacterChoiceDbo.AbilityChoice.toObject(message.ability, options);
                 if (options.oneofs)
-                    object.effect = "Ability";
+                    object.effect = "ability";
             }
-            if (message.Modifier != null && message.hasOwnProperty("Modifier")) {
-                object.Modifier = $root.v2.CharacterChoiceDbo.ModifierChoice.toObject(message.Modifier, options);
+            if (message.modifier != null && message.hasOwnProperty("modifier")) {
+                object.modifier = $root.v2.CharacterChoiceDbo.ModifierChoice.toObject(message.modifier, options);
                 if (options.oneofs)
-                    object.effect = "Modifier";
+                    object.effect = "modifier";
             }
             return object;
         };
@@ -11301,6 +11603,3176 @@ $root.v2 = (function() {
     })();
 
     return v2;
+})();
+
+$root.v3 = (function() {
+
+    /**
+     * Namespace v3.
+     * @exports v3
+     * @namespace
+     */
+    var v3 = {};
+
+    v3.ModificationDatabaseDbo = (function() {
+
+        /**
+         * Properties of a ModificationDatabaseDbo.
+         * @memberof v3
+         * @interface IModificationDatabaseDbo
+         * @property {string|null} [databaseId] ModificationDatabaseDbo databaseId
+         * @property {Array.<v3.ModificationSummaryDbo>|null} [summaries] ModificationDatabaseDbo summaries
+         * @property {Array.<v3.CategoryDbo>|null} [categories] ModificationDatabaseDbo categories
+         */
+
+        /**
+         * Constructs a new ModificationDatabaseDbo.
+         * @memberof v3
+         * @classdesc Represents a ModificationDatabaseDbo.
+         * @implements IModificationDatabaseDbo
+         * @constructor
+         * @param {v3.IModificationDatabaseDbo=} [properties] Properties to set
+         */
+        function ModificationDatabaseDbo(properties) {
+            this.summaries = [];
+            this.categories = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ModificationDatabaseDbo databaseId.
+         * @member {string} databaseId
+         * @memberof v3.ModificationDatabaseDbo
+         * @instance
+         */
+        ModificationDatabaseDbo.prototype.databaseId = "";
+
+        /**
+         * ModificationDatabaseDbo summaries.
+         * @member {Array.<v3.ModificationSummaryDbo>} summaries
+         * @memberof v3.ModificationDatabaseDbo
+         * @instance
+         */
+        ModificationDatabaseDbo.prototype.summaries = $util.emptyArray;
+
+        /**
+         * ModificationDatabaseDbo categories.
+         * @member {Array.<v3.CategoryDbo>} categories
+         * @memberof v3.ModificationDatabaseDbo
+         * @instance
+         */
+        ModificationDatabaseDbo.prototype.categories = $util.emptyArray;
+
+        /**
+         * Creates a new ModificationDatabaseDbo instance using the specified properties.
+         * @function create
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {v3.IModificationDatabaseDbo=} [properties] Properties to set
+         * @returns {v3.ModificationDatabaseDbo} ModificationDatabaseDbo instance
+         */
+        ModificationDatabaseDbo.create = function create(properties) {
+            return new ModificationDatabaseDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ModificationDatabaseDbo message. Does not implicitly {@link v3.ModificationDatabaseDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {v3.ModificationDatabaseDbo} message ModificationDatabaseDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ModificationDatabaseDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.databaseId != null && Object.hasOwnProperty.call(message, "databaseId"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.databaseId);
+            if (message.summaries != null && message.summaries.length)
+                for (var i = 0; i < message.summaries.length; ++i)
+                    $root.v3.ModificationSummaryDbo.encode(message.summaries[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            if (message.categories != null && message.categories.length)
+                for (var i = 0; i < message.categories.length; ++i)
+                    $root.v3.CategoryDbo.encode(message.categories[i], writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ModificationDatabaseDbo message, length delimited. Does not implicitly {@link v3.ModificationDatabaseDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {v3.ModificationDatabaseDbo} message ModificationDatabaseDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ModificationDatabaseDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ModificationDatabaseDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v3.ModificationDatabaseDbo} ModificationDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ModificationDatabaseDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.ModificationDatabaseDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.databaseId = reader.string();
+                        break;
+                    }
+                case 2: {
+                        if (!(message.summaries && message.summaries.length))
+                            message.summaries = [];
+                        message.summaries.push($root.v3.ModificationSummaryDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 3: {
+                        if (!(message.categories && message.categories.length))
+                            message.categories = [];
+                        message.categories.push($root.v3.CategoryDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ModificationDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v3.ModificationDatabaseDbo} ModificationDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ModificationDatabaseDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ModificationDatabaseDbo message.
+         * @function verify
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ModificationDatabaseDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                if (!$util.isString(message.databaseId))
+                    return "databaseId: string expected";
+            if (message.summaries != null && message.hasOwnProperty("summaries")) {
+                if (!Array.isArray(message.summaries))
+                    return "summaries: array expected";
+                for (var i = 0; i < message.summaries.length; ++i) {
+                    var error = $root.v3.ModificationSummaryDbo.verify(message.summaries[i]);
+                    if (error)
+                        return "summaries." + error;
+                }
+            }
+            if (message.categories != null && message.hasOwnProperty("categories")) {
+                if (!Array.isArray(message.categories))
+                    return "categories: array expected";
+                for (var i = 0; i < message.categories.length; ++i) {
+                    var error = $root.v3.CategoryDbo.verify(message.categories[i]);
+                    if (error)
+                        return "categories." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a ModificationDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v3.ModificationDatabaseDbo} ModificationDatabaseDbo
+         */
+        ModificationDatabaseDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v3.ModificationDatabaseDbo)
+                return object;
+            var message = new $root.v3.ModificationDatabaseDbo();
+            if (object.databaseId != null)
+                message.databaseId = String(object.databaseId);
+            if (object.summaries) {
+                if (!Array.isArray(object.summaries))
+                    throw TypeError(".v3.ModificationDatabaseDbo.summaries: array expected");
+                message.summaries = [];
+                for (var i = 0; i < object.summaries.length; ++i) {
+                    if (typeof object.summaries[i] !== "object")
+                        throw TypeError(".v3.ModificationDatabaseDbo.summaries: object expected");
+                    message.summaries[i] = $root.v3.ModificationSummaryDbo.fromObject(object.summaries[i]);
+                }
+            }
+            if (object.categories) {
+                if (!Array.isArray(object.categories))
+                    throw TypeError(".v3.ModificationDatabaseDbo.categories: array expected");
+                message.categories = [];
+                for (var i = 0; i < object.categories.length; ++i) {
+                    if (typeof object.categories[i] !== "object")
+                        throw TypeError(".v3.ModificationDatabaseDbo.categories: object expected");
+                    message.categories[i] = $root.v3.CategoryDbo.fromObject(object.categories[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ModificationDatabaseDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {v3.ModificationDatabaseDbo} message ModificationDatabaseDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ModificationDatabaseDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults) {
+                object.summaries = [];
+                object.categories = [];
+            }
+            if (options.defaults)
+                object.databaseId = "";
+            if (message.databaseId != null && message.hasOwnProperty("databaseId"))
+                object.databaseId = message.databaseId;
+            if (message.summaries && message.summaries.length) {
+                object.summaries = [];
+                for (var j = 0; j < message.summaries.length; ++j)
+                    object.summaries[j] = $root.v3.ModificationSummaryDbo.toObject(message.summaries[j], options);
+            }
+            if (message.categories && message.categories.length) {
+                object.categories = [];
+                for (var j = 0; j < message.categories.length; ++j)
+                    object.categories[j] = $root.v3.CategoryDbo.toObject(message.categories[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this ModificationDatabaseDbo to JSON.
+         * @function toJSON
+         * @memberof v3.ModificationDatabaseDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ModificationDatabaseDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ModificationDatabaseDbo
+         * @function getTypeUrl
+         * @memberof v3.ModificationDatabaseDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ModificationDatabaseDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v3.ModificationDatabaseDbo";
+        };
+
+        return ModificationDatabaseDbo;
+    })();
+
+    v3.CategoryDbo = (function() {
+
+        /**
+         * Properties of a CategoryDbo.
+         * @memberof v3
+         * @interface ICategoryDbo
+         * @property {number|null} [id] CategoryDbo id
+         * @property {string|null} [name] CategoryDbo name
+         */
+
+        /**
+         * Constructs a new CategoryDbo.
+         * @memberof v3
+         * @classdesc Represents a CategoryDbo.
+         * @implements ICategoryDbo
+         * @constructor
+         * @param {v3.ICategoryDbo=} [properties] Properties to set
+         */
+        function CategoryDbo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * CategoryDbo id.
+         * @member {number} id
+         * @memberof v3.CategoryDbo
+         * @instance
+         */
+        CategoryDbo.prototype.id = 0;
+
+        /**
+         * CategoryDbo name.
+         * @member {string} name
+         * @memberof v3.CategoryDbo
+         * @instance
+         */
+        CategoryDbo.prototype.name = "";
+
+        /**
+         * Creates a new CategoryDbo instance using the specified properties.
+         * @function create
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {v3.ICategoryDbo=} [properties] Properties to set
+         * @returns {v3.CategoryDbo} CategoryDbo instance
+         */
+        CategoryDbo.create = function create(properties) {
+            return new CategoryDbo(properties);
+        };
+
+        /**
+         * Encodes the specified CategoryDbo message. Does not implicitly {@link v3.CategoryDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {v3.CategoryDbo} message CategoryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        CategoryDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified CategoryDbo message, length delimited. Does not implicitly {@link v3.CategoryDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {v3.CategoryDbo} message CategoryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        CategoryDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a CategoryDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v3.CategoryDbo} CategoryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        CategoryDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.CategoryDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.int32();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a CategoryDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v3.CategoryDbo} CategoryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        CategoryDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a CategoryDbo message.
+         * @function verify
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        CategoryDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isInteger(message.id))
+                    return "id: integer expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a CategoryDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v3.CategoryDbo} CategoryDbo
+         */
+        CategoryDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v3.CategoryDbo)
+                return object;
+            var message = new $root.v3.CategoryDbo();
+            if (object.id != null)
+                message.id = object.id | 0;
+            if (object.name != null)
+                message.name = String(object.name);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a CategoryDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {v3.CategoryDbo} message CategoryDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        CategoryDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults) {
+                object.id = 0;
+                object.name = "";
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            return object;
+        };
+
+        /**
+         * Converts this CategoryDbo to JSON.
+         * @function toJSON
+         * @memberof v3.CategoryDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        CategoryDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for CategoryDbo
+         * @function getTypeUrl
+         * @memberof v3.CategoryDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        CategoryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v3.CategoryDbo";
+        };
+
+        return CategoryDbo;
+    })();
+
+    v3.ModificationSummaryDbo = (function() {
+
+        /**
+         * Properties of a ModificationSummaryDbo.
+         * @memberof v3
+         * @interface IModificationSummaryDbo
+         * @property {string|null} [id] ModificationSummaryDbo id
+         * @property {string|null} [name] ModificationSummaryDbo name
+         * @property {string|null} [prerequisiteFormula] ModificationSummaryDbo prerequisiteFormula
+         * @property {Array.<v3.ModificationSummaryDbo>|null} [children] ModificationSummaryDbo children
+         * @property {string|null} [type] ModificationSummaryDbo type
+         * @property {number|null} [categoryId] ModificationSummaryDbo categoryId
+         */
+
+        /**
+         * Constructs a new ModificationSummaryDbo.
+         * @memberof v3
+         * @classdesc Represents a ModificationSummaryDbo.
+         * @implements IModificationSummaryDbo
+         * @constructor
+         * @param {v3.IModificationSummaryDbo=} [properties] Properties to set
+         */
+        function ModificationSummaryDbo(properties) {
+            this.children = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ModificationSummaryDbo id.
+         * @member {string} id
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         */
+        ModificationSummaryDbo.prototype.id = "";
+
+        /**
+         * ModificationSummaryDbo name.
+         * @member {string} name
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         */
+        ModificationSummaryDbo.prototype.name = "";
+
+        /**
+         * ModificationSummaryDbo prerequisiteFormula.
+         * @member {string} prerequisiteFormula
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         */
+        ModificationSummaryDbo.prototype.prerequisiteFormula = "";
+
+        /**
+         * ModificationSummaryDbo children.
+         * @member {Array.<v3.ModificationSummaryDbo>} children
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         */
+        ModificationSummaryDbo.prototype.children = $util.emptyArray;
+
+        /**
+         * ModificationSummaryDbo type.
+         * @member {string} type
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         */
+        ModificationSummaryDbo.prototype.type = "";
+
+        /**
+         * ModificationSummaryDbo categoryId.
+         * @member {number} categoryId
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         */
+        ModificationSummaryDbo.prototype.categoryId = 0;
+
+        /**
+         * Creates a new ModificationSummaryDbo instance using the specified properties.
+         * @function create
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {v3.IModificationSummaryDbo=} [properties] Properties to set
+         * @returns {v3.ModificationSummaryDbo} ModificationSummaryDbo instance
+         */
+        ModificationSummaryDbo.create = function create(properties) {
+            return new ModificationSummaryDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ModificationSummaryDbo message. Does not implicitly {@link v3.ModificationSummaryDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {v3.ModificationSummaryDbo} message ModificationSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ModificationSummaryDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.prerequisiteFormula != null && Object.hasOwnProperty.call(message, "prerequisiteFormula"))
+                writer.uint32(/* id 3, wireType 2 =*/26).string(message.prerequisiteFormula);
+            if (message.children != null && message.children.length)
+                for (var i = 0; i < message.children.length; ++i)
+                    $root.v3.ModificationSummaryDbo.encode(message.children[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                writer.uint32(/* id 5, wireType 2 =*/42).string(message.type);
+            if (message.categoryId != null && Object.hasOwnProperty.call(message, "categoryId"))
+                writer.uint32(/* id 6, wireType 0 =*/48).int32(message.categoryId);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ModificationSummaryDbo message, length delimited. Does not implicitly {@link v3.ModificationSummaryDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {v3.ModificationSummaryDbo} message ModificationSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ModificationSummaryDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ModificationSummaryDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v3.ModificationSummaryDbo} ModificationSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ModificationSummaryDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.ModificationSummaryDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.prerequisiteFormula = reader.string();
+                        break;
+                    }
+                case 4: {
+                        if (!(message.children && message.children.length))
+                            message.children = [];
+                        message.children.push($root.v3.ModificationSummaryDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 5: {
+                        message.type = reader.string();
+                        break;
+                    }
+                case 6: {
+                        message.categoryId = reader.int32();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ModificationSummaryDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v3.ModificationSummaryDbo} ModificationSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ModificationSummaryDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ModificationSummaryDbo message.
+         * @function verify
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ModificationSummaryDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.prerequisiteFormula != null && message.hasOwnProperty("prerequisiteFormula"))
+                if (!$util.isString(message.prerequisiteFormula))
+                    return "prerequisiteFormula: string expected";
+            if (message.children != null && message.hasOwnProperty("children")) {
+                if (!Array.isArray(message.children))
+                    return "children: array expected";
+                for (var i = 0; i < message.children.length; ++i) {
+                    var error = $root.v3.ModificationSummaryDbo.verify(message.children[i]);
+                    if (error)
+                        return "children." + error;
+                }
+            }
+            if (message.type != null && message.hasOwnProperty("type"))
+                if (!$util.isString(message.type))
+                    return "type: string expected";
+            if (message.categoryId != null && message.hasOwnProperty("categoryId"))
+                if (!$util.isInteger(message.categoryId))
+                    return "categoryId: integer expected";
+            return null;
+        };
+
+        /**
+         * Creates a ModificationSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v3.ModificationSummaryDbo} ModificationSummaryDbo
+         */
+        ModificationSummaryDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v3.ModificationSummaryDbo)
+                return object;
+            var message = new $root.v3.ModificationSummaryDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.prerequisiteFormula != null)
+                message.prerequisiteFormula = String(object.prerequisiteFormula);
+            if (object.children) {
+                if (!Array.isArray(object.children))
+                    throw TypeError(".v3.ModificationSummaryDbo.children: array expected");
+                message.children = [];
+                for (var i = 0; i < object.children.length; ++i) {
+                    if (typeof object.children[i] !== "object")
+                        throw TypeError(".v3.ModificationSummaryDbo.children: object expected");
+                    message.children[i] = $root.v3.ModificationSummaryDbo.fromObject(object.children[i]);
+                }
+            }
+            if (object.type != null)
+                message.type = String(object.type);
+            if (object.categoryId != null)
+                message.categoryId = object.categoryId | 0;
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ModificationSummaryDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {v3.ModificationSummaryDbo} message ModificationSummaryDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ModificationSummaryDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults)
+                object.children = [];
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.prerequisiteFormula = "";
+                object.type = "";
+                object.categoryId = 0;
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.prerequisiteFormula != null && message.hasOwnProperty("prerequisiteFormula"))
+                object.prerequisiteFormula = message.prerequisiteFormula;
+            if (message.children && message.children.length) {
+                object.children = [];
+                for (var j = 0; j < message.children.length; ++j)
+                    object.children[j] = $root.v3.ModificationSummaryDbo.toObject(message.children[j], options);
+            }
+            if (message.type != null && message.hasOwnProperty("type"))
+                object.type = message.type;
+            if (message.categoryId != null && message.hasOwnProperty("categoryId"))
+                object.categoryId = message.categoryId;
+            return object;
+        };
+
+        /**
+         * Converts this ModificationSummaryDbo to JSON.
+         * @function toJSON
+         * @memberof v3.ModificationSummaryDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ModificationSummaryDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ModificationSummaryDbo
+         * @function getTypeUrl
+         * @memberof v3.ModificationSummaryDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ModificationSummaryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v3.ModificationSummaryDbo";
+        };
+
+        return ModificationSummaryDbo;
+    })();
+
+    v3.ModificationDetailsDbo = (function() {
+
+        /**
+         * Properties of a ModificationDetailsDbo.
+         * @memberof v3
+         * @interface IModificationDetailsDbo
+         * @property {string|null} [id] ModificationDetailsDbo id
+         * @property {string|null} [name] ModificationDetailsDbo name
+         * @property {string|null} [prerequisiteFormula] ModificationDetailsDbo prerequisiteFormula
+         * @property {Array.<v3.ModificationDetailsDbo>|null} [children] ModificationDetailsDbo children
+         * @property {string|null} [type] ModificationDetailsDbo type
+         * @property {number|null} [categoryId] ModificationDetailsDbo categoryId
+         * @property {string|null} [descriptionText] ModificationDetailsDbo descriptionText
+         * @property {Array.<v3.EffectDbo>|null} [effects] ModificationDetailsDbo effects
+         * @property {string|null} [benefitText] ModificationDetailsDbo benefitText
+         * @property {string|null} [normalText] ModificationDetailsDbo normalText
+         * @property {string|null} [specialText] ModificationDetailsDbo specialText
+         * @property {string|null} [noteText] ModificationDetailsDbo noteText
+         */
+
+        /**
+         * Constructs a new ModificationDetailsDbo.
+         * @memberof v3
+         * @classdesc Represents a ModificationDetailsDbo.
+         * @implements IModificationDetailsDbo
+         * @constructor
+         * @param {v3.IModificationDetailsDbo=} [properties] Properties to set
+         */
+        function ModificationDetailsDbo(properties) {
+            this.children = [];
+            this.effects = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ModificationDetailsDbo id.
+         * @member {string} id
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.id = "";
+
+        /**
+         * ModificationDetailsDbo name.
+         * @member {string} name
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.name = "";
+
+        /**
+         * ModificationDetailsDbo prerequisiteFormula.
+         * @member {string} prerequisiteFormula
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.prerequisiteFormula = "";
+
+        /**
+         * ModificationDetailsDbo children.
+         * @member {Array.<v3.ModificationDetailsDbo>} children
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.children = $util.emptyArray;
+
+        /**
+         * ModificationDetailsDbo type.
+         * @member {string} type
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.type = "";
+
+        /**
+         * ModificationDetailsDbo categoryId.
+         * @member {number} categoryId
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.categoryId = 0;
+
+        /**
+         * ModificationDetailsDbo descriptionText.
+         * @member {string} descriptionText
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.descriptionText = "";
+
+        /**
+         * ModificationDetailsDbo effects.
+         * @member {Array.<v3.EffectDbo>} effects
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.effects = $util.emptyArray;
+
+        /**
+         * ModificationDetailsDbo benefitText.
+         * @member {string} benefitText
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.benefitText = "";
+
+        /**
+         * ModificationDetailsDbo normalText.
+         * @member {string} normalText
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.normalText = "";
+
+        /**
+         * ModificationDetailsDbo specialText.
+         * @member {string} specialText
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.specialText = "";
+
+        /**
+         * ModificationDetailsDbo noteText.
+         * @member {string} noteText
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         */
+        ModificationDetailsDbo.prototype.noteText = "";
+
+        /**
+         * Creates a new ModificationDetailsDbo instance using the specified properties.
+         * @function create
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {v3.IModificationDetailsDbo=} [properties] Properties to set
+         * @returns {v3.ModificationDetailsDbo} ModificationDetailsDbo instance
+         */
+        ModificationDetailsDbo.create = function create(properties) {
+            return new ModificationDetailsDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ModificationDetailsDbo message. Does not implicitly {@link v3.ModificationDetailsDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {v3.ModificationDetailsDbo} message ModificationDetailsDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ModificationDetailsDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.prerequisiteFormula != null && Object.hasOwnProperty.call(message, "prerequisiteFormula"))
+                writer.uint32(/* id 3, wireType 2 =*/26).string(message.prerequisiteFormula);
+            if (message.children != null && message.children.length)
+                for (var i = 0; i < message.children.length; ++i)
+                    $root.v3.ModificationDetailsDbo.encode(message.children[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                writer.uint32(/* id 5, wireType 2 =*/42).string(message.type);
+            if (message.categoryId != null && Object.hasOwnProperty.call(message, "categoryId"))
+                writer.uint32(/* id 6, wireType 0 =*/48).int32(message.categoryId);
+            if (message.descriptionText != null && Object.hasOwnProperty.call(message, "descriptionText"))
+                writer.uint32(/* id 100, wireType 2 =*/802).string(message.descriptionText);
+            if (message.effects != null && message.effects.length)
+                for (var i = 0; i < message.effects.length; ++i)
+                    $root.v3.EffectDbo.encode(message.effects[i], writer.uint32(/* id 101, wireType 2 =*/810).fork()).ldelim();
+            if (message.benefitText != null && Object.hasOwnProperty.call(message, "benefitText"))
+                writer.uint32(/* id 102, wireType 2 =*/818).string(message.benefitText);
+            if (message.normalText != null && Object.hasOwnProperty.call(message, "normalText"))
+                writer.uint32(/* id 103, wireType 2 =*/826).string(message.normalText);
+            if (message.specialText != null && Object.hasOwnProperty.call(message, "specialText"))
+                writer.uint32(/* id 104, wireType 2 =*/834).string(message.specialText);
+            if (message.noteText != null && Object.hasOwnProperty.call(message, "noteText"))
+                writer.uint32(/* id 105, wireType 2 =*/842).string(message.noteText);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ModificationDetailsDbo message, length delimited. Does not implicitly {@link v3.ModificationDetailsDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {v3.ModificationDetailsDbo} message ModificationDetailsDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ModificationDetailsDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a ModificationDetailsDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v3.ModificationDetailsDbo} ModificationDetailsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ModificationDetailsDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.ModificationDetailsDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.prerequisiteFormula = reader.string();
+                        break;
+                    }
+                case 4: {
+                        if (!(message.children && message.children.length))
+                            message.children = [];
+                        message.children.push($root.v3.ModificationDetailsDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 5: {
+                        message.type = reader.string();
+                        break;
+                    }
+                case 6: {
+                        message.categoryId = reader.int32();
+                        break;
+                    }
+                case 100: {
+                        message.descriptionText = reader.string();
+                        break;
+                    }
+                case 101: {
+                        if (!(message.effects && message.effects.length))
+                            message.effects = [];
+                        message.effects.push($root.v3.EffectDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                case 102: {
+                        message.benefitText = reader.string();
+                        break;
+                    }
+                case 103: {
+                        message.normalText = reader.string();
+                        break;
+                    }
+                case 104: {
+                        message.specialText = reader.string();
+                        break;
+                    }
+                case 105: {
+                        message.noteText = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a ModificationDetailsDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v3.ModificationDetailsDbo} ModificationDetailsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ModificationDetailsDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a ModificationDetailsDbo message.
+         * @function verify
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ModificationDetailsDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isString(message.id))
+                    return "id: string expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.prerequisiteFormula != null && message.hasOwnProperty("prerequisiteFormula"))
+                if (!$util.isString(message.prerequisiteFormula))
+                    return "prerequisiteFormula: string expected";
+            if (message.children != null && message.hasOwnProperty("children")) {
+                if (!Array.isArray(message.children))
+                    return "children: array expected";
+                for (var i = 0; i < message.children.length; ++i) {
+                    var error = $root.v3.ModificationDetailsDbo.verify(message.children[i]);
+                    if (error)
+                        return "children." + error;
+                }
+            }
+            if (message.type != null && message.hasOwnProperty("type"))
+                if (!$util.isString(message.type))
+                    return "type: string expected";
+            if (message.categoryId != null && message.hasOwnProperty("categoryId"))
+                if (!$util.isInteger(message.categoryId))
+                    return "categoryId: integer expected";
+            if (message.descriptionText != null && message.hasOwnProperty("descriptionText"))
+                if (!$util.isString(message.descriptionText))
+                    return "descriptionText: string expected";
+            if (message.effects != null && message.hasOwnProperty("effects")) {
+                if (!Array.isArray(message.effects))
+                    return "effects: array expected";
+                for (var i = 0; i < message.effects.length; ++i) {
+                    var error = $root.v3.EffectDbo.verify(message.effects[i]);
+                    if (error)
+                        return "effects." + error;
+                }
+            }
+            if (message.benefitText != null && message.hasOwnProperty("benefitText"))
+                if (!$util.isString(message.benefitText))
+                    return "benefitText: string expected";
+            if (message.normalText != null && message.hasOwnProperty("normalText"))
+                if (!$util.isString(message.normalText))
+                    return "normalText: string expected";
+            if (message.specialText != null && message.hasOwnProperty("specialText"))
+                if (!$util.isString(message.specialText))
+                    return "specialText: string expected";
+            if (message.noteText != null && message.hasOwnProperty("noteText"))
+                if (!$util.isString(message.noteText))
+                    return "noteText: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a ModificationDetailsDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v3.ModificationDetailsDbo} ModificationDetailsDbo
+         */
+        ModificationDetailsDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v3.ModificationDetailsDbo)
+                return object;
+            var message = new $root.v3.ModificationDetailsDbo();
+            if (object.id != null)
+                message.id = String(object.id);
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.prerequisiteFormula != null)
+                message.prerequisiteFormula = String(object.prerequisiteFormula);
+            if (object.children) {
+                if (!Array.isArray(object.children))
+                    throw TypeError(".v3.ModificationDetailsDbo.children: array expected");
+                message.children = [];
+                for (var i = 0; i < object.children.length; ++i) {
+                    if (typeof object.children[i] !== "object")
+                        throw TypeError(".v3.ModificationDetailsDbo.children: object expected");
+                    message.children[i] = $root.v3.ModificationDetailsDbo.fromObject(object.children[i]);
+                }
+            }
+            if (object.type != null)
+                message.type = String(object.type);
+            if (object.categoryId != null)
+                message.categoryId = object.categoryId | 0;
+            if (object.descriptionText != null)
+                message.descriptionText = String(object.descriptionText);
+            if (object.effects) {
+                if (!Array.isArray(object.effects))
+                    throw TypeError(".v3.ModificationDetailsDbo.effects: array expected");
+                message.effects = [];
+                for (var i = 0; i < object.effects.length; ++i) {
+                    if (typeof object.effects[i] !== "object")
+                        throw TypeError(".v3.ModificationDetailsDbo.effects: object expected");
+                    message.effects[i] = $root.v3.EffectDbo.fromObject(object.effects[i]);
+                }
+            }
+            if (object.benefitText != null)
+                message.benefitText = String(object.benefitText);
+            if (object.normalText != null)
+                message.normalText = String(object.normalText);
+            if (object.specialText != null)
+                message.specialText = String(object.specialText);
+            if (object.noteText != null)
+                message.noteText = String(object.noteText);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a ModificationDetailsDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {v3.ModificationDetailsDbo} message ModificationDetailsDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ModificationDetailsDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults) {
+                object.children = [];
+                object.effects = [];
+            }
+            if (options.defaults) {
+                object.id = "";
+                object.name = "";
+                object.prerequisiteFormula = "";
+                object.type = "";
+                object.categoryId = 0;
+                object.descriptionText = "";
+                object.benefitText = "";
+                object.normalText = "";
+                object.specialText = "";
+                object.noteText = "";
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.prerequisiteFormula != null && message.hasOwnProperty("prerequisiteFormula"))
+                object.prerequisiteFormula = message.prerequisiteFormula;
+            if (message.children && message.children.length) {
+                object.children = [];
+                for (var j = 0; j < message.children.length; ++j)
+                    object.children[j] = $root.v3.ModificationDetailsDbo.toObject(message.children[j], options);
+            }
+            if (message.type != null && message.hasOwnProperty("type"))
+                object.type = message.type;
+            if (message.categoryId != null && message.hasOwnProperty("categoryId"))
+                object.categoryId = message.categoryId;
+            if (message.descriptionText != null && message.hasOwnProperty("descriptionText"))
+                object.descriptionText = message.descriptionText;
+            if (message.effects && message.effects.length) {
+                object.effects = [];
+                for (var j = 0; j < message.effects.length; ++j)
+                    object.effects[j] = $root.v3.EffectDbo.toObject(message.effects[j], options);
+            }
+            if (message.benefitText != null && message.hasOwnProperty("benefitText"))
+                object.benefitText = message.benefitText;
+            if (message.normalText != null && message.hasOwnProperty("normalText"))
+                object.normalText = message.normalText;
+            if (message.specialText != null && message.hasOwnProperty("specialText"))
+                object.specialText = message.specialText;
+            if (message.noteText != null && message.hasOwnProperty("noteText"))
+                object.noteText = message.noteText;
+            return object;
+        };
+
+        /**
+         * Converts this ModificationDetailsDbo to JSON.
+         * @function toJSON
+         * @memberof v3.ModificationDetailsDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ModificationDetailsDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ModificationDetailsDbo
+         * @function getTypeUrl
+         * @memberof v3.ModificationDetailsDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ModificationDetailsDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v3.ModificationDetailsDbo";
+        };
+
+        return ModificationDetailsDbo;
+    })();
+
+    v3.EffectDbo = (function() {
+
+        /**
+         * Properties of an EffectDbo.
+         * @memberof v3
+         * @interface IEffectDbo
+         * @property {v3.EffectDbo.SetStateEffectDbo|null} [setState] EffectDbo setState
+         * @property {v3.EffectDbo.AdjustStateEffectDbo|null} [adjustState] EffectDbo adjustState
+         * @property {v3.EffectDbo.TextChoiceDbo|null} [textChoice] EffectDbo textChoice
+         * @property {v3.EffectDbo.SelectChoiceDbo|null} [selectChoice] EffectDbo selectChoice
+         * @property {v3.EffectDbo.AddChoicesToTypeEffectDbo|null} [addChoicesToType] EffectDbo addChoicesToType
+         */
+
+        /**
+         * Constructs a new EffectDbo.
+         * @memberof v3
+         * @classdesc Represents an EffectDbo.
+         * @implements IEffectDbo
+         * @constructor
+         * @param {v3.IEffectDbo=} [properties] Properties to set
+         */
+        function EffectDbo(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * EffectDbo setState.
+         * @member {v3.EffectDbo.SetStateEffectDbo|null|undefined} setState
+         * @memberof v3.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.setState = null;
+
+        /**
+         * EffectDbo adjustState.
+         * @member {v3.EffectDbo.AdjustStateEffectDbo|null|undefined} adjustState
+         * @memberof v3.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.adjustState = null;
+
+        /**
+         * EffectDbo textChoice.
+         * @member {v3.EffectDbo.TextChoiceDbo|null|undefined} textChoice
+         * @memberof v3.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.textChoice = null;
+
+        /**
+         * EffectDbo selectChoice.
+         * @member {v3.EffectDbo.SelectChoiceDbo|null|undefined} selectChoice
+         * @memberof v3.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.selectChoice = null;
+
+        /**
+         * EffectDbo addChoicesToType.
+         * @member {v3.EffectDbo.AddChoicesToTypeEffectDbo|null|undefined} addChoicesToType
+         * @memberof v3.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.addChoicesToType = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * EffectDbo effect.
+         * @member {"setState"|"adjustState"|"textChoice"|"selectChoice"|"addChoicesToType"|undefined} effect
+         * @memberof v3.EffectDbo
+         * @instance
+         */
+        Object.defineProperty(EffectDbo.prototype, "effect", {
+            get: $util.oneOfGetter($oneOfFields = ["setState", "adjustState", "textChoice", "selectChoice", "addChoicesToType"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * Creates a new EffectDbo instance using the specified properties.
+         * @function create
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {v3.IEffectDbo=} [properties] Properties to set
+         * @returns {v3.EffectDbo} EffectDbo instance
+         */
+        EffectDbo.create = function create(properties) {
+            return new EffectDbo(properties);
+        };
+
+        /**
+         * Encodes the specified EffectDbo message. Does not implicitly {@link v3.EffectDbo.verify|verify} messages.
+         * @function encode
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {v3.EffectDbo} message EffectDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        EffectDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.setState != null && Object.hasOwnProperty.call(message, "setState"))
+                $root.v3.EffectDbo.SetStateEffectDbo.encode(message.setState, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            if (message.adjustState != null && Object.hasOwnProperty.call(message, "adjustState"))
+                $root.v3.EffectDbo.AdjustStateEffectDbo.encode(message.adjustState, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            if (message.textChoice != null && Object.hasOwnProperty.call(message, "textChoice"))
+                $root.v3.EffectDbo.TextChoiceDbo.encode(message.textChoice, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            if (message.selectChoice != null && Object.hasOwnProperty.call(message, "selectChoice"))
+                $root.v3.EffectDbo.SelectChoiceDbo.encode(message.selectChoice, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+            if (message.addChoicesToType != null && Object.hasOwnProperty.call(message, "addChoicesToType"))
+                $root.v3.EffectDbo.AddChoicesToTypeEffectDbo.encode(message.addChoicesToType, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified EffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {v3.EffectDbo} message EffectDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        EffectDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an EffectDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {v3.EffectDbo} EffectDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        EffectDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.EffectDbo();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.setState = $root.v3.EffectDbo.SetStateEffectDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 2: {
+                        message.adjustState = $root.v3.EffectDbo.AdjustStateEffectDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 3: {
+                        message.textChoice = $root.v3.EffectDbo.TextChoiceDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 4: {
+                        message.selectChoice = $root.v3.EffectDbo.SelectChoiceDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 5: {
+                        message.addChoicesToType = $root.v3.EffectDbo.AddChoicesToTypeEffectDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes an EffectDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {v3.EffectDbo} EffectDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        EffectDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an EffectDbo message.
+         * @function verify
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        EffectDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            var properties = {};
+            if (message.setState != null && message.hasOwnProperty("setState")) {
+                properties.effect = 1;
+                {
+                    var error = $root.v3.EffectDbo.SetStateEffectDbo.verify(message.setState);
+                    if (error)
+                        return "setState." + error;
+                }
+            }
+            if (message.adjustState != null && message.hasOwnProperty("adjustState")) {
+                if (properties.effect === 1)
+                    return "effect: multiple values";
+                properties.effect = 1;
+                {
+                    var error = $root.v3.EffectDbo.AdjustStateEffectDbo.verify(message.adjustState);
+                    if (error)
+                        return "adjustState." + error;
+                }
+            }
+            if (message.textChoice != null && message.hasOwnProperty("textChoice")) {
+                if (properties.effect === 1)
+                    return "effect: multiple values";
+                properties.effect = 1;
+                {
+                    var error = $root.v3.EffectDbo.TextChoiceDbo.verify(message.textChoice);
+                    if (error)
+                        return "textChoice." + error;
+                }
+            }
+            if (message.selectChoice != null && message.hasOwnProperty("selectChoice")) {
+                if (properties.effect === 1)
+                    return "effect: multiple values";
+                properties.effect = 1;
+                {
+                    var error = $root.v3.EffectDbo.SelectChoiceDbo.verify(message.selectChoice);
+                    if (error)
+                        return "selectChoice." + error;
+                }
+            }
+            if (message.addChoicesToType != null && message.hasOwnProperty("addChoicesToType")) {
+                if (properties.effect === 1)
+                    return "effect: multiple values";
+                properties.effect = 1;
+                {
+                    var error = $root.v3.EffectDbo.AddChoicesToTypeEffectDbo.verify(message.addChoicesToType);
+                    if (error)
+                        return "addChoicesToType." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates an EffectDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {v3.EffectDbo} EffectDbo
+         */
+        EffectDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.v3.EffectDbo)
+                return object;
+            var message = new $root.v3.EffectDbo();
+            if (object.setState != null) {
+                if (typeof object.setState !== "object")
+                    throw TypeError(".v3.EffectDbo.setState: object expected");
+                message.setState = $root.v3.EffectDbo.SetStateEffectDbo.fromObject(object.setState);
+            }
+            if (object.adjustState != null) {
+                if (typeof object.adjustState !== "object")
+                    throw TypeError(".v3.EffectDbo.adjustState: object expected");
+                message.adjustState = $root.v3.EffectDbo.AdjustStateEffectDbo.fromObject(object.adjustState);
+            }
+            if (object.textChoice != null) {
+                if (typeof object.textChoice !== "object")
+                    throw TypeError(".v3.EffectDbo.textChoice: object expected");
+                message.textChoice = $root.v3.EffectDbo.TextChoiceDbo.fromObject(object.textChoice);
+            }
+            if (object.selectChoice != null) {
+                if (typeof object.selectChoice !== "object")
+                    throw TypeError(".v3.EffectDbo.selectChoice: object expected");
+                message.selectChoice = $root.v3.EffectDbo.SelectChoiceDbo.fromObject(object.selectChoice);
+            }
+            if (object.addChoicesToType != null) {
+                if (typeof object.addChoicesToType !== "object")
+                    throw TypeError(".v3.EffectDbo.addChoicesToType: object expected");
+                message.addChoicesToType = $root.v3.EffectDbo.AddChoicesToTypeEffectDbo.fromObject(object.addChoicesToType);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an EffectDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {v3.EffectDbo} message EffectDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        EffectDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (message.setState != null && message.hasOwnProperty("setState")) {
+                object.setState = $root.v3.EffectDbo.SetStateEffectDbo.toObject(message.setState, options);
+                if (options.oneofs)
+                    object.effect = "setState";
+            }
+            if (message.adjustState != null && message.hasOwnProperty("adjustState")) {
+                object.adjustState = $root.v3.EffectDbo.AdjustStateEffectDbo.toObject(message.adjustState, options);
+                if (options.oneofs)
+                    object.effect = "adjustState";
+            }
+            if (message.textChoice != null && message.hasOwnProperty("textChoice")) {
+                object.textChoice = $root.v3.EffectDbo.TextChoiceDbo.toObject(message.textChoice, options);
+                if (options.oneofs)
+                    object.effect = "textChoice";
+            }
+            if (message.selectChoice != null && message.hasOwnProperty("selectChoice")) {
+                object.selectChoice = $root.v3.EffectDbo.SelectChoiceDbo.toObject(message.selectChoice, options);
+                if (options.oneofs)
+                    object.effect = "selectChoice";
+            }
+            if (message.addChoicesToType != null && message.hasOwnProperty("addChoicesToType")) {
+                object.addChoicesToType = $root.v3.EffectDbo.AddChoicesToTypeEffectDbo.toObject(message.addChoicesToType, options);
+                if (options.oneofs)
+                    object.effect = "addChoicesToType";
+            }
+            return object;
+        };
+
+        /**
+         * Converts this EffectDbo to JSON.
+         * @function toJSON
+         * @memberof v3.EffectDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        EffectDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for EffectDbo
+         * @function getTypeUrl
+         * @memberof v3.EffectDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        EffectDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/v3.EffectDbo";
+        };
+
+        EffectDbo.SetStateEffectDbo = (function() {
+
+            /**
+             * Properties of a SetStateEffectDbo.
+             * @memberof v3.EffectDbo
+             * @interface ISetStateEffectDbo
+             * @property {number|null} [level] SetStateEffectDbo level
+             * @property {string|null} [key] SetStateEffectDbo key
+             * @property {number|null} [numericValue] SetStateEffectDbo numericValue
+             * @property {string|null} [textValue] SetStateEffectDbo textValue
+             * @property {boolean|null} [booleanValue] SetStateEffectDbo booleanValue
+             */
+
+            /**
+             * Constructs a new SetStateEffectDbo.
+             * @memberof v3.EffectDbo
+             * @classdesc Represents a SetStateEffectDbo.
+             * @implements ISetStateEffectDbo
+             * @constructor
+             * @param {v3.EffectDbo.ISetStateEffectDbo=} [properties] Properties to set
+             */
+            function SetStateEffectDbo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * SetStateEffectDbo level.
+             * @member {number} level
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             */
+            SetStateEffectDbo.prototype.level = 0;
+
+            /**
+             * SetStateEffectDbo key.
+             * @member {string} key
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             */
+            SetStateEffectDbo.prototype.key = "";
+
+            /**
+             * SetStateEffectDbo numericValue.
+             * @member {number|null|undefined} numericValue
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             */
+            SetStateEffectDbo.prototype.numericValue = null;
+
+            /**
+             * SetStateEffectDbo textValue.
+             * @member {string|null|undefined} textValue
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             */
+            SetStateEffectDbo.prototype.textValue = null;
+
+            /**
+             * SetStateEffectDbo booleanValue.
+             * @member {boolean|null|undefined} booleanValue
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             */
+            SetStateEffectDbo.prototype.booleanValue = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * SetStateEffectDbo value.
+             * @member {"numericValue"|"textValue"|"booleanValue"|undefined} value
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             */
+            Object.defineProperty(SetStateEffectDbo.prototype, "value", {
+                get: $util.oneOfGetter($oneOfFields = ["numericValue", "textValue", "booleanValue"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new SetStateEffectDbo instance using the specified properties.
+             * @function create
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.ISetStateEffectDbo=} [properties] Properties to set
+             * @returns {v3.EffectDbo.SetStateEffectDbo} SetStateEffectDbo instance
+             */
+            SetStateEffectDbo.create = function create(properties) {
+                return new SetStateEffectDbo(properties);
+            };
+
+            /**
+             * Encodes the specified SetStateEffectDbo message. Does not implicitly {@link v3.EffectDbo.SetStateEffectDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.SetStateEffectDbo} message SetStateEffectDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            SetStateEffectDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.level != null && Object.hasOwnProperty.call(message, "level"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.level);
+                if (message.key != null && Object.hasOwnProperty.call(message, "key"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.key);
+                if (message.numericValue != null && Object.hasOwnProperty.call(message, "numericValue"))
+                    writer.uint32(/* id 3, wireType 0 =*/24).int32(message.numericValue);
+                if (message.textValue != null && Object.hasOwnProperty.call(message, "textValue"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.textValue);
+                if (message.booleanValue != null && Object.hasOwnProperty.call(message, "booleanValue"))
+                    writer.uint32(/* id 5, wireType 0 =*/40).bool(message.booleanValue);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified SetStateEffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.SetStateEffectDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.SetStateEffectDbo} message SetStateEffectDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            SetStateEffectDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a SetStateEffectDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v3.EffectDbo.SetStateEffectDbo} SetStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            SetStateEffectDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.EffectDbo.SetStateEffectDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.level = reader.int32();
+                            break;
+                        }
+                    case 2: {
+                            message.key = reader.string();
+                            break;
+                        }
+                    case 3: {
+                            message.numericValue = reader.int32();
+                            break;
+                        }
+                    case 4: {
+                            message.textValue = reader.string();
+                            break;
+                        }
+                    case 5: {
+                            message.booleanValue = reader.bool();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a SetStateEffectDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v3.EffectDbo.SetStateEffectDbo} SetStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            SetStateEffectDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a SetStateEffectDbo message.
+             * @function verify
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            SetStateEffectDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.level != null && message.hasOwnProperty("level"))
+                    if (!$util.isInteger(message.level))
+                        return "level: integer expected";
+                if (message.key != null && message.hasOwnProperty("key"))
+                    if (!$util.isString(message.key))
+                        return "key: string expected";
+                if (message.numericValue != null && message.hasOwnProperty("numericValue")) {
+                    properties.value = 1;
+                    if (!$util.isInteger(message.numericValue))
+                        return "numericValue: integer expected";
+                }
+                if (message.textValue != null && message.hasOwnProperty("textValue")) {
+                    if (properties.value === 1)
+                        return "value: multiple values";
+                    properties.value = 1;
+                    if (!$util.isString(message.textValue))
+                        return "textValue: string expected";
+                }
+                if (message.booleanValue != null && message.hasOwnProperty("booleanValue")) {
+                    if (properties.value === 1)
+                        return "value: multiple values";
+                    properties.value = 1;
+                    if (typeof message.booleanValue !== "boolean")
+                        return "booleanValue: boolean expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a SetStateEffectDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v3.EffectDbo.SetStateEffectDbo} SetStateEffectDbo
+             */
+            SetStateEffectDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v3.EffectDbo.SetStateEffectDbo)
+                    return object;
+                var message = new $root.v3.EffectDbo.SetStateEffectDbo();
+                if (object.level != null)
+                    message.level = object.level | 0;
+                if (object.key != null)
+                    message.key = String(object.key);
+                if (object.numericValue != null)
+                    message.numericValue = object.numericValue | 0;
+                if (object.textValue != null)
+                    message.textValue = String(object.textValue);
+                if (object.booleanValue != null)
+                    message.booleanValue = Boolean(object.booleanValue);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a SetStateEffectDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.SetStateEffectDbo} message SetStateEffectDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            SetStateEffectDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    object.level = 0;
+                    object.key = "";
+                }
+                if (message.level != null && message.hasOwnProperty("level"))
+                    object.level = message.level;
+                if (message.key != null && message.hasOwnProperty("key"))
+                    object.key = message.key;
+                if (message.numericValue != null && message.hasOwnProperty("numericValue")) {
+                    object.numericValue = message.numericValue;
+                    if (options.oneofs)
+                        object.value = "numericValue";
+                }
+                if (message.textValue != null && message.hasOwnProperty("textValue")) {
+                    object.textValue = message.textValue;
+                    if (options.oneofs)
+                        object.value = "textValue";
+                }
+                if (message.booleanValue != null && message.hasOwnProperty("booleanValue")) {
+                    object.booleanValue = message.booleanValue;
+                    if (options.oneofs)
+                        object.value = "booleanValue";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this SetStateEffectDbo to JSON.
+             * @function toJSON
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            SetStateEffectDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for SetStateEffectDbo
+             * @function getTypeUrl
+             * @memberof v3.EffectDbo.SetStateEffectDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            SetStateEffectDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v3.EffectDbo.SetStateEffectDbo";
+            };
+
+            return SetStateEffectDbo;
+        })();
+
+        EffectDbo.AdjustStateEffectDbo = (function() {
+
+            /**
+             * Properties of an AdjustStateEffectDbo.
+             * @memberof v3.EffectDbo
+             * @interface IAdjustStateEffectDbo
+             * @property {number|null} [level] AdjustStateEffectDbo level
+             * @property {string|null} [key] AdjustStateEffectDbo key
+             * @property {number|null} [delta] AdjustStateEffectDbo delta
+             */
+
+            /**
+             * Constructs a new AdjustStateEffectDbo.
+             * @memberof v3.EffectDbo
+             * @classdesc Represents an AdjustStateEffectDbo.
+             * @implements IAdjustStateEffectDbo
+             * @constructor
+             * @param {v3.EffectDbo.IAdjustStateEffectDbo=} [properties] Properties to set
+             */
+            function AdjustStateEffectDbo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AdjustStateEffectDbo level.
+             * @member {number} level
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @instance
+             */
+            AdjustStateEffectDbo.prototype.level = 0;
+
+            /**
+             * AdjustStateEffectDbo key.
+             * @member {string} key
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @instance
+             */
+            AdjustStateEffectDbo.prototype.key = "";
+
+            /**
+             * AdjustStateEffectDbo delta.
+             * @member {number} delta
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @instance
+             */
+            AdjustStateEffectDbo.prototype.delta = 0;
+
+            /**
+             * Creates a new AdjustStateEffectDbo instance using the specified properties.
+             * @function create
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.IAdjustStateEffectDbo=} [properties] Properties to set
+             * @returns {v3.EffectDbo.AdjustStateEffectDbo} AdjustStateEffectDbo instance
+             */
+            AdjustStateEffectDbo.create = function create(properties) {
+                return new AdjustStateEffectDbo(properties);
+            };
+
+            /**
+             * Encodes the specified AdjustStateEffectDbo message. Does not implicitly {@link v3.EffectDbo.AdjustStateEffectDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.AdjustStateEffectDbo} message AdjustStateEffectDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AdjustStateEffectDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.level != null && Object.hasOwnProperty.call(message, "level"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.level);
+                if (message.key != null && Object.hasOwnProperty.call(message, "key"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.key);
+                if (message.delta != null && Object.hasOwnProperty.call(message, "delta"))
+                    writer.uint32(/* id 3, wireType 0 =*/24).int32(message.delta);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AdjustStateEffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.AdjustStateEffectDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.AdjustStateEffectDbo} message AdjustStateEffectDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AdjustStateEffectDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AdjustStateEffectDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v3.EffectDbo.AdjustStateEffectDbo} AdjustStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AdjustStateEffectDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.EffectDbo.AdjustStateEffectDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.level = reader.int32();
+                            break;
+                        }
+                    case 2: {
+                            message.key = reader.string();
+                            break;
+                        }
+                    case 3: {
+                            message.delta = reader.int32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AdjustStateEffectDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v3.EffectDbo.AdjustStateEffectDbo} AdjustStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AdjustStateEffectDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AdjustStateEffectDbo message.
+             * @function verify
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AdjustStateEffectDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.level != null && message.hasOwnProperty("level"))
+                    if (!$util.isInteger(message.level))
+                        return "level: integer expected";
+                if (message.key != null && message.hasOwnProperty("key"))
+                    if (!$util.isString(message.key))
+                        return "key: string expected";
+                if (message.delta != null && message.hasOwnProperty("delta"))
+                    if (!$util.isInteger(message.delta))
+                        return "delta: integer expected";
+                return null;
+            };
+
+            /**
+             * Creates an AdjustStateEffectDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v3.EffectDbo.AdjustStateEffectDbo} AdjustStateEffectDbo
+             */
+            AdjustStateEffectDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v3.EffectDbo.AdjustStateEffectDbo)
+                    return object;
+                var message = new $root.v3.EffectDbo.AdjustStateEffectDbo();
+                if (object.level != null)
+                    message.level = object.level | 0;
+                if (object.key != null)
+                    message.key = String(object.key);
+                if (object.delta != null)
+                    message.delta = object.delta | 0;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AdjustStateEffectDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {v3.EffectDbo.AdjustStateEffectDbo} message AdjustStateEffectDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AdjustStateEffectDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    object.level = 0;
+                    object.key = "";
+                    object.delta = 0;
+                }
+                if (message.level != null && message.hasOwnProperty("level"))
+                    object.level = message.level;
+                if (message.key != null && message.hasOwnProperty("key"))
+                    object.key = message.key;
+                if (message.delta != null && message.hasOwnProperty("delta"))
+                    object.delta = message.delta;
+                return object;
+            };
+
+            /**
+             * Converts this AdjustStateEffectDbo to JSON.
+             * @function toJSON
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AdjustStateEffectDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AdjustStateEffectDbo
+             * @function getTypeUrl
+             * @memberof v3.EffectDbo.AdjustStateEffectDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AdjustStateEffectDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v3.EffectDbo.AdjustStateEffectDbo";
+            };
+
+            return AdjustStateEffectDbo;
+        })();
+
+        EffectDbo.AddChoicesToTypeEffectDbo = (function() {
+
+            /**
+             * Properties of an AddChoicesToTypeEffectDbo.
+             * @memberof v3.EffectDbo
+             * @interface IAddChoicesToTypeEffectDbo
+             * @property {string|null} [type] AddChoicesToTypeEffectDbo type
+             * @property {Array.<string>|null} [additionalReferences] AddChoicesToTypeEffectDbo additionalReferences
+             */
+
+            /**
+             * Constructs a new AddChoicesToTypeEffectDbo.
+             * @memberof v3.EffectDbo
+             * @classdesc Represents an AddChoicesToTypeEffectDbo.
+             * @implements IAddChoicesToTypeEffectDbo
+             * @constructor
+             * @param {v3.EffectDbo.IAddChoicesToTypeEffectDbo=} [properties] Properties to set
+             */
+            function AddChoicesToTypeEffectDbo(properties) {
+                this.additionalReferences = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AddChoicesToTypeEffectDbo type.
+             * @member {string} type
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @instance
+             */
+            AddChoicesToTypeEffectDbo.prototype.type = "";
+
+            /**
+             * AddChoicesToTypeEffectDbo additionalReferences.
+             * @member {Array.<string>} additionalReferences
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @instance
+             */
+            AddChoicesToTypeEffectDbo.prototype.additionalReferences = $util.emptyArray;
+
+            /**
+             * Creates a new AddChoicesToTypeEffectDbo instance using the specified properties.
+             * @function create
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {v3.EffectDbo.IAddChoicesToTypeEffectDbo=} [properties] Properties to set
+             * @returns {v3.EffectDbo.AddChoicesToTypeEffectDbo} AddChoicesToTypeEffectDbo instance
+             */
+            AddChoicesToTypeEffectDbo.create = function create(properties) {
+                return new AddChoicesToTypeEffectDbo(properties);
+            };
+
+            /**
+             * Encodes the specified AddChoicesToTypeEffectDbo message. Does not implicitly {@link v3.EffectDbo.AddChoicesToTypeEffectDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {v3.EffectDbo.AddChoicesToTypeEffectDbo} message AddChoicesToTypeEffectDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AddChoicesToTypeEffectDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.type);
+                if (message.additionalReferences != null && message.additionalReferences.length)
+                    for (var i = 0; i < message.additionalReferences.length; ++i)
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.additionalReferences[i]);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AddChoicesToTypeEffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.AddChoicesToTypeEffectDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {v3.EffectDbo.AddChoicesToTypeEffectDbo} message AddChoicesToTypeEffectDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AddChoicesToTypeEffectDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AddChoicesToTypeEffectDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v3.EffectDbo.AddChoicesToTypeEffectDbo} AddChoicesToTypeEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AddChoicesToTypeEffectDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.EffectDbo.AddChoicesToTypeEffectDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.type = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            if (!(message.additionalReferences && message.additionalReferences.length))
+                                message.additionalReferences = [];
+                            message.additionalReferences.push(reader.string());
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AddChoicesToTypeEffectDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v3.EffectDbo.AddChoicesToTypeEffectDbo} AddChoicesToTypeEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AddChoicesToTypeEffectDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AddChoicesToTypeEffectDbo message.
+             * @function verify
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AddChoicesToTypeEffectDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.type != null && message.hasOwnProperty("type"))
+                    if (!$util.isString(message.type))
+                        return "type: string expected";
+                if (message.additionalReferences != null && message.hasOwnProperty("additionalReferences")) {
+                    if (!Array.isArray(message.additionalReferences))
+                        return "additionalReferences: array expected";
+                    for (var i = 0; i < message.additionalReferences.length; ++i)
+                        if (!$util.isString(message.additionalReferences[i]))
+                            return "additionalReferences: string[] expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates an AddChoicesToTypeEffectDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v3.EffectDbo.AddChoicesToTypeEffectDbo} AddChoicesToTypeEffectDbo
+             */
+            AddChoicesToTypeEffectDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v3.EffectDbo.AddChoicesToTypeEffectDbo)
+                    return object;
+                var message = new $root.v3.EffectDbo.AddChoicesToTypeEffectDbo();
+                if (object.type != null)
+                    message.type = String(object.type);
+                if (object.additionalReferences) {
+                    if (!Array.isArray(object.additionalReferences))
+                        throw TypeError(".v3.EffectDbo.AddChoicesToTypeEffectDbo.additionalReferences: array expected");
+                    message.additionalReferences = [];
+                    for (var i = 0; i < object.additionalReferences.length; ++i)
+                        message.additionalReferences[i] = String(object.additionalReferences[i]);
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AddChoicesToTypeEffectDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {v3.EffectDbo.AddChoicesToTypeEffectDbo} message AddChoicesToTypeEffectDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AddChoicesToTypeEffectDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.arrays || options.defaults)
+                    object.additionalReferences = [];
+                if (options.defaults)
+                    object.type = "";
+                if (message.type != null && message.hasOwnProperty("type"))
+                    object.type = message.type;
+                if (message.additionalReferences && message.additionalReferences.length) {
+                    object.additionalReferences = [];
+                    for (var j = 0; j < message.additionalReferences.length; ++j)
+                        object.additionalReferences[j] = message.additionalReferences[j];
+                }
+                return object;
+            };
+
+            /**
+             * Converts this AddChoicesToTypeEffectDbo to JSON.
+             * @function toJSON
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AddChoicesToTypeEffectDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AddChoicesToTypeEffectDbo
+             * @function getTypeUrl
+             * @memberof v3.EffectDbo.AddChoicesToTypeEffectDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AddChoicesToTypeEffectDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v3.EffectDbo.AddChoicesToTypeEffectDbo";
+            };
+
+            return AddChoicesToTypeEffectDbo;
+        })();
+
+        EffectDbo.TextChoiceDbo = (function() {
+
+            /**
+             * Properties of a TextChoiceDbo.
+             * @memberof v3.EffectDbo
+             * @interface ITextChoiceDbo
+             * @property {string|null} [id] TextChoiceDbo id
+             * @property {number|null} [level] TextChoiceDbo level
+             * @property {string|null} [key] TextChoiceDbo key
+             * @property {string|null} [label] TextChoiceDbo label
+             * @property {string|null} [type] TextChoiceDbo type
+             */
+
+            /**
+             * Constructs a new TextChoiceDbo.
+             * @memberof v3.EffectDbo
+             * @classdesc Represents a TextChoiceDbo.
+             * @implements ITextChoiceDbo
+             * @constructor
+             * @param {v3.EffectDbo.ITextChoiceDbo=} [properties] Properties to set
+             */
+            function TextChoiceDbo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * TextChoiceDbo id.
+             * @member {string} id
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @instance
+             */
+            TextChoiceDbo.prototype.id = "";
+
+            /**
+             * TextChoiceDbo level.
+             * @member {number} level
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @instance
+             */
+            TextChoiceDbo.prototype.level = 0;
+
+            /**
+             * TextChoiceDbo key.
+             * @member {string} key
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @instance
+             */
+            TextChoiceDbo.prototype.key = "";
+
+            /**
+             * TextChoiceDbo label.
+             * @member {string} label
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @instance
+             */
+            TextChoiceDbo.prototype.label = "";
+
+            /**
+             * TextChoiceDbo type.
+             * @member {string} type
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @instance
+             */
+            TextChoiceDbo.prototype.type = "";
+
+            /**
+             * Creates a new TextChoiceDbo instance using the specified properties.
+             * @function create
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.ITextChoiceDbo=} [properties] Properties to set
+             * @returns {v3.EffectDbo.TextChoiceDbo} TextChoiceDbo instance
+             */
+            TextChoiceDbo.create = function create(properties) {
+                return new TextChoiceDbo(properties);
+            };
+
+            /**
+             * Encodes the specified TextChoiceDbo message. Does not implicitly {@link v3.EffectDbo.TextChoiceDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.TextChoiceDbo} message TextChoiceDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            TextChoiceDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+                if (message.level != null && Object.hasOwnProperty.call(message, "level"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.level);
+                if (message.key != null && Object.hasOwnProperty.call(message, "key"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.key);
+                if (message.label != null && Object.hasOwnProperty.call(message, "label"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).string(message.label);
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.type);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified TextChoiceDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.TextChoiceDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.TextChoiceDbo} message TextChoiceDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            TextChoiceDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a TextChoiceDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v3.EffectDbo.TextChoiceDbo} TextChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            TextChoiceDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.EffectDbo.TextChoiceDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.id = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            message.level = reader.int32();
+                            break;
+                        }
+                    case 3: {
+                            message.key = reader.string();
+                            break;
+                        }
+                    case 4: {
+                            message.label = reader.string();
+                            break;
+                        }
+                    case 5: {
+                            message.type = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a TextChoiceDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v3.EffectDbo.TextChoiceDbo} TextChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            TextChoiceDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a TextChoiceDbo message.
+             * @function verify
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            TextChoiceDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.id != null && message.hasOwnProperty("id"))
+                    if (!$util.isString(message.id))
+                        return "id: string expected";
+                if (message.level != null && message.hasOwnProperty("level"))
+                    if (!$util.isInteger(message.level))
+                        return "level: integer expected";
+                if (message.key != null && message.hasOwnProperty("key"))
+                    if (!$util.isString(message.key))
+                        return "key: string expected";
+                if (message.label != null && message.hasOwnProperty("label"))
+                    if (!$util.isString(message.label))
+                        return "label: string expected";
+                if (message.type != null && message.hasOwnProperty("type"))
+                    if (!$util.isString(message.type))
+                        return "type: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a TextChoiceDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v3.EffectDbo.TextChoiceDbo} TextChoiceDbo
+             */
+            TextChoiceDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v3.EffectDbo.TextChoiceDbo)
+                    return object;
+                var message = new $root.v3.EffectDbo.TextChoiceDbo();
+                if (object.id != null)
+                    message.id = String(object.id);
+                if (object.level != null)
+                    message.level = object.level | 0;
+                if (object.key != null)
+                    message.key = String(object.key);
+                if (object.label != null)
+                    message.label = String(object.label);
+                if (object.type != null)
+                    message.type = String(object.type);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a TextChoiceDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.TextChoiceDbo} message TextChoiceDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            TextChoiceDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    object.id = "";
+                    object.level = 0;
+                    object.key = "";
+                    object.label = "";
+                    object.type = "";
+                }
+                if (message.id != null && message.hasOwnProperty("id"))
+                    object.id = message.id;
+                if (message.level != null && message.hasOwnProperty("level"))
+                    object.level = message.level;
+                if (message.key != null && message.hasOwnProperty("key"))
+                    object.key = message.key;
+                if (message.label != null && message.hasOwnProperty("label"))
+                    object.label = message.label;
+                if (message.type != null && message.hasOwnProperty("type"))
+                    object.type = message.type;
+                return object;
+            };
+
+            /**
+             * Converts this TextChoiceDbo to JSON.
+             * @function toJSON
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            TextChoiceDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for TextChoiceDbo
+             * @function getTypeUrl
+             * @memberof v3.EffectDbo.TextChoiceDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            TextChoiceDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v3.EffectDbo.TextChoiceDbo";
+            };
+
+            return TextChoiceDbo;
+        })();
+
+        EffectDbo.SelectChoiceDbo = (function() {
+
+            /**
+             * Properties of a SelectChoiceDbo.
+             * @memberof v3.EffectDbo
+             * @interface ISelectChoiceDbo
+             * @property {string|null} [id] SelectChoiceDbo id
+             * @property {number|null} [level] SelectChoiceDbo level
+             * @property {string|null} [label] SelectChoiceDbo label
+             * @property {Array.<string>|null} [references] SelectChoiceDbo references
+             * @property {string|null} [type] SelectChoiceDbo type
+             */
+
+            /**
+             * Constructs a new SelectChoiceDbo.
+             * @memberof v3.EffectDbo
+             * @classdesc Represents a SelectChoiceDbo.
+             * @implements ISelectChoiceDbo
+             * @constructor
+             * @param {v3.EffectDbo.ISelectChoiceDbo=} [properties] Properties to set
+             */
+            function SelectChoiceDbo(properties) {
+                this.references = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * SelectChoiceDbo id.
+             * @member {string} id
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @instance
+             */
+            SelectChoiceDbo.prototype.id = "";
+
+            /**
+             * SelectChoiceDbo level.
+             * @member {number} level
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @instance
+             */
+            SelectChoiceDbo.prototype.level = 0;
+
+            /**
+             * SelectChoiceDbo label.
+             * @member {string} label
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @instance
+             */
+            SelectChoiceDbo.prototype.label = "";
+
+            /**
+             * SelectChoiceDbo references.
+             * @member {Array.<string>} references
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @instance
+             */
+            SelectChoiceDbo.prototype.references = $util.emptyArray;
+
+            /**
+             * SelectChoiceDbo type.
+             * @member {string} type
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @instance
+             */
+            SelectChoiceDbo.prototype.type = "";
+
+            /**
+             * Creates a new SelectChoiceDbo instance using the specified properties.
+             * @function create
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.ISelectChoiceDbo=} [properties] Properties to set
+             * @returns {v3.EffectDbo.SelectChoiceDbo} SelectChoiceDbo instance
+             */
+            SelectChoiceDbo.create = function create(properties) {
+                return new SelectChoiceDbo(properties);
+            };
+
+            /**
+             * Encodes the specified SelectChoiceDbo message. Does not implicitly {@link v3.EffectDbo.SelectChoiceDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.SelectChoiceDbo} message SelectChoiceDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            SelectChoiceDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
+                if (message.level != null && Object.hasOwnProperty.call(message, "level"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.level);
+                if (message.label != null && Object.hasOwnProperty.call(message, "label"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.label);
+                if (message.references != null && message.references.length)
+                    for (var i = 0; i < message.references.length; ++i)
+                        writer.uint32(/* id 4, wireType 2 =*/34).string(message.references[i]);
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.type);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified SelectChoiceDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.SelectChoiceDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.SelectChoiceDbo} message SelectChoiceDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            SelectChoiceDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a SelectChoiceDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v3.EffectDbo.SelectChoiceDbo} SelectChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            SelectChoiceDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v3.EffectDbo.SelectChoiceDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.id = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            message.level = reader.int32();
+                            break;
+                        }
+                    case 3: {
+                            message.label = reader.string();
+                            break;
+                        }
+                    case 4: {
+                            if (!(message.references && message.references.length))
+                                message.references = [];
+                            message.references.push(reader.string());
+                            break;
+                        }
+                    case 5: {
+                            message.type = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a SelectChoiceDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v3.EffectDbo.SelectChoiceDbo} SelectChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            SelectChoiceDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a SelectChoiceDbo message.
+             * @function verify
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            SelectChoiceDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.id != null && message.hasOwnProperty("id"))
+                    if (!$util.isString(message.id))
+                        return "id: string expected";
+                if (message.level != null && message.hasOwnProperty("level"))
+                    if (!$util.isInteger(message.level))
+                        return "level: integer expected";
+                if (message.label != null && message.hasOwnProperty("label"))
+                    if (!$util.isString(message.label))
+                        return "label: string expected";
+                if (message.references != null && message.hasOwnProperty("references")) {
+                    if (!Array.isArray(message.references))
+                        return "references: array expected";
+                    for (var i = 0; i < message.references.length; ++i)
+                        if (!$util.isString(message.references[i]))
+                            return "references: string[] expected";
+                }
+                if (message.type != null && message.hasOwnProperty("type"))
+                    if (!$util.isString(message.type))
+                        return "type: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a SelectChoiceDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v3.EffectDbo.SelectChoiceDbo} SelectChoiceDbo
+             */
+            SelectChoiceDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v3.EffectDbo.SelectChoiceDbo)
+                    return object;
+                var message = new $root.v3.EffectDbo.SelectChoiceDbo();
+                if (object.id != null)
+                    message.id = String(object.id);
+                if (object.level != null)
+                    message.level = object.level | 0;
+                if (object.label != null)
+                    message.label = String(object.label);
+                if (object.references) {
+                    if (!Array.isArray(object.references))
+                        throw TypeError(".v3.EffectDbo.SelectChoiceDbo.references: array expected");
+                    message.references = [];
+                    for (var i = 0; i < object.references.length; ++i)
+                        message.references[i] = String(object.references[i]);
+                }
+                if (object.type != null)
+                    message.type = String(object.type);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a SelectChoiceDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {v3.EffectDbo.SelectChoiceDbo} message SelectChoiceDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            SelectChoiceDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.arrays || options.defaults)
+                    object.references = [];
+                if (options.defaults) {
+                    object.id = "";
+                    object.level = 0;
+                    object.label = "";
+                    object.type = "";
+                }
+                if (message.id != null && message.hasOwnProperty("id"))
+                    object.id = message.id;
+                if (message.level != null && message.hasOwnProperty("level"))
+                    object.level = message.level;
+                if (message.label != null && message.hasOwnProperty("label"))
+                    object.label = message.label;
+                if (message.references && message.references.length) {
+                    object.references = [];
+                    for (var j = 0; j < message.references.length; ++j)
+                        object.references[j] = message.references[j];
+                }
+                if (message.type != null && message.hasOwnProperty("type"))
+                    object.type = message.type;
+                return object;
+            };
+
+            /**
+             * Converts this SelectChoiceDbo to JSON.
+             * @function toJSON
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            SelectChoiceDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for SelectChoiceDbo
+             * @function getTypeUrl
+             * @memberof v3.EffectDbo.SelectChoiceDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            SelectChoiceDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v3.EffectDbo.SelectChoiceDbo";
+            };
+
+            return SelectChoiceDbo;
+        })();
+
+        return EffectDbo;
+    })();
+
+    return v3;
 })();
 
 $root.Formula = (function() {

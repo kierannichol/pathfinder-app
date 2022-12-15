@@ -1,9 +1,16 @@
 {
   "id": "feat:agile_maneuvers",
   "name": "Agile Maneuvers",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You\u0027ve learned to use your quickness in place of brute force when performing combat maneuvers.",
-  "benefit": "You add your Dexterity bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus (see Chapter 8) instead of your Strength bonus.",
-  "normal": "You add your Strength bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You\u0027ve learned to use your quickness in place of brute force when performing combat maneuvers.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:agile_maneuvers",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You add your Dexterity bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus (see Chapter 8) instead of your Strength bonus.",
+  "normalText": "You add your Strength bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus."
 }

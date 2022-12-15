@@ -1,10 +1,16 @@
 {
   "id": "feat:stone_faced",
   "name": "Stone-Faced",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Rocks show more expression than you.",
-  "prerequisites": "Dwarf.",
-  "prerequisitesFormula": "@race:dwarf",
-  "benefit": "You receive a +4 bonus on Bluff checks to lie or conceal your feelings or true motives, but not to feint in combat or deliver secret messages. In addition, the DC for Sense Motive checks to get a hunch about you is 25 rather than 20.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@race:dwarf",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Rocks show more expression than you.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:stone_faced",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You receive a +4 bonus on Bluff checks to lie or conceal your feelings or true motives, but not to feint in combat or deliver secret messages. In addition, the DC for Sense Motive checks to get a hunch about you is 25 rather than 20."
 }

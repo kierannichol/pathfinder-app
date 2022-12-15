@@ -1,11 +1,17 @@
 {
   "id": "feat:sleep_venom",
   "name": "Sleep Venom",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can change the nature of your toxic spittle to put your enemies to sleep.",
-  "prerequisites": "Vishkanya.",
-  "prerequisitesFormula": "@race:vishkanya",
-  "benefit": "As a swift action, you may alter the effects of your venom so the target falls unconscious. This changes the initial and secondary effect of your venom to the following: initial effect staggered for 1d4 rounds; secondary effect unconsciousness for 1 minute. You must make the decision to alter your venom before you apply it to a weapon.",
-  "normal": "Vishkanya venom deals Dexterity damage.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:vishkanya",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can change the nature of your toxic spittle to put your enemies to sleep.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sleep_venom",
+      "delta": 1
+    }
+  }],
+  "benefitText": "As a swift action, you may alter the effects of your venom so the target falls unconscious. This changes the initial and secondary effect of your venom to the following: initial effect staggered for 1d4 rounds; secondary effect unconsciousness for 1 minute. You must make the decision to alter your venom before you apply it to a weapon.",
+  "normalText": "Vishkanya venom deals Dexterity damage."
 }

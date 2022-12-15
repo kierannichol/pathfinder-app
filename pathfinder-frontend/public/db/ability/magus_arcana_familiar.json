@@ -1,6 +1,12 @@
 {
   "id": "magus_arcana:familiar",
   "name": "Familiar",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain a familiar"
+  "type": "ability",
+  "descriptionText": "Gain a familiar",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:familiar",
+      "delta": 1
+    }
+  }]
 }

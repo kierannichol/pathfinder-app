@@ -1,10 +1,16 @@
 {
   "id": "feat:channel_smite",
   "name": "Channel Smite",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can channel your divine energy through a melee weapon you wield.",
-  "prerequisites": "Channel energy class feature.",
-  "prerequisitesFormula": "@ability:channel_energy#warpriest",
-  "benefit": "Before you make a melee attack roll, you can choose to spend one use of your channel energy ability as a swift action. If you channel positive energy and you hit an undead creature, that creature takes an amount of additional damage equal to the damage dealt by your channel positive energy ability. If you channel negative energy and you hit a living creature, that creature takes an amount of additional damage equal to the damage dealt by your channel negative energy ability. Your target can make a Will save, as normal, to halve this additional damage. If your attack misses, the channel energy ability is still expended with no effect.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@ability:channel_energy#warpriest",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can channel your divine energy through a melee weapon you wield.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:channel_smite",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Before you make a melee attack roll, you can choose to spend one use of your channel energy ability as a swift action. If you channel positive energy and you hit an undead creature, that creature takes an amount of additional damage equal to the damage dealt by your channel positive energy ability. If you channel negative energy and you hit a living creature, that creature takes an amount of additional damage equal to the damage dealt by your channel negative energy ability. Your target can make a Will save, as normal, to halve this additional damage. If your attack misses, the channel energy ability is still expended with no effect."
 }

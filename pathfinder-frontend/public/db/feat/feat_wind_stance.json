@@ -1,10 +1,16 @@
 {
   "id": "feat:wind_stance",
   "name": "Wind Stance",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your erratic movements make it difficult for enemies to pinpoint your location.",
-  "prerequisites": "Dex 15, Dodge, base attack bonus +6.",
-  "prerequisitesFormula": "@dex_score \u003e\u003d 15 AND @feat:dodge AND @bab \u003e\u003d 6",
-  "benefit": "If you move more than 5 feet this turn, you gain 20% concealment for 1 round against ranged attacks.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@dex_score \u003e\u003d 15 AND @feat:dodge AND @bab \u003e\u003d 6",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your erratic movements make it difficult for enemies to pinpoint your location.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:wind_stance",
+      "delta": 1
+    }
+  }],
+  "benefitText": "If you move more than 5 feet this turn, you gain 20% concealment for 1 round against ranged attacks."
 }

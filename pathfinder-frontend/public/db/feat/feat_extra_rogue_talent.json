@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_rogue_talent",
   "name": "Extra Rogue Talent",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Through constant practice, you have learned how to perform a special trick.",
-  "prerequisites": "Rogue talent class feature.",
-  "prerequisitesFormula": "@ability:rogue_talent#unchained_rogue",
-  "benefit": "You gain one additional rogue talent. You must meet all of the prerequisites for this rogue talent.",
-  "special": "You can gain Extra Rogue Talent multiple times.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:rogue_talent#unchained_rogue",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Through constant practice, you have learned how to perform a special trick.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_rogue_talent",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain one additional rogue talent. You must meet all of the prerequisites for this rogue talent.",
+  "specialText": "You can gain Extra Rogue Talent multiple times."
 }

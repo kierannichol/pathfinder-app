@@ -1,9 +1,36 @@
 {
   "id": "race:grippli",
   "name": "Grippli",
-  "size": 4,
-  "type": "Humanoid (grippli)",
-  "speed": 30,
-  "languages": ["Common", "Grippli"],
-  "traits": ["modifier:dex_plus_2", "modifier:wis_plus_2", "modifier:str_minus_2", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:grippli"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "dex:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "wis:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "str:race",
+      "delta": -2
+    }
+  }]
 }

@@ -1,10 +1,16 @@
 {
   "id": "feat:grudge_fighter",
   "name": "Grudge Fighter",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You feel great anger at anyone who dares to attack you, and this fury makes your own attacks that much stronger.",
-  "prerequisites": "Orc.",
-  "prerequisitesFormula": "@race:orc",
-  "benefit": "You gain a +1 morale bonus on attack and damage rolls made against any creature that attacked you in the current combat.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:orc",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You feel great anger at anyone who dares to attack you, and this fury makes your own attacks that much stronger.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:grudge_fighter",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain a +1 morale bonus on attack and damage rolls made against any creature that attacked you in the current combat."
 }

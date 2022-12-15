@@ -1,7 +1,13 @@
 {
   "id": "rage_power:greater_chaos_totem",
   "name": "Greater Chaos Totem",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:chaos_totem",
-  "description": "Gain DR/lawful and weapons count as chaotic"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:chaos_totem",
+  "type": "ability",
+  "descriptionText": "Gain DR/lawful and weapons count as chaotic",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:greater_chaos_totem",
+      "delta": 1
+    }
+  }]
 }

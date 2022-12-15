@@ -1,10 +1,16 @@
 {
   "id": "feat:mounted_shield",
   "name": "Mounted Shield",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your defensive tactics defend both you and your mount.",
-  "prerequisites": "Mounted Combat, Shield Focus.",
-  "prerequisitesFormula": "@feat:mounted_combat AND @feat:shield_focus",
-  "benefit": "You may add your base shield bonus (including the bonus from Shield Focus but not including enhancement bonuses) to your mount\u0027s AC. In addition, you may add this bonus when making a Ride check to negate a hit against your mount using the Mounted Combat feat.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@feat:mounted_combat AND @feat:shield_focus",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your defensive tactics defend both you and your mount.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:mounted_shield",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You may add your base shield bonus (including the bonus from Shield Focus but not including enhancement bonuses) to your mount\u0027s AC. In addition, you may add this bonus when making a Ride check to negate a hit against your mount using the Mounted Combat feat."
 }

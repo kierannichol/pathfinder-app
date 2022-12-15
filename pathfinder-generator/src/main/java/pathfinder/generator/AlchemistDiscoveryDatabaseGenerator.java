@@ -21,7 +21,7 @@ public class AlchemistDiscoveryDatabaseGenerator extends AbstractAbilityDatabase
 
     @Override
     protected String getRelativeOutputPath() {
-        return "alchemistdiscovery";
+        return "alchemist_discovery";
     }
 
     @Override

@@ -1,10 +1,16 @@
 {
   "id": "feat:masterful_display",
   "name": "Masterful Display",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You craft a special victory performance that causes the crowd to go wild.",
-  "prerequisites": "Dazzling Display, any two performance feats.",
-  "prerequisitesFormula": "@feat:dazzling_display AND (0) \u003e\u003d 2",
-  "benefit": "Choose the effects of any two performance feats you have. When you make a performance combat check, you gain the benefits of those two feats, but you only gain a +2 bonus on the performance combat check.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:dazzling_display AND (0) \u003e\u003d 2",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You craft a special victory performance that causes the crowd to go wild.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:masterful_display",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Choose the effects of any two performance feats you have. When you make a performance combat check, you gain the benefits of those two feats, but you only gain a +2 bonus on the performance combat check."
 }

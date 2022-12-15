@@ -1,8 +1,15 @@
 {
   "id": "feat:still_spell",
   "name": "Still Spell",
-  "types": ["FEAT_TYPE_METAMAGIC"],
-  "description": "You can cast spells without moving.",
-  "benefit": "A stilled spell can be cast with no somatic components. Spells without somatic components are not affected. A stilled spell uses up a spell slot one level higher than the spell\u0027s actual level.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 5,
+  "descriptionText": "You can cast spells without moving.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:still_spell",
+      "delta": 1
+    }
+  }],
+  "benefitText": "A stilled spell can be cast with no somatic components. Spells without somatic components are not affected. A stilled spell uses up a spell slot one level higher than the spell\u0027s actual level."
 }

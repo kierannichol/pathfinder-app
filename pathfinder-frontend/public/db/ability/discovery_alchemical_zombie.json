@@ -1,6 +1,13 @@
 {
   "id": "discovery:alchemical_zombie",
   "name": "Alchemical Zombie",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 8",
-  "description": "Create zombie as if created by animate dead"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "Create zombie as if created by animate dead",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:alchemical_zombie",
+      "delta": 1
+    }
+  }]
 }

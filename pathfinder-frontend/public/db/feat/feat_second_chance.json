@@ -1,10 +1,16 @@
 {
   "id": "feat:second_chance",
   "name": "Second Chance",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Quick ref lexes turn missed strikes into second chances.",
-  "prerequisites": "Int 13, Combat Expertise, base attack bonus +6.",
-  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @bab \u003e\u003d 6",
-  "benefit": "When making a full attack, if you miss on your first attack, you can forgo making any other attacks for the rest of your turn to reroll that attack at your highest base attack bonus.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise AND @bab \u003e\u003d 6",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Quick ref lexes turn missed strikes into second chances.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:second_chance",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When making a full attack, if you miss on your first attack, you can forgo making any other attacks for the rest of your turn to reroll that attack at your highest base attack bonus."
 }

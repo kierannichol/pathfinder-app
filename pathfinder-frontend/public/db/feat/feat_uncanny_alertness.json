@@ -1,10 +1,16 @@
 {
   "id": "feat:uncanny_alertness",
   "name": "Uncanny Alertness",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your research into arcana and the nature of reality has given you heightened senses.",
-  "prerequisites": "Alertness.",
-  "prerequisitesFormula": "@feat:alertness",
-  "benefit": "This feat gives you an additional +1 bonus on Perception and Sense Motive checks, and you gain a +2 bonus on saving throws against sleep and charm effects.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@feat:alertness",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your research into arcana and the nature of reality has given you heightened senses.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:uncanny_alertness",
+      "delta": 1
+    }
+  }],
+  "benefitText": "This feat gives you an additional +1 bonus on Perception and Sense Motive checks, and you gain a +2 bonus on saving throws against sleep and charm effects."
 }

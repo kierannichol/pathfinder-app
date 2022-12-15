@@ -1,5 +1,12 @@
 {
   "id": "discovery:enhance_potion",
   "name": "Enhance Potion",
-  "description": "Cause potions to be more powerful"
+  "type": "ability",
+  "descriptionText": "Cause potions to be more powerful",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:enhance_potion",
+      "delta": 1
+    }
+  }]
 }

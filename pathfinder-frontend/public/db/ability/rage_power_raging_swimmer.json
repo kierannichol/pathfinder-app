@@ -1,6 +1,12 @@
 {
   "id": "rage_power:raging_swimmer",
   "name": "Raging Swimmer",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain a bonus on Swim checks while raging"
+  "type": "ability",
+  "descriptionText": "Gain a bonus on Swim checks while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:raging_swimmer",
+      "delta": 1
+    }
+  }]
 }

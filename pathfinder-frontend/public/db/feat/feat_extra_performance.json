@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_performance",
   "name": "Extra Performance",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can use your bardic performance ability more often than normal.",
-  "prerequisites": "Bardic performance class feature.",
-  "prerequisitesFormula": "@ability:bardic_performance#bard",
-  "benefit": "You can use bardic performance for 6 additional rounds per day.",
-  "special": "You can gain Extra Performance multiple times. Its effects stack.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@ability:bardic_performance#bard",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can use your bardic performance ability more often than normal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_performance",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can use bardic performance for 6 additional rounds per day.",
+  "specialText": "You can gain Extra Performance multiple times. Its effects stack."
 }

@@ -2,49 +2,32 @@ package pathfinder.generator;
 
 import com.google.protobuf.Message;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
-import logic.parse.Formula;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import pathfinder.data.v2.CharacterEffectDbo;
-import pathfinder.data.v2.FeatDatabaseDbo;
-import pathfinder.data.v2.FeatDbo;
-import pathfinder.data.v2.FeatOptionDbo;
-import pathfinder.data.v2.FeatSummaryDbo;
-import pathfinder.data.v2.FeatTypeDbo;
-import pathfinder.encoder.Encoder;
+import pathfinder.data.v3.CategoryDbo;
+import pathfinder.data.v3.EffectDbo;
+import pathfinder.data.v3.EffectDbo.AdjustStateEffectDbo;
+import pathfinder.data.v3.ModificationDatabaseDbo;
+import pathfinder.data.v3.ModificationDetailsDbo;
+import pathfinder.data.v3.ModificationSummaryDbo;
 import pathfinder.generator.db.parse.PrerequisiteParser;
-import pathfinder.model.CharacterEffect;
 import pathfinder.model.Feat;
 import pathfinder.model.Feat.Type;
-import pathfinder.model.Id;
-import pathfinder.model.Skills;
-import pathfinder.model.Weapons;
-import pathfinder.parser.db.WeaponType;
 import pathfinder.source.FeatSourceDatabase;
-import pathfinder.spring.ConditionalOnGeneratorEnabled;
-import pathfinder.util.FormulaBuilder;
-import pathfinder.util.FormulaBuilder.AnyOfFormulaBuilder;
+import pathfinder.util.NameUtils;
 
-@Slf4j
-@RequiredArgsConstructor
 @Service("Feat Database Generator")
-@ConditionalOnGeneratorEnabled("feat")
-public class FeatDatabaseGenerator extends AbstractDatabaseGenerator<Feat, FeatSummaryDbo, FeatDbo> {
+@RequiredArgsConstructor
+public class FeatDatabaseGenerator extends AbstractDatabaseGenerator<Feat, ModificationSummaryDbo, ModificationDetailsDbo> {
     private final FeatSourceDatabase featSourceDatabase;
     private final PrerequisiteParser prerequisiteParser;
-    private final Encoder<CharacterEffect, CharacterEffectDbo> effectEncoder;
 
     @Override
     protected Stream<Feat> streamModels() throws IOException {
-        return featSourceDatabase.streamFeats()
-                .filter(KNOWN_SOURCES)
-                .filter(feat ->
-                        !feat.types().contains(Type.UNKNOWN)
-                        && !feat.types().contains(Type.STORY));
+        return featSourceDatabase.streamFeats();
     }
 
     @Override
@@ -58,155 +41,54 @@ public class FeatDatabaseGenerator extends AbstractDatabaseGenerator<Feat, FeatS
     }
 
     @Override
-    protected FeatSummaryDbo encodedSummary(Feat feat) {
-        String originalPrerequisiteFormula = prerequisiteParser.extractPrerequisites(feat.asAbility());
-        String prerequisiteFormula = originalPrerequisiteFormula;
+    protected ModificationSummaryDbo encodedSummary(Feat model) {
+        String prerequisiteFormula = prerequisiteParser.extractPrerequisites(model.asAbility());
 
-        try {
-            // Validate feat
-            Formula.parse(prerequisiteFormula).resolve();
-        } catch (Exception e) {
-            log.info("Failed to validate: {}", feat.prerequisites());
-            log.info(prerequisiteFormula);
-            e.printStackTrace();
-            System.exit(0);
-        }
-
-        List<FeatOptionDbo> options = new ArrayList<>();
-        if (prerequisiteFormula.contains("selected_weapon")) {
-            for (WeaponType weaponType : Weapons.WEAPON_TYPES) {
-                String modifiedPrerequisiteFormula = originalPrerequisiteFormula;
-                if (originalPrerequisiteFormula.contains("@proficiency:selected_weapon")) {
-                    AnyOfFormulaBuilder prerequisiteBuilder = FormulaBuilder.anyOf();
-                    if (weaponType.requiredProficiency().equals(Weapons.SIMPLE)) {
-                        prerequisiteBuilder.or("@feat:simple_weapon_proficiency");
-                    }
-                    if (weaponType.requiredProficiency().equals(Weapons.MARTIAL)) {
-                        prerequisiteBuilder.or("@feat:martial_weapon_proficiency");
-                    }
-                    if (weaponType.requiredProficiency().equals(Weapons.EXOTIC)) {
-                        prerequisiteBuilder.or("@feat:exotic_weapon_proficiency#" + weaponType.id());
-                    }
-
-                    modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replaceAll("@proficiency:selected_weapon", prerequisiteBuilder.build());
-                }
-
-                modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replace("selected_weapon", weaponType.id());
-                modifiedPrerequisiteFormula = modifiedPrerequisiteFormula.replace("@" + feat.id(), "@" + feat.id() + "#" + weaponType.id());
-
-                FeatOptionDbo option = FeatOptionDbo.newBuilder()
-                        .setId(feat.id() + "#" + weaponType.id())
-                        .setName(weaponType.name())
-                        .setPrerequisitesFormula(modifiedPrerequisiteFormula)
-                        .build();
-
-                options.add(option);
-            }
-        }
-
-        if (prerequisiteFormula.contains("selected_ranged_weapon")) {
-            Weapons.WEAPON_TYPES
-                    .stream().filter(weaponType -> weaponType.range().isRanged())
-                    .forEach(weaponType -> {
-                        FeatOptionDbo option = FeatOptionDbo.newBuilder()
-                                .setId(feat.id() + "#" + weaponType.id())
-                                .setName(weaponType.name())
-                                .setPrerequisitesFormula(originalPrerequisiteFormula.replaceAll("selected_ranged_weapon", weaponType.id()))
-                                .build();
-
-                        options.add(option);
-                    });
-        }
-
-        if (feat.description().toLowerCase().contains("choose a skill")) {
-            Skills.ALL
-                    .forEach(skill -> {
-                        FeatOptionDbo option = FeatOptionDbo.newBuilder()
-                                .setId(feat.id() + "#" + Id.parse(skill.id()).key)
-                                .setName(skill.name())
-                                .setPrerequisitesFormula(originalPrerequisiteFormula)
-                                .build();
-
-                        options.add(option);
-                    });
-        }
-
-        if (options.size() > 0) {
-            prerequisiteFormula = "";
-        }
-
-        if (feat.id().equals("feat:exotic_weapon_proficiency")) {
-            Weapons.WEAPON_TYPES
-                    .stream().filter(weaponType -> weaponType.requiredProficiency().equals(Weapons.EXOTIC))
-                    .forEach(weaponType -> {
-                        FeatOptionDbo option = FeatOptionDbo.newBuilder()
-                                .setId(feat.id() + "#" + weaponType.id())
-                                .setName(weaponType.name())
-                                .build();
-
-                        options.add(option);
-                    });
-        }
-
-        var types = extractFeatTypes(feat);
-
-        return FeatSummaryDbo.newBuilder()
-                .setId(feat.id())
-                .setName(feat.name())
-                .addAllTypes(types)
-                .setPrerequisites(feat.prerequisites())
-                .setPrerequisitesFormula(prerequisiteFormula)
-                .addAllOptions(options)
+        return ModificationSummaryDbo.newBuilder()
+                .setId(model.id())
+                .setName(model.name())
+                .setType("feat")
+                .setCategoryId(model.types().stream().findFirst().map(Type::ordinal).orElse(0))
+                .setPrerequisiteFormula(prerequisiteFormula)
                 .build();
     }
 
     @Override
-    protected FeatDbo encodedDetailed(Feat feat, FeatSummaryDbo summary) {
-        return FeatDbo.newBuilder()
+    protected ModificationDetailsDbo encodedDetailed(Feat model, ModificationSummaryDbo summary) {
+        return ModificationDetailsDbo.newBuilder()
                 .setId(summary.getId())
                 .setName(summary.getName())
-                .addAllTypes(summary.getTypesList())
-                .setPrerequisites(summary.getPrerequisites())
-                .setPrerequisitesFormula(summary.getPrerequisitesFormula())
-                .addAllOptions(summary.getOptionsList())
-                .setDescription(feat.description())
-                .setBenefit(feat.benefit())
-                .setNormal(feat.normal())
-                .setSpecial(feat.special())
-                .setNote(feat.note())
-                .setSource(feat.source().code())
-                .setTeamwork(feat.teamwork())
-                .addAllEffects(convertEffects(feat))
+                .setType(summary.getType())
+                .setCategoryId(summary.getCategoryId())
+                .setPrerequisiteFormula(summary.getPrerequisiteFormula())
+                .setDescriptionText(Optional.ofNullable(model.description()).orElse(""))
+                .setBenefitText(Optional.ofNullable(model.benefit()).orElse(""))
+                .setSpecialText(Optional.ofNullable(model.special()).orElse(""))
+                .setNormalText(Optional.ofNullable(model.normal()).orElse(""))
+                .setNoteText(Optional.ofNullable(model.note()).orElse(""))
+                .addEffects(EffectDbo.newBuilder()
+                        .setAdjustState(AdjustStateEffectDbo.newBuilder()
+                                .setLevel(1)
+                                .setKey(model.id())
+                                .setDelta(1)
+                                .build())
+                        .build())
                 .build();
     }
 
     @Override
-    protected Message createSummaryDatabase(List<FeatSummaryDbo> featSummaryDbos) {
-        return FeatDatabaseDbo.newBuilder()
-                .addAllFeatSummaries(featSummaryDbos)
-                .build();
-    }
-
-    private static List<FeatTypeDbo> extractFeatTypes(Feat model) {
-        List<Feat.Type> types = new ArrayList<>(model.types());
-        if (model.teamwork()) {
-            types.add(Type.TEAMWORK);
-        }
-        return convertFeatTypes(types);
-    }
-
-    private List<CharacterEffectDbo> convertEffects(Feat model) {
-        return effectEncoder.encodeList(model.effects());
-    }
-
-    private static List<FeatTypeDbo> convertFeatTypes(List<Feat.Type> types) {
-        return types.stream()
-                .map(FeatDatabaseGenerator::convertFeatType)
+    protected Message createSummaryDatabase(List<ModificationSummaryDbo> modificationDetailsDbos) {
+        List<CategoryDbo> categories = Stream.of(Type.COMBAT, Type.GENERAL, Type.METAMAGIC, Type.TEAMWORK)
+                .map(type -> CategoryDbo.newBuilder()
+                        .setId(type.ordinal())
+                        .setName(NameUtils.enumToName(type))
+                        .build())
                 .toList();
-    }
 
-    private static FeatTypeDbo convertFeatType(Feat.Type type) {
-        String name = "FEAT_TYPE_" + type.name();
-        return FeatTypeDbo.valueOf(name);
+        return ModificationDatabaseDbo.newBuilder()
+                .setDatabaseId("feat")
+                .addAllSummaries(modificationDetailsDbos)
+                .addAllCategories(categories)
+                .build();
     }
 }

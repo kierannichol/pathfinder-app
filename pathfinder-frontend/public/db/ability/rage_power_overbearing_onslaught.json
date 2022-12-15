@@ -1,7 +1,13 @@
 {
   "id": "rage_power:overbearing_onslaught",
   "name": "Overbearing Onslaught",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:overbearing_advance",
-  "description": "Overrun multiple targets per round"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:overbearing_advance",
+  "type": "ability",
+  "descriptionText": "Overrun multiple targets per round",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:overbearing_onslaught",
+      "delta": 1
+    }
+  }]
 }

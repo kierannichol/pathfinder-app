@@ -1,5 +1,12 @@
 {
   "id": "discovery:mutagen",
   "name": "Mutagen",
-  "description": "Increase physical scores and decrease mental scores"
+  "type": "ability",
+  "descriptionText": "Increase physical scores and decrease mental scores",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:mutagen",
+      "delta": 1
+    }
+  }]
 }

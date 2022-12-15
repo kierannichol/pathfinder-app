@@ -1,10 +1,16 @@
 {
   "id": "feat:summoners_call",
   "name": "Summoner\u0027s Call",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Whenever you summon your eidolon, it is more powerful for a brief period of time.",
-  "prerequisites": "Eidolon class feature.",
-  "prerequisitesFormula": "@ability:eidolon#unchained_summoner",
-  "benefit": "Whenever you summon your eidolon, you may give it a +2 enhancement bonus to its Strength, Dexterity, or Constitution. This bonus lasts 10 minutes after the summoning ritual is complete.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:eidolon#unchained_summoner",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Whenever you summon your eidolon, it is more powerful for a brief period of time.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:summoners_call",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you summon your eidolon, you may give it a +2 enhancement bonus to its Strength, Dexterity, or Constitution. This bonus lasts 10 minutes after the summoning ritual is complete."
 }

@@ -1,0 +1,55 @@
+{
+  "id": "sorcerer_bloodline:deep_earth_bloodline",
+  "name": "Deep Earth Bloodline",
+  "children": [{
+    "id": "ability:bloodline_arcana#deep_earth_bloodline",
+    "name": "Bloodline Arcana",
+    "type": "ability",
+    "descriptionText": ": Whenever you and the target of your spell are both underground, increase the spell\u0027s save DC by +1.",
+    "effects": [{
+      "adjustState": {
+        "key": "ability:bloodline_arcana#deep_earth_bloodline",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "sorcerer_bloodline",
+  "descriptionText": "The echoing cave-songs and the rumble and creak of primal spirits deep below the ground thrum in your soul and in all your family line. You are likely slow, steady, and stable in your thinking, little prone to wandering and preferring to instead find depth in contemplation.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "trained:skill:knowledge_dungeoneering",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:bloodline_feat",
+      "level": 7,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:acrobatic_steps", "feat/feat:alertness", "feat/feat:blind_fight", "feat/feat:forge_ring", "feat/feat:nimble_moves", "feat/feat:skill_focus#perception", "feat/feat:stealthy", "feat/feat:still_spell"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:bloodline_feat",
+      "level": 13,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:acrobatic_steps", "feat/feat:alertness", "feat/feat:blind_fight", "feat/feat:forge_ring", "feat/feat:nimble_moves", "feat/feat:skill_focus#perception", "feat/feat:stealthy", "feat/feat:still_spell"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:bloodline_feat",
+      "level": 19,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:acrobatic_steps", "feat/feat:alertness", "feat/feat:blind_fight", "feat/feat:forge_ring", "feat/feat:nimble_moves", "feat/feat:skill_focus#perception", "feat/feat:stealthy", "feat/feat:still_spell"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bloodline_arcana#deep_earth_bloodline",
+      "delta": 1
+    }
+  }]
+}

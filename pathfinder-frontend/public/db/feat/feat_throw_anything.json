@@ -1,9 +1,16 @@
 {
   "id": "feat:throw_anything",
   "name": "Throw Anything",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are used to throwing things you have on hand.",
-  "benefit": "You do not suffer any penalties for using an improvised ranged weapon. You receive a +1 circumstance bonus on attack rolls made with thrown splash weapons.",
-  "normal": "You take a -4 penalty on attack rolls made with an improvised weapon.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are used to throwing things you have on hand.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:throw_anything",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You do not suffer any penalties for using an improvised ranged weapon. You receive a +1 circumstance bonus on attack rolls made with thrown splash weapons.",
+  "normalText": "You take a -4 penalty on attack rolls made with an improvised weapon."
 }

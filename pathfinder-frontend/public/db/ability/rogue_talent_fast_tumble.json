@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:fast_tumble",
   "name": "Fast Tumble",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Improve your skill at avoiding attacks of opportunity"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Improve your skill at avoiding attacks of opportunity",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:fast_tumble",
+      "delta": 1
+    }
+  }]
 }

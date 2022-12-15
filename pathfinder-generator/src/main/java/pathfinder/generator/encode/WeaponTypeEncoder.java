@@ -7,11 +7,10 @@ import pathfinder.parser.db.WeaponType;
 
 @Component("Weapon Type Encoder")
 @RequiredArgsConstructor
-public class WeaponTypeEncoder implements Encoder<WeaponType, WeaponTypeDbo> {
+public class WeaponTypeEncoder {
     private final WeaponProficiencyEncoder weaponProficiencyEncoder;
     private final WeaponRangeEncoder weaponRangeEncoder;
-
-    @Override
+    
     public WeaponTypeDbo encode(WeaponType weaponType) {
         var builder = WeaponTypeDbo.newBuilder()
                 .setId(weaponType.id())

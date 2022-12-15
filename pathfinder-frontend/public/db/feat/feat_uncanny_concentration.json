@@ -1,10 +1,16 @@
 {
   "id": "feat:uncanny_concentration",
   "name": "Uncanny Concentration",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have learned to enter a deeper state when casting spells, allowing you to shrug off distractions, damage, weather effects, and even the effects of other spells.",
-  "prerequisites": "Combat Casting.",
-  "prerequisitesFormula": "@feat:combat_casting",
-  "benefit": "You do not need to make concentration checks when affected by vigorous or violent motion or by violent weather. You gain a +2 bonus on all other concentration checks.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@feat:combat_casting",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have learned to enter a deeper state when casting spells, allowing you to shrug off distractions, damage, weather effects, and even the effects of other spells.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:uncanny_concentration",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You do not need to make concentration checks when affected by vigorous or violent motion or by violent weather. You gain a +2 bonus on all other concentration checks."
 }

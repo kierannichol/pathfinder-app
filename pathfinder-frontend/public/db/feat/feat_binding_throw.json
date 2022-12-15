@@ -1,12 +1,18 @@
 {
   "id": "feat:binding_throw",
   "name": "Binding Throw",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can strike your enemy and use the blow as an opportunity to grab and hold him.",
-  "prerequisites": "Improved Grapple, Improved Trip, Improved Unarmed Strike, Ki Throw.",
-  "prerequisitesFormula": "@feat:improved_grapple AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @feat:ki_throw",
-  "benefit": "After you successfully use the Ki Throw feat on an opponent, you can use a swift action to attempt a grapple combat maneuver against that opponent.",
-  "normal": "The grapple combat maneuver is a standard action.",
-  "special": "A monk can gain Binding Throw as a bonus feat starting at 14th level.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:improved_grapple AND @feat:improved_trip AND @feat:improved_unarmed_strike AND @feat:ki_throw",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can strike your enemy and use the blow as an opportunity to grab and hold him.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:binding_throw",
+      "delta": 1
+    }
+  }],
+  "benefitText": "After you successfully use the Ki Throw feat on an opponent, you can use a swift action to attempt a grapple combat maneuver against that opponent.",
+  "normalText": "The grapple combat maneuver is a standard action.",
+  "specialText": "A monk can gain Binding Throw as a bonus feat starting at 14th level."
 }

@@ -14,7 +14,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
 import pathfinder.model.Ability.Type;
 import pathfinder.model.Spell;
 import pathfinder.parser.AttributeType;
@@ -25,7 +24,7 @@ import pathfinder.spring.FileCached;
 import pathfinder.util.NameUtils;
 
 @FileCached
-@Service("Nethys Spells Scraper")
+//@Service("Nethys Spells Scraper")
 @Slf4j
 @Primary
 @RequiredArgsConstructor

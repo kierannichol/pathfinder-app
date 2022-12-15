@@ -13,8 +13,8 @@ import {
   signOut
 } from "firebase/auth";
 import {get, getDatabase, ref, remove, set} from 'firebase/database';
-import {PackedCharacter} from "../model/character/Character";
-import {setGoogleToken, User} from "./auth";
+import PackedCharacter from "../v3/model/PackedCharacter";
+import {setGoogleToken, User} from "./auth"; // TODO: Add SDKs for Firebase products that you want to use
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

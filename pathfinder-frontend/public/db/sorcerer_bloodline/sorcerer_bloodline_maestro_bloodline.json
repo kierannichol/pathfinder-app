@@ -1,0 +1,55 @@
+{
+  "id": "sorcerer_bloodline:maestro_bloodline",
+  "name": "Maestro Bloodline",
+  "children": [{
+    "id": "ability:bloodline_arcana#maestro_bloodline",
+    "name": "Bloodline Arcana",
+    "type": "ability",
+    "descriptionText": ": Whenever you cast a spell with a verbal component and no somatic or material component, you treat your caster level as if it were one higher.",
+    "effects": [{
+      "adjustState": {
+        "key": "ability:bloodline_arcana#maestro_bloodline",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "sorcerer_bloodline",
+  "descriptionText": "The spiritual power of art and song runs strongly through your family line. This may be the result of ancient pacts made with azata patrons, or even an inheritance from a lillend or trumpet archon ancestor. It could also be the lingering taint of a less savory heritage, such as from a harpy or a forefather driven to madness by the disquieting gibbering of a shoggoth. However it came to be, your family\u0027s artistic bent shows itself strongly in your magic.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "trained:skill:perform",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:bloodline_feat",
+      "level": 7,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:deceitful", "feat/feat:greater_spell_focus#enchantment", "feat/feat:lingering_performance", "feat/feat:persuasive", "feat/feat:skill_focus#perform", "feat/feat:spell_focus#enchantment", "feat/feat:spellsong", "feat/feat:still_spell"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:bloodline_feat",
+      "level": 13,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:deceitful", "feat/feat:greater_spell_focus#enchantment", "feat/feat:lingering_performance", "feat/feat:persuasive", "feat/feat:skill_focus#perform", "feat/feat:spell_focus#enchantment", "feat/feat:spellsong", "feat/feat:still_spell"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:bloodline_feat",
+      "level": 19,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:deceitful", "feat/feat:greater_spell_focus#enchantment", "feat/feat:lingering_performance", "feat/feat:persuasive", "feat/feat:skill_focus#perform", "feat/feat:spell_focus#enchantment", "feat/feat:spellsong", "feat/feat:still_spell"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bloodline_arcana#maestro_bloodline",
+      "delta": 1
+    }
+  }]
+}

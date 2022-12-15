@@ -1,6 +1,12 @@
 {
   "id": "rage_power:intimidating_glare",
   "name": "Intimidating Glare",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Intimidate an opponent as a move action"
+  "type": "ability",
+  "descriptionText": "Intimidate an opponent as a move action",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:intimidating_glare",
+      "delta": 1
+    }
+  }]
 }

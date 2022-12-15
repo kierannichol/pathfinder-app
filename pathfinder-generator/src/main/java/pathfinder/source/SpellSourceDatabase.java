@@ -7,4 +7,5 @@ import pathfinder.model.Spell;
 public interface SpellSourceDatabase {
 
     Stream<Spell> streamSpells() throws IOException;
+
 }

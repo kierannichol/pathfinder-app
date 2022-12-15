@@ -1,10 +1,16 @@
 {
   "id": "feat:inexplicable_luck",
   "name": "Inexplicable Luck",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Others are often dumfounded by your luck.",
-  "prerequisites": "Defiant Luck, human.",
-  "prerequisitesFormula": "@feat:defiant_luck AND @race:human",
-  "benefit": "Once per day, as a free action before a roll is made, you gain a +8 bonus on any single d20 roll. You can also use this ability after the roll is made, but if you do, this bonus is reduced to +4.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@feat:defiant_luck AND @race:human",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Others are often dumfounded by your luck.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:inexplicable_luck",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Once per day, as a free action before a roll is made, you gain a +8 bonus on any single d20 roll. You can also use this ability after the roll is made, but if you do, this bonus is reduced to +4."
 }

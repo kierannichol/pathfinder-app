@@ -1,7 +1,13 @@
 {
   "id": "rage_power:hurling_charge",
   "name": "Hurling Charge",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_hurling",
-  "description": "You can hurl an object as part of a charge"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_hurling",
+  "type": "ability",
+  "descriptionText": "You can hurl an object as part of a charge",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:hurling_charge",
+      "delta": 1
+    }
+  }]
 }

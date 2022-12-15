@@ -1,7 +1,13 @@
 {
   "id": "rage_power:sprint",
   "name": "Sprint",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:swift_foot",
-  "description": "Move at x3 or x6 speed once per rage"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:swift_foot",
+  "type": "ability",
+  "descriptionText": "Move at x3 or x6 speed once per rage",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:sprint",
+      "delta": 1
+    }
+  }]
 }

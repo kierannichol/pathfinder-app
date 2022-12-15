@@ -1,6 +1,13 @@
 {
   "id": "discovery:eternal_youth",
   "name": "Eternal Youth",
-  "prerequisitesFormula": "@ability:grand_discovery#alchemist",
-  "description": "Stop aging"
+  "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+  "type": "ability",
+  "descriptionText": "Stop aging",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:eternal_youth",
+      "delta": 1
+    }
+  }]
 }

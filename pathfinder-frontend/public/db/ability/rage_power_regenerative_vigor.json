@@ -1,7 +1,13 @@
 {
   "id": "rage_power:regenerative_vigor",
   "name": "Regenerative Vigor",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vigor",
-  "description": "Gain fast healing after using renewed vigor"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vigor",
+  "type": "ability",
+  "descriptionText": "Gain fast healing after using renewed vigor",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:regenerative_vigor",
+      "delta": 1
+    }
+  }]
 }

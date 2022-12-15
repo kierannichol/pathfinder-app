@@ -1,6 +1,13 @@
 {
   "id": "discovery:rocket_bomb",
   "name": "Rocket Bomb",
-  "prerequisitesFormula": "@race:goblin AND @class:alchemist \u003e\u003d 6",
-  "description": "Create bombs with less accuracy but more ka-boom!"
+  "prerequisiteFormula": "@race:goblin AND @class:alchemist \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Create bombs with less accuracy but more ka-boom!",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:rocket_bomb",
+      "delta": 1
+    }
+  }]
 }

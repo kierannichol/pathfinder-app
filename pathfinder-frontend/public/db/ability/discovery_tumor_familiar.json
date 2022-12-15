@@ -1,5 +1,12 @@
 {
   "id": "discovery:tumor_familiar",
   "name": "Tumor Familiar",
-  "description": "Gain a familiar that is part of the alchemist’s body"
+  "type": "ability",
+  "descriptionText": "Gain a familiar that is part of the alchemist’s body",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:tumor_familiar",
+      "delta": 1
+    }
+  }]
 }

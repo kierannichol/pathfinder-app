@@ -1,6 +1,5 @@
 import React, {useCallback} from "react";
-import {Character} from "../../model/character/Character";
-import TextLookup from "../../model/TextLookup";
+import AbilityScores from "../../database/AbilityScores";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
 import {ChoiceSelectorOption} from "./edit/ChoiceSelectorDialog";
 
@@ -11,8 +10,8 @@ interface AbilityScoreSelectButtonProps {
 
 export default function AbilityScoreSelectButton({ value, onSelect }: AbilityScoreSelectButtonProps) {
   const optionsFn = useCallback(() => {
-    return Character.ABILITIES.map(ability =>
-        new ChoiceSelectorOption(ability, TextLookup.get(`ABILITY_${ability}_NAME_LONG`),
+    return AbilityScores.map(ability =>
+        new ChoiceSelectorOption(ability.id, ability.name,
             true,
             ''))
   }, []);

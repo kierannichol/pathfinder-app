@@ -1,11 +1,17 @@
 {
   "id": "feat:spellbreaker",
   "name": "Spellbreaker",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can strike at enemy spellcasters who fail to cast defensively when you threaten them.",
-  "prerequisites": "Disruptive, 10th-level fighter.",
-  "prerequisitesFormula": "@magus_arcana:disruptive AND @class:fighter \u003e\u003d 10",
-  "benefit": "Enemies in your threatened area that fail their checks to cast spells defensively provoke attacks of opportunity from you.",
-  "normal": "Enemies that fail to cast spells defensively do not provoke attacks of opportunity.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@magus_arcana:disruptive AND @class:fighter \u003e\u003d 10",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can strike at enemy spellcasters who fail to cast defensively when you threaten them.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:spellbreaker",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Enemies in your threatened area that fail their checks to cast spells defensively provoke attacks of opportunity from you.",
+  "normalText": "Enemies that fail to cast spells defensively do not provoke attacks of opportunity."
 }

@@ -1,7 +1,13 @@
 {
   "id": "rage_power:body_bludgeon",
   "name": "Body Bludgeon",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 10",
-  "description": "Beat a foe with another creature"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 10",
+  "type": "ability",
+  "descriptionText": "Beat a foe with another creature",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:body_bludgeon",
+      "delta": 1
+    }
+  }]
 }

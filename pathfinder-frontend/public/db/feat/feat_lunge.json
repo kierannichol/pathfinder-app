@@ -1,10 +1,16 @@
 {
   "id": "feat:lunge",
   "name": "Lunge",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can strike foes that would normally be out of reach.",
-  "prerequisites": "Base attack bonus +6.",
-  "prerequisitesFormula": "@bab \u003e\u003d 6",
-  "benefit": "You can increase the reach of your melee attacks by 5 feet until the end of your turn by taking a -2 penalty to your AC until your next turn. You must decide to use this ability before any attacks are made.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@bab \u003e\u003d 6",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can strike foes that would normally be out of reach.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:lunge",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can increase the reach of your melee attacks by 5 feet until the end of your turn by taking a -2 penalty to your AC until your next turn. You must decide to use this ability before any attacks are made."
 }

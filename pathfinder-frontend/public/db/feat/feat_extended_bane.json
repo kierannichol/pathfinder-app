@@ -1,10 +1,16 @@
 {
   "id": "feat:extended_bane",
   "name": "Extended Bane",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your dedication knows no limit. Your wrath dies hard.",
-  "prerequisites": "Bane class feature.",
-  "prerequisitesFormula": "@spell:bane",
-  "benefit": "Add your Wisdom bonus to the number of rounds per day that you can use your bane ability.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@spell:bane",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your dedication knows no limit. Your wrath dies hard.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extended_bane",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Add your Wisdom bonus to the number of rounds per day that you can use your bane ability."
 }

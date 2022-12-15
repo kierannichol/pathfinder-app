@@ -1,9 +1,28 @@
 {
   "id": "race:half_orc",
   "name": "Half-orc",
-  "size": 5,
-  "type": "Humanoid (human, orc)",
-  "speed": 30,
-  "languages": ["Common", "Orc"],
-  "traits": ["modifier:asi_2", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:half_orc"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "selectChoice": {
+      "id": "level0:race_asi",
+      "label": "Ability Score Increase",
+      "references": ["ability_score/*"],
+      "type": "asi"
+    }
+  }]
 }

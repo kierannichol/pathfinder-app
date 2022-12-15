@@ -1,10 +1,16 @@
 {
   "id": "feat:quick_channel",
   "name": "Quick Channel",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your divine energies flash with dazzling speed.",
-  "prerequisites": "Knowledge (religion) 5 ranks, channel energy class feature.",
-  "prerequisitesFormula": "@skill:knowledge_religion \u003e\u003d 5 AND @ability:channel_energy#warpriest",
-  "benefit": "You may channel energy as a move action by spending 2 daily uses of that ability.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@skill:knowledge_religion \u003e\u003d 5 AND @ability:channel_energy#warpriest",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your divine energies flash with dazzling speed.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:quick_channel",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You may channel energy as a move action by spending 2 daily uses of that ability."
 }

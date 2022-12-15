@@ -1,8 +1,6 @@
 import {createContext, useContext} from "react";
-import {CharacterClassDatabase} from "../../../../database/v2/ClassDatabase";
-import {RaceDatabase} from "../../../../database/v2/RaceDatabase";
-import {CharacterAtLevel} from "../../../../model/character/CharacterAtLevel";
-import {Race} from "../../../../model/character/Race";
+import CharacterAtLevel from "../../../../v3/model/CharacterAtLevel";
+import DataHub from "../../../../v3/model/DataHub";
 import PrintablePage from "../../../common/PrintablePage";
 import CharacterAtLevelDebugView from "./CharacterAtLevelDebugView";
 import styles from "./CharacterSheet.module.scss";
@@ -23,13 +21,8 @@ import WeaponSection from "./sections/WeaponSection";
 
 type CharacterSheetContextValues = {
   characterAtLevel: CharacterAtLevel;
-  classDatabase: CharacterClassDatabase;
-  raceDatabase: RaceDatabase;
+  database: DataHub;
   characterData: CharacterData;
-}
-
-interface CharacterData {
-  race: Race;
 }
 
 const CharacterSheetContext = createContext<CharacterSheetContextValues|undefined>(undefined);
@@ -44,18 +37,6 @@ function useCharacterSheetContext(): CharacterSheetContextValues {
 
 export function useCharacterAtLevel(): CharacterAtLevel {
   return useCharacterSheetContext().characterAtLevel;
-}
-
-export function useClassDatabase(): CharacterClassDatabase {
-  return useCharacterSheetContext().classDatabase;
-}
-
-export function useRaceDatabase(): RaceDatabase {
-  return useCharacterSheetContext().raceDatabase;
-}
-
-export function useCharacterData(): CharacterData {
-  return useCharacterSheetContext().characterData;
 }
 
 export default function CharacterSheet(values: CharacterSheetContextValues) {

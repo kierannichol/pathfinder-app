@@ -1,5 +1,12 @@
 {
   "id": "ability:fighter_training#magus",
   "name": "Fighter Training",
-  "description": "Starting at 10th level, a magus counts 1/2 his total magus level as his fighter level for the purpose of qualifying for feats. If he has levels in fighter, these levels stack."
+  "type": "ability",
+  "descriptionText": "Starting at 10th level, a magus counts 1/2 his total magus level as his fighter level for the purpose of qualifying for feats. If he has levels in fighter, these levels stack.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:fighter_training#magus",
+      "delta": 1
+    }
+  }]
 }

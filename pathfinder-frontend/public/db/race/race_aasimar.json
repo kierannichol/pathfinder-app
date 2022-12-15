@@ -1,9 +1,31 @@
 {
   "id": "race:aasimar",
   "name": "Aasimar",
-  "size": 5,
-  "type": "Outsider (native)",
-  "speed": 30,
-  "languages": ["Common", "Celestial"],
-  "traits": ["modifier:wis_plus_2", "modifier:cha_plus_2", "spell:daylight", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:aasimar"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "wis:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "cha:race",
+      "delta": 2
+    }
+  }]
 }

@@ -5,29 +5,23 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import pathfinder.data.v2.RaceDataDbo;
-import pathfinder.data.v2.RaceDatabaseDbo;
-import pathfinder.data.v2.RaceSummaryDbo;
-import pathfinder.generator.encode.RaceDataEncoder;
-import pathfinder.generator.encode.RaceSummaryEncoder;
+import pathfinder.data.v3.ModificationDatabaseDbo;
+import pathfinder.data.v3.ModificationDetailsDbo;
+import pathfinder.data.v3.ModificationSummaryDbo;
+import pathfinder.generator.encode.RaceEncoder;
 import pathfinder.model.Race;
 import pathfinder.source.RaceSourceDatabase;
-import pathfinder.spring.ConditionalOnGeneratorEnabled;
 
-@Slf4j
+@Service
 @RequiredArgsConstructor
-@Service("Race Database Generator")
-@ConditionalOnGeneratorEnabled("race")
-public class RaceDatabaseGenerator extends AbstractDatabaseGenerator<Race, RaceSummaryDbo, RaceDataDbo> {
-    private final RaceSourceDatabase raceSourceDatabase;
-    private final RaceSummaryEncoder raceSummaryEncoder;
-    private final RaceDataEncoder raceDataEncoder;
+public class RaceDatabaseGenerator extends AbstractDatabaseGenerator<Race, ModificationSummaryDbo, ModificationDetailsDbo> {
+    private final RaceSourceDatabase sourceDatabase;
+    private final RaceEncoder raceEncoder;
 
     @Override
     protected Stream<Race> streamModels() throws IOException {
-        return raceSourceDatabase.streamRaces();
+        return sourceDatabase.streamRaces();
     }
 
     @Override
@@ -41,19 +35,24 @@ public class RaceDatabaseGenerator extends AbstractDatabaseGenerator<Race, RaceS
     }
 
     @Override
-    protected RaceSummaryDbo encodedSummary(Race race) {
-        return raceSummaryEncoder.encode(race);
+    protected ModificationSummaryDbo encodedSummary(Race model) {
+        return ModificationSummaryDbo.newBuilder()
+                .setId(model.id())
+                .setName(model.name())
+                .setType("race")
+                .build();
     }
 
     @Override
-    protected RaceDataDbo encodedDetailed(Race race, RaceSummaryDbo raceSummaryDbo) {
-        return raceDataEncoder.encode(race);
+    protected ModificationDetailsDbo encodedDetailed(Race model, ModificationSummaryDbo summary) {
+        return raceEncoder.encodeDetailed(model);
     }
 
     @Override
-    protected Message createSummaryDatabase(List<RaceSummaryDbo> raceSummaryDbos) {
-        return RaceDatabaseDbo.newBuilder()
-                .addAllRaceSummaries(raceSummaryDbos)
+    protected Message createSummaryDatabase(List<ModificationSummaryDbo> modificationDetailsDbos) {
+        return ModificationDatabaseDbo.newBuilder()
+                .setDatabaseId("race")
+                .addAllSummaries(modificationDetailsDbos)
                 .build();
     }
 }

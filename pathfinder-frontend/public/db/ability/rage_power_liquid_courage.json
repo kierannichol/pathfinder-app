@@ -1,6 +1,12 @@
 {
   "id": "rage_power:liquid_courage",
   "name": "Liquid Courage",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Alcoholic beverages give you a morale bonus while raging"
+  "type": "ability",
+  "descriptionText": "Alcoholic beverages give you a morale bonus while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:liquid_courage",
+      "delta": 1
+    }
+  }]
 }

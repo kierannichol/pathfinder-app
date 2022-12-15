@@ -3,48 +3,32 @@ package pathfinder.generator;
 import com.google.protobuf.Message;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import pathfinder.data.v2.AbilityDataDbo;
-import pathfinder.data.v2.AbilityDatabaseDbo;
-import pathfinder.data.v2.AbilitySummaryDbo;
-import pathfinder.generator.db.parse.PrerequisiteParser;
-import pathfinder.generator.encode.AbilityTypeEncoder;
+import pathfinder.data.v3.ModificationDatabaseDbo;
+import pathfinder.data.v3.ModificationDetailsDbo;
+import pathfinder.data.v3.ModificationSummaryDbo;
+import pathfinder.generator.encode.AbilityEncoder;
 import pathfinder.model.Ability;
 
-public abstract class AbstractAbilityDatabaseGenerator extends AbstractDatabaseGenerator<Ability, AbilitySummaryDbo, AbilityDataDbo> {
+public abstract class AbstractAbilityDatabaseGenerator extends AbstractDatabaseGenerator<Ability, ModificationSummaryDbo, ModificationDetailsDbo> {
 
     @Autowired
-    protected PrerequisiteParser prerequisiteParser;
-
-    @Autowired
-    protected AbilityTypeEncoder abilityTypeEncoder;
+    protected AbilityEncoder abilityEncoder;
 
     @Override
-    protected AbilitySummaryDbo encodedSummary(Ability ability) {
-        String prerequisiteFormula = prerequisiteParser.extractPrerequisites(ability);
-
-        return AbilitySummaryDbo.newBuilder()
-                .setId(ability.id())
-                .setName(ability.name())
-                .setType(abilityTypeEncoder.encode(ability.type()))
-                .setPrerequisitesFormula(prerequisiteFormula)
-                .build();
+    protected ModificationSummaryDbo encodedSummary(Ability model) {
+        return abilityEncoder.encodeSummary(model, getRelativeOutputPath());
     }
 
     @Override
-    protected AbilityDataDbo encodedDetailed(Ability model, AbilitySummaryDbo summary) {
-        return AbilityDataDbo.newBuilder()
-                .setId(summary.getId())
-                .setName(summary.getName())
-                .setType(summary.getType())
-                .setPrerequisitesFormula(summary.getPrerequisitesFormula())
-                .setDescription(model.description())
-                .build();
+    protected ModificationDetailsDbo encodedDetailed(Ability model, ModificationSummaryDbo summary) {
+        return abilityEncoder.encodeDetails(model, getRelativeOutputPath());
     }
 
     @Override
-    protected Message createSummaryDatabase(List<AbilitySummaryDbo> abilitySummaryDbos) {
-        return AbilityDatabaseDbo.newBuilder()
-                .addAllAbilitySummaries(abilitySummaryDbos)
+    protected Message createSummaryDatabase(List<ModificationSummaryDbo> summaries) {
+        return ModificationDatabaseDbo.newBuilder()
+                .setDatabaseId(getRelativeOutputPath())
+                .addAllSummaries(summaries)
                 .build();
     }
 }

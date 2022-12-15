@@ -1,0 +1,1531 @@
+{
+  "id": "class:hunter",
+  "name": "Hunter",
+  "children": [{
+    "id": "ability:orisons#hunter",
+    "name": "Orisons",
+    "descriptionText": "Hunters learn a number of orisons, or 0-level spells, as noted on Table: Hunter Spells Known. These spells are cast like any other spell, but they do not consume any slots and may be used again.Chaotic, Evil, Good, and Lawful Spells: A hunter can\u0027t cast spells of an alignment opposed to her own or her deity\u0027s (if she has one). Spells associated with particular alignments are indicated by the chaos, evil, good, and law descriptors in their spell descriptions.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:orisons#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_trick#hunter",
+    "name": "Bonus Trick",
+    "descriptionText": "At 7th level and every 6 levels thereafter, a hunter\u0027s animal companion learns a bonus trick (in addition to the bonus tricks gained from the hunter\u0027s effective druid level).",
+    "effects": [{
+      "adjustState": {
+        "level": 13,
+        "key": "ability:bonus_trick#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:teamwork_feat#hunter",
+    "name": "Teamwork Feat",
+    "descriptionText": "At 3rd level and every 3 levels thereafter, the hunter gains a bonus teamwork feat in addition to those gained from normal advancement. The hunter must meet the prerequisites of the selected bonus teamwork feat.As a standard action, the hunter can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the hunter loses the bonus feat in exchange for the new one. She can change only the most recent teamwork feat gained, and must meet the prerequisites for the newly selected feat. A hunter can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains a new teamwork feat, her previous teamwork feats become permanent.",
+    "effects": [{
+      "adjustState": {
+        "level": 6,
+        "key": "ability:teamwork_feat#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:woodland_stride#hunter",
+    "name": "Woodland Stride",
+    "descriptionText": "At 5th level, a hunter and her animal companion may move through any sort of undergrowth (such as natural thorns, briars, overgrown areas, and similar terrain) at their normal speed and without taking damage or suffering any other impairment.Thorns, briars, and overgrown areas that are enchanted or magically manipulated to impede motion will still affect the hunter and her animal companion.",
+    "effects": [{
+      "adjustState": {
+        "level": 5,
+        "key": "ability:woodland_stride#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:teamwork_feat#hunter",
+    "name": "Teamwork Feat",
+    "descriptionText": "At 3rd level and every 3 levels thereafter, the hunter gains a bonus teamwork feat in addition to those gained from normal advancement. The hunter must meet the prerequisites of the selected bonus teamwork feat.As a standard action, the hunter can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the hunter loses the bonus feat in exchange for the new one. She can change only the most recent teamwork feat gained, and must meet the prerequisites for the newly selected feat. A hunter can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains a new teamwork feat, her previous teamwork feats become permanent.",
+    "effects": [{
+      "adjustState": {
+        "level": 15,
+        "key": "ability:teamwork_feat#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:improved_empathic_link#hunter",
+    "name": "Improved Empathic Link",
+    "descriptionText": "At 4th level, the hunter gains an empathic link with her animal companion. This functions like an empathic link with a familiar, except the hunter can also see through a companion\u0027s eyes as a swift action, maintaining this connection as long as she likes (as long as the companion is within 1 mile) and ending it as a free action. The hunter is blinded while maintaining this connection.",
+    "effects": [{
+      "adjustState": {
+        "level": 4,
+        "key": "ability:improved_empathic_link#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:hunter_tactics#hunter",
+    "name": "Hunter Tactics",
+    "descriptionText": "At 3rd level, the hunter automatically grants her teamwork feats to her animal companion. The companion doesn\u0027t need to meet the prerequisites of these teamwork feats.",
+    "effects": [{
+      "adjustState": {
+        "level": 3,
+        "key": "ability:hunter_tactics#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_trick#hunter",
+    "name": "Bonus Trick",
+    "descriptionText": "At 7th level and every 6 levels thereafter, a hunter\u0027s animal companion learns a bonus trick (in addition to the bonus tricks gained from the hunter\u0027s effective druid level).",
+    "effects": [{
+      "adjustState": {
+        "level": 19,
+        "key": "ability:bonus_trick#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:teamwork_feat#hunter",
+    "name": "Teamwork Feat",
+    "descriptionText": "At 3rd level and every 3 levels thereafter, the hunter gains a bonus teamwork feat in addition to those gained from normal advancement. The hunter must meet the prerequisites of the selected bonus teamwork feat.As a standard action, the hunter can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the hunter loses the bonus feat in exchange for the new one. She can change only the most recent teamwork feat gained, and must meet the prerequisites for the newly selected feat. A hunter can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains a new teamwork feat, her previous teamwork feats become permanent.",
+    "effects": [{
+      "adjustState": {
+        "level": 18,
+        "key": "ability:teamwork_feat#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:wild_empathy#hunter",
+    "name": "Wild Empathy",
+    "descriptionText": "A hunter can improve the initial attitude of an animal. This ability functions as a Diplomacy check to improve the attitude of a person. The hunter rolls 1d20 and adds her hunter level and her Charisma modifier to determine the wild empathy check result. The typical domestic animal has a starting attitude of indifferent, while wild animals are usually unfriendly.To use wild empathy, the hunter and the animal must be within 30 feet of one another under normal conditions. Generally, influencing an animal in this way takes 1 minute but, as with influencing people, it might take more or less time.The hunter can also use this ability to influence a magical beast with an Intelligence score of 1 or 2, but she takes a –4 penalty on the check.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:wild_empathy#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:animal_companion#hunter",
+    "name": "Animal Companion",
+    "descriptionText": "At 1st level, a hunter forms a bond with an animal companion. A hunter may begin play with any of the animals available to a druid. This animal is a loyal companion that accompanies the hunter on her adventures. This ability functions like the druid animal companion ability (which is part of the nature bond class feature). The hunter\u0027s effective druid level is equal to her hunter level. If a character receives an animal companion from more than one source, her effective druid levels stack for the purposes of determining the companion\u0027s statistics and abilities. A hunter may teach her companion hunter\u0027s tricks from the skirmisher ranger archetype instead of standard tricks. The animal companion can use skirmisher tricks when commanded, a number of times per day equal to half its Hit Dice plus its Wisdom modifier.If a hunter releases her companion from service or her animal companion perishes, she may gain a new one by performing a ceremony requiring 24 uninterrupted hours of prayer in the environment where the new companion typically lives. While the hunter\u0027s animal companion is dead, any animal she summons with a summon nature\u0027s ally spell remains for 1 minute per level instead of 1 round per level. A hunter cannot have more than one summon nature\u0027s ally spell active in this way at one time. If this ability is used again, any existing summon nature\u0027s ally immediately ends.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:animal_companion#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_trick#hunter",
+    "name": "Bonus Trick",
+    "descriptionText": "At 7th level and every 6 levels thereafter, a hunter\u0027s animal companion learns a bonus trick (in addition to the bonus tricks gained from the hunter\u0027s effective druid level).",
+    "effects": [{
+      "adjustState": {
+        "level": 7,
+        "key": "ability:bonus_trick#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:animal_focus#hunter",
+    "name": "Animal Focus",
+    "descriptionText": "At 1st level, a hunter can take on the aspect of an animal as a swift action. She must select one type of animal to emulate, gaining a bonus or special ability based on the type of animal emulated and her hunter level. The hunter can use this ability for a number of minutes per day equal to her level. This duration does not need to be consecutive, but must be spent in 1-minute increments. The hunter can emulate only one animal at a time.The hunter can also apply one of these aspects to her animal companion. Unlike with the hunter herself, there is no duration on the animal aspect applied to her animal companion. An aspect applied in this way does not count against the hunter\u0027s minutes of duration per day--it remains in effect until the hunter changes it. The companion\u0027s aspect can be the same aspect the hunter has taken on or a different one. The hunter can select or change the animal foci on both herself and her animal companion as part of the same swift action.If the hunter\u0027s animal companion is dead, the hunter can apply her companion\u0027s animal focus to herself instead of her animal companion. This is in addition to the normal one she can choose, and (as with a companion\u0027s focus) remains in effect until the hunter changes it instead of counting against her minutes per day.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:animal_focus#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:nature_training#hunter",
+    "name": "Nature Training",
+    "descriptionText": "A hunter counts her total hunter level as both druid levels and ranger levels for the purpose of qualifying for feats, traits, and options that modify or improve an animal companion.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:nature_training#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:teamwork_feat#hunter",
+    "name": "Teamwork Feat",
+    "descriptionText": "At 3rd level and every 3 levels thereafter, the hunter gains a bonus teamwork feat in addition to those gained from normal advancement. The hunter must meet the prerequisites of the selected bonus teamwork feat.As a standard action, the hunter can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the hunter loses the bonus feat in exchange for the new one. She can change only the most recent teamwork feat gained, and must meet the prerequisites for the newly selected feat. A hunter can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains a new teamwork feat, her previous teamwork feats become permanent.",
+    "effects": [{
+      "adjustState": {
+        "level": 9,
+        "key": "ability:teamwork_feat#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:speak_with_master#hunter",
+    "name": "Speak With Master",
+    "descriptionText": "At 11th level, a hunter and her animal companion can communicate verbally, as if they were using a common language. Other creatures cannot understand the communication without magical aid.",
+    "effects": [{
+      "adjustState": {
+        "level": 11,
+        "key": "ability:speak_with_master#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:swift_tracker#hunter",
+    "name": "Swift Tracker",
+    "descriptionText": "At 8th level, a hunter can move at her normal speed while using Survival to follow tracks without taking the normal –5 penalty. She takes only a –10 penalty (instead of the normal –20) when moving at up to twice normal speed while tracking.",
+    "effects": [{
+      "adjustState": {
+        "level": 8,
+        "key": "ability:swift_tracker#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:track#hunter",
+    "name": "Track",
+    "descriptionText": "At 2nd level, a hunter adds 1/2 her level to Survival skill checks made to follow tracks.",
+    "effects": [{
+      "adjustState": {
+        "level": 2,
+        "key": "ability:track#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:precise_companion#hunter",
+    "name": "Precise Companion",
+    "descriptionText": "At 2nd level, a hunter chooses either Precise Shot or Outflank as a bonus feat. She does not need to meet the prerequisites for this feat. If she chooses Outflank, she automatically grants this feat to her animal companion as well.",
+    "effects": [{
+      "adjustState": {
+        "level": 2,
+        "key": "ability:precise_companion#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:master_hunter#hunter",
+    "name": "Master Hunter",
+    "descriptionText": "At 20th level, a hunter becomes a master hunter, able to track down foes with ease. She can always move at full speed while using Survival to follow tracks without penalty.Additionally, each day when the hunter regains her spell slots, she chooses one animal focus to be active on herself for the entire day. This focus is in addition to using her animal focus class ability (including the additional focus ability she is able to use on herself if her animal companion is dead).",
+    "effects": [{
+      "adjustState": {
+        "level": 20,
+        "key": "ability:master_hunter#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:one_with_the_wild#hunter",
+    "name": "One With The Wild",
+    "descriptionText": "At 17th level, the hunter and her animal companion are respected or even feared by other animals, so long as the animals are approximately of the same type as any of the hunter\u0027s current animal foci: bat for bats, tiger with felines, falcon for birds, snake for reptiles, and so on. No animal in this category (including dire varieties) willingly attacks the hunter or her companion unless magically compelled to or if the hunter or companion attacks it first.The hunter and her companion can attempt to demoralize animals in the appropriate category as a swift action, rolling 1d20 and adding the hunter\u0027s level and her Charisma modifier to determine the Intimidate check result.",
+    "effects": [{
+      "adjustState": {
+        "level": 17,
+        "key": "ability:one_with_the_wild#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:teamwork_feat#hunter",
+    "name": "Teamwork Feat",
+    "descriptionText": "At 3rd level and every 3 levels thereafter, the hunter gains a bonus teamwork feat in addition to those gained from normal advancement. The hunter must meet the prerequisites of the selected bonus teamwork feat.As a standard action, the hunter can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the hunter loses the bonus feat in exchange for the new one. She can change only the most recent teamwork feat gained, and must meet the prerequisites for the newly selected feat. A hunter can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains a new teamwork feat, her previous teamwork feats become permanent.",
+    "effects": [{
+      "adjustState": {
+        "level": 3,
+        "key": "ability:teamwork_feat#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:raise_animal_companion#hunter",
+    "name": "Raise Animal Companion",
+    "descriptionText": "At 10th level, a hunter gains raise animal companion as a spell-like ability; this is not restricted to raising only her own animal companion. Using this spell-like ability gives the hunter a permanent negative level. This negative level cannot be overcome in any way (including by restoration), but automatically ends after 24 hours. At 16th level, this functions as resurrection instead of raise dead, but otherwise operates as normal.",
+    "effects": [{
+      "adjustState": {
+        "level": 10,
+        "key": "ability:raise_animal_companion#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:greater_empathic_link#hunter",
+    "name": "Greater Empathic Link",
+    "descriptionText": "At 14th level, the range of the hunter\u0027s empathic link with her animal companion increases to 10 miles. If the animal companion is within 1 mile, the hunter can communicate with it telepathically.",
+    "effects": [{
+      "adjustState": {
+        "level": 14,
+        "key": "ability:greater_empathic_link#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:second_animal_focus#hunter",
+    "name": "Second Animal Focus",
+    "descriptionText": "At 8th level, whenever a hunter uses her animal focus ability, she selects two different animal aspects for herself instead of one, and can assign two aspects to her companion instead of one. As with the companion\u0027s previous aspect, the second one does not count against the minutes per day a hunter can take on an aspect.If the hunter\u0027s animal companion is dead and the hunter has applied the companion\u0027s animal aspect to herself, that aspect does not count toward her maximum of two aspects at once. The hunter can still apply only one of her dead companion\u0027s aspects to herself, not both.",
+    "effects": [{
+      "adjustState": {
+        "level": 8,
+        "key": "ability:second_animal_focus#hunter",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:teamwork_feat#hunter",
+    "name": "Teamwork Feat",
+    "descriptionText": "At 3rd level and every 3 levels thereafter, the hunter gains a bonus teamwork feat in addition to those gained from normal advancement. The hunter must meet the prerequisites of the selected bonus teamwork feat.As a standard action, the hunter can choose to learn a new bonus teamwork feat in place of the most recent bonus teamwork feat she has already learned. In effect, the hunter loses the bonus feat in exchange for the new one. She can change only the most recent teamwork feat gained, and must meet the prerequisites for the newly selected feat. A hunter can change her most recent teamwork feat a number of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains a new teamwork feat, her previous teamwork feats become permanent.",
+    "effects": [{
+      "adjustState": {
+        "level": 12,
+        "key": "ability:teamwork_feat#hunter",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "class",
+  "categoryId": 2,
+  "descriptionText": "Hunters can adapt their tactics to many kinds of opponents, and cherish their highly trained animal companions. As a team, the hunter and her companion can react to danger with incredible speed, making them excellent scouts, explorers, and saboteurs.",
+  "effects": [{
+    "setState": {
+      "key": "class_1",
+      "textValue": "class:hunter"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 16,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "class:hunter",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:feat",
+      "level": 1,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:feat",
+      "level": 3,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:feat",
+      "level": 5,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:feat",
+      "level": 7,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:feat",
+      "level": 9,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:feat",
+      "level": 11,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:feat",
+      "level": 13,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:feat",
+      "level": 15,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:feat",
+      "level": 17,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:feat",
+      "level": 19,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:climb",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:craft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:handle_animal",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:heal",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:intimidate",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:perception",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:profession",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:ride",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:spellcraft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:stealth",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:survival",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:swim",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "bab",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "will:base",
+      "numericValue": 0
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:0",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:1",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:animal_companion#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:animal_focus#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:nature_training#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:orisons#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:wild_empathy#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "bab",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "will:base",
+      "numericValue": 0
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:0",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:1",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "ability:precise_companion#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "ability:track#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "bab",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "will:base",
+      "numericValue": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:0",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:1",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "ability:hunter_tactics#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "ability:teamwork_feat#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "will:base",
+      "numericValue": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:0",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:1",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "ability:improved_empathic_link#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "will:base",
+      "numericValue": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:0",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:1",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "ability:woodland_stride#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "bab",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:0",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:1",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "ability:teamwork_feat#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "bab",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:0",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:1",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "ability:bonus_trick#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:0",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:1",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "ability:second_animal_focus#hunter",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "ability:swift_tracker#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:0",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:1",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "ability:teamwork_feat#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "bab",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "fort:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "ref:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:0",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:1",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "ability:raise_animal_companion#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "bab",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "fort:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "ref:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:0",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:1",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "ability:speak_with_master#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "fort:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "ref:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:0",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:1",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "ability:teamwork_feat#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "fort:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "ref:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:0",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:1",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "ability:bonus_trick#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "bab",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "fort:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "ref:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:0",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:1",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "ability:greater_empathic_link#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "bab",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "fort:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "ref:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:0",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:1",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "ability:teamwork_feat#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "bab",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "fort:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "ref:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:0",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:1",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "bab",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "fort:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "ref:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:0",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:1",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "ability:one_with_the_wild#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "bab",
+      "numericValue": 13
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "fort:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "ref:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:0",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:1",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "ability:teamwork_feat#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "bab",
+      "numericValue": 14
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "fort:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "ref:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:0",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:1",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "ability:bonus_trick#hunter",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "bab",
+      "numericValue": 15
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "fort:base",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "ref:base",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:0",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:1",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "ability:master_hunter#hunter",
+      "delta": 1
+    }
+  }]
+}

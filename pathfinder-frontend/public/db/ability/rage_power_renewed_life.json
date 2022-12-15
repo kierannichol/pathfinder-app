@@ -1,7 +1,13 @@
 {
   "id": "rage_power:renewed_life",
   "name": "Renewed Life",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vitality",
-  "description": "Ignore temporary negative levels while raging"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vitality",
+  "type": "ability",
+  "descriptionText": "Ignore temporary negative levels while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:renewed_life",
+      "delta": 1
+    }
+  }]
 }

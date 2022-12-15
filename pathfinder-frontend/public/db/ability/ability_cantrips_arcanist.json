@@ -1,5 +1,12 @@
 {
   "id": "ability:cantrips#arcanist",
   "name": "Cantrips",
-  "description": "Arcanists can prepare a number of cantrips, or 0-level spells, each day as noted on Table: Arcanist Spells Prepared. These spells are cast like any other spell, but they do not consume spell slots. As with her other spells, these spells are not expended when cast."
+  "type": "ability",
+  "descriptionText": "Arcanists can prepare a number of cantrips, or 0-level spells, each day as noted on Table: Arcanist Spells Prepared. These spells are cast like any other spell, but they do not consume spell slots. As with her other spells, these spells are not expended when cast.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:cantrips#arcanist",
+      "delta": 1
+    }
+  }]
 }

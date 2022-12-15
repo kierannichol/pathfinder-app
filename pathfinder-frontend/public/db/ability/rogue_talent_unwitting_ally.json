@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:unwitting_ally",
   "name": "Unwitting Ally",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Make an opponent act as a flanking partner"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Make an opponent act as a flanking partner",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:unwitting_ally",
+      "delta": 1
+    }
+  }]
 }

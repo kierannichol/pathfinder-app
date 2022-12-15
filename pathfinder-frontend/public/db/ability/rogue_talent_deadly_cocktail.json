@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:deadly_cocktail",
   "name": "Deadly Cocktail",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Apply two doses of poison to a weapon"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Apply two doses of poison to a weapon",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:deadly_cocktail",
+      "delta": 1
+    }
+  }]
 }

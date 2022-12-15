@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v3";
+
+package v3;
+
+message EffectDbo {
+  message SetStateEffectDbo {
+    int32 level = 1;
+    string key = 2;
+    oneof value {
+      int32 numericValue = 3;
+      string textValue = 4;
+      bool booleanValue = 5;
+    }
+  }
+
+  message AdjustStateEffectDbo {
+    int32 level = 1;
+    string key = 2;
+    int32 delta = 3;
+  }
+
+  message AddChoicesToTypeEffectDbo {
+    string type = 1;
+    repeated string additional_references = 2;
+  }
+
+  message TextChoiceDbo {
+    string id = 1;
+    int32 level = 2;
+    string key = 3;
+    string label = 4;
+    string type = 5;
+  }
+
+  message SelectChoiceDbo {
+    string id = 1;
+    int32 level = 2;
+    string label = 3;
+    repeated string references = 4;
+    string type = 5;
+  }
+
+  oneof effect {
+    SetStateEffectDbo setState = 1;
+    AdjustStateEffectDbo adjustState = 2;
+    TextChoiceDbo textChoice = 3;
+    SelectChoiceDbo selectChoice = 4;
+    AddChoicesToTypeEffectDbo addChoicesToType = 5;
+  }
+}

@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:charmer",
   "name": "Charmer",
-  "description": "Roll two dice when using Diplomacy and take the better result"
+  "type": "ability",
+  "descriptionText": "Roll two dice when using Diplomacy and take the better result",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:charmer",
+      "delta": 1
+    }
+  }]
 }

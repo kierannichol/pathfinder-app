@@ -1,10 +1,16 @@
 {
   "id": "feat:sharpclaw",
   "name": "Sharpclaw",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your nails are large and strong.",
-  "prerequisites": "Ratfolk.",
-  "prerequisitesFormula": "@race:ratfolk",
-  "benefit": "You gain two claw attacks. These are primary natural attacks that deal 1d4 points of damage.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:ratfolk",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your nails are large and strong.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sharpclaw",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain two claw attacks. These are primary natural attacks that deal 1d4 points of damage."
 }

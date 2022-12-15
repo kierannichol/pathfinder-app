@@ -1,9 +1,36 @@
 {
   "id": "race:merfolk",
   "name": "Merfolk",
-  "size": 5,
-  "type": "Humanoid (aquatic)",
-  "speed": 5,
-  "languages": ["Common", "Aquan"],
-  "traits": ["modifier:dex_plus_2", "modifier:con_plus_2", "modifier:cha_plus_2", "modifier:low_light_vision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:merfolk"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 5
+    }
+  }, {
+    "adjustState": {
+      "key": "dex:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "con:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "cha:race",
+      "delta": 2
+    }
+  }]
 }

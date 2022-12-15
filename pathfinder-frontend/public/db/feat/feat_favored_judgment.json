@@ -1,11 +1,17 @@
 {
   "id": "feat:favored_judgment",
   "name": "Favored Judgment",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your judgment against a particular type of creature is particularly harsh.",
-  "prerequisites": "Wis 13, judgment class feature.",
-  "prerequisitesFormula": "@wis_score \u003e\u003d 13 AND @ability:judgment#inquisitor",
-  "benefit": "Select a favored race from the ranger\u0027s favored enemies chart. Any sacred or profane bonus you gain from a judgment is 1 higher for attacks you make against or take from creatures that match the selected favored enemy.",
-  "special": "You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a different favored enemy.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@wis_score \u003e\u003d 13 AND @ability:judgment#inquisitor",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your judgment against a particular type of creature is particularly harsh.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:favored_judgment",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Select a favored race from the ranger\u0027s favored enemies chart. Any sacred or profane bonus you gain from a judgment is 1 higher for attacks you make against or take from creatures that match the selected favored enemy.",
+  "specialText": "You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a different favored enemy."
 }

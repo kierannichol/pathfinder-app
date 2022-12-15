@@ -1,10 +1,16 @@
 {
   "id": "feat:lingering_performance",
   "name": "Lingering Performance",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "The effects of your bardic performance carry on, even after you have stopped performing.",
-  "prerequisites": "Bardic performance class feature.",
-  "prerequisitesFormula": "@ability:bardic_performance#bard",
-  "benefit": "The bonuses and penalties from your bardic performance continue for 2 rounds after you cease performing. Any other requirement, such as range or specific conditions, must still be met for the effect to continue. If you begin a new bardic performance during this time, the effects of the previous performance immediately cease.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:bardic_performance#bard",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "The effects of your bardic performance carry on, even after you have stopped performing.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:lingering_performance",
+      "delta": 1
+    }
+  }],
+  "benefitText": "The bonuses and penalties from your bardic performance continue for 2 rounds after you cease performing. Any other requirement, such as range or specific conditions, must still be met for the effect to continue. If you begin a new bardic performance during this time, the effects of the previous performance immediately cease."
 }

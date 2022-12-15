@@ -1,6 +1,13 @@
 {
   "id": "discovery:poison_conversion",
   "name": "Poison Conversion",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 6",
-  "description": "You can convert one form of poison to another form"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "You can convert one form of poison to another form",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:poison_conversion",
+      "delta": 1
+    }
+  }]
 }

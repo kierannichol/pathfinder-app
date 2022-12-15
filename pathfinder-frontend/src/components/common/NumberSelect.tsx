@@ -10,7 +10,12 @@ interface NumberSelectProps {
 }
 
 export default function NumberSelect({ defaultValue = "0", onChange, min, max }: NumberSelectProps) {
-  const [current, setCurrent] = useState(() => parseInt(defaultValue));
+  const [current, setCurrent] = useState(() => {
+    if (defaultValue === '') {
+      return 0;
+    }
+    return parseInt(defaultValue);
+  });
 
   const canPlus = max === undefined || current < max;
   const canMinus = min === undefined || current > min;

@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_elemental_assault",
   "name": "Extra Elemental Assault",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have unlocked greater elemental power.",
-  "prerequisites": "Suli.",
-  "prerequisitesFormula": "@race:suli",
-  "benefit": "Your elemental assault ability lasts an additional 2 rounds per day.",
-  "special": "You can take this feat multiple times. Its effects stack.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:suli",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have unlocked greater elemental power.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_elemental_assault",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your elemental assault ability lasts an additional 2 rounds per day.",
+  "specialText": "You can take this feat multiple times. Its effects stack."
 }

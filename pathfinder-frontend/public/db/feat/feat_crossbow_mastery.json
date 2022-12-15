@@ -1,11 +1,17 @@
 {
   "id": "feat:crossbow_mastery",
   "name": "Crossbow Mastery",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can load crossbows with blinding speed and even fire them in melee with little fear of reprisal.",
-  "prerequisites": "Dex 15, Point-Blank Shot, Rapid Reload, Rapid Shot.",
-  "prerequisitesFormula": "@dex_score \u003e\u003d 15 AND @feat:point_blank_shot AND @ability:rapid_reload AND @feat:rapid_shot",
-  "benefit": "The time required for you to reload any type of crossbow is reduced to a free action, regardless of the type of crossbow used. You can fire a crossbow as many times in a full attack action as you could attack if you were using a bow. Reloading a crossbow for the type of crossbow you chose when you took Rapid Reload no longer provokes attacks of opportunity.",
-  "special": "Starting at 6th level, a ranger with the archery combat style may select Crossbow Mastery as a combat style feat.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@dex_score \u003e\u003d 15 AND @feat:point_blank_shot AND @ability:rapid_reload AND @feat:rapid_shot",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can load crossbows with blinding speed and even fire them in melee with little fear of reprisal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:crossbow_mastery",
+      "delta": 1
+    }
+  }],
+  "benefitText": "The time required for you to reload any type of crossbow is reduced to a free action, regardless of the type of crossbow used. You can fire a crossbow as many times in a full attack action as you could attack if you were using a bow. Reloading a crossbow for the type of crossbow you chose when you took Rapid Reload no longer provokes attacks of opportunity.",
+  "specialText": "Starting at 6th level, a ranger with the archery combat style may select Crossbow Mastery as a combat style feat."
 }

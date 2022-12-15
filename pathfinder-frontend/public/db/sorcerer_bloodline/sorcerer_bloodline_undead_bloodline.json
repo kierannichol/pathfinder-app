@@ -1,0 +1,55 @@
+{
+  "id": "sorcerer_bloodline:undead_bloodline",
+  "name": "Undead Bloodline",
+  "children": [{
+    "id": "ability:bloodline_arcana#undead_bloodline",
+    "name": "Bloodline Arcana",
+    "type": "ability",
+    "descriptionText": ": Some undead are susceptible to your mind-affecting spells. Corporeal undead that were once humanoids are treated as humanoids for the purposes of determining which spells affect them.",
+    "effects": [{
+      "adjustState": {
+        "key": "ability:bloodline_arcana#undead_bloodline",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "sorcerer_bloodline",
+  "descriptionText": "The taint of the grave runs through your family. Perhaps one of your ancestors became a powerful lich or vampire, or maybe you were born dead before suddenly returning to life. Either way, the forces of death move through you and touch your every action.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "trained:skill:knowledge_religion",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:bloodline_feat",
+      "level": 7,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:combat_casting", "feat/feat:diehard", "feat/feat:endurance", "feat/feat:iron_will", "feat/feat:skill_focus#knowledge_religion", "feat/feat:spell_focus", "feat/feat:still_spell", "feat/feat:toughness"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:bloodline_feat",
+      "level": 13,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:combat_casting", "feat/feat:diehard", "feat/feat:endurance", "feat/feat:iron_will", "feat/feat:skill_focus#knowledge_religion", "feat/feat:spell_focus", "feat/feat:still_spell", "feat/feat:toughness"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:bloodline_feat",
+      "level": 19,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:combat_casting", "feat/feat:diehard", "feat/feat:endurance", "feat/feat:iron_will", "feat/feat:skill_focus#knowledge_religion", "feat/feat:spell_focus", "feat/feat:still_spell", "feat/feat:toughness"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bloodline_arcana#undead_bloodline",
+      "delta": 1
+    }
+  }]
+}

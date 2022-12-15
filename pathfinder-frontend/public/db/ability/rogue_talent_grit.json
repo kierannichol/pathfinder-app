@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:grit",
   "name": "Grit",
-  "prerequisitesFormula": "@rogue_talent:firearm_training",
-  "description": "Gain Amateur Gunslinger and one grit feat"
+  "prerequisiteFormula": "@rogue_talent:firearm_training",
+  "type": "ability",
+  "descriptionText": "Gain Amateur Gunslinger and one grit feat",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:grit",
+      "delta": 1
+    }
+  }]
 }

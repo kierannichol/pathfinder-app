@@ -1,6 +1,13 @@
 {
   "id": "discovery:poison_touch",
   "name": "Poison Touch",
-  "prerequisitesFormula": "@ability:grand_discovery#alchemist",
-  "description": "Gain a poison touch attack"
+  "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+  "type": "ability",
+  "descriptionText": "Gain a poison touch attack",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:poison_touch",
+      "delta": 1
+    }
+  }]
 }

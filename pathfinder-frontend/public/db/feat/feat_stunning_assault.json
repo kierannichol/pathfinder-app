@@ -1,10 +1,16 @@
 {
   "id": "feat:stunning_assault",
   "name": "Stunning Assault",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You powerful but imprecise attacks can stun your enemies.",
-  "prerequisites": "Str 13, Power Attack, base attack bonus +16.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:power_attack AND @bab \u003e\u003d 16",
-  "benefit": "You can choose to take a -5 penalty on all melee attack rolls and combat maneuver checks to stun targets you hit with your melee attacks for 1 round. A successful Fortitude save negates the effect. The DC of this save is 10 + your base attack bonus. You must choose to use this feat before making the attack roll, and its effects last until your next turn.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@str_score \u003e\u003d 13 AND @feat:power_attack AND @bab \u003e\u003d 16",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You powerful but imprecise attacks can stun your enemies.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:stunning_assault",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can choose to take a -5 penalty on all melee attack rolls and combat maneuver checks to stun targets you hit with your melee attacks for 1 round. A successful Fortitude save negates the effect. The DC of this save is 10 + your base attack bonus. You must choose to use this feat before making the attack roll, and its effects last until your next turn."
 }

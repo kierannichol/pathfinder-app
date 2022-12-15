@@ -1,6 +1,6 @@
 import {createContext, useContext, useMemo, useState} from "react";
-import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v2/PathfinderDatabase";
-import CharacterRepository from "../model/character/CharacterRepository";
+import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v3/PathfinderDatabase";
+import CharacterRepository from "../v3/model/CharacterRepository";
 
 const CharacterRepositoryContext = createContext<CharacterRepository|undefined>(undefined);
 

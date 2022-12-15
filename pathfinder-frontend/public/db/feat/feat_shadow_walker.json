@@ -1,10 +1,16 @@
 {
   "id": "feat:shadow_walker",
   "name": "Shadow Walker",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can pierce the veil between the Shadow Plane and the Material Plane more often, and to greater effect.",
-  "prerequisites": "Fetchling, shadow walk spell-like ability.",
-  "prerequisitesFormula": "@race:fetchling AND @spell:shadow_walk",
-  "benefit": "You can expend one use of your shadow walk spell-like ability to use dimension door as a spell-like ability. Your start and end locations for this ability must be in dim light or darkness.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:fetchling AND @spell:shadow_walk",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can pierce the veil between the Shadow Plane and the Material Plane more often, and to greater effect.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:shadow_walker",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can expend one use of your shadow walk spell-like ability to use dimension door as a spell-like ability. Your start and end locations for this ability must be in dim light or darkness."
 }

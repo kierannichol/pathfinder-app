@@ -1,0 +1,1433 @@
+{
+  "id": "class:unchained_summoner",
+  "name": "Unchained Summoner",
+  "children": [{
+    "id": "ability:eidolon#unchained_summoner",
+    "name": "Eidolon",
+    "descriptionText": "A summoner begins play with the ability to summon to his side a powerful outsider called an eidolon. The eidolon forms a link with the summoner, who forever after summons an aspect of the same creature. Each eidolon has a subtype, chosen when the eidolon is first summoned, that determines its origin and many of its abilities. An eidolon must be within one alignment step of the summoner who calls it (so a neutral good summoner can call a neutral, lawful good, or chaotic good eidolon) and can speak all of his languages. An eidolon is treated as a summoned creature, except it is not sent back to its home plane until reduced to a number of negative hit points equal to or greater than its Constitution score. In addition, due to its tie to its summoner, an eidolon can touch and attack creatures warded by protection from evil and similar effects that prevent contact with summoned creatures.A summoner can summon his eidolon in a ritual that takes 1 minute to perform. When summoned in this way, the eidolon\u0027s hit points are unchanged from the last time it was summoned. The only exception to this is if the eidolon was slain, in which case it returns with half its normal hit points. The eidolon does not heal naturally. The eidolon remains until dismissed by the summoner (a standard action). If the eidolon is sent back to its home plane due to death, it cannot be summoned again until the following day. The eidolon cannot be sent back to its home plane by means of dispel magic, but spells such as dismissal and banishment function normally. If the summoner is unconscious, asleep, or killed, his eidolon is immediately banished.The eidolon takes a form shaped by the summoner\u0027s desires. The eidolon\u0027s Hit Dice, saving throws, skills, feats, and abilities are tied to the summoner\u0027s class level and increase as the summoner gains levels. In addition, each eidolon gains a pool of evolution points based on the summoner\u0027s class level that can be used to give the eidolon different abilities and powers. Whenever the summoner gains a level, he must decide how these points are spent, and they are set until he gains another level of summoner.The eidolon\u0027s physical appearance is up to the summoner, but it always appears as some sort of fantastical creature appropriate to its subtype. This control is not fine enough to make the eidolon appear like a specific creature. The eidolon also bears a glowing rune that is identical to a rune that appears on the summoner\u0027s forehead as long as the eidolon is summoned. While this rune can be hidden through mundane means, it cannot be concealed through magic that changes appearance, such as alter self or polymorph (although invisibility does conceal it as long as the spell lasts).See the Eidolon Unchained rules here.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:eidolon#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_vi#unchained_summoner",
+    "name": "Summon Monster VI",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 11,
+        "key": "ability:summon_monster_vi#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_vii#unchained_summoner",
+    "name": "Summon Monster VII",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 13,
+        "key": "ability:summon_monster_vii#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:greater_shield_ally#unchained_summoner",
+    "name": "Greater Shield Ally",
+    "descriptionText": "At 12th level, whenever an ally is within reach of the summoner\u0027s eidolon, the ally gains a +2 shield bonus to its Armor Class and a +2 circumstance bonus on its saving throws. If this ally is the summoner, these bonuses increase to +4. This bonus does not apply if the eidolon is grappled, helpless, paralyzed, stunned, or unconscious.",
+    "effects": [{
+      "adjustState": {
+        "level": 12,
+        "key": "ability:greater_shield_ally#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:makers_call#unchained_summoner",
+    "name": "Maker\u0027s Call",
+    "descriptionText": "At 6th level, as a standard action, a summoner can call his eidolon to his side. This functions as dimension door, using the summoner\u0027s caster level. When this ability is used, the eidolon appears adjacent to the summoner (or as close as possible if all adjacent spaces are occupied). If the eidolon is out of range, the ability is wasted. The summoner can use this ability once per day at 6th level, plus one additional time per day for every four levels beyond 6th.",
+    "effects": [{
+      "adjustState": {
+        "level": 6,
+        "key": "ability:makers_call#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_ix#unchained_summoner",
+    "name": "Summon Monster IX",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 17,
+        "key": "ability:summon_monster_ix#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:life_bond#unchained_summoner",
+    "name": "Life Bond",
+    "descriptionText": "At 14th level, the summoner\u0027s life becomes linked to his eidolon\u0027s. As long as the eidolon has 1 or more hit points, the summoner is protected from harm. Damage in excess of that which would reduce the summoner to 0 hit points is instead transferred to the eidolon. This damage is transferred 1 point at a time, meaning that as soon as the eidolon is reduced to a number of negative hit points equal to its Constitution score, all excess damage remains with the summoner. Effects that cause death but don\u0027t deal damage are unaffected by this ability. This ability does not affect spells such as baleful polymorph, flesh to stone, imprisonment, or other spells that don\u0027t deal damage.",
+    "effects": [{
+      "adjustState": {
+        "level": 14,
+        "key": "ability:life_bond#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:greater_aspect#unchained_summoner",
+    "name": "Greater Aspect",
+    "descriptionText": "At 18th level, a summoner can divert more of his eidolon\u0027s evolutions to himself. This ability functions as the aspect ability, but the maximum number of evolution points the summoner can divert increases to 6. In addition, the eidolon loses 1 point from its evolution pool for every 2 points (or fraction thereof ) diverted to the summoner instead of losing 1 point from the evolution pool for each point diverted.",
+    "effects": [{
+      "adjustState": {
+        "level": 18,
+        "key": "ability:greater_aspect#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:twin_eidolon#unchained_summoner",
+    "name": "Twin Eidolon",
+    "descriptionText": "At 20th level, a summoner and his eidolon share a true connection. As a standard action, the summoner can assume the shape of his eidolon, copying all of its evolutions, form, and abilities. His Strength, Dexterity, and Constitution scores change to match the base scores of his eidolon. He can choose to have any gear that he carries become absorbed by his new form, as with spells from the polymorph subschool. Items with continuous effects continue to function while absorbed in this way. The summoner loses his natural attacks and all racial traits (except bonus feats, skills, and languages) in favor of the abilities granted by his eidolon\u0027s evolutions. The summoner retains all of his class features. The summoner can keep this form for a number of minutes per day equal to his summoner level. This duration does not need to be consecutive, but it must be spent in 1-minute increments. The summoner can end this effect as a free action.",
+    "effects": [{
+      "adjustState": {
+        "level": 20,
+        "key": "ability:twin_eidolon#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_iv#unchained_summoner",
+    "name": "Summon Monster IV",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 7,
+        "key": "ability:summon_monster_iv#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:transposition#unchained_summoner",
+    "name": "Transposition",
+    "descriptionText": "At 8th level, a summoner can use his maker\u0027s call ability to swap locations with his eidolon. If the eidolon occupies more squares than the summoner, the summoner can appear in any square occupied by the eidolon. The eidolon must occupy the square that was occupied by the summoner if able, or as close as possible if it is not able.",
+    "effects": [{
+      "adjustState": {
+        "level": 8,
+        "key": "ability:transposition#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:aspect#unchained_summoner",
+    "name": "Aspect",
+    "descriptionText": "At 10th level, a summoner can divert up to 2 points from his eidolon\u0027s evolution pool to add evolutions to himself. He cannot select any evolution that the eidolon could not possess, and he must be able to meet the requirements as well (except for subtype requirements, so long as his eidolon meets the subtype requirement). He cannot select the ability increase evolution through this ability. Any points spent in this way are taken from the eidolon\u0027s evolution pool (reducing the total number available to the eidolon). The summoner can change the evolutions granted by these points anytime he can change the eidolon\u0027s evolutions.",
+    "effects": [{
+      "adjustState": {
+        "level": 10,
+        "key": "ability:aspect#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bond_senses#unchained_summoner",
+    "name": "Bond Senses",
+    "descriptionText": "At 2nd level, a summoner can, as a standard action, share the senses of his eidolon, hearing, seeing, smelling, tasting, and touching everything the eidolon does. He can use this ability a number of rounds per day equal to his summoner level. There is no maximum range to this effect, but the eidolon and the summoner must be on the same plane. The summoner can end this effect as a free action.",
+    "effects": [{
+      "adjustState": {
+        "level": 2,
+        "key": "ability:bond_senses#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:merge_forms#unchained_summoner",
+    "name": "Merge Forms",
+    "descriptionText": "At 16th level, as a full-round action, a summoner can touch his eidolon and the two can merge forms. This transformation includes all of the summoner\u0027s gear. While merged in this way, the summoner is protected from harm and cannot be the target of spells or effects. All effects and spells currently targeting the summoner are suspended until the summoner emerges from the eidolon (although durations continue to expire).The summoner can cast spells while inside the eidolon by taking control of the eidolon for the duration of the casting. Any material components used for these spells are taken from the summoner\u0027s gear, even though they are otherwise inaccessible. The summoner can direct all of the eidolon\u0027s actions while merged, can perceive through its senses, and can speak through its voice.The summoner can use this ability for a number of rounds per day equal to his summoner level. He can end this effect at any time as a swift action. The summoner emerges in a square adjacent to the eidolon if able. If the eidolon is returned to its home plane while the summoner is merged with it, the summoner is immediately ejected, takes 4d6 points of damage, and is stunned for 1 round.",
+    "effects": [{
+      "adjustState": {
+        "level": 16,
+        "key": "ability:merge_forms#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:life_link#unchained_summoner",
+    "name": "Life Link",
+    "descriptionText": "At 1st level, a summoner forms a close bond with his eidolon. Whenever the eidolon takes enough damage to send it back to its home plane, as a reaction to the damage, the summoner can sacrifice any number of hit points he has without using an action. Each hit point sacrificed in this way prevents 1 point of damage dealt to the eidolon. This can prevent the eidolon from being sent back to its home plane.In addition, the eidolon and the summoner must remain within 100 feet of one another for the eidolon to remain at full strength. If the eidolon is beyond 100 feet but closer than 1,000 feet, its current and maximum hit point totals are reduced by 50%. If the eidolon is more than 1,000 feet away but closer than 10,000 feet, its current and maximum hit point totals are reduced by 75%. If the eidolon is more than 10,000 feet away, it is immediately returned to its home plane. Current hit points lost in this way are not restored when the eidolon gets closer to its summoner, but its maximum hit point total does climb to the levels indicated and eventually returns to normal.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:life_link#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_ii#unchained_summoner",
+    "name": "Summon Monster II",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 3,
+        "key": "ability:summon_monster_ii#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_v#unchained_summoner",
+    "name": "Summon Monster V",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 9,
+        "key": "ability:summon_monster_v#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:shield_ally#unchained_summoner",
+    "name": "Shield Ally",
+    "descriptionText": "At 4th level, whenever a summoner is within his eidolon\u0027s reach, the summoner gains a +2 shield bonus to his Armor Class and a +2 circumstance bonus on his saving throws. This bonus does not apply if the eidolon is grappled, helpless, paralyzed, stunned, or unconscious.",
+    "effects": [{
+      "adjustState": {
+        "level": 4,
+        "key": "ability:shield_ally#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_viii#unchained_summoner",
+    "name": "Summon Monster VIII",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 15,
+        "key": "ability:summon_monster_viii#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster_iii#unchained_summoner",
+    "name": "Summon Monster III",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 5,
+        "key": "ability:summon_monster_iii#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:gate#unchained_summoner",
+    "name": "Gate",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 19,
+        "key": "ability:gate#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:summon_monster#unchained_summoner",
+    "name": "Summon Monster",
+    "descriptionText": "At 1st level, a summoner can cast summon monster I as a spell-like ability a number of times per day equal to 3 + his Charisma modifier. Drawing on this ability uses up the same power that the summoner uses to call his eidolon. As a result, he can use this ability only when his eidolon is not summoned. He can cast this spell as a standard action, and the creatures remain for 1 minute per level (instead of 1 round per level). At 3rd level, and every 2 levels thereafter, the power of this ability increases by 1 spell level, allowing him to summon more powerful creatures (to a maximum of summon monster IX at 17th level). At 19th level, this ability can be used as gate or summon monster IX . If used as gate, the summoner must pay any required material components. A summoner cannot have more than one summon monster or gate spell active in this way at one time. If this ability is used again, any existing summon monster or gate from this spell-like ability immediately ends. These summon spells are considered to be part of the summoner\u0027s spell list for the purposes of spell trigger and spell completion items. In addition, the summoner can expend uses of this ability to fulfill the construction requirements of any magic item he creates, so long as he can use this ability to cast the required spell.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:summon_monster#unchained_summoner",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "class",
+  "categoryId": 3,
+  "descriptionText": "Summoners spend much of their time exploring the arcane arts alongside their eidolons. While their power comes from within, they rely heavily on their eidolon companions in dangerous situations. While a summoner and his eidolon function as individuals, their true power lies in what they can accomplish together.",
+  "effects": [{
+    "setState": {
+      "key": "class_1",
+      "textValue": "class:unchained_summoner"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 16,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "class:unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:feat",
+      "level": 1,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:feat",
+      "level": 3,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:feat",
+      "level": 5,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:feat",
+      "level": 7,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:feat",
+      "level": 9,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:feat",
+      "level": 11,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:feat",
+      "level": 13,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:feat",
+      "level": 15,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:feat",
+      "level": 17,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:feat",
+      "level": 19,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:craft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:fly",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:handle_animal",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:linguistics",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:profession",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:ride",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:spellcraft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:use_magic_device",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "bab",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "fort:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "ref:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:0",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:1",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:eidolon#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:life_link#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:summon_monster#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "bab",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "fort:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "ref:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:0",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:1",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "ability:bond_senses#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "bab",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "fort:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "ref:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:0",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:1",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "ability:summon_monster_ii#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "fort:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "ref:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:0",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:1",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "ability:shield_ally#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "fort:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "ref:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:0",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:1",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "ability:summon_monster_iii#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "bab",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:0",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:1",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "ability:makers_call#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "bab",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:0",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:1",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "ability:summon_monster_iv#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:0",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:1",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "ability:transposition#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:0",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:1",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "ability:summon_monster_v#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "bab",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "will:base",
+      "numericValue": 7
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:0",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:1",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "ability:aspect#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "bab",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "will:base",
+      "numericValue": 7
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:0",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:1",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "ability:summon_monster_vi#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "will:base",
+      "numericValue": 8
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:0",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:1",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "ability:greater_shield_ally#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "will:base",
+      "numericValue": 8
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:0",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:1",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "ability:summon_monster_vii#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "bab",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "will:base",
+      "numericValue": 9
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:0",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:1",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "ability:life_bond#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "bab",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "will:base",
+      "numericValue": 9
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:0",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:1",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "ability:summon_monster_viii#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "bab",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "will:base",
+      "numericValue": 10
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:0",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:1",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 16,
+      "key": "ability:merge_forms#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "bab",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "will:base",
+      "numericValue": 10
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:0",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:1",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "ability:summon_monster_ix#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "bab",
+      "numericValue": 13
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "will:base",
+      "numericValue": 11
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:0",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:1",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "ability:greater_aspect#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "bab",
+      "numericValue": 14
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "will:base",
+      "numericValue": 11
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:0",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:1",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "ability:gate#unchained_summoner",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "bab",
+      "numericValue": 15
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "will:base",
+      "numericValue": 12
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:0",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:1",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "ability:twin_eidolon#unchained_summoner",
+      "delta": 1
+    }
+  }]
+}

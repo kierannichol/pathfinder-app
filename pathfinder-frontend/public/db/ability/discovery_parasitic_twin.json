@@ -1,6 +1,13 @@
 {
   "id": "discovery:parasitic_twin",
   "name": "Parasitic Twin",
-  "prerequisitesFormula": "@discovery:vestigial_arm#2",
-  "description": "You can reroll your saves against certain mental effects"
+  "prerequisiteFormula": "@discovery:vestigial_arm#2",
+  "type": "ability",
+  "descriptionText": "You can reroll your saves against certain mental effects",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:parasitic_twin",
+      "delta": 1
+    }
+  }]
 }

@@ -1,14 +1,15 @@
 import {faCircleCheck, faCircleQuestion, faCircleXmark} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {ReactNode, useMemo} from "react";
-import {PathfinderDatabase, usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
+import {usePathfinderDatabase} from "../../../database/v3/PathfinderDatabase";
 import FormulaTreeFormatter, {
   FormattedValue,
   TreeNodeOperator,
   TreeNodeValue
 } from "../../../logic/FormulaTreeFormatter";
 import {ResolvedValue} from "../../../logic/ResolvedValue";
-import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
+import CharacterAtLevel from "../../../v3/model/CharacterAtLevel";
+import DataHub from "../../../v3/model/DataHub";
 
 interface PrerequisiteListProps {
   formula: string;
@@ -40,7 +41,7 @@ export default function PrerequisiteList({ formula, characterAtLevel } : Prerequ
   </div>);
 }
 
-function formatFormula(formula: string, characterAtLevel: CharacterAtLevel, pathfinderDb: PathfinderDatabase): ReactNode {
+function formatFormula(formula: string, characterAtLevel: CharacterAtLevel, pathfinderDb: DataHub): ReactNode {
   const formatter = new FormulaTreeFormatter(variable => {
     return pathfinderDb.name(variable) ?? variable;
   });

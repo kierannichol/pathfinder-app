@@ -1,0 +1,55 @@
+{
+  "id": "sorcerer_bloodline:serpentine_bloodline",
+  "name": "Serpentine Bloodline",
+  "children": [{
+    "id": "ability:bloodline_arcana#serpentine_bloodline",
+    "name": "Bloodline Arcana",
+    "type": "ability",
+    "descriptionText": ": Your powers of compulsion can affect even bestial creatures. Whenever you cast a mind-affecting or language-dependent spell, it affects animals, magical beasts, and monstrous humanoids as if they were humanoids who understood your language.",
+    "effects": [{
+      "adjustState": {
+        "key": "ability:bloodline_arcana#serpentine_bloodline",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "sorcerer_bloodline",
+  "descriptionText": "Your bloodline carries the lingering stain of ancient serpent races that ruled when the world was young; your forebears were likely favored slaves anointed by their reptilian masters and gifted with their cold cunning and subtle manipulation. While deception and a mesmeric charm are your birthright, you may struggle for truth in spite of your heritage.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "trained:skill:diplomacy",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:bloodline_feat",
+      "level": 7,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:combat_casting", "feat/feat:combat_reflexes", "feat/feat:deceitful", "feat/feat:deft_hands", "feat/feat:persuasive", "feat/feat:silent_spell", "feat/feat:skill_focus#bluff", "feat/feat:stealthy"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:bloodline_feat",
+      "level": 13,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:combat_casting", "feat/feat:combat_reflexes", "feat/feat:deceitful", "feat/feat:deft_hands", "feat/feat:persuasive", "feat/feat:silent_spell", "feat/feat:skill_focus#bluff", "feat/feat:stealthy"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:bloodline_feat",
+      "level": 19,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:combat_casting", "feat/feat:combat_reflexes", "feat/feat:deceitful", "feat/feat:deft_hands", "feat/feat:persuasive", "feat/feat:silent_spell", "feat/feat:skill_focus#bluff", "feat/feat:stealthy"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bloodline_arcana#serpentine_bloodline",
+      "delta": 1
+    }
+  }]
+}

@@ -1,5 +1,12 @@
 {
   "id": "ability:armor_mastery#fighter",
   "name": "Armor Mastery",
-  "description": "At 19th level, a fighter gains damage reduction 5/-- whenever he is wearing armor or using a shield."
+  "type": "ability",
+  "descriptionText": "At 19th level, a fighter gains damage reduction 5/-- whenever he is wearing armor or using a shield.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:armor_mastery#fighter",
+      "delta": 1
+    }
+  }]
 }

@@ -1,0 +1,55 @@
+{
+  "id": "sorcerer_bloodline:shaitan_bloodline",
+  "name": "Shaitan Bloodline",
+  "children": [{
+    "id": "ability:bloodline_arcana#shaitan_bloodline",
+    "name": "Bloodline Arcana",
+    "type": "ability",
+    "descriptionText": ": Whenever you cast a spell that deals energy damage, you can change the type of damage to acid. This effect also changes the spell\u0027s descriptors to match this energy type.",
+    "effects": [{
+      "adjustState": {
+        "key": "ability:bloodline_arcana#shaitan_bloodline",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "sorcerer_bloodline",
+  "descriptionText": "You were born with the power of earth genies, and the magic of the shaitans is strong in you.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "trained:skill:knowledge_planes",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:bloodline_feat",
+      "level": 7,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:dodge", "feat/feat:empower_spell", "feat/feat:great_fortitude", "feat/feat:improved_initiative", "feat/feat:lightning_reflexes", "feat/feat:power_attack", "feat/feat:skill_focus#knowledge_planes", "feat/feat:weapon_finesse"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:bloodline_feat",
+      "level": 13,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:dodge", "feat/feat:empower_spell", "feat/feat:great_fortitude", "feat/feat:improved_initiative", "feat/feat:lightning_reflexes", "feat/feat:power_attack", "feat/feat:skill_focus#knowledge_planes", "feat/feat:weapon_finesse"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:bloodline_feat",
+      "level": 19,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:dodge", "feat/feat:empower_spell", "feat/feat:great_fortitude", "feat/feat:improved_initiative", "feat/feat:lightning_reflexes", "feat/feat:power_attack", "feat/feat:skill_focus#knowledge_planes", "feat/feat:weapon_finesse"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bloodline_arcana#shaitan_bloodline",
+      "delta": 1
+    }
+  }]
+}

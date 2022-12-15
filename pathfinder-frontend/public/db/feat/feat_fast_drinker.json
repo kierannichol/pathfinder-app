@@ -1,10 +1,16 @@
 {
   "id": "feat:fast_drinker",
   "name": "Fast Drinker",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You swiftly guzzle spirits to draw forth ki.",
-  "prerequisites": "Con 18, drunken ki class feature.",
-  "prerequisitesFormula": "@con_score \u003e\u003d 18 AND @ability:drunken_ki",
-  "benefit": "Drinking strong alcohol to gain temporary ki, takes a swift action rather than a standard action.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@con_score \u003e\u003d 18 AND @ability:drunken_ki",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You swiftly guzzle spirits to draw forth ki.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:fast_drinker",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Drinking strong alcohol to gain temporary ki, takes a swift action rather than a standard action."
 }

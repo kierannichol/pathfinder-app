@@ -1,10 +1,16 @@
 {
   "id": "feat:dwarf_blooded",
   "name": "Dwarf Blooded",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have dwarven blood coursing through your veins.",
-  "prerequisites": "Oread.",
-  "prerequisitesFormula": "@race:oread",
-  "benefit": "Your dwarven heritage manifests in two ways. First, your speed is never modified by armor or encumbrance, as the dwarf slow and steady racial trait. Second, you gain the stonecunning dwarf racial trait.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:oread",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have dwarven blood coursing through your veins.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:dwarf_blooded",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your dwarven heritage manifests in two ways. First, your speed is never modified by armor or encumbrance, as the dwarf slow and steady racial trait. Second, you gain the stonecunning dwarf racial trait."
 }

@@ -1,11 +1,9 @@
-import {List} from "immutable";
 import {useMemo} from "react";
 import * as Icon from "react-bootstrap-icons";
-import SkillDatabase from "../../../database/SkillDatabase";
-import {Character} from "../../../model/character/Character";
-import {CharacterAtLevel} from "../../../model/character/CharacterAtLevel";
-import CharacterChoice, {ChoiceType} from "../../../model/character/choices/CharacterChoice";
-import Skill from "../../../model/character/Skill";
+import Skills from "../../../database/Skills";
+import Character from "../../../v3/model/Character";
+import CharacterAtLevel from "../../../v3/model/CharacterAtLevel";
+import Choice from "../../../v3/model/Choice";
 import NumberSelect from "../../common/NumberSelect";
 import "./SkillEditor.scss";
 
@@ -18,11 +16,11 @@ interface SkillEditorProps {
 export function SkillEditor({ character, characterAtLevel, onChange }: SkillEditorProps) {
   const skillChoices = useMemo(() => {
     return character.choicesForLevel(characterAtLevel.level)
-    .filter(choice => choice.type === ChoiceType.SKILL_POINT);
+    .filter(choice => choice.type === "skill");
   }, [character]);
 
   return <div className="skill-editor">
-    {SkillDatabase.all.map(skill => <SkillRow
+    {Skills.all.map(skill => <SkillRow
         key={skill.id}
         skill={skill}
         skillChoices={skillChoices}
@@ -32,9 +30,9 @@ export function SkillEditor({ character, characterAtLevel, onChange }: SkillEdit
 }
 
 interface SkillRowProps {
-  skill: Skill;
+  skill: any;
   characterAtLevel: CharacterAtLevel;
-  skillChoices: List<CharacterChoice>;
+  skillChoices: Choice[];
   onChange: (choiceId: string, skillId: string) => void;
 }
 
@@ -50,15 +48,15 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
   function handleSkillChanged(newValue: string) {
     const newValueNumber = parseInt(newValue);
     if (newValueNumber > current) {
-      const availableSkill = choicesAvailable.get(0);
+      const availableSkill = choicesAvailable[0];
       if (availableSkill) {
-        onChange(availableSkill.key, skill.id);
+        onChange(availableSkill.id, skill.id);
       }
     }
     else if (newValueNumber < current) {
-      const disposableSkill = choicesUsedForThisSkill.get(0);
+      const disposableSkill = choicesUsedForThisSkill[0];
       if (disposableSkill) {
-        onChange(disposableSkill.key, '');
+        onChange(disposableSkill.id, '');
       }
     }
   }
@@ -68,8 +66,8 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
     &nbsp;
 
     <NumberSelect defaultValue={current.toString()}
-                  min={current - choicesUsedForThisSkill.size}
-                  max={Math.min(max, current + choicesAvailable.size)}
+                  min={current - choicesUsedForThisSkill.length}
+                  max={Math.min(max, current + choicesAvailable.length)}
                   onChange={handleSkillChanged} />
     &nbsp;
     {skill.name}{!skill.untrained ? '*' : ''} ({current}/{max})

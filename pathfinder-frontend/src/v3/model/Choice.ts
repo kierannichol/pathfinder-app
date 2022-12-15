@@ -1,33 +1,41 @@
-import {PackedChoices} from "../../model/character/Character";
 import {CharacterStateMutator} from "./CharacterState";
-import DataHub from "./DataHub";
-import Effect from "./Effect";
+import Effect, {EffectContext} from "./Effect";
 import Option from "./Option";
+import {PackedChoices} from "./PackedCharacter";
 import Reference from "./Reference";
 
+type ChoiceInputType = "text" | "select";
+
 export default abstract class Choice extends Effect {
-  static textChoice(id: string, label: string, level: number, attributeId: string): Choice {
-    return new TextChoice(id, label, level, attributeId);
+
+  static textChoice(id: string, label: string, level: number, type: string, attributeId: string): Choice {
+    return new TextChoice(id, label, level, type, attributeId);
   }
 
-  static selectChoice(id: string, label: string, level: number, options: Reference[]) {
-    return new SelectChoice(id, label, level, options);
+  static selectChoice(id: string, label: string, level: number, type: string, options: Reference[]) {
+    return new SelectChoice(id, label, level, type, options);
   }
 
   abstract get id(): string;
   abstract get label(): string;
   abstract get level(): number;
   abstract get current(): string;
-
-  abstract unpack(values: {[choiceId:string]:any}, database: DataHub): Promise<Choice>;
+  abstract get input(): ChoiceInputType;
+  abstract get type(): string;
+  abstract unpack(values: {[choiceId:string]:any}, context: EffectContext): Promise<Choice>;
   abstract pack(): PackedChoices;
+
+  abstract flat(): Choice[];
 }
 
-class TextChoice extends Choice {
+export class TextChoice extends Choice {
+  public readonly input: ChoiceInputType = "text";
+
   constructor(public readonly id: string,
               public readonly label: string,
               public readonly level: number,
-              private readonly attributeId: string,
+              public readonly type: string,
+              public readonly attributeId: string,
               public readonly current: string = '') {
     super();
   }
@@ -36,7 +44,7 @@ class TextChoice extends Choice {
     return this.copy({ current: value });
   }
 
-  async unpack(values: {[choiceId:string]:any}, database: DataHub): Promise<Choice> {
+  async unpack(values: {[choiceId:string]:any}, context: EffectContext): Promise<Choice> {
     if (!(this.id in values)) return this;
     return this.withValue(values[this.id]);
   }
@@ -45,8 +53,8 @@ class TextChoice extends Choice {
     return { [this.id]: this.current };
   }
 
-  applyTo(level: number, state: CharacterStateMutator): void {
-    if (this.level > level) return;
+  applyTo(level: number, state: CharacterStateMutator, context: EffectContext): void {
+    if (this.level > level || this.current === '') return;
     state.set(this.attributeId, this.current);
   }
 
@@ -56,19 +64,30 @@ class TextChoice extends Choice {
     return clone;
   }
 
-  choices(): Choice[] {
+  flat(): Choice[] {
     return [ this ];
   }
 }
 
 export class SelectChoice extends Choice {
+  public readonly input: ChoiceInputType = "select";
 
-  applyTo(level: number, state: CharacterStateMutator) {
-    if (this.level > level) return;
-    this.effects.forEach(effect => effect.applyTo(level, state));
+  applyTo(level: number, state: CharacterStateMutator, context: EffectContext) {
+    if (this.level > level || this.current === '') return;
+    this.effects.forEach(effect => effect.applyTo(level, state, context));
   }
 
-  private async withSelected(option: Option): Promise<Choice> {
+  applyToContext(context: EffectContext): void {
+    this.effects.forEach(effect => effect.applyToContext(context));
+  }
+
+  private async withSelected(option: Option|undefined): Promise<Choice> {
+    if (option === undefined) {
+      return this.copy({
+        current: '',
+        effects: []
+      });
+    }
     return this.copy({
       current: option.id,
       effects: await option.effects()
@@ -78,6 +97,7 @@ export class SelectChoice extends Choice {
   constructor(public readonly id: string,
               public readonly label: string,
               public readonly level: number,
+              public readonly type: string,
               public readonly options: Reference[],
               public readonly effects: Effect[] = [],
               public readonly current: string = '') {
@@ -90,13 +110,16 @@ export class SelectChoice extends Choice {
     return clone;
   }
 
-  async unpack(values: {[choiceId:string]:any}, database: DataHub): Promise<Choice> {
+  async unpack(values: {[choiceId:string]:any}, context: EffectContext): Promise<Choice> {
     let choice: SelectChoice = this;
     let currentValues = { ...values };
     if (this.id in values) {
       const thisValue = currentValues[this.id];
+      if (thisValue === '') {
+        return this.withSelected(undefined);
+      }
       delete currentValues[this.id];
-      const options = await database.options(this);
+      const options = context.options(choice);
       const selected = options.find(option => option.id === thisValue);
       if (!selected) {
         console.warn(`Invalid value selected for ${this.id}: ${thisValue}`)
@@ -111,7 +134,7 @@ export class SelectChoice extends Choice {
 
     const effectsWithSelection: Effect[] = (await Promise.all(choice.effects.map(async effect => {
       if (effect instanceof Choice) {
-        return await effect.unpack(values, database);
+        return await effect.unpack(values, context)
       }
       return effect;
     })));
@@ -129,5 +152,12 @@ export class SelectChoice extends Choice {
 
     packed[this.id] = this.current;
     return packed;
+  }
+
+  flat(): Choice[] {
+    return [ this, ...this.effects
+        .filter(effect => effect instanceof Choice)
+        .flatMap(choice => (choice as Choice)?.flat() ?? [])
+    ]
   }
 }

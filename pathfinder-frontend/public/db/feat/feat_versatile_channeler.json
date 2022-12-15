@@ -1,10 +1,16 @@
 {
   "id": "feat:versatile_channeler",
   "name": "Versatile Channeler",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can choose to channel positive and negative energy.",
-  "prerequisites": "Channel energy class feature, necromancer or neutrally aligned cleric (see below).",
-  "prerequisitesFormula": "(@ability:channel_energy#warpriest OR @class:necromancer OR (@class:cleric AND (@alignment:ng OR @alignment:n OR @alignment:ne)))",
-  "benefit": "You may make a choice whenever you use your channel energy class feature. If you normally channel positive energy, you may choose to channel negative energy as if your effective cleric level were 2 levels lower than normal. If you normally channel negative energy, you may choose to channel positive energy as if your effective cleric level were 2 levels lower than normal. Having this feat means you qualify for feats and abilities that have \"channel positive energy\" or \"channel negative energy\" as a prerequisite (for example, you qualify for the Command Undead feat and the Turn Undead feat).",
-  "source": "PZO1117"
+  "prerequisiteFormula": "(@ability:channel_energy#warpriest OR @class:necromancer OR (@class:cleric AND (@alignment:ng OR @alignment:n OR @alignment:ne)))",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can choose to channel positive and negative energy.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:versatile_channeler",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You may make a choice whenever you use your channel energy class feature. If you normally channel positive energy, you may choose to channel negative energy as if your effective cleric level were 2 levels lower than normal. If you normally channel negative energy, you may choose to channel positive energy as if your effective cleric level were 2 levels lower than normal. Having this feat means you qualify for feats and abilities that have \"channel positive energy\" or \"channel negative energy\" as a prerequisite (for example, you qualify for the Command Undead feat and the Turn Undead feat)."
 }

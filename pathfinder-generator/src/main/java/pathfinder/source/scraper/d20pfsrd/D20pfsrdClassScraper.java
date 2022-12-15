@@ -32,11 +32,13 @@ import pathfinder.model.Special;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.source.AbilitySourceDatabase;
 import pathfinder.source.ClassSourceDatabase;
+import pathfinder.spring.FileCached;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
 
 @Service("d20pfsrd Class Scraper")
 @Slf4j
+@FileCached
 public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
         implements ClassSourceDatabase, AbilitySourceDatabase {
     private static final Pattern BAB_PATTERN = Pattern.compile("^\\+(\\d+).*$");

@@ -1,8 +1,15 @@
 {
   "id": "feat:defensive_combat_training",
   "name": "Defensive Combat Training",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You excel at defending yourself from all manner of combat maneuvers.",
-  "benefit": "You treat your total Hit Dice as your base attack bonus when calculating your Combat Maneuver Defense (see Chapter 8).",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You excel at defending yourself from all manner of combat maneuvers.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:defensive_combat_training",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You treat your total Hit Dice as your base attack bonus when calculating your Combat Maneuver Defense (see Chapter 8)."
 }

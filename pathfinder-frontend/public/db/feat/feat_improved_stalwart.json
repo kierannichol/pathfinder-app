@@ -1,10 +1,16 @@
 {
   "id": "feat:improved_stalwart",
   "name": "Improved Stalwart",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can roll with the punches while simultaneously striking back at your attackers.",
-  "prerequisites": "Diehard, Endurance, Stalwart, base attack bonus +11.",
-  "prerequisitesFormula": "@feat:diehard AND @ability:endurance#ranger AND @ability:stalwart#inquisitor AND @bab \u003e\u003d 11",
-  "benefit": "Double the DR you gain from Stalwart, to a maximum of DR 10/-.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:diehard AND @ability:endurance#ranger AND @magus_arcana:stalwart AND @bab \u003e\u003d 11",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can roll with the punches while simultaneously striking back at your attackers.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_stalwart",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Double the DR you gain from Stalwart, to a maximum of DR 10/-."
 }

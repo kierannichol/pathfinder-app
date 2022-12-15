@@ -1,6 +1,13 @@
 {
   "id": "discovery:fire_brand",
   "name": "Fire Brand",
-  "prerequisitesFormula": "@race:goblin",
-  "description": "Use a bomb to set your weapon on fire"
+  "prerequisiteFormula": "@race:goblin",
+  "type": "ability",
+  "descriptionText": "Use a bomb to set your weapon on fire",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:fire_brand",
+      "delta": 1
+    }
+  }]
 }

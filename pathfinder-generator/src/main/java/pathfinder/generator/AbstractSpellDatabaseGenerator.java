@@ -1,5 +1,7 @@
 package pathfinder.generator;
 
+import static pathfinder.util.ListUtils.mapList;
+
 import com.google.protobuf.Message;
 import java.util.Arrays;
 import java.util.List;
@@ -12,9 +14,9 @@ import pathfinder.data.v2.SpellDataDbo;
 import pathfinder.data.v2.SpellDatabaseDbo;
 import pathfinder.data.v2.SpellLevelDbo;
 import pathfinder.data.v2.SpellSummaryDbo;
-import pathfinder.encoder.SpellLevelEncoder;
 import pathfinder.generator.db.parse.PrerequisiteParser;
 import pathfinder.generator.encode.AbilityTypeEncoder;
+import pathfinder.generator.encode.SpellLevelEncoder;
 import pathfinder.model.Spell;
 
 @Slf4j
@@ -33,7 +35,7 @@ public abstract class AbstractSpellDatabaseGenerator extends AbstractDatabaseGen
     protected SpellSummaryDbo encodedSummary(Spell spell) {
         String prerequisiteFormula = prerequisiteParser.extractPrerequisites(spell);
 
-        List<SpellLevelDbo> level = spellLevelEncoder.encodeList(spell.level());
+        List<SpellLevelDbo> level = mapList(spell.level(), spellLevelEncoder::encode);
 
         return SpellSummaryDbo.newBuilder()
                 .setId(spell.id())
@@ -113,6 +115,18 @@ public abstract class AbstractSpellDatabaseGenerator extends AbstractDatabaseGen
                     if (rangeText.equalsIgnoreCase("short")) {
                         return RangeDbo.newBuilder()
                                 .setCategory(Category.CLOSE)
+                                .build();
+                    }
+
+                    if (rangeText.equalsIgnoreCase("anywhere")) {
+                        return RangeDbo.newBuilder()
+                                .setCategory(Category.UNLIMITED)
+                                .build();
+                    }
+
+                    if (rangeText.equalsIgnoreCase("touch;")) {
+                        return RangeDbo.newBuilder()
+                                .setCategory(Category.TOUCH)
                                 .build();
                     }
 

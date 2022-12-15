@@ -1,0 +1,13 @@
+{
+  "id": "rage_power:raging_flier",
+  "name": "Raging Flier",
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper",
+  "type": "rage_power",
+  "descriptionText": "1/rage, fly up to your base speed as a move action and can use this flight as part of movement during a charge.",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:raging_flier",
+      "delta": 1
+    }
+  }]
+}

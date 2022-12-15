@@ -1,6 +1,12 @@
 {
   "id": "magus_arcana:rod_mastery",
   "name": "Rod Mastery",
-  "type": "ABILITY_TYPE_SU",
-  "description": "Use your Intelligence modifier instead of the minimum modifier for the DC when using a rod"
+  "type": "ability",
+  "descriptionText": "Use your Intelligence modifier instead of the minimum modifier for the DC when using a rod",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:rod_mastery",
+      "delta": 1
+    }
+  }]
 }

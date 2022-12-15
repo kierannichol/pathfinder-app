@@ -1,8 +1,15 @@
 {
   "id": "feat:great_fortitude",
   "name": "Great Fortitude",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You are resistant to poisons, diseases, and other maladies.",
-  "benefit": "You get a +2 bonus on all Fortitude saving throws.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You are resistant to poisons, diseases, and other maladies.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:great_fortitude",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +2 bonus on all Fortitude saving throws."
 }

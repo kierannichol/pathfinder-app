@@ -1,6 +1,13 @@
 {
   "id": "discovery:mummification",
   "name": "Mummification",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:preserve_organs",
-  "description": "Gain mummy-like immunities"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:preserve_organs",
+  "type": "ability",
+  "descriptionText": "Gain mummy-like immunities",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:mummification",
+      "delta": 1
+    }
+  }]
 }

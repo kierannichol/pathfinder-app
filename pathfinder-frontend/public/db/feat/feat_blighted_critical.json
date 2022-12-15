@@ -1,11 +1,17 @@
 {
   "id": "feat:blighted_critical",
   "name": "Blighted Critical",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "With a critical hit from a spell or spell-like ability, you give the target a minor spellblight.",
-  "prerequisites": "Caster level 5th.",
-  "prerequisitesFormula": "@caster_level \u003e\u003d 5",
-  "benefit": "Whenever you confirm a critical hit with a touch spell, ranged touch spell, or spell-like ability against an opponent, the victim gains a random minor spellblight (see page 95).",
-  "special": "You can apply the effects of only one critical feat to a given critical hit unless you possess Critical Mastery.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@caster_level \u003e\u003d 5",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "With a critical hit from a spell or spell-like ability, you give the target a minor spellblight.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:blighted_critical",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you confirm a critical hit with a touch spell, ranged touch spell, or spell-like ability against an opponent, the victim gains a random minor spellblight (see page 95).",
+  "specialText": "You can apply the effects of only one critical feat to a given critical hit unless you possess Critical Mastery."
 }

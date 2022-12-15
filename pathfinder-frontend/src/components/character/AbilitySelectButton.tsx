@@ -1,31 +1,29 @@
 import React, {useCallback} from "react";
-import {BaseAbilityDatabase} from "../../database/v2/BaseAbilityDatabase";
-import {AbilitySummary} from "../../model/character/Ability";
-import {CharacterAtLevel} from "../../model/character/CharacterAtLevel";
-import AbilityDescription from "./edit/AbilityDescription";
+import CharacterAtLevel from "../../v3/model/CharacterAtLevel";
+import {SelectChoice} from "../../v3/model/Choice";
+import DataHub from "../../v3/model/DataHub";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
 import {ChoiceSelectorOption} from "./edit/ChoiceSelectorDialog";
 
 interface AbilitySelectButtonProps {
-  choiceName: string;
-  value: string;
+  choice: SelectChoice;
   onSelect: (value: string) => void;
   characterAtLevel: CharacterAtLevel;
-  database: BaseAbilityDatabase;
-  filterFn?: (ability: AbilitySummary) => boolean;
+  database: DataHub;
   variant?: string;
 }
 
-export default function AbilitySelectButton({ choiceName, value, onSelect, characterAtLevel, database, variant, filterFn = (_ => true) }: AbilitySelectButtonProps) {
+export default function AbilitySelectButton({ choice, onSelect, characterAtLevel, database, variant }: AbilitySelectButtonProps) {
   const optionsFn = useCallback(() => {
-    const characterWithoutCurrentSelection = characterAtLevel.without(value);
-    return database.all.filter(ability => filterFn(ability)).map(abilitySummary =>
+    const characterWithoutCurrentSelection = characterAtLevel.without(choice.current);
+    return database.options(choice.options).map(abilitySummary =>
         new ChoiceSelectorOption(abilitySummary.id, abilitySummary.name,
             () => abilitySummary.isValidFor(characterWithoutCurrentSelection),
             '',
             '',
-            () => database.load(abilitySummary.id)
-                .then(ability => ability ? <AbilityDescription ability={ability} characterAtLevel={characterAtLevel} /> : '')))
-  }, [characterAtLevel, value, database]);
-  return <ChoiceSelectButton variant={variant} choiceName={choiceName} value={value} optionsFn={optionsFn} onSelect={onSelect} />
+            async () => database.description(abilitySummary.id)))
+            // () => database.load(abilitySummary.id)
+            //     .then(ability => ability ? <AbilityDescription ability={ability} characterAtLevel={characterAtLevel} /> : '')))
+  }, [characterAtLevel, choice, database]);
+  return <ChoiceSelectButton variant={variant} choiceName={choice.label} value={choice.current} optionsFn={optionsFn} onSelect={onSelect} />
 }

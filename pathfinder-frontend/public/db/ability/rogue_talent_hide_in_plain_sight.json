@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:hide_in_plain_sight",
   "name": "Hide in Plain Sight",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Hide while being observed in your favored terrain"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Hide while being observed in your favored terrain",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:hide_in_plain_sight",
+      "delta": 1
+    }
+  }]
 }

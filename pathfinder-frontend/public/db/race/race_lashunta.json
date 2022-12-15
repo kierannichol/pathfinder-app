@@ -1,9 +1,26 @@
 {
   "id": "race:lashunta",
   "name": "Lashunta",
-  "size": 5,
-  "type": "Humanoid",
-  "speed": 30,
-  "languages": ["Elven", "Lashunta"],
-  "traits": ["modifier:int_plus_2"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:lashunta"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "int:race",
+      "delta": 2
+    }
+  }]
 }

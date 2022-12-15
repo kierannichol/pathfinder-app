@@ -19,4 +19,13 @@ export class CharacterStateMutator {
   public get(key: string): ResolvedValue {
     return DataContext.of(this.state).get(key) ?? ResolvedValue.none();
   }
+
+  public remove(key: string): this {
+    delete this.state[key];
+    return this;
+  }
+
+  public has(key: string): boolean {
+    return key in this.state;
+  }
 }

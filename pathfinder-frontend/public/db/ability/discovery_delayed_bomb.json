@@ -1,6 +1,13 @@
 {
   "id": "discovery:delayed_bomb",
   "name": "Delayed Bomb",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 8",
-  "description": "You can choose to delay the explosion of your bombs"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "You can choose to delay the explosion of your bombs",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:delayed_bomb",
+      "delta": 1
+    }
+  }]
 }

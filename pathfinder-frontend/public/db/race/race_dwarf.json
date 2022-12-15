@@ -1,9 +1,36 @@
 {
   "id": "race:dwarf",
   "name": "Dwarf",
-  "size": 5,
-  "type": "Humanoid (dwarf)",
-  "speed": 20,
-  "languages": ["Common", "Dwarven"],
-  "traits": ["modifier:con_plus_2", "modifier:wis_plus_2", "modifier:cha_minus_2", "modifier:darkvision_60"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:dwarf"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 20
+    }
+  }, {
+    "adjustState": {
+      "key": "con:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "wis:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "cha:race",
+      "delta": -2
+    }
+  }]
 }

@@ -1,9 +1,16 @@
 {
   "id": "feat:prone_slinger",
   "name": "Prone Slinger",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your sideways sling release allows you to launch bullets and stones even while prone.",
-  "benefit": "While prone, you can use a sling to make ranged attacks.",
-  "normal": "Crossbows and firearms are the only ranged weapons that can be used while prone.",
-  "source": "PZO1118"
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your sideways sling release allows you to launch bullets and stones even while prone.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:prone_slinger",
+      "delta": 1
+    }
+  }],
+  "benefitText": "While prone, you can use a sling to make ranged attacks.",
+  "normalText": "Crossbows and firearms are the only ranged weapons that can be used while prone."
 }

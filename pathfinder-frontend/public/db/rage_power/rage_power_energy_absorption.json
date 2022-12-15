@@ -1,0 +1,13 @@
+{
+  "id": "rage_power:energy_absorption",
+  "name": "Energy Absorption",
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:greater_energy_resistance",
+  "type": "rage_power",
+  "descriptionText": "Absorb energy to gain temporary hit points",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:energy_absorption",
+      "delta": 1
+    }
+  }]
+}

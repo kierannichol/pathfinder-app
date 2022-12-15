@@ -1,4 +1,4 @@
-import {CharacterAtLevel} from "./CharacterAtLevel";
+import CharacterAtLevel from "../../v3/model/CharacterAtLevel";
 
 export class WeaponType {
 

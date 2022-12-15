@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:master_of_disguise",
   "name": "Master of Disguise",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "1/day gain +10 bonus on a Disguise check"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "1/day gain +10 bonus on a Disguise check",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:master_of_disguise",
+      "delta": 1
+    }
+  }]
 }

@@ -1,11 +1,17 @@
 {
   "id": "feat:shadow_ghost",
   "name": "Shadow Ghost",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can move between the Shadow Plane and the Material Plane more often.",
-  "prerequisites": "Fetchling, shadow walk spell-like ability.",
-  "prerequisitesFormula": "@race:fetchling AND @spell:shadow_walk",
-  "benefit": "You gain the ability to use shadow walk an additional time each day.",
-  "special": "You may select this feat multiple times. Its effects stack.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:fetchling AND @spell:shadow_walk",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can move between the Shadow Plane and the Material Plane more often.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:shadow_ghost",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain the ability to use shadow walk an additional time each day.",
+  "specialText": "You may select this feat multiple times. Its effects stack."
 }

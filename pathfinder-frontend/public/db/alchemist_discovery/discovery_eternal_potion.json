@@ -1,0 +1,13 @@
+{
+  "id": "discovery:eternal_potion",
+  "name": "Eternal Potion",
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:extend_potion",
+  "type": "alchemist_discovery",
+  "descriptionText": "Cause a potion to become permanent",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:eternal_potion",
+      "delta": 1
+    }
+  }]
+}

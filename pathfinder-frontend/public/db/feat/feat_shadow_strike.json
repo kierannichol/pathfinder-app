@@ -1,10 +1,16 @@
 {
   "id": "feat:shadow_strike",
   "name": "Shadow Strike",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You accurately strike even those you cannot clearly see.",
-  "prerequisites": "Base attack bonus +1.",
-  "prerequisitesFormula": "@bab \u003e\u003d 1",
-  "benefit": "You can deal precision damage, such as sneak attack damage, against targets with concealment (but not total concealment).",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@bab \u003e\u003d 1",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You accurately strike even those you cannot clearly see.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:shadow_strike",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can deal precision damage, such as sneak attack damage, against targets with concealment (but not total concealment)."
 }

@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:feat",
   "name": "Feat",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Gain a feat"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Gain a feat",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:feat",
+      "delta": 1
+    }
+  }]
 }

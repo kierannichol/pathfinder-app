@@ -1,10 +1,16 @@
 {
   "id": "feat:elven_battle_training",
   "name": "Elven Battle Training",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You have been specially trained to wield a variety of traditional elven weapons.",
-  "prerequisites": "Base attack bonus +1, elf.",
-  "prerequisitesFormula": "@bab \u003e\u003d 1 AND @race:elf",
-  "benefit": "You have received special training with traditional elven weapons (longbows, composite longbows, longswords, rapiers, shortbows, composite shortbows, and any weapon with the word \"elven\" in its name). You receive a +2 bonus to your CMD against disarm and sunder maneuvers directed at one of these weapons you are wielding. In addition, if you are wielding one of these melee weapons, you may make an additional attack of opportunity each round (this bonus stacks with Combat Reflexes).",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@bab \u003e\u003d 1 AND @race:elf",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You have been specially trained to wield a variety of traditional elven weapons.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:elven_battle_training",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You have received special training with traditional elven weapons (longbows, composite longbows, longswords, rapiers, shortbows, composite shortbows, and any weapon with the word \"elven\" in its name). You receive a +2 bonus to your CMD against disarm and sunder maneuvers directed at one of these weapons you are wielding. In addition, if you are wielding one of these melee weapons, you may make an additional attack of opportunity each round (this bonus stacks with Combat Reflexes)."
 }

@@ -1,6 +1,13 @@
 {
   "id": "discovery:doppelganger_simulacrum",
   "name": "Doppelganger Simulacrum",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:alchemical_simulacrum",
-  "description": "Create a temporary body"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:alchemical_simulacrum",
+  "type": "ability",
+  "descriptionText": "Create a temporary body",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:doppelganger_simulacrum",
+      "delta": 1
+    }
+  }]
 }

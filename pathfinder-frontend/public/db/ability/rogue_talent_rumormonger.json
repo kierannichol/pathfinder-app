@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:rumormonger",
   "name": "Rumormonger",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Spread rumors"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Spread rumors",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:rumormonger",
+      "delta": 1
+    }
+  }]
 }

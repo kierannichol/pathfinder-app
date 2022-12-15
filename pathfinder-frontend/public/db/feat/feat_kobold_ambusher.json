@@ -1,11 +1,17 @@
 {
   "id": "feat:kobold_ambusher",
   "name": "Kobold Ambusher",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are adept at moving fast and staying hidden.",
-  "prerequisites": "Stealth 4 ranks, kobold.",
-  "prerequisitesFormula": "@skill:stealth \u003e\u003d 4 AND @race:kobold",
-  "benefit": "You take no penalty on Stealth checks when you move up to your full speed. You can use the run or charge action and remain hidden, taking a -10 penalty on the check to do so.",
-  "normal": "When moving greater than half speed up to your full speed, you take a -5 penalty on Stealth checks. When you are able to run or charge while using Stealth, you take a -20 penalty on the Stealth check.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@skill:stealth \u003e\u003d 4 AND @race:kobold",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are adept at moving fast and staying hidden.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:kobold_ambusher",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You take no penalty on Stealth checks when you move up to your full speed. You can use the run or charge action and remain hidden, taking a -10 penalty on the check to do so.",
+  "normalText": "When moving greater than half speed up to your full speed, you take a -5 penalty on Stealth checks. When you are able to run or charge while using Stealth, you take a -20 penalty on the Stealth check."
 }

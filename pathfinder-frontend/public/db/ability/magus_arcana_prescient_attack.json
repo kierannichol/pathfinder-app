@@ -1,7 +1,13 @@
 {
   "id": "magus_arcana:prescient_attack",
   "name": "Prescient Attack",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:magus \u003e\u003d 6",
-  "description": "Use your arcane pool to deny your opponents their Dexterity bonus"
+  "prerequisiteFormula": "@class:magus \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Use your arcane pool to deny your opponents their Dexterity bonus",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:prescient_attack",
+      "delta": 1
+    }
+  }]
 }

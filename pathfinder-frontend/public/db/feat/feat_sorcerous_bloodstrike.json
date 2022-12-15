@@ -1,10 +1,16 @@
 {
   "id": "feat:sorcerous_bloodstrike",
   "name": "Sorcerous Bloodstrike",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can regain power when you kill a creature.",
-  "prerequisites": "Cha 13, sorcerer bloodline class feature.",
-  "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND @ability:bloodline_power",
-  "benefit": "Once per day, as an immediate action upon reducing a creature to 0 or fewer hit points with one of your sorcerer spells, you can regain one usage of a sorcerer bloodline power that has a limited number of uses per day. The slain creature must have at least half as many Hit Dice as your sorcerer level. You cannot use this feat to gain another usage of a bloodline power that you have not yet used today.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@cha_score \u003e\u003d 13 AND @ability:bloodline_power",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can regain power when you kill a creature.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sorcerous_bloodstrike",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Once per day, as an immediate action upon reducing a creature to 0 or fewer hit points with one of your sorcerer spells, you can regain one usage of a sorcerer bloodline power that has a limited number of uses per day. The slain creature must have at least half as many Hit Dice as your sorcerer level. You cannot use this feat to gain another usage of a bloodline power that you have not yet used today."
 }

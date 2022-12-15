@@ -1,11 +1,16 @@
 {
   "id": "feat:enfilading_fire",
   "name": "Enfilading Fire",
-  "types": ["FEAT_TYPE_COMBAT", "FEAT_TYPE_TEAMWORK"],
-  "description": "Your ranged attacks take advantage of the flanking maneuvers of allies.",
-  "prerequisites": "Point-Blank Shot, Precise Shot, one other teamwork feat.",
-  "prerequisitesFormula": "@feat:point_blank_shot AND @feat:precise_shot AND (0)",
-  "benefit": "You receive a +2 bonus on ranged attacks made against a foe flanked by 1 or more allies with this feat.",
-  "source": "PZO1118",
-  "teamwork": true
+  "prerequisiteFormula": "@feat:point_blank_shot AND @feat:precise_shot AND (0)",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your ranged attacks take advantage of the flanking maneuvers of allies.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:enfilading_fire",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You receive a +2 bonus on ranged attacks made against a foe flanked by 1 or more allies with this feat."
 }

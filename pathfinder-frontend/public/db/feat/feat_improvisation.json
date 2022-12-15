@@ -1,10 +1,16 @@
 {
   "id": "feat:improvisation",
   "name": "Improvisation",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can figure out how to do almost anything.",
-  "prerequisites": "Int 13, Fast Learner, human.",
-  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:fast_learner AND @race:human",
-  "benefit": "You gain a +2 bonus on all skill checks for skills you have no ranks in. Furthermore, you can use all trained skills untrained.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@int_score \u003e\u003d 13 AND @feat:fast_learner AND @race:human",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can figure out how to do almost anything.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improvisation",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain a +2 bonus on all skill checks for skills you have no ranks in. Furthermore, you can use all trained skills untrained."
 }

@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:entanglement_of_blades",
   "name": "Entanglement of Blades",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Targets damaged by sneak attack may not make 5-foot-steps"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Targets damaged by sneak attack may not make 5-foot-steps",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:entanglement_of_blades",
+      "delta": 1
+    }
+  }]
 }

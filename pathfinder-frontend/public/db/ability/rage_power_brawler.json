@@ -1,5 +1,12 @@
 {
   "id": "rage_power:brawler",
   "name": "Brawler",
-  "description": "Gain Improved Unarmed Strike while raging"
+  "type": "ability",
+  "descriptionText": "Gain Improved Unarmed Strike while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:brawler",
+      "delta": 1
+    }
+  }]
 }

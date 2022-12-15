@@ -1,5 +1,12 @@
 {
   "id": "ability:detect_alignment#inquisitor",
   "name": "Detect Alignment",
-  "description": "At 2nd level, at will, an inquisitor can use detect chaos, detect evil, detect good, or detect law. She can only use one of these at any given time."
+  "type": "ability",
+  "descriptionText": "At 2nd level, at will, an inquisitor can use detect chaos, detect evil, detect good, or detect law. She can only use one of these at any given time.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:detect_alignment#inquisitor",
+      "delta": 1
+    }
+  }]
 }

@@ -1,7 +1,13 @@
 {
   "id": "rage_power:greater_hurling",
   "name": "Greater Hurling",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:hurling",
-  "description": "Increase the range and size allowed for a hurled object"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:hurling",
+  "type": "ability",
+  "descriptionText": "Increase the range and size allowed for a hurled object",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:greater_hurling",
+      "delta": 1
+    }
+  }]
 }

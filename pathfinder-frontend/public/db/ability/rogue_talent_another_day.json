@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:another_day",
   "name": "Another Day",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Take a 5-foot-step to avoid being reduced to 0 or fewer hit points"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Take a 5-foot-step to avoid being reduced to 0 or fewer hit points",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:another_day",
+      "delta": 1
+    }
+  }]
 }

@@ -1,0 +1,1711 @@
+{
+  "id": "class:alchemist",
+  "name": "Alchemist",
+  "children": [{
+    "id": "ability:throw_anything#alchemist",
+    "name": "Throw Anything",
+    "descriptionText": "All alchemists gain the Throw Anything feat as a bonus feat at 1st level. An alchemist adds his Intelligence modifier to damage done with splash weapons, including the splash damage if any. This bonus damage is already included in the bomb class feature.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:throw_anything#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:instant_alchemy#alchemist",
+    "name": "Instant Alchemy",
+    "descriptionText": "At 18th level, an alchemist can create alchemical items with almost supernatural speed. He can create any alchemical item as a full-round action if he succeeds at the Craft (alchemy) check and has the appropriate resources at hand to fund the creation. He can apply poison to a weapon as an immediate action.",
+    "effects": [{
+      "adjustState": {
+        "level": 18,
+        "key": "ability:instant_alchemy#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 7,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 12,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 14,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 2,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:poison_resistance#alchemist",
+    "name": "Poison Resistance",
+    "descriptionText": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison.",
+    "effects": [{
+      "adjustState": {
+        "level": 2,
+        "key": "ability:poison_resistance#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 4,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 15,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 17,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 19,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:poison_resistance#alchemist",
+    "name": "Poison Resistance",
+    "descriptionText": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison.",
+    "effects": [{
+      "adjustState": {
+        "level": 5,
+        "key": "ability:poison_resistance#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 9,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:poison_use#alchemist",
+    "name": "Poison Use",
+    "descriptionText": "Alchemists are trained in the use of poison and starting at 2nd level, cannot accidentally poison themselves when applying poison to a weapon.",
+    "effects": [{
+      "adjustState": {
+        "level": 2,
+        "key": "ability:poison_use#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 5,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:swift_poisoning#alchemist",
+    "name": "Swift Poisoning",
+    "descriptionText": "At 6th level, an alchemist can apply a dose of poison to a weapon as a swift action.",
+    "effects": [{
+      "adjustState": {
+        "level": 6,
+        "key": "ability:swift_poisoning#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:mutagen#alchemist",
+    "name": "Mutagen",
+    "descriptionText": "At 1st level, an alchemist discovers how to create a mutagen that he can imbibe in order to heighten his physical prowess at the cost of his personality. It takes 1 hour to brew a dose of mutagen, and once brewed, it remains potent until used. An alchemist can only maintain one dose of mutagen at a time--if he brews a second dose, any existing mutagen becomes inert. As with an extract or bomb, a mutagen that is not in an alchemist\u0027s possession becomes inert until an alchemist picks it up again.When an alchemist brews a mutagen, he selects one physical ability score--either Strength, Dexterity, or Constitution. It\u0027s a standard action to drink a mutagen. Upon being imbibed, the mutagen causes the alchemist to grow bulkier and more bestial, granting him a +2 natural armor bonus and a +4 alchemical bonus to the selected ability score for 10 minutes per alchemist level. In addition, while the mutagen is in effect, the alchemist takes a –2 penalty to one of his mental ability scores. If the mutagen enhances his Strength, it applies a penalty to his Intelligence. If it enhances his Dexterity, it applies a penalty to his Wisdom. If it enhances his Constitution, it applies a penalty to his Charisma.A non-alchemist who drinks a mutagen must make a Fortitude save (DC 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier) or become nauseated for 1 hour--a non-alchemist can never gain the benefit of a mutagen, but an alchemist can gain the effects of another alchemist\u0027s mutagen if he drinks it. (Although if the other alchemist creates a different mutagen, the effects of the “stolen\" mutagen immediately cease.) The effects of a mutagen do not stack. Whenever an alchemist drinks a mutagen, the effects of any previous mutagen immediately end.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:mutagen#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:poison_immunity#alchemist",
+    "name": "Poison Immunity",
+    "descriptionText": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison.",
+    "effects": [{
+      "adjustState": {
+        "level": 10,
+        "key": "ability:poison_immunity#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 3,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:swift_alchemy#alchemist",
+    "name": "Swift Alchemy",
+    "descriptionText": "At 3rd level, an alchemist can create alchemical items with astounding speed. It takes an alchemist half the normal amount of time to create alchemical items, and he can apply poison to a weapon as a move action.",
+    "effects": [{
+      "adjustState": {
+        "level": 3,
+        "key": "ability:swift_alchemy#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:persistent_mutagen#alchemist",
+    "name": "Persistent Mutagen",
+    "descriptionText": "At 14th level, the effects of a mutagen last for 1 hour per level.",
+    "effects": [{
+      "adjustState": {
+        "level": 14,
+        "key": "ability:persistent_mutagen#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 18,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 11,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bomb#alchemist",
+    "name": "Bomb",
+    "descriptionText": "In addition to magical extracts, alchemists are adept at swiftly mixing various volatile chemicals and infusing them with their magical reserves to create powerful bombs that they can hurl at their enemies. An alchemist can use a number of bombs each day equal to his class level + his Intelligence modifier. Bombs are unstable, and if not used in the round they are created, they degrade and become inert--their method of creation prevents large volumes of explosive material from being created and stored. In order to create a bomb, the alchemist must use a small vial containing an ounce of liquid catalyst--the alchemist can create this liquid catalyst from small amounts of chemicals from an alchemy lab, and these supplies can be readily refilled in the same manner as a spellcaster\u0027s component pouch. Most alchemists create a number of catalyst vials at the start of the day equal to the total number of bombs they can create in that day--once created, a catalyst vial remains usable by the alchemist for years.Drawing the components of, creating, and throwing a bomb requires a standard action that provokes an attack of opportunity. Thrown bombs have a range of 20 feet and use the Throw Splash Weapon special attack. Bombs are considered weapons and can be selected using feats such as Point-Blank Shot and Weapon Focus. On a direct hit, an alchemist\u0027s bomb inflicts 1d6 points of fire damage + additional damage equal to the alchemist\u0027s Intelligence modifier. The damage of an alchemist\u0027s bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus damage is not multiplied on a critical hit or by using feats such as Vital Strike). Splash damage from an alchemist bomb is always equal to the bomb\u0027s minimum damage (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its splash damage would be 6 points of fire damage). Those caught in the splash damage can attempt a Reflex save for half damage. The DC of this save is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.Alchemists can learn new types of bombs as discoveries (see the Discovery ability) as they level up. An alchemist\u0027s bomb, like an extract, becomes inert if used or carried by anyone else.",
+    "effects": [{
+      "adjustState": {
+        "level": 13,
+        "key": "ability:bomb#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:poison_resistance#alchemist",
+    "name": "Poison Resistance",
+    "descriptionText": "At 2nd level, an alchemist gains a +2 bonus on all saving throws against poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th level. At 10th level, an alchemist becomes completely immune to poison.",
+    "effects": [{
+      "adjustState": {
+        "level": 8,
+        "key": "ability:poison_resistance#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:brew_potion#alchemist",
+    "name": "Brew Potion",
+    "descriptionText": "At 1st level, alchemists receive Brew Potion as a bonus feat. An alchemist can brew potions of any formulae he knows (up to 3rd level), using his alchemist level as his caster level. The spell must be one that can be made into a potion. The alchemist does not need to meet the prerequisites for this feat.",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:brew_potion#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 10,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 8,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 6,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:grand_discovery#alchemist",
+    "name": "Grand Discovery",
+    "descriptionText": "At 20th level, the alchemist makes a grand discovery. He immediately learns two normal discoveries, but also learns a third discovery chosen from the linked list below, representing a truly astounding alchemical breakthrough of significant import. For many alchemists, the promise of one of these grand discoveries is the primary goal of their experiments and hard work.",
+    "effects": [{
+      "adjustState": {
+        "level": 20,
+        "key": "ability:grand_discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:discovery#alchemist",
+    "name": "Discovery",
+    "descriptionText": "At 2nd level, and then again every 2 levels thereafter (up to 18th level), an alchemist makes an incredible alchemical discovery. Unless otherwise noted, an alchemist cannot select an individual discovery more than once. Some discoveries can only be made if the alchemist has met certain prerequisites first, such as uncovering other discoveries. Discoveries that modify bombs that are marked with an asterisk (*) do not stack. Only one such discovery can be applied to an individual bomb. The DC of any saving throw called for by a discovery is equal to 10 + 1/2 the alchemist\u0027s level + the alchemist\u0027s Intelligence modifier.",
+    "effects": [{
+      "adjustState": {
+        "level": 16,
+        "key": "ability:discovery#alchemist",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:alchemy#alchemist",
+    "name": "Alchemy",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:alchemy#alchemist",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "class",
+  "categoryId": 1,
+  "descriptionText": "The alchemist’s reputation is not softened by his exuberance (some would say dangerous recklessness) in perfecting his magical extracts and potion-like creations, infusing these substances with magic siphoned from his aura and using his own body as experimental stock. Nor is it mollified by the alchemist’s almost gleeful passion for building explosive bombs and discovering strange new poisons and methods for their use. These traits, while making him a liability and risk for most civilized organizations and institutions of higher learning, seem to fit quite well with most adventuring groups.",
+  "effects": [{
+    "setState": {
+      "key": "class_1",
+      "textValue": "class:alchemist"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 16,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "class:alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:feat",
+      "level": 1,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:feat",
+      "level": 3,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:feat",
+      "level": 5,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:feat",
+      "level": 7,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:feat",
+      "level": 9,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:feat",
+      "level": 11,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:feat",
+      "level": 13,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:feat",
+      "level": 15,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:feat",
+      "level": 17,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:feat",
+      "level": 19,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:appraise",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:craft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:disable_device",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:fly",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:heal",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:perception",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:profession",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:sleight_of_hand",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:spellcraft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:survival",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:use_magic_device",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "bab",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "will:base",
+      "numericValue": 0
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:0",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:1",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:alchemy#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:brew_potion#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:mutagen#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:throw_anything#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "bab",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "will:base",
+      "numericValue": 0
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:0",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:1",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:alchemist:alchemist_discovery",
+      "level": 2,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "ability:poison_resistance#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "ability:poison_use#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "bab",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "will:base",
+      "numericValue": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:0",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:1",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "ability:swift_alchemy#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "will:base",
+      "numericValue": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:0",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:1",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:alchemist:alchemist_discovery",
+      "level": 4,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "will:base",
+      "numericValue": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:0",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:1",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "ability:poison_resistance#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "bab",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:0",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:1",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:alchemist:alchemist_discovery",
+      "level": 6,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "ability:swift_poisoning#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "bab",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:0",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:1",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:0",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:1",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:alchemist:alchemist_discovery",
+      "level": 8,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "ability:poison_resistance#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:0",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:1",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "bab",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "fort:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "ref:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:0",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:1",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:alchemist:alchemist_discovery",
+      "level": 10,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "ability:poison_immunity#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "bab",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "fort:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "ref:base",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:0",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:1",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "fort:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "ref:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:0",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:1",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:alchemist:alchemist_discovery",
+      "level": 12,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "fort:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "ref:base",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:0",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:1",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "bab",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "fort:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "ref:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:0",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:1",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:alchemist:alchemist_discovery",
+      "level": 14,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "ability:persistent_mutagen#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "bab",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "fort:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "ref:base",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:0",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:1",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "bab",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "fort:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "ref:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:0",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:1",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 16,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:alchemist:alchemist_discovery",
+      "level": 16,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "bab",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "fort:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "ref:base",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:0",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:1",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "bab",
+      "numericValue": 13
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "fort:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "ref:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:0",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:1",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "ability:discovery#alchemist",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:alchemist:alchemist_discovery",
+      "level": 18,
+      "label": "Discovery",
+      "references": ["alchemist_discovery/*"],
+      "type": "alchemist_discovery"
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "ability:instant_alchemy#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "bab",
+      "numericValue": 14
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "fort:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "ref:base",
+      "numericValue": 11
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:0",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:1",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "ability:bomb#alchemist",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "bab",
+      "numericValue": 15
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "fort:base",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "ref:base",
+      "numericValue": 12
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:0",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:1",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "ability:grand_discovery#alchemist",
+      "delta": 1
+    }
+  }]
+}

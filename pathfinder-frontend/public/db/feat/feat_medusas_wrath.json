@@ -1,10 +1,16 @@
 {
   "id": "feat:medusas_wrath",
   "name": "Medusa\u0027s Wrath",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can take advantage of your opponent\u0027s confusion, delivering multiple blows.",
-  "prerequisites": "Improved Unarmed Strike, Gorgon\u0027s Fist, Scorpion Style, base attack bonus +11.",
-  "prerequisitesFormula": "@feat:improved_unarmed_strike AND @feat:gorgons_fist AND @feat:scorpion_style AND @bab \u003e\u003d 11",
-  "benefit": "Whenever you use the full-attack action and make at least one unarmed strike, you can make two additional unarmed strikes at your highest base attack bonus. These bonus attacks must be made against a dazed, flat-footed, paralyzed, staggered, stunned, or unconscious foe.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@feat:improved_unarmed_strike AND @feat:gorgons_fist AND @feat:scorpion_style AND @bab \u003e\u003d 11",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can take advantage of your opponent\u0027s confusion, delivering multiple blows.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:medusas_wrath",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you use the full-attack action and make at least one unarmed strike, you can make two additional unarmed strikes at your highest base attack bonus. These bonus attacks must be made against a dazed, flat-footed, paralyzed, staggered, stunned, or unconscious foe."
 }

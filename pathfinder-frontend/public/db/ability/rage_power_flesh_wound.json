@@ -1,7 +1,13 @@
 {
   "id": "rage_power:flesh_wound",
   "name": "Flesh Wound",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 10",
-  "description": "Convert lethal damage to nonlethal damage"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 10",
+  "type": "ability",
+  "descriptionText": "Convert lethal damage to nonlethal damage",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:flesh_wound",
+      "delta": 1
+    }
+  }]
 }

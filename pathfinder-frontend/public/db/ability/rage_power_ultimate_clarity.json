@@ -1,7 +1,13 @@
 {
   "id": "rage_power:ultimate_clarity",
   "name": "Ultimate Clarity",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:moment_of_clarity AND @rage_power:perfect_clarity",
-  "description": "1/rage, for 1 round, see through normal and magical darkness (including from magical effects such as blur and displacement), invisibility, and illusions; and discern exact locations of creatures with concealment."
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:moment_of_clarity AND @rage_power:perfect_clarity",
+  "type": "ability",
+  "descriptionText": "1/rage, for 1 round, see through normal and magical darkness (including from magical effects such as blur and displacement), invisibility, and illusions; and discern exact locations of creatures with concealment.",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:ultimate_clarity",
+      "delta": 1
+    }
+  }]
 }

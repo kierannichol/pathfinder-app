@@ -1,6 +1,12 @@
 {
   "id": "magus_arcana:concentrate",
   "name": "Concentrate",
-  "type": "ABILITY_TYPE_EX",
-  "description": "You can reroll a concentration check"
+  "type": "ability",
+  "descriptionText": "You can reroll a concentration check",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:concentrate",
+      "delta": 1
+    }
+  }]
 }

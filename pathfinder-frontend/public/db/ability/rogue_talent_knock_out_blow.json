@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:knock_out_blow",
   "name": "Knock-Out Blow",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Knock an opponent out instead of dealing sneak attack damage"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Knock an opponent out instead of dealing sneak attack damage",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:knock_out_blow",
+      "delta": 1
+    }
+  }]
 }

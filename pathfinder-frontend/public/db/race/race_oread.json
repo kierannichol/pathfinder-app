@@ -1,9 +1,36 @@
 {
   "id": "race:oread",
   "name": "Oread",
-  "size": 5,
-  "type": "Outsider (native)",
-  "speed": 20,
-  "languages": ["Common", "Terran"],
-  "traits": ["modifier:str_plus_2", "modifier:wis_plus_2", "modifier:cha_minus_2", "spell:magic_stone", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:oread"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 20
+    }
+  }, {
+    "adjustState": {
+      "key": "str:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "wis:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "cha:race",
+      "delta": -2
+    }
+  }]
 }

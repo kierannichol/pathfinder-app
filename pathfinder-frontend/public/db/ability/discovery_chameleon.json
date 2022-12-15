@@ -1,5 +1,12 @@
 {
   "id": "discovery:chameleon",
   "name": "Chameleon",
-  "description": "Your skin changes colors, granting you a bonus on Stealth checks"
+  "type": "ability",
+  "descriptionText": "Your skin changes colors, granting you a bonus on Stealth checks",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:chameleon",
+      "delta": 1
+    }
+  }]
 }

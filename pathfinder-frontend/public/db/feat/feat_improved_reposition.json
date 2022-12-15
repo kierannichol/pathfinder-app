@@ -1,11 +1,17 @@
 {
   "id": "feat:improved_reposition",
   "name": "Improved Reposition",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You have learned how to force your enemies to move around the battlefield.",
-  "prerequisites": "Int 13, Combat Expertise.",
-  "prerequisitesFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise",
-  "benefit": "You do not provoke an attack of opportunity when performing a reposition combat maneuver. In addition, you receive a +2 bonus on checks made to reposition a foe. You also receive a +2 bonus to your Combat Maneuver Defense when an opponent tries to reposition you.",
-  "normal": "You provoke an attack of opportunity when performing a reposition combat maneuver.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@int_score \u003e\u003d 13 AND @feat:combat_expertise",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You have learned how to force your enemies to move around the battlefield.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_reposition",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You do not provoke an attack of opportunity when performing a reposition combat maneuver. In addition, you receive a +2 bonus on checks made to reposition a foe. You also receive a +2 bonus to your Combat Maneuver Defense when an opponent tries to reposition you.",
+  "normalText": "You provoke an attack of opportunity when performing a reposition combat maneuver."
 }

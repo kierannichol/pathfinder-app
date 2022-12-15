@@ -1,7 +1,13 @@
 {
   "id": "magus_arcana:hasted_assault",
   "name": "Hasted Assault",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:magus \u003e\u003d 9",
-  "description": "Cast haste on yourself using your arcane pool"
+  "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+  "type": "ability",
+  "descriptionText": "Cast haste on yourself using your arcane pool",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:hasted_assault",
+      "delta": 1
+    }
+  }]
 }

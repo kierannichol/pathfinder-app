@@ -1,6 +1,13 @@
 {
   "id": "discovery:grand_cognatogen",
   "name": "Grand Cognatogen",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_cognatogen",
-  "description": "Increase mental scores and decrease physical scores"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_cognatogen",
+  "type": "ability",
+  "descriptionText": "Increase mental scores and decrease physical scores",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:grand_cognatogen",
+      "delta": 1
+    }
+  }]
 }

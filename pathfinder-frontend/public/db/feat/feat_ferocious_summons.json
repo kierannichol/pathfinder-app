@@ -1,10 +1,16 @@
 {
   "id": "feat:ferocious_summons",
   "name": "Ferocious Summons",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your summoned creatures gain your ferocity.",
-  "prerequisites": "Augment Summoning, Spell Focus (conjuration), half-orc or orc.",
-  "prerequisitesFormula": "(@feat:augment_summoning OR @feat:spell_focus#conjuration OR @race:half_orc OR @race:orc)",
-  "benefit": "Creatures you summon gain the ferocity universal monster ability.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "(@feat:augment_summoning OR @feat:spell_focus#conjuration OR @race:half_orc OR @race:orc)",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your summoned creatures gain your ferocity.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:ferocious_summons",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Creatures you summon gain the ferocity universal monster ability."
 }

@@ -1,5 +1,12 @@
 {
   "id": "ability:tireless_rage#barbarian",
   "name": "Tireless Rage",
-  "description": "Starting at 17th level, a barbarian no longer becomes fatigued at the end of her rage."
+  "type": "ability",
+  "descriptionText": "Starting at 17th level, a barbarian no longer becomes fatigued at the end of her rage.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:tireless_rage#barbarian",
+      "delta": 1
+    }
+  }]
 }

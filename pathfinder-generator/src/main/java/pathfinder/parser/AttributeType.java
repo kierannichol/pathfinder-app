@@ -31,7 +31,7 @@ public enum AttributeType {
     UNCHAINED_RAGE_POWER("unchained_rage_power"),
     UNCHAINED_KI_POWER("unchained_ki_power"),
     UNCHAINED_ROGUE_TALENT("unchained_rogue_talent"),
-    BLOODLINE("bloodline"),
+    SORCERER_BLOODLINE("sorcerer_bloodline"),
 
     SPELL("spell"),
     ;

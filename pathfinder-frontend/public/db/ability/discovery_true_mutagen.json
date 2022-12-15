@@ -1,6 +1,13 @@
 {
   "id": "discovery:true_mutagen",
   "name": "True Mutagen",
-  "prerequisitesFormula": "@ability:grand_discovery#alchemist AND @discovery:grand_mutagen",
-  "description": "Gain a more powerful mutagen"
+  "prerequisiteFormula": "@ability:grand_discovery#alchemist AND @discovery:grand_mutagen",
+  "type": "ability",
+  "descriptionText": "Gain a more powerful mutagen",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:true_mutagen",
+      "delta": 1
+    }
+  }]
 }

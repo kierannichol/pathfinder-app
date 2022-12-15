@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:frugal_trapsmith",
   "name": "Frugal Trapsmith",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Pay 75% of the cost when building a trap"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Pay 75% of the cost when building a trap",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:frugal_trapsmith",
+      "delta": 1
+    }
+  }]
 }

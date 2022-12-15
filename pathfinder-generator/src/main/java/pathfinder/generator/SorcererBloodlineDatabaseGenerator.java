@@ -20,7 +20,7 @@ public class SorcererBloodlineDatabaseGenerator extends AbstractModifierDatabase
 
     @Override
     protected String getRelativeOutputPath() {
-        return "sorcerer";
+        return "sorcerer_bloodline";
     }
 
     @Override

@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:quick_disable",
   "name": "Quick Disable",
-  "description": "Disable a trap in half the normal amount of time"
+  "type": "ability",
+  "descriptionText": "Disable a trap in half the normal amount of time",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:quick_disable",
+      "delta": 1
+    }
+  }]
 }

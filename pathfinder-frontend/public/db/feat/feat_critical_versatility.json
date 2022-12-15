@@ -1,10 +1,16 @@
 {
   "id": "feat:critical_versatility",
   "name": "Critical Versatility",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "An open mind and combat training grant versatility to your critical hits.",
-  "prerequisites": "Fighter level 11th, human.",
-  "prerequisitesFormula": "@class:fighter \u003e\u003d 11 AND @race:human",
-  "benefit": "Once per day, you can spend 1 hour practicing maneuvers to gain one single critical feat that you meet the prerequisites for. You gain the benefits of the chosen critical feat until you choose to practice a different critical feat.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@class:fighter \u003e\u003d 11 AND @race:human",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "An open mind and combat training grant versatility to your critical hits.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:critical_versatility",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Once per day, you can spend 1 hour practicing maneuvers to gain one single critical feat that you meet the prerequisites for. You gain the benefits of the chosen critical feat until you choose to practice a different critical feat."
 }

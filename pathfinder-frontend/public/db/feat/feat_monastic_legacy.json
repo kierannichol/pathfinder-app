@@ -1,10 +1,16 @@
 {
   "id": "feat:monastic_legacy",
   "name": "Monastic Legacy",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your formal unarmed training continues to bolster your training in other areas.",
-  "prerequisites": "Still mind class feature, Improved Unarmed Strike.",
-  "prerequisitesFormula": "@ability:still_mind#unchained_monk AND @feat:improved_unarmed_strike",
-  "benefit": "Add half the levels you have in classes other than monk to your monk level to determine your effective monk level for your base unarmed strike damage. This feat does not make levels in classes other than monk count toward any other monk class features.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@ability:still_mind#unchained_monk AND @feat:improved_unarmed_strike",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your formal unarmed training continues to bolster your training in other areas.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:monastic_legacy",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Add half the levels you have in classes other than monk to your monk level to determine your effective monk level for your base unarmed strike damage. This feat does not make levels in classes other than monk count toward any other monk class features."
 }

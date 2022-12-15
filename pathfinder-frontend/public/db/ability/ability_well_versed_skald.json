@@ -1,5 +1,12 @@
 {
   "id": "ability:well_versed#skald",
   "name": "Well-versed",
-  "description": "At 2nd level, the skald becomes resistant to sonic effects. The skald gains a +4 bonus on saving throws made against bardic performance, as well as all sonic or language-dependent effects."
+  "type": "ability",
+  "descriptionText": "At 2nd level, the skald becomes resistant to sonic effects. The skald gains a +4 bonus on saving throws made against bardic performance, as well as all sonic or language-dependent effects.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:well_versed#skald",
+      "delta": 1
+    }
+  }]
 }

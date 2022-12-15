@@ -1,6 +1,13 @@
 {
   "id": "discovery:fast_healing",
   "name": "Fast Healing",
-  "prerequisitesFormula": "@ability:grand_discovery#alchemist",
-  "description": "Gain fast healing 5"
+  "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+  "type": "ability",
+  "descriptionText": "Gain fast healing 5",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:fast_healing",
+      "delta": 1
+    }
+  }]
 }

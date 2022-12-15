@@ -1,6 +1,13 @@
 {
   "id": "discovery:dilution",
   "name": "Dilution",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 12",
-  "description": "Create two doses of a potion or elixir from one set of ingredients"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 12",
+  "type": "ability",
+  "descriptionText": "Create two doses of a potion or elixir from one set of ingredients",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:dilution",
+      "delta": 1
+    }
+  }]
 }

@@ -1,11 +1,17 @@
 {
   "id": "feat:spontaneous_metafocus",
   "name": "Spontaneous Metafocus",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can focus to combine one of your known spells and metamagic feats.",
-  "prerequisites": "Cha 13, one metamagic feat, able to spontaneously cast spells.",
-  "prerequisitesFormula": "@cha_score \u003e\u003d 13 AND (@feat:elemental_spell + @feat:widen_spell + @feat:echoing_spell + @feat:piercing_spell + @feat:lingering_spell + @feat:empower_spell + @feat:bouncing_spell + @feat:focused_spell + @feat:flaring_spell + @feat:maximize_spell + @feat:thanatopic_spell + @feat:thundering_spell + @feat:intensified_spell + @feat:sickening_spell + @feat:threnodic_spell + @feat:disruptive_spell + @feat:extend_spell + @feat:selective_spell + @feat:enlarge_spell + @feat:toppling_spell + @feat:dazing_spell + @feat:heighten_spell + @feat:ectoplasmic_spell + @feat:burning_spell + @feat:silent_spell + @feat:persistent_spell + @feat:still_spell + @feat:concussive_spell + @feat:reach_spell + @feat:quicken_spell + @feat:rime_spell + @feat:merciful_spell) AND @ability:spontaneous_caster",
-  "benefit": "Pick a single spell that you are able to cast spontaneously. When you apply metamagic feats to that spell, you can cast the spell using the normal casting time instead of at the slower casting time.",
-  "special": "You can take this feat multiple times. Each time you select this feat, choose a new spell that you can cast spontaneously; the feat applies to that spell.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@cha_score \u003e\u003d 13 AND (@feat:elemental_spell + @feat:widen_spell + @feat:echoing_spell + @feat:piercing_spell + @feat:lingering_spell + @feat:empower_spell + @feat:bouncing_spell + @feat:focused_spell + @feat:flaring_spell + @feat:maximize_spell + @feat:thanatopic_spell + @feat:thundering_spell + @feat:intensified_spell + @feat:sickening_spell + @feat:threnodic_spell + @feat:disruptive_spell + @feat:extend_spell + @feat:selective_spell + @feat:enlarge_spell + @feat:toppling_spell + @feat:dazing_spell + @feat:heighten_spell + @feat:ectoplasmic_spell + @feat:burning_spell + @feat:silent_spell + @feat:persistent_spell + @feat:still_spell + @feat:concussive_spell + @feat:reach_spell + @feat:quicken_spell + @feat:rime_spell + @feat:merciful_spell) AND @ability:spontaneous_caster",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can focus to combine one of your known spells and metamagic feats.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:spontaneous_metafocus",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Pick a single spell that you are able to cast spontaneously. When you apply metamagic feats to that spell, you can cast the spell using the normal casting time instead of at the slower casting time.",
+  "specialText": "You can take this feat multiple times. Each time you select this feat, choose a new spell that you can cast spontaneously; the feat applies to that spell."
 }

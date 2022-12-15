@@ -1,10 +1,16 @@
 {
   "id": "feat:sacred_summons",
   "name": "Sacred Summons",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "The minions of your divine patrons stand ready to answer your call.",
-  "prerequisites": "Aura class feature, ability to cast summon monster.",
-  "prerequisitesFormula": "@ability:aura#warpriest AND @ability:summon_monster#unchained_summoner",
-  "benefit": "When using summon monster to summon creatures whose alignment subtype or subtypes exactly match your aura, you may cast the spell as a standard action instead of with a casting time of 1 round.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@ability:aura#warpriest AND @ability:summon_monster#unchained_summoner",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "The minions of your divine patrons stand ready to answer your call.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sacred_summons",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When using summon monster to summon creatures whose alignment subtype or subtypes exactly match your aura, you may cast the spell as a standard action instead of with a casting time of 1 round."
 }

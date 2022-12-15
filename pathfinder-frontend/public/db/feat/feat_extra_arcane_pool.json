@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_arcane_pool",
   "name": "Extra Arcane Pool",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have learned how to draw more power from your arcane pool.",
-  "prerequisites": "Arcane pool class feature.",
-  "prerequisitesFormula": "@ability:arcane_pool#magus",
-  "benefit": "Your arcane pool increases by 2.",
-  "special": "You can gain this feat multiple times. Its effects stack, granting you an increase to your arcane pool each time you take this feat.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@ability:arcane_pool#magus",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have learned how to draw more power from your arcane pool.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_arcane_pool",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your arcane pool increases by 2.",
+  "specialText": "You can gain this feat multiple times. Its effects stack, granting you an increase to your arcane pool each time you take this feat."
 }

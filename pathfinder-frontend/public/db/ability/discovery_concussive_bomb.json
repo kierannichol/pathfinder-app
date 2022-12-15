@@ -1,6 +1,13 @@
 {
   "id": "discovery:concussive_bomb",
   "name": "Concussive Bomb",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 6",
-  "description": "Deal sonic damage with your bombs"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Deal sonic damage with your bombs",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:concussive_bomb",
+      "delta": 1
+    }
+  }]
 }

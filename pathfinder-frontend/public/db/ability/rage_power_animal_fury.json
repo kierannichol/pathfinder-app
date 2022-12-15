@@ -1,6 +1,12 @@
 {
   "id": "rage_power:animal_fury",
   "name": "Animal Fury",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain a bite attack"
+  "type": "ability",
+  "descriptionText": "Gain a bite attack",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:animal_fury",
+      "delta": 1
+    }
+  }]
 }

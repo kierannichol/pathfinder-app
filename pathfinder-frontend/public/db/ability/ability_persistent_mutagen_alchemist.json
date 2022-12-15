@@ -1,5 +1,12 @@
 {
   "id": "ability:persistent_mutagen#alchemist",
   "name": "Persistent Mutagen",
-  "description": "At 14th level, the effects of a mutagen last for 1 hour per level."
+  "type": "ability",
+  "descriptionText": "At 14th level, the effects of a mutagen last for 1 hour per level.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:persistent_mutagen#alchemist",
+      "delta": 1
+    }
+  }]
 }

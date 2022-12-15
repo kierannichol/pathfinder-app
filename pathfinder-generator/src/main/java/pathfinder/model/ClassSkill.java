@@ -1,5 +1,7 @@
 package pathfinder.model;
 
-public record ClassSkill(String id) {
+import java.io.Serializable;
+
+public record ClassSkill(String id) implements Serializable {
 
 }

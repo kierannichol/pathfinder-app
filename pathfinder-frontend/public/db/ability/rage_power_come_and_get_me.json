@@ -1,7 +1,13 @@
 {
   "id": "rage_power:come_and_get_me",
   "name": "Come and Get Me",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 12",
-  "description": "Provoke attacks of opportunity to get extra attacks"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 12",
+  "type": "ability",
+  "descriptionText": "Provoke attacks of opportunity to get extra attacks",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:come_and_get_me",
+      "delta": 1
+    }
+  }]
 }

@@ -1,11 +1,17 @@
 {
   "id": "feat:deepsight",
   "name": "Deepsight",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your senses are especially keen in the utter darkness.",
-  "prerequisites": "Darkvision 60 feet.",
-  "prerequisitesFormula": "@ability:darkvision \u003e\u003d 60",
-  "benefit": "Your darkvision has a range of 120 feet.",
-  "normal": "Darkvision normally extends 60 or 90 feet.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:darkvision \u003e\u003d 60",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your senses are especially keen in the utter darkness.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:deepsight",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your darkvision has a range of 120 feet.",
+  "normalText": "Darkvision normally extends 60 or 90 feet."
 }

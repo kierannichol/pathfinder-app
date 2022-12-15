@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:resiliency",
   "name": "Resiliency",
-  "description": "Gain temporary hit points to avoid dying"
+  "type": "ability",
+  "descriptionText": "Gain temporary hit points to avoid dying",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:resiliency",
+      "delta": 1
+    }
+  }]
 }

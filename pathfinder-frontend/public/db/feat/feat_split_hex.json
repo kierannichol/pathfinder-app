@@ -1,10 +1,16 @@
 {
   "id": "feat:split_hex",
   "name": "Split Hex",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can split the effect of one of your targeted hexes, affecting another creature you can see.",
-  "prerequisites": "Witch level 10th.",
-  "prerequisitesFormula": "@class:witch \u003e\u003d 10",
-  "benefit": "When you use one of your hexes (not a major hex or a grand hex) that targets a single creature, you can choose another creature within 30 feet of the first target to also be targeted by the hex.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@class:witch \u003e\u003d 10",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can split the effect of one of your targeted hexes, affecting another creature you can see.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:split_hex",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you use one of your hexes (not a major hex or a grand hex) that targets a single creature, you can choose another creature within 30 feet of the first target to also be targeted by the hex."
 }

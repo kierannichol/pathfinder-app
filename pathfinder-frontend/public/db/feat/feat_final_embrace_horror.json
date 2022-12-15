@@ -1,10 +1,16 @@
 {
   "id": "feat:final_embrace_horror",
   "name": "Final Embrace Horror",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your constricting attack has become stronger and more lethal.",
-  "prerequisites": "Str 15, Int 3; naga, serpentfolk, or creature that has the constrict special attack; Final Embrace; base attack bonus +6.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 15 AND @int_score \u003e\u003d 3 AND (@race:naga OR @race:serpentfolk OR @ability:constrict) AND @feat:final_embrace AND @bab \u003e\u003d 6",
-  "benefit": "A creature that takes damage from your constrict attack is also shaken until the start of your next turn.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@str_score \u003e\u003d 15 AND @int_score \u003e\u003d 3 AND (@race:naga OR @race:serpentfolk OR @ability:constrict) AND @feat:final_embrace AND @bab \u003e\u003d 6",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your constricting attack has become stronger and more lethal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:final_embrace_horror",
+      "delta": 1
+    }
+  }],
+  "benefitText": "A creature that takes damage from your constrict attack is also shaken until the start of your next turn."
 }

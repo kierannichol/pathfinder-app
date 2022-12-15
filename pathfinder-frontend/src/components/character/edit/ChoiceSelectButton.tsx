@@ -1,6 +1,6 @@
 import {useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
-import {usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
+import {usePathfinderDatabase} from "../../../database/v3/PathfinderDatabase";
 import PathfinderButton from "../../common/PathfinderButton";
 import "./ChoiceSelectButton.scss";
 import ChoiceSelectorDialog, {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorDialog";

@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:master_tricks",
   "name": "Master Tricks",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Select a ninja trick from the list of master tricks in place of a rogue talent."
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Select a ninja trick from the list of master tricks in place of a rogue talent.",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:master_tricks",
+      "delta": 1
+    }
+  }]
 }

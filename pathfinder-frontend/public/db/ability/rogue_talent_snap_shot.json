@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:snap_shot",
   "name": "Snap Shot",
-  "description": "Gain initiative 20 for a surprise round"
+  "type": "ability",
+  "descriptionText": "Gain initiative 20 for a surprise round",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:snap_shot",
+      "delta": 1
+    }
+  }]
 }

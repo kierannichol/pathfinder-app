@@ -1,5 +1,12 @@
 {
   "id": "discovery:explosive_bomb",
   "name": "Explosive Bomb",
-  "description": "Your bombs gain an increased area of effect"
+  "type": "ability",
+  "descriptionText": "Your bombs gain an increased area of effect",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:explosive_bomb",
+      "delta": 1
+    }
+  }]
 }

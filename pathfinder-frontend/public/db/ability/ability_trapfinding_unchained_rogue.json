@@ -1,5 +1,12 @@
 {
   "id": "ability:trapfinding#unchained_rogue",
   "name": "Trapfinding",
-  "description": "A rogue adds 1/2 her level on Perception checks to locate traps and on Disable Device checks (minimum +1). A rogue can use Disable Device to disarm magic traps."
+  "type": "ability",
+  "descriptionText": "A rogue adds 1/2 her level on Perception checks to locate traps and on Disable Device checks (minimum +1). A rogue can use Disable Device to disarm magic traps.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:trapfinding#unchained_rogue",
+      "delta": 1
+    }
+  }]
 }

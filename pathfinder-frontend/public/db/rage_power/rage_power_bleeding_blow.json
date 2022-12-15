@@ -1,0 +1,13 @@
+{
+  "id": "rage_power:bleeding_blow",
+  "name": "Bleeding Blow",
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow",
+  "type": "rage_power",
+  "descriptionText": "Deal bleed damage with your powerful blows",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:bleeding_blow",
+      "delta": 1
+    }
+  }]
+}

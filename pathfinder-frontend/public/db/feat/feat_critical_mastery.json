@@ -1,11 +1,17 @@
 {
   "id": "feat:critical_mastery",
   "name": "Critical Mastery",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your critical hits cause two additional effects.",
-  "prerequisites": "Critical Focus, any two critical feats, 14th-level fighter.",
-  "prerequisitesFormula": "@feat:critical_focus AND (0) \u003e\u003d 2 AND @class:fighter \u003e\u003d 14",
-  "benefit": "When you score a critical hit, you can apply the effects of two critical feats in addition to the damage dealt.",
-  "normal": "You can only apply the effects of one critical feat to a given critical hit in addition to the damage dealt.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@feat:critical_focus AND (0) \u003e\u003d 2 AND @class:fighter \u003e\u003d 14",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your critical hits cause two additional effects.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:critical_mastery",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you score a critical hit, you can apply the effects of two critical feats in addition to the damage dealt.",
+  "normalText": "You can only apply the effects of one critical feat to a given critical hit in addition to the damage dealt."
 }

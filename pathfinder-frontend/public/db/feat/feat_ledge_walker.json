@@ -1,10 +1,16 @@
 {
   "id": "feat:ledge_walker",
   "name": "Ledge Walker",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You negotiate tiny ledges like a mountain goat.",
-  "prerequisites": "Dex 13, dwarf, mountaineer or stability racial trait.",
-  "prerequisitesFormula": "(@dex_score \u003e\u003d 13 OR @race:dwarf OR @ability:mountaineer OR @ability:stability)",
-  "benefit": "You can move at full speed while using Acrobatics to balance on narrow surfaces, and you gain a +4 bonus on Climb checks to catch yourself or another creature while falling. You also gain a +4 bonus on saving throws against effects that would cause you to fall prone (such as earthquakes). This bonus does not apply to your CMD against bull rush or trip attacks.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "(@dex_score \u003e\u003d 13 OR @race:dwarf OR @ability:mountaineer OR @ability:stability)",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You negotiate tiny ledges like a mountain goat.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:ledge_walker",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can move at full speed while using Acrobatics to balance on narrow surfaces, and you gain a +4 bonus on Climb checks to catch yourself or another creature while falling. You also gain a +4 bonus on saving throws against effects that would cause you to fall prone (such as earthquakes). This bonus does not apply to your CMD against bull rush or trip attacks."
 }

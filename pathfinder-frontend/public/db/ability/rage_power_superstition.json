@@ -1,6 +1,12 @@
 {
   "id": "rage_power:superstition",
   "name": "Superstition",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain a bonus on saving throws"
+  "type": "ability",
+  "descriptionText": "Gain a bonus on saving throws",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:superstition",
+      "delta": 1
+    }
+  }]
 }

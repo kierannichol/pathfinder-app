@@ -1,5 +1,12 @@
 {
   "id": "ability:improved_awesome_blow#brawler",
   "name": "Improved Awesome Blow",
-  "description": "At 20th level, the brawler can use her awesome blow ability as an attack rather than as a standard action. She may use it on creatures of any size. If the maneuver roll is a natural 20, the brawler can immediately attempt to confirm the critical by rolling another combat maneuver check with all the same modifiers as the one just rolled; if the confirmation roll is successful, the attack deals double damage, and the damage from hitting an obstacle (if any) is also doubled."
+  "type": "ability",
+  "descriptionText": "At 20th level, the brawler can use her awesome blow ability as an attack rather than as a standard action. She may use it on creatures of any size. If the maneuver roll is a natural 20, the brawler can immediately attempt to confirm the critical by rolling another combat maneuver check with all the same modifiers as the one just rolled; if the confirmation roll is successful, the attack deals double damage, and the damage from hitting an obstacle (if any) is also doubled.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:improved_awesome_blow#brawler",
+      "delta": 1
+    }
+  }]
 }

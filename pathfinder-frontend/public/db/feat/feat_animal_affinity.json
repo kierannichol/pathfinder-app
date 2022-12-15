@@ -1,8 +1,15 @@
 {
   "id": "feat:animal_affinity",
   "name": "Animal Affinity",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You are skilled at working with animals and mounts.",
-  "benefit": "You get a +2 bonus on all Handle Animal and Ride skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You are skilled at working with animals and mounts.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:animal_affinity",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +2 bonus on all Handle Animal and Ride skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
 }

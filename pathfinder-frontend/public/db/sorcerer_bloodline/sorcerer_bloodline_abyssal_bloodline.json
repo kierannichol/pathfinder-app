@@ -1,0 +1,55 @@
+{
+  "id": "sorcerer_bloodline:abyssal_bloodline",
+  "name": "Abyssal Bloodline",
+  "children": [{
+    "id": "ability:bloodline_arcana#abyssal_bloodline",
+    "name": "Bloodline Arcana",
+    "type": "ability",
+    "descriptionText": ": Whenever you cast a spell of the summoning subschool, the creatures summoned gain DR/good equal to 1/2 your sorcerer level (minimum 1). This does not stack with any DR the creature might have.",
+    "effects": [{
+      "adjustState": {
+        "key": "ability:bloodline_arcana#abyssal_bloodline",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "sorcerer_bloodline",
+  "descriptionText": "Generations ago, a demon spread its filth into your heritage. While it does not manifest in all of your kin, for you it is particularly strong. You might sometimes have urges to chaos or evil, but your destiny (and alignment) is up to you.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "trained:skill:knowledge_planes",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:bloodline_feat",
+      "level": 7,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:augment_summoning", "feat/feat:cleave", "feat/feat:empower_spell", "feat/feat:great_fortitude", "feat/feat:improved_bull_rush", "feat/feat:improved_sunder", "feat/feat:power_attack", "feat/feat:skill_focus#knowledge_planes"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:bloodline_feat",
+      "level": 13,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:augment_summoning", "feat/feat:cleave", "feat/feat:empower_spell", "feat/feat:great_fortitude", "feat/feat:improved_bull_rush", "feat/feat:improved_sunder", "feat/feat:power_attack", "feat/feat:skill_focus#knowledge_planes"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:bloodline_feat",
+      "level": 19,
+      "label": "Bloodline Feat",
+      "references": ["feat/feat:augment_summoning", "feat/feat:cleave", "feat/feat:empower_spell", "feat/feat:great_fortitude", "feat/feat:improved_bull_rush", "feat/feat:improved_sunder", "feat/feat:power_attack", "feat/feat:skill_focus#knowledge_planes"],
+      "type": "bloodline_feat"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:bloodline_arcana#abyssal_bloodline",
+      "delta": 1
+    }
+  }]
+}

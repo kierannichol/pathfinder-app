@@ -1,6 +1,5 @@
 import React, {ComponentProps, useMemo} from "react";
 import {Modal} from "react-bootstrap";
-import {ChoiceType} from "../../../model/character/choices/CharacterChoice";
 import styles from "./Dialog.module.scss";
 import {SkillEditor} from "./SkillEditor";
 
@@ -12,14 +11,14 @@ interface SkillEditorDialogProps extends ComponentProps<typeof SkillEditor> {
 export default function SkillEditorDialog({ show, onCancel, character, characterAtLevel, ...skillEditorProps }: SkillEditorDialogProps) {
   const skillChoices = useMemo(() => {
     return character.choicesForLevel(characterAtLevel.level)
-    .filter(choice => choice.type === ChoiceType.SKILL_POINT);
+        .filter(choice => choice.type === "skill");
   }, [character]);
 
   const pointsRemaining = useMemo(() => {
-    return skillChoices.filter(choice => choice.current === '').size;
+    return skillChoices.filter(choice => choice.current === '').length;
   }, [skillChoices]);
 
-  const pointsAvailable = skillChoices.size;
+  const pointsAvailable = skillChoices.length;
 
   return <Modal
       show={show}
@@ -40,7 +39,10 @@ export default function SkillEditorDialog({ show, onCancel, character, character
     </Modal.Header>
 
     <Modal.Body>
-      <SkillEditor character={character} characterAtLevel={characterAtLevel} {...skillEditorProps} />
+      <SkillEditor
+          character={character}
+          characterAtLevel={characterAtLevel}
+          {...skillEditorProps} />
     </Modal.Body>
   </Modal>
 }

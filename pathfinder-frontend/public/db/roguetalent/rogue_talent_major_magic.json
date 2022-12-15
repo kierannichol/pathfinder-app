@@ -1,0 +1,13 @@
+{
+  "id": "rogue_talent:major_magic",
+  "name": "Major Magic",
+  "prerequisiteFormula": "@int_score \u003e\u003d 11 AND @rogue_talent:minor_magic",
+  "type": "roguetalent",
+  "descriptionText": "Cast a 1st-level sorcerer/wizard spell twice per day as a spell-like ability",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:major_magic",
+      "delta": 1
+    }
+  }]
+}

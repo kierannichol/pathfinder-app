@@ -1,6 +1,13 @@
 {
   "id": "discovery:greater_plague_bomb",
   "name": "Greater Plague Bomb",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:plague_bomb AND @discovery:smoke_bomb",
-  "description": "Your smoke bombs spread a deadly disease"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:plague_bomb AND @discovery:smoke_bomb",
+  "type": "ability",
+  "descriptionText": "Your smoke bombs spread a deadly disease",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:greater_plague_bomb",
+      "delta": 1
+    }
+  }]
 }

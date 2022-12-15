@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:assault_leader",
   "name": "Assault Leader",
-  "description": "When you miss, allow a flanking ally to make a single melee attack"
+  "type": "ability",
+  "descriptionText": "When you miss, allow a flanking ally to make a single melee attack",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:assault_leader",
+      "delta": 1
+    }
+  }]
 }

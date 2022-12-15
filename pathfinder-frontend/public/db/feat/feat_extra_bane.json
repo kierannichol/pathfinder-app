@@ -1,10 +1,16 @@
 {
   "id": "feat:extra_bane",
   "name": "Extra Bane",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can use your bane ability more often than normal.",
-  "prerequisites": "Bane class feature.",
-  "prerequisitesFormula": "@spell:bane",
-  "benefit": "You can use your bane ability for 3 additional rounds per day.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@spell:bane",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can use your bane ability more often than normal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_bane",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can use your bane ability for 3 additional rounds per day."
 }

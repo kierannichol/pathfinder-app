@@ -1,9 +1,36 @@
 {
   "id": "race:sylph",
   "name": "Sylph",
-  "size": 5,
-  "type": "Outsider (native)",
-  "speed": 30,
-  "languages": ["Common", "Auran"],
-  "traits": ["modifier:dex_plus_2", "modifier:int_plus_2", "modifier:con_minus_2", "spell:feather_fall", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:sylph"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "dex:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "int:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "con:race",
+      "delta": -2
+    }
+  }]
 }

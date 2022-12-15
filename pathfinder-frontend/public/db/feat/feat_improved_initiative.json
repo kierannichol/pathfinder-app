@@ -1,8 +1,15 @@
 {
   "id": "feat:improved_initiative",
   "name": "Improved Initiative",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your quick ref lexes allow you to react rapidly to danger.",
-  "benefit": "You get a +4 bonus on initiative checks.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your quick ref lexes allow you to react rapidly to danger.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_initiative",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +4 bonus on initiative checks."
 }

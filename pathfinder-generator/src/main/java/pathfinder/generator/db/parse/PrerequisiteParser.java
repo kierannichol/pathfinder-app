@@ -31,9 +31,10 @@ import pathfinder.model.Spell;
 import pathfinder.model.Weapons;
 import pathfinder.source.AbilitySourceDatabase;
 import pathfinder.source.ClassSourceDatabase;
+import pathfinder.source.FeatSourceDatabase;
+import pathfinder.source.ModifierSourceDatabase;
 import pathfinder.source.RaceSourceDatabase;
 import pathfinder.source.SpellSourceDatabase;
-import pathfinder.source.excel.ExcelFeatSourceDatabase;
 import pathfinder.util.PatternMapper;
 
 @Component("Prerequisite Parser")
@@ -51,11 +52,13 @@ public class PrerequisiteParser {
     private static final String LEVEL_GROUP = "(\\d+)(?:th|st|rd|nd)?";
     private static final String SIZE_GROUP = "(" + Arrays.stream(Size.values()).map(Size::longName).map(Pattern::quote).collect(Collectors.joining("|")) + ")";
 
-    private final ExcelFeatSourceDatabase featSourceDatabase;
-    private final List<AbilitySourceDatabase> abilitySourceDatabases;
+    private final FeatSourceDatabase featSourceDatabase;
+
+    private final AbilitySourceDatabase abilitySourceDatabase;
     private final ClassSourceDatabase classSourceDatabase;
     private final RaceSourceDatabase raceSourceDatabase;
     private final SpellSourceDatabase spellSourceDatabase;
+    private final ModifierSourceDatabase modifierSourceDatabase;
 
     private final Map<String, String> specialNameToId = new HashMap<>();
 
@@ -73,6 +76,7 @@ public class PrerequisiteParser {
             .addToken("ANY", "(.*?)")
 
             .addImmediateReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
+            .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
 
             // removals
             .addReplacement("occultist {NUMBER}", "(0)")
@@ -363,10 +367,6 @@ public class PrerequisiteParser {
 
     @PostConstruct
     private void init() throws IOException {
-        Stream<Ability> abilityStream = Stream.of();
-        for (AbilitySourceDatabase abilitySourceDatabase : abilitySourceDatabases) {
-            abilityStream = Stream.concat(abilityStream, abilitySourceDatabase.streamAbilities());
-        }
 
         specialNameToId.clear();
 
@@ -374,13 +374,14 @@ public class PrerequisiteParser {
         specialNameToId.put("proficiency", "proficiency");
 
         featSourceDatabase.streamFeats().forEach(feat -> specialNameToId.put(feat.name(), feat.id()));
-        abilityStream
-                .forEach(ability -> specialNameToId.put(ability.name(), ability.id()));
+        abilitySourceDatabase.streamAbilities().forEach(ability -> specialNameToId.put(ability.name(), ability.id()));
         classSourceDatabase.streamClasses().forEach(cls -> specialNameToId.put(cls.name(), cls.id()));
-        classSourceDatabase.streamClasses()
-                        .flatMap(cls -> cls.levels().stream())
-                                .flatMap(level -> level.specials().stream())
-                                        .forEach(special -> specialNameToId.put(special.name(), special.id()));
+//        classSourceDatabase.streamClasses()
+//                        .flatMap(cls -> cls.levels().stream())
+//                                .flatMap(level -> level.specials().stream())
+//                                        .forEach(special -> specialNameToId.put(special.name(), special.id()));
+
+        modifierSourceDatabase.streamModifiers().forEach(modifier -> specialNameToId.put(modifier.name(), modifier.id()));
 
         // Weapon Types
         Weapons.WEAPON_TYPES.forEach(weaponType -> specialNameToId.put(

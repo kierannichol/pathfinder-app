@@ -1,10 +1,16 @@
 {
   "id": "feat:improved_great_fortitude",
   "name": "Improved Great Fortitude",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can draw upon an inner reserve to resist diseases, poisons, and other grievous harm.",
-  "prerequisites": "Great Fortitude.",
-  "prerequisitesFormula": "@feat:great_fortitude",
-  "benefit": "Once per day, you may reroll a Fortitude save. You must decide to use this ability before the results are revealed. You must take the second roll, even if it is worse.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@feat:great_fortitude",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can draw upon an inner reserve to resist diseases, poisons, and other grievous harm.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_great_fortitude",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Once per day, you may reroll a Fortitude save. You must decide to use this ability before the results are revealed. You must take the second roll, even if it is worse."
 }

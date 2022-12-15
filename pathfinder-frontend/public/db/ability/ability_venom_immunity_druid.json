@@ -1,5 +1,12 @@
 {
   "id": "ability:venom_immunity#druid",
   "name": "Venom Immunity",
-  "description": "At 9th level, a druid gains immunity to all poisons."
+  "type": "ability",
+  "descriptionText": "At 9th level, a druid gains immunity to all poisons.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:venom_immunity#druid",
+      "delta": 1
+    }
+  }]
 }

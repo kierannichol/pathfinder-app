@@ -1,7 +1,13 @@
 {
   "id": "rage_power:beast_totem",
   "name": "Beast Totem",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_beast_totem",
-  "description": "Gain a natural armor bonus"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_beast_totem",
+  "type": "ability",
+  "descriptionText": "Gain a natural armor bonus",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:beast_totem",
+      "delta": 1
+    }
+  }]
 }

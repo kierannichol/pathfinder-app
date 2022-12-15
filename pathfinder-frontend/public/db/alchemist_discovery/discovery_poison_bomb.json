@@ -1,0 +1,13 @@
+{
+  "id": "discovery:poison_bomb",
+  "name": "Poison Bomb",
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:smoke_bomb",
+  "type": "alchemist_discovery",
+  "descriptionText": "Duplicate the effects of cloudkill with your bombs",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:poison_bomb",
+      "delta": 1
+    }
+  }]
+}

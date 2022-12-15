@@ -1,10 +1,16 @@
 {
   "id": "feat:lingering_invisibility",
   "name": "Lingering Invisibility",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You remain brief ly translucent after losing invisibility.",
-  "prerequisites": "Duergar.",
-  "prerequisitesFormula": "@race:duergar",
-  "benefit": "When your invisibility ends, you gain concealment for 1 round per minute of duration the invisibility effect had remaining (minimum 1 round). This only occurs if the invisibility is from your racial spell-like ability or a spell you cast. Effects that negate invisibility negate this concealment.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:duergar",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You remain brief ly translucent after losing invisibility.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:lingering_invisibility",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When your invisibility ends, you gain concealment for 1 round per minute of duration the invisibility effect had remaining (minimum 1 round). This only occurs if the invisibility is from your racial spell-like ability or a spell you cast. Effects that negate invisibility negate this concealment."
 }

@@ -1,10 +1,16 @@
 {
   "id": "feat:martial_mastery",
   "name": "Martial Mastery",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You broaden your study of weapons to encompass multiple similar weapons.",
-  "prerequisites": "Martial Versatility, fighter level 16th, human.",
-  "prerequisitesFormula": "@feat:martial_versatility AND @class:fighter \u003e\u003d 16 AND @race:human",
-  "benefit": "Each combat feat you have that applies to a specific weapon (e.g., Weapon Focus) can be used with all weapons in the same weapon group (Ultimate Combat 45).",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@feat:martial_versatility AND @class:fighter \u003e\u003d 16 AND @race:human",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You broaden your study of weapons to encompass multiple similar weapons.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:martial_mastery",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Each combat feat you have that applies to a specific weapon (e.g., Weapon Focus) can be used with all weapons in the same weapon group (Ultimate Combat 45)."
 }

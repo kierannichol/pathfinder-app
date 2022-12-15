@@ -1,6 +1,12 @@
 {
   "id": "rage_power:roaring_drunk",
   "name": "Roaring Drunk",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain a bonus on Intimidate checks and fear effect DC"
+  "type": "ability",
+  "descriptionText": "Gain a bonus on Intimidate checks and fear effect DC",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:roaring_drunk",
+      "delta": 1
+    }
+  }]
 }

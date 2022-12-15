@@ -1,11 +1,17 @@
 {
   "id": "feat:combat_style_master",
   "name": "Combat Style Master",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You shift between combat styles, combining them to increased effect.",
-  "prerequisites": "Improved Unarmed Strike, two or more style feats, base attack bonus +6 or monk level 5th.",
-  "prerequisitesFormula": "(@feat:improved_unarmed_strike OR (0) \u003e\u003d 2 OR @bab \u003e\u003d 6 OR @class:monk \u003e\u003d 5)",
-  "benefit": "You can switch your style as a free action. At the start of combat, pick one of your styles. You start the combat in that style, even in the surprise round.",
-  "normal": "It takes a swift action to begin or switch your styles.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "(@feat:improved_unarmed_strike OR (0) \u003e\u003d 2 OR @bab \u003e\u003d 6 OR @class:monk \u003e\u003d 5)",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You shift between combat styles, combining them to increased effect.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:combat_style_master",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can switch your style as a free action. At the start of combat, pick one of your styles. You start the combat in that style, even in the surprise round.",
+  "normalText": "It takes a swift action to begin or switch your styles."
 }

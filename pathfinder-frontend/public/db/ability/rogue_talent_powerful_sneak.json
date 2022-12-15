@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:powerful_sneak",
   "name": "Powerful Sneak",
-  "description": "Treat all 1s on sneak attack damage dice as 2s"
+  "type": "ability",
+  "descriptionText": "Treat all 1s on sneak attack damage dice as 2s",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:powerful_sneak",
+      "delta": 1
+    }
+  }]
 }

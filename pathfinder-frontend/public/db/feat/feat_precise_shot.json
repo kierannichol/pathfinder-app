@@ -1,10 +1,16 @@
 {
   "id": "feat:precise_shot",
   "name": "Precise Shot",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are adept at firing ranged attacks into melee.",
-  "prerequisites": "Point-Blank Shot.",
-  "prerequisitesFormula": "@feat:point_blank_shot",
-  "benefit": "You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@feat:point_blank_shot",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are adept at firing ranged attacks into melee.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:precise_shot",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll."
 }

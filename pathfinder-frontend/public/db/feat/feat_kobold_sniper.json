@@ -1,11 +1,17 @@
 {
   "id": "feat:kobold_sniper",
   "name": "Kobold Sniper",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You snipe quickly, making it harder for others to find the location of your attack.",
-  "prerequisites": "Stealth 1 rank, kobold.",
-  "prerequisitesFormula": "@skill:stealth \u003e\u003d 1 AND @race:kobold",
-  "benefit": "When you are sniping, you only take a -10 penalty on your Stealth checks to stay hidden.",
-  "normal": "You take a -20 penalty on your Stealth check to maintain your obscured location while sniping.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@skill:stealth \u003e\u003d 1 AND @race:kobold",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You snipe quickly, making it harder for others to find the location of your attack.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:kobold_sniper",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you are sniping, you only take a -10 penalty on your Stealth checks to stay hidden.",
+  "normalText": "You take a -20 penalty on your Stealth check to maintain your obscured location while sniping."
 }

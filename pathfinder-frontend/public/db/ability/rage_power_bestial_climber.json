@@ -1,7 +1,13 @@
 {
   "id": "rage_power:bestial_climber",
   "name": "Bestial Climber",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_climber",
-  "description": "Climb at your normal land speed while raging"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_climber",
+  "type": "ability",
+  "descriptionText": "Climb at your normal land speed while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:bestial_climber",
+      "delta": 1
+    }
+  }]
 }

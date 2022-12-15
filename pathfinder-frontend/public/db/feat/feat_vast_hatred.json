@@ -1,11 +1,17 @@
 {
   "id": "feat:vast_hatred",
   "name": "Vast Hatred",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your rage stretches beyond normal bounds.",
-  "prerequisites": "Gnome, hatred racial trait.",
-  "prerequisitesFormula": "@race:gnome AND @ability:hatred",
-  "benefit": "Select two creature types (and subtypes where appropriate) from the list of potential favored enemies from the ranger class ability. Your +1 attack bonus from the hatred racial trait applies to creatures of the selected types (and subtypes).",
-  "special": "You may take this feat more than once. Its benefits do not stack. Each time you select this feat, you select two additional creature types to which your hatred racial trait applies.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:gnome AND @ability:hatred",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your rage stretches beyond normal bounds.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:vast_hatred",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Select two creature types (and subtypes where appropriate) from the list of potential favored enemies from the ranger class ability. Your +1 attack bonus from the hatred racial trait applies to creatures of the selected types (and subtypes).",
+  "specialText": "You may take this feat more than once. Its benefits do not stack. Each time you select this feat, you select two additional creature types to which your hatred racial trait applies."
 }

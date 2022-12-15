@@ -1,10 +1,16 @@
 {
   "id": "feat:improved_rending_fury",
   "name": "Improved Rending Fury",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Honing the deadliness of your claws, you are a living hurricane of rending fury.",
-  "prerequisites": "Rending Fury, base attack bonus +9, rend special attack.",
-  "prerequisitesFormula": "@feat:rending_fury AND @bab \u003e\u003d 9 AND @ability:rend",
-  "benefit": "Whenever you successfully rend an opponent, you deal an extra 1d6 damage. This damage is not multiplied on a critical hit.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:rending_fury AND @bab \u003e\u003d 9 AND @ability:rend",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Honing the deadliness of your claws, you are a living hurricane of rending fury.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_rending_fury",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you successfully rend an opponent, you deal an extra 1d6 damage. This damage is not multiplied on a critical hit."
 }

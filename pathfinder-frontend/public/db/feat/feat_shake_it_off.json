@@ -1,9 +1,15 @@
 {
   "id": "feat:shake_it_off",
   "name": "Shake It Off",
-  "types": ["FEAT_TYPE_GENERAL", "FEAT_TYPE_TEAMWORK"],
-  "description": "You support your allies and help them recover from crippling effects.",
-  "benefit": "When you are adjacent to one or more allies who also have this feat, you gain a +1 bonus on saving throws per such ally (maximum +4).",
-  "source": "PZO1118",
-  "teamwork": true
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You support your allies and help them recover from crippling effects.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:shake_it_off",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you are adjacent to one or more allies who also have this feat, you gain a +1 bonus on saving throws per such ally (maximum +4)."
 }

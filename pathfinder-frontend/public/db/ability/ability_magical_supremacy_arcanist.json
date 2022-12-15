@@ -1,5 +1,12 @@
 {
   "id": "ability:magical_supremacy#arcanist",
   "name": "Magical Supremacy",
-  "description": "At 20th level, the arcanist learns how to convert her arcane reservoir into spells and back again. She can cast any spell she has prepared by expending a number of points from her arcane reservoir equal to 1 + the level of the spell to be cast instead of expending a spell slot. When she casts a spell in this fashion, she treats her caster level as 2 higher than normal, and the DCs of any saving throws associated with the spell increase by 2. She cannot further expend points from her arcane reservoir to enhance a spell cast in this way."
+  "type": "ability",
+  "descriptionText": "At 20th level, the arcanist learns how to convert her arcane reservoir into spells and back again. She can cast any spell she has prepared by expending a number of points from her arcane reservoir equal to 1 + the level of the spell to be cast instead of expending a spell slot. When she casts a spell in this fashion, she treats her caster level as 2 higher than normal, and the DCs of any saving throws associated with the spell increase by 2. She cannot further expend points from her arcane reservoir to enhance a spell cast in this way.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:magical_supremacy#arcanist",
+      "delta": 1
+    }
+  }]
 }

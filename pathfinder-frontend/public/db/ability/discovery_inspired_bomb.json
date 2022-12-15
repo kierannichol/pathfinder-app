@@ -1,6 +1,12 @@
 {
   "id": "discovery:inspired_bomb",
   "name": "Inspired Bomb",
-  "type": "ABILITY_TYPE_SU",
-  "description": "You can expend two uses of inspiration to increase a bomb’s damage by 1d6."
+  "type": "ability",
+  "descriptionText": "You can expend two uses of inspiration to increase a bomb’s damage by 1d6.",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:inspired_bomb",
+      "delta": 1
+    }
+  }]
 }

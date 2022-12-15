@@ -1,6 +1,13 @@
 {
   "id": "discovery:bottled_ooze",
   "name": "Bottled Ooze",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 6",
-  "description": "Preserve an ooze so it can be summoned later"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Preserve an ooze so it can be summoned later",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:bottled_ooze",
+      "delta": 1
+    }
+  }]
 }

@@ -1,6 +1,12 @@
 {
   "id": "rage_power:scent",
   "name": "Scent",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Gain the scent ability when raging"
+  "type": "ability",
+  "descriptionText": "Gain the scent ability when raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:scent",
+      "delta": 1
+    }
+  }]
 }

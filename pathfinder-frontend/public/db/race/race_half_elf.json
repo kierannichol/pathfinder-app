@@ -1,9 +1,28 @@
 {
   "id": "race:half_elf",
   "name": "Half-elf",
-  "size": 5,
-  "type": "Humanoid (elf, human)",
-  "speed": 30,
-  "languages": ["Common", "Elven"],
-  "traits": ["modifier:asi_2", "modifier:low_light_vision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:half_elf"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "selectChoice": {
+      "id": "level0:race_asi",
+      "label": "Ability Score Increase",
+      "references": ["ability_score/*"],
+      "type": "asi"
+    }
+  }]
 }

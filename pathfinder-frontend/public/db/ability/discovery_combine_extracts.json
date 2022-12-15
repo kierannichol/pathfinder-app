@@ -1,6 +1,13 @@
 {
   "id": "discovery:combine_extracts",
   "name": "Combine Extracts",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 8",
-  "description": "Use two formulae at once"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "Use two formulae at once",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:combine_extracts",
+      "delta": 1
+    }
+  }]
 }

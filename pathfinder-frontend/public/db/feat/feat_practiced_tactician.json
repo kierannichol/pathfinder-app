@@ -1,11 +1,17 @@
 {
   "id": "feat:practiced_tactician",
   "name": "Practiced Tactician",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "With only a few quick gestures and commands, you can direct others in combat.",
-  "prerequisites": "Tactician class feature.",
-  "prerequisitesFormula": "@ability:tactician#cavalier",
-  "benefit": "You can use your tactician ability to grant allies a teamwork feat one additional time per day.",
-  "special": "You can gain Practiced Tactician multiple times. Its effects stack.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:tactician#cavalier",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "With only a few quick gestures and commands, you can direct others in combat.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:practiced_tactician",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can use your tactician ability to grant allies a teamwork feat one additional time per day.",
+  "specialText": "You can gain Practiced Tactician multiple times. Its effects stack."
 }

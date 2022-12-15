@@ -1,5 +1,12 @@
 {
   "id": "discovery:smoke_bomb",
   "name": "Smoke Bomb",
-  "description": "Create a fog cloud effect with your bombs"
+  "type": "ability",
+  "descriptionText": "Create a fog cloud effect with your bombs",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:smoke_bomb",
+      "delta": 1
+    }
+  }]
 }

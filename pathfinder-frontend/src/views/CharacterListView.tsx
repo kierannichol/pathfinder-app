@@ -7,8 +7,7 @@ import {useAsyncMemo} from "../app/reactHooks";
 import NewCharacterDialog from "../components/character/NewCharacterDialog";
 import LoadingBlock from "../components/common/LoadingBlock";
 import {HeaderRow} from "../components/GridHelpers";
-import {Character} from "../model/character/Character";
-import CharacterChoice from "../model/character/choices/CharacterChoice";
+import Character from "../v3/model/Character";
 import "./CharacterListView.scss";
 
 function CharacterListView() {
@@ -27,7 +26,7 @@ function CharacterListView() {
     const id = `${characterList.length + 1}`;
     characterRepository.create()
         .then(async (newCharacter) => {
-          newCharacter = await newCharacter.select(CharacterChoice.CHARACTER_NAME, characterName);
+          newCharacter = await newCharacter.select("level0:character_name", characterName);
           characterRepository.save(newCharacter)
               .then(() => navigate(`/character/edit/${id}`));
         });
@@ -64,7 +63,7 @@ function CharacterItemRow({ character }: CharacterItemRowProps) {
   return <ListGroup.Item>
     <div className="d-flex flex-row w-100 align-items-center">
       <Link className="d-flex flex-grow-1" to={`/character/edit/${character.id}`}>
-        {character.getChoice(CharacterChoice.CHARACTER_NAME)}
+        {character.choice("level0:character_name")?.current}
       </Link>
       <Link to={'#'} className="d-flex ms-3" onClick={_ => deleteAction()}>
         {deleting ? <LoadingBlock/> : <Icon.XLg />}

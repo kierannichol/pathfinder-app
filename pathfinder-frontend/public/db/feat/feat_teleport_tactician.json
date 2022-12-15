@@ -1,10 +1,16 @@
 {
   "id": "feat:teleport_tactician",
   "name": "Teleport Tactician",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are highly alert for enemies using teleportation to approach you or flee from you.",
-  "prerequisites": "Combat Reflexes, Disruptive, Spellbreaker.",
-  "prerequisitesFormula": "@feat:combat_reflexes AND @magus_arcana:disruptive AND @magus_arcana:spellbreaker",
-  "benefit": "Any creature using a teleportation effect to enter or leave a square threatened by you provokes an attack of opportunity, even if casting defensively or using a supernatural ability.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@feat:combat_reflexes AND @magus_arcana:disruptive AND @magus_arcana:spellbreaker",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are highly alert for enemies using teleportation to approach you or flee from you.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:teleport_tactician",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Any creature using a teleportation effect to enter or leave a square threatened by you provokes an attack of opportunity, even if casting defensively or using a supernatural ability."
 }

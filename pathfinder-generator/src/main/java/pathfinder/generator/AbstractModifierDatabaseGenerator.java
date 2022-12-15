@@ -3,42 +3,73 @@ package pathfinder.generator;
 import com.google.protobuf.Message;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import pathfinder.data.v2.ModifierDatabaseDbo;
-import pathfinder.data.v2.ModifierDetailsDbo;
-import pathfinder.data.v2.ModifierSummaryDbo;
-import pathfinder.encoder.ModifierDetailsEncoder;
-import pathfinder.encoder.ModifierSummaryEncoder;
-import pathfinder.generator.db.parse.PrerequisiteParser;
-import pathfinder.generator.encode.AbilityTypeEncoder;
+import pathfinder.data.v3.EffectDbo;
+import pathfinder.data.v3.ModificationDatabaseDbo;
+import pathfinder.data.v3.ModificationDetailsDbo;
+import pathfinder.data.v3.ModificationSummaryDbo;
+import pathfinder.generator.encode.AbilityEncoder;
+import pathfinder.generator.encode.CharacterEffectEncoder;
 import pathfinder.model.CharacterModifier;
 
-public abstract class AbstractModifierDatabaseGenerator extends AbstractDatabaseGenerator<CharacterModifier, ModifierSummaryDbo, ModifierDetailsDbo> {
-
-    @Autowired private ModifierSummaryEncoder summaryEncoder;
-    @Autowired private ModifierDetailsEncoder detailedEncoder;
+public abstract class AbstractModifierDatabaseGenerator extends AbstractDatabaseGenerator<CharacterModifier, ModificationSummaryDbo, ModificationDetailsDbo> {
 
     @Autowired
-    protected PrerequisiteParser prerequisiteParser;
+    private CharacterEffectEncoder characterEffectEncoder;
 
     @Autowired
-    protected AbilityTypeEncoder abilityTypeEncoder;
+    private AbilityEncoder abilityEncoder;
 
     protected abstract String getDatabaseId();
 
     @Override
-    protected ModifierSummaryDbo encodedSummary(CharacterModifier model) {
-        return summaryEncoder.encode(model);
+    protected ModificationSummaryDbo encodedSummary(CharacterModifier model) {
+        List<ModificationSummaryDbo> abilityDbos = model.effects().stream().flatMap(effect ->
+                        effect.abilities().map(ability -> abilityEncoder.encodeSummary(ability, "ability")))
+                .toList();
+
+        List<ModificationSummaryDbo> featDbos = model.effects().stream().flatMap(effect ->
+                        effect.feats().map(feat -> abilityEncoder.encodeSummary(feat.asAbility(), "feat")))
+                .toList();
+
+        return ModificationSummaryDbo.newBuilder()
+                .setId(model.id())
+                .setName(model.name())
+                .setType(getDatabaseId())
+                .addAllChildren(featDbos)
+                .addAllChildren(abilityDbos)
+                .build();
     }
 
     @Override
-    protected ModifierDetailsDbo encodedDetailed(CharacterModifier model,
-            ModifierSummaryDbo characterModifierSummaryDbo) {
-        return detailedEncoder.encode(model);
+    protected ModificationDetailsDbo encodedDetailed(CharacterModifier model,
+            ModificationSummaryDbo modificationSummaryDbo) {
+
+        List<ModificationDetailsDbo> abilityDbos = model.effects().stream().flatMap(effect ->
+                effect.abilities().map(ability -> abilityEncoder.encodeDetails(ability, "ability")))
+                .toList();
+
+        List<ModificationDetailsDbo> featDbos = model.effects().stream().flatMap(effect ->
+                        effect.feats().map(feat -> abilityEncoder.encodeDetails(feat.asAbility(), "feat")))
+                .toList();
+
+        List<EffectDbo> effects = model.effects().stream()
+                .flatMap(effect -> characterEffectEncoder.encode(effect).stream())
+                .toList();
+
+        return ModificationDetailsDbo.newBuilder()
+                .setId(model.id())
+                .setName(model.name())
+                .setType(getDatabaseId())
+                .setDescriptionText(model.descriptionText())
+                .addAllEffects(effects)
+                .addAllChildren(featDbos)
+                .addAllChildren(abilityDbos)
+                .build();
     }
 
     @Override
-    protected Message createSummaryDatabase(List<ModifierSummaryDbo> summaries) {
-        return ModifierDatabaseDbo.newBuilder()
+    protected Message createSummaryDatabase(List<ModificationSummaryDbo> summaries) {
+        return ModificationDatabaseDbo.newBuilder()
                 .setDatabaseId(getDatabaseId())
                 .addAllSummaries(summaries)
                 .build();

@@ -1,7 +1,13 @@
 {
   "id": "magus_arcana:prescient_defense",
   "name": "Prescient Defense",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:magus \u003e\u003d 9",
-  "description": "Use your arcane pool to increase your reflexes"
+  "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+  "type": "ability",
+  "descriptionText": "Use your arcane pool to increase your reflexes",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:prescient_defense",
+      "delta": 1
+    }
+  }]
 }

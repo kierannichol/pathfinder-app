@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_evolution",
   "name": "Extra Evolution",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your eidolon has more evolutions.",
-  "prerequisites": "Eidolon class feature.",
-  "prerequisitesFormula": "@ability:eidolon#unchained_summoner",
-  "benefit": "Your eidolon\u0027s evolution pool increases by 1.",
-  "special": "This evolution can be taken once at 1st level, and again at 5th, 10th, 15th, and 20th.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@ability:eidolon#unchained_summoner",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your eidolon has more evolutions.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_evolution",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your eidolon\u0027s evolution pool increases by 1.",
+  "specialText": "This evolution can be taken once at 1st level, and again at 5th, 10th, 15th, and 20th."
 }

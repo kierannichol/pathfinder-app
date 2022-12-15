@@ -18,8 +18,7 @@ import pathfinder.util.FileUtils;
 
 public abstract class AbstractDatabaseGenerator<MODEL extends FeatureModel, SUMMARY extends Message, DETAILED extends Message> implements DatabaseGenerator {
     protected static final Predicate<Sourced> KNOWN_SOURCES = sourced -> sourced.source() != null;
-    protected static final Printer JSON_PRINTER = JsonFormat.printer()
-            .omittingInsignificantWhitespace();
+    protected static final Printer JSON_PRINTER = JsonFormat.printer();
 
     @OutputPathValue
     private Path outputBasePath;

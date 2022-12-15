@@ -1,7 +1,13 @@
 {
   "id": "rage_power:ground_breaker",
   "name": "Ground Breaker",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6",
-  "description": "Attack the ground to create difficult terrain"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Attack the ground to create difficult terrain",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:ground_breaker",
+      "delta": 1
+    }
+  }]
 }

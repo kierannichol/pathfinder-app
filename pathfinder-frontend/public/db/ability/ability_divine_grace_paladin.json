@@ -1,5 +1,12 @@
 {
   "id": "ability:divine_grace#paladin",
   "name": "Divine Grace",
-  "description": "At 2nd level, a paladin gains a bonus equal to her Charisma bonus (if any) on all Saving Throws."
+  "type": "ability",
+  "descriptionText": "At 2nd level, a paladin gains a bonus equal to her Charisma bonus (if any) on all Saving Throws.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:divine_grace#paladin",
+      "delta": 1
+    }
+  }]
 }

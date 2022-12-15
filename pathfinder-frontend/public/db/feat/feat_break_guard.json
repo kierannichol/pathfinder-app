@@ -1,10 +1,16 @@
 {
   "id": "feat:break_guard",
   "name": "Break Guard",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You can use one of your two weapons to occupy your opponent\u0027s defenses while attacking with the other.",
-  "prerequisites": "Dex 15, Int 13, Combat Expertise, Improved Disarm, Two-Weapon Fighting.",
-  "prerequisitesFormula": "@dex_score \u003e\u003d 15 AND @int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:improved_disarm AND @feat:two_weapon_fighting",
-  "benefit": "While wielding two weapons, whenever you successfully use one weapon to disarm an opponent, you can spend a swift action to attack the opponent you attempted to disarm using your other weapon.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@dex_score \u003e\u003d 15 AND @int_score \u003e\u003d 13 AND @feat:combat_expertise AND @feat:improved_disarm AND @feat:two_weapon_fighting",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You can use one of your two weapons to occupy your opponent\u0027s defenses while attacking with the other.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:break_guard",
+      "delta": 1
+    }
+  }],
+  "benefitText": "While wielding two weapons, whenever you successfully use one weapon to disarm an opponent, you can spend a swift action to attack the opponent you attempted to disarm using your other weapon."
 }

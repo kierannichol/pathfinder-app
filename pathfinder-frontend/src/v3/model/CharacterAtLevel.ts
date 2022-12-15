@@ -72,4 +72,8 @@ export default class CharacterAtLevel implements DataContext {
   private escapeRegExp(expression: string) {
     return expression.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
+
+  resolve(expression: string): ResolvedValue|undefined {
+    return Expression.parse(expression).resolve(this);
+  }
 }

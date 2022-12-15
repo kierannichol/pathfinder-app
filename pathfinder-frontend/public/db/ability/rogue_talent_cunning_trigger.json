@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:cunning_trigger",
   "name": "Cunning Trigger",
-  "description": "Set off one of your traps within 30 ft as a swift action"
+  "type": "ability",
+  "descriptionText": "Set off one of your traps within 30 ft as a swift action",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:cunning_trigger",
+      "delta": 1
+    }
+  }]
 }

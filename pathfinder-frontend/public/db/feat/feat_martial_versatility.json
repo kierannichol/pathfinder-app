@@ -1,11 +1,17 @@
 {
   "id": "feat:martial_versatility",
   "name": "Martial Versatility",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You further broaden your study of weapons to encompass multiple similar weapons.",
-  "prerequisites": "Fighter level 4th, human.",
-  "prerequisitesFormula": "@class:fighter \u003e\u003d 4 AND @race:human",
-  "benefit": "Choose one combat feat you know that applies to a specific weapon (e.g., Weapon Focus). You can use that feat with any weapon within the same weapon group.",
-  "special": "You may take this feat more than once. Each time it applies to a different feat.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@class:fighter \u003e\u003d 4 AND @race:human",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You further broaden your study of weapons to encompass multiple similar weapons.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:martial_versatility",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Choose one combat feat you know that applies to a specific weapon (e.g., Weapon Focus). You can use that feat with any weapon within the same weapon group.",
+  "specialText": "You may take this feat more than once. Each time it applies to a different feat."
 }

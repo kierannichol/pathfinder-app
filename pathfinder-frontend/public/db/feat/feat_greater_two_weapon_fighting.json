@@ -1,10 +1,16 @@
 {
   "id": "feat:greater_two_weapon_fighting",
   "name": "Greater Two-Weapon Fighting",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are incredibly skilled at fighting with two weapons at the same time.",
-  "prerequisites": "Dex 19, Improved Two-Weapon Fighting, Two-Weapon Fighting, base attack bonus +11.",
-  "prerequisitesFormula": "@dex_score \u003e\u003d 19 AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND @bab \u003e\u003d 11",
-  "benefit": "You get a third attack with your off-hand weapon, albeit at a -10 penalty.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@dex_score \u003e\u003d 19 AND @feat:improved_two_weapon_fighting AND @feat:two_weapon_fighting AND @bab \u003e\u003d 11",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are incredibly skilled at fighting with two weapons at the same time.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:greater_two_weapon_fighting",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a third attack with your off-hand weapon, albeit at a -10 penalty."
 }

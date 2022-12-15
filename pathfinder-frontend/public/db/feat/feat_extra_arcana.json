@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_arcana",
   "name": "Extra Arcana",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have unlocked the secret of a new magus arcana.",
-  "prerequisites": "Magus arcana class feature.",
-  "prerequisitesFormula": "@ability:magus_arcana#magus",
-  "benefit": "You gain one additional magus arcana. You must meet all the prerequisites for this magus arcana.",
-  "special": "You can gain this feat multiple times. Its effects stack, granting a new arcana each time you gain this feat.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@ability:magus_arcana#magus",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have unlocked the secret of a new magus arcana.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_arcana",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain one additional magus arcana. You must meet all the prerequisites for this magus arcana.",
+  "specialText": "You can gain this feat multiple times. Its effects stack, granting a new arcana each time you gain this feat."
 }

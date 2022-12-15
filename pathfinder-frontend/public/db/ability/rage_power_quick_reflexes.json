@@ -1,6 +1,12 @@
 {
   "id": "rage_power:quick_reflexes",
   "name": "Quick Reflexes",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Make additional attacks of opportunity while raging"
+  "type": "ability",
+  "descriptionText": "Make additional attacks of opportunity while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:quick_reflexes",
+      "delta": 1
+    }
+  }]
 }

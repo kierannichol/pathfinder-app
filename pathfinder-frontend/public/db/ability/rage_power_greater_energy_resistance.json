@@ -1,7 +1,13 @@
 {
   "id": "rage_power:greater_energy_resistance",
   "name": "Greater Energy Resistance",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:energy_resistance",
-  "description": "Halve damage from an elemental attack"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:energy_resistance",
+  "type": "ability",
+  "descriptionText": "Halve damage from an elemental attack",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:greater_energy_resistance",
+      "delta": 1
+    }
+  }]
 }

@@ -1,5 +1,12 @@
 {
   "id": "discovery:underwater_demolition",
   "name": "Underwater Demolition",
-  "description": "You can create and throw bombs underwater"
+  "type": "ability",
+  "descriptionText": "You can create and throw bombs underwater",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:underwater_demolition",
+      "delta": 1
+    }
+  }]
 }

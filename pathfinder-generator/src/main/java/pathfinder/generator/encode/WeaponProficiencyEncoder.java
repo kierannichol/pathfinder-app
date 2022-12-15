@@ -5,9 +5,8 @@ import pathfinder.data.v2.WeaponProficiencyDbo;
 import pathfinder.model.WeaponProficiency;
 
 @Component("Weapon Proficiency Encoder")
-public class WeaponProficiencyEncoder implements Encoder<WeaponProficiency, WeaponProficiencyDbo> {
+public class WeaponProficiencyEncoder {
 
-    @Override
     public WeaponProficiencyDbo encode(WeaponProficiency weaponProficiency) {
         return switch (weaponProficiency) {
             case SIMPLE -> WeaponProficiencyDbo.WEAPON_PROFICIENCY_SIMPLE;

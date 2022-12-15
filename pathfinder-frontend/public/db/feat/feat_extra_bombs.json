@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_bombs",
   "name": "Extra Bombs",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can throw more bombs per day.",
-  "prerequisites": "Bomb class feature.",
-  "prerequisitesFormula": "@ability:bomb#alchemist",
-  "benefit": "You can throw two additional bombs per day.",
-  "special": "You can gain Extra Bombs multiple times. Its effects stack.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:bomb#alchemist",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can throw more bombs per day.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_bombs",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can throw two additional bombs per day.",
+  "specialText": "You can gain Extra Bombs multiple times. Its effects stack."
 }

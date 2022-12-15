@@ -1,11 +1,16 @@
 {
   "id": "feat:combat_medic",
   "name": "Combat Medic",
-  "types": ["FEAT_TYPE_GENERAL", "FEAT_TYPE_TEAMWORK"],
-  "description": "You know the urgency of treating wounds in the heat of battle, applying first aid to your allies with such speed that you assure no one gets left behind.",
-  "prerequisites": "Heal 5 ranks.",
-  "prerequisitesFormula": "@skill:heal \u003e\u003d 5",
-  "benefit": "Whenever you use Heal to provide first aid, treat caltrop wounds, or treat poison on an ally who also has this feat, you provoke no attacks of opportunity, and can take 10 on the check. Unlike with other teamwork feats, allies that are paralyzed, stunned, unconscious, or cannot otherwise act still count for the purposes of this feet.",
-  "source": "PZO1118",
-  "teamwork": true
+  "prerequisiteFormula": "@skill:heal \u003e\u003d 5",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You know the urgency of treating wounds in the heat of battle, applying first aid to your allies with such speed that you assure no one gets left behind.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:combat_medic",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you use Heal to provide first aid, treat caltrop wounds, or treat poison on an ally who also has this feat, you provoke no attacks of opportunity, and can take 10 on the check. Unlike with other teamwork feats, allies that are paralyzed, stunned, unconscious, or cannot otherwise act still count for the purposes of this feet."
 }

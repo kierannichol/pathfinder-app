@@ -1,5 +1,12 @@
 {
   "id": "rogue_talent:peerless_maneuver",
   "name": "Peerless Maneuver",
-  "description": "Roll two dice when making a Acrobatics check and take the better result"
+  "type": "ability",
+  "descriptionText": "Roll two dice when making a Acrobatics check and take the better result",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:peerless_maneuver",
+      "delta": 1
+    }
+  }]
 }

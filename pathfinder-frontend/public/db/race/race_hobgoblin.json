@@ -1,9 +1,31 @@
 {
   "id": "race:hobgoblin",
   "name": "Hobgoblin",
-  "size": 5,
-  "type": "Humanoid (goblinoid)",
-  "speed": 30,
-  "languages": ["Common", "Goblin"],
-  "traits": ["modifier:dex_plus_2", "modifier:con_plus_2", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:hobgoblin"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "dex:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "con:race",
+      "delta": 2
+    }
+  }]
 }

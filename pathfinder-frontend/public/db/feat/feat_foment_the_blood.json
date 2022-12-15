@@ -1,10 +1,16 @@
 {
   "id": "feat:foment_the_blood",
   "name": "Foment the Blood",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can unleash a wave of energy that drives orcs into a frenzy.",
-  "prerequisites": "Channel energy class feature, orc.",
-  "prerequisitesFormula": "@ability:channel_energy#warpriest AND @race:orc",
-  "benefit": "When you channel energy, instead of creating its normal effect, you can give orcs a bonus on weapon damage and critical hit conf irmation rolls until your next turn. This bonus is equal to the number of dice your channeled energy normally heals or harms. Your channel has its normal effect on other creatures in the area.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@ability:channel_energy#warpriest AND @race:orc",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can unleash a wave of energy that drives orcs into a frenzy.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:foment_the_blood",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you channel energy, instead of creating its normal effect, you can give orcs a bonus on weapon damage and critical hit conf irmation rolls until your next turn. This bonus is equal to the number of dice your channeled energy normally heals or harms. Your channel has its normal effect on other creatures in the area."
 }

@@ -1,8 +1,15 @@
 {
   "id": "feat:additional_traits",
   "name": "Additional Traits",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have more traits than normal.",
-  "benefit": "You gain two character traits of your choice (see Chapter 8). These traits must be chosen from different lists, and cannot be chosen from lists from which you have already selected a character trait. You must meet any additional qualifications for the character traits you choose.",
-  "source": "PZO1115"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have more traits than normal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:additional_traits",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain two character traits of your choice (see Chapter 8). These traits must be chosen from different lists, and cannot be chosen from lists from which you have already selected a character trait. You must meet any additional qualifications for the character traits you choose."
 }

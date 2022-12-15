@@ -1,9 +1,36 @@
 {
   "id": "race:catfolk",
   "name": "Catfolk",
-  "size": 5,
-  "type": "Humanoid (catfolk)",
-  "speed": 30,
-  "languages": ["Common", "Catfolk"],
-  "traits": ["modifier:dex_plus_2", "modifier:cha_plus_2", "modifier:wis_minus_2", "modifier:low_light_vision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:catfolk"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "dex:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "cha:race",
+      "delta": 2
+    }
+  }, {
+    "adjustState": {
+      "key": "wis:race",
+      "delta": -2
+    }
+  }]
 }

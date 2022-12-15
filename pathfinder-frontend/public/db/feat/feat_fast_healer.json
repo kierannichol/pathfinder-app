@@ -1,10 +1,16 @@
 {
   "id": "feat:fast_healer",
   "name": "Fast Healer",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You benefit greatly from your healing, be it from spells or natural healing.",
-  "prerequisites": "Con 13, Diehard, Endurance.",
-  "prerequisitesFormula": "@con_score \u003e\u003d 13 AND @feat:diehard AND @ability:endurance#ranger",
-  "benefit": "When you regain hit points by resting or through magical healing, you recover additional hit points equal to half your Constitution modifier (minimum +1).",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@con_score \u003e\u003d 13 AND @feat:diehard AND @ability:endurance#ranger",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You benefit greatly from your healing, be it from spells or natural healing.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:fast_healer",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you regain hit points by resting or through magical healing, you recover additional hit points equal to half your Constitution modifier (minimum +1)."
 }

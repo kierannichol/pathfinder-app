@@ -1,10 +1,16 @@
 {
   "id": "feat:guardian_of_the_wild",
   "name": "Guardian of the Wild",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your mystic connection with the wilderness enhances your ability to react to threats.",
-  "prerequisites": "Attuned to the Wild, elf.",
-  "prerequisitesFormula": "@feat:attuned_to_the_wild AND @race:elf",
-  "benefit": "When you are in a terrain type you have selected the Attuned to the Wild feat for, you gain a +2 dodge bonus to Armor Class. If you are in an area that qualifies as more than one kind of terrain, these bonuses do not stack; you receive the bonus for only one of the terrain types.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@feat:attuned_to_the_wild AND @race:elf",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your mystic connection with the wilderness enhances your ability to react to threats.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:guardian_of_the_wild",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you are in a terrain type you have selected the Attuned to the Wild feat for, you gain a +2 dodge bonus to Armor Class. If you are in an area that qualifies as more than one kind of terrain, these bonuses do not stack; you receive the bonus for only one of the terrain types."
 }

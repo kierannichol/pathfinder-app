@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import pathfinder.NotCached;
 import pathfinder.model.Ability;
 import pathfinder.model.Ability.Type;
-import pathfinder.model.CharacterChoice;
+import pathfinder.model.CharacterChoice.FeatChoice;
 import pathfinder.model.CharacterEffect;
 import pathfinder.model.CharacterEffect.GrantAbility;
 import pathfinder.model.CharacterEffect.ModifyFeatureEffect;
@@ -64,7 +64,7 @@ public class NethysSorcererBloodlineScraper extends AbstractNethysScraper
         Elements contents = titleElement.nextElementSiblings();
 
         String name = nodeText(titleElement);
-        String id = NameToIdConverter.generateId(AttributeType.BLOODLINE, name);
+        String id = NameToIdConverter.generateId(AttributeType.SORCERER_BLOODLINE, name);
 
         String description = nodeText(titleElement.nextElementSiblings().select("br").first().nextSibling());
 
@@ -101,8 +101,13 @@ public class NethysSorcererBloodlineScraper extends AbstractNethysScraper
                 .flatMap(text -> featSourceDatabase.findIdByName(text).stream())
                 .toList();
 
-        return List.of(new CharacterEffect.AddChoiceEffect(1,
-                new CharacterChoice.FeatChoice("bloodline_feat", bonusFeatIds)));
+        List<CharacterEffect> bonusFeats = new ArrayList<>();
+        for (int level = 7; level <= 20; level += 6) {
+            bonusFeats.add(new CharacterEffect.AddChoiceEffect(level, new FeatChoice(
+                    "bloodline_feat",
+                    bonusFeatIds)));
+        }
+        return bonusFeats;
     }
 
     private List<CharacterEffect> parseBloodlineArcana(Elements contents, Id bloodlineId) {

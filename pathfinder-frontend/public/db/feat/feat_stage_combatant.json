@@ -1,11 +1,17 @@
 {
   "id": "feat:stage_combatant",
   "name": "Stage Combatant",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are a master of stage and nonlethal combats.",
-  "prerequisites": "Weapon Focus, base attack bonus +5",
-  "prerequisitesFormula": "@feat:weapon_focus AND @bab \u003e\u003d 5",
-  "benefit": "When you make an attack with a weapon that you have Weapon Focus in, you take no penalty on the attack roll when you are attempting to make an attack that deals no damage or nonlethal damage.",
-  "normal": "When making attacks that deal no damage or nonlethal damage, you take a -4 penalty on attack rolls.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:weapon_focus AND @bab \u003e\u003d 5",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are a master of stage and nonlethal combats.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:stage_combatant",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you make an attack with a weapon that you have Weapon Focus in, you take no penalty on the attack roll when you are attempting to make an attack that deals no damage or nonlethal damage.",
+  "normalText": "When making attacks that deal no damage or nonlethal damage, you take a -4 penalty on attack rolls."
 }

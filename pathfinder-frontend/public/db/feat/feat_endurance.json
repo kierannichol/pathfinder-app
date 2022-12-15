@@ -1,9 +1,16 @@
 {
   "id": "feat:endurance",
   "name": "Endurance",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Harsh conditions or long exertions do not easily tire you.",
-  "benefit": "You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage from exhaustion; Constitution checks made to continue running; Constitution checks made to avoid nonlethal damage from a forced march; Constitution checks made to hold your breath; Constitution checks made to avoid nonlethal damage from starvation or thirst; Fortitude saves made to avoid nonlethal damage from hot or cold environments; and Fortitude saves made to resist damage from suffocation. You may sleep in light or medium armor without becoming fatigued.",
-  "normal": "A character without this feat who sleeps in medium or heavier armor is fatigued the next day.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Harsh conditions or long exertions do not easily tire you.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:endurance",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage from exhaustion; Constitution checks made to continue running; Constitution checks made to avoid nonlethal damage from a forced march; Constitution checks made to hold your breath; Constitution checks made to avoid nonlethal damage from starvation or thirst; Fortitude saves made to avoid nonlethal damage from hot or cold environments; and Fortitude saves made to resist damage from suffocation. You may sleep in light or medium armor without becoming fatigued.",
+  "normalText": "A character without this feat who sleeps in medium or heavier armor is fatigued the next day."
 }

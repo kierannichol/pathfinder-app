@@ -1,10 +1,16 @@
 {
   "id": "feat:tengu_wings",
   "name": "Tengu Wings",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can grow wings that allow you to fly.",
-  "prerequisites": "Character level 5th, tengu.",
-  "prerequisitesFormula": "@character_level \u003e\u003d 5 AND @race:tengu",
-  "benefit": "Once per day, you can sprout a pair of giant black crow\u0027s wings, granting you a fly speed of 30 feet (average maneuverability). This spell-like ability otherwise functions as beast shape I (though you do not gain any other benefits of that spell) with a caster level equal to your level.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@character_level \u003e\u003d 5 AND @race:tengu",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can grow wings that allow you to fly.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:tengu_wings",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Once per day, you can sprout a pair of giant black crow\u0027s wings, granting you a fly speed of 30 feet (average maneuverability). This spell-like ability otherwise functions as beast shape I (though you do not gain any other benefits of that spell) with a caster level equal to your level."
 }

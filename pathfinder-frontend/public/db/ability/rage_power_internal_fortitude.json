@@ -1,7 +1,13 @@
 {
   "id": "rage_power:internal_fortitude",
   "name": "Internal Fortitude",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 8",
-  "description": "Gain immunity to nauseated and sickened conditions"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "Gain immunity to nauseated and sickened conditions",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:internal_fortitude",
+      "delta": 1
+    }
+  }]
 }

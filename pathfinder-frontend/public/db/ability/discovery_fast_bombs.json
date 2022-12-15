@@ -1,6 +1,13 @@
 {
   "id": "discovery:fast_bombs",
   "name": "Fast Bombs",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 8",
-  "description": "You can throw multiple bombs in a round"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "You can throw multiple bombs in a round",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:fast_bombs",
+      "delta": 1
+    }
+  }]
 }

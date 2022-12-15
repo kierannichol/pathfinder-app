@@ -1,5 +1,12 @@
 {
   "id": "ability:keen_recollection#investigator",
   "name": "Keen Recollection",
-  "description": "At 3rd level, an investigator can attempt all Knowledge skill checks untrained."
+  "type": "ability",
+  "descriptionText": "At 3rd level, an investigator can attempt all Knowledge skill checks untrained.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:keen_recollection#investigator",
+      "delta": 1
+    }
+  }]
 }

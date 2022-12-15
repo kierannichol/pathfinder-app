@@ -1,8 +1,15 @@
 {
   "id": "feat:spell_penetration",
   "name": "Spell Penetration",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your spells break through spell resistance more easily than most.",
-  "benefit": "You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature\u0027s spell resistance.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your spells break through spell resistance more easily than most.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:spell_penetration",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature\u0027s spell resistance."
 }

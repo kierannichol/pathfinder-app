@@ -1,5 +1,12 @@
 {
   "id": "discovery:cognatogen",
   "name": "Cognatogen",
-  "description": "Increase a mental score and decrease a physical score"
+  "type": "ability",
+  "descriptionText": "Increase a mental score and decrease a physical score",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:cognatogen",
+      "delta": 1
+    }
+  }]
 }

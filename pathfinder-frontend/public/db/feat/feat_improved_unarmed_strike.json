@@ -1,9 +1,16 @@
 {
   "id": "feat:improved_unarmed_strike",
   "name": "Improved Unarmed Strike",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are skilled at fighting while unarmed.",
-  "benefit": "You are considered to be armed even when unarmed-you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes can deal lethal or nonlethal damage, at your choice.",
-  "normal": "Without this feat, you are considered unarmed when attacking with an unarmed strike, and you can deal only nonlethal damage with such an attack.",
-  "source": "PZO1110"
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are skilled at fighting while unarmed.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_unarmed_strike",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You are considered to be armed even when unarmed-you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes can deal lethal or nonlethal damage, at your choice.",
+  "normalText": "Without this feat, you are considered unarmed when attacking with an unarmed strike, and you can deal only nonlethal damage with such an attack."
 }

@@ -1,9 +1,36 @@
 {
   "id": "race:human",
   "name": "Human",
-  "size": 5,
-  "type": "Humanoid (human)",
-  "speed": 30,
-  "languages": ["Common"],
-  "traits": ["modifier:asi_2", "modifier:bonus_feat"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:human"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "selectChoice": {
+      "id": "level0:race_asi",
+      "label": "Ability Score Increase",
+      "references": ["ability_score/*"],
+      "type": "asi"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:race_bonus_feat",
+      "level": 1,
+      "label": "Bonus Feat (Human)",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }]
 }

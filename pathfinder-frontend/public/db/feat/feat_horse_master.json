@@ -1,11 +1,17 @@
 {
   "id": "feat:horse_master",
   "name": "Horse Master",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You blend horsemanship skills from disparate traditions into a seamless mounted combat technique.",
-  "prerequisites": "Expert trainer class feature (Advanced Player\u0027s Guide 33), Ride 6 ranks.",
-  "prerequisitesFormula": "@ability:expert_trainer#cavalier AND @skill:ride \u003e\u003d 6",
-  "benefit": "Use your character level to determine your effective druid level for determining the powers and abilities of your mount.",
-  "normal": "You use your cavalier level to determine your effective druid level for determining the powers and abilities of your mount.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@ability:expert_trainer#cavalier AND @skill:ride \u003e\u003d 6",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You blend horsemanship skills from disparate traditions into a seamless mounted combat technique.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:horse_master",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Use your character level to determine your effective druid level for determining the powers and abilities of your mount.",
+  "normalText": "You use your cavalier level to determine your effective druid level for determining the powers and abilities of your mount."
 }

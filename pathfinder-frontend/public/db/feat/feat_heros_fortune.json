@@ -1,10 +1,17 @@
 {
   "id": "feat:heros_fortune",
   "name": "Hero\u0027s Fortune",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Even at the start of your career, it was clear that you had a chance at greatness, and your legend continues to grow with every adventure.",
-  "benefit": "You gain a hero point. The maximum number of hero points you can have at any one time is increased to 5.",
-  "normal": "You can have no more than 3 hero points at one time.",
-  "special": "NPCs who take this feat receive 1 hero point and can have up to 3 (not 5).",
-  "source": "PZO1115"
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Even at the start of your career, it was clear that you had a chance at greatness, and your legend continues to grow with every adventure.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:heros_fortune",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain a hero point. The maximum number of hero points you can have at any one time is increased to 5.",
+  "normalText": "You can have no more than 3 hero points at one time.",
+  "specialText": "NPCs who take this feat receive 1 hero point and can have up to 3 (not 5)."
 }

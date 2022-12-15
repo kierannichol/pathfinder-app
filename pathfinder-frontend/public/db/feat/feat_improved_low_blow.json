@@ -1,10 +1,16 @@
 {
   "id": "feat:improved_low_blow",
   "name": "Improved Low Blow",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are adept at hitting larger opponents where it hurts.",
-  "prerequisites": "Base attack bonus +4, halfling, low-blow racial trait.",
-  "prerequisitesFormula": "@bab \u003e\u003d 4 AND @race:halfling AND @ability:low_blow",
-  "benefit": "Your bonus to conf irm critical hits against opponents larger than yourself improves to +2. Furthermore, once per day, after you fail to hit with a critical hit conf irmation roll, you can reroll the conf irmation roll, but must take the new result even if it is worse.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@bab \u003e\u003d 4 AND @race:halfling AND @ability:low_blow",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are adept at hitting larger opponents where it hurts.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:improved_low_blow",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your bonus to conf irm critical hits against opponents larger than yourself improves to +2. Furthermore, once per day, after you fail to hit with a critical hit conf irmation roll, you can reroll the conf irmation roll, but must take the new result even if it is worse."
 }

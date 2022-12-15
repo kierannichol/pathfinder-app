@@ -1,6 +1,13 @@
 {
   "id": "discovery:deadly_excretions",
   "name": "Deadly Excretions",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 8",
-  "description": "Your toxic skin poison deals Constitution damage"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "Your toxic skin poison deals Constitution damage",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:deadly_excretions",
+      "delta": 1
+    }
+  }]
 }

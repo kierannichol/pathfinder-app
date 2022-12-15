@@ -1,6 +1,8 @@
 import {useMemo} from "react";
-import AlignmentDatabase from "../../../../../database/AlignmentDatabase";
-import {useCharacterAtLevel, useClassDatabase, useRaceDatabase} from "../CharacterSheet";
+import Alignments from "../../../../../database/Alignments";
+import {usePathfinderDatabase} from "../../../../../database/v3/PathfinderDatabase";
+import CreatureSize from "../../../../../model/character/CreatureSize";
+import {useCharacterAtLevel} from "../CharacterSheet";
 
 interface CharacterValueProps {
   dataKey: string;
@@ -12,8 +14,7 @@ interface CharacterValueProps {
 interface CharacterValueWithoutDataKeyProps extends Omit<CharacterValueProps, 'dataKey' | 'lookupFn'> {}
 
 export const CharacterName = value("character_name");
-export const Alignment = value("alignment",
-                                      value => AlignmentDatabase.all.find(a => a.id === value)?.name ?? 'Unknown');
+export const Alignment = value("alignment", value => Alignments.find(value)?.name ?? "Unknown");
 export const TotalHealth = value("hp_total");
 
 export const BaseAttackBonus = value("bab");
@@ -41,35 +42,38 @@ function value(dataKey: string, lookupFn?: (value: string) => string) {
 
 export function CharacterLevel() {
   const characterAtLevel = useCharacterAtLevel();
-  const classDatabase = useClassDatabase();
+  const database = usePathfinderDatabase();
   const classLevelText = useMemo(() => {
     const classId = characterAtLevel.get("class_1")?.asText() ?? '';
     const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
-    const className = classDatabase.summary(classId)?.name ?? "Unknown";
+    const className = database.summary(classId)?.name ?? "Unknown";
     return `${className} ${classLevel}`;
-  }, [characterAtLevel, classDatabase]);
+  }, [characterAtLevel, database]);
 
   return <span>{classLevelText}</span>
 }
 
 export function Race() {
   const characterAtLevel = useCharacterAtLevel();
-  const raceDatabase = useRaceDatabase();
+  const database = usePathfinderDatabase();
   const text = useMemo(() => {
     const raceId = characterAtLevel.get("race")?.asText() ?? '';
-    return raceDatabase.summary(raceId)?.name ?? "Unknown";
-  }, [characterAtLevel, raceDatabase]);
+    return database.summary(raceId)?.name ?? "Unknown";
+  }, [characterAtLevel, database]);
 
   return <span>{text}</span>
 }
 
 export function Size() {
   const characterAtLevel = useCharacterAtLevel();
-  const raceDatabase = useRaceDatabase();
+  const database = usePathfinderDatabase();
   const text = useMemo(() => {
-    const raceId = characterAtLevel.get("race")?.asText() ?? '';
-    return raceDatabase.summary(raceId)?.size.longName ?? "Unknown";
-  }, [characterAtLevel, raceDatabase]);
+    const size = characterAtLevel.get("size");
+    if (size === undefined) {
+      return "Unknown";
+    }
+    return CreatureSize.fromId(size.asNumber())?.longName ?? "Unknown";
+  }, [characterAtLevel, database]);
 
   return <span>{text}</span>
 }

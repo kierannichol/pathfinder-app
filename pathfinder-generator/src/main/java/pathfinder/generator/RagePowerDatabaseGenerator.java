@@ -26,7 +26,7 @@ public class RagePowerDatabaseGenerator extends AbstractAbilityDatabaseGenerator
 
     @Override
     protected String getRelativeOutputPath() {
-        return "ragepower";
+        return "rage_power";
     }
 
     @Override

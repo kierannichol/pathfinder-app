@@ -1,12 +1,18 @@
 {
   "id": "feat:sundering_strike",
   "name": "Sundering Strike",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your critical hits can sunder your foes\u0027 weapons.",
-  "prerequisites": "Str 13, Improved Sunder, Power Attack, base attack bonus +9.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:improved_sunder AND @feat:power_attack AND @bab \u003e\u003d 9",
-  "benefit": "Whenever you score a critical hit with a melee attack, you can sunder your opponent\u0027s weapon, in addition to the normal damage dealt by the attack. If your confirmation roll exceeds your opponent\u0027s CMD, you may deal damage to your opponent\u0027s weapon as if from the sunder combat maneuver (roll normal damage to the weapon separately). This does not provoke an attack of opportunity.",
-  "normal": "You must perform a sunder combat maneuver to sunder an opponent\u0027s weapon.",
-  "special": "You can only apply the effects of one of the following feats to a given critical hit: Bull Rush Strike, Disarming Strike, Repositioning Strike, Sundering Strike, or Tripping Strike. You may choose to use this feat after you make your confirmation roll.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@str_score \u003e\u003d 13 AND @feat:improved_sunder AND @feat:power_attack AND @bab \u003e\u003d 9",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your critical hits can sunder your foes\u0027 weapons.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sundering_strike",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you score a critical hit with a melee attack, you can sunder your opponent\u0027s weapon, in addition to the normal damage dealt by the attack. If your confirmation roll exceeds your opponent\u0027s CMD, you may deal damage to your opponent\u0027s weapon as if from the sunder combat maneuver (roll normal damage to the weapon separately). This does not provoke an attack of opportunity.",
+  "normalText": "You must perform a sunder combat maneuver to sunder an opponent\u0027s weapon.",
+  "specialText": "You can only apply the effects of one of the following feats to a given critical hit: Bull Rush Strike, Disarming Strike, Repositioning Strike, Sundering Strike, or Tripping Strike. You may choose to use this feat after you make your confirmation roll."
 }

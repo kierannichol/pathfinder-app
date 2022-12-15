@@ -19,7 +19,7 @@ import pathfinder.model.Spell;
 import pathfinder.parser.AttributeType;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.source.OracleMysterySourceDatabase;
-import pathfinder.source.SpellSourceDatabase;
+import pathfinder.source.excel.ExcelSpellSourceDatabase;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
 
@@ -27,7 +27,7 @@ import pathfinder.util.StringUtils;
 @RequiredArgsConstructor
 public class D20pfsrdOracleMysteryScraper extends AbstractD20pfsrdScraper implements
         OracleMysterySourceDatabase {
-    private final SpellSourceDatabase spellSourceDatabase;
+    private final ExcelSpellSourceDatabase spellSourceDatabase;
 
     @Override
     public Stream<CharacterModifier> streamModifiers() throws IOException {
@@ -81,6 +81,10 @@ public class D20pfsrdOracleMysteryScraper extends AbstractD20pfsrdScraper implem
     }
 
     private List<CharacterEffect> findAddSpellsFromText(String text) throws IOException {
+        text = text
+                .replaceAll(" \\(.*\\)", "")
+                .replaceAll(" \\[\\w+]", "");
+
         List<CharacterEffect> found = new ArrayList<>();
 
         String[] parts = text.split("[,.]");
@@ -91,6 +95,7 @@ public class D20pfsrdOracleMysteryScraper extends AbstractD20pfsrdScraper implem
             }
             List<String> spellAndLevel = NameUtils.extractNameAndParentheses(part);
             String spellName = spellAndLevel.get(0);
+
             int level = spellAndLevel.size() > 1
                     ? StringUtils.parseLevel(spellAndLevel.get(1))
                     : 1;

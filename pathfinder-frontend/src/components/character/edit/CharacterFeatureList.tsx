@@ -1,5 +1,5 @@
 import React from "react";
-import {usePathfinderDatabase} from "../../../database/v2/PathfinderDatabase";
+import {usePathfinderDatabase} from "../../../database/v3/PathfinderDatabase";
 import PathfinderSelect from "../../common/PathfinderSelect";
 import "./CharacterFeatureList.scss";
 

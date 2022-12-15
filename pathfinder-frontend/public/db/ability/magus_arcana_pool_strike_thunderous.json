@@ -1,7 +1,13 @@
 {
   "id": "magus_arcana:pool_strike_thunderous",
   "name": "Pool Strike, Thunderous",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:magus \u003e\u003d 6 AND @magus_arcana:pool_strike",
-  "description": "Deal sonic damage with your pool strike"
+  "prerequisiteFormula": "@class:magus \u003e\u003d 6 AND @magus_arcana:pool_strike",
+  "type": "ability",
+  "descriptionText": "Deal sonic damage with your pool strike",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:pool_strike_thunderous",
+      "delta": 1
+    }
+  }]
 }

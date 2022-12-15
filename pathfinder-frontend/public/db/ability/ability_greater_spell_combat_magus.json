@@ -1,5 +1,12 @@
 {
   "id": "ability:greater_spell_combat#magus",
   "name": "Greater Spell Combat",
-  "description": "At 14th level, the magus gains the ability to seamlessly cast spells and make melee attacks. Whenever he uses the spell combat ability, his concentration check bonus equals double the amount of the attack penalty taken."
+  "type": "ability",
+  "descriptionText": "At 14th level, the magus gains the ability to seamlessly cast spells and make melee attacks. Whenever he uses the spell combat ability, his concentration check bonus equals double the amount of the attack penalty taken.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:greater_spell_combat#magus",
+      "delta": 1
+    }
+  }]
 }

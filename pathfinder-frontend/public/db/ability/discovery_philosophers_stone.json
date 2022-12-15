@@ -1,6 +1,13 @@
 {
   "id": "discovery:philosophers_stone",
   "name": "Philosopher\u0027s Stone",
-  "prerequisitesFormula": "@ability:grand_discovery#alchemist",
-  "description": "Learn how to make a philosopher’s stone"
+  "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+  "type": "ability",
+  "descriptionText": "Learn how to make a philosopher’s stone",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:philosophers_stone",
+      "delta": 1
+    }
+  }]
 }

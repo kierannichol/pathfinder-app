@@ -1,115 +1,16 @@
 {
   "id": "feat:skill_focus",
   "name": "Skill Focus",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Choose a skill. You are particularly adept at that skill.",
-  "benefit": "You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
-  "special": "You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.",
-  "source": "PZO1110",
-  "options": [{
-    "id": "feat:skill_focus#acrobatics",
-    "name": "Acrobatics"
-  }, {
-    "id": "feat:skill_focus#appraise",
-    "name": "Appraise"
-  }, {
-    "id": "feat:skill_focus#bluff",
-    "name": "Bluff"
-  }, {
-    "id": "feat:skill_focus#climb",
-    "name": "Climb"
-  }, {
-    "id": "feat:skill_focus#craft",
-    "name": "Craft"
-  }, {
-    "id": "feat:skill_focus#diplomacy",
-    "name": "Diplomacy"
-  }, {
-    "id": "feat:skill_focus#disable_device",
-    "name": "Disable Device"
-  }, {
-    "id": "feat:skill_focus#disguise",
-    "name": "Disguise"
-  }, {
-    "id": "feat:skill_focus#escape_artist",
-    "name": "Escape Artist"
-  }, {
-    "id": "feat:skill_focus#fly",
-    "name": "Fly"
-  }, {
-    "id": "feat:skill_focus#handle_animal",
-    "name": "Handle Animal"
-  }, {
-    "id": "feat:skill_focus#heal",
-    "name": "Heal"
-  }, {
-    "id": "feat:skill_focus#intimidate",
-    "name": "Intimidate"
-  }, {
-    "id": "feat:skill_focus#knowledge_arcana",
-    "name": "Knowledge (arcana)"
-  }, {
-    "id": "feat:skill_focus#knowledge_dungeoneering",
-    "name": "Knowledge (dungeoneering)"
-  }, {
-    "id": "feat:skill_focus#knowledge_engineering",
-    "name": "Knowledge (engineering)"
-  }, {
-    "id": "feat:skill_focus#knowledge_geography",
-    "name": "Knowledge (geography)"
-  }, {
-    "id": "feat:skill_focus#knowledge_history",
-    "name": "Knowledge (history)"
-  }, {
-    "id": "feat:skill_focus#knowledge_local",
-    "name": "Knowledge (local)"
-  }, {
-    "id": "feat:skill_focus#knowledge_nature",
-    "name": "Knowledge (nature)"
-  }, {
-    "id": "feat:skill_focus#knowledge_nobility",
-    "name": "Knowledge (nobility)"
-  }, {
-    "id": "feat:skill_focus#knowledge_planes",
-    "name": "Knowledge (planes)"
-  }, {
-    "id": "feat:skill_focus#knowledge_religion",
-    "name": "Knowledge (religion)"
-  }, {
-    "id": "feat:skill_focus#linguistics",
-    "name": "Linguistics"
-  }, {
-    "id": "feat:skill_focus#perception",
-    "name": "Perception"
-  }, {
-    "id": "feat:skill_focus#perform",
-    "name": "Perform"
-  }, {
-    "id": "feat:skill_focus#profession",
-    "name": "Profession"
-  }, {
-    "id": "feat:skill_focus#ride",
-    "name": "Ride"
-  }, {
-    "id": "feat:skill_focus#sense_motive",
-    "name": "Sense Motive"
-  }, {
-    "id": "feat:skill_focus#sleight_of_hand",
-    "name": "Sleight of Hand"
-  }, {
-    "id": "feat:skill_focus#spellcraft",
-    "name": "Spellcraft"
-  }, {
-    "id": "feat:skill_focus#stealth",
-    "name": "Stealth"
-  }, {
-    "id": "feat:skill_focus#survival",
-    "name": "Survival"
-  }, {
-    "id": "feat:skill_focus#swim",
-    "name": "Swim"
-  }, {
-    "id": "feat:skill_focus#use_magic_device",
-    "name": "Use Magic Device"
-  }]
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Choose a skill. You are particularly adept at that skill.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:skill_focus",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
+  "specialText": "You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill."
 }

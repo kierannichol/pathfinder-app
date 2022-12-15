@@ -1,7 +1,13 @@
 {
   "id": "rage_power:ghost_rager",
   "name": "Ghost Rager",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:superstition",
-  "description": "Deal normal damage to incorporeal creatures"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:superstition",
+  "type": "ability",
+  "descriptionText": "Deal normal damage to incorporeal creatures",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:ghost_rager",
+      "delta": 1
+    }
+  }]
 }

@@ -1,6 +1,12 @@
 {
   "id": "rage_power:smasher",
   "name": "Smasher",
-  "type": "ABILITY_TYPE_EX",
-  "description": "When sundering an unattended object, ignore hardness"
+  "type": "ability",
+  "descriptionText": "When sundering an unattended object, ignore hardness",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:smasher",
+      "delta": 1
+    }
+  }]
 }

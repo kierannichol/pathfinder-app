@@ -1,10 +1,16 @@
 {
   "id": "feat:mantis_style",
   "name": "Mantis Style",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You have learned to target vital areas with crippling accuracy.",
-  "prerequisites": "Improved Unarmed Strike, Stunning Fist, Heal 3 ranks.",
-  "prerequisitesFormula": "@feat:improved_unarmed_strike AND @ability:stunning_fist#unchained_monk AND @skill:heal \u003e\u003d 3",
-  "benefit": "You gain one additional Stunning Fist attempt per day. While using this style, you gain a +2 bonus to the DC of effects you deliver with your Stunning Fist.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:improved_unarmed_strike AND @ability:stunning_fist#unchained_monk AND @skill:heal \u003e\u003d 3",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You have learned to target vital areas with crippling accuracy.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:mantis_style",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain one additional Stunning Fist attempt per day. While using this style, you gain a +2 bonus to the DC of effects you deliver with your Stunning Fist."
 }

@@ -1,11 +1,17 @@
 {
   "id": "feat:field_repair",
   "name": "Field Repair",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can repair your broken weapon or armor to serviceability even without the benefits of artisan tools.",
-  "prerequisites": "Craft 4 ranks.",
-  "prerequisitesFormula": "@skill:craft \u003e\u003d 4",
-  "benefit": "If you are trained in a Craft skill appropriate to a broken item, you can repair that item with no raw material cost and no penalty on your Craft skill check for using improvised tools. If you spend a day, the item regains 1 hit point plus one-quarter of its original hit points. Alternatively, if the item gained the broken condition because it is a firearm that has misf ired or a siege engine that suffered a mishap, or has the broken condition because it has the fragile weapon quality (or some similar quality), you can make a Craft check with the DC it takes to craft that item (see Table 2-2, below). If the check succeeds, the item loses the broken condition.",
-  "normal": "Improvised tools impose a -2 penalty on Craft checks. Items require raw materials to repair.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@skill:craft \u003e\u003d 4",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can repair your broken weapon or armor to serviceability even without the benefits of artisan tools.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:field_repair",
+      "delta": 1
+    }
+  }],
+  "benefitText": "If you are trained in a Craft skill appropriate to a broken item, you can repair that item with no raw material cost and no penalty on your Craft skill check for using improvised tools. If you spend a day, the item regains 1 hit point plus one-quarter of its original hit points. Alternatively, if the item gained the broken condition because it is a firearm that has misf ired or a siege engine that suffered a mishap, or has the broken condition because it has the fragile weapon quality (or some similar quality), you can make a Craft check with the DC it takes to craft that item (see Table 2-2, below). If the check succeeds, the item loses the broken condition.",
+  "normalText": "Improvised tools impose a -2 penalty on Craft checks. Items require raw materials to repair."
 }

@@ -1,10 +1,16 @@
 {
   "id": "feat:celestial_servant",
   "name": "Celestial Servant",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Rather than being a normal animal or beast, your companion or familiar hails from the heavenly realms.",
-  "prerequisites": "Aasimar, animal companion, familiar, or mount class feature.",
-  "prerequisitesFormula": "(@race:aasimar OR @ability:animal_companion#hunter OR @rogue_talent:familiar OR @spell:mount)",
-  "benefit": "Your animal companion, familiar, or mount gains the celestial template and becomes a magical beast, though you may still treat it as an animal when using Handle Animal, wild empathy, or any other spells or class abilities that specifically affect animals.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "(@race:aasimar OR @ability:animal_companion#hunter OR @rogue_talent:familiar OR @spell:mount)",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Rather than being a normal animal or beast, your companion or familiar hails from the heavenly realms.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:celestial_servant",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Your animal companion, familiar, or mount gains the celestial template and becomes a magical beast, though you may still treat it as an animal when using Handle Animal, wild empathy, or any other spells or class abilities that specifically affect animals."
 }

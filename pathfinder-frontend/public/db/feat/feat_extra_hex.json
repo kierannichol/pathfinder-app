@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_hex",
   "name": "Extra Hex",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have learned the secrets of a new hex.",
-  "prerequisites": "Hex class feature.",
-  "prerequisitesFormula": "@ability:hex#shaman",
-  "benefit": "You gain one additional hex. You must meet all of the prerequisites for this hex.",
-  "special": "You can gain Extra Hex multiple times.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:hex#shaman",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have learned the secrets of a new hex.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_hex",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain one additional hex. You must meet all of the prerequisites for this hex.",
+  "specialText": "You can gain Extra Hex multiple times."
 }

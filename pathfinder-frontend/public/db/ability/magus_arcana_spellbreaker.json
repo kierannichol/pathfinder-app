@@ -1,7 +1,13 @@
 {
   "id": "magus_arcana:spellbreaker",
   "name": "Spellbreaker",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:magus \u003e\u003d 9",
-  "description": "Gain Spellbreaker as a bonus feat."
+  "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+  "type": "ability",
+  "descriptionText": "Gain Spellbreaker as a bonus feat.",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:spellbreaker",
+      "delta": 1
+    }
+  }]
 }

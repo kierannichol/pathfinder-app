@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:confounding_blades",
   "name": "Confounding Blades",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Prevent attacks of opportunity when you do damage with a sneak attack"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Prevent attacks of opportunity when you do damage with a sneak attack",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:confounding_blades",
+      "delta": 1
+    }
+  }]
 }

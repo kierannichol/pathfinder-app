@@ -1,5 +1,12 @@
 {
   "id": "ability:close_weapon_mastery#brawler",
   "name": "Close Weapon Mastery",
-  "description": "At 5th level, a brawler\u0027s damage with close weapons increases. When wielding a close weapon, she uses the unarmed strike damage of a brawler 4 levels lower instead of the base damage for that weapon (for example, a 5th-level Medium brawler wielding a punching dagger deals 1d6 points of damage instead of the weapon\u0027s normal 1d4). If the weapon normally deals more damage than this, its damage is unchanged. This ability does not affect any other aspect of the weapon. The brawler can decide to use the weapon\u0027s base damage instead of her adjusted unarmed strike damage--this must be declared before the attack roll is made."
+  "type": "ability",
+  "descriptionText": "At 5th level, a brawler\u0027s damage with close weapons increases. When wielding a close weapon, she uses the unarmed strike damage of a brawler 4 levels lower instead of the base damage for that weapon (for example, a 5th-level Medium brawler wielding a punching dagger deals 1d6 points of damage instead of the weapon\u0027s normal 1d4). If the weapon normally deals more damage than this, its damage is unchanged. This ability does not affect any other aspect of the weapon. The brawler can decide to use the weapon\u0027s base damage instead of her adjusted unarmed strike damage--this must be declared before the attack roll is made.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:close_weapon_mastery#brawler",
+      "delta": 1
+    }
+  }]
 }

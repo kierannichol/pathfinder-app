@@ -1,6 +1,12 @@
 {
   "id": "magus_arcana:rod_wielder",
   "name": "Rod Wielder",
-  "type": "ABILITY_TYPE_SU",
-  "description": "Use your Intelligence when using a rod to overcome SR"
+  "type": "ability",
+  "descriptionText": "Use your Intelligence when using a rod to overcome SR",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:rod_wielder",
+      "delta": 1
+    }
+  }]
 }

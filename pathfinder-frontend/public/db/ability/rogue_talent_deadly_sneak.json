@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:deadly_sneak",
   "name": "Deadly Sneak",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:powerful_sneak",
-  "description": "Treat all 1s and 2s on sneak attack damage dice as 3s"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:powerful_sneak",
+  "type": "ability",
+  "descriptionText": "Treat all 1s and 2s on sneak attack damage dice as 3s",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:deadly_sneak",
+      "delta": 1
+    }
+  }]
 }

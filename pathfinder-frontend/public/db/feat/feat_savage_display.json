@@ -1,10 +1,16 @@
 {
   "id": "feat:savage_display",
   "name": "Savage Display",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "With your victory and a roar, you push yourself on with increased savagery.",
-  "prerequisites": "Dazzling Display.",
-  "prerequisitesFormula": "@feat:dazzling_display",
-  "benefit": "When you spend a swift action to make a performance combat check, you gain a +2 bonus on your performance combat check and gain a +1d6 bonus on damage rolls until the end of your next turn. This extra damage is not precision damage.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:dazzling_display",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "With your victory and a roar, you push yourself on with increased savagery.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:savage_display",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you spend a swift action to make a performance combat check, you gain a +2 bonus on your performance combat check and gain a +1d6 bonus on damage rolls until the end of your next turn. This extra damage is not precision damage."
 }

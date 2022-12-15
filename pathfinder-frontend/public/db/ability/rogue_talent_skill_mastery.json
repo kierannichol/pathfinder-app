@@ -1,6 +1,13 @@
 {
   "id": "rogue_talent:skill_mastery",
   "name": "Skill Mastery",
-  "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue",
-  "description": "Take 10 at any time on certain skills"
+  "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+  "type": "ability",
+  "descriptionText": "Take 10 at any time on certain skills",
+  "effects": [{
+    "adjustState": {
+      "key": "rogue_talent:skill_mastery",
+      "delta": 1
+    }
+  }]
 }

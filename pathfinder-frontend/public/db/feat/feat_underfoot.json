@@ -1,10 +1,16 @@
 {
   "id": "feat:underfoot",
   "name": "Underfoot",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You slip under and around your larger foes.",
-  "prerequisites": "Dodge, Mobility, Small size or smaller.",
-  "prerequisitesFormula": "@size \u003c\u003d (4)",
-  "benefit": "You receive a +4 dodge bonus on Acrobatics checks to move past opponents without provoking attacks of opportunity, so long as they are larger than you. In addition, you gain a +2 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a larger opponent\u0027s threatened area (this stacks with the +4 bonus provided by Mobility, for a total bonus of +6).",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@size \u003c\u003d (4)",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You slip under and around your larger foes.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:underfoot",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You receive a +4 dodge bonus on Acrobatics checks to move past opponents without provoking attacks of opportunity, so long as they are larger than you. In addition, you gain a +2 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a larger opponent\u0027s threatened area (this stacks with the +4 bonus provided by Mobility, for a total bonus of +6)."
 }

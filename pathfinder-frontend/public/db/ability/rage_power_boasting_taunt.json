@@ -1,7 +1,13 @@
 {
   "id": "rage_power:boasting_taunt",
   "name": "Boasting Taunt",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6",
-  "description": "Force an enemy to attack the barbarian"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Force an enemy to attack the barbarian",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:boasting_taunt",
+      "delta": 1
+    }
+  }]
 }

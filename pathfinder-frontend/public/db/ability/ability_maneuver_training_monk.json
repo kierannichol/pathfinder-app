@@ -1,5 +1,12 @@
 {
   "id": "ability:maneuver_training#monk",
   "name": "Maneuver Training",
-  "description": "At 3rd level, a monk uses his monk level in place of his base attack bonus when calculating his Combat Maneuver Bonus. Base attack bonuses granted from other classes are unaffected and are added normally."
+  "type": "ability",
+  "descriptionText": "At 3rd level, a monk uses his monk level in place of his base attack bonus when calculating his Combat Maneuver Bonus. Base attack bonuses granted from other classes are unaffected and are added normally.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:maneuver_training#monk",
+      "delta": 1
+    }
+  }]
 }

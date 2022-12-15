@@ -1,5 +1,12 @@
 {
   "id": "ability:diamond_body#monk",
   "name": "Diamond Body",
-  "description": "At 11th level, a monk gains immunity to poisons of all kinds."
+  "type": "ability",
+  "descriptionText": "At 11th level, a monk gains immunity to poisons of all kinds.",
+  "effects": [{
+    "adjustState": {
+      "key": "ability:diamond_body#monk",
+      "delta": 1
+    }
+  }]
 }

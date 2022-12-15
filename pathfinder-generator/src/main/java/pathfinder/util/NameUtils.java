@@ -3,6 +3,7 @@ package pathfinder.util;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import pathfinder.model.v3.Id;
 
 public class NameUtils {
     private static final Pattern WITH_PARENTHESES = Pattern.compile("^(.*?)( *\\(.*\\))?$");
@@ -11,6 +12,12 @@ public class NameUtils {
         return StringUtils.sanitize(name)
                 .replace("*", "")
                 .trim();
+    }
+
+    public static String enumToName(Enum<?> e) {
+        String name = e.name().toLowerCase()
+                .replace("_", " ");
+        return StringUtils.toCamelCase(name);
     }
 
     public static List<String> extractNameAndParentheses(String text) {
@@ -44,5 +51,17 @@ public class NameUtils {
             return parts[0];
         }
         return (parts[1].trim() + " " + parts[0].trim()) + parenthesesPart;
+    }
+
+    public static String idToName(String idString) {
+        Id id = Id.parse(idString);
+        StringBuilder name = new StringBuilder();
+        name.append(StringUtils.toCamelCase(id.key.replace("_", " ")));
+        if (id.option != null) {
+            name.append(" (");
+            name.append(StringUtils.toCamelCase(id.option.replace("_", " ")));
+            name.append(")");
+        }
+        return name.toString();
     }
 }

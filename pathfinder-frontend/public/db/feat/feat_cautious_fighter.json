@@ -1,10 +1,16 @@
 {
   "id": "feat:cautious_fighter",
   "name": "Cautious Fighter",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You care more about survival than victory.",
-  "prerequisites": "Halfling.",
-  "prerequisitesFormula": "@race:halfling",
-  "benefit": "When fighting defensively or using total defense, your dodge bonus to AC increases by 2.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:halfling",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You care more about survival than victory.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:cautious_fighter",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When fighting defensively or using total defense, your dodge bonus to AC increases by 2."
 }

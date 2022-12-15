@@ -1,5 +1,12 @@
 {
   "id": "discovery:spontaneous_healing",
   "name": "Spontaneous Healing",
-  "description": "You can heal more rapidly"
+  "type": "ability",
+  "descriptionText": "You can heal more rapidly",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:spontaneous_healing",
+      "delta": 1
+    }
+  }]
 }

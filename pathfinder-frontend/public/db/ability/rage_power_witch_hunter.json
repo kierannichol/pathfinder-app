@@ -1,7 +1,13 @@
 {
   "id": "rage_power:witch_hunter",
   "name": "Witch Hunter",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@rage_power:superstition",
-  "description": "Do extra damage against spellcasters"
+  "prerequisiteFormula": "@rage_power:superstition",
+  "type": "ability",
+  "descriptionText": "Do extra damage against spellcasters",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:witch_hunter",
+      "delta": 1
+    }
+  }]
 }

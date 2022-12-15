@@ -1,7 +1,13 @@
 {
   "id": "rage_power:greater_elemental_rage",
   "name": "Greater Elemental Rage",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:elemental_rage",
-  "description": "Deal extra elemental damage on critical hits with melee weapons"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:elemental_rage",
+  "type": "ability",
+  "descriptionText": "Deal extra elemental damage on critical hits with melee weapons",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:greater_elemental_rage",
+      "delta": 1
+    }
+  }]
 }

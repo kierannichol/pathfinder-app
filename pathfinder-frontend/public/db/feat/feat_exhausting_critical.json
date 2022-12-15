@@ -1,11 +1,17 @@
 {
   "id": "feat:exhausting_critical",
   "name": "Exhausting Critical",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your critical hits cause opponents to become exhausted.",
-  "prerequisites": "Critical Focus, Tiring Critical, base attack bonus +15.",
-  "prerequisitesFormula": "@feat:critical_focus AND @feat:tiring_critical AND @bab \u003e\u003d 15",
-  "benefit": "When you score a critical hit on a foe, your target immediately becomes exhausted. This feat has no effect on exhausted creatures.",
-  "special": "You can only apply the effects of one critical feat to a given critical hit unless you possess the Critical Mastery feat.",
-  "source": "PZO1110"
+  "prerequisiteFormula": "@feat:critical_focus AND @feat:tiring_critical AND @bab \u003e\u003d 15",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your critical hits cause opponents to become exhausted.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:exhausting_critical",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you score a critical hit on a foe, your target immediately becomes exhausted. This feat has no effect on exhausted creatures.",
+  "specialText": "You can only apply the effects of one critical feat to a given critical hit unless you possess the Critical Mastery feat."
 }

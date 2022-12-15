@@ -1,45 +1,10 @@
 import {getActiveUser} from "../../app/auth";
 import {FirebaseRepository} from "../../app/firebase";
 import Character from "./Character";
-import {CharacterState} from "./CharacterState";
-import Choice from "./Choice";
+import {InitialChoices, InitialState} from "./CharacterInitialState";
 import DataHub from "./DataHub";
-import Reference from "./Reference";
 
 type CharacterListChangeListener = () => void;
-
-export const InitialState: CharacterState = {
-  'character_name': '',
-  'race': '',
-  'class_1': '',
-
-  'fort_save': '{sum(@fort:*) + @con_mod}',
-  'ref_save': '{sum(@ref:*) + @dex_mod}',
-  'will_save': '{sum(@will:*) + @wis_mod}',
-
-  'initiative': '{@dex_mod + @initiative:misc}',
-
-  'ac': '{10 + @ac:armor + @ac:shield + @dex_mod + @ac:size + @ac:natural + @ac:deflection + @ac:misc}',
-  'ac:touch': '{10 + @dex_mod + @ac:misc}',
-  'ac:size': '{2^abs(5-@size)-1}',
-  'ac:flat': '{@ac - @dex_mod}',
-
-  'cmb': '{@bab + @str_mod + @size_mod}',
-  'cmd': '{@bab + @str_mod + @dex_mod + @size_mod + 10}',
-
-  ...['str', 'dex', 'con', 'int', 'wis', 'cha'].reduce((state, ability) => ({
-    ...state,
-    [`${ability}:base`]: 10,
-    [`${ability}_score`]: `{sum(@${ability}:*)}`,
-    [`${ability}_mod`]: `{floor(@${ability}_score / 2) - 5}`
-  }), {})
-};
-
-export const InitialChoices: Choice[] = [
-  Choice.textChoice('name', 'Name', 0, 'character_name'),
-  Choice.selectChoice("race", "Race", 0, [ new Reference('race') ]),
-  Choice.selectChoice("class_1", "Class", 0, [ new Reference('class') ]),
-];
 
 export default class CharacterRepository {
   private characterListChangedListeners: CharacterListChangeListener[] = []
@@ -64,7 +29,7 @@ export default class CharacterRepository {
     const packedList = await FirebaseRepository.loadAll(user.id) ?? [];
     const characterList = await Promise.all(packedList.map(packed => {
       const character = new Character(packed.id, InitialState, InitialChoices, this.datahub);
-      return character.unpack(packed);
+      return character.unpack(packed.choices);
     }));
 
     this.cache = Object.fromEntries(characterList.map(character => [ character.id, character ]));
@@ -93,7 +58,7 @@ export default class CharacterRepository {
     if (packed === undefined) {
       return character;
     }
-    const unpacked = await character.unpack(packed);
+    const unpacked = await character.unpack(packed.choices);
     if (this.cache === undefined) {
       this.cache = {};
     }

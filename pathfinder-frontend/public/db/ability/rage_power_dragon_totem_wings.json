@@ -1,7 +1,13 @@
 {
   "id": "rage_power:dragon_totem_wings",
   "name": "Dragon Totem Wings",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:dragon_totem AND @rage_power:dragon_totem_resilience",
-  "description": "Gain wings and a fly speed while raging"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:dragon_totem AND @rage_power:dragon_totem_resilience",
+  "type": "ability",
+  "descriptionText": "Gain wings and a fly speed while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:dragon_totem_wings",
+      "delta": 1
+    }
+  }]
 }

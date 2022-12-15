@@ -1,10 +1,16 @@
 {
   "id": "feat:distance_thrower",
   "name": "Distance Thrower",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You are accurate with thrown weapons at longer ranges than normal.",
-  "prerequisites": "Str 13.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 13",
-  "benefit": "With a thrown weapon, you reduce your penalty on ranged attack rolls due to range by 2.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@str_score \u003e\u003d 13",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You are accurate with thrown weapons at longer ranges than normal.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:distance_thrower",
+      "delta": 1
+    }
+  }],
+  "benefitText": "With a thrown weapon, you reduce your penalty on ranged attack rolls due to range by 2."
 }

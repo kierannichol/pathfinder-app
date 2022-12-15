@@ -1,5 +1,12 @@
 {
   "id": "discovery:precise_bombs",
   "name": "Precise Bombs",
-  "description": "Choose which squares are missed by your bomb’s splash damage"
+  "type": "ability",
+  "descriptionText": "Choose which squares are missed by your bomb’s splash damage",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:precise_bombs",
+      "delta": 1
+    }
+  }]
 }

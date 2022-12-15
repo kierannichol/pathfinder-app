@@ -739,6 +739,9 @@ export namespace v2 {
 
         /** CharacterEffectDbo grantFeat */
         grantFeat?: (v2.CharacterEffectDbo.GrantFeatEffect|null);
+
+        /** CharacterEffectDbo addChoiceOptions */
+        addChoiceOptions?: (v2.CharacterEffectDbo.AddChoiceOptionsEffect|null);
     }
 
     /** Represents a CharacterEffectDbo. */
@@ -768,8 +771,11 @@ export namespace v2 {
         /** CharacterEffectDbo grantFeat. */
         public grantFeat?: (v2.CharacterEffectDbo.GrantFeatEffect|null);
 
+        /** CharacterEffectDbo addChoiceOptions. */
+        public addChoiceOptions?: (v2.CharacterEffectDbo.AddChoiceOptionsEffect|null);
+
         /** CharacterEffectDbo effect. */
-        public effect?: ("modifyFeature"|"setFeature"|"grantChoice"|"grantAbility"|"grantFeat");
+        public effect?: ("modifyFeature"|"setFeature"|"grantChoice"|"grantAbility"|"grantFeat"|"addChoiceOptions");
 
         /**
          * Creates a new CharacterEffectDbo instance using the specified properties.
@@ -1342,6 +1348,115 @@ export namespace v2 {
 
             /**
              * Gets the default type url for GrantFeatEffect
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an AddChoiceOptionsEffect. */
+        interface IAddChoiceOptionsEffect {
+
+            /** AddChoiceOptionsEffect choiceType */
+            choiceType?: (string|null);
+
+            /** AddChoiceOptionsEffect databaseId */
+            databaseId?: (string|null);
+
+            /** AddChoiceOptionsEffect optionIds */
+            optionIds?: (string[]|null);
+        }
+
+        /** Represents an AddChoiceOptionsEffect. */
+        class AddChoiceOptionsEffect implements IAddChoiceOptionsEffect {
+
+            /**
+             * Constructs a new AddChoiceOptionsEffect.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v2.CharacterEffectDbo.IAddChoiceOptionsEffect);
+
+            /** AddChoiceOptionsEffect choiceType. */
+            public choiceType: string;
+
+            /** AddChoiceOptionsEffect databaseId. */
+            public databaseId: string;
+
+            /** AddChoiceOptionsEffect optionIds. */
+            public optionIds: string[];
+
+            /**
+             * Creates a new AddChoiceOptionsEffect instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AddChoiceOptionsEffect instance
+             */
+            public static create(properties?: v2.CharacterEffectDbo.IAddChoiceOptionsEffect): v2.CharacterEffectDbo.AddChoiceOptionsEffect;
+
+            /**
+             * Encodes the specified AddChoiceOptionsEffect message. Does not implicitly {@link v2.CharacterEffectDbo.AddChoiceOptionsEffect.verify|verify} messages.
+             * @param message AddChoiceOptionsEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v2.CharacterEffectDbo.AddChoiceOptionsEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AddChoiceOptionsEffect message, length delimited. Does not implicitly {@link v2.CharacterEffectDbo.AddChoiceOptionsEffect.verify|verify} messages.
+             * @param message AddChoiceOptionsEffect message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v2.CharacterEffectDbo.AddChoiceOptionsEffect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AddChoiceOptionsEffect message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AddChoiceOptionsEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v2.CharacterEffectDbo.AddChoiceOptionsEffect;
+
+            /**
+             * Decodes an AddChoiceOptionsEffect message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AddChoiceOptionsEffect
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v2.CharacterEffectDbo.AddChoiceOptionsEffect;
+
+            /**
+             * Verifies an AddChoiceOptionsEffect message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AddChoiceOptionsEffect message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AddChoiceOptionsEffect
+             */
+            public static fromObject(object: { [k: string]: any }): v2.CharacterEffectDbo.AddChoiceOptionsEffect;
+
+            /**
+             * Creates a plain object from an AddChoiceOptionsEffect message. Also converts values to other types if specified.
+             * @param message AddChoiceOptionsEffect
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v2.CharacterEffectDbo.AddChoiceOptionsEffect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AddChoiceOptionsEffect to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AddChoiceOptionsEffect
              * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
              * @returns The default type url
              */
@@ -2638,17 +2753,17 @@ export namespace v2 {
         /** CharacterChoiceDbo label */
         label?: (string|null);
 
-        /** CharacterChoiceDbo AbilityScoreIncrease */
-        AbilityScoreIncrease?: (v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null);
+        /** CharacterChoiceDbo abilityScoreIncrease */
+        abilityScoreIncrease?: (v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null);
 
-        /** CharacterChoiceDbo Feat */
-        Feat?: (v2.CharacterChoiceDbo.FeatChoice|null);
+        /** CharacterChoiceDbo feat */
+        feat?: (v2.CharacterChoiceDbo.FeatChoice|null);
 
-        /** CharacterChoiceDbo Ability */
-        Ability?: (v2.CharacterChoiceDbo.AbilityChoice|null);
+        /** CharacterChoiceDbo ability */
+        ability?: (v2.CharacterChoiceDbo.AbilityChoice|null);
 
-        /** CharacterChoiceDbo Modifier */
-        Modifier?: (v2.CharacterChoiceDbo.ModifierChoice|null);
+        /** CharacterChoiceDbo modifier */
+        modifier?: (v2.CharacterChoiceDbo.ModifierChoice|null);
     }
 
     /** Represents a CharacterChoiceDbo. */
@@ -2666,20 +2781,20 @@ export namespace v2 {
         /** CharacterChoiceDbo label. */
         public label: string;
 
-        /** CharacterChoiceDbo AbilityScoreIncrease. */
-        public AbilityScoreIncrease?: (v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null);
+        /** CharacterChoiceDbo abilityScoreIncrease. */
+        public abilityScoreIncrease?: (v2.CharacterChoiceDbo.AbilityScoreIncreaseChoice|null);
 
-        /** CharacterChoiceDbo Feat. */
-        public Feat?: (v2.CharacterChoiceDbo.FeatChoice|null);
+        /** CharacterChoiceDbo feat. */
+        public feat?: (v2.CharacterChoiceDbo.FeatChoice|null);
 
-        /** CharacterChoiceDbo Ability. */
-        public Ability?: (v2.CharacterChoiceDbo.AbilityChoice|null);
+        /** CharacterChoiceDbo ability. */
+        public ability?: (v2.CharacterChoiceDbo.AbilityChoice|null);
 
-        /** CharacterChoiceDbo Modifier. */
-        public Modifier?: (v2.CharacterChoiceDbo.ModifierChoice|null);
+        /** CharacterChoiceDbo modifier. */
+        public modifier?: (v2.CharacterChoiceDbo.ModifierChoice|null);
 
         /** CharacterChoiceDbo effect. */
-        public effect?: ("AbilityScoreIncrease"|"Feat"|"Ability"|"Modifier");
+        public effect?: ("abilityScoreIncrease"|"feat"|"ability"|"modifier");
 
         /**
          * Creates a new CharacterChoiceDbo instance using the specified properties.
@@ -4187,6 +4302,1217 @@ export namespace v2 {
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+}
+
+/** Namespace v3. */
+export namespace v3 {
+
+    /** Properties of a ModificationDatabaseDbo. */
+    interface IModificationDatabaseDbo {
+
+        /** ModificationDatabaseDbo databaseId */
+        databaseId?: (string|null);
+
+        /** ModificationDatabaseDbo summaries */
+        summaries?: (v3.ModificationSummaryDbo[]|null);
+
+        /** ModificationDatabaseDbo categories */
+        categories?: (v3.CategoryDbo[]|null);
+    }
+
+    /** Represents a ModificationDatabaseDbo. */
+    class ModificationDatabaseDbo implements IModificationDatabaseDbo {
+
+        /**
+         * Constructs a new ModificationDatabaseDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v3.IModificationDatabaseDbo);
+
+        /** ModificationDatabaseDbo databaseId. */
+        public databaseId: string;
+
+        /** ModificationDatabaseDbo summaries. */
+        public summaries: v3.ModificationSummaryDbo[];
+
+        /** ModificationDatabaseDbo categories. */
+        public categories: v3.CategoryDbo[];
+
+        /**
+         * Creates a new ModificationDatabaseDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ModificationDatabaseDbo instance
+         */
+        public static create(properties?: v3.IModificationDatabaseDbo): v3.ModificationDatabaseDbo;
+
+        /**
+         * Encodes the specified ModificationDatabaseDbo message. Does not implicitly {@link v3.ModificationDatabaseDbo.verify|verify} messages.
+         * @param message ModificationDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v3.ModificationDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ModificationDatabaseDbo message, length delimited. Does not implicitly {@link v3.ModificationDatabaseDbo.verify|verify} messages.
+         * @param message ModificationDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v3.ModificationDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ModificationDatabaseDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ModificationDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.ModificationDatabaseDbo;
+
+        /**
+         * Decodes a ModificationDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ModificationDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.ModificationDatabaseDbo;
+
+        /**
+         * Verifies a ModificationDatabaseDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ModificationDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ModificationDatabaseDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v3.ModificationDatabaseDbo;
+
+        /**
+         * Creates a plain object from a ModificationDatabaseDbo message. Also converts values to other types if specified.
+         * @param message ModificationDatabaseDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v3.ModificationDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ModificationDatabaseDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ModificationDatabaseDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a CategoryDbo. */
+    interface ICategoryDbo {
+
+        /** CategoryDbo id */
+        id?: (number|null);
+
+        /** CategoryDbo name */
+        name?: (string|null);
+    }
+
+    /** Represents a CategoryDbo. */
+    class CategoryDbo implements ICategoryDbo {
+
+        /**
+         * Constructs a new CategoryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v3.ICategoryDbo);
+
+        /** CategoryDbo id. */
+        public id: number;
+
+        /** CategoryDbo name. */
+        public name: string;
+
+        /**
+         * Creates a new CategoryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns CategoryDbo instance
+         */
+        public static create(properties?: v3.ICategoryDbo): v3.CategoryDbo;
+
+        /**
+         * Encodes the specified CategoryDbo message. Does not implicitly {@link v3.CategoryDbo.verify|verify} messages.
+         * @param message CategoryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v3.CategoryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified CategoryDbo message, length delimited. Does not implicitly {@link v3.CategoryDbo.verify|verify} messages.
+         * @param message CategoryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v3.CategoryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a CategoryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns CategoryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.CategoryDbo;
+
+        /**
+         * Decodes a CategoryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns CategoryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.CategoryDbo;
+
+        /**
+         * Verifies a CategoryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a CategoryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns CategoryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v3.CategoryDbo;
+
+        /**
+         * Creates a plain object from a CategoryDbo message. Also converts values to other types if specified.
+         * @param message CategoryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v3.CategoryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this CategoryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for CategoryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ModificationSummaryDbo. */
+    interface IModificationSummaryDbo {
+
+        /** ModificationSummaryDbo id */
+        id?: (string|null);
+
+        /** ModificationSummaryDbo name */
+        name?: (string|null);
+
+        /** ModificationSummaryDbo prerequisiteFormula */
+        prerequisiteFormula?: (string|null);
+
+        /** ModificationSummaryDbo children */
+        children?: (v3.ModificationSummaryDbo[]|null);
+
+        /** ModificationSummaryDbo type */
+        type?: (string|null);
+
+        /** ModificationSummaryDbo categoryId */
+        categoryId?: (number|null);
+    }
+
+    /** Represents a ModificationSummaryDbo. */
+    class ModificationSummaryDbo implements IModificationSummaryDbo {
+
+        /**
+         * Constructs a new ModificationSummaryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v3.IModificationSummaryDbo);
+
+        /** ModificationSummaryDbo id. */
+        public id: string;
+
+        /** ModificationSummaryDbo name. */
+        public name: string;
+
+        /** ModificationSummaryDbo prerequisiteFormula. */
+        public prerequisiteFormula: string;
+
+        /** ModificationSummaryDbo children. */
+        public children: v3.ModificationSummaryDbo[];
+
+        /** ModificationSummaryDbo type. */
+        public type: string;
+
+        /** ModificationSummaryDbo categoryId. */
+        public categoryId: number;
+
+        /**
+         * Creates a new ModificationSummaryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ModificationSummaryDbo instance
+         */
+        public static create(properties?: v3.IModificationSummaryDbo): v3.ModificationSummaryDbo;
+
+        /**
+         * Encodes the specified ModificationSummaryDbo message. Does not implicitly {@link v3.ModificationSummaryDbo.verify|verify} messages.
+         * @param message ModificationSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v3.ModificationSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ModificationSummaryDbo message, length delimited. Does not implicitly {@link v3.ModificationSummaryDbo.verify|verify} messages.
+         * @param message ModificationSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v3.ModificationSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ModificationSummaryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ModificationSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.ModificationSummaryDbo;
+
+        /**
+         * Decodes a ModificationSummaryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ModificationSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.ModificationSummaryDbo;
+
+        /**
+         * Verifies a ModificationSummaryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ModificationSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ModificationSummaryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v3.ModificationSummaryDbo;
+
+        /**
+         * Creates a plain object from a ModificationSummaryDbo message. Also converts values to other types if specified.
+         * @param message ModificationSummaryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v3.ModificationSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ModificationSummaryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ModificationSummaryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a ModificationDetailsDbo. */
+    interface IModificationDetailsDbo {
+
+        /** ModificationDetailsDbo id */
+        id?: (string|null);
+
+        /** ModificationDetailsDbo name */
+        name?: (string|null);
+
+        /** ModificationDetailsDbo prerequisiteFormula */
+        prerequisiteFormula?: (string|null);
+
+        /** ModificationDetailsDbo children */
+        children?: (v3.ModificationDetailsDbo[]|null);
+
+        /** ModificationDetailsDbo type */
+        type?: (string|null);
+
+        /** ModificationDetailsDbo categoryId */
+        categoryId?: (number|null);
+
+        /** ModificationDetailsDbo descriptionText */
+        descriptionText?: (string|null);
+
+        /** ModificationDetailsDbo effects */
+        effects?: (v3.EffectDbo[]|null);
+
+        /** ModificationDetailsDbo benefitText */
+        benefitText?: (string|null);
+
+        /** ModificationDetailsDbo normalText */
+        normalText?: (string|null);
+
+        /** ModificationDetailsDbo specialText */
+        specialText?: (string|null);
+
+        /** ModificationDetailsDbo noteText */
+        noteText?: (string|null);
+    }
+
+    /** Represents a ModificationDetailsDbo. */
+    class ModificationDetailsDbo implements IModificationDetailsDbo {
+
+        /**
+         * Constructs a new ModificationDetailsDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v3.IModificationDetailsDbo);
+
+        /** ModificationDetailsDbo id. */
+        public id: string;
+
+        /** ModificationDetailsDbo name. */
+        public name: string;
+
+        /** ModificationDetailsDbo prerequisiteFormula. */
+        public prerequisiteFormula: string;
+
+        /** ModificationDetailsDbo children. */
+        public children: v3.ModificationDetailsDbo[];
+
+        /** ModificationDetailsDbo type. */
+        public type: string;
+
+        /** ModificationDetailsDbo categoryId. */
+        public categoryId: number;
+
+        /** ModificationDetailsDbo descriptionText. */
+        public descriptionText: string;
+
+        /** ModificationDetailsDbo effects. */
+        public effects: v3.EffectDbo[];
+
+        /** ModificationDetailsDbo benefitText. */
+        public benefitText: string;
+
+        /** ModificationDetailsDbo normalText. */
+        public normalText: string;
+
+        /** ModificationDetailsDbo specialText. */
+        public specialText: string;
+
+        /** ModificationDetailsDbo noteText. */
+        public noteText: string;
+
+        /**
+         * Creates a new ModificationDetailsDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ModificationDetailsDbo instance
+         */
+        public static create(properties?: v3.IModificationDetailsDbo): v3.ModificationDetailsDbo;
+
+        /**
+         * Encodes the specified ModificationDetailsDbo message. Does not implicitly {@link v3.ModificationDetailsDbo.verify|verify} messages.
+         * @param message ModificationDetailsDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v3.ModificationDetailsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ModificationDetailsDbo message, length delimited. Does not implicitly {@link v3.ModificationDetailsDbo.verify|verify} messages.
+         * @param message ModificationDetailsDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v3.ModificationDetailsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a ModificationDetailsDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ModificationDetailsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.ModificationDetailsDbo;
+
+        /**
+         * Decodes a ModificationDetailsDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ModificationDetailsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.ModificationDetailsDbo;
+
+        /**
+         * Verifies a ModificationDetailsDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a ModificationDetailsDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ModificationDetailsDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v3.ModificationDetailsDbo;
+
+        /**
+         * Creates a plain object from a ModificationDetailsDbo message. Also converts values to other types if specified.
+         * @param message ModificationDetailsDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v3.ModificationDetailsDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ModificationDetailsDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ModificationDetailsDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an EffectDbo. */
+    interface IEffectDbo {
+
+        /** EffectDbo setState */
+        setState?: (v3.EffectDbo.SetStateEffectDbo|null);
+
+        /** EffectDbo adjustState */
+        adjustState?: (v3.EffectDbo.AdjustStateEffectDbo|null);
+
+        /** EffectDbo textChoice */
+        textChoice?: (v3.EffectDbo.TextChoiceDbo|null);
+
+        /** EffectDbo selectChoice */
+        selectChoice?: (v3.EffectDbo.SelectChoiceDbo|null);
+
+        /** EffectDbo addChoicesToType */
+        addChoicesToType?: (v3.EffectDbo.AddChoicesToTypeEffectDbo|null);
+    }
+
+    /** Represents an EffectDbo. */
+    class EffectDbo implements IEffectDbo {
+
+        /**
+         * Constructs a new EffectDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: v3.IEffectDbo);
+
+        /** EffectDbo setState. */
+        public setState?: (v3.EffectDbo.SetStateEffectDbo|null);
+
+        /** EffectDbo adjustState. */
+        public adjustState?: (v3.EffectDbo.AdjustStateEffectDbo|null);
+
+        /** EffectDbo textChoice. */
+        public textChoice?: (v3.EffectDbo.TextChoiceDbo|null);
+
+        /** EffectDbo selectChoice. */
+        public selectChoice?: (v3.EffectDbo.SelectChoiceDbo|null);
+
+        /** EffectDbo addChoicesToType. */
+        public addChoicesToType?: (v3.EffectDbo.AddChoicesToTypeEffectDbo|null);
+
+        /** EffectDbo effect. */
+        public effect?: ("setState"|"adjustState"|"textChoice"|"selectChoice"|"addChoicesToType");
+
+        /**
+         * Creates a new EffectDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns EffectDbo instance
+         */
+        public static create(properties?: v3.IEffectDbo): v3.EffectDbo;
+
+        /**
+         * Encodes the specified EffectDbo message. Does not implicitly {@link v3.EffectDbo.verify|verify} messages.
+         * @param message EffectDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: v3.EffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified EffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.verify|verify} messages.
+         * @param message EffectDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: v3.EffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an EffectDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns EffectDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.EffectDbo;
+
+        /**
+         * Decodes an EffectDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns EffectDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.EffectDbo;
+
+        /**
+         * Verifies an EffectDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an EffectDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns EffectDbo
+         */
+        public static fromObject(object: { [k: string]: any }): v3.EffectDbo;
+
+        /**
+         * Creates a plain object from an EffectDbo message. Also converts values to other types if specified.
+         * @param message EffectDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: v3.EffectDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this EffectDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for EffectDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace EffectDbo {
+
+        /** Properties of a SetStateEffectDbo. */
+        interface ISetStateEffectDbo {
+
+            /** SetStateEffectDbo level */
+            level?: (number|null);
+
+            /** SetStateEffectDbo key */
+            key?: (string|null);
+
+            /** SetStateEffectDbo numericValue */
+            numericValue?: (number|null);
+
+            /** SetStateEffectDbo textValue */
+            textValue?: (string|null);
+
+            /** SetStateEffectDbo booleanValue */
+            booleanValue?: (boolean|null);
+        }
+
+        /** Represents a SetStateEffectDbo. */
+        class SetStateEffectDbo implements ISetStateEffectDbo {
+
+            /**
+             * Constructs a new SetStateEffectDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v3.EffectDbo.ISetStateEffectDbo);
+
+            /** SetStateEffectDbo level. */
+            public level: number;
+
+            /** SetStateEffectDbo key. */
+            public key: string;
+
+            /** SetStateEffectDbo numericValue. */
+            public numericValue?: (number|null);
+
+            /** SetStateEffectDbo textValue. */
+            public textValue?: (string|null);
+
+            /** SetStateEffectDbo booleanValue. */
+            public booleanValue?: (boolean|null);
+
+            /** SetStateEffectDbo value. */
+            public value?: ("numericValue"|"textValue"|"booleanValue");
+
+            /**
+             * Creates a new SetStateEffectDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns SetStateEffectDbo instance
+             */
+            public static create(properties?: v3.EffectDbo.ISetStateEffectDbo): v3.EffectDbo.SetStateEffectDbo;
+
+            /**
+             * Encodes the specified SetStateEffectDbo message. Does not implicitly {@link v3.EffectDbo.SetStateEffectDbo.verify|verify} messages.
+             * @param message SetStateEffectDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v3.EffectDbo.SetStateEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified SetStateEffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.SetStateEffectDbo.verify|verify} messages.
+             * @param message SetStateEffectDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v3.EffectDbo.SetStateEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a SetStateEffectDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns SetStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.EffectDbo.SetStateEffectDbo;
+
+            /**
+             * Decodes a SetStateEffectDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns SetStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.EffectDbo.SetStateEffectDbo;
+
+            /**
+             * Verifies a SetStateEffectDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a SetStateEffectDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns SetStateEffectDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v3.EffectDbo.SetStateEffectDbo;
+
+            /**
+             * Creates a plain object from a SetStateEffectDbo message. Also converts values to other types if specified.
+             * @param message SetStateEffectDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v3.EffectDbo.SetStateEffectDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this SetStateEffectDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for SetStateEffectDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an AdjustStateEffectDbo. */
+        interface IAdjustStateEffectDbo {
+
+            /** AdjustStateEffectDbo level */
+            level?: (number|null);
+
+            /** AdjustStateEffectDbo key */
+            key?: (string|null);
+
+            /** AdjustStateEffectDbo delta */
+            delta?: (number|null);
+        }
+
+        /** Represents an AdjustStateEffectDbo. */
+        class AdjustStateEffectDbo implements IAdjustStateEffectDbo {
+
+            /**
+             * Constructs a new AdjustStateEffectDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v3.EffectDbo.IAdjustStateEffectDbo);
+
+            /** AdjustStateEffectDbo level. */
+            public level: number;
+
+            /** AdjustStateEffectDbo key. */
+            public key: string;
+
+            /** AdjustStateEffectDbo delta. */
+            public delta: number;
+
+            /**
+             * Creates a new AdjustStateEffectDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AdjustStateEffectDbo instance
+             */
+            public static create(properties?: v3.EffectDbo.IAdjustStateEffectDbo): v3.EffectDbo.AdjustStateEffectDbo;
+
+            /**
+             * Encodes the specified AdjustStateEffectDbo message. Does not implicitly {@link v3.EffectDbo.AdjustStateEffectDbo.verify|verify} messages.
+             * @param message AdjustStateEffectDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v3.EffectDbo.AdjustStateEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AdjustStateEffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.AdjustStateEffectDbo.verify|verify} messages.
+             * @param message AdjustStateEffectDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v3.EffectDbo.AdjustStateEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AdjustStateEffectDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AdjustStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.EffectDbo.AdjustStateEffectDbo;
+
+            /**
+             * Decodes an AdjustStateEffectDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AdjustStateEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.EffectDbo.AdjustStateEffectDbo;
+
+            /**
+             * Verifies an AdjustStateEffectDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AdjustStateEffectDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AdjustStateEffectDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v3.EffectDbo.AdjustStateEffectDbo;
+
+            /**
+             * Creates a plain object from an AdjustStateEffectDbo message. Also converts values to other types if specified.
+             * @param message AdjustStateEffectDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v3.EffectDbo.AdjustStateEffectDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AdjustStateEffectDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AdjustStateEffectDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an AddChoicesToTypeEffectDbo. */
+        interface IAddChoicesToTypeEffectDbo {
+
+            /** AddChoicesToTypeEffectDbo type */
+            type?: (string|null);
+
+            /** AddChoicesToTypeEffectDbo additionalReferences */
+            additionalReferences?: (string[]|null);
+        }
+
+        /** Represents an AddChoicesToTypeEffectDbo. */
+        class AddChoicesToTypeEffectDbo implements IAddChoicesToTypeEffectDbo {
+
+            /**
+             * Constructs a new AddChoicesToTypeEffectDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v3.EffectDbo.IAddChoicesToTypeEffectDbo);
+
+            /** AddChoicesToTypeEffectDbo type. */
+            public type: string;
+
+            /** AddChoicesToTypeEffectDbo additionalReferences. */
+            public additionalReferences: string[];
+
+            /**
+             * Creates a new AddChoicesToTypeEffectDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AddChoicesToTypeEffectDbo instance
+             */
+            public static create(properties?: v3.EffectDbo.IAddChoicesToTypeEffectDbo): v3.EffectDbo.AddChoicesToTypeEffectDbo;
+
+            /**
+             * Encodes the specified AddChoicesToTypeEffectDbo message. Does not implicitly {@link v3.EffectDbo.AddChoicesToTypeEffectDbo.verify|verify} messages.
+             * @param message AddChoicesToTypeEffectDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v3.EffectDbo.AddChoicesToTypeEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AddChoicesToTypeEffectDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.AddChoicesToTypeEffectDbo.verify|verify} messages.
+             * @param message AddChoicesToTypeEffectDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v3.EffectDbo.AddChoicesToTypeEffectDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AddChoicesToTypeEffectDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AddChoicesToTypeEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.EffectDbo.AddChoicesToTypeEffectDbo;
+
+            /**
+             * Decodes an AddChoicesToTypeEffectDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AddChoicesToTypeEffectDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.EffectDbo.AddChoicesToTypeEffectDbo;
+
+            /**
+             * Verifies an AddChoicesToTypeEffectDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AddChoicesToTypeEffectDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AddChoicesToTypeEffectDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v3.EffectDbo.AddChoicesToTypeEffectDbo;
+
+            /**
+             * Creates a plain object from an AddChoicesToTypeEffectDbo message. Also converts values to other types if specified.
+             * @param message AddChoicesToTypeEffectDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v3.EffectDbo.AddChoicesToTypeEffectDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AddChoicesToTypeEffectDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AddChoicesToTypeEffectDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a TextChoiceDbo. */
+        interface ITextChoiceDbo {
+
+            /** TextChoiceDbo id */
+            id?: (string|null);
+
+            /** TextChoiceDbo level */
+            level?: (number|null);
+
+            /** TextChoiceDbo key */
+            key?: (string|null);
+
+            /** TextChoiceDbo label */
+            label?: (string|null);
+
+            /** TextChoiceDbo type */
+            type?: (string|null);
+        }
+
+        /** Represents a TextChoiceDbo. */
+        class TextChoiceDbo implements ITextChoiceDbo {
+
+            /**
+             * Constructs a new TextChoiceDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v3.EffectDbo.ITextChoiceDbo);
+
+            /** TextChoiceDbo id. */
+            public id: string;
+
+            /** TextChoiceDbo level. */
+            public level: number;
+
+            /** TextChoiceDbo key. */
+            public key: string;
+
+            /** TextChoiceDbo label. */
+            public label: string;
+
+            /** TextChoiceDbo type. */
+            public type: string;
+
+            /**
+             * Creates a new TextChoiceDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns TextChoiceDbo instance
+             */
+            public static create(properties?: v3.EffectDbo.ITextChoiceDbo): v3.EffectDbo.TextChoiceDbo;
+
+            /**
+             * Encodes the specified TextChoiceDbo message. Does not implicitly {@link v3.EffectDbo.TextChoiceDbo.verify|verify} messages.
+             * @param message TextChoiceDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v3.EffectDbo.TextChoiceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified TextChoiceDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.TextChoiceDbo.verify|verify} messages.
+             * @param message TextChoiceDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v3.EffectDbo.TextChoiceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a TextChoiceDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns TextChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.EffectDbo.TextChoiceDbo;
+
+            /**
+             * Decodes a TextChoiceDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns TextChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.EffectDbo.TextChoiceDbo;
+
+            /**
+             * Verifies a TextChoiceDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a TextChoiceDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns TextChoiceDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v3.EffectDbo.TextChoiceDbo;
+
+            /**
+             * Creates a plain object from a TextChoiceDbo message. Also converts values to other types if specified.
+             * @param message TextChoiceDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v3.EffectDbo.TextChoiceDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this TextChoiceDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for TextChoiceDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a SelectChoiceDbo. */
+        interface ISelectChoiceDbo {
+
+            /** SelectChoiceDbo id */
+            id?: (string|null);
+
+            /** SelectChoiceDbo level */
+            level?: (number|null);
+
+            /** SelectChoiceDbo label */
+            label?: (string|null);
+
+            /** SelectChoiceDbo references */
+            references?: (string[]|null);
+
+            /** SelectChoiceDbo type */
+            type?: (string|null);
+        }
+
+        /** Represents a SelectChoiceDbo. */
+        class SelectChoiceDbo implements ISelectChoiceDbo {
+
+            /**
+             * Constructs a new SelectChoiceDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v3.EffectDbo.ISelectChoiceDbo);
+
+            /** SelectChoiceDbo id. */
+            public id: string;
+
+            /** SelectChoiceDbo level. */
+            public level: number;
+
+            /** SelectChoiceDbo label. */
+            public label: string;
+
+            /** SelectChoiceDbo references. */
+            public references: string[];
+
+            /** SelectChoiceDbo type. */
+            public type: string;
+
+            /**
+             * Creates a new SelectChoiceDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns SelectChoiceDbo instance
+             */
+            public static create(properties?: v3.EffectDbo.ISelectChoiceDbo): v3.EffectDbo.SelectChoiceDbo;
+
+            /**
+             * Encodes the specified SelectChoiceDbo message. Does not implicitly {@link v3.EffectDbo.SelectChoiceDbo.verify|verify} messages.
+             * @param message SelectChoiceDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v3.EffectDbo.SelectChoiceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified SelectChoiceDbo message, length delimited. Does not implicitly {@link v3.EffectDbo.SelectChoiceDbo.verify|verify} messages.
+             * @param message SelectChoiceDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v3.EffectDbo.SelectChoiceDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a SelectChoiceDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns SelectChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v3.EffectDbo.SelectChoiceDbo;
+
+            /**
+             * Decodes a SelectChoiceDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns SelectChoiceDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v3.EffectDbo.SelectChoiceDbo;
+
+            /**
+             * Verifies a SelectChoiceDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a SelectChoiceDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns SelectChoiceDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v3.EffectDbo.SelectChoiceDbo;
+
+            /**
+             * Creates a plain object from a SelectChoiceDbo message. Also converts values to other types if specified.
+             * @param message SelectChoiceDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v3.EffectDbo.SelectChoiceDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this SelectChoiceDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for SelectChoiceDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
     }
 }
 

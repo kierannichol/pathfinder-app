@@ -1,9 +1,31 @@
 {
   "id": "race:goblin",
   "name": "Goblin",
-  "size": 4,
-  "type": "Humanoid (goblinoid)",
-  "speed": 30,
-  "languages": ["Goblin"],
-  "traits": ["modifier:str_minus_2", "modifier:cha_minus_2", "modifier:darkvision"]
+  "type": "race",
+  "effects": [{
+    "setState": {
+      "key": "race",
+      "textValue": "race:goblin"
+    }
+  }, {
+    "setState": {
+      "key": "size",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "key": "speed:base",
+      "numericValue": 30
+    }
+  }, {
+    "adjustState": {
+      "key": "str:race",
+      "delta": -2
+    }
+  }, {
+    "adjustState": {
+      "key": "cha:race",
+      "delta": -2
+    }
+  }]
 }

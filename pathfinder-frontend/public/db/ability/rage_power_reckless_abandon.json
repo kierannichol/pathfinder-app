@@ -1,6 +1,12 @@
 {
   "id": "rage_power:reckless_abandon",
   "name": "Reckless Abandon",
-  "type": "ABILITY_TYPE_EX",
-  "description": "Take a penalty to AC for extra accuracy while raging"
+  "type": "ability",
+  "descriptionText": "Take a penalty to AC for extra accuracy while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:reckless_abandon",
+      "delta": 1
+    }
+  }]
 }

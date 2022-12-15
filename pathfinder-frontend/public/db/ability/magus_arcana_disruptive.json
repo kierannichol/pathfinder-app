@@ -1,7 +1,13 @@
 {
   "id": "magus_arcana:disruptive",
   "name": "Disruptive",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:magus \u003e\u003d 6",
-  "description": "Gain Disruptive as a bonus feat"
+  "prerequisiteFormula": "@class:magus \u003e\u003d 6",
+  "type": "ability",
+  "descriptionText": "Gain Disruptive as a bonus feat",
+  "effects": [{
+    "adjustState": {
+      "key": "magus_arcana:disruptive",
+      "delta": 1
+    }
+  }]
 }

@@ -1,10 +1,16 @@
 {
   "id": "feat:performing_combatant",
   "name": "Performing Combatant",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You treat every combat as a performance, bringing flare and showmanship.",
-  "prerequisites": "Dazzling Display, any one performance feat.",
-  "prerequisitesFormula": "@feat:dazzling_display AND (0)",
-  "benefit": "You can make performance combat checks in any combat. When making a performance check outside of performance combat, you can pick a single performance feat to use. You automatically gain any bonus on the performance combat check the feat grants, and then you make a DC 20 performance combat check. On a success, you gain the full effect of the performance feat you chose.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@feat:dazzling_display AND (0)",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You treat every combat as a performance, bringing flare and showmanship.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:performing_combatant",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can make performance combat checks in any combat. When making a performance check outside of performance combat, you can pick a single performance feat to use. You automatically gain any bonus on the performance combat check the feat grants, and then you make a DC 20 performance combat check. On a success, you gain the full effect of the performance feat you chose."
 }

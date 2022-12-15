@@ -1,16 +1,14 @@
 import {useEffect, useState} from "react";
 import {useCharacterRepository} from "../app/reactCharacter";
 import AbilityScoreSelectButton from "../components/character/AbilityScoreSelectButton";
-import AlignmentSelectButton from "../components/character/AlignmentSelectButton";
+import CharacterTextInput from "../components/character/base/CharacterTextInput";
 import CharacterAttributeChoiceInputs from "../components/character/CharacterAttributeChoiceInputs";
-import CharacterClassSelectButton from "../components/character/CharacterClassSelectButton";
-import CharacterNameChoiceInput from "../components/character/CharacterNameChoiceInput";
-import CharacterRaceSelectButton from "../components/character/CharacterRaceSelectButton";
+import DataChoiceSelectButton from "../components/character/DataChoiceSelectButton";
 import CharacterLevel from "../components/character/edit/CharacterLevel";
 import LoadingBlock from "../components/common/LoadingBlock";
-import {Character} from "../model/character/Character";
-import {CharacterAtLevel} from "../model/character/CharacterAtLevel";
-import CharacterChoice from "../model/character/choices/CharacterChoice";
+import Character from "../v3/model/Character";
+import CharacterAtLevel from "../v3/model/CharacterAtLevel";
+import {SelectChoice} from "../v3/model/Choice";
 import "./CharacterEditView.scss";
 
 interface CharacterEditViewProps {
@@ -47,6 +45,11 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
     }
   }, [character]);
 
+  const nameChoice = character.choice('level0:character_name');
+  const raceChoice = character.choice('level0:race') as SelectChoice;
+  const classChoice = character.choice('level0:class_1') as SelectChoice;
+  const alignmentChoice = character.choice('level0:alignment') as SelectChoice;
+
   if (character0 === undefined) {
     return <main><LoadingBlock/></main>
   }
@@ -55,23 +58,33 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
     <fieldset>
       <legend>Character Information</legend>
       <div className='section'>
-        <label htmlFor={'character_name'}>Character Name</label>
-        <CharacterNameChoiceInput
-            id={'character_name'}
-            value={character0.get('character_name')?.asText() ?? ''}
-            onChange={(value: string) => selectChoice(CharacterChoice.CHARACTER_NAME, value)} />
+        {nameChoice && <>
+          <label htmlFor={'character_name'}>Character Name</label>
+          <CharacterTextInput
+              value={nameChoice.current}
+              onChange={(value: string) => selectChoice(nameChoice.id, value)} />
+        </>}
+        {raceChoice && <>
         <label htmlFor={'character_race'}>Race</label>
-        <CharacterRaceSelectButton
-            value={character0.get('race')?.asText()}
-            onSelect={value => selectChoice(CharacterChoice.RACE, value)} />
+        <DataChoiceSelectButton
+            choice={raceChoice}
+            characterAtLevel={character0}
+            onSelect={value => selectChoice(raceChoice.id, value)} />
+        </>}
+        {classChoice && <>
         <label htmlFor={'character_class'}>Class</label>
-        <CharacterClassSelectButton
-            value={character0.get('class_1')?.asText()}
-            onSelect={value => selectChoice(CharacterChoice.CLASS_1, value)} />
+        <DataChoiceSelectButton
+            choice={classChoice}
+            characterAtLevel={character0}
+            onSelect={value => selectChoice(classChoice.id, value)} />
+        </>}
+        {alignmentChoice && <>
         <label htmlFor={'alignment'}>Alignment</label>
-        <AlignmentSelectButton
-            value={character.getChoice(CharacterChoice.CHARACTER_ALIGNMENT)}
-            onSelect={value => selectChoice(CharacterChoice.CHARACTER_ALIGNMENT, value)} />
+        <DataChoiceSelectButton
+            choice={alignmentChoice}
+            characterAtLevel={character0}
+            onSelect={value => selectChoice(alignmentChoice.id, value)} />
+        </>}
       </div>
     </fieldset>
     <fieldset>
@@ -81,12 +94,12 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
             characterAtLevel={character0}
             onCommit={(ability, value) => selectChoice(`level0:${ability}_base`, value)} />
 
-        {character.hasChoice(CharacterChoice.RACE_ABILITY_SCORE_INCREASE) &&
+        {character.choice("level0:race_asi") &&
             <>
               <label>Ability Score Increase</label>
               <AbilityScoreSelectButton
-                  value={character.getChoice(CharacterChoice.RACE_ABILITY_SCORE_INCREASE)}
-                  onSelect={(value: string) => selectChoice(CharacterChoice.RACE_ABILITY_SCORE_INCREASE, value)} />
+                  value={character.choice("level0:race_asi")?.current}
+                  onSelect={(value: string) => selectChoice("level0:race_asi", value)} />
             </>
         }
       </div>

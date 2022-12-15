@@ -1,0 +1,1165 @@
+{
+  "id": "class:wizard",
+  "name": "Wizard",
+  "children": [{
+    "id": "ability:cantrips#wizard",
+    "name": "Cantrips",
+    "descriptionText": "Wizards can prepare a number of cantrips, or 0-level spells, each day, as noted on Table: Wizard under “Spells per Day.\" These spells are cast like any other spell, but they are not expended when cast and may be used again. A wizard can prepare a cantrip from an opposition school, but it uses up two of his available slots (see below).",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:cantrips#wizard",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:arcane_school#wizard",
+    "name": "Arcane School",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:arcane_school#wizard",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_feat#wizard",
+    "name": "Bonus Feat",
+    "descriptionText": "At 5th, 10th, 15th, and 20th level, a wizard gains a bonus feat. At each such opportunity, he can choose a metamagic feat, an item creation, or Spell Mastery. The wizard must still meet all prerequisites for a bonus feat, including caster level minimums. These bonus feats are in addition to the feats that a character of any class gets from advancing levels. The wizard is not limited to the categories of Item Creation Feats, Metamagic Feats, or Spell Mastery when choosing those feats.A wizard may also choose an Arcane Discovery that he qualifies for in place of a bonus feat at these levels.",
+    "effects": [{
+      "adjustState": {
+        "level": 20,
+        "key": "ability:bonus_feat#wizard",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_feat#wizard",
+    "name": "Bonus Feat",
+    "descriptionText": "At 5th, 10th, 15th, and 20th level, a wizard gains a bonus feat. At each such opportunity, he can choose a metamagic feat, an item creation, or Spell Mastery. The wizard must still meet all prerequisites for a bonus feat, including caster level minimums. These bonus feats are in addition to the feats that a character of any class gets from advancing levels. The wizard is not limited to the categories of Item Creation Feats, Metamagic Feats, or Spell Mastery when choosing those feats.A wizard may also choose an Arcane Discovery that he qualifies for in place of a bonus feat at these levels.",
+    "effects": [{
+      "adjustState": {
+        "level": 10,
+        "key": "ability:bonus_feat#wizard",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:arcane_bond#wizard",
+    "name": "Arcane Bond",
+    "effects": [{
+      "adjustState": {
+        "level": 1,
+        "key": "ability:arcane_bond#wizard",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_feat#wizard",
+    "name": "Bonus Feat",
+    "descriptionText": "At 5th, 10th, 15th, and 20th level, a wizard gains a bonus feat. At each such opportunity, he can choose a metamagic feat, an item creation, or Spell Mastery. The wizard must still meet all prerequisites for a bonus feat, including caster level minimums. These bonus feats are in addition to the feats that a character of any class gets from advancing levels. The wizard is not limited to the categories of Item Creation Feats, Metamagic Feats, or Spell Mastery when choosing those feats.A wizard may also choose an Arcane Discovery that he qualifies for in place of a bonus feat at these levels.",
+    "effects": [{
+      "adjustState": {
+        "level": 5,
+        "key": "ability:bonus_feat#wizard",
+        "delta": 1
+      }
+    }]
+  }, {
+    "id": "ability:bonus_feat#wizard",
+    "name": "Bonus Feat",
+    "descriptionText": "At 5th, 10th, 15th, and 20th level, a wizard gains a bonus feat. At each such opportunity, he can choose a metamagic feat, an item creation, or Spell Mastery. The wizard must still meet all prerequisites for a bonus feat, including caster level minimums. These bonus feats are in addition to the feats that a character of any class gets from advancing levels. The wizard is not limited to the categories of Item Creation Feats, Metamagic Feats, or Spell Mastery when choosing those feats.A wizard may also choose an Arcane Discovery that he qualifies for in place of a bonus feat at these levels.",
+    "effects": [{
+      "adjustState": {
+        "level": 15,
+        "key": "ability:bonus_feat#wizard",
+        "delta": 1
+      }
+    }]
+  }],
+  "type": "class",
+  "descriptionText": "While universalist wizards might study to prepare themselves for any manner of danger, specialist wizards research schools of magic that make them exceptionally skilled within a specific focus. Yet no matter their specialty, all wizards are masters of the impossible and can aid their allies in overcoming any danger.",
+  "effects": [{
+    "setState": {
+      "key": "class_1",
+      "textValue": "class:wizard"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 2,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 3,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 4,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 6,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 7,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 8,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 9,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 11,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 12,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 13,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 14,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 16,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 17,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 18,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 19,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "class:wizard",
+      "delta": 1
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:feat",
+      "level": 1,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:feat",
+      "level": 3,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:feat",
+      "level": 5,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:feat",
+      "level": 7,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:feat",
+      "level": 9,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:feat",
+      "level": 11,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:feat",
+      "level": 13,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:feat",
+      "level": 15,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:feat",
+      "level": 17,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:feat",
+      "level": 19,
+      "label": "Feat",
+      "references": ["feat/*"],
+      "type": "feat"
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:appraise",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:craft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:fly",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:knowledge",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:linguistics",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:profession",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "key": "trained:skill:spellcraft",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "bab",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "fort:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "ref:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 1,
+      "key": "will:base",
+      "numericValue": 2
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:0",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level1:skill:1",
+      "level": 1,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:arcane_bond#wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:arcane_school#wizard",
+      "delta": 1
+    }
+  }, {
+    "adjustState": {
+      "level": 1,
+      "key": "ability:cantrips#wizard",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "bab",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "fort:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "ref:base",
+      "numericValue": 0
+    }
+  }, {
+    "setState": {
+      "level": 2,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:0",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level2:skill:1",
+      "level": 2,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "bab",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "fort:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "ref:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 3,
+      "key": "will:base",
+      "numericValue": 3
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:0",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level3:skill:1",
+      "level": 3,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "bab",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "fort:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "ref:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 4,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:0",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level4:skill:1",
+      "level": 4,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "bab",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "fort:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "ref:base",
+      "numericValue": 1
+    }
+  }, {
+    "setState": {
+      "level": 5,
+      "key": "will:base",
+      "numericValue": 4
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:0",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level5:skill:1",
+      "level": 5,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 5,
+      "key": "ability:bonus_feat#wizard",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 6,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:0",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level6:skill:1",
+      "level": 6,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "bab",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 7,
+      "key": "will:base",
+      "numericValue": 5
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:0",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level7:skill:1",
+      "level": 7,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "bab",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "fort:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "ref:base",
+      "numericValue": 2
+    }
+  }, {
+    "setState": {
+      "level": 8,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:0",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level8:skill:1",
+      "level": 8,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "bab",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 9,
+      "key": "will:base",
+      "numericValue": 6
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:0",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level9:skill:1",
+      "level": 9,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "bab",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 10,
+      "key": "will:base",
+      "numericValue": 7
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:0",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level10:skill:1",
+      "level": 10,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 10,
+      "key": "ability:bonus_feat#wizard",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "bab",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "fort:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "ref:base",
+      "numericValue": 3
+    }
+  }, {
+    "setState": {
+      "level": 11,
+      "key": "will:base",
+      "numericValue": 7
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:0",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level11:skill:1",
+      "level": 11,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 12,
+      "key": "will:base",
+      "numericValue": 8
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:0",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level12:skill:1",
+      "level": 12,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "bab",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 13,
+      "key": "will:base",
+      "numericValue": 8
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:0",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level13:skill:1",
+      "level": 13,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "bab",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "fort:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "ref:base",
+      "numericValue": 4
+    }
+  }, {
+    "setState": {
+      "level": 14,
+      "key": "will:base",
+      "numericValue": 9
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:0",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level14:skill:1",
+      "level": 14,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "bab",
+      "numericValue": 7
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 15,
+      "key": "will:base",
+      "numericValue": 9
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:0",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level15:skill:1",
+      "level": 15,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 15,
+      "key": "ability:bonus_feat#wizard",
+      "delta": 1
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "bab",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 16,
+      "key": "will:base",
+      "numericValue": 10
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:0",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level16:skill:1",
+      "level": 16,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "bab",
+      "numericValue": 8
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "fort:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "ref:base",
+      "numericValue": 5
+    }
+  }, {
+    "setState": {
+      "level": 17,
+      "key": "will:base",
+      "numericValue": 10
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:0",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level17:skill:1",
+      "level": 17,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 18,
+      "key": "will:base",
+      "numericValue": 11
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:0",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level18:skill:1",
+      "level": 18,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "bab",
+      "numericValue": 9
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 19,
+      "key": "will:base",
+      "numericValue": 11
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:0",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level19:skill:1",
+      "level": 19,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "bab",
+      "numericValue": 10
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "fort:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "ref:base",
+      "numericValue": 6
+    }
+  }, {
+    "setState": {
+      "level": 20,
+      "key": "will:base",
+      "numericValue": 12
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:0",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "selectChoice": {
+      "id": "level20:skill:1",
+      "level": 20,
+      "label": "Skill",
+      "references": ["skill/*"],
+      "type": "skill"
+    }
+  }, {
+    "adjustState": {
+      "level": 20,
+      "key": "ability:bonus_feat#wizard",
+      "delta": 1
+    }
+  }]
+}

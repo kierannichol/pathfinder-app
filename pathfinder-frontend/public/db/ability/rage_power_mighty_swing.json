@@ -1,7 +1,13 @@
 {
   "id": "rage_power:mighty_swing",
   "name": "Mighty Swing",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 12",
-  "description": "Automatically confirm a critical hit"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 12",
+  "type": "ability",
+  "descriptionText": "Automatically confirm a critical hit",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:mighty_swing",
+      "delta": 1
+    }
+  }]
 }

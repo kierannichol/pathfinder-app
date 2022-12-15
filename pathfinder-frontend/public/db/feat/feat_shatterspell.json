@@ -1,10 +1,16 @@
 {
   "id": "feat:shatterspell",
   "name": "Shatterspell",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Your mighty blows shatter your enemy\u0027s magic.",
-  "prerequisites": "Disruptive, Spellbreaker, dwarf, 10th-level fighter.",
-  "prerequisitesFormula": "@magus_arcana:disruptive AND @magus_arcana:spellbreaker AND @race:dwarf AND @class:fighter \u003e\u003d 10",
-  "benefit": "As a standard action, you can attempt to sunder an ongoing spell effect as if you had the spell sunder rage power (Ultimate Combat 28). You may use this feat once per day, plus one additional time per day for every 5 points by which your base attack bonus exceeds +10.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@magus_arcana:disruptive AND @magus_arcana:spellbreaker AND @race:dwarf AND @class:fighter \u003e\u003d 10",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Your mighty blows shatter your enemy\u0027s magic.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:shatterspell",
+      "delta": 1
+    }
+  }],
+  "benefitText": "As a standard action, you can attempt to sunder an ongoing spell effect as if you had the spell sunder rage power (Ultimate Combat 28). You may use this feat once per day, plus one additional time per day for every 5 points by which your base attack bonus exceeds +10."
 }

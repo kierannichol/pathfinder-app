@@ -1,2589 +1,3163 @@
 {
-  "abilitySummaries": [{
-    "id": "rage_power:powerful_blow",
-    "name": "Powerful Blow",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:superstition",
-    "name": "Superstition",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:lesser_chaos_totem",
-    "name": "Lesser Chaos Totem",
-    "type": "ABILITY_TYPE_SU"
-  }, {
-    "id": "rage_power:dragon_totem",
-    "name": "Dragon Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:animal_fury AND @rage_power:intimidating_glare"
-  }, {
-    "id": "rage_power:disruptive",
-    "name": "Disruptive",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:superstition"
-  }, {
-    "id": "rage_power:energy_eruption",
-    "name": "Energy Eruption",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 16 AND @rage_power:energy_absorption"
-  }, {
-    "id": "rage_power:rolling_dodge",
-    "name": "Rolling Dodge",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:fjord_linnorm_death_curse",
-    "name": "Fjord Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:ice_linnorm_death_curse",
-    "name": "Ice Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:boasting_taunt",
-    "name": "Boasting Taunt",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6"
-  }, {
-    "id": "rage_power:greater_hurling",
-    "name": "Greater Hurling",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:hurling"
-  }, {
-    "id": "rage_power:bleeding_blow",
-    "name": "Bleeding Blow",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow"
-  }, {
-    "id": "rage_power:primal_scent",
-    "name": "Primal Scent",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:scent"
-  }, {
-    "id": "rage_power:battle_roar",
-    "name": "Battle Roar",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:intimidating_glare"
-  }, {
-    "id": "rage_power:greater_ferocious_trample",
-    "name": "Greater Ferocious Trample",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:ferocious_trample"
-  }, {
-    "id": "rage_power:no_escape",
-    "name": "No Escape",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:flesh_wound",
-    "name": "Flesh Wound",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10"
-  }, {
-    "id": "rage_power:roaring_drunk",
-    "name": "Roaring Drunk",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:clear_mind",
-    "name": "Clear Mind",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:greater_beast_totem",
-    "name": "Greater Beast Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:beast_totem"
-  }, {
-    "id": "rage_power:good_for_what_ails_you",
-    "name": "Good for What Ails You",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:knockdown",
-    "name": "Knockdown",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:raging_swimmer",
-    "name": "Raging Swimmer",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:greater_elemental_rage",
-    "name": "Greater Elemental Rage",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:elemental_rage"
-  }, {
-    "id": "rage_power:liquid_courage",
-    "name": "Liquid Courage",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:hurling",
-    "name": "Hurling",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_hurling"
-  }, {
-    "id": "rage_power:hive_totem_toxicity",
-    "name": "Hive Totem Toxicity",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:hive_totem AND @rage_power:hive_totem_resilience"
-  }, {
-    "id": "rage_power:low_light_vision",
-    "name": "Low-Light Vision",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:auspicious_mark",
-    "name": "Auspicious Mark",
-    "type": "ABILITY_TYPE_SU"
-  }, {
-    "id": "rage_power:animal_fury",
-    "name": "Animal Fury",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:raging_climber",
-    "name": "Raging Climber",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:crag_linnorm_death_curse",
-    "name": "Crag Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:lesser_elemental_rage",
-    "name": "Lesser Elemental Rage",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:elemental_rage",
-    "name": "Elemental Rage",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_elemental_rage"
-  }, {
-    "id": "rage_power:deadly_accuracy",
-    "name": "Deadly Accuracy",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:surprise_accuracy"
-  }, {
-    "id": "rage_power:fiend_totem",
-    "name": "Fiend Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_fiend_totem"
-  }, {
-    "id": "rage_power:dragon_totem_resilience",
-    "name": "Dragon Totem Resilience",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:dragon_totem"
-  }, {
-    "id": "rage_power:greater_energy_resistance",
-    "name": "Greater Energy Resistance",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:energy_resistance"
-  }, {
-    "id": "rage_power:dragon_totem_wings",
-    "name": "Dragon Totem Wings",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:dragon_totem AND @rage_power:dragon_totem_resilience"
-  }, {
-    "id": "rage_power:greater_ferocious_mount",
-    "name": "Greater Ferocious Mount",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_mount"
-  }, {
-    "id": "rage_power:inspire_ferocity",
-    "name": "Inspire Ferocity",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@rage_power:reckless_abandon"
-  }, {
-    "id": "rage_power:roused_anger",
-    "name": "Roused Anger",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:tor_linnorm_death_curse",
-    "name": "Tor Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:cairn_linnorm_death_curse",
-    "name": "Cairn Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:world_serpent_totem_unity",
-    "name": "World Serpent Totem Unity",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_spirit AND @rage_power:world_serpent_totem"
-  }, {
-    "id": "rage_power:overbearing_advance",
-    "name": "Overbearing Advance",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:lesser_spirit_totem",
-    "name": "Lesser Spirit Totem",
-    "type": "ABILITY_TYPE_SU"
-  }, {
-    "id": "rage_power:witch_hunter",
-    "name": "Witch Hunter",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@rage_power:superstition"
-  }, {
-    "id": "rage_power:lesser_fiend_totem",
-    "name": "Lesser Fiend Totem",
-    "type": "ABILITY_TYPE_SU"
-  }, {
-    "id": "rage_power:greater_guarded_life",
-    "name": "Greater Guarded Life",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:guarded_life"
-  }, {
-    "id": "rage_power:mighty_swing",
-    "name": "Mighty Swing",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12"
-  }, {
-    "id": "rage_power:increased_damage_reduction",
-    "name": "Increased Damage Reduction",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:come_and_get_me",
-    "name": "Come and Get Me",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12"
-  }, {
-    "id": "rage_power:renewed_vigor",
-    "name": "Renewed Vigor",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:bestial_swimmer",
-    "name": "Bestial Swimmer",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_swimmer"
-  }, {
-    "id": "rage_power:hive_totem_resilience",
-    "name": "Hive Totem Resilience",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:hive_totem"
-  }, {
-    "id": "rage_power:beast_totem",
-    "name": "Beast Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_beast_totem"
-  }, {
-    "id": "rage_power:hive_totem",
-    "name": "Hive Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:animal_fury"
-  }, {
-    "id": "rage_power:unexpected_strike",
-    "name": "Unexpected Strike",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:reflexive_dodge",
-    "name": "Reflexive Dodge",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:rolling_dodge"
-  }, {
-    "id": "rage_power:greater_brawler",
-    "name": "Greater Brawler",
-    "prerequisitesFormula": "@class:brawler"
-  }, {
-    "id": "rage_power:surprise_accuracy",
-    "name": "Surprise Accuracy",
-    "type": "ABILITY_TYPE_EX"
-  }, {
+  "databaseId": "ability",
+  "summaries": [{
     "id": "rage_power:knockback",
     "name": "Knockback",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:reckless_abandon",
-    "name": "Reckless Abandon",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:overbearing_onslaught",
-    "name": "Overbearing Onslaught",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:overbearing_advance"
-  }, {
-    "id": "rage_power:raging_leaper",
-    "name": "Raging Leaper",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:spirit_steed",
-    "name": "Spirit Steed",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:ferocious_mount"
-  }, {
-    "id": "rage_power:world_serpent_spirit",
-    "name": "World Serpent Spirit",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_totem"
-  }, {
-    "id": "rage_power:staggering_drunk",
-    "name": "Staggering Drunk",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:world_serpent_totem",
-    "name": "World Serpent Totem",
-    "type": "ABILITY_TYPE_SU"
-  }, {
-    "id": "rage_power:body_bludgeon",
-    "name": "Body Bludgeon",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10"
-  }, {
-    "id": "rage_power:smasher",
-    "name": "Smasher",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:renewed_life",
-    "name": "Renewed Life",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vitality"
-  }, {
-    "id": "rage_power:spirit_totem",
-    "name": "Spirit Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spirit_totem"
-  }, {
-    "id": "rage_power:guarded_stance",
-    "name": "Guarded Stance",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:raging_flier",
-    "name": "Raging Flier",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper"
-  }, {
-    "id": "rage_power:ghost_rager",
-    "name": "Ghost Rager",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:superstition"
-  }, {
-    "id": "rage_power:quick_reflexes",
-    "name": "Quick Reflexes",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:bestial_climber",
-    "name": "Bestial Climber",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_climber"
-  }, {
-    "id": "rage_power:spellbreaker",
-    "name": "Spellbreaker",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @magus_arcana:disruptive"
-  }, {
-    "id": "rage_power:intimidating_glare",
-    "name": "Intimidating Glare",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:chaos_totem",
-    "name": "Chaos Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_chaos_totem"
-  }, {
-    "id": "rage_power:night_vision",
-    "name": "Night Vision",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "(@rage_power:low_light_vision OR @trait:low_light_vision)"
-  }, {
-    "id": "rage_power:swift_foot",
-    "name": "Swift Foot",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:bestial_leaper",
-    "name": "Bestial Leaper",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper"
-  }, {
-    "id": "rage_power:lethal_accuracy",
-    "name": "Lethal Accuracy",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 16 AND @rage_power:deadly_accuracy AND @rage_power:surprise_accuracy"
-  }, {
-    "id": "rage_power:tarn_linnorm_death_curse",
-    "name": "Tarn Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:scent",
-    "name": "Scent",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:energy_resistance",
-    "name": "Energy Resistance",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:sharpened_accuracy",
-    "name": "Sharpened Accuracy",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:surprise_accuracy"
-  }, {
-    "id": "rage_power:energy_absorption",
-    "name": "Energy Absorption",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:greater_energy_resistance"
-  }, {
-    "id": "rage_power:greater_spirit_totem",
-    "name": "Greater Spirit Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:spirit_totem"
-  }, {
-    "id": "rage_power:perfect_clarity",
-    "name": "Perfect Clarity",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@rage_power:moment_of_clarity"
-  }, {
-    "id": "rage_power:sunder_enchantment",
-    "name": "Sunder Enchantment",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:spell_sunder"
-  }, {
-    "id": "rage_power:spell_sunder",
-    "name": "Spell Sunder",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:witch_hunter"
-  }, {
-    "id": "rage_power:strength_surge",
-    "name": "Strength Surge",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:moment_of_clarity",
-    "name": "Moment of Clarity",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:fierce_fortitude",
-    "name": "Fierce Fortitude",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:lesser_hurling",
-    "name": "Lesser Hurling",
-    "type": "ABILITY_TYPE_EX"
-  }, {
-    "id": "rage_power:ferocious_trample",
-    "name": "Ferocious Trample",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_mount"
-  }, {
-    "id": "rage_power:hurling_charge",
-    "name": "Hurling Charge",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_hurling"
-  }, {
-    "id": "rage_power:taiga_linnorm_death_curse",
-    "name": "Taiga Linnorm Death Curse",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4"
-  }, {
-    "id": "rage_power:renewed_vitality",
-    "name": "Renewed Vitality",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:renewed_vigor"
-  }, {
-    "id": "rage_power:ultimate_clarity",
-    "name": "Ultimate Clarity",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:moment_of_clarity AND @rage_power:perfect_clarity"
-  }, {
-    "id": "rage_power:terrifying_howl",
-    "name": "Terrifying Howl",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:intimidating_glare"
-  }, {
-    "id": "rage_power:internal_fortitude",
-    "name": "Internal Fortitude",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8"
-  }, {
-    "id": "rage_power:lesser_beast_totem",
-    "name": "Lesser Beast Totem",
-    "type": "ABILITY_TYPE_SU"
-  }, {
-    "id": "rage_power:crippling_blow",
-    "name": "Crippling Blow",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow"
-  }, {
-    "id": "rage_power:ground_breaker",
-    "name": "Ground Breaker",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6"
-  }, {
-    "id": "rage_power:brawler",
-    "name": "Brawler"
-  }, {
-    "id": "rage_power:sprint",
-    "name": "Sprint",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:swift_foot"
-  }, {
-    "id": "rage_power:greater_chaos_totem",
-    "name": "Greater Chaos Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:chaos_totem"
-  }, {
-    "id": "rage_power:eater_of_magic",
-    "name": "Eater of Magic",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:superstition"
-  }, {
-    "id": "rage_power:fearless_rage",
-    "name": "Fearless Rage",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 12"
+    "type": "ability"
   }, {
     "id": "rage_power:greater_ground_breaker",
     "name": "Greater Ground Breaker",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ground_breaker"
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ground_breaker",
+    "type": "ability"
+  }, {
+    "id": "rage_power:overbearing_advance",
+    "name": "Overbearing Advance",
+    "type": "ability"
+  }, {
+    "id": "rage_power:brawler",
+    "name": "Brawler",
+    "type": "ability"
+  }, {
+    "id": "rage_power:guarded_stance",
+    "name": "Guarded Stance",
+    "type": "ability"
+  }, {
+    "id": "rage_power:reflexive_dodge",
+    "name": "Reflexive Dodge",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:rolling_dodge",
+    "type": "ability"
+  }, {
+    "id": "rage_power:renewed_life",
+    "name": "Renewed Life",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vitality",
+    "type": "ability"
+  }, {
+    "id": "rage_power:scent",
+    "name": "Scent",
+    "type": "ability"
+  }, {
+    "id": "rage_power:hurling_charge",
+    "name": "Hurling Charge",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_hurling",
+    "type": "ability"
+  }, {
+    "id": "rage_power:surprise_accuracy",
+    "name": "Surprise Accuracy",
+    "type": "ability"
+  }, {
+    "id": "rage_power:fearless_rage",
+    "name": "Fearless Rage",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lesser_fiend_totem",
+    "name": "Lesser Fiend Totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:witch_hunter",
+    "name": "Witch Hunter",
+    "prerequisiteFormula": "@rage_power:superstition",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_spirit_totem",
+    "name": "Greater Spirit Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:spirit_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:night_vision",
+    "name": "Night Vision",
+    "prerequisiteFormula": "(@rage_power:low_light_vision OR @trait:low_light_vision)",
+    "type": "ability"
+  }, {
+    "id": "rage_power:body_bludgeon",
+    "name": "Body Bludgeon",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10",
+    "type": "ability"
+  }, {
+    "id": "rage_power:fiend_totem",
+    "name": "Fiend Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_fiend_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:renewed_vigor",
+    "name": "Renewed Vigor",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
+  }, {
+    "id": "rage_power:fierce_fortitude",
+    "name": "Fierce Fortitude",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:spirit_steed",
+    "name": "Spirit Steed",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:ferocious_mount",
+    "type": "ability"
+  }, {
+    "id": "rage_power:ultimate_clarity",
+    "name": "Ultimate Clarity",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:moment_of_clarity AND @rage_power:perfect_clarity",
+    "type": "ability"
+  }, {
+    "id": "rage_power:overbearing_onslaught",
+    "name": "Overbearing Onslaught",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:overbearing_advance",
+    "type": "ability"
+  }, {
+    "id": "rage_power:smasher",
+    "name": "Smasher",
+    "type": "ability"
+  }, {
+    "id": "rage_power:bestial_climber",
+    "name": "Bestial Climber",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_climber",
+    "type": "ability"
+  }, {
+    "id": "rage_power:quick_reflexes",
+    "name": "Quick Reflexes",
+    "type": "ability"
+  }, {
+    "id": "rage_power:hurling",
+    "name": "Hurling",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_hurling",
+    "type": "ability"
+  }, {
+    "id": "rage_power:liquid_courage",
+    "name": "Liquid Courage",
+    "type": "ability"
+  }, {
+    "id": "rage_power:disruptive",
+    "name": "Disruptive",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:superstition",
+    "type": "ability"
+  }, {
+    "id": "rage_power:hive_totem_resilience",
+    "name": "Hive Totem Resilience",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:hive_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:inspire_ferocity",
+    "name": "Inspire Ferocity",
+    "prerequisiteFormula": "@rage_power:reckless_abandon",
+    "type": "ability"
+  }, {
+    "id": "rage_power:perfect_clarity",
+    "name": "Perfect Clarity",
+    "prerequisiteFormula": "@rage_power:moment_of_clarity",
+    "type": "ability"
+  }, {
+    "id": "rage_power:raging_leaper",
+    "name": "Raging Leaper",
+    "type": "ability"
+  }, {
+    "id": "rage_power:spirit_totem",
+    "name": "Spirit Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spirit_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:staggering_drunk",
+    "name": "Staggering Drunk",
+    "type": "ability"
+  }, {
+    "id": "rage_power:bestial_swimmer",
+    "name": "Bestial Swimmer",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_swimmer",
+    "type": "ability"
+  }, {
+    "id": "rage_power:beast_totem",
+    "name": "Beast Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_beast_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:strength_surge",
+    "name": "Strength Surge",
+    "type": "ability"
+  }, {
+    "id": "rage_power:fjord_linnorm_death_curse",
+    "name": "Fjord Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
   }, {
     "id": "rage_power:ferocious_mount",
     "name": "Ferocious Mount",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
-    "id": "rage_power:greater_fiend_totem",
-    "name": "Greater Fiend Totem",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:fiend_totem"
+    "id": "rage_power:tarn_linnorm_death_curse",
+    "name": "Tarn Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
+  }, {
+    "id": "rage_power:deadly_accuracy",
+    "name": "Deadly Accuracy",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:surprise_accuracy",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_elemental_rage",
+    "name": "Greater Elemental Rage",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:elemental_rage",
+    "type": "ability"
+  }, {
+    "id": "rage_power:world_serpent_spirit",
+    "name": "World Serpent Spirit",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lesser_elemental_rage",
+    "name": "Lesser Elemental Rage",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
+  }, {
+    "id": "rage_power:raging_flier",
+    "name": "Raging Flier",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper",
+    "type": "ability"
+  }, {
+    "id": "rage_power:elemental_rage",
+    "name": "Elemental Rage",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_elemental_rage",
+    "type": "ability"
+  }, {
+    "id": "rage_power:dragon_totem",
+    "name": "Dragon Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:animal_fury AND @rage_power:intimidating_glare",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lesser_spirit_totem",
+    "name": "Lesser Spirit Totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:animal_fury",
+    "name": "Animal Fury",
+    "type": "ability"
+  }, {
+    "id": "rage_power:reckless_abandon",
+    "name": "Reckless Abandon",
+    "type": "ability"
+  }, {
+    "id": "rage_power:raging_swimmer",
+    "name": "Raging Swimmer",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_ferocious_trample",
+    "name": "Greater Ferocious Trample",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:ferocious_trample",
+    "type": "ability"
+  }, {
+    "id": "rage_power:increased_damage_reduction",
+    "name": "Increased Damage Reduction",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:eater_of_magic",
+    "name": "Eater of Magic",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:superstition",
+    "type": "ability"
+  }, {
+    "id": "rage_power:spell_sunder",
+    "name": "Spell Sunder",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:witch_hunter",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_brawler",
+    "name": "Greater Brawler",
+    "prerequisiteFormula": "@class:brawler",
+    "type": "ability"
+  }, {
+    "id": "rage_power:sharpened_accuracy",
+    "name": "Sharpened Accuracy",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:surprise_accuracy",
+    "type": "ability"
+  }, {
+    "id": "rage_power:sunder_enchantment",
+    "name": "Sunder Enchantment",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:spell_sunder",
+    "type": "ability"
+  }, {
+    "id": "rage_power:boasting_taunt",
+    "name": "Boasting Taunt",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6",
+    "type": "ability"
+  }, {
+    "id": "rage_power:cairn_linnorm_death_curse",
+    "name": "Cairn Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:energy_eruption",
+    "name": "Energy Eruption",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 16 AND @rage_power:energy_absorption",
+    "type": "ability"
+  }, {
+    "id": "rage_power:rolling_dodge",
+    "name": "Rolling Dodge",
+    "type": "ability"
+  }, {
+    "id": "rage_power:clear_mind",
+    "name": "Clear Mind",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:superstition",
+    "name": "Superstition",
+    "type": "ability"
+  }, {
+    "id": "rage_power:tor_linnorm_death_curse",
+    "name": "Tor Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:come_and_get_me",
+    "name": "Come and Get Me",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12",
+    "type": "ability"
+  }, {
+    "id": "rage_power:primal_scent",
+    "name": "Primal Scent",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:scent",
+    "type": "ability"
+  }, {
+    "id": "rage_power:ground_breaker",
+    "name": "Ground Breaker",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lesser_hurling",
+    "name": "Lesser Hurling",
+    "type": "ability"
+  }, {
+    "id": "rage_power:powerful_blow",
+    "name": "Powerful Blow",
+    "type": "ability"
+  }, {
+    "id": "rage_power:unexpected_strike",
+    "name": "Unexpected Strike",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:energy_resistance",
+    "name": "Energy Resistance",
+    "type": "ability"
+  }, {
+    "id": "rage_power:energy_absorption",
+    "name": "Energy Absorption",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:greater_energy_resistance",
+    "type": "ability"
+  }, {
+    "id": "rage_power:mighty_swing",
+    "name": "Mighty Swing",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12",
+    "type": "ability"
+  }, {
+    "id": "rage_power:auspicious_mark",
+    "name": "Auspicious Mark",
+    "type": "ability"
+  }, {
+    "id": "rage_power:internal_fortitude",
+    "name": "Internal Fortitude",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_guarded_life",
+    "name": "Greater Guarded Life",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:guarded_life",
+    "type": "ability"
+  }, {
+    "id": "rage_power:good_for_what_ails_you",
+    "name": "Good for What Ails You",
+    "type": "ability"
+  }, {
+    "id": "rage_power:spellbreaker",
+    "name": "Spellbreaker",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @magus_arcana:disruptive",
+    "type": "ability"
+  }, {
+    "id": "rage_power:no_escape",
+    "name": "No Escape",
+    "type": "ability"
+  }, {
+    "id": "rage_power:hive_totem_toxicity",
+    "name": "Hive Totem Toxicity",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:hive_totem AND @rage_power:hive_totem_resilience",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_beast_totem",
+    "name": "Greater Beast Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:beast_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:taiga_linnorm_death_curse",
+    "name": "Taiga Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
+  }, {
+    "id": "rage_power:world_serpent_totem_unity",
+    "name": "World Serpent Totem Unity",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_spirit AND @rage_power:world_serpent_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_energy_resistance",
+    "name": "Greater Energy Resistance",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:energy_resistance",
+    "type": "ability"
+  }, {
+    "id": "rage_power:ghost_rager",
+    "name": "Ghost Rager",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:superstition",
+    "type": "ability"
+  }, {
+    "id": "rage_power:crippling_blow",
+    "name": "Crippling Blow",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow",
+    "type": "ability"
+  }, {
+    "id": "rage_power:dragon_totem_resilience",
+    "name": "Dragon Totem Resilience",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:dragon_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:bleeding_blow",
+    "name": "Bleeding Blow",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow",
+    "type": "ability"
+  }, {
+    "id": "rage_power:knockdown",
+    "name": "Knockdown",
+    "type": "ability"
+  }, {
+    "id": "rage_power:ferocious_trample",
+    "name": "Ferocious Trample",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_mount",
+    "type": "ability"
   }, {
     "id": "rage_power:regenerative_vigor",
     "name": "Regenerative Vigor",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vigor"
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vigor",
+    "type": "ability"
+  }, {
+    "id": "rage_power:roaring_drunk",
+    "name": "Roaring Drunk",
+    "type": "ability"
+  }, {
+    "id": "rage_power:chaos_totem",
+    "name": "Chaos Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_chaos_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:roused_anger",
+    "name": "Roused Anger",
+    "type": "ability"
+  }, {
+    "id": "rage_power:sprint",
+    "name": "Sprint",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:swift_foot",
+    "type": "ability"
+  }, {
+    "id": "rage_power:flesh_wound",
+    "name": "Flesh Wound",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lesser_beast_totem",
+    "name": "Lesser Beast Totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:world_serpent_totem",
+    "name": "World Serpent Totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lesser_chaos_totem",
+    "name": "Lesser Chaos Totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:bestial_leaper",
+    "name": "Bestial Leaper",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_fiend_totem",
+    "name": "Greater Fiend Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:fiend_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:low_light_vision",
+    "name": "Low-Light Vision",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_chaos_totem",
+    "name": "Greater Chaos Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:chaos_totem",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_hurling",
+    "name": "Greater Hurling",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:hurling",
+    "type": "ability"
+  }, {
+    "id": "rage_power:lethal_accuracy",
+    "name": "Lethal Accuracy",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 16 AND @rage_power:deadly_accuracy AND @rage_power:surprise_accuracy",
+    "type": "ability"
+  }, {
+    "id": "rage_power:hive_totem",
+    "name": "Hive Totem",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:animal_fury",
+    "type": "ability"
+  }, {
+    "id": "rage_power:renewed_vitality",
+    "name": "Renewed Vitality",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:renewed_vigor",
+    "type": "ability"
+  }, {
+    "id": "rage_power:terrifying_howl",
+    "name": "Terrifying Howl",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:intimidating_glare",
+    "type": "ability"
+  }, {
+    "id": "rage_power:intimidating_glare",
+    "name": "Intimidating Glare",
+    "type": "ability"
+  }, {
+    "id": "rage_power:raging_climber",
+    "name": "Raging Climber",
+    "type": "ability"
+  }, {
+    "id": "rage_power:greater_ferocious_mount",
+    "name": "Greater Ferocious Mount",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_mount",
+    "type": "ability"
+  }, {
+    "id": "rage_power:swift_foot",
+    "name": "Swift Foot",
+    "type": "ability"
+  }, {
+    "id": "rage_power:battle_roar",
+    "name": "Battle Roar",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:intimidating_glare",
+    "type": "ability"
+  }, {
+    "id": "rage_power:ice_linnorm_death_curse",
+    "name": "Ice Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
+  }, {
+    "id": "rage_power:dragon_totem_wings",
+    "name": "Dragon Totem Wings",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:dragon_totem AND @rage_power:dragon_totem_resilience",
+    "type": "ability"
+  }, {
+    "id": "rage_power:crag_linnorm_death_curse",
+    "name": "Crag Linnorm Death Curse",
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4",
+    "type": "ability"
+  }, {
+    "id": "rage_power:moment_of_clarity",
+    "name": "Moment of Clarity",
+    "type": "ability"
   }, {
     "id": "discovery:acid_bomb",
-    "name": "Acid Bomb"
+    "name": "Acid Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:alchemical_simulacrum",
     "name": "Alchemical Simulacrum",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:alchemical_zombie",
     "name": "Alchemical Zombie",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:blinding_bomb",
     "name": "Blinding Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:bottled_ooze",
     "name": "Bottled Ooze",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:breath_weapon_bomb",
     "name": "Breath Weapon Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:chameleon",
-    "name": "Chameleon"
+    "name": "Chameleon",
+    "type": "ability"
   }, {
     "id": "discovery:cognatogen",
-    "name": "Cognatogen"
+    "name": "Cognatogen",
+    "type": "ability"
   }, {
     "id": "discovery:combine_extracts",
     "name": "Combine Extracts",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:concentrate_poison",
-    "name": "Concentrate Poison"
+    "name": "Concentrate Poison",
+    "type": "ability"
   }, {
     "id": "discovery:concussive_bomb",
     "name": "Concussive Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:confusion_bomb",
     "name": "Confusion Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:darkness_bomb",
-    "name": "Darkness Bomb"
+    "name": "Darkness Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:deadly_excretions",
     "name": "Deadly Excretions",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:defoliant_bomb",
-    "name": "Defoliant Bomb"
+    "name": "Defoliant Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:delayed_bomb",
     "name": "Delayed Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:dilution",
     "name": "Dilution",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "discovery:dispelling_bomb",
     "name": "Dispelling Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:doppelganger_simulacrum",
     "name": "Doppelganger Simulacrum",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:alchemical_simulacrum"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:alchemical_simulacrum",
+    "type": "ability"
   }, {
     "id": "discovery:elixir_of_life",
     "name": "Elixir of Life",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16",
+    "type": "ability"
   }, {
     "id": "discovery:enhance_potion",
-    "name": "Enhance Potion"
+    "name": "Enhance Potion",
+    "type": "ability"
   }, {
     "id": "discovery:eternal_potion",
     "name": "Eternal Potion",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:extend_potion"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:extend_potion",
+    "type": "ability"
   }, {
     "id": "discovery:explosive_bomb",
-    "name": "Explosive Bomb"
+    "name": "Explosive Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:explosive_missile",
     "name": "Explosive Missile",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 4"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 4",
+    "type": "ability"
   }, {
     "id": "discovery:extend_potion",
-    "name": "Extend Potion"
+    "name": "Extend Potion",
+    "type": "ability"
   }, {
     "id": "discovery:fast_bombs",
     "name": "Fast Bombs",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:feral_mutagen",
-    "name": "Feral Mutagen"
+    "name": "Feral Mutagen",
+    "type": "ability"
   }, {
     "id": "discovery:fire_brand",
     "name": "Fire Brand",
-    "prerequisitesFormula": "@race:goblin"
+    "prerequisiteFormula": "@race:goblin",
+    "type": "ability"
   }, {
     "id": "discovery:force_bomb",
     "name": "Force Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:frost_bomb",
-    "name": "Frost Bomb"
+    "name": "Frost Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:glassfoot_bomb",
-    "name": "Glassfoot Bomb"
+    "name": "Glassfoot Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:grand_cognatogen",
     "name": "Grand Cognatogen",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_cognatogen"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_cognatogen",
+    "type": "ability"
   }, {
     "id": "discovery:grand_inspiring_cognatogen",
     "name": "Grand Inspiring Cognatogen",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_inspiring_cognatogen"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_inspiring_cognatogen",
+    "type": "ability"
   }, {
     "id": "discovery:grand_mutagen",
     "name": "Grand Mutagen",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_mutagen"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:greater_mutagen",
+    "type": "ability"
   }, {
     "id": "discovery:greater_plague_bomb",
     "name": "Greater Plague Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:plague_bomb AND @discovery:smoke_bomb"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:plague_bomb AND @discovery:smoke_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:greater_alchemical_simulacrum",
     "name": "Greater Alchemical Simulacrum",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 14 AND @discovery:alchemical_simulacrum"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 14 AND @discovery:alchemical_simulacrum",
+    "type": "ability"
   }, {
     "id": "discovery:greater_cognatogen",
     "name": "Greater Cognatogen",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:cognatogen"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:cognatogen",
+    "type": "ability"
   }, {
     "id": "discovery:greater_inspiring_cognatogen",
     "name": "Greater Inspiring Cognatogen",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:inspiring_cognatogen"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:inspiring_cognatogen",
+    "type": "ability"
   }, {
     "id": "discovery:greater_mutagen",
     "name": "Greater Mutagen",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "discovery:healing_touch",
     "name": "Healing Touch",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6 AND @discovery:spontaneous_healing"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6 AND @discovery:spontaneous_healing",
+    "type": "ability"
   }, {
     "id": "discovery:immolation_bomb",
     "name": "Immolation Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 3"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 3",
+    "type": "ability"
   }, {
     "id": "discovery:inferno_bomb",
     "name": "Inferno Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:smoke_bomb"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 16 AND @discovery:smoke_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:infuse_mutagen",
-    "name": "Infuse Mutagen"
+    "name": "Infuse Mutagen",
+    "type": "ability"
   }, {
     "id": "discovery:infusion",
-    "name": "Infusion"
+    "name": "Infusion",
+    "type": "ability"
   }, {
     "id": "discovery:inspired_bomb",
     "name": "Inspired Bomb",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "discovery:inspiring_cognatogen",
     "name": "Inspiring Cognatogen",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "discovery:lingering_plague",
     "name": "Lingering Plague",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+    "type": "ability"
   }, {
     "id": "discovery:lingering_spirit",
     "name": "Lingering Spirit",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 4"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 4",
+    "type": "ability"
   }, {
     "id": "discovery:madness_bomb",
     "name": "Madness Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "discovery:mummification",
     "name": "Mummification",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:preserve_organs"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:preserve_organs",
+    "type": "ability"
   }, {
     "id": "discovery:mutagen",
-    "name": "Mutagen"
+    "name": "Mutagen",
+    "type": "ability"
   }, {
     "id": "discovery:nauseating_flesh",
     "name": "Nauseating Flesh",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "discovery:parasitic_twin",
     "name": "Parasitic Twin",
-    "prerequisitesFormula": "@discovery:vestigial_arm#2"
+    "prerequisiteFormula": "@discovery:vestigial_arm#2",
+    "type": "ability"
   }, {
     "id": "discovery:plague_bomb",
     "name": "Plague Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 8 AND @discovery:smoke_bomb"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 8 AND @discovery:smoke_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:poison_bomb",
     "name": "Poison Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:smoke_bomb"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:smoke_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:poison_conversion",
     "name": "Poison Conversion",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:precise_bombs",
-    "name": "Precise Bombs"
+    "name": "Precise Bombs",
+    "type": "ability"
   }, {
     "id": "discovery:preserve_organs",
-    "name": "Preserve Organs"
+    "name": "Preserve Organs",
+    "type": "ability"
   }, {
     "id": "discovery:rag_doll_mutagen",
     "name": "Rag Doll Mutagen",
-    "prerequisitesFormula": "@race:goblin"
+    "prerequisiteFormula": "@race:goblin",
+    "type": "ability"
   }, {
     "id": "discovery:rocket_bomb",
     "name": "Rocket Bomb",
-    "prerequisitesFormula": "@race:goblin AND @class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@race:goblin AND @class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:scrap_bomb",
     "name": "Scrap Bomb",
-    "prerequisitesFormula": "@race:goblin"
+    "prerequisiteFormula": "@race:goblin",
+    "type": "ability"
   }, {
     "id": "discovery:shock_bomb",
-    "name": "Shock Bomb"
+    "name": "Shock Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:siege_bomb",
     "name": "Siege Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:explosive_bomb"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 12 AND @discovery:explosive_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:smoke_bomb",
-    "name": "Smoke Bomb"
+    "name": "Smoke Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:spontaneous_healing",
-    "name": "Spontaneous Healing"
+    "name": "Spontaneous Healing",
+    "type": "ability"
   }, {
     "id": "discovery:sticky_bomb",
     "name": "Sticky Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 10"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 10",
+    "type": "ability"
   }, {
     "id": "discovery:sticky_poison",
     "name": "Sticky Poison",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:stink_bomb",
     "name": "Stink Bomb",
-    "prerequisitesFormula": "@discovery:smoke_bomb"
+    "prerequisiteFormula": "@discovery:smoke_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:strafe_bomb",
-    "name": "Strafe Bomb"
+    "name": "Strafe Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:sunlight_bomb",
     "name": "Sunlight Bomb",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:blinding_bomb"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 10 AND @discovery:blinding_bomb",
+    "type": "ability"
   }, {
     "id": "discovery:tanglefoot_bomb",
-    "name": "Tanglefoot Bomb"
+    "name": "Tanglefoot Bomb",
+    "type": "ability"
   }, {
     "id": "discovery:tentacle",
-    "name": "Tentacle"
+    "name": "Tentacle",
+    "type": "ability"
   }, {
     "id": "discovery:tumor_familiar",
-    "name": "Tumor Familiar"
+    "name": "Tumor Familiar",
+    "type": "ability"
   }, {
     "id": "discovery:underwater_demolition",
-    "name": "Underwater Demolition"
+    "name": "Underwater Demolition",
+    "type": "ability"
   }, {
     "id": "discovery:vestigial_arm",
-    "name": "Vestigial Arm"
+    "name": "Vestigial Arm",
+    "type": "ability"
   }, {
     "id": "discovery:wings",
     "name": "Wings",
-    "prerequisitesFormula": "@class:alchemist \u003e\u003d 6"
+    "prerequisiteFormula": "@class:alchemist \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "discovery:awakened_intellect",
     "name": "Awakened Intellect",
-    "prerequisitesFormula": "@ability:grand_discovery#alchemist"
+    "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+    "type": "ability"
   }, {
     "id": "discovery:eternal_youth",
     "name": "Eternal Youth",
-    "prerequisitesFormula": "@ability:grand_discovery#alchemist"
+    "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+    "type": "ability"
   }, {
     "id": "discovery:fast_healing",
     "name": "Fast Healing",
-    "prerequisitesFormula": "@ability:grand_discovery#alchemist"
+    "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+    "type": "ability"
   }, {
     "id": "discovery:philosophers_stone",
     "name": "Philosopher\u0027s Stone",
-    "prerequisitesFormula": "@ability:grand_discovery#alchemist"
+    "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+    "type": "ability"
   }, {
     "id": "discovery:poison_touch",
     "name": "Poison Touch",
-    "prerequisitesFormula": "@ability:grand_discovery#alchemist"
+    "prerequisiteFormula": "@ability:grand_discovery#alchemist",
+    "type": "ability"
   }, {
     "id": "discovery:true_mutagen",
     "name": "True Mutagen",
-    "prerequisitesFormula": "@ability:grand_discovery#alchemist AND @discovery:grand_mutagen"
+    "prerequisiteFormula": "@ability:grand_discovery#alchemist AND @discovery:grand_mutagen",
+    "type": "ability"
   }, {
     "id": "ability:fast_movement#barbarian",
-    "name": "Fast Movement"
+    "name": "Fast Movement",
+    "type": "ability"
   }, {
     "id": "ability:rage#barbarian",
-    "name": "Rage"
+    "name": "Rage",
+    "type": "ability"
   }, {
     "id": "ability:rage_power#barbarian",
-    "name": "Rage Power"
+    "name": "Rage Power",
+    "type": "ability"
   }, {
     "id": "ability:uncanny_dodge#barbarian",
-    "name": "Uncanny Dodge"
+    "name": "Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:trap_sense#barbarian",
-    "name": "Trap Sense"
+    "name": "Trap Sense",
+    "type": "ability"
   }, {
     "id": "ability:improved_uncanny_dodge#barbarian",
-    "name": "Improved Uncanny Dodge"
+    "name": "Improved Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:damage_reduction#barbarian",
-    "name": "Damage Reduction"
+    "name": "Damage Reduction",
+    "type": "ability"
   }, {
     "id": "ability:greater_rage#barbarian",
-    "name": "Greater Rage"
+    "name": "Greater Rage",
+    "type": "ability"
   }, {
     "id": "ability:indomitable_will#barbarian",
-    "name": "Indomitable Will"
+    "name": "Indomitable Will",
+    "type": "ability"
   }, {
     "id": "ability:tireless_rage#barbarian",
-    "name": "Tireless Rage"
+    "name": "Tireless Rage",
+    "type": "ability"
   }, {
     "id": "ability:mighty_rage#barbarian",
-    "name": "Mighty Rage"
+    "name": "Mighty Rage",
+    "type": "ability"
   }, {
     "id": "ability:bardic_knowledge#bard",
-    "name": "Bardic Knowledge"
+    "name": "Bardic Knowledge",
+    "type": "ability"
   }, {
     "id": "ability:bardic_performance#bard",
-    "name": "Bardic Performance"
+    "name": "Bardic Performance",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#bard",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:countersong#bard",
-    "name": "Countersong"
+    "name": "Countersong",
+    "type": "ability"
   }, {
     "id": "ability:distraction#bard",
-    "name": "Distraction"
+    "name": "Distraction",
+    "type": "ability"
   }, {
     "id": "ability:fascinate#bard",
-    "name": "Fascinate"
+    "name": "Fascinate",
+    "type": "ability"
   }, {
     "id": "ability:inspire_courage#bard",
-    "name": "Inspire Courage"
+    "name": "Inspire Courage",
+    "type": "ability"
   }, {
     "id": "ability:versatile_performance#bard",
-    "name": "Versatile Performance"
+    "name": "Versatile Performance",
+    "type": "ability"
   }, {
     "id": "ability:well_versed#bard",
-    "name": "Well-versed"
+    "name": "Well-versed",
+    "type": "ability"
   }, {
     "id": "ability:inspire_competence#bard",
-    "name": "Inspire Competence"
+    "name": "Inspire Competence",
+    "type": "ability"
   }, {
     "id": "ability:lore_master#bard",
-    "name": "Lore Master"
+    "name": "Lore Master",
+    "type": "ability"
   }, {
     "id": "ability:suggestion#bard",
-    "name": "Suggestion"
+    "name": "Suggestion",
+    "type": "ability"
   }, {
     "id": "ability:dirge_of_doom#bard",
-    "name": "Dirge Of Doom"
+    "name": "Dirge Of Doom",
+    "type": "ability"
   }, {
     "id": "ability:inspire_greatness#bard",
-    "name": "Inspire Greatness"
+    "name": "Inspire Greatness",
+    "type": "ability"
   }, {
     "id": "ability:jack_of_all_trades#bard",
-    "name": "Jack-of-all-trades"
+    "name": "Jack-of-all-trades",
+    "type": "ability"
   }, {
     "id": "ability:soothing_performance#bard",
-    "name": "Soothing Performance"
+    "name": "Soothing Performance",
+    "type": "ability"
   }, {
     "id": "ability:frightening_tune#bard",
-    "name": "Frightening Tune"
+    "name": "Frightening Tune",
+    "type": "ability"
   }, {
     "id": "ability:inspire_heroics#bard",
-    "name": "Inspire Heroics"
+    "name": "Inspire Heroics",
+    "type": "ability"
   }, {
     "id": "ability:mass_suggestion#bard",
-    "name": "Mass Suggestion"
+    "name": "Mass Suggestion",
+    "type": "ability"
   }, {
     "id": "ability:deadly_performance#bard",
-    "name": "Deadly Performance"
+    "name": "Deadly Performance",
+    "type": "ability"
   }, {
     "id": "ability:aura#cleric",
-    "name": "Aura"
+    "name": "Aura",
+    "type": "ability"
   }, {
     "id": "ability:channel_energy#cleric",
-    "name": "Channel Energy"
+    "name": "Channel Energy",
+    "type": "ability"
   }, {
     "id": "ability:domains#cleric",
-    "name": "Domains"
+    "name": "Domains",
+    "type": "ability"
   }, {
     "id": "ability:orisons#cleric",
-    "name": "Orisons"
+    "name": "Orisons",
+    "type": "ability"
   }, {
     "id": "ability:spontaneous_casting#cleric",
-    "name": "Spontaneous Casting"
+    "name": "Spontaneous Casting",
+    "type": "ability"
   }, {
     "id": "ability:nature_bond#druid",
-    "name": "Nature Bond"
+    "name": "Nature Bond",
+    "type": "ability"
   }, {
     "id": "ability:nature_sense#druid",
-    "name": "Nature Sense"
+    "name": "Nature Sense",
+    "type": "ability"
   }, {
     "id": "ability:orisons#druid",
-    "name": "Orisons"
+    "name": "Orisons",
+    "type": "ability"
   }, {
     "id": "ability:wild_empathy#druid",
-    "name": "Wild Empathy"
+    "name": "Wild Empathy",
+    "type": "ability"
   }, {
     "id": "ability:woodland_stride#druid",
-    "name": "Woodland Stride"
+    "name": "Woodland Stride",
+    "type": "ability"
   }, {
     "id": "ability:trackless_step#druid",
-    "name": "Trackless Step"
+    "name": "Trackless Step",
+    "type": "ability"
   }, {
     "id": "ability:resist_natures_lure#druid",
-    "name": "Resist Nature\u0027s Lure"
+    "name": "Resist Nature\u0027s Lure",
+    "type": "ability"
   }, {
     "id": "ability:wild_shape#druid",
-    "name": "Wild Shape"
+    "name": "Wild Shape",
+    "type": "ability"
   }, {
     "id": "ability:venom_immunity#druid",
-    "name": "Venom Immunity"
+    "name": "Venom Immunity",
+    "type": "ability"
   }, {
     "id": "ability:a_thousand_faces#druid",
-    "name": "A Thousand Faces"
+    "name": "A Thousand Faces",
+    "type": "ability"
   }, {
     "id": "ability:timeless_body#druid",
-    "name": "Timeless Body"
+    "name": "Timeless Body",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#fighter",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:bravery#fighter",
-    "name": "Bravery"
+    "name": "Bravery",
+    "type": "ability"
   }, {
     "id": "ability:armor_training#fighter",
-    "name": "Armor Training"
+    "name": "Armor Training",
+    "type": "ability"
   }, {
     "id": "ability:weapon_training#fighter",
-    "name": "Weapon Training"
+    "name": "Weapon Training",
+    "type": "ability"
   }, {
     "id": "ability:advanced_weapon_training#fighter",
-    "name": "Advanced Weapon Training"
+    "name": "Advanced Weapon Training",
+    "type": "ability"
   }, {
     "id": "ability:armor_mastery#fighter",
-    "name": "Armor Mastery"
+    "name": "Armor Mastery",
+    "type": "ability"
   }, {
     "id": "ability:weapon_mastery#fighter",
-    "name": "Weapon Mastery"
+    "name": "Weapon Mastery",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#monk",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:flurry_of_blows#monk",
-    "name": "Flurry Of Blows"
+    "name": "Flurry Of Blows",
+    "type": "ability"
   }, {
     "id": "ability:stunning_fist#monk",
-    "name": "Stunning Fist"
+    "name": "Stunning Fist",
+    "type": "ability"
   }, {
     "id": "ability:unarmed_strike#monk",
-    "name": "Unarmed Strike"
+    "name": "Unarmed Strike",
+    "type": "ability"
   }, {
     "id": "ability:evasion#monk",
-    "name": "Evasion"
+    "name": "Evasion",
+    "type": "ability"
   }, {
     "id": "ability:fast_movement#monk",
-    "name": "Fast Movement"
+    "name": "Fast Movement",
+    "type": "ability"
   }, {
     "id": "ability:maneuver_training#monk",
-    "name": "Maneuver Training"
+    "name": "Maneuver Training",
+    "type": "ability"
   }, {
     "id": "ability:still_mind#monk",
-    "name": "Still Mind"
+    "name": "Still Mind",
+    "type": "ability"
   }, {
     "id": "ability:ki_pool#monk",
-    "name": "Ki Pool"
+    "name": "Ki Pool",
+    "type": "ability"
   }, {
     "id": "ability:slow_fall#monk",
-    "name": "Slow Fall"
+    "name": "Slow Fall",
+    "type": "ability"
   }, {
     "id": "ability:high_jump#monk",
-    "name": "High Jump"
+    "name": "High Jump",
+    "type": "ability"
   }, {
     "id": "ability:purity_of_body#monk",
-    "name": "Purity Of Body"
+    "name": "Purity Of Body",
+    "type": "ability"
   }, {
     "id": "ability:wholeness_of_body#monk",
-    "name": "Wholeness Of Body"
+    "name": "Wholeness Of Body",
+    "type": "ability"
   }, {
     "id": "ability:improved_evasion#monk",
-    "name": "Improved Evasion"
+    "name": "Improved Evasion",
+    "type": "ability"
   }, {
     "id": "ability:diamond_body#monk",
-    "name": "Diamond Body"
+    "name": "Diamond Body",
+    "type": "ability"
   }, {
     "id": "ability:abundant_step#monk",
-    "name": "Abundant Step"
+    "name": "Abundant Step",
+    "type": "ability"
   }, {
     "id": "ability:diamond_soul#monk",
-    "name": "Diamond Soul"
+    "name": "Diamond Soul",
+    "type": "ability"
   }, {
     "id": "ability:quivering_palm#monk",
-    "name": "Quivering Palm"
+    "name": "Quivering Palm",
+    "type": "ability"
   }, {
     "id": "ability:timeless_body#monk",
-    "name": "Timeless Body"
+    "name": "Timeless Body",
+    "type": "ability"
   }, {
     "id": "ability:tongue_of_the_sun_and_moon#monk",
-    "name": "Tongue Of The Sun And Moon"
+    "name": "Tongue Of The Sun And Moon",
+    "type": "ability"
   }, {
     "id": "ability:empty_body#monk",
-    "name": "Empty Body"
+    "name": "Empty Body",
+    "type": "ability"
   }, {
     "id": "ability:perfect_self#monk",
-    "name": "Perfect Self"
+    "name": "Perfect Self",
+    "type": "ability"
   }, {
     "id": "ability:slow_fall_any_distance#monk",
-    "name": "Slow Fall Any Distance"
+    "name": "Slow Fall Any Distance",
+    "type": "ability"
   }, {
     "id": "ability:aura_of_good#paladin",
-    "name": "Aura Of Good"
+    "name": "Aura Of Good",
+    "type": "ability"
   }, {
     "id": "ability:detect_evil#paladin",
-    "name": "Detect Evil"
+    "name": "Detect Evil",
+    "type": "ability"
   }, {
     "id": "ability:smite_evil#paladin",
-    "name": "Smite Evil"
+    "name": "Smite Evil",
+    "type": "ability"
   }, {
     "id": "ability:divine_grace#paladin",
-    "name": "Divine Grace"
+    "name": "Divine Grace",
+    "type": "ability"
   }, {
     "id": "ability:lay_on_hands#paladin",
-    "name": "Lay On Hands"
+    "name": "Lay On Hands",
+    "type": "ability"
   }, {
     "id": "ability:aura_of_courage#paladin",
-    "name": "Aura Of Courage"
+    "name": "Aura Of Courage",
+    "type": "ability"
   }, {
     "id": "ability:divine_health#paladin",
-    "name": "Divine Health"
+    "name": "Divine Health",
+    "type": "ability"
   }, {
     "id": "ability:mercy#paladin",
-    "name": "Mercy"
+    "name": "Mercy",
+    "type": "ability"
   }, {
     "id": "ability:channel_positive_energy#paladin",
-    "name": "Channel Positive Energy"
+    "name": "Channel Positive Energy",
+    "type": "ability"
   }, {
     "id": "ability:divine_bond#paladin",
-    "name": "Divine Bond"
+    "name": "Divine Bond",
+    "type": "ability"
   }, {
     "id": "ability:aura_of_resolve#paladin",
-    "name": "Aura Of Resolve"
+    "name": "Aura Of Resolve",
+    "type": "ability"
   }, {
     "id": "ability:aura_of_justice#paladin",
-    "name": "Aura Of Justice"
+    "name": "Aura Of Justice",
+    "type": "ability"
   }, {
     "id": "ability:aura_of_faith#paladin",
-    "name": "Aura Of Faith"
+    "name": "Aura Of Faith",
+    "type": "ability"
   }, {
     "id": "ability:aura_of_righteousness#paladin",
-    "name": "Aura Of Righteousness"
+    "name": "Aura Of Righteousness",
+    "type": "ability"
   }, {
     "id": "ability:holy_champion#paladin",
-    "name": "Holy Champion"
+    "name": "Holy Champion",
+    "type": "ability"
   }, {
     "id": "ability:favored_enemy#ranger",
-    "name": "Favored Enemy"
+    "name": "Favored Enemy",
+    "type": "ability"
   }, {
     "id": "ability:track#ranger",
-    "name": "Track"
+    "name": "Track",
+    "type": "ability"
   }, {
     "id": "ability:wild_empathy#ranger",
-    "name": "Wild Empathy"
+    "name": "Wild Empathy",
+    "type": "ability"
   }, {
     "id": "ability:combat_style_feat#ranger",
-    "name": "Combat Style Feat"
+    "name": "Combat Style Feat",
+    "type": "ability"
   }, {
     "id": "ability:endurance#ranger",
-    "name": "Endurance"
+    "name": "Endurance",
+    "type": "ability"
   }, {
     "id": "ability:favored_terrain#ranger",
-    "name": "Favored Terrain"
+    "name": "Favored Terrain",
+    "type": "ability"
   }, {
     "id": "ability:hunters_bond#ranger",
-    "name": "Hunter\u0027s Bond"
+    "name": "Hunter\u0027s Bond",
+    "type": "ability"
   }, {
     "id": "ability:woodland_stride#ranger",
-    "name": "Woodland Stride"
+    "name": "Woodland Stride",
+    "type": "ability"
   }, {
     "id": "ability:swift_tracker#ranger",
-    "name": "Swift Tracker"
+    "name": "Swift Tracker",
+    "type": "ability"
   }, {
     "id": "ability:evasion#ranger",
-    "name": "Evasion"
+    "name": "Evasion",
+    "type": "ability"
   }, {
     "id": "ability:quarry#ranger",
-    "name": "Quarry"
+    "name": "Quarry",
+    "type": "ability"
   }, {
     "id": "ability:camouflage#ranger",
-    "name": "Camouflage"
+    "name": "Camouflage",
+    "type": "ability"
   }, {
     "id": "ability:improved_evasion#ranger",
-    "name": "Improved Evasion"
+    "name": "Improved Evasion",
+    "type": "ability"
   }, {
     "id": "ability:hide_in_plain_sight#ranger",
-    "name": "Hide In Plain Sight"
+    "name": "Hide In Plain Sight",
+    "type": "ability"
   }, {
     "id": "ability:improved_quarry#ranger",
-    "name": "Improved Quarry"
+    "name": "Improved Quarry",
+    "type": "ability"
   }, {
     "id": "ability:master_hunter#ranger",
-    "name": "Master Hunter"
+    "name": "Master Hunter",
+    "type": "ability"
   }, {
     "id": "ability:sneak_attack#rogue",
-    "name": "Sneak Attack"
+    "name": "Sneak Attack",
+    "type": "ability"
   }, {
     "id": "ability:trapfinding#rogue",
-    "name": "Trapfinding"
+    "name": "Trapfinding",
+    "type": "ability"
   }, {
     "id": "ability:evasion#rogue",
-    "name": "Evasion"
+    "name": "Evasion",
+    "type": "ability"
   }, {
     "id": "ability:rogue_talent#rogue",
-    "name": "Rogue Talent"
+    "name": "Rogue Talent",
+    "type": "ability"
   }, {
     "id": "ability:trap_sense#rogue",
-    "name": "Trap Sense"
+    "name": "Trap Sense",
+    "type": "ability"
   }, {
     "id": "ability:uncanny_dodge#rogue",
-    "name": "Uncanny Dodge"
+    "name": "Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:improved_uncanny_dodge#rogue",
-    "name": "Improved Uncanny Dodge"
+    "name": "Improved Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:advanced_talents#rogue",
-    "name": "Advanced Talents"
+    "name": "Advanced Talents",
+    "type": "ability"
   }, {
     "id": "ability:master_strike#rogue",
-    "name": "Master Strike"
+    "name": "Master Strike",
+    "type": "ability"
   }, {
     "id": "ability:bloodline_power#sorcerer",
-    "name": "Bloodline Power"
+    "name": "Bloodline Power",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#sorcerer",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:eschew_materials#sorcerer",
-    "name": "Eschew Materials"
+    "name": "Eschew Materials",
+    "type": "ability"
   }, {
     "id": "ability:bloodline_spell#sorcerer",
-    "name": "Bloodline Spell"
+    "name": "Bloodline Spell",
+    "type": "ability"
   }, {
     "id": "ability:bloodline_feat#sorcerer",
-    "name": "Bloodline Feat"
+    "name": "Bloodline Feat",
+    "type": "ability"
   }, {
     "id": "ability:arcane_bond#wizard",
-    "name": "Arcane Bond"
+    "name": "Arcane Bond",
+    "type": "ability"
   }, {
     "id": "ability:arcane_school#wizard",
-    "name": "Arcane School"
+    "name": "Arcane School",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#wizard",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#wizard",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:alchemy#alchemist",
-    "name": "Alchemy"
+    "name": "Alchemy",
+    "type": "ability"
   }, {
     "id": "ability:bomb#alchemist",
-    "name": "Bomb"
+    "name": "Bomb",
+    "type": "ability"
   }, {
     "id": "ability:brew_potion#alchemist",
-    "name": "Brew Potion"
+    "name": "Brew Potion",
+    "type": "ability"
   }, {
     "id": "ability:mutagen#alchemist",
-    "name": "Mutagen"
+    "name": "Mutagen",
+    "type": "ability"
   }, {
     "id": "ability:throw_anything#alchemist",
-    "name": "Throw Anything"
+    "name": "Throw Anything",
+    "type": "ability"
   }, {
     "id": "ability:discovery#alchemist",
-    "name": "Discovery"
+    "name": "Discovery",
+    "type": "ability"
   }, {
     "id": "ability:poison_resistance#alchemist",
-    "name": "Poison Resistance"
+    "name": "Poison Resistance",
+    "type": "ability"
   }, {
     "id": "ability:poison_use#alchemist",
-    "name": "Poison Use"
+    "name": "Poison Use",
+    "type": "ability"
   }, {
     "id": "ability:swift_alchemy#alchemist",
-    "name": "Swift Alchemy"
+    "name": "Swift Alchemy",
+    "type": "ability"
   }, {
     "id": "ability:swift_poisoning#alchemist",
-    "name": "Swift Poisoning"
+    "name": "Swift Poisoning",
+    "type": "ability"
   }, {
     "id": "ability:poison_immunity#alchemist",
-    "name": "Poison Immunity"
+    "name": "Poison Immunity",
+    "type": "ability"
   }, {
     "id": "ability:persistent_mutagen#alchemist",
-    "name": "Persistent Mutagen"
+    "name": "Persistent Mutagen",
+    "type": "ability"
   }, {
     "id": "ability:instant_alchemy#alchemist",
-    "name": "Instant Alchemy"
+    "name": "Instant Alchemy",
+    "type": "ability"
   }, {
     "id": "ability:grand_discovery#alchemist",
-    "name": "Grand Discovery"
+    "name": "Grand Discovery",
+    "type": "ability"
   }, {
     "id": "ability:challenge#cavalier",
-    "name": "Challenge"
+    "name": "Challenge",
+    "type": "ability"
   }, {
     "id": "ability:mount#cavalier",
-    "name": "Mount"
+    "name": "Mount",
+    "type": "ability"
   }, {
     "id": "ability:order#cavalier",
-    "name": "Order"
+    "name": "Order",
+    "type": "ability"
   }, {
     "id": "ability:tactician#cavalier",
-    "name": "Tactician"
+    "name": "Tactician",
+    "type": "ability"
   }, {
     "id": "ability:order_ability#cavalier",
-    "name": "Order Ability"
+    "name": "Order Ability",
+    "type": "ability"
   }, {
     "id": "ability:cavaliers_charge#cavalier",
-    "name": "Cavalier\u0027s Charge"
+    "name": "Cavalier\u0027s Charge",
+    "type": "ability"
   }, {
     "id": "ability:expert_trainer#cavalier",
-    "name": "Expert Trainer"
+    "name": "Expert Trainer",
+    "type": "ability"
   }, {
     "id": "ability:banner#cavalier",
-    "name": "Banner"
+    "name": "Banner",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#cavalier",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:greater_tactician#cavalier",
-    "name": "Greater Tactician"
+    "name": "Greater Tactician",
+    "type": "ability"
   }, {
     "id": "ability:mighty_charge#cavalier",
-    "name": "Mighty Charge"
+    "name": "Mighty Charge",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#cavalier",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:demanding_challenge#cavalier",
-    "name": "Demanding Challenge"
+    "name": "Demanding Challenge",
+    "type": "ability"
   }, {
     "id": "ability:greater_banner#cavalier",
-    "name": "Greater Banner"
+    "name": "Greater Banner",
+    "type": "ability"
   }, {
     "id": "ability:master_tactician#cavalier",
-    "name": "Master Tactician"
+    "name": "Master Tactician",
+    "type": "ability"
   }, {
     "id": "ability:supreme_charge#cavalier",
-    "name": "Supreme Charge"
+    "name": "Supreme Charge",
+    "type": "ability"
   }, {
     "id": "ability:deeds#gunslinger",
-    "name": "Deeds"
+    "name": "Deeds",
+    "type": "ability"
   }, {
     "id": "ability:grit#gunslinger",
-    "name": "Grit"
+    "name": "Grit",
+    "type": "ability"
   }, {
     "id": "ability:gunsmith#gunslinger",
-    "name": "Gunsmith"
+    "name": "Gunsmith",
+    "type": "ability"
   }, {
     "id": "ability:nimble#gunslinger",
-    "name": "Nimble"
+    "name": "Nimble",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#gunslinger",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:gun_training#gunslinger",
-    "name": "Gun Training"
+    "name": "Gun Training",
+    "type": "ability"
   }, {
     "id": "ability:true_grit#gunslinger",
-    "name": "True Grit"
+    "name": "True Grit",
+    "type": "ability"
   }, {
     "id": "ability:domain#inquisitor",
-    "name": "Domain"
+    "name": "Domain",
+    "type": "ability"
   }, {
     "id": "ability:judgment#inquisitor",
-    "name": "Judgment"
+    "name": "Judgment",
+    "type": "ability"
   }, {
     "id": "ability:monster_lore#inquisitor",
-    "name": "Monster Lore"
+    "name": "Monster Lore",
+    "type": "ability"
   }, {
     "id": "ability:orisons#inquisitor",
-    "name": "Orisons"
+    "name": "Orisons",
+    "type": "ability"
   }, {
     "id": "ability:stern_gaze#inquisitor",
-    "name": "Stern Gaze"
+    "name": "Stern Gaze",
+    "type": "ability"
   }, {
     "id": "ability:cunning_initiative#inquisitor",
-    "name": "Cunning Initiative"
+    "name": "Cunning Initiative",
+    "type": "ability"
   }, {
     "id": "ability:detect_alignment#inquisitor",
-    "name": "Detect Alignment"
+    "name": "Detect Alignment",
+    "type": "ability"
   }, {
     "id": "ability:track#inquisitor",
-    "name": "Track"
+    "name": "Track",
+    "type": "ability"
   }, {
     "id": "ability:solo_tactics#inquisitor",
-    "name": "Solo Tactics"
+    "name": "Solo Tactics",
+    "type": "ability"
   }, {
     "id": "ability:teamwork_feat#inquisitor",
-    "name": "Teamwork Feat"
+    "name": "Teamwork Feat",
+    "type": "ability"
   }, {
     "id": "ability:bane#inquisitor",
-    "name": "Bane"
+    "name": "Bane",
+    "type": "ability"
   }, {
     "id": "ability:discern_lies#inquisitor",
-    "name": "Discern Lies"
+    "name": "Discern Lies",
+    "type": "ability"
   }, {
     "id": "ability:second_judgment#inquisitor",
-    "name": "Second Judgment"
+    "name": "Second Judgment",
+    "type": "ability"
   }, {
     "id": "ability:stalwart#inquisitor",
-    "name": "Stalwart"
+    "name": "Stalwart",
+    "type": "ability"
   }, {
     "id": "ability:greater_bane#inquisitor",
-    "name": "Greater Bane"
+    "name": "Greater Bane",
+    "type": "ability"
   }, {
     "id": "ability:exploit_weakness#inquisitor",
-    "name": "Exploit Weakness"
+    "name": "Exploit Weakness",
+    "type": "ability"
   }, {
     "id": "ability:third_judgment#inquisitor",
-    "name": "Third Judgment"
+    "name": "Third Judgment",
+    "type": "ability"
   }, {
     "id": "ability:slayer#inquisitor",
-    "name": "Slayer"
+    "name": "Slayer",
+    "type": "ability"
   }, {
     "id": "ability:true_judgment#inquisitor",
-    "name": "True Judgment"
+    "name": "True Judgment",
+    "type": "ability"
   }, {
     "id": "ability:arcane_pool#magus",
-    "name": "Arcane Pool"
+    "name": "Arcane Pool",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#magus",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:spell_combat#magus",
-    "name": "Spell Combat"
+    "name": "Spell Combat",
+    "type": "ability"
   }, {
     "id": "ability:spellstrike#magus",
-    "name": "Spellstrike"
+    "name": "Spellstrike",
+    "type": "ability"
   }, {
     "id": "ability:magus_arcana#magus",
-    "name": "Magus Arcana"
+    "name": "Magus Arcana",
+    "type": "ability"
   }, {
     "id": "ability:spell_recall#magus",
-    "name": "Spell Recall"
+    "name": "Spell Recall",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#magus",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:knowledge_pool#magus",
-    "name": "Knowledge Pool"
+    "name": "Knowledge Pool",
+    "type": "ability"
   }, {
     "id": "ability:medium_armor#magus",
-    "name": "Medium Armor"
+    "name": "Medium Armor",
+    "type": "ability"
   }, {
     "id": "ability:improved_spell_combat#magus",
-    "name": "Improved Spell Combat"
+    "name": "Improved Spell Combat",
+    "type": "ability"
   }, {
     "id": "ability:fighter_training#magus",
-    "name": "Fighter Training"
+    "name": "Fighter Training",
+    "type": "ability"
   }, {
     "id": "ability:improved_spell_recall#magus",
-    "name": "Improved Spell Recall"
+    "name": "Improved Spell Recall",
+    "type": "ability"
   }, {
     "id": "ability:heavy_armor#magus",
-    "name": "Heavy Armor"
+    "name": "Heavy Armor",
+    "type": "ability"
   }, {
     "id": "ability:greater_spell_combat#magus",
-    "name": "Greater Spell Combat"
+    "name": "Greater Spell Combat",
+    "type": "ability"
   }, {
     "id": "ability:counterstrike#magus",
-    "name": "Counterstrike"
+    "name": "Counterstrike",
+    "type": "ability"
   }, {
     "id": "ability:greater_spell_access#magus",
-    "name": "Greater Spell Access"
+    "name": "Greater Spell Access",
+    "type": "ability"
   }, {
     "id": "ability:true_magus#magus",
-    "name": "True Magus"
+    "name": "True Magus",
+    "type": "ability"
   }, {
     "id": "ability:mystery#oracle",
-    "name": "Mystery"
+    "name": "Mystery",
+    "type": "ability"
   }, {
     "id": "ability:oracles_curse#oracle",
-    "name": "Oracle\u0027s Curse"
+    "name": "Oracle\u0027s Curse",
+    "type": "ability"
   }, {
     "id": "ability:orisons#oracle",
-    "name": "Orisons"
+    "name": "Orisons",
+    "type": "ability"
   }, {
     "id": "ability:revelation#oracle",
-    "name": "Revelation"
+    "name": "Revelation",
+    "type": "ability"
   }, {
     "id": "ability:mystery_spell#oracle",
-    "name": "Mystery Spell"
+    "name": "Mystery Spell",
+    "type": "ability"
   }, {
     "id": "ability:final_revelation#oracle",
-    "name": "Final Revelation"
+    "name": "Final Revelation",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#summoner",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:eidolon#summoner",
-    "name": "Eidolon"
+    "name": "Eidolon",
+    "type": "ability"
   }, {
     "id": "ability:life_link#summoner",
-    "name": "Life Link"
+    "name": "Life Link",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster#summoner",
-    "name": "Summon Monster"
+    "name": "Summon Monster",
+    "type": "ability"
   }, {
     "id": "ability:bond_senses#summoner",
-    "name": "Bond Senses"
+    "name": "Bond Senses",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_ii#summoner",
-    "name": "Summon Monster II"
+    "name": "Summon Monster II",
+    "type": "ability"
   }, {
     "id": "ability:shield_ally#summoner",
-    "name": "Shield Ally"
+    "name": "Shield Ally",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_iii#summoner",
-    "name": "Summon Monster III"
+    "name": "Summon Monster III",
+    "type": "ability"
   }, {
     "id": "ability:makers_call#summoner",
-    "name": "Maker\u0027s Call"
+    "name": "Maker\u0027s Call",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_iv#summoner",
-    "name": "Summon Monster IV"
+    "name": "Summon Monster IV",
+    "type": "ability"
   }, {
     "id": "ability:transposition#summoner",
-    "name": "Transposition"
+    "name": "Transposition",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_v#summoner",
-    "name": "Summon Monster V"
+    "name": "Summon Monster V",
+    "type": "ability"
   }, {
     "id": "ability:aspect#summoner",
-    "name": "Aspect"
+    "name": "Aspect",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_vi#summoner",
-    "name": "Summon Monster VI"
+    "name": "Summon Monster VI",
+    "type": "ability"
   }, {
     "id": "ability:greater_shield_ally#summoner",
-    "name": "Greater Shield Ally"
+    "name": "Greater Shield Ally",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_vii#summoner",
-    "name": "Summon Monster VII"
+    "name": "Summon Monster VII",
+    "type": "ability"
   }, {
     "id": "ability:life_bond#summoner",
-    "name": "Life Bond"
+    "name": "Life Bond",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_viii#summoner",
-    "name": "Summon Monster VIII"
+    "name": "Summon Monster VIII",
+    "type": "ability"
   }, {
     "id": "ability:merge_forms#summoner",
-    "name": "Merge Forms"
+    "name": "Merge Forms",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_ix#summoner",
-    "name": "Summon Monster IX"
+    "name": "Summon Monster IX",
+    "type": "ability"
   }, {
     "id": "ability:greater_aspect#summoner",
-    "name": "Greater Aspect"
+    "name": "Greater Aspect",
+    "type": "ability"
   }, {
     "id": "ability:gate#summoner",
-    "name": "Gate"
+    "name": "Gate",
+    "type": "ability"
   }, {
     "id": "ability:twin_eidolon#summoner",
-    "name": "Twin Eidolon"
+    "name": "Twin Eidolon",
+    "type": "ability"
   }, {
     "id": "ability:hex#witch",
-    "name": "Hex"
+    "name": "Hex",
+    "type": "ability"
   }, {
     "id": "ability:patron_spells#witch",
-    "name": "Patron Spells"
+    "name": "Patron Spells",
+    "type": "ability"
   }, {
     "id": "ability:major_hex#witch",
-    "name": "Major Hex"
+    "name": "Major Hex",
+    "type": "ability"
   }, {
     "id": "ability:grand_hex#witch",
-    "name": "Grand Hex"
+    "name": "Grand Hex",
+    "type": "ability"
   }, {
     "id": "ability:arcane_reservoir#arcanist",
-    "name": "Arcane Reservoir"
+    "name": "Arcane Reservoir",
+    "type": "ability"
   }, {
     "id": "ability:arcanist_exploit#arcanist",
-    "name": "Arcanist Exploit"
+    "name": "Arcanist Exploit",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#arcanist",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:consume_spells#arcanist",
-    "name": "Consume Spells"
+    "name": "Consume Spells",
+    "type": "ability"
   }, {
     "id": "ability:greater_exploits#arcanist",
-    "name": "Greater Exploits"
+    "name": "Greater Exploits",
+    "type": "ability"
   }, {
     "id": "ability:magical_supremacy#arcanist",
-    "name": "Magical Supremacy"
+    "name": "Magical Supremacy",
+    "type": "ability"
   }, {
     "id": "ability:bloodline#bloodrager",
-    "name": "Bloodline"
+    "name": "Bloodline",
+    "type": "ability"
   }, {
     "id": "ability:bloodline_power#bloodrager",
-    "name": "Bloodline Power"
+    "name": "Bloodline Power",
+    "type": "ability"
   }, {
     "id": "ability:bloodrage#bloodrager",
-    "name": "Bloodrage"
+    "name": "Bloodrage",
+    "type": "ability"
   }, {
     "id": "ability:fast_movement#bloodrager",
-    "name": "Fast Movement"
+    "name": "Fast Movement",
+    "type": "ability"
   }, {
     "id": "ability:uncanny_dodge#bloodrager",
-    "name": "Uncanny Dodge"
+    "name": "Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:blood_sanctuary#bloodrager",
-    "name": "Blood Sanctuary"
+    "name": "Blood Sanctuary",
+    "type": "ability"
   }, {
     "id": "ability:blood_casting#bloodrager",
-    "name": "Blood Casting"
+    "name": "Blood Casting",
+    "type": "ability"
   }, {
     "id": "ability:eschew_materials#bloodrager",
-    "name": "Eschew Materials"
+    "name": "Eschew Materials",
+    "type": "ability"
   }, {
     "id": "ability:improved_uncanny_dodge#bloodrager",
-    "name": "Improved Uncanny Dodge"
+    "name": "Improved Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:damage_reduction#bloodrager",
-    "name": "Damage Reduction"
+    "name": "Damage Reduction",
+    "type": "ability"
   }, {
     "id": "ability:greater_bloodrage#bloodrager",
-    "name": "Greater Bloodrage"
+    "name": "Greater Bloodrage",
+    "type": "ability"
   }, {
     "id": "ability:indomitable_will#bloodrager",
-    "name": "Indomitable Will"
+    "name": "Indomitable Will",
+    "type": "ability"
   }, {
     "id": "ability:tireless_bloodrage#bloodrager",
-    "name": "Tireless Bloodrage"
+    "name": "Tireless Bloodrage",
+    "type": "ability"
   }, {
     "id": "ability:mighty_bloodrage#bloodrager",
-    "name": "Mighty Bloodrage"
+    "name": "Mighty Bloodrage",
+    "type": "ability"
   }, {
     "id": "ability:brawlers_cunning#brawler",
-    "name": "Brawler\u0027s Cunning"
+    "name": "Brawler\u0027s Cunning",
+    "type": "ability"
   }, {
     "id": "ability:martial_flexibility#brawler",
-    "name": "Martial Flexibility"
+    "name": "Martial Flexibility",
+    "type": "ability"
   }, {
     "id": "ability:martial_training#brawler",
-    "name": "Martial Training"
+    "name": "Martial Training",
+    "type": "ability"
   }, {
     "id": "ability:bonus_combat_feat#brawler",
-    "name": "Bonus Combat Feat"
+    "name": "Bonus Combat Feat",
+    "type": "ability"
   }, {
     "id": "ability:brawlers_flurry#brawler",
-    "name": "Brawler\u0027s Flurry"
+    "name": "Brawler\u0027s Flurry",
+    "type": "ability"
   }, {
     "id": "ability:maneuver_training#brawler",
-    "name": "Maneuver Training"
+    "name": "Maneuver Training",
+    "type": "ability"
   }, {
     "id": "ability:ac_bonus#brawler",
-    "name": "AC Bonus"
+    "name": "AC Bonus",
+    "type": "ability"
   }, {
     "id": "ability:knockout#brawler",
-    "name": "Knockout"
+    "name": "Knockout",
+    "type": "ability"
   }, {
     "id": "ability:brawlers_strike#brawler",
-    "name": "Brawler\u0027s Strike"
+    "name": "Brawler\u0027s Strike",
+    "type": "ability"
   }, {
     "id": "ability:close_weapon_mastery#brawler",
-    "name": "Close Weapon Mastery"
+    "name": "Close Weapon Mastery",
+    "type": "ability"
   }, {
     "id": "ability:awesome_blow#brawler",
-    "name": "Awesome Blow"
+    "name": "Awesome Blow",
+    "type": "ability"
   }, {
     "id": "ability:improved_awesome_blow#brawler",
-    "name": "Improved Awesome Blow"
+    "name": "Improved Awesome Blow",
+    "type": "ability"
   }, {
     "id": "ability:animal_companion#hunter",
-    "name": "Animal Companion"
+    "name": "Animal Companion",
+    "type": "ability"
   }, {
     "id": "ability:animal_focus#hunter",
-    "name": "Animal Focus"
+    "name": "Animal Focus",
+    "type": "ability"
   }, {
     "id": "ability:nature_training#hunter",
-    "name": "Nature Training"
+    "name": "Nature Training",
+    "type": "ability"
   }, {
     "id": "ability:orisons#hunter",
-    "name": "Orisons"
+    "name": "Orisons",
+    "type": "ability"
   }, {
     "id": "ability:wild_empathy#hunter",
-    "name": "Wild Empathy"
+    "name": "Wild Empathy",
+    "type": "ability"
   }, {
     "id": "ability:precise_companion#hunter",
-    "name": "Precise Companion"
+    "name": "Precise Companion",
+    "type": "ability"
   }, {
     "id": "ability:track#hunter",
-    "name": "Track"
+    "name": "Track",
+    "type": "ability"
   }, {
     "id": "ability:hunter_tactics#hunter",
-    "name": "Hunter Tactics"
+    "name": "Hunter Tactics",
+    "type": "ability"
   }, {
     "id": "ability:teamwork_feat#hunter",
-    "name": "Teamwork Feat"
+    "name": "Teamwork Feat",
+    "type": "ability"
   }, {
     "id": "ability:improved_empathic_link#hunter",
-    "name": "Improved Empathic Link"
+    "name": "Improved Empathic Link",
+    "type": "ability"
   }, {
     "id": "ability:woodland_stride#hunter",
-    "name": "Woodland Stride"
+    "name": "Woodland Stride",
+    "type": "ability"
   }, {
     "id": "ability:bonus_trick#hunter",
-    "name": "Bonus Trick"
+    "name": "Bonus Trick",
+    "type": "ability"
   }, {
     "id": "ability:second_animal_focus#hunter",
-    "name": "Second Animal Focus"
+    "name": "Second Animal Focus",
+    "type": "ability"
   }, {
     "id": "ability:swift_tracker#hunter",
-    "name": "Swift Tracker"
+    "name": "Swift Tracker",
+    "type": "ability"
   }, {
     "id": "ability:raise_animal_companion#hunter",
-    "name": "Raise Animal Companion"
+    "name": "Raise Animal Companion",
+    "type": "ability"
   }, {
     "id": "ability:speak_with_master#hunter",
-    "name": "Speak With Master"
+    "name": "Speak With Master",
+    "type": "ability"
   }, {
     "id": "ability:greater_empathic_link#hunter",
-    "name": "Greater Empathic Link"
+    "name": "Greater Empathic Link",
+    "type": "ability"
   }, {
     "id": "ability:one_with_the_wild#hunter",
-    "name": "One With The Wild"
+    "name": "One With The Wild",
+    "type": "ability"
   }, {
     "id": "ability:master_hunter#hunter",
-    "name": "Master Hunter"
+    "name": "Master Hunter",
+    "type": "ability"
   }, {
     "id": "ability:alchemy#investigator",
-    "name": "Alchemy"
+    "name": "Alchemy",
+    "type": "ability"
   }, {
     "id": "ability:inspiration#investigator",
-    "name": "Inspiration"
+    "name": "Inspiration",
+    "type": "ability"
   }, {
     "id": "ability:trapfinding#investigator",
-    "name": "Trapfinding"
+    "name": "Trapfinding",
+    "type": "ability"
   }, {
     "id": "ability:poison_lore#investigator",
-    "name": "Poison Lore"
+    "name": "Poison Lore",
+    "type": "ability"
   }, {
     "id": "ability:poison_resistance#investigator",
-    "name": "Poison Resistance"
+    "name": "Poison Resistance",
+    "type": "ability"
   }, {
     "id": "ability:investigator_talent#investigator",
-    "name": "Investigator Talent"
+    "name": "Investigator Talent",
+    "type": "ability"
   }, {
     "id": "ability:keen_recollection#investigator",
-    "name": "Keen Recollection"
+    "name": "Keen Recollection",
+    "type": "ability"
   }, {
     "id": "ability:trap_sense#investigator",
-    "name": "Trap Sense"
+    "name": "Trap Sense",
+    "type": "ability"
   }, {
     "id": "ability:studied_combat#investigator",
-    "name": "Studied Combat"
+    "name": "Studied Combat",
+    "type": "ability"
   }, {
     "id": "ability:studied_strike#investigator",
-    "name": "Studied Strike"
+    "name": "Studied Strike",
+    "type": "ability"
   }, {
     "id": "ability:swift_alchemy#investigator",
-    "name": "Swift Alchemy"
+    "name": "Swift Alchemy",
+    "type": "ability"
   }, {
     "id": "ability:poison_immunity#investigator",
-    "name": "Poison Immunity"
+    "name": "Poison Immunity",
+    "type": "ability"
   }, {
     "id": "ability:true_inspiration#investigator",
-    "name": "True Inspiration"
+    "name": "True Inspiration",
+    "type": "ability"
   }, {
     "id": "ability:orisons#shaman",
-    "name": "Orisons"
+    "name": "Orisons",
+    "type": "ability"
   }, {
     "id": "ability:spirit#shaman",
-    "name": "Spirit"
+    "name": "Spirit",
+    "type": "ability"
   }, {
     "id": "ability:spirit_animal#shaman",
-    "name": "Spirit Animal"
+    "name": "Spirit Animal",
+    "type": "ability"
   }, {
     "id": "ability:spirit_magic#shaman",
-    "name": "Spirit Magic"
+    "name": "Spirit Magic",
+    "type": "ability"
   }, {
     "id": "ability:hex#shaman",
-    "name": "Hex"
+    "name": "Hex",
+    "type": "ability"
   }, {
     "id": "ability:wandering_spirit#shaman",
-    "name": "Wandering Spirit"
+    "name": "Wandering Spirit",
+    "type": "ability"
   }, {
     "id": "ability:wandering_hex#shaman",
-    "name": "Wandering Hex"
+    "name": "Wandering Hex",
+    "type": "ability"
   }, {
     "id": "ability:spirit_greater#shaman",
-    "name": "Spirit"
+    "name": "Spirit",
+    "type": "ability"
   }, {
     "id": "ability:wandering_spirit_greater#shaman",
-    "name": "Wandering Spirit"
+    "name": "Wandering Spirit",
+    "type": "ability"
   }, {
     "id": "ability:manifestation#shaman",
-    "name": "Manifestation"
+    "name": "Manifestation",
+    "type": "ability"
   }, {
     "id": "ability:bardic_knowledge#skald",
-    "name": "Bardic Knowledge"
+    "name": "Bardic Knowledge",
+    "type": "ability"
   }, {
     "id": "ability:cantrips#skald",
-    "name": "Cantrips"
+    "name": "Cantrips",
+    "type": "ability"
   }, {
     "id": "ability:raging_song#skald",
-    "name": "Raging Song"
+    "name": "Raging Song",
+    "type": "ability"
   }, {
     "id": "ability:scribe_scroll#skald",
-    "name": "Scribe Scroll"
+    "name": "Scribe Scroll",
+    "type": "ability"
   }, {
     "id": "ability:versatile_performance#skald",
-    "name": "Versatile Performance"
+    "name": "Versatile Performance",
+    "type": "ability"
   }, {
     "id": "ability:well_versed#skald",
-    "name": "Well-versed"
+    "name": "Well-versed",
+    "type": "ability"
   }, {
     "id": "ability:rage_power#skald",
-    "name": "Rage Power"
+    "name": "Rage Power",
+    "type": "ability"
   }, {
     "id": "ability:uncanny_dodge#skald",
-    "name": "Uncanny Dodge"
+    "name": "Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:spell_kenning#skald",
-    "name": "Spell Kenning"
+    "name": "Spell Kenning",
+    "type": "ability"
   }, {
     "id": "ability:lore_master#skald",
-    "name": "Lore Master"
+    "name": "Lore Master",
+    "type": "ability"
   }, {
     "id": "ability:improved_uncanny_dodge#skald",
-    "name": "Improved Uncanny Dodge"
+    "name": "Improved Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:dr#skald",
-    "name": "DR"
+    "name": "DR",
+    "type": "ability"
   }, {
     "id": "ability:master_skald#skald",
-    "name": "Master Skald"
+    "name": "Master Skald",
+    "type": "ability"
   }, {
     "id": "ability:studied_target#slayer",
-    "name": "Studied Target"
+    "name": "Studied Target",
+    "type": "ability"
   }, {
     "id": "ability:track#slayer",
-    "name": "Track"
+    "name": "Track",
+    "type": "ability"
   }, {
     "id": "ability:slayer_talent#slayer",
-    "name": "Slayer Talent"
+    "name": "Slayer Talent",
+    "type": "ability"
   }, {
     "id": "ability:sneak_attack#slayer",
-    "name": "Sneak Attack"
+    "name": "Sneak Attack",
+    "type": "ability"
   }, {
     "id": "ability:stalker#slayer",
-    "name": "Stalker"
+    "name": "Stalker",
+    "type": "ability"
   }, {
     "id": "ability:advanced_talents#slayer",
-    "name": "Advanced Talents"
+    "name": "Advanced Talents",
+    "type": "ability"
   }, {
     "id": "ability:swift_tracker#slayer",
-    "name": "Swift Tracker"
+    "name": "Swift Tracker",
+    "type": "ability"
   }, {
     "id": "ability:slayers_advance#slayer",
-    "name": "Slayer\u0027s Advance"
+    "name": "Slayer\u0027s Advance",
+    "type": "ability"
   }, {
     "id": "ability:quarry#slayer",
-    "name": "Quarry"
+    "name": "Quarry",
+    "type": "ability"
   }, {
     "id": "ability:improved_quarry#slayer",
-    "name": "Improved Quarry"
+    "name": "Improved Quarry",
+    "type": "ability"
   }, {
     "id": "ability:master_slayer#slayer",
-    "name": "Master Slayer"
+    "name": "Master Slayer",
+    "type": "ability"
   }, {
     "id": "ability:aura#warpriest",
-    "name": "Aura"
+    "name": "Aura",
+    "type": "ability"
   }, {
     "id": "ability:blessings#warpriest",
-    "name": "Blessings"
+    "name": "Blessings",
+    "type": "ability"
   }, {
     "id": "ability:focus_weapon#warpriest",
-    "name": "Focus Weapon"
+    "name": "Focus Weapon",
+    "type": "ability"
   }, {
     "id": "ability:sacred_weapon#warpriest",
-    "name": "Sacred Weapon"
+    "name": "Sacred Weapon",
+    "type": "ability"
   }, {
     "id": "ability:fervor#warpriest",
-    "name": "Fervor"
+    "name": "Fervor",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#warpriest",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:channel_energy#warpriest",
-    "name": "Channel Energy"
+    "name": "Channel Energy",
+    "type": "ability"
   }, {
     "id": "ability:sacred_armor#warpriest",
-    "name": "Sacred Armor"
+    "name": "Sacred Armor",
+    "type": "ability"
   }, {
     "id": "ability:aspect_of_war#warpriest",
-    "name": "Aspect Of War"
+    "name": "Aspect Of War",
+    "type": "ability"
   }, {
     "id": "ability:fast_movement#unchained_barbarian",
-    "name": "Fast Movement"
+    "name": "Fast Movement",
+    "type": "ability"
   }, {
     "id": "ability:rage#unchained_barbarian",
-    "name": "Rage"
+    "name": "Rage",
+    "type": "ability"
   }, {
     "id": "ability:rage_power#unchained_barbarian",
-    "name": "Rage Power"
+    "name": "Rage Power",
+    "type": "ability"
   }, {
     "id": "ability:uncanny_dodge#unchained_barbarian",
-    "name": "Uncanny Dodge"
+    "name": "Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:danger_sense#unchained_barbarian",
-    "name": "Danger Sense"
+    "name": "Danger Sense",
+    "type": "ability"
   }, {
     "id": "ability:improved_uncanny_dodge#unchained_barbarian",
-    "name": "Improved Uncanny Dodge"
+    "name": "Improved Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:damage_reduction#unchained_barbarian",
-    "name": "Damage Reduction"
+    "name": "Damage Reduction",
+    "type": "ability"
   }, {
     "id": "ability:greater_rage#unchained_barbarian",
-    "name": "Greater Rage"
+    "name": "Greater Rage",
+    "type": "ability"
   }, {
     "id": "ability:indomitable_will#unchained_barbarian",
-    "name": "Indomitable Will"
+    "name": "Indomitable Will",
+    "type": "ability"
   }, {
     "id": "ability:tireless_rage#unchained_barbarian",
-    "name": "Tireless Rage"
+    "name": "Tireless Rage",
+    "type": "ability"
   }, {
     "id": "ability:mighty_rage#unchained_barbarian",
-    "name": "Mighty Rage"
+    "name": "Mighty Rage",
+    "type": "ability"
   }, {
     "id": "ability:bonus_feat#unchained_monk",
-    "name": "Bonus Feat"
+    "name": "Bonus Feat",
+    "type": "ability"
   }, {
     "id": "ability:flurry_of_blows#unchained_monk",
-    "name": "Flurry Of Blows"
+    "name": "Flurry Of Blows",
+    "type": "ability"
   }, {
     "id": "ability:stunning_fist#unchained_monk",
-    "name": "Stunning Fist"
+    "name": "Stunning Fist",
+    "type": "ability"
   }, {
     "id": "ability:unarmed_strike#unchained_monk",
-    "name": "Unarmed Strike"
+    "name": "Unarmed Strike",
+    "type": "ability"
   }, {
     "id": "ability:evasion#unchained_monk",
-    "name": "Evasion"
+    "name": "Evasion",
+    "type": "ability"
   }, {
     "id": "ability:fast_movement#unchained_monk",
-    "name": "Fast Movement"
+    "name": "Fast Movement",
+    "type": "ability"
   }, {
     "id": "ability:ki_pool#unchained_monk",
-    "name": "Ki Pool"
+    "name": "Ki Pool",
+    "type": "ability"
   }, {
     "id": "ability:ki_strike#unchained_monk",
-    "name": "Ki Strike"
+    "name": "Ki Strike",
+    "type": "ability"
   }, {
     "id": "ability:ki_power#unchained_monk",
-    "name": "Ki Power"
+    "name": "Ki Power",
+    "type": "ability"
   }, {
     "id": "ability:still_mind#unchained_monk",
-    "name": "Still Mind"
+    "name": "Still Mind",
+    "type": "ability"
   }, {
     "id": "ability:purity_of_body#unchained_monk",
-    "name": "Purity Of Body"
+    "name": "Purity Of Body",
+    "type": "ability"
   }, {
     "id": "ability:style_strike#unchained_monk",
-    "name": "Style Strike"
+    "name": "Style Strike",
+    "type": "ability"
   }, {
     "id": "ability:improved_evasion#unchained_monk",
-    "name": "Improved Evasion"
+    "name": "Improved Evasion",
+    "type": "ability"
   }, {
     "id": "ability:tongue_of_the_sun_and_moon#unchained_monk",
-    "name": "Tongue Of The Sun And Moon"
+    "name": "Tongue Of The Sun And Moon",
+    "type": "ability"
   }, {
     "id": "ability:timeless_body#unchained_monk",
-    "name": "Timeless Body"
+    "name": "Timeless Body",
+    "type": "ability"
   }, {
     "id": "ability:flawless_mind#unchained_monk",
-    "name": "Flawless Mind"
+    "name": "Flawless Mind",
+    "type": "ability"
   }, {
     "id": "ability:perfect_self#unchained_monk",
-    "name": "Perfect Self"
+    "name": "Perfect Self",
+    "type": "ability"
   }, {
     "id": "ability:finesse_training#unchained_rogue",
-    "name": "Finesse Training"
+    "name": "Finesse Training",
+    "type": "ability"
   }, {
     "id": "ability:sneak_attack#unchained_rogue",
-    "name": "Sneak Attack"
+    "name": "Sneak Attack",
+    "type": "ability"
   }, {
     "id": "ability:trapfinding#unchained_rogue",
-    "name": "Trapfinding"
+    "name": "Trapfinding",
+    "type": "ability"
   }, {
     "id": "ability:evasion#unchained_rogue",
-    "name": "Evasion"
+    "name": "Evasion",
+    "type": "ability"
   }, {
     "id": "ability:rogue_talent#unchained_rogue",
-    "name": "Rogue Talent"
+    "name": "Rogue Talent",
+    "type": "ability"
   }, {
     "id": "ability:danger_sense#unchained_rogue",
-    "name": "Danger Sense"
+    "name": "Danger Sense",
+    "type": "ability"
   }, {
     "id": "ability:debilitating_injury#unchained_rogue",
-    "name": "Debilitating Injury"
+    "name": "Debilitating Injury",
+    "type": "ability"
   }, {
     "id": "ability:uncanny_dodge#unchained_rogue",
-    "name": "Uncanny Dodge"
+    "name": "Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:rogues_edge#unchained_rogue",
-    "name": "Rogue\u0027s Edge"
+    "name": "Rogue\u0027s Edge",
+    "type": "ability"
   }, {
     "id": "ability:improved_uncanny_dodge#unchained_rogue",
-    "name": "Improved Uncanny Dodge"
+    "name": "Improved Uncanny Dodge",
+    "type": "ability"
   }, {
     "id": "ability:advanced_talents#unchained_rogue",
-    "name": "Advanced Talents"
+    "name": "Advanced Talents",
+    "type": "ability"
   }, {
     "id": "ability:master_strike#unchained_rogue",
-    "name": "Master Strike"
+    "name": "Master Strike",
+    "type": "ability"
   }, {
     "id": "ability:eidolon#unchained_summoner",
-    "name": "Eidolon"
+    "name": "Eidolon",
+    "type": "ability"
   }, {
     "id": "ability:life_link#unchained_summoner",
-    "name": "Life Link"
+    "name": "Life Link",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster#unchained_summoner",
-    "name": "Summon Monster"
+    "name": "Summon Monster",
+    "type": "ability"
   }, {
     "id": "ability:bond_senses#unchained_summoner",
-    "name": "Bond Senses"
+    "name": "Bond Senses",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_ii#unchained_summoner",
-    "name": "Summon Monster II"
+    "name": "Summon Monster II",
+    "type": "ability"
   }, {
     "id": "ability:shield_ally#unchained_summoner",
-    "name": "Shield Ally"
+    "name": "Shield Ally",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_iii#unchained_summoner",
-    "name": "Summon Monster III"
+    "name": "Summon Monster III",
+    "type": "ability"
   }, {
     "id": "ability:makers_call#unchained_summoner",
-    "name": "Maker\u0027s Call"
+    "name": "Maker\u0027s Call",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_iv#unchained_summoner",
-    "name": "Summon Monster IV"
+    "name": "Summon Monster IV",
+    "type": "ability"
   }, {
     "id": "ability:transposition#unchained_summoner",
-    "name": "Transposition"
+    "name": "Transposition",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_v#unchained_summoner",
-    "name": "Summon Monster V"
+    "name": "Summon Monster V",
+    "type": "ability"
   }, {
     "id": "ability:aspect#unchained_summoner",
-    "name": "Aspect"
+    "name": "Aspect",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_vi#unchained_summoner",
-    "name": "Summon Monster VI"
+    "name": "Summon Monster VI",
+    "type": "ability"
   }, {
     "id": "ability:greater_shield_ally#unchained_summoner",
-    "name": "Greater Shield Ally"
+    "name": "Greater Shield Ally",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_vii#unchained_summoner",
-    "name": "Summon Monster VII"
+    "name": "Summon Monster VII",
+    "type": "ability"
   }, {
     "id": "ability:life_bond#unchained_summoner",
-    "name": "Life Bond"
+    "name": "Life Bond",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_viii#unchained_summoner",
-    "name": "Summon Monster VIII"
+    "name": "Summon Monster VIII",
+    "type": "ability"
   }, {
     "id": "ability:merge_forms#unchained_summoner",
-    "name": "Merge Forms"
+    "name": "Merge Forms",
+    "type": "ability"
   }, {
     "id": "ability:summon_monster_ix#unchained_summoner",
-    "name": "Summon Monster IX"
+    "name": "Summon Monster IX",
+    "type": "ability"
   }, {
     "id": "ability:greater_aspect#unchained_summoner",
-    "name": "Greater Aspect"
+    "name": "Greater Aspect",
+    "type": "ability"
   }, {
     "id": "ability:gate#unchained_summoner",
-    "name": "Gate"
+    "name": "Gate",
+    "type": "ability"
   }, {
     "id": "ability:twin_eidolon#unchained_summoner",
-    "name": "Twin Eidolon"
+    "name": "Twin Eidolon",
+    "type": "ability"
   }, {
     "id": "magus_arcana:accurate_strike",
     "name": "Accurate Strike",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:arcane_accuracy",
     "name": "Arcane Accuracy",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:arcane_cloak",
     "name": "Arcane Cloak",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:arcane_deed",
     "name": "Arcane Deed",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@magus_arcana:flamboyant_arcana"
+    "prerequisiteFormula": "@magus_arcana:flamboyant_arcana",
+    "type": "ability"
   }, {
     "id": "magus_arcana:arcane_edge",
     "name": "Arcane Edge",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:arcane_redoubt",
     "name": "Arcane Redoubt",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:arcane_redoubt_greater",
     "name": "Arcane Redoubt, Greater",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 12 AND @magus_arcana:arcane_redoubt"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 12 AND @magus_arcana:arcane_redoubt",
+    "type": "ability"
   }, {
     "id": "magus_arcana:bane_blade",
     "name": "Bane Blade",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 15"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 15",
+    "type": "ability"
   }, {
     "id": "magus_arcana:broad_study",
     "name": "Broad Study",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 6 AND \"Levels in another spellcasting class\""
+    "prerequisiteFormula": "@class:magus \u003e\u003d 6 AND \"Levels in another spellcasting class\"",
+    "type": "ability"
   }, {
     "id": "magus_arcana:close_range",
     "name": "Close Range",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "magus_arcana:concentrate",
     "name": "Concentrate",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "magus_arcana:critical_strike",
     "name": "Critical Strike",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 12"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "magus_arcana:devoted_blade",
     "name": "Devoted Blade",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 12"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "magus_arcana:dispelling_strike",
     "name": "Dispelling Strike",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:disruptive",
     "name": "Disruptive",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 6"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "magus_arcana:enduring_blade",
     "name": "Enduring Blade",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 6"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "magus_arcana:empowered_magic",
     "name": "Empowered Magic",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 6"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "magus_arcana:familiar",
     "name": "Familiar",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "magus_arcana:flamboyant_arcana",
     "name": "Flamboyant Arcana",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "magus_arcana:ghost_blade",
     "name": "Ghost Blade",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:hasted_assault",
     "name": "Hasted Assault",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:lingering_pain",
     "name": "Lingering Pain",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:maneuver_mastery",
     "name": "Maneuver Mastery",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "magus_arcana:maximized_magic",
     "name": "Maximized Magic",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 12"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 12",
+    "type": "ability"
   }, {
     "id": "magus_arcana:pool_strike",
     "name": "Pool Strike",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:pool_strike_arcing",
     "name": "Pool Strike, Arcing",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 12 AND @magus_arcana:pool_strike"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 12 AND @magus_arcana:pool_strike",
+    "type": "ability"
   }, {
     "id": "magus_arcana:pool_strike_clinging",
     "name": "Pool Strike, Clinging",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9 AND @magus_arcana:pool_strike"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9 AND @magus_arcana:pool_strike",
+    "type": "ability"
   }, {
     "id": "magus_arcana:pool_strike_thunderous",
     "name": "Pool Strike, Thunderous",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 6 AND @magus_arcana:pool_strike"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 6 AND @magus_arcana:pool_strike",
+    "type": "ability"
   }, {
     "id": "magus_arcana:prescient_attack",
     "name": "Prescient Attack",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 6"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 6",
+    "type": "ability"
   }, {
     "id": "magus_arcana:prescient_defense",
     "name": "Prescient Defense",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:quickened_magic",
     "name": "Quickened Magic",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 15"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 15",
+    "type": "ability"
   }, {
     "id": "magus_arcana:reflection",
     "name": "Reflection",
-    "type": "ABILITY_TYPE_SU",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 15"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 15",
+    "type": "ability"
   }, {
     "id": "magus_arcana:rod_mastery",
     "name": "Rod Mastery",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:rod_wielder",
     "name": "Rod Wielder",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:silent_magic",
     "name": "Silent Magic",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:spell_blending",
     "name": "Spell Blending",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "magus_arcana:spell_shield",
     "name": "Spell Shield",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:spellbreaker",
     "name": "Spellbreaker",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@class:magus \u003e\u003d 9"
+    "prerequisiteFormula": "@class:magus \u003e\u003d 9",
+    "type": "ability"
   }, {
     "id": "magus_arcana:still_magic",
     "name": "Still Magic",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:wand_mastery",
     "name": "Wand Mastery",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "magus_arcana:wand_wielder",
     "name": "Wand Wielder",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "rogue_talent:assault_leader",
-    "name": "Assault Leader"
+    "name": "Assault Leader",
+    "type": "ability"
   }, {
     "id": "rogue_talent:befuddling_strike",
-    "name": "Befuddling Strike"
+    "name": "Befuddling Strike",
+    "type": "ability"
   }, {
     "id": "rogue_talent:black_market_connections",
-    "name": "Black Market Connections"
+    "name": "Black Market Connections",
+    "type": "ability"
   }, {
     "id": "rogue_talent:bleeding_attack",
-    "name": "Bleeding Attack"
+    "name": "Bleeding Attack",
+    "type": "ability"
   }, {
     "id": "rogue_talent:camouflage",
-    "name": "Camouflage"
+    "name": "Camouflage",
+    "type": "ability"
   }, {
     "id": "rogue_talent:canny_observer",
-    "name": "Canny Observer"
+    "name": "Canny Observer",
+    "type": "ability"
   }, {
     "id": "rogue_talent:careful_stab",
     "name": "Careful Stab",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "rogue_talent:charmer",
-    "name": "Charmer"
+    "name": "Charmer",
+    "type": "ability"
   }, {
     "id": "rogue_talent:coax_information",
-    "name": "Coax Information"
+    "name": "Coax Information",
+    "type": "ability"
   }, {
     "id": "rogue_talent:combat_swipe",
-    "name": "Combat Swipe"
+    "name": "Combat Swipe",
+    "type": "ability"
   }, {
     "id": "rogue_talent:combat_trick",
-    "name": "Combat Trick"
+    "name": "Combat Trick",
+    "type": "ability"
   }, {
     "id": "rogue_talent:convincing_lie",
-    "name": "Convincing Lie"
+    "name": "Convincing Lie",
+    "type": "ability"
   }, {
     "id": "rogue_talent:cunning_trigger",
-    "name": "Cunning Trigger"
+    "name": "Cunning Trigger",
+    "type": "ability"
   }, {
     "id": "rogue_talent:deft_palm",
-    "name": "Deft Palm"
+    "name": "Deft Palm",
+    "type": "ability"
   }, {
     "id": "rogue_talent:distracting_attack",
-    "name": "Distracting Attack"
+    "name": "Distracting Attack",
+    "type": "ability"
   }, {
     "id": "rogue_talent:esoteric_scholar",
-    "name": "Esoteric Scholar"
+    "name": "Esoteric Scholar",
+    "type": "ability"
   }, {
     "id": "rogue_talent:expert_leaper",
-    "name": "Expert Leaper"
+    "name": "Expert Leaper",
+    "type": "ability"
   }, {
     "id": "rogue_talent:false_friend",
-    "name": "False Friend"
+    "name": "False Friend",
+    "type": "ability"
   }, {
     "id": "rogue_talent:fast_fingers",
-    "name": "Fast Fingers"
+    "name": "Fast Fingers",
+    "type": "ability"
   }, {
     "id": "rogue_talent:fast_getaway",
-    "name": "Fast Getaway"
+    "name": "Fast Getaway",
+    "type": "ability"
   }, {
     "id": "rogue_talent:fast_picks",
-    "name": "Fast Picks"
+    "name": "Fast Picks",
+    "type": "ability"
   }, {
     "id": "rogue_talent:fast_stealth",
-    "name": "Fast Stealth"
+    "name": "Fast Stealth",
+    "type": "ability"
   }, {
     "id": "rogue_talent:finesse_rogue",
-    "name": "Finesse Rogue"
+    "name": "Finesse Rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:firearm_training",
-    "name": "Firearm Training"
+    "name": "Firearm Training",
+    "type": "ability"
   }, {
     "id": "rogue_talent:follow_clues",
-    "name": "Follow Clues"
+    "name": "Follow Clues",
+    "type": "ability"
   }, {
     "id": "rogue_talent:getaway_artist",
-    "name": "Getaway Artist"
+    "name": "Getaway Artist",
+    "type": "ability"
   }, {
     "id": "rogue_talent:grit",
     "name": "Grit",
-    "prerequisitesFormula": "@rogue_talent:firearm_training"
+    "prerequisiteFormula": "@rogue_talent:firearm_training",
+    "type": "ability"
   }, {
     "id": "rogue_talent:guileful_polyglot",
-    "name": "Guileful Polyglot"
+    "name": "Guileful Polyglot",
+    "type": "ability"
   }, {
     "id": "rogue_talent:hairpin_trick",
     "name": "Hairpin Trick",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "rogue_talent:hard_to_fool",
-    "name": "Hard to Fool"
+    "name": "Hard to Fool",
+    "type": "ability"
   }, {
     "id": "rogue_talent:hold_breath",
-    "name": "Hold Breath"
+    "name": "Hold Breath",
+    "type": "ability"
   }, {
     "id": "rogue_talent:honeyed_words",
-    "name": "Honeyed Words"
+    "name": "Honeyed Words",
+    "type": "ability"
   }, {
     "id": "rogue_talent:iron_guts",
-    "name": "Iron Guts"
+    "name": "Iron Guts",
+    "type": "ability"
   }, {
     "id": "rogue_talent:ki_pool",
-    "name": "Ki Pool"
+    "name": "Ki Pool",
+    "type": "ability"
   }, {
     "id": "rogue_talent:knockout_queen",
     "name": "Knockout Queen",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "rogue_talent:lasting_poison",
-    "name": "Lasting Poison"
+    "name": "Lasting Poison",
+    "type": "ability"
   }, {
     "id": "rogue_talent:ledge_walker",
-    "name": "Ledge Walker"
+    "name": "Ledge Walker",
+    "type": "ability"
   }, {
     "id": "rogue_talent:major_magic",
     "name": "Major Magic",
-    "type": "ABILITY_TYPE_SP",
-    "prerequisitesFormula": "@int_score \u003e\u003d 11 AND @rogue_talent:minor_magic"
+    "prerequisiteFormula": "@int_score \u003e\u003d 11 AND @rogue_talent:minor_magic",
+    "type": "ability"
   }, {
     "id": "rogue_talent:minor_magic",
     "name": "Minor Magic",
-    "type": "ABILITY_TYPE_SP",
-    "prerequisitesFormula": "@int_score \u003e\u003d 10"
+    "prerequisiteFormula": "@int_score \u003e\u003d 10",
+    "type": "ability"
   }, {
     "id": "rogue_talent:nimble_climber",
-    "name": "Nimble Climber"
+    "name": "Nimble Climber",
+    "type": "ability"
   }, {
     "id": "rogue_talent:ninja_trick",
-    "name": "Ninja Trick"
+    "name": "Ninja Trick",
+    "type": "ability"
   }, {
     "id": "rogue_talent:obfuscate_story",
-    "name": "Obfuscate Story"
+    "name": "Obfuscate Story",
+    "type": "ability"
   }, {
     "id": "rogue_talent:occult_mysticism",
     "name": "Occult Mysticism",
-    "type": "ABILITY_TYPE_EX"
+    "type": "ability"
   }, {
     "id": "rogue_talent:offensive_defense",
-    "name": "Offensive Defense"
+    "name": "Offensive Defense",
+    "type": "ability"
   }, {
     "id": "rogue_talent:peerless_maneuver",
-    "name": "Peerless Maneuver"
+    "name": "Peerless Maneuver",
+    "type": "ability"
   }, {
     "id": "rogue_talent:positioning_attack",
-    "name": "Positioning Attack"
+    "name": "Positioning Attack",
+    "type": "ability"
   }, {
     "id": "rogue_talent:powerful_sneak",
-    "name": "Powerful Sneak"
+    "name": "Powerful Sneak",
+    "type": "ability"
   }, {
     "id": "rogue_talent:quick_disable",
-    "name": "Quick Disable"
+    "name": "Quick Disable",
+    "type": "ability"
   }, {
     "id": "rogue_talent:quick_disguise",
-    "name": "Quick Disguise"
+    "name": "Quick Disguise",
+    "type": "ability"
   }, {
     "id": "rogue_talent:quick_trapsmith",
-    "name": "Quick Trapsmith"
+    "name": "Quick Trapsmith",
+    "type": "ability"
   }, {
     "id": "rogue_talent:resiliency",
-    "name": "Resiliency"
+    "name": "Resiliency",
+    "type": "ability"
   }, {
     "id": "rogue_talent:rogue_crawl",
-    "name": "Rogue Crawl"
+    "name": "Rogue Crawl",
+    "type": "ability"
   }, {
     "id": "rogue_talent:rope_master",
-    "name": "Rope Master"
+    "name": "Rope Master",
+    "type": "ability"
   }, {
     "id": "rogue_talent:silencing_strike",
     "name": "Silencing Strike",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "rogue_talent:slow_reactions",
-    "name": "Slow Reactions"
+    "name": "Slow Reactions",
+    "type": "ability"
   }, {
     "id": "rogue_talent:snap_shot",
-    "name": "Snap Shot"
+    "name": "Snap Shot",
+    "type": "ability"
   }, {
     "id": "rogue_talent:snipers_eye",
-    "name": "Sniper\u0027s Eye"
+    "name": "Sniper\u0027s Eye",
+    "type": "ability"
   }, {
     "id": "rogue_talent:stand_up",
-    "name": "Stand Up"
+    "name": "Stand Up",
+    "type": "ability"
   }, {
     "id": "rogue_talent:steal_the_story",
     "name": "Steal the Story",
-    "prerequisitesFormula": "@rogue_talent:obfuscate_story"
+    "prerequisiteFormula": "@rogue_talent:obfuscate_story",
+    "type": "ability"
   }, {
     "id": "rogue_talent:strong_impression",
-    "name": "Strong Impression"
+    "name": "Strong Impression",
+    "type": "ability"
   }, {
     "id": "rogue_talent:strong_stroke",
-    "name": "Strong Stroke"
+    "name": "Strong Stroke",
+    "type": "ability"
   }, {
     "id": "rogue_talent:surprise_attack",
-    "name": "Surprise Attack"
+    "name": "Surprise Attack",
+    "type": "ability"
   }, {
     "id": "rogue_talent:survivalist",
-    "name": "Survivalist"
+    "name": "Survivalist",
+    "type": "ability"
   }, {
     "id": "rogue_talent:swift_poison",
-    "name": "Swift Poison"
+    "name": "Swift Poison",
+    "type": "ability"
   }, {
     "id": "rogue_talent:terrain_mastery",
-    "name": "Terrain Mastery"
+    "name": "Terrain Mastery",
+    "type": "ability"
   }, {
     "id": "rogue_talent:trap_spotter",
-    "name": "Trap Spotter"
+    "name": "Trap Spotter",
+    "type": "ability"
   }, {
     "id": "rogue_talent:underhanded",
-    "name": "Underhanded"
+    "name": "Underhanded",
+    "type": "ability"
   }, {
     "id": "rogue_talent:wall_scramble",
-    "name": "Wall Scramble"
+    "name": "Wall Scramble",
+    "type": "ability"
   }, {
     "id": "rogue_talent:weapon_training",
-    "name": "Weapon Training"
+    "name": "Weapon Training",
+    "type": "ability"
   }, {
     "id": "rogue_talent:another_day",
     "name": "Another Day",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:confounding_blades",
     "name": "Confounding Blades",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:crippling_strike",
     "name": "Crippling Strike",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:deadly_cocktail",
     "name": "Deadly Cocktail",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:deadly_sneak",
     "name": "Deadly Sneak",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:powerful_sneak"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:powerful_sneak",
+    "type": "ability"
   }, {
     "id": "rogue_talent:defensive_roll",
     "name": "Defensive Roll",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:dispelling_attack",
     "name": "Dispelling Attack",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:major_magic"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:major_magic",
+    "type": "ability"
   }, {
     "id": "rogue_talent:entanglement_of_blades",
     "name": "Entanglement of Blades",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:familiar",
     "name": "Familiar",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:major_magic AND @rogue_talent:minor_magic"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:major_magic AND @rogue_talent:minor_magic",
+    "type": "ability"
   }, {
     "id": "rogue_talent:fast_tumble",
     "name": "Fast Tumble",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:founders_blessing",
     "name": "Founders\u0027 Blessing",
-    "type": "ABILITY_TYPE_SU"
+    "type": "ability"
   }, {
     "id": "rogue_talent:frugal_trapsmith",
     "name": "Frugal Trapsmith",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:feat",
     "name": "Feat",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:getaway_master",
     "name": "Getaway Master",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:getaway_artist"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue AND @rogue_talent:getaway_artist",
+    "type": "ability"
   }, {
     "id": "rogue_talent:hard_minded",
     "name": "Hard Minded",
-    "type": "ABILITY_TYPE_EX",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:hide_in_plain_sight",
     "name": "Hide in Plain Sight",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:hunters_surprise",
     "name": "Hunter\u0027s Surprise",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:knock_out_blow",
     "name": "Knock-Out Blow",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:improved_evasion",
     "name": "Improved Evasion",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:master_of_disguise",
     "name": "Master of Disguise",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:master_tricks",
     "name": "Master Tricks",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:opportunist",
     "name": "Opportunist",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:redirect_attack",
     "name": "Redirect Attack",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:rumormonger",
     "name": "Rumormonger",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:shrinewalk",
     "name": "Shrinewalk",
-    "type": "ABILITY_TYPE_SP"
+    "type": "ability"
   }, {
     "id": "rogue_talent:skill_mastery",
     "name": "Skill Mastery",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:slippery_mind",
     "name": "Slippery Mind",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:stealthy_sniper",
     "name": "Stealthy Sniper",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:thoughtful_reexamining",
     "name": "Thoughtful Reexamining",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:unwitting_ally",
     "name": "Unwitting Ally",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }, {
     "id": "rogue_talent:weapon_snatcher",
     "name": "Weapon Snatcher",
-    "prerequisitesFormula": "@ability:advanced_talents#unchained_rogue"
+    "prerequisiteFormula": "@ability:advanced_talents#unchained_rogue",
+    "type": "ability"
   }]
 }

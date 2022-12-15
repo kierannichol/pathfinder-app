@@ -1,11 +1,17 @@
 {
   "id": "feat:extra_rage_power",
   "name": "Extra Rage Power",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have unlocked a new ability to use while raging.",
-  "prerequisites": "Rage power class feature.",
-  "prerequisitesFormula": "@ability:rage_power#unchained_barbarian",
-  "benefit": "You gain one additional rage power. You must meet all of the prerequisites for this rage power.",
-  "special": "You can gain Extra Rage Power multiple times.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@ability:rage_power#unchained_barbarian",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have unlocked a new ability to use while raging.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:extra_rage_power",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain one additional rage power. You must meet all of the prerequisites for this rage power.",
+  "specialText": "You can gain Extra Rage Power multiple times."
 }

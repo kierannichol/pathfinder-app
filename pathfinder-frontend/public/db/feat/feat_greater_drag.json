@@ -1,11 +1,17 @@
 {
   "id": "feat:greater_drag",
   "name": "Greater Drag",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Foes that you drag are thrown out of balance.",
-  "prerequisites": "Str 13, Improved Drag, Power Attack, base attack bonus +6.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 13 AND @feat:improved_drag AND @feat:power_attack AND @bab \u003e\u003d 6",
-  "benefit": "You receive a +2 bonus on checks made to drag a foe. This bonus stacks with the bonus granted by Improved Drag. Whenever you drag a foe, his movement provokes attacks of opportunity from all of your allies (but not you).",
-  "normal": "Creatures moved by drag do not provoke attacks of opportunity.",
-  "source": "PZO1115"
+  "prerequisiteFormula": "@str_score \u003e\u003d 13 AND @feat:improved_drag AND @feat:power_attack AND @bab \u003e\u003d 6",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Foes that you drag are thrown out of balance.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:greater_drag",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You receive a +2 bonus on checks made to drag a foe. This bonus stacks with the bonus granted by Improved Drag. Whenever you drag a foe, his movement provokes attacks of opportunity from all of your allies (but not you).",
+  "normalText": "Creatures moved by drag do not provoke attacks of opportunity."
 }

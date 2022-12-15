@@ -1,10 +1,16 @@
 {
   "id": "feat:sap_master",
   "name": "Sap Master",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You knock the sense out of foes with a well-timed surprise attack.",
-  "prerequisites": "Sneak attack +3d6, Sap Adept.",
-  "prerequisitesFormula": "@ability:sneak_attack \u003e\u003d 3 AND @feat:sap_adept",
-  "benefit": "Whenever you use a bludgeoning weapon to deal nonlethal sneak attack damage to a flat-footed opponent, roll your sneak attack dice twice, totaling the results as your nonlethal sneak attack damage for that attack.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@ability:sneak_attack \u003e\u003d 3 AND @feat:sap_adept",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You knock the sense out of foes with a well-timed surprise attack.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sap_master",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you use a bludgeoning weapon to deal nonlethal sneak attack damage to a flat-footed opponent, roll your sneak attack dice twice, totaling the results as your nonlethal sneak attack damage for that attack."
 }

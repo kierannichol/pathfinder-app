@@ -1,6 +1,13 @@
 {
   "id": "discovery:blinding_bomb",
   "name": "Blinding Bomb",
-  "prerequisitesFormula": "@class:alchemist \u003e\u003d 8",
-  "description": "Blind enemies with your bombs"
+  "prerequisiteFormula": "@class:alchemist \u003e\u003d 8",
+  "type": "ability",
+  "descriptionText": "Blind enemies with your bombs",
+  "effects": [{
+    "adjustState": {
+      "key": "discovery:blinding_bomb",
+      "delta": 1
+    }
+  }]
 }

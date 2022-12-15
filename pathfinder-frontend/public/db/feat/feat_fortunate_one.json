@@ -1,10 +1,16 @@
 {
   "id": "feat:fortunate_one",
   "name": "Fortunate One",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You have an even greater knack than most halflings for adaptable luck.",
-  "prerequisites": "Adaptable luck racial trait, halfling.",
-  "prerequisitesFormula": "@ability:adaptable_luck AND @race:halfling",
-  "benefit": "The number of times per day you can use the adaptable luck racial trait increases by 1.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@ability:adaptable_luck AND @race:halfling",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You have an even greater knack than most halflings for adaptable luck.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:fortunate_one",
+      "delta": 1
+    }
+  }],
+  "benefitText": "The number of times per day you can use the adaptable luck racial trait increases by 1."
 }

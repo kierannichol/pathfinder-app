@@ -1,10 +1,16 @@
 {
   "id": "feat:cloud_gazer",
   "name": "Cloud Gazer",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "Your insight into your elemental heritage gives you a clarity of sight few humans possess.",
-  "prerequisites": "Sylph.",
-  "prerequisitesFormula": "@race:sylph",
-  "benefit": "You can see through fog, mist, and clouds, without penalty, ignoring any cover or concealment bonuses from such effects. If the effect is created by magic, this feat instead triples the distance you can see without penalty.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@race:sylph",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "Your insight into your elemental heritage gives you a clarity of sight few humans possess.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:cloud_gazer",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You can see through fog, mist, and clouds, without penalty, ignoring any cover or concealment bonuses from such effects. If the effect is created by magic, this feat instead triples the distance you can see without penalty."
 }

@@ -1,8 +1,15 @@
 {
   "id": "feat:disruptive_spell",
   "name": "Disruptive Spell",
-  "types": ["FEAT_TYPE_METAMAGIC"],
-  "description": "Your magical energies cling to enemies, interfering with their spellcasting.",
-  "benefit": "Targets affected by a disruptive spell must make concentration checks when using spells or spell-like abilities (DC equals the save DC of the disruptive spell plus the level of the spell being cast) for 1 round. Targets that avoid the spell\u0027s effects avoid this feat\u0027s effect as well. A disruptive spell uses up a spell slot one level higher than the spell\u0027s actual level.",
-  "source": "PZO1115"
+  "type": "feat",
+  "categoryId": 5,
+  "descriptionText": "Your magical energies cling to enemies, interfering with their spellcasting.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:disruptive_spell",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Targets affected by a disruptive spell must make concentration checks when using spells or spell-like abilities (DC equals the save DC of the disruptive spell plus the level of the spell being cast) for 1 round. Targets that avoid the spell\u0027s effects avoid this feat\u0027s effect as well. A disruptive spell uses up a spell slot one level higher than the spell\u0027s actual level."
 }

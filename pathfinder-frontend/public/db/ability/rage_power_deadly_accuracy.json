@@ -1,7 +1,13 @@
 {
   "id": "rage_power:deadly_accuracy",
   "name": "Deadly Accuracy",
-  "type": "ABILITY_TYPE_EX",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:surprise_accuracy",
-  "description": "On critical threat when using surprise accuracy, double surprise accuracy bonus on roll to confirm critical hit."
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:surprise_accuracy",
+  "type": "ability",
+  "descriptionText": "On critical threat when using surprise accuracy, double surprise accuracy bonus on roll to confirm critical hit.",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:deadly_accuracy",
+      "delta": 1
+    }
+  }]
 }

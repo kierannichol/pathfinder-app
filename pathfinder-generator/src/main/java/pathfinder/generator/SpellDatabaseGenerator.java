@@ -5,12 +5,12 @@ import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pathfinder.model.Spell;
-import pathfinder.source.scraper.nethys.NethysSpellsScraper;
+import pathfinder.source.excel.ExcelSpellSourceDatabase;
 
 @Service("Spell Database Generator")
 @RequiredArgsConstructor
 public class SpellDatabaseGenerator extends AbstractSpellDatabaseGenerator {
-    private final NethysSpellsScraper sourceDatabase;
+    private final ExcelSpellSourceDatabase sourceDatabase;
 
     @Override
     protected Stream<Spell> streamModels() throws IOException {
@@ -20,7 +20,7 @@ public class SpellDatabaseGenerator extends AbstractSpellDatabaseGenerator {
 
     @Override
     protected String getRelativeOutputPath() {
-        return "spells";
+        return "spell";
     }
 
     @Override

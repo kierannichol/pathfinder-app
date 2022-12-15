@@ -1,10 +1,16 @@
 {
   "id": "feat:tangle_feet",
   "name": "Tangle Feet",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Creatures who cross your path find themselves tripping over their own feet.",
-  "prerequisites": "Dodge, Mobility, Underfoot (Advanced Player\u0027s Guide 173), goblin, Small size or smaller.",
-  "prerequisitesFormula": "@size \u003c\u003d (4)",
-  "benefit": "When you successfully make an Acrobatics check to avoid provoking an attack of opportunity from a larger opponent when you move through its threatened area or its space, you can make that opponent lose its balance until the end of its next turn as a free action. While that creature\u0027s balance is lost, if it attempts to move, it must make a successful DC 15 Acrobatics check or fall prone, wasting the move action. You can only affect one creature with this effect each round.",
-  "source": "PZO1121"
+  "prerequisiteFormula": "@size \u003c\u003d (4)",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Creatures who cross your path find themselves tripping over their own feet.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:tangle_feet",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When you successfully make an Acrobatics check to avoid provoking an attack of opportunity from a larger opponent when you move through its threatened area or its space, you can make that opponent lose its balance until the end of its next turn as a free action. While that creature\u0027s balance is lost, if it attempts to move, it must make a successful DC 15 Acrobatics check or fall prone, wasting the move action. You can only affect one creature with this effect each round."
 }

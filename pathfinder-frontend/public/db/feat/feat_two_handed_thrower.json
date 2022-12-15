@@ -1,11 +1,17 @@
 {
   "id": "feat:two_handed_thrower",
   "name": "Two-Handed Thrower",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "You hurl weapons with both hands and with great force, sometimes using a whirling technique to send your weapon flying through the air at tremendous speeds.",
-  "prerequisites": "Str 15.",
-  "prerequisitesFormula": "@str_score \u003e\u003d 15",
-  "benefit": "Whenever you use two hands to throw a onehanded or two-handed weapon, you gain a bonus on damage rolls equal to 1-1/2 times your Strength bonus. Using two hands to throw any weapon requires only a standard action for you. If you also have the Quick Draw feat, you can throw two-handed weapons at your full normal rate of attacks.",
-  "normal": "You add your Strength bonus on thrown weapon damage, regardless of available hands. Throwing a twohanded weapon is a full-round action.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "@str_score \u003e\u003d 15",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "You hurl weapons with both hands and with great force, sometimes using a whirling technique to send your weapon flying through the air at tremendous speeds.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:two_handed_thrower",
+      "delta": 1
+    }
+  }],
+  "benefitText": "Whenever you use two hands to throw a onehanded or two-handed weapon, you gain a bonus on damage rolls equal to 1-1/2 times your Strength bonus. Using two hands to throw any weapon requires only a standard action for you. If you also have the Quick Draw feat, you can throw two-handed weapons at your full normal rate of attacks.",
+  "normalText": "You add your Strength bonus on thrown weapon damage, regardless of available hands. Throwing a twohanded weapon is a full-round action."
 }

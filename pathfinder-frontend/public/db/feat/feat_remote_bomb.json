@@ -1,10 +1,16 @@
 {
   "id": "feat:remote_bomb",
   "name": "Remote Bomb",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "You can set off your delayed bombs at great distances.",
-  "prerequisites": "Delayed bomb discovery.",
-  "prerequisitesFormula": "@discovery:delayed_bomb",
-  "benefit": "The maximum delay for your delayed bombs increases to a number of minutes equal to your level. If you have line of effect to your delayed bomb, you may detonate it earlier than its preset time by making a DC 20 Intelligence check; the DC increases by +1 for every 10 feet of distance between you and the bomb.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@discovery:delayed_bomb",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "You can set off your delayed bombs at great distances.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:remote_bomb",
+      "delta": 1
+    }
+  }],
+  "benefitText": "The maximum delay for your delayed bombs increases to a number of minutes equal to your level. If you have line of effect to your delayed bomb, you may detonate it earlier than its preset time by making a DC 20 Intelligence check; the DC increases by +1 for every 10 feet of distance between you and the bomb."
 }

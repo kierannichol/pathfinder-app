@@ -1,11 +1,17 @@
 {
   "id": "feat:amateur_gunslinger",
   "name": "Amateur Gunslinger",
-  "types": ["FEAT_TYPE_COMBAT"],
-  "description": "Although you are not a gunslinger, you have and can use grit.",
-  "prerequisites": "You have no levels in a class that has the grit class feature.",
-  "prerequisitesFormula": "!@ability:grit",
-  "benefit": "You gain a small amount of grit and the ability to perform a single 1st-level deed from the gunslinger deed class feature. At the start of the day, you gain 1 grit point, though throughout the day you can gain grit points up to a maximum of your Wisdom modifier (minimum 1). You can regain grit using the rules for the gunslinger\u0027s grit class feature (see page 9). You can spend this grit to perform the 1st-level deed you chose upon taking this feat, and any other deed you have gained through feats or magic items.",
-  "special": "If you gain levels in a class that grants the grit class feature, you can immediately trade this feat for the Extra Grit feat.",
-  "source": "PZO1118"
+  "prerequisiteFormula": "!@ability:grit",
+  "type": "feat",
+  "categoryId": 2,
+  "descriptionText": "Although you are not a gunslinger, you have and can use grit.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:amateur_gunslinger",
+      "delta": 1
+    }
+  }],
+  "benefitText": "You gain a small amount of grit and the ability to perform a single 1st-level deed from the gunslinger deed class feature. At the start of the day, you gain 1 grit point, though throughout the day you can gain grit points up to a maximum of your Wisdom modifier (minimum 1). You can regain grit using the rules for the gunslinger\u0027s grit class feature (see page 9). You can spend this grit to perform the 1st-level deed you chose upon taking this feat, and any other deed you have gained through feats or magic items.",
+  "specialText": "If you gain levels in a class that grants the grit class feature, you can immediately trade this feat for the Extra Grit feat."
 }

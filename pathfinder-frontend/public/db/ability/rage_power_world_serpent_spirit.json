@@ -1,7 +1,13 @@
 {
   "id": "rage_power:world_serpent_spirit",
   "name": "World Serpent Spirit",
-  "type": "ABILITY_TYPE_SU",
-  "prerequisitesFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_totem",
-  "description": "Your weapon counts as chaotic, evil, good, lawful while raging"
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_totem",
+  "type": "ability",
+  "descriptionText": "Your weapon counts as chaotic, evil, good, lawful while raging",
+  "effects": [{
+    "adjustState": {
+      "key": "rage_power:world_serpent_spirit",
+      "delta": 1
+    }
+  }]
 }

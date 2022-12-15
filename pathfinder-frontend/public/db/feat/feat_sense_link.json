@@ -1,10 +1,16 @@
 {
   "id": "feat:sense_link",
   "name": "Sense Link",
-  "types": ["FEAT_TYPE_GENERAL"],
-  "description": "When you and your eidolon share senses, your combined minds grant you exceptional powers of observation.",
-  "prerequisites": "Bond senses class feature.",
-  "prerequisitesFormula": "@ability:bond_senses#unchained_summoner",
-  "benefit": "When sharing the senses of your eidolon, you gain a +4 competence bonus on Perception checks for the duration of your bond senses ability.",
-  "source": "PZO1117"
+  "prerequisiteFormula": "@ability:bond_senses#unchained_summoner",
+  "type": "feat",
+  "categoryId": 1,
+  "descriptionText": "When you and your eidolon share senses, your combined minds grant you exceptional powers of observation.",
+  "effects": [{
+    "adjustState": {
+      "level": 1,
+      "key": "feat:sense_link",
+      "delta": 1
+    }
+  }],
+  "benefitText": "When sharing the senses of your eidolon, you gain a +4 competence bonus on Perception checks for the duration of your bond senses ability."
 }
