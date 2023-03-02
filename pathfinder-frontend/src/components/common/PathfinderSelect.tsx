@@ -33,15 +33,14 @@ interface PathfinderSelectItemProps {
   itemKey: string;
   label: ReactNode;
   bodyFn?: () => Promise<ReactNode>;
-  body?: ReactNode;
   disabled?: boolean;
   variant?: string;
 }
 
-function PathfinderSelectItem({ itemKey, label, bodyFn, body, disabled = false, variant = 'special' }: PathfinderSelectItemProps) {
-  const hasBody = body !== undefined || bodyFn !== undefined;
+function PathfinderSelectItem({ itemKey, label, bodyFn, disabled = false, variant = 'special' }: PathfinderSelectItemProps) {
+  const hasBody = bodyFn !== undefined;
   return hasBody
-      ? <PathfinderSelectItemWithBody itemKey={itemKey} label={label} bodyFn={bodyFn} body={body} disabled={disabled} variant={variant} />
+      ? <PathfinderSelectItemWithBody itemKey={itemKey} label={label} bodyFn={bodyFn} disabled={disabled} variant={variant} />
       : <PathfinderSelectItemWithoutBody itemKey={itemKey} label={label} disabled={disabled} variant={variant} />
 }
 
@@ -65,7 +64,7 @@ function PathfinderSelectItemWithoutBody({ itemKey, label, disabled, variant }: 
       </div>);
 }
 
-function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, variant }: PathfinderSelectItemProps) {
+function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, disabled, variant }: PathfinderSelectItemProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(elementRef);
   const { activeEventKey } = useContext(AccordionContext);
@@ -76,7 +75,7 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, 
   const [ collapsing, setCollapsing ] = useState(false);
   const [ collapsed, setCollapsed ] = useState(!isActive);
 
-  const [ bodyState, setBodyState ] = useState<ReactNode>(body);
+  const [ bodyState, setBodyState ] = useState<ReactNode>();
   useEffect(() => {
     if (!onScreen || bodyFn === undefined) {
       return;
@@ -93,7 +92,7 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, body, disabled, 
     return () => {
       mounted = false;
       if (!loading) {
-        setBodyState(body);
+        setBodyState(undefined);
       }
     }
   }, [itemKey, onScreen])

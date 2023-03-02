@@ -1,7 +1,8 @@
 import React from "react";
-import {usePathfinderDatabase} from "../../../database/v3/PathfinderDatabase";
+import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import PathfinderSelect from "../../common/PathfinderSelect";
 import "./CharacterFeatureList.scss";
+import EntityDescription from "./EntityDescription";
 
 interface CharacterFeatureListProps {
   featureIds: string[];
@@ -14,8 +15,9 @@ export default function CharacterFeatureList({ featureIds, variant }: CharacterF
   return <PathfinderSelect>
     {featureIds.map(id => <PathfinderSelect.Item key={id}
                                                   itemKey={id}
-                                                  label={pathfinderDatabase.name(id) ?? id}
+                                                 label={<>{pathfinderDatabase.name(id) ?? id}</>}
                                                   variant={variant}
-                                                  bodyFn={() => pathfinderDatabase.description(id)}/>)}
+                                                  bodyFn={async () => <EntityDescription description={await pathfinderDatabase.description(id)}/>}
+    />)}
   </PathfinderSelect>
 }

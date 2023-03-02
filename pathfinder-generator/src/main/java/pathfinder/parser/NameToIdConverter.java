@@ -1,38 +1,40 @@
 package pathfinder.parser;
 
+import pathfinder.model.Id;
+
 public class NameToIdConverter {
 
-    public static String featId(String name) {
+    public static Id featId(String name) {
         return generateId(AttributeType.FEAT, name);
     }
 
-    public static String abilityId(String name) {
+    public static Id abilityId(String name) {
         return generateId(AttributeType.ABILITY, name);
     }
 
-    public static String raceId(String name) {
+    public static Id raceId(String name) {
         return generateId(AttributeType.RACE, name);
     }
 
-    public static String classId(String name) {
+    public static Id classId(String name) {
         return generateId(AttributeType.CLASS, name);
     }
 
-    public static String proficiencyId(String name) {
+    public static Id proficiencyId(String name) {
         return generateId(AttributeType.PROFICIENCY, name);
     }
 
-    public static String skillId(String name) {
+    public static Id skillId(String name) {
         return generateId(AttributeType.SKILL, name);
     }
 
-    public static String weaponId(String name) {
+    public static Id.Key weaponId(String name) {
         return partialId(name);
 //        return generateId(AttributeType.WEAPON, name);
     }
 
-    public static String partialId(String name) {
-        return name
+    public static Id.Key partialId(String name) {
+        return Id.partial(name
                 .toLowerCase()
                 .replaceAll(" \\(Su\\)", "")
                 .replaceAll(" \\(Sp\\)", "")
@@ -49,10 +51,10 @@ public class NameToIdConverter {
                 .replaceAll("]", "")
                 .replaceAll("!", "")
                 .replace('-', '_')
-                .replace("&", "and");
+                .replace("&", "and"));
     }
 
-    public static String generateId(AttributeType type, String name) {
-        return type.key() + ":" + partialId(name);
+    public static Id generateId(AttributeType type, String name) {
+        return Id.of(type.key(), partialId(name));
     }
 }

@@ -1,11 +1,26 @@
-import CharacterAtLevel from "../../v3/model/CharacterAtLevel";
+import CharacterAtLevel from "../../core/CharacterAtLevel";
 
 export class WeaponType {
+  public readonly name: string;
+  public readonly id: string;
 
-  public constructor(public readonly id: string,
-                     public readonly name: string,
+  public constructor(name: string,
                      public readonly proficiency: Weapon.Proficiency,
                      public readonly range: Weapon.Range) {
+    this.name = this.fixName(name)
+        .replace(/(\b[a-z](?!\s))/g, x => x.toUpperCase());
+
+    this.id = this.name.toLowerCase()
+        .replace("'", "")
+        .replaceAll(/[^a-zA-Z0-9]+/g, "_");
+  }
+
+  private fixName(name: string): string {
+    const parts = name.split(", ");
+    if (parts.length == 1) {
+      return parts[0];
+    }
+    return `${parts[1]} ${[parts[0]]}`;
   }
 
   public isValidFor(characterAtLevel: CharacterAtLevel): boolean {

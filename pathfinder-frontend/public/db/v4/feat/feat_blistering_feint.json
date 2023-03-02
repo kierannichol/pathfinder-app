@@ -1,0 +1,18 @@
+{
+  "id": "feat:blistering_feint",
+  "name": "Blistering Feint",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@feat:combat_expertise, @feat:improved_feint, @race:ifrit)",
+  "description": {
+    "text": "Your foes flinch from the heat of your weapon, giving you an opportunity to slip past their defenses.",
+    "sections": {
+      "Benefit": "You gain a +2 bonus on feint checks made while wielding a weapon that deals fire damage. Anytime you successfully feint a creature while using such a weapon, you may deal its fire damage to the enemy."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:blistering_feint",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 import lombok.extern.slf4j.Slf4j;
+import org.jsoup.UncheckedIOException;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import pathfinder.model.Ability;
-import pathfinder.model.Ability.Type;
-import pathfinder.model.Sources;
+import pathfinder.model.v4.Description;
+import pathfinder.model.v4.pathfinder.Feature;
 import pathfinder.parser.AttributeType;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.source.RogueTalentSourceDatabase;
@@ -22,11 +22,11 @@ import pathfinder.util.NameUtils;
 public class D20pfsrdRogueTalentScraper extends AbstractD20pfsrdScraper implements
         RogueTalentSourceDatabase {
 
-    public List<Ability> scrape() throws IOException {
+    public List<Feature> scrape() throws IOException {
         Document document = fetch(
                 new URL("https://www.d20pfsrd.com/classes/core-classes/rogue/rogue-talents/"));
 
-        List<Ability> rogueTalents = new ArrayList<>();
+        List<Feature> rogueTalents = new ArrayList<>();
 
         Elements tableRows = document.select("table[border=1] tbody tr");
         tableRows.forEach(row -> {
@@ -39,16 +39,16 @@ public class D20pfsrdRogueTalentScraper extends AbstractD20pfsrdScraper implemen
             String benefits = columns.get(2).text();
             String source = columns.get(3).text();
 
-            Type type = Ability.Type.fromAbilityName(name);
-            name = Ability.Type.removeTypeFromName(name);
+            String type = Feature.Type.fromFeatureName(name);
+            name = Feature.Type.removeTypeFromName(name);
 
-            Ability ability = Ability.builder()
+            Feature ability = Feature.builder()
                     .id(NameToIdConverter.generateId(AttributeType.ROGUE_TALENT, name))
                     .name(name)
                     .type(type)
                     .prerequisites(prerequisites)
-                    .description(benefits)
-                    .source(Sources.findSourceByNameOrCode(source))
+                    .description(Description.create(benefits))
+                    .source(source)
                     .build();
 
             rogueTalents.add(ability);
@@ -58,7 +58,11 @@ public class D20pfsrdRogueTalentScraper extends AbstractD20pfsrdScraper implemen
     }
 
     @Override
-    public Stream<Ability> streamAbilities() throws IOException {
-        return scrape().stream();
+    public Stream<Feature> streamAbilities() {
+        try {
+            return scrape().stream();
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
     }
 }

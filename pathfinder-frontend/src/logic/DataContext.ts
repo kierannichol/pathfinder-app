@@ -1,5 +1,5 @@
 import Resolvable from "./Resolvable";
-import {ResolvedValue} from "./ResolvedValue";
+import ResolvedValue from "./ResolvedValue";
 
 export type DataContextState = { [key:string]:string|number|boolean|Resolvable; };
 
@@ -14,7 +14,9 @@ export interface ImmutableDataContext extends DataContext {
 }
 
 export interface MutableDataContext extends DataContext {
-  set(key: string, value: string|number|boolean): void;
+  set(key: string, value: string|number|boolean|Resolvable): void;
+  remove(key: string): void;
+  rename(key: string, to: string): void;
 }
 
 class EmptyDataContext implements DataContext {
@@ -53,7 +55,7 @@ class StaticDataContext implements MutableDataContext {
     return ResolvedValue.of(result);
   }
 
-  set(key: string, value: string|number): void {
+  set(key: string, value: string|number|boolean|Resolvable): void {
     this.state[key] = value;
     // const existing = this.state[key];
     // if (existing === undefined || existing instanceof Resolvable) {
@@ -61,6 +63,10 @@ class StaticDataContext implements MutableDataContext {
     // } else {
     //   existing.setValue(value);
     // }
+  }
+
+  remove(key: string): void {
+    delete this.state[key];
   }
 
   keys(): string[] {
@@ -79,10 +85,17 @@ class StaticDataContext implements MutableDataContext {
   private escapeRegExp(expression: string) {
     return expression.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
+
+  rename(key: string, to: string): void {
+    if (key in this.state) {
+      this.state[to] = this.state[key];
+      delete this.state[key];
+    }
+  }
 }
 
 export class StaticImmutableDataContext implements ImmutableDataContext {
-  constructor(private readonly state: { [key:string]:string|number|boolean|Resolvable; }) {
+  constructor(private readonly state: { [key:string]:string|number|boolean|Resolvable; } = {}) {
   }
 
   get(key: string): ResolvedValue|undefined {

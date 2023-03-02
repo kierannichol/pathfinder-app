@@ -1,0 +1,18 @@
+{
+  "id": "feat:trappers_setup",
+  "name": "Trapper\u0027s Setup",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@skill:craft#traps \u003e\u003d 5",
+  "description": {
+    "text": "You have an instinct for waiting until just the right moment to spring a hazard or trap.",
+    "sections": {
+      "Benefit": "When you manually trigger a trap against opponents, that trap receives either a +2 circumstance bonus on melee attack rolls or a +2 circumstance bonus to its saving throw DC."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:trappers_setup",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

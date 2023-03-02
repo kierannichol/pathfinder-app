@@ -1,0 +1,18 @@
+{
+  "id": "feat:sociable",
+  "name": "Sociable",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@cha_score \u003e\u003d 13, @race:half_elf)",
+  "description": {
+    "text": "You have a way of helping others to get along.",
+    "sections": {
+      "Benefit": "As a move action, you grant all friendly creatures within 30 feet who can see or hear you (including yourself ) a +2 bonus on Diplomacy checks for a number of rounds equal to your Charisma modifier (minimum 1 round)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:sociable",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

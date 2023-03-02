@@ -11,9 +11,7 @@ interface AbilityScoreSelectButtonProps {
 export default function AbilityScoreSelectButton({ value, onSelect }: AbilityScoreSelectButtonProps) {
   const optionsFn = useCallback(() => {
     return AbilityScores.map(ability =>
-        new ChoiceSelectorOption(ability.id, ability.name,
-            true,
-            ''))
+        new ChoiceSelectorOption(ability.id, ability.name, true))
   }, []);
   return <ChoiceSelectButton choiceName="Ability Score" value={value} optionsFn={optionsFn} onSelect={onSelect} />
 }

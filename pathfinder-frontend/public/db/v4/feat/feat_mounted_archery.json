@@ -1,0 +1,18 @@
+{
+  "id": "feat:mounted_archery",
+  "name": "Mounted Archery",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@skill:ride \u003e\u003d 1, @feat:mounted_combat)",
+  "description": {
+    "text": "You are skilled at making ranged attacks while mounted.",
+    "sections": {
+      "Benefit": "The penalty you take when using a ranged weapon while mounted is halved: -2 instead of -4 if your mount is taking a double move, and -4 instead of -8 if your mount is running."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:mounted_archery",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

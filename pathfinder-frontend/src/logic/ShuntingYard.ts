@@ -1,7 +1,7 @@
 import {DataContext} from "./DataContext";
 import Parser from "./Parser";
 import Resolvable from "./Resolvable";
-import {ResolvedValue} from "./ResolvedValue";
+import ResolvedValue from "./ResolvedValue";
 import {ResolveError} from "./ResolveError";
 import TokenTree, {alpha, decimal, integer, key, literal, optional, term} from "./TokenTree";
 
@@ -10,6 +10,7 @@ type OneOperandFunction<T> = (x: T) => T;
 type TwoOperandFunction<T> = (x: T, y: T) => T;
 type ThreeOperandFunction<T> = (x: T, y: T, z: T) => T;
 type OperandFunction<T> = ZeroOperandFunction<T> | OneOperandFunction<T> | TwoOperandFunction<T> | ThreeOperandFunction<T>;
+type VarargsOperandFunction<T> = (n: T[]) => T;
 
 function mapIntFunction(operands: number, fn: OperandFunction<number>): OperandFunction<ResolvedValue> {
   switch (operands) {
@@ -35,6 +36,8 @@ abstract class OperatorFunction implements Node {
   public readonly operands: number;
   private readonly fn: OperandFunction<ResolvedValue>;
 
+  abstract get associativity(): Associativity;
+
   protected constructor(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
     this.name = name;
     this.operands = operands;
@@ -43,11 +46,16 @@ abstract class OperatorFunction implements Node {
 
   execute(x?: ResolvedValue, y?: ResolvedValue, z?: ResolvedValue): ResolvedValue {
     switch (this.operands) {
-      case 0: return (this.fn as ZeroOperandFunction<ResolvedValue>)();
-      case 1: return (this.fn as OneOperandFunction<ResolvedValue>)(x as ResolvedValue);
-      case 2: return (this.fn as TwoOperandFunction<ResolvedValue>)(x as ResolvedValue, y as ResolvedValue);
-      case 3: return (this.fn as ThreeOperandFunction<ResolvedValue>)(x as ResolvedValue, y as ResolvedValue, z as ResolvedValue);
-      default: throw new Error(`Unsupported number of operands: ${this.operands}`);
+      case 0:
+        return (this.fn as ZeroOperandFunction<ResolvedValue>)();
+      case 1:
+        return (this.fn as OneOperandFunction<ResolvedValue>)(x as ResolvedValue);
+      case 2:
+        return (this.fn as TwoOperandFunction<ResolvedValue>)(x as ResolvedValue, y as ResolvedValue);
+      case 3:
+        return (this.fn as ThreeOperandFunction<ResolvedValue>)(x as ResolvedValue, y as ResolvedValue, z as ResolvedValue);
+      default:
+        throw new Error(`Unsupported number of operands: ${this.operands}`);
     }
   }
 }
@@ -55,6 +63,19 @@ abstract class OperatorFunction implements Node {
 class Function extends OperatorFunction {
   constructor(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
     super(name, operands, fn);
+  }
+
+  get associativity(): Associativity {
+    return Associativity.Left;
+  }
+}
+
+class VarargsFunction implements Node {
+  constructor(public readonly name: string,
+              private readonly fn: VarargsOperandFunction<ResolvedValue>) {
+  }
+  execute(args: ResolvedValue[]): ResolvedValue {
+    return this.fn(args);
   }
 }
 
@@ -73,6 +94,10 @@ class Variable implements Node {
 
   resolve(context: DataContext) {
     return this.resolver(context, this.key);
+  }
+
+  public toString(): string {
+    return this.key;
   }
 }
 
@@ -114,6 +139,11 @@ export class ShuntingYardParser implements Parser {
     return this;
   }
 
+  varargsFunction(name: string, fn: VarargsOperandFunction<ResolvedValue>) {
+    this.parser.add(name, _ => new VarargsFunction(name, fn));
+    return this;
+  }
+
   intFunction(name: string, operands: number, fn: OperandFunction<number>) {
     return this.function(name, operands, mapIntFunction(operands, fn));
   }
@@ -147,6 +177,7 @@ export class ShuntingYardParser implements Parser {
   parse(formula: string): ShuntingYard {
     let outputBuffer: OperatorStack = [];
     let operatorStack: OperatorStack = [];
+    let arityStack: number[] = [];
 
     const tokens = this.parser.parse(formula);
 
@@ -169,6 +200,13 @@ export class ShuntingYardParser implements Parser {
 
       if (token instanceof Function) {
         operatorStack.push(token);
+        arityStack.push(1);
+        continue;
+      }
+
+      if (token instanceof VarargsFunction) {
+        operatorStack.push(token);
+        arityStack.push(1);
         continue;
       }
 
@@ -189,6 +227,7 @@ export class ShuntingYardParser implements Parser {
           // ignore
           break;
         case ',':
+          arityStack[arityStack.length-1]++;
           while (operatorStack.length > 0) {
             let next = operatorStack.pop();
             if (next === '(') {
@@ -211,6 +250,15 @@ export class ShuntingYardParser implements Parser {
           }
 
           if (operatorStack.at(-1) instanceof Function) {
+            const paramCount = arityStack.pop();
+            const func = operatorStack.pop() as Function;
+            if (paramCount !== func.operands) {
+              throw new Error(`${func.name} expected ${func.operands} parameters, but got ${paramCount}`);
+            }
+            outputBuffer.push(func);
+          }
+          else if (operatorStack.at(-1) instanceof VarargsFunction) {
+            outputBuffer.push(arityStack.pop());
             outputBuffer.push(operatorStack.pop());
           }
           break;
@@ -223,22 +271,28 @@ export class ShuntingYardParser implements Parser {
       outputBuffer.push(operatorStack.pop());
     }
 
-    return new ShuntingYard(outputBuffer);
+    return new ShuntingYard(outputBuffer, formula);
   }
 }
 
 type OperatorStack = Array<Node|string|number|null|undefined>;
 
 export class ShuntingYard extends Resolvable {
+  private readonly originalFormula: string;
   private readonly stack: OperatorStack;
 
   static parser(): ShuntingYardParser {
     return new ShuntingYardParser();
   }
 
-  constructor(stack: OperatorStack) {
+  constructor(stack: OperatorStack, originalFormula: string) {
     super();
     this.stack = stack;
+    this.originalFormula = originalFormula;
+  }
+
+  asFormula(): string {
+    return this.originalFormula;
   }
 
   resolve(context: DataContext = DataContext.Empty): ResolvedValue|undefined {
@@ -275,6 +329,17 @@ export class ShuntingYard extends Resolvable {
         else {
           throw new Error("Unsupported number of operands: " + func.operands);
         }
+        continue;
+      }
+
+      if (next instanceof VarargsFunction) {
+        let func = next;
+        let params: ResolvedValue[] = [];
+        let paramCount = stack.pop() as number;
+        while (paramCount-- > 0) {
+          params.push(stack.pop() as ResolvedValue);
+        }
+        stack.push(func.execute(params));
         continue;
       }
 

@@ -1,0 +1,18 @@
+{
+  "id": "feat:cockatrice_strike",
+  "name": "Cockatrice Strike",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @feat:gorgons_fist, @feat:medusas_wrath, @bab \u003e\u003d 14)",
+  "description": {
+    "text": "With a single strike, you transmute flesh to stone.",
+    "sections": {
+      "Benefit": "As a full-round action, you can make a single unarmed strike against a dazed, flat-footed, paralyzed, staggered, stunned, or unconscious foe. If that attack is a critical hit, the target is petrified unless it succeeds on a Fortitude saving throw with a DC of 10 + 1/2 your character level + your Wisdom modifier. This is a supernatural polymorph effect."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:cockatrice_strike",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

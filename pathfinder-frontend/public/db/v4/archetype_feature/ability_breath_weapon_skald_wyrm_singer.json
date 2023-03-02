@@ -1,0 +1,14 @@
+{
+  "id": "ability:breath_weapon#skald_wyrm_singer",
+  "name": "Breath Weapon",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 12th level, once per day as a swift action, a wyrm singer can grant a breath weapon attack to himself or an ally affected by his draconic rage raging song.\nUsing the breath weapon is a standard action, and it affects creatures in a 30-foot cone or a 60-foot line. The breath weapons deals 1d6 points of damage per 2 skald levels the wyrm singer has, and is of an energy type of the wyrm singer\u0027s choice (acid, cold, electricity, or fire). Creatures caught in the area can attempt a Reflex save (DC \u003d 10 + 1/2 the wyrm singer\u0027s skald level + his Charisma modifier) to halve the damage."
+  },
+  "effects": [{
+    "targetKey": "ability:breath_weapon#skald_wyrm_singer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

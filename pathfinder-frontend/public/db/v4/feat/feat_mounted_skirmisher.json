@@ -1,0 +1,19 @@
+{
+  "id": "feat:mounted_skirmisher",
+  "name": "Mounted Skirmisher",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@skill:ride \u003e\u003d 14, @feat:mounted_combat, @feat:trick_riding)",
+  "description": {
+    "text": "You are adept at attacking from upon a swift moving steed.",
+    "sections": {
+      "Benefit": "If your mount moves its speed or less, you can still take a full-attack action.",
+      "Normal": "If your mount moves more than 5 feet, you can only take an attack action."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:mounted_skirmisher",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

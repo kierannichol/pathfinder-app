@@ -1,0 +1,19 @@
+{
+  "id": "feat:greater_steal",
+  "name": "Greater Steal",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @feat:combat_expertise, @feat:improved_steal, @bab \u003e\u003d 6)",
+  "description": {
+    "text": "You have a knack for snatching items from your opponents in combat.",
+    "sections": {
+      "Benefit": "You receive a +2 bonus on checks made to steal an item from a foe. This bonus stacks with the bonus granted by Improved Steal. If you successfully steal an item from a foe during combat, it does not notice the theft until after combat is over or if it attempts to use the missing item.",
+      "Normal": "Creatures automatically notice items taken from them through the steal combat maneuver."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_steal",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

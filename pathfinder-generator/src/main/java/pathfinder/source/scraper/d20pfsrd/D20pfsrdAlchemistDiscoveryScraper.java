@@ -1,6 +1,7 @@
 package pathfinder.source.scraper.d20pfsrd;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import pathfinder.model.Ability;
-import pathfinder.model.Ability.Type;
-import pathfinder.model.Sources;
+import pathfinder.model.v4.Description;
+import pathfinder.model.v4.pathfinder.Feature;
+import pathfinder.model.v4.pathfinder.Feature.Type;
 import pathfinder.parser.AttributeType;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.source.AlchemistDiscoverySourceDatabase;
@@ -22,11 +23,11 @@ import pathfinder.util.NameUtils;
 public class D20pfsrdAlchemistDiscoveryScraper extends AbstractD20pfsrdScraper implements
         AlchemistDiscoverySourceDatabase {
 
-    public List<Ability> scrape() throws IOException {
+    public List<Feature> scrape() throws IOException {
         Document document = fetch(
                 new URL("https://www.d20pfsrd.com/classes/base-classes/alchemist/discoveries/"));
 
-        List<Ability> abilities = new ArrayList<>();
+        List<Feature> abilities = new ArrayList<>();
 
         Elements tableRows = document.select("table[border=1] tbody tr");
         tableRows.forEach(row -> {
@@ -43,16 +44,16 @@ public class D20pfsrdAlchemistDiscoveryScraper extends AbstractD20pfsrdScraper i
             String benefits = columns.get(2).text();
             String source = columns.get(3).text();
 
-            Type type = Type.fromAbilityName(name);
+            String type = Type.fromFeatureName(name);
             name = Type.removeTypeFromName(name);
 
-            Ability ability = Ability.builder()
+            Feature ability = Feature.builder()
                     .id(NameToIdConverter.generateId(AttributeType.ALCHEMIST_DISCOVERY, name))
                     .name(name)
                     .type(type)
                     .prerequisites(prerequisites)
-                    .description(benefits)
-                    .source(Sources.findSourceByNameOrCode(source))
+                    .description(Description.create(benefits))
+                    .source(source)
                     .build();
 
             abilities.add(ability);
@@ -62,7 +63,11 @@ public class D20pfsrdAlchemistDiscoveryScraper extends AbstractD20pfsrdScraper i
     }
 
     @Override
-    public Stream<Ability> streamAbilities() throws IOException {
-        return scrape().stream();
+    public Stream<Feature> streamAbilities() {
+        try {
+            return scrape().stream();
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
     }
 }

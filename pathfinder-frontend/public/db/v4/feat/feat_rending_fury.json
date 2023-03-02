@@ -1,0 +1,18 @@
+{
+  "id": "feat:rending_fury",
+  "name": "Rending Fury",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@bab \u003e\u003d 6, @ability:rend)",
+  "description": {
+    "text": "You easily tear your enemies limb from limb with your natural attacks.",
+    "sections": {
+      "Benefit": "You deal rend damage if you hit with half the normal natural attacks your rend requires. For example, a troll that has this feat can rend when it hits with one claw attack, while a girallon that has this feat must hit one target with two claw attacks to rend. You can only make this rend attack once per round."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:rending_fury",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

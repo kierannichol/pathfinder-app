@@ -1,0 +1,14 @@
+{
+  "id": "ability:generous_touch#wizard_arcane_warden",
+  "name": "Generous Touch",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "Arcane wardens are talented at enhancing the magical effects they create to bolster allies. When an arcane warden casts a spell with a target of “creature touched\" on a willing target other than himself, he can cause the effects of the spell to last longer than normal. A spell with a duration of 1 round per level lasts an additional number of rounds equal to the arcane warden\u0027s Intelligence modifier (minimum of 1 additional round). A spell with a duration of 1 minute per level lasts for an additional number of minutes equal to the arcane warden\u0027s Intelligence modifier (minimum of 1 additional minute). Spells with different durations than this are not enhanced by this ability. Only one spell can be enhanced in this way on any individual creature at a time."
+  },
+  "effects": [{
+    "targetKey": "ability:generous_touch#wizard_arcane_warden",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

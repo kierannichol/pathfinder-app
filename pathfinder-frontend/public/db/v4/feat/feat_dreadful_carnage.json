@@ -1,0 +1,18 @@
+{
+  "id": "feat:dreadful_carnage",
+  "name": "Dreadful Carnage",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 15, @feat:power_attack, @feat:furious_focus, @bab \u003e\u003d 11)",
+  "description": {
+    "text": "Slaying an enemy demoralizes your other nearby foes.",
+    "sections": {
+      "Benefit": "Whenever you reduce an enemy to 0 or fewer hit points, you can make an Intimidate check to demoralize all enemies within 30 feet as a free action. Enemies that cannot see both you and the enemy you reduced to 0 or fewer hit points are unaffected."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:dreadful_carnage",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

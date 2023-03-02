@@ -1,0 +1,19 @@
+{
+  "id": "feat:diverse_palate",
+  "name": "Diverse Palate",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:blood_drinker, @race:dhampir)",
+  "description": {
+    "text": "Your taste for blood is broader than that of other dhampirs.",
+    "sections": {
+      "Benefit": "Choose a humanoid subtype or the monstrous humanoid type. You may use your Blood Drinker feat on creatures of this subtype or type.",
+      "Special": "You can take this feat multiple times. Each time you select it, choose a new humanoid subtype or the monstrous humanoid."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:diverse_palate",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

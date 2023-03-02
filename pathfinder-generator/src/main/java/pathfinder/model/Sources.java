@@ -7,6 +7,7 @@ import pathfinder.util.StringUtils;
 
 @Slf4j
 public class Sources {
+    public static final Source CORE = new Source("PZO1110", "Core Rulebook", "PFRPG Core", "PRPG Core Rulebook", "Pathfinder RPG Core Rulebook");
 
     public static Source findSourceByNameOrCode(String search) {
         Source found = findSourceByName(search);
@@ -17,6 +18,9 @@ public class Sources {
     }
 
     private static Source findSourceByCode(String code) {
+        if (code == null) {
+            return null;
+        }
         String sanitizedCode = StringUtils.sanitize(code);
         return SOURCES_LIST.stream()
                 .filter(source -> source.code().equalsIgnoreCase(sanitizedCode))
@@ -25,6 +29,9 @@ public class Sources {
     }
 
     private static Source findSourceByName(String name) {
+        if (name == null) {
+            return null;
+        }
         name = name
                 .replace("Pathfinder Roleplaying Game: ", "")
                 .replace("Pathfinder Roleplaying Game ", "")
@@ -38,7 +45,7 @@ public class Sources {
     }
 
     public static final List<Source> SOURCES_LIST = List.of(
-            new Source("PZO1110", "Core Rulebook", "PFRPG Core", "PRPG Core Rulebook", "Pathfinder RPG Core Rulebook"),
+            CORE,
             new Source("PZO1114", "GameMastery Guide"),
             new Source("PZO1112", "Bestiary", "Pathfinder RPG Bestiary"),
             new Source("PZO1116", "Bestiary 2"),

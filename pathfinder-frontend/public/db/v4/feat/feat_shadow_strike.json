@@ -1,0 +1,18 @@
+{
+  "id": "feat:shadow_strike",
+  "name": "Shadow Strike",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@bab \u003e\u003d 1",
+  "description": {
+    "text": "You accurately strike even those you cannot clearly see.",
+    "sections": {
+      "Benefit": "You can deal precision damage, such as sneak attack damage, against targets with concealment (but not total concealment)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:shadow_strike",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

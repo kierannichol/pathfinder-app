@@ -1,54 +1,47 @@
 import {faCircleCheck, faCircleQuestion, faCircleXmark} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {ReactNode, useMemo} from "react";
-import {usePathfinderDatabase} from "../../../database/v3/PathfinderDatabase";
+import CharacterAtLevel from "../../../core/CharacterAtLevel";
+import {IDataHub} from "../../../core/DataHub";
+import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import FormulaTreeFormatter, {
   FormattedValue,
   TreeNodeOperator,
   TreeNodeValue
 } from "../../../logic/FormulaTreeFormatter";
-import {ResolvedValue} from "../../../logic/ResolvedValue";
-import CharacterAtLevel from "../../../v3/model/CharacterAtLevel";
-import DataHub from "../../../v3/model/DataHub";
+import Resolvable from "../../../logic/Resolvable";
+import ResolvedValue from "../../../logic/ResolvedValue";
+import styles from "./PrerequisiteList.module.scss";
 
 interface PrerequisiteListProps {
-  formula: string;
+  formula: Resolvable;
   characterAtLevel: CharacterAtLevel;
 }
 
 export default function PrerequisiteList({ formula, characterAtLevel } : PrerequisiteListProps) {
   const pathfinderDb = usePathfinderDatabase();
 
-  const formulaText = formula;
-
   const block = useMemo(() => {
-    if (formulaText === undefined || formulaText === '') {
+    if (formula === undefined) {
       return [];
     }
 
-    // const formulaWithoutSelfReference = formulaText
-    //     .replaceAll(new RegExp("(\\s*AND)?\\s*\\(!@" + abilitySummary.id + "\\)$", "g"), '')
-    //
-    // if (formulaWithoutSelfReference === '') {
-    //   return [];
-    // }
-
-    return formatFormula(formulaText, characterAtLevel, pathfinderDb);
-  }, [formulaText, characterAtLevel]);
+    return formatFormula(formula, characterAtLevel, pathfinderDb);
+  }, [formula, characterAtLevel]);
 
   return (<div>
     {block}
   </div>);
 }
 
-function formatFormula(formula: string, characterAtLevel: CharacterAtLevel, pathfinderDb: DataHub): ReactNode {
+function formatFormula(formula: Resolvable, characterAtLevel: CharacterAtLevel, pathfinderDb: IDataHub): ReactNode {
   const formatter = new FormulaTreeFormatter(variable => {
     return pathfinderDb.name(variable) ?? variable;
   });
 
   const tree = formatter.format(formula, characterAtLevel);
   if (tree === undefined) {
-    return formula;
+    return '';
   }
 
   const checkMark = <FontAwesomeIcon style={{ color: 'var(--bs-success)' }} icon={faCircleCheck} />
@@ -66,18 +59,26 @@ function formatFormula(formula: string, characterAtLevel: CharacterAtLevel, path
     if (node instanceof TreeNodeValue) {
       const isAll = node.operator === TreeNodeOperator.ALL;
 
-      let html = undefined;
+      let html: ReactNode|undefined;
       if (!isAll) {
         // create OR block
-        html = node.map(child => formatNode(child))
-            .reduce((prev, node, currentIndex) => <>{prev} <div>{currentIndex > 0 ? <b>OR</b> : <></>} {node}</div></>, <></>);
+        html = <div className={styles.block}><span className={styles.blockHeader}>Any Of</span><ul>{node.map(child => formatNode(child))
+            .filter(x => x !== undefined)
+            .map((formatted, i) => <li key={i}>{formatted}</li>)
+        }</ul></div>
       }
       else {
         // create AND block
-        html = node.map(child => formatNode(child))
-        .reduce((prev, node) => <>{prev} <div>{node}</div></>, <></>);
+        html = <div className={styles.block}><span className={styles.blockHeader}>All Of</span><ul>{node.map(child => formatNode(child))
+          .filter(x => x !== undefined)
+          .map((formatted, i) => <li key={i}>{formatted}</li>)
+        }</ul></div>
       }
       return html
+    }
+
+    if (node.asText() === 'true') {
+      return undefined;
     }
 
     return <span>{unknownMark} {node.asText()}</span>

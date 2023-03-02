@@ -1,0 +1,14 @@
+{
+  "id": "ability:batch_brew#alchemist_fermenter",
+  "name": "Batch Brew",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 6th level, a fermenter learns how to brew tinctures in larger batches. Whenever she creates a tincture using Craft (alchemy), she can simultaneously create a number of additional tinctures equal to her Intelligence modifier. She expends resources for each tincture separately, but she attempts a single Craft check and applies the result to each tincture being brewed."
+  },
+  "effects": [{
+    "targetKey": "ability:batch_brew#alchemist_fermenter",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

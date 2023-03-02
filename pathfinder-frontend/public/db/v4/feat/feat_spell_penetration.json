@@ -1,0 +1,18 @@
+{
+  "id": "feat:spell_penetration",
+  "name": "Spell Penetration",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "Your spells break through spell resistance more easily than most.",
+    "sections": {
+      "Benefit": "You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature\u0027s spell resistance."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:spell_penetration",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

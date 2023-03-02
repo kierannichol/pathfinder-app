@@ -1,8 +1,9 @@
-import {Modification} from "../v3/model/Modification";
-
-class Skill extends Modification {
-  constructor(id: string, name: string, public readonly untrained: boolean, public readonly armorCheckPenalty: boolean, public readonly keyAbility: string) {
-    super(id, name, 0, "", [], "", "", "", "", "", []);
+class Skill {
+  constructor(public readonly id: string,
+              public readonly name: string,
+              public readonly untrained: boolean,
+              public readonly armorCheckPenalty: boolean,
+              public readonly keyAbility: string) {
   }
 }
 

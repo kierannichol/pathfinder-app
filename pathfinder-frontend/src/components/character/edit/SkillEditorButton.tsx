@@ -1,7 +1,7 @@
 import {ComponentProps, useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
-import Character from "../../../v3/model/Character";
-import CharacterAtLevel from "../../../v3/model/CharacterAtLevel";
+import Character from "../../../core/Character";
+import CharacterAtLevel from "../../../core/CharacterAtLevel";
 import PathfinderButton from "../../common/PathfinderButton";
 import {SkillEditor} from "./SkillEditor";
 import SkillEditorDialog from "./SkillEditorDialog";
@@ -18,8 +18,7 @@ export default function SkillEditorButton({ character, characterAtLevel, ...dial
   const handleCancel = () => setShow(false);
 
   const skillChoices = useMemo(() => {
-    return character.choicesForLevel(characterAtLevel.level)
-        .filter(choice => choice.type === "skill");
+    return characterAtLevel.choicesOfType("skill");
   }, [character]);
 
   const pointsRemaining = useMemo(() => {

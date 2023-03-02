@@ -1,0 +1,19 @@
+{
+  "id": "feat:menacing_bane",
+  "name": "Menacing Bane",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@spell:bane",
+  "description": {
+    "text": "You are deadly when you team up with allies against a single foe.",
+    "sections": {
+      "Benefit": "You can use your bane class feature to imbue a melee weapon with the menacing special weapon ability (Advanced Player\u0027s Guide 288) instead of bane. You can spend a swift action to switch between the two special weapon abilities. Doing so otherwise works according to your bane class feature.",
+      "Special": "If you have the Double Bane feat, you can imbue each weapon you wield with either bane or menacing. No single weapon can have both."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:menacing_bane",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

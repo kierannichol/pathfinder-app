@@ -1,5 +1,6 @@
 package logic.parse;
 
+import java.util.List;
 import logic.Resolvable;
 import logic.ResolvedValue;
 import logic.context.DataContext;
@@ -7,7 +8,8 @@ import logic.parse.shuntingyard.Associativity;
 import logic.parse.shuntingyard.ShuntingYardParser;
 import logic.util.Ordinal;
 
-public class Formula {
+public class Formula implements Resolvable {
+
     private static final ShuntingYardParser PARSER = ShuntingYardParser.create()
             .operator("^", 4, Associativity.RIGHT, (a, b) -> ResolvedValue.of(Math.pow(a.asDecimal(), b.asDecimal())))
             .operator("*", 3, Associativity.LEFT, (a, b) -> ResolvedValue.of(a.asDecimal() * b.asDecimal()))
@@ -34,6 +36,8 @@ public class Formula {
             .function("if", (ResolvedValue a, ResolvedValue b, ResolvedValue c) -> a.asBoolean() ? b : c)
             .function("concat", (ResolvedValue a, ResolvedValue b) -> ResolvedValue.of(a.asText() + b.asText()))
             .function("ordinal", (ResolvedValue a) -> ResolvedValue.of(Ordinal.toString(a.asNumber())))
+            .function("any", (List<ResolvedValue> values) -> ResolvedValue.of(values.stream().anyMatch(ResolvedValue::asBoolean)))
+            .function("all", (List<ResolvedValue> values) -> ResolvedValue.of(values.stream().allMatch(ResolvedValue::asBoolean)))
             .variable("@", DataContext::get)
             .variable("@{", "}", DataContext::get)
             .variable("min(@", ")", (context, key) -> context.find(key).reduce((a, b) -> a.asDecimal() < b.asDecimal() ? a : b).orElse(ResolvedValue.none()))
@@ -41,10 +45,26 @@ public class Formula {
             .variable("sum(@", ")", (context, key) -> context.find(key).reduce((a, b) -> ResolvedValue.of(a.asDecimal() + b.asDecimal())).orElse(ResolvedValue.of(0)))
             ;
 
-    public static Resolvable parse(String formulaText) {
+    private final Resolvable resolvable;
+
+    public static Formula parse(String formulaText) {
         if (formulaText.isBlank()) {
-            return Resolvable.empty();
+            return new Formula(Resolvable.empty());
         }
-        return PARSER.parse(formulaText);
+        return new Formula(PARSER.parse(formulaText));
+    }
+
+    @Override
+    public ResolvedValue resolve(DataContext context) {
+        return resolvable.resolve(context);
+    }
+
+    @Override
+    public ResolvedValue resolve() {
+        return resolvable.resolve();
+    }
+
+    private Formula(Resolvable resolvable) {
+        this.resolvable = resolvable;
     }
 }

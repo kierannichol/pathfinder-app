@@ -1,0 +1,909 @@
+{
+  "databaseId": "rage_power",
+  "summaries": [{
+    "id": "rage_power:lesser_spirit_totem",
+    "name": "Lesser Spirit Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_spirit_totem"
+  }, {
+    "id": "rage_power:fury_companion",
+    "name": "Fury Companion",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:lesser_fury_companion AND @class:barbarian \u003e\u003d 6 AND !@rage_power:fury_companion"
+  }, {
+    "id": "rage_power:ice_linnorm_death_curse",
+    "name": "Ice Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:ice_linnorm_death_curse"
+  }, {
+    "id": "rage_power:savage_dirty_trick",
+    "name": "Savage Dirty Trick",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:savage_dirty_trick"
+  }, {
+    "id": "rage_power:lesser_fury_companion",
+    "name": "Lesser Fury Companion",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_fury_companion"
+  }, {
+    "id": "rage_power:inspire_ferocity",
+    "name": "Inspire Ferocity",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:reckless_abandon AND !@rage_power:inspire_ferocity"
+  }, {
+    "id": "rage_power:greater_ferocious_mount",
+    "name": "Greater Ferocious Mount",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_mount AND !@rage_power:greater_ferocious_mount"
+  }, {
+    "id": "rage_power:spell_sunder",
+    "name": "Spell Sunder",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:witch_hunter AND !@rage_power:spell_sunder"
+  }, {
+    "id": "rage_power:fueled_by_vengeance",
+    "name": "Fueled by Vengeance",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:fueled_by_vengeance"
+  }, {
+    "id": "rage_power:greater_shadow_totem",
+    "name": "Greater Shadow Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:shadow_totem AND !@rage_power:greater_shadow_totem"
+  }, {
+    "id": "rage_power:greater_ronins_resolve",
+    "name": "Greater Ronin\u0027s Resolve",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:ronins_resolve AND @class:barbarian \u003e\u003d 10 AND !@rage_power:greater_ronins_resolve"
+  }, {
+    "id": "rage_power:bloody_fist",
+    "name": "Bloody Fist",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND !@rage_power:bloody_fist"
+  }, {
+    "id": "rage_power:battle_roar",
+    "name": "Battle Roar",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:intimidating_glare AND !@rage_power:battle_roar"
+  }, {
+    "id": "rage_power:fjord_linnorm_death_curse",
+    "name": "Fjord Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:fjord_linnorm_death_curse"
+  }, {
+    "id": "rage_power:lesser_lunar_totem",
+    "name": "Lesser Lunar Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @trait:bite_attack AND !@rage_power:lesser_lunar_totem"
+  }, {
+    "id": "rage_power:savage_intuition",
+    "name": "Savage Intuition",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:savage_intuition"
+  }, {
+    "id": "rage_power:sharpened_accuracy",
+    "name": "Sharpened Accuracy",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:surprise_accuracy AND !@rage_power:sharpened_accuracy"
+  }, {
+    "id": "rage_power:liquid_courage",
+    "name": "Liquid Courage",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:liquid_courage"
+  }, {
+    "id": "rage_power:dragon_totem_resilience",
+    "name": "Dragon Totem Resilience",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:dragon_totem AND !@rage_power:dragon_totem_resilience"
+  }, {
+    "id": "rage_power:hurling",
+    "name": "Hurling",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_hurling AND !@rage_power:hurling"
+  }, {
+    "id": "rage_power:greater_elemental_rage",
+    "name": "Greater Elemental Rage",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:elemental_rage AND !@rage_power:greater_elemental_rage"
+  }, {
+    "id": "rage_power:greater_animal_fury",
+    "name": "Greater Animal Fury",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:animal_fury AND !@rage_power:greater_animal_fury"
+  }, {
+    "id": "rage_power:greater_ground_breaker",
+    "name": "Greater Ground Breaker",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ground_breaker AND !@rage_power:greater_ground_breaker"
+  }, {
+    "id": "rage_power:intimidating_glare",
+    "name": "Intimidating Glare",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:intimidating_glare"
+  }, {
+    "id": "rage_power:guarded_stance",
+    "name": "Guarded Stance",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:guarded_stance"
+  }, {
+    "id": "rage_power:reflexive_dodge",
+    "name": "Reflexive Dodge",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:rolling_dodge AND !@rage_power:reflexive_dodge"
+  }, {
+    "id": "rage_power:renewed_life",
+    "name": "Renewed Life",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vitality AND !@rage_power:renewed_life"
+  }, {
+    "id": "rage_power:ronins_challenge",
+    "name": "Ronin\u0027s Challenge",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:ronins_challenge"
+  }, {
+    "id": "rage_power:knockback",
+    "name": "Knockback",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:knockback"
+  }, {
+    "id": "rage_power:energy_eruption",
+    "name": "Energy Eruption",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 16 AND @rage_power:energy_absorption AND !@rage_power:energy_eruption"
+  }, {
+    "id": "rage_power:crag_linnorm_death_curse",
+    "name": "Crag Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:crag_linnorm_death_curse"
+  }, {
+    "id": "rage_power:bestial_swimmer",
+    "name": "Bestial Swimmer",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_swimmer AND !@rage_power:bestial_swimmer"
+  }, {
+    "id": "rage_power:greater_chaos_totem",
+    "name": "Greater Chaos Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:chaos_totem AND !@rage_power:greater_chaos_totem"
+  }, {
+    "id": "rage_power:ferocious_mount",
+    "name": "Ferocious Mount",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:ferocious_mount"
+  }, {
+    "id": "rage_power:armor_ripper",
+    "name": "Armor Ripper",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:armor_ripper"
+  }, {
+    "id": "rage_power:shadow_totem",
+    "name": "Shadow Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:lesser_shadow_totem AND !@rage_power:shadow_totem"
+  }, {
+    "id": "rage_power:feast_of_blood",
+    "name": "Feast of Blood",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:bloody_fist AND @class:barbarian \u003e\u003d 14 AND !@rage_power:feast_of_blood"
+  }, {
+    "id": "rage_power:greater_death_totem",
+    "name": "Greater Death Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "(@class:barbarian \u003e\u003d 12 OR @class:savage \u003e\u003d 2) AND @rage_power:death_totem AND @rage_power:lesser_death_totem AND !@rage_power:greater_death_totem"
+  }, {
+    "id": "rage_power:penetrating_bite",
+    "name": "Penetrating Bite",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:animal_fury AND !@rage_power:penetrating_bite"
+  }, {
+    "id": "rage_power:greater_cult_totem",
+    "name": "Greater Cult Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "(@class:barbarian \u003e\u003d 10 AND @rage_power:lesser_cult_totem AND @rage_power:cult_totem) AND !@rage_power:greater_cult_totem"
+  }, {
+    "id": "rage_power:spire_totem",
+    "name": "Spire Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spire_totem AND !@rage_power:spire_totem"
+  }, {
+    "id": "rage_power:bloody_bite",
+    "name": "Bloody Bite",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "(@race:half_orc OR @rage_power:animal_fury OR @ability:bite_attack) AND !@rage_power:bloody_bite"
+  }, {
+    "id": "rage_power:fierce_fortitude",
+    "name": "Fierce Fortitude",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:fierce_fortitude"
+  }, {
+    "id": "rage_power:bestial_climber",
+    "name": "Bestial Climber",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_climber AND !@rage_power:bestial_climber"
+  }, {
+    "id": "rage_power:gearbreaker",
+    "name": "Gearbreaker",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:smasher AND !@rage_power:gearbreaker"
+  }, {
+    "id": "rage_power:dragon_totem",
+    "name": "Dragon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:animal_fury AND @rage_power:intimidating_glare AND !@rage_power:dragon_totem"
+  }, {
+    "id": "rage_power:greater_ferocious_trample",
+    "name": "Greater Ferocious Trample",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:ferocious_trample AND !@rage_power:greater_ferocious_trample"
+  }, {
+    "id": "rage_power:good_for_what_ails_you",
+    "name": "Good for What Ails You",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:good_for_what_ails_you"
+  }, {
+    "id": "rage_power:impelling_disarm",
+    "name": "Impelling Disarm",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:impelling_disarm"
+  }, {
+    "id": "rage_power:fearless_rage",
+    "name": "Fearless Rage",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND !@rage_power:fearless_rage"
+  }, {
+    "id": "rage_power:brawler",
+    "name": "Brawler",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:brawler"
+  }, {
+    "id": "rage_power:lesser_death_totem",
+    "name": "Lesser Death Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "(@class:barbarian OR @class:savage) AND !@rage_power:lesser_death_totem"
+  }, {
+    "id": "rage_power:hurling_charge",
+    "name": "Hurling Charge",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_hurling AND !@rage_power:hurling_charge"
+  }, {
+    "id": "rage_power:spirit_steed",
+    "name": "Spirit Steed",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:ferocious_mount AND !@rage_power:spirit_steed"
+  }, {
+    "id": "rage_power:greater_guarded_life",
+    "name": "Greater Guarded Life",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:guarded_life AND !@rage_power:greater_guarded_life"
+  }, {
+    "id": "rage_power:reckless_abandon",
+    "name": "Reckless Abandon",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:reckless_abandon"
+  }, {
+    "id": "rage_power:rolling_dodge",
+    "name": "Rolling Dodge",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:rolling_dodge"
+  }, {
+    "id": "rage_power:overbearing_onslaught",
+    "name": "Overbearing Onslaught",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:overbearing_advance AND !@rage_power:overbearing_onslaught"
+  }, {
+    "id": "rage_power:greater_spirit_totem",
+    "name": "Greater Spirit Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:spirit_totem AND !@rage_power:greater_spirit_totem"
+  }, {
+    "id": "rage_power:taiga_linnorm_death_curse",
+    "name": "Taiga Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:taiga_linnorm_death_curse"
+  }, {
+    "id": "rage_power:ultimate_clarity",
+    "name": "Ultimate Clarity",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:moment_of_clarity AND @rage_power:perfect_clarity AND !@rage_power:ultimate_clarity"
+  }, {
+    "id": "rage_power:lesser_chaos_totem",
+    "name": "Lesser Chaos Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_chaos_totem"
+  }, {
+    "id": "rage_power:elemental_rage",
+    "name": "Elemental Rage",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_elemental_rage AND !@rage_power:elemental_rage"
+  }, {
+    "id": "rage_power:primal_scent",
+    "name": "Primal Scent",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:scent AND !@rage_power:primal_scent"
+  }, {
+    "id": "rage_power:scent",
+    "name": "Scent",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:scent"
+  }, {
+    "id": "rage_power:fiend_totem",
+    "name": "Fiend Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_fiend_totem AND !@rage_power:fiend_totem"
+  }, {
+    "id": "rage_power:lesser_hurling",
+    "name": "Lesser Hurling",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_hurling"
+  }, {
+    "id": "rage_power:greater_spire_totem",
+    "name": "Greater Spire Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:spire_totem AND !@rage_power:greater_spire_totem"
+  }, {
+    "id": "rage_power:surprise_accuracy",
+    "name": "Surprise Accuracy",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:surprise_accuracy"
+  }, {
+    "id": "rage_power:lesser_celestial_totem",
+    "name": "Lesser Celestial Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_celestial_totem"
+  }, {
+    "id": "rage_power:powerful_blow",
+    "name": "Powerful Blow",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:powerful_blow"
+  }, {
+    "id": "rage_power:hive_totem_toxicity",
+    "name": "Hive Totem Toxicity",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:hive_totem AND @rage_power:hive_totem_resilience AND !@rage_power:hive_totem_toxicity"
+  }, {
+    "id": "rage_power:greater_daemon_totem",
+    "name": "Greater Daemon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:lesser_daemon_totem AND @rage_power:daemon_totem AND !@rage_power:greater_daemon_totem"
+  }, {
+    "id": "rage_power:lesser_elemental_rage",
+    "name": "Lesser Elemental Rage",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:lesser_elemental_rage"
+  }, {
+    "id": "rage_power:greater_lunar_totem",
+    "name": "Greater Lunar Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:lunar_totem AND !@rage_power:greater_lunar_totem"
+  }, {
+    "id": "rage_power:body_bludgeon",
+    "name": "Body Bludgeon",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND !@rage_power:body_bludgeon"
+  }, {
+    "id": "rage_power:world_serpent_totem_unity",
+    "name": "World Serpent Totem Unity",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_spirit AND @rage_power:world_serpent_totem AND !@rage_power:world_serpent_totem_unity"
+  }, {
+    "id": "rage_power:deadly_accuracy",
+    "name": "Deadly Accuracy",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:surprise_accuracy AND !@rage_power:deadly_accuracy"
+  }, {
+    "id": "rage_power:lesser_daemon_totem",
+    "name": "Lesser Daemon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_daemon_totem"
+  }, {
+    "id": "rage_power:raging_swimmer",
+    "name": "Raging Swimmer",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:raging_swimmer"
+  }, {
+    "id": "rage_power:night_vision",
+    "name": "Night Vision",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "(@rage_power:low_light_vision OR @trait:low_light_vision) AND !@rage_power:night_vision"
+  }, {
+    "id": "rage_power:no_escape",
+    "name": "No Escape",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:no_escape"
+  }, {
+    "id": "rage_power:boasting_taunt",
+    "name": "Boasting Taunt",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:boasting_taunt"
+  }, {
+    "id": "rage_power:lesser_moon_totem",
+    "name": "Lesser Moon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_moon_totem"
+  }, {
+    "id": "rage_power:strength_surge",
+    "name": "Strength Surge",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:strength_surge"
+  }, {
+    "id": "rage_power:spellbreaker",
+    "name": "Spellbreaker",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:disruptive AND !@rage_power:spellbreaker"
+  }, {
+    "id": "rage_power:greater_ferocious_beast",
+    "name": "Greater Ferocious Beast",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_beast AND !@rage_power:greater_ferocious_beast"
+  }, {
+    "id": "rage_power:raging_climber",
+    "name": "Raging Climber",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:raging_climber"
+  }, {
+    "id": "rage_power:water_sense",
+    "name": "Water Sense",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:water_sense"
+  }, {
+    "id": "rage_power:lesser_beast_totem",
+    "name": "Lesser Beast Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_beast_totem"
+  }, {
+    "id": "rage_power:ferocious_trample",
+    "name": "Ferocious Trample",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:ferocious_mount AND !@rage_power:ferocious_trample"
+  }, {
+    "id": "rage_power:animal_fury",
+    "name": "Animal Fury",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:animal_fury"
+  }, {
+    "id": "rage_power:dragon_totem_wings",
+    "name": "Dragon Totem Wings",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:dragon_totem AND @rage_power:dragon_totem_resilience AND !@rage_power:dragon_totem_wings"
+  }, {
+    "id": "rage_power:internal_fortitude",
+    "name": "Internal Fortitude",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:internal_fortitude"
+  }, {
+    "id": "rage_power:tarn_linnorm_death_curse",
+    "name": "Tarn Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:tarn_linnorm_death_curse"
+  }, {
+    "id": "rage_power:lesser_spire_totem",
+    "name": "Lesser Spire Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_spire_totem"
+  }, {
+    "id": "rage_power:savage_jaw",
+    "name": "Savage Jaw",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:animal_fury AND !@rage_power:savage_jaw"
+  }, {
+    "id": "rage_power:sunder_enchantment",
+    "name": "Sunder Enchantment",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:spell_sunder AND !@rage_power:sunder_enchantment"
+  }, {
+    "id": "rage_power:energy_resistance",
+    "name": "Energy Resistance",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:energy_resistance"
+  }, {
+    "id": "rage_power:fight_response",
+    "name": "Fight Response",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:fight_response"
+  }, {
+    "id": "rage_power:totemic_mettle",
+    "name": "Totemic Mettle",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "true AND !@rage_power:totemic_mettle"
+  }, {
+    "id": "rage_power:raging_flier",
+    "name": "Raging Flier",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper AND !@rage_power:raging_flier"
+  }, {
+    "id": "rage_power:disruptive",
+    "name": "Disruptive",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:superstition AND !@rage_power:disruptive"
+  }, {
+    "id": "rage_power:lunar_totem",
+    "name": "Lunar Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_lunar_totem AND !@rage_power:lunar_totem"
+  }, {
+    "id": "rage_power:greater_fury_companion",
+    "name": "Greater Fury Companion",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:fury_companion AND @rage_power:lesser_fury_companion AND @class:barbarian \u003e\u003d 10 AND !@rage_power:greater_fury_companion"
+  }, {
+    "id": "rage_power:bloodcaster",
+    "name": "Bloodcaster",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@cha_score \u003e\u003d 13 AND @class:barbarian \u003e\u003d 6 AND !@rage_power:bloodcaster"
+  }, {
+    "id": "rage_power:greater_brawler",
+    "name": "Greater Brawler",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:brawler AND !@rage_power:greater_brawler"
+  }, {
+    "id": "rage_power:chaos_totem",
+    "name": "Chaos Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_chaos_totem AND !@rage_power:chaos_totem"
+  }, {
+    "id": "rage_power:sprint",
+    "name": "Sprint",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:swift_foot AND !@rage_power:sprint"
+  }, {
+    "id": "rage_power:energy_absorption",
+    "name": "Energy Absorption",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:greater_energy_resistance AND !@rage_power:energy_absorption"
+  }, {
+    "id": "rage_power:greater_fiend_totem",
+    "name": "Greater Fiend Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:fiend_totem AND !@rage_power:greater_fiend_totem"
+  }, {
+    "id": "rage_power:moon_totem",
+    "name": "Moon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_moon_totem AND !@rage_power:moon_totem"
+  }, {
+    "id": "rage_power:moment_of_clarity",
+    "name": "Moment of Clarity",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:moment_of_clarity"
+  }, {
+    "id": "rage_power:ground_breaker",
+    "name": "Ground Breaker",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:ground_breaker"
+  }, {
+    "id": "rage_power:lesser_shadow_totem",
+    "name": "Lesser Shadow Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @trait:darkvision \u003e\u003d 60 AND !@rage_power:lesser_shadow_totem"
+  }, {
+    "id": "rage_power:come_and_get_me",
+    "name": "Come and Get Me",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND !@rage_power:come_and_get_me"
+  }, {
+    "id": "rage_power:daemon_totem",
+    "name": "Daemon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_daemon_totem AND !@rage_power:daemon_totem"
+  }, {
+    "id": "rage_power:bleeding_blow",
+    "name": "Bleeding Blow",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow AND !@rage_power:bleeding_blow"
+  }, {
+    "id": "rage_power:hive_totem_resilience",
+    "name": "Hive Totem Resilience",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:hive_totem AND !@rage_power:hive_totem_resilience"
+  }, {
+    "id": "rage_power:greater_atavism_totem",
+    "name": "Greater Atavism Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND !@rage_power:greater_atavism_totem"
+  }, {
+    "id": "rage_power:crippling_blow",
+    "name": "Crippling Blow",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow AND !@rage_power:crippling_blow"
+  }, {
+    "id": "rage_power:hive_totem",
+    "name": "Hive Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:animal_fury AND !@rage_power:hive_totem"
+  }, {
+    "id": "rage_power:greater_energy_resistance",
+    "name": "Greater Energy Resistance",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:energy_resistance AND !@rage_power:greater_energy_resistance"
+  }, {
+    "id": "rage_power:cult_totem",
+    "name": "Cult Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_cult_totem AND !@rage_power:cult_totem"
+  }, {
+    "id": "rage_power:mighty_swing",
+    "name": "Mighty Swing",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND !@rage_power:mighty_swing"
+  }, {
+    "id": "rage_power:eater_of_magic",
+    "name": "Eater of Magic",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:superstition AND !@rage_power:eater_of_magic"
+  }, {
+    "id": "rage_power:world_serpent_spirit",
+    "name": "World Serpent Spirit",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:world_serpent_totem AND !@rage_power:world_serpent_spirit"
+  }, {
+    "id": "rage_power:terrifying_howl",
+    "name": "Terrifying Howl",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:intimidating_glare AND !@rage_power:terrifying_howl"
+  }, {
+    "id": "rage_power:beast_totem",
+    "name": "Beast Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_beast_totem AND !@rage_power:beast_totem"
+  }, {
+    "id": "rage_power:staggering_drunk",
+    "name": "Staggering Drunk",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:staggering_drunk"
+  }, {
+    "id": "rage_power:lesser_ancestor_totem",
+    "name": "Lesser Ancestor Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_ancestor_totem"
+  }, {
+    "id": "rage_power:increased_damage_reduction",
+    "name": "Increased Damage Reduction",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:increased_damage_reduction"
+  }, {
+    "id": "rage_power:feasting_bite",
+    "name": "Feasting Bite",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@race:half_orc AND @rage_power:bloody_bite AND (@rage_power:animal_fury OR @ability:bite_attack) AND !@rage_power:feasting_bite"
+  }, {
+    "id": "rage_power:lethal_accuracy",
+    "name": "Lethal Accuracy",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 16 AND @rage_power:deadly_accuracy AND @rage_power:surprise_accuracy AND !@rage_power:lethal_accuracy"
+  }, {
+    "id": "rage_power:death_totem",
+    "name": "Death Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "(@class:barbarian \u003e\u003d 6 OR @class:savage \u003e\u003d 2) AND @rage_power:lesser_death_totem AND !@rage_power:death_totem"
+  }, {
+    "id": "rage_power:celestial_totem",
+    "name": "Celestial Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:celestial_totem"
+  }, {
+    "id": "rage_power:lesser_fiend_totem",
+    "name": "Lesser Fiend Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_fiend_totem"
+  }, {
+    "id": "rage_power:deathless_frenzy",
+    "name": "Deathless Frenzy",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND !@rage_power:deathless_frenzy"
+  }, {
+    "id": "rage_power:quick_reflexes",
+    "name": "Quick Reflexes",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:quick_reflexes"
+  }, {
+    "id": "rage_power:tor_linnorm_death_curse",
+    "name": "Tor Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:tor_linnorm_death_curse"
+  }, {
+    "id": "rage_power:knockdown",
+    "name": "Knockdown",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:knockdown"
+  }, {
+    "id": "rage_power:greater_beast_totem",
+    "name": "Greater Beast Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:beast_totem AND !@rage_power:greater_beast_totem"
+  }, {
+    "id": "rage_power:ferocious_beast",
+    "name": "Ferocious Beast",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:ferocious_beast"
+  }, {
+    "id": "rage_power:renewed_vitality",
+    "name": "Renewed Vitality",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND @rage_power:renewed_vigor AND !@rage_power:renewed_vitality"
+  }, {
+    "id": "rage_power:cairn_linnorm_death_curse",
+    "name": "Cairn Linnorm Death Curse",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:cairn_linnorm_death_curse"
+  }, {
+    "id": "rage_power:perfect_clarity",
+    "name": "Perfect Clarity",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:moment_of_clarity AND !@rage_power:perfect_clarity"
+  }, {
+    "id": "rage_power:unexpected_strike",
+    "name": "Unexpected Strike",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:unexpected_strike"
+  }, {
+    "id": "rage_power:lesser_cult_totem",
+    "name": "Lesser Cult Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_cult_totem"
+  }, {
+    "id": "rage_power:renewed_vigor",
+    "name": "Renewed Vigor",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:renewed_vigor"
+  }, {
+    "id": "rage_power:world_serpent_totem",
+    "name": "World Serpent Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:world_serpent_totem"
+  }, {
+    "id": "rage_power:raging_grappler",
+    "name": "Raging Grappler",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:raging_grappler"
+  }, {
+    "id": "rage_power:raging_leaper",
+    "name": "Raging Leaper",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:raging_leaper"
+  }, {
+    "id": "rage_power:raging_skald",
+    "name": "Raging Skald",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:raging_skald"
+  }, {
+    "id": "rage_power:greater_ancestor_totem",
+    "name": "Greater Ancestor Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:ancestor_totem AND !@rage_power:greater_ancestor_totem"
+  }, {
+    "id": "rage_power:swift_foot",
+    "name": "Swift Foot",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:swift_foot"
+  }, {
+    "id": "rage_power:witch_hunter",
+    "name": "Witch Hunter",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@rage_power:superstition AND !@rage_power:witch_hunter"
+  }, {
+    "id": "rage_power:regenerative_vigor",
+    "name": "Regenerative Vigor",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:renewed_vigor AND !@rage_power:regenerative_vigor"
+  }, {
+    "id": "rage_power:smasher",
+    "name": "Smasher",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:smasher"
+  }, {
+    "id": "rage_power:bestial_leaper",
+    "name": "Bestial Leaper",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:raging_leaper AND !@rage_power:bestial_leaper"
+  }, {
+    "id": "rage_power:ghost_rager",
+    "name": "Ghost Rager",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:superstition AND !@rage_power:ghost_rager"
+  }, {
+    "id": "rage_power:greater_hurling",
+    "name": "Greater Hurling",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:hurling AND !@rage_power:greater_hurling"
+  }, {
+    "id": "rage_power:superstition",
+    "name": "Superstition",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:superstition"
+  }, {
+    "id": "rage_power:ancestor_totem",
+    "name": "Ancestor Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_ancestor_totem AND !@rage_power:ancestor_totem"
+  }, {
+    "id": "rage_power:roaring_drunk",
+    "name": "Roaring Drunk",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:roaring_drunk"
+  }, {
+    "id": "rage_power:roused_anger",
+    "name": "Roused Anger",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:roused_anger"
+  }, {
+    "id": "rage_power:boars_charge",
+    "name": "Boar\u0027s Charge",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND !@rage_power:boars_charge"
+  }, {
+    "id": "rage_power:greater_celestial_totem",
+    "name": "Greater Celestial Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 12 AND @rage_power:celestial_totem AND !@rage_power:greater_celestial_totem"
+  }, {
+    "id": "rage_power:disemboweling_tusks",
+    "name": "Disemboweling Tusks",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND !@rage_power:disemboweling_tusks"
+  }, {
+    "id": "rage_power:atavism_totem",
+    "name": "Atavism Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:atavism_totem"
+  }, {
+    "id": "rage_power:flesh_wound",
+    "name": "Flesh Wound",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND !@rage_power:flesh_wound"
+  }, {
+    "id": "rage_power:breathtaker",
+    "name": "Breathtaker",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:breathtaker"
+  }, {
+    "id": "rage_power:clear_mind",
+    "name": "Clear Mind",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:clear_mind"
+  }, {
+    "id": "rage_power:overbearing_advance",
+    "name": "Overbearing Advance",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:overbearing_advance"
+  }, {
+    "id": "rage_power:ronins_resolve",
+    "name": "Ronin\u0027s Resolve",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND !@rage_power:ronins_resolve"
+  }, {
+    "id": "rage_power:greater_moon_totem",
+    "name": "Greater Moon Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 10 AND @rage_power:moon_totem AND !@rage_power:greater_moon_totem"
+  }, {
+    "id": "rage_power:auspicious_mark",
+    "name": "Auspicious Mark",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:auspicious_mark"
+  }, {
+    "id": "rage_power:spirit_totem",
+    "name": "Spirit Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spirit_totem AND !@rage_power:spirit_totem"
+  }, {
+    "id": "rage_power:lesser_atavism_totem",
+    "name": "Lesser Atavism Totem",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:lesser_atavism_totem"
+  }, {
+    "id": "rage_power:guarded_life",
+    "name": "Guarded Life",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:guarded_life"
+  }, {
+    "id": "rage_power:low_light_vision",
+    "name": "Low-Light Vision",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "!@rage_power:low_light_vision"
+  }, {
+    "id": "rage_power:improved_totemic_alignment",
+    "name": "Improved Totemic Alignment",
+    "tags": ["rage_power"],
+    "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND true AND !@rage_power:improved_totemic_alignment"
+  }]
+}

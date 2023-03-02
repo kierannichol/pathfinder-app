@@ -1,0 +1,18 @@
+{
+  "id": "feat:flame_heart",
+  "name": "Flame Heart",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:fire_tamer, @character_level \u003e\u003d 5, @race:goblin)",
+  "description": {
+    "text": "You have mastered fire magic and alchemy.",
+    "sections": {
+      "Benefit": "You gain fire resistance 5. When casting spells with the fire descriptor or throwing alchemist bombs that deal fire damage, treat your caster level or alchemist level as if you were 1 level higher."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:flame_heart",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

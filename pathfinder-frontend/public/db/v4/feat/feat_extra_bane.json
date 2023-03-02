@@ -1,0 +1,18 @@
+{
+  "id": "feat:extra_bane",
+  "name": "Extra Bane",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@spell:bane",
+  "description": {
+    "text": "You can use your bane ability more often than normal.",
+    "sections": {
+      "Benefit": "You can use your bane ability for 3 additional rounds per day."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_bane",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

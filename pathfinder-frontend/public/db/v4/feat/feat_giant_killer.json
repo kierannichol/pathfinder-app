@@ -1,0 +1,18 @@
+{
+  "id": "feat:giant_killer",
+  "name": "Giant Killer",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @feat:cleave, @feat:goblin_cleaver, @feat:orc_hewer, @feat:power_attack, @feat:strike_back, @bab \u003e\u003d 11, @race:dwarf)",
+  "description": {
+    "text": "Your cleaving strokes menace giants and larger foes.",
+    "sections": {
+      "Benefit": "This functions as Goblin Cleaver, but your additional attacks can be made against creatures one size category larger than you or smaller. In addition, any such attacks made against humanoids (giant) gain a +2 circumstance bonus on attack rolls."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:giant_killer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

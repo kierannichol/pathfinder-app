@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:spirit_totem",
+  "name": "Spirit Totem",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_spirit_totem AND !@rage_power:spirit_totem",
+  "description": {
+    "text": "Attacks against you may miss when you are raging"
+  },
+  "effects": [{
+    "targetKey": "rage_power:spirit_totem",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -2,9 +2,9 @@ package pathfinder.source;
 
 import java.io.IOException;
 import java.util.stream.Stream;
-import pathfinder.model.Ability;
+import pathfinder.model.v4.pathfinder.Feature;
 
 public interface AbilitySourceDatabase {
 
-    Stream<Ability> streamAbilities() throws IOException;
+    Stream<Feature> streamAbilities() throws IOException;
 }

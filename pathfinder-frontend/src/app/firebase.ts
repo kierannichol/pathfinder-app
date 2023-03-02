@@ -13,7 +13,8 @@ import {
   signOut
 } from "firebase/auth";
 import {get, getDatabase, ref, remove, set} from 'firebase/database';
-import PackedCharacter from "../v3/model/PackedCharacter";
+import PackedCharacter from "../core/PackedCharacter";
+import {timedAsync} from "../util/pfutils";
 import {setGoogleToken, User} from "./auth"; // TODO: Add SDKs for Firebase products that you want to use
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -117,8 +118,8 @@ export const FirebaseRepository = {
   },
 
   save: async (userId: string, character: PackedCharacter): Promise<void> => {
-    console.log("Saving to Firebase");
-    return set(ref(db, "u/" + userId + "/character/" + character.id), character);
+    // console.log("Saving to Firebase");
+    return timedAsync(() => set(ref(db, "u/" + userId + "/character/" + character.id), character), "Saving to Firebase");
   },
 
   delete: async (userId: string, characterId: string): Promise<void> => {

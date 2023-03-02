@@ -1,6 +1,6 @@
 import {useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
-import {usePathfinderDatabase} from "../../../database/v3/PathfinderDatabase";
+import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import PathfinderButton from "../../common/PathfinderButton";
 import "./ChoiceSelectButton.scss";
 import ChoiceSelectorDialog, {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorDialog";
@@ -9,21 +9,20 @@ interface ChoiceSelectButtonProps {
   choiceName: string;
   value: string|undefined;
   onSelect?: (featId: string) => void;
-  optionsFn: () => ChoiceSelectorOptions;
+  optionsFn: (categoryId: string|undefined) => ChoiceSelectorOptions;
   categoriesFn?: () => ChoiceSelectorCategory[];
   variant?: string;
   dialogVariant?: string;
-  search?: boolean;
+  search?: boolean|"auto";
+  buttonLabel?: string;
 }
 
-export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, variant = 'white', dialogVariant = variant, search = false }: ChoiceSelectButtonProps) {
+export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, buttonLabel, variant = 'white', dialogVariant = variant, search = false }: ChoiceSelectButtonProps) {
   const pathfinderDatabase = usePathfinderDatabase();
   const [show, setShow] = useState(false);
-  const [options, setOptions] = useState<ChoiceSelectorOptions>();
   const [categories, setCategories] = useState<ChoiceSelectorCategory[]>();
 
   const handleShow = () => {
-    setOptions(optionsFn());
     if (categoriesFn) {
       setCategories(categoriesFn());
     }
@@ -31,23 +30,21 @@ export default function ChoiceSelectButton({ choiceName, value, onSelect, option
   }
   const handleCancel = () => {
     setShow(false);
-    setOptions(undefined);
     setCategories(undefined);
   }
   const handleSelect = (optionId: string) => {
     onSelect?.(optionId);
     setShow(false);
-    setOptions(undefined);
     setCategories(undefined);
   };
 
   const selectedName = useMemo(() => value !== '' ? pathfinderDatabase.name(value) : undefined,
       [value, pathfinderDatabase]);
 
-  const buttonLabel = selectedName ?? <><Icon.QuestionCircleFill/>&nbsp;<i> Select {choiceName}</i></>;
+  const actualButtonLabel = <><Icon.PencilSquare/>&nbsp;&nbsp;{buttonLabel ?? selectedName ?? <i>Select {choiceName}</i>}</>;
 
   return (<>
-        <PathfinderButton variant={variant} onClick={_ => handleShow()}>{buttonLabel}</PathfinderButton>
+        <PathfinderButton variant={variant} onClick={_ => handleShow()}>{actualButtonLabel}</PathfinderButton>
         {show && <ChoiceSelectorDialog
             choiceName={choiceName}
             variant={dialogVariant}
@@ -55,7 +52,7 @@ export default function ChoiceSelectButton({ choiceName, value, onSelect, option
             show={show}
             onSelect={handleSelect}
             onCancel={handleCancel}
-            options={options ?? []}
+            optionsFn={optionsFn}
             categories={categories}
             search={search} />}
     </>);

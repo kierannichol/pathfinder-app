@@ -1,0 +1,14 @@
+{
+  "id": "ability:gain_leverage#slayer_spawn_slayer",
+  "name": "Gain Leverage",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 7th level, a spawn slayer learns techniques to counteract a foe\u0027s size advantage. When performing a combat maneuver against a studied target of Large or larger size, the spawn slayer gains a bonus on the check equal to the creature\u0027s size modifier to CMB (Large +1, Huge +2, Gargantuan +4, and Colossal +8). The spawn slayer adds this same bonus to his CMD when defending against combat maneuvers from a Large or larger studied target."
+  },
+  "effects": [{
+    "targetKey": "ability:gain_leverage#slayer_spawn_slayer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

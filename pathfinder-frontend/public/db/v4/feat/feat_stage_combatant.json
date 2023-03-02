@@ -1,0 +1,4259 @@
+{
+  "id": "feat:stage_combatant",
+  "name": "Stage Combatant",
+  "tags": ["feat", "combat"],
+  "children": [{
+    "optionId": "gauntlet",
+    "condition": "all(@feat:weapon_focus#gauntlet, @bab \u003e\u003d 5)",
+    "name": "Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "unarmed",
+    "condition": "all(@feat:weapon_focus#unarmed, @bab \u003e\u003d 5)",
+    "name": "Unarmed",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#unarmed",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_aspergillum",
+    "condition": "all(@feat:weapon_focus#battle_aspergillum, @bab \u003e\u003d 5)",
+    "name": "Battle Aspergillum",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#battle_aspergillum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knife",
+    "condition": "all(@feat:weapon_focus#brass_knife, @bab \u003e\u003d 5)",
+    "name": "Brass Knife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#brass_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knuckles",
+    "condition": "all(@feat:weapon_focus#brass_knuckles, @bab \u003e\u003d 5)",
+    "name": "Brass Knuckles",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#brass_knuckles",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cestus",
+    "condition": "all(@feat:weapon_focus#cestus, @bab \u003e\u003d 5)",
+    "name": "Cestus",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#cestus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dagger",
+    "condition": "all(@feat:weapon_focus#dagger, @bab \u003e\u003d 5)",
+    "name": "Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "punching_dagger",
+    "condition": "all(@feat:weapon_focus#punching_dagger, @bab \u003e\u003d 5)",
+    "name": "Punching Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#punching_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_gauntlet",
+    "condition": "all(@feat:weapon_focus#spiked_gauntlet, @bab \u003e\u003d 5)",
+    "name": "Spiked Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiked_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handwraps",
+    "condition": "all(@feat:weapon_focus#handwraps, @bab \u003e\u003d 5)",
+    "name": "Handwraps",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#handwraps",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "traveling_kettle",
+    "condition": "all(@feat:weapon_focus#traveling_kettle, @bab \u003e\u003d 5)",
+    "name": "Traveling Kettle",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#traveling_kettle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hook_hand",
+    "condition": "all(@feat:weapon_focus#hook_hand, @bab \u003e\u003d 5)",
+    "name": "Hook Hand",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hook_hand",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kunai",
+    "condition": "all(@feat:weapon_focus#kunai, @bab \u003e\u003d 5)",
+    "name": "Kunai",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kunai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_mace",
+    "condition": "all(@feat:weapon_focus#light_mace, @bab \u003e\u003d 5)",
+    "name": "Light Mace",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle",
+    "condition": "all(@feat:weapon_focus#sickle, @bab \u003e\u003d 5)",
+    "name": "Sickle",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sickle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spring_blade",
+    "condition": "all(@feat:weapon_focus#spring_blade, @bab \u003e\u003d 5)",
+    "name": "Spring Blade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spring_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wooden_stake",
+    "condition": "all(@feat:weapon_focus#wooden_stake, @bab \u003e\u003d 5)",
+    "name": "Wooden Stake",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#wooden_stake",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "club",
+    "condition": "all(@feat:weapon_focus#club, @bab \u003e\u003d 5)",
+    "name": "Club",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mere_club",
+    "condition": "all(@feat:weapon_focus#mere_club, @bab \u003e\u003d 5)",
+    "name": "Mere Club",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#mere_club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_mace",
+    "condition": "all(@feat:weapon_focus#heavy_mace, @bab \u003e\u003d 5)",
+    "name": "Heavy Mace",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "morningstar",
+    "condition": "all(@feat:weapon_focus#morningstar, @bab \u003e\u003d 5)",
+    "name": "Morningstar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#morningstar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortspear",
+    "condition": "all(@feat:weapon_focus#shortspear, @bab \u003e\u003d 5)",
+    "name": "Shortspear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shortspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bayonet",
+    "condition": "all(@feat:weapon_focus#bayonet, @bab \u003e\u003d 5)",
+    "name": "Bayonet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bayonet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_pike",
+    "condition": "all(@feat:weapon_focus#boarding_pike, @bab \u003e\u003d 5)",
+    "name": "Boarding Pike",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#boarding_pike",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kumade",
+    "condition": "all(@feat:weapon_focus#kumade, @bab \u003e\u003d 5)",
+    "name": "Kumade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "collapsible_kumade",
+    "condition": "all(@feat:weapon_focus#collapsible_kumade, @bab \u003e\u003d 5)",
+    "name": "Collapsible Kumade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#collapsible_kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lantern_staff",
+    "condition": "all(@feat:weapon_focus#lantern_staff, @bab \u003e\u003d 5)",
+    "name": "Lantern Staff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#lantern_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longspear",
+    "condition": "all(@feat:weapon_focus#longspear, @bab \u003e\u003d 5)",
+    "name": "Longspear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#longspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quarterstaff",
+    "condition": "all(@feat:weapon_focus#quarterstaff, @bab \u003e\u003d 5)",
+    "name": "Quarterstaff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#quarterstaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spear",
+    "condition": "all(@feat:weapon_focus#spear, @bab \u003e\u003d 5)",
+    "name": "Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blowgun",
+    "condition": "all(@feat:weapon_focus#blowgun, @bab \u003e\u003d 5)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@feat:weapon_focus#heavy_crossbow, @bab \u003e\u003d 5)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@feat:weapon_focus#light_crossbow, @bab \u003e\u003d 5)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@feat:weapon_focus#dart, @bab \u003e\u003d 5)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@feat:weapon_focus#javelin, @bab \u003e\u003d 5)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@feat:weapon_focus#sling, @bab \u003e\u003d 5)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@feat:weapon_focus#stingchuck, @bab \u003e\u003d 5)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@feat:weapon_focus#stonebow, @bab \u003e\u003d 5)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "axe",
+    "condition": "all(@feat:weapon_focus#axe, @bab \u003e\u003d 5)",
+    "name": "Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_axe",
+    "condition": "all(@feat:weapon_focus#throwing_axe, @bab \u003e\u003d 5)",
+    "name": "Throwing Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#throwing_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blade_boot",
+    "condition": "all(@feat:weapon_focus#blade_boot, @bab \u003e\u003d 5)",
+    "name": "Blade Boot",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#blade_boot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "whip",
+    "condition": "all(@feat:weapon_focus#whip, @bab \u003e\u003d 5)",
+    "name": "Whip",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "claw_blades",
+    "condition": "all(@feat:weapon_focus#claw_blades, @bab \u003e\u003d 5)",
+    "name": "Claw Blades",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#claw_blades",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_dagger",
+    "condition": "all(@feat:weapon_focus#dueling_dagger, @bab \u003e\u003d 5)",
+    "name": "Dueling Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dueling_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dogslicer",
+    "condition": "all(@feat:weapon_focus#dogslicer, @bab \u003e\u003d 5)",
+    "name": "Dogslicer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dogslicer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_hammer",
+    "condition": "all(@feat:weapon_focus#light_hammer, @bab \u003e\u003d 5)",
+    "name": "Light Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gladius",
+    "condition": "all(@feat:weapon_focus#gladius, @bab \u003e\u003d 5)",
+    "name": "Gladius",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gladius",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handaxe",
+    "condition": "all(@feat:weapon_focus#handaxe, @bab \u003e\u003d 5)",
+    "name": "Handaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#handaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "katar",
+    "condition": "all(@feat:weapon_focus#katar, @bab \u003e\u003d 5)",
+    "name": "Katar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#katar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kukri",
+    "condition": "all(@feat:weapon_focus#kukri, @bab \u003e\u003d 5)",
+    "name": "Kukri",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kukri",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "machete",
+    "condition": "all(@feat:weapon_focus#machete, @bab \u003e\u003d 5)",
+    "name": "Machete",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#machete",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_pick",
+    "condition": "all(@feat:weapon_focus#light_pick, @bab \u003e\u003d 5)",
+    "name": "Light Pick",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sap",
+    "condition": "all(@feat:weapon_focus#sap, @bab \u003e\u003d 5)",
+    "name": "Sap",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sap",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_shield",
+    "condition": "all(@feat:weapon_focus#light_shield, @bab \u003e\u003d 5)",
+    "name": "Light Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_armor",
+    "condition": "all(@feat:weapon_focus#spiked_armor, @bab \u003e\u003d 5)",
+    "name": "Spiked Armor",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiked_armor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_spiked_shield",
+    "condition": "all(@feat:weapon_focus#light_spiked_shield, @bab \u003e\u003d 5)",
+    "name": "Light Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "starknife",
+    "condition": "all(@feat:weapon_focus#starknife, @bab \u003e\u003d 5)",
+    "name": "Starknife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#starknife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "short_sword",
+    "condition": "all(@feat:weapon_focus#short_sword, @bab \u003e\u003d 5)",
+    "name": "Short Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#short_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "war_razor",
+    "condition": "all(@feat:weapon_focus#war_razor, @bab \u003e\u003d 5)",
+    "name": "War Razor",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#war_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ankus",
+    "condition": "all(@feat:weapon_focus#ankus, @bab \u003e\u003d 5)",
+    "name": "Ankus",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ankus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battleaxe",
+    "condition": "all(@feat:weapon_focus#battleaxe, @bab \u003e\u003d 5)",
+    "name": "Battleaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#battleaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "combat_scabbard",
+    "condition": "all(@feat:weapon_focus#combat_scabbard, @bab \u003e\u003d 5)",
+    "name": "Combat Scabbard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#combat_scabbard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cutlass",
+    "condition": "all(@feat:weapon_focus#cutlass, @bab \u003e\u003d 5)",
+    "name": "Cutlass",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#cutlass",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_flail",
+    "condition": "all(@feat:weapon_focus#light_flail, @bab \u003e\u003d 5)",
+    "name": "Light Flail",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gandasa",
+    "condition": "all(@feat:weapon_focus#gandasa, @bab \u003e\u003d 5)",
+    "name": "Gandasa",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gandasa",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "klar",
+    "condition": "all(@feat:weapon_focus#klar, @bab \u003e\u003d 5)",
+    "name": "Klar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#klar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longsword",
+    "condition": "all(@feat:weapon_focus#longsword, @bab \u003e\u003d 5)",
+    "name": "Longsword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#longsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "manople",
+    "condition": "all(@feat:weapon_focus#manople, @bab \u003e\u003d 5)",
+    "name": "Manople",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#manople",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_pick",
+    "condition": "all(@feat:weapon_focus#heavy_pick, @bab \u003e\u003d 5)",
+    "name": "Heavy Pick",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rapier",
+    "condition": "all(@feat:weapon_focus#rapier, @bab \u003e\u003d 5)",
+    "name": "Rapier",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scimitar",
+    "condition": "all(@feat:weapon_focus#scimitar, @bab \u003e\u003d 5)",
+    "name": "Scimitar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scimitar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scizore",
+    "condition": "all(@feat:weapon_focus#scizore, @bab \u003e\u003d 5)",
+    "name": "Scizore",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scizore",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_shield",
+    "condition": "all(@feat:weapon_focus#heavy_shield, @bab \u003e\u003d 5)",
+    "name": "Heavy Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_spiked_shield",
+    "condition": "all(@feat:weapon_focus#heavy_spiked_shield, @bab \u003e\u003d 5)",
+    "name": "Heavy Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sword_cane",
+    "condition": "all(@feat:weapon_focus#sword_cane, @bab \u003e\u003d 5)",
+    "name": "Sword Cane",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sword_cane",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "terbutje",
+    "condition": "all(@feat:weapon_focus#terbutje, @bab \u003e\u003d 5)",
+    "name": "Terbutje",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#terbutje",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "trident",
+    "condition": "all(@feat:weapon_focus#trident, @bab \u003e\u003d 5)",
+    "name": "Trident",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#trident",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "warhammer",
+    "condition": "all(@feat:weapon_focus#warhammer, @bab \u003e\u003d 5)",
+    "name": "Warhammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#warhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bardiche",
+    "condition": "all(@feat:weapon_focus#bardiche, @bab \u003e\u003d 5)",
+    "name": "Bardiche",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bardiche",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bill",
+    "condition": "all(@feat:weapon_focus#bill, @bab \u003e\u003d 5)",
+    "name": "Bill",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bill",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "earth_breaker",
+    "condition": "all(@feat:weapon_focus#earth_breaker, @bab \u003e\u003d 5)",
+    "name": "Earth Breaker",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#earth_breaker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falchion",
+    "condition": "all(@feat:weapon_focus#falchion, @bab \u003e\u003d 5)",
+    "name": "Falchion",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#falchion",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_flail",
+    "condition": "all(@feat:weapon_focus#heavy_flail, @bab \u003e\u003d 5)",
+    "name": "Heavy Flail",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "glaive",
+    "condition": "all(@feat:weapon_focus#glaive, @bab \u003e\u003d 5)",
+    "name": "Glaive",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greataxe",
+    "condition": "all(@feat:weapon_focus#greataxe, @bab \u003e\u003d 5)",
+    "name": "Greataxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#greataxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatclub",
+    "condition": "all(@feat:weapon_focus#greatclub, @bab \u003e\u003d 5)",
+    "name": "Greatclub",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#greatclub",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatsword",
+    "condition": "all(@feat:weapon_focus#greatsword, @bab \u003e\u003d 5)",
+    "name": "Greatsword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#greatsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "guisarme",
+    "condition": "all(@feat:weapon_focus#guisarme, @bab \u003e\u003d 5)",
+    "name": "Guisarme",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#guisarme",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halberd",
+    "condition": "all(@feat:weapon_focus#halberd, @bab \u003e\u003d 5)",
+    "name": "Halberd",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#halberd",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "horsechopper",
+    "condition": "all(@feat:weapon_focus#horsechopper, @bab \u003e\u003d 5)",
+    "name": "Horsechopper",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#horsechopper",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lance",
+    "condition": "all(@feat:weapon_focus#lance, @bab \u003e\u003d 5)",
+    "name": "Lance",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#lance",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ogre_hook",
+    "condition": "all(@feat:weapon_focus#ogre_hook, @bab \u003e\u003d 5)",
+    "name": "Ogre Hook",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ogre_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pickaxe",
+    "condition": "all(@feat:weapon_focus#pickaxe, @bab \u003e\u003d 5)",
+    "name": "Pickaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#pickaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "planson",
+    "condition": "all(@feat:weapon_focus#planson, @bab \u003e\u003d 5)",
+    "name": "Planson",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#planson",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ranseur",
+    "condition": "all(@feat:weapon_focus#ranseur, @bab \u003e\u003d 5)",
+    "name": "Ranseur",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ranseur",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scythe",
+    "condition": "all(@feat:weapon_focus#scythe, @bab \u003e\u003d 5)",
+    "name": "Scythe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "syringe_spear",
+    "condition": "all(@feat:weapon_focus#syringe_spear, @bab \u003e\u003d 5)",
+    "name": "Syringe Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#syringe_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@feat:weapon_focus#ammentum, @bab \u003e\u003d 5)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@feat:weapon_focus#chakram, @bab \u003e\u003d 5)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@feat:weapon_focus#jolting_dart, @bab \u003e\u003d 5)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@feat:weapon_focus#hunga_munga, @bab \u003e\u003d 5)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@feat:weapon_focus#hurlbat, @bab \u003e\u003d 5)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@feat:weapon_focus#longbow, @bab \u003e\u003d 5)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@feat:weapon_focus#pilum, @bab \u003e\u003d 5)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@feat:weapon_focus#shortbow, @bab \u003e\u003d 5)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@feat:weapon_focus#aklys, @bab \u003e\u003d 5)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knuckle_axe",
+    "condition": "all(@feat:weapon_focus#knuckle_axe, @bab \u003e\u003d 5)",
+    "name": "Knuckle Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#knuckle_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "barbazu_beard",
+    "condition": "all(@feat:weapon_focus#barbazu_beard, @bab \u003e\u003d 5)",
+    "name": "Barbazu Beard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#barbazu_beard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_poi",
+    "condition": "all(@feat:weapon_focus#battle_poi, @bab \u003e\u003d 5)",
+    "name": "Battle Poi",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#battle_poi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "swordbreaker_dagger",
+    "condition": "all(@feat:weapon_focus#swordbreaker_dagger, @bab \u003e\u003d 5)",
+    "name": "Swordbreaker Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#swordbreaker_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_talon",
+    "condition": "all(@feat:weapon_focus#flying_talon, @bab \u003e\u003d 5)",
+    "name": "Flying Talon",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flying_talon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_pincher",
+    "condition": "all(@feat:weapon_focus#gnome_pincher, @bab \u003e\u003d 5)",
+    "name": "Gnome Pincher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_pincher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_rope_shot",
+    "condition": "all(@feat:weapon_focus#halfling_rope_shot, @bab \u003e\u003d 5)",
+    "name": "Halfling Rope-shot",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#halfling_rope_shot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_boulder_helmet",
+    "condition": "all(@feat:weapon_focus#dwarven_boulder_helmet, @bab \u003e\u003d 5)",
+    "name": "Dwarven Boulder Helmet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_boulder_helmet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kama",
+    "condition": "all(@feat:weapon_focus#kama, @bab \u003e\u003d 5)",
+    "name": "Kama",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kama",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butterfly_knife",
+    "condition": "all(@feat:weapon_focus#butterfly_knife, @bab \u003e\u003d 5)",
+    "name": "Butterfly Knife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#butterfly_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "deer_horn_knife",
+    "condition": "all(@feat:weapon_focus#deer_horn_knife, @bab \u003e\u003d 5)",
+    "name": "Deer Horn Knife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#deer_horn_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_maulaxe",
+    "condition": "all(@feat:weapon_focus#dwarven_maulaxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Maulaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_maulaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "nunchaku",
+    "condition": "all(@feat:weapon_focus#nunchaku, @bab \u003e\u003d 5)",
+    "name": "Nunchaku",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#nunchaku",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quadrens",
+    "condition": "all(@feat:weapon_focus#quadrens, @bab \u003e\u003d 5)",
+    "name": "Quadrens",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#quadrens",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "drow_razor",
+    "condition": "all(@feat:weapon_focus#drow_razor, @bab \u003e\u003d 5)",
+    "name": "Drow Razor",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#drow_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rope_gauntlet",
+    "condition": "all(@feat:weapon_focus#rope_gauntlet, @bab \u003e\u003d 5)",
+    "name": "Rope Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#rope_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sawtooth_sabre",
+    "condition": "all(@feat:weapon_focus#sawtooth_sabre, @bab \u003e\u003d 5)",
+    "name": "Sawtooth Sabre",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sawtooth_sabre",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sai",
+    "condition": "all(@feat:weapon_focus#sai, @bab \u003e\u003d 5)",
+    "name": "Sai",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sanpkhang",
+    "condition": "all(@feat:weapon_focus#sanpkhang, @bab \u003e\u003d 5)",
+    "name": "Sanpkhang",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sanpkhang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "siangham",
+    "condition": "all(@feat:weapon_focus#siangham, @bab \u003e\u003d 5)",
+    "name": "Siangham",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#siangham",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sica",
+    "condition": "all(@feat:weapon_focus#sica, @bab \u003e\u003d 5)",
+    "name": "Sica",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sica",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bracer",
+    "condition": "all(@feat:weapon_focus#thorn_bracer, @bab \u003e\u003d 5)",
+    "name": "Thorn Bracer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#thorn_bracer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_war_shield",
+    "condition": "all(@feat:weapon_focus#dwarven_war_shield, @bab \u003e\u003d 5)",
+    "name": "Dwarven War-shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_war_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "waveblade",
+    "condition": "all(@feat:weapon_focus#waveblade, @bab \u003e\u003d 5)",
+    "name": "Waveblade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#waveblade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scorpion_whip",
+    "condition": "all(@feat:weapon_focus#scorpion_whip, @bab \u003e\u003d 5)",
+    "name": "Scorpion Whip",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scorpion_whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_axe_gauntlet",
+    "condition": "all(@feat:weapon_focus#dwarven_heavy_axe_gauntlet, @bab \u003e\u003d 5)",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_heavy_axe_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hooked_axe",
+    "condition": "all(@feat:weapon_focus#hooked_axe, @bab \u003e\u003d 5)",
+    "name": "Hooked Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hooked_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "broken_back_seax",
+    "condition": "all(@feat:weapon_focus#broken_back_seax, @bab \u003e\u003d 5)",
+    "name": "Broken-back Seax",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#broken_back_seax",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "estoc",
+    "condition": "all(@feat:weapon_focus#estoc, @bab \u003e\u003d 5)",
+    "name": "Estoc",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#estoc",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falcata",
+    "condition": "all(@feat:weapon_focus#falcata, @bab \u003e\u003d 5)",
+    "name": "Falcata",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#falcata",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flickmace",
+    "condition": "all(@feat:weapon_focus#flickmace, @bab \u003e\u003d 5)",
+    "name": "Flickmace",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flickmace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flindbar",
+    "condition": "all(@feat:weapon_focus#flindbar, @bab \u003e\u003d 5)",
+    "name": "Flindbar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flindbar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "khopesh",
+    "condition": "all(@feat:weapon_focus#khopesh, @bab \u003e\u003d 5)",
+    "name": "Khopesh",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#khopesh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knobkerrie",
+    "condition": "all(@feat:weapon_focus#knobkerrie, @bab \u003e\u003d 5)",
+    "name": "Knobkerrie",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#knobkerrie",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_ram_hammer",
+    "condition": "all(@feat:weapon_focus#dwarven_ram_hammer, @bab \u003e\u003d 5)",
+    "name": "Dwarven Ram Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_ram_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiral_rapier",
+    "condition": "all(@feat:weapon_focus#spiral_rapier, @bab \u003e\u003d 5)",
+    "name": "Spiral Rapier",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiral_rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rhoka",
+    "condition": "all(@feat:weapon_focus#rhoka, @bab \u003e\u003d 5)",
+    "name": "Rhoka",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#rhoka",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shotel",
+    "condition": "all(@feat:weapon_focus#shotel, @bab \u003e\u003d 5)",
+    "name": "Shotel",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shotel",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle_sword",
+    "condition": "all(@feat:weapon_focus#sickle_sword, @bab \u003e\u003d 5)",
+    "name": "Sickle-sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sickle_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "split_blade_sword",
+    "condition": "all(@feat:weapon_focus#split_blade_sword, @bab \u003e\u003d 5)",
+    "name": "Split-blade Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#split_blade_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_sword",
+    "condition": "all(@feat:weapon_focus#dueling_sword, @bab \u003e\u003d 5)",
+    "name": "Dueling Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dueling_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bastard_sword",
+    "condition": "all(@feat:weapon_focus#bastard_sword, @bab \u003e\u003d 5)",
+    "name": "Bastard Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bastard_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tongi",
+    "condition": "all(@feat:weapon_focus#tongi, @bab \u003e\u003d 5)",
+    "name": "Tongi",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#tongi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_waraxe",
+    "condition": "all(@feat:weapon_focus#dwarven_waraxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Waraxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_double_waraxe",
+    "condition": "all(@feat:weapon_focus#dwarven_double_waraxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Double Waraxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_double_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_double_axe",
+    "condition": "all(@feat:weapon_focus#orc_double_axe, @bab \u003e\u003d 5)",
+    "name": "Orc Double Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#orc_double_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butchering_axe",
+    "condition": "all(@feat:weapon_focus#butchering_axe, @bab \u003e\u003d 5)",
+    "name": "Butchering Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#butchering_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_battle_ladder",
+    "condition": "all(@feat:weapon_focus#gnome_battle_ladder, @bab \u003e\u003d 5)",
+    "name": "Gnome Battle Ladder",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_battle_ladder",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_gaff",
+    "condition": "all(@feat:weapon_focus#boarding_gaff, @bab \u003e\u003d 5)",
+    "name": "Boarding Gaff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#boarding_gaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chain_hammer",
+    "condition": "all(@feat:weapon_focus#chain_hammer, @bab \u003e\u003d 5)",
+    "name": "Chain-hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#chain_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_chain",
+    "condition": "all(@feat:weapon_focus#spiked_chain, @bab \u003e\u003d 5)",
+    "name": "Spiked Chain",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiked_chain",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crook",
+    "condition": "all(@feat:weapon_focus#crook, @bab \u003e\u003d 5)",
+    "name": "Crook",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#crook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_curve_blade",
+    "condition": "all(@feat:weapon_focus#elven_curve_blade, @bab \u003e\u003d 5)",
+    "name": "Elven Curve Blade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#elven_curve_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_dorn_dergar",
+    "condition": "all(@feat:weapon_focus#dwarven_dorn_dergar, @bab \u003e\u003d 5)",
+    "name": "Dwarven Dorn-Dergar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_dorn_dergar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_spear",
+    "condition": "all(@feat:weapon_focus#double_spear, @bab \u003e\u003d 5)",
+    "name": "Double Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#double_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_branched_spear",
+    "condition": "all(@feat:weapon_focus#elven_branched_spear, @bab \u003e\u003d 5)",
+    "name": "Elven Branched Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#elven_branched_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "fauchard",
+    "condition": "all(@feat:weapon_focus#fauchard, @bab \u003e\u003d 5)",
+    "name": "Fauchard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#fauchard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dire_flail",
+    "condition": "all(@feat:weapon_focus#dire_flail, @bab \u003e\u003d 5)",
+    "name": "Dire Flail",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dire_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flailpole",
+    "condition": "all(@feat:weapon_focus#flailpole, @bab \u003e\u003d 5)",
+    "name": "Flailpole",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flailpole",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flambard",
+    "condition": "all(@feat:weapon_focus#flambard, @bab \u003e\u003d 5)",
+    "name": "Flambard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flambard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_blade",
+    "condition": "all(@feat:weapon_focus#flying_blade, @bab \u003e\u003d 5)",
+    "name": "Flying Blade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flying_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "garrote",
+    "condition": "all(@feat:weapon_focus#garrote, @bab \u003e\u003d 5)",
+    "name": "Garrote",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#garrote",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_giant_sticker",
+    "condition": "all(@feat:weapon_focus#dwarven_giant_sticker, @bab \u003e\u003d 5)",
+    "name": "Dwarven Giant-Sticker",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_giant_sticker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_hooked_hammer",
+    "condition": "all(@feat:weapon_focus#gnome_hooked_hammer, @bab \u003e\u003d 5)",
+    "name": "Gnome Hooked Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_hooked_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "harpoon",
+    "condition": "all(@feat:weapon_focus#harpoon, @bab \u003e\u003d 5)",
+    "name": "Harpoon",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#harpoon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longaxe",
+    "condition": "all(@feat:weapon_focus#dwarven_longaxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Longaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_longaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longhammer",
+    "condition": "all(@feat:weapon_focus#dwarven_longhammer, @bab \u003e\u003d 5)",
+    "name": "Dwarven Longhammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_longhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mancatcher",
+    "condition": "all(@feat:weapon_focus#mancatcher, @bab \u003e\u003d 5)",
+    "name": "Mancatcher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#mancatcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_skull_ram",
+    "condition": "all(@feat:weapon_focus#orc_skull_ram, @bab \u003e\u003d 5)",
+    "name": "Orc Skull Ram",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#orc_skull_ram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_piston_maul",
+    "condition": "all(@feat:weapon_focus#gnome_piston_maul, @bab \u003e\u003d 5)",
+    "name": "Gnome Piston Maul",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_piston_maul",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_ripsaw_glaive",
+    "condition": "all(@feat:weapon_focus#gnome_ripsaw_glaive, @bab \u003e\u003d 5)",
+    "name": "Gnome Ripsaw Glaive",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_ripsaw_glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bladed_scarf",
+    "condition": "all(@feat:weapon_focus#bladed_scarf, @bab \u003e\u003d 5)",
+    "name": "Bladed Scarf",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bladed_scarf",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "totem_spear",
+    "condition": "all(@feat:weapon_focus#totem_spear, @bab \u003e\u003d 5)",
+    "name": "Totem Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#totem_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_sphinx_hammer",
+    "condition": "all(@feat:weapon_focus#dwarven_sphinx_hammer, @bab \u003e\u003d 5)",
+    "name": "Dwarven Sphinx Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_sphinx_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "switchscythe",
+    "condition": "all(@feat:weapon_focus#switchscythe, @bab \u003e\u003d 5)",
+    "name": "Switchscythe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#switchscythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "two_bladed_sword",
+    "condition": "all(@feat:weapon_focus#two_bladed_sword, @bab \u003e\u003d 5)",
+    "name": "Two-bladed Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#two_bladed_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_urgrosh",
+    "condition": "all(@feat:weapon_focus#dwarven_urgrosh, @bab \u003e\u003d 5)",
+    "name": "Dwarven Urgrosh",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_urgrosh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@feat:weapon_focus#bola, @bab \u003e\u003d 5)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@feat:weapon_focus#brutal_bola, @bab \u003e\u003d 5)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@feat:weapon_focus#boomerang, @bab \u003e\u003d 5)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@feat:weapon_focus#thorn_bow, @bab \u003e\u003d 5)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@feat:weapon_focus#crank_heavy_crossbow, @bab \u003e\u003d 5)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@feat:weapon_focus#crank_light_crossbow, @bab \u003e\u003d 5)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@feat:weapon_focus#double_crossbow, @bab \u003e\u003d 5)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@feat:weapon_focus#hand_crossbow, @bab \u003e\u003d 5)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@feat:weapon_focus#launching_crossbow, @bab \u003e\u003d 5)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@feat:weapon_focus#repeating_heavy_crossbow, @bab \u003e\u003d 5)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@feat:weapon_focus#repeating_light_crossbow, @bab \u003e\u003d 5)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@feat:weapon_focus#flask_thrower, @bab \u003e\u003d 5)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@feat:weapon_focus#grappling_hook, @bab \u003e\u003d 5)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@feat:weapon_focus#orc_hornbow, @bab \u003e\u003d 5)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@feat:weapon_focus#stormshaft_javelin, @bab \u003e\u003d 5)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@feat:weapon_focus#lasso, @bab \u003e\u003d 5)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@feat:weapon_focus#net, @bab \u003e\u003d 5)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@feat:weapon_focus#snag_net, @bab \u003e\u003d 5)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@feat:weapon_focus#dwarven_heavy_pelletbow, @bab \u003e\u003d 5)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@feat:weapon_focus#dwarven_light_pelletbow, @bab \u003e\u003d 5)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@feat:weapon_focus#throwing_shield, @bab \u003e\u003d 5)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@feat:weapon_focus#shrillshaft_javelin, @bab \u003e\u003d 5)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@feat:weapon_focus#shuriken_5, @bab \u003e\u003d 5)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@feat:weapon_focus#double_sling, @bab \u003e\u003d 5)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@feat:weapon_focus#sling_glove, @bab \u003e\u003d 5)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@feat:weapon_focus#halfling_sling_staff, @bab \u003e\u003d 5)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@feat:weapon_focus#stitched_sling, @bab \u003e\u003d 5)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@feat:weapon_focus#wrist_launcher, @bab \u003e\u003d 5)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@feat:weapon_focus#heavy_wrist_launcher, @bab \u003e\u003d 5)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gauntlet",
+    "condition": "all(@feat:weapon_focus#gauntlet, @bab \u003e\u003d 5)",
+    "name": "Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "unarmed",
+    "condition": "all(@feat:weapon_focus#unarmed, @bab \u003e\u003d 5)",
+    "name": "Unarmed",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#unarmed",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_aspergillum",
+    "condition": "all(@feat:weapon_focus#battle_aspergillum, @bab \u003e\u003d 5)",
+    "name": "Battle Aspergillum",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#battle_aspergillum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knife",
+    "condition": "all(@feat:weapon_focus#brass_knife, @bab \u003e\u003d 5)",
+    "name": "Brass Knife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#brass_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knuckles",
+    "condition": "all(@feat:weapon_focus#brass_knuckles, @bab \u003e\u003d 5)",
+    "name": "Brass Knuckles",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#brass_knuckles",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cestus",
+    "condition": "all(@feat:weapon_focus#cestus, @bab \u003e\u003d 5)",
+    "name": "Cestus",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#cestus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dagger",
+    "condition": "all(@feat:weapon_focus#dagger, @bab \u003e\u003d 5)",
+    "name": "Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "punching_dagger",
+    "condition": "all(@feat:weapon_focus#punching_dagger, @bab \u003e\u003d 5)",
+    "name": "Punching Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#punching_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_gauntlet",
+    "condition": "all(@feat:weapon_focus#spiked_gauntlet, @bab \u003e\u003d 5)",
+    "name": "Spiked Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiked_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handwraps",
+    "condition": "all(@feat:weapon_focus#handwraps, @bab \u003e\u003d 5)",
+    "name": "Handwraps",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#handwraps",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "traveling_kettle",
+    "condition": "all(@feat:weapon_focus#traveling_kettle, @bab \u003e\u003d 5)",
+    "name": "Traveling Kettle",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#traveling_kettle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hook_hand",
+    "condition": "all(@feat:weapon_focus#hook_hand, @bab \u003e\u003d 5)",
+    "name": "Hook Hand",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hook_hand",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kunai",
+    "condition": "all(@feat:weapon_focus#kunai, @bab \u003e\u003d 5)",
+    "name": "Kunai",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kunai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_mace",
+    "condition": "all(@feat:weapon_focus#light_mace, @bab \u003e\u003d 5)",
+    "name": "Light Mace",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle",
+    "condition": "all(@feat:weapon_focus#sickle, @bab \u003e\u003d 5)",
+    "name": "Sickle",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sickle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spring_blade",
+    "condition": "all(@feat:weapon_focus#spring_blade, @bab \u003e\u003d 5)",
+    "name": "Spring Blade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spring_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wooden_stake",
+    "condition": "all(@feat:weapon_focus#wooden_stake, @bab \u003e\u003d 5)",
+    "name": "Wooden Stake",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#wooden_stake",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "club",
+    "condition": "all(@feat:weapon_focus#club, @bab \u003e\u003d 5)",
+    "name": "Club",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mere_club",
+    "condition": "all(@feat:weapon_focus#mere_club, @bab \u003e\u003d 5)",
+    "name": "Mere Club",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#mere_club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_mace",
+    "condition": "all(@feat:weapon_focus#heavy_mace, @bab \u003e\u003d 5)",
+    "name": "Heavy Mace",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "morningstar",
+    "condition": "all(@feat:weapon_focus#morningstar, @bab \u003e\u003d 5)",
+    "name": "Morningstar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#morningstar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortspear",
+    "condition": "all(@feat:weapon_focus#shortspear, @bab \u003e\u003d 5)",
+    "name": "Shortspear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shortspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bayonet",
+    "condition": "all(@feat:weapon_focus#bayonet, @bab \u003e\u003d 5)",
+    "name": "Bayonet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bayonet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_pike",
+    "condition": "all(@feat:weapon_focus#boarding_pike, @bab \u003e\u003d 5)",
+    "name": "Boarding Pike",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#boarding_pike",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kumade",
+    "condition": "all(@feat:weapon_focus#kumade, @bab \u003e\u003d 5)",
+    "name": "Kumade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "collapsible_kumade",
+    "condition": "all(@feat:weapon_focus#collapsible_kumade, @bab \u003e\u003d 5)",
+    "name": "Collapsible Kumade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#collapsible_kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lantern_staff",
+    "condition": "all(@feat:weapon_focus#lantern_staff, @bab \u003e\u003d 5)",
+    "name": "Lantern Staff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#lantern_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longspear",
+    "condition": "all(@feat:weapon_focus#longspear, @bab \u003e\u003d 5)",
+    "name": "Longspear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#longspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quarterstaff",
+    "condition": "all(@feat:weapon_focus#quarterstaff, @bab \u003e\u003d 5)",
+    "name": "Quarterstaff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#quarterstaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spear",
+    "condition": "all(@feat:weapon_focus#spear, @bab \u003e\u003d 5)",
+    "name": "Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blowgun",
+    "condition": "all(@feat:weapon_focus#blowgun, @bab \u003e\u003d 5)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@feat:weapon_focus#heavy_crossbow, @bab \u003e\u003d 5)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@feat:weapon_focus#light_crossbow, @bab \u003e\u003d 5)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@feat:weapon_focus#dart, @bab \u003e\u003d 5)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@feat:weapon_focus#javelin, @bab \u003e\u003d 5)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@feat:weapon_focus#sling, @bab \u003e\u003d 5)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@feat:weapon_focus#stingchuck, @bab \u003e\u003d 5)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@feat:weapon_focus#stonebow, @bab \u003e\u003d 5)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "axe",
+    "condition": "all(@feat:weapon_focus#axe, @bab \u003e\u003d 5)",
+    "name": "Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_axe",
+    "condition": "all(@feat:weapon_focus#throwing_axe, @bab \u003e\u003d 5)",
+    "name": "Throwing Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#throwing_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blade_boot",
+    "condition": "all(@feat:weapon_focus#blade_boot, @bab \u003e\u003d 5)",
+    "name": "Blade Boot",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#blade_boot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "whip",
+    "condition": "all(@feat:weapon_focus#whip, @bab \u003e\u003d 5)",
+    "name": "Whip",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "claw_blades",
+    "condition": "all(@feat:weapon_focus#claw_blades, @bab \u003e\u003d 5)",
+    "name": "Claw Blades",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#claw_blades",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_dagger",
+    "condition": "all(@feat:weapon_focus#dueling_dagger, @bab \u003e\u003d 5)",
+    "name": "Dueling Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dueling_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dogslicer",
+    "condition": "all(@feat:weapon_focus#dogslicer, @bab \u003e\u003d 5)",
+    "name": "Dogslicer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dogslicer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_hammer",
+    "condition": "all(@feat:weapon_focus#light_hammer, @bab \u003e\u003d 5)",
+    "name": "Light Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gladius",
+    "condition": "all(@feat:weapon_focus#gladius, @bab \u003e\u003d 5)",
+    "name": "Gladius",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gladius",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handaxe",
+    "condition": "all(@feat:weapon_focus#handaxe, @bab \u003e\u003d 5)",
+    "name": "Handaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#handaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "katar",
+    "condition": "all(@feat:weapon_focus#katar, @bab \u003e\u003d 5)",
+    "name": "Katar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#katar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kukri",
+    "condition": "all(@feat:weapon_focus#kukri, @bab \u003e\u003d 5)",
+    "name": "Kukri",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kukri",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "machete",
+    "condition": "all(@feat:weapon_focus#machete, @bab \u003e\u003d 5)",
+    "name": "Machete",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#machete",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_pick",
+    "condition": "all(@feat:weapon_focus#light_pick, @bab \u003e\u003d 5)",
+    "name": "Light Pick",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sap",
+    "condition": "all(@feat:weapon_focus#sap, @bab \u003e\u003d 5)",
+    "name": "Sap",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sap",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_shield",
+    "condition": "all(@feat:weapon_focus#light_shield, @bab \u003e\u003d 5)",
+    "name": "Light Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_armor",
+    "condition": "all(@feat:weapon_focus#spiked_armor, @bab \u003e\u003d 5)",
+    "name": "Spiked Armor",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiked_armor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_spiked_shield",
+    "condition": "all(@feat:weapon_focus#light_spiked_shield, @bab \u003e\u003d 5)",
+    "name": "Light Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "starknife",
+    "condition": "all(@feat:weapon_focus#starknife, @bab \u003e\u003d 5)",
+    "name": "Starknife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#starknife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "short_sword",
+    "condition": "all(@feat:weapon_focus#short_sword, @bab \u003e\u003d 5)",
+    "name": "Short Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#short_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "war_razor",
+    "condition": "all(@feat:weapon_focus#war_razor, @bab \u003e\u003d 5)",
+    "name": "War Razor",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#war_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ankus",
+    "condition": "all(@feat:weapon_focus#ankus, @bab \u003e\u003d 5)",
+    "name": "Ankus",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ankus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battleaxe",
+    "condition": "all(@feat:weapon_focus#battleaxe, @bab \u003e\u003d 5)",
+    "name": "Battleaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#battleaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "combat_scabbard",
+    "condition": "all(@feat:weapon_focus#combat_scabbard, @bab \u003e\u003d 5)",
+    "name": "Combat Scabbard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#combat_scabbard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cutlass",
+    "condition": "all(@feat:weapon_focus#cutlass, @bab \u003e\u003d 5)",
+    "name": "Cutlass",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#cutlass",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_flail",
+    "condition": "all(@feat:weapon_focus#light_flail, @bab \u003e\u003d 5)",
+    "name": "Light Flail",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#light_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gandasa",
+    "condition": "all(@feat:weapon_focus#gandasa, @bab \u003e\u003d 5)",
+    "name": "Gandasa",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gandasa",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "klar",
+    "condition": "all(@feat:weapon_focus#klar, @bab \u003e\u003d 5)",
+    "name": "Klar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#klar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longsword",
+    "condition": "all(@feat:weapon_focus#longsword, @bab \u003e\u003d 5)",
+    "name": "Longsword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#longsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "manople",
+    "condition": "all(@feat:weapon_focus#manople, @bab \u003e\u003d 5)",
+    "name": "Manople",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#manople",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_pick",
+    "condition": "all(@feat:weapon_focus#heavy_pick, @bab \u003e\u003d 5)",
+    "name": "Heavy Pick",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rapier",
+    "condition": "all(@feat:weapon_focus#rapier, @bab \u003e\u003d 5)",
+    "name": "Rapier",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scimitar",
+    "condition": "all(@feat:weapon_focus#scimitar, @bab \u003e\u003d 5)",
+    "name": "Scimitar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scimitar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scizore",
+    "condition": "all(@feat:weapon_focus#scizore, @bab \u003e\u003d 5)",
+    "name": "Scizore",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scizore",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_shield",
+    "condition": "all(@feat:weapon_focus#heavy_shield, @bab \u003e\u003d 5)",
+    "name": "Heavy Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_spiked_shield",
+    "condition": "all(@feat:weapon_focus#heavy_spiked_shield, @bab \u003e\u003d 5)",
+    "name": "Heavy Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sword_cane",
+    "condition": "all(@feat:weapon_focus#sword_cane, @bab \u003e\u003d 5)",
+    "name": "Sword Cane",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sword_cane",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "terbutje",
+    "condition": "all(@feat:weapon_focus#terbutje, @bab \u003e\u003d 5)",
+    "name": "Terbutje",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#terbutje",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "trident",
+    "condition": "all(@feat:weapon_focus#trident, @bab \u003e\u003d 5)",
+    "name": "Trident",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#trident",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "warhammer",
+    "condition": "all(@feat:weapon_focus#warhammer, @bab \u003e\u003d 5)",
+    "name": "Warhammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#warhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bardiche",
+    "condition": "all(@feat:weapon_focus#bardiche, @bab \u003e\u003d 5)",
+    "name": "Bardiche",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bardiche",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bill",
+    "condition": "all(@feat:weapon_focus#bill, @bab \u003e\u003d 5)",
+    "name": "Bill",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bill",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "earth_breaker",
+    "condition": "all(@feat:weapon_focus#earth_breaker, @bab \u003e\u003d 5)",
+    "name": "Earth Breaker",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#earth_breaker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falchion",
+    "condition": "all(@feat:weapon_focus#falchion, @bab \u003e\u003d 5)",
+    "name": "Falchion",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#falchion",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_flail",
+    "condition": "all(@feat:weapon_focus#heavy_flail, @bab \u003e\u003d 5)",
+    "name": "Heavy Flail",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "glaive",
+    "condition": "all(@feat:weapon_focus#glaive, @bab \u003e\u003d 5)",
+    "name": "Glaive",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greataxe",
+    "condition": "all(@feat:weapon_focus#greataxe, @bab \u003e\u003d 5)",
+    "name": "Greataxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#greataxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatclub",
+    "condition": "all(@feat:weapon_focus#greatclub, @bab \u003e\u003d 5)",
+    "name": "Greatclub",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#greatclub",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatsword",
+    "condition": "all(@feat:weapon_focus#greatsword, @bab \u003e\u003d 5)",
+    "name": "Greatsword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#greatsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "guisarme",
+    "condition": "all(@feat:weapon_focus#guisarme, @bab \u003e\u003d 5)",
+    "name": "Guisarme",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#guisarme",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halberd",
+    "condition": "all(@feat:weapon_focus#halberd, @bab \u003e\u003d 5)",
+    "name": "Halberd",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#halberd",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "horsechopper",
+    "condition": "all(@feat:weapon_focus#horsechopper, @bab \u003e\u003d 5)",
+    "name": "Horsechopper",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#horsechopper",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lance",
+    "condition": "all(@feat:weapon_focus#lance, @bab \u003e\u003d 5)",
+    "name": "Lance",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#lance",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ogre_hook",
+    "condition": "all(@feat:weapon_focus#ogre_hook, @bab \u003e\u003d 5)",
+    "name": "Ogre Hook",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ogre_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pickaxe",
+    "condition": "all(@feat:weapon_focus#pickaxe, @bab \u003e\u003d 5)",
+    "name": "Pickaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#pickaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "planson",
+    "condition": "all(@feat:weapon_focus#planson, @bab \u003e\u003d 5)",
+    "name": "Planson",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#planson",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ranseur",
+    "condition": "all(@feat:weapon_focus#ranseur, @bab \u003e\u003d 5)",
+    "name": "Ranseur",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ranseur",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scythe",
+    "condition": "all(@feat:weapon_focus#scythe, @bab \u003e\u003d 5)",
+    "name": "Scythe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "syringe_spear",
+    "condition": "all(@feat:weapon_focus#syringe_spear, @bab \u003e\u003d 5)",
+    "name": "Syringe Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#syringe_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@feat:weapon_focus#ammentum, @bab \u003e\u003d 5)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@feat:weapon_focus#chakram, @bab \u003e\u003d 5)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@feat:weapon_focus#jolting_dart, @bab \u003e\u003d 5)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@feat:weapon_focus#hunga_munga, @bab \u003e\u003d 5)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@feat:weapon_focus#hurlbat, @bab \u003e\u003d 5)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@feat:weapon_focus#longbow, @bab \u003e\u003d 5)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@feat:weapon_focus#pilum, @bab \u003e\u003d 5)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@feat:weapon_focus#shortbow, @bab \u003e\u003d 5)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@feat:weapon_focus#aklys, @bab \u003e\u003d 5)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knuckle_axe",
+    "condition": "all(@feat:weapon_focus#knuckle_axe, @bab \u003e\u003d 5)",
+    "name": "Knuckle Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#knuckle_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "barbazu_beard",
+    "condition": "all(@feat:weapon_focus#barbazu_beard, @bab \u003e\u003d 5)",
+    "name": "Barbazu Beard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#barbazu_beard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_poi",
+    "condition": "all(@feat:weapon_focus#battle_poi, @bab \u003e\u003d 5)",
+    "name": "Battle Poi",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#battle_poi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "swordbreaker_dagger",
+    "condition": "all(@feat:weapon_focus#swordbreaker_dagger, @bab \u003e\u003d 5)",
+    "name": "Swordbreaker Dagger",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#swordbreaker_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_talon",
+    "condition": "all(@feat:weapon_focus#flying_talon, @bab \u003e\u003d 5)",
+    "name": "Flying Talon",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flying_talon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_pincher",
+    "condition": "all(@feat:weapon_focus#gnome_pincher, @bab \u003e\u003d 5)",
+    "name": "Gnome Pincher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_pincher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_rope_shot",
+    "condition": "all(@feat:weapon_focus#halfling_rope_shot, @bab \u003e\u003d 5)",
+    "name": "Halfling Rope-shot",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#halfling_rope_shot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_boulder_helmet",
+    "condition": "all(@feat:weapon_focus#dwarven_boulder_helmet, @bab \u003e\u003d 5)",
+    "name": "Dwarven Boulder Helmet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_boulder_helmet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kama",
+    "condition": "all(@feat:weapon_focus#kama, @bab \u003e\u003d 5)",
+    "name": "Kama",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#kama",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butterfly_knife",
+    "condition": "all(@feat:weapon_focus#butterfly_knife, @bab \u003e\u003d 5)",
+    "name": "Butterfly Knife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#butterfly_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "deer_horn_knife",
+    "condition": "all(@feat:weapon_focus#deer_horn_knife, @bab \u003e\u003d 5)",
+    "name": "Deer Horn Knife",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#deer_horn_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_maulaxe",
+    "condition": "all(@feat:weapon_focus#dwarven_maulaxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Maulaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_maulaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "nunchaku",
+    "condition": "all(@feat:weapon_focus#nunchaku, @bab \u003e\u003d 5)",
+    "name": "Nunchaku",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#nunchaku",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quadrens",
+    "condition": "all(@feat:weapon_focus#quadrens, @bab \u003e\u003d 5)",
+    "name": "Quadrens",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#quadrens",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "drow_razor",
+    "condition": "all(@feat:weapon_focus#drow_razor, @bab \u003e\u003d 5)",
+    "name": "Drow Razor",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#drow_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rope_gauntlet",
+    "condition": "all(@feat:weapon_focus#rope_gauntlet, @bab \u003e\u003d 5)",
+    "name": "Rope Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#rope_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sawtooth_sabre",
+    "condition": "all(@feat:weapon_focus#sawtooth_sabre, @bab \u003e\u003d 5)",
+    "name": "Sawtooth Sabre",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sawtooth_sabre",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sai",
+    "condition": "all(@feat:weapon_focus#sai, @bab \u003e\u003d 5)",
+    "name": "Sai",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sanpkhang",
+    "condition": "all(@feat:weapon_focus#sanpkhang, @bab \u003e\u003d 5)",
+    "name": "Sanpkhang",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sanpkhang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "siangham",
+    "condition": "all(@feat:weapon_focus#siangham, @bab \u003e\u003d 5)",
+    "name": "Siangham",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#siangham",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sica",
+    "condition": "all(@feat:weapon_focus#sica, @bab \u003e\u003d 5)",
+    "name": "Sica",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sica",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bracer",
+    "condition": "all(@feat:weapon_focus#thorn_bracer, @bab \u003e\u003d 5)",
+    "name": "Thorn Bracer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#thorn_bracer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_war_shield",
+    "condition": "all(@feat:weapon_focus#dwarven_war_shield, @bab \u003e\u003d 5)",
+    "name": "Dwarven War-shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_war_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "waveblade",
+    "condition": "all(@feat:weapon_focus#waveblade, @bab \u003e\u003d 5)",
+    "name": "Waveblade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#waveblade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scorpion_whip",
+    "condition": "all(@feat:weapon_focus#scorpion_whip, @bab \u003e\u003d 5)",
+    "name": "Scorpion Whip",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#scorpion_whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_axe_gauntlet",
+    "condition": "all(@feat:weapon_focus#dwarven_heavy_axe_gauntlet, @bab \u003e\u003d 5)",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_heavy_axe_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hooked_axe",
+    "condition": "all(@feat:weapon_focus#hooked_axe, @bab \u003e\u003d 5)",
+    "name": "Hooked Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hooked_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "broken_back_seax",
+    "condition": "all(@feat:weapon_focus#broken_back_seax, @bab \u003e\u003d 5)",
+    "name": "Broken-back Seax",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#broken_back_seax",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "estoc",
+    "condition": "all(@feat:weapon_focus#estoc, @bab \u003e\u003d 5)",
+    "name": "Estoc",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#estoc",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falcata",
+    "condition": "all(@feat:weapon_focus#falcata, @bab \u003e\u003d 5)",
+    "name": "Falcata",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#falcata",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flickmace",
+    "condition": "all(@feat:weapon_focus#flickmace, @bab \u003e\u003d 5)",
+    "name": "Flickmace",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flickmace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flindbar",
+    "condition": "all(@feat:weapon_focus#flindbar, @bab \u003e\u003d 5)",
+    "name": "Flindbar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flindbar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "khopesh",
+    "condition": "all(@feat:weapon_focus#khopesh, @bab \u003e\u003d 5)",
+    "name": "Khopesh",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#khopesh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knobkerrie",
+    "condition": "all(@feat:weapon_focus#knobkerrie, @bab \u003e\u003d 5)",
+    "name": "Knobkerrie",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#knobkerrie",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_ram_hammer",
+    "condition": "all(@feat:weapon_focus#dwarven_ram_hammer, @bab \u003e\u003d 5)",
+    "name": "Dwarven Ram Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_ram_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiral_rapier",
+    "condition": "all(@feat:weapon_focus#spiral_rapier, @bab \u003e\u003d 5)",
+    "name": "Spiral Rapier",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiral_rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rhoka",
+    "condition": "all(@feat:weapon_focus#rhoka, @bab \u003e\u003d 5)",
+    "name": "Rhoka",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#rhoka",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shotel",
+    "condition": "all(@feat:weapon_focus#shotel, @bab \u003e\u003d 5)",
+    "name": "Shotel",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shotel",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle_sword",
+    "condition": "all(@feat:weapon_focus#sickle_sword, @bab \u003e\u003d 5)",
+    "name": "Sickle-sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sickle_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "split_blade_sword",
+    "condition": "all(@feat:weapon_focus#split_blade_sword, @bab \u003e\u003d 5)",
+    "name": "Split-blade Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#split_blade_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_sword",
+    "condition": "all(@feat:weapon_focus#dueling_sword, @bab \u003e\u003d 5)",
+    "name": "Dueling Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dueling_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bastard_sword",
+    "condition": "all(@feat:weapon_focus#bastard_sword, @bab \u003e\u003d 5)",
+    "name": "Bastard Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bastard_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tongi",
+    "condition": "all(@feat:weapon_focus#tongi, @bab \u003e\u003d 5)",
+    "name": "Tongi",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#tongi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_waraxe",
+    "condition": "all(@feat:weapon_focus#dwarven_waraxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Waraxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_double_waraxe",
+    "condition": "all(@feat:weapon_focus#dwarven_double_waraxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Double Waraxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_double_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_double_axe",
+    "condition": "all(@feat:weapon_focus#orc_double_axe, @bab \u003e\u003d 5)",
+    "name": "Orc Double Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#orc_double_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butchering_axe",
+    "condition": "all(@feat:weapon_focus#butchering_axe, @bab \u003e\u003d 5)",
+    "name": "Butchering Axe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#butchering_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_battle_ladder",
+    "condition": "all(@feat:weapon_focus#gnome_battle_ladder, @bab \u003e\u003d 5)",
+    "name": "Gnome Battle Ladder",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_battle_ladder",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_gaff",
+    "condition": "all(@feat:weapon_focus#boarding_gaff, @bab \u003e\u003d 5)",
+    "name": "Boarding Gaff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#boarding_gaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chain_hammer",
+    "condition": "all(@feat:weapon_focus#chain_hammer, @bab \u003e\u003d 5)",
+    "name": "Chain-hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#chain_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_chain",
+    "condition": "all(@feat:weapon_focus#spiked_chain, @bab \u003e\u003d 5)",
+    "name": "Spiked Chain",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#spiked_chain",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crook",
+    "condition": "all(@feat:weapon_focus#crook, @bab \u003e\u003d 5)",
+    "name": "Crook",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#crook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_curve_blade",
+    "condition": "all(@feat:weapon_focus#elven_curve_blade, @bab \u003e\u003d 5)",
+    "name": "Elven Curve Blade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#elven_curve_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_dorn_dergar",
+    "condition": "all(@feat:weapon_focus#dwarven_dorn_dergar, @bab \u003e\u003d 5)",
+    "name": "Dwarven Dorn-Dergar",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_dorn_dergar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_spear",
+    "condition": "all(@feat:weapon_focus#double_spear, @bab \u003e\u003d 5)",
+    "name": "Double Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#double_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_branched_spear",
+    "condition": "all(@feat:weapon_focus#elven_branched_spear, @bab \u003e\u003d 5)",
+    "name": "Elven Branched Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#elven_branched_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "fauchard",
+    "condition": "all(@feat:weapon_focus#fauchard, @bab \u003e\u003d 5)",
+    "name": "Fauchard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#fauchard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dire_flail",
+    "condition": "all(@feat:weapon_focus#dire_flail, @bab \u003e\u003d 5)",
+    "name": "Dire Flail",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dire_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flailpole",
+    "condition": "all(@feat:weapon_focus#flailpole, @bab \u003e\u003d 5)",
+    "name": "Flailpole",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flailpole",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flambard",
+    "condition": "all(@feat:weapon_focus#flambard, @bab \u003e\u003d 5)",
+    "name": "Flambard",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flambard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_blade",
+    "condition": "all(@feat:weapon_focus#flying_blade, @bab \u003e\u003d 5)",
+    "name": "Flying Blade",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flying_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "garrote",
+    "condition": "all(@feat:weapon_focus#garrote, @bab \u003e\u003d 5)",
+    "name": "Garrote",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#garrote",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_giant_sticker",
+    "condition": "all(@feat:weapon_focus#dwarven_giant_sticker, @bab \u003e\u003d 5)",
+    "name": "Dwarven Giant-Sticker",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_giant_sticker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_hooked_hammer",
+    "condition": "all(@feat:weapon_focus#gnome_hooked_hammer, @bab \u003e\u003d 5)",
+    "name": "Gnome Hooked Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_hooked_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "harpoon",
+    "condition": "all(@feat:weapon_focus#harpoon, @bab \u003e\u003d 5)",
+    "name": "Harpoon",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#harpoon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longaxe",
+    "condition": "all(@feat:weapon_focus#dwarven_longaxe, @bab \u003e\u003d 5)",
+    "name": "Dwarven Longaxe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_longaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longhammer",
+    "condition": "all(@feat:weapon_focus#dwarven_longhammer, @bab \u003e\u003d 5)",
+    "name": "Dwarven Longhammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_longhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mancatcher",
+    "condition": "all(@feat:weapon_focus#mancatcher, @bab \u003e\u003d 5)",
+    "name": "Mancatcher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#mancatcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_skull_ram",
+    "condition": "all(@feat:weapon_focus#orc_skull_ram, @bab \u003e\u003d 5)",
+    "name": "Orc Skull Ram",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#orc_skull_ram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_piston_maul",
+    "condition": "all(@feat:weapon_focus#gnome_piston_maul, @bab \u003e\u003d 5)",
+    "name": "Gnome Piston Maul",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_piston_maul",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_ripsaw_glaive",
+    "condition": "all(@feat:weapon_focus#gnome_ripsaw_glaive, @bab \u003e\u003d 5)",
+    "name": "Gnome Ripsaw Glaive",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#gnome_ripsaw_glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bladed_scarf",
+    "condition": "all(@feat:weapon_focus#bladed_scarf, @bab \u003e\u003d 5)",
+    "name": "Bladed Scarf",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bladed_scarf",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "totem_spear",
+    "condition": "all(@feat:weapon_focus#totem_spear, @bab \u003e\u003d 5)",
+    "name": "Totem Spear",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#totem_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_sphinx_hammer",
+    "condition": "all(@feat:weapon_focus#dwarven_sphinx_hammer, @bab \u003e\u003d 5)",
+    "name": "Dwarven Sphinx Hammer",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_sphinx_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "switchscythe",
+    "condition": "all(@feat:weapon_focus#switchscythe, @bab \u003e\u003d 5)",
+    "name": "Switchscythe",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#switchscythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "two_bladed_sword",
+    "condition": "all(@feat:weapon_focus#two_bladed_sword, @bab \u003e\u003d 5)",
+    "name": "Two-bladed Sword",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#two_bladed_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_urgrosh",
+    "condition": "all(@feat:weapon_focus#dwarven_urgrosh, @bab \u003e\u003d 5)",
+    "name": "Dwarven Urgrosh",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_urgrosh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@feat:weapon_focus#bola, @bab \u003e\u003d 5)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@feat:weapon_focus#brutal_bola, @bab \u003e\u003d 5)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@feat:weapon_focus#boomerang, @bab \u003e\u003d 5)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@feat:weapon_focus#thorn_bow, @bab \u003e\u003d 5)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@feat:weapon_focus#crank_heavy_crossbow, @bab \u003e\u003d 5)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@feat:weapon_focus#crank_light_crossbow, @bab \u003e\u003d 5)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@feat:weapon_focus#double_crossbow, @bab \u003e\u003d 5)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@feat:weapon_focus#hand_crossbow, @bab \u003e\u003d 5)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@feat:weapon_focus#launching_crossbow, @bab \u003e\u003d 5)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@feat:weapon_focus#repeating_heavy_crossbow, @bab \u003e\u003d 5)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@feat:weapon_focus#repeating_light_crossbow, @bab \u003e\u003d 5)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@feat:weapon_focus#flask_thrower, @bab \u003e\u003d 5)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@feat:weapon_focus#grappling_hook, @bab \u003e\u003d 5)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@feat:weapon_focus#orc_hornbow, @bab \u003e\u003d 5)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@feat:weapon_focus#stormshaft_javelin, @bab \u003e\u003d 5)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@feat:weapon_focus#lasso, @bab \u003e\u003d 5)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@feat:weapon_focus#net, @bab \u003e\u003d 5)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@feat:weapon_focus#snag_net, @bab \u003e\u003d 5)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@feat:weapon_focus#dwarven_heavy_pelletbow, @bab \u003e\u003d 5)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@feat:weapon_focus#dwarven_light_pelletbow, @bab \u003e\u003d 5)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@feat:weapon_focus#throwing_shield, @bab \u003e\u003d 5)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@feat:weapon_focus#shrillshaft_javelin, @bab \u003e\u003d 5)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@feat:weapon_focus#shuriken_5, @bab \u003e\u003d 5)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@feat:weapon_focus#double_sling, @bab \u003e\u003d 5)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@feat:weapon_focus#sling_glove, @bab \u003e\u003d 5)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@feat:weapon_focus#halfling_sling_staff, @bab \u003e\u003d 5)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@feat:weapon_focus#stitched_sling, @bab \u003e\u003d 5)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@feat:weapon_focus#wrist_launcher, @bab \u003e\u003d 5)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@feat:weapon_focus#heavy_wrist_launcher, @bab \u003e\u003d 5)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:stage_combatant#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }],
+  "description": {
+    "text": "You are a master of stage and nonlethal combats.",
+    "sections": {
+      "Benefit": "When you make an attack with a weapon that you have Weapon Focus in, you take no penalty on the attack roll when you are attempting to make an attack that deals no damage or nonlethal damage.",
+      "Normal": "When making attacks that deal no damage or nonlethal damage, you take a -4 penalty on attack rolls."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:stage_combatant",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

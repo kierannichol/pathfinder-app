@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_summons",
+  "name": "Extra Summons",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@ability:summon_monster#unchained_summoner, @class:summoner \u003e\u003d 1)",
+  "description": {
+    "text": "You can summon monsters more often each day.",
+    "sections": {
+      "Benefit": "You gain 1 additional use of your summon monster spell-like ability per day.",
+      "Special": "You can take this feat multiple times, but it can only be taken once for every five summoner levels you possess."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_summons",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

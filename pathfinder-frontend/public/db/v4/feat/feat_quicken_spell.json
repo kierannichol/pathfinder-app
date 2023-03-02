@@ -1,0 +1,19 @@
+{
+  "id": "feat:quicken_spell",
+  "name": "Quicken Spell",
+  "tags": ["feat", "metamagic"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "You can cast spells in a fraction of the normal time.",
+    "sections": {
+      "Benefit": "Casting a quickened spell is a swift action. You can perform another action, even casting another spell, in the same round as you cast a quickened spell. A spell whose casting time is more than 1 round or 1 fullround action cannot be quickened. A quickened spell uses up a spell slot four levels higher than the spell\u0027s actual level. Casting a quickened spell doesn\u0027t provoke an attack of opportunity.",
+      "Special": "You can apply the effects of this feat to a spell cast spontaneously, so long as it has a casting time that is not more than 1 full-round action, without increasing the spell\u0027s casting time."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:quicken_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

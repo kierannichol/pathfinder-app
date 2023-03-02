@@ -1,0 +1,18 @@
+{
+  "id": "feat:panther_claw",
+  "name": "Panther Claw",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@wis_score \u003e\u003d 15, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:panther_style)",
+  "description": {
+    "text": "You unleash a rapid series of blows on foes that attempt to attack you when you move.",
+    "sections": {
+      "Benefit": "While using Panther Style, you can spend a free action, instead of spending a swift action, to make a retaliatory unarmed strike. You can make a number of retaliatory unarmed strikes on your turn equal to your Wisdom modifier."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:panther_claw",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

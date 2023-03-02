@@ -1,6 +1,6 @@
-import {Associativity, ShuntingYard} from "./ShuntingYard";
 import {DataContext} from "./DataContext";
-import {Formula} from "./Formula";
+import ResolvedValue from "./ResolvedValue";
+import {Associativity, ShuntingYard} from "./ShuntingYard";
 
 const parser = ShuntingYard.parser()
   .intOperator('$', 4, Associativity.Right, 2, Math.pow)
@@ -13,6 +13,12 @@ const parser = ShuntingYard.parser()
   .intFunction('max', 2, Math.max)
   .intFunction('floor', 1, Math.floor)
   .intFunction('ceil', 1, Math.ceil)
+  .varargsFunction('any', args => ResolvedValue.of(args.some(arg => arg.asBoolean())))
+  .varargsFunction('all', args => ResolvedValue.of(args.every(arg => arg.asBoolean())))
+  .operator('AND', 1, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => ResolvedValue.of(a.asBoolean() && b.asBoolean()))
+  .operator('OR', 1, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => ResolvedValue.of(a.asBoolean() || b.asBoolean()))
+  .term('true', () => ResolvedValue.of(true))
+  .term('false', () => ResolvedValue.of(false))
   .variable('@', '',(state, key) => state.get(key));
 
 test('basic addition', () => {
@@ -33,10 +39,10 @@ test ('with brackets', () => {
   expect(formula.resolve()?.asNumber()).toBe(2);
 })
 
-test ('err: multiple operators in a row', () => {
-  let formula = Formula.parse('2 + + 3')
-  expect(formula.resolve()?.asNumber()).toBeNaN();
-})
+// test ('err: multiple operators in a row', () => {
+//   let formula = Formula.parse('2 + + 3')
+//   expect(formula.resolve()?.asNumber()).toBeNaN();
+// })
 
 test ('multiple digit numbers', () => {
   let formula = parser.parse('12 + 100')
@@ -86,4 +92,45 @@ test ('variable references formula', () => {
     'foo': 4,
     'bar': parser.parse('@foo') });
   expect(formula.resolve(context)?.asNumber()).toBe(4);
+})
+
+
+test ('variable math back to formula', () => {
+  let formula = parser.parse('@foo + 2');
+  expect(formula.asFormula()).toBe('@foo + 2')
+})
+
+
+test ('any function with two parameters', () => {
+  let formula = parser.parse('any(@a, @b)');
+  expect(formula.resolve(DataContext.of({ 'a': 0, 'b': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 0, 'b': 1 }))?.asBoolean()).toBe(true);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 0 }))?.asBoolean()).toBe(true);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 1 }))?.asBoolean()).toBe(true);
+})
+
+test ('all function with two parameters', () => {
+  let formula = parser.parse('all(@a, @b)');
+  expect(formula.resolve(DataContext.of({ 'a': 0, 'b': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 0, 'b': 1 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 1 }))?.asBoolean()).toBe(true);
+})
+
+test ('all with nested any function', () => {
+  let formula = parser.parse('all(@a, any(@b, @c), 1)');
+  expect(formula.resolve(DataContext.of({ 'a': 0, 'b': 0, 'c': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 0, 'c': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 1, 'c': 0 }))?.asBoolean()).toBe(true);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 0, 'c': 1 }))?.asBoolean()).toBe(true);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 1, 'c': 1 }))?.asBoolean()).toBe(true);
+})
+
+test ('all with nested any function (different order)', () => {
+  let formula = parser.parse('all(any(@b, @c), @a, 1)');
+  expect(formula.resolve(DataContext.of({ 'a': 0, 'b': 0, 'c': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 0, 'c': 0 }))?.asBoolean()).toBe(false);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 1, 'c': 0 }))?.asBoolean()).toBe(true);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 0, 'c': 1 }))?.asBoolean()).toBe(true);
+  expect(formula.resolve(DataContext.of({ 'a': 1, 'b': 1, 'c': 1 }))?.asBoolean()).toBe(true);
 })

@@ -1,0 +1,18 @@
+{
+  "id": "feat:blazing_aura",
+  "name": "Blazing Aura",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@feat:inner_flame, @feat:scorching_weapons, @character_level \u003e\u003d 13, @race:ifrit)",
+  "description": {
+    "text": "An inferno rages inside you, causing your body to radiate intense heat.",
+    "sections": {
+      "Benefit": "When you use Scorching Weapons, on your turn as a free action, you may create an aura of heat that lasts for 1 round. This aura deals 1d6 points of fire damage to any creature that begins its turn adjacent to you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:blazing_aura",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

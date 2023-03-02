@@ -1,0 +1,18 @@
+{
+  "id": "feat:back_to_back",
+  "name": "Back to Back",
+  "tags": ["feat", "general", "teamwork"],
+  "prerequisiteFormula": "@skill:perception \u003e\u003d 3",
+  "description": {
+    "text": "Your ally\u0027s eyes are your own, and yours are his.",
+    "sections": {
+      "Benefit": "While you are flanked and adjacent to an ally with this feat, you receive a +2 circumstance bonus to AC against attacks from opponents flanking you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:back_to_back",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:stone_singer",
+  "name": "Stone Singer",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@cha_score \u003e\u003d 13, @ability:bardic_performance#bard, @race:dwarf)",
+  "description": {
+    "text": "Your songs are in accordance with the ways and lands of your people.",
+    "sections": {
+      "Benefit": "When you use bardic performance with audible components underground, the range or area of your chosen performance is doubled, and you can affect deaf creatures if they possess tremorsense and are in your new range. In addition, the DC for saving throws against your bardic performance is increased by +2 for creatures of the earth subtype, regardless of where the performance occurs."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:stone_singer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

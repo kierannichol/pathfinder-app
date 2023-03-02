@@ -1,0 +1,18 @@
+{
+  "id": "feat:critical_focus",
+  "name": "Critical Focus",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@bab \u003e\u003d 9",
+  "description": {
+    "text": "You are trained in the art of causing pain.",
+    "sections": {
+      "Benefit": "You receive a +4 circumstance bonus on attack rolls made to confirm critical hits."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:critical_focus",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

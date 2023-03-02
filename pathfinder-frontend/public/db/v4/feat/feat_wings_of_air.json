@@ -1,0 +1,18 @@
+{
+  "id": "feat:wings_of_air",
+  "name": "Wings of Air",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:airy_step, @character_level \u003e\u003d 9, @race:sylph)",
+  "description": {
+    "text": "The winds lift you, carrying you where you want to go.",
+    "sections": {
+      "Benefit": "Your bonus on saves against effects with the air or electricity descriptors and effects that deal electricity damage increases to +4. In addition, you gain a supernatural fly speed equal to your base speed (good maneuverability). You may only fly with this ability when wearing light armor or no armor."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:wings_of_air",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

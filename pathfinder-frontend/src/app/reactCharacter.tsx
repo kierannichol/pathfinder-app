@@ -1,17 +1,18 @@
 import {createContext, useContext, useMemo, useState} from "react";
-import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v3/PathfinderDatabase";
-import CharacterRepository from "../v3/model/CharacterRepository";
+import LoadingBlock from "../components/common/LoadingBlock";
+import CharacterRepository from "../core/CharacterRepository";
+import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v4/PathfinderDatabase";
 
 const CharacterRepositoryContext = createContext<CharacterRepository|undefined>(undefined);
 
 let globalCharacterRepository: Promise<CharacterRepository> | undefined = undefined;
 
-async function initializeCharacterRepository() {
+async function initializeCharacterRepository(): Promise<CharacterRepository> {
   const dbs = await withGlobalPathfinderDatabase();
   return new CharacterRepository(dbs);
 }
 
-export function withGlobalCharacterRepository() {
+export function withGlobalCharacterRepository(): Promise<CharacterRepository> {
   if (globalCharacterRepository === undefined) {
     globalCharacterRepository = initializeCharacterRepository();
   }
@@ -27,6 +28,10 @@ export function CharacterRepositoryContextProvider({ children }: any) {
     return repository
       },
       [pathfinderDatabase, modified]);
+
+  if (!repository) {
+    return <LoadingBlock />
+  }
 
   return (
       <CharacterRepositoryContext.Provider value={repository}>

@@ -1,0 +1,18 @@
+{
+  "id": "feat:exiles_path",
+  "name": "Exile\u0027s Path",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "@race:half_elf",
+  "description": {
+    "text": "A lifetime spent shunned by others and eschewing your heritage makes you resistant to efforts to pry inside of your mind.",
+    "sections": {
+      "Benefit": "Once per day, when you fail a Will save against an enchantment spell or effect, you may reroll that saving throw, but must take the reroll result even if it\u0027s worse."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:exiles_path",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

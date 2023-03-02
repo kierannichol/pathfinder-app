@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v4";
+
+package v4;
+
+message EffectDbo {
+
+  message SetActionDbo {
+    oneof value {
+      string formula = 1;
+      int32 number_value = 2;
+    }
+  }
+
+  message AddActionDbo {
+    int32 number_delta = 1;
+  }
+
+  message RenameKeyDbo {
+    string renamed_key = 1;
+  }
+
+  string target_key = 1;
+  string condition = 2;
+
+  oneof action {
+    SetActionDbo set_action = 100;
+    AddActionDbo add_action = 101;
+    RenameKeyDbo rename_action = 102;
+  }
+}

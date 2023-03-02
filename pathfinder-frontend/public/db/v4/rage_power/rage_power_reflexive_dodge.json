@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:reflexive_dodge",
+  "name": "Reflexive Dodge",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:rolling_dodge AND !@rage_power:reflexive_dodge",
+  "description": {
+    "text": "Use your rolling dodge bonus on Reflex saving throws"
+  },
+  "effects": [{
+    "targetKey": "rage_power:reflexive_dodge",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

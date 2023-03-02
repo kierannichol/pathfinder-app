@@ -1,5 +1,5 @@
 import {Col, Container, Row} from "react-bootstrap";
-import CharacterAtLevel from "../../v3/model/CharacterAtLevel";
+import CharacterAtLevel from "../../core/CharacterAtLevel";
 import "./LevelStatsDisplay.css";
 
 interface LevelStatsDisplayProps {

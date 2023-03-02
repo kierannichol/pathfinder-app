@@ -1,0 +1,18 @@
+{
+  "id": "feat:light_step",
+  "name": "Light Step",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:acrobatic_steps, @feat:nimble_moves, @race:elf)",
+  "description": {
+    "text": "You pick your way nimbly through even the most dangerous and uneven terrain.",
+    "sections": {
+      "Benefit": "You can ignore the effects of difficult terrain in natural environments, as if it were normal terrain."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:light_step",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

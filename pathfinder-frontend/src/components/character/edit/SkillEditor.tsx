@@ -1,9 +1,9 @@
 import {useMemo} from "react";
 import * as Icon from "react-bootstrap-icons";
+import Character from "../../../core/Character";
+import CharacterAtLevel from "../../../core/CharacterAtLevel";
+import {ChoiceNode} from "../../../core/Choice";
 import Skills from "../../../database/Skills";
-import Character from "../../../v3/model/Character";
-import CharacterAtLevel from "../../../v3/model/CharacterAtLevel";
-import Choice from "../../../v3/model/Choice";
 import NumberSelect from "../../common/NumberSelect";
 import "./SkillEditor.scss";
 
@@ -15,8 +15,7 @@ interface SkillEditorProps {
 
 export function SkillEditor({ character, characterAtLevel, onChange }: SkillEditorProps) {
   const skillChoices = useMemo(() => {
-    return character.choicesForLevel(characterAtLevel.level)
-    .filter(choice => choice.type === "skill");
+    return characterAtLevel.choicesOfType("skill");
   }, [character]);
 
   return <div className="skill-editor">
@@ -32,16 +31,17 @@ export function SkillEditor({ character, characterAtLevel, onChange }: SkillEdit
 interface SkillRowProps {
   skill: any;
   characterAtLevel: CharacterAtLevel;
-  skillChoices: Choice[];
+  skillChoices: ChoiceNode[];
   onChange: (choiceId: string, skillId: string) => void;
 }
 
 function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowProps) {
-  const current = useMemo(() => characterAtLevel.get(skill.id)?.asNumber() ?? 0, [characterAtLevel]);
+  const current = useMemo(() => characterAtLevel.get(skill.id)?.asNumber() ?? 0, [skill, characterAtLevel]);
   const max = characterAtLevel.level;
 
   const choicesAvailable = useMemo(() => skillChoices.filter(choice => choice.current === ''), [skillChoices]);
-  const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => choice.current === skill.id), [skillChoices]);
+  const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => choice.current === skill.id),
+      [skill, skillChoices]);
 
   const isTrained = useMemo(() => characterAtLevel.get("trained:" + skill.id)?.asBoolean() ?? false, [characterAtLevel, skill]);
 
@@ -50,13 +50,13 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
     if (newValueNumber > current) {
       const availableSkill = choicesAvailable[0];
       if (availableSkill) {
-        onChange(availableSkill.id, skill.id);
+        onChange(availableSkill.key, skill.id);
       }
     }
     else if (newValueNumber < current) {
       const disposableSkill = choicesUsedForThisSkill[0];
       if (disposableSkill) {
-        onChange(disposableSkill.id, '');
+        onChange(disposableSkill.key, '');
       }
     }
   }

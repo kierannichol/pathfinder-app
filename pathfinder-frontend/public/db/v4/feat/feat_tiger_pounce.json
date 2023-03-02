@@ -1,0 +1,18 @@
+{
+  "id": "feat:tiger_pounce",
+  "name": "Tiger Pounce",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "any(@feat:improved_unarmed_strike, @feat:power_attack, @feat:tiger_claws, @feat:tiger_style, @bab \u003e\u003d 9, @class:monk \u003e\u003d 8)",
+  "description": {
+    "text": "Your unarmed strikes are as precise as they are powerful, but they leave you open and you can pursue foes with blinding speed.",
+    "sections": {
+      "Benefit": "While using the Tiger Style feat, you can apply the penalty from Power Attack to your AC instead of attack rolls. Additionally, once per round as a swift action, you can move up to half your speed closer to a target you hit with an unarmed strike or made a successful combat maneuver against on this turn or your last turn."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:tiger_pounce",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

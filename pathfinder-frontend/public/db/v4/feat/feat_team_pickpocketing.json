@@ -1,0 +1,18 @@
+{
+  "id": "feat:team_pickpocketing",
+  "name": "Team Pickpocketing",
+  "tags": ["feat", "general", "teamwork"],
+  "prerequisiteFormula": "all(@skill:bluff \u003e\u003d 1, @skill:sleight_of_hand \u003e\u003d 1)",
+  "description": {
+    "text": "You distract a mark with friendly conversation while your partner robs the victim blind.",
+    "sections": {
+      "Benefit": "Whenever an ally with this feat succeeds a Bluff check to feint an opponent, if you are adjacent to that creature, you can spend an immediate action to make a Sleight of Hand check to pickpocket that opponent and gain a +4 bonus on that attempt."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:team_pickpocketing",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

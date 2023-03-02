@@ -1,8 +1,10 @@
-import {Associativity, ShuntingYard} from "./ShuntingYard";
+import {DataContext} from "./DataContext";
 import Resolvable from "./Resolvable";
-import {ResolvedValue} from "./ResolvedValue";
+import ResolvedValue from "./ResolvedValue";
+import {Associativity, ShuntingYard} from "./ShuntingYard";
 
-export class Formula {
+export class Formula extends Resolvable {
+
   private static Parser = ShuntingYard.parser()
     .operator('^', 4, Associativity.Right, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(Math.pow(a.asNumber(), b.asNumber())))
     .operator('*', 3, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() * b.asNumber()))
@@ -29,16 +31,33 @@ export class Formula {
     .function('if', 3, (a: ResolvedValue, b: ResolvedValue, c: ResolvedValue) => a.asBoolean() ? b : c)
     .function('concat', 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asText() + b.asText()))
     .function('ordinal', 1, (a: ResolvedValue) => ResolvedValue.of(ordinal(a.asNumber())))
+    .varargsFunction('any', args => ResolvedValue.of(args.some(arg => arg.asBoolean())))
+    .varargsFunction('all', args => ResolvedValue.of(args.every(arg => arg.asBoolean())))
     .variable('@', '', (state, key) => state.get(key))
     .variable('min(@', ')', (state, key) => Formula.noneIfEmpty(state.find(key)).reduce((a, b) => a.asNumber() < b.asNumber() ? a : b))
     .variable('max(@', ')', (state, key) => Formula.noneIfEmpty(state.find(key)).reduce((a, b) => a.asNumber() > b.asNumber() ? a : b))
     .variable('sum(@', ')', (state, key) => state.find(key).reduce((a, b) => ResolvedValue.of(a.asNumber() + b.asNumber()), ResolvedValue.none()));
 
-  static parse(formula: string|Resolvable): Resolvable {
-    if (formula instanceof Resolvable) {
+  static parse(formula: string|Resolvable): Formula {
+    if (formula instanceof Formula) {
       return formula;
     }
-    return this.Parser.parse(formula);
+    if (formula instanceof Resolvable) {
+      return new Formula(formula);
+    }
+    return new Formula(this.Parser.parse(formula));
+  }
+
+  resolve(context?: DataContext | undefined): ResolvedValue | undefined {
+    return this.resolvable.resolve(context);
+  }
+
+  asFormula(): string {
+    return this.resolvable.asFormula();
+  }
+
+  private constructor(private readonly resolvable: Resolvable) {
+    super();
   }
 
   private static noneIfEmpty(array: ResolvedValue[]): ResolvedValue[] {

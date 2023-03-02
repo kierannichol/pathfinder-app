@@ -46,4 +46,8 @@ public class StringUtils {
 
         return Integer.parseInt(matcher.group(1));
     }
+
+    public static String trimPeriod(String str) {
+        return str.replaceAll("\\.$", "");
+    }
 }

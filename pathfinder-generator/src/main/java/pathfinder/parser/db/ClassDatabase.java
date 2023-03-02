@@ -18,6 +18,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import pathfinder.model.Id;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.parser.db.ClassEntry.Level;
 
@@ -48,9 +49,9 @@ public class ClassDatabase implements AutoCloseable {
         workbook.close();
     }
 
-    public Optional<ClassEntry> findById(String classId) {
+    public Optional<ClassEntry> findById(Id classId) {
         return stream()
-                .filter(classEntry -> classEntry.id().equalsIgnoreCase(classId))
+                .filter(classEntry -> classEntry.id().equals(classId))
                 .findFirst();
     }
 
@@ -60,7 +61,7 @@ public class ClassDatabase implements AutoCloseable {
     }
 
     private ClassEntry createClassEntryFromSheet(Sheet sheet) {
-        String id = NameToIdConverter.classId(sheet.getSheetName());
+        Id id = NameToIdConverter.classId(sheet.getSheetName());
         String name = sheet.getSheetName();
 
         List<Level> levels = IntStream.range(0, 20)

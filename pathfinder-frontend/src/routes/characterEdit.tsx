@@ -2,7 +2,7 @@ import React from "react";
 import {useLoaderData} from "react-router-dom";
 import {withGlobalCharacterRepository} from "../app/reactCharacter";
 import Page from "../components/common/Page";
-import {withGlobalPathfinderDatabase} from "../database/v3/PathfinderDatabase";
+import {withGlobalPathfinderDatabase} from "../database/v4/PathfinderDatabase";
 import CharacterEditView from "../views/CharacterEditView";
 
 export async function characterEditLoader({ params }: any) {

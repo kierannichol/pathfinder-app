@@ -1,0 +1,18 @@
+{
+  "id": "feat:deadly_aim",
+  "name": "Deadly Aim",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @bab \u003e\u003d 1)",
+  "description": {
+    "text": "You can make exceptionally deadly ranged attacks by pinpointing a foe\u0027s weak spot, at the expense of making the attack less likely to succeed.",
+    "sections": {
+      "Benefit": "You can choose to take a -1 penalty on all ranged attack rolls to gain a +2 bonus on all ranged damage rolls. When your base attack bonus reaches +4, and every +4 thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:deadly_aim",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:lightning_reflexes",
+  "name": "Lightning Reflexes",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "You have faster ref lexes than normal.",
+    "sections": {
+      "Benefit": "You get a +2 bonus on all Ref lex saving throws."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:lightning_reflexes",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

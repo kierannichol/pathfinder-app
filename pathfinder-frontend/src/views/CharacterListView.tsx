@@ -7,7 +7,7 @@ import {useAsyncMemo} from "../app/reactHooks";
 import NewCharacterDialog from "../components/character/NewCharacterDialog";
 import LoadingBlock from "../components/common/LoadingBlock";
 import {HeaderRow} from "../components/GridHelpers";
-import Character from "../v3/model/Character";
+import Character from "../core/Character";
 import "./CharacterListView.scss";
 
 function CharacterListView() {
@@ -52,8 +52,6 @@ function CharacterItemRow({ character }: CharacterItemRowProps) {
   const characterRepository = useCharacterRepository()
   const [ deleting, setDeleting ] = useState(false)
 
-  console.log(character);
-
   const deleteAction = () => {
     setDeleting(true)
     characterRepository.delete(character.id)
@@ -63,7 +61,7 @@ function CharacterItemRow({ character }: CharacterItemRowProps) {
   return <ListGroup.Item>
     <div className="d-flex flex-row w-100 align-items-center">
       <Link className="d-flex flex-grow-1" to={`/character/edit/${character.id}`}>
-        {character.choice("level0:character_name")?.current}
+        {character.selected("level0:character_name")}
       </Link>
       <Link to={'#'} className="d-flex ms-3" onClick={_ => deleteAction()}>
         {deleting ? <LoadingBlock/> : <Icon.XLg />}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:ectoplasmic_spell",
+  "name": "Ectoplasmic Spell",
+  "tags": ["feat", "metamagic"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "Your spells breach the gulf between dimensions, sending ghostly emanations into the ether.",
+    "sections": {
+      "Benefit": "An ectoplasmic spell has full effect against incorporeal or ethereal creatures. An ectoplasmic spell uses up a spell slot one level higher than the spell\u0027s actual level."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:ectoplasmic_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

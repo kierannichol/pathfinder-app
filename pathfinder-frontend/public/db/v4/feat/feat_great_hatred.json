@@ -1,0 +1,18 @@
+{
+  "id": "feat:great_hatred",
+  "name": "Great Hatred",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@race:gnome, @ability:hatred)",
+  "description": {
+    "text": "Your rage burns with vast intensity.",
+    "sections": {
+      "Benefit": "You gain an additional +1 bonus on melee and thrown weapon attacks against targets of your hatred racial trait."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:great_hatred",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

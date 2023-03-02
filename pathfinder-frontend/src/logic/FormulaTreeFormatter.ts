@@ -1,5 +1,6 @@
 import {DataContext} from "./DataContext";
-import {ResolvedValue} from "./ResolvedValue";
+import Resolvable from "./Resolvable";
+import ResolvedValue from "./ResolvedValue";
 import {Associativity, ShuntingYard} from "./ShuntingYard";
 
 export enum TreeNodeOperator {
@@ -127,6 +128,8 @@ export default class FormulaFormatter {
         .function('signed', 1, (a: ResolvedValue) => ResolvedValue.of((a.asNumber() < 0 ? '' : '+') + a.asNumber()))
         .function('if', 3, (a: ResolvedValue, b: ResolvedValue, c: ResolvedValue) => a.asBoolean() ? b : c)
         .function('concat', 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asText() + b.asText()))
+        .varargsFunction('any', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ANY, ...args))
+        .varargsFunction('all', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ALL, ...args))
         .variable('@', '', (state, key) => {
           const actual = state.get(key);
           return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.none();
@@ -145,10 +148,11 @@ export default class FormulaFormatter {
         })
   }
 
-  public format(formulaText: string|undefined, dataContext: DataContext): TreeNodeValue|undefined {
-    if (formulaText === undefined) {
+  public format(formula: Resolvable|undefined, dataContext: DataContext): TreeNodeValue|undefined {
+    if (formula === undefined) {
       return undefined;
     }
+    const formulaText = formula.asFormula();
     let resolved = this.Parser.parse(formulaText).resolve(dataContext);
     if (resolved === undefined) {
       return undefined;

@@ -1,6 +1,6 @@
 import {createContext, useContext} from "react";
-import CharacterAtLevel from "../../../../v3/model/CharacterAtLevel";
-import DataHub from "../../../../v3/model/DataHub";
+import CharacterAtLevel from "../../../../core/CharacterAtLevel";
+import {IDataHub} from "../../../../core/DataHub";
 import PrintablePage from "../../../common/PrintablePage";
 import CharacterAtLevelDebugView from "./CharacterAtLevelDebugView";
 import styles from "./CharacterSheet.module.scss";
@@ -21,8 +21,7 @@ import WeaponSection from "./sections/WeaponSection";
 
 type CharacterSheetContextValues = {
   characterAtLevel: CharacterAtLevel;
-  database: DataHub;
-  characterData: CharacterData;
+  database: IDataHub;
 }
 
 const CharacterSheetContext = createContext<CharacterSheetContextValues|undefined>(undefined);
@@ -77,7 +76,7 @@ export default function CharacterSheet(values: CharacterSheetContextValues) {
           </Section.Column>
         </Section.Row>
       </PrintablePage>
-      <PrintablePage style={{ display: "none" }}>
+      <PrintablePage style={{ display: "flex" }}>
         <CharacterAtLevelDebugView />
       </PrintablePage>
     </CharacterSheetContext.Provider>

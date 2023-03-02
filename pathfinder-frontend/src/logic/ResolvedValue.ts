@@ -1,35 +1,15 @@
-export abstract class ResolvedValue {
+interface ResolvedValue {
+  asText(): string;
 
-  static of(value: string | number | boolean): ResolvedValue {
-    if (value === undefined) {
-      return NullValue.none();
-    }
+  asNumber(): number;
 
-    if (typeof value === 'string') {
-      return new TextValue(value);
-    }
-    if (typeof value === 'boolean') {
-      return new TextValue(value ? 'true' : 'false')
-    }
-    return new TextValue(value.toString())
-  }
+  asBoolean(): boolean;
 
-  static none(): ResolvedValue {
-    return new NullValue();
-  }
-
-  abstract asText(): string;
-
-  abstract asNumber(): number;
-
-  abstract asBoolean(): boolean;
-
-  abstract equals(other: ResolvedValue): boolean;
+  equals(other: ResolvedValue): boolean;
 }
 
-class TextValue extends ResolvedValue {
+class TextValue implements ResolvedValue {
   constructor(private readonly value:string) {
-    super();
   }
 
   asText(): string {
@@ -48,9 +28,42 @@ class TextValue extends ResolvedValue {
     return other instanceof TextValue
         && this.value === other.value;
   }
+
+  toString(): string {
+    return this.asText();
+  }
 }
 
-class NullValue extends ResolvedValue {
+class BooleanValue implements ResolvedValue {
+
+  constructor(private readonly value:boolean) {
+  }
+
+  asBoolean(): boolean {
+    return this.value;
+  }
+
+  asNumber(): number {
+    return this.value ? 1 : 0;
+  }
+
+  asText(): string {
+    return this.value ? "true" : "false";
+  }
+
+  equals(other: ResolvedValue): boolean {
+    return other instanceof BooleanValue
+        && this.value === other.value;
+  }
+
+  toString(): string {
+    return this.asText();
+  }
+}
+
+class NullValue implements ResolvedValue {
+  static readonly Instance = new NullValue();
+
   asBoolean(): boolean {
     return false;
   }
@@ -66,4 +79,33 @@ class NullValue extends ResolvedValue {
   equals(other: ResolvedValue): boolean {
     return other instanceof NullValue;
   }
+
+  toString(): string {
+    return this.asText();
+  }
 }
+
+abstract class ResolvedValue {
+  static readonly True: ResolvedValue = new BooleanValue(true);
+  static readonly False: ResolvedValue = new BooleanValue(false);
+
+  static of(value: string | number | boolean): ResolvedValue {
+    if (value === undefined) {
+      return NullValue.Instance;
+    }
+
+    if (typeof value === 'string') {
+      return new TextValue(value);
+    }
+    if (typeof value === 'boolean') {
+      return new TextValue(value ? 'true' : 'false')
+    }
+    return new TextValue(value.toString())
+  }
+
+  static none(): ResolvedValue {
+    return NullValue.Instance;
+  }
+}
+
+export default ResolvedValue;

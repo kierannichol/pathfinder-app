@@ -1,11 +1,11 @@
-import Resolvable from "../Resolvable";
-import {Formula} from "../../compiled";
+import {FormulaDbo} from "../../compiled";
 import {DataContext} from "../DataContext";
-import {ResolvedValue} from "../ResolvedValue";
+import Resolvable from "../Resolvable";
+import ResolvedValue from "../ResolvedValue";
 
-export default class ProtoFormula implements Resolvable {
+export default class ProtoFormula extends Resolvable {
 
-  static from(formulaData: Formula): Resolvable {
+  static from(formulaData: FormulaDbo): Resolvable {
     return new ProtoFormula(formulaData);
   }
 
@@ -14,10 +14,15 @@ export default class ProtoFormula implements Resolvable {
         context ?? DataContext.Empty);
   }
 
-  private constructor(private readonly formulaData: Formula) {
+  asFormula(): string {
+    throw new Error("Method not implemented.");
   }
 
-  private resolveOp(op: Formula.Operation | null | undefined, context: DataContext): ResolvedValue {
+  private constructor(private readonly formulaData: FormulaDbo) {
+    super();
+  }
+
+  private resolveOp(op: FormulaDbo.OperationDbo | null | undefined, context: DataContext): ResolvedValue {
     if (op === null || op === undefined) {
       return ResolvedValue.none();
     }

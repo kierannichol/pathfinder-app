@@ -1,11 +1,13 @@
 package pathfinder.model;
 
+import static pathfinder.model.WeaponProficiency.OTHER;
 import static pathfinder.model.WeaponRange.MELEE;
 import static pathfinder.model.WeaponRange.RANGED;
 import static pathfinder.model.WeaponRange.REACH;
 
 import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
 import pathfinder.parser.db.WeaponType;
 
 public class Weapons {
@@ -15,6 +17,19 @@ public class Weapons {
     public static final WeaponProficiency EXOTIC = WeaponProficiency.EXOTIC;
 
     public static final Set<WeaponProficiency> PROFICIENCIES = Set.of(SIMPLE, MARTIAL, EXOTIC);
+
+    // Natural Attacks
+    public static final WeaponType BITE = WeaponType.of("Bite", OTHER, MELEE);
+    public static final WeaponType CLAW = WeaponType.of("Claw", OTHER, MELEE);
+    public static final WeaponType GORE = WeaponType.of("Gore", OTHER, MELEE);
+    public static final WeaponType SLAM = WeaponType.of("Slam", OTHER, MELEE);
+    public static final WeaponType STING = WeaponType.of("Sting", OTHER, MELEE);
+    public static final WeaponType TALONS = WeaponType.of("Talons", OTHER, MELEE);
+    public static final WeaponType HOOF = WeaponType.of("Hoof", OTHER, MELEE);
+    public static final WeaponType TENTACLE = WeaponType.of("Tentacle", OTHER, MELEE);
+    public static final WeaponType WING = WeaponType.of("Wing", OTHER, MELEE);
+    public static final WeaponType PINCERS = WeaponType.of("Pincers", OTHER, MELEE);
+    public static final WeaponType TAIL_SLAP = WeaponType.of("Tail Slap", OTHER, MELEE);
 
     public static final WeaponType GAUNTLET = WeaponType.of("Gauntlet", SIMPLE, MELEE);
     public static final WeaponType UNARMED = WeaponType.of("Unarmed", SIMPLE, MELEE);
@@ -250,7 +265,7 @@ public class Weapons {
     public static final WeaponType WRIST_LAUNCHER_HEAVY = WeaponType.of("Wrist launcher, heavy", EXOTIC,
             RANGED);
 
-    public static final List<WeaponType> WEAPON_TYPES = List.of(
+    public static final List<WeaponType> ALL_WEAPONS = List.of(
             GAUNTLET,
             UNARMED,
             BATTLE_ASPERGILLUM,
@@ -463,4 +478,19 @@ public class Weapons {
             SLING_STITCHED,
             WRIST_LAUNCHER,
             WRIST_LAUNCHER_HEAVY);
+
+    public static List<WeaponType> filter(Predicate<WeaponType> filter) {
+        return ALL_WEAPONS.stream()
+                .filter(filter)
+                .toList();
+    }
+
+    public static List<WeaponType> ALL_MELEE = Weapons.filter(weaponType -> weaponType.range().isMelee());
+    public static List<WeaponType> ALL_RANGED = Weapons.filter(weaponType -> weaponType.range().isRanged());
+    public static List<WeaponType> ALL_NATURAL = List.of(BITE, CLAW, GORE, HOOF, TENTACLE, WING, PINCERS, TAIL_SLAP, SLAM, STING, TALONS);
+
+    public static List<WeaponType> ALL_CROSSBOWS = List.of(CROSSBOW_DOUBLE, CROSSBOW_HAND, CROSSBOW_LAUNCHING, CROSSBOW_HEAVY, CROSSBOW_LIGHT, CROSSBOW_CRANK_HEAVY, CROSSBOW_CRANK_LIGHT, CROSSBOW_REPEATING_HEAVY, CROSSBOW_REPEATING_LIGHT);
+
+    public static List<WeaponType> ALL_PIERCING = Weapons.ALL_WEAPONS;
+    public static List<WeaponType> ALL_THROWN = Weapons.ALL_RANGED;
 }

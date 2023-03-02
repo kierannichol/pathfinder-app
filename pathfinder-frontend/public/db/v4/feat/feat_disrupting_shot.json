@@ -1,0 +1,18 @@
+{
+  "id": "feat:disrupting_shot",
+  "name": "Disrupting Shot",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @class:fighter \u003e\u003d 6)",
+  "description": {
+    "text": "With a well-placed shot, you make it harder for a nearby opponent to cast spells.",
+    "sections": {
+      "Benefit": "If you ready an action to shoot an opponent casting a spell within 30 feet and successfully hit that opponent with a ranged attack, the concentration DC to successfully cast the spell is increased by +4."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:disrupting_shot",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

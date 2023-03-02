@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useMemo} from "react";
 import {Link} from "react-router-dom";
 import {useAsyncMemo} from "../../../app/reactHooks";
-import Character from "../../../v3/model/Character";
+import Character from "../../../core/Character";
 import ChoiceSelector from "../ChoiceSelector";
 import LevelStatsDisplay from "../LevelStatsDisplay";
 import CharacterFeatureList from "./CharacterFeatureList";
@@ -18,19 +18,20 @@ interface CharacterLevelProps {
 
 export default function CharacterLevel({ character, level, onChange }: CharacterLevelProps) {
 
-  const characterAtLevel = useMemo(() => character.atLevel(level), [character, level]);
-  const choicesForLevel = useMemo(() => character.choicesForLevel(level)
-      .filter(choice => choice.type !== 'skill'),
-      [character, level]);
+  const [ characterAtLevel ] = useAsyncMemo(() => character.atLevel(level), [character, level]);
 
   const [ characterChanges ] = useAsyncMemo(async () => {
     if (characterAtLevel === undefined) {
       return undefined;
     }
-    return level > 1
+    return level > 0
         ? characterAtLevel.intersection(await character.atLevel(level - 1))
         : characterAtLevel;
   }, [characterAtLevel, character]);
+
+  const choicesForLevel = useMemo(() => characterChanges && characterChanges.choices
+      .filter(choice => choice.type !== 'skill') || [],
+      [characterChanges]);
 
   const featIds = useMemo(() => characterChanges?.find('feat:*').map(a => a.id), [characterChanges]);
   const specialIds = useMemo(() => characterChanges?.find('ability:*').map(a => a.id), [characterChanges]);
@@ -41,7 +42,7 @@ export default function CharacterLevel({ character, level, onChange }: Character
 
   return <fieldset>
     <legend>
-      <div className={'level-title'}>{'Level ' + level}</div>
+      <div className={'level-title'}>{`Level ${characterAtLevel.level}`}</div>
       <div className={'character-sheet-button'}>
         <Link to={`/character/sheet/${character.id}/${level}`} target={'_blank'} rel='noopener noreferrer'>
           <FontAwesomeIcon icon={faFileLines}/>
@@ -58,14 +59,14 @@ export default function CharacterLevel({ character, level, onChange }: Character
       {choicesForLevel.length > 0 && <div>
         <label>Choices</label>
       {choicesForLevel
-          .sort((a, b) => b.input.localeCompare(a.input))
+          .sort((a, b) => (typeof b).localeCompare(typeof a))
           .map(choice =>
-          <div key={choice.id}>
+          <div key={choice.key}>
             <label className={"label--option-type"}>{choice.label}</label>
             <ChoiceSelector
                 characterAtLevel={characterAtLevel}
                 choice={choice}
-                onChange={value => onChange(choice.id, value)} />
+                onChange={value => onChange(choice.key, value)} />
           </div>
       )}
       </div>}

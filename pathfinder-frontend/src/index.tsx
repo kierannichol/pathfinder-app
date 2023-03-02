@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import {CharacterRepositoryContextProvider} from "./app/reactCharacter";
-import {PathfinderDatabaseContextProvider} from "./database/v3/PathfinderDatabase";
+import {PathfinderDatabaseContextProvider} from "./database/v4/PathfinderDatabase";
 import './index.css';
 import reportWebVitals from "./reportWebVitals";
 import CharacterEditRoute, {characterEditLoader} from "./routes/characterEdit";

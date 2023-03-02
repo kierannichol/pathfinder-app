@@ -2,7 +2,7 @@ import {useMemo} from "react";
 import {Table} from "react-bootstrap";
 import {useCharacterAtLevel} from "./CharacterSheet";
 
-function CharacterAtLevelDebugView() {
+export default function CharacterAtLevelDebugView() {
   const characterAtLevel = useCharacterAtLevel();
 
   const keysAlphabetical = useMemo(
@@ -27,5 +27,3 @@ function CharacterAtLevelDebugView() {
           </tbody>
         </Table>
 }
-
-export default CharacterAtLevelDebugView;

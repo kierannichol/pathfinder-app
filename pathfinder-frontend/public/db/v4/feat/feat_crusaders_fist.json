@@ -1,0 +1,18 @@
+{
+  "id": "feat:crusaders_fist",
+  "name": "Crusader\u0027s Fist",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all((@ability:lay_on_hands#paladin OR @ability:touch_of_corruption), @feat:improved_unarmed_strike, @bab \u003e\u003d 6)",
+  "description": {
+    "text": "You pour divine energy into the enemy you strike.",
+    "sections": {
+      "Benefit": "When you attack with an unarmed strike and hit a creature that you can harm with your lay on hands or touch of corruption feature, you can use a swift action to expend a daily use of that feature to deal its normal damage as if you had hit with the feature\u0027s normal touch attack. This extra damage is not multiplied if you scored a critical hit."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:crusaders_fist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

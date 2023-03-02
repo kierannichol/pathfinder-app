@@ -3,13 +3,13 @@ package pathfinder.model;
 import lombok.Getter;
 import pathfinder.parser.NameToIdConverter;
 
-public enum WeaponProficiency implements FeatureModel {
+public enum WeaponProficiency {
     OTHER("Other"),
     SIMPLE("Simple"),
     MARTIAL("Martial"),
     EXOTIC("Exotic");
 
-    @Getter private final String id;
+    @Getter private final Id id;
     private final String name;
 
     WeaponProficiency(String name) {
@@ -17,7 +17,7 @@ public enum WeaponProficiency implements FeatureModel {
         this.name = name;
     }
 
-    public String getId() {
+    public Id getId() {
         return id;
     }
 

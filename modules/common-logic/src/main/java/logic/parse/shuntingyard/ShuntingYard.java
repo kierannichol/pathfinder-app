@@ -1,5 +1,6 @@
 package logic.parse.shuntingyard;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 import logic.Resolvable;
@@ -30,6 +31,16 @@ public class ShuntingYard implements Resolvable {
                 ResolvedValue b = (ResolvedValue) checkedPopParameter(next, 2, localStack);
                 ResolvedValue a = (ResolvedValue) checkedPopParameter(next, 3, localStack);
                 localStack.push(func.execute(a, b, c));
+            } else if (next instanceof OperatorFunctionN func) {
+                if (localStack.isEmpty()) {
+                    throw new ResolveException("Missing arity count for \"" + func + "\"");
+                }
+                int arity = ((Arity) localStack.pop()).arity();
+                List<ResolvedValue> params = new ArrayList<>();
+                while (arity-- > 0) {
+                    params.add((ResolvedValue) checkedPopParameter(next, arity, localStack));
+                }
+                localStack.push(func.execute(params));
             } else {
                 while (next instanceof Resolvable resolvable) {
                     next = resolvable.resolve(context);

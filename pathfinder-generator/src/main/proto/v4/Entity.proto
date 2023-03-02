@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v4";
+
+import "v4/Choice.proto";
+import "v4/Description.proto";
+import "v4/Effect.proto";
+import "v4/Template.proto";
+
+package v4;
+
+message EntitySummaryDbo {
+  string id = 1;
+  string name = 2;
+  repeated string tags = 3;
+  string prerequisite_formula = 4;
+  repeated ChildEntitySummaryDbo children = 5;
+}
+
+message EntityDbo {
+  string id = 1;
+  string name = 2;
+  repeated string tags = 3;
+  string prerequisite_formula = 4;
+
+  repeated ChildEntityDbo children = 5;
+
+  DescriptionDbo description = 100;
+  repeated EffectDbo effects = 101;
+  repeated ChoiceDbo choices = 102;
+  TemplateDbo template = 103;
+}
+
+message ChildEntitySummaryDbo {
+  string option_id = 1;
+  string condition = 2;
+  string name = 3;
+  repeated string additional_tags = 4;
+}
+
+message ChildEntityDbo {
+  string option_id = 1;
+  string condition = 2;
+  string name = 3;
+  repeated string additional_tags = 4;
+
+  repeated EffectDbo effects = 101;
+  repeated ChoiceDbo choices = 102;
+  TemplateDbo template = 103;
+}

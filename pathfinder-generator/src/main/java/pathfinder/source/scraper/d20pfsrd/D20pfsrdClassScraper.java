@@ -8,9 +8,11 @@ import java.io.UncheckedIOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
@@ -21,32 +23,36 @@ import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import pathfinder.model.Ability;
-import pathfinder.model.CharacterClass;
-import pathfinder.model.CharacterClass.Level;
-import pathfinder.model.CharacterClass.Type;
+import pathfinder.NotCached;
+import pathfinder.model.ArmorProficiency;
 import pathfinder.model.ClassSkill;
+import pathfinder.model.D20pfsrdCharacterClass;
+import pathfinder.model.D20pfsrdCharacterClass.Level;
+import pathfinder.model.D20pfsrdCharacterClass.Type;
 import pathfinder.model.Id;
 import pathfinder.model.Source;
-import pathfinder.model.Special;
+import pathfinder.model.WeaponProficiency;
+import pathfinder.model.Weapons;
+import pathfinder.model.v4.Description;
+import pathfinder.model.v4.pathfinder.Feature;
 import pathfinder.parser.NameToIdConverter;
+import pathfinder.parser.db.WeaponType;
 import pathfinder.source.AbilitySourceDatabase;
 import pathfinder.source.ClassSourceDatabase;
-import pathfinder.spring.FileCached;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
 
 @Service("d20pfsrd Class Scraper")
 @Slf4j
-@FileCached
+@NotCached
 public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
         implements ClassSourceDatabase, AbilitySourceDatabase {
     private static final Pattern BAB_PATTERN = Pattern.compile("^\\+(\\d+).*$");
     private static final Pattern SPELLS_PER_DAY_PATTERN = Pattern.compile("^([-+]?\\d+).*$");
 
-    private final List<CharacterClass> cached = new ArrayList<>();
+    private final List<D20pfsrdCharacterClass> cached = new ArrayList<>();
 
-    public List<CharacterClass> scrape() throws IOException {
+    public List<D20pfsrdCharacterClass> scrape() throws IOException {
         if (cached.isEmpty()) {
             cached.addAll(scrapeType(Type.CORE, new URL("https://www.d20pfsrd.com/classes/core-classes/")));
             cached.addAll(scrapeType(Type.BASE, new URL("https://www.d20pfsrd.com/classes/base-classes/")));
@@ -57,16 +63,20 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
     }
 
     @Override
-    public Stream<CharacterClass> streamClasses() throws IOException {
-        return scrape().stream();
+    public Stream<D20pfsrdCharacterClass> streamClasses() {
+        try {
+            return scrape().stream();
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
     }
 
     @Override
-    public Stream<Ability> streamAbilities() throws IOException {
-        return scrape().stream().flatMap(CharacterClass::abilities);
+    public Stream<Feature> streamAbilities() throws IOException {
+        return scrape().stream().flatMap(D20pfsrdCharacterClass::abilities);
     }
 
-    private List<CharacterClass> scrapeType(Type type, URL url) throws IOException {
+    private List<D20pfsrdCharacterClass> scrapeType(Type type, URL url) throws IOException {
         Document document = fetch(url);
 
         Elements classLinks = document.select(".ogn-childpages>li>a");
@@ -83,19 +93,76 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
                 .toList();
     }
 
-    private CharacterClass scrapeCharacterClass(Type type, URL url) throws IOException {
+    private D20pfsrdCharacterClass scrapeCharacterClass(Type type, URL url) throws IOException {
         Document document = fetch(url);
+        Element content = contentElement(document);
 
         String name = parseClassName(document);
         log.info("Scraping Class: " + name);
-        String id = NameToIdConverter.classId(name);
-        List<Level> levels = parseLevels(document, Id.parse(id));
+        Id id = NameToIdConverter.classId(name);
+        List<Level> levels = parseLevels(document, id);
 
         List<ClassSkill> classSkills = parseClassSkills(document);
         String shortDescription = scrapeShortDescription(document);
         Source source = scrapeSourceFromCopyrightSection(document);
 
-        return new CharacterClass(id, name, shortDescription, type, levels, classSkills, source);
+        // Proficiencies
+        String proficiencyDescription = selectSection(content, "Weapon and Armor Proficiency")
+                .or(() -> selectSection(content, "Weapon Proficiency"))
+                .or(() -> selectSection(content, "Armor Proficiency"))
+                .map(Block::contentText)
+                .orElse("");
+        Set<ArmorProficiency> armorProficiencies = scrapeArmorProficiencies(proficiencyDescription);
+        Set<WeaponType> weaponProficiencies = scrapeWeaponProficiencies(proficiencyDescription);
+
+        return new D20pfsrdCharacterClass(id, name, shortDescription, type, levels, "D10", 2, classSkills, armorProficiencies, weaponProficiencies, source);
+    }
+
+    private static Set<WeaponType> scrapeWeaponProficiencies(String proficiencyDescription) {
+        Set<WeaponType> weaponProficiencies = new HashSet<>();
+        if (proficiencyDescription.contains("all simple and martial weapons")) {
+            Weapons.ALL_WEAPONS.stream()
+                    .filter(weapon -> weapon.requiredProficiency() == WeaponProficiency.SIMPLE || weapon.requiredProficiency() == WeaponProficiency.MARTIAL)
+                    .forEach(weaponProficiencies::add);
+        }
+        if (proficiencyDescription.contains("all simple weapons")) {
+            Weapons.ALL_WEAPONS.stream()
+                    .filter(weapon -> weapon.requiredProficiency() == WeaponProficiency.SIMPLE)
+                    .forEach(weaponProficiencies::add);
+        }
+        Weapons.ALL_WEAPONS.stream()
+                .filter(weapon -> proficiencyDescription.toLowerCase().contains(NameUtils.fixNameOrder(weapon.name().toLowerCase())))
+                .forEach(weaponProficiencies::add);
+        return weaponProficiencies;
+    }
+
+    private static Set<ArmorProficiency> scrapeArmorProficiencies(String proficiencyDescription) {
+        Set<ArmorProficiency> armorProficiencies = new HashSet<>();
+        if (proficiencyDescription.contains("with all types of armor") || proficiencyDescription.contains("with all armor")) {
+            armorProficiencies.add(ArmorProficiency.LIGHT_ARMOR);
+            armorProficiencies.add(ArmorProficiency.MEDIUM_ARMOR);
+            armorProficiencies.add(ArmorProficiency.HEAVY_ARMOR);
+        }
+        if (proficiencyDescription.contains("light armor")) {
+            armorProficiencies.add(ArmorProficiency.LIGHT_ARMOR);
+        }
+        if (proficiencyDescription.contains("medium armor")) {
+            armorProficiencies.add(ArmorProficiency.MEDIUM_ARMOR);
+        }
+        if (proficiencyDescription.contains("light and medium armor")) {
+            armorProficiencies.add(ArmorProficiency.LIGHT_ARMOR);
+            armorProficiencies.add(ArmorProficiency.MEDIUM_ARMOR);
+        }
+        if ((proficiencyDescription.contains("with shields") && !proficiencyDescription.contains("not with shields")) || proficiencyDescription.contains("and shields")) {
+            armorProficiencies.add(ArmorProficiency.BUCKLER);
+            armorProficiencies.add(ArmorProficiency.LIGHT_SHIELD);
+            armorProficiencies.add(ArmorProficiency.HEAVY_SHIELD);
+            armorProficiencies.add(ArmorProficiency.TOWER_SHIELD);
+        }
+        if (proficiencyDescription.contains("except tower shields")) {
+            armorProficiencies.remove(ArmorProficiency.TOWER_SHIELD);
+        }
+        return armorProficiencies;
     }
 
     private String scrapeShortDescription(Document document) {
@@ -136,7 +203,7 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
             specialsColumnIndex++;
         }
         Elements specialLinks = columns.get(specialsColumnIndex).select("a");
-        List<Special> specials = specialLinks.stream()
+        List<Feature> specials = specialLinks.stream()
                 .map(el -> parseSpecial(el, classId))
                 .filter(Objects::nonNull)
                 .toList();
@@ -162,12 +229,12 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
         );
     }
 
-    private Special parseSpecial(Element element, Id classId) {
+    private Feature parseSpecial(Element element, Id classId) {
 //        String name = element.text();
         String specialLabel = element.text();
         specialLabel = NameUtils.sanitize(specialLabel);
-        String id = NameToIdConverter.abilityId(specialLabel);
-        id = id + "#" + classId.key;
+        Id id = NameToIdConverter.abilityId(specialLabel)
+                .withOption(classId.key);
 
         StringBuilder descriptionBuilder = new StringBuilder();
 
@@ -216,8 +283,7 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
             }
         }
 
-        String sectionName = StringUtils.sanitize(nameElement.text());
-        Ability.Type type = Ability.Type.fromAbilityName(sectionName);
+        String type = StringUtils.sanitize(nameElement.text());
 
 //        String name = nameElement.text();
         String name = specialLabel;
@@ -234,7 +300,12 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
                 .trim();
         description = StringUtils.sanitize(description);
 
-        return new Special(id, name, type, description);
+        return Feature.builder()
+                .id(id)
+                .name(name)
+                .type(type)
+                .description(Description.create(description))
+                .build();
     }
 
     private int parseBab(String str) {

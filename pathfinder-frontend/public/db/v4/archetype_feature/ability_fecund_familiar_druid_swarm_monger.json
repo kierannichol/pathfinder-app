@@ -1,0 +1,14 @@
+{
+  "id": "ability:fecund_familiar#druid_swarm_monger",
+  "name": "Fecund Familiar",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A swarm monger bonds with an urban familiar, treating her druid level as her wizard level for the purposes of determining her familiar\u0027s abilities.\nThe swarm monger must select her familiar from the following options: cat, house centipede, rat, raven, or scarlet spider. The fecund familiar gains the benefits of its master\u0027s child of pollution, shadowy opportunist, and venom immunity class abilities.\nAs a standard action, a swarm monger can cause her familiar to burst forth into a full swarm of identical creatures, filling four contiguous 5-foot squares and gaining temporary hit points equal to half its master\u0027s maximum hit points. While in swarm form, the familiar loses the improved evasion, share spells, deliver touch attack, and scry on familiar special abilities. It uses its normal AC, saving throws, and skill bonuses, and it gains the swarm subtype and the ability to make swarm attacks (dealing 1d6 points of damage at 1st level and using the swarm monger\u0027s druid level as the swarm\u0027s Hit Dice to determine damage increases as per the swarm subtype). The swarm monger is immune to her own familiar\u0027s swarm attack.\nBeginning at 5th level, any creature damaged by a fecund familiar\u0027s swarm attack must succeed at a Fortitude saving throw (DC \u003d 10 + 1/2 the swarm monger\u0027s druid level + the swarm monger\u0027s Wisdom modifier) or be sickened for 1d6 rounds. At 12th level, creatures that fail their Fortitude saving throws instead become nauseated.\nA swarm monger can transform her familiar into a swarm a number of times each day equal to her Wisdom modifier (minimum 1), and the transformation lasts for 1 minute per druid level, or until the swarm monger reverts her familiar back to a singular form as a standard action. A fecund familiar cannot be reduced in size to Diminutive or smaller when in swarm form."
+  },
+  "effects": [{
+    "targetKey": "ability:fecund_familiar#druid_swarm_monger",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

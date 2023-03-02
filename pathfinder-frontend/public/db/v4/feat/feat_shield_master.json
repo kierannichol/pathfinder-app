@@ -1,0 +1,18 @@
+{
+  "id": "feat:shield_master",
+  "name": "Shield Master",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:improved_shield_bash, @feat:shield_proficiency, @feat:shield_slam, @feat:two_weapon_fighting, @bab \u003e\u003d 11)",
+  "description": {
+    "text": "Your mastery of the shield allows you to fight with it without hindrance.",
+    "sections": {
+      "Benefit": "You do not suffer any penalties on attack rolls made with a shield while you are wielding another weapon. Add your shield\u0027s enhancement bonus to attacks and damage rolls made with the shield as if it was a weapon enhancement bonus."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:shield_master",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

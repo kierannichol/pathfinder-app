@@ -1,0 +1,14 @@
+{
+  "id": "ability:unnatural_ingestion#rogue_rotdrinker",
+  "name": "Unnatural Ingestion",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 4th level, a rotdrinker gains immunity to all ingested poisons, including poisons that are converted to or considered ingested poisons (such as a poison converted to an ingested poison using the alchemist\u0027s poison conversion discovery).\nFurther, when the rotdrinker ingests an ingested poison, she gains a number of temporary hit points equal to half her rogue level. These temporary hit points stack with temporary hit points from other effects, and they last until they are lost or for a number of rounds equal to the rotdrinker\u0027s rogue level, whichever comes first.\nAdditionally, the rotdrinker gains benefits from the ingested poisons that she ingests depending on the poison\u0027s details, as explained below. A rotdrinker can gain hit points and additional benefits from only one ingested poison at a time. If she ingests another poison while she has temporary hit points and additional benefits from another poison, the previous temporary hit points and benefits are lost. At 8th level, the temporary hit points and additional benefits last for a number of minutes equal to the rotdrinker\u0027s rogue level.\nIngested poisons provide an alchemical bonus equal to the number of consecutive saving throws required to cure the poison (for example, lich dust provides a +2 bonus).\nAn ingested poison that affects Strength, Dexterity, or Constitution grants this bonus on the rotdrinker\u0027s damage rolls and Fortitude saving throws. An ingested poison that affects Intelligence, Wisdom, or Charisma instead grants this bonus on the rotdrinker\u0027s attack rolls and Will saving throws. An ingested poison that does not affect any ability scores (such as oil of taggit) grants this bonus to the rotdrinker\u0027s AC. If an ingested poison falls into more than one of these categories, the rotdrinker chooses which benefit she receives at the time of ingestion."
+  },
+  "effects": [{
+    "targetKey": "ability:unnatural_ingestion#rogue_rotdrinker",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

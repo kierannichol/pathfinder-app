@@ -1,4 +1,4 @@
 package pathfinder.source;
 
-public interface SorcererBloodlineSourceDatabase extends ModifierSourceDatabase {
+public interface SorcererBloodlineSourceDatabase {
 }

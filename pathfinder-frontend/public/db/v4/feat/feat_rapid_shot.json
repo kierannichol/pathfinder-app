@@ -1,0 +1,18 @@
+{
+  "id": "feat:rapid_shot",
+  "name": "Rapid Shot",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot)",
+  "description": {
+    "text": "You can make an additional ranged attack.",
+    "sections": {
+      "Benefit": "When making a full-attack action with a ranged weapon, you can fire one additional time this round at your highest bonus. All of your attack rolls take a -2 penalty when using Rapid Shot."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:rapid_shot",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

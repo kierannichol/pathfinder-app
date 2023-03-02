@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v4";
+
+import "v4/Entity.proto";
+
+package v4;
+
+message EntityDatabaseDbo {
+  string database_id = 1;
+  repeated EntitySummaryDbo summaries = 2;
+}

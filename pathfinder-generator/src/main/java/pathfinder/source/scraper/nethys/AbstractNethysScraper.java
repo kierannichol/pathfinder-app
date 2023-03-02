@@ -85,9 +85,9 @@ public class AbstractNethysScraper extends AbstractWebScraper {
 
     protected Elements findTitledContentElements(Elements root, String label) {
         Element startElement = findElementsWithExactText(root, label)
-                .select("h2.title")
+                .select("h2.titleText")
                 .first();
-        if (startElement == null || !startElement.is("h2.title")) {
+        if (startElement == null || !startElement.is("h2.titleText")) {
             return new Elements();
         }
         return findElementsBetween(

@@ -1,7 +1,7 @@
 import {HTMLAttributes, useMemo} from "react";
 import classNames from "../../../../../app/classNames";
 import Skills from "../../../../../database/Skills";
-import CharacterAtLevel from "../../../../../v3/model/CharacterAtLevel";
+import CharacterAtLevel from "../../../../../core/CharacterAtLevel";
 import {useCharacterAtLevel} from "../CharacterSheet";
 import Label from "../common/Label";
 import Section from "../common/Section";
@@ -13,7 +13,7 @@ export default function SkillsSection({ className, ...divProps }: HTMLAttributes
   return <Section className={classNames(styles.section, className)} {...divProps}>
     <Section.Column>
       <Label className={styles.label}>Skills</Label>
-      {Skills.all.map(skill => <Section.Row className={styles.skillRow}>
+      {Skills.all.map(skill => <Section.Row key={skill.id} className={styles.skillRow}>
         <ClassTrainedBox skill={skill} characterAtLevel={characterAtLevel} />
         <div className={styles.skillName}>{skill.name}{skill.untrained ? '' : '*'}</div>
         <UnderlinedValue className={styles.value}>{(characterAtLevel.get(skill.id)?.asNumber() ?? 0) + (characterAtLevel.get(skill.keyAbility + '_mod')?.asNumber() ?? 0)}</UnderlinedValue>

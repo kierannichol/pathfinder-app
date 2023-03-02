@@ -26,9 +26,9 @@ class IdTest {
 
     @Test
     void parseTests() {
-        assertThat(Id.parse("key")).isEqualTo(Id.partial("key"));
-        assertThat(Id.parse("type:key")).isEqualTo(Id.of("type", "key"));
-        assertThat(Id.parse("type:key#option")).isEqualTo(Id.of("type", "key").withOption("option"));
-        assertThat(Id.parse("key#option")).isEqualTo(Id.partial("key").withOption("option"));
+        assertThat(Id.of("key")).isEqualTo(Id.partial("key"));
+        assertThat(Id.of("type:key")).isEqualTo(Id.of("type", "key"));
+        assertThat(Id.of("type:key#option")).isEqualTo(Id.of("type", "key").withOption("option"));
+        assertThat(Id.of("key#option")).isEqualTo(Id.partial("key").withOption("option"));
     }
 }

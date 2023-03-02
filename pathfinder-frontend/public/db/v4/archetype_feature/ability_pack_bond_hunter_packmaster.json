@@ -1,0 +1,14 @@
+{
+  "id": "ability:pack_bond#hunter_packmaster",
+  "name": "Pack Bond",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A packmaster can have more than one animal companion, but she must divide her effective druid level between her companions to determine the abilities of each one. For example, a 4th-level packmaster can have one 4th-level animal companion, two 2nd-level companions, one 3rd-level companion and one 1st-level companion, or four 1st-level companions.\nWhen a packmaster gains a level, she must decide how to allocate the increase among her animal companions, including whether or not to add a new 1st-level companion. Once a hunter level is allocated to a particular companion, it cannot be redistributed while that companion is in the packmaster\u0027s service. She must release the companion or wait until the companion dies to allocate its levels to another companion, which she can then do the next time she refreshes her spell slots for the day. The share spells animal companion ability applies to only one animal companion at a time--the packmaster cannot use it to cast a spell that affects only a single target and have the spell affect all of her animal companions.\nA packmaster\u0027s precise companion, woodland stride, and teamwork feats apply to only one of her animal companions at a time. (For example, a packmaster can apply precise companion to one companion, woodland stride to another, and a given teamwork feat to a third, but cannot apply any of those to two animal companions at once.) As a swift action, she can change which companion gains any or all of these benefits."
+  },
+  "effects": [{
+    "targetKey": "ability:pack_bond#hunter_packmaster",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

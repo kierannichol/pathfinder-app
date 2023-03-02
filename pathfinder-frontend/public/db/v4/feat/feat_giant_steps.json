@@ -1,0 +1,18 @@
+{
+  "id": "feat:giant_steps",
+  "name": "Giant Steps",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "@ability:slow_and_steady",
+  "description": {
+    "text": "When enlarged, your speed increases.",
+    "sections": {
+      "Benefit": "When your size increases to Large or larger, your base speed increases by 20 feet. This increase applies only if the effect that changed your size does not alter your speed."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:giant_steps",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

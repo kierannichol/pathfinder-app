@@ -14,9 +14,9 @@ const Alignments = {
       new Alignment('alignment:le', "Lawful Evil"),
   ],
 
-    find: (id: string): Alignment|undefined => {
-        return Alignments.all.find(alignment => alignment.id === id);
-    }
+  find: (id: string): Alignment|undefined => {
+      return Alignments.all.find(alignment => alignment.id === id);
+  }
 }
 
 export default Alignments;

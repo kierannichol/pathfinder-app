@@ -1,0 +1,14 @@
+{
+  "id": "ability:relight_the_spark#bard_clockspeaker",
+  "name": "Relight the Spark",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 12th level, a clockspeaker can reanimate a destroyed construct. The clockspeaker selects a destroyed construct within 60 feet and expends 1 round of bardic performance to reanimate the chosen construct. The construct reanimates with a number of hit points equal to the clockspeaker\u0027s level, but it is staggered. The affected construct follows the clockspeaker\u0027s orders while reanimated. Each round, the bard can expend another round of bardic performance to keep that construct reanimated for another round. The construct regains a number of hit points equal to the clockspeaker\u0027s level for every round it remains reanimated. If the construct recovers all of its hit points in this way, it becomes fully reanimated and no longer requires bardic performance to remain animated. A construct fully reanimated in this way follows the orders of the clockspeaker that reanimated it, as if the clockspeaker were its original creator, for 24 hours. Afterwards, the construct reverts to its original programming. The construct is completely destroyed if the clockspeaker ends this performance before the construct regains its full hit points, is interrupted, or is reduced to 0 hit points. A completely destroyed construct cannot be repowered or reanimated, even by another clockspeaker. The clockspeaker can reanimate multiple constructs with this ability (either at the same time or over successive rounds) but must expend 1 round of bardic performance per reanimated construct per round to maintain the effect."
+  },
+  "effects": [{
+    "targetKey": "ability:relight_the_spark#bard_clockspeaker",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

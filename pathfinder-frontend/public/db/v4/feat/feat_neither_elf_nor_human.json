@@ -1,0 +1,18 @@
+{
+  "id": "feat:neither_elf_nor_human",
+  "name": "Neither Elf nor Human",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:exiles_path, @feat:seen_and_unseen, @character_level \u003e\u003d 11, @race:half_elf)",
+  "description": {
+    "text": "You have removed yourself from your heritage so thoroughly that even magic does not recognize you.",
+    "sections": {
+      "Benefit": "You are not considered elven or human for the purpose of harmful spells or effects based on your type, like a bane weapon or a ranger\u0027s favored enemy class feature."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:neither_elf_nor_human",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

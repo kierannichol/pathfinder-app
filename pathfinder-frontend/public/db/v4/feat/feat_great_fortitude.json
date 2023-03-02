@@ -1,0 +1,18 @@
+{
+  "id": "feat:great_fortitude",
+  "name": "Great Fortitude",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "You are resistant to poisons, diseases, and other maladies.",
+    "sections": {
+      "Benefit": "You get a +2 bonus on all Fortitude saving throws."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:great_fortitude",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

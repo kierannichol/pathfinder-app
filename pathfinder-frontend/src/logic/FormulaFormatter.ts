@@ -1,5 +1,5 @@
 import {DataContext} from "./DataContext";
-import {ResolvedValue} from "./ResolvedValue";
+import ResolvedValue from "./ResolvedValue";
 import {Associativity, ShuntingYard} from "./ShuntingYard";
 
 class FormattedValue extends ResolvedValue {

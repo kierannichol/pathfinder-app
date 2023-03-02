@@ -1,0 +1,18 @@
+{
+  "id": "feat:self_sufficient",
+  "name": "Self-Sufficient",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "You know how to get along in the wild and how to effectively treat wounds.",
+    "sections": {
+      "Benefit": "You get a +2 bonus on all Heal checks and Survival checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:self_sufficient",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

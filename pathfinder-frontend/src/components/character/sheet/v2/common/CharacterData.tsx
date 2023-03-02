@@ -1,7 +1,8 @@
 import {useMemo} from "react";
 import Alignments from "../../../../../database/Alignments";
-import {usePathfinderDatabase} from "../../../../../database/v3/PathfinderDatabase";
+import {usePathfinderDatabase} from "../../../../../database/v4/PathfinderDatabase";
 import CreatureSize from "../../../../../model/character/CreatureSize";
+import {uniq} from "../../../../../util/pfutils";
 import {useCharacterAtLevel} from "../CharacterSheet";
 
 interface CharacterValueProps {
@@ -43,11 +44,18 @@ function value(dataKey: string, lookupFn?: (value: string) => string) {
 export function CharacterLevel() {
   const characterAtLevel = useCharacterAtLevel();
   const database = usePathfinderDatabase();
+
   const classLevelText = useMemo(() => {
-    const classId = characterAtLevel.get("class_1")?.asText() ?? '';
-    const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
-    const className = database.summary(classId)?.name ?? "Unknown";
-    return `${className} ${classLevel}`;
+    const classesSelected = uniq(characterAtLevel.choices
+        .filter(choice => choice.type === 'class')
+        .filter(choice => choice.current !== '')
+        .map(choice => choice.current));
+
+    return classesSelected.map(classId => {
+      const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
+      const className = database.name(classId) ?? "Unknown";
+      return `${className} ${classLevel}`;
+    }).join('/');
   }, [characterAtLevel, database]);
 
   return <span>{classLevelText}</span>
@@ -57,8 +65,11 @@ export function Race() {
   const characterAtLevel = useCharacterAtLevel();
   const database = usePathfinderDatabase();
   const text = useMemo(() => {
-    const raceId = characterAtLevel.get("race")?.asText() ?? '';
-    return database.summary(raceId)?.name ?? "Unknown";
+    const selected = characterAtLevel.choices
+        .find(option => option.type === 'race')
+        ?.current;
+
+    return database.name(selected) ?? "Unknown";
   }, [characterAtLevel, database]);
 
   return <span>{text}</span>

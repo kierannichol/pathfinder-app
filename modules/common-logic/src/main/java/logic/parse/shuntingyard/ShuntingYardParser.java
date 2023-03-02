@@ -70,6 +70,11 @@ public class ShuntingYardParser implements Parser {
         return this;
     }
 
+    public ShuntingYardParser function(String name, OperatorFunctionN fn) {
+        tokenTree.add(name, token -> new FunctionN(name, fn));
+        return this;
+    }
+
     public ShuntingYardParser variable(String idenfifier, Resolver resolver) {
         NodeExpression variableExpression = NodeExpression.of(
                 NodeExpression.term(idenfifier),
@@ -104,6 +109,7 @@ public class ShuntingYardParser implements Parser {
     public Resolvable parse(String text) {
         Stack<Node> operatorStack = new Stack<>();
         Stack<Node> outputBuffer = new Stack<>();
+        Stack<Integer> arityStack = new Stack<>();
 
         List<Node> tokens = tokenTree.parse(text);
 
@@ -127,6 +133,7 @@ public class ShuntingYardParser implements Parser {
 
             if (token instanceof Function) {
                 operatorStack.push(token);
+                arityStack.push(1);
                 continue;
             }
 
@@ -148,6 +155,7 @@ public class ShuntingYardParser implements Parser {
                         // ignore
                         break;
                     case ",":
+                        arityStack.push(arityStack.pop() + 1);
                         while (operatorStack.size() > 0) {
                             Node next = operatorStack.pop();
                             if (next.equals(Literal.of("("))) {
@@ -170,6 +178,9 @@ public class ShuntingYardParser implements Parser {
                         }
 
                         if (operatorStack.size() > 0 && operatorStack.peek() instanceof Function) {
+                            if (operatorStack.peek() instanceof FunctionN) {
+                                outputBuffer.push(new Arity(arityStack.pop()));
+                            }
                             outputBuffer.push(operatorStack.pop());
                         }
                         break;

@@ -1,5 +1,6 @@
 import {DataContext} from "./DataContext";
 import {Formula} from "./Formula";
+import getRealSystemTime = jest.getRealSystemTime;
 
 test('add two scalars', () => {
   let formula = Formula.parse("2 + 3")
@@ -143,4 +144,41 @@ test ('sum(a:wildcard:b)', () => {
     // 'base:second:target': 1,
   });
   expect(formula.resolve(context)?.asNumber()).toBe(1);
+})
+
+test('parse performance test', () => {
+  const iterations = 1000;
+  let startTime = getRealSystemTime();
+  for (let i = 0; i < iterations; i++) {
+    Formula.parse("@alpha AND (@beta OR @delta) AND @sigma AND (@omega >= 5)");
+  }
+  let endTime = getRealSystemTime();
+  let total = endTime - startTime;
+  let average = total / iterations;
+  console.log(`Total: ${total}ms`);
+  console.log(`Average: ${average}ms`);
+})
+
+test('resolve performance test', () => {
+  const iterations = 1000;
+  const formula = Formula.parse("@alpha AND (@beta OR @delta) AND @sigma AND (@omega >= 5)");
+  const context = DataContext.of({
+    "alpha": "true",
+    "beta": 1,
+    "delta": 0,
+    "sigma": "Not a number",
+    "omega": "22"
+  });
+  for (let j = 0; j < 200; j++) {
+    context.set(`key_${j}`, `value_${j}`);
+  }
+  let startTime = getRealSystemTime();
+  for (let i = 0; i < iterations; i++) {
+    formula.resolve(context)?.asBoolean();
+  }
+  let endTime = getRealSystemTime();
+  let total = endTime - startTime;
+  let average = total / iterations;
+  console.log(`Total: ${total}ms`);
+  console.log(`Average: ${average}ms`);
 })

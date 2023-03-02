@@ -1,42 +1,41 @@
-import ProtoFormula from "./ProtoFormula";
-import {DataContext} from "../DataContext";
-import {Formula} from "../../compiled";
+import {FormulaDbo} from "../../compiled";
 import Resolvable from "../Resolvable";
+import ProtoFormula from "./ProtoFormula";
 
-function protoFormula(operation: Formula.Operation): Resolvable {
-  const formula: Formula = Formula.create({ operation: operation });
+function protoFormula(operation: FormulaDbo.OperationDbo): Resolvable {
+  const formula: FormulaDbo = FormulaDbo.create({ operation: operation });
   return ProtoFormula.from(formula);
 }
 
-function integer(value: number | Formula.Operation): Formula.Operation {
-  if (!(value instanceof Formula.Operation)) {
-    value = Formula.Operation.create({ integerValue: value });
+function integer(value: number | FormulaDbo.OperationDbo): FormulaDbo.OperationDbo {
+  if (!(value instanceof FormulaDbo.OperationDbo)) {
+    value = FormulaDbo.OperationDbo.create({ integerValue: value });
   }
   return value;
 }
 
-function add(a: number | Formula.Operation, b: number | Formula.Operation): Formula.Operation {
-  return Formula.Operation.create({ addOperation: Formula.Operation.AddOperation.create({
+function add(a: number | FormulaDbo.OperationDbo, b: number | FormulaDbo.OperationDbo): FormulaDbo.OperationDbo {
+  return FormulaDbo.OperationDbo.create({ addOperation: FormulaDbo.OperationDbo.AddOperationDbo.create({
       a: integer(a), b: integer(b)})});
 }
 
-function subtract(a: number | Formula.Operation, b: number | Formula.Operation): Formula.Operation {
-  return Formula.Operation.create({ subtractOperation: Formula.Operation.SubtractOperation.create({
+function subtract(a: number | FormulaDbo.OperationDbo, b: number | FormulaDbo.OperationDbo): FormulaDbo.OperationDbo {
+  return FormulaDbo.OperationDbo.create({ subtractOperation: FormulaDbo.OperationDbo.SubtractOperationDbo.create({
       a: integer(a), b: integer(b)})});
 }
 
-function multiply(a: number | Formula.Operation, b: number | Formula.Operation): Formula.Operation {
-  return Formula.Operation.create({ multiplyOperation: Formula.Operation.MultiplyOperation.create({
+function multiply(a: number | FormulaDbo.OperationDbo, b: number | FormulaDbo.OperationDbo): FormulaDbo.OperationDbo {
+  return FormulaDbo.OperationDbo.create({ multiplyOperation: FormulaDbo.OperationDbo.MultiplyOperationDbo.create({
       a: integer(a), b: integer(b)})});
 }
 
-function divide(a: number | Formula.Operation, b: number | Formula.Operation): Formula.Operation {
-  return Formula.Operation.create({ divideOperation: Formula.Operation.DivideOperation.create({
+function divide(a: number | FormulaDbo.OperationDbo, b: number | FormulaDbo.OperationDbo): FormulaDbo.OperationDbo {
+  return FormulaDbo.OperationDbo.create({ divideOperation: FormulaDbo.OperationDbo.DivideOperationDbo.create({
       a: integer(a), b: integer(b)})});
 }
 
-function absFunc(param: number | Formula.Operation): Formula.Operation {
-  return Formula.Operation.create({ absFunction: Formula.Operation.AbsFunction.create({
+function absFunc(param: number | FormulaDbo.OperationDbo): FormulaDbo.OperationDbo {
+  return FormulaDbo.OperationDbo.create({ absFunction: FormulaDbo.OperationDbo.AbsFunctionDbo.create({
       param: integer(param)})});
 }
 
@@ -57,7 +56,7 @@ test ('with brackets', () => {
 })
 
 // // test ('err: multiple operators in a row', () => {
-// //   let formula = Formula.parse('2 + + 3')
+// //   let formula = FormulaDbo.parse('2 + + 3')
 // //   expect(formula.resolve()).toBe(112);
 // // })
 //

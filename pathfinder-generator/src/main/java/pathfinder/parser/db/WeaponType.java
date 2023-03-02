@@ -2,16 +2,17 @@ package pathfinder.parser.db;
 
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
-import pathfinder.model.FeatureModel;
+import pathfinder.model.Id;
 import pathfinder.model.WeaponProficiency;
 import pathfinder.model.WeaponRange;
+import pathfinder.model.v4.NamedEntity;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.util.StringUtils;
 
 @RequiredArgsConstructor(staticName = "of")
 @Value
-public class WeaponType implements FeatureModel {
-    String id;
+public class WeaponType implements NamedEntity {
+    Id.Key id;
     String name;
     WeaponProficiency requiredProficiency;
     WeaponRange range;

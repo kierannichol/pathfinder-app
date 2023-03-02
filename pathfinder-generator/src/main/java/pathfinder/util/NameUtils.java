@@ -3,7 +3,7 @@ package pathfinder.util;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import pathfinder.model.v3.Id;
+import pathfinder.model.Id;
 
 public class NameUtils {
     private static final Pattern WITH_PARENTHESES = Pattern.compile("^(.*?)( *\\(.*\\))?$");
@@ -54,7 +54,7 @@ public class NameUtils {
     }
 
     public static String idToName(String idString) {
-        Id id = Id.parse(idString);
+        Id id = Id.of(idString);
         StringBuilder name = new StringBuilder();
         name.append(StringUtils.toCamelCase(id.key.replace("_", " ")));
         if (id.option != null) {

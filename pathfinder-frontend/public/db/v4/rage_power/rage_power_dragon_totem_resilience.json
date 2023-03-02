@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:dragon_totem_resilience",
+  "name": "Dragon Totem Resilience",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:dragon_totem AND !@rage_power:dragon_totem_resilience",
+  "description": {
+    "text": "Gain energy resistance while raging"
+  },
+  "effects": [{
+    "targetKey": "rage_power:dragon_totem_resilience",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

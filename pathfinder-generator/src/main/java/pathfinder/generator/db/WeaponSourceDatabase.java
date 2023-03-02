@@ -14,7 +14,7 @@ public class WeaponSourceDatabase {
 
     @PostConstruct
     private void load() {
-        weaponTypes.addAll(Weapons.WEAPON_TYPES);
+        weaponTypes.addAll(Weapons.ALL_WEAPONS);
     }
 
     public Stream<WeaponType> streamWeaponTypes() {

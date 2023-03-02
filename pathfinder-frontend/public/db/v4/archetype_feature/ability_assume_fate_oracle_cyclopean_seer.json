@@ -1,0 +1,14 @@
+{
+  "id": "ability:assume_fate#oracle_cyclopean_seer",
+  "name": "Assume Fate",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "As an immediate action when targeted by an effect that requires a saving throw, you can choose another creature within line of sight that is attempting a save against the same effect. The target takes a penalty on its saving throw equal to 1d4 + 1 for every 4 levels you possess. You gain the value of their penalty as a luck bonus on your saving throw. You can use this ability a number of times per day equal to your Charisma bonus."
+  },
+  "effects": [{
+    "targetKey": "ability:assume_fate#oracle_cyclopean_seer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

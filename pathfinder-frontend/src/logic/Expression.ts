@@ -1,9 +1,9 @@
+import {DataContext} from "./DataContext";
 import {Formula} from "./Formula";
 import Resolvable from "./Resolvable";
-import {DataContext} from "./DataContext";
-import {ResolvedValue} from "./ResolvedValue";
+import ResolvedValue from "./ResolvedValue";
 
-export default class Expression implements Resolvable {
+export default class Expression extends Resolvable {
   private static InlineRegex: RegExp = /(?<!\\)\{(.*?)}/;
 
   static resolve(dataContext: DataContext, dataKey: string): ResolvedValue|undefined {
@@ -47,8 +47,13 @@ export default class Expression implements Resolvable {
     }).join(''));
   }
 
+  asFormula(): string {
+    return this.original;
+  }
+
   private constructor(
       public readonly original: string,
       private readonly parts: any[]) {
+    super();
   }
 }

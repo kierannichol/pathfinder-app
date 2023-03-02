@@ -1,4 +1,4 @@
-import {ResolvedValue} from "./ResolvedValue";
+import ResolvedValue from "./ResolvedValue";
 
 export default class ResolvedValueWithId extends ResolvedValue {
 

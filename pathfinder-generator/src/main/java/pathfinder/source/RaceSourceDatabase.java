@@ -1,10 +1,9 @@
 package pathfinder.source;
 
-import java.io.IOException;
 import java.util.stream.Stream;
-import pathfinder.model.Race;
+import pathfinder.model.D20pfsrdRace;
 
 public interface RaceSourceDatabase {
 
-    Stream<Race> streamRaces() throws IOException;
+    Stream<D20pfsrdRace> streamRaces();
 }

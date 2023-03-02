@@ -1,0 +1,18 @@
+{
+  "id": "feat:kirin_style",
+  "name": "Kirin Style",
+  "tags": ["feat", "combat", "style"],
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @skill:knowledge_arcana \u003e\u003d 6, (@skill:knowledge#dungeoneering OR @skill:knowledge#local OR @skill:knowledge#planes OR @skill:knowledge#religion))",
+  "description": {
+    "text": "Your study and your grace allows you to exploit your enemies\u0027 weaknesses.",
+    "sections": {
+      "Benefit": "While using this style, you can spend a swift action to make a Knowledge check to identify a single creature (DC 15 + the creature\u0027s CR for this purpose). If you succeed at the check, while using this style, you gain a +2 bonus on saving throws against that creature\u0027s attacks, as well as a +2 dodge bonus to AC against that creature\u0027s attacks of opportunity. These bonuses last for as long as you use this style. If you cease combat with the creature during this time and resume it later, you can attempt the check again."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:kirin_style",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

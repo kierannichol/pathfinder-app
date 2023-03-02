@@ -1,0 +1,18 @@
+{
+  "id": "feat:deathless_zealot",
+  "name": "Deathless Zealot",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @con_score \u003e\u003d 17, any(@race:orc, @race:half_orc), @feat:deathless_initiate, @feat:deathless_master, @feat:diehard, @feat:endurance, @feat:ironhide, @bab \u003e\u003d 12)",
+  "description": {
+    "text": "Only the most serious wounds can stop you.",
+    "sections": {
+      "Benefit": "Whenever a creature rolls to confirm a critical hit against you, it must roll twice and take the lowest result."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:deathless_zealot",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

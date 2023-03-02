@@ -1,0 +1,18 @@
+{
+  "id": "feat:net_trickery",
+  "name": "Net Trickery",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:exotic_weapon_proficiency#net, @feat:net_adept, @feat:net_maneuvering, @bab \u003e\u003d 6)",
+  "description": {
+    "text": "You have become very proficient at using your net to hinder your enemies.",
+    "sections": {
+      "Benefit": "In place of one of your melee attacks, you can use your net to attempt a dirty trick combat maneuver to blind an opponent (Advance Player\u0027s Guide 320). If you have an opponent entangled in your net, you can attempt to trip that opponent as long as he is within your net\u0027s reach or you control the trailing rope on your net. You also gain a +2 bonus on drag and reposition combat maneuver checks you make using your net."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:net_trickery",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

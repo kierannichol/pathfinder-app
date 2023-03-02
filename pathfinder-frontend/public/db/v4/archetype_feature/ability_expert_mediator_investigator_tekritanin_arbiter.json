@@ -1,0 +1,14 @@
+{
+  "id": "ability:expert_mediator#investigator_tekritanin_arbiter",
+  "name": "Expert Mediator",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A Tekritanin arbiter learns to forge lasting harmony between enemies. At 2nd level, whenever the arbiter uses the Diplomacy skill to improve the starting attitude of a creature, that attitude shift lasts for 24 hours instead of 1d4 hours, barring any circumstance or event that causes it to be decreased. If the arbiter spends 1 minute continuously interacting with a creature, he can attempt a Sense Motive check (DC \u003d 10 + the creature\u0027s Bluff skill bonus) to identify the creature\u0027s starting attitude (per the Diplomacy skill) in regard to all other creatures present (including himself ). With this understanding, the arbiter can use the Diplomacy skill to improve a target\u0027s attitude toward any other creature present. This functions as if using the Diplomacy skill to improve the target\u0027s attitude toward the arbiter, but instead uses the Diplomacy DC determined by the target\u0027s starting attitude toward the creature of the arbiter\u0027s choosing."
+  },
+  "effects": [{
+    "targetKey": "ability:expert_mediator#investigator_tekritanin_arbiter",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:hive_totem_toxicity",
+  "name": "Hive Totem Toxicity",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:hive_totem AND @rage_power:hive_totem_resilience AND !@rage_power:hive_totem_toxicity",
+  "description": {
+    "text": "Do Constitution damage with a bite while raging"
+  },
+  "effects": [{
+    "targetKey": "rage_power:hive_totem_toxicity",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

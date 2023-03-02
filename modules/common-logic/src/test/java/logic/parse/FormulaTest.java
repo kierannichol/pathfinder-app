@@ -169,4 +169,42 @@ class FormulaTest {
                 .set("key_3", 5);
         assertResolvedValue(formula.resolve(context)).hasValue(12);
     }
+
+    @Test
+    void anyFunction() {
+        var formula = Formula.parse("any(@a, @b)");
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 0).set("b", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 0).set("b", 1))).hasValue(true);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0))).hasValue(true);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1))).hasValue(true);
+    }
+
+    @Test
+    void allFunction() {
+        var formula = Formula.parse("all(@a, @b)");
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 0).set("b", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 0).set("b", 1))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1))).hasValue(true);
+    }
+
+    @Test
+    void allWithNestedAny() {
+        var formula = Formula.parse("all(@a, any(@b, @c), 1)");
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 0).set("b", 0).set("c", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0).set("c", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1).set("c", 0))).hasValue(true);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0).set("c", 1))).hasValue(true);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1).set("c", 1))).hasValue(true);
+    }
+
+    @Test
+    void allWithNestedAnyDifferentOrder() {
+        var formula = Formula.parse("all(any(@b, @c), @a, 1)");
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 0).set("b", 0).set("c", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0).set("c", 0))).hasValue(false);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1).set("c", 0))).hasValue(true);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0).set("c", 1))).hasValue(true);
+        assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1).set("c", 1))).hasValue(true);
+    }
 }
