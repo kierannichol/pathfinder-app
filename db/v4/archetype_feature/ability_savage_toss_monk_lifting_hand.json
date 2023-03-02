@@ -1,0 +1,14 @@
+{
+  "id": "ability:savage_toss#monk_lifting_hand",
+  "name": "Savage Toss",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A lifting hand gains Savage Slam as a bonus feat, even if she doesn\u0027t meet the prerequisites.\nAt 4th level, when the lifting hand succeeds at her grapple combat maneuver check while using the Savage Slam feat and her grapple combat maneuver check result exceeds the opponent\u0027s CMD by at least 5, she can throw the opponent into an non-adjacent square. The lifting hand can throw the opponent 10 feet, plus an additional 5 feet for every 5 by which her grapple check exceeds the opponent\u0027s CMD. For instance, if the lifting monk exceeds the target\u0027s CMD by 15, she can throw the target into a square 20 feet away.\nAt 8th level, when using Savage Slam, the lifting hand\u0027s target no longer receives a bonus to its CMD when the lifting hand attempts to throw it into a dangerous area."
+  },
+  "effects": [{
+    "targetKey": "ability:savage_toss#monk_lifting_hand",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "feat:human_spirit",
+  "name": "Human Spirit",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "@race:half_elf",
+  "description": {
+    "text": "Your blood burns with the passion and unyielding quest for self-improvement displayed so prominently by your human relatives.",
+    "sections": {
+      "Benefit": "You receive 1 bonus skill rank. Whenever you gain another Hit Die, you gain an additional skill rank. You cannot gain more than four skill ranks in this way.",
+      "Special": "You can only take this feat at 1st level. If you take this feat, you cannot take the Elven Spirit feat."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:human_spirit",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

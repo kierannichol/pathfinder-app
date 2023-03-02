@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:bloody_bite",
+  "name": "Bloody Bite",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "(@race:half_orc OR @rage_power:animal_fury OR @ability:bite_attack) AND !@rage_power:bloody_bite",
+  "description": {
+    "text": "Your bite attack deals 1d6 points of bleed damage in addition to its other effects."
+  },
+  "effects": [{
+    "targetKey": "rage_power:bloody_bite",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:beast_rider",
+  "name": "Beast Rider",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "any((@ability:animal_companion#hunter OR @spell:mount), @character_level \u003e\u003d 7, @race:half_orc, @race:orc)",
+  "description": {
+    "text": "You gain the service of a monstrous companion or mount.",
+    "sections": {
+      "Benefit": "Select one of the following creature types: elephant, pteranodon, rhinoceros, stegosaurus, or triceratops. Add this creature type to your list of possible animal companions or mounts. When summoning a creature of the selected type to serve as a mount or companion, treat your effective druid level as if it were two levels higher (to a maximum of your character level). If the creature is large enough for you to ride, it gains the combat training general purpose (see Handle Animal) at no cost."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:beast_rider",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

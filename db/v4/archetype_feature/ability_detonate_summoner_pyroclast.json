@@ -1,0 +1,14 @@
+{
+  "id": "ability:detonate#summoner_pyroclast",
+  "name": "Detonate",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 6th level, a pyroclast can banish his eidolon in an explosion of fiery shards. This slays the eidolon and deals 1d6 points of damage per Hit Die of the eidolon to every creature in a 20-foot-radius burst (Reflex half, DC \u003d 10 + 1/2 his summoner level + his Charisma modifier).\nHalf of this damage is fire, and the other half is piercing.\nAt 12th level, the pyroclast can reduce the damage by 4d6 to increase the burst radius to 40 feet. The pyroclast can use this ability once per day."
+  },
+  "effects": [{
+    "targetKey": "ability:detonate#summoner_pyroclast",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

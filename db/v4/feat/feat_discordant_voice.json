@@ -1,0 +1,18 @@
+{
+  "id": "feat:discordant_voice",
+  "name": "Discordant Voice",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@ability:bardic_performance#bard, (@skill:perform#oratory \u003e\u003d 10 OR @skill:perform#sing \u003e\u003d 10))",
+  "description": {
+    "text": "By singing out a precise tone, you cause discordant vibrations to run through allies\u0027 weapons.",
+    "sections": {
+      "Benefit": "Whenever you are using bardic performance to create a spell-like or supernatural effect, allies within 30 feet of you deal an extra 1d6 points of sonic damage with successful weapon attacks. This damage stacks with other energy damage a weapon might deal. Projectile weapons bestow this extra damage on their ammunition, but the extra damage is dealt only if the projectile hits a target within 30 feet of you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:discordant_voice",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

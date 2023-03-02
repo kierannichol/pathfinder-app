@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:crippling_blow",
+  "name": "Crippling Blow",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:powerful_blow AND !@rage_power:crippling_blow",
+  "description": {
+    "text": "Deal Strength or Dexterity damage with your powerful blows"
+  },
+  "effects": [{
+    "targetKey": "rage_power:crippling_blow",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

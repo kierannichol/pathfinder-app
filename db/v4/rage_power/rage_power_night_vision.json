@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:night_vision",
+  "name": "Night Vision",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "(@rage_power:low_light_vision OR @trait:low_light_vision) AND !@rage_power:night_vision",
+  "description": {
+    "text": "Gain darkvision 60 ft while raging"
+  },
+  "effects": [{
+    "targetKey": "rage_power:night_vision",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

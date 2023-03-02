@@ -1,0 +1,772 @@
+{
+  "id": "class:ranger#raven_master",
+  "name": "Raven Master",
+  "tags": ["archetype", "ranger"],
+  "description": {
+    "text": "Raven masters serve as messengers and spies for the Silver Ravens, using their ravens to scout and report any suspicious troop movements. Raven companions alight on the rooftops and window ledges of palaces and keeps to eavesdrop on tyrants and dictators, feeding these precious secrets to the raven master so that she can more efficiently foment and organize rebellion."
+  },
+  "template": {
+    "id": "class:ranger#raven_master",
+    "sections": [{
+      "condition": "@class:ranger\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d2",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d4",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d5",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d6",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d7",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d8",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d9",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d10",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d11",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d12",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d13",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d14",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d15",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d16",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d17",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d18",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d19",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }, {
+      "condition": "@class:ranger\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:the_rangers_class_skills#ranger",
+        "renameAction": {
+          "renamedKey": "ability:class_skills#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:wild_empathy#ranger",
+        "renameAction": {
+          "renamedKey": "ability:avian_empathy#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:hunters_bond_and_replaces_specific_ranger_abilities_as_indicated_below#ranger",
+        "renameAction": {
+          "renamedKey": "ability:raven_companion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:woodland_stride#ranger",
+        "renameAction": {
+          "renamedKey": "ability:silver_champion#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:swift_tracker#ranger",
+        "renameAction": {
+          "renamedKey": "ability:mimic_figurine#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:camouflage#ranger",
+        "renameAction": {
+          "renamedKey": "ability:cheat_death#ranger_raven_master"
+        }
+      }, {
+        "targetKey": "ability:the_rangers_spellcasting#ranger",
+        "renameAction": {
+          "renamedKey": "ability:argent_magic#ranger_raven_master"
+        }
+      }]
+    }]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "feat:greater_bull_rush",
+  "name": "Greater Bull Rush",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:improved_bull_rush, @feat:power_attack, @bab \u003e\u003d 6, @str_score \u003e\u003d 13)",
+  "description": {
+    "text": "Your bull rush attacks throw enemies off balance.",
+    "sections": {
+      "Benefit": "You receive a +2 bonus on checks made to bull rush a foe. This bonus stacks with the bonus granted by Improved Bull Rush. Whenever you bull rush an opponent, his movement provokes attacks of opportunity from all of your allies (but not you).",
+      "Normal": "Creatures moved by bull rush do not provoke attacks of opportunity."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_bull_rush",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

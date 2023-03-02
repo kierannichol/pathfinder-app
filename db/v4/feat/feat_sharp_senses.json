@@ -1,0 +1,19 @@
+{
+  "id": "feat:sharp_senses",
+  "name": "Sharp Senses",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@spell:keen_senses",
+  "description": {
+    "text": "Your senses are especially sharp, even for your kind.",
+    "sections": {
+      "Benefit": "You receive a +4 racial bonus on Perception skill checks. This replaces the normal bonus from the keen senses racial trait.",
+      "Normal": "The keen senses trait normally grants a +2 racial bonus on Perception skill checks."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:sharp_senses",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

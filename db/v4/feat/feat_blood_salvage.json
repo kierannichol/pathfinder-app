@@ -1,0 +1,19 @@
+{
+  "id": "feat:blood_salvage",
+  "name": "Blood Salvage",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:blood_drinker, @race:dhampir)",
+  "description": {
+    "text": "You do not need to drink blood from a living creature to gain healing benefits.",
+    "sections": {
+      "Benefit": "You can use your Blood Drinker feat on a dead creature of the appropriate humanoid subtype. The creature must have died less than 6 hours beforehand.",
+      "Normal": "You only benefit from the Blood Drinker feat if you consume fresh blood from a living creature."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:blood_salvage",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

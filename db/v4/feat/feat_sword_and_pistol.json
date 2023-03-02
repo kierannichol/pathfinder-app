@@ -1,0 +1,939 @@
+{
+  "id": "feat:sword_and_pistol",
+  "name": "Sword and Pistol",
+  "tags": ["feat", "combat"],
+  "children": [{
+    "optionId": "blowgun",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#blowgun, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#heavy_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#light_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#dart, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#javelin, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#sling, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stingchuck, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stonebow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#ammentum, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#chakram, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#jolting_dart, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#hunga_munga, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#hurlbat, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#longbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#pilum, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#shortbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#aklys, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#bola, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#brutal_bola, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#boomerang, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#thorn_bow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#crank_heavy_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#crank_light_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#double_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#hand_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#launching_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#repeating_heavy_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#repeating_light_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#flask_thrower, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#grappling_hook, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#orc_hornbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stormshaft_javelin, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#lasso, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#net, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#snag_net, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#dwarven_heavy_pelletbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#dwarven_light_pelletbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#throwing_shield, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#shrillshaft_javelin, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#shuriken_5, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#double_sling, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#sling_glove, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#halfling_sling_staff, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stitched_sling, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#wrist_launcher, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#heavy_wrist_launcher, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blowgun",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#blowgun, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#heavy_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#light_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#dart, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#javelin, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#sling, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stingchuck, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stonebow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#ammentum, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#chakram, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#jolting_dart, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#hunga_munga, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#hurlbat, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#longbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#pilum, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#shortbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#aklys, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#bola, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#brutal_bola, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#boomerang, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#thorn_bow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#crank_heavy_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#crank_light_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#double_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#hand_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#launching_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#repeating_heavy_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#repeating_light_crossbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#flask_thrower, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#grappling_hook, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#orc_hornbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stormshaft_javelin, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#lasso, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#net, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#snag_net, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#dwarven_heavy_pelletbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#dwarven_light_pelletbow, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#throwing_shield, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#shrillshaft_javelin, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#shuriken_5, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#double_sling, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#sling_glove, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#halfling_sling_staff, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#stitched_sling, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#wrist_launcher, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@dex_score \u003e\u003d 13, @feat:point_blank_shot, @feat:rapid_shot, @feat:snap_shot#heavy_wrist_launcher, @feat:two_weapon_fighting, @bab \u003e\u003d 6)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:sword_and_pistol#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }],
+  "description": {
+    "text": "You effortlessly pair melee and ranged weaponry.",
+    "sections": {
+      "Benefit": "When you use the Two-Weapon Fighting feat while wielding a melee weapon and a crossbow or firearm, your attacks with the crossbow or firearm provoke no attacks of opportunity from foes that you threaten with your melee weapon.",
+      "Normal": "Making a ranged attack provokes attacks of opportunity."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:sword_and_pistol",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

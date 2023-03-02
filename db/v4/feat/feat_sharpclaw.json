@@ -1,0 +1,18 @@
+{
+  "id": "feat:sharpclaw",
+  "name": "Sharpclaw",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "@race:ratfolk",
+  "description": {
+    "text": "Your nails are large and strong.",
+    "sections": {
+      "Benefit": "You gain two claw attacks. These are primary natural attacks that deal 1d4 points of damage."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:sharpclaw",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

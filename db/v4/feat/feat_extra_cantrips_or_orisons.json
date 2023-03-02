@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_cantrips_or_orisons",
+  "name": "Extra Cantrips or Orisons",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "any(@ability:cantrips#skald, @ability:orisons#shaman)",
+  "description": {
+    "text": "You are a master of minor spells.",
+    "sections": {
+      "Benefit": "Add two cantrips to your cantrips known or two orisons to your orisons known.",
+      "Special": "You can take this feat multiple times. Each time you do, add two cantrips or orisons to your spells known."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_cantrips_or_orisons",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

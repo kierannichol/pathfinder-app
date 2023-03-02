@@ -1,0 +1,18 @@
+{
+  "id": "feat:improved_initiative",
+  "name": "Improved Initiative",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "Your quick ref lexes allow you to react rapidly to danger.",
+    "sections": {
+      "Benefit": "You get a +4 bonus on initiative checks."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_initiative",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

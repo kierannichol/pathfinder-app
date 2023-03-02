@@ -1,0 +1,18 @@
+{
+  "id": "feat:greater_channel_force",
+  "name": "Greater Channel Force",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:channel_force, @feat:improved_channel_force, @race:aasimar, (@ability:channel_positive_energy \u003e\u003d 6 OR @ability:channel_negative_energy \u003e\u003d 6))",
+  "description": {
+    "text": "Your eruptions of divine power move your enemies.",
+    "sections": {
+      "Benefit": "When using Improved Channel Force, you can affect all creatures in a 30-foot-radius burst."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_channel_force",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

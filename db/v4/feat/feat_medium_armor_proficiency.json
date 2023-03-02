@@ -1,0 +1,20 @@
+{
+  "id": "feat:medium_armor_proficiency",
+  "name": "Medium Armor Proficiency",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@feat:light_armor_proficiency",
+  "description": {
+    "text": "You are skilled at wearing medium armor.",
+    "sections": {
+      "Benefit": "See Armor Proficiency, Light.",
+      "Special": "Barbarians, clerics, druids, fighters, paladins, and rangers automatically have Medium Armor Proficiency as a bonus feat. They need not select it.",
+      "Normal": "See Armor Proficiency, Light."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:medium_armor_proficiency",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

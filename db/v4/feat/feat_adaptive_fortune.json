@@ -1,0 +1,18 @@
+{
+  "id": "feat:adaptive_fortune",
+  "name": "Adaptive Fortune",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:fortunate_one, @ability:adaptable_luck, @character_level \u003e\u003d 10, @race:halfling)",
+  "description": {
+    "text": "Your luck takes on almost legendary proportions.",
+    "sections": {
+      "Benefit": "Increase the number of times per day you can use the adaptable luck racial trait by 1. Furthermore, when you use adaptable luck, increase the luck bonus for each type of use by 2."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:adaptive_fortune",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

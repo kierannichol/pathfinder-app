@@ -1,0 +1,18 @@
+{
+  "id": "feat:spell_bluff",
+  "name": "Spell Bluff",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@skill:bluff \u003e\u003d 5, @skill:spellcraft \u003e\u003d 5)",
+  "description": {
+    "text": "You know the principles of arcane dueling, and when fighting other spellcasters, you have learned to hide the true nature of your spells until the last possible moment.",
+    "sections": {
+      "Benefit": "If another spellcaster tries to counterspell your casting, she adds +4 to her Spellcraft DC when trying to determine your spell. Because you have studied how to mask the recognizable elements of your spellcasting, you gain a +2 bonus on your Spellcraft checks to identify and counter an opponent\u0027s spell if it is a spell you know or have in your spellbook."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:spell_bluff",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

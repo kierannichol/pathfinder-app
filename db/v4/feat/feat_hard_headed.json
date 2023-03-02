@@ -1,0 +1,18 @@
+{
+  "id": "feat:hard_headed",
+  "name": "Hard-Headed",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@bab \u003e\u003d 1, @race:dwarf)",
+  "description": {
+    "text": "Your thick skull is almost a weapon unto itself.",
+    "sections": {
+      "Benefit": "You gain a +1 bonus on attack rolls and combat maneuver checks made using a helmet. You receive a +2 bonus on saves against spells and special abilities that cause you to become staggered or stunned."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:hard_headed",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

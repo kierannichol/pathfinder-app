@@ -1,0 +1,19 @@
+{
+  "id": "feat:multiattack",
+  "name": "Multiattack",
+  "tags": ["feat", "monster, combat"],
+  "prerequisiteFormula": "(@ability:bite + @ability:claw + @ability:gore) \u003e\u003d 3",
+  "description": {
+    "text": "This creature is particularly skilled at making attacks with its natural weapons.",
+    "sections": {
+      "Benefit": "The creature\u0027s secondary attacks with natural weapons take only a -2 penalty.",
+      "Normal": "Without this feat, the creature\u0027s secondary attacks with natural weapons take a -5 penalty."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:multiattack",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

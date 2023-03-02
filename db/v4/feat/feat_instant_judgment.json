@@ -1,0 +1,19 @@
+{
+  "id": "feat:instant_judgment",
+  "name": "Instant Judgment",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:second_judgment#inquisitor",
+  "description": {
+    "text": "Your hastiest condemnations can have power.",
+    "sections": {
+      "Benefit": "You can spend an immediate action to pronounce a judgment or change an active judgment.",
+      "Normal": "Pronouncing or changing a judgment requires a swift action."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:instant_judgment",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

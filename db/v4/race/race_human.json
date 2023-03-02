@@ -1,0 +1,26 @@
+{
+  "id": "race:human",
+  "name": "Human",
+  "tags": ["race"],
+  "description": {
+  },
+  "effects": [{
+    "targetKey": "race:human",
+    "setAction": {
+      "numberValue": 1
+    }
+  }, {
+    "targetKey": "size",
+    "setAction": {
+      "numberValue": 5
+    }
+  }],
+  "choices": [{
+    "id": "level0:race_asi:human",
+    "type": "asi",
+    "label": "Ability Score Increase (Human)",
+    "select": {
+      "tags": ["ability_score"]
+    }
+  }]
+}

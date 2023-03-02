@@ -1,0 +1,18 @@
+{
+  "id": "feat:martial_mastery",
+  "name": "Martial Mastery",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@feat:martial_versatility, @class:fighter \u003e\u003d 16, @race:human)",
+  "description": {
+    "text": "You broaden your study of weapons to encompass multiple similar weapons.",
+    "sections": {
+      "Benefit": "Each combat feat you have that applies to a specific weapon (e.g., Weapon Focus) can be used with all weapons in the same weapon group (Ultimate Combat 45)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:martial_mastery",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:greater_fury_companion",
+  "name": "Greater Fury Companion",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@rage_power:fury_companion AND @rage_power:lesser_fury_companion AND @class:barbarian \u003e\u003d 10 AND !@rage_power:greater_fury_companion",
+  "description": {
+    "text": "Conjure a druid’s animal companion while raging."
+  },
+  "effects": [{
+    "targetKey": "rage_power:greater_fury_companion",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

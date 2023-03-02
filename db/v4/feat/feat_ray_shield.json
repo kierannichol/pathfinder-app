@@ -1,0 +1,18 @@
+{
+  "id": "feat:ray_shield",
+  "name": "Ray Shield",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 15, @feat:missile_shield, @rage_power:spellbreaker)",
+  "description": {
+    "text": "You can even deflect rays with your shield.",
+    "sections": {
+      "Benefit": "You must be using a light, heavy, or tower shield to use this feat. Once per round when you would normally be hit with a ranged touch attack (including rays and similar magical effects), you may def lect it so that you take no damage from it. Your shield suffers the full effects of the spell or effect, if applicable."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:ray_shield",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

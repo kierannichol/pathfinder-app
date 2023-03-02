@@ -1,0 +1,18 @@
+{
+  "id": "feat:stretched_wings",
+  "name": "Stretched Wings",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @feat:skill_focus#@skill:fly, @race:strix, @ability:wing_clipped)",
+  "description": {
+    "text": "You strengthen your crippled wings.",
+    "sections": {
+      "Benefit": "Your strix racial fly speed increases to 60 feet (average). You ignore the wing-clipped trait\u0027s Fly check requirement to fly upward."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:stretched_wings",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

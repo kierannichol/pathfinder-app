@@ -1,0 +1,18 @@
+{
+  "id": "feat:mantis_wisdom",
+  "name": "Mantis Wisdom",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @feat:mantis_style, @feat:stunning_fist, @skill:heal \u003e\u003d 6)",
+  "description": {
+    "text": "Your knowledge of vital areas allows you to land debilitating strikes with precision.",
+    "sections": {
+      "Benefit": "Treat half your levels in classes other than monk as monk levels for determining effects you can apply to a target of your Stunning Fist per the Stunning Fist monk class feature. You can also use a standard action and a successful melee touch attack to remove any Stunning Fist effect you have applied to a target. While using Mantis Style, you gain a +2 bonus on unarmed attack rolls with which you are using Stunning Fist attempts."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:mantis_wisdom",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

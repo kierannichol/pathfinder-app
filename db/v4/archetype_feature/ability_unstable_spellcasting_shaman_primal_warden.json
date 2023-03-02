@@ -1,0 +1,14 @@
+{
+  "id": "ability:unstable_spellcasting#shaman_primal_warden",
+  "name": "Unstable Spellcasting",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A primal warden\u0027s spirit is ever shifting, and the spells it grants the primal warden change from moment to moment.\nWhen the primal warden would spontaneously cast a 1st- through 8th-level spell using the spirit magic class feature, she produces a random spell from the list of shaman spells of 1 spell level higher than the spell slot expended; use an appropriate die or another randomization method to determine the spell. When she would spontaneously cast a 9th-level spell using spirit magic, she instead casts a random 9th-level spell from the shaman spell list, treating her caster level as 2 higher.\nThere is no way to predict the spell before the shaman begins casting it using spirit magic, and she cannot enhance the spell using metamagic feats. The spell uses the shaman\u0027s caster level, even if that caster level would normally be too low to cast the spell. There are 47 potential 2nd-level spells, 46 potential 3rd-level spells, 41 potential 4th-level spells, 30 potential 5th-level spells, 22 potential 6th-level spells, 22 potential 7th-level spells, 18 potential 8th-level spells, and 14 potential 9th-level spells.\nAt 8th level, after determining the spell that she would cast using spirit magic, once per day as a free action, the primal warden shaman can choose to randomly select another spell instead, using the same method of randomization as she used before (if she obtains the same result a second time, she must keep that result). At 12th level and every 4 shaman levels thereafter, she can choose to randomly select a different spirit magic spell one additional time per day, up to a maximum of four times per day at 20th level. She cannot use this ability more than once in the same round."
+  },
+  "effects": [{
+    "targetKey": "ability:unstable_spellcasting#shaman_primal_warden",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

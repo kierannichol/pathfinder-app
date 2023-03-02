@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:elemental_rage",
+  "name": "Elemental Rage",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND @rage_power:lesser_elemental_rage AND !@rage_power:elemental_rage",
+  "description": {
+    "text": "Deal extra elemental damage with melee attacks"
+  },
+  "effects": [{
+    "targetKey": "rage_power:elemental_rage",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

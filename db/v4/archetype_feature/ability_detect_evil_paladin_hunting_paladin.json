@@ -1,0 +1,14 @@
+{
+  "id": "ability:detect_evil#paladin_hunting_paladin",
+  "name": "Detect Evil",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A hunting paladin cannot use this ability as a move action. However, when a hunting paladin has successfully followed a creature\u0027s tracks for at least 1 minute, she can discern whether the tracked creature\u0027s alignment was evil, as if she had cast detect evil in its presence and concentrated for 3 rounds."
+  },
+  "effects": [{
+    "targetKey": "ability:detect_evil#paladin_hunting_paladin",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

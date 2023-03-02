@@ -1,0 +1,18 @@
+{
+  "id": "feat:dimensional_agility",
+  "name": "Dimensional Agility",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "(@ability:abundant_step#monk OR @spell:dimension_door)",
+  "description": {
+    "text": "Teleportation does not faze you.",
+    "sections": {
+      "Benefit": "After using abundant step or casting dimension door, you can take any actions you still have remaining on your turn. You also gain a +4 bonus on Concentration checks when casting teleportation spells."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:dimensional_agility",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

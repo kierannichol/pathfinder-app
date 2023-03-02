@@ -1,0 +1,14 @@
+{
+  "id": "ability:inscribe_rune#magus_sigilus",
+  "name": "Inscribe Rune",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 2nd level, a sigilus learns how to magically inscribe a Sin rune onto a weapon. The rune to be inscribed must be chosen from the seven runes that symbolize the seven schools of Sin magic. Note that due to the nature of magus spells, certain runes (and thus certain schools of magic) are more appropriate for inscription than others-the runes for conjuration, evocation, illusion, and transmutation are the strongest choices, while those for abjuration, enchantment, and necromancy are less enticing. Inscribing a rune takes 10 minutes.\nOnce a weapon has been infused with a rune, the sigilus becomes more adept at using her spell combat ability with spells of that rune\u0027s school. Her penalty on attack rolls when using spell combat is reduced by 1 (to -1) when she casts a spell from the same school as her inscribed rune, but is increased by 2 (to -4) when she uses spell combat with a spell not from her inscribed rune\u0027s school. As long as she has a rune inscribed on her weapon in this manner, she cannot use spells from that rune\u0027s opposition schools at all with spell Combat.\nThe sigilus can maintain only a single inscribed rune on a weapon at any time; if she inscribes a new rune on a weapon, the previously inscribed rune fades."
+  },
+  "effects": [{
+    "targetKey": "ability:inscribe_rune#magus_sigilus",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

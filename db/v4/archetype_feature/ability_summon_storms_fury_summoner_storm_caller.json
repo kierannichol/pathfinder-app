@@ -1,0 +1,14 @@
+{
+  "id": "ability:summon_storms_fury#summoner_storm_caller",
+  "name": "Summon Storm\u0027s Fury",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "A storm caller can summon creatures infused with the power of the storm to help him. This functions as the summoner\u0027s summon monster I–IX abilities, except the storm caller can summon only the following creatures at the indicated spell levels: I--eagle; II--small air elemental, small lightning elemental; III--dire bat; IV--medium air elemental, medium lightning elemental, pteranodon; V--large air elemental, large lightning elemental; VI--huge air elemental, huge lightning elemental; VII--roc; VIII--elder air elemental, elder lightning elemental; IX--advanced elder air elemental, advanced elder lightning elemental. Any creatures summoned with this ability gain immunity to electricity.\nAlternatively, whenever his eidolon is not summoned, a storm caller can expend a daily use of this ability to summon a magical storm as a standard action.\nThis functions as call lightning with a caster level equal to his summoner level, except as noted below.\nEach bolt of lightning deals 1d6 points of electricity damage. This damage increases by 1d6 at 3rd level and every 2 levels thereafter, to a maximum of 10d6 at 19th level. The prevailing weather has no effect on the damage of the lightning bolts. The Reflex save DC is equal to 10 + half the storm caller\u0027s summoner level + his Charisma modifier. If the storm caller uses this ability again before he has used all of his available bolts of lightning (to summon another magical storm, to summon a monster, or to use the gate spell), any unused bolts are expended with no effect.\nThe storm caller adds call lightning to his summoner spell list as a 3rd-level spell and call lightning storm to his summoner spell list as a 5th-level spell, but he does not automatically add them to his list of spells known."
+  },
+  "effects": [{
+    "targetKey": "ability:summon_storms_fury#summoner_storm_caller",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

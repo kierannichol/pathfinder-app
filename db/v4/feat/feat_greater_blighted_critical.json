@@ -1,0 +1,19 @@
+{
+  "id": "feat:greater_blighted_critical",
+  "name": "Greater Blighted Critical",
+  "tags": ["feat", "general", "critical"],
+  "prerequisiteFormula": "all(@feat:blighted_critical, @caster_level \u003e\u003d 12)",
+  "description": {
+    "text": "Your critical hit from a spell or spell-like ability aff licts the target with a major spellblight.",
+    "sections": {
+      "Benefit": "Whenever you confirm a critical hit with a touch spell, ranged touch spell, or spell-like ability against an opponent, the victim gains a random major spellblight (see page 96).",
+      "Special": "You can only apply the effects of one critical feat to a given critical hit unless you possess Critical Mastery."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_blighted_critical",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

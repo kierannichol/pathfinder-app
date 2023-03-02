@@ -1,0 +1,18 @@
+{
+  "id": "feat:dark_sight",
+  "name": "Dark Sight",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@feat:gloom_sight, @race:fetchling)",
+  "description": {
+    "text": "With further modification, your eyes can pierce the gloom of even magical darkness.",
+    "sections": {
+      "Benefit": "You gain the ability to see up to 15 feet clearly in magical darkness, such as that created by the deeper darkness spell."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:dark_sight",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

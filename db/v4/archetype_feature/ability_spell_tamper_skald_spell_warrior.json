@@ -1,0 +1,14 @@
+{
+  "id": "ability:spell_tamper#skald_spell_warrior",
+  "name": "Spell Tamper",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 20th level, when a spell warrior successfully counterspells an opponent\u0027s spell, the opponent suffers a backlash of magical energy and takes 1d6 points of damage per spell level of the countered spell. If the opponent succeeds at a Will saving throw (DC \u003d 10 + 1/2 the skald\u0027s level + the skald\u0027s Charisma modifier), the damage is reduced by half. This damage is magical and is not subject to damage reduction or energy resistance.\nThis ability replaces master skald."
+  },
+  "effects": [{
+    "targetKey": "ability:spell_tamper#skald_spell_warrior",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

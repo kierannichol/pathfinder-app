@@ -1,0 +1,14 @@
+{
+  "id": "ability:primal_magic#wizard_primalist",
+  "name": "Primal Magic",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 1st level, a primalist may attempt to channel primal magic as a swift action to cast a prepared spell without losing that spell from its spell slot. Essentially, a primalist is forcing primal magic into the world and attempting to shape it into a specific spell effect. To use this ability, she casts the spell as she would normally, but as the spell\u0027s effects take place, she makes a concentration check (DC 20 + double the spell\u0027s level). If she fails this check, she expends the spell normally as if she had cast it, but its actual effects are replaced by a primal magic event with a CR equal to her caster level and she is staggered for 1 round per level of the spell she was attempting to cast. If she makes this check, she casts the spell normally and it is not expended from her prepared spell slot, allowing her to cast that spell again at a later point."
+  },
+  "effects": [{
+    "targetKey": "ability:primal_magic#wizard_primalist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

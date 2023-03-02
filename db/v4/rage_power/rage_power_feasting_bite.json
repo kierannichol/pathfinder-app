@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:feasting_bite",
+  "name": "Feasting Bite",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@race:half_orc AND @rage_power:bloody_bite AND (@rage_power:animal_fury OR @ability:bite_attack) AND !@rage_power:feasting_bite",
+  "description": {
+    "text": "When the barbarian confirms a critical hit with her bite attack, she regains a number of hit points equal to half the damage dealt. Activating this ability consumes 1 round of rage."
+  },
+  "effects": [{
+    "targetKey": "rage_power:feasting_bite",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

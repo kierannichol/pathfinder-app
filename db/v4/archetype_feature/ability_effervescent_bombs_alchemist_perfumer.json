@@ -1,0 +1,14 @@
+{
+  "id": "ability:effervescent_bombs#alchemist_perfumer",
+  "name": "Effervescent Bombs",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "Rather than deal direct damage, a perfumer\u0027s bombs create an effervescent puddle in a 5-foot radius for a number of rounds equal to the alchemist\u0027s intelligence bonus (minimum 1). Each creature within this area takes 1d4 points of fire damage immediately and again each round it remains within or enters the puddle.\nA creature caught in the puddle when it is first created can attempt a Reflex save (DC \u003d 10 + half the perfumer\u0027s level + the perfumer\u0027s Intelligence modifier) for half damage. The effervescent bombs\u0027 damage increases by 1d4 at 3rd level and every odd level thereafter. Effervescent bombs otherwise functions as bombs, and discoveries that apply to bombs apply to effervescent bombs."
+  },
+  "effects": [{
+    "targetKey": "ability:effervescent_bombs#alchemist_perfumer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

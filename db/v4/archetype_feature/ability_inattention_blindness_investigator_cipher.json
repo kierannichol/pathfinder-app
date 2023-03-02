@@ -1,0 +1,14 @@
+{
+  "id": "ability:inattention_blindness#investigator_cipher",
+  "name": "Inattention Blindness",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 1st level, a cipher can blind nearby creatures to his presence. A creature who would become aware of a cipher\u0027s presence when the cipher is within 10 feet per cipher level must succeed at a Perception check against a DC equal to 10 + the cipher\u0027s investigator level + his Intelligence modifier or the creature ignores the investigator as though it had not become aware of his presence. The cipher can spend a use of inspiration to raise the DC by 1d6. The affected creature continues to ignore the cipher until he attacks, moves out of range, directly interacts with the creature, interacts with another creature or object in a way the affected creature notices, or otherwise specifically draws attention to himself. If the cipher does none of these things, the affected creature can attempt another Perception check at the same DC for each minute the cipher remains in range.\nA creature that was aware of the cipher\u0027s presence prior to being in range of his inattention blinding ability is unaffected. This is a mind-affecting compulsion effect.\nA cipher can affect only one creature with inattention blindness at any given time, plus one additional creature at 5th level and every 3 investigator levels thereafter, to a maximum of seven creatures at 19th level. Once a cipher reaches that maximum, he can\u0027t affect an additional creature until he ends the effect for an already affected creature. If multiple creatures enter the range of inattention blindness simultaneously, they all must attempt Perception checks; the inattention blindness effect affects the creatures with the lowest Perception check results, in order, until it reaches the maximum number of creatures it can affect.\nThe cipher can suppress or activate inattention blindness as a free action, and dismiss its effects on any affected creature within range as a move action."
+  },
+  "effects": [{
+    "targetKey": "ability:inattention_blindness#investigator_cipher",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

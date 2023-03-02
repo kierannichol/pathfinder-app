@@ -1,0 +1,18 @@
+{
+  "id": "feat:feline_grace",
+  "name": "Feline Grace",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @race:catfolk)",
+  "description": {
+    "text": "Your innate grace allows you to get out of the stickiest situations.",
+    "sections": {
+      "Benefit": "You gain a +2 bonus to your CMD against bull rush, grapple, overrun, repositioning, and trip combat maneuvers."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:feline_grace",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

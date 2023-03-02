@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_lay_on_hands",
+  "name": "Extra Lay On Hands",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:lay_on_hands#paladin",
+  "description": {
+    "text": "You can use your lay on hands ability more often.",
+    "sections": {
+      "Benefit": "You can use your lay on hands ability two additional times per day.",
+      "Special": "You can gain Extra Lay On Hands multiple times. Its effects stack."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_lay_on_hands",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

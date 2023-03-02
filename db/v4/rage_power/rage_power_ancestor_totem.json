@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:ancestor_totem",
+  "name": "Ancestor Totem",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 6 AND @rage_power:lesser_ancestor_totem AND !@rage_power:ancestor_totem",
+  "description": {
+    "text": "Gain a +4 Insight Bonus to a skill while raging, and you may use it while raging even if you normally couldn’t"
+  },
+  "effects": [{
+    "targetKey": "rage_power:ancestor_totem",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

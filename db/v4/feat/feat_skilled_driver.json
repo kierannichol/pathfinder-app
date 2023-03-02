@@ -1,0 +1,18 @@
+{
+  "id": "feat:skilled_driver",
+  "name": "Skilled Driver",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability",
+  "description": {
+    "text": "Choose a type a type of vehicle (either air, land, or water). You are more skilled when driving that vehicle.",
+    "sections": {
+      "Benefit": "You gain a +4 bonus on driving checks with your chosen vehicle."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:skilled_driver",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

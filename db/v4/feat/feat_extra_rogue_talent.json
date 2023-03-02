@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_rogue_talent",
+  "name": "Extra Rogue Talent",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:rogue_talent#unchained_rogue",
+  "description": {
+    "text": "Through constant practice, you have learned how to perform a special trick.",
+    "sections": {
+      "Benefit": "You gain one additional rogue talent. You must meet all of the prerequisites for this rogue talent.",
+      "Special": "You can gain Extra Rogue Talent multiple times."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_rogue_talent",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

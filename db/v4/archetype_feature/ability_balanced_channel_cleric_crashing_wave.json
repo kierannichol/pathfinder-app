@@ -1,0 +1,14 @@
+{
+  "id": "ability:balanced_channel#cleric_crashing_wave",
+  "name": "Balanced Channel",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 1st level, a crashing wave can channel the pure balance of the ocean--its wildness, its calm, its cruelty, and its gentleness. This energy can be used to harm or heal creatures, as the crashing wave chooses.\nChanneling this energy causes a 30-foot-radius burst centered on the cleric. Using balanced channel is a standard action that does not provoke attacks of opportunity. A crashing wave can choose whether to include herself in the effect. The cleric must be able to present her holy symbol to use this ability, and she can channel energy a number of times equal to 3 + her Charisma modifier.\nIf the crashing wave chooses to harm, creatures within the burst that are chaotic good, chaotic evil, lawful good, or lawful evil take 1d6 points of damage plus 1d6 points of damage for every 2 levels the cleric has beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures with a neutral alignment component are unaffected by this energy. Creatures that take damage from the channeled energy can attempt a Fortitude save (DC \u003d 10 + half the crashing wave\u0027s level + her Charisma modifier) for half damage. This damage is neither negative nor positive energy, so a creature\u0027s resistance to positive or negative energy does not reduce this damage. (However, resistance to channeled energy in particular, such as that provided by channel resistance, applies normally.)\nIf the crashing wave chooses to heal, creatures within the burst that have any neutral alignment component are healed 1d6 points of damage plus 1d6 points of damage for every 2 levels the cleric has beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). This healing does not affect creatures that are chaotic good, chaotic evil, lawful good, or lawful evil. This healing is positive energy, so any creatures not healed by positive energy (such as undead) receive no healing from this effect, even if they have a neutral alignment."
+  },
+  "effects": [{
+    "targetKey": "ability:balanced_channel#cleric_crashing_wave",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

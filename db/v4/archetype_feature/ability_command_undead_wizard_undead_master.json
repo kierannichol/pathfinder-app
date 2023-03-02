@@ -1,0 +1,14 @@
+{
+  "id": "ability:command_undead#wizard_undead_master",
+  "name": "Command Undead",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "An undead master gains Command Undead as a bonus feat, treating his wizard level as his cleric level. If he lacks the ability to channel negative energy for the purpose of Command Undead, he can expend 3 uses of any 1st-level arcane school ability that normally has a number of uses per day equal to 3 + his Intelligence modifier, rather than a use of channel energy. If he\u0027s a necromancer with the power over undead ability, he instead gains Improved Channel."
+  },
+  "effects": [{
+    "targetKey": "ability:command_undead#wizard_undead_master",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

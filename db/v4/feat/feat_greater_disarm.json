@@ -1,0 +1,19 @@
+{
+  "id": "feat:greater_disarm",
+  "name": "Greater Disarm",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:combat_expertise, @feat:improved_disarm, @bab \u003e\u003d 6, @int_score \u003e\u003d 13)",
+  "description": {
+    "text": "You can knock weapons far from an enemy\u0027s grasp.",
+    "sections": {
+      "Benefit": "You receive a +2 bonus on checks made to disarm a foe. This bonus stacks with the bonus granted by Improved Disarm. Whenever you successfully disarm an opponent, the weapon lands 15 feet away from its previous wielder, in a random direction.",
+      "Normal": "Disarmed weapons and gear land at the feet of the disarmed creature."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_disarm",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

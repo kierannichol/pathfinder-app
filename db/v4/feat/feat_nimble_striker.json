@@ -1,0 +1,18 @@
+{
+  "id": "feat:nimble_striker",
+  "name": "Nimble Striker",
+  "tags": ["feat", "combat", "racial"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @bab \u003e\u003d 1, @race:catfolk, @ability:sprinter)",
+  "description": {
+    "text": "You were born to charge your enemies and nobody does it better.",
+    "sections": {
+      "Benefit": "You do not take a -2 penalty to AC when you use the Cleave feat, Lunge feat, or when you charge."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:nimble_striker",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

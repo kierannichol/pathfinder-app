@@ -1,0 +1,14 @@
+{
+  "id": "ability:rage_mutagen#alchemist_ragechemist",
+  "name": "Rage Mutagen",
+  "tags": ["archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 2nd level, whenever a ragechemist creates a mutagen that improves his Strength, that mutagen\u0027s bonus to Strength increases by +2 and penalizes the alchemist\u0027s Intelligence score.\nFurthermore, while under the effects of this mutagen, whenever the alchemist takes damage, his rage grows, with detrimental effects. At the end of each turn that he takes hit point damage, the ragechemist must succeed at a Will saving throw (DC 15, or DC 20 if any of the damage came from a critical hit that turn) or take a –2 penalty on Will saving throws and to Intelligence. These penalties end 1 hour after the mutagen ends and stack with themselves. If the penalty lowers the ragechemist\u0027s Intelligence score to 0, the ragechemist is comatose until 1 hour after the mutagen expires.\nThis ability replaces poison use."
+  },
+  "effects": [{
+    "targetKey": "ability:rage_mutagen#alchemist_ragechemist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:diviners_delving",
+  "name": "Diviner\u0027s Delving",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@feat:spell_focus#@spell:divination",
+  "description": {
+    "text": "Your keen magical intuition makes reading signs, portents, and mystical clues quick and easy.",
+    "sections": {
+      "Benefit": "You gain a +2 bonus on caster level checks with divinations to overcome spell resistance or effects that impede divination (for example, nondetection). When using a divination spell that requires concentration, you gain information from the spell 1 round sooner than normal (so you gain information from the first 2 rounds with 1 round of concentration, and information from the third round in the second round of concentration)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:diviners_delving",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:stone_sense",
+  "name": "Stone Sense",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@feat:improved_stonecunning, @skill:perception \u003e\u003d 10)",
+  "description": {
+    "text": "You can feel movement in the very earth and stones around you.",
+    "sections": {
+      "Benefit": "You gain tremorsense to a range of 10 feet."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:stone_sense",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

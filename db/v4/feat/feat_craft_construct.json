@@ -1,0 +1,18 @@
+{
+  "id": "feat:craft_construct",
+  "name": "Craft Construct",
+  "tags": ["feat", "item creation"],
+  "prerequisiteFormula": "all(@caster_level \u003e\u003d 5, @feat:craft_magic_arms_and_armor, @feat:craft_wondrous_item)",
+  "description": {
+    "text": "You can create construct creatures like golems.",
+    "sections": {
+      "Benefit": "You can create any construct whose prerequisites you meet. The act of animating a construct takes one day for each 1,000 gp in its market price. To create a construct, you must use up raw materials costing half of its base price, plus the full cost of the basic body created for the construct. Each construct has a special section that summarizes its costs and other prerequisites. A newly created construct has average hit points for its Hit Dice."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:craft_construct",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

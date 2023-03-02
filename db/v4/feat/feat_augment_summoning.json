@@ -1,0 +1,18 @@
+{
+  "id": "feat:augment_summoning",
+  "name": "Augment Summoning",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@feat:spell_focus#conjuration",
+  "description": {
+    "text": "Your summoned creatures are more powerful and robust.",
+    "sections": {
+      "Benefit": "Each creature you conjure with any summon spell gains a +4 enhancement bonus to Strength and Constitution for the duration of the spell that summoned it."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:augment_summoning",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

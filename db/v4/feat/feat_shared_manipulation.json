@@ -1,0 +1,18 @@
+{
+  "id": "feat:shared_manipulation",
+  "name": "Shared Manipulation",
+  "tags": ["feat", "general", "racial"],
+  "prerequisiteFormula": "all(@cha_score \u003e\u003d 13, @race:half_elf)",
+  "description": {
+    "text": "You can subtly bolster allies\u0027 ability to misdirect and infuriate their enemies.",
+    "sections": {
+      "Benefit": "As a move action, you can grant all friendly creatures within 30 feet who can see or hear you a +2 bonus on Bluff or Intimidate checks (choose which skill to affect each time you use this ability) for a number of rounds equal to your Charisma modifier (minimum 1 round)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:shared_manipulation",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

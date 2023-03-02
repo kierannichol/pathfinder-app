@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:renewed_vigor",
+  "name": "Renewed Vigor",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 4 AND !@rage_power:renewed_vigor",
+  "description": {
+    "text": "Heal damage as a standard action"
+  },
+  "effects": [{
+    "targetKey": "rage_power:renewed_vigor",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

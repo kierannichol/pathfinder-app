@@ -1,0 +1,19 @@
+{
+  "id": "feat:deepsight",
+  "name": "Deepsight",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:darkvision \u003e\u003d 60",
+  "description": {
+    "text": "Your senses are especially keen in the utter darkness.",
+    "sections": {
+      "Benefit": "Your darkvision has a range of 120 feet.",
+      "Normal": "Darkvision normally extends 60 or 90 feet."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:deepsight",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}
