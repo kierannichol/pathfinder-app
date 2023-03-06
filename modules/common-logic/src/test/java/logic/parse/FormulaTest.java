@@ -91,6 +91,13 @@ class FormulaTest {
     }
 
     @Test
+    void formulaWithComments() {
+        var formula = Formula.parse("@foo[Foo] + @bar[Bar]");
+        var context = StaticDataContext.empty().set("foo", 2).set("bar", 3);
+        assertResolvedValue(formula.resolve(context)).hasValue(5);
+    }
+
+    @Test
     void variableMath() {
         var formula = Formula.parse("@foo + 2");
         var context = StaticDataContext.empty().set("foo", 1);

@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode, RefObject, useContext, useEffect, useRef, useState} from "react";
+import React, {ReactElement, ReactNode, useContext, useEffect, useRef, useState} from "react";
 import {Accordion, AccordionContext, Collapse, useAccordionButton} from "react-bootstrap";
 import * as Icons from "react-bootstrap-icons";
 import {AccordionEventKey} from "react-bootstrap/AccordionContext";
@@ -95,12 +95,11 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, disabled, varian
         setBodyState(undefined);
       }
     }
-  }, [itemKey, onScreen])
+  }, [itemKey, onScreen, bodyFn])
 
   const selectOptionButton = useAccordionButton(itemKey);
 
   const handleExpanding = () => {
-    // scrollToElement(elementRef);
     setExpanding(true);
     setExpanded(false);
     setCollapsing(false);
@@ -169,7 +168,7 @@ interface PathfinderSelectItemContainerProps {
 
 function PathfinderSelectItemContainer({ label, childrenFn, disabled, variant }: PathfinderSelectItemContainerProps) {
   const elementRef = useRef<HTMLDivElement>(null);
-  const onScreen = useOnScreen(elementRef);
+  // const onScreen = useOnScreen(elementRef);
 
   const [ expanded, setExpanded ] = useState(false);
   const [ expanding, setExpanding ] = useState(false);
@@ -242,13 +241,6 @@ function PathfinderSelectItemContainer({ label, childrenFn, disabled, variant }:
           </div>
         </Collapse>
       </div>);
-}
-
-function scrollToElement(elementRef: RefObject<HTMLDivElement>) {
-  elementRef.current?.scrollIntoView({
-    block: "start",
-    inline: "nearest"
-  });
 }
 
 PathfinderSelect.Item = PathfinderSelectItem;

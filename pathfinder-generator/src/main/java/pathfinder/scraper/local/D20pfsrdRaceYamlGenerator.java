@@ -15,11 +15,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import pathfinder.NotCached;
-import pathfinder.model.Size;
 import pathfinder.model.json.PathfinderJsonModule;
-import pathfinder.model.v4.pathfinder.Race;
-import pathfinder.source.scraper.d20pfsrd.AbstractD20pfsrdScraper;
-import pathfinder.source.scraper.d20pfsrd.D20pfsrdRaceScraper;
+import pathfinder.model.pathfinder.Race;
+import pathfinder.model.pathfinder.Size;
+import pathfinder.scraper.remote.d20pfsrd.AbstractD20pfsrdScraper;
+import pathfinder.scraper.remote.d20pfsrd.D20pfsrdRaceScraper;
 
 @Service("d20pfsrd Race YAML Generator")
 @Slf4j

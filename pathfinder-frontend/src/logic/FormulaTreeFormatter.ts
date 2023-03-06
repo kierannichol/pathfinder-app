@@ -114,8 +114,8 @@ export default class FormulaFormatter {
         .operator('<=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a >= b, (a, b) => `${a} is ${b} or less`))
         .operator('>', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a > b, (a, b) => `${a} greater than ${b}`))
         .operator('>=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a >= b, (a, b) => `${a} ${b}`))
-        .operator('==', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a == b, (a, b) => `${a} is ${b}`))
-        .operator('!=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a != b, (a, b) => `${a} is not ${b}`))
+        .operator('==', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a === b, (a, b) => `${a} is ${b}`))
+        .operator('!=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => formatNumberOp(a, b, (a, b)=> a !== b, (a, b) => `${a} is not ${b}`))
         .operator('AND', 1, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => createTreeNode(TreeNodeOperator.ALL, a, b))
         .operator('OR', 1, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => createTreeNode(TreeNodeOperator.ANY, a, b))
         .term('true', () => ResolvedValue.of(true))
@@ -135,16 +135,23 @@ export default class FormulaFormatter {
           return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.none();
         })
         .variable('min(@', ')', (state, key) => {
-          const actual = state.get(key);
-          return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.none();
+          const actual = FormulaFormatter.noneIfEmpty(state.find(key))
+              .reduce((a, b) => a.asNumber() < b.asNumber() ? a : b)
+          return new FormattedValue(actual, '');
         })
         .variable('max(@', ')', (state, key) => {
-          const actual = state.get(key);
-          return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.none();
+          const actual = FormulaFormatter.noneIfEmpty(state.find(key))
+              .reduce((a, b) => a.asNumber() > b.asNumber() ? a : b)
+          return new FormattedValue(actual, '');
         })
         .variable('sum(@', ')', (state, key) => {
-          const actual = state.get(key);
-          return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.none();
+          const actual = FormulaFormatter.noneIfEmpty(state.find(key))
+              .reduce((a, b) => ResolvedValue.of(a.asNumber() + b.asNumber()))
+          return new FormattedValue(actual, '');
+        })
+        .comment('[', ']', (text, value) => {
+          console.log("Found comment: " + text + " for " + JSON.stringify(value))
+          return new FormattedValue(value, text)
         })
   }
 
@@ -158,5 +165,9 @@ export default class FormulaFormatter {
       return undefined;
     }
     return resolved instanceof TreeNodeValue ? resolved : new TreeNodeValue(resolved, TreeNodeOperator.ALL, [resolved]);
+  }
+
+  private static noneIfEmpty(array: ResolvedValue[]): ResolvedValue[] {
+    return array.length > 0 ? array : [ ResolvedValue.none() ];
   }
 }

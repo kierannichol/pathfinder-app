@@ -1,9 +1,8 @@
-import {useState} from "react";
+import {useEffect, useState, useTransition} from "react";
 import {Button, ListGroup} from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
 import {Link, useNavigate} from "react-router-dom";
 import {useCharacterRepository} from "../app/reactCharacter";
-import {useAsyncMemo} from "../app/reactHooks";
 import NewCharacterDialog from "../components/character/NewCharacterDialog";
 import LoadingBlock from "../components/common/LoadingBlock";
 import {HeaderRow} from "../components/GridHelpers";
@@ -14,31 +13,50 @@ function CharacterListView() {
   const navigate = useNavigate();
   const characterRepository = useCharacterRepository();
 
-  const [ characterList ] = useAsyncMemo(() => characterRepository.list(),
-      [ characterRepository ]);
+  const [ characterList, setCharacterList ] = useState<Character[]>();
 
-  const isLoaded = characterList !== undefined;
+  const [ isLoading, startLoading ] = useTransition();
+  const loadCharacterList = async () => {
+    setCharacterList(await characterRepository.list());
+  };
+
+  useEffect(() => {
+    startLoading(() => {
+      loadCharacterList()
+        .catch(e => console.log(e));
+    });
+  }, [characterRepository]);
+
+  const handleChange = () => {
+    startLoading(() => {
+      loadCharacterList()
+      .catch(e => console.log(e));
+    });
+  };
 
   const handleCreate = (characterName: string) => {
     if (characterList === undefined) {
       return;
     }
-    const id = `${characterList.length + 1}`;
     characterRepository.create()
         .then(async (newCharacter) => {
           newCharacter = await newCharacter.select("level0:character_name", characterName);
           characterRepository.save(newCharacter)
-              .then(() => navigate(`/character/edit/${id}`));
+              .then(() => navigate(`/character/edit/${newCharacter.id}`));
         });
   };
+
+  if (isLoading) {
+    return <LoadingBlock/>
+  }
 
   return (<main>
     <HeaderRow>Characters</HeaderRow>
     <ListGroup>
-      {characterList?.map(character => <CharacterItemRow key={character.id} character={character} />)
+      {characterList?.map(character => <CharacterItemRow key={character.id} character={character} onChange={handleChange} />)
           ?? <div className="d-flex justify-content-center"><LoadingBlock/></div>}
       <ListGroup.Item>
-        <AddCharacterButton disabled={!isLoaded} onCreate={handleCreate}/>
+        <AddCharacterButton disabled={isLoading} onCreate={handleCreate}/>
       </ListGroup.Item>
     </ListGroup>
   </main>);
@@ -46,16 +64,20 @@ function CharacterListView() {
 
 interface CharacterItemRowProps {
   character: Character;
+  onChange?: () => void;
 }
 
-function CharacterItemRow({ character }: CharacterItemRowProps) {
+function CharacterItemRow({ character, onChange }: CharacterItemRowProps) {
   const characterRepository = useCharacterRepository()
   const [ deleting, setDeleting ] = useState(false)
 
   const deleteAction = () => {
     setDeleting(true)
     characterRepository.delete(character.id)
-        .then(() => setDeleting(false))
+        .then(() => {
+          setDeleting(false);
+          onChange?.();
+        })
   }
 
   return <ListGroup.Item>

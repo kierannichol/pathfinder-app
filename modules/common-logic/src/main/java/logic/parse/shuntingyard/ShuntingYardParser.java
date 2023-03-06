@@ -99,6 +99,12 @@ public class ShuntingYardParser implements Parser {
         return this;
     }
 
+    public ShuntingYardParser comment(String prefix, String suffix) {
+        NodeExpression commentExpression = NodeExpression.literal(prefix, suffix);
+        tokenTree.add(commentExpression, Comment::new);
+        return this;
+    }
+
     public ShuntingYardParser term(String text, Supplier<ResolvedValue> extractor) {
         NodeExpression termExpression = NodeExpression.term(text);
         tokenTree.add(termExpression, key -> new Term(extractor.get()));

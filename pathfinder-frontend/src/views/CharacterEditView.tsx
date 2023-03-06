@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {useCharacterRepository} from "../app/reactCharacter";
 import AbilityScoreSelectButton from "../components/character/AbilityScoreSelectButton";
 import CharacterTextInput from "../components/character/base/CharacterTextInput";
@@ -59,6 +59,8 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
     }
   }, [character]);
 
+  const totalAbilityPointCost = useMemo(() => character0?.get('ability_point_cost').asText() ?? '0', [character0]);
+
   if (character0 === undefined) {
     return <main><LoadingBlock/></main>
   }
@@ -75,7 +77,7 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
         {nameChoice && <>
           <label htmlFor={'character_name'}>Character Name</label>
           <CharacterTextInput
-              value={nameChoice.current}
+              value={nameChoice.current ?? ''}
               onChange={(value: string) => selectChoice(nameChoice?.key, value)} />
         </>}
         {raceChoice && <>
@@ -115,6 +117,7 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
     <fieldset>
       <legend>Attributes</legend>
       <div className='section'>
+        <div>Ability Point Cost: {totalAbilityPointCost}</div>
         <CharacterAttributeChoiceInputs
             characterAtLevel={character0}
             onCommit={(ability, value) => selectChoice(`level0:${ability}_base`, value)} />

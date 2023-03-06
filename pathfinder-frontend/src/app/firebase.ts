@@ -1,9 +1,7 @@
 // Import the functions you need from the SDKs you need
-import {getAnalytics} from "firebase/analytics";
 import {FirebaseError, initializeApp} from "firebase/app";
 import {
   createUserWithEmailAndPassword,
-  EmailAuthProvider,
   getAuth,
   getRedirectResult,
   GoogleAuthProvider,
@@ -36,7 +34,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 const db = getDatabase(app);
 const auth = getAuth(app);
@@ -45,7 +42,6 @@ auth.onAuthStateChanged(user => {
 })
 
 const googleAuthProvider = new GoogleAuthProvider();
-const emailAuthProvider = new EmailAuthProvider();
 
 export async function firebaseLoginWithEmail(email: string, password: string) {
   let result = undefined;

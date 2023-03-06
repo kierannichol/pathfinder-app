@@ -52,15 +52,22 @@ class DataHubV4 implements IDataHub, IEntityDatabase {
     return found;
   }
 
-  options(tags: string[]): OptionMap {
+  options(tags: string[], ids: string[] = []): OptionMap {
     const optionMap: OptionMap = {};
-    this.find(...tags).flatMap(summary => {
+    [ ...this.find(...tags), ...ids.map(id => this.summary(id)) ].flatMap(summary => {
+      if (!summary) {
+        return undefined;
+      }
       if (summary.children.length > 0) {
         return summary.children.map(child => this.summaryToOption(child.toEntitySummary(summary)));
       }
       return [ this.summaryToOption(summary) ]
     })
-    .forEach(option => optionMap[option.id] = option);
+    .forEach(option => {
+      if (option) {
+        optionMap[option.id] = option;
+      }
+    });
     return optionMap;
   }
 

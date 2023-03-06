@@ -1,8 +1,8 @@
 package pathfinder.model.json;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
+import pathfinder.model.Description;
 import pathfinder.model.Id;
-import pathfinder.model.v4.Description;
 
 public class PathfinderJsonModule extends SimpleModule {
 

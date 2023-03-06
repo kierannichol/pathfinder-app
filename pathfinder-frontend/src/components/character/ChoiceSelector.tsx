@@ -25,7 +25,7 @@ export default function ChoiceSelector({ choice, characterAtLevel, onChange }: C
         onSelect={onChange} />
   }
   if (choice instanceof TextChoiceNode) {
-    return <CharacterTextInput value={choice.current} onChange={onChange} />
+    return <CharacterTextInput value={choice.current ?? ''} onChange={onChange} />
   }
   return <div className="invalid-feedback">Unknown Choice</div>
 }

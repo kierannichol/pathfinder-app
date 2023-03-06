@@ -26,17 +26,6 @@ export class ChoiceSelectorOption {
   }
 }
 
-export class ChoiceSelectorOptionCollection extends ChoiceSelectorOption{
-
-  constructor(id: string,
-              name: string,
-              public readonly options: ChoiceSelectorOption[],
-              descriptionFn?: () => Promise<ReactNode>) {
-    const isValidFn = () => options.some(option => option.isValid);
-    super(id, name, isValidFn, descriptionFn);
-  }
-}
-
 export class ChoiceSelectorCategory {
   constructor(public readonly id: string,
               public readonly name: string) {
@@ -61,7 +50,6 @@ interface ChoiceSelectorDialogProps {
 export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect, onCancel, optionsFn, categories = [], search = false, variant = 'special' }: ChoiceSelectorDialogProps) {
   const [selected, setSelected] = useState<string|undefined>(value);
   const [query, setQuery] = useState('');
-  const showInvalid = useMemo(() => query.length > 0, [query]);
   // const showInvalid = true;
 
   const [category, setCategory] = useState<string>(() => {
@@ -70,11 +58,15 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
 
   const options: ChoiceSelectorOption[] = useMemo(() => array(optionsFn(category)), [optionsFn, category]);
 
+  const hasQuery = useMemo(() => query.trim().length > 0, [query]);
+
+  const showInvalid = useMemo(() => hasQuery || options.length <= 20, [hasQuery, options]);
+
   useEffect(() => {
     if (hasQuery) {
       setCategory('');
     }
-  }, [query]);
+  }, [hasQuery]);
 
   useEffect(() => {
     if (category !== '') {
@@ -85,8 +77,6 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
   useEffect(() => {
     setSelected(value);
   }, [value]);
-
-  const hasQuery = useMemo(() => query.trim().length > 0, [query]);
 
   const availableOptions: Array<ChoiceSelectorOption> = useMemo(() => {
     let filteredOptions = options;
@@ -110,7 +100,7 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
       }
       return a.name.localeCompare(b.name);
     })
-  }, [ options, query ]);
+  }, [ options, query, hasQuery, showInvalid ]);
 
   const hasSelection = selected !== undefined && selected !== '';
   const includeSearch = search === true || (search === "auto" && (availableOptions.length > 10 || categories?.length > 0)) || hasQuery
@@ -152,11 +142,11 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     </Modal.Header>}
 
     <Modal.Body>
-      {availableOptions.length > 0 &&
+      {(availableOptions.length > 0 &&
           <ChoiceSelectorList selected={selected}
                               options={availableOptions}
                               onSelect={handleChangeSelection}
-                              variant={variant} />
+                              variant={variant} />)
           || <Alert variant="warning">None found</Alert>}
     </Modal.Body>
 

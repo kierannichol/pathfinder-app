@@ -164,7 +164,7 @@ export interface ChoiceNode {
   get key(): string;
   get label(): string;
   get type(): string;
-  get current(): string;
+  get current(): string|undefined;
   resolve(db: IDataHub, values: ChoiceValues): Promise<ChoiceNode>;
   applyTo(state: MutableDataContext): void;
   choices(state: DataContext): ChoiceNode[];
@@ -176,12 +176,14 @@ export class TextChoiceNode implements ChoiceNode {
   constructor(public readonly key: string,
               public readonly label: string,
               public readonly type: string,
-              public readonly current: string,
+              public readonly current: string|undefined,
               private readonly effectsFn: (value: string) => Effect[]) {
   }
 
   applyTo(state: MutableDataContext): void {
-    this.effectsFn(this.current).forEach(effect => effect.applyTo(state));
+    if (this.current) {
+      this.effectsFn(this.current).forEach(effect => effect.applyTo(state));
+    }
   }
 
   choices(state: DataContext): ChoiceNode[] {
@@ -266,7 +268,7 @@ export class ResolvedSelectChoiceNode implements SelectChoiceNode {
             this.type,
             this.options,
             this.categories,
-            await (selected == this.selected.id
+            await (selected === this.selected.id
                 ? this.selected
                 : this.options(db, undefined)[selected]).resolve(db, values))
         : new UnresolvedSelectChoiceNode(this.key,

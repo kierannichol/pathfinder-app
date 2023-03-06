@@ -15,6 +15,8 @@ const databasesV4: (Promise<EntityDatabase>|EntityDatabase)[] = [
     loadDatabase("ArchetypeDatabase", "archetype"),
     loadDatabase("ArchetypeFeatureDatabase", "archetype_feature"),
     loadDatabase("RagePowerDatabase", "rage_power"),
+    loadDatabase("BloodragerBloodlineDatabase", "bloodrager_bloodline"),
+    loadDatabase("BloodragerBloodlineFeatureDatabase", "bloodrager_bloodline_feature"),
     AlignmentDatabase,
     SkillDatabase,
     BaseStatDatabase,

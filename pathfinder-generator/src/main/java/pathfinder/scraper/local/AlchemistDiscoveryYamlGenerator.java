@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import pathfinder.NotCached;
-import pathfinder.model.v4.pathfinder.Feature;
-import pathfinder.source.scraper.d20pfsrd.D20pfsrdAlchemistDiscoveryScraper;
+import pathfinder.model.pathfinder.Feature;
+import pathfinder.scraper.remote.d20pfsrd.D20pfsrdAlchemistDiscoveryScraper;
 
 @Service("Alchemist Discovery YAML Generator")
 @Slf4j

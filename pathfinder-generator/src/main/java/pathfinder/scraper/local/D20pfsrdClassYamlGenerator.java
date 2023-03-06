@@ -2,6 +2,8 @@ package pathfinder.scraper.local;
 
 import static java.lang.Integer.parseInt;
 import static logic.util.Ordinal.parseOrdinal;
+import static pathfinder.util.ListUtils.mapList;
+import static pathfinder.util.ListUtils.mapSet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
@@ -31,23 +33,23 @@ import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 import pathfinder.NotCached;
-import pathfinder.model.ArmorProficiency;
-import pathfinder.model.ClassSkill;
-import pathfinder.model.D20pfsrdCharacterClass.Level;
-import pathfinder.model.D20pfsrdCharacterClass.Type;
+import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.IdTypes;
-import pathfinder.model.Source;
-import pathfinder.model.WeaponProficiency;
-import pathfinder.model.Weapons;
 import pathfinder.model.json.PathfinderJsonModule;
-import pathfinder.model.v4.Description;
-import pathfinder.model.v4.pathfinder.CharacterClass;
-import pathfinder.model.v4.pathfinder.ClassLevel;
-import pathfinder.model.v4.pathfinder.Feature;
+import pathfinder.model.pathfinder.ArmorProficiency;
+import pathfinder.model.pathfinder.CharacterClass;
+import pathfinder.model.pathfinder.ClassLevel;
+import pathfinder.model.pathfinder.ClassSkill;
+import pathfinder.model.pathfinder.D20pfsrdCharacterClass.Level;
+import pathfinder.model.pathfinder.D20pfsrdCharacterClass.Type;
+import pathfinder.model.pathfinder.Feature;
+import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.WeaponProficiency;
+import pathfinder.model.pathfinder.Weapons;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.parser.db.WeaponType;
-import pathfinder.source.scraper.d20pfsrd.AbstractD20pfsrdScraper;
+import pathfinder.scraper.remote.d20pfsrd.AbstractD20pfsrdScraper;
 import pathfinder.util.ListUtils;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
@@ -76,11 +78,86 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
             scrapeTypeToYaml(Type.UNCHAINED, new URL("https://www.d20pfsrd.com/classes/unchained-classes/"), classDatabase);
 
             try (OutputStream fos = new FileOutputStream(file)) {
-                objectMapper.writeValue(fos, classDatabase);
+                List<CharacterClass> fixedClassDatabase = mapList(classDatabase, this::customFixes);
+                objectMapper.writeValue(fos, fixedClassDatabase);
             }
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
+    }
+
+    private CharacterClass customFixes(CharacterClass characterClass) {
+        if (characterClass.id().equals(Id.of("class:bloodrager"))) {
+            Id bloodlineFeatId = Id.of("ability:bloodline_feat#bloodrager");
+            Id bloodlineSpellId = Id.of("ability:bloodline_spell#bloodrager");
+
+            var modifiedLevels = mapList(characterClass.levels(), level -> {
+                var modifiedClassFeatureIds = new ArrayList<>(level.classFeatureIds());
+
+                switch (level.level()) {
+                    case 6:
+                    case 9:
+                    case 12:
+                    case 15:
+                    case 18:
+                        modifiedClassFeatureIds.remove(Id.of("ability:bloodline#bloodrager"));
+                        modifiedClassFeatureIds.add(bloodlineFeatId);
+                        break;
+                    case 7:
+                    case 10:
+                    case 13:
+                    case 16:
+                        modifiedClassFeatureIds.remove(Id.of("ability:bloodline#bloodrager"));
+                        modifiedClassFeatureIds.add(bloodlineSpellId);
+                        break;
+                }
+
+                return new ClassLevel(level.level(), modifiedClassFeatureIds, level.spellsPerDay());
+            });
+
+            var modifiedClassFeatures = new HashSet<>(characterClass.class_features());
+            modifiedClassFeatures.add(new Feature(bloodlineFeatId,
+                    "Bloodline Feat",
+                    "",
+                    Description.create("At 6th level and every 3 levels thereafter, a bloodrager receives one bonus feat chosen from a list specific to each bloodline. The bloodrager must meet the prerequisites for these bonus feats."),
+                    "",
+                    characterClass.source()));
+            modifiedClassFeatures.add(new Feature(bloodlineSpellId,
+                    "Bloodline Spell",
+                    "",
+                    Description.create("At 7th, 10th, 13th, and 16th levels, a bloodrager learns an additional spell derived from his bloodline. These spells are in addition to the number of spells given on Table: Bloodrager. These spells cannot be exchanged for different spells at higher levels."),
+                    "",
+                    characterClass.source()));
+
+            return new CharacterClass(characterClass.id(),
+                    characterClass.name(),
+                    characterClass.category(),
+                    characterClass.description(),
+                    characterClass.source(),
+                    characterClass.hit_die(),
+                    characterClass.alignment(),
+                    characterClass.class_skills(),
+                    characterClass.skill_ranks_per_level(),
+                    characterClass.bab(),
+                    characterClass.fort(),
+                    characterClass.ref(),
+                    characterClass.will(),
+                    characterClass.weapon_proficiencies(),
+                    characterClass.armor_proficiencies(),
+                    modifiedLevels,
+                    characterClass.spell_caster_types(),
+                    modifiedClassFeatures);
+        }
+
+        return characterClass;
+    }
+
+    private List<String> determineSpellCasterTypes(Id classId) {
+        return switch (classId.key) {
+            case "wizard", "sorcerer", "bloodrager", "bard", "magus", "summoner", "witch" -> List.of("arcane");
+            case "cleric", "paladin", "ranger", "druid", "inquisitor", "oracle", "omdura" -> List.of("divine");
+            default -> List.of();
+        };
     }
 
     private void scrapeTypeToYaml(Type type, URL url, List<CharacterClass> classDatabase) throws IOException {
@@ -104,7 +181,8 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
         Element content = contentElement(document);
 
         String name = StringUtils.sanitize(content.selectFirst("h1").text());
-        Id id = NameToIdConverter.classId(name);
+        Id classId = NameToIdConverter.classId(name);
+        Id id = classId;
 
         Source source = scrapeSourceFromCopyrightSection(document);
         if (source == null) {
@@ -127,7 +205,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
 
         skillsPerLevel = skillsPerLevel.replaceAll("(\\d+).*", "$1");
 
-        List<ClassSkill> classSkills = parseClassSkills(document);
+        Set<ClassSkill> classSkills = parseClassSkills(document);
         List<Level> levels = parseLevels(document, id);
 
         Set<Feature> classFeatures = levels.stream()
@@ -145,30 +223,32 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
 
         // Write YAML Entry
         CharacterClass classYaml = new CharacterClass(
-                NameToIdConverter.classId(name),
+                classId,
                 name,
                 type.name(),
                 description,
                 source.code(),
                 hitDie,
                 alignment,
-                ListUtils.mapList(classSkills, ClassSkill::id),
+                mapSet(classSkills, ClassSkill::id),
                 skillsPerLevel,
                 progressionTier(levels, Level::bab),
                 progressionTier(levels, Level::fortSave),
                 progressionTier(levels, Level::refSave),
                 progressionTier(levels, Level::willSave),
-                new ArrayList<>(ListUtils.mapSet(weaponProficiencies, wp -> IdTypes.PROFICIENCY.withKey(wp.id()))),
-                new ArrayList<>(ListUtils.mapSet(armorProficiencies, ArmorProficiency::id)),
+                new HashSet<>(ListUtils.mapSet(weaponProficiencies, wp -> IdTypes.PROFICIENCY.withKey(wp.id()))),
+                new HashSet<>(ListUtils.mapSet(armorProficiencies, ArmorProficiency::id)),
                 levels.stream()
                                 .map(level -> new ClassLevel(level.level(),
-                                        ListUtils.mapList(level.specials(), Feature::id)))
+                                        mapList(level.specials(), Feature::id),
+                                        level.spellsPerDay()))
                         .toList(),
+                determineSpellCasterTypes(classId),
                 levels.stream()
                         .flatMap(level -> level.specials().stream()
                                 .distinct()
                                 .map(special -> new Feature(special.id(), special.name(), special.type(), special.description(), "", source.code())))
-                        .toList());
+                        .collect(Collectors.toSet()));
 
         classDatabase.add(classYaml);
     }
@@ -391,7 +471,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
         return parseInt(matcher.group(1));
     }
 
-    private List<ClassSkill> parseClassSkills(Document document) {
+    private Set<ClassSkill> parseClassSkills(Document document) {
         Element headerText = document.getElementById("Class_Skills");
         if (headerText == null) {
             headerText = document.getElementById("Class_skills");
@@ -403,6 +483,6 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
                 .map(Element::text)
                 .map(NameToIdConverter::skillId)
                 .map(ClassSkill::new)
-                .toList();
+                .collect(Collectors.toSet());
     }
 }

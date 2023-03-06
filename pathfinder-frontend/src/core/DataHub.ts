@@ -4,7 +4,7 @@ import Description from "./Description";
 export interface IDataHub {
   name(id: string|undefined): string|undefined;
   description(id: string): Promise<Description>;
-  options(tags: string[]): OptionMap;
+  options(tags: string[], ids?: string[]): OptionMap;
 }
 
 export const LoadingDataHub: IDataHub = {

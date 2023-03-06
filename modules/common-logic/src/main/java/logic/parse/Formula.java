@@ -43,6 +43,7 @@ public class Formula implements Resolvable {
             .variable("min(@", ")", (context, key) -> context.find(key).reduce((a, b) -> a.asDecimal() < b.asDecimal() ? a : b).orElse(ResolvedValue.none()))
             .variable("max(@", ")", (context, key) -> context.find(key).reduce((a, b) -> a.asDecimal() > b.asDecimal() ? a : b).orElse(ResolvedValue.none()))
             .variable("sum(@", ")", (context, key) -> context.find(key).reduce((a, b) -> ResolvedValue.of(a.asDecimal() + b.asDecimal())).orElse(ResolvedValue.of(0)))
+            .comment("[", "]")
             ;
 
     private final Resolvable resolvable;

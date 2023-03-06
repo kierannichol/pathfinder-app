@@ -79,6 +79,11 @@ class VarargsFunction implements Node {
   }
 }
 
+class MultiOperator implements Node {
+  constructor(public readonly unary: Operator, public readonly binary: Operator) {
+  }
+}
+
 class Operator extends OperatorFunction {
   constructor(public readonly name: string,
               public readonly precedence: number,
@@ -109,6 +114,15 @@ class Term implements Node {
   }
 }
 
+class Comment implements Node {
+  constructor(private readonly text: string,
+              private readonly decorator: (text: string, value: ResolvedValue) => ResolvedValue) {}
+
+  apply(previous: ResolvedValue) {
+    return this.decorator(this.text, previous);
+  }
+}
+
 export class ShuntingYardParser implements Parser {
   private readonly parser: TokenTree;
   private bracketFn: (value: ResolvedValue) => ResolvedValue = value => value;
@@ -127,6 +141,16 @@ export class ShuntingYardParser implements Parser {
 
   operator(symbol: string, precedence: number, associativity: Associativity, operands: number, fn: OperandFunction<ResolvedValue>) {
     this.parser.add(symbol, _ => new Operator(symbol, precedence, associativity, operands, fn));
+    return this;
+  }
+
+  multiOperator(symbol: string,
+                unaryPrecedence: number, unaryAssociativity: Associativity, unaryFn: OneOperandFunction<ResolvedValue>,
+                binaryPrecedence: number, binaryAssociativity: Associativity, binaryFn: TwoOperandFunction<ResolvedValue>) {
+    this.parser.add(symbol, _ => new MultiOperator(
+        new Operator(symbol, unaryPrecedence, unaryAssociativity, 1, unaryFn),
+        new Operator(symbol, binaryPrecedence, binaryAssociativity, 2, binaryFn)
+    ));
     return this;
   }
 
@@ -169,6 +193,12 @@ export class ShuntingYardParser implements Parser {
     return this;
   }
 
+  comment(prefix: string, suffix: string, decorator: (text: string, value: ResolvedValue) => ResolvedValue = (text, value) => value) {
+    this.parser.add(literal(prefix, suffix),
+        key => new Comment(key.substring(prefix.length, key.length - suffix.length), decorator));
+    return this;
+  }
+
   brackets(mapFn: (value: ResolvedValue) => ResolvedValue) {
     this.bracketFn = mapFn;
     return this;
@@ -181,7 +211,18 @@ export class ShuntingYardParser implements Parser {
 
     const tokens = this.parser.parse(formula);
 
-    for (let token of tokens) {
+    for (let i = 0; i < tokens.length; i++) {
+      let token = tokens[i];
+      let previous = i > 0 ? tokens[i-1] : undefined;
+
+      if (token instanceof MultiOperator) {
+        let operator = token;
+        token = operator.binary;
+        if (!previous || previous instanceof Operator || previous === '(' || previous == ',') {
+          token = operator.unary;
+        }
+      }
+
       if (token instanceof Operator) {
         let operator = token;
         let top = operatorStack.at(-1);
@@ -216,6 +257,11 @@ export class ShuntingYardParser implements Parser {
       }
 
       if (token instanceof Term) {
+        outputBuffer.push(token);
+        continue;
+      }
+
+      if (token instanceof Comment) {
         outputBuffer.push(token);
         continue;
       }
@@ -348,6 +394,12 @@ export class ShuntingYard extends Resolvable {
         while (next instanceof Resolvable) {
           next = next.resolve(context);
         }
+      }
+
+      if (next instanceof Comment) {
+        const previous = stack.pop();
+        stack.push(next.apply(previous as ResolvedValue));
+        continue;
       }
 
       stack.push(next);

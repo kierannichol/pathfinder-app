@@ -1,5 +1,22 @@
 import CharacterAtLevel from "../../core/CharacterAtLevel";
 
+export namespace Weapon {
+
+  export enum Proficiency {
+    Other,
+    Simple,
+    Martial,
+    Exotic
+  }
+
+  export enum Range {
+    None,
+    Melee,
+    Reach,
+    Ranged
+  }
+}
+
 export class WeaponType {
   public readonly name: string;
   public readonly id: string;
@@ -17,7 +34,7 @@ export class WeaponType {
 
   private fixName(name: string): string {
     const parts = name.split(", ");
-    if (parts.length == 1) {
+    if (parts.length === 1) {
       return parts[0];
     }
     return `${parts[1]} ${[parts[0]]}`;
@@ -36,22 +53,5 @@ export class WeaponType {
             || characterAtLevel.has("proficiency:" + this.id);
     }
     return false;
-  }
-}
-
-export namespace Weapon {
-
-  export enum Proficiency {
-    Other,
-    Simple,
-    Martial,
-    Exotic
-  }
-
-  export enum Range {
-    None,
-    Melee,
-    Reach,
-    Ranged
   }
 }

@@ -52,6 +52,9 @@ export function CharacterLevel() {
         .map(choice => choice.current));
 
     return classesSelected.map(classId => {
+      if (!classId) {
+        return "Unknown";
+      }
       const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
       const className = database.name(classId) ?? "Unknown";
       return `${className} ${classLevel}`;
@@ -77,14 +80,13 @@ export function Race() {
 
 export function Size() {
   const characterAtLevel = useCharacterAtLevel();
-  const database = usePathfinderDatabase();
   const text = useMemo(() => {
     const size = characterAtLevel.get("size");
     if (size === undefined) {
       return "Unknown";
     }
     return CreatureSize.fromId(size.asNumber())?.longName ?? "Unknown";
-  }, [characterAtLevel, database]);
+  }, [characterAtLevel]);
 
   return <span>{text}</span>
 }

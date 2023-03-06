@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.node.TextNode;
 import java.io.IOException;
-import pathfinder.model.v4.Description;
+import pathfinder.model.Description;
 
 public class DescriptionJsonDeserializer extends StdDeserializer<Description> {
 

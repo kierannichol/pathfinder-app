@@ -231,6 +231,9 @@ export namespace v4 {
 
             /** SelectChoiceDbo tags */
             tags?: (string[]|null);
+
+            /** SelectChoiceDbo ids */
+            ids?: (string[]|null);
         }
 
         /** Represents a SelectChoiceDbo. */
@@ -244,6 +247,9 @@ export namespace v4 {
 
             /** SelectChoiceDbo tags. */
             public tags: string[];
+
+            /** SelectChoiceDbo ids. */
+            public ids: string[];
 
             /**
              * Creates a new SelectChoiceDbo instance using the specified properties.

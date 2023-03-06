@@ -77,7 +77,7 @@ export function decodeTemplateSection(dbo: TemplateSectionDbo): ComponentTemplat
 function decodeChoice(dbo: ChoiceDbo): ChoiceNode {
   switch (dbo.choice) {
     case "text": return Choice.text(dbo.id, dbo.label, dbo.type, value => [Effect.setValue(dbo.id, value)]);
-    case "select": return Choice.select(dbo.id, dbo.label, dbo.type,db => db.options(dbo.select?.tags ?? []));
+    case "select": return Choice.select(dbo.id, dbo.label, dbo.type,db => db.options(dbo.select?.tags ?? [], dbo.select?.ids ?? []));
     default: throw Error("Unknown choice type " + dbo.choice);
   }
 }

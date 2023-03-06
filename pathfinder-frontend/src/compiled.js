@@ -553,6 +553,7 @@ $root.v4 = (function() {
              * @memberof v4.ChoiceDbo
              * @interface ISelectChoiceDbo
              * @property {Array.<string>|null} [tags] SelectChoiceDbo tags
+             * @property {Array.<string>|null} [ids] SelectChoiceDbo ids
              */
 
             /**
@@ -565,6 +566,7 @@ $root.v4 = (function() {
              */
             function SelectChoiceDbo(properties) {
                 this.tags = [];
+                this.ids = [];
                 if (properties)
                     for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -578,6 +580,14 @@ $root.v4 = (function() {
              * @instance
              */
             SelectChoiceDbo.prototype.tags = $util.emptyArray;
+
+            /**
+             * SelectChoiceDbo ids.
+             * @member {Array.<string>} ids
+             * @memberof v4.ChoiceDbo.SelectChoiceDbo
+             * @instance
+             */
+            SelectChoiceDbo.prototype.ids = $util.emptyArray;
 
             /**
              * Creates a new SelectChoiceDbo instance using the specified properties.
@@ -606,6 +616,9 @@ $root.v4 = (function() {
                 if (message.tags != null && message.tags.length)
                     for (var i = 0; i < message.tags.length; ++i)
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.tags[i]);
+                if (message.ids != null && message.ids.length)
+                    for (var i = 0; i < message.ids.length; ++i)
+                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.ids[i]);
                 return writer;
             };
 
@@ -644,6 +657,12 @@ $root.v4 = (function() {
                             if (!(message.tags && message.tags.length))
                                 message.tags = [];
                             message.tags.push(reader.string());
+                            break;
+                        }
+                    case 2: {
+                            if (!(message.ids && message.ids.length))
+                                message.ids = [];
+                            message.ids.push(reader.string());
                             break;
                         }
                     default:
@@ -688,6 +707,13 @@ $root.v4 = (function() {
                         if (!$util.isString(message.tags[i]))
                             return "tags: string[] expected";
                 }
+                if (message.ids != null && message.hasOwnProperty("ids")) {
+                    if (!Array.isArray(message.ids))
+                        return "ids: array expected";
+                    for (var i = 0; i < message.ids.length; ++i)
+                        if (!$util.isString(message.ids[i]))
+                            return "ids: string[] expected";
+                }
                 return null;
             };
 
@@ -710,6 +736,13 @@ $root.v4 = (function() {
                     for (var i = 0; i < object.tags.length; ++i)
                         message.tags[i] = String(object.tags[i]);
                 }
+                if (object.ids) {
+                    if (!Array.isArray(object.ids))
+                        throw TypeError(".v4.ChoiceDbo.SelectChoiceDbo.ids: array expected");
+                    message.ids = [];
+                    for (var i = 0; i < object.ids.length; ++i)
+                        message.ids[i] = String(object.ids[i]);
+                }
                 return message;
             };
 
@@ -726,12 +759,19 @@ $root.v4 = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.arrays || options.defaults)
+                if (options.arrays || options.defaults) {
                     object.tags = [];
+                    object.ids = [];
+                }
                 if (message.tags && message.tags.length) {
                     object.tags = [];
                     for (var j = 0; j < message.tags.length; ++j)
                         object.tags[j] = message.tags[j];
+                }
+                if (message.ids && message.ids.length) {
+                    object.ids = [];
+                    for (var j = 0; j < message.ids.length; ++j)
+                        object.ids[j] = message.ids[j];
                 }
                 return object;
             };

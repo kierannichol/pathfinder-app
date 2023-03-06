@@ -7,6 +7,7 @@ export function useOnScreen(ref: RefObject<HTMLDivElement|undefined>, rootMargin
     if (ref === undefined) {
       return;
     }
+    let current: Element|undefined = undefined;
     const observer = new IntersectionObserver(
         ([entry]) => {
           // Update our state when observer callback fires
@@ -17,12 +18,13 @@ export function useOnScreen(ref: RefObject<HTMLDivElement|undefined>, rootMargin
         }
     );
     if (ref.current) {
-      observer.observe(ref.current);
+      current = ref.current;
+      observer.observe(current);
     }
     return () => {
-      ref.current && observer.unobserve(ref.current);
+      current && observer.unobserve(current);
     };
-  }, [ref]);
+  }, [ref, rootMargin]);
   return isIntersecting;
 }
 
@@ -48,4 +50,11 @@ export function useAsyncMemo<T>(promiseFn: () => Promise<T|undefined>, deps?: De
     }
   }, deps);
   return [ result, error ];
+}
+
+function scrollToElement(elementRef: RefObject<HTMLDivElement>) {
+  elementRef.current?.scrollIntoView({
+    block: "start",
+    inline: "nearest"
+  });
 }

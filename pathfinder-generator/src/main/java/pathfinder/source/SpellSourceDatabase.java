@@ -2,7 +2,7 @@ package pathfinder.source;
 
 import java.io.IOException;
 import java.util.stream.Stream;
-import pathfinder.model.v4.pathfinder.Spell;
+import pathfinder.model.pathfinder.Spell;
 
 public interface SpellSourceDatabase {
 

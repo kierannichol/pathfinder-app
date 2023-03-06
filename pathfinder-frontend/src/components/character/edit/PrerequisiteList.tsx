@@ -27,7 +27,7 @@ export default function PrerequisiteList({ formula, characterAtLevel } : Prerequ
     }
 
     return formatFormula(formula, characterAtLevel, pathfinderDb);
-  }, [formula, characterAtLevel]);
+  }, [formula, characterAtLevel, pathfinderDb]);
 
   return (<div>
     {block}

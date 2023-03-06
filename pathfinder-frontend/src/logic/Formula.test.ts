@@ -17,6 +17,11 @@ test ('with brackets', () => {
   expect(formula.resolve()?.asNumber()).toBe(2);
 })
 
+test ('with comment', () => {
+  let formula = Formula.parse('(4[Four] + 2[Two])')
+  expect(formula.resolve()?.asNumber()).toBe(6);
+})
+
 // test ('err: multiple operators in a row', () => {
 //   let formula = Formula.parse('2 + + 3')
 //   expect(formula.resolve()).toBe(112);
@@ -64,6 +69,24 @@ test ('signed()', () => {
   expect(Formula.parse('signed(-3)').resolve()?.asNumber()).toBe(-3);
 })
 
+test ('negative integers', () => {
+  expect(Formula.parse('-4').resolve()?.asNumber()).toBe(-4);
+  expect(Formula.parse('1-4').resolve()?.asNumber()).toBe(-3);
+  expect(Formula.parse('(1)-4').resolve()?.asNumber()).toBe(-3);
+  expect(Formula.parse('1-(4)').resolve()?.asNumber()).toBe(-3);
+  expect(Formula.parse('(1-4)').resolve()?.asNumber()).toBe(-3);
+})
+
+test ('trailing minus integer', () => {
+  let formula = Formula.parse('(5)-1');
+  expect(formula.resolve()?.asNumber()).toBe(4);
+})
+
+test ('multiply negative integer', () => {
+  let formula = Formula.parse('5*-2');
+  expect(formula.resolve()?.asNumber()).toBe(-10);
+})
+
 test ('simple variable', () => {
   let formula = Formula.parse('@foo');
   let context = DataContext.of({ 'foo': 12 });
@@ -82,6 +105,12 @@ test ('variable references formula', () => {
     'foo': 4,
     'bar': Formula.parse('@foo') });
   expect(formula.resolve(context)?.asNumber()).toBe(4);
+})
+
+test ('chained if formula', () => {
+  let formula = Formula.parse('if(1==1, 1, 0) + if(2<1, -1, 0) + if(1<=2, 1, 0)');
+  let context = DataContext.Empty;
+  expect(formula.resolve(context)?.asNumber()).toBe(2);
 })
 
 test ('if formula', () => {
@@ -155,8 +184,8 @@ test('parse performance test', () => {
   let endTime = getRealSystemTime();
   let total = endTime - startTime;
   let average = total / iterations;
-  console.log(`Total: ${total}ms`);
-  console.log(`Average: ${average}ms`);
+  console.log(`Parse Total: ${total}ms`);
+  console.log(`Parse Average: ${average}ms`);
 })
 
 test('resolve performance test', () => {
@@ -179,6 +208,6 @@ test('resolve performance test', () => {
   let endTime = getRealSystemTime();
   let total = endTime - startTime;
   let average = total / iterations;
-  console.log(`Total: ${total}ms`);
-  console.log(`Average: ${average}ms`);
+  console.log(`Resolve Total: ${total}ms`);
+  console.log(`Resolve Average: ${average}ms`);
 })

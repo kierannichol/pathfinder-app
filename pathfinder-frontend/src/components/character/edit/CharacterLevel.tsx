@@ -29,8 +29,8 @@ export default function CharacterLevel({ character, level, onChange }: Character
         : characterAtLevel;
   }, [characterAtLevel, character]);
 
-  const choicesForLevel = useMemo(() => characterChanges && characterChanges.choices
-      .filter(choice => choice.type !== 'skill') || [],
+  const choicesForLevel = useMemo(() => (characterChanges && characterChanges.choices
+      .filter(choice => choice.type !== 'skill')) || [],
       [characterChanges]);
 
   const featIds = useMemo(() => characterChanges?.find('feat:*').map(a => a.id), [characterChanges]);
@@ -52,14 +52,13 @@ export default function CharacterLevel({ character, level, onChange }: Character
     <div className='section'>
       {characterAtLevel.has('bab') && <LevelStatsDisplay characterAtLevel={characterAtLevel} />}
       <SkillEditorButton
-          character={character}
           characterAtLevel={characterAtLevel}
           onChange={onChange}/>
 
       {choicesForLevel.length > 0 && <div>
         <label>Choices</label>
       {choicesForLevel
-          .sort((a, b) => (typeof b).localeCompare(typeof a))
+          .sort((a, b) => a.type.localeCompare(b.type))
           .map(choice =>
           <div key={choice.key}>
             <label className={"label--option-type"}>{choice.label}</label>

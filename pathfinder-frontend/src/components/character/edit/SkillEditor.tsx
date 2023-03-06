@@ -1,6 +1,5 @@
 import {useMemo} from "react";
 import * as Icon from "react-bootstrap-icons";
-import Character from "../../../core/Character";
 import CharacterAtLevel from "../../../core/CharacterAtLevel";
 import {ChoiceNode} from "../../../core/Choice";
 import Skills from "../../../database/Skills";
@@ -8,15 +7,14 @@ import NumberSelect from "../../common/NumberSelect";
 import "./SkillEditor.scss";
 
 interface SkillEditorProps {
-  character: Character;
   characterAtLevel: CharacterAtLevel;
   onChange: (choiceId: string, skillId: string) => void;
 }
 
-export function SkillEditor({ character, characterAtLevel, onChange }: SkillEditorProps) {
+export function SkillEditor({characterAtLevel, onChange }: SkillEditorProps) {
   const skillChoices = useMemo(() => {
     return characterAtLevel.choicesOfType("skill");
-  }, [character]);
+  }, [characterAtLevel]);
 
   return <div className="skill-editor">
     {Skills.all.map(skill => <SkillRow

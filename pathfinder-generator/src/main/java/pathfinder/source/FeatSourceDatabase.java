@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 import pathfinder.model.Id;
-import pathfinder.model.v4.pathfinder.Feat;
+import pathfinder.model.pathfinder.Feat;
 import pathfinder.util.NameUtils;
 
 public interface FeatSourceDatabase {

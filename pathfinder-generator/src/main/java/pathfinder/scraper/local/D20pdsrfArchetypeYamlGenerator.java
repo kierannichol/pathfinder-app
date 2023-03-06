@@ -16,10 +16,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Component;
 import pathfinder.model.Id;
-import pathfinder.model.v4.pathfinder.Archetype;
-import pathfinder.source.scraper.d20pfsrd.AbstractD20pfsrdScraper;
-import pathfinder.source.scraper.d20pfsrd.D20pdsrdArchetypePageScraper;
-import pathfinder.source.v4.ClassSourceDatabase;
+import pathfinder.model.pathfinder.Archetype;
+import pathfinder.scraper.remote.d20pfsrd.AbstractD20pfsrdScraper;
+import pathfinder.scraper.remote.d20pfsrd.D20pdsrdArchetypePageScraper;
+import pathfinder.source.local.ClassSourceDatabase;
 
 @Component
 @RequiredArgsConstructor

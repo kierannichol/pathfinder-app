@@ -61,10 +61,6 @@ export default class Character {
         this.resolvedTemplate.choicesFor(mutator));
   }
 
-  public async unpack(packed: PackedChoices): Promise<Character> {
-    return this.selectAll(packed);
-  }
-
   public pack(): PackedCharacter {
     return {id: this.id, choices: this.selections};
   }

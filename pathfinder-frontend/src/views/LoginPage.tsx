@@ -21,7 +21,7 @@ export default function LoginPage() {
     if (firebaseUser()) {
       navigate("/", {replace: true});
     }
-  }, []);
+  }, [navigate]);
 
   async function handleLogin(loginFn: Promise<void>, errorFn: (message: ReactNode) => void) {
     try {

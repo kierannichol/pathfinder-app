@@ -32,6 +32,7 @@ public enum AttributeType {
     UNCHAINED_KI_POWER("unchained_ki_power"),
     UNCHAINED_ROGUE_TALENT("unchained_rogue_talent"),
     SORCERER_BLOODLINE("sorcerer_bloodline"),
+    BLOODRAGER_BLOODLINE("bloodrager_bloodline"),
 
     SPELL("spell"),
     ;

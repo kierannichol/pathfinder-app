@@ -5,9 +5,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import pathfinder.NotCached;
-import pathfinder.model.Sources;
-import pathfinder.model.v4.pathfinder.Feature;
-import pathfinder.source.excel.ExcelRagePowerSourceDatabase;
+import pathfinder.model.pathfinder.Feature;
+import pathfinder.model.pathfinder.Sources;
+import pathfinder.scraper.remote.excel.ExcelRagePowerSourceDatabase;
 
 @Service("Rage Power YAML Generator")
 @Slf4j

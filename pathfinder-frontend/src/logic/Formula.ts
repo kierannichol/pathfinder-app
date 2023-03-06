@@ -6,11 +6,13 @@ import {Associativity, ShuntingYard} from "./ShuntingYard";
 export class Formula extends Resolvable {
 
   private static Parser = ShuntingYard.parser()
+    .multiOperator('-',
+        4, Associativity.Left,(a: ResolvedValue) => ResolvedValue.of(-a.asNumber()),
+        2, Associativity.Left,(a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() - b.asNumber()))
     .operator('^', 4, Associativity.Right, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(Math.pow(a.asNumber(), b.asNumber())))
     .operator('*', 3, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() * b.asNumber()))
     .operator('/', 3, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() / b.asNumber()))
     .operator('+', 2, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asNumber() + b.asNumber()))
-    .operator('-', 2, Associativity.Left, 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of((a?.asNumber() ?? 0) - b.asNumber()))
     .operator('!', 2, Associativity.Left, 1, (a:ResolvedValue) => ResolvedValue.of(!a.asBoolean()))
     .operator('<', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => ResolvedValue.of(a.asNumber() < b.asNumber()))
     .operator('<=', 3, Associativity.Left, 2, (a:ResolvedValue, b:ResolvedValue) => ResolvedValue.of(a.asNumber() <= b.asNumber()))
@@ -36,7 +38,9 @@ export class Formula extends Resolvable {
     .variable('@', '', (state, key) => state.get(key))
     .variable('min(@', ')', (state, key) => Formula.noneIfEmpty(state.find(key)).reduce((a, b) => a.asNumber() < b.asNumber() ? a : b))
     .variable('max(@', ')', (state, key) => Formula.noneIfEmpty(state.find(key)).reduce((a, b) => a.asNumber() > b.asNumber() ? a : b))
-    .variable('sum(@', ')', (state, key) => state.find(key).reduce((a, b) => ResolvedValue.of(a.asNumber() + b.asNumber()), ResolvedValue.none()));
+    .variable('sum(@', ')', (state, key) => state.find(key).reduce((a, b) => ResolvedValue.of(a.asNumber() + b.asNumber()), ResolvedValue.none()))
+    .comment('[', ']')
+  ;
 
   static parse(formula: string|Resolvable): Formula {
     if (formula instanceof Formula) {

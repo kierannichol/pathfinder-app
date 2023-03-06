@@ -9,7 +9,7 @@ interface PathfinderButtonProps extends React.DetailedHTMLProps<React.HTMLAttrib
 }
 
 function PathfinderButton({ variant = 'default', className, disabled = false, ...divProps }: PathfinderButtonProps) {
-  const buttonClassNames = [ styles.button, className ];
+  const buttonClassNames = [ styles.button, variants.default, className ];
   if (variant && !disabled) {
     buttonClassNames.push(variants[variant]);
   }

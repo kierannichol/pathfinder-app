@@ -1,4 +1,4 @@
-import {createContext, useContext, useMemo, useState} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 import LoadingBlock from "../components/common/LoadingBlock";
 import CharacterRepository from "../core/CharacterRepository";
 import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v4/PathfinderDatabase";
@@ -20,14 +20,20 @@ export function withGlobalCharacterRepository(): Promise<CharacterRepository> {
 }
 
 export function CharacterRepositoryContextProvider({ children }: any) {
-  const [ modified, setModified ] = useState({})
   const pathfinderDatabase = usePathfinderDatabase();
-  const repository = useMemo(() => {
-    const repository = new CharacterRepository(pathfinderDatabase);
-    repository.onCharacterListChanged(() => setModified({}))
-    return repository
-      },
-      [pathfinderDatabase, modified]);
+
+  const [ repository, setRepository ] = useState<CharacterRepository>();
+
+  useEffect(() => {
+    setRepository(new CharacterRepository(pathfinderDatabase));
+  }, [pathfinderDatabase])
+
+  // const repository = useMemo(() => {
+  //   const repository = new CharacterRepository(pathfinderDatabase);
+  //   repository.onCharacterListChanged(() => setModified({}))
+  //   return repository
+  //     },
+  //     [pathfinderDatabase, modified]);
 
   if (!repository) {
     return <LoadingBlock />

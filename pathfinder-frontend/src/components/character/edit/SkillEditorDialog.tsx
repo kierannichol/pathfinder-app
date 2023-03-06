@@ -8,10 +8,10 @@ interface SkillEditorDialogProps extends ComponentProps<typeof SkillEditor> {
   onCancel?: () => void;
 }
 
-export default function SkillEditorDialog({ show, onCancel, character, characterAtLevel, ...skillEditorProps }: SkillEditorDialogProps) {
+export default function SkillEditorDialog({ show, onCancel, characterAtLevel, ...skillEditorProps }: SkillEditorDialogProps) {
   const skillChoices = useMemo(() => {
     return characterAtLevel.choicesOfType("skill")
-  }, [character]);
+  }, [characterAtLevel]);
 
   const pointsRemaining = useMemo(() => {
     return skillChoices.filter(choice => choice.current === '').length;
@@ -39,7 +39,6 @@ export default function SkillEditorDialog({ show, onCancel, character, character
 
     <Modal.Body>
       <SkillEditor
-          character={character}
           characterAtLevel={characterAtLevel}
           {...skillEditorProps} />
     </Modal.Body>

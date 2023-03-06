@@ -15,6 +15,7 @@ public class YamlConfiguration {
         return new ObjectMapper(new YAMLFactory()
                 .disable(com.fasterxml.jackson.dataformat.yaml.YAMLGenerator.Feature.WRITE_DOC_START_MARKER))
                 .setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE)
+                .findAndRegisterModules()
                 .registerModule(new PathfinderJsonModule());
     }
 

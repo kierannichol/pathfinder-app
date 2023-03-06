@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import pathfinder.model.v4.Description;
+import pathfinder.model.Description;
 
 public class DescriptionJsonSerializer extends StdSerializer<Description> {
 
@@ -15,6 +15,11 @@ public class DescriptionJsonSerializer extends StdSerializer<Description> {
 
     @Override
     public void serialize(Description value, JsonGenerator gen, SerializerProvider provider) throws IOException {
+        if (value.sections().isEmpty()) {
+            gen.writeString(value.text());
+            return;
+        }
+
         gen.writeStartObject();
         gen.writeFieldName("text");
         gen.writeString(value.text());

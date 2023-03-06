@@ -17,7 +17,8 @@ export const InitialState: CharacterState = {
 
   'ac': '{10 + @ac:armor + @ac:shield + @dex_mod + @ac:size + @ac:natural + @ac:deflection + @ac:misc}',
   'ac:touch': '{10 + @dex_mod + @ac:misc}',
-  'ac:size': '{2^abs(5-@size)-1}',
+  // 'ac:size': '{2^abs(5-@size)-1}',
+  'ac:size': '{(2^abs(5-@size))-1}',
   'ac:flat': '{@ac - @dex_mod}',
 
   'cmb': '{@bab + @str_mod + @size_mod}',
@@ -27,8 +28,11 @@ export const InitialState: CharacterState = {
     ...state,
     [`${ability}:base`]: 10,
     [`${ability}_score`]: `{sum(@${ability}:*)}`,
-    [`${ability}_mod`]: `{floor(@${ability}_score / 2) - 5}`
-  }), {})
+    [`${ability}_mod`]: `{floor(@${ability}_score / 2) - 5}`,
+    [`ability_point_cost:${ability}`]: `{if(@${ability}:base==7,-4,0) + if(@${ability}:base==8,-2,0) + if(@${ability}:base==9,-1,0) + if(@${ability}:base==10,0,0) + if(@${ability}:base==11,1,0) + if(@${ability}:base==12,2,0) + if(@${ability}:base==13,3,0) + if(@${ability}:base==14,5,0) + if(@${ability}:base==15,7,0) + if(@${ability}:base==16,10,0) + if(@${ability}:base==17,13,0) + if(@${ability}:base==18,17,0)}`
+  }), {}),
+
+  'ability_point_cost': '{sum(@ability_point_cost:*)}'
 };
 
 export const InitialChoices = [
@@ -47,7 +51,7 @@ export const BasePlayerTemplate = new Template('base', [
     .map(level => {
       // Level-specific choices
       const choices = [ Choice.select(`level${level}:class`, "Class", "class",db => db.options(['class'])) ];
-      if ((level % 2) == 1) {
+      if ((level % 2) === 1) {
         choices.push(Choice.select(`level${level}:feat`, "Feat", "feat", (db, category) => {
           const tags = ['feat'];
           if (category) {
