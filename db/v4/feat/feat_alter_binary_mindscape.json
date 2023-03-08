@@ -1,0 +1,18 @@
+{
+  "id": "feat:alter_binary_mindscape",
+  "name": "Alter Binary Mindscape",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @spell:instigate_psychic_duel)",
+  "description": {
+    "text": "You can shift and change a binary mindscape to your advantage during a psychic duel.",
+    "sections": {
+      "Benefit": "When you cast instigate psychic duel and create a binary mindscape, the arena you create puts your enemy at a disadvantage. Your opponent must spend 1 more manifestation point than normal when creating any defensive manifestations."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:alter_binary_mindscape",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

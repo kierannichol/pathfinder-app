@@ -1,0 +1,18 @@
+{
+  "id": "feat:agile_maiden",
+  "name": "Agile Maiden",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @dex_score \u003e\u003d 13, all((@feat:endurance OR @ability:armor_training#fighter), @proficiency:@proficiency:heavy_armor))",
+  "description": {
+    "text": "Your armor hinders you less than others.",
+    "sections": {
+      "Benefit": "For the purpose of class features (such as a ranger\u0027s combat style, a barbarian\u0027s fast movement, or a magus\u0027s spellcasting), you treat Gray Maiden plate as medium armor or heavy armor, whichever is more beneficial to a given ability. This does not affect the armor\u0027s statistics, and it is still considered heavy armor for all other purposes."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:agile_maiden",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

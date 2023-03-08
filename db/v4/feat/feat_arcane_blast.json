@@ -2,7 +2,7 @@
   "id": "feat:arcane_blast",
   "name": "Arcane Blast",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@ability:arcane_spellcaster, @caster_level \u003e\u003d 10)",
+  "prerequisiteFormula": "all(max(@spells_per_day:arcane#*)[Arcane spellcaster], @caster_level \u003e\u003d 10)",
   "description": {
     "text": "You can convert any spell into an attack.",
     "sections": {

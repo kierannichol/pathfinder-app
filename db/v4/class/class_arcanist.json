@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:arcanist\u003e\u003d1",
       "effects": [{
-        "targetKey": "trained:skill:appraise",
+        "targetKey": "trained:skill:fly",
         "setAction": {
           "numberValue": 1
         }
@@ -26,22 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:fly",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:knowledge",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:linguistics",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:profession",
+        "targetKey": "trained:skill:use_magic_device",
         "setAction": {
           "numberValue": 1
         }
@@ -51,7 +36,22 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:use_magic_device",
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:appraise",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:linguistics",
         "setAction": {
           "numberValue": 1
         }
@@ -94,6 +94,11 @@
         "targetKey": "ability:consume_spells#arcanist",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -138,6 +143,11 @@
         "setAction": {
           "numberValue": 3
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist2:skill_rank:1",
@@ -179,6 +189,11 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
       }],
       "choices": [{
         "id": "arcanist3:skill_rank:1",
@@ -214,6 +229,16 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -256,6 +281,16 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist5:skill_rank:1",
@@ -291,6 +326,21 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -333,6 +383,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist7:skill_rank:1",
@@ -368,6 +433,26 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 6
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -410,6 +495,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist9:skill_rank:1",
@@ -445,6 +550,31 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 7
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -492,6 +622,31 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist11:skill_rank:1",
@@ -527,6 +682,36 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 8
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -569,6 +754,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist13:skill_rank:1",
@@ -604,6 +819,41 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 9
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -646,6 +896,41 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist15:skill_rank:1",
@@ -681,6 +966,46 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 10
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -723,6 +1048,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist17:skill_rank:1",
@@ -758,6 +1123,51 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 11
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -800,6 +1210,51 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "arcanist19:skill_rank:1",
@@ -840,6 +1295,51 @@
         "targetKey": "ability:magical_supremacy#arcanist",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 4
         }
       }],
       "choices": [{

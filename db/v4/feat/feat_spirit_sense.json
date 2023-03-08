@@ -1,0 +1,19 @@
+{
+  "id": "feat:spirit_sense",
+  "name": "Spirit Sense",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "any(@feat:psychic_sensitivity, @spellbook:psychic)",
+  "description": {
+    "text": "You sense the presence of the unseen.",
+    "sections": {
+      "Benefit": "You gain a +5 bonus on checks to notice haunts.",
+      "Normal": "Corporeal spells and effects that don\u0027t deal damage have only a 50% chance of affecting an incorporeal creature."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:spirit_sense",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:improved_flexible_wizardry",
+  "name": "Improved Flexible Wizardry",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@feat:flexible_wizardry, @feat:spell_mastery, @class:wizard \u003e\u003d 8)",
+  "description": {
+    "text": "You possess an impressive flexibility with casting that other wizards lack.",
+    "sections": {
+      "Benefit": "When you use Flexible Wizardry, you can flexibly prepare a number of spell slots equal to your Intelligence modifier + 4. Furthermore, you can finalize one of these slots with a standard action instead of a full-round action."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_flexible_wizardry",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

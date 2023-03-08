@@ -2,7 +2,7 @@
   "id": "feat:raging_throw",
   "name": "Raging Throw",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @con_score \u003e\u003d 13, @spell:rage, @feat:improved_bull_rush, @feat:power_attack, @bab \u003e\u003d 6)",
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @con_score \u003e\u003d 13, any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature], @feat:improved_bull_rush, @feat:power_attack, @bab \u003e\u003d 6)",
   "description": {
     "text": "You expend some of your rage to throw one opponent at another.",
     "sections": {

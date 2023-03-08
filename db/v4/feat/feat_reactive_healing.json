@@ -1,0 +1,18 @@
+{
+  "id": "feat:reactive_healing",
+  "name": "Reactive Healing",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(any(@feat:quick_channel, @feat:quicken_spell), (@ability:channel_energy#warpriest OR @ability:lay_on_hands#paladin))",
+  "description": {
+    "text": "You can channel healing energy in response to an attack that would knock you unconscious.",
+    "sections": {
+      "Benefit": "When the damage from an attack or an effect would reduce you to 0 or fewer hit points, you can expend one use of channel energy (of a form that would heal you) or lay on hands as an immediate action to heal yourself. The healing affects only you, even if it would normally affect others."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:reactive_healing",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

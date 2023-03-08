@@ -16,22 +16,7 @@
     "sections": [{
       "condition": "@class:unchained_monk\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:nunchaku",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:dagger",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:javelin",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:sling",
+        "targetKey": "proficiency:sai",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +26,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handaxe",
+        "targetKey": "proficiency:spear",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:club",
+        "targetKey": "proficiency:siangham",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -56,7 +46,27 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sai",
+        "targetKey": "proficiency:nunchaku",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:club",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:handaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:javelin",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -66,7 +76,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:quarterstaff",
+        "targetKey": "proficiency:dagger",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +91,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:siangham",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:spear",
+        "targetKey": "trained:skill:swim",
         "setAction": {
           "numberValue": 1
         }
@@ -96,7 +101,22 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:ride",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perception",
         "setAction": {
           "numberValue": 1
         }
@@ -116,32 +136,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:knowledge",
+        "targetKey": "trained:skill:stealth",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "trained:skill:knowledge",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:perception",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:perform",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:profession",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:ride",
         "setAction": {
           "numberValue": 1
         }
@@ -151,12 +151,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:stealth",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:swim",
+        "targetKey": "trained:skill:perform",
         "setAction": {
           "numberValue": 1
         }
@@ -199,6 +194,21 @@
         "targetKey": "ability:unarmed_strike#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 0
         }
       }],
       "choices": [{
@@ -265,6 +275,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 0
+        }
       }],
       "choices": [{
         "id": "unchained_monk2:skill_rank:1",
@@ -328,6 +353,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 10
+        }
       }],
       "choices": [{
         "id": "unchained_monk3:skill_rank:1",
@@ -385,6 +425,21 @@
         "targetKey": "ability:still_mind#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 10
         }
       }],
       "choices": [{
@@ -444,6 +499,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 10
+        }
       }],
       "choices": [{
         "id": "unchained_monk5:skill_rank:1",
@@ -502,6 +572,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 20
+        }
       }],
       "choices": [{
         "id": "unchained_monk6:skill_rank:1",
@@ -555,6 +640,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 20
+        }
       }],
       "choices": [{
         "id": "unchained_monk7:skill_rank:1",
@@ -607,6 +707,21 @@
         "targetKey": "ability:ki_power#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 20
         }
       }],
       "choices": [{
@@ -665,6 +780,21 @@
         "targetKey": "ability:style_strike#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 30
         }
       }],
       "choices": [{
@@ -729,6 +859,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 30
+        }
       }],
       "choices": [{
         "id": "unchained_monk10:skill_rank:1",
@@ -782,6 +927,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 30
+        }
       }],
       "choices": [{
         "id": "unchained_monk11:skill_rank:1",
@@ -834,6 +994,21 @@
         "targetKey": "ability:ki_power#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 40
         }
       }],
       "choices": [{
@@ -893,6 +1068,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 40
+        }
       }],
       "choices": [{
         "id": "unchained_monk13:skill_rank:1",
@@ -951,6 +1141,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 40
+        }
       }],
       "choices": [{
         "id": "unchained_monk14:skill_rank:1",
@@ -1003,6 +1208,21 @@
         "targetKey": "ability:style_strike#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 50
         }
       }],
       "choices": [{
@@ -1062,6 +1282,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 50
+        }
       }],
       "choices": [{
         "id": "unchained_monk16:skill_rank:1",
@@ -1119,6 +1354,21 @@
         "targetKey": "ability:timeless_body#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 50
         }
       }],
       "choices": [{
@@ -1178,6 +1428,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 60
+        }
       }],
       "choices": [{
         "id": "unchained_monk18:skill_rank:1",
@@ -1230,6 +1495,21 @@
         "targetKey": "ability:flawless_mind#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 60
         }
       }],
       "choices": [{
@@ -1288,6 +1568,21 @@
         "targetKey": "ability:perfect_self#unchained_monk",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 60
         }
       }],
       "choices": [{

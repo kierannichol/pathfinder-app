@@ -1,0 +1,20 @@
+{
+  "id": "feat:perfect_style",
+  "name": "Perfect Style",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "any(@wis_score \u003e\u003d 13, @bab \u003e\u003d 5, @class:monk \u003e\u003d 5)",
+  "description": {
+    "text": "You have an innate connection to a house of combat, and it\u0027s associated element.",
+    "sections": {
+      "Benefit": "When you take this feat, choose one of the following houses of combat styles; once this decision has been made it cannot be changed. While using this style, you gain a type of energy resistance based on the house you have chosen.",
+      "Note": "Note If using the optional Stamina Pool rules, the following trick may be used with this feat.",
+      "Special": "You may select Perfect Style multiple times. Each time you do so, you must select a different house to belong to."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:perfect_style",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

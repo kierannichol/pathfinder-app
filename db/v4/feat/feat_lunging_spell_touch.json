@@ -1,0 +1,18 @@
+{
+  "id": "feat:lunging_spell_touch",
+  "name": "Lunging Spell Touch",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@skill:spellcraft \u003e\u003d 6",
+  "description": {
+    "text": "You can extend your reach to touch foes that would normally be too far away.",
+    "sections": {
+      "Benefit": "You can increase the reach of your spells\u0027 melee touch attacks by 5 feet until the end of your turn by taking a –2 penalty to your AC until your next turn. You must decide to use this ability before you attempt any attacks on your turn."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:lunging_spell_touch",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -16,12 +16,7 @@
     "sections": [{
       "condition": "@class:druid\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:sickle",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
+        "targetKey": "proficiency:scimitar",
         "setAction": {
           "numberValue": 1
         }
@@ -31,12 +26,27 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:scimitar",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:scythe",
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:club",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sickle",
         "setAction": {
           "numberValue": 1
         }
@@ -51,22 +61,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:spear",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:heavy_shield",
+        "targetKey": "proficiency:scythe",
         "setAction": {
           "numberValue": 1
         }
@@ -81,22 +76,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:climb",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:craft",
+        "targetKey": "proficiency:heavy_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -106,42 +96,22 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:handle_animal",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:heal",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:knowledge",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:knowledge",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "trained:skill:perception",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:profession",
+        "targetKey": "trained:skill:craft",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:ride",
+        "targetKey": "trained:skill:handle_animal",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:spellcraft",
+        "targetKey": "trained:skill:swim",
         "setAction": {
           "numberValue": 1
         }
@@ -151,7 +121,32 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:swim",
+        "targetKey": "trained:skill:spellcraft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:ride",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:heal",
         "setAction": {
           "numberValue": 1
         }
@@ -194,6 +189,26 @@
         "targetKey": "ability:wild_empathy#druid",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -255,6 +270,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid2:skill_rank:1",
@@ -307,6 +342,36 @@
         "targetKey": "ability:trackless_step#druid",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -366,6 +431,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid4:skill_rank:1",
@@ -413,6 +508,46 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -467,6 +602,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid6:skill_rank:1",
@@ -514,6 +689,56 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -568,6 +793,56 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid8:skill_rank:1",
@@ -620,6 +895,66 @@
         "targetKey": "ability:venom_immunity#druid",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -674,6 +1009,66 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid10:skill_rank:1",
@@ -721,6 +1116,76 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 7
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -775,6 +1240,76 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid12:skill_rank:1",
@@ -827,6 +1362,86 @@
         "targetKey": "ability:a_thousand_faces#druid",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -881,6 +1496,86 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid14:skill_rank:1",
@@ -933,6 +1628,96 @@
         "targetKey": "ability:timeless_body#druid",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#9",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -987,6 +1772,96 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#9",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid16:skill_rank:1",
@@ -1034,6 +1909,106 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 10
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#9",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#10",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#10",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -1088,6 +2063,106 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#9",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#10",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#10",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "druid18:skill_rank:1",
@@ -1135,6 +2210,106 @@
         "targetKey": "will:base",
         "setAction": {
           "numberValue": 11
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#9",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#10",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#10",
+        "setAction": {
+          "numberValue": 3
         }
       }],
       "choices": [{
@@ -1188,6 +2363,106 @@
         "targetKey": "ability:wild_shape#druid",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#8",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#9",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#9",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#10",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#10",
+        "setAction": {
+          "numberValue": 4
         }
       }],
       "choices": [{

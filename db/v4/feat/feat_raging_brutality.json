@@ -2,7 +2,7 @@
   "id": "feat:raging_brutality",
   "name": "Raging Brutality",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @spell:rage, @feat:power_attack, @bab \u003e\u003d 12)",
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature], @feat:power_attack, @bab \u003e\u003d 12)",
   "description": {
     "text": "You expend some of your rage to strike your opponents with a more powerful weapon blow.",
     "sections": {

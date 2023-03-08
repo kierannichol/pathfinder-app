@@ -1,12 +1,11 @@
 {
   "id": "feat:elusive_redirection",
   "name": "Elusive Redirection",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@ability:elusive_target#monk_flowing_monk, @feat:combat_expertise, @feat:improved_unarmed_strike, @class:monk#flowing)",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@ability:elusive_target, @feat:combat_expertise, @feat:improved_unarmed_strike, @class:monk#flowing_monk AND @class:monk \u003e\u003d 12)",
   "description": {
-    "text": "You can redirect an attack back at your assailant or into an adjacent enemy.",
     "sections": {
-      "Benefit": "When you successfully use your elusive target class feature to avoid taking damage, you can spend an immediate action and an additional point from your ki pool to redirect that attack back at your attacker or toward any other opponent adjacent to you and your attacker. This attack uses the same attack roll as the original attack, but it targets the opponent you choose."
+      "Benefit": "Benefit"
     }
   },
   "effects": [{

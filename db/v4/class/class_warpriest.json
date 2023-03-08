@@ -16,12 +16,12 @@
     "sections": [{
       "condition": "@class:warpriest\u003e\u003d1",
       "effects": [{
-        "targetKey": "trained:skill:climb",
+        "targetKey": "trained:skill:handle_animal",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:craft",
+        "targetKey": "trained:skill:swim",
         "setAction": {
           "numberValue": 1
         }
@@ -31,12 +31,37 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:handle_animal",
+        "targetKey": "trained:skill:spellcraft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:ride",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "trained:skill:heal",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:craft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:survival",
         "setAction": {
           "numberValue": 1
         }
@@ -51,37 +76,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:knowledge",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:profession",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:ride",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "trained:skill:sense_motive",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:spellcraft",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:survival",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:swim",
         "setAction": {
           "numberValue": 1
         }
@@ -124,6 +119,21 @@
         "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -173,6 +183,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "warpriest2:skill_rank:1",
@@ -213,6 +238,21 @@
         "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
         }
       }],
       "choices": [{
@@ -260,6 +300,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "warpriest4:skill_rank:1",
@@ -300,6 +360,26 @@
         "targetKey": "ability:fervor#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -342,6 +422,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "warpriest6:skill_rank:1",
@@ -382,6 +482,31 @@
         "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -429,6 +554,31 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "warpriest8:skill_rank:1",
@@ -469,6 +619,31 @@
         "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
         }
       }],
       "choices": [{
@@ -511,6 +686,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "warpriest10:skill_rank:1",
@@ -551,6 +756,36 @@
         "targetKey": "ability:fervor#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -598,6 +833,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "warpriest12:skill_rank:1",
@@ -638,6 +903,41 @@
         "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -680,6 +980,41 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "warpriest14:skill_rank:1",
@@ -720,6 +1055,41 @@
         "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 3
         }
       }],
       "choices": [{
@@ -767,6 +1137,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "warpriest16:skill_rank:1",
@@ -807,6 +1217,46 @@
         "targetKey": "ability:fervor#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -849,6 +1299,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "warpriest18:skill_rank:1",
@@ -889,6 +1379,46 @@
         "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 4
         }
       }],
       "choices": [{
@@ -940,6 +1470,46 @@
         "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#7",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#8",
+        "setAction": {
+          "numberValue": 5
         }
       }],
       "choices": [{

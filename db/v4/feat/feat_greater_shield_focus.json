@@ -2,9 +2,8 @@
   "id": "feat:greater_shield_focus",
   "name": "Greater Shield Focus",
   "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@feat:shield_focus, @feat:shield_proficiency, @class:fighter \u003e\u003d 8)",
+  "prerequisiteFormula": "all(@feat:shield_focus, @feat:shield_proficiency, @bab \u003e\u003d 1, @class:fighter \u003e\u003d 8)",
   "description": {
-    "text": "You are skilled at def lecting blows with your shield.",
     "sections": {
       "Benefit": "Increase the AC bonus granted by any shield you are using by 1. This bonus stacks with the bonus granted by Shield Focus."
     }

@@ -1,12 +1,11 @@
 {
   "id": "feat:spider_step",
   "name": "Spider Step",
-  "tags": ["feat", "general", "racial"],
-  "prerequisiteFormula": "all(@character_level \u003e\u003d 3, @race:drow)",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@skill:acrobatics \u003e\u003d 6, @skill:climb \u003e\u003d 6, @class:monk \u003e\u003d 6)",
   "description": {
-    "text": "You tread where only arachnids dare.",
     "sections": {
-      "Benefit": "You can cast spider climb once per day as a spell-like ability, using your character level as the caster level. Furthermore, you gain a +4 bonus on saving throws against the web special attacks of spiders and the effects of web and other similar spells (such as the web cloud spell)."
+      "Benefit": "As a move action, you can move up to half your slow fall distance (maximum 50 feet) across a wall or ceiling or across ropes, branches, or even water or other surfaces that cannot support your weight. You must reach a solid, level surface by the end of your turn or you will fall."
     }
   },
   "effects": [{

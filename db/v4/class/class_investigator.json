@@ -16,17 +16,12 @@
     "sections": [{
       "condition": "@class:investigator\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:sword_cane",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:shortbow",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:rapier",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sword_cane",
         "setAction": {
           "numberValue": 1
         }
@@ -36,12 +31,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:short_sword",
+        "targetKey": "proficiency:hand_crossbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:hand_crossbow",
+        "targetKey": "proficiency:shortbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:short_sword",
         "setAction": {
           "numberValue": 1
         }
@@ -51,27 +51,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:acrobatics",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:appraise",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:bluff",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:climb",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:craft",
+        "targetKey": "trained:skill:sleight_of_hand",
         "setAction": {
           "numberValue": 1
         }
@@ -81,62 +61,12 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "trained:skill:bluff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "trained:skill:disable_device",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:disguise",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:escape_artist",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:heal",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:intimidate",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:knowledge",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:linguistics",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:perception",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:perform",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:profession",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:sense_motive",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "trained:skill:sleight_of_hand",
         "setAction": {
           "numberValue": 1
         }
@@ -146,12 +76,82 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:stealth",
+        "targetKey": "trained:skill:acrobatics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:heal",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perception",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:craft",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "trained:skill:use_magic_device",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:escape_artist",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:intimidate",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:stealth",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:disguise",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sense_motive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:appraise",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:linguistics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perform",
         "setAction": {
           "numberValue": 1
         }
@@ -189,6 +189,11 @@
         "targetKey": "ability:trapfinding#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -267,6 +272,11 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "investigator2:skill_rank:1",
@@ -341,6 +351,11 @@
         "targetKey": "ability:trap_sense#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
         }
       }],
       "choices": [{
@@ -417,6 +432,16 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "investigator4:skill_rank:1",
@@ -486,6 +511,16 @@
         "targetKey": "ability:poison_resistance#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -557,6 +592,16 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "investigator6:skill_rank:1",
@@ -621,6 +666,21 @@
         "targetKey": "ability:investigator_talent#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -692,6 +752,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "investigator8:skill_rank:1",
@@ -762,6 +837,21 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "investigator9:skill_rank:1",
@@ -826,6 +916,26 @@
         "targetKey": "ability:studied_strike#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -897,6 +1007,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "investigator11:skill_rank:1",
@@ -967,6 +1097,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "investigator12:skill_rank:1",
@@ -1032,6 +1182,31 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "investigator13:skill_rank:1",
@@ -1096,6 +1271,31 @@
         "targetKey": "ability:studied_strike#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -1167,6 +1367,31 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "investigator15:skill_rank:1",
@@ -1232,6 +1457,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "investigator16:skill_rank:1",
@@ -1296,6 +1551,36 @@
         "targetKey": "ability:investigator_talent#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
         }
       }],
       "choices": [{
@@ -1367,6 +1652,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
       }],
       "choices": [{
         "id": "investigator18:skill_rank:1",
@@ -1431,6 +1746,36 @@
         "targetKey": "ability:investigator_talent#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
         }
       }],
       "choices": [{
@@ -1501,6 +1846,36 @@
         "targetKey": "ability:true_inspiration#investigator",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 5
         }
       }],
       "choices": [{
