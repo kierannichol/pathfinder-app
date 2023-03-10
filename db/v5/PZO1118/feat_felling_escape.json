@@ -1,0 +1,18 @@
+{
+  "id": "feat:felling_escape",
+  "name": "Felling Escape",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @feat:combat_expertise, @feat:improved_trip)",
+  "description": {
+    "text": "Through the use of fluid contortions and manipulations of leverage, you can throw your opponent to the ground after escaping a grapple.",
+    "sections": {
+      "Benefit": "When you break an opponent\u0027s grapple with a combat maneuver check or Escape Artist check, you can spend a swift action to make a trip attempt against that opponent."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:felling_escape",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

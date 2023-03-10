@@ -1,0 +1,18 @@
+{
+  "id": "feat:thanatopic_spell",
+  "name": "Thanatopic Spell",
+  "tags": ["feat", "metamagic"],
+  "prerequisiteFormula": "all(@skill:knowledge_religion \u003e\u003d 6, @feat:spell_focus#necromancy)",
+  "description": {
+    "sections": {
+      "Benefit": "A thanatopic spell pierces defenses and immunities that protect against death effects, negative levels, and energy drain, affecting the target as if the protective barrier did not exist.",
+      "Normal": "Defenses such as death ward negate death effects, negative levels, and energy drain. Undead are immune to these attacks."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:thanatopic_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "feat:inexplicable_luck",
+  "name": "Inexplicable Luck",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@feat:defiant_luck, @race:human)",
+  "description": {
+    "sections": {
+      "Benefit": "Once per day, as a free action before a roll is made, you gain a +8 bonus on any single d20 roll. You can also use this ability after the roll is made, but if you do, this bonus is reduced to +4."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:inexplicable_luck",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

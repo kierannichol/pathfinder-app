@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:inspire_ferocity",
+  "name": "Inspire Ferocity",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@rage_power:reckless_abandon AND !@rage_power:inspire_ferocity",
+  "description": {
+    "text": "Use a move action to share reckless abandon with allies"
+  },
+  "effects": [{
+    "targetKey": "rage_power:inspire_ferocity",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

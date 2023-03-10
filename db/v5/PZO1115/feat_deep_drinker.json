@@ -1,0 +1,17 @@
+{
+  "id": "feat:deep_drinker",
+  "name": "Deep Drinker",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@con_score \u003e\u003d 13, @class:monk \u003e\u003d 11, @ability:drunken_ki)",
+  "description": {
+    "sections": {
+      "Benefit": "When you gain temporary ki from drunken ki, you gain 2 temporary ki rather than just 1."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:deep_drinker",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

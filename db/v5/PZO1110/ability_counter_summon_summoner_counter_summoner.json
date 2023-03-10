@@ -1,0 +1,14 @@
+{
+  "id": "ability:counter_summon#summoner_counter_summoner",
+  "name": "Counter-Summon",
+  "tags": ["class:summoner#counter_summoner", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 1st level, a counter-summoner can attempt to counter a conjuration spell cast by another creature. He must identify the spell being cast as normal for counterspelling. If he does so, he can attempt to counter the spell as a swift or immediate action. To counter the spell, the counter-summoner must attempt a dispel check as if using dispel magic. If the spell being countered is a summon monster or summon nature\u0027s ally spell, the counter-summoner gains a +5 bonus on the dispel check. The counter-summoner can use this ability a number of times per day equal to 3 + his Charisma modifier."
+  },
+  "effects": [{
+    "targetKey": "ability:counter_summon#summoner_counter_summoner",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

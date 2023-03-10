@@ -1,0 +1,18 @@
+{
+  "id": "feat:elemental_spell",
+  "name": "Elemental Spell",
+  "tags": ["feat", "metamagic"],
+  "description": {
+    "text": "You can manipulate the elemental nature of your spells.",
+    "sections": {
+      "Benefit": "Choose one energy type: acid, cold, electricity, or fire. You may replace a spell\u0027s normal damage with that energy type or split the spell\u0027s damage, so that half is of that energy type and half is of its normal type.",
+      "Special": "You can gain this feat multiple times. Each time you must choose a different energy type."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:elemental_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

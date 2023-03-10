@@ -1,0 +1,18 @@
+{
+  "id": "feat:noble_spell_resistance",
+  "name": "Noble Spell Resistance",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@cha_score \u003e\u003d 13, @wis_score \u003e\u003d 13, @feat:greater_drow_nobility, @character_level \u003e\u003d 13, @race:drow)",
+  "description": {
+    "sections": {
+      "Benefit": "Your spell resistance is equal to 11 + your character level.",
+      "Special": "You receive a +1 circumstance bonus on Diplomacy and Intimidate checks made against any drow."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:noble_spell_resistance",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

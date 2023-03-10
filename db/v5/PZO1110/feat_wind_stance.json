@@ -1,0 +1,17 @@
+{
+  "id": "feat:wind_stance",
+  "name": "Wind Stance",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 15, @feat:dodge, @bab \u003e\u003d 6)",
+  "description": {
+    "sections": {
+      "Benefit": "If you move more than 5 feet this turn, you gain 20% concealment for 1 round against ranged attacks."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:wind_stance",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

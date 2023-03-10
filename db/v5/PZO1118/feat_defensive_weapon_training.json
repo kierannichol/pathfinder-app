@@ -1,0 +1,19 @@
+{
+  "id": "feat:defensive_weapon_training",
+  "name": "Defensive Weapon Training",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @bab \u003e\u003d 5)",
+  "description": {
+    "text": "You know how to defend yourself against a certain class of weaponry.",
+    "sections": {
+      "Benefit": "Choose a weapon group from the fighter\u0027s weapon training class ability list (except natural weapons). You gain a +2 dodge bonus on AC when an opponent attacks you using a weapon from that group. If you also have the weapon training class feature in the selected group, your dodge bonus from this feat increases to +3.",
+      "Special": "You can select this feat more than once. Its effects do not stack. Each time you select this feat, it applies to a different weapon group."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:defensive_weapon_training",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

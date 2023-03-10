@@ -1,0 +1,2023 @@
+{
+  "id": "class:paladin",
+  "name": "Paladin",
+  "tags": ["class", "core"],
+  "description": {
+    "text": "Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to banish evil, heal the innocent, and inspire the faithful. Although their convictions might lead them into conflict with the very souls they would save, paladins weather endless challenges of faith and dark temptations, risking their lives to do right and fighting to bring about a brighter future. Role: Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting. Alignment: Lawful good Hit Die: d10 Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "effects": [{
+    "targetKey": "class:paladin",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }],
+  "template": {
+    "id": "class:paladin",
+    "sections": [{
+      "condition": "@class:paladin\u003e\u003d1",
+      "effects": [{
+        "targetKey": "proficiency:mere_club",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:blade_boot",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spiked_gauntlet",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spiked_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_crossbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:unarmed",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dogslicer",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ogre_hook",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:handaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_flail",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dagger",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:pickaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:whip",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:shortspear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:guisarme",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:lantern_staff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:gandasa",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:club",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:warhammer",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:jolting_dart",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dart",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:chakram",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_pick",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ammentum",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:halberd",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:brass_knuckles",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:battle_aspergillum",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sword_cane",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:falchion",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_mace",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:gauntlet",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:cestus",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:kukri",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:greatsword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:bardiche",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:wooden_stake",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:rapier",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dueling_dagger",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:axe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sickle",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:horsechopper",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:traveling_kettle",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hook_hand",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:brass_knife",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_spiked_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:handwraps",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:greatclub",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:blowgun",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ranseur",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:manople",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:battleaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:gladius",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:combat_scabbard",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:greataxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:bayonet",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:pilum",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:klar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:boarding_pike",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:planson",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:glaive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:collapsible_kumade",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hunga_munga",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:shortbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spring_blade",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_hammer",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_mace",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:morningstar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:longsword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scizore",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:terbutje",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scimitar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:earth_breaker",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:stingchuck",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_crossbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hurlbat",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sap",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:machete",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:katar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:trident",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ankus",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:starknife",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_spiked_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:javelin",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_flail",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:war_razor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:short_sword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:kumade",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:longbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:lance",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:claw_blades",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:kunai",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:throwing_axe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_pick",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:bill",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:cutlass",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:punching_dagger",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:syringe_spear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:stonebow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:longspear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:medium_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:buckler",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:craft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:handle_animal",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:diplomacy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:spellcraft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:ride",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:heal",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sense_motive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ability:aura_of_good#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:detect_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin:archetype",
+        "type": "archetype",
+        "label": "Archetype",
+        "select": {
+          "tags": ["archetype", "paladin"]
+        }
+      }, {
+        "id": "paladin1:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin1:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d2",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:divine_grace#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:lay_on_hands#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin2:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin2:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d3",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:aura_of_courage#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:divine_health#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:mercy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "class:paladin3:mercy",
+        "type": "mercy",
+        "label": "Mercy",
+        "condition": "@class:paladin\u003d\u003d3",
+        "select": {
+          "tags": ["mercy"]
+        }
+      }, {
+        "id": "paladin3:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin3:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d4",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:channel_positive_energy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 0
+        }
+      }],
+      "choices": [{
+        "id": "paladin4:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin4:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d5",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:divine_bond#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin5:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin5:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d6",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:mercy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "class:paladin6:mercy",
+        "type": "mercy",
+        "label": "Mercy",
+        "condition": "@class:paladin\u003d\u003d6",
+        "select": {
+          "tags": ["mercy"]
+        }
+      }, {
+        "id": "paladin6:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin6:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d7",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 0
+        }
+      }],
+      "choices": [{
+        "id": "paladin7:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin7:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d8",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:aura_of_resolve#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin8:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin8:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d9",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:mercy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "class:paladin9:mercy",
+        "type": "mercy",
+        "label": "Mercy",
+        "condition": "@class:paladin\u003d\u003d9",
+        "select": {
+          "tags": ["mercy"]
+        }
+      }, {
+        "id": "paladin9:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin9:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d10",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 0
+        }
+      }],
+      "choices": [{
+        "id": "paladin10:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin10:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d11",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ability:aura_of_justice#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin11:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin11:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d12",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ability:mercy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "class:paladin12:mercy",
+        "type": "mercy",
+        "label": "Mercy",
+        "condition": "@class:paladin\u003d\u003d12",
+        "select": {
+          "tags": ["mercy"]
+        }
+      }, {
+        "id": "paladin12:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin12:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d13",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 13
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 0
+        }
+      }],
+      "choices": [{
+        "id": "paladin13:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin13:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d14",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 14
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ability:aura_of_faith#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin14:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin14:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d15",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 15
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ability:mercy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "class:paladin15:mercy",
+        "type": "mercy",
+        "label": "Mercy",
+        "condition": "@class:paladin\u003d\u003d15",
+        "select": {
+          "tags": ["mercy"]
+        }
+      }, {
+        "id": "paladin15:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin15:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d16",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 16
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin16:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin16:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d17",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 17
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ability:aura_of_righteousness#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "paladin17:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin17:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d18",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 18
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ability:mercy#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "class:paladin18:mercy",
+        "type": "mercy",
+        "label": "Mercy",
+        "condition": "@class:paladin\u003d\u003d18",
+        "select": {
+          "tags": ["mercy"]
+        }
+      }, {
+        "id": "paladin18:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin18:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d19",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 19
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ability:smite_evil#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "paladin19:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin19:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d20",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 20
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "ability:holy_champion#paladin",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "paladin20:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "paladin20:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }]
+  }
+}

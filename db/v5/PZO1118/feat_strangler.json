@@ -1,0 +1,18 @@
+{
+  "id": "feat:strangler",
+  "name": "Strangler",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @ability:sneak_attack \u003e\u003d 1, @feat:improved_grapple, @feat:improved_unarmed_strike)",
+  "description": {
+    "text": "Throttling the life out of enemies is second nature to you.",
+    "sections": {
+      "Benefit": "Whenever you successfully maintain a grapple and choose to deal damage, you can spend a swift action to deal your sneak attack damage to the creature you are grappling."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:strangler",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

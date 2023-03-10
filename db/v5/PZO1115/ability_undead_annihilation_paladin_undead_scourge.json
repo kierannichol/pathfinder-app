@@ -1,0 +1,14 @@
+{
+  "id": "ability:undead_annihilation#paladin_undead_scourge",
+  "name": "Undead Annihilation",
+  "tags": ["class:paladin#undead_scourge", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 11th level, an undead scourge can expend one use of her smite evil ability as a standard action and make a single melee attack against an undead creature. If this attack hits, the undead creature must make a Will save or be destroyed. The save DC is equal to 10 + 1/2 the undead scourge\u0027s level + the undead scourge\u0027s Charisma modifier. Undead with twice as many Hit Dice as the undead scourge are unaffected by this ability. If the attack misses, the smite evil is wasted without effect."
+  },
+  "effects": [{
+    "targetKey": "ability:undead_annihilation#paladin_undead_scourge",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

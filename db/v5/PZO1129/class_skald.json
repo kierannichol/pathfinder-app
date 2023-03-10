@@ -1,0 +1,2140 @@
+{
+  "id": "class:skald",
+  "name": "Skald",
+  "tags": ["class", "hybrid"],
+  "description": {
+    "text": "Skalds are poets, historians, and keepers of lore who use their gifts for oration and song to inspire allies into a frenzied rage. They balance a violent spirit with the veneer of civilization, recording events such as heroic battles and the deeds of great leaders, enhancing these stories in the retelling to earn bloodier victories in combat. A skald\u0027s poetry is nuanced and often has multiple overlapping meanings, and he applies similar talents to emulate magic from other spellcasters. Role: A skald inspires his allies, and often presses forward to fight enemies in melee. Outside of combat, he\u0027s useful as a healer and scholar, less versatile but more durable than a bard. Alignment: Any. Hit Die: d8. Parent Classes: Barbarian and bard. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "effects": [{
+    "targetKey": "class:skald",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }],
+  "template": {
+    "id": "class:skald",
+    "sections": [{
+      "condition": "@class:skald\u003e\u003d1",
+      "effects": [{
+        "targetKey": "proficiency:mere_club",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:blade_boot",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spiked_gauntlet",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spiked_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_crossbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:unarmed",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dogslicer",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ogre_hook",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:handaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_flail",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dagger",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:pickaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:whip",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:shortspear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:guisarme",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:lantern_staff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:gandasa",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:club",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:warhammer",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:jolting_dart",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dart",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:chakram",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_pick",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ammentum",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:halberd",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:brass_knuckles",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:battle_aspergillum",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sword_cane",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:falchion",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_mace",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:gauntlet",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:cestus",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:kukri",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:greatsword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:bardiche",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:wooden_stake",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:rapier",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:dueling_dagger",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:axe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sickle",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:horsechopper",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:traveling_kettle",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hook_hand",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:brass_knife",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_spiked_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:handwraps",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:greatclub",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:blowgun",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ranseur",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:manople",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:battleaxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:gladius",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:combat_scabbard",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:greataxe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:bayonet",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:pilum",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:klar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:boarding_pike",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:planson",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:glaive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:collapsible_kumade",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hunga_munga",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:shortbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:spring_blade",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_hammer",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_mace",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:morningstar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:longsword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scizore",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:terbutje",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scimitar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:earth_breaker",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:stingchuck",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_crossbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hurlbat",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sap",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:machete",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:katar",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:trident",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:ankus",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:starknife",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_spiked_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:javelin",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_flail",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:war_razor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:short_sword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:kumade",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:longbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:lance",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:claw_blades",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:kunai",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:throwing_axe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_pick",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:bill",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:cutlass",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:punching_dagger",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:syringe_spear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:stonebow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:longspear",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:medium_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:buckler",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:heavy_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:handle_animal",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:swim",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:diplomacy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:bluff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:spellcraft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:acrobatics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:ride",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perception",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:craft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:use_magic_device",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:escape_artist",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:intimidate",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sense_motive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:appraise",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:linguistics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perform",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ability:bardic_knowledge#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:cantrips#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:raging_song#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:scribe_scroll#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "skald:archetype",
+        "type": "archetype",
+        "label": "Archetype",
+        "select": {
+          "tags": ["archetype", "skald"]
+        }
+      }, {
+        "id": "skald1:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald1:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald1:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald1:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d2",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:versatile_performance#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:well_versed#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "skald2:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald2:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald2:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald2:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d3",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:rage_power#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "skald3:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald3:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald3:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald3:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d4",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:uncanny_dodge#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "skald4:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald4:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald4:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald4:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d5",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:spell_kenning#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "skald5:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald5:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald5:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald5:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d6",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:rage_power#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "skald6:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald6:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald6:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald6:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d7",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:lore_master#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:versatile_performance#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "skald7:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald7:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald7:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald7:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d8",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:improved_uncanny_dodge#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "skald8:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald8:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald8:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald8:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d9",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:rage_power#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:dr#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "skald9:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald9:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald9:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald9:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d10",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "skald10:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald10:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald10:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald10:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d11",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ability:spell_kenning#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "skald11:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald11:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald11:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald11:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d12",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ability:rage_power#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:versatile_performance#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "skald12:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald12:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald12:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald12:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d13",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ability:lore_master#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "skald13:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald13:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald13:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald13:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d14",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ability:dr#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "skald14:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald14:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald14:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald14:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d15",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ability:rage_power#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "skald15:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald15:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald15:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald15:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d16",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "skald16:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald16:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald16:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald16:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d17",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ability:spell_kenning#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:versatile_performance#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "skald17:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald17:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald17:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald17:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d18",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 13
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ability:rage_power#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "skald18:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald18:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald18:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald18:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d19",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 14
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ability:dr#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:lore_master#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }],
+      "choices": [{
+        "id": "skald19:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald19:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald19:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald19:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:skald\u003e\u003d20",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 15
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "ability:master_skald#skald",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 5
+        }
+      }],
+      "choices": [{
+        "id": "skald20:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald20:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald20:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "skald20:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }]
+  }
+}

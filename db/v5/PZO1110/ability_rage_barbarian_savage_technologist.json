@@ -1,0 +1,19 @@
+{
+  "id": "ability:rage#barbarian_savage_technologist",
+  "name": "Rage",
+  "tags": ["class:barbarian#savage_technologist", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "A savage technologist can enter rage as a barbarian, except she gains a morale bonus to Strength and Dexterity instead of Strength and Constitution, and she does not take a penalty to Armor Class. She retains the bonus on Will saving throws. When a barbarian ability would increase the savage technologist\u0027s Strength while raging, it increases her Dexterity instead."
+  },
+  "effects": [{
+    "targetKey": "ability:rage#barbarian_savage_technologist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }, {
+    "targetKey": "feature:rage",
+    "setAction": {
+      "numberValue": 1
+    }
+  }]
+}

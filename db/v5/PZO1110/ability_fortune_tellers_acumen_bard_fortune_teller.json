@@ -1,0 +1,14 @@
+{
+  "id": "ability:fortune_tellers_acumen#bard_fortune_teller",
+  "name": "Fortune-Teller\u0027s Acumen",
+  "tags": ["class:bard#fortune_teller", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 2nd level, whenever he casts a spell from the divination school, a fortune-teller can use a fortune-teller\u0027s deck, crystal ball, or similar item instead of the spell\u0027s material component, as long as the cost of the material component is no more than 100 gp per bard level. If he chooses to cast the spell using such an item and the spell\u0027s normal material component (regardless of that component\u0027s cost), he casts the spell at +1 caster level. This special focus can\u0027t be used with other special foci that have a similar effect, but can be used with spells that normally require a focus component (which must also be provided)."
+  },
+  "effects": [{
+    "targetKey": "ability:fortune_tellers_acumen#bard_fortune_teller",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

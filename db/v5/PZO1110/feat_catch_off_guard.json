@@ -1,0 +1,18 @@
+{
+  "id": "feat:catch_off_guard",
+  "name": "Catch Off-Guard",
+  "tags": ["feat", "combat"],
+  "description": {
+    "text": "Foes are surprised by your skilled use of unorthodox and improvised weapons.",
+    "sections": {
+      "Benefit": "You do not suffer any penalties for using an improvised melee weapon. Unarmed opponents are flat-footed against any attacks you make with an improvised melee weapon.",
+      "Normal": "You take a –4 penalty on attack rolls made with an improvised weapon."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:catch_off_guard",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

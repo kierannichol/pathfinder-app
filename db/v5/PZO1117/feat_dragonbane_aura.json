@@ -1,0 +1,19 @@
+{
+  "id": "feat:dragonbane_aura",
+  "name": "Dragonbane Aura",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@ability:aura_of_courage#paladin, @caster_level \u003e\u003d 8)",
+  "description": {
+    "text": "Those within your dragonbane aura gain the same protection that you do.",
+    "sections": {
+      "Benefit": "When fighting dragons, your aura of courage expands to a 20-foot-radius emanation, and allies in the aura gain a morale bonus on saving throws against dragon breath equal to your aura of courage\u0027s bonus against fear effects.",
+      "Normal": "The aura of courage is a 10-foot-radius emanation, and grants a +4 morale bonus on fear effects."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:dragonbane_aura",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:shaitan_skin",
+  "name": "Shaitan Skin",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "any(@con_score \u003e\u003d 15, @wis_score \u003e\u003d 15, @feat:elemental_fist, @feat:improved_unarmed_strike, @feat:shaitan_style, @bab \u003e\u003d 11, @class:monk \u003e\u003d 9)",
+  "description": {
+    "text": "You can manipulate acid to shield yourself and disable your enemies.",
+    "sections": {
+      "Benefit": "You gain one additional Elemental Fist attempt per day. While using the Shaitan Style feat, you gain acid resistance equal to your base attack bonus, or your monk level plus BAB gained from levels in classes other than monk, whichever is higher. While denied your Dexterity bonus to AC you are also denied this resistance. Creatures that take acid damage from your Elemental Fist attack must succeed at a Reflex save (DC 10 + 1/2 your character level + your Wis modifier) or be staggered for 1 round."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:shaitan_skin",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

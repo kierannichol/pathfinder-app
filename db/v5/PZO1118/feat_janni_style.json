@@ -1,0 +1,18 @@
+{
+  "id": "feat:janni_style",
+  "name": "Janni Style",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @skill:acrobatics \u003e\u003d 3, @skill:perform#dance \u003e\u003d 3)",
+  "description": {
+    "text": "Your whirling fighting technique makes you difficult to hit.",
+    "sections": {
+      "Benefit": "While using this style, you take only a –1 penalty to AC for charging. Further, opponents that flank you gain only a +1 bonus on attack rolls against you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:janni_style",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

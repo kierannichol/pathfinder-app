@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:greater_ronins_resolve",
+  "name": "Greater Ronin\u0027s Resolve",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "all(@rage_power:ronins_resolve, @class:barbarian \u003e\u003d 10) AND !@rage_power:greater_ronins_resolve",
+  "description": {
+    "text": "Gain a samurai’s greater resolve while raging."
+  },
+  "effects": [{
+    "targetKey": "rage_power:greater_ronins_resolve",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

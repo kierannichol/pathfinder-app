@@ -1,0 +1,14 @@
+{
+  "id": "ability:battle_prowess#skald_battle_scion",
+  "name": "Battle Prowess",
+  "tags": ["class:skald#battle_scion", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "Whenever a battle scion would gain a rage power from the skald\u0027s rage power ability (at 3rd level and every 3 skald levels thereafter), she can instead choose to gain a combat feat or teamwork feat for which she meets the prerequisites.\nLike rage powers she selects in this way, the battle scion can grant this feat to allies under the effect of inspired rage, as long as those allies also meet the prerequisites, but she must expend 2 rounds of raging song for each round in which she grants a combat feat or teamwork feat.\nIf the battle scion gains multiple feats from battle prowess, allies can use these feats to meet the prerequisites for other feats while they\u0027re affected by battle prowess (for example, a battle scion with Power Attack and Cleave from battle prowess could grant both, allowing allies with a +1 base attack bonus and a Strength score of 13 to gain both, since they can use Power Attack to qualify for Cleave)."
+  },
+  "effects": [{
+    "targetKey": "ability:battle_prowess#skald_battle_scion",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

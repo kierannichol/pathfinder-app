@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_inspiration",
+  "name": "Extra Inspiration",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "(@feat:amateur_investigator OR @ability:inspiration#investigator)",
+  "description": {
+    "text": "You are more able to draw upon inspiration than most.",
+    "sections": {
+      "Benefit": "You gain three extra use per day of inspiration in your inspiration pool.",
+      "Special": "If you have levels in the investigator class, you can take this feat multiple times. Each time you do, you gain three extra uses of inspiration per day."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_inspiration",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

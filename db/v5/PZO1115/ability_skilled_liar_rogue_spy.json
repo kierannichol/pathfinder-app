@@ -1,0 +1,14 @@
+{
+  "id": "ability:skilled_liar#rogue_spy",
+  "name": "Skilled Liar",
+  "tags": ["class:rogue#spy", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "Whenever a spy uses Bluff to attempt to deceive someone, she gains a bonus on the opposed roll equal to 1/2 her rogue level (minimum +1). This bonus does not apply to feint attempts or attempts to pass secret messages."
+  },
+  "effects": [{
+    "targetKey": "ability:skilled_liar#rogue_spy",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

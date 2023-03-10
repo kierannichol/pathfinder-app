@@ -1,0 +1,14 @@
+{
+  "id": "ability:detect_summons#summoner_counter_summoner",
+  "name": "Detect Summons",
+  "tags": ["class:summoner#counter_summoner", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 2nd level, as a swift action, a counter-summoner can target a single creature he can see and determine if it has been summoned to its current plane from another. This ability reveals whether the target has been conjured by a conjuration (summoning) or (calling) spell, and allows the counter-summoner to attempt a Spellcraft check to identify the spell that conjured it (using the same DC as if the counter-summoner had witnessed the spell being cast)."
+  },
+  "effects": [{
+    "targetKey": "ability:detect_summons#summoner_counter_summoner",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

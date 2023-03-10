@@ -1,0 +1,18 @@
+{
+  "id": "feat:simple_weapon_proficiency",
+  "name": "Simple Weapon Proficiency",
+  "tags": ["feat", "combat"],
+  "description": {
+    "sections": {
+      "Benefit": "You make attack rolls with simple weapons without penalty.",
+      "Special": "All characters except for druids, monks, and wizards are automatically proficient with all simple weapons. They need not select this feat.",
+      "Normal": "When using a weapon with which you are not proficient, you take a –4 penalty on attack rolls."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:simple_weapon_proficiency",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

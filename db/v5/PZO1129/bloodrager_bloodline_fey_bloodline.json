@@ -1,0 +1,102 @@
+{
+  "id": "bloodrager_bloodline:fey_bloodline",
+  "name": "Fey Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "description": {
+    "text": "One of your ancestors was fey, or the fey realm somehow intermixed with your bloodline. It affects your bloodrage in tricky and surprising ways."
+  },
+  "template": {
+    "id": "bloodrager_bloodline:fey_bloodline",
+    "sections": [{
+      "condition": "@class:bloodrager\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:confusing_critical#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d4",
+      "effects": [{
+        "targetKey": "ability:leaping_charger#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d6",
+      "choices": [{
+        "id": "bloodrager6:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d8",
+      "effects": [{
+        "targetKey": "ability:blurring_movement#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d9",
+      "choices": [{
+        "id": "bloodrager9:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d12",
+      "choices": [{
+        "id": "bloodrager12:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d12",
+      "effects": [{
+        "targetKey": "ability:blur#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d15",
+      "choices": [{
+        "id": "bloodrager15:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d16",
+      "effects": [{
+        "targetKey": "ability:quickling_bloodrage#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d18",
+      "choices": [{
+        "id": "bloodrager18:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+        }
+      }]
+    }]
+  }
+}

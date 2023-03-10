@@ -1,0 +1,17 @@
+{
+  "id": "feat:sin_seer",
+  "name": "Sin Seer",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "\"Detect undead paladin class feature\"",
+  "description": {
+    "sections": {
+      "Benefit": "You gain the detect evil class feature. You may use it or the detect undead class feature, but not at the same time."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:sin_seer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

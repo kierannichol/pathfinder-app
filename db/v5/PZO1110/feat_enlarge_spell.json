@@ -1,0 +1,16 @@
+{
+  "id": "feat:enlarge_spell",
+  "name": "Enlarge Spell",
+  "tags": ["feat", "metamagic"],
+  "description": {
+    "sections": {
+      "Benefit": "You can alter a spell with a range of close, medium, or long to increase its range by 100%. An enlarged spell with a range of close now has a range of 50 ft. + 5 ft./level, while medium-range spells have a range of 200 ft. + 20 ft./level and long-range spells have a range of 800 ft. + 80 ft./level."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:enlarge_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

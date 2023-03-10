@@ -1,0 +1,14 @@
+{
+  "id": "ability:spell_eating#bloodrager_spelleater",
+  "name": "Spell Eating",
+  "tags": ["class:bloodrager#spelleater", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 5th level, a spelleater can consume spell slots for an extra dose of healing. As a swift action, the spelleater can consume one unused bloodrager spell slot to heal 1d8 damage for each level of the spell slot consumed."
+  },
+  "effects": [{
+    "targetKey": "ability:spell_eating#bloodrager_spelleater",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

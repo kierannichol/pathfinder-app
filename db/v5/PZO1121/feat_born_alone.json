@@ -1,0 +1,17 @@
+{
+  "id": "feat:born_alone",
+  "name": "Born Alone",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "@race:orc",
+  "description": {
+    "sections": {
+      "Benefit": "Whenever you kill or knock unconscious an opponent with a melee attack, you gain temporary hit points equal to your Constitution bonus (minimum 1) until your next turn. These temporary hit points do not stack. You do not gain this bonus if the opponent is helpless or has less than half your Hit Dice."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:born_alone",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

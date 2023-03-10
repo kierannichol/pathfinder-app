@@ -1,0 +1,17 @@
+{
+  "id": "feat:two_weapon_defense",
+  "name": "Two-Weapon Defense",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 15, @feat:two_weapon_fighting)",
+  "description": {
+    "sections": {
+      "Benefit": "When wielding a double weapon or two weapons (not including natural weapons or unarmed strikes), you gain a +1 shield bonus to your AC."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:two_weapon_defense",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

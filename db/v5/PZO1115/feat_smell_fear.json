@@ -1,0 +1,17 @@
+{
+  "id": "feat:smell_fear",
+  "name": "Smell Fear",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "any(@feat:keen_scent, @race:half_orc, @race:orc)",
+  "description": {
+    "sections": {
+      "Benefit": "You receive a +4 bonus on Perception checks to detect creatures with the shaken, frightened, or panicked conditions using scent. You can substitute your Perception skill for Sense Motive skill checks if the subject has one of the previous conditions or is attempting to cover up their fear in some way."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:smell_fear",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

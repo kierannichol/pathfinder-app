@@ -1,0 +1,14 @@
+{
+  "id": "ability:false_channel#sorcerer_false_priest",
+  "name": "False Channel",
+  "tags": ["class:sorcerer#false_priest", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 9th level, the false priest can use his own magic to power spell completion and spell trigger items that use divine spells. He expends a sorcerer spell slot that is at least 1 level higher than the level of the spell he\u0027s trying to activate, then makes a Use Magic Device check. If he succeeds, the item\u0027s spell occurs and the item or charge is not expended. If he fails, nothing happens. Whether he succeeds or fail, his spell slot is expended."
+  },
+  "effects": [{
+    "targetKey": "ability:false_channel#sorcerer_false_priest",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

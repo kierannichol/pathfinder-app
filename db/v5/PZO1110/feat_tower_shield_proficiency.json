@@ -1,0 +1,19 @@
+{
+  "id": "feat:tower_shield_proficiency",
+  "name": "Tower Shield Proficiency",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@feat:shield_proficiency",
+  "description": {
+    "sections": {
+      "Benefit": "When you use a tower shield, the shield\u0027s armor check penalty only applies to Strength and Dexterity-based skills.",
+      "Special": "Fighters automatically have Tower Shield Proficiency as a bonus feat. They need not select it.",
+      "Normal": "A character using a shield with which he is not proficient takes the shield\u0027s armor check penalty on attack rolls and on all skill checks that involve moving, including Ride."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:tower_shield_proficiency",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

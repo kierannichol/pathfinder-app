@@ -1,0 +1,14 @@
+{
+  "id": "ability:snip_thread#monk_nornkith",
+  "name": "Snip Thread",
+  "tags": ["class:monk#nornkith", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 15th level, as a standard action, a monk can spend 1 ki point to produce a golden thread linked to the fate of a creature within 60 feet and mimic snipping through the thread with a pair of shears. The target takes 1d6 points of damage per nornkith level and can attempt a Fortitude saving throw (DC \u003d 10 + half the nornkith\u0027s monk level + her Charisma modifier) to halve this damage. If the damage would bring the target\u0027s hit points to 0 or below, the nornkith can spend another ki point to sever the golden thread completely; in this case, the target dies and can only be restored to life with miracle, wish, or divine intervention. The nornkith can use this ability once per day. This is a death effect."
+  },
+  "effects": [{
+    "targetKey": "ability:snip_thread#monk_nornkith",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

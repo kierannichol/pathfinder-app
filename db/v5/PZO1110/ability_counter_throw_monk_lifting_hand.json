@@ -1,0 +1,14 @@
+{
+  "id": "ability:counter_throw#monk_lifting_hand",
+  "name": "Counter-Throw",
+  "tags": ["class:monk#lifting_hand", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 12th level, a lifting hand can ready an action to trigger if a creature tries to attack her.\nWhen the readied action triggers, the lifting hand can attempt a grapple combat maneuver check with a +2 bonus. If she succeeds, she grapples the creature and negates the triggering attack, and she can spend an immediate action to use the Savage Slam feat."
+  },
+  "effects": [{
+    "targetKey": "ability:counter_throw#monk_lifting_hand",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

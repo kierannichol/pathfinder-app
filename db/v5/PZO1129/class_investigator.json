@@ -1,0 +1,1920 @@
+{
+  "id": "class:investigator",
+  "name": "Investigator",
+  "tags": ["class", "hybrid"],
+  "description": {
+    "text": "Whether on the trail of a fugitive, a long-lost treasure trove, or a criminal mastermind, investigators are motivated by an intense curiosity about the world and use knowledge of it as a weapon. Mixing gumption and learnedness into a personal alchemy of daring, investigators are full of surprises. Observing the world around them, they gain valuable knowledge about the situation they\u0027re in, process that information using inspiration and deduction, and cut to the quick of the matter in unexpected ways. Investigators are always evaluating situations they encounter, sizing up potential foes, and looking out for secret dangers, all while using their vast knowledge and powers of perception to find solutions to the most perplexing problems. Role: Investigators live to solve mysteries and find inventive ways to get out of jams. They serve as advisors and support for their adventuring parties, but can take center stage when knowledge and cunning are needed. No slouches in battle, they know how to make surprise attacks and use inspiration to bring those attacks home. Alignment: Any. Hit Die: d8. Parent Classes: Alchemist and rogue. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "effects": [{
+    "targetKey": "class:investigator",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }],
+  "template": {
+    "id": "class:investigator",
+    "sections": [{
+      "condition": "@class:investigator\u003e\u003d1",
+      "effects": [{
+        "targetKey": "proficiency:rapier",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sword_cane",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sap",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:hand_crossbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:shortbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:short_sword",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:light_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sleight_of_hand",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:diplomacy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:bluff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:disable_device",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:spellcraft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:acrobatics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:heal",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perception",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:craft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:use_magic_device",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:escape_artist",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:intimidate",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:stealth",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:disguise",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sense_motive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:appraise",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:linguistics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perform",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ability:alchemy#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:inspiration#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trapfinding#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "investigator:archetype",
+        "type": "archetype",
+        "label": "Archetype",
+        "select": {
+          "tags": ["archetype", "investigator"]
+        }
+      }, {
+        "id": "investigator1:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator1:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator1:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator1:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator1:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator1:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d2",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:poison_lore#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:poison_resistance#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "investigator2:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator2:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator2:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator2:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator2:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator2:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d3",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:keen_recollection#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trap_sense#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "investigator3:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator3:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator3:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator3:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator3:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator3:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d4",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:studied_combat#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:swift_alchemy#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "investigator4:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator4:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator4:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator4:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator4:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator4:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d5",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:poison_resistance#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "investigator5:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator5:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator5:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator5:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator5:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator5:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d6",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trap_sense#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "investigator6:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator6:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator6:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator6:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator6:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator6:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d7",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "investigator7:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator7:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator7:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator7:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator7:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator7:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d8",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:poison_resistance#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "investigator8:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator8:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator8:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator8:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator8:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator8:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d9",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trap_sense#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "investigator9:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator9:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator9:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator9:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator9:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator9:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d10",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "investigator10:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator10:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator10:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator10:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator10:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator10:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d11",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:poison_immunity#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "investigator11:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator11:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator11:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator11:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator11:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator11:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d12",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trap_sense#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "investigator12:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator12:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator12:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator12:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator12:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator12:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d13",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "investigator13:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator13:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator13:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator13:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator13:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator13:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d14",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "investigator14:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator14:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator14:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator14:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator14:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator14:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d15",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trap_sense#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "investigator15:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator15:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator15:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator15:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator15:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator15:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d16",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 1
+        }
+      }],
+      "choices": [{
+        "id": "investigator16:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator16:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator16:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator16:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator16:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator16:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d17",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 2
+        }
+      }],
+      "choices": [{
+        "id": "investigator17:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator17:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator17:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator17:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator17:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator17:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d18",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 13
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:trap_sense#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 3
+        }
+      }],
+      "choices": [{
+        "id": "investigator18:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator18:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator18:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator18:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator18:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator18:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d19",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 14
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "ability:investigator_talent#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 4
+        }
+      }],
+      "choices": [{
+        "id": "investigator19:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator19:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator19:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator19:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator19:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator19:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:investigator\u003e\u003d20",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 15
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "ability:studied_strike#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:true_inspiration#investigator",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#5",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "spells_per_day#6",
+        "setAction": {
+          "numberValue": 5
+        }
+      }],
+      "choices": [{
+        "id": "investigator20:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator20:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator20:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator20:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator20:skill_rank:5",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "investigator20:skill_rank:6",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }]
+  }
+}

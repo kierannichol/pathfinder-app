@@ -1,0 +1,1205 @@
+{
+  "id": "class:swashbuckler",
+  "name": "Swashbuckler",
+  "tags": ["class", "hybrid"],
+  "description": {
+    "text": "Whereas many warriors brave battle encased in suits of armor and wielding large and powerful weapons, swashbucklers rely on speed, agility, and panache. Swashbucklers dart in and out of the fray, wearing down opponents with lunges and feints, all while foiling the powerful attacks against them with a flick of the wrist and a flash of the blade. Their deft parries and fatal ripostes are carnage elevated to an art form. Some may be arrogant and devil-may-care, but behind this veneer lie people deeply dedicated to their craft. Those of smaller races are particularly driven to prove that the right mix of discipline and daring is the perfect counter to size and strength, and enjoy nothing more than taking down lumbering brutes and bullies. Role: Combining fancy footwork with quick and precise lunges, swashbucklers dart in and out of battle, harassing and thwarting their opponents. These fast and agile combatants serve as protectors for spellcasters and flank mates for rogues and slayers, while waiting for the opportunity to show panache and score the killing blow on some lumbering hulk. Swashbucklers often face death with wry humor, mocking it with jabbing wit. Alignment: Any. Hit Die: d10. Parent Classes: Fighter and gunslinger. Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "effects": [{
+    "targetKey": "class:swashbuckler",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }],
+  "template": {
+    "id": "class:swashbuckler",
+    "sections": [{
+      "condition": "@class:swashbuckler\u003e\u003d1",
+      "effects": [{
+        "targetKey": "proficiency:light_armor",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sleight_of_hand",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:swim",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:diplomacy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:bluff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:acrobatics",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:profession",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:climb",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:ride",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perception",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:craft",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:escape_artist",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:intimidate",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:knowledge",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:sense_motive",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "trained:skill:perform",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "ability:deeds#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:panache#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:swashbuckler_finesse#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler:archetype",
+        "type": "archetype",
+        "label": "Archetype",
+        "select": {
+          "tags": ["archetype", "swashbuckler"]
+        }
+      }, {
+        "id": "swashbuckler1:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler1:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler1:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler1:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d2",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "ability:charmed_life#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler2:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler2:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler2:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler2:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d3",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ability:deeds#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:nimble#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler3:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler3:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler3:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler3:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d4",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ability:bonus_feat#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler4:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler4:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler4:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler4:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d5",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "ability:swashbuckler_weapon_training#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler5:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler5:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler5:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler5:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d6",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ability:charmed_life#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler6:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler6:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler6:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler6:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d7",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ability:deeds#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:nimble#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler7:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler7:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler7:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler7:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d8",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "ability:bonus_feat#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler8:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler8:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler8:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler8:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d9",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:swashbuckler_weapon_training#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler9:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler9:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler9:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler9:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d10",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:charmed_life#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler10:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler10:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler10:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler10:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d11",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 7
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "ability:deeds#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:nimble#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler11:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler11:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler11:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler11:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d12",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:bonus_feat#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler12:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler12:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler12:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler12:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d13",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 13
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 8
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:swashbuckler_weapon_training#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler13:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler13:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler13:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler13:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d14",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 14
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "ability:charmed_life#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler14:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler14:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler14:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler14:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d15",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 15
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 9
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:deeds#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:nimble#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler15:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler15:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler15:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler15:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d16",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 16
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:bonus_feat#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler16:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler16:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler16:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler16:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d17",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 17
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 10
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 5
+        }
+      }, {
+        "targetKey": "ability:swashbuckler_weapon_training#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler17:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler17:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler17:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler17:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d18",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 18
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:charmed_life#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler18:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler18:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler18:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler18:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d19",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 19
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 11
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:deeds#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:nimble#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler19:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler19:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler19:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler19:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }, {
+      "condition": "@class:swashbuckler\u003e\u003d20",
+      "effects": [{
+        "targetKey": "bab",
+        "setAction": {
+          "numberValue": 20
+        }
+      }, {
+        "targetKey": "fort:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ref:base",
+        "setAction": {
+          "numberValue": 12
+        }
+      }, {
+        "targetKey": "will:base",
+        "setAction": {
+          "numberValue": 6
+        }
+      }, {
+        "targetKey": "ability:bonus_feat#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }, {
+        "targetKey": "ability:swashbuckler_weapon_mastery#swashbuckler",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }],
+      "choices": [{
+        "id": "swashbuckler20:skill_rank:1",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler20:skill_rank:2",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler20:skill_rank:3",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }, {
+        "id": "swashbuckler20:skill_rank:4",
+        "type": "skill",
+        "select": {
+          "tags": ["skill"]
+        }
+      }]
+    }]
+  }
+}

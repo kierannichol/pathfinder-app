@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:eater_of_magic",
+  "name": "Eater of Magic",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "all(@class:barbarian \u003e\u003d 10, @rage_power:superstition) AND !@rage_power:eater_of_magic",
+  "description": {
+    "text": "Take a second saving throw and gain temp hp"
+  },
+  "effects": [{
+    "targetKey": "rage_power:eater_of_magic",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

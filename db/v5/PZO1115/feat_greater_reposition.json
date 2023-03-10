@@ -1,0 +1,18 @@
+{
+  "id": "feat:greater_reposition",
+  "name": "Greater Reposition",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @feat:combat_expertise, @feat:improved_reposition, @bab \u003e\u003d 6)",
+  "description": {
+    "sections": {
+      "Benefit": "You receive a +2 bonus on checks made to reposition a foe. This bonus stacks with the bonus granted by Improved Reposition. Whenever you reposition a foe, his movement provokes attacks of opportunity from all of your allies (but not you).",
+      "Normal": "Creatures moved by reposition do not provoke attacks of opportunity."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_reposition",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

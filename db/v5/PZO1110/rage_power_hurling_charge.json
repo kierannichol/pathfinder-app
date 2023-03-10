@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:hurling_charge",
+  "name": "Hurling Charge",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "all(@class:barbarian \u003e\u003d 6, @rage_power:lesser_hurling) AND !@rage_power:hurling_charge",
+  "description": {
+    "text": "You can hurl an object as part of a charge"
+  },
+  "effects": [{
+    "targetKey": "rage_power:hurling_charge",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

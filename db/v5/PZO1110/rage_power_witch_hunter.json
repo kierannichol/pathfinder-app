@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:witch_hunter",
+  "name": "Witch Hunter",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@rage_power:superstition AND !@rage_power:witch_hunter",
+  "description": {
+    "text": "Do extra damage against spellcasters"
+  },
+  "effects": [{
+    "targetKey": "rage_power:witch_hunter",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

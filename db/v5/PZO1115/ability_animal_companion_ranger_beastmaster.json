@@ -1,0 +1,14 @@
+{
+  "id": "ability:animal_companion#ranger_beastmaster",
+  "name": "Animal Companion",
+  "tags": ["class:ranger#beastmaster", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "A beast master forms a close bond with an animal companion. This ability functions like the druid animal companion ability except that the ranger\u0027s effective druid level is equal to his ranger level – 3. The ranger gains a +2 bonus on wild empathy and Handle Animal checks made regarding his animal companion. Unlike a normal ranger, a beast master\u0027s choice of animal companion is not limited to a subset of all possible animal companion choices--he may choose freely among all animal companion choices, just as a druid can.\nThe beast master may have more than one animal companion, but he must divide up his effective druid level between his companions to determine the abilities of each companion.\nFor example, a beast master with an effective druid level of 4 can have one 4th-level companion, two 2nd-level companions, or one 1st-level and one 3rd-level companion.\nEach time a beast master\u0027s effective druid level increases, he must decide how to allocate the increase among his animal companions (including the option of adding a new 1st-level companion). Once an effective druid level is allocated to a particular companion, it cannot be redistributed while that companion is in the ranger\u0027s service (he must release a companion or wait until a companion dies to allocate its levels to another companion). The share spells animal companion ability does not give the ranger the ability to cast a single spell so that it affects all of his animal companions."
+  },
+  "effects": [{
+    "targetKey": "ability:animal_companion#ranger_beastmaster",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

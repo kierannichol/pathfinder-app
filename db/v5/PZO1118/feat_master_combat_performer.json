@@ -1,0 +1,4258 @@
+{
+  "id": "feat:master_combat_performer",
+  "name": "Master Combat Performer",
+  "tags": ["feat", "combat"],
+  "children": [{
+    "optionId": "gauntlet",
+    "condition": "all(@feat:performing_combatant#gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "unarmed",
+    "condition": "all(@feat:performing_combatant#unarmed OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Unarmed",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#unarmed",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_aspergillum",
+    "condition": "all(@feat:performing_combatant#battle_aspergillum OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Battle Aspergillum",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#battle_aspergillum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knife",
+    "condition": "all(@feat:performing_combatant#brass_knife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Brass Knife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#brass_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knuckles",
+    "condition": "all(@feat:performing_combatant#brass_knuckles OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Brass Knuckles",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#brass_knuckles",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cestus",
+    "condition": "all(@feat:performing_combatant#cestus OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Cestus",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#cestus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dagger",
+    "condition": "all(@feat:performing_combatant#dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "punching_dagger",
+    "condition": "all(@feat:performing_combatant#punching_dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Punching Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#punching_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_gauntlet",
+    "condition": "all(@feat:performing_combatant#spiked_gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiked Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiked_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handwraps",
+    "condition": "all(@feat:performing_combatant#handwraps OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Handwraps",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#handwraps",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "traveling_kettle",
+    "condition": "all(@feat:performing_combatant#traveling_kettle OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Traveling Kettle",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#traveling_kettle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hook_hand",
+    "condition": "all(@feat:performing_combatant#hook_hand OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hook Hand",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hook_hand",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kunai",
+    "condition": "all(@feat:performing_combatant#kunai OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kunai",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kunai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_mace",
+    "condition": "all(@feat:performing_combatant#light_mace OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Mace",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle",
+    "condition": "all(@feat:performing_combatant#sickle OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sickle",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sickle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spring_blade",
+    "condition": "all(@feat:performing_combatant#spring_blade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spring Blade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spring_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wooden_stake",
+    "condition": "all(@feat:performing_combatant#wooden_stake OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Wooden Stake",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#wooden_stake",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "club",
+    "condition": "all(@feat:performing_combatant#club OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Club",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mere_club",
+    "condition": "all(@feat:performing_combatant#mere_club OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Mere Club",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#mere_club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_mace",
+    "condition": "all(@feat:performing_combatant#heavy_mace OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Mace",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "morningstar",
+    "condition": "all(@feat:performing_combatant#morningstar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Morningstar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#morningstar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortspear",
+    "condition": "all(@feat:performing_combatant#shortspear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shortspear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shortspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bayonet",
+    "condition": "all(@feat:performing_combatant#bayonet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bayonet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bayonet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_pike",
+    "condition": "all(@feat:performing_combatant#boarding_pike OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Boarding Pike",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#boarding_pike",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kumade",
+    "condition": "all(@feat:performing_combatant#kumade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kumade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "collapsible_kumade",
+    "condition": "all(@feat:performing_combatant#collapsible_kumade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Collapsible Kumade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#collapsible_kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lantern_staff",
+    "condition": "all(@feat:performing_combatant#lantern_staff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Lantern Staff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#lantern_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longspear",
+    "condition": "all(@feat:performing_combatant#longspear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Longspear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#longspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quarterstaff",
+    "condition": "all(@feat:performing_combatant#quarterstaff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Quarterstaff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#quarterstaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spear",
+    "condition": "all(@feat:performing_combatant#spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blowgun",
+    "condition": "all(@feat:performing_combatant#blowgun OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@feat:performing_combatant#heavy_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@feat:performing_combatant#light_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@feat:performing_combatant#dart OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@feat:performing_combatant#javelin OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@feat:performing_combatant#sling OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@feat:performing_combatant#stingchuck OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@feat:performing_combatant#stonebow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "axe",
+    "condition": "all(@feat:performing_combatant#axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_axe",
+    "condition": "all(@feat:performing_combatant#throwing_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Throwing Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#throwing_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blade_boot",
+    "condition": "all(@feat:performing_combatant#blade_boot OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Blade Boot",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#blade_boot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "whip",
+    "condition": "all(@feat:performing_combatant#whip OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Whip",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "claw_blades",
+    "condition": "all(@feat:performing_combatant#claw_blades OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Claw Blades",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#claw_blades",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_dagger",
+    "condition": "all(@feat:performing_combatant#dueling_dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dueling Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dueling_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dogslicer",
+    "condition": "all(@feat:performing_combatant#dogslicer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dogslicer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dogslicer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_hammer",
+    "condition": "all(@feat:performing_combatant#light_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gladius",
+    "condition": "all(@feat:performing_combatant#gladius OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gladius",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gladius",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handaxe",
+    "condition": "all(@feat:performing_combatant#handaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Handaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#handaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "katar",
+    "condition": "all(@feat:performing_combatant#katar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Katar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#katar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kukri",
+    "condition": "all(@feat:performing_combatant#kukri OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kukri",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kukri",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "machete",
+    "condition": "all(@feat:performing_combatant#machete OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Machete",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#machete",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_pick",
+    "condition": "all(@feat:performing_combatant#light_pick OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Pick",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sap",
+    "condition": "all(@feat:performing_combatant#sap OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sap",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sap",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_shield",
+    "condition": "all(@feat:performing_combatant#light_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_armor",
+    "condition": "all(@feat:performing_combatant#spiked_armor OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiked Armor",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiked_armor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_spiked_shield",
+    "condition": "all(@feat:performing_combatant#light_spiked_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "starknife",
+    "condition": "all(@feat:performing_combatant#starknife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Starknife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#starknife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "short_sword",
+    "condition": "all(@feat:performing_combatant#short_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Short Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#short_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "war_razor",
+    "condition": "all(@feat:performing_combatant#war_razor OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "War Razor",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#war_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ankus",
+    "condition": "all(@feat:performing_combatant#ankus OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ankus",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ankus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battleaxe",
+    "condition": "all(@feat:performing_combatant#battleaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Battleaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#battleaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "combat_scabbard",
+    "condition": "all(@feat:performing_combatant#combat_scabbard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Combat Scabbard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#combat_scabbard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cutlass",
+    "condition": "all(@feat:performing_combatant#cutlass OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Cutlass",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#cutlass",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_flail",
+    "condition": "all(@feat:performing_combatant#light_flail OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Flail",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gandasa",
+    "condition": "all(@feat:performing_combatant#gandasa OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gandasa",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gandasa",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "klar",
+    "condition": "all(@feat:performing_combatant#klar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Klar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#klar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longsword",
+    "condition": "all(@feat:performing_combatant#longsword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Longsword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#longsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "manople",
+    "condition": "all(@feat:performing_combatant#manople OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Manople",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#manople",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_pick",
+    "condition": "all(@feat:performing_combatant#heavy_pick OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Pick",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rapier",
+    "condition": "all(@feat:performing_combatant#rapier OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Rapier",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scimitar",
+    "condition": "all(@feat:performing_combatant#scimitar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scimitar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scimitar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scizore",
+    "condition": "all(@feat:performing_combatant#scizore OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scizore",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scizore",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_shield",
+    "condition": "all(@feat:performing_combatant#heavy_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_spiked_shield",
+    "condition": "all(@feat:performing_combatant#heavy_spiked_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sword_cane",
+    "condition": "all(@feat:performing_combatant#sword_cane OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sword Cane",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sword_cane",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "terbutje",
+    "condition": "all(@feat:performing_combatant#terbutje OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Terbutje",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#terbutje",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "trident",
+    "condition": "all(@feat:performing_combatant#trident OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Trident",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#trident",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "warhammer",
+    "condition": "all(@feat:performing_combatant#warhammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Warhammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#warhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bardiche",
+    "condition": "all(@feat:performing_combatant#bardiche OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bardiche",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bardiche",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bill",
+    "condition": "all(@feat:performing_combatant#bill OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bill",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bill",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "earth_breaker",
+    "condition": "all(@feat:performing_combatant#earth_breaker OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Earth Breaker",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#earth_breaker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falchion",
+    "condition": "all(@feat:performing_combatant#falchion OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Falchion",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#falchion",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_flail",
+    "condition": "all(@feat:performing_combatant#heavy_flail OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Flail",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "glaive",
+    "condition": "all(@feat:performing_combatant#glaive OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Glaive",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greataxe",
+    "condition": "all(@feat:performing_combatant#greataxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Greataxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#greataxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatclub",
+    "condition": "all(@feat:performing_combatant#greatclub OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Greatclub",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#greatclub",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatsword",
+    "condition": "all(@feat:performing_combatant#greatsword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Greatsword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#greatsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "guisarme",
+    "condition": "all(@feat:performing_combatant#guisarme OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Guisarme",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#guisarme",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halberd",
+    "condition": "all(@feat:performing_combatant#halberd OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Halberd",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#halberd",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "horsechopper",
+    "condition": "all(@feat:performing_combatant#horsechopper OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Horsechopper",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#horsechopper",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lance",
+    "condition": "all(@feat:performing_combatant#lance OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Lance",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#lance",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ogre_hook",
+    "condition": "all(@feat:performing_combatant#ogre_hook OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ogre Hook",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ogre_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pickaxe",
+    "condition": "all(@feat:performing_combatant#pickaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Pickaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#pickaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "planson",
+    "condition": "all(@feat:performing_combatant#planson OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Planson",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#planson",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ranseur",
+    "condition": "all(@feat:performing_combatant#ranseur OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ranseur",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ranseur",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scythe",
+    "condition": "all(@feat:performing_combatant#scythe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scythe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "syringe_spear",
+    "condition": "all(@feat:performing_combatant#syringe_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Syringe Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#syringe_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@feat:performing_combatant#ammentum OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@feat:performing_combatant#chakram OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@feat:performing_combatant#jolting_dart OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@feat:performing_combatant#hunga_munga OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@feat:performing_combatant#hurlbat OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@feat:performing_combatant#longbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@feat:performing_combatant#pilum OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@feat:performing_combatant#shortbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@feat:performing_combatant#aklys OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knuckle_axe",
+    "condition": "all(@feat:performing_combatant#knuckle_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Knuckle Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#knuckle_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "barbazu_beard",
+    "condition": "all(@feat:performing_combatant#barbazu_beard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Barbazu Beard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#barbazu_beard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_poi",
+    "condition": "all(@feat:performing_combatant#battle_poi OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Battle Poi",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#battle_poi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "swordbreaker_dagger",
+    "condition": "all(@feat:performing_combatant#swordbreaker_dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Swordbreaker Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#swordbreaker_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_talon",
+    "condition": "all(@feat:performing_combatant#flying_talon OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flying Talon",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flying_talon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_pincher",
+    "condition": "all(@feat:performing_combatant#gnome_pincher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Pincher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_pincher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_rope_shot",
+    "condition": "all(@feat:performing_combatant#halfling_rope_shot OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Halfling Rope-shot",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#halfling_rope_shot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_boulder_helmet",
+    "condition": "all(@feat:performing_combatant#dwarven_boulder_helmet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Boulder Helmet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_boulder_helmet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kama",
+    "condition": "all(@feat:performing_combatant#kama OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kama",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kama",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butterfly_knife",
+    "condition": "all(@feat:performing_combatant#butterfly_knife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Butterfly Knife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#butterfly_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "deer_horn_knife",
+    "condition": "all(@feat:performing_combatant#deer_horn_knife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Deer Horn Knife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#deer_horn_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_maulaxe",
+    "condition": "all(@feat:performing_combatant#dwarven_maulaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Maulaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_maulaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "nunchaku",
+    "condition": "all(@feat:performing_combatant#nunchaku OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Nunchaku",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#nunchaku",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quadrens",
+    "condition": "all(@feat:performing_combatant#quadrens OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Quadrens",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#quadrens",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "drow_razor",
+    "condition": "all(@feat:performing_combatant#drow_razor OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Drow Razor",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#drow_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rope_gauntlet",
+    "condition": "all(@feat:performing_combatant#rope_gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Rope Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#rope_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sawtooth_sabre",
+    "condition": "all(@feat:performing_combatant#sawtooth_sabre OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sawtooth Sabre",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sawtooth_sabre",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sai",
+    "condition": "all(@feat:performing_combatant#sai OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sai",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sanpkhang",
+    "condition": "all(@feat:performing_combatant#sanpkhang OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sanpkhang",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sanpkhang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "siangham",
+    "condition": "all(@feat:performing_combatant#siangham OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Siangham",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#siangham",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sica",
+    "condition": "all(@feat:performing_combatant#sica OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sica",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sica",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bracer",
+    "condition": "all(@feat:performing_combatant#thorn_bracer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Thorn Bracer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#thorn_bracer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_war_shield",
+    "condition": "all(@feat:performing_combatant#dwarven_war_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven War-shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_war_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "waveblade",
+    "condition": "all(@feat:performing_combatant#waveblade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Waveblade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#waveblade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scorpion_whip",
+    "condition": "all(@feat:performing_combatant#scorpion_whip OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scorpion Whip",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scorpion_whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_axe_gauntlet",
+    "condition": "all(@feat:performing_combatant#dwarven_heavy_axe_gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_heavy_axe_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hooked_axe",
+    "condition": "all(@feat:performing_combatant#hooked_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hooked Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hooked_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "broken_back_seax",
+    "condition": "all(@feat:performing_combatant#broken_back_seax OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Broken-back Seax",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#broken_back_seax",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "estoc",
+    "condition": "all(@feat:performing_combatant#estoc OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Estoc",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#estoc",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falcata",
+    "condition": "all(@feat:performing_combatant#falcata OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Falcata",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#falcata",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flickmace",
+    "condition": "all(@feat:performing_combatant#flickmace OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flickmace",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flickmace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flindbar",
+    "condition": "all(@feat:performing_combatant#flindbar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flindbar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flindbar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "khopesh",
+    "condition": "all(@feat:performing_combatant#khopesh OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Khopesh",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#khopesh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knobkerrie",
+    "condition": "all(@feat:performing_combatant#knobkerrie OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Knobkerrie",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#knobkerrie",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_ram_hammer",
+    "condition": "all(@feat:performing_combatant#dwarven_ram_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Ram Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_ram_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiral_rapier",
+    "condition": "all(@feat:performing_combatant#spiral_rapier OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiral Rapier",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiral_rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rhoka",
+    "condition": "all(@feat:performing_combatant#rhoka OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Rhoka",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#rhoka",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shotel",
+    "condition": "all(@feat:performing_combatant#shotel OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shotel",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shotel",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle_sword",
+    "condition": "all(@feat:performing_combatant#sickle_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sickle-sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sickle_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "split_blade_sword",
+    "condition": "all(@feat:performing_combatant#split_blade_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Split-blade Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#split_blade_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_sword",
+    "condition": "all(@feat:performing_combatant#dueling_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dueling Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dueling_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bastard_sword",
+    "condition": "all(@feat:performing_combatant#bastard_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bastard Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bastard_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tongi",
+    "condition": "all(@feat:performing_combatant#tongi OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Tongi",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#tongi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_waraxe",
+    "condition": "all(@feat:performing_combatant#dwarven_waraxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Waraxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_double_waraxe",
+    "condition": "all(@feat:performing_combatant#dwarven_double_waraxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Double Waraxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_double_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_double_axe",
+    "condition": "all(@feat:performing_combatant#orc_double_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Orc Double Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#orc_double_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butchering_axe",
+    "condition": "all(@feat:performing_combatant#butchering_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Butchering Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#butchering_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_battle_ladder",
+    "condition": "all(@feat:performing_combatant#gnome_battle_ladder OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Battle Ladder",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_battle_ladder",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_gaff",
+    "condition": "all(@feat:performing_combatant#boarding_gaff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Boarding Gaff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#boarding_gaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chain_hammer",
+    "condition": "all(@feat:performing_combatant#chain_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Chain-hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#chain_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_chain",
+    "condition": "all(@feat:performing_combatant#spiked_chain OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiked Chain",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiked_chain",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crook",
+    "condition": "all(@feat:performing_combatant#crook OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Crook",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#crook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_curve_blade",
+    "condition": "all(@feat:performing_combatant#elven_curve_blade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Elven Curve Blade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#elven_curve_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_dorn_dergar",
+    "condition": "all(@feat:performing_combatant#dwarven_dorn_dergar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Dorn-Dergar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_dorn_dergar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_spear",
+    "condition": "all(@feat:performing_combatant#double_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Double Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#double_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_branched_spear",
+    "condition": "all(@feat:performing_combatant#elven_branched_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Elven Branched Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#elven_branched_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "fauchard",
+    "condition": "all(@feat:performing_combatant#fauchard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Fauchard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#fauchard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dire_flail",
+    "condition": "all(@feat:performing_combatant#dire_flail OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dire Flail",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dire_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flailpole",
+    "condition": "all(@feat:performing_combatant#flailpole OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flailpole",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flailpole",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flambard",
+    "condition": "all(@feat:performing_combatant#flambard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flambard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flambard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_blade",
+    "condition": "all(@feat:performing_combatant#flying_blade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flying Blade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flying_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "garrote",
+    "condition": "all(@feat:performing_combatant#garrote OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Garrote",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#garrote",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_giant_sticker",
+    "condition": "all(@feat:performing_combatant#dwarven_giant_sticker OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Giant-Sticker",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_giant_sticker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_hooked_hammer",
+    "condition": "all(@feat:performing_combatant#gnome_hooked_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Hooked Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_hooked_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "harpoon",
+    "condition": "all(@feat:performing_combatant#harpoon OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Harpoon",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#harpoon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longaxe",
+    "condition": "all(@feat:performing_combatant#dwarven_longaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Longaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_longaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longhammer",
+    "condition": "all(@feat:performing_combatant#dwarven_longhammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Longhammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_longhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mancatcher",
+    "condition": "all(@feat:performing_combatant#mancatcher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Mancatcher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#mancatcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_skull_ram",
+    "condition": "all(@feat:performing_combatant#orc_skull_ram OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Orc Skull Ram",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#orc_skull_ram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_piston_maul",
+    "condition": "all(@feat:performing_combatant#gnome_piston_maul OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Piston Maul",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_piston_maul",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_ripsaw_glaive",
+    "condition": "all(@feat:performing_combatant#gnome_ripsaw_glaive OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Ripsaw Glaive",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_ripsaw_glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bladed_scarf",
+    "condition": "all(@feat:performing_combatant#bladed_scarf OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bladed Scarf",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bladed_scarf",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "totem_spear",
+    "condition": "all(@feat:performing_combatant#totem_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Totem Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#totem_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_sphinx_hammer",
+    "condition": "all(@feat:performing_combatant#dwarven_sphinx_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Sphinx Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_sphinx_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "switchscythe",
+    "condition": "all(@feat:performing_combatant#switchscythe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Switchscythe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#switchscythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "two_bladed_sword",
+    "condition": "all(@feat:performing_combatant#two_bladed_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Two-bladed Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#two_bladed_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_urgrosh",
+    "condition": "all(@feat:performing_combatant#dwarven_urgrosh OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Urgrosh",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_urgrosh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@feat:performing_combatant#bola OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@feat:performing_combatant#brutal_bola OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@feat:performing_combatant#boomerang OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@feat:performing_combatant#thorn_bow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@feat:performing_combatant#crank_heavy_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@feat:performing_combatant#crank_light_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@feat:performing_combatant#double_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@feat:performing_combatant#hand_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@feat:performing_combatant#launching_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@feat:performing_combatant#repeating_heavy_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@feat:performing_combatant#repeating_light_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@feat:performing_combatant#flask_thrower OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@feat:performing_combatant#grappling_hook OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@feat:performing_combatant#orc_hornbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@feat:performing_combatant#stormshaft_javelin OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@feat:performing_combatant#lasso OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@feat:performing_combatant#net OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@feat:performing_combatant#snag_net OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@feat:performing_combatant#dwarven_heavy_pelletbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@feat:performing_combatant#dwarven_light_pelletbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@feat:performing_combatant#throwing_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@feat:performing_combatant#shrillshaft_javelin OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@feat:performing_combatant#shuriken_5 OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@feat:performing_combatant#double_sling OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@feat:performing_combatant#sling_glove OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@feat:performing_combatant#halfling_sling_staff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@feat:performing_combatant#stitched_sling OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@feat:performing_combatant#wrist_launcher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@feat:performing_combatant#heavy_wrist_launcher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gauntlet",
+    "condition": "all(@feat:performing_combatant#gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "unarmed",
+    "condition": "all(@feat:performing_combatant#unarmed OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Unarmed",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#unarmed",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_aspergillum",
+    "condition": "all(@feat:performing_combatant#battle_aspergillum OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Battle Aspergillum",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#battle_aspergillum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knife",
+    "condition": "all(@feat:performing_combatant#brass_knife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Brass Knife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#brass_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knuckles",
+    "condition": "all(@feat:performing_combatant#brass_knuckles OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Brass Knuckles",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#brass_knuckles",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cestus",
+    "condition": "all(@feat:performing_combatant#cestus OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Cestus",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#cestus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dagger",
+    "condition": "all(@feat:performing_combatant#dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "punching_dagger",
+    "condition": "all(@feat:performing_combatant#punching_dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Punching Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#punching_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_gauntlet",
+    "condition": "all(@feat:performing_combatant#spiked_gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiked Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiked_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handwraps",
+    "condition": "all(@feat:performing_combatant#handwraps OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Handwraps",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#handwraps",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "traveling_kettle",
+    "condition": "all(@feat:performing_combatant#traveling_kettle OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Traveling Kettle",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#traveling_kettle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hook_hand",
+    "condition": "all(@feat:performing_combatant#hook_hand OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hook Hand",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hook_hand",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kunai",
+    "condition": "all(@feat:performing_combatant#kunai OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kunai",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kunai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_mace",
+    "condition": "all(@feat:performing_combatant#light_mace OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Mace",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle",
+    "condition": "all(@feat:performing_combatant#sickle OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sickle",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sickle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spring_blade",
+    "condition": "all(@feat:performing_combatant#spring_blade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spring Blade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spring_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wooden_stake",
+    "condition": "all(@feat:performing_combatant#wooden_stake OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Wooden Stake",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#wooden_stake",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "club",
+    "condition": "all(@feat:performing_combatant#club OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Club",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mere_club",
+    "condition": "all(@feat:performing_combatant#mere_club OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Mere Club",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#mere_club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_mace",
+    "condition": "all(@feat:performing_combatant#heavy_mace OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Mace",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "morningstar",
+    "condition": "all(@feat:performing_combatant#morningstar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Morningstar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#morningstar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortspear",
+    "condition": "all(@feat:performing_combatant#shortspear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shortspear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shortspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bayonet",
+    "condition": "all(@feat:performing_combatant#bayonet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bayonet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bayonet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_pike",
+    "condition": "all(@feat:performing_combatant#boarding_pike OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Boarding Pike",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#boarding_pike",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kumade",
+    "condition": "all(@feat:performing_combatant#kumade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kumade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "collapsible_kumade",
+    "condition": "all(@feat:performing_combatant#collapsible_kumade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Collapsible Kumade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#collapsible_kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lantern_staff",
+    "condition": "all(@feat:performing_combatant#lantern_staff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Lantern Staff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#lantern_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longspear",
+    "condition": "all(@feat:performing_combatant#longspear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Longspear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#longspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quarterstaff",
+    "condition": "all(@feat:performing_combatant#quarterstaff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Quarterstaff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#quarterstaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spear",
+    "condition": "all(@feat:performing_combatant#spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blowgun",
+    "condition": "all(@feat:performing_combatant#blowgun OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@feat:performing_combatant#heavy_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@feat:performing_combatant#light_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@feat:performing_combatant#dart OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@feat:performing_combatant#javelin OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@feat:performing_combatant#sling OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@feat:performing_combatant#stingchuck OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@feat:performing_combatant#stonebow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "axe",
+    "condition": "all(@feat:performing_combatant#axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_axe",
+    "condition": "all(@feat:performing_combatant#throwing_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Throwing Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#throwing_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blade_boot",
+    "condition": "all(@feat:performing_combatant#blade_boot OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Blade Boot",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#blade_boot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "whip",
+    "condition": "all(@feat:performing_combatant#whip OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Whip",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "claw_blades",
+    "condition": "all(@feat:performing_combatant#claw_blades OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Claw Blades",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#claw_blades",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_dagger",
+    "condition": "all(@feat:performing_combatant#dueling_dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dueling Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dueling_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dogslicer",
+    "condition": "all(@feat:performing_combatant#dogslicer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dogslicer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dogslicer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_hammer",
+    "condition": "all(@feat:performing_combatant#light_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gladius",
+    "condition": "all(@feat:performing_combatant#gladius OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gladius",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gladius",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handaxe",
+    "condition": "all(@feat:performing_combatant#handaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Handaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#handaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "katar",
+    "condition": "all(@feat:performing_combatant#katar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Katar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#katar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kukri",
+    "condition": "all(@feat:performing_combatant#kukri OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kukri",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kukri",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "machete",
+    "condition": "all(@feat:performing_combatant#machete OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Machete",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#machete",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_pick",
+    "condition": "all(@feat:performing_combatant#light_pick OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Pick",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sap",
+    "condition": "all(@feat:performing_combatant#sap OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sap",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sap",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_shield",
+    "condition": "all(@feat:performing_combatant#light_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_armor",
+    "condition": "all(@feat:performing_combatant#spiked_armor OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiked Armor",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiked_armor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_spiked_shield",
+    "condition": "all(@feat:performing_combatant#light_spiked_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "starknife",
+    "condition": "all(@feat:performing_combatant#starknife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Starknife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#starknife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "short_sword",
+    "condition": "all(@feat:performing_combatant#short_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Short Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#short_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "war_razor",
+    "condition": "all(@feat:performing_combatant#war_razor OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "War Razor",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#war_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ankus",
+    "condition": "all(@feat:performing_combatant#ankus OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ankus",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ankus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battleaxe",
+    "condition": "all(@feat:performing_combatant#battleaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Battleaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#battleaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "combat_scabbard",
+    "condition": "all(@feat:performing_combatant#combat_scabbard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Combat Scabbard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#combat_scabbard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cutlass",
+    "condition": "all(@feat:performing_combatant#cutlass OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Cutlass",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#cutlass",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_flail",
+    "condition": "all(@feat:performing_combatant#light_flail OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Light Flail",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#light_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gandasa",
+    "condition": "all(@feat:performing_combatant#gandasa OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gandasa",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gandasa",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "klar",
+    "condition": "all(@feat:performing_combatant#klar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Klar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#klar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longsword",
+    "condition": "all(@feat:performing_combatant#longsword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Longsword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#longsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "manople",
+    "condition": "all(@feat:performing_combatant#manople OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Manople",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#manople",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_pick",
+    "condition": "all(@feat:performing_combatant#heavy_pick OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Pick",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rapier",
+    "condition": "all(@feat:performing_combatant#rapier OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Rapier",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scimitar",
+    "condition": "all(@feat:performing_combatant#scimitar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scimitar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scimitar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scizore",
+    "condition": "all(@feat:performing_combatant#scizore OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scizore",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scizore",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_shield",
+    "condition": "all(@feat:performing_combatant#heavy_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_spiked_shield",
+    "condition": "all(@feat:performing_combatant#heavy_spiked_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sword_cane",
+    "condition": "all(@feat:performing_combatant#sword_cane OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sword Cane",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sword_cane",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "terbutje",
+    "condition": "all(@feat:performing_combatant#terbutje OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Terbutje",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#terbutje",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "trident",
+    "condition": "all(@feat:performing_combatant#trident OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Trident",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#trident",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "warhammer",
+    "condition": "all(@feat:performing_combatant#warhammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Warhammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#warhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bardiche",
+    "condition": "all(@feat:performing_combatant#bardiche OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bardiche",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bardiche",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bill",
+    "condition": "all(@feat:performing_combatant#bill OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bill",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bill",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "earth_breaker",
+    "condition": "all(@feat:performing_combatant#earth_breaker OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Earth Breaker",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#earth_breaker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falchion",
+    "condition": "all(@feat:performing_combatant#falchion OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Falchion",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#falchion",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_flail",
+    "condition": "all(@feat:performing_combatant#heavy_flail OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Flail",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "glaive",
+    "condition": "all(@feat:performing_combatant#glaive OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Glaive",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greataxe",
+    "condition": "all(@feat:performing_combatant#greataxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Greataxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#greataxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatclub",
+    "condition": "all(@feat:performing_combatant#greatclub OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Greatclub",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#greatclub",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatsword",
+    "condition": "all(@feat:performing_combatant#greatsword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Greatsword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#greatsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "guisarme",
+    "condition": "all(@feat:performing_combatant#guisarme OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Guisarme",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#guisarme",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halberd",
+    "condition": "all(@feat:performing_combatant#halberd OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Halberd",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#halberd",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "horsechopper",
+    "condition": "all(@feat:performing_combatant#horsechopper OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Horsechopper",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#horsechopper",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lance",
+    "condition": "all(@feat:performing_combatant#lance OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Lance",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#lance",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ogre_hook",
+    "condition": "all(@feat:performing_combatant#ogre_hook OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ogre Hook",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ogre_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pickaxe",
+    "condition": "all(@feat:performing_combatant#pickaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Pickaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#pickaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "planson",
+    "condition": "all(@feat:performing_combatant#planson OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Planson",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#planson",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ranseur",
+    "condition": "all(@feat:performing_combatant#ranseur OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ranseur",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ranseur",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scythe",
+    "condition": "all(@feat:performing_combatant#scythe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scythe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "syringe_spear",
+    "condition": "all(@feat:performing_combatant#syringe_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Syringe Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#syringe_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@feat:performing_combatant#ammentum OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@feat:performing_combatant#chakram OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@feat:performing_combatant#jolting_dart OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@feat:performing_combatant#hunga_munga OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@feat:performing_combatant#hurlbat OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@feat:performing_combatant#longbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@feat:performing_combatant#pilum OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@feat:performing_combatant#shortbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@feat:performing_combatant#aklys OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knuckle_axe",
+    "condition": "all(@feat:performing_combatant#knuckle_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Knuckle Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#knuckle_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "barbazu_beard",
+    "condition": "all(@feat:performing_combatant#barbazu_beard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Barbazu Beard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#barbazu_beard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_poi",
+    "condition": "all(@feat:performing_combatant#battle_poi OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Battle Poi",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#battle_poi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "swordbreaker_dagger",
+    "condition": "all(@feat:performing_combatant#swordbreaker_dagger OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Swordbreaker Dagger",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#swordbreaker_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_talon",
+    "condition": "all(@feat:performing_combatant#flying_talon OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flying Talon",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flying_talon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_pincher",
+    "condition": "all(@feat:performing_combatant#gnome_pincher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Pincher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_pincher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_rope_shot",
+    "condition": "all(@feat:performing_combatant#halfling_rope_shot OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Halfling Rope-shot",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#halfling_rope_shot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_boulder_helmet",
+    "condition": "all(@feat:performing_combatant#dwarven_boulder_helmet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Boulder Helmet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_boulder_helmet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kama",
+    "condition": "all(@feat:performing_combatant#kama OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Kama",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#kama",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butterfly_knife",
+    "condition": "all(@feat:performing_combatant#butterfly_knife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Butterfly Knife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#butterfly_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "deer_horn_knife",
+    "condition": "all(@feat:performing_combatant#deer_horn_knife OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Deer Horn Knife",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#deer_horn_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_maulaxe",
+    "condition": "all(@feat:performing_combatant#dwarven_maulaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Maulaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_maulaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "nunchaku",
+    "condition": "all(@feat:performing_combatant#nunchaku OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Nunchaku",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#nunchaku",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quadrens",
+    "condition": "all(@feat:performing_combatant#quadrens OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Quadrens",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#quadrens",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "drow_razor",
+    "condition": "all(@feat:performing_combatant#drow_razor OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Drow Razor",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#drow_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rope_gauntlet",
+    "condition": "all(@feat:performing_combatant#rope_gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Rope Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#rope_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sawtooth_sabre",
+    "condition": "all(@feat:performing_combatant#sawtooth_sabre OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sawtooth Sabre",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sawtooth_sabre",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sai",
+    "condition": "all(@feat:performing_combatant#sai OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sai",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sanpkhang",
+    "condition": "all(@feat:performing_combatant#sanpkhang OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sanpkhang",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sanpkhang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "siangham",
+    "condition": "all(@feat:performing_combatant#siangham OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Siangham",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#siangham",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sica",
+    "condition": "all(@feat:performing_combatant#sica OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sica",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sica",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bracer",
+    "condition": "all(@feat:performing_combatant#thorn_bracer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Thorn Bracer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#thorn_bracer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_war_shield",
+    "condition": "all(@feat:performing_combatant#dwarven_war_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven War-shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_war_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "waveblade",
+    "condition": "all(@feat:performing_combatant#waveblade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Waveblade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#waveblade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scorpion_whip",
+    "condition": "all(@feat:performing_combatant#scorpion_whip OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Scorpion Whip",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#scorpion_whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_axe_gauntlet",
+    "condition": "all(@feat:performing_combatant#dwarven_heavy_axe_gauntlet OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_heavy_axe_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hooked_axe",
+    "condition": "all(@feat:performing_combatant#hooked_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hooked Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hooked_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "broken_back_seax",
+    "condition": "all(@feat:performing_combatant#broken_back_seax OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Broken-back Seax",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#broken_back_seax",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "estoc",
+    "condition": "all(@feat:performing_combatant#estoc OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Estoc",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#estoc",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falcata",
+    "condition": "all(@feat:performing_combatant#falcata OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Falcata",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#falcata",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flickmace",
+    "condition": "all(@feat:performing_combatant#flickmace OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flickmace",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flickmace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flindbar",
+    "condition": "all(@feat:performing_combatant#flindbar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flindbar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flindbar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "khopesh",
+    "condition": "all(@feat:performing_combatant#khopesh OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Khopesh",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#khopesh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knobkerrie",
+    "condition": "all(@feat:performing_combatant#knobkerrie OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Knobkerrie",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#knobkerrie",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_ram_hammer",
+    "condition": "all(@feat:performing_combatant#dwarven_ram_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Ram Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_ram_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiral_rapier",
+    "condition": "all(@feat:performing_combatant#spiral_rapier OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiral Rapier",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiral_rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rhoka",
+    "condition": "all(@feat:performing_combatant#rhoka OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Rhoka",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#rhoka",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shotel",
+    "condition": "all(@feat:performing_combatant#shotel OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shotel",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shotel",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle_sword",
+    "condition": "all(@feat:performing_combatant#sickle_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sickle-sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sickle_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "split_blade_sword",
+    "condition": "all(@feat:performing_combatant#split_blade_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Split-blade Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#split_blade_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_sword",
+    "condition": "all(@feat:performing_combatant#dueling_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dueling Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dueling_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bastard_sword",
+    "condition": "all(@feat:performing_combatant#bastard_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bastard Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bastard_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tongi",
+    "condition": "all(@feat:performing_combatant#tongi OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Tongi",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#tongi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_waraxe",
+    "condition": "all(@feat:performing_combatant#dwarven_waraxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Waraxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_double_waraxe",
+    "condition": "all(@feat:performing_combatant#dwarven_double_waraxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Double Waraxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_double_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_double_axe",
+    "condition": "all(@feat:performing_combatant#orc_double_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Orc Double Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#orc_double_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butchering_axe",
+    "condition": "all(@feat:performing_combatant#butchering_axe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Butchering Axe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#butchering_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_battle_ladder",
+    "condition": "all(@feat:performing_combatant#gnome_battle_ladder OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Battle Ladder",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_battle_ladder",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_gaff",
+    "condition": "all(@feat:performing_combatant#boarding_gaff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Boarding Gaff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#boarding_gaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chain_hammer",
+    "condition": "all(@feat:performing_combatant#chain_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Chain-hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#chain_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_chain",
+    "condition": "all(@feat:performing_combatant#spiked_chain OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Spiked Chain",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#spiked_chain",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crook",
+    "condition": "all(@feat:performing_combatant#crook OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Crook",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#crook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_curve_blade",
+    "condition": "all(@feat:performing_combatant#elven_curve_blade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Elven Curve Blade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#elven_curve_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_dorn_dergar",
+    "condition": "all(@feat:performing_combatant#dwarven_dorn_dergar OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Dorn-Dergar",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_dorn_dergar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_spear",
+    "condition": "all(@feat:performing_combatant#double_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Double Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#double_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_branched_spear",
+    "condition": "all(@feat:performing_combatant#elven_branched_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Elven Branched Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#elven_branched_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "fauchard",
+    "condition": "all(@feat:performing_combatant#fauchard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Fauchard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#fauchard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dire_flail",
+    "condition": "all(@feat:performing_combatant#dire_flail OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dire Flail",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dire_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flailpole",
+    "condition": "all(@feat:performing_combatant#flailpole OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flailpole",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flailpole",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flambard",
+    "condition": "all(@feat:performing_combatant#flambard OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flambard",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flambard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_blade",
+    "condition": "all(@feat:performing_combatant#flying_blade OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flying Blade",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flying_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "garrote",
+    "condition": "all(@feat:performing_combatant#garrote OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Garrote",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#garrote",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_giant_sticker",
+    "condition": "all(@feat:performing_combatant#dwarven_giant_sticker OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Giant-Sticker",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_giant_sticker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_hooked_hammer",
+    "condition": "all(@feat:performing_combatant#gnome_hooked_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Hooked Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_hooked_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "harpoon",
+    "condition": "all(@feat:performing_combatant#harpoon OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Harpoon",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#harpoon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longaxe",
+    "condition": "all(@feat:performing_combatant#dwarven_longaxe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Longaxe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_longaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longhammer",
+    "condition": "all(@feat:performing_combatant#dwarven_longhammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Longhammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_longhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mancatcher",
+    "condition": "all(@feat:performing_combatant#mancatcher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Mancatcher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#mancatcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_skull_ram",
+    "condition": "all(@feat:performing_combatant#orc_skull_ram OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Orc Skull Ram",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#orc_skull_ram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_piston_maul",
+    "condition": "all(@feat:performing_combatant#gnome_piston_maul OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Piston Maul",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_piston_maul",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_ripsaw_glaive",
+    "condition": "all(@feat:performing_combatant#gnome_ripsaw_glaive OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Gnome Ripsaw Glaive",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#gnome_ripsaw_glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bladed_scarf",
+    "condition": "all(@feat:performing_combatant#bladed_scarf OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bladed Scarf",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bladed_scarf",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "totem_spear",
+    "condition": "all(@feat:performing_combatant#totem_spear OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Totem Spear",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#totem_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_sphinx_hammer",
+    "condition": "all(@feat:performing_combatant#dwarven_sphinx_hammer OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Sphinx Hammer",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_sphinx_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "switchscythe",
+    "condition": "all(@feat:performing_combatant#switchscythe OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Switchscythe",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#switchscythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "two_bladed_sword",
+    "condition": "all(@feat:performing_combatant#two_bladed_sword OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Two-bladed Sword",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#two_bladed_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_urgrosh",
+    "condition": "all(@feat:performing_combatant#dwarven_urgrosh OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Urgrosh",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_urgrosh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@feat:performing_combatant#bola OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@feat:performing_combatant#brutal_bola OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@feat:performing_combatant#boomerang OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@feat:performing_combatant#thorn_bow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@feat:performing_combatant#crank_heavy_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@feat:performing_combatant#crank_light_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@feat:performing_combatant#double_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@feat:performing_combatant#hand_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@feat:performing_combatant#launching_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@feat:performing_combatant#repeating_heavy_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@feat:performing_combatant#repeating_light_crossbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@feat:performing_combatant#flask_thrower OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@feat:performing_combatant#grappling_hook OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@feat:performing_combatant#orc_hornbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@feat:performing_combatant#stormshaft_javelin OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@feat:performing_combatant#lasso OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@feat:performing_combatant#net OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@feat:performing_combatant#snag_net OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@feat:performing_combatant#dwarven_heavy_pelletbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@feat:performing_combatant#dwarven_light_pelletbow OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@feat:performing_combatant#throwing_shield OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@feat:performing_combatant#shrillshaft_javelin OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@feat:performing_combatant#shuriken_5 OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@feat:performing_combatant#double_sling OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@feat:performing_combatant#sling_glove OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@feat:performing_combatant#halfling_sling_staff OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@feat:performing_combatant#stitched_sling OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@feat:performing_combatant#wrist_launcher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@feat:performing_combatant#heavy_wrist_launcher OR (0)[performance feat(s)] \u003e\u003d 3, @bab \u003e\u003d 6)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:master_combat_performer#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }],
+  "description": {
+    "text": "You are a master of the techniques and weapons of the arena and the stage.",
+    "sections": {
+      "Benefit": "You can make performance combat checks as a free action. You are proficient in all weapons with the performance special quality."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:master_combat_performer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

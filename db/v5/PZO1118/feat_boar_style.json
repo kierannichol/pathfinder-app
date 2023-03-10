@@ -1,0 +1,18 @@
+{
+  "id": "feat:boar_style",
+  "name": "Boar Style",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @skill:intimidate \u003e\u003d 3)",
+  "description": {
+    "text": "Your sharp teeth and nails rip your foes open.",
+    "sections": {
+      "Benefit": "You can deal bludgeoning damage or slashing damage with your unarmed strikes--changing damage type is a free action. While using this style, once per round when you hit a single foe with two or more unarmed strikes, you can tear flesh. When you do, you deal 2d6 extra points of damage with the attack."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:boar_style",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

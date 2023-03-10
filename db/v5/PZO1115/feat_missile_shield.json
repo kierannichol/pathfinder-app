@@ -1,0 +1,18 @@
+{
+  "id": "feat:missile_shield",
+  "name": "Missile Shield",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 13, @feat:shield_focus)",
+  "description": {
+    "text": "You are skilled at deflecting ranged attacks with your shield.",
+    "sections": {
+      "Benefit": "You must be using a light, heavy, or tower shield to use this feat. Once per round when you would normally be hit with an attack from a ranged weapon (not including spell effects, natural attacks, or massive ranged weapons), you may deflect it so that you take no damage, as if you had the Deflect Arrows feat. You must be aware of the attack and not flat-footed."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:missile_shield",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

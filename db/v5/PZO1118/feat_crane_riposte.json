@@ -1,0 +1,18 @@
+{
+  "id": "feat:crane_riposte",
+  "name": "Crane Riposte",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "any(@feat:crane_style, @feat:crane_wing, @feat:dodge, @feat:improved_unarmed_strike, @bab \u003e\u003d 8, @class:monk \u003e\u003d 7)",
+  "description": {
+    "text": "You use your defensive abilities to make overpowering counterattacks.",
+    "sections": {
+      "Benefit": "You take only a –1 penalty on attack rolls for fighting defensively."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:crane_riposte",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}
