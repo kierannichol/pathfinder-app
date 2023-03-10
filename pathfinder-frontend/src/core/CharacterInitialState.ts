@@ -35,10 +35,19 @@ export const InitialState: CharacterState = {
   'ability_point_cost': '{sum(@ability_point_cost:*)}'
 };
 
+const CharacterClassCategories = [ new OptionCategory('core', 'Core'), new OptionCategory('base', 'Base'), new OptionCategory('hybrid', 'Hybrid'), new OptionCategory('unchained', 'Unchained') ];
+const FeatCategories = [
+    new OptionCategory('feat+combat', 'Combat'),
+    new OptionCategory('feat+general', 'General'),
+    new OptionCategory('feat+teamwork', 'Teamwork'),
+    new OptionCategory('feat+metamagic', 'Metamagic')
+];
+
 export const InitialChoices = [
       Choice.text("level0:character_name", "character_name", "Character Name", value => [ Effect.setValue('character_name', value) ]),
       Choice.select("level0:race", "Race", "race",db => db.options(['race'])),
-      Choice.select("level0:favored_class", "Favored Class", "favored_class", db => db.options(['favored_class'])),
+      // Choice.select("level0:favored_class", "Favored Class", "favored_class", (db, category) => db.options(['favored_class', ...(category ? [category] : [])]), [ new OptionCategory('core', 'Core'), new OptionCategory('base', 'Base'), new OptionCategory('hybrid', 'Hybrid'), new OptionCategory('unchained', 'Unchained') ]),
+      Choice.select("level0:favored_class", "Favored Class", "favored_class", (db, category) => db.options(['favored_class', category ?? '']), CharacterClassCategories),
       Choice.select("level0:alignment", "Alignment", "alignment", db => db.options(['alignment'])),
       ...AbilityScores.map(s => s.id)
       .map(ability =>
@@ -50,16 +59,11 @@ export const BasePlayerTemplate = new Template('base', [
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     .map(level => {
       // Level-specific choices
-      const choices = [ Choice.select(`level${level}:class`, "Class", "class",db => db.options(['class'])) ];
+      const choices = [ Choice.select(`level${level}:class`, "Class", "class",db => db.options(['class']), CharacterClassCategories) ];
       if ((level % 2) === 1) {
         choices.push(Choice.select(`level${level}:feat`, "Feat", "feat", (db, category) => {
-          const tags = ['feat'];
-          if (category) {
-            tags.push(category);
-          }
-
-          return db.options(tags)
-        }, [ new OptionCategory('combat', 'Combat'), new OptionCategory('general', 'General')]));
+          return db.options([category ?? 'feat'])
+        }, FeatCategories));
       }
       return new ComponentTemplate(Formula.parse("@character_level>=" + level), [], choices)
     })

@@ -1,0 +1,14 @@
+{
+  "id": "ability:smite_evil#paladin_sacred_servant",
+  "name": "Smite Evil",
+  "tags": ["class:paladin#sacred_servant", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "This functions as the paladin ability, but the sacred servant can smite evil one additional time per day at 7th level, and every six levels thereafter (instead of 4th level and every three levels thereafter)."
+  },
+  "effects": [{
+    "targetKey": "ability:smite_evil#paladin_sacred_servant",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

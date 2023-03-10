@@ -1,0 +1,18 @@
+{
+  "id": "feat:improved_duck_and_cover",
+  "name": "Improved Duck and Cover",
+  "tags": ["feat", "teamwork", "teamwork"],
+  "prerequisiteFormula": "@feat:duck_and_cover",
+  "description": {
+    "text": "Your allies\u0027 ability to protect you from damage extends to area attacks.",
+    "sections": {
+      "Benefit": "Whenever you use Duck and Cover, your ally has evasion or improved evasion, and your ally\u0027s saving throw roll succeeds, half of the damage you would have taken is transferred to your ally. (This damage is not reduced by the ally\u0027s evasion or improved evasion.)"
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_duck_and_cover",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:devastating_strike",
+  "name": "Devastating Strike",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:vital_strike, @bab \u003e\u003d 9)",
+  "description": {
+    "text": "Pitting all of your strength and resolve against your enemy, you deliver a strike that is impossible to ignore.",
+    "sections": {
+      "Benefit": "Whenever you use Vital Strike, Improved Vital Strike, or Greater Vital Strike, you gain a +2 bonus on each extra weapon damage dice roll those feats grant (+6 maximum). This bonus damage is multiplied on a critical hit."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:devastating_strike",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

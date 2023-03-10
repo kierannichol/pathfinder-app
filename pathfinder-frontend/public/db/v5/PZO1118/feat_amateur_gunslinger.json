@@ -1,0 +1,19 @@
+{
+  "id": "feat:amateur_gunslinger",
+  "name": "Amateur Gunslinger",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "!@ability:grit",
+  "description": {
+    "text": "Although you are not a gunslinger, you have and can use grit.",
+    "sections": {
+      "Benefit": "You gain a small amount of grit and the ability to perform a single 1st-level deed from the gunslinger deed class feature.",
+      "Special": "If you gain levels in a class that grants the grit class feature, you can immediately trade this feat for the Extra Grit feat."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:amateur_gunslinger",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

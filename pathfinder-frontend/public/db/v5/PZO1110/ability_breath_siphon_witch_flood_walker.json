@@ -1,0 +1,14 @@
+{
+  "id": "ability:breath_siphon#witch_flood_walker",
+  "name": "Breath Siphon",
+  "tags": ["class:witch#flood_walker", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 10th level, a flood walker gains strength from his patron when creatures suffocate or drown. Whenever a creature with an Intelligence of 3 or higher asphyxiates or drowns within 30 feet of him, the flood walker gains the benefit of a death knell spell for 1 hour. If a flood walker drowns such a victim himself (such as by holding a grappled or helpless creature under water until it dies or by killing it with a suffocation spell), the duration is doubled, and the flood walker gains 4d8 temporary hit points and a +6 enhancement bonus to Strength instead of the usual temporary hit points and enhancement bonus to Strength from death knell . Like death knell itself, this is an evil act."
+  },
+  "effects": [{
+    "targetKey": "ability:breath_siphon#witch_flood_walker",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

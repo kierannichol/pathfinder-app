@@ -1,0 +1,17 @@
+{
+  "id": "feat:covering_defense",
+  "name": "Covering Defense",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:shield_focus, @bab \u003e\u003d 6)",
+  "description": {
+    "sections": {
+      "Benefit": "When you use the total defense action while using a light, heavy, or tower shield, you can provide a cover bonus to AC against all attacks to an adjacent ally your size or smaller. This cover bonus is equal to your shield\u0027s shield bonus and lasts until the beginning of your next turn. your shield does not provide a cover bonus to reflex saves."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:covering_defense",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "feat:cooperative_crafting",
+  "name": "Cooperative Crafting",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(max(@skill:craft#*)[Any craft skill] \u003e\u003d 1, (0)[item creation feat(s)])",
+  "description": {
+    "sections": {
+      "Benefit": "You can assist another character in crafting mundane and magical items. You must both possess the relevant Craft skill or item creation feat, but either one of you can fulfill any other prerequisites for crafting the item. You provide a +2 circumstance bonus on any Craft or Spellcraft checks related to making an item, and your assistance doubles the gp value of items that can be crafted each day."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:cooperative_crafting",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

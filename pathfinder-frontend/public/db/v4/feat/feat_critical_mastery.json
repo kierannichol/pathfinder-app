@@ -1,0 +1,18 @@
+{
+  "id": "feat:critical_mastery",
+  "name": "Critical Mastery",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:critical_focus, (0)[critical feat(s)] \u003e\u003d 2, @class:fighter \u003e\u003d 14)",
+  "description": {
+    "sections": {
+      "Benefit": "When you score a critical hit, you can apply the effects of two critical feats in addition to the damage dealt.",
+      "Normal": "You can only apply the effects of one critical feat to a given critical hit in addition to the damage dealt."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:critical_mastery",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

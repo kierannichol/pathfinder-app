@@ -1,0 +1,18 @@
+{
+  "id": "feat:boar_ferocity",
+  "name": "Boar Ferocity",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @feat:boar_style, @skill:intimidate \u003e\u003d 6)",
+  "description": {
+    "text": "Your flesh-ripping unarmed strikes terrify your victims.",
+    "sections": {
+      "Benefit": "You add piercing damage to the damage types you can deal with your unarmed strikes. Further, you gain a +2 bonus on Intimidate checks to demoralize opponents. While using Boar Style, whenever you tear an opponent\u0027s flesh, you can spend a free action to make an Intimidate check to demoralize that opponent."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:boar_ferocity",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

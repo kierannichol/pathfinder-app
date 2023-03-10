@@ -1,4 +1,3 @@
-import {timedAsync} from "../util/pfutils";
 import {ResolvedTemplate, Template} from "../v4/Template";
 import CharacterAtLevel from "./CharacterAtLevel";
 import {CharacterState, CharacterStateMutator} from "./CharacterState";
@@ -38,7 +37,7 @@ export default class Character {
 
     // console.log(values);
 
-    const template = await timedAsync(() => this.baseTemplate.resolve(this.datahub, values), "Resolving template");
+    const template = await this.baseTemplate.resolve(this.datahub, values);
 
     return new Character(this.id,
         values,
@@ -48,17 +47,19 @@ export default class Character {
         this.datahub);
   }
 
-  public async atLevel(level: number): Promise<CharacterAtLevel> {
-    const mutator = new CharacterStateMutator(this.state);
+  public atLevel(level: number): CharacterAtLevel {
+    const state = this.state;
+    const template = this.resolvedTemplate;
+    const mutator = new CharacterStateMutator(state);
     mutator.set('character_level', level);
 
-    this.resolvedTemplate.applyTo(mutator);
+    template.applyTo(mutator);
 
     // console.log(mutator.state);
 
     return new CharacterAtLevel(level,
         mutator.state,
-        this.resolvedTemplate.choicesFor(mutator));
+        template.choicesFor(mutator));
   }
 
   public pack(): PackedCharacter {

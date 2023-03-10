@@ -1,0 +1,14 @@
+{
+  "id": "ability:banishing_smite#paladin_banishing_warden",
+  "name": "Banishing Smite",
+  "tags": ["class:paladin#banishing_warden", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 3rd level, once per day when the banishing warden confirms a critical hit against a target of her smite evil effect, she can attempt to forcibly banish the target to its home plane. The creature struck must succeed at a Will save (DC \u003d 10 + half the banishing warden\u0027s level + the banishing warden\u0027s Charisma modifier) or be sent back to its home plane as per dismissal. At 10th level, a creature dismissed in this manner takes an amount of damage equal to 2 points per paladin level at the start of its next turn. The banishing warden gains an additional daily use of this ability at 9th and 15th level."
+  },
+  "effects": [{
+    "targetKey": "ability:banishing_smite#paladin_banishing_warden",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

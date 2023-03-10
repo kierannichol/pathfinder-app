@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_channel",
+  "name": "Extra Channel",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:channel_energy#warpriest",
+  "description": {
+    "text": "You can channel divine energy more often.",
+    "sections": {
+      "Benefit": "You can channel energy two additional times per day.",
+      "Special": "If a paladin with the ability to channel positive energy takes this feat, she can use lay on hands four additional times a day, but only to channel positive energy."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_channel",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

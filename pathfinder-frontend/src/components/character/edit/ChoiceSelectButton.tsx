@@ -1,4 +1,4 @@
-import {useMemo, useState} from "react";
+import {ReactNode, useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
 import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import PathfinderButton from "../../common/PathfinderButton";
@@ -15,9 +15,10 @@ interface ChoiceSelectButtonProps {
   dialogVariant?: string;
   search?: boolean|"auto";
   buttonLabel?: string;
+  children?: ReactNode;
 }
 
-export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, buttonLabel, variant = 'white', dialogVariant = variant, search = false }: ChoiceSelectButtonProps) {
+export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, buttonLabel, children, variant = 'white', dialogVariant = variant, search = false }: ChoiceSelectButtonProps) {
   const pathfinderDatabase = usePathfinderDatabase();
   const [show, setShow] = useState(false);
   const [categories, setCategories] = useState<ChoiceSelectorCategory[]>();
@@ -41,7 +42,7 @@ export default function ChoiceSelectButton({ choiceName, value, onSelect, option
   const selectedName = useMemo(() => value !== '' ? pathfinderDatabase.name(value) : undefined,
       [value, pathfinderDatabase]);
 
-  const actualButtonLabel = <><Icon.PencilSquare/>&nbsp;&nbsp;{buttonLabel ?? selectedName ?? <i>Select {choiceName}</i>}</>;
+  const actualButtonLabel = children ?? <><Icon.PencilSquare/>&nbsp;&nbsp;{buttonLabel ?? selectedName ?? <i>Select {choiceName}</i>}</>;
 
   return (<>
         <PathfinderButton variant={variant} onClick={_ => handleShow()}>{actualButtonLabel}</PathfinderButton>

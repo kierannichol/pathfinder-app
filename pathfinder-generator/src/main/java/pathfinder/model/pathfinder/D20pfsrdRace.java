@@ -19,6 +19,7 @@ public record D20pfsrdRace(
         List<String> offensiveTraits,
         List<String> skillBonuses,
         List<String> bonusFeats,
-        List<String> spsuAbilities) implements
+        List<String> spsuAbilities,
+        String source) implements
         Serializable, NamedEntity {
 }

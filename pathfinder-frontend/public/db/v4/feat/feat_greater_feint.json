@@ -1,0 +1,18 @@
+{
+  "id": "feat:greater_feint",
+  "name": "Greater Feint",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:combat_expertise, @feat:improved_feint, @bab \u003e\u003d 6, @int_score \u003e\u003d 13)",
+  "description": {
+    "sections": {
+      "Benefit": "Whenever you use feint to cause an opponent to lose his Dexterity bonus, he loses that bonus until the beginning of your next turn, in addition to losing his Dexterity bonus against your next attack.",
+      "Normal": "A creature you feint loses its Dexterity bonus against your next attack."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:greater_feint",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

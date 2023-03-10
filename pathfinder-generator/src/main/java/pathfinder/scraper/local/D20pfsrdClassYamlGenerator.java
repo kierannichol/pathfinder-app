@@ -44,7 +44,6 @@ import pathfinder.model.pathfinder.ClassSkill;
 import pathfinder.model.pathfinder.D20pfsrdCharacterClass.Level;
 import pathfinder.model.pathfinder.D20pfsrdCharacterClass.Type;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.WeaponProficiency;
 import pathfinder.model.pathfinder.Weapons;
 import pathfinder.parser.NameToIdConverter;
@@ -184,10 +183,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
         Id classId = NameToIdConverter.classId(name);
         Id id = classId;
 
-        Source source = scrapeSourceFromCopyrightSection(document);
-        if (source == null) {
-            return;
-        }
+        String source = scrapeSourceFromCopyrightSection(document);
 
         Elements descriptionElements = findElementsBetween(content.selectFirst("h1"), this::elementIsEndOfSection);
         descriptionElements.removeIf(element -> element.is("div") || element.is("table"));
@@ -227,7 +223,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
                 name,
                 type.name(),
                 description,
-                source.code(),
+                source,
                 hitDie,
                 alignment,
                 mapSet(classSkills, ClassSkill::id),
@@ -247,7 +243,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
                 levels.stream()
                         .flatMap(level -> level.specials().stream()
                                 .distinct()
-                                .map(special -> new Feature(special.id(), special.name(), special.type(), special.description(), "", source.code())))
+                                .map(special -> new Feature(special.id(), special.name(), special.type(), special.description(), "", source)))
                         .collect(Collectors.toSet()));
 
         classDatabase.add(classYaml);

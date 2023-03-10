@@ -6,6 +6,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Optional;
+import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -22,6 +23,23 @@ public abstract class AbstractWebScraper implements WebScraper {
         }
 
         return cacheWrite(url, Jsoup.parse(url, TIMEOUT_MS));
+    }
+
+    protected Document fetchAllow404(URL url) throws IOException {
+        Document cached = cacheRead(url).orElse(null);
+        if (cached != null) {
+            return cached;
+        }
+
+        var connection = Jsoup.connect(url.toString())
+                .timeout(TIMEOUT_MS)
+                .ignoreHttpErrors(true)
+                .execute();
+
+        if (connection.statusCode() != 200 && connection.statusCode() != 404) {
+            throw new HttpStatusException(connection.statusMessage(), connection.statusCode(), url.toString());
+        }
+        return cacheWrite(url, connection.parse());
     }
 
     protected Element findLinkAnchor(Element linkElement) {

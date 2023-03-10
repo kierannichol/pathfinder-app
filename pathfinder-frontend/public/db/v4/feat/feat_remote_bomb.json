@@ -1,0 +1,17 @@
+{
+  "id": "feat:remote_bomb",
+  "name": "Remote Bomb",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@discovery:delayed_bomb",
+  "description": {
+    "sections": {
+      "Benefit": "The maximum delay for your delayed bombs increases to a number of minutes equal to your level."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:remote_bomb",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

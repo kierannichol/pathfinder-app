@@ -1,0 +1,18 @@
+{
+  "id": "feat:cautious_fighter",
+  "name": "Cautious Fighter",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "@race:halfling",
+  "description": {
+    "text": "You care more about survival than victory.",
+    "sections": {
+      "Benefit": "When fighting defensively or using total defense, your dodge bonus to AC increases by 2."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:cautious_fighter",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

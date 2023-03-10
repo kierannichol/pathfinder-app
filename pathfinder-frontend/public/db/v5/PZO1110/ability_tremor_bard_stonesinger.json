@@ -1,0 +1,14 @@
+{
+  "id": "ability:tremor#bard_stonesinger",
+  "name": "Tremor",
+  "tags": ["class:bard#stonesinger", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "As part of another bardic performance, a stonesinger can cause the ground within 30 feet to tremble, throwing enemies off balance and causing them to take a –1 circumstance penalty to AC as long as the stonesinger continues performing. This penalty increases by 1 at 5th level and every 6 levels thereafter. Creatures levitating or flying above the ground are unaffected by this ability."
+  },
+  "effects": [{
+    "targetKey": "ability:tremor#bard_stonesinger",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

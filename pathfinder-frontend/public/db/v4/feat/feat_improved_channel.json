@@ -1,0 +1,17 @@
+{
+  "id": "feat:improved_channel",
+  "name": "Improved Channel",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:channel_energy#warpriest",
+  "description": {
+    "sections": {
+      "Benefit": "Add 2 to the DC of saving throws made to resist the effects of your channel energy ability."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_channel",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

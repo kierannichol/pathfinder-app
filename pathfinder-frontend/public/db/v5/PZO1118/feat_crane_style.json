@@ -1,0 +1,18 @@
+{
+  "id": "feat:crane_style",
+  "name": "Crane Style",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "any(@feat:dodge, @feat:improved_unarmed_strike, @bab \u003e\u003d 2, @class:monk \u003e\u003d 1)",
+  "description": {
+    "text": "Your unarmed fighting techniques blend poise with graceful defense.",
+    "sections": {
+      "Benefit": "You take only a –2 penalty on attack rolls for fighting defensively. While using this style and fighting defensively or using the total defense action, you gain an additional +1 dodge bonus to your Armor Class."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:crane_style",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

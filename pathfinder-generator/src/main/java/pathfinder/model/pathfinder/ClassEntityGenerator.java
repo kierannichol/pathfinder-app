@@ -24,7 +24,8 @@ public class ClassEntityGenerator {
                 .name(characterClass.name())
                 .tags(tags)
                 .description(Description.create(characterClass.description()))
-                .effect(Effect.addNumber(characterClass.id(), 1));
+                .effect(Effect.addNumber(characterClass.id(), 1))
+                .source(Sources.findSourceByNameOrCode(characterClass.source()));
 
         TemplateBuilder template = Template.builder(characterClass.id());
 
@@ -115,11 +116,17 @@ public class ClassEntityGenerator {
     }
 
     private static Optional<Choice> tryFeatureChoice(Id classId, int classLevel, Id featureId) {
+        String choicePrefix = "%s%d:".formatted(classId, classLevel);
+        String classLevelPrerequisite = "@%s==%d".formatted(classId, classLevel);
         return switch (featureId.string()) {
             case "ability:rage_power#barbarian" -> Optional.of(
-                    new SelectChoice("barbarian%d:rage_power".formatted(classLevel), "Rage Power", "rage_power", "@%s==%d".formatted(classId, classLevel), List.of("rage_power"), List.of()));
+                    new SelectChoice(choicePrefix + "rage_power", "Rage Power", "rage_power", classLevelPrerequisite, List.of("rage_power"), List.of()));
             case "ability:bloodline#bloodrager" -> Optional.of(
-                    new SelectChoice("bloodrager%d:bloodline".formatted(classLevel), "Bloodline", "bloodrager_bloodline", "@%s==%d".formatted(classId, classLevel), List.of("bloodrager_bloodline"), List.of()));
+                    new SelectChoice(choicePrefix + "bloodline", "Bloodline", "bloodrager_bloodline", classLevelPrerequisite, List.of("bloodrager_bloodline"), List.of()));
+            case "ability:mercy#paladin" -> Optional.of(
+                    new SelectChoice(choicePrefix + "mercy", "Mercy", "mercy", classLevelPrerequisite, List.of("mercy"), List.of()));
+            case "ability:bonus_feat#magus" -> Optional.of(
+                    new SelectChoice(choicePrefix + "bonus_feat", "Bonus Feat (Magus)", "feat", classLevelPrerequisite, List.of("feat+combat", "feat+item_creation", "feat+metamagic"), List.of()));
             default -> Optional.empty();
         };
     }

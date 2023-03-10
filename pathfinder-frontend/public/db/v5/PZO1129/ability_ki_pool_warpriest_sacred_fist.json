@@ -1,0 +1,14 @@
+{
+  "id": "ability:ki_pool#warpriest_sacred_fist",
+  "name": "Ki Pool",
+  "tags": ["class:warpriest#sacred_fist", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 7th level, the sacred fist gains a ki pool. This functions as the monk class feature, using the sacred fist\u0027s level – 3 as his monk level when determining the number of points in his pool and bonuses granted to his unarmed strike. Additionally, the sacred fist can as a swift action spend 1 point from his ki pool to grant himself a +1 insight bonus to his AC for 1 minute. (This is in addition the normal ki ability to gain a dodge bonus to AC.) This insight bonus increases by 1 for every 3 levels above 7th (to a maximum of +5 at 19th level)."
+  },
+  "effects": [{
+    "targetKey": "ability:ki_pool#warpriest_sacred_fist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

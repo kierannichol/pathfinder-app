@@ -1,0 +1,17 @@
+{
+  "id": "feat:orc_hewer",
+  "name": "Orc Hewer",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @feat:cleave, @feat:goblin_cleaver, @feat:power_attack, @race:dwarf)",
+  "description": {
+    "sections": {
+      "Benefit": "This feat functions as Goblin Cleaver, but your additional attacks can be made against creatures your size or smaller. In addition, any such attacks that you make against humanoids (orc) gain a +2 circumstance bonus on attack rolls."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:orc_hewer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

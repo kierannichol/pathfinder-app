@@ -1,36 +1,45 @@
 import {faFileLines} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useMemo} from "react";
+import {useDeferredValue, useMemo} from "react";
+import * as Icon from "react-bootstrap-icons";
 import {Link} from "react-router-dom";
-import {useAsyncMemo} from "../../../app/reactHooks";
-import Character from "../../../core/Character";
+import CharacterAtLevel from "../../../core/CharacterAtLevel";
+import {SelectChoiceNode} from "../../../core/Choice";
+import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
+import {uniq} from "../../../util/pfutils";
 import ChoiceSelector from "../ChoiceSelector";
+import DataChoiceSelectButton from "../DataChoiceSelectButton";
 import LevelStatsDisplay from "../LevelStatsDisplay";
 import CharacterFeatureList from "./CharacterFeatureList";
 import "./CharacterLevel.scss";
 import SkillEditorButton from "./SkillEditorButton";
 
 interface CharacterLevelProps {
-  character: Character;
-  level: number;
+  characterId: string;
+  characterAtLevel: CharacterAtLevel;
+  characterAtPreviousLevel: CharacterAtLevel|undefined;
   onChange: (key:string, value:string) => void;
 }
 
-export default function CharacterLevel({ character, level, onChange }: CharacterLevelProps) {
+export default function CharacterLevel({ characterId, characterAtLevel, characterAtPreviousLevel, onChange }: CharacterLevelProps) {
 
-  const [ characterAtLevel ] = useAsyncMemo(() => character.atLevel(level), [character, level]);
+  characterAtLevel = useDeferredValue(characterAtLevel);
+  characterAtPreviousLevel = useDeferredValue(characterAtPreviousLevel);
 
-  const [ characterChanges ] = useAsyncMemo(async () => {
-    if (characterAtLevel === undefined) {
-      return undefined;
+  const characterChanges = useMemo(() => {
+    if (characterAtPreviousLevel === undefined) {
+      return characterAtLevel;
     }
-    return level > 0
-        ? characterAtLevel.intersection(await character.atLevel(level - 1))
-        : characterAtLevel;
-  }, [characterAtLevel, character]);
+    return characterAtLevel.intersection(characterAtPreviousLevel);
+  }, [characterAtLevel, characterAtPreviousLevel]);
+
+  const classChoice = useMemo(() => (characterChanges && characterChanges.choices
+      .find(choice => choice.type === 'class')),
+      [characterChanges]);
 
   const choicesForLevel = useMemo(() => (characterChanges && characterChanges.choices
-      .filter(choice => choice.type !== 'skill')) || [],
+      .filter(choice => choice.type !== 'skill')
+      .filter(choice => choice.type !== 'class')) || [],
       [characterChanges]);
 
   const featIds = useMemo(() => characterChanges?.find('feat:*').map(a => a.id), [characterChanges]);
@@ -40,11 +49,15 @@ export default function CharacterLevel({ character, level, onChange }: Character
     return <div>Loading...</div>;
   }
 
+  const classEditButton = classChoice
+      ? <> - <CharacterClassEditButton characterAtLevel={characterAtLevel} classChoice={classChoice as SelectChoiceNode} onChange={onChange}/></>
+      : <></>;
+
   return <fieldset>
     <legend>
-      <div className={'level-title'}>{`Level ${characterAtLevel.level}`}</div>
+      <div className={'level-title'}><span>{`Level ${characterAtLevel.level}`}</span>{classEditButton}</div>
       <div className={'character-sheet-button'}>
-        <Link to={`/character/sheet/${character.id}/${level}`} target={'_blank'} rel='noopener noreferrer'>
+        <Link to={`/character/sheet/${characterId}/${characterAtLevel.level}`} target={'_blank'} rel='noopener noreferrer'>
           <FontAwesomeIcon icon={faFileLines}/>
         </Link>
       </div>
@@ -77,9 +90,42 @@ export default function CharacterLevel({ character, level, onChange }: Character
 
       {specialIds.length > 0 && <div>
       <label>New Special Abilities</label>
-      {/*<CharacterTraitList classIds={[ characterAtLevel.get(`class_at_${level}`)?.asText() ?? '' ]} level={level} />*/}
       <CharacterFeatureList featureIds={specialIds} variant="special" />
       </div>}
     </div>
   </fieldset>
+}
+
+
+interface CharacterLevelNameProps {
+  characterAtLevel: CharacterAtLevel;
+  classChoice: SelectChoiceNode;
+  onChange: (key:string, value:string) => void;
+}
+
+function CharacterClassEditButton({ characterAtLevel, classChoice, onChange }: CharacterLevelNameProps) {
+  const database = usePathfinderDatabase();
+
+  const classLevelText = useMemo(() => {
+    const classesSelected = uniq(characterAtLevel.choicesOfType('class')
+      .map(choice => choice.current));
+
+    return classesSelected.map(classId => {
+      if (!classId) {
+        return "Unknown";
+      }
+      const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
+      const className = database.name(classId) ?? "Unknown";
+      return `${className} ${classLevel}`;
+    }).join('/');
+  }, [characterAtLevel, database]);
+
+  return <DataChoiceSelectButton
+      variant={'link'}
+      dialogVariant={'class'}
+      characterAtLevel={characterAtLevel}
+      choice={classChoice}
+      onSelect={value => onChange(classChoice.key, value)}>
+    <Icon.PencilSquare/>&nbsp;{classLevelText}
+  </DataChoiceSelectButton>
 }

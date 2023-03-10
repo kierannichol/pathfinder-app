@@ -1,0 +1,17 @@
+{
+  "id": "feat:reward_of_life",
+  "name": "Reward of Life",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:lay_on_hands#paladin",
+  "description": {
+    "sections": {
+      "Benefit": "Each time you use your lay on hands ability to heal a creature other than yourself, you heal a number of hit points equal to your Charisma bonus. This ability has no effect if you use lay on hands to harm undead."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:reward_of_life",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

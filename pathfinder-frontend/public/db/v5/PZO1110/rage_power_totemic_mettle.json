@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:totemic_mettle",
+  "name": "Totemic Mettle",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "true AND !@rage_power:totemic_mettle",
+  "description": {
+    "text": "A successful Fortitude save negates all harmful effects associated with an attack while spirit bound."
+  },
+  "effects": [{
+    "targetKey": "rage_power:totemic_mettle",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

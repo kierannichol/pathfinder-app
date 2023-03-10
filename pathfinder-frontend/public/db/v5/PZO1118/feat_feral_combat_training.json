@@ -1,0 +1,2249 @@
+{
+  "id": "feat:feral_combat_training",
+  "name": "Feral Combat Training",
+  "tags": ["feat", "combat"],
+  "children": [{
+    "optionId": "bite",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bite)",
+    "name": "Bite",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bite",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "claw",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#claw)",
+    "name": "Claw",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#claw",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gore",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gore)",
+    "name": "Gore",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gore",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hoof",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#hoof)",
+    "name": "Hoof",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#hoof",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tentacle",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#tentacle)",
+    "name": "Tentacle",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#tentacle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wing",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#wing)",
+    "name": "Wing",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#wing",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pincers",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#pincers)",
+    "name": "Pincers",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#pincers",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tail_slap",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#tail_slap)",
+    "name": "Tail Slap",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#tail_slap",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "slam",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#slam)",
+    "name": "Slam",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#slam",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sting",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sting)",
+    "name": "Sting",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sting",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "talons",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#talons)",
+    "name": "Talons",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#talons",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gauntlet",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gauntlet)",
+    "name": "Gauntlet",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "unarmed",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#unarmed)",
+    "name": "Unarmed",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#unarmed",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_aspergillum",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#battle_aspergillum)",
+    "name": "Battle Aspergillum",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#battle_aspergillum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knife",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#brass_knife)",
+    "name": "Brass Knife",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#brass_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brass_knuckles",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#brass_knuckles)",
+    "name": "Brass Knuckles",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#brass_knuckles",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cestus",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#cestus)",
+    "name": "Cestus",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#cestus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dagger",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dagger)",
+    "name": "Dagger",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "punching_dagger",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#punching_dagger)",
+    "name": "Punching Dagger",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#punching_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_gauntlet",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#spiked_gauntlet)",
+    "name": "Spiked Gauntlet",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#spiked_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handwraps",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#handwraps)",
+    "name": "Handwraps",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#handwraps",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "traveling_kettle",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#traveling_kettle)",
+    "name": "Traveling Kettle",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#traveling_kettle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hook_hand",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#hook_hand)",
+    "name": "Hook Hand",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#hook_hand",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kunai",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#kunai)",
+    "name": "Kunai",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#kunai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_mace",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_mace)",
+    "name": "Light Mace",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sickle)",
+    "name": "Sickle",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sickle",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spring_blade",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#spring_blade)",
+    "name": "Spring Blade",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#spring_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wooden_stake",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#wooden_stake)",
+    "name": "Wooden Stake",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#wooden_stake",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "club",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#club)",
+    "name": "Club",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mere_club",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#mere_club)",
+    "name": "Mere Club",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#mere_club",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_mace",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_mace)",
+    "name": "Heavy Mace",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_mace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "morningstar",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#morningstar)",
+    "name": "Morningstar",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#morningstar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortspear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#shortspear)",
+    "name": "Shortspear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#shortspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bayonet",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bayonet)",
+    "name": "Bayonet",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bayonet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_pike",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#boarding_pike)",
+    "name": "Boarding Pike",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#boarding_pike",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kumade",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#kumade)",
+    "name": "Kumade",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "collapsible_kumade",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#collapsible_kumade)",
+    "name": "Collapsible Kumade",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#collapsible_kumade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lantern_staff",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#lantern_staff)",
+    "name": "Lantern Staff",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#lantern_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longspear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#longspear)",
+    "name": "Longspear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#longspear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quarterstaff",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#quarterstaff)",
+    "name": "Quarterstaff",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#quarterstaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#spear)",
+    "name": "Spear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blowgun",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#blowgun)",
+    "name": "Blowgun",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#blowgun",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_crossbow)",
+    "name": "Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_crossbow)",
+    "name": "Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dart",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dart)",
+    "name": "Dart",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "javelin",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#javelin)",
+    "name": "Javelin",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sling)",
+    "name": "Sling",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stingchuck",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#stingchuck)",
+    "name": "Stingchuck",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#stingchuck",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stonebow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#stonebow)",
+    "name": "Stonebow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#stonebow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "axe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#axe)",
+    "name": "Axe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_axe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#throwing_axe)",
+    "name": "Throwing Axe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#throwing_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "blade_boot",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#blade_boot)",
+    "name": "Blade Boot",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#blade_boot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "whip",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#whip)",
+    "name": "Whip",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "claw_blades",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#claw_blades)",
+    "name": "Claw Blades",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#claw_blades",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_dagger",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dueling_dagger)",
+    "name": "Dueling Dagger",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dueling_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dogslicer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dogslicer)",
+    "name": "Dogslicer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dogslicer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_hammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_hammer)",
+    "name": "Light Hammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gladius",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gladius)",
+    "name": "Gladius",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gladius",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "handaxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#handaxe)",
+    "name": "Handaxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#handaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "katar",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#katar)",
+    "name": "Katar",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#katar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kukri",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#kukri)",
+    "name": "Kukri",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#kukri",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "machete",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#machete)",
+    "name": "Machete",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#machete",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_pick",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_pick)",
+    "name": "Light Pick",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sap",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sap)",
+    "name": "Sap",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sap",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_shield",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_shield)",
+    "name": "Light Shield",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_armor",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#spiked_armor)",
+    "name": "Spiked Armor",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#spiked_armor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_spiked_shield",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_spiked_shield)",
+    "name": "Light Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "starknife",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#starknife)",
+    "name": "Starknife",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#starknife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "short_sword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#short_sword)",
+    "name": "Short Sword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#short_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "war_razor",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#war_razor)",
+    "name": "War Razor",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#war_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ankus",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#ankus)",
+    "name": "Ankus",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#ankus",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battleaxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#battleaxe)",
+    "name": "Battleaxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#battleaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "combat_scabbard",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#combat_scabbard)",
+    "name": "Combat Scabbard",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#combat_scabbard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "cutlass",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#cutlass)",
+    "name": "Cutlass",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#cutlass",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "light_flail",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#light_flail)",
+    "name": "Light Flail",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#light_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gandasa",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gandasa)",
+    "name": "Gandasa",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gandasa",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "klar",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#klar)",
+    "name": "Klar",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#klar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longsword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#longsword)",
+    "name": "Longsword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#longsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "manople",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#manople)",
+    "name": "Manople",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#manople",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_pick",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_pick)",
+    "name": "Heavy Pick",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_pick",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rapier",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#rapier)",
+    "name": "Rapier",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scimitar",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#scimitar)",
+    "name": "Scimitar",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#scimitar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scizore",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#scizore)",
+    "name": "Scizore",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#scizore",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_shield",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_shield)",
+    "name": "Heavy Shield",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_spiked_shield",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_spiked_shield)",
+    "name": "Heavy Spiked Shield",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_spiked_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sword_cane",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sword_cane)",
+    "name": "Sword Cane",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sword_cane",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "terbutje",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#terbutje)",
+    "name": "Terbutje",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#terbutje",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "trident",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#trident)",
+    "name": "Trident",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#trident",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "warhammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#warhammer)",
+    "name": "Warhammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#warhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bardiche",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bardiche)",
+    "name": "Bardiche",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bardiche",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bill",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bill)",
+    "name": "Bill",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bill",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "earth_breaker",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#earth_breaker)",
+    "name": "Earth Breaker",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#earth_breaker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falchion",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#falchion)",
+    "name": "Falchion",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#falchion",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_flail",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_flail)",
+    "name": "Heavy Flail",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "glaive",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#glaive)",
+    "name": "Glaive",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greataxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#greataxe)",
+    "name": "Greataxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#greataxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatclub",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#greatclub)",
+    "name": "Greatclub",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#greatclub",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "greatsword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#greatsword)",
+    "name": "Greatsword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#greatsword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "guisarme",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#guisarme)",
+    "name": "Guisarme",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#guisarme",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halberd",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#halberd)",
+    "name": "Halberd",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#halberd",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "horsechopper",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#horsechopper)",
+    "name": "Horsechopper",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#horsechopper",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lance",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#lance)",
+    "name": "Lance",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#lance",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ogre_hook",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#ogre_hook)",
+    "name": "Ogre Hook",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#ogre_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pickaxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#pickaxe)",
+    "name": "Pickaxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#pickaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "planson",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#planson)",
+    "name": "Planson",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#planson",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ranseur",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#ranseur)",
+    "name": "Ranseur",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#ranseur",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scythe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#scythe)",
+    "name": "Scythe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#scythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "syringe_spear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#syringe_spear)",
+    "name": "Syringe Spear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#syringe_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "ammentum",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#ammentum)",
+    "name": "Ammentum",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#ammentum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chakram",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#chakram)",
+    "name": "Chakram",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#chakram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "jolting_dart",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#jolting_dart)",
+    "name": "Jolting Dart",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#jolting_dart",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hunga_munga",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#hunga_munga)",
+    "name": "Hunga Munga",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#hunga_munga",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hurlbat",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#hurlbat)",
+    "name": "Hurlbat",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#hurlbat",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "longbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#longbow)",
+    "name": "Longbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#longbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "pilum",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#pilum)",
+    "name": "Pilum",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#pilum",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shortbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#shortbow)",
+    "name": "Shortbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#shortbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "aklys",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#aklys)",
+    "name": "Aklys",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#aklys",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knuckle_axe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#knuckle_axe)",
+    "name": "Knuckle Axe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#knuckle_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "barbazu_beard",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#barbazu_beard)",
+    "name": "Barbazu Beard",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#barbazu_beard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "battle_poi",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#battle_poi)",
+    "name": "Battle Poi",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#battle_poi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "swordbreaker_dagger",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#swordbreaker_dagger)",
+    "name": "Swordbreaker Dagger",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#swordbreaker_dagger",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_talon",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flying_talon)",
+    "name": "Flying Talon",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flying_talon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_pincher",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gnome_pincher)",
+    "name": "Gnome Pincher",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gnome_pincher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_rope_shot",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#halfling_rope_shot)",
+    "name": "Halfling Rope-shot",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#halfling_rope_shot",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_boulder_helmet",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_boulder_helmet)",
+    "name": "Dwarven Boulder Helmet",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_boulder_helmet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "kama",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#kama)",
+    "name": "Kama",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#kama",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butterfly_knife",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#butterfly_knife)",
+    "name": "Butterfly Knife",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#butterfly_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "deer_horn_knife",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#deer_horn_knife)",
+    "name": "Deer Horn Knife",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#deer_horn_knife",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_maulaxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_maulaxe)",
+    "name": "Dwarven Maulaxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_maulaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "nunchaku",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#nunchaku)",
+    "name": "Nunchaku",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#nunchaku",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "quadrens",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#quadrens)",
+    "name": "Quadrens",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#quadrens",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "drow_razor",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#drow_razor)",
+    "name": "Drow Razor",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#drow_razor",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rope_gauntlet",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#rope_gauntlet)",
+    "name": "Rope Gauntlet",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#rope_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sawtooth_sabre",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sawtooth_sabre)",
+    "name": "Sawtooth Sabre",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sawtooth_sabre",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sai",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sai)",
+    "name": "Sai",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sai",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sanpkhang",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sanpkhang)",
+    "name": "Sanpkhang",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sanpkhang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "siangham",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#siangham)",
+    "name": "Siangham",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#siangham",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sica",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sica)",
+    "name": "Sica",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sica",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bracer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#thorn_bracer)",
+    "name": "Thorn Bracer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#thorn_bracer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_war_shield",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_war_shield)",
+    "name": "Dwarven War-shield",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_war_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "waveblade",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#waveblade)",
+    "name": "Waveblade",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#waveblade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "scorpion_whip",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#scorpion_whip)",
+    "name": "Scorpion Whip",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#scorpion_whip",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_axe_gauntlet",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_heavy_axe_gauntlet)",
+    "name": "Dwarven Heavy Axe-Gauntlet",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_heavy_axe_gauntlet",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hooked_axe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#hooked_axe)",
+    "name": "Hooked Axe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#hooked_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "broken_back_seax",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#broken_back_seax)",
+    "name": "Broken-back Seax",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#broken_back_seax",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "estoc",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#estoc)",
+    "name": "Estoc",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#estoc",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "falcata",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#falcata)",
+    "name": "Falcata",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#falcata",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flickmace",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flickmace)",
+    "name": "Flickmace",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flickmace",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flindbar",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flindbar)",
+    "name": "Flindbar",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flindbar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "khopesh",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#khopesh)",
+    "name": "Khopesh",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#khopesh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "knobkerrie",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#knobkerrie)",
+    "name": "Knobkerrie",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#knobkerrie",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_ram_hammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_ram_hammer)",
+    "name": "Dwarven Ram Hammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_ram_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiral_rapier",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#spiral_rapier)",
+    "name": "Spiral Rapier",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#spiral_rapier",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "rhoka",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#rhoka)",
+    "name": "Rhoka",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#rhoka",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shotel",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#shotel)",
+    "name": "Shotel",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#shotel",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sickle_sword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sickle_sword)",
+    "name": "Sickle-sword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sickle_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "split_blade_sword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#split_blade_sword)",
+    "name": "Split-blade Sword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#split_blade_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dueling_sword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dueling_sword)",
+    "name": "Dueling Sword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dueling_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bastard_sword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bastard_sword)",
+    "name": "Bastard Sword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bastard_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "tongi",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#tongi)",
+    "name": "Tongi",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#tongi",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_waraxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_waraxe)",
+    "name": "Dwarven Waraxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_double_waraxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_double_waraxe)",
+    "name": "Dwarven Double Waraxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_double_waraxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_double_axe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#orc_double_axe)",
+    "name": "Orc Double Axe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#orc_double_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "butchering_axe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#butchering_axe)",
+    "name": "Butchering Axe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#butchering_axe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_battle_ladder",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gnome_battle_ladder)",
+    "name": "Gnome Battle Ladder",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gnome_battle_ladder",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boarding_gaff",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#boarding_gaff)",
+    "name": "Boarding Gaff",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#boarding_gaff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "chain_hammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#chain_hammer)",
+    "name": "Chain-hammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#chain_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "spiked_chain",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#spiked_chain)",
+    "name": "Spiked Chain",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#spiked_chain",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crook",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#crook)",
+    "name": "Crook",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#crook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_curve_blade",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#elven_curve_blade)",
+    "name": "Elven Curve Blade",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#elven_curve_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_dorn_dergar",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_dorn_dergar)",
+    "name": "Dwarven Dorn-Dergar",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_dorn_dergar",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_spear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#double_spear)",
+    "name": "Double Spear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#double_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "elven_branched_spear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#elven_branched_spear)",
+    "name": "Elven Branched Spear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#elven_branched_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "fauchard",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#fauchard)",
+    "name": "Fauchard",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#fauchard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dire_flail",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dire_flail)",
+    "name": "Dire Flail",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dire_flail",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flailpole",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flailpole)",
+    "name": "Flailpole",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flailpole",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flambard",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flambard)",
+    "name": "Flambard",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flambard",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flying_blade",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flying_blade)",
+    "name": "Flying Blade",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flying_blade",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "garrote",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#garrote)",
+    "name": "Garrote",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#garrote",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_giant_sticker",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_giant_sticker)",
+    "name": "Dwarven Giant-Sticker",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_giant_sticker",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_hooked_hammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gnome_hooked_hammer)",
+    "name": "Gnome Hooked Hammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gnome_hooked_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "harpoon",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#harpoon)",
+    "name": "Harpoon",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#harpoon",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longaxe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_longaxe)",
+    "name": "Dwarven Longaxe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_longaxe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_longhammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_longhammer)",
+    "name": "Dwarven Longhammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_longhammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "mancatcher",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#mancatcher)",
+    "name": "Mancatcher",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#mancatcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_skull_ram",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#orc_skull_ram)",
+    "name": "Orc Skull Ram",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#orc_skull_ram",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_piston_maul",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gnome_piston_maul)",
+    "name": "Gnome Piston Maul",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gnome_piston_maul",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "gnome_ripsaw_glaive",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#gnome_ripsaw_glaive)",
+    "name": "Gnome Ripsaw Glaive",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#gnome_ripsaw_glaive",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bladed_scarf",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bladed_scarf)",
+    "name": "Bladed Scarf",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bladed_scarf",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "totem_spear",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#totem_spear)",
+    "name": "Totem Spear",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#totem_spear",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_sphinx_hammer",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_sphinx_hammer)",
+    "name": "Dwarven Sphinx Hammer",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_sphinx_hammer",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "switchscythe",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#switchscythe)",
+    "name": "Switchscythe",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#switchscythe",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "two_bladed_sword",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#two_bladed_sword)",
+    "name": "Two-bladed Sword",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#two_bladed_sword",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_urgrosh",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_urgrosh)",
+    "name": "Dwarven Urgrosh",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_urgrosh",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "bola",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#bola)",
+    "name": "Bola",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "brutal_bola",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#brutal_bola)",
+    "name": "Brutal Bola",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#brutal_bola",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "boomerang",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#boomerang)",
+    "name": "Boomerang",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#boomerang",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "thorn_bow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#thorn_bow)",
+    "name": "Thorn Bow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#thorn_bow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_heavy_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#crank_heavy_crossbow)",
+    "name": "Crank (heavy) Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#crank_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "crank_light_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#crank_light_crossbow)",
+    "name": "Crank (light) Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#crank_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#double_crossbow)",
+    "name": "Double Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#double_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "hand_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#hand_crossbow)",
+    "name": "Hand Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#hand_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "launching_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#launching_crossbow)",
+    "name": "Launching Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#launching_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_heavy_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#repeating_heavy_crossbow)",
+    "name": "Repeating Heavy Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#repeating_heavy_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "repeating_light_crossbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#repeating_light_crossbow)",
+    "name": "Repeating Light Crossbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#repeating_light_crossbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "flask_thrower",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#flask_thrower)",
+    "name": "Flask Thrower",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#flask_thrower",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "grappling_hook",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#grappling_hook)",
+    "name": "Grappling Hook",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#grappling_hook",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "orc_hornbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#orc_hornbow)",
+    "name": "Orc Hornbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#orc_hornbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stormshaft_javelin",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#stormshaft_javelin)",
+    "name": "Stormshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#stormshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "lasso",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#lasso)",
+    "name": "Lasso",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#lasso",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "net",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#net)",
+    "name": "Net",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "snag_net",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#snag_net)",
+    "name": "Snag Net",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#snag_net",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_heavy_pelletbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_heavy_pelletbow)",
+    "name": "Dwarven Heavy Pelletbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_heavy_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "dwarven_light_pelletbow",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_light_pelletbow)",
+    "name": "Dwarven Light Pelletbow",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#dwarven_light_pelletbow",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "throwing_shield",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#throwing_shield)",
+    "name": "Throwing Shield",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#throwing_shield",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shrillshaft_javelin",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#shrillshaft_javelin)",
+    "name": "Shrillshaft Javelin",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#shrillshaft_javelin",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "shuriken_5",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#shuriken_5)",
+    "name": "Shuriken (5)",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#shuriken_5",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "double_sling",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#double_sling)",
+    "name": "Double Sling",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#double_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "sling_glove",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#sling_glove)",
+    "name": "Sling Glove",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#sling_glove",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "halfling_sling_staff",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#halfling_sling_staff)",
+    "name": "Halfling Sling Staff",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#halfling_sling_staff",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "stitched_sling",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#stitched_sling)",
+    "name": "Stitched Sling",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#stitched_sling",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "wrist_launcher",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#wrist_launcher)",
+    "name": "Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }, {
+    "optionId": "heavy_wrist_launcher",
+    "condition": "all(@feat:improved_unarmed_strike, @feat:weapon_focus#heavy_wrist_launcher)",
+    "name": "Heavy Wrist Launcher",
+    "effects": [{
+      "targetKey": "feat:feral_combat_training#heavy_wrist_launcher",
+      "addAction": {
+        "numberDelta": 1
+      }
+    }]
+  }],
+  "description": {
+    "text": "You were taught a style of martial arts that relies on the natural weapons from your racial ability or class feature.",
+    "sections": {
+      "Benefit": "Choose one of your natural weapons. While using the selected natural weapon, you can apply the effects of feats that have Improved Unarmed Strike as a prerequisite.",
+      "Special": "If you are a monk, you can use the selected natural weapon with your flurry of blows class feature."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:feral_combat_training",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:greater_brawler",
+  "name": "Greater Brawler",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@rage_power:brawler AND !@rage_power:greater_brawler",
+  "description": {
+    "text": "Gain Two-Weapon Fighting while raging"
+  },
+  "effects": [{
+    "targetKey": "rage_power:greater_brawler",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

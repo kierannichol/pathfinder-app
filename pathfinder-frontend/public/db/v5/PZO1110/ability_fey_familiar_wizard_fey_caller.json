@@ -1,0 +1,14 @@
+{
+  "id": "ability:fey_familiar#wizard_fey_caller",
+  "name": "Fey Familiar",
+  "tags": ["class:wizard#fey_caller", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "A fey caller must select a familiar as his arcane bond. This familiar is often the fey creature that was created when the fey caller\u0027s soul passed through the fey on the way to being born. The familiar counts as both an animal and a fey for the purposes of effects that depend on its type, rather than counting as a magical beast.\nIt gains only half the normal natural armor bonus for a familiar based on the fey caller\u0027s level (rounded down, minimum 0), and it doesn\u0027t grant its special familiar ability to its master. Instead, the familiar gains the fey-touched creature template (see sidebar). At 10th level, the familiar grows a pair of delicate, gossamer wings, gaining a fly speed equal to its land speed and average maneuverability. If the familiar could already fly, its maneuverability improves by one step instead."
+  },
+  "effects": [{
+    "targetKey": "ability:fey_familiar#wizard_fey_caller",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

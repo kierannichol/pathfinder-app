@@ -1,0 +1,19 @@
+{
+  "id": "feat:clustered_shots",
+  "name": "Clustered Shots",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@feat:point_blank_shot, @feat:precise_shot, @bab \u003e\u003d 6)",
+  "description": {
+    "text": "You take a moment to carefully aim your shots, causing them all to strike nearly the same spot.",
+    "sections": {
+      "Benefit": "When you use a full-attack action to make multiple ranged weapon attacks against the same opponent, total the damage from all hits before applying that opponent\u0027s damage reduction.",
+      "Special": "If the massive damage optional rule is being used, that rule applies if the total damage you deal with this feat is equal to or exceeds half the opponent\u0027s full normal hit points (minimum 50 points of damage)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:clustered_shots",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

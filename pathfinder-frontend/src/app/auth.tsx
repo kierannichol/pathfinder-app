@@ -6,6 +6,8 @@ export class User {
   }
 }
 
+let activeUser: User|undefined;
+
 export function RequiresAuth({ children }: any) {
   const hasToken = getGoogleToken() !== undefined;
   if (!hasToken) {
@@ -28,12 +30,17 @@ function getGoogleToken(): string|undefined {
 
 export function logout() {
   firebaseLogout()
-      .then(() => localStorage.removeItem('google-token'));
+      .then(() => localStorage.removeItem('google-token'))
+      .then(() => activeUser = undefined);
 }
 
 export function getActiveUser() {
+  if (activeUser) {
+    return activeUser;
+  }
   const token = getGoogleToken();
-  return token ? new User(token) : undefined;
+  activeUser = token ? new User(token) : undefined;
+  return activeUser;
 }
 
 export function useActiveUser() {

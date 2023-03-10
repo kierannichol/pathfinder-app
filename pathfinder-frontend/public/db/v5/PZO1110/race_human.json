@@ -1,0 +1,42 @@
+{
+  "id": "race:human",
+  "name": "Human",
+  "tags": ["race"],
+  "description": {
+  },
+  "effects": [{
+    "targetKey": "race:human",
+    "setAction": {
+      "numberValue": 1
+    }
+  }, {
+    "targetKey": "size",
+    "setAction": {
+      "numberValue": 5
+    }
+  }],
+  "template": {
+    "id": "race:human",
+    "sections": [{
+      "condition": "@character_level\u003e\u003d0",
+      "choices": [{
+        "id": "level0:race_asi:human",
+        "type": "asi",
+        "label": "Ability Score Increase (Human)",
+        "select": {
+          "tags": ["ability_score"]
+        }
+      }]
+    }, {
+      "condition": "@character_level\u003e\u003d1",
+      "choices": [{
+        "id": "level1:human_bonus_feat",
+        "type": "feat",
+        "label": "Bonus Feat (Human)",
+        "select": {
+          "tags": ["feat"]
+        }
+      }]
+    }]
+  }
+}

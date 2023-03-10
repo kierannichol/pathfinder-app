@@ -7,11 +7,10 @@ import java.util.Set;
 import java.util.stream.Stream;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
-import pathfinder.model.Sourced;
 import pathfinder.parser.db.WeaponType;
 
-public record D20pfsrdCharacterClass(Id id, String name, String shortDescription, Type type, List<Level> levels, String hitDie, int skillRanksPerLevel, List<ClassSkill> skills, Set<ArmorProficiency> armorProficiencies, Set<WeaponType> weaponProficiencies, Source source) implements
-        Serializable, NamedEntity, Sourced {
+public record D20pfsrdCharacterClass(Id id, String name, String shortDescription, Type type, List<Level> levels, String hitDie, int skillRanksPerLevel, List<ClassSkill> skills, Set<ArmorProficiency> armorProficiencies, Set<WeaponType> weaponProficiencies, String source) implements
+        Serializable, NamedEntity {
     public record Level(int level, int bab, int fortSave, int refSave, int willSave, List<Feature> specials, Map<Integer, Integer> spellsPerDay) implements Serializable {}
 
     public enum Type {
@@ -29,7 +28,7 @@ public record D20pfsrdCharacterClass(Id id, String name, String shortDescription
                         .name(special.name())
                         .description(special.description())
                         .type(special.type())
-                        .source(source.code())
+                        .source(source)
                         .build());
     }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "feat:moonlight_stalker_master",
+  "name": "Moonlight Stalker Master",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "(@ability:darkvision OR @ability:low_light_vision)",
+  "description": {
+    "text": "You leave your opponents swinging at shadows while you slide elusively through the darkness.",
+    "sections": {
+      "Benefit": "While you have concealment, your opponents\u0027 miss chance against you increases by 10%. If an opponent misses you due to your concealment, you can spend an immediate action to move 5 feet, this movement does not provoke attacks of opportunity and does not count as a 5-foot step."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:moonlight_stalker_master",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

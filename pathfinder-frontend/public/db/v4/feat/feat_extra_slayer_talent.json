@@ -1,0 +1,19 @@
+{
+  "id": "feat:extra_slayer_talent",
+  "name": "Extra Slayer Talent",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:slayer_talent#slayer",
+  "description": {
+    "text": "Through long practice, you have learned how to perform a special talent.",
+    "sections": {
+      "Benefit": "You gain one additional slayer talent. You must meet the prerequisites for this slayer talent.",
+      "Special": "You can take this feat multiple times. Each time you do, you gain another slayer talent."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_slayer_talent",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "feat:improved_counterspell",
+  "name": "Improved Counterspell",
+  "tags": ["feat", "general"],
+  "description": {
+    "sections": {
+      "Benefit": "When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell.",
+      "Normal": "Without this feat, you may counter a spell only with the same spell or with a spell specifically designated as countering the target spell."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_counterspell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

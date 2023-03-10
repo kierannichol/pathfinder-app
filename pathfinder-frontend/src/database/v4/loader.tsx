@@ -29,3 +29,21 @@ export async function loadDatabase(path: string, detailsPath: string): Promise<E
       data.summaries.map(decodeEntitySummary),
       id => loadEntity(detailsPath, id));
 }
+
+export async function loadDatabaseV5(source: string): Promise<EntityDatabase> {
+  const data: EntityDatabaseDbo = await fetchProtoV5(source + ".bin", binary => EntityDatabaseDbo.decode(binary));
+  return new EntityDatabase(data.databaseId,
+      data.summaries.map(decodeEntitySummary),
+      id => loadEntityV5(source, id));
+}
+
+async function fetchProtoV5<T>(source: string, decoder: (binary: Uint8Array) => T): Promise<T> {
+  const binary = await fetch(`${process.env.PUBLIC_URL}/db/v5/${source}`, { binary: true });
+  return decoder(binary as Uint8Array);
+}
+
+export async function loadEntityV5(detailsPath: string, id: string) {
+  const dbo = await fetchProtoV5(`${detailsPath}/${idToFilename(id)}.bin`,
+      binary => EntityDbo.decode(binary));
+  return decodeEntity(dbo);
+}

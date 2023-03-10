@@ -1,0 +1,18 @@
+{
+  "id": "feat:pinpoint_targeting",
+  "name": "Pinpoint Targeting",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@dex_score \u003e\u003d 19, @feat:improved_precise_shot, @feat:point_blank_shot, @feat:precise_shot, @bab \u003e\u003d 16)",
+  "description": {
+    "text": "You can target the weak points in your opponent\u0027s armor.",
+    "sections": {
+      "Benefit": "As a standard action, make a single ranged attack. The target does not gain any armor, natural armor, or shield bonuses to its Armor Class. You do not gain the benefit of this feat if you move this round."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:pinpoint_targeting",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -224,14 +224,14 @@ export class UnresolvedSelectChoiceNode implements SelectChoiceNode {
 
   async resolve(db: IDataHub, values: ChoiceValues): Promise<ChoiceNode> {
     const selected = values[this.key];
-    const options = this.options(db, undefined);
-    return selected in options
+    const selectedOption = db.option(selected);
+    return selectedOption
         ? new ResolvedSelectChoiceNode(this.key,
             this.label,
             this.type,
             this.options,
             this.categories,
-            await options[selected].resolve(db, values))
+            await selectedOption.resolve(db, values))
         : this;
   }
 

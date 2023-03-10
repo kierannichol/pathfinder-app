@@ -1,0 +1,17 @@
+{
+  "id": "feat:hobgoblin_discipline",
+  "name": "Hobgoblin Discipline",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@bab \u003e\u003d 1, @race:hobgoblin)",
+  "description": {
+    "sections": {
+      "Benefit": "While you are within 30 feet of at least two other hobgoblins, you gain a +1 morale bonus on saving throws."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:hobgoblin_discipline",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

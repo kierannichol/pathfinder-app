@@ -23,7 +23,8 @@ public record Archetype(Id id,
                 .id(id())
                 .name(name())
                 .description(description())
-                .tags("archetype", id().key);
+                .tags("archetype", id().key)
+                .source(Sources.findSourceByNameOrCode(source()));
 
         var template = Template.builder(id());
 

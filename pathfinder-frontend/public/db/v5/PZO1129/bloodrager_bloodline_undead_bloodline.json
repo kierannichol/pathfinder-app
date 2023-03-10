@@ -1,0 +1,102 @@
+{
+  "id": "bloodrager_bloodline:undead_bloodline",
+  "name": "Undead Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "description": {
+    "text": "The foul corruption of undeath is a part of you. Somewhere in the past, death became infused with your lineage. Your connection to the attributes of the undead bestows frightening power when your bloodrage."
+  },
+  "template": {
+    "id": "bloodrager_bloodline:undead_bloodline",
+    "sections": [{
+      "condition": "@class:bloodrager\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:frightful_charger#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d4",
+      "effects": [{
+        "targetKey": "ability:ghost_strike#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d6",
+      "choices": [{
+        "id": "bloodrager6:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d8",
+      "effects": [{
+        "targetKey": "ability:ghost_touch#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d9",
+      "choices": [{
+        "id": "bloodrager9:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d12",
+      "choices": [{
+        "id": "bloodrager12:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d12",
+      "effects": [{
+        "targetKey": "ability:deaths_gift#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d15",
+      "choices": [{
+        "id": "bloodrager15:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"]
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d16",
+      "effects": [{
+        "targetKey": "ability:frightful_strikes#bloodrager",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:bloodrager\u003e\u003d18",
+      "choices": [{
+        "id": "bloodrager18:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"]
+        }
+      }]
+    }]
+  }
+}

@@ -18,8 +18,6 @@ import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Archetype;
 import pathfinder.model.pathfinder.ArchetypeModification;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.model.pathfinder.Source;
-import pathfinder.model.pathfinder.Sources;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
@@ -35,7 +33,7 @@ public class D20pdsrdArchetypePageScraper extends AbstractD20pfsrdScraper {
 
         String name = NameUtils.sanitize(selectText(main, "h1"));
         String description = selectText(main, ".description");
-        Source source = Optional.ofNullable(scrapeSourceFromCopyrightSection(document)).orElse(Sources.CORE);
+        String source = scrapeSourceFromCopyrightSection(document);
 
         String classTag = classId.key;
         String archetypeTag = classTag + "_" + NameToIdConverter.partialId(name);
@@ -84,10 +82,10 @@ public class D20pdsrdArchetypePageScraper extends AbstractD20pfsrdScraper {
                 Description.create(description),
                 modifications,
                 features,
-                source.code());
+                source);
     }
 
-    private Optional<Feature> sectionToAbility(Block section, Source source, String archetypeTag) {
+    private Optional<Feature> sectionToAbility(Block section, String source, String archetypeTag) {
         String name = NameUtils.fixNameOrder(NameUtils.sanitize(section.titleText()));
         Id id = NameToIdConverter.abilityId(name).withOption(archetypeTag);
 
@@ -95,7 +93,7 @@ public class D20pdsrdArchetypePageScraper extends AbstractD20pfsrdScraper {
                         .id(id)
                         .name(name)
                         .description(Description.create(section.contentText()))
-                        .source(source.code())
+                        .source(source)
                 .build());
     }
 

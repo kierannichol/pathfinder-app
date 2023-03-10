@@ -1,0 +1,17 @@
+{
+  "id": "feat:cloud_step",
+  "name": "Cloud Step",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@feat:spider_step, @class:monk \u003e\u003d 12)",
+  "description": {
+    "sections": {
+      "Benefit": "As a move action, you can air walk (as the spell) up to half your slow fall distance, maximum 50 feet. You must reach a solid, level surface by the end of your turn or you will fall."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:cloud_step",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

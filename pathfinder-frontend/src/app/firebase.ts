@@ -115,7 +115,7 @@ export const FirebaseRepository = {
 
   save: async (userId: string, character: PackedCharacter): Promise<void> => {
     // console.log("Saving to Firebase");
-    return timedAsync(() => set(ref(db, "u/" + userId + "/character/" + character.id), character), "Saving to Firebase");
+    return timedAsync(() => set(ref(db, "u/" + userId + "/character/" + character.id), character), "Saved to Firebase");
   },
 
   delete: async (userId: string, characterId: string): Promise<void> => {

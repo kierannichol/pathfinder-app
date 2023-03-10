@@ -1,0 +1,18 @@
+{
+  "id": "feat:eagle_eyes",
+  "name": "Eagle Eyes",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@wis_score \u003e\u003d 13, @spell:keen_senses)",
+  "description": {
+    "text": "Your vision is especially keen.",
+    "sections": {
+      "Benefit": "You ignore up to –5 in penalties due to distance on visual Perception checks, allowing you to see accurately at much greater distances than most."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:eagle_eyes",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

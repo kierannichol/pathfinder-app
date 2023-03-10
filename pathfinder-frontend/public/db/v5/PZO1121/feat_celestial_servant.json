@@ -1,0 +1,18 @@
+{
+  "id": "feat:celestial_servant",
+  "name": "Celestial Servant",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "any(@race:aasimar, @ability:animal_companion#hunter, @magus_arcana:familiar, @ability:mount#cavalier)",
+  "description": {
+    "text": "Rather than being a normal animal or beast, your companion or familiar hails from the heavenly realms.",
+    "sections": {
+      "Benefit": "Your animal companion, familiar, or mount gains the celestial template and becomes a magical beast, though you may still treat it as an animal when using Handle Animal, wild empathy, or any other spells or class abilities that specifically affect animals."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:celestial_servant",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

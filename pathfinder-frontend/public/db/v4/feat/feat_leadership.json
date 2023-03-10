@@ -1,0 +1,18 @@
+{
+  "id": "feat:leadership",
+  "name": "Leadership",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@character_level \u003e\u003d 7",
+  "description": {
+    "sections": {
+      "Benefit": "This feat enables you to attract a loyal cohort and a number of devoted subordinates who assist you. A cohort is generally an NPC with class levels, while followers are typically lower level NPCs. See Table: Leadership for what level of cohort and how many followers you can recruit.",
+      "Special": "The feat Monstrous Companion counts as the Leadership feat for the purposes of prerequisites. A character cannot have both Leadership and Monstrous Companion."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:leadership",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

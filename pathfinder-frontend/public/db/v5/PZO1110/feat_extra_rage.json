@@ -1,0 +1,18 @@
+{
+  "id": "feat:extra_rage",
+  "name": "Extra Rage",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature]",
+  "description": {
+    "sections": {
+      "Benefit": "You can rage for 6 additional rounds per day.",
+      "Special": "You can gain Extra Rage multiple times. Its effects stack."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_rage",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

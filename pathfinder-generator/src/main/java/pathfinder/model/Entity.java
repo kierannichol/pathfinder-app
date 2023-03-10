@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import pathfinder.data.v4.EntityDbo;
 import pathfinder.data.v4.EntitySummaryDbo;
+import pathfinder.model.pathfinder.Source;
 import pathfinder.util.ListUtils;
 
 public record Entity(Id id,
@@ -15,7 +16,8 @@ public record Entity(Id id,
                      List<Effect> effects,
                      List<Choice> choices,
                      List<ChildEntity> children,
-                     Template template) implements NamedEntity {
+                     Template template,
+                     Source source) implements NamedEntity {
 
     public static EntityBuilder builder() {
         return new EntityBuilder();
@@ -72,6 +74,7 @@ public record Entity(Id id,
         private final List<Choice> choices = new ArrayList<>();
         private final List<ChildEntity> children = new ArrayList<>();
         private Template template = null;
+        private Source source = Source.NONE;
 
         private EntityBuilder() {}
 
@@ -147,8 +150,13 @@ public record Entity(Id id,
             return this;
         }
 
+        public EntityBuilder source(Source source) {
+            this.source = source;
+            return this;
+        }
+
         public Entity build() {
-            return new Entity(id, name, tags, prerequisiteFormula, description, effects, choices, children, template);
+            return new Entity(id, name, tags, prerequisiteFormula, description, effects, choices, children, template, source);
         }
     }
 }

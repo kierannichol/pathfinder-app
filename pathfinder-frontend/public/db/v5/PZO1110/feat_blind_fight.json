@@ -1,0 +1,19 @@
+{
+  "id": "feat:blind_fight",
+  "name": "Blind-Fight",
+  "tags": ["feat", "combat"],
+  "description": {
+    "text": "You are skilled at attacking opponents that you cannot clearly perceive.",
+    "sections": {
+      "Benefit": "In melee, every time you miss because of concealment (see Combat), you can reroll your miss chance percentile roll one time to see if you actually hit.",
+      "Special": "The Blind-Fight feat is of no use against a character who is the subject of a blink spell.",
+      "Normal": "Regular attack roll modifiers for invisible attackers trying to hit you apply, and you lose your Dexterity bonus to AC. The speed reduction for darkness and poor visibility also applies."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:blind_fight",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

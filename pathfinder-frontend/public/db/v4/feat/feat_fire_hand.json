@@ -1,0 +1,17 @@
+{
+  "id": "feat:fire_hand",
+  "name": "Fire Hand",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "@race:goblin",
+  "description": {
+    "sections": {
+      "Benefit": "You can wield a torch as a weapon without taking the nonproficient penalty and gain a +1 bonus on attack rolls with melee weapons that deal fire damage."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:fire_hand",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

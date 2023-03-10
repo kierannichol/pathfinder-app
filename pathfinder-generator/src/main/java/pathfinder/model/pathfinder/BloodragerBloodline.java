@@ -12,7 +12,7 @@ public record BloodragerBloodline(Id id,
                                   @JsonProperty("bonus_feats") List<String> bonusFeats,
                                   @JsonProperty("bonus_spells") List<String> bonusSpells,
                                   @JsonProperty("bloodline_powers") List<Feature> bloodlinePowers,
-                                  Source source) implements NamedEntity {
+                                  String source) implements NamedEntity {
 
 //    public Entity toBloodlineEntity() {
 //        var entity = Entity.builder()

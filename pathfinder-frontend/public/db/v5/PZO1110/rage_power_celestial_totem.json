@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:celestial_totem",
+  "name": "Celestial Totem",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "@class:barbarian \u003e\u003d 8 AND !@rage_power:celestial_totem",
+  "description": {
+    "text": "Gain a halo that shines as daylight and triggers invisibility purge (only reveals non-good creatures) in the barbarian’s square and each adjacent square."
+  },
+  "effects": [{
+    "targetKey": "rage_power:celestial_totem",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

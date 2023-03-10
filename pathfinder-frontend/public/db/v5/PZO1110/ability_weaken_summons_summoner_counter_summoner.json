@@ -1,0 +1,14 @@
+{
+  "id": "ability:weaken_summons#summoner_counter_summoner",
+  "name": "Weaken Summons",
+  "tags": ["class:summoner#counter_summoner", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 10th level, as a standard action, a counter-summoner can attempt to weaken a summoned or called creature within 60 feet. The targeted creature takes a –2 penalty on attack and damage rolls and to Armor Class for 1 minute per summoner level. A successful Will save (DC \u003d 10 + 1/2 the counter-summoner\u0027s class level + his Charisma modifier) negates this effect. A given summoned creature can\u0027t be targeted by this ability more than once per 24-hour period."
+  },
+  "effects": [{
+    "targetKey": "ability:weaken_summons#summoner_counter_summoner",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ability:charmstrike#magus_puppetmaster",
+  "name": "Charmstrike",
+  "tags": ["class:magus#puppetmaster", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 2nd level, as a swift action when a foe fails a saving throw against a spell (but not a spell-like or supernatural ability) cast by a puppetmaster, the puppetmaster can expend 1 point from his arcane pool to cast a prepared 1st-level enchantment on the foe. The foe must be one that the spell can target, and is the only creature affected (even if the spell can normally target multiple creatures). At 10th level, the puppetmaster can instead cast a 2nd-level enchantment spell on the foe, and at 16th level, a 3rd-level enchantment spell. The prepared spell is expended, as if cast normally."
+  },
+  "effects": [{
+    "targetKey": "ability:charmstrike#magus_puppetmaster",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

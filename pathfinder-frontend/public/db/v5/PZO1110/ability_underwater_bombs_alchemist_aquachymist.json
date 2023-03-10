@@ -1,0 +1,14 @@
+{
+  "id": "ability:underwater_bombs#alchemist_aquachymist",
+  "name": "Underwater Bombs",
+  "tags": ["class:alchemist#aquachymist", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "An aquachymist\u0027s fire bombs deal steam damage, allowing them to deal damage underwater or on land. Since thrown weapons don\u0027t work well underwater, when the aquachymist creates a bomb, he either weights it or includes excess air as part of the action of creating the bomb, granting the bomb his choice of swiftly rising or swiftly sinking buoyancy and allowing him to target foes directly above or below him. If the attack misses, the bomb doesn\u0027t deal splash damage, but instead continues to travel up or down until it loses potency at the end of the alchemist\u0027s turn; the exception is when the aquachymist throws a swiftly sinking bomb close to the bottom, in which case it might reach the bottom and explode there. Because of the strange aquadynamic features of the aquachymist\u0027s underwater bombs, they have a range increment of only 5 feet above the water."
+  },
+  "effects": [{
+    "targetKey": "ability:underwater_bombs#alchemist_aquachymist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

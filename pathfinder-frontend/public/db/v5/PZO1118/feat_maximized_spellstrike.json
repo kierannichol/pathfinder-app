@@ -1,0 +1,18 @@
+{
+  "id": "feat:maximized_spellstrike",
+  "name": "Maximized Spellstrike",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "any(@magus_arcana:maximized_magic, @ability:weapon_expertise, @feat:quick_draw)",
+  "description": {
+    "text": "You deal brutal damage against opponents caught unawares.",
+    "sections": {
+      "Benefit": "When you make a melee attack and successfully use your spellstrike ability against an opponent denied his Dexterity bonus to AC, you can spend 3 points from your arcane pool to maximize the spell delivered through your spellstrike as if using the Maximize Spell metamagic feat."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:maximized_spellstrike",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,9 +18,10 @@ import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.BloodragerBloodline;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.model.pathfinder.Source;
 import pathfinder.parser.AttributeType;
 import pathfinder.parser.NameToIdConverter;
+import pathfinder.util.NameUtils;
+import pathfinder.util.StringUtils;
 
 @Service
 @Slf4j
@@ -36,8 +36,7 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
                     results.getElementsContainingOwnText("Bloodrager - Bloodlines").first());
 
             return content.select("a").stream()
-                    .map(a -> scrapeBloodline(a.text(), a.attr("href")))
-                    .filter(Objects::nonNull);
+                    .map(a -> scrapeBloodline(a.text(), a.attr("href")));
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
@@ -57,8 +56,8 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
 
         String description = nodeText(titleElement.nextElementSiblings().select("br").first().nextSibling());
 
-        String sourceText = findLinedContent(contents, "Source");
-        Source source = parseSource(sourceText);
+        String source = findLinedContent(contents, "Source");
+        source = formatSourceText(source);
 
         List<String> bonusFeats = parseBonusFeats(contents);
         List<String> bonusSpells = parseBonusSpells(contents);
@@ -93,7 +92,7 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
                 .toList();
     }
 
-    private List<Feature> parseBloodlinePowers(Elements contents, Source source) {
+    private List<Feature> parseBloodlinePowers(Elements contents, String source) {
         Element startElement = findElementsWithExactText(contents, "Bloodline Powers").first();
 
         Elements next = startElement.nextElementSiblings();
@@ -101,6 +100,8 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
         return powerLabels.stream().map(powerLabel -> {
             String label = powerLabel.text();
             String name = Feature.Type.removeTypeFromName(label);
+            name = NameUtils.fixNameOrder(name);
+            name = StringUtils.toCamelCase(name);
             String type = Feature.Type.fromFeatureName(label).toUpperCase();
 
             String descriptionText = nodeText(powerLabel.nextSibling());
@@ -111,7 +112,7 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
                     type,
                     Description.create(descriptionText),
                     "",
-                    source != null ? source.code() : "");
+                    source);
         }).toList();
     }
 }

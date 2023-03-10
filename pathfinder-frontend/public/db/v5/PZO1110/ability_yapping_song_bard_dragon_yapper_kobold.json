@@ -1,0 +1,14 @@
+{
+  "id": "ability:yapping_song#bard_dragon_yapper_kobold",
+  "name": "Yapping Song",
+  "tags": ["class:bard#dragon_yapper_kobold", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "A dragon yapper can use performance to annoy those that hear it, causing them to take a –1 penalty on attack and damage rolls (minimum 1) and a –1 penalty on saves against fear effects and charm effects as long as the dragon yapper continues performing.\nThis penalty increases by 1 at 5th level and every 6 levels thereafter. Yapping song is a mind-affecting ability that uses audible components, but is not language-dependent."
+  },
+  "effects": [{
+    "targetKey": "ability:yapping_song#bard_dragon_yapper_kobold",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

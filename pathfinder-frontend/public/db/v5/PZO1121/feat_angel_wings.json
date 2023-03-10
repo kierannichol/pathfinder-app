@@ -1,0 +1,18 @@
+{
+  "id": "feat:angel_wings",
+  "name": "Angel Wings",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@feat:angelic_blood, @race:aasimar, @character_level \u003e\u003d 10)",
+  "description": {
+    "text": "Feathered wings sprout from your back.",
+    "sections": {
+      "Benefit": "You gain a pair of gleaming feathered wings that grant a fly speed of 30 feet (average maneuverability) if wearing light armor or unencumbered, or 20 feet (poor maneuverability) with a medium or heavy load or medium or heavy armor. Fly is a class skill for you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:angel_wings",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

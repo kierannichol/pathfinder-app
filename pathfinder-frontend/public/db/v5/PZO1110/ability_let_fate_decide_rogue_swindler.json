@@ -1,0 +1,14 @@
+{
+  "id": "ability:let_fate_decide#rogue_swindler",
+  "name": "Let Fate Decide",
+  "tags": ["class:rogue#swindler", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 1st level, the swindler can declare two different actions that rely on different types of rolls or checks, such as attacking a creature (an attack roll) or sneaking past the same creature (a Stealth check). As a standard action, the swindler then uses a random method to choose one of the declared activities, such as flipping a coin, rolling a die, or drawing a harrow card. The specific method doesn\u0027t matter as long as there is an equal chance of either activity being chosen.\nIf the swindler then performs the chosen activity within the next round, she gains a luck bonus on the roll type required for that activity--attack rolls with a specific weapon, a specific skill check, a specific ability check, or a specific saving throw--equal to half her rogue level (minimum +1) for 1 minute. If the swindler performs any other action (whether declared or not) in the round after using this ability, she becomes shaken for 1 minute instead. The swindler can use this ability a number of times per day equal to 3 + her Charisma modifier."
+  },
+  "effects": [{
+    "targetKey": "ability:let_fate_decide#rogue_swindler",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

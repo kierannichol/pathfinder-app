@@ -1,0 +1,14 @@
+{
+  "id": "ability:stored_life#druid_life_channeler",
+  "name": "Stored Life",
+  "tags": ["class:druid#life_channeler", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 9th level, a life channeler gains a third option when using a coup de grace on a sentient humanoid.\nIf the victim had a CR at least as high as the life channeler\u0027s class level, the life channeler can store the creature\u0027s life energy in her body. She can have the life energy from only 1 creature in her body at a time. While she is storing life energy, if she would take damage or die from a death effect or if she would gain negative levels or take energy drain, she can sacrifice the stored energy to negate the effect without spending an action."
+  },
+  "effects": [{
+    "targetKey": "ability:stored_life#druid_life_channeler",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

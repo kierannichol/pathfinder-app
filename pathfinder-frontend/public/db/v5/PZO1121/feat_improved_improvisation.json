@@ -1,0 +1,18 @@
+{
+  "id": "feat:improved_improvisation",
+  "name": "Improved Improvisation",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @feat:fast_learner, @feat:improvisation, @race:human)",
+  "description": {
+    "text": "You are masterful in your improvisation.",
+    "sections": {
+      "Benefit": "Your nonproficiency penalty with weapons, armor, and shields is halved. In addition, the bonus on all skill checks for skills you have no ranks in increases to +4 instead of +2."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_improvisation",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

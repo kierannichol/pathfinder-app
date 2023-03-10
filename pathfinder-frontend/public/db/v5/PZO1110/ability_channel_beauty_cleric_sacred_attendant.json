@@ -1,0 +1,14 @@
+{
+  "id": "ability:channel_beauty#cleric_sacred_attendant",
+  "name": "Channel Beauty",
+  "tags": ["class:cleric#sacred_attendant", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "Whenever a sacred attendant channels energy to heal, she can opt to reduce the number of dice she rolls by 1 or more. For every die the sacred attendant subtracts, each of the targets of the channeled energy is healed of 1 point of Charisma damage."
+  },
+  "effects": [{
+    "targetKey": "ability:channel_beauty#cleric_sacred_attendant",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:cleaving_finish",
+  "name": "Cleaving Finish",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @feat:cleave, @feat:power_attack)",
+  "description": {
+    "text": "When you strike down an opponent, you can continue your swing into another target.",
+    "sections": {
+      "Benefit": "If you make a melee attack, and your target drops to 0 or fewer hit points as a result of your attack, you can make another melee attack using your highest base attack bonus against another opponent within reach. You can make only one extra attack per round with this feat."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:cleaving_finish",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

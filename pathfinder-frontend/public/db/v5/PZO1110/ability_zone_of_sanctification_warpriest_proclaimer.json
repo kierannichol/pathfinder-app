@@ -1,0 +1,14 @@
+{
+  "id": "ability:zone_of_sanctification#warpriest_proclaimer",
+  "name": "Zone of Sanctification",
+  "tags": ["class:warpriest#proclaimer", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 4th level, when a proclaimer uses fervor to damage evil outsiders with his cleanser of evil ability, he can spend one additional use of fervor as a move action to create a zone of sanctification in the same area for 1 round. All evil outsiders in the zone when it becomes active must succeed at a Will saving throw (DC 10 + half the proclaimer\u0027s level + his Wisdom modifier) or be pushed back until they are out of the area.\nEvil outsiders that end their turns in the area take damage as if affected by cleanser of evil."
+  },
+  "effects": [{
+    "targetKey": "ability:zone_of_sanctification#warpriest_proclaimer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

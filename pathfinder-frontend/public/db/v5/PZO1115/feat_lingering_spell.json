@@ -1,0 +1,16 @@
+{
+  "id": "feat:lingering_spell",
+  "name": "Lingering Spell",
+  "tags": ["feat", "metamagic"],
+  "description": {
+    "sections": {
+      "Benefit": "You may cause an instantaneous spell that affects an area to persist until the beginning of your next turn. Those already in the area suffer no additional harm, but other creatures or objects entering the area are subject to its effects. A lingering spell with a visual manifestation obscures vision, providing concealment (20% miss chance) beyond 5 feet and total concealment (50% miss chance) beyond 20 feet."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:lingering_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

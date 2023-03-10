@@ -1,0 +1,14 @@
+{
+  "id": "ability:interfering_blade#swashbuckler_guiding_blade",
+  "name": "Interfering Blade",
+  "tags": ["class:swashbuckler#guiding_blade", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 3rd level, a guiding blade learns how to use her weapon to interfere with enemies\u0027 attacks, protecting her allies from peril. As long as the guiding blade is wearing light or no armor, whenever she is aware of an attack against an adjacent ally and would not herself be denied her Dexterity bonus against that attack, the guiding blade grants that ally a +1 bonus to AC against that attack.\nFor example, if an invisible enemy attacks a guiding blade\u0027s ally and the guiding blade can\u0027t see that enemy, she would not grant the bonus from interfering blade unless she had the uncanny dodge ability. This bonus does not stack with any bonus to AC the guiding blade provides with the aid another action. The bonus increases by 1 for every 4 swashbuckler levels beyond 3rd, to a maximum of +5 at 19th level."
+  },
+  "effects": [{
+    "targetKey": "ability:interfering_blade#swashbuckler_guiding_blade",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

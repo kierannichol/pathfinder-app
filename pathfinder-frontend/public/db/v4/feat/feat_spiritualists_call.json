@@ -1,0 +1,18 @@
+{
+  "id": "feat:spiritualists_call",
+  "name": "Spiritualist\u0027s Call",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:phantom#druid_death_druid",
+  "description": {
+    "text": "Whenever you summon your phantom, it is more powerful for a brief period of time.",
+    "sections": {
+      "Benefit": "Whenever you summon your phantom, you can give it a +2 enhancement bonus to its Strength, Dexterity, or Charisma. This bonus lasts for 10 minutes after the summoning ritual is complete."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:spiritualists_call",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

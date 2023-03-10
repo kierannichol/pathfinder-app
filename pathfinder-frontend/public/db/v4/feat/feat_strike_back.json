@@ -1,0 +1,17 @@
+{
+  "id": "feat:strike_back",
+  "name": "Strike Back",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@bab \u003e\u003d 11",
+  "description": {
+    "sections": {
+      "Benefit": "You can ready an action to make a melee attack against any foe that attacks you in melee, even if the foe is outside of your reach."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:strike_back",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

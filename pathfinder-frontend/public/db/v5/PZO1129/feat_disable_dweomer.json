@@ -1,0 +1,18 @@
+{
+  "id": "feat:disable_dweomer",
+  "name": "Disable Dweomer",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@skill:disable_device \u003e\u003d 5, @skill:use_magic_device \u003e\u003d 5, @ability:trapfinding#unchained_rogue)",
+  "description": {
+    "text": "You can disable a magic item, suppressing it for a short time.",
+    "sections": {
+      "Benefit": "You can use Disable Device to suppress the magic of a non-artifact magic item for 1d4 rounds, after which the item recovers its magical properties. A suppressed item becomes non-magical for the duration of the suppression. Using Disable Device in this way takes 2d4 rounds, with a DC of 15 + the item\u0027s caster level."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:disable_dweomer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

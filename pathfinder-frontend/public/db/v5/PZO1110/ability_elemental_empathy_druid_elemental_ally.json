@@ -1,0 +1,14 @@
+{
+  "id": "ability:elemental_empathy#druid_elemental_ally",
+  "name": "Elemental Empathy",
+  "tags": ["class:druid#elemental_ally", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "An elemental ally can improve the attitude of a creature of the elemental subtype. This ability functions just like a Diplomacy check to improve the attitude of a person. The elemental ally rolls 1d20 and adds her druid level and her Charisma modifier to determine the elemental empathy check result.\nTo use elemental empathy, the elemental ally and the elemental must be able to study each other, which means that they must be within 30 feet of one another under normal conditions. Generally, influencing an elemental in this way takes 1 minute, but as with influencing people, it might take more or less time.\nAn elemental ally can also use this ability to influence a non-elemental outsider with the air, earth, fire, or water subtype, but she takes a –4 penalty on the check."
+  },
+  "effects": [{
+    "targetKey": "ability:elemental_empathy#druid_elemental_ally",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

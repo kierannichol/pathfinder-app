@@ -1,4 +1,5 @@
 import Id from "../core/Id";
+import {hasTag} from "../model/Tag";
 import {Entity, EntitySummary} from "./Entity";
 
 export interface IEntityDatabase {
@@ -73,10 +74,10 @@ export default class EntityDatabase implements IEntityDatabase {
   }
 
   find(...tags: string[]): EntitySummary[] {
-    if (!tags.some(tag => this.tags.has(tag))) {
+    if (!tags.some(tag => hasTag(Array.from(this.tags), tag))) {
       return [];
     }
     return Object.values(this._summaries)
-        .filter(summary => tags.every(tag => tag === this.id || summary.tags.includes(tag)));
+        .filter(summary => tags.some(tag => tag === this.id || hasTag(summary.tags, tag)));
   }
 }

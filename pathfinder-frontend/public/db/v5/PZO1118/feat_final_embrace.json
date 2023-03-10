@@ -1,0 +1,19 @@
+{
+  "id": "feat:final_embrace",
+  "name": "Final Embrace",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(all(@str_score \u003e\u003d 13, @int_score \u003e\u003d 3), any(@race:naga, @race:serpentfolk, @ability:constrict), @bab \u003e\u003d 3)",
+  "description": {
+    "text": "Your coils are particularly deadly, allowing you to constrict opponents of your size or smaller.",
+    "sections": {
+      "Benefit": "You gain the constrict and grab special attacks. Your constrict attack deals damage equal to your unarmed strike or primary natural weapon melee attack. Further, you can grab and constrict opponents up to your size.",
+      "Normal": "You can grab and constrict creatures one size smaller than you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:final_embrace",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

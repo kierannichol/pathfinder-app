@@ -85,7 +85,7 @@ public class BloodragerBloodlineDatabaseGenerator extends AbstractDatabaseGenera
             String actualName = nameAndParentheses.get(0);
             String option = nameAndParentheses.size() > 1 ? nameAndParentheses.get(1) : null;
             return featSourceDatabase.namedEntities()
-                    .filter(feat -> feat.name().equals(actualName))
+                    .filter(feat -> feat.name().equalsIgnoreCase(actualName))
                     .map(Identity::id)
                     .findFirst()
                     .orElseThrow(() -> new IllegalStateException("Unable to find bloodline bonus feat ID: " + featName))

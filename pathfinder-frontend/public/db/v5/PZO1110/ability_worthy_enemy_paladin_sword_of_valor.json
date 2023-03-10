@@ -1,0 +1,14 @@
+{
+  "id": "ability:worthy_enemy#paladin_sword_of_valor",
+  "name": "Worthy Enemy",
+  "tags": ["class:paladin#sword_of_valor", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 11th level, when a sword of valor critically hits an enemy with a smite, the target must make a Will saving throw (DC \u003d 10 + 1/2 the paladin\u0027s level + the paladin\u0027s Charisma bonus) or be compelled to surrender to the paladin, as if affected by a suggestion spell (CL \u003d the paladin\u0027s level) to lay down arms and give up the fight. An enemy that succumbs to this ability remains docile until it is injured by the paladin or one of his obvious allies, at which point the compulsion to surrender immediately ends and the enemy is free to make his own choices again. If the enemy makes the save, it is not subject to this ability for 24 hours. Worthy enemy is a mind-affecting effect."
+  },
+  "effects": [{
+    "targetKey": "ability:worthy_enemy#paladin_sword_of_valor",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

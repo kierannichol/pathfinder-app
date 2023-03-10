@@ -1,0 +1,19 @@
+{
+  "id": "feat:unblinking_flame_feint",
+  "name": "Unblinking Flame Feint",
+  "tags": ["feat", "style", "style"],
+  "prerequisiteFormula": "all(@int_score \u003e\u003d 13, @wis_score \u003e\u003d 13, all(@feat:combat_expertise, @feat:perfect_style, any(@bab \u003e\u003d 9, @class:monk \u003e\u003d 9)))",
+  "description": {
+    "text": "You move as swiftly and unpredictably as a flickering flame.",
+    "sections": {
+      "Benefit": "While using Perfect Style, you can use your Wisdom modifier in place of your Charisma modifier when attempting Bluff checks to feint. You can spend 1 ki point as a swift action to gain the benefits of Improved Feint for 1 round.",
+      "Note": "Note If using the optional Stamina Pool rules, the following trick may be used with this feat."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:unblinking_flame_feint",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

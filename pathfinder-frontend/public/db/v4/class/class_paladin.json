@@ -31,12 +31,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_crossbow",
+        "targetKey": "proficiency:spiked_armor",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:spiked_armor",
+        "targetKey": "proficiency:heavy_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -46,12 +46,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:ogre_hook",
+        "targetKey": "proficiency:dogslicer",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:dogslicer",
+        "targetKey": "proficiency:ogre_hook",
         "setAction": {
           "numberValue": 1
         }
@@ -121,12 +121,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_pick",
+        "targetKey": "proficiency:chakram",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:chakram",
+        "targetKey": "proficiency:light_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -241,12 +241,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:hook_hand",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:hook_hand",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -316,12 +316,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:planson",
+        "targetKey": "proficiency:boarding_pike",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:boarding_pike",
+        "targetKey": "proficiency:planson",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:scythe",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:shortbow",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:scythe",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
@@ -441,12 +441,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:starknife",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:starknife",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -516,7 +516,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:syringe_spear",
+        "targetKey": "proficiency:cutlass",
         "setAction": {
           "numberValue": 1
         }
@@ -526,7 +526,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:cutlass",
+        "targetKey": "proficiency:syringe_spear",
         "setAction": {
           "numberValue": 1
         }
@@ -800,6 +800,16 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 0
+        }
       }],
       "choices": [{
         "id": "paladin4:skill_rank:1",
@@ -840,6 +850,16 @@
         "targetKey": "ability:divine_bond#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -882,6 +902,16 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "paladin6:skill_rank:1",
@@ -922,6 +952,26 @@
         "targetKey": "ability:smite_evil#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 0
         }
       }],
       "choices": [{
@@ -964,6 +1014,26 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "paladin8:skill_rank:1",
@@ -1004,6 +1074,26 @@
         "targetKey": "ability:mercy#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -1046,6 +1136,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 0
+        }
       }],
       "choices": [{
         "id": "paladin10:skill_rank:1",
@@ -1086,6 +1206,36 @@
         "targetKey": "ability:aura_of_justice#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -1128,6 +1278,36 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "paladin12:skill_rank:1",
@@ -1168,6 +1348,46 @@
         "targetKey": "ability:smite_evil#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 0
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 0
         }
       }],
       "choices": [{
@@ -1210,6 +1430,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "paladin14:skill_rank:1",
@@ -1250,6 +1510,46 @@
         "targetKey": "ability:mercy#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -1292,6 +1592,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
+        }
       }],
       "choices": [{
         "id": "paladin16:skill_rank:1",
@@ -1332,6 +1672,46 @@
         "targetKey": "ability:aura_of_righteousness#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 1
         }
       }],
       "choices": [{
@@ -1374,6 +1754,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "paladin18:skill_rank:1",
@@ -1415,6 +1835,46 @@
         "addAction": {
           "numberDelta": 1
         }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 2
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 2
+        }
       }],
       "choices": [{
         "id": "paladin19:skill_rank:1",
@@ -1455,6 +1915,46 @@
         "targetKey": "ability:holy_champion#paladin",
         "addAction": {
           "numberDelta": 1
+        }
+      }, {
+        "targetKey": "spells_per_day#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#1",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#2",
+        "setAction": {
+          "numberValue": 4
+        }
+      }, {
+        "targetKey": "spells_per_day#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#3",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day#4",
+        "setAction": {
+          "numberValue": 3
+        }
+      }, {
+        "targetKey": "spells_per_day:divine#4",
+        "setAction": {
+          "numberValue": 3
         }
       }],
       "choices": [{

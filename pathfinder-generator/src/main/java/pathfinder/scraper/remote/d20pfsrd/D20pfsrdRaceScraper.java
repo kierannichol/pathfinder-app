@@ -13,6 +13,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 import pathfinder.model.pathfinder.D20pfsrdRace;
+import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.Sources;
 import pathfinder.parser.NameToIdConverter;
 import pathfinder.source.RaceSourceDatabase;
 import pathfinder.util.NameUtils;
@@ -49,9 +51,26 @@ public class D20pfsrdRaceScraper extends AbstractD20pfsrdScraper implements
             List<String> skillBonuses = split(columns.get(10).text());
             List<String> bonusFeats = split(columns.get(11).text());
             List<String> spsuAbilities = split(columns.get(12).text());
+            String sourceText;
 
             if (speedText.isBlank()) {
                 return;
+            }
+
+            try {
+                String racePageUrl = columns.get(0).select("a").first().attr("href");
+                Document raceDocument = fetch(new URL(racePageUrl));
+                sourceText = scrapeSourceFromCopyrightSection(raceDocument).trim();
+            } catch (IOException e) {
+                throw new UncheckedIOException(e);
+            }
+
+            if (sourceText.isBlank()) {
+                sourceText = Sources.CORE.code();
+            }
+            Source source = Sources.findSourceByNameOrCode(sourceText);
+            if (source != null) {
+                sourceText = source.code();
             }
 
             D20pfsrdRace race = new D20pfsrdRace(
@@ -68,7 +87,8 @@ public class D20pfsrdRaceScraper extends AbstractD20pfsrdScraper implements
                     offensiveTraits,
                     skillBonuses,
                     bonusFeats,
-                    spsuAbilities
+                    spsuAbilities,
+                    sourceText
             );
             races.add(race);
         });

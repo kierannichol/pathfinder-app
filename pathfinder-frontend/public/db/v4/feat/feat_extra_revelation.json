@@ -1,0 +1,18 @@
+{
+  "id": "feat:extra_revelation",
+  "name": "Extra Revelation",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:revelation#oracle",
+  "description": {
+    "sections": {
+      "Benefit": "You gain one additional revelation. You must meet all of the prerequisites for this revelation.",
+      "Special": "You can gain Extra Revelation multiple times."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:extra_revelation",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

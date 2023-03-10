@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 import {useCharacterRepository} from "../app/reactCharacter";
 import AbilityScoreSelectButton from "../components/character/AbilityScoreSelectButton";
 import CharacterTextInput from "../components/character/base/CharacterTextInput";
@@ -8,7 +8,6 @@ import CharacterLevel from "../components/character/edit/CharacterLevel";
 import PromptDialog from "../components/character/edit/PromptDialog";
 import LoadingBlock from "../components/common/LoadingBlock";
 import Character from "../core/Character";
-import CharacterAtLevel from "../core/CharacterAtLevel";
 import {SelectChoiceNode} from "../core/Choice";
 import "./CharacterEditView.scss";
 
@@ -19,7 +18,9 @@ interface CharacterEditViewProps {
 function CharacterEditView({ loaded }: CharacterEditViewProps) {
   const characterRepository = useCharacterRepository();
   const [ character, setCharacter ] = useState(loaded);
-  const [ character0, setCharacter0 ] = useState<CharacterAtLevel>();
+  const characterAtLevels = useMemo(() => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(level => character.atLevel(level)),
+      [character]);
+  const character0 = characterAtLevels[0];
   const [ showFavoredClassPrompt, setShowFavoredClassPrompt ] = useState(false);
 
   function updateCharacter(mappingFunction: (character: Character) => Promise<Character>) {
@@ -45,19 +46,6 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
     }
     updateCharacter(character => character.selectAll(selected));
   }
-
-  useEffect(() => {
-    let mounted = true;
-    (async () => {
-      const data = await character.atLevel(0);
-      if (mounted) {
-        setCharacter0(data);
-      }
-    })();
-    return () => {
-      mounted = false;
-    }
-  }, [character]);
 
   const totalAbilityPointCost = useMemo(() => character0?.get('ability_point_cost').asText() ?? '0', [character0]);
 
@@ -136,7 +124,11 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
       </div>
     </fieldset>
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(level =>(
-          <CharacterLevel key={`level${level}`} character={character} level={level} onChange={selectChoice} />
+          <CharacterLevel key={`level${level}`}
+                          characterId={character.id}
+                          characterAtLevel={characterAtLevels[level]}
+                          characterAtPreviousLevel={characterAtLevels[level-1]}
+                          onChange={selectChoice} />
       ))}
 
   </main>);

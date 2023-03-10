@@ -1,0 +1,18 @@
+{
+  "id": "feat:arcane_strike",
+  "name": "Arcane Strike",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "max(@spells_per_day:arcane#*)[Arcane spells]",
+  "description": {
+    "text": "You draw upon your arcane power to enhance your weapons with magical energy.",
+    "sections": {
+      "Benefit": "As a swift action, you can imbue your weapons with a fraction of your power. For 1 round, your weapons deal +1 damage and are treated as magic for the purpose of overcoming damage reduction. For every five caster levels you possess, this bonus increases by +1, to a maximum of +5 at 20th level."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:arcane_strike",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

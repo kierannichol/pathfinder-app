@@ -32,7 +32,6 @@ import pathfinder.model.pathfinder.D20pfsrdCharacterClass;
 import pathfinder.model.pathfinder.D20pfsrdCharacterClass.Level;
 import pathfinder.model.pathfinder.D20pfsrdCharacterClass.Type;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.WeaponProficiency;
 import pathfinder.model.pathfinder.Weapons;
 import pathfinder.parser.NameToIdConverter;
@@ -104,7 +103,7 @@ public class D20pfsrdClassScraper extends AbstractD20pfsrdScraper
 
         List<ClassSkill> classSkills = parseClassSkills(document);
         String shortDescription = scrapeShortDescription(document);
-        Source source = scrapeSourceFromCopyrightSection(document);
+        String source = scrapeSourceFromCopyrightSection(document);
 
         // Proficiencies
         String proficiencyDescription = selectSection(content, "Weapon and Armor Proficiency")

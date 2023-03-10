@@ -1,0 +1,17 @@
+{
+  "id": "feat:spider_step",
+  "name": "Spider Step",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@skill:acrobatics \u003e\u003d 6, @skill:climb \u003e\u003d 6, @class:monk \u003e\u003d 6)",
+  "description": {
+    "sections": {
+      "Benefit": "As a move action, you can move up to half your slow fall distance (maximum 50 feet) across a wall or ceiling or across ropes, branches, or even water or other surfaces that cannot support your weight. You must reach a solid, level surface by the end of your turn or you will fall."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:spider_step",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

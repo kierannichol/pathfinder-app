@@ -1,0 +1,16 @@
+{
+  "id": "feat:flaring_spell",
+  "name": "Flaring Spell",
+  "tags": ["feat", "metamagic"],
+  "description": {
+    "sections": {
+      "Benefit": "The electricity, fire, or light effects of the affected spell create a flaring that dazzles creatures that take damage from the spell. A flare spell causes a creature that takes fire or electricity damage from the affected spell to become dazzled for a number of rounds equal to the actual level of the spell. A flaring spell only affects spells with a fire, light, or electricity descriptor."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:flaring_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:bestial_swimmer",
+  "name": "Bestial Swimmer",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "all(@class:barbarian \u003e\u003d 6, @rage_power:raging_swimmer) AND !@rage_power:bestial_swimmer",
+  "description": {
+    "text": "Swim at your normal land speed while raging"
+  },
+  "effects": [{
+    "targetKey": "rage_power:bestial_swimmer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

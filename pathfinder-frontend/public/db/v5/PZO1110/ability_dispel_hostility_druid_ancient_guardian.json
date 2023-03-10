@@ -1,0 +1,14 @@
+{
+  "id": "ability:dispel_hostility#druid_ancient_guardian",
+  "name": "Dispel Hostility",
+  "tags": ["class:druid#ancient_guardian", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "An ancient guardian doesn\u0027t gain spontaneous casting at 1st level. Instead, at 3rd level, she can channel stored spell energy into a spell capable of dispelling hostile thoughts and strong emotions. She can “lose\" a prepared spell in order to cast calm emotions.\nInstead of the normal Will saving throw for that spell, the DC of a calm emotions spell cast with this ability is 10 + 1/2 the ancient guardian\u0027s druid level + her Wisdom modifier."
+  },
+  "effects": [{
+    "targetKey": "ability:dispel_hostility#druid_ancient_guardian",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

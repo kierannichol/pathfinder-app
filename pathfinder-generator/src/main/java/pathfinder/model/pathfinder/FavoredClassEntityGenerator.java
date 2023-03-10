@@ -17,6 +17,7 @@ public class FavoredClassEntityGenerator {
                 .tags(tags)
                 .description(Description.create(characterClass.description()))
                 .effect(Effect.setNumber(id, 1))
+                .source(Sources.findSourceByNameOrCode(characterClass.source()))
                 .build();
     }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "feat:spirited_charge",
+  "name": "Spirited Charge",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@skill:ride \u003e\u003d 1, @feat:mounted_combat, @feat:ride_by_attack)",
+  "description": {
+    "text": "Your mounted charge attacks deal a tremendous amount of damage.",
+    "sections": {
+      "Benefit": "When mounted and using the charge action, you deal double damage with a melee weapon (or triple damage with a lance)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:spirited_charge",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

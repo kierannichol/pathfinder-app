@@ -1,0 +1,17 @@
+{
+  "id": "feat:logical_spell",
+  "name": "Logical Spell",
+  "tags": ["feat", "metamagic"],
+  "description": {
+    "text": "You can eschew emotional components by exercising logic.",
+    "sections": {
+      "Benefit": "A logical spell can be cast without emotion components. Spells that don\u0027t require emotion components are not affected."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:logical_spell",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

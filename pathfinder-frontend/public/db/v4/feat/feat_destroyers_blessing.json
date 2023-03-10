@@ -1,0 +1,17 @@
+{
+  "id": "feat:destroyers_blessing",
+  "name": "Destroyer\u0027s Blessing",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(any(@race:half_orc, @race:orc), any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature])",
+  "description": {
+    "sections": {
+      "Benefit": "When you are raging and you succeed at a sunder combat maneuver, you regain 1 round of rage. If the sunder attempt causes the object to gain the broken condition, you heal 1 hit point. You can only gain these benefits once per round."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:destroyers_blessing",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

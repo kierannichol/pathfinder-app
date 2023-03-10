@@ -1,0 +1,18 @@
+{
+  "id": "feat:animal_soul",
+  "name": "Animal Soul",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "(@ability:animal_companion#hunter OR @ability:mount#cavalier)",
+  "description": {
+    "text": "Your close bond with an animal allows you to ignore harmful magic that cannot affect your wild side.",
+    "sections": {
+      "Benefit": "You can choose not to allow spells and effects to affect you if they would not be capable of affecting both your original creature type and the animal creature type."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:animal_soul",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

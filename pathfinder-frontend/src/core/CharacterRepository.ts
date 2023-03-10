@@ -65,7 +65,10 @@ export default class CharacterRepository {
       this.cache = {};
     }
     this.cache[character.id] = character;
-    return FirebaseRepository.save(user.id, packed);
+
+    (async () => {
+      await FirebaseRepository.save(user.id, packed);
+    })().catch(e => console.log(e));
   }
 
   public async delete(id: string): Promise<void> {

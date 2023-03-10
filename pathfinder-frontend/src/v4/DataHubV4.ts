@@ -1,4 +1,4 @@
-import {Choice, OptionMap, Outcome} from "../core/Choice";
+import {Choice, Option, OptionMap, Outcome} from "../core/Choice";
 import {IDataHub} from "../core/DataHub";
 import Description from "../core/Description";
 import {Entity, EntitySummary} from "./Entity";
@@ -15,7 +15,7 @@ class DataHubV4 implements IDataHub, IEntityDatabase {
     if (id === undefined) {
       return undefined;
     }
-    return this.summary(id)?.name;
+    return this.summary(id)?.name;// + ` (${id})`;
   }
 
   public async description(id: string): Promise<Description> {
@@ -84,6 +84,11 @@ class DataHubV4 implements IDataHub, IEntityDatabase {
           entity.template ? [entity.template] : []
       );
     });
+  }
+
+  option(id: string): Option | undefined {
+    const summary = this.summary(id);
+    return summary ? this.summaryToOption(summary) : undefined;
   }
 }
 

@@ -167,6 +167,10 @@ public class AbstractNethysScraper extends AbstractWebScraper {
     }
 
     protected Source parseSource(String sourceText) {
-        return Sources.findSourceByNameOrCode(sourceText.replaceAll("(.*?) pg. \\d+", "$1"));
+        return Sources.findSourceByNameOrCode(formatSourceText(sourceText));
+    }
+
+    protected String formatSourceText(String sourceText) {
+        return sourceText.replaceAll("(.*?) pg. \\d+", "$1");
     }
 }

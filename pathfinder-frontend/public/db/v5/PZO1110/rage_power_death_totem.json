@@ -1,0 +1,15 @@
+{
+  "id": "rage_power:death_totem",
+  "name": "Death Totem",
+  "tags": ["rage_power"],
+  "prerequisiteFormula": "all((@class:barbarian \u003e\u003d 6 OR @class:savage \u003e\u003d 2), @rage_power:lesser_death_totem) AND !@rage_power:death_totem",
+  "description": {
+    "text": "While raging, gain DR 5/bludgeoning and +2 resistance bonus against cold-based spells and effects."
+  },
+  "effects": [{
+    "targetKey": "rage_power:death_totem",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:channeled_revival",
+  "name": "Channeled Revival",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@ability:channel_positive_energy \u003e\u003d 6",
+  "description": {
+    "text": "You can expend a large portion of your channeling power to reverse death itself.",
+    "sections": {
+      "Benefit": "As a full-round action that provokes attacks of opportunity, you can expend three uses of your channel energy class feature to restore a dead creature to life as if you had cast the breath of life spell."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:channeled_revival",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

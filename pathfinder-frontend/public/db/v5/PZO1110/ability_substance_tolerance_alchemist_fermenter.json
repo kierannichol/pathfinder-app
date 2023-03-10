@@ -1,0 +1,14 @@
+{
+  "id": "ability:substance_tolerance#alchemist_fermenter",
+  "name": "Substance Tolerance",
+  "tags": ["class:alchemist#fermenter", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 2nd level, whenever a fermenter consumes a drug, she gains a +2 bonus on her saving throw to resist becoming addicted. Whenever she consumes a tincture, she gains its usual benefits, but all penalties imposed are reduced by 1. (If the tincture\u0027s penalties instead impose a condition or another penalty that is not numerical, such as the penalties imposed by starlight juice, this ability has no effect at 2nd level.) Additionally, the fermenter can consume a number of alcoholic beverages equal to one plus three times her Constitution modifier before becoming sickened for 1 hour per drink above this maximum.\nThe bonus on saving throws to resist addiction increases to +3 at 8th level and to +4 at 10th level. At 10th level, the fermenter suffers no penalties at all from drinking tinctures, including conditions and other nonnumerical penalties (starlight juice would not make her dazzled, for example). Additionally, at 10th level she can consume a number of alcoholic beverages equal to one plus four times her Constitution modifier before becoming sickened."
+  },
+  "effects": [{
+    "targetKey": "ability:substance_tolerance#alchemist_fermenter",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

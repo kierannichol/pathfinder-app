@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -21,6 +22,7 @@ import pathfinder.model.Id;
 import pathfinder.model.Id.Key;
 import pathfinder.model.NamedEntity;
 import pathfinder.model.NamedEntitySource;
+import pathfinder.model.pathfinder.ArmorProficiency;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Feat.FeatType;
 import pathfinder.model.pathfinder.Size;
@@ -34,7 +36,7 @@ import pathfinder.util.PatternMapper;
 @Slf4j
 @RequiredArgsConstructor
 public class PrerequisiteParser {
-    private static final String RACE_GROUP = "(human|dwarf|orc|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|goblin|creature that has the constrict special attack)";
+    private static final String RACE_GROUP = "(human|dwarf|orc|hobgoblin|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|goblin|creature that has the constrict special attack)";
     private static final String CLASS_GROUP = "(barbarian|bard|cleric|druid|fighter|monk|paladin|ranger|rogue|sorcerer|wizard|alchemist|cavalier|gunslinger|inquisitor|magus|omdura|oracle|shifter|summoner|witch|vampire hunter|vigilante|arcanist|bloodrager|brawler|hunter|investigator|shaman|skald|slayer|swashbuckler|warpriest|witch|savage|summoner \\(unchained\\))";
     private static final String SKILL_GROUP = "(" + Skills.ALL.stream().map(Skill::name).map(Pattern::quote).collect(Collectors.joining("|")) + ")";
     private static final String ABILITY_SCORE_GROUP = "(str|dex|con|wis|int|cha)";
@@ -47,8 +49,7 @@ public class PrerequisiteParser {
     private final List<NamedEntitySource> namedEntitySources;
 
     private final Map<String, Id> specialNameToId = new HashMap<>();
-    private final Map<String, Id> abilityNameToId = new HashMap<>();
-    private final Map<String, Id> spellNameToId = new HashMap<>();
+    private final Map<String, Id> specialNameAndTypeToId = new HashMap<>();
 
     // TODO: fix spells per day
     public static final PatternMapper GLOBAL_PATTERN_MAPPER = new PatternMapper()
@@ -70,6 +71,8 @@ public class PrerequisiteParser {
             .addImmediateReplacement("the ability to cast animate dead or command undead", "(@spell:animate_dead OR @spell:command_undead)")
             .addImmediateReplacement("ability to acquire an animal companion, eidolon, familiar, or special mount", "(@feature:animal_companion OR @feature:eidolon OR @feature:familiar OR @feature:special_mount)")
 
+            .addReplacement("no levels in a class that has the {NAME}", "!{0}")
+
             // removals
             .addReplacement("occultist {NUMBER}", "(0)")
             .addReplacement("redmantisassassin {NUMBER}", "(0)")
@@ -80,9 +83,10 @@ public class PrerequisiteParser {
             .addReplacement("spiritualist {NUMBER}", "(0)")
             .addReplacement("sahirafiyun {NUMBER}", "(0)")
             .addReplacement("adept {NUMBER}", "(0)")
-            .addReplacement("detect undead paladin class feature", "\"detect undead paladin class feature\"")
-            .addReplacement("ability to use any polymorph effect", "\"ability to use any polymorph effect\"")
+            .addReplacement("detect undead paladin class feature", "\"Detect undead paladin class feature\"")
+            .addReplacement("ability to use any polymorph effect", "\"Ability to use any polymorph effect\"")
             .addReplacement("Centaur or any tauric creature at the GM's discretion", "\"Centaur or any tauric creature at the GM's discretion\"")
+            .addReplacement("alignment must be within one step of your deity's", "\"Alignment must be within one step of your deity's\"")
 
             .addReplacement("You have no levels in a class that has the grit class feature", "!@ability:grit")
             .addReplacement("Siege Weapon Engineer", "@feat:siege_engineer")
@@ -98,6 +102,13 @@ public class PrerequisiteParser {
             .addReplacement("Wisdom {NUMBER}", "@wis_score >= {0}")
             .addReplacement("Charisma {NUMBER}", "@cha_score >= {0}")
 
+            .addReplacement("Str {NUMBER}", "@str_score >= {0}")
+            .addReplacement("Dex {NUMBER}", "@dex_score >= {0}")
+            .addReplacement("Con {NUMBER}", "@con_score >= {0}")
+            .addReplacement("Int {NUMBER}", "@int_score >= {0}")
+            .addReplacement("Wis {NUMBER}", "@wis_score >= {0}")
+            .addReplacement("Cha {NUMBER}", "@cha_score >= {0}")
+
             .addReplacement("You have no levels in a class that has the grit", "!@ability:grit")
             .addReplacement("Craft Magic Arms and Armor", "@feat:craft_magic_arms_and_armor")
             .addReplacement("proficient with all martial weapons", "@feat:martial_weapon_proficiency")
@@ -109,7 +120,7 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} as a spell or spell-like ability (including from the {NAME} or {NAME} class features)", "({0} OR {1} OR {2})")
             .addReplacement("Ability to cast divine spells", "@ability:divine_caster")
             .addReplacement("Divine spellcaster", "max(@spells_per_day:divine#*)[Divine spellcaster]")
-            .addReplacement("Ability to use the {NAME} or cast {NAME}", "({ability:0} OR {spell:1})")
+            .addReplacement("Ability to use the {NAME} or cast {NAME}", "({ability:0} OR {1})")
             .addImmediateReplacement("darkvision or low-light vision racial trait", "(@ability:darkvision OR @ability:low_light_vision)")
             .addImmediateReplacement("darkvision or lowlight vision racial trait", "(@ability:darkvision OR @ability:low_light_vision)")
             .addReplacement("lowlight vision", "@ability:low_light_vision")
@@ -125,6 +136,7 @@ public class PrerequisiteParser {
             .addReplacement("1 rank in any Craft skill", "max(@skill:craft#*)[Any craft skill] >= 1")
             .addReplacement("Ride rank {NUMBER}", "@skill:ride >= {0}")
             .addImmediateReplacement("{NUMBER} ranks in any Craft or Profession skill", "(max(@skill:craft#*)[Any craft skill] >= {0} OR max(@skill:profession:#*)[Any profession skill] >= {0})")
+            .addImmediateReplacement("{NUMBER} rank in at least one knowledge skill", "max(@skill:knowledge_*)[Any knowledge skill]")
             .addReplacement("special mount", "\"Special mount\"")
 
             .addReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank", "(@skill:knowledge#dungeoneering OR @skill:knowledge#local OR @skill:knowledge#planes OR @skill:knowledge#religion)")
@@ -139,7 +151,7 @@ public class PrerequisiteParser {
             .addImmediateReplacement("cat's claws racial trait or Aspect of the Beast (claws of the beast manifestation)", "(@ability:cats_claws OR @ability:aspect_of_the_beast#claws)")
             .addImmediateReplacement("Profession (siege engineer)", "@skill:profession#siege_engineer")
 
-            .addReplacement("{NAME} or {NAME} class feature", "({ability:0} OR {ability:1})")
+            .addReplacement("{NAME} or {NAME} class feature", "({0} OR {ability:1})")
             .addReplacement("{NAME} class ability", "{ability:0}")
             .addReplacement("either the {PHRASE} or {PHRASE}", "({0} OR {1})")
             .addReplacement("either {PHRASE} or {PHRASE}", "({0} OR {1})")
@@ -155,20 +167,26 @@ public class PrerequisiteParser {
             .addReplacement("{LEVEL}-level {CLASS}", "{1} >= {0}")
             .addReplacement("caster level {LEVEL}", "@caster_level >= {0}")
             .addReplacement("character level {LEVEL}", "@character_level >= {0}")
-            .addReplacement("{NAME} rage power", "{0}")
-            .addReplacement("{NAME} rage powers", "{0}")
-            .addReplacement("{NAME} alchemist discovery", "{0}")
-            .addReplacement("{NAME} discovery", "{0}")
-            .addReplacement("{NAME} magus arcana", "{0}")
+            .addReplacement("{NAME} rage power", "{rage_power:0}")
+            .addReplacement("{NAME} rage powers", "{rage_power:0}")
+            .addReplacement("{NAME} alchemist discovery", "{discovery:0}")
+            .addReplacement("{NAME} discovery", "{discovery:0}")
+            .addReplacement("{NAME} magus arcana", "{magus_arcana:0}")
+            .addReplacement("{NAME} rogue talent", "{rogue_talent:0}")
             .addReplacement("Trained in {NAME}", "{0}")
-            .addReplacement("{SKILL} {NUMBER} ranks", "{0} >= {1}")
-            .addReplacement("{SKILL} {NUMBER} rank", "{0} >= {1}")
+            .addReplacement("{PHRASE} {NUMBER} ranks", "{0} >= {1}")
+            .addReplacement("{PHRASE} {NUMBER} rank", "{0} >= {1}")
             .addReplacement("{NAME} ({NAME} or {NAME})", "({0}#{key:1} OR {0}#{key:2})")
+            .addReplacement("{NAME} ({NAME}, {NAME} or {NAME})", "({0}#{key:1} OR {0}#{key:2} OR {0}#{key:3})")
+            .addReplacement("{NAME} ({NAME}, {NAME}, or {NAME})", "({0}#{key:1} OR {0}#{key:2} OR {0}#{key:3})")
             .addReplacement("{NAME} ({NAME})", "{0}#{key:1}")
             .addReplacement("{NAME} ({NAME}) 1 rank", "{0}#{key:1}")
             .addReplacement("proficient with weapon", "@proficiency:selected_weapon")
+            .addReplacement("proficiency with chosen weapon", "@proficiency:selected_weapon")
+            .addReplacement("{NAME} Proficiency", "@proficiency:{0}")
             .addReplacement("proficiency with {NAME}", "@proficiency:{0}")
             .addReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
+            .addReplacement("a shield", "any(%s)".formatted(String.join(",", Arrays.stream(ArmorProficiency.values()).map(ArmorProficiency::getId).map(Id::string).toList())))
             .addReplacement("the selected weapon", "selected_weapon")
             .addReplacement("selected shield", "selected_shield")
             .addReplacement("selected weapon", "selected_weapon")
@@ -195,12 +213,14 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} class feature", "{ability:0}")
             .addReplacement("Fly speed", "@speed:fly")
             .addReplacement("{NUMBER} years old", "@age >= {0}")
-            .addReplacement("{NAME} racial trait or {NAME} racial trait", "{ability:0} OR {ability:1}")
+            .addReplacement("{NAME} racial trait or {NAME} racial trait", "{0} OR {1}")
 
             // Not supported automatically yet
             .addReplacement("Ability to channel energy", "(@ability:channel_positive_energy OR @ability:channel_negative_energy)")
             .addReplacement("channel energy {NUMBER}d{NUMBER}", "(@ability:channel_positive_energy >= {0} OR @ability:channel_negative_energy >= {0})")
             .addReplacement("Good alignment", "(@alignment:lg OR @alignment:ng OR @alignment:cg)[Good alignment]")
+            .addReplacement("must be lawful good", "@alignment:lg")
+            .addReplacement("alignment must be within one step of your deity's", "\"alignment must be within one step of your deity's\"")
             .addReplacement("nonlawful", "(@alignment:ng OR @alignment:cg OR @alignment:n OR @alignment:cn OR @alignment:ne OR @alignment:ce)[Non-lawful alignment]")
             .addReplacement("Channel negative energy", "@ability:channel_negative_energy")
             .addReplacement("Channel energy {NUMBER}d{NUMBER}#positive energy", "@ability:channel_positive_energy >= {0}")
@@ -212,6 +232,7 @@ public class PrerequisiteParser {
             .addReplacement("rend special attack", "@ability:rend")
             .addReplacement("bite attack", "@trait:bite_attack")
             .addReplacement("creature that has the constrict special attack", "@ability:constrict")
+            .addReplacement("creature that has the constrict special attack as a racial ability", "@ability:constrict")
             .addReplacement("Earthcraft ability", "@ability:earthcraft")
             .addReplacement("Rogue: none. Investigator: expanded inspiration", "(!@class:rogue#investigator OR @ability:expanded_inspiration)")
             .addReplacement("arcane spells", "max(@spells_per_day:arcane#*)[Arcane spells]")
@@ -251,6 +272,8 @@ public class PrerequisiteParser {
             .addReplacement("neutrally aligned cleric", "all(@class:cleric, any(@alignment:ng, @alignment:n, @alignment:ne)[Neutral alignment])")
             .addReplacement("weapon made of primitive material", "\"Weapon made of primitive material\"")
             .addReplacement("levels in another spellcasting", "\"Levels in another spellcasting class\"")
+            .addReplacement("Air, Earth, Fire, or Water domain or blessing", "\"Air, Earth, Fire, or Water domain or blessing\"")
+            .addReplacement("spellbook", "max(@spellbook:*)")
 
             // Misspelled Names
             .addReplacement("Close Quarters Thrower", "@feat:close_quarters_thrower")
@@ -260,6 +283,7 @@ public class PrerequisiteParser {
             .addReplacement("Surprise Follow Through", "@ability:surprise_follow_through")
             .addReplacement("Rapid Reload", "@ability:rapid_reload")
             .addReplacement("Snake Sidewind", "@feat:snake_sidewind")
+            .addImmediateReplacement("half ling", "halfling")
 
             // TODO: remove once paladin oath abilities have been added
             .addReplacement("Anchoring aura", "@ability:anchoring_aura")
@@ -303,10 +327,12 @@ public class PrerequisiteParser {
             .addReplacement("multitalented", "@ability:multitalented")
             .addReplacement("animal fury", "@ability:animal_fury")
 
-            .addReplacement("{NAME} racial trait", "{ability:0}")
+            .addReplacement("{NAME} racial trait", "{0}")
 
             .addReplacement("two or more {NAME}", "{0} >= 2")
             .addReplacement("any two {NAME}", "{0} >= 2")
+            .addReplacement("at least one {NAME}", "{0} >= 1")
+            .addReplacement("at least two {NAME}", "{0} >= 2")
             .addReplacement("at least three {NAME}", "{0} >= 3")
             .addReplacement("one {NAME}", "{0}")
             .addReplacement("any {NAME}", "{0}")
@@ -321,7 +347,8 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} with {NAME}", "{0}#{key:1}")
             .addReplacement("{PHRASE}, {PHRASE} and either the {PHRASE} or {PHRASE}", "all({0}, {1}, any({2}, {3})")
             .addReplacement("{PHRASE} and {PHRASE}, or {PHRASE}", "any(all({0}, {1}), {2})")
-            .addReplacement("{PHRASE} or {PHRASE}", "any({0}, {1})")
+            .addReplacement("{PHRASE} and {PHRASE}", "{0} AND {1}")
+            .addReplacement("{PHRASE} or {PHRASE}", "{0} OR {1}")
             .addReplacement("{PHRASE}, {PHRASE}, or {PHRASE}", "any({0}, {1}, {2})")
             .addReplacement("{PHRASE}, {PHRASE} or {PHRASE}", "any({0}, {1}, {2})")
             .addReplacement("{PHRASE}, {PHRASE}, {PHRASE}, or {PHRASE}", "any({0}, {1}, {2}, {3})")
@@ -363,7 +390,7 @@ public class PrerequisiteParser {
     private final PatternMapper patternMapper = new PatternMapper();
 
     public String extractPrerequisiteFormula(String prerequisites) {
-        if (prerequisites == null || prerequisites.isBlank()) {
+        if (prerequisites == null || prerequisites.trim().isBlank() || prerequisites.trim().equals("—")) {
             return "";
         }
 
@@ -399,18 +426,32 @@ public class PrerequisiteParser {
         // generic terms
         addNameMapping("proficiency", Id.partial("@proficiency"));
 
+        // hard-coded
+        addNameMapping("force spell", Id.partial("\"force spell\""));
+        addNameMapping("arcane force spell", Id.partial("\"arcane force spell\""));
+
+        // custom (not dynamically supported yet)
+        addNameMapping("ranger spellbook", Id.of("spellbook:ranger"));
+        addNameMapping("ranger spells", Id.of("spellbook:ranger"));
+        addNameMapping("psychic spells", Id.of("spellbook:psychic"));
+        addNameMapping("ability focus", Id.of("feat:ability_focus"));
+
         namedEntities().forEach(namedEntity -> addNameMapping(namedEntity.name(), namedEntity.id()));
 
         // Weapon Types
         Weapons.ALL_WEAPONS.forEach(weaponType -> addNameMapping(
                 weaponType.name(),
                 weaponType.id()));
+        Arrays.stream(ArmorProficiency.values()).forEach(armorProficiency ->
+                addNameMapping(armorProficiency.getName(), armorProficiency.getId()));
 
         // Races
         addNameMapping("naga", Id.of("race:naga"));
         addNameMapping("serpentfolk", Id.of("race:serpentfolk"));
         addNameMapping("wayang", Id.of("race:wayang"));
         addNameMapping("vishkanya", Id.of("race:vishkanya"));
+        addNameMapping("orcs", Id.of("race:orc"));
+        addNameMapping("hobgoblin", Id.of("race:hobgoblin"));
 //        specialNameToId.put("Aasimar", "race:aasimar");
 //        specialNameToId.put("goblin", "race:goblin");
 
@@ -452,29 +493,42 @@ public class PrerequisiteParser {
 
         patternMapper.addAll(GLOBAL_PATTERN_MAPPER);
 
-        patternMapper.addFunction("ability",
-                (id, text) -> {
-                    if (id.startsWith("@ability:") || id.startsWith("@feat:")) {
-                        return id;
-                    }
-                    Id abilityId = abilityNameToId.get(text.toLowerCase());
-                    if (abilityId == null) {
-                        throw new IllegalArgumentException("No ability found for name: " + text.toLowerCase());
-                    }
-                    return "@" + abilityId.string();
-                });
+
+        Consumer<String> addTypeLookupFunction = type -> {
+            patternMapper.addFunction(type, (id, text) -> {
+                if (id.startsWith("@%s:".formatted(type))) {
+                    return id;
+                }
+                Id foundId = specialNameAndTypeToId.get(type + ":" + text.toLowerCase());
+                if (foundId == null) {
+                    throw new IllegalArgumentException("No %s found for name: %s".formatted(type, text.toLowerCase()));
+                }
+                return "@" + foundId.string();
+            });
+        };
+
+        addTypeLookupFunction.accept("ability");
+        addTypeLookupFunction.accept("feat");
+        addTypeLookupFunction.accept("spell");
+        addTypeLookupFunction.accept("magus_arcana");
+        addTypeLookupFunction.accept("rogue_talent");
+        addTypeLookupFunction.accept("rage_power");
+        addTypeLookupFunction.accept("discovery");
 
         log.info("Finished initializing prerequisite parser");
     }
 
     private void addNameMapping(String name, Id to) {
-        if ("ability".equals(to.type) || "feat".equals(to.type)) {
-            this.abilityNameToId.put(name.toLowerCase(), to);
+        if (to.type != null) {
+            this.specialNameAndTypeToId.put((to.type + ":" + name).toLowerCase(), to);
         }
-        if ("spell".equals(to.type)) {
-            this.spellNameToId.put(name.toLowerCase(), to);
-        }
-        this.specialNameToId.put(name, to);
+//        if ("ability".equals(to.type) || "feat".equals(to.type)) {
+//            this.abilityNameToId.put(name.toLowerCase(), to);
+//        }
+//        if ("spell".equals(to.type)) {
+//            this.spellNameToId.put(name.toLowerCase(), to);
+//        }
+        this.specialNameToId.put(name.toLowerCase(), to);
     }
 
     private void addFeatTypeToSpecialIds(FeatType type, String... names) {
@@ -549,18 +603,19 @@ public class PrerequisiteParser {
                 .replaceAll(" \\((Advanced Player's Guide \\d+)\\)\\.?", "")
                 .replaceAll(",? see Special\\.?", "")
                 .replaceAll("\\s*\\(see below\\)\\.?", "")
-                .replaceAll("\\.", "");
+                .replaceAll("\\.", "")
+                .trim();
 
         Function<String, String> renameFunction = patternMapper::mapText;
 
         prerequisites = renameFunction.apply(prerequisites);
+        return prerequisites;
 
-//        return Arrays.stream(prerequisites.split("[,;](?![^()*])"))
-        return Stream.of(prerequisites)
-                .map(String::trim)
-                .filter(part -> !part.isBlank())
-                .map(renameFunction)
-                .collect(Collectors.joining(" AND "));
+////        return Arrays.stream(prerequisites.split("[,;](?![^()*])"))
+//        return Stream.of(prerequisites)
+//                .filter(part -> !part.isBlank())
+//                .map(renameFunction)
+//                .collect(Collectors.joining(" AND "));
     }
 
 }

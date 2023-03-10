@@ -1,0 +1,17 @@
+{
+  "id": "feat:sacred_summons",
+  "name": "Sacred Summons",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@ability:aura#warpriest, any(@ability:summon_monster_vi#summoner, @ability:summon_monster_viii#summoner, @ability:summon_monster_ix#summoner, @ability:summon_monster_v#summoner, @ability:summon_monster_iii#summoner, @ability:summon_monster_vii#summoner, @ability:summon_monster_iv#summoner, @ability:summon_monster_ii#summoner, @ability:summon_monster#summoner, @ability:summon_monster#unchained_summoner, @ability:summon_monster_iii#unchained_summoner, @ability:summon_monster_vi#unchained_summoner, @ability:summon_monster_ix#unchained_summoner, @ability:summon_monster_v#unchained_summoner, @ability:summon_monster_vii#unchained_summoner, @ability:summon_monster_viii#unchained_summoner, @ability:summon_monster_ii#unchained_summoner, @ability:summon_monster_iv#unchained_summoner, @spell:summon_monster_i, @spell:summon_monster_ii, @spell:summon_monster_iii, @spell:summon_monster_iv, @spell:summon_monster_v, @spell:summon_monster_vi, @spell:summon_monster_viii, @spell:summon_monster_vii, @spell:summon_monster_ix)[Summon monster])",
+  "description": {
+    "sections": {
+      "Benefit": "When using summon monster to summon creatures whose alignment subtype or subtypes exactly match your aura, you may cast the spell as a standard action instead of with a casting time of 1 round."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:sacred_summons",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ability:master_healing_technique#oracle_divine_herbalist",
+  "name": "Master Healing Technique",
+  "tags": ["class:oracle#divine_herbalist", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 7th level, whenever a divine herbalist heals a living creature with her healer\u0027s way ability, as a free action she can attempt a Profession (herbalist) check to remove a condition from the target, with each condition having an accompanying Profession (herbalist) DC (see the list below). She cannot take 10 or 20 on this check, nor can she receive aid from any creature except another divine herbalist (though the practitioner need not be an oracle). Failure by 5 or more causes the target to become sickened for 1 round (if the divine herbalist is attempting to remove the sickened condition, this extends it by 1 round). Similarly, failure by 10 or more instead causes the target to become nauseated for 1 round or to have its existing nauseated condition extended by 1 round. A creature that cannot be sickened or nauseated cannot have conditions removed by this ability.\nMinor Conditions (DC 20): Fatigued, shaken, and sickened. Major Conditions (DC 25): Dazed and staggered. Severe Conditions (DC 30): Confused, exhausted, frightened, and nauseated. Dire Conditions (DC 35): Blinded, deafened, paralyzed, and stunned.\nThis ability replaces the revelation gained at 7th level."
+  },
+  "effects": [{
+    "targetKey": "ability:master_healing_technique#oracle_divine_herbalist",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

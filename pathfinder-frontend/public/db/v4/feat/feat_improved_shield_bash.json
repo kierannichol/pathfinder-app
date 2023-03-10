@@ -1,0 +1,19 @@
+{
+  "id": "feat:improved_shield_bash",
+  "name": "Improved Shield Bash",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "@feat:shield_proficiency",
+  "description": {
+    "text": "You can protect yourself with your shield, even if you use it to attack.",
+    "sections": {
+      "Benefit": "When you perform a shield bash, you may still apply the shield\u0027s shield bonus to your AC.",
+      "Normal": "Without this feat, a character that performs a shield bash loses the shield\u0027s shield bonus to AC until his next turn (see Equipment)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:improved_shield_bash",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

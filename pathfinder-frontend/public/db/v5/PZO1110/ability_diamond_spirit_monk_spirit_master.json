@@ -1,0 +1,14 @@
+{
+  "id": "ability:diamond_spirit#monk_spirit_master",
+  "name": "Diamond Spirit",
+  "tags": ["class:monk#spirit_master", "archetype_feature", "class_feature"],
+  "description": {
+    "text": "At 5th level, a spirit master becomes fortified against the effects of energy drain. When the spirit master gains a negative level, he does not take any penalties, his total hit points remain unchanged, and he is not considered lower level for the purpose of level-dependent variables. Once per day when attempting a Fortitude save to remove a temporary negative level, the spirit master may choose to automatically succeed. The spirit master still dies if his number of negative levels equals or exceeds his number of Hit Dice."
+  },
+  "effects": [{
+    "targetKey": "ability:diamond_spirit#monk_spirit_master",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

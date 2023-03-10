@@ -1,0 +1,19 @@
+{
+  "id": "feat:blessed_striker",
+  "name": "Blessed Striker",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "all(@bab \u003e\u003d 11, @ability:divine_caster, \"alignment must be within one step of your deity\u0027s\")",
+  "description": {
+    "text": "You attacks are augmented by the strength of your and your deity\u0027s shared alignment.",
+    "sections": {
+      "Benefit": "All of your attacks are treated as having whatever alignment components you and your deity share for the purpose of overcoming damage reduction.",
+      "Special": "If you grossly violate the code of conduct required by your deity or no longer worship your deity, you lose access to this feat. You can regain it once you atone for your misdeeds to your deity (see the atonement spell)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:blessed_striker",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

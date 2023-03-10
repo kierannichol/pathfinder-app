@@ -1,0 +1,18 @@
+{
+  "id": "feat:arcane_armor_training",
+  "name": "Arcane Armor Training",
+  "tags": ["feat", "combat"],
+  "prerequisiteFormula": "all(@proficiency:@proficiency:light_armor, @caster_level \u003e\u003d 3)",
+  "description": {
+    "text": "You have learned how to cast spells while wearing armor.",
+    "sections": {
+      "Benefit": "As a swift action, reduce the arcane spell failure chance due to the armor you are wearing by 10% for any spells you cast this round."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:arcane_armor_training",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

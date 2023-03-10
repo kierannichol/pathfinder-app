@@ -44,6 +44,7 @@ public record Race(Id id, String name, String size, int speed, String type, Stri
                 .effects(effects)
                 .choices(choices)
                 .template(template.build())
+                .source(Sources.findSourceByNameOrCode(source()))
                 .build();
     }
 }

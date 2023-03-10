@@ -1,0 +1,18 @@
+{
+  "id": "feat:metallic_wings",
+  "name": "Metallic Wings",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@feat:angelic_blood, @feat:angelic_flesh, @feat:angel_wings, @race:aasimar, @character_level \u003e\u003d 11)",
+  "description": {
+    "text": "Your wing feathers are made of gleaming metal",
+    "sections": {
+      "Benefit": "You gain two wing attacks. These are secondary natural attacks that deal 1d4 points of slashing damage (or 1d3 if you are Small)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:metallic_wings",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

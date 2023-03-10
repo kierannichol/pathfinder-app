@@ -7,7 +7,9 @@ import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class PatternMapper {
     private static final String REPLACEMENT_DESTINATION_PATTERN = "\\{(?:(?<func>\\w+):)?%d}";
     private final List<PatternReplacement> replacements;
@@ -27,7 +29,7 @@ public class PatternMapper {
     }
 
     public PatternMapper addToken(String token, String pattern) {
-        patternsByToken.put("{" + token + "}", Pattern.compile(pattern));
+        patternsByToken.put("{" + token.toLowerCase() + "}", Pattern.compile(pattern));
         replacementRegexCache.clear();
         return this;
     }
@@ -41,55 +43,64 @@ public class PatternMapper {
         if (!pattern.contains("{")) {
             return addStaticReplacement(pattern, replacement);
         }
-        replacements.add(new PatternReplacement(pattern, replacement, false));
+        replacements.add(new PatternReplacement(pattern.trim().toLowerCase(), replacement, false));
         return this;
     }
 
     public PatternMapper addStaticReplacement(String text, String replacement) {
-        staticReplacements.put(text.toLowerCase(), replacement);
+        staticReplacements.put(text.trim().toLowerCase(), replacement);
         return this;
     }
 
     public PatternMapper addImmediateReplacement(String pattern, String replacement) {
-        replacements.add(new PatternReplacement(pattern, replacement, true));
+        replacements.add(new PatternReplacement(pattern.trim().toLowerCase(), replacement, true));
         return this;
     }
 
     public String mapText(String text) {
-        var staticReplacement = staticReplacements.get(text.toLowerCase());
-        if (staticReplacement != null) {
-            return staticReplacement;
-        }
+        return internalMapText(text.trim().toLowerCase());
+    }
 
-        for (PatternReplacement replacementEntry : replacements) {
-            Pattern regex = patternToRegEx(replacementEntry);
-            Matcher matcher = regex.matcher(text);
-            if (!matcher.find()) {
-                continue;
+    private String internalMapText(String text) {
+        try {
+            var staticReplacement = staticReplacements.get(text);
+            if (staticReplacement != null) {
+                return staticReplacement;
             }
 
-            String resolved = replacementEntry.replacement();
-            for (int i = 0; i < matcher.groupCount(); i++) {
-                String original = matcher.group(i + 1);
-                String found = mapText(original);
-
-                Pattern destinationPattern = Pattern.compile(REPLACEMENT_DESTINATION_PATTERN.formatted(i));
-                Matcher destinationMatcher = destinationPattern.matcher(resolved);
-                if (destinationMatcher.find()) {
-                    String funcKey = destinationMatcher.group("func");
-                    if (funcKey != null) {
-                        BiFunction<String, String, String> func = functionMap.get(funcKey);
-                        if (func == null) {
-                            throw new IllegalArgumentException("Unknown pattern mapper function: " + funcKey);
-                        }
-                        found = func.apply(found, original);
-                    }
-                    resolved = resolved.replaceAll(destinationPattern.pattern(), found);
+            for (PatternReplacement replacementEntry : replacements) {
+                Pattern regex = patternToRegEx(replacementEntry);
+                Matcher matcher = regex.matcher(text);
+                if (!matcher.find()) {
+                    continue;
                 }
+
+                String resolved = replacementEntry.replacement();
+                for (int i = 0; i < matcher.groupCount(); i++) {
+                    String original = matcher.group(i + 1);
+                    String found = internalMapText(original);
+
+                    Pattern destinationPattern = Pattern.compile(REPLACEMENT_DESTINATION_PATTERN.formatted(i));
+                    Matcher destinationMatcher = destinationPattern.matcher(resolved);
+                    if (destinationMatcher.find()) {
+                        String funcKey = destinationMatcher.group("func");
+                        if (funcKey != null) {
+                            BiFunction<String, String, String> func = functionMap.get(funcKey);
+                            if (func == null) {
+                                throw new IllegalArgumentException("Unknown pattern mapper function: " + funcKey);
+                            }
+                            found = func.apply(found, original);
+                        }
+                        resolved = resolved.replaceAll(destinationPattern.pattern(), found);
+                    }
+                }
+                return resolved;
             }
-            return resolved;
+
+            return text;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Failed to map: " + text, e);
         }
-        return text;
     }
 
     private Pattern patternToRegEx(PatternReplacement replacement) {

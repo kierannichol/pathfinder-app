@@ -1,0 +1,17 @@
+{
+  "id": "feat:die_for_your_master",
+  "name": "Die for Your Master",
+  "tags": ["feat", "general"],
+  "prerequisiteFormula": "@discovery:tumor_familiar",
+  "description": {
+    "sections": {
+      "Benefit": "If your tumor familiar is attached, and you would be reduced to 0 or fewer hit points by damage in combat (from a weapon or other blow, not a spell or special ability), the familiar throws itself in the way of the attack as an immediate action. If it makes a Reflex saving throw (DC \u003d damage dealt), it takes all the damage from the attack; if it fails, it takes half damage and you take half damage."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:die_for_your_master",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

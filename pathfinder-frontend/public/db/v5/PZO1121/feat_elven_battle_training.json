@@ -1,0 +1,17 @@
+{
+  "id": "feat:elven_battle_training",
+  "name": "Elven Battle Training",
+  "tags": ["feat", "racial", "racial"],
+  "prerequisiteFormula": "all(@bab \u003e\u003d 1, @race:elf)",
+  "description": {
+    "sections": {
+      "Benefit": "You have received special training with traditional elven weapons (longbows, composite longbows, longswords, rapiers, shortbows, composite shortbows, and any weapon with the word “elven\" in its name). You receive a +2 bonus to your CMD against disarm and sunder maneuvers directed at one of these weapons you are wielding. In addition, if you are wielding one of these melee weapons, you may make an additional attack of opportunity each round (this bonus stacks with Combat Reflexes)."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:elven_battle_training",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

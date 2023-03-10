@@ -12,8 +12,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
-import pathfinder.model.pathfinder.Source;
-import pathfinder.model.pathfinder.Sources;
 import pathfinder.scraper.remote.AbstractWebScraper;
 import pathfinder.util.StringUtils;
 
@@ -67,11 +65,11 @@ public abstract class AbstractD20pfsrdScraper extends AbstractWebScraper {
                 contentElements));
     }
 
-    protected Source scrapeSourceFromCopyrightSection(Document document) {
+    protected String scrapeSourceFromCopyrightSection(Document document) {
         String source = selectText(document, ".section15");
         source = source.replaceAll("Section 15: Copyright Notice", "");
         source = source.replaceAll("^(.*?)(?:\\.| ©).*", "$1");
-        return Sources.findSourceByNameOrCode(source);
+        return source;
     }
 
     protected Stream<Block> sections(Element root, String tag) {
