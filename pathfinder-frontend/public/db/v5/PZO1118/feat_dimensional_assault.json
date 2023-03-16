@@ -2,7 +2,7 @@
   "id": "feat:dimensional_assault",
   "name": "Dimensional Assault",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all((@ability:abundant_step#monk OR @spell:dimension_door), @feat:dimensional_agility)",
+  "prerequisiteFormula": "all(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility)",
   "description": {
     "text": "You have been trained to use magical movement as part of your combat tactics.",
     "sections": {

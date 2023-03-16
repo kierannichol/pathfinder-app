@@ -4,7 +4,7 @@
   "tags": ["feat", "combat"],
   "children": [{
     "optionId": "blowgun",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#blowgun OR @feat:point_blank_master#blowgun, @feat:weapon_focus#blowgun)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#blowgun,@feat:point_blank_master#blowgun),@feat:weapon_focus#blowgun)",
     "name": "Blowgun",
     "effects": [{
       "targetKey": "feat:false_opening#blowgun",
@@ -14,7 +14,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_crossbow OR @feat:point_blank_master#heavy_crossbow, @feat:weapon_focus#heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_crossbow,@feat:point_blank_master#heavy_crossbow),@feat:weapon_focus#heavy_crossbow)",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_crossbow",
@@ -24,7 +24,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_crossbow OR @feat:point_blank_master#light_crossbow, @feat:weapon_focus#light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_crossbow,@feat:point_blank_master#light_crossbow),@feat:weapon_focus#light_crossbow)",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#light_crossbow",
@@ -34,7 +34,7 @@
     }]
   }, {
     "optionId": "dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dart OR @feat:point_blank_master#dart, @feat:weapon_focus#dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dart,@feat:point_blank_master#dart),@feat:weapon_focus#dart)",
     "name": "Dart",
     "effects": [{
       "targetKey": "feat:false_opening#dart",
@@ -44,7 +44,7 @@
     }]
   }, {
     "optionId": "javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#javelin OR @feat:point_blank_master#javelin, @feat:weapon_focus#javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#javelin,@feat:point_blank_master#javelin),@feat:weapon_focus#javelin)",
     "name": "Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#javelin",
@@ -54,7 +54,7 @@
     }]
   }, {
     "optionId": "sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling OR @feat:point_blank_master#sling, @feat:weapon_focus#sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling,@feat:point_blank_master#sling),@feat:weapon_focus#sling)",
     "name": "Sling",
     "effects": [{
       "targetKey": "feat:false_opening#sling",
@@ -64,7 +64,7 @@
     }]
   }, {
     "optionId": "stingchuck",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stingchuck OR @feat:point_blank_master#stingchuck, @feat:weapon_focus#stingchuck)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stingchuck,@feat:point_blank_master#stingchuck),@feat:weapon_focus#stingchuck)",
     "name": "Stingchuck",
     "effects": [{
       "targetKey": "feat:false_opening#stingchuck",
@@ -74,7 +74,7 @@
     }]
   }, {
     "optionId": "stonebow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stonebow OR @feat:point_blank_master#stonebow, @feat:weapon_focus#stonebow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stonebow,@feat:point_blank_master#stonebow),@feat:weapon_focus#stonebow)",
     "name": "Stonebow",
     "effects": [{
       "targetKey": "feat:false_opening#stonebow",
@@ -84,7 +84,7 @@
     }]
   }, {
     "optionId": "ammentum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ammentum OR @feat:point_blank_master#ammentum, @feat:weapon_focus#ammentum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ammentum,@feat:point_blank_master#ammentum),@feat:weapon_focus#ammentum)",
     "name": "Ammentum",
     "effects": [{
       "targetKey": "feat:false_opening#ammentum",
@@ -94,7 +94,7 @@
     }]
   }, {
     "optionId": "chakram",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#chakram OR @feat:point_blank_master#chakram, @feat:weapon_focus#chakram)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#chakram,@feat:point_blank_master#chakram),@feat:weapon_focus#chakram)",
     "name": "Chakram",
     "effects": [{
       "targetKey": "feat:false_opening#chakram",
@@ -104,7 +104,7 @@
     }]
   }, {
     "optionId": "jolting_dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#jolting_dart OR @feat:point_blank_master#jolting_dart, @feat:weapon_focus#jolting_dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#jolting_dart,@feat:point_blank_master#jolting_dart),@feat:weapon_focus#jolting_dart)",
     "name": "Jolting Dart",
     "effects": [{
       "targetKey": "feat:false_opening#jolting_dart",
@@ -114,7 +114,7 @@
     }]
   }, {
     "optionId": "hunga_munga",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hunga_munga OR @feat:point_blank_master#hunga_munga, @feat:weapon_focus#hunga_munga)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hunga_munga,@feat:point_blank_master#hunga_munga),@feat:weapon_focus#hunga_munga)",
     "name": "Hunga Munga",
     "effects": [{
       "targetKey": "feat:false_opening#hunga_munga",
@@ -124,7 +124,7 @@
     }]
   }, {
     "optionId": "hurlbat",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hurlbat OR @feat:point_blank_master#hurlbat, @feat:weapon_focus#hurlbat)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hurlbat,@feat:point_blank_master#hurlbat),@feat:weapon_focus#hurlbat)",
     "name": "Hurlbat",
     "effects": [{
       "targetKey": "feat:false_opening#hurlbat",
@@ -134,7 +134,7 @@
     }]
   }, {
     "optionId": "longbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#longbow OR @feat:point_blank_master#longbow, @feat:weapon_focus#longbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#longbow,@feat:point_blank_master#longbow),@feat:weapon_focus#longbow)",
     "name": "Longbow",
     "effects": [{
       "targetKey": "feat:false_opening#longbow",
@@ -144,7 +144,7 @@
     }]
   }, {
     "optionId": "pilum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#pilum OR @feat:point_blank_master#pilum, @feat:weapon_focus#pilum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#pilum,@feat:point_blank_master#pilum),@feat:weapon_focus#pilum)",
     "name": "Pilum",
     "effects": [{
       "targetKey": "feat:false_opening#pilum",
@@ -154,7 +154,7 @@
     }]
   }, {
     "optionId": "shortbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shortbow OR @feat:point_blank_master#shortbow, @feat:weapon_focus#shortbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shortbow,@feat:point_blank_master#shortbow),@feat:weapon_focus#shortbow)",
     "name": "Shortbow",
     "effects": [{
       "targetKey": "feat:false_opening#shortbow",
@@ -164,7 +164,7 @@
     }]
   }, {
     "optionId": "aklys",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#aklys OR @feat:point_blank_master#aklys, @feat:weapon_focus#aklys)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#aklys,@feat:point_blank_master#aklys),@feat:weapon_focus#aklys)",
     "name": "Aklys",
     "effects": [{
       "targetKey": "feat:false_opening#aklys",
@@ -174,7 +174,7 @@
     }]
   }, {
     "optionId": "bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bola OR @feat:point_blank_master#bola, @feat:weapon_focus#bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bola,@feat:point_blank_master#bola),@feat:weapon_focus#bola)",
     "name": "Bola",
     "effects": [{
       "targetKey": "feat:false_opening#bola",
@@ -184,7 +184,7 @@
     }]
   }, {
     "optionId": "brutal_bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#brutal_bola OR @feat:point_blank_master#brutal_bola, @feat:weapon_focus#brutal_bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#brutal_bola,@feat:point_blank_master#brutal_bola),@feat:weapon_focus#brutal_bola)",
     "name": "Brutal Bola",
     "effects": [{
       "targetKey": "feat:false_opening#brutal_bola",
@@ -194,7 +194,7 @@
     }]
   }, {
     "optionId": "boomerang",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#boomerang OR @feat:point_blank_master#boomerang, @feat:weapon_focus#boomerang)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#boomerang,@feat:point_blank_master#boomerang),@feat:weapon_focus#boomerang)",
     "name": "Boomerang",
     "effects": [{
       "targetKey": "feat:false_opening#boomerang",
@@ -204,7 +204,7 @@
     }]
   }, {
     "optionId": "thorn_bow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#thorn_bow OR @feat:point_blank_master#thorn_bow, @feat:weapon_focus#thorn_bow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#thorn_bow,@feat:point_blank_master#thorn_bow),@feat:weapon_focus#thorn_bow)",
     "name": "Thorn Bow",
     "effects": [{
       "targetKey": "feat:false_opening#thorn_bow",
@@ -214,7 +214,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_heavy_crossbow OR @feat:point_blank_master#crank_heavy_crossbow, @feat:weapon_focus#crank_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_heavy_crossbow,@feat:point_blank_master#crank_heavy_crossbow),@feat:weapon_focus#crank_heavy_crossbow)",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_heavy_crossbow",
@@ -224,7 +224,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_light_crossbow OR @feat:point_blank_master#crank_light_crossbow, @feat:weapon_focus#crank_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_light_crossbow,@feat:point_blank_master#crank_light_crossbow),@feat:weapon_focus#crank_light_crossbow)",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_light_crossbow",
@@ -234,7 +234,7 @@
     }]
   }, {
     "optionId": "double_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_crossbow OR @feat:point_blank_master#double_crossbow, @feat:weapon_focus#double_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_crossbow,@feat:point_blank_master#double_crossbow),@feat:weapon_focus#double_crossbow)",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#double_crossbow",
@@ -244,7 +244,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hand_crossbow OR @feat:point_blank_master#hand_crossbow, @feat:weapon_focus#hand_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hand_crossbow,@feat:point_blank_master#hand_crossbow),@feat:weapon_focus#hand_crossbow)",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#hand_crossbow",
@@ -254,7 +254,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#launching_crossbow OR @feat:point_blank_master#launching_crossbow, @feat:weapon_focus#launching_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#launching_crossbow,@feat:point_blank_master#launching_crossbow),@feat:weapon_focus#launching_crossbow)",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#launching_crossbow",
@@ -264,7 +264,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_heavy_crossbow OR @feat:point_blank_master#repeating_heavy_crossbow, @feat:weapon_focus#repeating_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_heavy_crossbow,@feat:point_blank_master#repeating_heavy_crossbow),@feat:weapon_focus#repeating_heavy_crossbow)",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_heavy_crossbow",
@@ -274,7 +274,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_light_crossbow OR @feat:point_blank_master#repeating_light_crossbow, @feat:weapon_focus#repeating_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_light_crossbow,@feat:point_blank_master#repeating_light_crossbow),@feat:weapon_focus#repeating_light_crossbow)",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_light_crossbow",
@@ -284,7 +284,7 @@
     }]
   }, {
     "optionId": "flask_thrower",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flask_thrower OR @feat:point_blank_master#flask_thrower, @feat:weapon_focus#flask_thrower)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flask_thrower,@feat:point_blank_master#flask_thrower),@feat:weapon_focus#flask_thrower)",
     "name": "Flask Thrower",
     "effects": [{
       "targetKey": "feat:false_opening#flask_thrower",
@@ -294,7 +294,7 @@
     }]
   }, {
     "optionId": "grappling_hook",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#grappling_hook OR @feat:point_blank_master#grappling_hook, @feat:weapon_focus#grappling_hook)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#grappling_hook,@feat:point_blank_master#grappling_hook),@feat:weapon_focus#grappling_hook)",
     "name": "Grappling Hook",
     "effects": [{
       "targetKey": "feat:false_opening#grappling_hook",
@@ -304,7 +304,7 @@
     }]
   }, {
     "optionId": "orc_hornbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#orc_hornbow OR @feat:point_blank_master#orc_hornbow, @feat:weapon_focus#orc_hornbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#orc_hornbow,@feat:point_blank_master#orc_hornbow),@feat:weapon_focus#orc_hornbow)",
     "name": "Orc Hornbow",
     "effects": [{
       "targetKey": "feat:false_opening#orc_hornbow",
@@ -314,7 +314,7 @@
     }]
   }, {
     "optionId": "stormshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stormshaft_javelin OR @feat:point_blank_master#stormshaft_javelin, @feat:weapon_focus#stormshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stormshaft_javelin,@feat:point_blank_master#stormshaft_javelin),@feat:weapon_focus#stormshaft_javelin)",
     "name": "Stormshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#stormshaft_javelin",
@@ -324,7 +324,7 @@
     }]
   }, {
     "optionId": "lasso",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#lasso OR @feat:point_blank_master#lasso, @feat:weapon_focus#lasso)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#lasso,@feat:point_blank_master#lasso),@feat:weapon_focus#lasso)",
     "name": "Lasso",
     "effects": [{
       "targetKey": "feat:false_opening#lasso",
@@ -334,7 +334,7 @@
     }]
   }, {
     "optionId": "net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#net OR @feat:point_blank_master#net, @feat:weapon_focus#net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#net,@feat:point_blank_master#net),@feat:weapon_focus#net)",
     "name": "Net",
     "effects": [{
       "targetKey": "feat:false_opening#net",
@@ -344,7 +344,7 @@
     }]
   }, {
     "optionId": "snag_net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#snag_net OR @feat:point_blank_master#snag_net, @feat:weapon_focus#snag_net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#snag_net,@feat:point_blank_master#snag_net),@feat:weapon_focus#snag_net)",
     "name": "Snag Net",
     "effects": [{
       "targetKey": "feat:false_opening#snag_net",
@@ -354,7 +354,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_heavy_pelletbow OR @feat:point_blank_master#dwarven_heavy_pelletbow, @feat:weapon_focus#dwarven_heavy_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_heavy_pelletbow,@feat:point_blank_master#dwarven_heavy_pelletbow),@feat:weapon_focus#dwarven_heavy_pelletbow)",
     "name": "Dwarven Heavy Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_heavy_pelletbow",
@@ -364,7 +364,7 @@
     }]
   }, {
     "optionId": "dwarven_light_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_light_pelletbow OR @feat:point_blank_master#dwarven_light_pelletbow, @feat:weapon_focus#dwarven_light_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_light_pelletbow,@feat:point_blank_master#dwarven_light_pelletbow),@feat:weapon_focus#dwarven_light_pelletbow)",
     "name": "Dwarven Light Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_light_pelletbow",
@@ -374,7 +374,7 @@
     }]
   }, {
     "optionId": "throwing_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#throwing_shield OR @feat:point_blank_master#throwing_shield, @feat:weapon_focus#throwing_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#throwing_shield,@feat:point_blank_master#throwing_shield),@feat:weapon_focus#throwing_shield)",
     "name": "Throwing Shield",
     "effects": [{
       "targetKey": "feat:false_opening#throwing_shield",
@@ -384,7 +384,7 @@
     }]
   }, {
     "optionId": "shrillshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shrillshaft_javelin OR @feat:point_blank_master#shrillshaft_javelin, @feat:weapon_focus#shrillshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shrillshaft_javelin,@feat:point_blank_master#shrillshaft_javelin),@feat:weapon_focus#shrillshaft_javelin)",
     "name": "Shrillshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#shrillshaft_javelin",
@@ -394,7 +394,7 @@
     }]
   }, {
     "optionId": "shuriken_5",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shuriken_5 OR @feat:point_blank_master#shuriken_5, @feat:weapon_focus#shuriken_5)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shuriken_5,@feat:point_blank_master#shuriken_5),@feat:weapon_focus#shuriken_5)",
     "name": "Shuriken (5)",
     "effects": [{
       "targetKey": "feat:false_opening#shuriken_5",
@@ -404,7 +404,7 @@
     }]
   }, {
     "optionId": "double_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_sling OR @feat:point_blank_master#double_sling, @feat:weapon_focus#double_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_sling,@feat:point_blank_master#double_sling),@feat:weapon_focus#double_sling)",
     "name": "Double Sling",
     "effects": [{
       "targetKey": "feat:false_opening#double_sling",
@@ -414,7 +414,7 @@
     }]
   }, {
     "optionId": "sling_glove",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling_glove OR @feat:point_blank_master#sling_glove, @feat:weapon_focus#sling_glove)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling_glove,@feat:point_blank_master#sling_glove),@feat:weapon_focus#sling_glove)",
     "name": "Sling Glove",
     "effects": [{
       "targetKey": "feat:false_opening#sling_glove",
@@ -424,7 +424,7 @@
     }]
   }, {
     "optionId": "halfling_sling_staff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#halfling_sling_staff OR @feat:point_blank_master#halfling_sling_staff, @feat:weapon_focus#halfling_sling_staff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#halfling_sling_staff,@feat:point_blank_master#halfling_sling_staff),@feat:weapon_focus#halfling_sling_staff)",
     "name": "Halfling Sling Staff",
     "effects": [{
       "targetKey": "feat:false_opening#halfling_sling_staff",
@@ -434,7 +434,7 @@
     }]
   }, {
     "optionId": "stitched_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stitched_sling OR @feat:point_blank_master#stitched_sling, @feat:weapon_focus#stitched_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stitched_sling,@feat:point_blank_master#stitched_sling),@feat:weapon_focus#stitched_sling)",
     "name": "Stitched Sling",
     "effects": [{
       "targetKey": "feat:false_opening#stitched_sling",
@@ -444,7 +444,7 @@
     }]
   }, {
     "optionId": "wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#wrist_launcher OR @feat:point_blank_master#wrist_launcher, @feat:weapon_focus#wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#wrist_launcher,@feat:point_blank_master#wrist_launcher),@feat:weapon_focus#wrist_launcher)",
     "name": "Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#wrist_launcher",
@@ -454,7 +454,7 @@
     }]
   }, {
     "optionId": "heavy_wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_wrist_launcher OR @feat:point_blank_master#heavy_wrist_launcher, @feat:weapon_focus#heavy_wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_wrist_launcher,@feat:point_blank_master#heavy_wrist_launcher),@feat:weapon_focus#heavy_wrist_launcher)",
     "name": "Heavy Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_wrist_launcher",
@@ -464,7 +464,7 @@
     }]
   }, {
     "optionId": "blowgun",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#blowgun OR @feat:point_blank_master#blowgun, @feat:weapon_focus#blowgun)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#blowgun,@feat:point_blank_master#blowgun),@feat:weapon_focus#blowgun)",
     "name": "Blowgun",
     "effects": [{
       "targetKey": "feat:false_opening#blowgun",
@@ -474,7 +474,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_crossbow OR @feat:point_blank_master#heavy_crossbow, @feat:weapon_focus#heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_crossbow,@feat:point_blank_master#heavy_crossbow),@feat:weapon_focus#heavy_crossbow)",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_crossbow",
@@ -484,7 +484,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_crossbow OR @feat:point_blank_master#light_crossbow, @feat:weapon_focus#light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_crossbow,@feat:point_blank_master#light_crossbow),@feat:weapon_focus#light_crossbow)",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#light_crossbow",
@@ -494,7 +494,7 @@
     }]
   }, {
     "optionId": "dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dart OR @feat:point_blank_master#dart, @feat:weapon_focus#dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dart,@feat:point_blank_master#dart),@feat:weapon_focus#dart)",
     "name": "Dart",
     "effects": [{
       "targetKey": "feat:false_opening#dart",
@@ -504,7 +504,7 @@
     }]
   }, {
     "optionId": "javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#javelin OR @feat:point_blank_master#javelin, @feat:weapon_focus#javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#javelin,@feat:point_blank_master#javelin),@feat:weapon_focus#javelin)",
     "name": "Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#javelin",
@@ -514,7 +514,7 @@
     }]
   }, {
     "optionId": "sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling OR @feat:point_blank_master#sling, @feat:weapon_focus#sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling,@feat:point_blank_master#sling),@feat:weapon_focus#sling)",
     "name": "Sling",
     "effects": [{
       "targetKey": "feat:false_opening#sling",
@@ -524,7 +524,7 @@
     }]
   }, {
     "optionId": "stingchuck",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stingchuck OR @feat:point_blank_master#stingchuck, @feat:weapon_focus#stingchuck)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stingchuck,@feat:point_blank_master#stingchuck),@feat:weapon_focus#stingchuck)",
     "name": "Stingchuck",
     "effects": [{
       "targetKey": "feat:false_opening#stingchuck",
@@ -534,7 +534,7 @@
     }]
   }, {
     "optionId": "stonebow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stonebow OR @feat:point_blank_master#stonebow, @feat:weapon_focus#stonebow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stonebow,@feat:point_blank_master#stonebow),@feat:weapon_focus#stonebow)",
     "name": "Stonebow",
     "effects": [{
       "targetKey": "feat:false_opening#stonebow",
@@ -544,7 +544,7 @@
     }]
   }, {
     "optionId": "ammentum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ammentum OR @feat:point_blank_master#ammentum, @feat:weapon_focus#ammentum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ammentum,@feat:point_blank_master#ammentum),@feat:weapon_focus#ammentum)",
     "name": "Ammentum",
     "effects": [{
       "targetKey": "feat:false_opening#ammentum",
@@ -554,7 +554,7 @@
     }]
   }, {
     "optionId": "chakram",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#chakram OR @feat:point_blank_master#chakram, @feat:weapon_focus#chakram)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#chakram,@feat:point_blank_master#chakram),@feat:weapon_focus#chakram)",
     "name": "Chakram",
     "effects": [{
       "targetKey": "feat:false_opening#chakram",
@@ -564,7 +564,7 @@
     }]
   }, {
     "optionId": "jolting_dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#jolting_dart OR @feat:point_blank_master#jolting_dart, @feat:weapon_focus#jolting_dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#jolting_dart,@feat:point_blank_master#jolting_dart),@feat:weapon_focus#jolting_dart)",
     "name": "Jolting Dart",
     "effects": [{
       "targetKey": "feat:false_opening#jolting_dart",
@@ -574,7 +574,7 @@
     }]
   }, {
     "optionId": "hunga_munga",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hunga_munga OR @feat:point_blank_master#hunga_munga, @feat:weapon_focus#hunga_munga)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hunga_munga,@feat:point_blank_master#hunga_munga),@feat:weapon_focus#hunga_munga)",
     "name": "Hunga Munga",
     "effects": [{
       "targetKey": "feat:false_opening#hunga_munga",
@@ -584,7 +584,7 @@
     }]
   }, {
     "optionId": "hurlbat",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hurlbat OR @feat:point_blank_master#hurlbat, @feat:weapon_focus#hurlbat)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hurlbat,@feat:point_blank_master#hurlbat),@feat:weapon_focus#hurlbat)",
     "name": "Hurlbat",
     "effects": [{
       "targetKey": "feat:false_opening#hurlbat",
@@ -594,7 +594,7 @@
     }]
   }, {
     "optionId": "longbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#longbow OR @feat:point_blank_master#longbow, @feat:weapon_focus#longbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#longbow,@feat:point_blank_master#longbow),@feat:weapon_focus#longbow)",
     "name": "Longbow",
     "effects": [{
       "targetKey": "feat:false_opening#longbow",
@@ -604,7 +604,7 @@
     }]
   }, {
     "optionId": "pilum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#pilum OR @feat:point_blank_master#pilum, @feat:weapon_focus#pilum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#pilum,@feat:point_blank_master#pilum),@feat:weapon_focus#pilum)",
     "name": "Pilum",
     "effects": [{
       "targetKey": "feat:false_opening#pilum",
@@ -614,7 +614,7 @@
     }]
   }, {
     "optionId": "shortbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shortbow OR @feat:point_blank_master#shortbow, @feat:weapon_focus#shortbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shortbow,@feat:point_blank_master#shortbow),@feat:weapon_focus#shortbow)",
     "name": "Shortbow",
     "effects": [{
       "targetKey": "feat:false_opening#shortbow",
@@ -624,7 +624,7 @@
     }]
   }, {
     "optionId": "aklys",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#aklys OR @feat:point_blank_master#aklys, @feat:weapon_focus#aklys)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#aklys,@feat:point_blank_master#aklys),@feat:weapon_focus#aklys)",
     "name": "Aklys",
     "effects": [{
       "targetKey": "feat:false_opening#aklys",
@@ -634,7 +634,7 @@
     }]
   }, {
     "optionId": "bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bola OR @feat:point_blank_master#bola, @feat:weapon_focus#bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bola,@feat:point_blank_master#bola),@feat:weapon_focus#bola)",
     "name": "Bola",
     "effects": [{
       "targetKey": "feat:false_opening#bola",
@@ -644,7 +644,7 @@
     }]
   }, {
     "optionId": "brutal_bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#brutal_bola OR @feat:point_blank_master#brutal_bola, @feat:weapon_focus#brutal_bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#brutal_bola,@feat:point_blank_master#brutal_bola),@feat:weapon_focus#brutal_bola)",
     "name": "Brutal Bola",
     "effects": [{
       "targetKey": "feat:false_opening#brutal_bola",
@@ -654,7 +654,7 @@
     }]
   }, {
     "optionId": "boomerang",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#boomerang OR @feat:point_blank_master#boomerang, @feat:weapon_focus#boomerang)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#boomerang,@feat:point_blank_master#boomerang),@feat:weapon_focus#boomerang)",
     "name": "Boomerang",
     "effects": [{
       "targetKey": "feat:false_opening#boomerang",
@@ -664,7 +664,7 @@
     }]
   }, {
     "optionId": "thorn_bow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#thorn_bow OR @feat:point_blank_master#thorn_bow, @feat:weapon_focus#thorn_bow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#thorn_bow,@feat:point_blank_master#thorn_bow),@feat:weapon_focus#thorn_bow)",
     "name": "Thorn Bow",
     "effects": [{
       "targetKey": "feat:false_opening#thorn_bow",
@@ -674,7 +674,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_heavy_crossbow OR @feat:point_blank_master#crank_heavy_crossbow, @feat:weapon_focus#crank_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_heavy_crossbow,@feat:point_blank_master#crank_heavy_crossbow),@feat:weapon_focus#crank_heavy_crossbow)",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_heavy_crossbow",
@@ -684,7 +684,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_light_crossbow OR @feat:point_blank_master#crank_light_crossbow, @feat:weapon_focus#crank_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_light_crossbow,@feat:point_blank_master#crank_light_crossbow),@feat:weapon_focus#crank_light_crossbow)",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_light_crossbow",
@@ -694,7 +694,7 @@
     }]
   }, {
     "optionId": "double_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_crossbow OR @feat:point_blank_master#double_crossbow, @feat:weapon_focus#double_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_crossbow,@feat:point_blank_master#double_crossbow),@feat:weapon_focus#double_crossbow)",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#double_crossbow",
@@ -704,7 +704,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hand_crossbow OR @feat:point_blank_master#hand_crossbow, @feat:weapon_focus#hand_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hand_crossbow,@feat:point_blank_master#hand_crossbow),@feat:weapon_focus#hand_crossbow)",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#hand_crossbow",
@@ -714,7 +714,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#launching_crossbow OR @feat:point_blank_master#launching_crossbow, @feat:weapon_focus#launching_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#launching_crossbow,@feat:point_blank_master#launching_crossbow),@feat:weapon_focus#launching_crossbow)",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#launching_crossbow",
@@ -724,7 +724,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_heavy_crossbow OR @feat:point_blank_master#repeating_heavy_crossbow, @feat:weapon_focus#repeating_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_heavy_crossbow,@feat:point_blank_master#repeating_heavy_crossbow),@feat:weapon_focus#repeating_heavy_crossbow)",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_heavy_crossbow",
@@ -734,7 +734,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_light_crossbow OR @feat:point_blank_master#repeating_light_crossbow, @feat:weapon_focus#repeating_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_light_crossbow,@feat:point_blank_master#repeating_light_crossbow),@feat:weapon_focus#repeating_light_crossbow)",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_light_crossbow",
@@ -744,7 +744,7 @@
     }]
   }, {
     "optionId": "flask_thrower",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flask_thrower OR @feat:point_blank_master#flask_thrower, @feat:weapon_focus#flask_thrower)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flask_thrower,@feat:point_blank_master#flask_thrower),@feat:weapon_focus#flask_thrower)",
     "name": "Flask Thrower",
     "effects": [{
       "targetKey": "feat:false_opening#flask_thrower",
@@ -754,7 +754,7 @@
     }]
   }, {
     "optionId": "grappling_hook",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#grappling_hook OR @feat:point_blank_master#grappling_hook, @feat:weapon_focus#grappling_hook)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#grappling_hook,@feat:point_blank_master#grappling_hook),@feat:weapon_focus#grappling_hook)",
     "name": "Grappling Hook",
     "effects": [{
       "targetKey": "feat:false_opening#grappling_hook",
@@ -764,7 +764,7 @@
     }]
   }, {
     "optionId": "orc_hornbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#orc_hornbow OR @feat:point_blank_master#orc_hornbow, @feat:weapon_focus#orc_hornbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#orc_hornbow,@feat:point_blank_master#orc_hornbow),@feat:weapon_focus#orc_hornbow)",
     "name": "Orc Hornbow",
     "effects": [{
       "targetKey": "feat:false_opening#orc_hornbow",
@@ -774,7 +774,7 @@
     }]
   }, {
     "optionId": "stormshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stormshaft_javelin OR @feat:point_blank_master#stormshaft_javelin, @feat:weapon_focus#stormshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stormshaft_javelin,@feat:point_blank_master#stormshaft_javelin),@feat:weapon_focus#stormshaft_javelin)",
     "name": "Stormshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#stormshaft_javelin",
@@ -784,7 +784,7 @@
     }]
   }, {
     "optionId": "lasso",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#lasso OR @feat:point_blank_master#lasso, @feat:weapon_focus#lasso)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#lasso,@feat:point_blank_master#lasso),@feat:weapon_focus#lasso)",
     "name": "Lasso",
     "effects": [{
       "targetKey": "feat:false_opening#lasso",
@@ -794,7 +794,7 @@
     }]
   }, {
     "optionId": "net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#net OR @feat:point_blank_master#net, @feat:weapon_focus#net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#net,@feat:point_blank_master#net),@feat:weapon_focus#net)",
     "name": "Net",
     "effects": [{
       "targetKey": "feat:false_opening#net",
@@ -804,7 +804,7 @@
     }]
   }, {
     "optionId": "snag_net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#snag_net OR @feat:point_blank_master#snag_net, @feat:weapon_focus#snag_net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#snag_net,@feat:point_blank_master#snag_net),@feat:weapon_focus#snag_net)",
     "name": "Snag Net",
     "effects": [{
       "targetKey": "feat:false_opening#snag_net",
@@ -814,7 +814,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_heavy_pelletbow OR @feat:point_blank_master#dwarven_heavy_pelletbow, @feat:weapon_focus#dwarven_heavy_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_heavy_pelletbow,@feat:point_blank_master#dwarven_heavy_pelletbow),@feat:weapon_focus#dwarven_heavy_pelletbow)",
     "name": "Dwarven Heavy Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_heavy_pelletbow",
@@ -824,7 +824,7 @@
     }]
   }, {
     "optionId": "dwarven_light_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_light_pelletbow OR @feat:point_blank_master#dwarven_light_pelletbow, @feat:weapon_focus#dwarven_light_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_light_pelletbow,@feat:point_blank_master#dwarven_light_pelletbow),@feat:weapon_focus#dwarven_light_pelletbow)",
     "name": "Dwarven Light Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_light_pelletbow",
@@ -834,7 +834,7 @@
     }]
   }, {
     "optionId": "throwing_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#throwing_shield OR @feat:point_blank_master#throwing_shield, @feat:weapon_focus#throwing_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#throwing_shield,@feat:point_blank_master#throwing_shield),@feat:weapon_focus#throwing_shield)",
     "name": "Throwing Shield",
     "effects": [{
       "targetKey": "feat:false_opening#throwing_shield",
@@ -844,7 +844,7 @@
     }]
   }, {
     "optionId": "shrillshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shrillshaft_javelin OR @feat:point_blank_master#shrillshaft_javelin, @feat:weapon_focus#shrillshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shrillshaft_javelin,@feat:point_blank_master#shrillshaft_javelin),@feat:weapon_focus#shrillshaft_javelin)",
     "name": "Shrillshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#shrillshaft_javelin",
@@ -854,7 +854,7 @@
     }]
   }, {
     "optionId": "shuriken_5",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shuriken_5 OR @feat:point_blank_master#shuriken_5, @feat:weapon_focus#shuriken_5)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shuriken_5,@feat:point_blank_master#shuriken_5),@feat:weapon_focus#shuriken_5)",
     "name": "Shuriken (5)",
     "effects": [{
       "targetKey": "feat:false_opening#shuriken_5",
@@ -864,7 +864,7 @@
     }]
   }, {
     "optionId": "double_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_sling OR @feat:point_blank_master#double_sling, @feat:weapon_focus#double_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_sling,@feat:point_blank_master#double_sling),@feat:weapon_focus#double_sling)",
     "name": "Double Sling",
     "effects": [{
       "targetKey": "feat:false_opening#double_sling",
@@ -874,7 +874,7 @@
     }]
   }, {
     "optionId": "sling_glove",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling_glove OR @feat:point_blank_master#sling_glove, @feat:weapon_focus#sling_glove)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling_glove,@feat:point_blank_master#sling_glove),@feat:weapon_focus#sling_glove)",
     "name": "Sling Glove",
     "effects": [{
       "targetKey": "feat:false_opening#sling_glove",
@@ -884,7 +884,7 @@
     }]
   }, {
     "optionId": "halfling_sling_staff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#halfling_sling_staff OR @feat:point_blank_master#halfling_sling_staff, @feat:weapon_focus#halfling_sling_staff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#halfling_sling_staff,@feat:point_blank_master#halfling_sling_staff),@feat:weapon_focus#halfling_sling_staff)",
     "name": "Halfling Sling Staff",
     "effects": [{
       "targetKey": "feat:false_opening#halfling_sling_staff",
@@ -894,7 +894,7 @@
     }]
   }, {
     "optionId": "stitched_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stitched_sling OR @feat:point_blank_master#stitched_sling, @feat:weapon_focus#stitched_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stitched_sling,@feat:point_blank_master#stitched_sling),@feat:weapon_focus#stitched_sling)",
     "name": "Stitched Sling",
     "effects": [{
       "targetKey": "feat:false_opening#stitched_sling",
@@ -904,7 +904,7 @@
     }]
   }, {
     "optionId": "wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#wrist_launcher OR @feat:point_blank_master#wrist_launcher, @feat:weapon_focus#wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#wrist_launcher,@feat:point_blank_master#wrist_launcher),@feat:weapon_focus#wrist_launcher)",
     "name": "Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#wrist_launcher",
@@ -914,7 +914,7 @@
     }]
   }, {
     "optionId": "heavy_wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_wrist_launcher OR @feat:point_blank_master#heavy_wrist_launcher, @feat:weapon_focus#heavy_wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_wrist_launcher,@feat:point_blank_master#heavy_wrist_launcher),@feat:weapon_focus#heavy_wrist_launcher)",
     "name": "Heavy Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_wrist_launcher",
@@ -924,7 +924,7 @@
     }]
   }, {
     "optionId": "blowgun",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#blowgun OR @feat:point_blank_master#blowgun, @feat:weapon_focus#blowgun)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#blowgun,@feat:point_blank_master#blowgun),@feat:weapon_focus#blowgun)",
     "name": "Blowgun",
     "effects": [{
       "targetKey": "feat:false_opening#blowgun",
@@ -934,7 +934,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_crossbow OR @feat:point_blank_master#heavy_crossbow, @feat:weapon_focus#heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_crossbow,@feat:point_blank_master#heavy_crossbow),@feat:weapon_focus#heavy_crossbow)",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_crossbow",
@@ -944,7 +944,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_crossbow OR @feat:point_blank_master#light_crossbow, @feat:weapon_focus#light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_crossbow,@feat:point_blank_master#light_crossbow),@feat:weapon_focus#light_crossbow)",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#light_crossbow",
@@ -954,7 +954,7 @@
     }]
   }, {
     "optionId": "dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dart OR @feat:point_blank_master#dart, @feat:weapon_focus#dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dart,@feat:point_blank_master#dart),@feat:weapon_focus#dart)",
     "name": "Dart",
     "effects": [{
       "targetKey": "feat:false_opening#dart",
@@ -964,7 +964,7 @@
     }]
   }, {
     "optionId": "javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#javelin OR @feat:point_blank_master#javelin, @feat:weapon_focus#javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#javelin,@feat:point_blank_master#javelin),@feat:weapon_focus#javelin)",
     "name": "Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#javelin",
@@ -974,7 +974,7 @@
     }]
   }, {
     "optionId": "sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling OR @feat:point_blank_master#sling, @feat:weapon_focus#sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling,@feat:point_blank_master#sling),@feat:weapon_focus#sling)",
     "name": "Sling",
     "effects": [{
       "targetKey": "feat:false_opening#sling",
@@ -984,7 +984,7 @@
     }]
   }, {
     "optionId": "stingchuck",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stingchuck OR @feat:point_blank_master#stingchuck, @feat:weapon_focus#stingchuck)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stingchuck,@feat:point_blank_master#stingchuck),@feat:weapon_focus#stingchuck)",
     "name": "Stingchuck",
     "effects": [{
       "targetKey": "feat:false_opening#stingchuck",
@@ -994,7 +994,7 @@
     }]
   }, {
     "optionId": "stonebow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stonebow OR @feat:point_blank_master#stonebow, @feat:weapon_focus#stonebow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stonebow,@feat:point_blank_master#stonebow),@feat:weapon_focus#stonebow)",
     "name": "Stonebow",
     "effects": [{
       "targetKey": "feat:false_opening#stonebow",
@@ -1004,7 +1004,7 @@
     }]
   }, {
     "optionId": "ammentum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ammentum OR @feat:point_blank_master#ammentum, @feat:weapon_focus#ammentum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ammentum,@feat:point_blank_master#ammentum),@feat:weapon_focus#ammentum)",
     "name": "Ammentum",
     "effects": [{
       "targetKey": "feat:false_opening#ammentum",
@@ -1014,7 +1014,7 @@
     }]
   }, {
     "optionId": "chakram",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#chakram OR @feat:point_blank_master#chakram, @feat:weapon_focus#chakram)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#chakram,@feat:point_blank_master#chakram),@feat:weapon_focus#chakram)",
     "name": "Chakram",
     "effects": [{
       "targetKey": "feat:false_opening#chakram",
@@ -1024,7 +1024,7 @@
     }]
   }, {
     "optionId": "jolting_dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#jolting_dart OR @feat:point_blank_master#jolting_dart, @feat:weapon_focus#jolting_dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#jolting_dart,@feat:point_blank_master#jolting_dart),@feat:weapon_focus#jolting_dart)",
     "name": "Jolting Dart",
     "effects": [{
       "targetKey": "feat:false_opening#jolting_dart",
@@ -1034,7 +1034,7 @@
     }]
   }, {
     "optionId": "hunga_munga",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hunga_munga OR @feat:point_blank_master#hunga_munga, @feat:weapon_focus#hunga_munga)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hunga_munga,@feat:point_blank_master#hunga_munga),@feat:weapon_focus#hunga_munga)",
     "name": "Hunga Munga",
     "effects": [{
       "targetKey": "feat:false_opening#hunga_munga",
@@ -1044,7 +1044,7 @@
     }]
   }, {
     "optionId": "hurlbat",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hurlbat OR @feat:point_blank_master#hurlbat, @feat:weapon_focus#hurlbat)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hurlbat,@feat:point_blank_master#hurlbat),@feat:weapon_focus#hurlbat)",
     "name": "Hurlbat",
     "effects": [{
       "targetKey": "feat:false_opening#hurlbat",
@@ -1054,7 +1054,7 @@
     }]
   }, {
     "optionId": "longbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#longbow OR @feat:point_blank_master#longbow, @feat:weapon_focus#longbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#longbow,@feat:point_blank_master#longbow),@feat:weapon_focus#longbow)",
     "name": "Longbow",
     "effects": [{
       "targetKey": "feat:false_opening#longbow",
@@ -1064,7 +1064,7 @@
     }]
   }, {
     "optionId": "pilum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#pilum OR @feat:point_blank_master#pilum, @feat:weapon_focus#pilum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#pilum,@feat:point_blank_master#pilum),@feat:weapon_focus#pilum)",
     "name": "Pilum",
     "effects": [{
       "targetKey": "feat:false_opening#pilum",
@@ -1074,7 +1074,7 @@
     }]
   }, {
     "optionId": "shortbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shortbow OR @feat:point_blank_master#shortbow, @feat:weapon_focus#shortbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shortbow,@feat:point_blank_master#shortbow),@feat:weapon_focus#shortbow)",
     "name": "Shortbow",
     "effects": [{
       "targetKey": "feat:false_opening#shortbow",
@@ -1084,7 +1084,7 @@
     }]
   }, {
     "optionId": "aklys",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#aklys OR @feat:point_blank_master#aklys, @feat:weapon_focus#aklys)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#aklys,@feat:point_blank_master#aklys),@feat:weapon_focus#aklys)",
     "name": "Aklys",
     "effects": [{
       "targetKey": "feat:false_opening#aklys",
@@ -1094,7 +1094,7 @@
     }]
   }, {
     "optionId": "bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bola OR @feat:point_blank_master#bola, @feat:weapon_focus#bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bola,@feat:point_blank_master#bola),@feat:weapon_focus#bola)",
     "name": "Bola",
     "effects": [{
       "targetKey": "feat:false_opening#bola",
@@ -1104,7 +1104,7 @@
     }]
   }, {
     "optionId": "brutal_bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#brutal_bola OR @feat:point_blank_master#brutal_bola, @feat:weapon_focus#brutal_bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#brutal_bola,@feat:point_blank_master#brutal_bola),@feat:weapon_focus#brutal_bola)",
     "name": "Brutal Bola",
     "effects": [{
       "targetKey": "feat:false_opening#brutal_bola",
@@ -1114,7 +1114,7 @@
     }]
   }, {
     "optionId": "boomerang",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#boomerang OR @feat:point_blank_master#boomerang, @feat:weapon_focus#boomerang)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#boomerang,@feat:point_blank_master#boomerang),@feat:weapon_focus#boomerang)",
     "name": "Boomerang",
     "effects": [{
       "targetKey": "feat:false_opening#boomerang",
@@ -1124,7 +1124,7 @@
     }]
   }, {
     "optionId": "thorn_bow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#thorn_bow OR @feat:point_blank_master#thorn_bow, @feat:weapon_focus#thorn_bow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#thorn_bow,@feat:point_blank_master#thorn_bow),@feat:weapon_focus#thorn_bow)",
     "name": "Thorn Bow",
     "effects": [{
       "targetKey": "feat:false_opening#thorn_bow",
@@ -1134,7 +1134,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_heavy_crossbow OR @feat:point_blank_master#crank_heavy_crossbow, @feat:weapon_focus#crank_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_heavy_crossbow,@feat:point_blank_master#crank_heavy_crossbow),@feat:weapon_focus#crank_heavy_crossbow)",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_heavy_crossbow",
@@ -1144,7 +1144,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_light_crossbow OR @feat:point_blank_master#crank_light_crossbow, @feat:weapon_focus#crank_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_light_crossbow,@feat:point_blank_master#crank_light_crossbow),@feat:weapon_focus#crank_light_crossbow)",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_light_crossbow",
@@ -1154,7 +1154,7 @@
     }]
   }, {
     "optionId": "double_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_crossbow OR @feat:point_blank_master#double_crossbow, @feat:weapon_focus#double_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_crossbow,@feat:point_blank_master#double_crossbow),@feat:weapon_focus#double_crossbow)",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#double_crossbow",
@@ -1164,7 +1164,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hand_crossbow OR @feat:point_blank_master#hand_crossbow, @feat:weapon_focus#hand_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hand_crossbow,@feat:point_blank_master#hand_crossbow),@feat:weapon_focus#hand_crossbow)",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#hand_crossbow",
@@ -1174,7 +1174,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#launching_crossbow OR @feat:point_blank_master#launching_crossbow, @feat:weapon_focus#launching_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#launching_crossbow,@feat:point_blank_master#launching_crossbow),@feat:weapon_focus#launching_crossbow)",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#launching_crossbow",
@@ -1184,7 +1184,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_heavy_crossbow OR @feat:point_blank_master#repeating_heavy_crossbow, @feat:weapon_focus#repeating_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_heavy_crossbow,@feat:point_blank_master#repeating_heavy_crossbow),@feat:weapon_focus#repeating_heavy_crossbow)",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_heavy_crossbow",
@@ -1194,7 +1194,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_light_crossbow OR @feat:point_blank_master#repeating_light_crossbow, @feat:weapon_focus#repeating_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_light_crossbow,@feat:point_blank_master#repeating_light_crossbow),@feat:weapon_focus#repeating_light_crossbow)",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_light_crossbow",
@@ -1204,7 +1204,7 @@
     }]
   }, {
     "optionId": "flask_thrower",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flask_thrower OR @feat:point_blank_master#flask_thrower, @feat:weapon_focus#flask_thrower)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flask_thrower,@feat:point_blank_master#flask_thrower),@feat:weapon_focus#flask_thrower)",
     "name": "Flask Thrower",
     "effects": [{
       "targetKey": "feat:false_opening#flask_thrower",
@@ -1214,7 +1214,7 @@
     }]
   }, {
     "optionId": "grappling_hook",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#grappling_hook OR @feat:point_blank_master#grappling_hook, @feat:weapon_focus#grappling_hook)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#grappling_hook,@feat:point_blank_master#grappling_hook),@feat:weapon_focus#grappling_hook)",
     "name": "Grappling Hook",
     "effects": [{
       "targetKey": "feat:false_opening#grappling_hook",
@@ -1224,7 +1224,7 @@
     }]
   }, {
     "optionId": "orc_hornbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#orc_hornbow OR @feat:point_blank_master#orc_hornbow, @feat:weapon_focus#orc_hornbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#orc_hornbow,@feat:point_blank_master#orc_hornbow),@feat:weapon_focus#orc_hornbow)",
     "name": "Orc Hornbow",
     "effects": [{
       "targetKey": "feat:false_opening#orc_hornbow",
@@ -1234,7 +1234,7 @@
     }]
   }, {
     "optionId": "stormshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stormshaft_javelin OR @feat:point_blank_master#stormshaft_javelin, @feat:weapon_focus#stormshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stormshaft_javelin,@feat:point_blank_master#stormshaft_javelin),@feat:weapon_focus#stormshaft_javelin)",
     "name": "Stormshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#stormshaft_javelin",
@@ -1244,7 +1244,7 @@
     }]
   }, {
     "optionId": "lasso",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#lasso OR @feat:point_blank_master#lasso, @feat:weapon_focus#lasso)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#lasso,@feat:point_blank_master#lasso),@feat:weapon_focus#lasso)",
     "name": "Lasso",
     "effects": [{
       "targetKey": "feat:false_opening#lasso",
@@ -1254,7 +1254,7 @@
     }]
   }, {
     "optionId": "net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#net OR @feat:point_blank_master#net, @feat:weapon_focus#net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#net,@feat:point_blank_master#net),@feat:weapon_focus#net)",
     "name": "Net",
     "effects": [{
       "targetKey": "feat:false_opening#net",
@@ -1264,7 +1264,7 @@
     }]
   }, {
     "optionId": "snag_net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#snag_net OR @feat:point_blank_master#snag_net, @feat:weapon_focus#snag_net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#snag_net,@feat:point_blank_master#snag_net),@feat:weapon_focus#snag_net)",
     "name": "Snag Net",
     "effects": [{
       "targetKey": "feat:false_opening#snag_net",
@@ -1274,7 +1274,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_heavy_pelletbow OR @feat:point_blank_master#dwarven_heavy_pelletbow, @feat:weapon_focus#dwarven_heavy_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_heavy_pelletbow,@feat:point_blank_master#dwarven_heavy_pelletbow),@feat:weapon_focus#dwarven_heavy_pelletbow)",
     "name": "Dwarven Heavy Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_heavy_pelletbow",
@@ -1284,7 +1284,7 @@
     }]
   }, {
     "optionId": "dwarven_light_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_light_pelletbow OR @feat:point_blank_master#dwarven_light_pelletbow, @feat:weapon_focus#dwarven_light_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_light_pelletbow,@feat:point_blank_master#dwarven_light_pelletbow),@feat:weapon_focus#dwarven_light_pelletbow)",
     "name": "Dwarven Light Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_light_pelletbow",
@@ -1294,7 +1294,7 @@
     }]
   }, {
     "optionId": "throwing_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#throwing_shield OR @feat:point_blank_master#throwing_shield, @feat:weapon_focus#throwing_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#throwing_shield,@feat:point_blank_master#throwing_shield),@feat:weapon_focus#throwing_shield)",
     "name": "Throwing Shield",
     "effects": [{
       "targetKey": "feat:false_opening#throwing_shield",
@@ -1304,7 +1304,7 @@
     }]
   }, {
     "optionId": "shrillshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shrillshaft_javelin OR @feat:point_blank_master#shrillshaft_javelin, @feat:weapon_focus#shrillshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shrillshaft_javelin,@feat:point_blank_master#shrillshaft_javelin),@feat:weapon_focus#shrillshaft_javelin)",
     "name": "Shrillshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#shrillshaft_javelin",
@@ -1314,7 +1314,7 @@
     }]
   }, {
     "optionId": "shuriken_5",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shuriken_5 OR @feat:point_blank_master#shuriken_5, @feat:weapon_focus#shuriken_5)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shuriken_5,@feat:point_blank_master#shuriken_5),@feat:weapon_focus#shuriken_5)",
     "name": "Shuriken (5)",
     "effects": [{
       "targetKey": "feat:false_opening#shuriken_5",
@@ -1324,7 +1324,7 @@
     }]
   }, {
     "optionId": "double_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_sling OR @feat:point_blank_master#double_sling, @feat:weapon_focus#double_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_sling,@feat:point_blank_master#double_sling),@feat:weapon_focus#double_sling)",
     "name": "Double Sling",
     "effects": [{
       "targetKey": "feat:false_opening#double_sling",
@@ -1334,7 +1334,7 @@
     }]
   }, {
     "optionId": "sling_glove",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling_glove OR @feat:point_blank_master#sling_glove, @feat:weapon_focus#sling_glove)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling_glove,@feat:point_blank_master#sling_glove),@feat:weapon_focus#sling_glove)",
     "name": "Sling Glove",
     "effects": [{
       "targetKey": "feat:false_opening#sling_glove",
@@ -1344,7 +1344,7 @@
     }]
   }, {
     "optionId": "halfling_sling_staff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#halfling_sling_staff OR @feat:point_blank_master#halfling_sling_staff, @feat:weapon_focus#halfling_sling_staff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#halfling_sling_staff,@feat:point_blank_master#halfling_sling_staff),@feat:weapon_focus#halfling_sling_staff)",
     "name": "Halfling Sling Staff",
     "effects": [{
       "targetKey": "feat:false_opening#halfling_sling_staff",
@@ -1354,7 +1354,7 @@
     }]
   }, {
     "optionId": "stitched_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stitched_sling OR @feat:point_blank_master#stitched_sling, @feat:weapon_focus#stitched_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stitched_sling,@feat:point_blank_master#stitched_sling),@feat:weapon_focus#stitched_sling)",
     "name": "Stitched Sling",
     "effects": [{
       "targetKey": "feat:false_opening#stitched_sling",
@@ -1364,7 +1364,7 @@
     }]
   }, {
     "optionId": "wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#wrist_launcher OR @feat:point_blank_master#wrist_launcher, @feat:weapon_focus#wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#wrist_launcher,@feat:point_blank_master#wrist_launcher),@feat:weapon_focus#wrist_launcher)",
     "name": "Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#wrist_launcher",
@@ -1374,7 +1374,7 @@
     }]
   }, {
     "optionId": "heavy_wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_wrist_launcher OR @feat:point_blank_master#heavy_wrist_launcher, @feat:weapon_focus#heavy_wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_wrist_launcher,@feat:point_blank_master#heavy_wrist_launcher),@feat:weapon_focus#heavy_wrist_launcher)",
     "name": "Heavy Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_wrist_launcher",
@@ -1384,7 +1384,7 @@
     }]
   }, {
     "optionId": "gauntlet",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gauntlet OR @feat:point_blank_master#gauntlet, @feat:weapon_focus#gauntlet)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gauntlet,@feat:point_blank_master#gauntlet),@feat:weapon_focus#gauntlet)",
     "name": "Gauntlet",
     "effects": [{
       "targetKey": "feat:false_opening#gauntlet",
@@ -1394,7 +1394,7 @@
     }]
   }, {
     "optionId": "unarmed",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#unarmed OR @feat:point_blank_master#unarmed, @feat:weapon_focus#unarmed)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#unarmed,@feat:point_blank_master#unarmed),@feat:weapon_focus#unarmed)",
     "name": "Unarmed",
     "effects": [{
       "targetKey": "feat:false_opening#unarmed",
@@ -1404,7 +1404,7 @@
     }]
   }, {
     "optionId": "battle_aspergillum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#battle_aspergillum OR @feat:point_blank_master#battle_aspergillum, @feat:weapon_focus#battle_aspergillum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#battle_aspergillum,@feat:point_blank_master#battle_aspergillum),@feat:weapon_focus#battle_aspergillum)",
     "name": "Battle Aspergillum",
     "effects": [{
       "targetKey": "feat:false_opening#battle_aspergillum",
@@ -1414,7 +1414,7 @@
     }]
   }, {
     "optionId": "brass_knife",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#brass_knife OR @feat:point_blank_master#brass_knife, @feat:weapon_focus#brass_knife)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#brass_knife,@feat:point_blank_master#brass_knife),@feat:weapon_focus#brass_knife)",
     "name": "Brass Knife",
     "effects": [{
       "targetKey": "feat:false_opening#brass_knife",
@@ -1424,7 +1424,7 @@
     }]
   }, {
     "optionId": "brass_knuckles",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#brass_knuckles OR @feat:point_blank_master#brass_knuckles, @feat:weapon_focus#brass_knuckles)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#brass_knuckles,@feat:point_blank_master#brass_knuckles),@feat:weapon_focus#brass_knuckles)",
     "name": "Brass Knuckles",
     "effects": [{
       "targetKey": "feat:false_opening#brass_knuckles",
@@ -1434,7 +1434,7 @@
     }]
   }, {
     "optionId": "cestus",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#cestus OR @feat:point_blank_master#cestus, @feat:weapon_focus#cestus)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#cestus,@feat:point_blank_master#cestus),@feat:weapon_focus#cestus)",
     "name": "Cestus",
     "effects": [{
       "targetKey": "feat:false_opening#cestus",
@@ -1444,7 +1444,7 @@
     }]
   }, {
     "optionId": "dagger",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dagger OR @feat:point_blank_master#dagger, @feat:weapon_focus#dagger)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dagger,@feat:point_blank_master#dagger),@feat:weapon_focus#dagger)",
     "name": "Dagger",
     "effects": [{
       "targetKey": "feat:false_opening#dagger",
@@ -1454,7 +1454,7 @@
     }]
   }, {
     "optionId": "punching_dagger",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#punching_dagger OR @feat:point_blank_master#punching_dagger, @feat:weapon_focus#punching_dagger)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#punching_dagger,@feat:point_blank_master#punching_dagger),@feat:weapon_focus#punching_dagger)",
     "name": "Punching Dagger",
     "effects": [{
       "targetKey": "feat:false_opening#punching_dagger",
@@ -1464,7 +1464,7 @@
     }]
   }, {
     "optionId": "spiked_gauntlet",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#spiked_gauntlet OR @feat:point_blank_master#spiked_gauntlet, @feat:weapon_focus#spiked_gauntlet)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#spiked_gauntlet,@feat:point_blank_master#spiked_gauntlet),@feat:weapon_focus#spiked_gauntlet)",
     "name": "Spiked Gauntlet",
     "effects": [{
       "targetKey": "feat:false_opening#spiked_gauntlet",
@@ -1474,7 +1474,7 @@
     }]
   }, {
     "optionId": "handwraps",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#handwraps OR @feat:point_blank_master#handwraps, @feat:weapon_focus#handwraps)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#handwraps,@feat:point_blank_master#handwraps),@feat:weapon_focus#handwraps)",
     "name": "Handwraps",
     "effects": [{
       "targetKey": "feat:false_opening#handwraps",
@@ -1484,7 +1484,7 @@
     }]
   }, {
     "optionId": "traveling_kettle",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#traveling_kettle OR @feat:point_blank_master#traveling_kettle, @feat:weapon_focus#traveling_kettle)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#traveling_kettle,@feat:point_blank_master#traveling_kettle),@feat:weapon_focus#traveling_kettle)",
     "name": "Traveling Kettle",
     "effects": [{
       "targetKey": "feat:false_opening#traveling_kettle",
@@ -1494,7 +1494,7 @@
     }]
   }, {
     "optionId": "hook_hand",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hook_hand OR @feat:point_blank_master#hook_hand, @feat:weapon_focus#hook_hand)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hook_hand,@feat:point_blank_master#hook_hand),@feat:weapon_focus#hook_hand)",
     "name": "Hook Hand",
     "effects": [{
       "targetKey": "feat:false_opening#hook_hand",
@@ -1504,7 +1504,7 @@
     }]
   }, {
     "optionId": "kunai",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#kunai OR @feat:point_blank_master#kunai, @feat:weapon_focus#kunai)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#kunai,@feat:point_blank_master#kunai),@feat:weapon_focus#kunai)",
     "name": "Kunai",
     "effects": [{
       "targetKey": "feat:false_opening#kunai",
@@ -1514,7 +1514,7 @@
     }]
   }, {
     "optionId": "light_mace",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_mace OR @feat:point_blank_master#light_mace, @feat:weapon_focus#light_mace)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_mace,@feat:point_blank_master#light_mace),@feat:weapon_focus#light_mace)",
     "name": "Light Mace",
     "effects": [{
       "targetKey": "feat:false_opening#light_mace",
@@ -1524,7 +1524,7 @@
     }]
   }, {
     "optionId": "sickle",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sickle OR @feat:point_blank_master#sickle, @feat:weapon_focus#sickle)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sickle,@feat:point_blank_master#sickle),@feat:weapon_focus#sickle)",
     "name": "Sickle",
     "effects": [{
       "targetKey": "feat:false_opening#sickle",
@@ -1534,7 +1534,7 @@
     }]
   }, {
     "optionId": "spring_blade",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#spring_blade OR @feat:point_blank_master#spring_blade, @feat:weapon_focus#spring_blade)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#spring_blade,@feat:point_blank_master#spring_blade),@feat:weapon_focus#spring_blade)",
     "name": "Spring Blade",
     "effects": [{
       "targetKey": "feat:false_opening#spring_blade",
@@ -1544,7 +1544,7 @@
     }]
   }, {
     "optionId": "wooden_stake",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#wooden_stake OR @feat:point_blank_master#wooden_stake, @feat:weapon_focus#wooden_stake)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#wooden_stake,@feat:point_blank_master#wooden_stake),@feat:weapon_focus#wooden_stake)",
     "name": "Wooden Stake",
     "effects": [{
       "targetKey": "feat:false_opening#wooden_stake",
@@ -1554,7 +1554,7 @@
     }]
   }, {
     "optionId": "club",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#club OR @feat:point_blank_master#club, @feat:weapon_focus#club)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#club,@feat:point_blank_master#club),@feat:weapon_focus#club)",
     "name": "Club",
     "effects": [{
       "targetKey": "feat:false_opening#club",
@@ -1564,7 +1564,7 @@
     }]
   }, {
     "optionId": "mere_club",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#mere_club OR @feat:point_blank_master#mere_club, @feat:weapon_focus#mere_club)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#mere_club,@feat:point_blank_master#mere_club),@feat:weapon_focus#mere_club)",
     "name": "Mere Club",
     "effects": [{
       "targetKey": "feat:false_opening#mere_club",
@@ -1574,7 +1574,7 @@
     }]
   }, {
     "optionId": "heavy_mace",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_mace OR @feat:point_blank_master#heavy_mace, @feat:weapon_focus#heavy_mace)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_mace,@feat:point_blank_master#heavy_mace),@feat:weapon_focus#heavy_mace)",
     "name": "Heavy Mace",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_mace",
@@ -1584,7 +1584,7 @@
     }]
   }, {
     "optionId": "morningstar",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#morningstar OR @feat:point_blank_master#morningstar, @feat:weapon_focus#morningstar)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#morningstar,@feat:point_blank_master#morningstar),@feat:weapon_focus#morningstar)",
     "name": "Morningstar",
     "effects": [{
       "targetKey": "feat:false_opening#morningstar",
@@ -1594,7 +1594,7 @@
     }]
   }, {
     "optionId": "shortspear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shortspear OR @feat:point_blank_master#shortspear, @feat:weapon_focus#shortspear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shortspear,@feat:point_blank_master#shortspear),@feat:weapon_focus#shortspear)",
     "name": "Shortspear",
     "effects": [{
       "targetKey": "feat:false_opening#shortspear",
@@ -1604,7 +1604,7 @@
     }]
   }, {
     "optionId": "bayonet",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bayonet OR @feat:point_blank_master#bayonet, @feat:weapon_focus#bayonet)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bayonet,@feat:point_blank_master#bayonet),@feat:weapon_focus#bayonet)",
     "name": "Bayonet",
     "effects": [{
       "targetKey": "feat:false_opening#bayonet",
@@ -1614,7 +1614,7 @@
     }]
   }, {
     "optionId": "boarding_pike",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#boarding_pike OR @feat:point_blank_master#boarding_pike, @feat:weapon_focus#boarding_pike)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#boarding_pike,@feat:point_blank_master#boarding_pike),@feat:weapon_focus#boarding_pike)",
     "name": "Boarding Pike",
     "effects": [{
       "targetKey": "feat:false_opening#boarding_pike",
@@ -1624,7 +1624,7 @@
     }]
   }, {
     "optionId": "kumade",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#kumade OR @feat:point_blank_master#kumade, @feat:weapon_focus#kumade)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#kumade,@feat:point_blank_master#kumade),@feat:weapon_focus#kumade)",
     "name": "Kumade",
     "effects": [{
       "targetKey": "feat:false_opening#kumade",
@@ -1634,7 +1634,7 @@
     }]
   }, {
     "optionId": "collapsible_kumade",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#collapsible_kumade OR @feat:point_blank_master#collapsible_kumade, @feat:weapon_focus#collapsible_kumade)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#collapsible_kumade,@feat:point_blank_master#collapsible_kumade),@feat:weapon_focus#collapsible_kumade)",
     "name": "Collapsible Kumade",
     "effects": [{
       "targetKey": "feat:false_opening#collapsible_kumade",
@@ -1644,7 +1644,7 @@
     }]
   }, {
     "optionId": "lantern_staff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#lantern_staff OR @feat:point_blank_master#lantern_staff, @feat:weapon_focus#lantern_staff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#lantern_staff,@feat:point_blank_master#lantern_staff),@feat:weapon_focus#lantern_staff)",
     "name": "Lantern Staff",
     "effects": [{
       "targetKey": "feat:false_opening#lantern_staff",
@@ -1654,7 +1654,7 @@
     }]
   }, {
     "optionId": "longspear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#longspear OR @feat:point_blank_master#longspear, @feat:weapon_focus#longspear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#longspear,@feat:point_blank_master#longspear),@feat:weapon_focus#longspear)",
     "name": "Longspear",
     "effects": [{
       "targetKey": "feat:false_opening#longspear",
@@ -1664,7 +1664,7 @@
     }]
   }, {
     "optionId": "quarterstaff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#quarterstaff OR @feat:point_blank_master#quarterstaff, @feat:weapon_focus#quarterstaff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#quarterstaff,@feat:point_blank_master#quarterstaff),@feat:weapon_focus#quarterstaff)",
     "name": "Quarterstaff",
     "effects": [{
       "targetKey": "feat:false_opening#quarterstaff",
@@ -1674,7 +1674,7 @@
     }]
   }, {
     "optionId": "spear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#spear OR @feat:point_blank_master#spear, @feat:weapon_focus#spear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#spear,@feat:point_blank_master#spear),@feat:weapon_focus#spear)",
     "name": "Spear",
     "effects": [{
       "targetKey": "feat:false_opening#spear",
@@ -1684,7 +1684,7 @@
     }]
   }, {
     "optionId": "blowgun",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#blowgun OR @feat:point_blank_master#blowgun, @feat:weapon_focus#blowgun)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#blowgun,@feat:point_blank_master#blowgun),@feat:weapon_focus#blowgun)",
     "name": "Blowgun",
     "effects": [{
       "targetKey": "feat:false_opening#blowgun",
@@ -1694,7 +1694,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_crossbow OR @feat:point_blank_master#heavy_crossbow, @feat:weapon_focus#heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_crossbow,@feat:point_blank_master#heavy_crossbow),@feat:weapon_focus#heavy_crossbow)",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_crossbow",
@@ -1704,7 +1704,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_crossbow OR @feat:point_blank_master#light_crossbow, @feat:weapon_focus#light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_crossbow,@feat:point_blank_master#light_crossbow),@feat:weapon_focus#light_crossbow)",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#light_crossbow",
@@ -1714,7 +1714,7 @@
     }]
   }, {
     "optionId": "dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dart OR @feat:point_blank_master#dart, @feat:weapon_focus#dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dart,@feat:point_blank_master#dart),@feat:weapon_focus#dart)",
     "name": "Dart",
     "effects": [{
       "targetKey": "feat:false_opening#dart",
@@ -1724,7 +1724,7 @@
     }]
   }, {
     "optionId": "javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#javelin OR @feat:point_blank_master#javelin, @feat:weapon_focus#javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#javelin,@feat:point_blank_master#javelin),@feat:weapon_focus#javelin)",
     "name": "Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#javelin",
@@ -1734,7 +1734,7 @@
     }]
   }, {
     "optionId": "sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling OR @feat:point_blank_master#sling, @feat:weapon_focus#sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling,@feat:point_blank_master#sling),@feat:weapon_focus#sling)",
     "name": "Sling",
     "effects": [{
       "targetKey": "feat:false_opening#sling",
@@ -1744,7 +1744,7 @@
     }]
   }, {
     "optionId": "stingchuck",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stingchuck OR @feat:point_blank_master#stingchuck, @feat:weapon_focus#stingchuck)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stingchuck,@feat:point_blank_master#stingchuck),@feat:weapon_focus#stingchuck)",
     "name": "Stingchuck",
     "effects": [{
       "targetKey": "feat:false_opening#stingchuck",
@@ -1754,7 +1754,7 @@
     }]
   }, {
     "optionId": "stonebow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stonebow OR @feat:point_blank_master#stonebow, @feat:weapon_focus#stonebow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stonebow,@feat:point_blank_master#stonebow),@feat:weapon_focus#stonebow)",
     "name": "Stonebow",
     "effects": [{
       "targetKey": "feat:false_opening#stonebow",
@@ -1764,7 +1764,7 @@
     }]
   }, {
     "optionId": "axe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#axe OR @feat:point_blank_master#axe, @feat:weapon_focus#axe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#axe,@feat:point_blank_master#axe),@feat:weapon_focus#axe)",
     "name": "Axe",
     "effects": [{
       "targetKey": "feat:false_opening#axe",
@@ -1774,7 +1774,7 @@
     }]
   }, {
     "optionId": "throwing_axe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#throwing_axe OR @feat:point_blank_master#throwing_axe, @feat:weapon_focus#throwing_axe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#throwing_axe,@feat:point_blank_master#throwing_axe),@feat:weapon_focus#throwing_axe)",
     "name": "Throwing Axe",
     "effects": [{
       "targetKey": "feat:false_opening#throwing_axe",
@@ -1784,7 +1784,7 @@
     }]
   }, {
     "optionId": "blade_boot",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#blade_boot OR @feat:point_blank_master#blade_boot, @feat:weapon_focus#blade_boot)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#blade_boot,@feat:point_blank_master#blade_boot),@feat:weapon_focus#blade_boot)",
     "name": "Blade Boot",
     "effects": [{
       "targetKey": "feat:false_opening#blade_boot",
@@ -1794,7 +1794,7 @@
     }]
   }, {
     "optionId": "whip",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#whip OR @feat:point_blank_master#whip, @feat:weapon_focus#whip)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#whip,@feat:point_blank_master#whip),@feat:weapon_focus#whip)",
     "name": "Whip",
     "effects": [{
       "targetKey": "feat:false_opening#whip",
@@ -1804,7 +1804,7 @@
     }]
   }, {
     "optionId": "claw_blades",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#claw_blades OR @feat:point_blank_master#claw_blades, @feat:weapon_focus#claw_blades)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#claw_blades,@feat:point_blank_master#claw_blades),@feat:weapon_focus#claw_blades)",
     "name": "Claw Blades",
     "effects": [{
       "targetKey": "feat:false_opening#claw_blades",
@@ -1814,7 +1814,7 @@
     }]
   }, {
     "optionId": "dueling_dagger",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dueling_dagger OR @feat:point_blank_master#dueling_dagger, @feat:weapon_focus#dueling_dagger)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dueling_dagger,@feat:point_blank_master#dueling_dagger),@feat:weapon_focus#dueling_dagger)",
     "name": "Dueling Dagger",
     "effects": [{
       "targetKey": "feat:false_opening#dueling_dagger",
@@ -1824,7 +1824,7 @@
     }]
   }, {
     "optionId": "dogslicer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dogslicer OR @feat:point_blank_master#dogslicer, @feat:weapon_focus#dogslicer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dogslicer,@feat:point_blank_master#dogslicer),@feat:weapon_focus#dogslicer)",
     "name": "Dogslicer",
     "effects": [{
       "targetKey": "feat:false_opening#dogslicer",
@@ -1834,7 +1834,7 @@
     }]
   }, {
     "optionId": "light_hammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_hammer OR @feat:point_blank_master#light_hammer, @feat:weapon_focus#light_hammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_hammer,@feat:point_blank_master#light_hammer),@feat:weapon_focus#light_hammer)",
     "name": "Light Hammer",
     "effects": [{
       "targetKey": "feat:false_opening#light_hammer",
@@ -1844,7 +1844,7 @@
     }]
   }, {
     "optionId": "gladius",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gladius OR @feat:point_blank_master#gladius, @feat:weapon_focus#gladius)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gladius,@feat:point_blank_master#gladius),@feat:weapon_focus#gladius)",
     "name": "Gladius",
     "effects": [{
       "targetKey": "feat:false_opening#gladius",
@@ -1854,7 +1854,7 @@
     }]
   }, {
     "optionId": "handaxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#handaxe OR @feat:point_blank_master#handaxe, @feat:weapon_focus#handaxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#handaxe,@feat:point_blank_master#handaxe),@feat:weapon_focus#handaxe)",
     "name": "Handaxe",
     "effects": [{
       "targetKey": "feat:false_opening#handaxe",
@@ -1864,7 +1864,7 @@
     }]
   }, {
     "optionId": "katar",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#katar OR @feat:point_blank_master#katar, @feat:weapon_focus#katar)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#katar,@feat:point_blank_master#katar),@feat:weapon_focus#katar)",
     "name": "Katar",
     "effects": [{
       "targetKey": "feat:false_opening#katar",
@@ -1874,7 +1874,7 @@
     }]
   }, {
     "optionId": "kukri",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#kukri OR @feat:point_blank_master#kukri, @feat:weapon_focus#kukri)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#kukri,@feat:point_blank_master#kukri),@feat:weapon_focus#kukri)",
     "name": "Kukri",
     "effects": [{
       "targetKey": "feat:false_opening#kukri",
@@ -1884,7 +1884,7 @@
     }]
   }, {
     "optionId": "machete",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#machete OR @feat:point_blank_master#machete, @feat:weapon_focus#machete)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#machete,@feat:point_blank_master#machete),@feat:weapon_focus#machete)",
     "name": "Machete",
     "effects": [{
       "targetKey": "feat:false_opening#machete",
@@ -1894,7 +1894,7 @@
     }]
   }, {
     "optionId": "light_pick",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_pick OR @feat:point_blank_master#light_pick, @feat:weapon_focus#light_pick)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_pick,@feat:point_blank_master#light_pick),@feat:weapon_focus#light_pick)",
     "name": "Light Pick",
     "effects": [{
       "targetKey": "feat:false_opening#light_pick",
@@ -1904,7 +1904,7 @@
     }]
   }, {
     "optionId": "sap",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sap OR @feat:point_blank_master#sap, @feat:weapon_focus#sap)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sap,@feat:point_blank_master#sap),@feat:weapon_focus#sap)",
     "name": "Sap",
     "effects": [{
       "targetKey": "feat:false_opening#sap",
@@ -1914,7 +1914,7 @@
     }]
   }, {
     "optionId": "light_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_shield OR @feat:point_blank_master#light_shield, @feat:weapon_focus#light_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_shield,@feat:point_blank_master#light_shield),@feat:weapon_focus#light_shield)",
     "name": "Light Shield",
     "effects": [{
       "targetKey": "feat:false_opening#light_shield",
@@ -1924,7 +1924,7 @@
     }]
   }, {
     "optionId": "spiked_armor",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#spiked_armor OR @feat:point_blank_master#spiked_armor, @feat:weapon_focus#spiked_armor)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#spiked_armor,@feat:point_blank_master#spiked_armor),@feat:weapon_focus#spiked_armor)",
     "name": "Spiked Armor",
     "effects": [{
       "targetKey": "feat:false_opening#spiked_armor",
@@ -1934,7 +1934,7 @@
     }]
   }, {
     "optionId": "light_spiked_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_spiked_shield OR @feat:point_blank_master#light_spiked_shield, @feat:weapon_focus#light_spiked_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_spiked_shield,@feat:point_blank_master#light_spiked_shield),@feat:weapon_focus#light_spiked_shield)",
     "name": "Light Spiked Shield",
     "effects": [{
       "targetKey": "feat:false_opening#light_spiked_shield",
@@ -1944,7 +1944,7 @@
     }]
   }, {
     "optionId": "starknife",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#starknife OR @feat:point_blank_master#starknife, @feat:weapon_focus#starknife)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#starknife,@feat:point_blank_master#starknife),@feat:weapon_focus#starknife)",
     "name": "Starknife",
     "effects": [{
       "targetKey": "feat:false_opening#starknife",
@@ -1954,7 +1954,7 @@
     }]
   }, {
     "optionId": "short_sword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#short_sword OR @feat:point_blank_master#short_sword, @feat:weapon_focus#short_sword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#short_sword,@feat:point_blank_master#short_sword),@feat:weapon_focus#short_sword)",
     "name": "Short Sword",
     "effects": [{
       "targetKey": "feat:false_opening#short_sword",
@@ -1964,7 +1964,7 @@
     }]
   }, {
     "optionId": "war_razor",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#war_razor OR @feat:point_blank_master#war_razor, @feat:weapon_focus#war_razor)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#war_razor,@feat:point_blank_master#war_razor),@feat:weapon_focus#war_razor)",
     "name": "War Razor",
     "effects": [{
       "targetKey": "feat:false_opening#war_razor",
@@ -1974,7 +1974,7 @@
     }]
   }, {
     "optionId": "ankus",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ankus OR @feat:point_blank_master#ankus, @feat:weapon_focus#ankus)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ankus,@feat:point_blank_master#ankus),@feat:weapon_focus#ankus)",
     "name": "Ankus",
     "effects": [{
       "targetKey": "feat:false_opening#ankus",
@@ -1984,7 +1984,7 @@
     }]
   }, {
     "optionId": "battleaxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#battleaxe OR @feat:point_blank_master#battleaxe, @feat:weapon_focus#battleaxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#battleaxe,@feat:point_blank_master#battleaxe),@feat:weapon_focus#battleaxe)",
     "name": "Battleaxe",
     "effects": [{
       "targetKey": "feat:false_opening#battleaxe",
@@ -1994,7 +1994,7 @@
     }]
   }, {
     "optionId": "combat_scabbard",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#combat_scabbard OR @feat:point_blank_master#combat_scabbard, @feat:weapon_focus#combat_scabbard)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#combat_scabbard,@feat:point_blank_master#combat_scabbard),@feat:weapon_focus#combat_scabbard)",
     "name": "Combat Scabbard",
     "effects": [{
       "targetKey": "feat:false_opening#combat_scabbard",
@@ -2004,7 +2004,7 @@
     }]
   }, {
     "optionId": "cutlass",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#cutlass OR @feat:point_blank_master#cutlass, @feat:weapon_focus#cutlass)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#cutlass,@feat:point_blank_master#cutlass),@feat:weapon_focus#cutlass)",
     "name": "Cutlass",
     "effects": [{
       "targetKey": "feat:false_opening#cutlass",
@@ -2014,7 +2014,7 @@
     }]
   }, {
     "optionId": "light_flail",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#light_flail OR @feat:point_blank_master#light_flail, @feat:weapon_focus#light_flail)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#light_flail,@feat:point_blank_master#light_flail),@feat:weapon_focus#light_flail)",
     "name": "Light Flail",
     "effects": [{
       "targetKey": "feat:false_opening#light_flail",
@@ -2024,7 +2024,7 @@
     }]
   }, {
     "optionId": "gandasa",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gandasa OR @feat:point_blank_master#gandasa, @feat:weapon_focus#gandasa)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gandasa,@feat:point_blank_master#gandasa),@feat:weapon_focus#gandasa)",
     "name": "Gandasa",
     "effects": [{
       "targetKey": "feat:false_opening#gandasa",
@@ -2034,7 +2034,7 @@
     }]
   }, {
     "optionId": "klar",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#klar OR @feat:point_blank_master#klar, @feat:weapon_focus#klar)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#klar,@feat:point_blank_master#klar),@feat:weapon_focus#klar)",
     "name": "Klar",
     "effects": [{
       "targetKey": "feat:false_opening#klar",
@@ -2044,7 +2044,7 @@
     }]
   }, {
     "optionId": "longsword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#longsword OR @feat:point_blank_master#longsword, @feat:weapon_focus#longsword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#longsword,@feat:point_blank_master#longsword),@feat:weapon_focus#longsword)",
     "name": "Longsword",
     "effects": [{
       "targetKey": "feat:false_opening#longsword",
@@ -2054,7 +2054,7 @@
     }]
   }, {
     "optionId": "manople",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#manople OR @feat:point_blank_master#manople, @feat:weapon_focus#manople)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#manople,@feat:point_blank_master#manople),@feat:weapon_focus#manople)",
     "name": "Manople",
     "effects": [{
       "targetKey": "feat:false_opening#manople",
@@ -2064,7 +2064,7 @@
     }]
   }, {
     "optionId": "heavy_pick",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_pick OR @feat:point_blank_master#heavy_pick, @feat:weapon_focus#heavy_pick)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_pick,@feat:point_blank_master#heavy_pick),@feat:weapon_focus#heavy_pick)",
     "name": "Heavy Pick",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_pick",
@@ -2074,7 +2074,7 @@
     }]
   }, {
     "optionId": "rapier",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#rapier OR @feat:point_blank_master#rapier, @feat:weapon_focus#rapier)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#rapier,@feat:point_blank_master#rapier),@feat:weapon_focus#rapier)",
     "name": "Rapier",
     "effects": [{
       "targetKey": "feat:false_opening#rapier",
@@ -2084,7 +2084,7 @@
     }]
   }, {
     "optionId": "scimitar",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#scimitar OR @feat:point_blank_master#scimitar, @feat:weapon_focus#scimitar)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#scimitar,@feat:point_blank_master#scimitar),@feat:weapon_focus#scimitar)",
     "name": "Scimitar",
     "effects": [{
       "targetKey": "feat:false_opening#scimitar",
@@ -2094,7 +2094,7 @@
     }]
   }, {
     "optionId": "scizore",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#scizore OR @feat:point_blank_master#scizore, @feat:weapon_focus#scizore)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#scizore,@feat:point_blank_master#scizore),@feat:weapon_focus#scizore)",
     "name": "Scizore",
     "effects": [{
       "targetKey": "feat:false_opening#scizore",
@@ -2104,7 +2104,7 @@
     }]
   }, {
     "optionId": "heavy_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_shield OR @feat:point_blank_master#heavy_shield, @feat:weapon_focus#heavy_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_shield,@feat:point_blank_master#heavy_shield),@feat:weapon_focus#heavy_shield)",
     "name": "Heavy Shield",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_shield",
@@ -2114,7 +2114,7 @@
     }]
   }, {
     "optionId": "heavy_spiked_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_spiked_shield OR @feat:point_blank_master#heavy_spiked_shield, @feat:weapon_focus#heavy_spiked_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_spiked_shield,@feat:point_blank_master#heavy_spiked_shield),@feat:weapon_focus#heavy_spiked_shield)",
     "name": "Heavy Spiked Shield",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_spiked_shield",
@@ -2124,7 +2124,7 @@
     }]
   }, {
     "optionId": "sword_cane",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sword_cane OR @feat:point_blank_master#sword_cane, @feat:weapon_focus#sword_cane)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sword_cane,@feat:point_blank_master#sword_cane),@feat:weapon_focus#sword_cane)",
     "name": "Sword Cane",
     "effects": [{
       "targetKey": "feat:false_opening#sword_cane",
@@ -2134,7 +2134,7 @@
     }]
   }, {
     "optionId": "terbutje",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#terbutje OR @feat:point_blank_master#terbutje, @feat:weapon_focus#terbutje)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#terbutje,@feat:point_blank_master#terbutje),@feat:weapon_focus#terbutje)",
     "name": "Terbutje",
     "effects": [{
       "targetKey": "feat:false_opening#terbutje",
@@ -2144,7 +2144,7 @@
     }]
   }, {
     "optionId": "trident",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#trident OR @feat:point_blank_master#trident, @feat:weapon_focus#trident)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#trident,@feat:point_blank_master#trident),@feat:weapon_focus#trident)",
     "name": "Trident",
     "effects": [{
       "targetKey": "feat:false_opening#trident",
@@ -2154,7 +2154,7 @@
     }]
   }, {
     "optionId": "warhammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#warhammer OR @feat:point_blank_master#warhammer, @feat:weapon_focus#warhammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#warhammer,@feat:point_blank_master#warhammer),@feat:weapon_focus#warhammer)",
     "name": "Warhammer",
     "effects": [{
       "targetKey": "feat:false_opening#warhammer",
@@ -2164,7 +2164,7 @@
     }]
   }, {
     "optionId": "bardiche",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bardiche OR @feat:point_blank_master#bardiche, @feat:weapon_focus#bardiche)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bardiche,@feat:point_blank_master#bardiche),@feat:weapon_focus#bardiche)",
     "name": "Bardiche",
     "effects": [{
       "targetKey": "feat:false_opening#bardiche",
@@ -2174,7 +2174,7 @@
     }]
   }, {
     "optionId": "bill",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bill OR @feat:point_blank_master#bill, @feat:weapon_focus#bill)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bill,@feat:point_blank_master#bill),@feat:weapon_focus#bill)",
     "name": "Bill",
     "effects": [{
       "targetKey": "feat:false_opening#bill",
@@ -2184,7 +2184,7 @@
     }]
   }, {
     "optionId": "earth_breaker",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#earth_breaker OR @feat:point_blank_master#earth_breaker, @feat:weapon_focus#earth_breaker)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#earth_breaker,@feat:point_blank_master#earth_breaker),@feat:weapon_focus#earth_breaker)",
     "name": "Earth Breaker",
     "effects": [{
       "targetKey": "feat:false_opening#earth_breaker",
@@ -2194,7 +2194,7 @@
     }]
   }, {
     "optionId": "falchion",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#falchion OR @feat:point_blank_master#falchion, @feat:weapon_focus#falchion)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#falchion,@feat:point_blank_master#falchion),@feat:weapon_focus#falchion)",
     "name": "Falchion",
     "effects": [{
       "targetKey": "feat:false_opening#falchion",
@@ -2204,7 +2204,7 @@
     }]
   }, {
     "optionId": "heavy_flail",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_flail OR @feat:point_blank_master#heavy_flail, @feat:weapon_focus#heavy_flail)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_flail,@feat:point_blank_master#heavy_flail),@feat:weapon_focus#heavy_flail)",
     "name": "Heavy Flail",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_flail",
@@ -2214,7 +2214,7 @@
     }]
   }, {
     "optionId": "glaive",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#glaive OR @feat:point_blank_master#glaive, @feat:weapon_focus#glaive)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#glaive,@feat:point_blank_master#glaive),@feat:weapon_focus#glaive)",
     "name": "Glaive",
     "effects": [{
       "targetKey": "feat:false_opening#glaive",
@@ -2224,7 +2224,7 @@
     }]
   }, {
     "optionId": "greataxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#greataxe OR @feat:point_blank_master#greataxe, @feat:weapon_focus#greataxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#greataxe,@feat:point_blank_master#greataxe),@feat:weapon_focus#greataxe)",
     "name": "Greataxe",
     "effects": [{
       "targetKey": "feat:false_opening#greataxe",
@@ -2234,7 +2234,7 @@
     }]
   }, {
     "optionId": "greatclub",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#greatclub OR @feat:point_blank_master#greatclub, @feat:weapon_focus#greatclub)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#greatclub,@feat:point_blank_master#greatclub),@feat:weapon_focus#greatclub)",
     "name": "Greatclub",
     "effects": [{
       "targetKey": "feat:false_opening#greatclub",
@@ -2244,7 +2244,7 @@
     }]
   }, {
     "optionId": "greatsword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#greatsword OR @feat:point_blank_master#greatsword, @feat:weapon_focus#greatsword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#greatsword,@feat:point_blank_master#greatsword),@feat:weapon_focus#greatsword)",
     "name": "Greatsword",
     "effects": [{
       "targetKey": "feat:false_opening#greatsword",
@@ -2254,7 +2254,7 @@
     }]
   }, {
     "optionId": "guisarme",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#guisarme OR @feat:point_blank_master#guisarme, @feat:weapon_focus#guisarme)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#guisarme,@feat:point_blank_master#guisarme),@feat:weapon_focus#guisarme)",
     "name": "Guisarme",
     "effects": [{
       "targetKey": "feat:false_opening#guisarme",
@@ -2264,7 +2264,7 @@
     }]
   }, {
     "optionId": "halberd",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#halberd OR @feat:point_blank_master#halberd, @feat:weapon_focus#halberd)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#halberd,@feat:point_blank_master#halberd),@feat:weapon_focus#halberd)",
     "name": "Halberd",
     "effects": [{
       "targetKey": "feat:false_opening#halberd",
@@ -2274,7 +2274,7 @@
     }]
   }, {
     "optionId": "horsechopper",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#horsechopper OR @feat:point_blank_master#horsechopper, @feat:weapon_focus#horsechopper)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#horsechopper,@feat:point_blank_master#horsechopper),@feat:weapon_focus#horsechopper)",
     "name": "Horsechopper",
     "effects": [{
       "targetKey": "feat:false_opening#horsechopper",
@@ -2284,7 +2284,7 @@
     }]
   }, {
     "optionId": "lance",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#lance OR @feat:point_blank_master#lance, @feat:weapon_focus#lance)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#lance,@feat:point_blank_master#lance),@feat:weapon_focus#lance)",
     "name": "Lance",
     "effects": [{
       "targetKey": "feat:false_opening#lance",
@@ -2294,7 +2294,7 @@
     }]
   }, {
     "optionId": "ogre_hook",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ogre_hook OR @feat:point_blank_master#ogre_hook, @feat:weapon_focus#ogre_hook)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ogre_hook,@feat:point_blank_master#ogre_hook),@feat:weapon_focus#ogre_hook)",
     "name": "Ogre Hook",
     "effects": [{
       "targetKey": "feat:false_opening#ogre_hook",
@@ -2304,7 +2304,7 @@
     }]
   }, {
     "optionId": "pickaxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#pickaxe OR @feat:point_blank_master#pickaxe, @feat:weapon_focus#pickaxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#pickaxe,@feat:point_blank_master#pickaxe),@feat:weapon_focus#pickaxe)",
     "name": "Pickaxe",
     "effects": [{
       "targetKey": "feat:false_opening#pickaxe",
@@ -2314,7 +2314,7 @@
     }]
   }, {
     "optionId": "planson",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#planson OR @feat:point_blank_master#planson, @feat:weapon_focus#planson)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#planson,@feat:point_blank_master#planson),@feat:weapon_focus#planson)",
     "name": "Planson",
     "effects": [{
       "targetKey": "feat:false_opening#planson",
@@ -2324,7 +2324,7 @@
     }]
   }, {
     "optionId": "ranseur",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ranseur OR @feat:point_blank_master#ranseur, @feat:weapon_focus#ranseur)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ranseur,@feat:point_blank_master#ranseur),@feat:weapon_focus#ranseur)",
     "name": "Ranseur",
     "effects": [{
       "targetKey": "feat:false_opening#ranseur",
@@ -2334,7 +2334,7 @@
     }]
   }, {
     "optionId": "scythe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#scythe OR @feat:point_blank_master#scythe, @feat:weapon_focus#scythe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#scythe,@feat:point_blank_master#scythe),@feat:weapon_focus#scythe)",
     "name": "Scythe",
     "effects": [{
       "targetKey": "feat:false_opening#scythe",
@@ -2344,7 +2344,7 @@
     }]
   }, {
     "optionId": "syringe_spear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#syringe_spear OR @feat:point_blank_master#syringe_spear, @feat:weapon_focus#syringe_spear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#syringe_spear,@feat:point_blank_master#syringe_spear),@feat:weapon_focus#syringe_spear)",
     "name": "Syringe Spear",
     "effects": [{
       "targetKey": "feat:false_opening#syringe_spear",
@@ -2354,7 +2354,7 @@
     }]
   }, {
     "optionId": "ammentum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#ammentum OR @feat:point_blank_master#ammentum, @feat:weapon_focus#ammentum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#ammentum,@feat:point_blank_master#ammentum),@feat:weapon_focus#ammentum)",
     "name": "Ammentum",
     "effects": [{
       "targetKey": "feat:false_opening#ammentum",
@@ -2364,7 +2364,7 @@
     }]
   }, {
     "optionId": "chakram",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#chakram OR @feat:point_blank_master#chakram, @feat:weapon_focus#chakram)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#chakram,@feat:point_blank_master#chakram),@feat:weapon_focus#chakram)",
     "name": "Chakram",
     "effects": [{
       "targetKey": "feat:false_opening#chakram",
@@ -2374,7 +2374,7 @@
     }]
   }, {
     "optionId": "jolting_dart",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#jolting_dart OR @feat:point_blank_master#jolting_dart, @feat:weapon_focus#jolting_dart)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#jolting_dart,@feat:point_blank_master#jolting_dart),@feat:weapon_focus#jolting_dart)",
     "name": "Jolting Dart",
     "effects": [{
       "targetKey": "feat:false_opening#jolting_dart",
@@ -2384,7 +2384,7 @@
     }]
   }, {
     "optionId": "hunga_munga",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hunga_munga OR @feat:point_blank_master#hunga_munga, @feat:weapon_focus#hunga_munga)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hunga_munga,@feat:point_blank_master#hunga_munga),@feat:weapon_focus#hunga_munga)",
     "name": "Hunga Munga",
     "effects": [{
       "targetKey": "feat:false_opening#hunga_munga",
@@ -2394,7 +2394,7 @@
     }]
   }, {
     "optionId": "hurlbat",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hurlbat OR @feat:point_blank_master#hurlbat, @feat:weapon_focus#hurlbat)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hurlbat,@feat:point_blank_master#hurlbat),@feat:weapon_focus#hurlbat)",
     "name": "Hurlbat",
     "effects": [{
       "targetKey": "feat:false_opening#hurlbat",
@@ -2404,7 +2404,7 @@
     }]
   }, {
     "optionId": "longbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#longbow OR @feat:point_blank_master#longbow, @feat:weapon_focus#longbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#longbow,@feat:point_blank_master#longbow),@feat:weapon_focus#longbow)",
     "name": "Longbow",
     "effects": [{
       "targetKey": "feat:false_opening#longbow",
@@ -2414,7 +2414,7 @@
     }]
   }, {
     "optionId": "pilum",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#pilum OR @feat:point_blank_master#pilum, @feat:weapon_focus#pilum)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#pilum,@feat:point_blank_master#pilum),@feat:weapon_focus#pilum)",
     "name": "Pilum",
     "effects": [{
       "targetKey": "feat:false_opening#pilum",
@@ -2424,7 +2424,7 @@
     }]
   }, {
     "optionId": "shortbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shortbow OR @feat:point_blank_master#shortbow, @feat:weapon_focus#shortbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shortbow,@feat:point_blank_master#shortbow),@feat:weapon_focus#shortbow)",
     "name": "Shortbow",
     "effects": [{
       "targetKey": "feat:false_opening#shortbow",
@@ -2434,7 +2434,7 @@
     }]
   }, {
     "optionId": "aklys",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#aklys OR @feat:point_blank_master#aklys, @feat:weapon_focus#aklys)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#aklys,@feat:point_blank_master#aklys),@feat:weapon_focus#aklys)",
     "name": "Aklys",
     "effects": [{
       "targetKey": "feat:false_opening#aklys",
@@ -2444,7 +2444,7 @@
     }]
   }, {
     "optionId": "knuckle_axe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#knuckle_axe OR @feat:point_blank_master#knuckle_axe, @feat:weapon_focus#knuckle_axe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#knuckle_axe,@feat:point_blank_master#knuckle_axe),@feat:weapon_focus#knuckle_axe)",
     "name": "Knuckle Axe",
     "effects": [{
       "targetKey": "feat:false_opening#knuckle_axe",
@@ -2454,7 +2454,7 @@
     }]
   }, {
     "optionId": "barbazu_beard",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#barbazu_beard OR @feat:point_blank_master#barbazu_beard, @feat:weapon_focus#barbazu_beard)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#barbazu_beard,@feat:point_blank_master#barbazu_beard),@feat:weapon_focus#barbazu_beard)",
     "name": "Barbazu Beard",
     "effects": [{
       "targetKey": "feat:false_opening#barbazu_beard",
@@ -2464,7 +2464,7 @@
     }]
   }, {
     "optionId": "battle_poi",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#battle_poi OR @feat:point_blank_master#battle_poi, @feat:weapon_focus#battle_poi)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#battle_poi,@feat:point_blank_master#battle_poi),@feat:weapon_focus#battle_poi)",
     "name": "Battle Poi",
     "effects": [{
       "targetKey": "feat:false_opening#battle_poi",
@@ -2474,7 +2474,7 @@
     }]
   }, {
     "optionId": "swordbreaker_dagger",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#swordbreaker_dagger OR @feat:point_blank_master#swordbreaker_dagger, @feat:weapon_focus#swordbreaker_dagger)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#swordbreaker_dagger,@feat:point_blank_master#swordbreaker_dagger),@feat:weapon_focus#swordbreaker_dagger)",
     "name": "Swordbreaker Dagger",
     "effects": [{
       "targetKey": "feat:false_opening#swordbreaker_dagger",
@@ -2484,7 +2484,7 @@
     }]
   }, {
     "optionId": "flying_talon",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flying_talon OR @feat:point_blank_master#flying_talon, @feat:weapon_focus#flying_talon)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flying_talon,@feat:point_blank_master#flying_talon),@feat:weapon_focus#flying_talon)",
     "name": "Flying Talon",
     "effects": [{
       "targetKey": "feat:false_opening#flying_talon",
@@ -2494,7 +2494,7 @@
     }]
   }, {
     "optionId": "gnome_pincher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gnome_pincher OR @feat:point_blank_master#gnome_pincher, @feat:weapon_focus#gnome_pincher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gnome_pincher,@feat:point_blank_master#gnome_pincher),@feat:weapon_focus#gnome_pincher)",
     "name": "Gnome Pincher",
     "effects": [{
       "targetKey": "feat:false_opening#gnome_pincher",
@@ -2504,7 +2504,7 @@
     }]
   }, {
     "optionId": "halfling_rope_shot",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#halfling_rope_shot OR @feat:point_blank_master#halfling_rope_shot, @feat:weapon_focus#halfling_rope_shot)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#halfling_rope_shot,@feat:point_blank_master#halfling_rope_shot),@feat:weapon_focus#halfling_rope_shot)",
     "name": "Halfling Rope-shot",
     "effects": [{
       "targetKey": "feat:false_opening#halfling_rope_shot",
@@ -2514,7 +2514,7 @@
     }]
   }, {
     "optionId": "dwarven_boulder_helmet",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_boulder_helmet OR @feat:point_blank_master#dwarven_boulder_helmet, @feat:weapon_focus#dwarven_boulder_helmet)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_boulder_helmet,@feat:point_blank_master#dwarven_boulder_helmet),@feat:weapon_focus#dwarven_boulder_helmet)",
     "name": "Dwarven Boulder Helmet",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_boulder_helmet",
@@ -2524,7 +2524,7 @@
     }]
   }, {
     "optionId": "kama",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#kama OR @feat:point_blank_master#kama, @feat:weapon_focus#kama)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#kama,@feat:point_blank_master#kama),@feat:weapon_focus#kama)",
     "name": "Kama",
     "effects": [{
       "targetKey": "feat:false_opening#kama",
@@ -2534,7 +2534,7 @@
     }]
   }, {
     "optionId": "butterfly_knife",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#butterfly_knife OR @feat:point_blank_master#butterfly_knife, @feat:weapon_focus#butterfly_knife)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#butterfly_knife,@feat:point_blank_master#butterfly_knife),@feat:weapon_focus#butterfly_knife)",
     "name": "Butterfly Knife",
     "effects": [{
       "targetKey": "feat:false_opening#butterfly_knife",
@@ -2544,7 +2544,7 @@
     }]
   }, {
     "optionId": "deer_horn_knife",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#deer_horn_knife OR @feat:point_blank_master#deer_horn_knife, @feat:weapon_focus#deer_horn_knife)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#deer_horn_knife,@feat:point_blank_master#deer_horn_knife),@feat:weapon_focus#deer_horn_knife)",
     "name": "Deer Horn Knife",
     "effects": [{
       "targetKey": "feat:false_opening#deer_horn_knife",
@@ -2554,7 +2554,7 @@
     }]
   }, {
     "optionId": "dwarven_maulaxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_maulaxe OR @feat:point_blank_master#dwarven_maulaxe, @feat:weapon_focus#dwarven_maulaxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_maulaxe,@feat:point_blank_master#dwarven_maulaxe),@feat:weapon_focus#dwarven_maulaxe)",
     "name": "Dwarven Maulaxe",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_maulaxe",
@@ -2564,7 +2564,7 @@
     }]
   }, {
     "optionId": "nunchaku",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#nunchaku OR @feat:point_blank_master#nunchaku, @feat:weapon_focus#nunchaku)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#nunchaku,@feat:point_blank_master#nunchaku),@feat:weapon_focus#nunchaku)",
     "name": "Nunchaku",
     "effects": [{
       "targetKey": "feat:false_opening#nunchaku",
@@ -2574,7 +2574,7 @@
     }]
   }, {
     "optionId": "quadrens",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#quadrens OR @feat:point_blank_master#quadrens, @feat:weapon_focus#quadrens)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#quadrens,@feat:point_blank_master#quadrens),@feat:weapon_focus#quadrens)",
     "name": "Quadrens",
     "effects": [{
       "targetKey": "feat:false_opening#quadrens",
@@ -2584,7 +2584,7 @@
     }]
   }, {
     "optionId": "drow_razor",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#drow_razor OR @feat:point_blank_master#drow_razor, @feat:weapon_focus#drow_razor)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#drow_razor,@feat:point_blank_master#drow_razor),@feat:weapon_focus#drow_razor)",
     "name": "Drow Razor",
     "effects": [{
       "targetKey": "feat:false_opening#drow_razor",
@@ -2594,7 +2594,7 @@
     }]
   }, {
     "optionId": "rope_gauntlet",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#rope_gauntlet OR @feat:point_blank_master#rope_gauntlet, @feat:weapon_focus#rope_gauntlet)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#rope_gauntlet,@feat:point_blank_master#rope_gauntlet),@feat:weapon_focus#rope_gauntlet)",
     "name": "Rope Gauntlet",
     "effects": [{
       "targetKey": "feat:false_opening#rope_gauntlet",
@@ -2604,7 +2604,7 @@
     }]
   }, {
     "optionId": "sawtooth_sabre",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sawtooth_sabre OR @feat:point_blank_master#sawtooth_sabre, @feat:weapon_focus#sawtooth_sabre)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sawtooth_sabre,@feat:point_blank_master#sawtooth_sabre),@feat:weapon_focus#sawtooth_sabre)",
     "name": "Sawtooth Sabre",
     "effects": [{
       "targetKey": "feat:false_opening#sawtooth_sabre",
@@ -2614,7 +2614,7 @@
     }]
   }, {
     "optionId": "sai",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sai OR @feat:point_blank_master#sai, @feat:weapon_focus#sai)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sai,@feat:point_blank_master#sai),@feat:weapon_focus#sai)",
     "name": "Sai",
     "effects": [{
       "targetKey": "feat:false_opening#sai",
@@ -2624,7 +2624,7 @@
     }]
   }, {
     "optionId": "sanpkhang",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sanpkhang OR @feat:point_blank_master#sanpkhang, @feat:weapon_focus#sanpkhang)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sanpkhang,@feat:point_blank_master#sanpkhang),@feat:weapon_focus#sanpkhang)",
     "name": "Sanpkhang",
     "effects": [{
       "targetKey": "feat:false_opening#sanpkhang",
@@ -2634,7 +2634,7 @@
     }]
   }, {
     "optionId": "siangham",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#siangham OR @feat:point_blank_master#siangham, @feat:weapon_focus#siangham)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#siangham,@feat:point_blank_master#siangham),@feat:weapon_focus#siangham)",
     "name": "Siangham",
     "effects": [{
       "targetKey": "feat:false_opening#siangham",
@@ -2644,7 +2644,7 @@
     }]
   }, {
     "optionId": "sica",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sica OR @feat:point_blank_master#sica, @feat:weapon_focus#sica)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sica,@feat:point_blank_master#sica),@feat:weapon_focus#sica)",
     "name": "Sica",
     "effects": [{
       "targetKey": "feat:false_opening#sica",
@@ -2654,7 +2654,7 @@
     }]
   }, {
     "optionId": "thorn_bracer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#thorn_bracer OR @feat:point_blank_master#thorn_bracer, @feat:weapon_focus#thorn_bracer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#thorn_bracer,@feat:point_blank_master#thorn_bracer),@feat:weapon_focus#thorn_bracer)",
     "name": "Thorn Bracer",
     "effects": [{
       "targetKey": "feat:false_opening#thorn_bracer",
@@ -2664,7 +2664,7 @@
     }]
   }, {
     "optionId": "dwarven_war_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_war_shield OR @feat:point_blank_master#dwarven_war_shield, @feat:weapon_focus#dwarven_war_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_war_shield,@feat:point_blank_master#dwarven_war_shield),@feat:weapon_focus#dwarven_war_shield)",
     "name": "Dwarven War-shield",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_war_shield",
@@ -2674,7 +2674,7 @@
     }]
   }, {
     "optionId": "waveblade",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#waveblade OR @feat:point_blank_master#waveblade, @feat:weapon_focus#waveblade)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#waveblade,@feat:point_blank_master#waveblade),@feat:weapon_focus#waveblade)",
     "name": "Waveblade",
     "effects": [{
       "targetKey": "feat:false_opening#waveblade",
@@ -2684,7 +2684,7 @@
     }]
   }, {
     "optionId": "scorpion_whip",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#scorpion_whip OR @feat:point_blank_master#scorpion_whip, @feat:weapon_focus#scorpion_whip)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#scorpion_whip,@feat:point_blank_master#scorpion_whip),@feat:weapon_focus#scorpion_whip)",
     "name": "Scorpion Whip",
     "effects": [{
       "targetKey": "feat:false_opening#scorpion_whip",
@@ -2694,7 +2694,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_axe_gauntlet",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_heavy_axe_gauntlet OR @feat:point_blank_master#dwarven_heavy_axe_gauntlet, @feat:weapon_focus#dwarven_heavy_axe_gauntlet)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_heavy_axe_gauntlet,@feat:point_blank_master#dwarven_heavy_axe_gauntlet),@feat:weapon_focus#dwarven_heavy_axe_gauntlet)",
     "name": "Dwarven Heavy Axe-Gauntlet",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_heavy_axe_gauntlet",
@@ -2704,7 +2704,7 @@
     }]
   }, {
     "optionId": "hooked_axe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hooked_axe OR @feat:point_blank_master#hooked_axe, @feat:weapon_focus#hooked_axe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hooked_axe,@feat:point_blank_master#hooked_axe),@feat:weapon_focus#hooked_axe)",
     "name": "Hooked Axe",
     "effects": [{
       "targetKey": "feat:false_opening#hooked_axe",
@@ -2714,7 +2714,7 @@
     }]
   }, {
     "optionId": "broken_back_seax",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#broken_back_seax OR @feat:point_blank_master#broken_back_seax, @feat:weapon_focus#broken_back_seax)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#broken_back_seax,@feat:point_blank_master#broken_back_seax),@feat:weapon_focus#broken_back_seax)",
     "name": "Broken-back Seax",
     "effects": [{
       "targetKey": "feat:false_opening#broken_back_seax",
@@ -2724,7 +2724,7 @@
     }]
   }, {
     "optionId": "estoc",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#estoc OR @feat:point_blank_master#estoc, @feat:weapon_focus#estoc)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#estoc,@feat:point_blank_master#estoc),@feat:weapon_focus#estoc)",
     "name": "Estoc",
     "effects": [{
       "targetKey": "feat:false_opening#estoc",
@@ -2734,7 +2734,7 @@
     }]
   }, {
     "optionId": "falcata",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#falcata OR @feat:point_blank_master#falcata, @feat:weapon_focus#falcata)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#falcata,@feat:point_blank_master#falcata),@feat:weapon_focus#falcata)",
     "name": "Falcata",
     "effects": [{
       "targetKey": "feat:false_opening#falcata",
@@ -2744,7 +2744,7 @@
     }]
   }, {
     "optionId": "flickmace",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flickmace OR @feat:point_blank_master#flickmace, @feat:weapon_focus#flickmace)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flickmace,@feat:point_blank_master#flickmace),@feat:weapon_focus#flickmace)",
     "name": "Flickmace",
     "effects": [{
       "targetKey": "feat:false_opening#flickmace",
@@ -2754,7 +2754,7 @@
     }]
   }, {
     "optionId": "flindbar",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flindbar OR @feat:point_blank_master#flindbar, @feat:weapon_focus#flindbar)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flindbar,@feat:point_blank_master#flindbar),@feat:weapon_focus#flindbar)",
     "name": "Flindbar",
     "effects": [{
       "targetKey": "feat:false_opening#flindbar",
@@ -2764,7 +2764,7 @@
     }]
   }, {
     "optionId": "khopesh",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#khopesh OR @feat:point_blank_master#khopesh, @feat:weapon_focus#khopesh)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#khopesh,@feat:point_blank_master#khopesh),@feat:weapon_focus#khopesh)",
     "name": "Khopesh",
     "effects": [{
       "targetKey": "feat:false_opening#khopesh",
@@ -2774,7 +2774,7 @@
     }]
   }, {
     "optionId": "knobkerrie",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#knobkerrie OR @feat:point_blank_master#knobkerrie, @feat:weapon_focus#knobkerrie)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#knobkerrie,@feat:point_blank_master#knobkerrie),@feat:weapon_focus#knobkerrie)",
     "name": "Knobkerrie",
     "effects": [{
       "targetKey": "feat:false_opening#knobkerrie",
@@ -2784,7 +2784,7 @@
     }]
   }, {
     "optionId": "dwarven_ram_hammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_ram_hammer OR @feat:point_blank_master#dwarven_ram_hammer, @feat:weapon_focus#dwarven_ram_hammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_ram_hammer,@feat:point_blank_master#dwarven_ram_hammer),@feat:weapon_focus#dwarven_ram_hammer)",
     "name": "Dwarven Ram Hammer",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_ram_hammer",
@@ -2794,7 +2794,7 @@
     }]
   }, {
     "optionId": "spiral_rapier",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#spiral_rapier OR @feat:point_blank_master#spiral_rapier, @feat:weapon_focus#spiral_rapier)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#spiral_rapier,@feat:point_blank_master#spiral_rapier),@feat:weapon_focus#spiral_rapier)",
     "name": "Spiral Rapier",
     "effects": [{
       "targetKey": "feat:false_opening#spiral_rapier",
@@ -2804,7 +2804,7 @@
     }]
   }, {
     "optionId": "rhoka",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#rhoka OR @feat:point_blank_master#rhoka, @feat:weapon_focus#rhoka)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#rhoka,@feat:point_blank_master#rhoka),@feat:weapon_focus#rhoka)",
     "name": "Rhoka",
     "effects": [{
       "targetKey": "feat:false_opening#rhoka",
@@ -2814,7 +2814,7 @@
     }]
   }, {
     "optionId": "shotel",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shotel OR @feat:point_blank_master#shotel, @feat:weapon_focus#shotel)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shotel,@feat:point_blank_master#shotel),@feat:weapon_focus#shotel)",
     "name": "Shotel",
     "effects": [{
       "targetKey": "feat:false_opening#shotel",
@@ -2824,7 +2824,7 @@
     }]
   }, {
     "optionId": "sickle_sword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sickle_sword OR @feat:point_blank_master#sickle_sword, @feat:weapon_focus#sickle_sword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sickle_sword,@feat:point_blank_master#sickle_sword),@feat:weapon_focus#sickle_sword)",
     "name": "Sickle-sword",
     "effects": [{
       "targetKey": "feat:false_opening#sickle_sword",
@@ -2834,7 +2834,7 @@
     }]
   }, {
     "optionId": "split_blade_sword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#split_blade_sword OR @feat:point_blank_master#split_blade_sword, @feat:weapon_focus#split_blade_sword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#split_blade_sword,@feat:point_blank_master#split_blade_sword),@feat:weapon_focus#split_blade_sword)",
     "name": "Split-blade Sword",
     "effects": [{
       "targetKey": "feat:false_opening#split_blade_sword",
@@ -2844,7 +2844,7 @@
     }]
   }, {
     "optionId": "dueling_sword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dueling_sword OR @feat:point_blank_master#dueling_sword, @feat:weapon_focus#dueling_sword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dueling_sword,@feat:point_blank_master#dueling_sword),@feat:weapon_focus#dueling_sword)",
     "name": "Dueling Sword",
     "effects": [{
       "targetKey": "feat:false_opening#dueling_sword",
@@ -2854,7 +2854,7 @@
     }]
   }, {
     "optionId": "bastard_sword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bastard_sword OR @feat:point_blank_master#bastard_sword, @feat:weapon_focus#bastard_sword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bastard_sword,@feat:point_blank_master#bastard_sword),@feat:weapon_focus#bastard_sword)",
     "name": "Bastard Sword",
     "effects": [{
       "targetKey": "feat:false_opening#bastard_sword",
@@ -2864,7 +2864,7 @@
     }]
   }, {
     "optionId": "tongi",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#tongi OR @feat:point_blank_master#tongi, @feat:weapon_focus#tongi)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#tongi,@feat:point_blank_master#tongi),@feat:weapon_focus#tongi)",
     "name": "Tongi",
     "effects": [{
       "targetKey": "feat:false_opening#tongi",
@@ -2874,7 +2874,7 @@
     }]
   }, {
     "optionId": "dwarven_waraxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_waraxe OR @feat:point_blank_master#dwarven_waraxe, @feat:weapon_focus#dwarven_waraxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_waraxe,@feat:point_blank_master#dwarven_waraxe),@feat:weapon_focus#dwarven_waraxe)",
     "name": "Dwarven Waraxe",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_waraxe",
@@ -2884,7 +2884,7 @@
     }]
   }, {
     "optionId": "dwarven_double_waraxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_double_waraxe OR @feat:point_blank_master#dwarven_double_waraxe, @feat:weapon_focus#dwarven_double_waraxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_double_waraxe,@feat:point_blank_master#dwarven_double_waraxe),@feat:weapon_focus#dwarven_double_waraxe)",
     "name": "Dwarven Double Waraxe",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_double_waraxe",
@@ -2894,7 +2894,7 @@
     }]
   }, {
     "optionId": "orc_double_axe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#orc_double_axe OR @feat:point_blank_master#orc_double_axe, @feat:weapon_focus#orc_double_axe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#orc_double_axe,@feat:point_blank_master#orc_double_axe),@feat:weapon_focus#orc_double_axe)",
     "name": "Orc Double Axe",
     "effects": [{
       "targetKey": "feat:false_opening#orc_double_axe",
@@ -2904,7 +2904,7 @@
     }]
   }, {
     "optionId": "butchering_axe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#butchering_axe OR @feat:point_blank_master#butchering_axe, @feat:weapon_focus#butchering_axe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#butchering_axe,@feat:point_blank_master#butchering_axe),@feat:weapon_focus#butchering_axe)",
     "name": "Butchering Axe",
     "effects": [{
       "targetKey": "feat:false_opening#butchering_axe",
@@ -2914,7 +2914,7 @@
     }]
   }, {
     "optionId": "gnome_battle_ladder",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gnome_battle_ladder OR @feat:point_blank_master#gnome_battle_ladder, @feat:weapon_focus#gnome_battle_ladder)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gnome_battle_ladder,@feat:point_blank_master#gnome_battle_ladder),@feat:weapon_focus#gnome_battle_ladder)",
     "name": "Gnome Battle Ladder",
     "effects": [{
       "targetKey": "feat:false_opening#gnome_battle_ladder",
@@ -2924,7 +2924,7 @@
     }]
   }, {
     "optionId": "boarding_gaff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#boarding_gaff OR @feat:point_blank_master#boarding_gaff, @feat:weapon_focus#boarding_gaff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#boarding_gaff,@feat:point_blank_master#boarding_gaff),@feat:weapon_focus#boarding_gaff)",
     "name": "Boarding Gaff",
     "effects": [{
       "targetKey": "feat:false_opening#boarding_gaff",
@@ -2934,7 +2934,7 @@
     }]
   }, {
     "optionId": "chain_hammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#chain_hammer OR @feat:point_blank_master#chain_hammer, @feat:weapon_focus#chain_hammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#chain_hammer,@feat:point_blank_master#chain_hammer),@feat:weapon_focus#chain_hammer)",
     "name": "Chain-hammer",
     "effects": [{
       "targetKey": "feat:false_opening#chain_hammer",
@@ -2944,7 +2944,7 @@
     }]
   }, {
     "optionId": "spiked_chain",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#spiked_chain OR @feat:point_blank_master#spiked_chain, @feat:weapon_focus#spiked_chain)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#spiked_chain,@feat:point_blank_master#spiked_chain),@feat:weapon_focus#spiked_chain)",
     "name": "Spiked Chain",
     "effects": [{
       "targetKey": "feat:false_opening#spiked_chain",
@@ -2954,7 +2954,7 @@
     }]
   }, {
     "optionId": "crook",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crook OR @feat:point_blank_master#crook, @feat:weapon_focus#crook)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crook,@feat:point_blank_master#crook),@feat:weapon_focus#crook)",
     "name": "Crook",
     "effects": [{
       "targetKey": "feat:false_opening#crook",
@@ -2964,7 +2964,7 @@
     }]
   }, {
     "optionId": "elven_curve_blade",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#elven_curve_blade OR @feat:point_blank_master#elven_curve_blade, @feat:weapon_focus#elven_curve_blade)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#elven_curve_blade,@feat:point_blank_master#elven_curve_blade),@feat:weapon_focus#elven_curve_blade)",
     "name": "Elven Curve Blade",
     "effects": [{
       "targetKey": "feat:false_opening#elven_curve_blade",
@@ -2974,7 +2974,7 @@
     }]
   }, {
     "optionId": "dwarven_dorn_dergar",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_dorn_dergar OR @feat:point_blank_master#dwarven_dorn_dergar, @feat:weapon_focus#dwarven_dorn_dergar)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_dorn_dergar,@feat:point_blank_master#dwarven_dorn_dergar),@feat:weapon_focus#dwarven_dorn_dergar)",
     "name": "Dwarven Dorn-Dergar",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_dorn_dergar",
@@ -2984,7 +2984,7 @@
     }]
   }, {
     "optionId": "double_spear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_spear OR @feat:point_blank_master#double_spear, @feat:weapon_focus#double_spear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_spear,@feat:point_blank_master#double_spear),@feat:weapon_focus#double_spear)",
     "name": "Double Spear",
     "effects": [{
       "targetKey": "feat:false_opening#double_spear",
@@ -2994,7 +2994,7 @@
     }]
   }, {
     "optionId": "elven_branched_spear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#elven_branched_spear OR @feat:point_blank_master#elven_branched_spear, @feat:weapon_focus#elven_branched_spear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#elven_branched_spear,@feat:point_blank_master#elven_branched_spear),@feat:weapon_focus#elven_branched_spear)",
     "name": "Elven Branched Spear",
     "effects": [{
       "targetKey": "feat:false_opening#elven_branched_spear",
@@ -3004,7 +3004,7 @@
     }]
   }, {
     "optionId": "fauchard",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#fauchard OR @feat:point_blank_master#fauchard, @feat:weapon_focus#fauchard)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#fauchard,@feat:point_blank_master#fauchard),@feat:weapon_focus#fauchard)",
     "name": "Fauchard",
     "effects": [{
       "targetKey": "feat:false_opening#fauchard",
@@ -3014,7 +3014,7 @@
     }]
   }, {
     "optionId": "dire_flail",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dire_flail OR @feat:point_blank_master#dire_flail, @feat:weapon_focus#dire_flail)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dire_flail,@feat:point_blank_master#dire_flail),@feat:weapon_focus#dire_flail)",
     "name": "Dire Flail",
     "effects": [{
       "targetKey": "feat:false_opening#dire_flail",
@@ -3024,7 +3024,7 @@
     }]
   }, {
     "optionId": "flailpole",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flailpole OR @feat:point_blank_master#flailpole, @feat:weapon_focus#flailpole)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flailpole,@feat:point_blank_master#flailpole),@feat:weapon_focus#flailpole)",
     "name": "Flailpole",
     "effects": [{
       "targetKey": "feat:false_opening#flailpole",
@@ -3034,7 +3034,7 @@
     }]
   }, {
     "optionId": "flambard",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flambard OR @feat:point_blank_master#flambard, @feat:weapon_focus#flambard)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flambard,@feat:point_blank_master#flambard),@feat:weapon_focus#flambard)",
     "name": "Flambard",
     "effects": [{
       "targetKey": "feat:false_opening#flambard",
@@ -3044,7 +3044,7 @@
     }]
   }, {
     "optionId": "flying_blade",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flying_blade OR @feat:point_blank_master#flying_blade, @feat:weapon_focus#flying_blade)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flying_blade,@feat:point_blank_master#flying_blade),@feat:weapon_focus#flying_blade)",
     "name": "Flying Blade",
     "effects": [{
       "targetKey": "feat:false_opening#flying_blade",
@@ -3054,7 +3054,7 @@
     }]
   }, {
     "optionId": "garrote",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#garrote OR @feat:point_blank_master#garrote, @feat:weapon_focus#garrote)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#garrote,@feat:point_blank_master#garrote),@feat:weapon_focus#garrote)",
     "name": "Garrote",
     "effects": [{
       "targetKey": "feat:false_opening#garrote",
@@ -3064,7 +3064,7 @@
     }]
   }, {
     "optionId": "dwarven_giant_sticker",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_giant_sticker OR @feat:point_blank_master#dwarven_giant_sticker, @feat:weapon_focus#dwarven_giant_sticker)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_giant_sticker,@feat:point_blank_master#dwarven_giant_sticker),@feat:weapon_focus#dwarven_giant_sticker)",
     "name": "Dwarven Giant-Sticker",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_giant_sticker",
@@ -3074,7 +3074,7 @@
     }]
   }, {
     "optionId": "gnome_hooked_hammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gnome_hooked_hammer OR @feat:point_blank_master#gnome_hooked_hammer, @feat:weapon_focus#gnome_hooked_hammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gnome_hooked_hammer,@feat:point_blank_master#gnome_hooked_hammer),@feat:weapon_focus#gnome_hooked_hammer)",
     "name": "Gnome Hooked Hammer",
     "effects": [{
       "targetKey": "feat:false_opening#gnome_hooked_hammer",
@@ -3084,7 +3084,7 @@
     }]
   }, {
     "optionId": "harpoon",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#harpoon OR @feat:point_blank_master#harpoon, @feat:weapon_focus#harpoon)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#harpoon,@feat:point_blank_master#harpoon),@feat:weapon_focus#harpoon)",
     "name": "Harpoon",
     "effects": [{
       "targetKey": "feat:false_opening#harpoon",
@@ -3094,7 +3094,7 @@
     }]
   }, {
     "optionId": "dwarven_longaxe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_longaxe OR @feat:point_blank_master#dwarven_longaxe, @feat:weapon_focus#dwarven_longaxe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_longaxe,@feat:point_blank_master#dwarven_longaxe),@feat:weapon_focus#dwarven_longaxe)",
     "name": "Dwarven Longaxe",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_longaxe",
@@ -3104,7 +3104,7 @@
     }]
   }, {
     "optionId": "dwarven_longhammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_longhammer OR @feat:point_blank_master#dwarven_longhammer, @feat:weapon_focus#dwarven_longhammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_longhammer,@feat:point_blank_master#dwarven_longhammer),@feat:weapon_focus#dwarven_longhammer)",
     "name": "Dwarven Longhammer",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_longhammer",
@@ -3114,7 +3114,7 @@
     }]
   }, {
     "optionId": "mancatcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#mancatcher OR @feat:point_blank_master#mancatcher, @feat:weapon_focus#mancatcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#mancatcher,@feat:point_blank_master#mancatcher),@feat:weapon_focus#mancatcher)",
     "name": "Mancatcher",
     "effects": [{
       "targetKey": "feat:false_opening#mancatcher",
@@ -3124,7 +3124,7 @@
     }]
   }, {
     "optionId": "orc_skull_ram",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#orc_skull_ram OR @feat:point_blank_master#orc_skull_ram, @feat:weapon_focus#orc_skull_ram)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#orc_skull_ram,@feat:point_blank_master#orc_skull_ram),@feat:weapon_focus#orc_skull_ram)",
     "name": "Orc Skull Ram",
     "effects": [{
       "targetKey": "feat:false_opening#orc_skull_ram",
@@ -3134,7 +3134,7 @@
     }]
   }, {
     "optionId": "gnome_piston_maul",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gnome_piston_maul OR @feat:point_blank_master#gnome_piston_maul, @feat:weapon_focus#gnome_piston_maul)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gnome_piston_maul,@feat:point_blank_master#gnome_piston_maul),@feat:weapon_focus#gnome_piston_maul)",
     "name": "Gnome Piston Maul",
     "effects": [{
       "targetKey": "feat:false_opening#gnome_piston_maul",
@@ -3144,7 +3144,7 @@
     }]
   }, {
     "optionId": "gnome_ripsaw_glaive",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#gnome_ripsaw_glaive OR @feat:point_blank_master#gnome_ripsaw_glaive, @feat:weapon_focus#gnome_ripsaw_glaive)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#gnome_ripsaw_glaive,@feat:point_blank_master#gnome_ripsaw_glaive),@feat:weapon_focus#gnome_ripsaw_glaive)",
     "name": "Gnome Ripsaw Glaive",
     "effects": [{
       "targetKey": "feat:false_opening#gnome_ripsaw_glaive",
@@ -3154,7 +3154,7 @@
     }]
   }, {
     "optionId": "bladed_scarf",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bladed_scarf OR @feat:point_blank_master#bladed_scarf, @feat:weapon_focus#bladed_scarf)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bladed_scarf,@feat:point_blank_master#bladed_scarf),@feat:weapon_focus#bladed_scarf)",
     "name": "Bladed Scarf",
     "effects": [{
       "targetKey": "feat:false_opening#bladed_scarf",
@@ -3164,7 +3164,7 @@
     }]
   }, {
     "optionId": "totem_spear",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#totem_spear OR @feat:point_blank_master#totem_spear, @feat:weapon_focus#totem_spear)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#totem_spear,@feat:point_blank_master#totem_spear),@feat:weapon_focus#totem_spear)",
     "name": "Totem Spear",
     "effects": [{
       "targetKey": "feat:false_opening#totem_spear",
@@ -3174,7 +3174,7 @@
     }]
   }, {
     "optionId": "dwarven_sphinx_hammer",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_sphinx_hammer OR @feat:point_blank_master#dwarven_sphinx_hammer, @feat:weapon_focus#dwarven_sphinx_hammer)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_sphinx_hammer,@feat:point_blank_master#dwarven_sphinx_hammer),@feat:weapon_focus#dwarven_sphinx_hammer)",
     "name": "Dwarven Sphinx Hammer",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_sphinx_hammer",
@@ -3184,7 +3184,7 @@
     }]
   }, {
     "optionId": "switchscythe",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#switchscythe OR @feat:point_blank_master#switchscythe, @feat:weapon_focus#switchscythe)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#switchscythe,@feat:point_blank_master#switchscythe),@feat:weapon_focus#switchscythe)",
     "name": "Switchscythe",
     "effects": [{
       "targetKey": "feat:false_opening#switchscythe",
@@ -3194,7 +3194,7 @@
     }]
   }, {
     "optionId": "two_bladed_sword",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#two_bladed_sword OR @feat:point_blank_master#two_bladed_sword, @feat:weapon_focus#two_bladed_sword)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#two_bladed_sword,@feat:point_blank_master#two_bladed_sword),@feat:weapon_focus#two_bladed_sword)",
     "name": "Two-bladed Sword",
     "effects": [{
       "targetKey": "feat:false_opening#two_bladed_sword",
@@ -3204,7 +3204,7 @@
     }]
   }, {
     "optionId": "dwarven_urgrosh",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_urgrosh OR @feat:point_blank_master#dwarven_urgrosh, @feat:weapon_focus#dwarven_urgrosh)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_urgrosh,@feat:point_blank_master#dwarven_urgrosh),@feat:weapon_focus#dwarven_urgrosh)",
     "name": "Dwarven Urgrosh",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_urgrosh",
@@ -3214,7 +3214,7 @@
     }]
   }, {
     "optionId": "bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#bola OR @feat:point_blank_master#bola, @feat:weapon_focus#bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#bola,@feat:point_blank_master#bola),@feat:weapon_focus#bola)",
     "name": "Bola",
     "effects": [{
       "targetKey": "feat:false_opening#bola",
@@ -3224,7 +3224,7 @@
     }]
   }, {
     "optionId": "brutal_bola",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#brutal_bola OR @feat:point_blank_master#brutal_bola, @feat:weapon_focus#brutal_bola)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#brutal_bola,@feat:point_blank_master#brutal_bola),@feat:weapon_focus#brutal_bola)",
     "name": "Brutal Bola",
     "effects": [{
       "targetKey": "feat:false_opening#brutal_bola",
@@ -3234,7 +3234,7 @@
     }]
   }, {
     "optionId": "boomerang",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#boomerang OR @feat:point_blank_master#boomerang, @feat:weapon_focus#boomerang)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#boomerang,@feat:point_blank_master#boomerang),@feat:weapon_focus#boomerang)",
     "name": "Boomerang",
     "effects": [{
       "targetKey": "feat:false_opening#boomerang",
@@ -3244,7 +3244,7 @@
     }]
   }, {
     "optionId": "thorn_bow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#thorn_bow OR @feat:point_blank_master#thorn_bow, @feat:weapon_focus#thorn_bow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#thorn_bow,@feat:point_blank_master#thorn_bow),@feat:weapon_focus#thorn_bow)",
     "name": "Thorn Bow",
     "effects": [{
       "targetKey": "feat:false_opening#thorn_bow",
@@ -3254,7 +3254,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_heavy_crossbow OR @feat:point_blank_master#crank_heavy_crossbow, @feat:weapon_focus#crank_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_heavy_crossbow,@feat:point_blank_master#crank_heavy_crossbow),@feat:weapon_focus#crank_heavy_crossbow)",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_heavy_crossbow",
@@ -3264,7 +3264,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#crank_light_crossbow OR @feat:point_blank_master#crank_light_crossbow, @feat:weapon_focus#crank_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#crank_light_crossbow,@feat:point_blank_master#crank_light_crossbow),@feat:weapon_focus#crank_light_crossbow)",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#crank_light_crossbow",
@@ -3274,7 +3274,7 @@
     }]
   }, {
     "optionId": "double_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_crossbow OR @feat:point_blank_master#double_crossbow, @feat:weapon_focus#double_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_crossbow,@feat:point_blank_master#double_crossbow),@feat:weapon_focus#double_crossbow)",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#double_crossbow",
@@ -3284,7 +3284,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#hand_crossbow OR @feat:point_blank_master#hand_crossbow, @feat:weapon_focus#hand_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#hand_crossbow,@feat:point_blank_master#hand_crossbow),@feat:weapon_focus#hand_crossbow)",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#hand_crossbow",
@@ -3294,7 +3294,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#launching_crossbow OR @feat:point_blank_master#launching_crossbow, @feat:weapon_focus#launching_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#launching_crossbow,@feat:point_blank_master#launching_crossbow),@feat:weapon_focus#launching_crossbow)",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#launching_crossbow",
@@ -3304,7 +3304,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_heavy_crossbow OR @feat:point_blank_master#repeating_heavy_crossbow, @feat:weapon_focus#repeating_heavy_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_heavy_crossbow,@feat:point_blank_master#repeating_heavy_crossbow),@feat:weapon_focus#repeating_heavy_crossbow)",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_heavy_crossbow",
@@ -3314,7 +3314,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#repeating_light_crossbow OR @feat:point_blank_master#repeating_light_crossbow, @feat:weapon_focus#repeating_light_crossbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#repeating_light_crossbow,@feat:point_blank_master#repeating_light_crossbow),@feat:weapon_focus#repeating_light_crossbow)",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:false_opening#repeating_light_crossbow",
@@ -3324,7 +3324,7 @@
     }]
   }, {
     "optionId": "flask_thrower",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#flask_thrower OR @feat:point_blank_master#flask_thrower, @feat:weapon_focus#flask_thrower)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#flask_thrower,@feat:point_blank_master#flask_thrower),@feat:weapon_focus#flask_thrower)",
     "name": "Flask Thrower",
     "effects": [{
       "targetKey": "feat:false_opening#flask_thrower",
@@ -3334,7 +3334,7 @@
     }]
   }, {
     "optionId": "grappling_hook",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#grappling_hook OR @feat:point_blank_master#grappling_hook, @feat:weapon_focus#grappling_hook)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#grappling_hook,@feat:point_blank_master#grappling_hook),@feat:weapon_focus#grappling_hook)",
     "name": "Grappling Hook",
     "effects": [{
       "targetKey": "feat:false_opening#grappling_hook",
@@ -3344,7 +3344,7 @@
     }]
   }, {
     "optionId": "orc_hornbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#orc_hornbow OR @feat:point_blank_master#orc_hornbow, @feat:weapon_focus#orc_hornbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#orc_hornbow,@feat:point_blank_master#orc_hornbow),@feat:weapon_focus#orc_hornbow)",
     "name": "Orc Hornbow",
     "effects": [{
       "targetKey": "feat:false_opening#orc_hornbow",
@@ -3354,7 +3354,7 @@
     }]
   }, {
     "optionId": "stormshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stormshaft_javelin OR @feat:point_blank_master#stormshaft_javelin, @feat:weapon_focus#stormshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stormshaft_javelin,@feat:point_blank_master#stormshaft_javelin),@feat:weapon_focus#stormshaft_javelin)",
     "name": "Stormshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#stormshaft_javelin",
@@ -3364,7 +3364,7 @@
     }]
   }, {
     "optionId": "lasso",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#lasso OR @feat:point_blank_master#lasso, @feat:weapon_focus#lasso)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#lasso,@feat:point_blank_master#lasso),@feat:weapon_focus#lasso)",
     "name": "Lasso",
     "effects": [{
       "targetKey": "feat:false_opening#lasso",
@@ -3374,7 +3374,7 @@
     }]
   }, {
     "optionId": "net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#net OR @feat:point_blank_master#net, @feat:weapon_focus#net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#net,@feat:point_blank_master#net),@feat:weapon_focus#net)",
     "name": "Net",
     "effects": [{
       "targetKey": "feat:false_opening#net",
@@ -3384,7 +3384,7 @@
     }]
   }, {
     "optionId": "snag_net",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#snag_net OR @feat:point_blank_master#snag_net, @feat:weapon_focus#snag_net)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#snag_net,@feat:point_blank_master#snag_net),@feat:weapon_focus#snag_net)",
     "name": "Snag Net",
     "effects": [{
       "targetKey": "feat:false_opening#snag_net",
@@ -3394,7 +3394,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_heavy_pelletbow OR @feat:point_blank_master#dwarven_heavy_pelletbow, @feat:weapon_focus#dwarven_heavy_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_heavy_pelletbow,@feat:point_blank_master#dwarven_heavy_pelletbow),@feat:weapon_focus#dwarven_heavy_pelletbow)",
     "name": "Dwarven Heavy Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_heavy_pelletbow",
@@ -3404,7 +3404,7 @@
     }]
   }, {
     "optionId": "dwarven_light_pelletbow",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#dwarven_light_pelletbow OR @feat:point_blank_master#dwarven_light_pelletbow, @feat:weapon_focus#dwarven_light_pelletbow)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#dwarven_light_pelletbow,@feat:point_blank_master#dwarven_light_pelletbow),@feat:weapon_focus#dwarven_light_pelletbow)",
     "name": "Dwarven Light Pelletbow",
     "effects": [{
       "targetKey": "feat:false_opening#dwarven_light_pelletbow",
@@ -3414,7 +3414,7 @@
     }]
   }, {
     "optionId": "throwing_shield",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#throwing_shield OR @feat:point_blank_master#throwing_shield, @feat:weapon_focus#throwing_shield)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#throwing_shield,@feat:point_blank_master#throwing_shield),@feat:weapon_focus#throwing_shield)",
     "name": "Throwing Shield",
     "effects": [{
       "targetKey": "feat:false_opening#throwing_shield",
@@ -3424,7 +3424,7 @@
     }]
   }, {
     "optionId": "shrillshaft_javelin",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shrillshaft_javelin OR @feat:point_blank_master#shrillshaft_javelin, @feat:weapon_focus#shrillshaft_javelin)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shrillshaft_javelin,@feat:point_blank_master#shrillshaft_javelin),@feat:weapon_focus#shrillshaft_javelin)",
     "name": "Shrillshaft Javelin",
     "effects": [{
       "targetKey": "feat:false_opening#shrillshaft_javelin",
@@ -3434,7 +3434,7 @@
     }]
   }, {
     "optionId": "shuriken_5",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#shuriken_5 OR @feat:point_blank_master#shuriken_5, @feat:weapon_focus#shuriken_5)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#shuriken_5,@feat:point_blank_master#shuriken_5),@feat:weapon_focus#shuriken_5)",
     "name": "Shuriken (5)",
     "effects": [{
       "targetKey": "feat:false_opening#shuriken_5",
@@ -3444,7 +3444,7 @@
     }]
   }, {
     "optionId": "double_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#double_sling OR @feat:point_blank_master#double_sling, @feat:weapon_focus#double_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#double_sling,@feat:point_blank_master#double_sling),@feat:weapon_focus#double_sling)",
     "name": "Double Sling",
     "effects": [{
       "targetKey": "feat:false_opening#double_sling",
@@ -3454,7 +3454,7 @@
     }]
   }, {
     "optionId": "sling_glove",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#sling_glove OR @feat:point_blank_master#sling_glove, @feat:weapon_focus#sling_glove)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#sling_glove,@feat:point_blank_master#sling_glove),@feat:weapon_focus#sling_glove)",
     "name": "Sling Glove",
     "effects": [{
       "targetKey": "feat:false_opening#sling_glove",
@@ -3464,7 +3464,7 @@
     }]
   }, {
     "optionId": "halfling_sling_staff",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#halfling_sling_staff OR @feat:point_blank_master#halfling_sling_staff, @feat:weapon_focus#halfling_sling_staff)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#halfling_sling_staff,@feat:point_blank_master#halfling_sling_staff),@feat:weapon_focus#halfling_sling_staff)",
     "name": "Halfling Sling Staff",
     "effects": [{
       "targetKey": "feat:false_opening#halfling_sling_staff",
@@ -3474,7 +3474,7 @@
     }]
   }, {
     "optionId": "stitched_sling",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#stitched_sling OR @feat:point_blank_master#stitched_sling, @feat:weapon_focus#stitched_sling)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#stitched_sling,@feat:point_blank_master#stitched_sling),@feat:weapon_focus#stitched_sling)",
     "name": "Stitched Sling",
     "effects": [{
       "targetKey": "feat:false_opening#stitched_sling",
@@ -3484,7 +3484,7 @@
     }]
   }, {
     "optionId": "wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#wrist_launcher OR @feat:point_blank_master#wrist_launcher, @feat:weapon_focus#wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#wrist_launcher,@feat:point_blank_master#wrist_launcher),@feat:weapon_focus#wrist_launcher)",
     "name": "Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#wrist_launcher",
@@ -3494,7 +3494,7 @@
     }]
   }, {
     "optionId": "heavy_wrist_launcher",
-    "condition": "all(@dex_score \u003e\u003d 13, @feat:dodge, @feat:close_quarters_thrower#heavy_wrist_launcher OR @feat:point_blank_master#heavy_wrist_launcher, @feat:weapon_focus#heavy_wrist_launcher)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:dodge,any(@feat:close_quarters_thrower#heavy_wrist_launcher,@feat:point_blank_master#heavy_wrist_launcher),@feat:weapon_focus#heavy_wrist_launcher)",
     "name": "Heavy Wrist Launcher",
     "effects": [{
       "targetKey": "feat:false_opening#heavy_wrist_launcher",

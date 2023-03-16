@@ -1,5 +1,10 @@
 // Variants
 
+.pill {
+  width: unset;
+  display: inline-block;
+}
+
 .default {
   --pf-button-background-color: white;
   --pf-button-text-color: dimgray;
@@ -9,6 +14,28 @@
 
 .white {
   @extend .default;
+}
+
+.header-link {
+  width: unset;
+  cursor: pointer;
+  display: inline;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: left;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: center;
+  border: 0;
+  background: unset;
+  color: white;
 }
 
 .link {
@@ -30,7 +57,7 @@
   vertical-align: center;
   border: 0;
   background: unset;
-  color: white;
+  color: var(--bs-primary);
 }
 
 .feat {

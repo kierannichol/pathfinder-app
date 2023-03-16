@@ -4,7 +4,7 @@
   "tags": ["feat", "combat"],
   "children": [{
     "optionId": "gauntlet",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gauntlet), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gauntlet,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gauntlet",
     "effects": [{
       "targetKey": "feat:counterpunch#gauntlet",
@@ -14,7 +14,7 @@
     }]
   }, {
     "optionId": "unarmed",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#unarmed), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#unarmed,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Unarmed",
     "effects": [{
       "targetKey": "feat:counterpunch#unarmed",
@@ -24,7 +24,7 @@
     }]
   }, {
     "optionId": "battle_aspergillum",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#battle_aspergillum), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#battle_aspergillum,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Battle Aspergillum",
     "effects": [{
       "targetKey": "feat:counterpunch#battle_aspergillum",
@@ -34,7 +34,7 @@
     }]
   }, {
     "optionId": "brass_knife",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#brass_knife), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#brass_knife,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Brass Knife",
     "effects": [{
       "targetKey": "feat:counterpunch#brass_knife",
@@ -44,7 +44,7 @@
     }]
   }, {
     "optionId": "brass_knuckles",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#brass_knuckles), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#brass_knuckles,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Brass Knuckles",
     "effects": [{
       "targetKey": "feat:counterpunch#brass_knuckles",
@@ -54,7 +54,7 @@
     }]
   }, {
     "optionId": "cestus",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#cestus), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#cestus,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Cestus",
     "effects": [{
       "targetKey": "feat:counterpunch#cestus",
@@ -64,7 +64,7 @@
     }]
   }, {
     "optionId": "dagger",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dagger), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dagger,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dagger",
     "effects": [{
       "targetKey": "feat:counterpunch#dagger",
@@ -74,7 +74,7 @@
     }]
   }, {
     "optionId": "punching_dagger",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#punching_dagger), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#punching_dagger,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Punching Dagger",
     "effects": [{
       "targetKey": "feat:counterpunch#punching_dagger",
@@ -84,7 +84,7 @@
     }]
   }, {
     "optionId": "spiked_gauntlet",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#spiked_gauntlet), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#spiked_gauntlet,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Spiked Gauntlet",
     "effects": [{
       "targetKey": "feat:counterpunch#spiked_gauntlet",
@@ -94,7 +94,7 @@
     }]
   }, {
     "optionId": "handwraps",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#handwraps), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#handwraps,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Handwraps",
     "effects": [{
       "targetKey": "feat:counterpunch#handwraps",
@@ -104,7 +104,7 @@
     }]
   }, {
     "optionId": "traveling_kettle",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#traveling_kettle), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#traveling_kettle,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Traveling Kettle",
     "effects": [{
       "targetKey": "feat:counterpunch#traveling_kettle",
@@ -114,7 +114,7 @@
     }]
   }, {
     "optionId": "hook_hand",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#hook_hand), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#hook_hand,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Hook Hand",
     "effects": [{
       "targetKey": "feat:counterpunch#hook_hand",
@@ -124,7 +124,7 @@
     }]
   }, {
     "optionId": "kunai",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#kunai), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#kunai,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Kunai",
     "effects": [{
       "targetKey": "feat:counterpunch#kunai",
@@ -134,7 +134,7 @@
     }]
   }, {
     "optionId": "light_mace",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_mace), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_mace,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Mace",
     "effects": [{
       "targetKey": "feat:counterpunch#light_mace",
@@ -144,7 +144,7 @@
     }]
   }, {
     "optionId": "sickle",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sickle), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sickle,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sickle",
     "effects": [{
       "targetKey": "feat:counterpunch#sickle",
@@ -154,7 +154,7 @@
     }]
   }, {
     "optionId": "spring_blade",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#spring_blade), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#spring_blade,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Spring Blade",
     "effects": [{
       "targetKey": "feat:counterpunch#spring_blade",
@@ -164,7 +164,7 @@
     }]
   }, {
     "optionId": "wooden_stake",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#wooden_stake), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#wooden_stake,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Wooden Stake",
     "effects": [{
       "targetKey": "feat:counterpunch#wooden_stake",
@@ -174,7 +174,7 @@
     }]
   }, {
     "optionId": "club",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#club), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#club,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Club",
     "effects": [{
       "targetKey": "feat:counterpunch#club",
@@ -184,7 +184,7 @@
     }]
   }, {
     "optionId": "mere_club",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#mere_club), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#mere_club,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Mere Club",
     "effects": [{
       "targetKey": "feat:counterpunch#mere_club",
@@ -194,7 +194,7 @@
     }]
   }, {
     "optionId": "heavy_mace",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_mace), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_mace,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Mace",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_mace",
@@ -204,7 +204,7 @@
     }]
   }, {
     "optionId": "morningstar",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#morningstar), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#morningstar,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Morningstar",
     "effects": [{
       "targetKey": "feat:counterpunch#morningstar",
@@ -214,7 +214,7 @@
     }]
   }, {
     "optionId": "shortspear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#shortspear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#shortspear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Shortspear",
     "effects": [{
       "targetKey": "feat:counterpunch#shortspear",
@@ -224,7 +224,7 @@
     }]
   }, {
     "optionId": "bayonet",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#bayonet), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#bayonet,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Bayonet",
     "effects": [{
       "targetKey": "feat:counterpunch#bayonet",
@@ -234,7 +234,7 @@
     }]
   }, {
     "optionId": "boarding_pike",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#boarding_pike), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#boarding_pike,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Boarding Pike",
     "effects": [{
       "targetKey": "feat:counterpunch#boarding_pike",
@@ -244,7 +244,7 @@
     }]
   }, {
     "optionId": "kumade",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#kumade), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#kumade,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Kumade",
     "effects": [{
       "targetKey": "feat:counterpunch#kumade",
@@ -254,7 +254,7 @@
     }]
   }, {
     "optionId": "collapsible_kumade",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#collapsible_kumade), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#collapsible_kumade,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Collapsible Kumade",
     "effects": [{
       "targetKey": "feat:counterpunch#collapsible_kumade",
@@ -264,7 +264,7 @@
     }]
   }, {
     "optionId": "lantern_staff",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#lantern_staff), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#lantern_staff,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Lantern Staff",
     "effects": [{
       "targetKey": "feat:counterpunch#lantern_staff",
@@ -274,7 +274,7 @@
     }]
   }, {
     "optionId": "longspear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#longspear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#longspear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Longspear",
     "effects": [{
       "targetKey": "feat:counterpunch#longspear",
@@ -284,7 +284,7 @@
     }]
   }, {
     "optionId": "quarterstaff",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#quarterstaff), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#quarterstaff,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Quarterstaff",
     "effects": [{
       "targetKey": "feat:counterpunch#quarterstaff",
@@ -294,7 +294,7 @@
     }]
   }, {
     "optionId": "spear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#spear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#spear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Spear",
     "effects": [{
       "targetKey": "feat:counterpunch#spear",
@@ -304,7 +304,7 @@
     }]
   }, {
     "optionId": "blowgun",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#blowgun), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#blowgun,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Blowgun",
     "effects": [{
       "targetKey": "feat:counterpunch#blowgun",
@@ -314,7 +314,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_crossbow",
@@ -324,7 +324,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#light_crossbow",
@@ -334,7 +334,7 @@
     }]
   }, {
     "optionId": "dart",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dart), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dart,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dart",
     "effects": [{
       "targetKey": "feat:counterpunch#dart",
@@ -344,7 +344,7 @@
     }]
   }, {
     "optionId": "javelin",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#javelin), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#javelin,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Javelin",
     "effects": [{
       "targetKey": "feat:counterpunch#javelin",
@@ -354,7 +354,7 @@
     }]
   }, {
     "optionId": "sling",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sling), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sling,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sling",
     "effects": [{
       "targetKey": "feat:counterpunch#sling",
@@ -364,7 +364,7 @@
     }]
   }, {
     "optionId": "stingchuck",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#stingchuck), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#stingchuck,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Stingchuck",
     "effects": [{
       "targetKey": "feat:counterpunch#stingchuck",
@@ -374,7 +374,7 @@
     }]
   }, {
     "optionId": "stonebow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#stonebow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#stonebow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Stonebow",
     "effects": [{
       "targetKey": "feat:counterpunch#stonebow",
@@ -384,7 +384,7 @@
     }]
   }, {
     "optionId": "axe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#axe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#axe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Axe",
     "effects": [{
       "targetKey": "feat:counterpunch#axe",
@@ -394,7 +394,7 @@
     }]
   }, {
     "optionId": "throwing_axe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#throwing_axe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#throwing_axe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Throwing Axe",
     "effects": [{
       "targetKey": "feat:counterpunch#throwing_axe",
@@ -404,7 +404,7 @@
     }]
   }, {
     "optionId": "blade_boot",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#blade_boot), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#blade_boot,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Blade Boot",
     "effects": [{
       "targetKey": "feat:counterpunch#blade_boot",
@@ -414,7 +414,7 @@
     }]
   }, {
     "optionId": "whip",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#whip), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#whip,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Whip",
     "effects": [{
       "targetKey": "feat:counterpunch#whip",
@@ -424,7 +424,7 @@
     }]
   }, {
     "optionId": "claw_blades",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#claw_blades), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#claw_blades,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Claw Blades",
     "effects": [{
       "targetKey": "feat:counterpunch#claw_blades",
@@ -434,7 +434,7 @@
     }]
   }, {
     "optionId": "dueling_dagger",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dueling_dagger), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dueling_dagger,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dueling Dagger",
     "effects": [{
       "targetKey": "feat:counterpunch#dueling_dagger",
@@ -444,7 +444,7 @@
     }]
   }, {
     "optionId": "dogslicer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dogslicer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dogslicer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dogslicer",
     "effects": [{
       "targetKey": "feat:counterpunch#dogslicer",
@@ -454,7 +454,7 @@
     }]
   }, {
     "optionId": "light_hammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_hammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_hammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Hammer",
     "effects": [{
       "targetKey": "feat:counterpunch#light_hammer",
@@ -464,7 +464,7 @@
     }]
   }, {
     "optionId": "gladius",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gladius), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gladius,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gladius",
     "effects": [{
       "targetKey": "feat:counterpunch#gladius",
@@ -474,7 +474,7 @@
     }]
   }, {
     "optionId": "handaxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#handaxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#handaxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Handaxe",
     "effects": [{
       "targetKey": "feat:counterpunch#handaxe",
@@ -484,7 +484,7 @@
     }]
   }, {
     "optionId": "katar",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#katar), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#katar,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Katar",
     "effects": [{
       "targetKey": "feat:counterpunch#katar",
@@ -494,7 +494,7 @@
     }]
   }, {
     "optionId": "kukri",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#kukri), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#kukri,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Kukri",
     "effects": [{
       "targetKey": "feat:counterpunch#kukri",
@@ -504,7 +504,7 @@
     }]
   }, {
     "optionId": "machete",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#machete), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#machete,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Machete",
     "effects": [{
       "targetKey": "feat:counterpunch#machete",
@@ -514,7 +514,7 @@
     }]
   }, {
     "optionId": "light_pick",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_pick), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_pick,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Pick",
     "effects": [{
       "targetKey": "feat:counterpunch#light_pick",
@@ -524,7 +524,7 @@
     }]
   }, {
     "optionId": "sap",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sap), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sap,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sap",
     "effects": [{
       "targetKey": "feat:counterpunch#sap",
@@ -534,7 +534,7 @@
     }]
   }, {
     "optionId": "light_shield",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_shield), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_shield,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Shield",
     "effects": [{
       "targetKey": "feat:counterpunch#light_shield",
@@ -544,7 +544,7 @@
     }]
   }, {
     "optionId": "spiked_armor",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#spiked_armor), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#spiked_armor,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Spiked Armor",
     "effects": [{
       "targetKey": "feat:counterpunch#spiked_armor",
@@ -554,7 +554,7 @@
     }]
   }, {
     "optionId": "light_spiked_shield",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_spiked_shield), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_spiked_shield,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Spiked Shield",
     "effects": [{
       "targetKey": "feat:counterpunch#light_spiked_shield",
@@ -564,7 +564,7 @@
     }]
   }, {
     "optionId": "starknife",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#starknife), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#starknife,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Starknife",
     "effects": [{
       "targetKey": "feat:counterpunch#starknife",
@@ -574,7 +574,7 @@
     }]
   }, {
     "optionId": "short_sword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#short_sword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#short_sword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Short Sword",
     "effects": [{
       "targetKey": "feat:counterpunch#short_sword",
@@ -584,7 +584,7 @@
     }]
   }, {
     "optionId": "war_razor",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#war_razor), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#war_razor,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "War Razor",
     "effects": [{
       "targetKey": "feat:counterpunch#war_razor",
@@ -594,7 +594,7 @@
     }]
   }, {
     "optionId": "ankus",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#ankus), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#ankus,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Ankus",
     "effects": [{
       "targetKey": "feat:counterpunch#ankus",
@@ -604,7 +604,7 @@
     }]
   }, {
     "optionId": "battleaxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#battleaxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#battleaxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Battleaxe",
     "effects": [{
       "targetKey": "feat:counterpunch#battleaxe",
@@ -614,7 +614,7 @@
     }]
   }, {
     "optionId": "combat_scabbard",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#combat_scabbard), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#combat_scabbard,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Combat Scabbard",
     "effects": [{
       "targetKey": "feat:counterpunch#combat_scabbard",
@@ -624,7 +624,7 @@
     }]
   }, {
     "optionId": "cutlass",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#cutlass), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#cutlass,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Cutlass",
     "effects": [{
       "targetKey": "feat:counterpunch#cutlass",
@@ -634,7 +634,7 @@
     }]
   }, {
     "optionId": "light_flail",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#light_flail), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#light_flail,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Light Flail",
     "effects": [{
       "targetKey": "feat:counterpunch#light_flail",
@@ -644,7 +644,7 @@
     }]
   }, {
     "optionId": "gandasa",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gandasa), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gandasa,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gandasa",
     "effects": [{
       "targetKey": "feat:counterpunch#gandasa",
@@ -654,7 +654,7 @@
     }]
   }, {
     "optionId": "klar",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#klar), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#klar,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Klar",
     "effects": [{
       "targetKey": "feat:counterpunch#klar",
@@ -664,7 +664,7 @@
     }]
   }, {
     "optionId": "longsword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#longsword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#longsword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Longsword",
     "effects": [{
       "targetKey": "feat:counterpunch#longsword",
@@ -674,7 +674,7 @@
     }]
   }, {
     "optionId": "manople",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#manople), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#manople,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Manople",
     "effects": [{
       "targetKey": "feat:counterpunch#manople",
@@ -684,7 +684,7 @@
     }]
   }, {
     "optionId": "heavy_pick",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_pick), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_pick,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Pick",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_pick",
@@ -694,7 +694,7 @@
     }]
   }, {
     "optionId": "rapier",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#rapier), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#rapier,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Rapier",
     "effects": [{
       "targetKey": "feat:counterpunch#rapier",
@@ -704,7 +704,7 @@
     }]
   }, {
     "optionId": "scimitar",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#scimitar), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#scimitar,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Scimitar",
     "effects": [{
       "targetKey": "feat:counterpunch#scimitar",
@@ -714,7 +714,7 @@
     }]
   }, {
     "optionId": "scizore",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#scizore), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#scizore,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Scizore",
     "effects": [{
       "targetKey": "feat:counterpunch#scizore",
@@ -724,7 +724,7 @@
     }]
   }, {
     "optionId": "heavy_shield",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_shield), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_shield,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Shield",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_shield",
@@ -734,7 +734,7 @@
     }]
   }, {
     "optionId": "heavy_spiked_shield",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_spiked_shield), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_spiked_shield,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Spiked Shield",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_spiked_shield",
@@ -744,7 +744,7 @@
     }]
   }, {
     "optionId": "sword_cane",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sword_cane), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sword_cane,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sword Cane",
     "effects": [{
       "targetKey": "feat:counterpunch#sword_cane",
@@ -754,7 +754,7 @@
     }]
   }, {
     "optionId": "terbutje",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#terbutje), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#terbutje,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Terbutje",
     "effects": [{
       "targetKey": "feat:counterpunch#terbutje",
@@ -764,7 +764,7 @@
     }]
   }, {
     "optionId": "trident",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#trident), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#trident,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Trident",
     "effects": [{
       "targetKey": "feat:counterpunch#trident",
@@ -774,7 +774,7 @@
     }]
   }, {
     "optionId": "warhammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#warhammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#warhammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Warhammer",
     "effects": [{
       "targetKey": "feat:counterpunch#warhammer",
@@ -784,7 +784,7 @@
     }]
   }, {
     "optionId": "bardiche",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#bardiche), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#bardiche,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Bardiche",
     "effects": [{
       "targetKey": "feat:counterpunch#bardiche",
@@ -794,7 +794,7 @@
     }]
   }, {
     "optionId": "bill",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#bill), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#bill,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Bill",
     "effects": [{
       "targetKey": "feat:counterpunch#bill",
@@ -804,7 +804,7 @@
     }]
   }, {
     "optionId": "earth_breaker",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#earth_breaker), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#earth_breaker,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Earth Breaker",
     "effects": [{
       "targetKey": "feat:counterpunch#earth_breaker",
@@ -814,7 +814,7 @@
     }]
   }, {
     "optionId": "falchion",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#falchion), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#falchion,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Falchion",
     "effects": [{
       "targetKey": "feat:counterpunch#falchion",
@@ -824,7 +824,7 @@
     }]
   }, {
     "optionId": "heavy_flail",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_flail), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_flail,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Flail",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_flail",
@@ -834,7 +834,7 @@
     }]
   }, {
     "optionId": "glaive",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#glaive), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#glaive,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Glaive",
     "effects": [{
       "targetKey": "feat:counterpunch#glaive",
@@ -844,7 +844,7 @@
     }]
   }, {
     "optionId": "greataxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#greataxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#greataxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Greataxe",
     "effects": [{
       "targetKey": "feat:counterpunch#greataxe",
@@ -854,7 +854,7 @@
     }]
   }, {
     "optionId": "greatclub",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#greatclub), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#greatclub,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Greatclub",
     "effects": [{
       "targetKey": "feat:counterpunch#greatclub",
@@ -864,7 +864,7 @@
     }]
   }, {
     "optionId": "greatsword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#greatsword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#greatsword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Greatsword",
     "effects": [{
       "targetKey": "feat:counterpunch#greatsword",
@@ -874,7 +874,7 @@
     }]
   }, {
     "optionId": "guisarme",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#guisarme), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#guisarme,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Guisarme",
     "effects": [{
       "targetKey": "feat:counterpunch#guisarme",
@@ -884,7 +884,7 @@
     }]
   }, {
     "optionId": "halberd",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#halberd), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#halberd,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Halberd",
     "effects": [{
       "targetKey": "feat:counterpunch#halberd",
@@ -894,7 +894,7 @@
     }]
   }, {
     "optionId": "horsechopper",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#horsechopper), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#horsechopper,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Horsechopper",
     "effects": [{
       "targetKey": "feat:counterpunch#horsechopper",
@@ -904,7 +904,7 @@
     }]
   }, {
     "optionId": "lance",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#lance), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#lance,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Lance",
     "effects": [{
       "targetKey": "feat:counterpunch#lance",
@@ -914,7 +914,7 @@
     }]
   }, {
     "optionId": "ogre_hook",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#ogre_hook), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#ogre_hook,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Ogre Hook",
     "effects": [{
       "targetKey": "feat:counterpunch#ogre_hook",
@@ -924,7 +924,7 @@
     }]
   }, {
     "optionId": "pickaxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#pickaxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#pickaxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Pickaxe",
     "effects": [{
       "targetKey": "feat:counterpunch#pickaxe",
@@ -934,7 +934,7 @@
     }]
   }, {
     "optionId": "planson",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#planson), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#planson,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Planson",
     "effects": [{
       "targetKey": "feat:counterpunch#planson",
@@ -944,7 +944,7 @@
     }]
   }, {
     "optionId": "ranseur",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#ranseur), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#ranseur,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Ranseur",
     "effects": [{
       "targetKey": "feat:counterpunch#ranseur",
@@ -954,7 +954,7 @@
     }]
   }, {
     "optionId": "scythe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#scythe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#scythe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Scythe",
     "effects": [{
       "targetKey": "feat:counterpunch#scythe",
@@ -964,7 +964,7 @@
     }]
   }, {
     "optionId": "syringe_spear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#syringe_spear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#syringe_spear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Syringe Spear",
     "effects": [{
       "targetKey": "feat:counterpunch#syringe_spear",
@@ -974,7 +974,7 @@
     }]
   }, {
     "optionId": "ammentum",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#ammentum), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#ammentum,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Ammentum",
     "effects": [{
       "targetKey": "feat:counterpunch#ammentum",
@@ -984,7 +984,7 @@
     }]
   }, {
     "optionId": "chakram",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#chakram), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#chakram,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Chakram",
     "effects": [{
       "targetKey": "feat:counterpunch#chakram",
@@ -994,7 +994,7 @@
     }]
   }, {
     "optionId": "jolting_dart",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#jolting_dart), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#jolting_dart,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Jolting Dart",
     "effects": [{
       "targetKey": "feat:counterpunch#jolting_dart",
@@ -1004,7 +1004,7 @@
     }]
   }, {
     "optionId": "hunga_munga",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#hunga_munga), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#hunga_munga,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Hunga Munga",
     "effects": [{
       "targetKey": "feat:counterpunch#hunga_munga",
@@ -1014,7 +1014,7 @@
     }]
   }, {
     "optionId": "hurlbat",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#hurlbat), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#hurlbat,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Hurlbat",
     "effects": [{
       "targetKey": "feat:counterpunch#hurlbat",
@@ -1024,7 +1024,7 @@
     }]
   }, {
     "optionId": "longbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#longbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#longbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Longbow",
     "effects": [{
       "targetKey": "feat:counterpunch#longbow",
@@ -1034,7 +1034,7 @@
     }]
   }, {
     "optionId": "pilum",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#pilum), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#pilum,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Pilum",
     "effects": [{
       "targetKey": "feat:counterpunch#pilum",
@@ -1044,7 +1044,7 @@
     }]
   }, {
     "optionId": "shortbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#shortbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#shortbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Shortbow",
     "effects": [{
       "targetKey": "feat:counterpunch#shortbow",
@@ -1054,7 +1054,7 @@
     }]
   }, {
     "optionId": "aklys",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#aklys), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#aklys,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Aklys",
     "effects": [{
       "targetKey": "feat:counterpunch#aklys",
@@ -1064,7 +1064,7 @@
     }]
   }, {
     "optionId": "knuckle_axe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#knuckle_axe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#knuckle_axe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Knuckle Axe",
     "effects": [{
       "targetKey": "feat:counterpunch#knuckle_axe",
@@ -1074,7 +1074,7 @@
     }]
   }, {
     "optionId": "barbazu_beard",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#barbazu_beard), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#barbazu_beard,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Barbazu Beard",
     "effects": [{
       "targetKey": "feat:counterpunch#barbazu_beard",
@@ -1084,7 +1084,7 @@
     }]
   }, {
     "optionId": "battle_poi",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#battle_poi), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#battle_poi,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Battle Poi",
     "effects": [{
       "targetKey": "feat:counterpunch#battle_poi",
@@ -1094,7 +1094,7 @@
     }]
   }, {
     "optionId": "swordbreaker_dagger",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#swordbreaker_dagger), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#swordbreaker_dagger,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Swordbreaker Dagger",
     "effects": [{
       "targetKey": "feat:counterpunch#swordbreaker_dagger",
@@ -1104,7 +1104,7 @@
     }]
   }, {
     "optionId": "flying_talon",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flying_talon), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flying_talon,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flying Talon",
     "effects": [{
       "targetKey": "feat:counterpunch#flying_talon",
@@ -1114,7 +1114,7 @@
     }]
   }, {
     "optionId": "gnome_pincher",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gnome_pincher), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gnome_pincher,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gnome Pincher",
     "effects": [{
       "targetKey": "feat:counterpunch#gnome_pincher",
@@ -1124,7 +1124,7 @@
     }]
   }, {
     "optionId": "halfling_rope_shot",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#halfling_rope_shot), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#halfling_rope_shot,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Halfling Rope-shot",
     "effects": [{
       "targetKey": "feat:counterpunch#halfling_rope_shot",
@@ -1134,7 +1134,7 @@
     }]
   }, {
     "optionId": "dwarven_boulder_helmet",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_boulder_helmet), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_boulder_helmet,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Boulder Helmet",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_boulder_helmet",
@@ -1144,7 +1144,7 @@
     }]
   }, {
     "optionId": "kama",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#kama), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#kama,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Kama",
     "effects": [{
       "targetKey": "feat:counterpunch#kama",
@@ -1154,7 +1154,7 @@
     }]
   }, {
     "optionId": "butterfly_knife",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#butterfly_knife), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#butterfly_knife,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Butterfly Knife",
     "effects": [{
       "targetKey": "feat:counterpunch#butterfly_knife",
@@ -1164,7 +1164,7 @@
     }]
   }, {
     "optionId": "deer_horn_knife",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#deer_horn_knife), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#deer_horn_knife,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Deer Horn Knife",
     "effects": [{
       "targetKey": "feat:counterpunch#deer_horn_knife",
@@ -1174,7 +1174,7 @@
     }]
   }, {
     "optionId": "dwarven_maulaxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_maulaxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_maulaxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Maulaxe",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_maulaxe",
@@ -1184,7 +1184,7 @@
     }]
   }, {
     "optionId": "nunchaku",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#nunchaku), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#nunchaku,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Nunchaku",
     "effects": [{
       "targetKey": "feat:counterpunch#nunchaku",
@@ -1194,7 +1194,7 @@
     }]
   }, {
     "optionId": "quadrens",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#quadrens), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#quadrens,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Quadrens",
     "effects": [{
       "targetKey": "feat:counterpunch#quadrens",
@@ -1204,7 +1204,7 @@
     }]
   }, {
     "optionId": "drow_razor",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#drow_razor), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#drow_razor,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Drow Razor",
     "effects": [{
       "targetKey": "feat:counterpunch#drow_razor",
@@ -1214,7 +1214,7 @@
     }]
   }, {
     "optionId": "rope_gauntlet",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#rope_gauntlet), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#rope_gauntlet,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Rope Gauntlet",
     "effects": [{
       "targetKey": "feat:counterpunch#rope_gauntlet",
@@ -1224,7 +1224,7 @@
     }]
   }, {
     "optionId": "sawtooth_sabre",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sawtooth_sabre), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sawtooth_sabre,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sawtooth Sabre",
     "effects": [{
       "targetKey": "feat:counterpunch#sawtooth_sabre",
@@ -1234,7 +1234,7 @@
     }]
   }, {
     "optionId": "sai",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sai), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sai,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sai",
     "effects": [{
       "targetKey": "feat:counterpunch#sai",
@@ -1244,7 +1244,7 @@
     }]
   }, {
     "optionId": "sanpkhang",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sanpkhang), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sanpkhang,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sanpkhang",
     "effects": [{
       "targetKey": "feat:counterpunch#sanpkhang",
@@ -1254,7 +1254,7 @@
     }]
   }, {
     "optionId": "siangham",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#siangham), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#siangham,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Siangham",
     "effects": [{
       "targetKey": "feat:counterpunch#siangham",
@@ -1264,7 +1264,7 @@
     }]
   }, {
     "optionId": "sica",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sica), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sica,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sica",
     "effects": [{
       "targetKey": "feat:counterpunch#sica",
@@ -1274,7 +1274,7 @@
     }]
   }, {
     "optionId": "thorn_bracer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#thorn_bracer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#thorn_bracer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Thorn Bracer",
     "effects": [{
       "targetKey": "feat:counterpunch#thorn_bracer",
@@ -1284,7 +1284,7 @@
     }]
   }, {
     "optionId": "dwarven_war_shield",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_war_shield), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_war_shield,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven War-shield",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_war_shield",
@@ -1294,7 +1294,7 @@
     }]
   }, {
     "optionId": "waveblade",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#waveblade), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#waveblade,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Waveblade",
     "effects": [{
       "targetKey": "feat:counterpunch#waveblade",
@@ -1304,7 +1304,7 @@
     }]
   }, {
     "optionId": "scorpion_whip",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#scorpion_whip), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#scorpion_whip,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Scorpion Whip",
     "effects": [{
       "targetKey": "feat:counterpunch#scorpion_whip",
@@ -1314,7 +1314,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_axe_gauntlet",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_heavy_axe_gauntlet), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_heavy_axe_gauntlet,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Heavy Axe-Gauntlet",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_heavy_axe_gauntlet",
@@ -1324,7 +1324,7 @@
     }]
   }, {
     "optionId": "hooked_axe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#hooked_axe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#hooked_axe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Hooked Axe",
     "effects": [{
       "targetKey": "feat:counterpunch#hooked_axe",
@@ -1334,7 +1334,7 @@
     }]
   }, {
     "optionId": "broken_back_seax",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#broken_back_seax), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#broken_back_seax,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Broken-back Seax",
     "effects": [{
       "targetKey": "feat:counterpunch#broken_back_seax",
@@ -1344,7 +1344,7 @@
     }]
   }, {
     "optionId": "estoc",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#estoc), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#estoc,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Estoc",
     "effects": [{
       "targetKey": "feat:counterpunch#estoc",
@@ -1354,7 +1354,7 @@
     }]
   }, {
     "optionId": "falcata",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#falcata), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#falcata,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Falcata",
     "effects": [{
       "targetKey": "feat:counterpunch#falcata",
@@ -1364,7 +1364,7 @@
     }]
   }, {
     "optionId": "flickmace",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flickmace), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flickmace,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flickmace",
     "effects": [{
       "targetKey": "feat:counterpunch#flickmace",
@@ -1374,7 +1374,7 @@
     }]
   }, {
     "optionId": "flindbar",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flindbar), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flindbar,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flindbar",
     "effects": [{
       "targetKey": "feat:counterpunch#flindbar",
@@ -1384,7 +1384,7 @@
     }]
   }, {
     "optionId": "khopesh",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#khopesh), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#khopesh,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Khopesh",
     "effects": [{
       "targetKey": "feat:counterpunch#khopesh",
@@ -1394,7 +1394,7 @@
     }]
   }, {
     "optionId": "knobkerrie",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#knobkerrie), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#knobkerrie,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Knobkerrie",
     "effects": [{
       "targetKey": "feat:counterpunch#knobkerrie",
@@ -1404,7 +1404,7 @@
     }]
   }, {
     "optionId": "dwarven_ram_hammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_ram_hammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_ram_hammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Ram Hammer",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_ram_hammer",
@@ -1414,7 +1414,7 @@
     }]
   }, {
     "optionId": "spiral_rapier",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#spiral_rapier), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#spiral_rapier,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Spiral Rapier",
     "effects": [{
       "targetKey": "feat:counterpunch#spiral_rapier",
@@ -1424,7 +1424,7 @@
     }]
   }, {
     "optionId": "rhoka",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#rhoka), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#rhoka,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Rhoka",
     "effects": [{
       "targetKey": "feat:counterpunch#rhoka",
@@ -1434,7 +1434,7 @@
     }]
   }, {
     "optionId": "shotel",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#shotel), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#shotel,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Shotel",
     "effects": [{
       "targetKey": "feat:counterpunch#shotel",
@@ -1444,7 +1444,7 @@
     }]
   }, {
     "optionId": "sickle_sword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sickle_sword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sickle_sword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sickle-sword",
     "effects": [{
       "targetKey": "feat:counterpunch#sickle_sword",
@@ -1454,7 +1454,7 @@
     }]
   }, {
     "optionId": "split_blade_sword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#split_blade_sword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#split_blade_sword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Split-blade Sword",
     "effects": [{
       "targetKey": "feat:counterpunch#split_blade_sword",
@@ -1464,7 +1464,7 @@
     }]
   }, {
     "optionId": "dueling_sword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dueling_sword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dueling_sword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dueling Sword",
     "effects": [{
       "targetKey": "feat:counterpunch#dueling_sword",
@@ -1474,7 +1474,7 @@
     }]
   }, {
     "optionId": "bastard_sword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#bastard_sword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#bastard_sword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Bastard Sword",
     "effects": [{
       "targetKey": "feat:counterpunch#bastard_sword",
@@ -1484,7 +1484,7 @@
     }]
   }, {
     "optionId": "tongi",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#tongi), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#tongi,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Tongi",
     "effects": [{
       "targetKey": "feat:counterpunch#tongi",
@@ -1494,7 +1494,7 @@
     }]
   }, {
     "optionId": "dwarven_waraxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_waraxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_waraxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Waraxe",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_waraxe",
@@ -1504,7 +1504,7 @@
     }]
   }, {
     "optionId": "dwarven_double_waraxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_double_waraxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_double_waraxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Double Waraxe",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_double_waraxe",
@@ -1514,7 +1514,7 @@
     }]
   }, {
     "optionId": "orc_double_axe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#orc_double_axe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#orc_double_axe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Orc Double Axe",
     "effects": [{
       "targetKey": "feat:counterpunch#orc_double_axe",
@@ -1524,7 +1524,7 @@
     }]
   }, {
     "optionId": "butchering_axe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#butchering_axe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#butchering_axe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Butchering Axe",
     "effects": [{
       "targetKey": "feat:counterpunch#butchering_axe",
@@ -1534,7 +1534,7 @@
     }]
   }, {
     "optionId": "gnome_battle_ladder",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gnome_battle_ladder), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gnome_battle_ladder,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gnome Battle Ladder",
     "effects": [{
       "targetKey": "feat:counterpunch#gnome_battle_ladder",
@@ -1544,7 +1544,7 @@
     }]
   }, {
     "optionId": "boarding_gaff",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#boarding_gaff), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#boarding_gaff,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Boarding Gaff",
     "effects": [{
       "targetKey": "feat:counterpunch#boarding_gaff",
@@ -1554,7 +1554,7 @@
     }]
   }, {
     "optionId": "chain_hammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#chain_hammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#chain_hammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Chain-hammer",
     "effects": [{
       "targetKey": "feat:counterpunch#chain_hammer",
@@ -1564,7 +1564,7 @@
     }]
   }, {
     "optionId": "spiked_chain",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#spiked_chain), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#spiked_chain,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Spiked Chain",
     "effects": [{
       "targetKey": "feat:counterpunch#spiked_chain",
@@ -1574,7 +1574,7 @@
     }]
   }, {
     "optionId": "crook",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#crook), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#crook,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Crook",
     "effects": [{
       "targetKey": "feat:counterpunch#crook",
@@ -1584,7 +1584,7 @@
     }]
   }, {
     "optionId": "elven_curve_blade",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#elven_curve_blade), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#elven_curve_blade,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Elven Curve Blade",
     "effects": [{
       "targetKey": "feat:counterpunch#elven_curve_blade",
@@ -1594,7 +1594,7 @@
     }]
   }, {
     "optionId": "dwarven_dorn_dergar",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_dorn_dergar), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_dorn_dergar,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Dorn-Dergar",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_dorn_dergar",
@@ -1604,7 +1604,7 @@
     }]
   }, {
     "optionId": "double_spear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#double_spear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#double_spear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Double Spear",
     "effects": [{
       "targetKey": "feat:counterpunch#double_spear",
@@ -1614,7 +1614,7 @@
     }]
   }, {
     "optionId": "elven_branched_spear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#elven_branched_spear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#elven_branched_spear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Elven Branched Spear",
     "effects": [{
       "targetKey": "feat:counterpunch#elven_branched_spear",
@@ -1624,7 +1624,7 @@
     }]
   }, {
     "optionId": "fauchard",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#fauchard), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#fauchard,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Fauchard",
     "effects": [{
       "targetKey": "feat:counterpunch#fauchard",
@@ -1634,7 +1634,7 @@
     }]
   }, {
     "optionId": "dire_flail",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dire_flail), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dire_flail,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dire Flail",
     "effects": [{
       "targetKey": "feat:counterpunch#dire_flail",
@@ -1644,7 +1644,7 @@
     }]
   }, {
     "optionId": "flailpole",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flailpole), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flailpole,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flailpole",
     "effects": [{
       "targetKey": "feat:counterpunch#flailpole",
@@ -1654,7 +1654,7 @@
     }]
   }, {
     "optionId": "flambard",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flambard), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flambard,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flambard",
     "effects": [{
       "targetKey": "feat:counterpunch#flambard",
@@ -1664,7 +1664,7 @@
     }]
   }, {
     "optionId": "flying_blade",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flying_blade), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flying_blade,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flying Blade",
     "effects": [{
       "targetKey": "feat:counterpunch#flying_blade",
@@ -1674,7 +1674,7 @@
     }]
   }, {
     "optionId": "garrote",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#garrote), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#garrote,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Garrote",
     "effects": [{
       "targetKey": "feat:counterpunch#garrote",
@@ -1684,7 +1684,7 @@
     }]
   }, {
     "optionId": "dwarven_giant_sticker",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_giant_sticker), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_giant_sticker,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Giant-Sticker",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_giant_sticker",
@@ -1694,7 +1694,7 @@
     }]
   }, {
     "optionId": "gnome_hooked_hammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gnome_hooked_hammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gnome_hooked_hammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gnome Hooked Hammer",
     "effects": [{
       "targetKey": "feat:counterpunch#gnome_hooked_hammer",
@@ -1704,7 +1704,7 @@
     }]
   }, {
     "optionId": "harpoon",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#harpoon), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#harpoon,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Harpoon",
     "effects": [{
       "targetKey": "feat:counterpunch#harpoon",
@@ -1714,7 +1714,7 @@
     }]
   }, {
     "optionId": "dwarven_longaxe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_longaxe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_longaxe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Longaxe",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_longaxe",
@@ -1724,7 +1724,7 @@
     }]
   }, {
     "optionId": "dwarven_longhammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_longhammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_longhammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Longhammer",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_longhammer",
@@ -1734,7 +1734,7 @@
     }]
   }, {
     "optionId": "mancatcher",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#mancatcher), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#mancatcher,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Mancatcher",
     "effects": [{
       "targetKey": "feat:counterpunch#mancatcher",
@@ -1744,7 +1744,7 @@
     }]
   }, {
     "optionId": "orc_skull_ram",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#orc_skull_ram), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#orc_skull_ram,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Orc Skull Ram",
     "effects": [{
       "targetKey": "feat:counterpunch#orc_skull_ram",
@@ -1754,7 +1754,7 @@
     }]
   }, {
     "optionId": "gnome_piston_maul",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gnome_piston_maul), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gnome_piston_maul,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gnome Piston Maul",
     "effects": [{
       "targetKey": "feat:counterpunch#gnome_piston_maul",
@@ -1764,7 +1764,7 @@
     }]
   }, {
     "optionId": "gnome_ripsaw_glaive",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#gnome_ripsaw_glaive), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#gnome_ripsaw_glaive,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Gnome Ripsaw Glaive",
     "effects": [{
       "targetKey": "feat:counterpunch#gnome_ripsaw_glaive",
@@ -1774,7 +1774,7 @@
     }]
   }, {
     "optionId": "bladed_scarf",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#bladed_scarf), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#bladed_scarf,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Bladed Scarf",
     "effects": [{
       "targetKey": "feat:counterpunch#bladed_scarf",
@@ -1784,7 +1784,7 @@
     }]
   }, {
     "optionId": "totem_spear",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#totem_spear), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#totem_spear,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Totem Spear",
     "effects": [{
       "targetKey": "feat:counterpunch#totem_spear",
@@ -1794,7 +1794,7 @@
     }]
   }, {
     "optionId": "dwarven_sphinx_hammer",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_sphinx_hammer), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_sphinx_hammer,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Sphinx Hammer",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_sphinx_hammer",
@@ -1804,7 +1804,7 @@
     }]
   }, {
     "optionId": "switchscythe",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#switchscythe), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#switchscythe,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Switchscythe",
     "effects": [{
       "targetKey": "feat:counterpunch#switchscythe",
@@ -1814,7 +1814,7 @@
     }]
   }, {
     "optionId": "two_bladed_sword",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#two_bladed_sword), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#two_bladed_sword,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Two-bladed Sword",
     "effects": [{
       "targetKey": "feat:counterpunch#two_bladed_sword",
@@ -1824,7 +1824,7 @@
     }]
   }, {
     "optionId": "dwarven_urgrosh",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_urgrosh), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_urgrosh,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Urgrosh",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_urgrosh",
@@ -1834,7 +1834,7 @@
     }]
   }, {
     "optionId": "bola",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#bola), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#bola,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Bola",
     "effects": [{
       "targetKey": "feat:counterpunch#bola",
@@ -1844,7 +1844,7 @@
     }]
   }, {
     "optionId": "brutal_bola",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#brutal_bola), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#brutal_bola,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Brutal Bola",
     "effects": [{
       "targetKey": "feat:counterpunch#brutal_bola",
@@ -1854,7 +1854,7 @@
     }]
   }, {
     "optionId": "boomerang",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#boomerang), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#boomerang,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Boomerang",
     "effects": [{
       "targetKey": "feat:counterpunch#boomerang",
@@ -1864,7 +1864,7 @@
     }]
   }, {
     "optionId": "thorn_bow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#thorn_bow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#thorn_bow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Thorn Bow",
     "effects": [{
       "targetKey": "feat:counterpunch#thorn_bow",
@@ -1874,7 +1874,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#crank_heavy_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#crank_heavy_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#crank_heavy_crossbow",
@@ -1884,7 +1884,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#crank_light_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#crank_light_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#crank_light_crossbow",
@@ -1894,7 +1894,7 @@
     }]
   }, {
     "optionId": "double_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#double_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#double_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#double_crossbow",
@@ -1904,7 +1904,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#hand_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#hand_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#hand_crossbow",
@@ -1914,7 +1914,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#launching_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#launching_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#launching_crossbow",
@@ -1924,7 +1924,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#repeating_heavy_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#repeating_heavy_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#repeating_heavy_crossbow",
@@ -1934,7 +1934,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#repeating_light_crossbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#repeating_light_crossbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:counterpunch#repeating_light_crossbow",
@@ -1944,7 +1944,7 @@
     }]
   }, {
     "optionId": "flask_thrower",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#flask_thrower), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#flask_thrower,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Flask Thrower",
     "effects": [{
       "targetKey": "feat:counterpunch#flask_thrower",
@@ -1954,7 +1954,7 @@
     }]
   }, {
     "optionId": "grappling_hook",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#grappling_hook), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#grappling_hook,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Grappling Hook",
     "effects": [{
       "targetKey": "feat:counterpunch#grappling_hook",
@@ -1964,7 +1964,7 @@
     }]
   }, {
     "optionId": "orc_hornbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#orc_hornbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#orc_hornbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Orc Hornbow",
     "effects": [{
       "targetKey": "feat:counterpunch#orc_hornbow",
@@ -1974,7 +1974,7 @@
     }]
   }, {
     "optionId": "stormshaft_javelin",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#stormshaft_javelin), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#stormshaft_javelin,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Stormshaft Javelin",
     "effects": [{
       "targetKey": "feat:counterpunch#stormshaft_javelin",
@@ -1984,7 +1984,7 @@
     }]
   }, {
     "optionId": "lasso",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#lasso), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#lasso,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Lasso",
     "effects": [{
       "targetKey": "feat:counterpunch#lasso",
@@ -1994,7 +1994,7 @@
     }]
   }, {
     "optionId": "net",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#net), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#net,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Net",
     "effects": [{
       "targetKey": "feat:counterpunch#net",
@@ -2004,7 +2004,7 @@
     }]
   }, {
     "optionId": "snag_net",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#snag_net), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#snag_net,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Snag Net",
     "effects": [{
       "targetKey": "feat:counterpunch#snag_net",
@@ -2014,7 +2014,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_heavy_pelletbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_heavy_pelletbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Heavy Pelletbow",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_heavy_pelletbow",
@@ -2024,7 +2024,7 @@
     }]
   }, {
     "optionId": "dwarven_light_pelletbow",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#dwarven_light_pelletbow), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#dwarven_light_pelletbow,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Dwarven Light Pelletbow",
     "effects": [{
       "targetKey": "feat:counterpunch#dwarven_light_pelletbow",
@@ -2034,7 +2034,7 @@
     }]
   }, {
     "optionId": "throwing_shield",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#throwing_shield), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#throwing_shield,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Throwing Shield",
     "effects": [{
       "targetKey": "feat:counterpunch#throwing_shield",
@@ -2044,7 +2044,7 @@
     }]
   }, {
     "optionId": "shrillshaft_javelin",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#shrillshaft_javelin), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#shrillshaft_javelin,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Shrillshaft Javelin",
     "effects": [{
       "targetKey": "feat:counterpunch#shrillshaft_javelin",
@@ -2054,7 +2054,7 @@
     }]
   }, {
     "optionId": "shuriken_5",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#shuriken_5), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#shuriken_5,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Shuriken (5)",
     "effects": [{
       "targetKey": "feat:counterpunch#shuriken_5",
@@ -2064,7 +2064,7 @@
     }]
   }, {
     "optionId": "double_sling",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#double_sling), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#double_sling,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Double Sling",
     "effects": [{
       "targetKey": "feat:counterpunch#double_sling",
@@ -2074,7 +2074,7 @@
     }]
   }, {
     "optionId": "sling_glove",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#sling_glove), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#sling_glove,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Sling Glove",
     "effects": [{
       "targetKey": "feat:counterpunch#sling_glove",
@@ -2084,7 +2084,7 @@
     }]
   }, {
     "optionId": "halfling_sling_staff",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#halfling_sling_staff), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#halfling_sling_staff,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Halfling Sling Staff",
     "effects": [{
       "targetKey": "feat:counterpunch#halfling_sling_staff",
@@ -2094,7 +2094,7 @@
     }]
   }, {
     "optionId": "stitched_sling",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#stitched_sling), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#stitched_sling,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Stitched Sling",
     "effects": [{
       "targetKey": "feat:counterpunch#stitched_sling",
@@ -2104,7 +2104,7 @@
     }]
   }, {
     "optionId": "wrist_launcher",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#wrist_launcher), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#wrist_launcher,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Wrist Launcher",
     "effects": [{
       "targetKey": "feat:counterpunch#wrist_launcher",
@@ -2114,7 +2114,7 @@
     }]
   }, {
     "optionId": "heavy_wrist_launcher",
-    "condition": "all(all(@dex_score \u003e\u003d 18, @feat:combat_reflexes, @feat:improved_unarmed_strike, @feat:weapon_focus#heavy_wrist_launcher), @bab \u003e\u003d 16 OR @rage_power:brawler \u003e\u003d 12)",
+    "condition": "all(@dex_score\u003e\u003d18,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:weapon_focus#heavy_wrist_launcher,any(@bab\u003e\u003d16,@rage_power:brawler\u003e\u003d12))",
     "name": "Heavy Wrist Launcher",
     "effects": [{
       "targetKey": "feat:counterpunch#heavy_wrist_launcher",

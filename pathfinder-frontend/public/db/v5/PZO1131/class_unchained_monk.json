@@ -1,7 +1,7 @@
 {
   "id": "class:unchained_monk",
   "name": "Unchained Monk",
-  "tags": ["class", "unchained"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "base", "base", "unchained", "unchained", "unchained"],
   "description": {
     "text": "For the truly exemplary, martial skill transcends the battlefield--it is a lifestyle, a doctrine, a state of mind. These warrior-artists search out methods of battle beyond swords and shields, finding weapons within themselves just as capable of crippling or killing as any blade. These monks (so called since they adhere to ancient philosophies and strict martial disciplines) elevate their bodies to become weapons of war, from battle-minded ascetics to self-taught brawlers. Monks tread the path of discipline, and those with the will to endure that path discover within themselves not what they are, but what they are meant to be. Role: Monks excel at overcoming even the most daunting perils, striking where it\u0027s least expected, and taking advantage of enemy vulnerabilities. Fleet of foot and skilled in combat, monks can navigate any battlefield with ease, aiding allies wherever they are needed most. Unchained: Much of the monk has been reworked, including its base attack bonus, Hit Die, saves, and many of its special abilities. The result is a version of the monk that not only is easier to play, but also possesses a great deal more versatility. Flurry of blows is now much simpler to use in play. Many of the higher-level abilities of the monk, such as abundant step and quivering palm, have been incorporated into the new system of ki powers. As a monk advances in level, he can select from a variety of ki powers, allowing the player to truly customize his character. Alignment: Any lawful Hit Die: d10. Starting Wealth: 1d6 × 10 gp (average 35 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -36,12 +36,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
+        "targetKey": "proficiency:shuriken_5",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shuriken_5",
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -56,7 +56,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handaxe",
+        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -66,7 +66,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:quarterstaff",
+        "targetKey": "proficiency:handaxe",
         "setAction": {
           "numberValue": 1
         }
@@ -215,8 +215,9 @@
         "id": "unchained_monk:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "unchained_monk"]
+          "tags": ["archetype+unchained_monk"]
         }
       }, {
         "id": "unchained_monk1:skill_rank:1",
@@ -241,6 +242,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk1:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -314,6 +323,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk2:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -393,6 +410,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk3:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d4",
@@ -465,6 +490,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -539,6 +572,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d6",
@@ -612,6 +653,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d7",
@@ -680,6 +729,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d8",
@@ -747,6 +804,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -820,6 +885,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -899,6 +972,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d11",
@@ -967,6 +1048,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d12",
@@ -1034,6 +1123,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -1108,6 +1205,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d14",
@@ -1181,6 +1286,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d15",
@@ -1248,6 +1361,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -1322,6 +1443,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d17",
@@ -1394,6 +1523,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -1468,6 +1605,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_monk18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
+        }
       }]
     }, {
       "condition": "@class:unchained_monk\u003e\u003d19",
@@ -1535,6 +1680,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }, {
@@ -1608,6 +1761,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_monk20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+unchained_monk"]
         }
       }]
     }]

@@ -1,7 +1,7 @@
 {
   "id": "class:rogue",
   "name": "Rogue",
-  "tags": ["class", "core"],
+  "tags": ["class", "core", "core"],
   "description": {
     "text": "Life is an endless adventure for those who live by their wits. Ever just one step ahead of danger, rogues bank on their cunning, skill, and charm to bend fate to their favor. Never knowing what to expect, they prepare for everything, becoming masters of a wide variety of skills, training themselves to be adept manipulators, agile acrobats, shadowy stalkers, or masters of any of dozens of other professions or talents. Thieves and gamblers, fast talkers and diplomats, bandits and bounty hunters, and explorers and investigators all might be considered rogues, as well as countless other professions that rely upon wits, prowess, or luck. Although many rogues favor cities and the innumerable opportunities of civilization, some embrace lives on the road, journeying far, meeting exotic people, and facing fantastic danger in pursuit of equally fantastic riches. In the end, any who desire to shape their fates and live life on their own terms might come to be called rogues. Role: Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents. Alignment: Any Hit Die: d8 Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:rogue\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -86,12 +86,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -111,12 +111,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:gauntlet",
+        "targetKey": "proficiency:short_sword",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:short_sword",
+        "targetKey": "proficiency:gauntlet",
         "setAction": {
           "numberValue": 1
         }
@@ -181,17 +181,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -370,8 +370,9 @@
         "id": "rogue:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "rogue"]
+          "tags": ["archetype+rogue"]
         }
       }, {
         "id": "rogue1:skill_rank:1",

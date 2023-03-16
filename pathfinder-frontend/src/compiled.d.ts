@@ -18,6 +18,9 @@ export namespace v4 {
         /** ChoiceDbo condition */
         condition?: (string|null);
 
+        /** ChoiceDbo repeating */
+        repeating?: (boolean|null);
+
         /** ChoiceDbo text */
         text?: (v4.ChoiceDbo.TextChoiceDbo|null);
 
@@ -45,6 +48,9 @@ export namespace v4 {
 
         /** ChoiceDbo condition. */
         public condition: string;
+
+        /** ChoiceDbo repeating. */
+        public repeating: boolean;
 
         /** ChoiceDbo text. */
         public text?: (v4.ChoiceDbo.TextChoiceDbo|null);

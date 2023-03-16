@@ -1,7 +1,7 @@
 {
   "id": "class:hunter",
   "name": "Hunter",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid"],
   "description": {
     "text": "Hunters are warriors of the wilds that have forged close bonds with trusted animal companions. They focus their tactics on fighting alongside their companion animals as a formidable team of two. Able to cast a wide variety of nature spells and take on the abilities and attributes of beasts, hunters magically improve both themselves and their animal companions. Role: Hunters can adapt their tactics to many kinds of opponents, and cherish their highly trained animal companions. As a team, the hunter and her companion can react to danger with incredible speed, making them excellent scouts, explorers, and saboteurs. Alignment: Any neutral. Hit Die: d8. Parent Classes: Druid and ranger. Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -551,12 +551,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -685,8 +685,9 @@
         "id": "hunter:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "hunter"]
+          "tags": ["archetype+hunter"]
         }
       }, {
         "id": "hunter1:skill_rank:1",
@@ -723,6 +724,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:hunter1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:hunter1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:hunter1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:hunter1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1"]
+        }
+      }, {
+        "id": "class:hunter1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1"]
         }
       }]
     }, {
@@ -799,6 +838,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:hunter2:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d3",
@@ -873,6 +925,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter3:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:hunter3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1"]
         }
       }]
     }, {
@@ -949,6 +1014,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2"]
+        }
+      }, {
+        "id": "class:hunter4:spell2_1",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d5",
@@ -1024,6 +1103,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d6",
@@ -1098,6 +1184,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter6:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2"]
         }
       }]
     }, {
@@ -1178,6 +1271,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1"]
+        }
+      }, {
+        "id": "class:hunter7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3"]
+        }
+      }, {
+        "id": "class:hunter7:spell3_1",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3"]
         }
       }]
     }, {
@@ -1264,6 +1378,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter8:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d9",
@@ -1343,6 +1464,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3"]
         }
       }]
     }, {
@@ -1429,6 +1557,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter10:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2"]
+        }
+      }, {
+        "id": "class:hunter10:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4"]
+        }
+      }, {
+        "id": "class:hunter10:spell4_1",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d11",
@@ -1514,6 +1663,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter11:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1"]
+        }
+      }, {
+        "id": "class:hunter11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d12",
@@ -1598,6 +1761,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter12:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4"]
         }
       }]
     }, {
@@ -1689,6 +1859,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter13:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3"]
+        }
+      }, {
+        "id": "class:hunter13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5"]
+        }
+      }, {
+        "id": "class:hunter13:spell5_1",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d14",
@@ -1778,6 +1969,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter14:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2"]
+        }
+      }, {
+        "id": "class:hunter14:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5"]
         }
       }]
     }, {
@@ -1869,6 +2074,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d16",
@@ -1958,6 +2170,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter16:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4"]
+        }
+      }, {
+        "id": "class:hunter16:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5", "spell+hunter6"]
+        }
+      }, {
+        "id": "class:hunter16:spell6_1",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5", "spell+hunter6"]
         }
       }]
     }, {
@@ -2054,6 +2287,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter17:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3"]
+        }
+      }, {
+        "id": "class:hunter17:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5", "spell+hunter6"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d18",
@@ -2148,6 +2395,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter18:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5", "spell+hunter6"]
         }
       }]
     }, {
@@ -2244,6 +2498,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:hunter19:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5"]
+        }
       }]
     }, {
       "condition": "@class:hunter\u003e\u003d20",
@@ -2338,6 +2599,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:hunter20:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4"]
+        }
+      }, {
+        "id": "class:hunter20:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+hunter1", "spell+hunter2", "spell+hunter3", "spell+hunter4", "spell+hunter5", "spell+hunter6"]
         }
       }]
     }]

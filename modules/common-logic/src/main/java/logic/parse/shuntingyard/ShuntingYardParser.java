@@ -9,6 +9,7 @@ import logic.ResolvedValue;
 import logic.parse.Parser;
 import logic.parse.tree.NodeExpression;
 import logic.parse.tree.TokenTree;
+import logic.util.Lambda2;
 
 public class ShuntingYardParser implements Parser {
 
@@ -27,9 +28,9 @@ public class ShuntingYardParser implements Parser {
                 .add(")", Literal::of)
                 .add(",", Literal::of)
                 .add(NodeExpression.literal("\"", "\"", "\\\""),
-                        quote -> Term.of(quote.substring(1, quote.length() - 1)))
+                        quote -> Term.of(quote.substring(1, quote.length() - 1), "\"", "\""))
                 .add(NodeExpression.literal("'", "'", "\\'"),
-                        quote -> Term.of(quote.substring(1, quote.length() - 1)));
+                        quote -> Term.of(quote.substring(1, quote.length() - 1), "'", "'"));
     }
 
     public ShuntingYardParser operator(String symbol, int precedence, Associativity associativity,
@@ -99,15 +100,15 @@ public class ShuntingYardParser implements Parser {
         return this;
     }
 
-    public ShuntingYardParser comment(String prefix, String suffix) {
+    public ShuntingYardParser comment(String prefix, String suffix, Lambda2<ResolvedValue, String, ResolvedValue> fn) {
         NodeExpression commentExpression = NodeExpression.literal(prefix, suffix);
-        tokenTree.add(commentExpression, Comment::new);
+        tokenTree.add(commentExpression, token -> new Comment(token, fn));
         return this;
     }
 
     public ShuntingYardParser term(String text, Supplier<ResolvedValue> extractor) {
         NodeExpression termExpression = NodeExpression.term(text);
-        tokenTree.add(termExpression, key -> new Term(extractor.get()));
+        tokenTree.add(termExpression, key -> Term.of(extractor.get()));
         return this;
     }
 
@@ -149,6 +150,11 @@ public class ShuntingYardParser implements Parser {
             }
 
             if (token instanceof Term) {
+                outputBuffer.push(token);
+                continue;
+            }
+
+            if (token instanceof Comment) {
                 outputBuffer.push(token);
                 continue;
             }

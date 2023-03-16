@@ -2,7 +2,7 @@
   "id": "feat:destructive_dispel",
   "name": "Destructive Dispel",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@spell:dispel_magic OR @spell:greater_dispel_magic, @caster_level \u003e\u003d 11)",
+  "prerequisiteFormula": "all(any(@spell:dispel_magic,@spell:greater_dispel_magic),@caster_level\u003e\u003d11)",
   "description": {
     "text": "When you dispel an enemy\u0027s magical defenses, those defenses crash down with debilitating effects.",
     "sections": {

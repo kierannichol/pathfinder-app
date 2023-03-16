@@ -12,10 +12,6 @@ export default class CharacterRepository {
   }
 
   public async list(): Promise<Character[]> {
-    if (this.cache !== undefined) {
-      return Object.values(this.cache);
-    }
-
     const user = getActiveUser();
     if (!user) {
       return [];
@@ -38,6 +34,9 @@ export default class CharacterRepository {
   }
 
   public async load(id: string): Promise<Character | undefined> {
+    if (this.cache && id in this.cache) {
+      return this.cache[id];
+    }
     const user = getActiveUser();
     if (!user) {
       return this.create(id);

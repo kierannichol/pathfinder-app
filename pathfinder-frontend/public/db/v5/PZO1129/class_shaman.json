@@ -1,7 +1,7 @@
 {
   "id": "class:shaman",
   "name": "Shaman",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid"],
   "description": {
     "text": "While some heroes speak to gods or consort with otherworldly muses, shamans commune with the spirits of the world and the energies that exist in every living thing. These divine adventurers draw upon their power to shape the world and expand the influence of their spiritual patrons. Shamans have strong ties to natural spirits. They form powerful bonds with particular spirits, and as their power grows they learn to call upon other spirits in times of need. Role: Shamans make for potent divine spellcasters, capable of using divine spells and the power of their spirits to aid their allies and destroy their foes. While they aren\u0027t the healers that clerics are, they can still fill that role when needed. Alignment: Any. Hit Die: d8. Parent Classes: Oracle and witch. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:shaman\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -161,17 +161,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -320,8 +320,9 @@
         "id": "shaman:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "shaman"]
+          "tags": ["archetype+shaman"]
         }
       }, {
         "id": "shaman1:skill_rank:1",
@@ -346,6 +347,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman1:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -410,6 +419,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman2:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d3",
@@ -472,6 +489,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman3:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -546,6 +571,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d5",
@@ -613,6 +646,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -687,6 +728,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d7",
@@ -759,6 +808,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -843,6 +900,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d9",
@@ -920,6 +985,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -1004,6 +1077,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d11",
@@ -1086,6 +1167,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -1180,6 +1269,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d13",
@@ -1267,6 +1364,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -1361,6 +1466,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d15",
@@ -1453,6 +1566,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -1557,6 +1678,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d17",
@@ -1654,6 +1783,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -1758,6 +1895,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:shaman18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
+        }
       }]
     }, {
       "condition": "@class:shaman\u003e\u003d19",
@@ -1855,6 +2000,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }, {
@@ -1968,6 +2121,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:shaman20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+shaman"]
         }
       }]
     }]

@@ -1,7 +1,7 @@
 {
   "id": "class:warpriest",
   "name": "Warpriest",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid"],
   "description": {
     "text": "Capable of calling upon the power of the gods in the form of blessings and spells, warpriests blend divine magic with martial skill. They are unflinching bastions of their faith, shouting gospel as they pummel foes into submission, and never shy away from a challenge to their beliefs. While clerics might be subtle and use diplomacy to accomplish their aims, warpriests aren\u0027t above using violence whenever the situation warrants it. In many faiths, warpriests form the core of the church\u0027s martial forces--reclaiming lost relics, rescuing captured clergy, and defending the church\u0027s tenets from all challenges. Role: Warpriests can serve as capable healers or spellcasters, calling upon their divine powers from the center of the fight, where their armor and martial skills are put to the test. Alignment: A warpriest\u0027s alignment must be within one step of his deity\u0027s, along either the law/chaos axis or the good/evil axis. Hit Die: d8. Parent Classes: Cleric and fighter. Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -140,8 +140,9 @@
         "id": "warpriest:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "warpriest"]
+          "tags": ["archetype+warpriest"]
         }
       }, {
         "id": "warpriest1:skill_rank:1",
@@ -154,6 +155,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest1:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -211,6 +220,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest2:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d3",
@@ -266,6 +283,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest3:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -333,6 +358,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d5",
@@ -394,6 +427,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d6",
@@ -454,6 +495,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -520,6 +569,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -592,6 +649,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d9",
@@ -657,6 +722,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -729,6 +802,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d11",
@@ -799,6 +880,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -876,6 +965,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d13",
@@ -951,6 +1048,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -1028,6 +1133,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d15",
@@ -1103,6 +1216,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -1190,6 +1311,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d17",
@@ -1270,6 +1399,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -1352,6 +1489,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:warpriest18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
+        }
       }]
     }, {
       "condition": "@class:warpriest\u003e\u003d19",
@@ -1432,6 +1577,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }, {
@@ -1523,6 +1676,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:warpriest20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+warpriest"]
         }
       }]
     }]

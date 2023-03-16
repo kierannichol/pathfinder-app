@@ -1,7 +1,7 @@
 {
   "id": "class:slayer",
   "name": "Slayer",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid"],
   "description": {
     "text": "Skilled at tracking down targets, slayers are consummate hunters, living for the chase and the deadly stroke that brings it to a close. Slayers spend most of their time honing their weapon skills, studying the habits and anatomy of foes, and practicing combat maneuvers. Role: The slayer is elusive, and good at finding the opportune time and location to strike. Combining the deadliest talents of rangers and rogues, a slayer\u0027s abilities are all about getting into combat, dealing with a target, and then getting back out again. Alignment: Any. Hit Die: d10. Parent Classes: Ranger and rogue. Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -551,12 +551,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -675,8 +675,9 @@
         "id": "slayer:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "slayer"]
+          "tags": ["archetype+slayer"]
         }
       }, {
         "id": "slayer1:skill_rank:1",

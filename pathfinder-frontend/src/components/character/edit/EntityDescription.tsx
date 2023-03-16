@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {ReactNode, useMemo} from "react";
 import CharacterAtLevel from "../../../core/CharacterAtLevel";
 import Description from "../../../core/Description";
 import {Formula} from "../../../logic/Formula";
@@ -19,13 +19,25 @@ export default function EntityDescription({ description, prerequisiteFormula, ch
 
   const showPrerequisiteList = true;//useMemo(() => !feat.isValidFor(characterAtLevel), [feat, characterAtLevel]);
 
+  const descriptionTextElement = useMemo(() => {
+    if (description.text === '') {
+      return <></>;
+    }
+    let element: ReactNode = description.text;
+    if (Object.keys(description.sections).length > 0) {
+      element = <i>{element}</i>
+    }
+
+    return <p>{element}</p>;
+  }, [description]);
+
   return (
       <div>
         {showPrerequisiteList && prerequisiteFormula !== undefined && prerequisiteFormula.asFormula() !== '' && prerequisiteFormula.asFormula() !== 'true' && characterAtLevel !== undefined && <div className={isValid ? styles.prerequisitesValid : styles.prerequisitesInvalid}>
           <div className={styles.prerequisiteHeader}>Prerequisites</div>
           <PrerequisiteList formula={prerequisiteFormula} characterAtLevel={characterAtLevel} />
         </div>}
-        {description.text !== '' && <p><i>{description.text}</i></p>}
+        {descriptionTextElement}
         {Object.keys(description.sections).map(sectionLabel =>
             <p key={sectionLabel}><b>{sectionLabel}:</b> {description.sections[sectionLabel]}</p>)}
       </div>);

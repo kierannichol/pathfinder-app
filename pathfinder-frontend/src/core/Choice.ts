@@ -41,11 +41,11 @@ export class ChoiceTree {
 export class Choice {
 
   static text(key: string, label: string, type: string, effectsFn: (value: string) => Effect[]): TextChoiceNode {
-    return new TextChoiceNode(key, label, type,'', effectsFn);
+    return new TextChoiceNode(key, label, type, 0,'', effectsFn);
   }
 
-  static select(key: string, label: string, type: string, options: (db: IDataHub, category: string|undefined) => OptionMap, categories: OptionCategory[] = []): SelectChoiceNode {
-    return new UnresolvedSelectChoiceNode(key, label, type, options, categories);
+  static select(key: string, label: string, type: string, options: (db: IDataHub, category: string|undefined) => OptionMap, categories: OptionCategory[] = []): UnresolvedSelectChoiceNode {
+    return new UnresolvedSelectChoiceNode(key, label, type, 0, options, categories);
   }
 
   static option(id: string, name: string, prerequisiteFormula: string|Resolvable, descriptionFn: () => Promise<Description>, outcomeFn: () => Promise<Outcome>): Option {
@@ -165,6 +165,8 @@ export interface ChoiceNode {
   get label(): string;
   get type(): string;
   get current(): string|undefined;
+
+  get repeatingIndex(): number;
   resolve(db: IDataHub, values: ChoiceValues): Promise<ChoiceNode>;
   applyTo(state: MutableDataContext): void;
   choices(state: DataContext): ChoiceNode[];
@@ -176,6 +178,7 @@ export class TextChoiceNode implements ChoiceNode {
   constructor(public readonly key: string,
               public readonly label: string,
               public readonly type: string,
+              public readonly repeatingIndex: number,
               public readonly current: string|undefined,
               private readonly effectsFn: (value: string) => Effect[]) {
   }
@@ -194,10 +197,20 @@ export class TextChoiceNode implements ChoiceNode {
     return [];
   }
 
+  repeating(): TextChoiceNode {
+    return new TextChoiceNode(this.key,
+        this.label,
+        this.type,
+        this.repeatingIndex > 0 ? this.repeatingIndex : 1,
+        this.current,
+        this.effectsFn);
+  }
+
   async resolve(db: IDataHub, values: ChoiceValues): Promise<TextChoiceNode> {
     return new TextChoiceNode(this.key,
         this.label,
         this.type,
+        this.repeatingIndex,
         values[this.key] ?? '', this.effectsFn);
   }
 }
@@ -214,6 +227,7 @@ export class UnresolvedSelectChoiceNode implements SelectChoiceNode {
   constructor(public readonly key: string,
               public readonly label: string,
               public readonly type: string,
+              public readonly repeatingIndex: number,
               public readonly options: (db: IDataHub, category: string|undefined) => OptionMap,
               public readonly categories: OptionCategory[] = []) {
   }
@@ -229,13 +243,25 @@ export class UnresolvedSelectChoiceNode implements SelectChoiceNode {
         ? new ResolvedSelectChoiceNode(this.key,
             this.label,
             this.type,
+            this.repeatingIndex,
             this.options,
             this.categories,
-            await selectedOption.resolve(db, values))
+            await selectedOption.resolve(db, values),
+            await this.createNextRepeatingChoice()?.resolve(db, values))
         : this;
   }
 
   applyTo(state: MutableDataContext): void {}
+
+  repeating(): UnresolvedSelectChoiceNode {
+    return new UnresolvedSelectChoiceNode(
+        this.key,
+        this.label,
+        this.type,
+        this.repeatingIndex > 0 ? this.repeatingIndex : 1,
+        this.options,
+        this.categories);
+  }
 
   public choices(state: DataContext): ChoiceNode[] {
     return [ this ];
@@ -244,16 +270,31 @@ export class UnresolvedSelectChoiceNode implements SelectChoiceNode {
   templates(): Template[] {
     return [];
   }
+
+  private createNextRepeatingChoice() {
+    if (this.repeatingIndex > 0) {
+      const nextRepeatingIndex = this.repeatingIndex + 1;
+      let repeatedChoiceKey = this.key.replace(/_\d+/, '') + "_" + nextRepeatingIndex;
+      return new UnresolvedSelectChoiceNode(
+          repeatedChoiceKey,
+          this.label,
+          this.type,
+          nextRepeatingIndex,
+          this.options,
+          this.categories);
+    }
+  }
 }
 
 export class ResolvedSelectChoiceNode implements SelectChoiceNode {
-
   constructor(public readonly key: string,
               public readonly label: string,
               public readonly type: string,
+              public readonly repeatingIndex: number,
               public readonly options: (db: IDataHub, category: string|undefined) => OptionMap,
               public readonly categories: OptionCategory[],
-              private readonly selected: Option) {
+              private readonly selected: Option,
+              private readonly nextRepeatedChoice: ChoiceNode|undefined = undefined) {
   }
 
   get current(): string {
@@ -262,18 +303,20 @@ export class ResolvedSelectChoiceNode implements SelectChoiceNode {
 
   async resolve(db: IDataHub, values: ChoiceValues): Promise<ChoiceNode> {
     const selected = values[this.key];
-    return selected
+    const selectedOption = db.option(selected);
+    return selectedOption
         ? new ResolvedSelectChoiceNode(this.key,
             this.label,
             this.type,
+            this.repeatingIndex,
             this.options,
             this.categories,
-            await (selected === this.selected.id
-                ? this.selected
-                : this.options(db, undefined)[selected]).resolve(db, values))
+            await selectedOption.resolve(db, values),
+            await this.nextRepeatedChoice?.resolve(db, values))
         : new UnresolvedSelectChoiceNode(this.key,
             this.label,
             this.type,
+            this.repeatingIndex,
             this.options,
             this.categories);
   }
@@ -283,7 +326,11 @@ export class ResolvedSelectChoiceNode implements SelectChoiceNode {
   }
 
   public choices(state: DataContext): ChoiceNode[] {
-    return [ this, ...this.selected.choices(state) ];
+    const choices = [ this, ...this.selected.choices(state) ];
+    if (this.nextRepeatedChoice) {
+      choices.push(...this.nextRepeatedChoice.choices(state));
+    }
+    return choices;
   }
 
   templates(): Template[] {

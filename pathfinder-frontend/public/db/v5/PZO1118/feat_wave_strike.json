@@ -2,7 +2,7 @@
   "id": "feat:wave_strike",
   "name": "Wave Strike",
   "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@ability:weapon_expertise OR @feat:quick_draw, @skill:bluff \u003e\u003d 1)",
+  "prerequisiteFormula": "all(any(@ability:weapon_expertise,@feat:quick_draw),@skill:bluff\u003e\u003d1)",
   "description": {
     "text": "You present a serene facade until you unsheathe your weapon and strike in one fluid motion.",
     "sections": {

@@ -1,7 +1,7 @@
 {
   "id": "class:alchemist",
   "name": "Alchemist",
-  "tags": ["class", "base"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base"],
   "description": {
     "text": "Whether secreted away in a smoky basement laboratory or gleefully experimenting in a well-respected school of magic, the alchemist is often regarded as being just as unstable, unpredictable, and dangerous as the concoctions he brews. While some creators of alchemical items content themselves with sedentary lives as merchants, providing tindertwigs and smokesticks, the true alchemist answers a deeper calling. Rather than cast magic like a spellcaster, the alchemist captures his own magic potential within liquids and extracts he creates, infusing his chemicals with virulent power to grant him impressive skill with poisons, explosives, and all manner of self-transformative magic. Role: The alchemist\u0027s reputation is not softened by his exuberance (some would say dangerous recklessness) in perfecting his magical extracts and potion-like creations, infusing these substances with magic siphoned from his aura and using his own body as experimental stock. Nor is it mollified by the alchemist\u0027s almost gleeful passion for building explosive bombs and discovering strange new poisons and methods for their use. These traits, while making him a liability and risk for most civilized organizations and institutions of higher learning, seem to fit quite well with most adventuring groups. Alignment: Any. Hit Die: d8. Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:alchemist\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -161,17 +161,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -325,8 +325,9 @@
         "id": "alchemist:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "alchemist"]
+          "tags": ["archetype+alchemist"]
         }
       }, {
         "id": "alchemist1:skill_rank:1",
@@ -351,6 +352,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist1:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -420,6 +429,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist2:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d3",
@@ -483,6 +500,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist3:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d4",
@@ -545,6 +570,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -614,6 +647,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d6",
@@ -682,6 +723,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d7",
@@ -749,6 +798,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -823,6 +880,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d9",
@@ -890,6 +955,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -969,6 +1042,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d11",
@@ -1042,6 +1123,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d12",
@@ -1114,6 +1203,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -1192,6 +1289,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -1276,6 +1381,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d15",
@@ -1353,6 +1466,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -1437,6 +1558,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d17",
@@ -1519,6 +1648,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }, {
@@ -1608,6 +1745,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d19",
@@ -1691,6 +1836,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:alchemist19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
+        }
       }]
     }, {
       "condition": "@class:alchemist\u003e\u003d20",
@@ -1773,6 +1926,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:alchemist20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+alchemist"]
         }
       }]
     }]

@@ -1,7 +1,7 @@
 {
   "id": "class:unchained_barbarian",
   "name": "Unchained Barbarian",
-  "tags": ["class", "unchained"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "base", "base", "unchained", "unchained"],
   "description": {
     "text": "For some, there is only rage. In the ways of their people, in the fury of their passion, in the howl of battle, conflict is all these brutal souls know. Savages, hired muscle, masters of vicious martial techniques, they are not soldiers or professional warriors--they are the battle possessed, creatures of slaughter and spirits of war. Known as barbarians, these warmongers know little of training, preparation, or the rules of warfare; for them, only the moment exists, with the foes that stand before them and the knowledge that the next moment might hold their death. They possess a sixth sense in regard to danger and the endurance to weather all that might entail. These brutal warriors might rise from all walks of life, both civilized and savage, though whole societies embracing such philosophies roam the wild places of the world. Within barbarians storms the primal spirit of battle, and woe to those who face their rage. Role: Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves. With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way. Unchained: The unchained barbarian is similar in many regards to the standard barbarian--she still goes into a rage and gains rage powers, but many of the details have been changed. Rage now grants temporary hit points and static bonuses on attack and damage rolls, rather than bonuses to ability scores that force players to recalculate a number of statistics. Additionally, many rage powers now function whenever the barbarian is raging, as opposed to just once per rage. Finally, the overall utility of many of the rage powers has been adjusted to make them more useful and interesting. Alignment: Any non-lawful Hit Die: d12 Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -551,12 +551,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -650,8 +650,9 @@
         "id": "unchained_barbarian:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "unchained_barbarian"]
+          "tags": ["archetype+unchained_barbarian"]
         }
       }, {
         "id": "unchained_barbarian1:skill_rank:1",

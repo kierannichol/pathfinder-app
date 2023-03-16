@@ -1,7 +1,7 @@
 {
   "id": "class:druid",
   "name": "Druid",
-  "tags": ["class", "core"],
+  "tags": ["class", "core", "core", "core", "core", "core"],
   "description": {
     "text": "Within the purity of the elements and the order of the wilds lingers a power beyond the marvels of civilization. Furtive yet undeniable, these primal magics are guarded over by servants of philosophical balance known as druids. Allies to beasts and manipulators of nature, these often misunderstood protectors of the wild strive to shield their lands from all who would threaten them and prove the might of the wilds to those who lock themselves behind city walls. Rewarded for their devotion with incredible powers, druids gain unparalleled shape-shifting abilities, the companionship of mighty beasts, and the power to call upon nature\u0027s wrath. The mightiest temper powers akin to storms, earthquakes, and volcanoes with primeval wisdom long abandoned and forgotten by civilization. Role: While some druids might keep to the fringe of battle, allowing companions and summoned creatures to fight while they confound foes with the powers of nature, others transform into deadly beasts and savagely wade into combat. Druids worship personifications of elemental forces, natural powers, or nature itself. Typically this means devotion to a nature deity, though druids are just as likely to revere vague spirits, animalistic demigods, or even specific awe-inspiring natural wonders. Alignment: Any neutral Hit Die: d8 Starting Wealth: 2d6 × 10 gp (average 70 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -31,12 +31,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:quarterstaff",
+        "targetKey": "proficiency:club",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:club",
+        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -76,12 +76,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -215,8 +215,9 @@
         "id": "druid:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "druid"]
+          "tags": ["archetype+druid"]
         }
       }, {
         "id": "druid1:skill_rank:1",
@@ -241,6 +242,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid1:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -314,6 +323,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid2:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -397,6 +414,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid3:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -486,6 +511,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:druid4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
+        }
       }]
     }, {
       "condition": "@class:druid\u003e\u003d5",
@@ -573,6 +606,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -666,6 +707,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -764,6 +813,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -867,6 +924,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -981,6 +1046,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:druid9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
+        }
       }]
     }, {
       "condition": "@class:druid\u003e\u003d10",
@@ -1093,6 +1166,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -1211,6 +1292,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -1334,6 +1423,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -1468,6 +1565,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:druid13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
+        }
       }]
     }, {
       "condition": "@class:druid\u003e\u003d14",
@@ -1600,6 +1705,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -1744,6 +1857,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:druid15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
+        }
       }]
     }, {
       "condition": "@class:druid\u003e\u003d16",
@@ -1886,6 +2007,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -2034,6 +2163,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -2188,6 +2325,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:druid18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
+        }
       }]
     }, {
       "condition": "@class:druid\u003e\u003d19",
@@ -2335,6 +2480,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }, {
@@ -2488,6 +2641,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:druid20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+druid"]
         }
       }]
     }]

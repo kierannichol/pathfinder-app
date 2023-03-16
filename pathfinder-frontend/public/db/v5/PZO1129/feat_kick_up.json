@@ -2,7 +2,7 @@
   "id": "feat:kick_up",
   "name": "Kick Up",
   "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(all(@dex_score \u003e\u003d 12, @feat:acrobatic, @skill:acrobatics \u003e\u003d 1), @ability:slayer#inquisitor \u003e\u003d 1 OR @class:swashbuckler \u003e\u003d 1)",
+  "prerequisiteFormula": "all(@dex_score\u003e\u003d12,@feat:acrobatic,@skill:acrobatics\u003e\u003d1,any(@ability:slayer#inquisitor\u003e\u003d1,@class:swashbuckler\u003e\u003d1))",
   "description": {
     "text": "You have learned how to kick items on the ground to a ready hand.",
     "sections": {

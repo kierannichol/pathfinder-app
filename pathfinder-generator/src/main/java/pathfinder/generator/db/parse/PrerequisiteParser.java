@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import logic.parse.Formula;
+import logic.parse.FormulaOptimizer;
 import logic.parse.tree.ParseException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -87,6 +88,7 @@ public class PrerequisiteParser {
             .addReplacement("ability to use any polymorph effect", "\"Ability to use any polymorph effect\"")
             .addReplacement("Centaur or any tauric creature at the GM's discretion", "\"Centaur or any tauric creature at the GM's discretion\"")
             .addReplacement("alignment must be within one step of your deity's", "\"Alignment must be within one step of your deity's\"")
+            .addReplacement("must worship and receive spells from a deity", "\"Worship and receive spells from a deity\"")
 
             .addReplacement("You have no levels in a class that has the grit class feature", "!@ability:grit")
             .addReplacement("Siege Weapon Engineer", "@feat:siege_engineer")
@@ -139,8 +141,8 @@ public class PrerequisiteParser {
             .addImmediateReplacement("{NUMBER} rank in at least one knowledge skill", "max(@skill:knowledge_*)[Any knowledge skill]")
             .addReplacement("special mount", "\"Special mount\"")
 
-            .addReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank", "(@skill:knowledge#dungeoneering OR @skill:knowledge#local OR @skill:knowledge#planes OR @skill:knowledge#religion)")
-            .addReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) {NUMBER} ranks", "(@skill:knowledge#dungeoneering >= {0} OR @skill:knowledge#local >= {0} OR @skill:knowledge#planes >= {0} OR @skill:knowledge#religion >= {0})")
+            .addImmediateReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) 1 rank", "(@skill:knowledge_dungeoneering OR @skill:knowledge_local OR @skill:knowledge_planes OR @skill:knowledge_religion)")
+            .addImmediateReplacement("Knowledge (dungeoneering, local, nature, planes, or religion) {NUMBER} ranks", "(@skill:knowledge_dungeoneering >= {0} OR @skill:knowledge_local >= {0} OR @skill:knowledge_planes >= {0} OR @skill:knowledge_religion >= {0})")
 
             // Sizes
             .addImmediateReplacement("size {SIZE} or larger", "@size >= {0}")
@@ -292,6 +294,7 @@ public class PrerequisiteParser {
             .addReplacement("Knowledge", "@skill:knowledge")
 
             // Not in supported book
+            .addReplacement("none", "true")
             .addReplacement("savage", "@class:savage")
             .addReplacement("shadow jump", "false")
             .addReplacement("Elusive target", "@ability:elusive_target")
@@ -345,8 +348,8 @@ public class PrerequisiteParser {
 
             // Generic
             .addReplacement("{NAME} with {NAME}", "{0}#{key:1}")
-            .addReplacement("{PHRASE}, {PHRASE} and either the {PHRASE} or {PHRASE}", "all({0}, {1}, any({2}, {3})")
-            .addReplacement("{PHRASE} and {PHRASE}, or {PHRASE}", "any(all({0}, {1}), {2})")
+            .addReplacement("{PHRASE}, {PHRASE} and either the {PHRASE} or {PHRASE}", "all({0}, {1}, any({2}, {3}))")
+            .addReplacement("{PHRASE} and {PHRASE}, or {PHRASE}", "any(all({0}, {1}), {2}))")
             .addReplacement("{PHRASE} and {PHRASE}", "{0} AND {1}")
             .addReplacement("{PHRASE} or {PHRASE}", "{0} OR {1}")
             .addReplacement("{PHRASE}, {PHRASE}, or {PHRASE}", "any({0}, {1}, {2})")
@@ -406,7 +409,7 @@ public class PrerequisiteParser {
                 log.warn("Was just \"@ability\":\n%s\n%s".formatted(prerequisites, parsed));
             }
 
-            return parsed;
+            return FormulaOptimizer.optimize(parsed);
         } catch (ParseException e) {
             log.error("Failed to parse: \"" + prerequisites + "\"");
             throw e;

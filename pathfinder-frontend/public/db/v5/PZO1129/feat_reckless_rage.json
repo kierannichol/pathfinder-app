@@ -2,7 +2,7 @@
   "id": "feat:reckless_rage",
   "name": "Reckless Rage",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@feat:power_attack, any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature] OR max(@ability:raging_song#*)[Raging song class feature])",
+  "prerequisiteFormula": "all(@feat:power_attack,any(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],max(@ability:raging_song#*)[Raging song class feature]))",
   "description": {
     "text": "Your boundless rage grants your blows extra strength, though at the expense of accuracy.",
     "sections": {

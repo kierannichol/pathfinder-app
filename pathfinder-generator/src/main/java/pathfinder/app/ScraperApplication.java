@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import pathfinder.scraper.local.D20pfsrdRaceYamlGenerator;
+import pathfinder.scraper.local.D20pfsrdClassYamlGenerator;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
@@ -23,7 +23,11 @@ public class ScraperApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-            ctx.getBean(D20pfsrdRaceYamlGenerator.class).generateLocalDatabase();
+
+            ctx.getBean(D20pfsrdClassYamlGenerator.class).generateLocalDatabase();
+
+//            ctx.getBean(SpellYamlGenerator.class).generateLocalDatabase();
+//            ctx.getBean(D20pfsrdRaceYamlGenerator.class).generateLocalDatabase();
 //            ctx.getBean(MagusArcanaYamlGenerator.class).generateLocalDatabase();
 //            ctx.getBean(D20pfsrdFeatYamlGenerator.class).generateLocalDatabase();
 //            ctx.getBean(D20pfsrdClassYamlGenerator.class).generateLocalDatabase();

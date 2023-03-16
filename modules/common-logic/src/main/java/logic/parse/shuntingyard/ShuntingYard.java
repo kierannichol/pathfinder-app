@@ -8,8 +8,10 @@ import logic.ResolveException;
 import logic.ResolvedValue;
 import logic.context.DataContext;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RequiredArgsConstructor
+@Slf4j
 public class ShuntingYard implements Resolvable {
     private final List<Object> stack;
 
@@ -41,12 +43,18 @@ public class ShuntingYard implements Resolvable {
                     params.add((ResolvedValue) checkedPopParameter(next, arity, localStack));
                 }
                 localStack.push(func.execute(params));
+            } else if (next instanceof Comment comment) {
+                localStack.push(comment.fn().execute((ResolvedValue) localStack.pop(), comment.text()));
             } else {
                 while (next instanceof Resolvable resolvable) {
                     next = resolvable.resolve(context);
                 }
                 localStack.push(next);
             }
+        }
+
+        if (localStack.isEmpty()) {
+            return ResolvedValue.none();
         }
 
         return (ResolvedValue) localStack.pop();

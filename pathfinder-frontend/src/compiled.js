@@ -28,6 +28,7 @@ $root.v4 = (function() {
          * @property {string|null} [type] ChoiceDbo type
          * @property {string|null} [label] ChoiceDbo label
          * @property {string|null} [condition] ChoiceDbo condition
+         * @property {boolean|null} [repeating] ChoiceDbo repeating
          * @property {v4.ChoiceDbo.TextChoiceDbo|null} [text] ChoiceDbo text
          * @property {v4.ChoiceDbo.SelectChoiceDbo|null} [select] ChoiceDbo select
          */
@@ -78,6 +79,14 @@ $root.v4 = (function() {
          * @instance
          */
         ChoiceDbo.prototype.condition = "";
+
+        /**
+         * ChoiceDbo repeating.
+         * @member {boolean} repeating
+         * @memberof v4.ChoiceDbo
+         * @instance
+         */
+        ChoiceDbo.prototype.repeating = false;
 
         /**
          * ChoiceDbo text.
@@ -141,6 +150,8 @@ $root.v4 = (function() {
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.label);
             if (message.condition != null && Object.hasOwnProperty.call(message, "condition"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.condition);
+            if (message.repeating != null && Object.hasOwnProperty.call(message, "repeating"))
+                writer.uint32(/* id 5, wireType 0 =*/40).bool(message.repeating);
             if (message.text != null && Object.hasOwnProperty.call(message, "text"))
                 $root.v4.ChoiceDbo.TextChoiceDbo.encode(message.text, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
             if (message.select != null && Object.hasOwnProperty.call(message, "select"))
@@ -193,6 +204,10 @@ $root.v4 = (function() {
                     }
                 case 4: {
                         message.condition = reader.string();
+                        break;
+                    }
+                case 5: {
+                        message.repeating = reader.bool();
                         break;
                     }
                 case 100: {
@@ -251,6 +266,9 @@ $root.v4 = (function() {
             if (message.condition != null && message.hasOwnProperty("condition"))
                 if (!$util.isString(message.condition))
                     return "condition: string expected";
+            if (message.repeating != null && message.hasOwnProperty("repeating"))
+                if (typeof message.repeating !== "boolean")
+                    return "repeating: boolean expected";
             if (message.text != null && message.hasOwnProperty("text")) {
                 properties.choice = 1;
                 {
@@ -292,6 +310,8 @@ $root.v4 = (function() {
                 message.label = String(object.label);
             if (object.condition != null)
                 message.condition = String(object.condition);
+            if (object.repeating != null)
+                message.repeating = Boolean(object.repeating);
             if (object.text != null) {
                 if (typeof object.text !== "object")
                     throw TypeError(".v4.ChoiceDbo.text: object expected");
@@ -323,6 +343,7 @@ $root.v4 = (function() {
                 object.type = "";
                 object.label = "";
                 object.condition = "";
+                object.repeating = false;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -332,6 +353,8 @@ $root.v4 = (function() {
                 object.label = message.label;
             if (message.condition != null && message.hasOwnProperty("condition"))
                 object.condition = message.condition;
+            if (message.repeating != null && message.hasOwnProperty("repeating"))
+                object.repeating = message.repeating;
             if (message.text != null && message.hasOwnProperty("text")) {
                 object.text = $root.v4.ChoiceDbo.TextChoiceDbo.toObject(message.text, options);
                 if (options.oneofs)

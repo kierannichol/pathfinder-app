@@ -7,6 +7,7 @@ import pathfinder.model.Id;
 
 public record ClassLevel(int level,
                          @JsonProperty("class_feature_names") List<Id> classFeatureIds,
-                         @JsonProperty("spells_per_day") Map<Integer, Integer> spellsPerDay) {
+                         @JsonProperty("spells_per_day") Map<Integer, Integer> spellsPerDay,
+                         @JsonProperty("spells_known") Map<Integer, Integer> spellsKnown) {
 
 }

@@ -1,7 +1,7 @@
 {
   "id": "class:brawler",
   "name": "Brawler",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid"],
   "description": {
     "text": "Deadly even with nothing in her hands, a brawler eschews using the fighter\u0027s heavy armor and the monk\u0027s mysticism, focusing instead on perfecting many styles of brutal unarmed combat. Versatile, agile, and able to adapt to most enemy attacks, a brawler\u0027s body is a powerful weapon. Role: Brawlers are maneuverable and well suited for creating flanking situations or dealing with lightly armored enemies, as well as quickly adapting to a rapidly changing battlefield. Alignment: Any. Hit Die: d10. Parent Classes: Fighter and monk. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:brawler\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,17 +81,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:javelin",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:handaxe",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:brass_knuckles",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
@@ -111,12 +111,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:gauntlet",
+        "targetKey": "proficiency:short_sword",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:short_sword",
+        "targetKey": "proficiency:gauntlet",
         "setAction": {
           "numberValue": 1
         }
@@ -171,17 +171,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -340,8 +340,9 @@
         "id": "brawler:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "brawler"]
+          "tags": ["archetype+brawler"]
         }
       }, {
         "id": "brawler1:skill_rank:1",

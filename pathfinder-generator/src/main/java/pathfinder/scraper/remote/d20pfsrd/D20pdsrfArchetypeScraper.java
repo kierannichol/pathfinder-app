@@ -11,7 +11,7 @@ import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Component;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Archetype;
-import pathfinder.source.ClassSourceDatabase;
+import pathfinder.source.local.ClassSourceDatabase;
 
 @Component
 @RequiredArgsConstructor
@@ -27,7 +27,7 @@ public class D20pdsrfArchetypeScraper extends AbstractD20pfsrdScraper {
                     try {
                         return scrapeArchetypes(characterClass.id(),
                                 "https://www.d20pfsrd.com/classes/%s-classes/%s/archetypes/paizo-%s-archetypes/"
-                                        .formatted(characterClass.type().name().toLowerCase(), id.key, id.key));
+                                        .formatted(characterClass.category().toLowerCase(), id.key, id.key));
                     } catch (IOException e) {
 //                        throw new UncheckedIOException(e);
                         log.error("Error scraping archetypes for " + id, e);

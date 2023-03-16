@@ -1,7 +1,7 @@
 {
   "id": "class:gunslinger",
   "name": "Gunslinger",
-  "tags": ["class", "base"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "base"],
   "description": {
     "text": "For a renegade few, battle sounds different than it does for the typical fighter. The clash of steel and the sizzle of spell energy are drowned out by the thunderous rhythm of gunfire--the pounding beat of the gunslinger. Gunslingers are a bold and mysterious lot. While many treat the secrets of black powder with the same care and reverence that a wizard typically reserves for his spellbook, most gunslingers know that firearms are a secret that cannot remain concealed forever. While current firearms are simple, often imprecise, and even dangerous devices, they are a technology on the move, and one that will become even more powerful when it is fully fused with magic. Role: Gunslingers are thunderous artillery, often found where the fighting is fiercest. Brave, clever, and frequently foolhardy, many gunslingers push to position themselves at close range, barrels blazing, to take down their foes and demoralize their enemies. Other gunslingers are masters of distant death, picking off enemies from afar with their strange and wondrous weapons. Alignment: Any. Hit Die: d10. Starting Wealth: 5d6 x 10 gp (average 175gp) In addition, each character begins play with an outfit worth 10 gp or less, and the gunslinger begins with her starting firearm."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -655,8 +655,9 @@
         "id": "gunslinger:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "gunslinger"]
+          "tags": ["archetype+gunslinger"]
         }
       }, {
         "id": "gunslinger1:skill_rank:1",

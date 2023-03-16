@@ -2,7 +2,7 @@
   "id": "feat:deft_shootist_deed",
   "name": "Deft Shootist Deed",
   "tags": ["feat", "grit", "grit"],
-  "prerequisiteFormula": "all(@ability:grit#gunslinger OR @feat:amateur_gunslinger, @feat:dodge, @feat:mobility)",
+  "prerequisiteFormula": "all(any(@ability:grit#gunslinger,@feat:amateur_gunslinger),@feat:dodge,@feat:mobility)",
   "description": {
     "text": "You keep an eye out while focusing on your weapon, allowing you to avoid attacks while shooting and reloading firearms.",
     "sections": {

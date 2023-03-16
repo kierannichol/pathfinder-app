@@ -13,8 +13,19 @@ public class SelectChoice implements Choice {
     private final String label;
     private final String type;
     private final String condition;
+    private final boolean repeating;
     private final List<String> tags;
     private final List<Id> ids;
+
+    public SelectChoice(String id, String label, String type, String condition, List<String> tags, List<Id> ids) {
+        this.id = id;
+        this.label = label;
+        this.type = type;
+        this.condition = condition;
+        this.repeating = false;
+        this.tags = tags;
+        this.ids = ids;
+    }
 
     @Override
     public ChoiceDbo toDbo() {
@@ -23,6 +34,7 @@ public class SelectChoice implements Choice {
                 .setLabel(label)
                 .setType(type)
                 .setCondition(condition)
+                .setRepeating(repeating)
                 .setSelect(SelectChoiceDbo.newBuilder()
                         .addAllTags(tags)
                         .addAllIds(mapList(ids, Id::string))

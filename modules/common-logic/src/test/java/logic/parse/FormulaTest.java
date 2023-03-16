@@ -2,9 +2,11 @@ package logic.parse;
 
 import static logic.parse.assertions.FormulaAssertions.assertFormula;
 import static logic.parse.assertions.ResolvedValueAssertions.assertResolvedValue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import logic.context.DataContext;
 import logic.context.StaticDataContext;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 class FormulaTest {
@@ -213,5 +215,45 @@ class FormulaTest {
         assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1).set("c", 0))).hasValue(true);
         assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 0).set("c", 1))).hasValue(true);
         assertResolvedValue(formula.resolve(StaticDataContext.empty().set("a", 1).set("b", 1).set("c", 1))).hasValue(true);
+    }
+
+    @Nested
+    class Optimize {
+
+        @Test
+        void any() {
+            var optimized = FormulaOptimizer.optimize("any(any(@a, any(@b, @c)), @d)");
+            assertThat(optimized).isEqualTo("any(@a,@b,@c,@d)");
+        }
+
+        @Test
+        void all() {
+            var optimized = FormulaOptimizer.optimize("all(any(@a, all(@b)), @c, all(@d AND @e), @f)");
+            assertThat(optimized).isEqualTo("all(any(@a,@b),@c,@d,@e,@f)");
+        }
+
+        @Test
+        void bracketAdd() {
+            var optimized = FormulaOptimizer.optimize("@a + (@b + @c)");
+            assertThat(optimized).isEqualTo("@a+@b+@c");
+        }
+
+        @Test
+        void keepsRequiredBrackets() {
+            assertThat(FormulaOptimizer.optimize("@a * (@b + @c + @d)/2")).isEqualTo("@a*(@b+@c+@d)/2");
+            assertThat(FormulaOptimizer.optimize("@a - (@b / @c)")).isEqualTo("@a-(@b/@c)");
+            assertThat(FormulaOptimizer.optimize("@a < (@b - @c)")).isEqualTo("@a<(@b-@c)");
+        }
+
+        @Test
+        void literals() {
+            assertThat(FormulaOptimizer.optimize("\"testing\"")).isEqualTo("\"testing\"");
+            assertThat(FormulaOptimizer.optimize("any(@a,\"testing\")")).isEqualTo("any(@a,\"testing\")");
+        }
+
+        @Test
+        void comments() {
+            assertThat(FormulaOptimizer.optimize("(@a+@b)[testing]")).isEqualTo("(@a+@b)[testing]");
+        }
     }
 }

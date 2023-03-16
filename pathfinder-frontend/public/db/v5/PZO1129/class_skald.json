@@ -1,7 +1,7 @@
 {
   "id": "class:skald",
   "name": "Skald",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid"],
   "description": {
     "text": "Skalds are poets, historians, and keepers of lore who use their gifts for oration and song to inspire allies into a frenzied rage. They balance a violent spirit with the veneer of civilization, recording events such as heroic battles and the deeds of great leaders, enhancing these stories in the retelling to earn bloodier victories in combat. A skald\u0027s poetry is nuanced and often has multiple overlapping meanings, and he applies similar talents to emulate magic from other spellcasters. Role: A skald inspires his allies, and often presses forward to fight enemies in melee. Outside of combat, he\u0027s useful as a healer and scholar, less versatile but more durable than a bard. Alignment: Any. Hit Die: d8. Parent Classes: Barbarian and bard. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -551,12 +551,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -710,8 +710,9 @@
         "id": "skald:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "skald"]
+          "tags": ["archetype+skald"]
         }
       }, {
         "id": "skald1:skill_rank:1",
@@ -736,6 +737,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:skald1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:skald1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:skald1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:skald1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+skald1"]
+        }
+      }, {
+        "id": "class:skald1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+skald1"]
         }
       }]
     }, {
@@ -800,6 +839,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:skald2:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+skald1"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d3",
@@ -857,6 +909,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald3:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:skald3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+skald1"]
         }
       }]
     }, {
@@ -921,6 +986,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2"]
+        }
+      }, {
+        "id": "class:skald4:spell2_1",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d5",
@@ -984,6 +1063,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d6",
@@ -1046,6 +1132,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald6:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2"]
         }
       }]
     }, {
@@ -1120,6 +1213,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+skald1"]
+        }
+      }, {
+        "id": "class:skald7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3"]
+        }
+      }, {
+        "id": "class:skald7:spell3_1",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d8",
@@ -1187,6 +1301,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald8:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3"]
         }
       }]
     }, {
@@ -1261,6 +1382,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d10",
@@ -1328,6 +1456,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald10:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2"]
+        }
+      }, {
+        "id": "class:skald10:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4"]
+        }
+      }, {
+        "id": "class:skald10:spell4_1",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4"]
         }
       }]
     }, {
@@ -1401,6 +1550,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald11:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+skald1"]
+        }
+      }, {
+        "id": "class:skald11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4"]
         }
       }]
     }, {
@@ -1480,6 +1643,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald12:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d13",
@@ -1557,6 +1727,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald13:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3"]
+        }
+      }, {
+        "id": "class:skald13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5"]
+        }
+      }, {
+        "id": "class:skald13:spell5_1",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5"]
         }
       }]
     }, {
@@ -1636,6 +1827,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald14:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2"]
+        }
+      }, {
+        "id": "class:skald14:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d15",
@@ -1714,6 +1919,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d16",
@@ -1791,6 +2003,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald16:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4"]
+        }
+      }, {
+        "id": "class:skald16:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5", "spell+skald6"]
+        }
+      }, {
+        "id": "class:skald16:spell6_1",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5", "spell+skald6"]
         }
       }]
     }, {
@@ -1880,6 +2113,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald17:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3"]
+        }
+      }, {
+        "id": "class:skald17:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5", "spell+skald6"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d18",
@@ -1962,6 +2209,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald18:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5", "spell+skald6"]
         }
       }]
     }, {
@@ -2051,6 +2305,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:skald19:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5"]
+        }
       }]
     }, {
       "condition": "@class:skald\u003e\u003d20",
@@ -2133,6 +2394,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:skald20:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4"]
+        }
+      }, {
+        "id": "class:skald20:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+skald1", "spell+skald2", "spell+skald3", "spell+skald4", "spell+skald5", "spell+skald6"]
         }
       }]
     }]

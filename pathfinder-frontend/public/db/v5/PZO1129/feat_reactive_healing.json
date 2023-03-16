@@ -2,7 +2,7 @@
   "id": "feat:reactive_healing",
   "name": "Reactive Healing",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@feat:quick_channel OR @feat:quicken_spell, (@ability:channel_energy#warpriest OR @ability:lay_on_hands#paladin))",
+  "prerequisiteFormula": "all(any(@feat:quick_channel,@feat:quicken_spell),any(@ability:channel_energy#warpriest,@ability:lay_on_hands#paladin))",
   "description": {
     "text": "You can channel healing energy in response to an attack that would knock you unconscious.",
     "sections": {

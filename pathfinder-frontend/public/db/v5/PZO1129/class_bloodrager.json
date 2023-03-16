@@ -1,7 +1,7 @@
 {
   "id": "class:bloodrager",
   "name": "Bloodrager",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid"],
   "description": {
     "text": "While many ferocious combatants can tap into a deep reservoir of buried rage, bloodragers have an intrinsic power that seethes within. Like sorcerers, bloodragers\u0027 veins surge with arcane power. While sorcerers use this power for spellcasting, bloodragers enter an altered state in which their bloodline becomes manifest, where the echoes of their strange ancestry lash out with devastating power. In these states, bloodragers can cast some arcane spells instinctively. The bloodrager\u0027s magic is as fast, violent, and seemingly unstoppable as their physical prowess. Role: Masters of the battlefield, bloodragers unleash fearful carnage on their enemies using their bloodlines and combat prowess. The bloodrager\u0027s place is on the front lines, right in his enemies\u0027 faces, supplying tremendous martial force bolstered by a trace of arcane magic. Alignment: Any. Hit Die: d10. Parent Classes: Barbarian and sorcerer. Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -551,12 +551,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -665,11 +665,12 @@
         "id": "bloodrager:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "bloodrager"]
+          "tags": ["archetype+bloodrager"]
         }
       }, {
-        "id": "bloodrager1:bloodline",
+        "id": "class:bloodrager1:bloodline",
         "type": "bloodrager_bloodline",
         "label": "Bloodline",
         "condition": "@class:bloodrager\u003d\u003d1",
@@ -879,6 +880,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager4:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1"]
+        }
+      }, {
+        "id": "class:bloodrager4:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d5",
@@ -942,6 +957,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager5:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d6",
@@ -1004,6 +1026,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:bloodrager6:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1"]
         }
       }]
     }, {
@@ -1083,6 +1112,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager7:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2"]
+        }
+      }, {
+        "id": "class:bloodrager7:spell2_1",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d8",
@@ -1156,6 +1199,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager8:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d9",
@@ -1228,6 +1278,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:bloodrager9:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1"]
+        }
+      }, {
+        "id": "class:bloodrager9:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2"]
         }
       }]
     }, {
@@ -1317,6 +1381,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager10:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3"]
+        }
+      }, {
+        "id": "class:bloodrager10:spell3_1",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d11",
@@ -1399,6 +1477,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:bloodrager11:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3"]
         }
       }]
     }, {
@@ -1487,6 +1572,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:bloodrager12:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1"]
+        }
+      }, {
+        "id": "class:bloodrager12:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2"]
+        }
+      }, {
+        "id": "class:bloodrager12:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3"]
         }
       }]
     }, {
@@ -1586,6 +1692,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager13:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3", "spell+bloodrager4"]
+        }
+      }, {
+        "id": "class:bloodrager13:spell4_1",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3", "spell+bloodrager4"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d14",
@@ -1679,6 +1799,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:bloodrager14:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3", "spell+bloodrager4"]
+        }
       }]
     }, {
       "condition": "@class:bloodrager\u003e\u003d15",
@@ -1771,6 +1898,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:bloodrager15:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2"]
+        }
+      }, {
+        "id": "class:bloodrager15:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3"]
+        }
+      }, {
+        "id": "class:bloodrager15:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3", "spell+bloodrager4"]
         }
       }]
     }, {
@@ -2060,6 +2208,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:bloodrager18:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3"]
+        }
+      }, {
+        "id": "class:bloodrager18:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+bloodrager1", "spell+bloodrager2", "spell+bloodrager3", "spell+bloodrager4"]
         }
       }]
     }, {

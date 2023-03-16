@@ -1,7 +1,7 @@
 {
   "id": "class:oracle",
   "name": "Oracle",
-  "tags": ["class", "base"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base"],
   "description": {
     "text": "Although the gods work through many agents, perhaps none is more mysterious than the oracle. These divine vessels are granted power without their choice, selected by providence to wield powers that even they do not fully understand. Unlike a cleric, who draws her magic through devotion to a deity, oracles garner strength and power from many sources, namely those patron deities who support their ideals. Instead of worshiping a single source, oracles tend to venerate all of the gods that share their beliefs. While some see the powers of the oracle as a gift, others view them as a curse, changing the life of the chosen in unforeseen ways. Role: Oracles do not usually associate with any one church or temple, instead preferring to strike out on their own, or with a small group of like-minded individuals. Oracles typically use their spells and revelations to further their understanding of their mystery, be it through fighting mighty battles or tending to the poor and sick. Alignment: Any. Hit Dice: d8. Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:oracle\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -161,17 +161,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -216,12 +216,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -320,8 +320,9 @@
         "id": "oracle:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "oracle"]
+          "tags": ["archetype+oracle"]
         }
       }, {
         "id": "oracle1:skill_rank:1",
@@ -346,6 +347,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1"]
+        }
+      }, {
+        "id": "class:oracle1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1"]
         }
       }]
     }, {
@@ -410,6 +449,12 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d3",
@@ -472,6 +517,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1"]
         }
       }]
     }, {
@@ -546,6 +598,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle4:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d5",
@@ -613,6 +678,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle5:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1"]
+        }
+      }, {
+        "id": "class:oracle5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2"]
         }
       }]
     }, {
@@ -697,6 +776,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle6:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle6:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d7",
@@ -779,6 +871,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1"]
+        }
+      }, {
+        "id": "class:oracle7:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2"]
+        }
+      }, {
+        "id": "class:oracle7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3"]
         }
       }]
     }, {
@@ -873,6 +986,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle8:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle8:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d9",
@@ -960,6 +1086,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle9:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2"]
+        }
+      }, {
+        "id": "class:oracle9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3"]
+        }
+      }, {
+        "id": "class:oracle9:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4"]
         }
       }]
     }, {
@@ -1064,6 +1211,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle10:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:oracle10:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d11",
@@ -1166,6 +1326,34 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle11:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2"]
+        }
+      }, {
+        "id": "class:oracle11:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3"]
+        }
+      }, {
+        "id": "class:oracle11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4"]
+        }
+      }, {
+        "id": "class:oracle11:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5"]
         }
       }]
     }, {
@@ -1280,6 +1468,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle12:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d13",
@@ -1387,6 +1582,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle13:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4"]
+        }
+      }, {
+        "id": "class:oracle13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5"]
+        }
+      }, {
+        "id": "class:oracle13:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6"]
         }
       }]
     }, {
@@ -1511,6 +1727,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle14:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d15",
@@ -1633,6 +1856,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5"]
+        }
+      }, {
+        "id": "class:oracle15:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6"]
+        }
+      }, {
+        "id": "class:oracle15:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7"]
         }
       }]
     }, {
@@ -1767,6 +2011,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle16:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7", "spell+oracle8"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d17",
@@ -1894,6 +2145,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle17:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7"]
+        }
+      }, {
+        "id": "class:oracle17:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7", "spell+oracle8"]
         }
       }]
     }, {
@@ -2038,6 +2303,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle18:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7", "spell+oracle8", "spell+oracle9"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d19",
@@ -2181,6 +2453,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:oracle19:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7", "spell+oracle8"]
+        }
+      }, {
+        "id": "class:oracle19:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7", "spell+oracle8", "spell+oracle9"]
+        }
       }]
     }, {
       "condition": "@class:oracle\u003e\u003d20",
@@ -2323,6 +2609,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:oracle20:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+oracle1", "spell+oracle2", "spell+oracle3", "spell+oracle4", "spell+oracle5", "spell+oracle6", "spell+oracle7", "spell+oracle8", "spell+oracle9"]
         }
       }]
     }]

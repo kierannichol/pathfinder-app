@@ -12,6 +12,11 @@ import lombok.RequiredArgsConstructor;
 public class Tags {
     private final List<Tag> tags;
 
+    public static Tags of(Tags other, String... tags) {
+        return new Tags(other.tags)
+                .addAll(of(tags));
+    }
+
     public static Tags of(String... tags) {
         return new Tags(new ArrayList<>(mapList(Arrays.asList(tags), Tag::of)));
     }

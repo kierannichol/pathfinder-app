@@ -1,6 +1,7 @@
 package logic.parse;
 
 import java.util.List;
+import logic.QuotedTextResolvedValue;
 import logic.Resolvable;
 import logic.ResolvedValue;
 import logic.context.DataContext;
@@ -43,7 +44,7 @@ public class Formula implements Resolvable {
             .variable("min(@", ")", (context, key) -> context.find(key).reduce((a, b) -> a.asDecimal() < b.asDecimal() ? a : b).orElse(ResolvedValue.none()))
             .variable("max(@", ")", (context, key) -> context.find(key).reduce((a, b) -> a.asDecimal() > b.asDecimal() ? a : b).orElse(ResolvedValue.none()))
             .variable("sum(@", ")", (context, key) -> context.find(key).reduce((a, b) -> ResolvedValue.of(a.asDecimal() + b.asDecimal())).orElse(ResolvedValue.of(0)))
-            .comment("[", "]")
+            .comment("[", "]", (subject, comment) -> QuotedTextResolvedValue.of(subject, "", comment))
             ;
 
     private final Resolvable resolvable;

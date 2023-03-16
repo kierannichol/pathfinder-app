@@ -23,10 +23,10 @@ export default function SkillEditorButton({ characterAtLevel, ...dialogProps }: 
     return skillChoices.filter(choice => choice.current === '').length;
   }, [skillChoices]);
 
-  const buttonLabel = <><Icon.PencilSquare/>&nbsp; Edit Skills ({pointsRemaining}/{skillChoices.length})</>;
+  const buttonLabel = <><Icon.PencilSquare/>&nbsp; Skills ({pointsRemaining}/{skillChoices.length})</>;
 
   return (<>
-    <PathfinderButton variant={'white'} onClick={_ => handleShow()}>{buttonLabel}</PathfinderButton>
+    <PathfinderButton variant={['white', 'pill']} onClick={_ => handleShow()}>{buttonLabel}</PathfinderButton>
     {show && <SkillEditorDialog
         show={show}
         onCancel={handleCancel}

@@ -2,7 +2,7 @@
   "id": "feat:dimensional_dervish",
   "name": "Dimensional Dervish",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all((@ability:abundant_step#monk OR @spell:dimension_door), @feat:dimensional_agility, @feat:dimensional_assault, @bab \u003e\u003d 6)",
+  "prerequisiteFormula": "all(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility,@feat:dimensional_assault,@bab\u003e\u003d6)",
   "description": {
     "text": "You teleport with a mere thought, savaging your opponents as you flash in and out of reality.",
     "sections": {

@@ -36,6 +36,8 @@ export default function DataChoiceSelectButton({ choice, characterAtLevel, onSel
           optionToChoiceSelectorOption(option, choice, database, characterAtLevel, descriptionFn))}
       categoriesFn={() => choice.categories.map(category => new ChoiceSelectorCategory(category.id, category.label))}
       children={children}
+      actionVerb={choice.repeatingIndex === 0 ? 'Select' : 'Add'}
+      removable={choice.repeatingIndex > 0 && choice.current !== ''}
   />
 }
 

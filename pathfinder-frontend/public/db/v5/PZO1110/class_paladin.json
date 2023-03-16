@@ -1,7 +1,7 @@
 {
   "id": "class:paladin",
   "name": "Paladin",
-  "tags": ["class", "core"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core"],
   "description": {
     "text": "Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to banish evil, heal the innocent, and inspire the faithful. Although their convictions might lead them into conflict with the very souls they would save, paladins weather endless challenges of faith and dark temptations, risking their lives to do right and fighting to bring about a brighter future. Role: Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting. Alignment: Lawful good Hit Die: d10 Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -556,12 +556,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -655,8 +655,9 @@
         "id": "paladin:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "paladin"]
+          "tags": ["archetype+paladin"]
         }
       }, {
         "id": "paladin1:skill_rank:1",
@@ -831,6 +832,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d5",
@@ -881,6 +890,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -940,6 +957,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1002,6 +1027,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d8",
@@ -1062,6 +1095,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1131,6 +1172,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1203,6 +1252,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d11",
@@ -1273,6 +1330,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1352,6 +1417,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1434,6 +1507,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d14",
@@ -1514,6 +1595,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1604,6 +1693,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d16",
@@ -1685,6 +1782,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d17",
@@ -1765,6 +1870,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }, {
@@ -1855,6 +1968,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d19",
@@ -1936,6 +2057,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:paladin19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
+        }
       }]
     }, {
       "condition": "@class:paladin\u003e\u003d20",
@@ -2016,6 +2145,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:paladin20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+paladin"]
         }
       }]
     }]

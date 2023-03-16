@@ -1,7 +1,7 @@
 {
   "id": "class:inquisitor",
   "name": "Inquisitor",
-  "tags": ["class", "base"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base"],
   "description": {
     "text": "Grim and determined, the inquisitor roots out enemies of the faith, using trickery and guile when righteousness and purity is not enough. Although inquisitors are dedicated to a deity, they are above many of the normal rules and conventions of the church. They answer to their deity and their own sense of justice alone, and are willing to take extreme measures to meet their goals. Role: Inquisitors tend to move from place to place, chasing down enemies and researching emerging threats. As a result, they often travel with others, if for no other reason than to mask their presence. Inquisitors work with members of their faith whenever possible, but even such allies are not above suspicion. Alignment: An inquisitor\u0027s alignment must be within one step of her deity\u0027s, along either the law/chaos axis or the good/evil axis. Hit Dice: d8. Starting Wealth: 4d6 × 10 gp (average 140gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:inquisitor\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -171,17 +171,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -231,12 +231,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -385,8 +385,9 @@
         "id": "inquisitor:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "inquisitor"]
+          "tags": ["archetype+inquisitor"]
         }
       }, {
         "id": "inquisitor1:skill_rank:1",
@@ -423,6 +424,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:inquisitor1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:inquisitor1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:inquisitor1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:inquisitor1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1"]
+        }
+      }, {
+        "id": "class:inquisitor1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1"]
         }
       }]
     }, {
@@ -509,6 +548,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:inquisitor2:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d3",
@@ -588,6 +640,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor3:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:inquisitor3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1"]
         }
       }]
     }, {
@@ -673,6 +738,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2"]
+        }
+      }, {
+        "id": "class:inquisitor4:spell2_1",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2"]
         }
       }]
     }, {
@@ -764,6 +843,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d6",
@@ -848,6 +934,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor6:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2"]
         }
       }]
     }, {
@@ -944,6 +1037,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1"]
+        }
+      }, {
+        "id": "class:inquisitor7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3"]
+        }
+      }, {
+        "id": "class:inquisitor7:spell3_1",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d8",
@@ -1039,6 +1153,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor8:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d9",
@@ -1133,6 +1254,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3"]
         }
       }]
     }, {
@@ -1239,6 +1367,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor10:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2"]
+        }
+      }, {
+        "id": "class:inquisitor10:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4"]
+        }
+      }, {
+        "id": "class:inquisitor10:spell4_1",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d11",
@@ -1343,6 +1492,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor11:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1"]
+        }
+      }, {
+        "id": "class:inquisitor11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4"]
         }
       }]
     }, {
@@ -1453,6 +1616,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor12:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4"]
         }
       }]
     }, {
@@ -1569,6 +1739,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor13:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3"]
+        }
+      }, {
+        "id": "class:inquisitor13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5"]
+        }
+      }, {
+        "id": "class:inquisitor13:spell5_1",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d14",
@@ -1684,6 +1875,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor14:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2"]
+        }
+      }, {
+        "id": "class:inquisitor14:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d15",
@@ -1798,6 +2003,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5"]
         }
       }]
     }, {
@@ -1929,6 +2141,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor16:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4"]
+        }
+      }, {
+        "id": "class:inquisitor16:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5", "spell+inquisitor6"]
+        }
+      }, {
+        "id": "class:inquisitor16:spell6_1",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5", "spell+inquisitor6"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d17",
@@ -2053,6 +2286,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor17:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3"]
+        }
+      }, {
+        "id": "class:inquisitor17:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5", "spell+inquisitor6"]
         }
       }]
     }, {
@@ -2179,6 +2426,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor18:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5", "spell+inquisitor6"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d19",
@@ -2304,6 +2558,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:inquisitor19:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5"]
+        }
       }]
     }, {
       "condition": "@class:inquisitor\u003e\u003d20",
@@ -2428,6 +2689,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:inquisitor20:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4"]
+        }
+      }, {
+        "id": "class:inquisitor20:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+inquisitor1", "spell+inquisitor2", "spell+inquisitor3", "spell+inquisitor4", "spell+inquisitor5", "spell+inquisitor6"]
         }
       }]
     }]

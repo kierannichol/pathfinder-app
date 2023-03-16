@@ -2,7 +2,7 @@
   "id": "feat:spiritual_guardian",
   "name": "Spiritual Guardian",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@spell:spiritual_weapon OR @spell:spiritual_ally, @ability:spirit_magic#shaman)",
+  "prerequisiteFormula": "all(any(@spell:spiritual_weapon,@spell:spiritual_ally),@ability:spirit_magic#shaman)",
   "description": {
     "text": "Your spiritual guardians are more powerful than those of most others.",
     "sections": {

@@ -1,7 +1,7 @@
 {
   "id": "class:sorcerer",
   "name": "Sorcerer",
-  "tags": ["class", "core"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core"],
   "description": {
     "text": "Scions of innately magical bloodlines, the chosen of deities, the spawn of monsters, pawns of fate and destiny, or simply flukes of fickle magic, sorcerers look within themselves for arcane prowess and draw forth might few mortals can imagine. Emboldened by lives ever threatening to be consumed by their innate powers, these magic-touched souls endlessly indulge in and refine their mysterious abilities, gradually learning how to harness their birthright and coax forth ever greater arcane feats. Just as varied as these innately powerful spellcasters\u0027 abilities and inspirations are the ways in which they choose to utilize their gifts. While some seek to control their abilities through meditation and discipline, becoming masters of their fantastic birthright, others give in to their magic, letting it rule their lives with often explosive results. Regardless, sorcerers live and breathe that which other spellcasters devote their lives to mastering, and for them magic is more than a boon or a field of study; it is life itself. Role: Sorcerers excel at casting a selection of favored spells frequently, making them powerful battle mages. As they become familiar with a specific and ever-widening set of spells, sorcerers often discover new and versatile ways of making use of magics other spellcasters might overlook. Their bloodlines also grant them additional abilities, assuring that no two sorcerers are ever quite alike. Alignment: Any Hit Die: d6 Starting Wealth: 2d6 × 10 gp (average 70 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:sorcerer\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -161,17 +161,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -300,8 +300,9 @@
         "id": "sorcerer:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "sorcerer"]
+          "tags": ["archetype+sorcerer"]
         }
       }, {
         "id": "sorcerer1:skill_rank:1",
@@ -314,6 +315,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1"]
+        }
+      }, {
+        "id": "class:sorcerer1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1"]
         }
       }]
     }, {
@@ -360,6 +399,12 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
         }
       }]
     }, {
@@ -417,6 +462,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:sorcerer3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1"]
+        }
       }]
     }, {
       "condition": "@class:sorcerer\u003e\u003d4",
@@ -472,6 +524,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer4:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2"]
         }
       }]
     }, {
@@ -533,6 +598,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer5:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1"]
+        }
+      }, {
+        "id": "class:sorcerer5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2"]
         }
       }]
     }, {
@@ -599,6 +678,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer6:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer6:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3"]
         }
       }]
     }, {
@@ -676,6 +768,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:sorcerer7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1"]
+        }
+      }, {
+        "id": "class:sorcerer7:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2"]
+        }
+      }, {
+        "id": "class:sorcerer7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3"]
+        }
       }]
     }, {
       "condition": "@class:sorcerer\u003e\u003d8",
@@ -751,6 +864,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer8:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer8:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4"]
         }
       }]
     }, {
@@ -838,6 +964,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:sorcerer9:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2"]
+        }
+      }, {
+        "id": "class:sorcerer9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3"]
+        }
+      }, {
+        "id": "class:sorcerer9:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4"]
+        }
       }]
     }, {
       "condition": "@class:sorcerer\u003e\u003d10",
@@ -923,6 +1070,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer10:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:sorcerer10:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5"]
         }
       }]
     }, {
@@ -1014,6 +1174,34 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer11:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2"]
+        }
+      }, {
+        "id": "class:sorcerer11:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3"]
+        }
+      }, {
+        "id": "class:sorcerer11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4"]
+        }
+      }, {
+        "id": "class:sorcerer11:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5"]
         }
       }]
     }, {
@@ -1110,6 +1298,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer12:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6"]
         }
       }]
     }, {
@@ -1217,6 +1412,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:sorcerer13:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4"]
+        }
+      }, {
+        "id": "class:sorcerer13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5"]
+        }
+      }, {
+        "id": "class:sorcerer13:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6"]
+        }
       }]
     }, {
       "condition": "@class:sorcerer\u003e\u003d14",
@@ -1322,6 +1538,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer14:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7"]
         }
       }]
     }, {
@@ -1439,6 +1662,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:sorcerer15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5"]
+        }
+      }, {
+        "id": "class:sorcerer15:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6"]
+        }
+      }, {
+        "id": "class:sorcerer15:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7"]
+        }
       }]
     }, {
       "condition": "@class:sorcerer\u003e\u003d16",
@@ -1554,6 +1798,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer16:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7", "spell+sorcerer8"]
         }
       }]
     }, {
@@ -1675,6 +1926,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer17:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7"]
+        }
+      }, {
+        "id": "class:sorcerer17:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7", "spell+sorcerer8"]
         }
       }]
     }, {
@@ -1801,6 +2066,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer18:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7", "spell+sorcerer8", "spell+sorcerer9"]
         }
       }]
     }, {
@@ -1938,6 +2210,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:sorcerer19:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7", "spell+sorcerer8"]
+        }
+      }, {
+        "id": "class:sorcerer19:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7", "spell+sorcerer8", "spell+sorcerer9"]
+        }
       }]
     }, {
       "condition": "@class:sorcerer\u003e\u003d20",
@@ -2068,6 +2354,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:sorcerer20:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+sorcerer1", "spell+sorcerer2", "spell+sorcerer3", "spell+sorcerer4", "spell+sorcerer5", "spell+sorcerer6", "spell+sorcerer7", "spell+sorcerer8", "spell+sorcerer9"]
         }
       }]
     }]

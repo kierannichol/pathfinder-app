@@ -12,7 +12,9 @@ import DataChoiceSelectButton from "../DataChoiceSelectButton";
 import LevelStatsDisplay from "../LevelStatsDisplay";
 import CharacterFeatureList from "./CharacterFeatureList";
 import "./CharacterLevel.scss";
+import {RepeatingChoiceSelector} from "./RepeatingChoiceSelector";
 import SkillEditorButton from "./SkillEditorButton";
+import SpellSelectorButton from "./SpellSelectorButton";
 
 interface CharacterLevelProps {
   characterId: string;
@@ -22,7 +24,7 @@ interface CharacterLevelProps {
 }
 
 export default function CharacterLevel({ characterId, characterAtLevel, characterAtPreviousLevel, onChange }: CharacterLevelProps) {
-
+  const database = usePathfinderDatabase();
   characterAtLevel = useDeferredValue(characterAtLevel);
   characterAtPreviousLevel = useDeferredValue(characterAtPreviousLevel);
 
@@ -33,12 +35,21 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
     return characterAtLevel.intersection(characterAtPreviousLevel);
   }, [characterAtLevel, characterAtPreviousLevel]);
 
-  const classChoice = useMemo(() => (characterChanges && characterChanges.choices
-      .find(choice => choice.type === 'class')),
+  const classChoice = useMemo(() => (characterChanges
+          && characterChanges.choicesOfType('class')[0]),
+      [characterChanges]);
+
+  const className = useMemo(() => database.name(classChoice.current),
+      [database, classChoice]);
+
+  const archetypeChoices = useMemo(() => (characterChanges
+          && characterChanges.choicesOfType('archetype') as SelectChoiceNode[]),
       [characterChanges]);
 
   const choicesForLevel = useMemo(() => (characterChanges && characterChanges.choices
+      .filter(choice => choice.type !== 'archetype')
       .filter(choice => choice.type !== 'skill')
+      .filter(choice => choice.type !== 'spell')
       .filter(choice => choice.type !== 'class')) || [],
       [characterChanges]);
 
@@ -64,9 +75,24 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
     </legend>
     <div className='section'>
       {characterAtLevel.has('bab') && <LevelStatsDisplay characterAtLevel={characterAtLevel} />}
-      <SkillEditorButton
-          characterAtLevel={characterAtLevel}
-          onChange={onChange}/>
+      <div className='level-pillbox'>
+        <SkillEditorButton
+            characterAtLevel={characterChanges}
+            onChange={onChange}/>
+        <SpellSelectorButton
+            characterAtLevel={characterChanges}
+            onChange={onChange}/>
+      </div>
+
+      {archetypeChoices.length > 0 &&
+          <>
+          <label>{className} Archetypes</label>
+            <RepeatingChoiceSelector
+                choices={archetypeChoices}
+                characterAtLevel={characterAtLevel}
+                onChange={onChange}/>
+          </>
+      }
 
       {choicesForLevel.length > 0 && <div>
         <label>Choices</label>
@@ -121,7 +147,7 @@ function CharacterClassEditButton({ characterAtLevel, classChoice, onChange }: C
   }, [characterAtLevel, database]);
 
   return <DataChoiceSelectButton
-      variant={'link'}
+      variant={'header-link'}
       dialogVariant={'class'}
       characterAtLevel={characterAtLevel}
       choice={classChoice}

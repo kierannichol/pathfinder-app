@@ -2,7 +2,7 @@
   "id": "feat:dimensional_maneuvers",
   "name": "Dimensional Maneuvers",
   "tags": ["feat", "general"],
-  "prerequisiteFormula": "all((@ability:abundant_step#monk OR @spell:dimension_door), @feat:dimensional_agility, @feat:dimensional_assault, @feat:dimensional_dervish, @bab \u003e\u003d 9)",
+  "prerequisiteFormula": "all(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility,@feat:dimensional_assault,@feat:dimensional_dervish,@bab\u003e\u003d9)",
   "description": {
     "text": "Your rapid teleportation makes your combat maneuvers more difficult to avoid.",
     "sections": {

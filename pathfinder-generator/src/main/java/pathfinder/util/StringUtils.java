@@ -50,4 +50,6 @@ public class StringUtils {
     public static String trimPeriod(String str) {
         return str.replaceAll("\\.$", "");
     }
+
+
 }

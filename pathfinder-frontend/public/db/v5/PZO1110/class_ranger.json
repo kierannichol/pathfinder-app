@@ -1,7 +1,7 @@
 {
   "id": "class:ranger",
   "name": "Ranger",
-  "tags": ["class", "core"],
+  "tags": ["class", "core", "core", "core", "core"],
   "description": {
     "text": "For those who relish the thrill of the hunt, there are only predators and prey. Be they scouts, trackers, or bounty hunters, rangers share much in common: unique mastery of specialized weapons, skill at stalking even the most elusive game, and the expertise to defeat a wide range of quarries. Knowledgeable, patient, and skilled hunters, these rangers hound man, beast, and monster alike, gaining insight into the way of the predator, skill in varied environments, and ever more lethal martial prowess. While some track man-eating creatures to protect the frontier, others pursue more cunning game--even fugitives among their own people. Role: Ranger are deft skirmishers, either in melee or at range, capable of skillfully dancing in and out of battle. Their abilities allow them to deal significant harm to specific types of foes, but their skills are valuable against all manner of enemies. Alignment: Any Hit Die: d10 Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -551,12 +551,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:medium_armor",
+        "targetKey": "proficiency:buckler",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:buckler",
+        "targetKey": "proficiency:medium_armor",
         "setAction": {
           "numberValue": 1
         }
@@ -670,8 +670,9 @@
         "id": "ranger:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "ranger"]
+          "tags": ["archetype+ranger"]
         }
       }, {
         "id": "ranger1:skill_rank:1",
@@ -919,6 +920,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d5",
@@ -994,6 +1003,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d6",
@@ -1068,6 +1085,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -1153,6 +1178,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -1244,6 +1277,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d9",
@@ -1328,6 +1369,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -1429,6 +1478,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d11",
@@ -1524,6 +1581,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d12",
@@ -1618,6 +1683,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -1724,6 +1797,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d14",
@@ -1828,6 +1909,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -1934,6 +2023,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d16",
@@ -2039,6 +2136,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d17",
@@ -2143,6 +2248,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -2254,6 +2367,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:ranger18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
+        }
       }]
     }, {
       "condition": "@class:ranger\u003e\u003d19",
@@ -2358,6 +2479,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }, {
@@ -2468,6 +2597,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:ranger20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+ranger"]
         }
       }]
     }]

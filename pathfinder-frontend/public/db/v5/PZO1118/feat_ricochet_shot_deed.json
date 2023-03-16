@@ -2,7 +2,7 @@
   "id": "feat:ricochet_shot_deed",
   "name": "Ricochet Shot Deed",
   "tags": ["feat", "grit", "grit"],
-  "prerequisiteFormula": "all(@ability:grit#gunslinger OR @feat:amateur_gunslinger, @feat:blind_fight)",
+  "prerequisiteFormula": "all(any(@ability:grit#gunslinger,@feat:amateur_gunslinger),@feat:blind_fight)",
   "description": {
     "text": "You can ricochet a firearm shot off the wall and still hit your target.",
     "sections": {

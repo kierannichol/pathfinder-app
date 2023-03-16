@@ -2,7 +2,7 @@
   "id": "feat:deathless_initiate",
   "name": "Deathless Initiate",
   "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@str_score \u003e\u003d 13, @con_score \u003e\u003d 13, @race:orc OR @race:half_orc, @feat:diehard, @feat:endurance, @bab \u003e\u003d 6)",
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@con_score\u003e\u003d13,any(@race:orc,@race:half_orc),@feat:diehard,@feat:endurance,@bab\u003e\u003d6)",
   "description": {
     "text": "For you, impending death is a call to wrath.",
     "sections": {

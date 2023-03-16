@@ -1,7 +1,7 @@
 {
   "id": "class:unchained_summoner",
   "name": "Unchained Summoner",
-  "tags": ["class", "unchained"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "base", "base", "unchained"],
   "description": {
     "text": "There are those who take a different path when pursuing the arcane arts, reaching across the boundaries of the world to the far-f lung planes to call forth all manner of creatures to do their bidding. Known as summoners, these arcane practitioners form close bonds with particular outsiders, known as eidolons, which increase in power along with their callers. In the end, summoners and their eidolons become linked, sharing shards of the same souls. Role: Summoners spend much of their time exploring the arcane arts alongside their eidolons. While their power comes from within, they rely heavily on their eidolon companions in dangerous situations. While a summoner and his eidolon function as individuals, their true power lies in what they can accomplish together. Unchained: Most of the summoner\u0027s class features are the same as those of the class\u0027s original design--the biggest change comes to the eidolon. The unchained summoner selects a subtype for his eidolon (such as angel, demon, or protean), which determines a number of its evolutions and helps to shape the eidolon\u0027s general attitude and appearance. In addition, some of the evolutions are now tied to one or more subtypes and base forms, to make eidolons that better match the expected appearances and abilities of such creatures. Finally, the summoner spell list has been greatly revised, removing a number of imbalances. Alignment: Any. Hit Die: d8."
   },
@@ -16,7 +16,7 @@
     "sections": [{
       "condition": "@class:unchained_summoner\u003e\u003d1",
       "effects": [{
-        "targetKey": "proficiency:dart",
+        "targetKey": "proficiency:brass_knife",
         "setAction": {
           "numberValue": 1
         }
@@ -26,7 +26,7 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knife",
+        "targetKey": "proficiency:dart",
         "setAction": {
           "numberValue": 1
         }
@@ -41,12 +41,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:light_crossbow",
+        "targetKey": "proficiency:handwraps",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:handwraps",
+        "targetKey": "proficiency:light_crossbow",
         "setAction": {
           "numberValue": 1
         }
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:brass_knuckles",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:brass_knuckles",
         "setAction": {
           "numberValue": 1
         }
@@ -161,17 +161,17 @@
           "numberValue": 1
         }
       }, {
+        "targetKey": "proficiency:quarterstaff",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
         "targetKey": "proficiency:light_mace",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:club",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
-        "targetKey": "proficiency:quarterstaff",
         "setAction": {
           "numberValue": 1
         }
@@ -300,8 +300,9 @@
         "id": "unchained_summoner:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "unchained_summoner"]
+          "tags": ["archetype+unchained_summoner"]
         }
       }, {
         "id": "unchained_summoner1:skill_rank:1",
@@ -314,6 +315,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:unchained_summoner1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:unchained_summoner1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:unchained_summoner1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:unchained_summoner1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1"]
+        }
+      }, {
+        "id": "class:unchained_summoner1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1"]
         }
       }]
     }, {
@@ -361,6 +400,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:unchained_summoner2:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d3",
@@ -406,6 +458,19 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner3:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:unchained_summoner3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1"]
         }
       }]
     }, {
@@ -458,6 +523,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2"]
+        }
+      }, {
+        "id": "class:unchained_summoner4:spell2_1",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d5",
@@ -509,6 +588,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d6",
@@ -559,6 +645,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner6:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2"]
         }
       }]
     }, {
@@ -616,6 +709,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1"]
+        }
+      }, {
+        "id": "class:unchained_summoner7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3"]
+        }
+      }, {
+        "id": "class:unchained_summoner7:spell3_1",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d8",
@@ -672,6 +786,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner8:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d9",
@@ -727,6 +848,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3"]
         }
       }]
     }, {
@@ -789,6 +917,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner10:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2"]
+        }
+      }, {
+        "id": "class:unchained_summoner10:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4"]
+        }
+      }, {
+        "id": "class:unchained_summoner10:spell4_1",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d11",
@@ -850,6 +999,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner11:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1"]
+        }
+      }, {
+        "id": "class:unchained_summoner11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d12",
@@ -910,6 +1073,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner12:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4"]
         }
       }]
     }, {
@@ -977,6 +1147,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner13:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3"]
+        }
+      }, {
+        "id": "class:unchained_summoner13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5"]
+        }
+      }, {
+        "id": "class:unchained_summoner13:spell5_1",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d14",
@@ -1043,6 +1234,20 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner14:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2"]
+        }
+      }, {
+        "id": "class:unchained_summoner14:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d15",
@@ -1108,6 +1313,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5"]
         }
       }]
     }, {
@@ -1180,6 +1392,27 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner16:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4"]
+        }
+      }, {
+        "id": "class:unchained_summoner16:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5", "spell+unchained_summoner6"]
+        }
+      }, {
+        "id": "class:unchained_summoner16:spell6_1",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5", "spell+unchained_summoner6"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d17",
@@ -1250,6 +1483,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner17:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3"]
+        }
+      }, {
+        "id": "class:unchained_summoner17:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5", "spell+unchained_summoner6"]
         }
       }]
     }, {
@@ -1322,6 +1569,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner18:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5", "spell+unchained_summoner6"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d19",
@@ -1393,6 +1647,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:unchained_summoner19:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5"]
+        }
       }]
     }, {
       "condition": "@class:unchained_summoner\u003e\u003d20",
@@ -1463,6 +1724,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:unchained_summoner20:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4"]
+        }
+      }, {
+        "id": "class:unchained_summoner20:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+unchained_summoner1", "spell+unchained_summoner2", "spell+unchained_summoner3", "spell+unchained_summoner4", "spell+unchained_summoner5", "spell+unchained_summoner6"]
         }
       }]
     }]

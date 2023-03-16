@@ -1,7 +1,7 @@
 {
   "id": "class:arcanist",
   "name": "Arcanist",
-  "tags": ["class", "hybrid"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid"],
   "description": {
     "text": "Some spellcasters seek the secrets of magic, pursuing the power to make the impossible possible. Others are born with magic in their blood, commanding unbelievable forces as effortlessly as they breathe. Yet still others seek to meld the science of arcane scholars with the natural might of innate casters. These arcanists seek to discover the mysterious laws of magic and through will and expertise bend those forces to their whims. Arcanists are the shapers and tinkers of the arcane world, and no magic can resist their control. Role: Arcanists are scholars of all things magical. They constantly seek out new forms of magic to discover how they work, and in many cases, to collect the energy of such magic for their own uses. Many arcanists are seen as reckless, more concerned with the potency of magic than the ramifications of unleashing such power. Alignment: Any. Hit Die: d6. Parent Classes: Sorcerer and wizard. Starting Wealth: 2d6 × 10 gp (average 70 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -105,8 +105,17 @@
         "id": "arcanist:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "arcanist"]
+          "tags": ["archetype+arcanist"]
+        }
+      }, {
+        "id": "class:arcanist1:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d1",
+        "select": {
+          "tags": ["arcanist_exploit"]
         }
       }, {
         "id": "arcanist1:skill_rank:1",
@@ -119,6 +128,44 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist1:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist1:spell0_1",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist1:spell0_2",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist1:spell0_3",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist1:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1"]
+        }
+      }, {
+        "id": "class:arcanist1:spell1_1",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1"]
         }
       }]
     }, {
@@ -161,6 +208,12 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist2:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d3",
@@ -196,6 +249,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist3:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d3",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist3:skill_rank:1",
         "type": "skill",
         "select": {
@@ -206,6 +267,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist3:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1"]
         }
       }]
     }, {
@@ -253,6 +321,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist4:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist4:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d5",
@@ -293,6 +374,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist5:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d5",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist5:skill_rank:1",
         "type": "skill",
         "select": {
@@ -303,6 +392,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist5:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1"]
+        }
+      }, {
+        "id": "class:arcanist5:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2"]
         }
       }]
     }, {
@@ -355,6 +458,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist6:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist6:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d7",
@@ -400,6 +516,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist7:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d7",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist7:skill_rank:1",
         "type": "skill",
         "select": {
@@ -410,6 +534,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist7:spell1_0",
+        "type": "spell",
+        "label": "1st-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1"]
+        }
+      }, {
+        "id": "class:arcanist7:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2"]
+        }
+      }, {
+        "id": "class:arcanist7:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3"]
         }
       }]
     }, {
@@ -467,6 +612,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist8:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist8:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d9",
@@ -517,6 +675,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist9:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d9",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist9:skill_rank:1",
         "type": "skill",
         "select": {
@@ -527,6 +693,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist9:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2"]
+        }
+      }, {
+        "id": "class:arcanist9:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3"]
+        }
+      }, {
+        "id": "class:arcanist9:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4"]
         }
       }]
     }, {
@@ -589,6 +776,19 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist10:spell0_0",
+        "type": "spell",
+        "label": "0th-Level Spell",
+        "select": {
+        }
+      }, {
+        "id": "class:arcanist10:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d11",
@@ -649,6 +849,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist11:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d11",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist11:skill_rank:1",
         "type": "skill",
         "select": {
@@ -659,6 +867,34 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist11:spell2_0",
+        "type": "spell",
+        "label": "2nd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2"]
+        }
+      }, {
+        "id": "class:arcanist11:spell3_0",
+        "type": "spell",
+        "label": "3rd-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3"]
+        }
+      }, {
+        "id": "class:arcanist11:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4"]
+        }
+      }, {
+        "id": "class:arcanist11:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5"]
         }
       }]
     }, {
@@ -726,6 +962,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist12:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d13",
@@ -786,6 +1029,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist13:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d13",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist13:skill_rank:1",
         "type": "skill",
         "select": {
@@ -796,6 +1047,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist13:spell4_0",
+        "type": "spell",
+        "label": "4th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4"]
+        }
+      }, {
+        "id": "class:arcanist13:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5"]
+        }
+      }, {
+        "id": "class:arcanist13:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6"]
         }
       }]
     }, {
@@ -868,6 +1140,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist14:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d15",
@@ -933,6 +1212,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist15:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d15",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist15:skill_rank:1",
         "type": "skill",
         "select": {
@@ -943,6 +1230,27 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist15:spell5_0",
+        "type": "spell",
+        "label": "5th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5"]
+        }
+      }, {
+        "id": "class:arcanist15:spell6_0",
+        "type": "spell",
+        "label": "6th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6"]
+        }
+      }, {
+        "id": "class:arcanist15:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7"]
         }
       }]
     }, {
@@ -1020,6 +1328,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist16:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7", "spell+arcanist8"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d17",
@@ -1090,6 +1405,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist17:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d17",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist17:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1100,6 +1423,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist17:spell7_0",
+        "type": "spell",
+        "label": "7th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7"]
+        }
+      }, {
+        "id": "class:arcanist17:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7", "spell+arcanist8"]
         }
       }]
     }, {
@@ -1182,6 +1519,13 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:arcanist18:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7", "spell+arcanist8", "spell+arcanist9"]
+        }
       }]
     }, {
       "condition": "@class:arcanist\u003e\u003d19",
@@ -1257,6 +1601,14 @@
         }
       }],
       "choices": [{
+        "id": "class:arcanist19:arcanist_exploit",
+        "type": "arcanist_exploit",
+        "label": "Arcanist Exploit",
+        "condition": "@class:arcanist\u003d\u003d19",
+        "select": {
+          "tags": ["arcanist_exploit"]
+        }
+      }, {
         "id": "arcanist19:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1267,6 +1619,20 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist19:spell8_0",
+        "type": "spell",
+        "label": "8th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7", "spell+arcanist8"]
+        }
+      }, {
+        "id": "class:arcanist19:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7", "spell+arcanist8", "spell+arcanist9"]
         }
       }]
     }, {
@@ -1353,6 +1719,13 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:arcanist20:spell9_0",
+        "type": "spell",
+        "label": "9th-Level Spell",
+        "select": {
+          "tags": ["spell+arcanist1", "spell+arcanist2", "spell+arcanist3", "spell+arcanist4", "spell+arcanist5", "spell+arcanist6", "spell+arcanist7", "spell+arcanist8", "spell+arcanist9"]
         }
       }]
     }]

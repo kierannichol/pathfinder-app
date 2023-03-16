@@ -35,8 +35,6 @@ export default class Character {
 
     values = { ...this.selections, ...values };
 
-    // console.log(values);
-
     const template = await this.baseTemplate.resolve(this.datahub, values);
 
     return new Character(this.id,

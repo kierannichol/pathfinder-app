@@ -1,7 +1,7 @@
 {
   "id": "class:magus",
   "name": "Magus",
-  "tags": ["class", "base"],
+  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "base", "base"],
   "description": {
     "text": "There are those who spend their lives poring over ancient tomes and texts, unlocking the power of magic, and there are those who spend their time perfecting the use of individual weapons, becoming masters without equal. The magus is at once a student of both philosophies, blending magical ability and martial prowess into something entirely unique, a discipline in which both spell and steel are used to devastating effect. As he grows in power, the magus unlocks powerful forms of arcana that allow him to merge his talents further, and at the pinnacle of his art, the magus becomes a blur of steel and magic, a force that few foes would dare to stand against. Role: Magi spend much of their time traveling the world, learning whatever martial or arcane secrets they can find. They might spend months learning a new sword-fighting style from a master warrior, while simultaneously moonlighting in the local library, poring through tomes of ancient lore. Most who take this path dabble in all sorts of lore, picking up anything that might aid them in their search for perfection. Alignment: Any. Hit Die: d8. Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -81,12 +81,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:shortspear",
+        "targetKey": "proficiency:guisarme",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:guisarme",
+        "targetKey": "proficiency:shortspear",
         "setAction": {
           "numberValue": 1
         }
@@ -341,17 +341,17 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:sling",
-        "setAction": {
-          "numberValue": 1
-        }
-      }, {
         "targetKey": "proficiency:shortbow",
         "setAction": {
           "numberValue": 1
         }
       }, {
         "targetKey": "proficiency:scythe",
+        "setAction": {
+          "numberValue": 1
+        }
+      }, {
+        "targetKey": "proficiency:sling",
         "setAction": {
           "numberValue": 1
         }
@@ -421,12 +421,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:machete",
+        "targetKey": "proficiency:katar",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:katar",
+        "targetKey": "proficiency:machete",
         "setAction": {
           "numberValue": 1
         }
@@ -446,12 +446,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_spiked_shield",
+        "targetKey": "proficiency:javelin",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:javelin",
+        "targetKey": "proficiency:heavy_spiked_shield",
         "setAction": {
           "numberValue": 1
         }
@@ -501,12 +501,12 @@
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:heavy_pick",
+        "targetKey": "proficiency:bill",
         "setAction": {
           "numberValue": 1
         }
       }, {
-        "targetKey": "proficiency:bill",
+        "targetKey": "proficiency:heavy_pick",
         "setAction": {
           "numberValue": 1
         }
@@ -660,8 +660,9 @@
         "id": "magus:archetype",
         "type": "archetype",
         "label": "Archetype",
+        "repeating": true,
         "select": {
-          "tags": ["archetype", "magus"]
+          "tags": ["archetype+magus"]
         }
       }, {
         "id": "magus1:skill_rank:1",
@@ -674,6 +675,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus1:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -736,6 +745,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus2:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d3",
@@ -796,6 +813,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus3:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -867,6 +892,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus4:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -947,6 +980,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus5:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d6",
@@ -1017,6 +1058,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus6:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -1104,6 +1153,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus7:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d8",
@@ -1185,6 +1242,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus8:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d9",
@@ -1265,6 +1330,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus9:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -1356,6 +1429,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus10:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -1461,6 +1542,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus11:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d12",
@@ -1551,6 +1640,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus12:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -1653,6 +1750,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus13:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d14",
@@ -1754,6 +1859,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus14:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d15",
@@ -1854,6 +1967,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus15:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -1965,6 +2086,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus16:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -2085,6 +2214,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus17:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d18",
@@ -2195,6 +2332,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus18:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }, {
@@ -2307,6 +2452,14 @@
         "select": {
           "tags": ["skill"]
         }
+      }, {
+        "id": "class:magus19:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
+        }
       }]
     }, {
       "condition": "@class:magus\u003e\u003d20",
@@ -2417,6 +2570,14 @@
         "type": "skill",
         "select": {
           "tags": ["skill"]
+        }
+      }, {
+        "id": "class:magus20:spell",
+        "type": "spell",
+        "label": "Spell",
+        "repeating": true,
+        "select": {
+          "tags": ["spell+magus"]
         }
       }]
     }]

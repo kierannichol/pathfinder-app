@@ -1,6 +1,7 @@
 package pathfinder.model.pathfinder;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import pathfinder.model.Entity;
 import pathfinder.model.Id;
@@ -34,5 +35,9 @@ public record CharacterClass(
         return FavoredClassEntityGenerator.toFavoredClassEntity(this);
     }
 
-
+    public Optional<ClassLevel> level(int num) {
+        return levels.stream()
+                .filter(level -> level.level() == num)
+                .findFirst();
+    }
 }

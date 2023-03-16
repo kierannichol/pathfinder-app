@@ -6,6 +6,7 @@ import java.util.List;
 import pathfinder.data.v4.EntityDbo;
 import pathfinder.data.v4.EntitySummaryDbo;
 import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.Sources;
 import pathfinder.util.ListUtils;
 
 public record Entity(Id id,
@@ -152,6 +153,11 @@ public record Entity(Id id,
 
         public EntityBuilder source(Source source) {
             this.source = source;
+            return this;
+        }
+
+        public EntityBuilder source(String source) {
+            this.source = Sources.findSourceByNameOrCode(source);
             return this;
         }
 

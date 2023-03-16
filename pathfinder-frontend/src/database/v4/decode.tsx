@@ -75,11 +75,20 @@ export function decodeTemplateSection(dbo: TemplateSectionDbo): ComponentTemplat
 }
 
 function decodeChoice(dbo: ChoiceDbo): ChoiceNode {
+  var choice;
   switch (dbo.choice) {
-    case "text": return Choice.text(dbo.id, dbo.label, dbo.type, value => [Effect.setValue(dbo.id, value)]);
-    case "select": return Choice.select(dbo.id, dbo.label, dbo.type,db => db.options(dbo.select?.tags ?? [], dbo.select?.ids ?? []));
+    case "text":
+      choice = Choice.text(dbo.id, dbo.label, dbo.type, value => [Effect.setValue(dbo.id, value)]);
+      break;
+    case "select":
+      choice = Choice.select(dbo.id, dbo.label, dbo.type,db => db.options(dbo.select?.tags ?? [], dbo.select?.ids ?? []));
+      break;
     default: throw Error("Unknown choice type " + dbo.choice);
   }
+  if (dbo.repeating) {
+    choice = choice.repeating();
+  }
+  return choice;
 }
 
 export function decodeEffect(dbo: EffectDbo): Effect {

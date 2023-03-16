@@ -25,6 +25,7 @@ import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import logic.util.Ordinal;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -111,7 +112,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
                         break;
                 }
 
-                return new ClassLevel(level.level(), modifiedClassFeatureIds, level.spellsPerDay());
+                return new ClassLevel(level.level(), modifiedClassFeatureIds, level.spellsPerDay(), level.spellsKnown());
             });
 
             var modifiedClassFeatures = new HashSet<>(characterClass.class_features());
@@ -182,6 +183,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
         String name = StringUtils.sanitize(content.selectFirst("h1").text());
         Id classId = NameToIdConverter.classId(name);
         Id id = classId;
+        log.info("Scraping class " + name);
 
         String source = scrapeSourceFromCopyrightSection(document);
 
@@ -237,7 +239,7 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
                 levels.stream()
                                 .map(level -> new ClassLevel(level.level(),
                                         mapList(level.specials(), Feature::id),
-                                        level.spellsPerDay()))
+                                        level.spellsPerDay(), level.spellsKnown()))
                         .toList(),
                 determineSpellCasterTypes(classId),
                 levels.stream()
@@ -360,6 +362,44 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
             spellsPerDay.put(i - specialsColumnIndex, parseSpellsPerDay(spellsPerDayText));
         }
 
+        Map<Integer, Integer> spellsKnown = new HashMap<>();
+        Element spellsKnownHeading = element.ownerDocument()
+                .getElementsMatchingText(" Spells (Known|Prepared)")
+                .stream().filter(e -> e.is("caption"))
+                .findFirst()
+                .orElse(null);
+
+        if (spellsKnownHeading != null) {
+            var spellLevelHeadingsCols = spellsKnownHeading
+                    .parent()
+                    .select("thead > tr:last-child > th");
+
+            int rowOffset = 0;
+            if (spellLevelHeadingsCols.size() == 0) {
+                spellLevelHeadingsCols = spellsKnownHeading
+                        .parent()
+                        .select("tbody > tr:first-child > th");
+                rowOffset = 1;
+            }
+
+            var spellLevelHeadings = spellLevelHeadingsCols.stream()
+                    .filter(e -> e.is(".number"))
+                    .map(col -> Ordinal.parseOrdinal(col.text()))
+                    .toList();
+
+            var spellsKnownColumns = spellsKnownHeading
+                    .parent()
+                    .select("tbody > tr:nth-child(%d) > td".formatted(level+rowOffset));
+
+            for (int i = 1; i < spellsKnownColumns.size(); i++) {
+                String spellsKnownText = spellsKnownColumns.get(i).text();
+                if ("—".equals(spellsKnownText)) {
+                    continue;
+                }
+                spellsKnown.put(spellLevelHeadings.get(i-1), Integer.parseInt(spellsKnownText));
+            }
+        }
+
         return new Level(
                 level,
                 bab,
@@ -367,7 +407,8 @@ public class D20pfsrdClassYamlGenerator extends AbstractD20pfsrdScraper implemen
                 refSave,
                 willSave,
                 specials,
-                spellsPerDay
+                spellsPerDay,
+                spellsKnown
         );
     }
 

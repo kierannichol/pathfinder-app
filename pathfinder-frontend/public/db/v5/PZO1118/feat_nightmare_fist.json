@@ -2,7 +2,7 @@
   "id": "feat:nightmare_fist",
   "name": "Nightmare Fist",
   "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@feat:improved_unarmed_strike, @skill:intimidate \u003e\u003d 1, (@spell:darkness OR @spell:deeper_darkness))",
+  "prerequisiteFormula": "all(@feat:improved_unarmed_strike,@skill:intimidate\u003e\u003d1,any(@spell:darkness,@spell:deeper_darkness))",
   "description": {
     "text": "You are even more deadly in magical darkness.",
     "sections": {
