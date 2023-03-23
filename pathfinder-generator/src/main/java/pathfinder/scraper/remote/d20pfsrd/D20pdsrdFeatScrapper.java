@@ -12,10 +12,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
+import pathfinder.model.AttributeType;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Feat.FeatType;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.parser.AttributeType;
 import pathfinder.util.StreamUtils;
 
 @Component("Feat Scraper")

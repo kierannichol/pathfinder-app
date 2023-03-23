@@ -1,0 +1,18 @@
+{
+  "id": "feat:insightful_delivery",
+  "name": "Insightful Delivery",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:poison_use#alchemist,@ability:studied_strike#investigator\u003e\u003d4)",
+  "description": {
+    "text": "Your knowledge of where to strike makes your poisons more deadly.",
+    "sections": {
+      "Benefit": "When you use a poisoned weapon to attempt an attack in conjunction with studied strike, the DC to resist the poison increases by half the number of your studied strike dice."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:insightful_delivery",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

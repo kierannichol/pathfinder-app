@@ -1,42 +1,49 @@
 package pathfinder.model;
 
 import static pathfinder.util.ListUtils.mapList;
+import static pathfinder.util.ListUtils.mapSet;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class Tags {
-    private final List<Tag> tags;
-
-    public static Tags of(Tags other, String... tags) {
-        return new Tags(other.tags)
-                .addAll(of(tags));
-    }
+    private final Set<Tag> tags;
 
     public static Tags of(String... tags) {
-        return new Tags(new ArrayList<>(mapList(Arrays.asList(tags), Tag::of)));
+        return new Tags(new HashSet<>(mapList(Arrays.asList(tags), Tag::of)));
+    }
+
+    public static Tags of(Collection<Tag> tags) {
+        return new Tags(new HashSet<>(tags));
     }
 
     public Tags add(String tag) {
-        this.tags.add(Tag.of(tag));
-        return this;
+        return add(Tag.of(tag));
     }
 
     public Tags add(Tag tag) {
-        this.tags.add(tag);
-        return this;
+        Set<Tag> combined = new HashSet<>(this.tags);
+        combined.add(tag);
+        return new Tags(combined);
     }
 
     public Tags addAll(Tags tags) {
-        this.tags.addAll(tags.tags);
-        return this;
+        Set<Tag> combined = new HashSet<>(this.tags);
+        combined.addAll(tags.tags);
+        return new Tags(combined);
     }
 
-    public List<String> toDbos() {
-        return mapList(tags, Tag::toString);
+    public Set<String> toDbos() {
+        return mapSet(tags, Tag::toString);
+    }
+
+    public Set<Tag> list() {
+        return Collections.unmodifiableSet(this.tags);
     }
 }

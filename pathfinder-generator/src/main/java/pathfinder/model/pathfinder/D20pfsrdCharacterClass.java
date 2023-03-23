@@ -8,7 +8,6 @@ import java.util.Set;
 import java.util.stream.Stream;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
-import pathfinder.parser.db.WeaponType;
 
 public record D20pfsrdCharacterClass(Id id,
                                      String name,

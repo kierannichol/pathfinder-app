@@ -10,11 +10,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
+import pathfinder.db.MagusArcanaSourceDatabase;
+import pathfinder.model.AttributeType;
 import pathfinder.model.Description;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.parser.AttributeType;
-import pathfinder.parser.NameToIdConverter;
-import pathfinder.source.MagusArcanaSourceDatabase;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
 
 @Service("d20pfsrd Magus Arcana Scraper")

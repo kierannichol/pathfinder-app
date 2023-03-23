@@ -16,7 +16,7 @@ export default class CharacterRepository {
     if (!user) {
       return [];
     }
-    const packedList = await FirebaseRepository.loadAll(user.id) ?? [];
+    const packedList = await FirebaseRepository.loadAll(user.id) || [];
     const characterList = await Promise.all(packedList.map(async packed =>
         Character.create(packed.id, this.datahub, InitialState, BasePlayerTemplate, packed.choices)));
 

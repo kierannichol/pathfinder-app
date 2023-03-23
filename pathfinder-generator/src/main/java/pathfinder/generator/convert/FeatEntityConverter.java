@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.db.parse.PrerequisiteParser;
+import pathfinder.generator.parse.PrerequisiteParser;
 import pathfinder.model.ChildEntity;
 import pathfinder.model.Description;
 import pathfinder.model.Effect;
@@ -21,8 +21,8 @@ import pathfinder.model.Tags;
 import pathfinder.model.pathfinder.ArmorProficiency;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Sources;
+import pathfinder.model.pathfinder.WeaponType;
 import pathfinder.model.pathfinder.Weapons;
-import pathfinder.parser.db.WeaponType;
 import pathfinder.util.ListUtils;
 
 @Component
@@ -234,25 +234,25 @@ public class FeatEntityConverter {
     private static Tags createFeatTags(Feat feat) {
         Tags tags = Tags.of("feat", feat.type());
         if (feat.critical()) {
-            tags.add(Tag.of("critical"));
+            tags = tags.add(Tag.of("critical"));
         }
         if (feat.style()) {
-            tags.add(Tag.of("style"));
+            tags = tags.add(Tag.of("style"));
         }
         if (feat.performance()) {
-            tags.add(Tag.of("performance"));
+            tags = tags.add(Tag.of("performance"));
         }
         if (feat.teamwork()) {
-            tags.add(Tag.of("teamwork"));
+            tags = tags.add(Tag.of("teamwork"));
         }
         if (feat.grit()) {
-            tags.add(Tag.of("grit"));
+            tags = tags.add(Tag.of("grit"));
         }
         if (feat.racial()) {
-            tags.add(Tag.of("racial"));
+            tags = tags.add(Tag.of("racial"));
         }
         if (feat.companion()) {
-            tags.add(Tag.of("companion"));
+            tags = tags.add(Tag.of("companion"));
         }
         return tags;
     }

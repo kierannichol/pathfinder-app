@@ -14,12 +14,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 import pathfinder.NotCached;
+import pathfinder.model.AttributeType;
 import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.BloodragerBloodline;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.parser.AttributeType;
-import pathfinder.parser.NameToIdConverter;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
 

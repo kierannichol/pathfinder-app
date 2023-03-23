@@ -12,7 +12,7 @@ import pathfinder.scraper.remote.d20pfsrd.D20pfsrdRogueTalentScraper;
 @Slf4j
 @NotCached
 @RequiredArgsConstructor
-public class RogueTalentYamlGenerator extends AbstractLocalYamlSourceDatabase implements LocalSourceDatabaseGenerator {
+public class RogueTalentYamlGenerator extends AbstractLocalYamlDatabaseGenerator implements LocalSourceDatabaseGenerator {
 
     private final D20pfsrdRogueTalentScraper scraper;
 

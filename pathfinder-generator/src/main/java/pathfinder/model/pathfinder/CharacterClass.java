@@ -3,7 +3,6 @@ package pathfinder.model.pathfinder;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import pathfinder.model.Entity;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 
@@ -26,14 +25,6 @@ public record CharacterClass(
         List<ClassLevel> levels,
         List<String> spell_caster_types,
         Set<Feature> class_features) implements NamedEntity {
-
-    public Entity toClassEntity() {
-        return ClassEntityGenerator.toClassEntity(this);
-    }
-
-    public Entity toFavoredClassEntity() {
-        return FavoredClassEntityGenerator.toFavoredClassEntity(this);
-    }
 
     public Optional<ClassLevel> level(int num) {
         return levels.stream()

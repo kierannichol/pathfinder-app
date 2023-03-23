@@ -2,7 +2,7 @@ package pathfinder.model.pathfinder;
 
 import lombok.Getter;
 import pathfinder.model.Id;
-import pathfinder.parser.NameToIdConverter;
+import pathfinder.util.NameToIdConverter;
 
 public enum WeaponProficiency {
     OTHER("Other"),

@@ -12,7 +12,7 @@ import pathfinder.scraper.remote.nethys.NethysBloodragerBloodlineScraper;
 @Slf4j
 @NotCached
 @RequiredArgsConstructor
-public class BloodragerBloodlineYamlGenerator extends AbstractLocalYamlSourceDatabase implements LocalSourceDatabaseGenerator {
+public class BloodragerBloodlineYamlGenerator extends AbstractLocalYamlDatabaseGenerator implements LocalSourceDatabaseGenerator {
 
     private final NethysBloodragerBloodlineScraper scraper;
 

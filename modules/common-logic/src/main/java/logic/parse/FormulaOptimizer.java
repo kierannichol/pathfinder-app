@@ -181,17 +181,17 @@ public class FormulaOptimizer {
 
         @Override
         public int asNumber() {
-            throw new UnsupportedOperationException("No available for optimization");
+            throw new UnsupportedOperationException("Not available for optimization");
         }
 
         @Override
         public double asDecimal() {
-            throw new UnsupportedOperationException("No available for optimization");
+            throw new UnsupportedOperationException("Not available for optimization");
         }
 
         @Override
         public boolean asBoolean() {
-            throw new UnsupportedOperationException("No available for optimization");
+            throw new UnsupportedOperationException("Not available for optimization");
         }
     }
 }

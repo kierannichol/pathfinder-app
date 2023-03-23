@@ -18,7 +18,7 @@ import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Archetype;
 import pathfinder.model.pathfinder.ArchetypeModification;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.parser.NameToIdConverter;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
 

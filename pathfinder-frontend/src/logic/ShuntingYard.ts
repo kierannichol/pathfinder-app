@@ -32,16 +32,10 @@ interface Node {
 }
 
 abstract class OperatorFunction implements Node {
-  public readonly name: string;
-  public readonly operands: number;
-  private readonly fn: OperandFunction<ResolvedValue>;
 
-  abstract get associativity(): Associativity;
-
-  protected constructor(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
-    this.name = name;
-    this.operands = operands;
-    this.fn = fn;
+  constructor(public readonly name: string,
+                        public readonly operands: number,
+                        private readonly fn: OperandFunction<ResolvedValue>) {
   }
 
   execute(x?: ResolvedValue, y?: ResolvedValue, z?: ResolvedValue): ResolvedValue {
@@ -61,13 +55,7 @@ abstract class OperatorFunction implements Node {
 }
 
 class Function extends OperatorFunction {
-  constructor(name: string, operands: number, fn: OperandFunction<ResolvedValue>) {
-    super(name, operands, fn);
-  }
 
-  get associativity(): Associativity {
-    return Associativity.Left;
-  }
 }
 
 class VarargsFunction implements Node {
@@ -218,7 +206,7 @@ export class ShuntingYardParser implements Parser {
       if (token instanceof MultiOperator) {
         let operator = token;
         token = operator.binary;
-        if (!previous || previous instanceof Operator || previous === '(' || previous == ',') {
+        if (!previous || previous instanceof Operator || previous === '(' || previous === ',') {
           token = operator.unary;
         }
       }

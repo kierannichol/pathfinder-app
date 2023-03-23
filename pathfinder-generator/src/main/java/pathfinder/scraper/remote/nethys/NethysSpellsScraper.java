@@ -16,12 +16,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import pathfinder.db.local.ClassSourceDatabase;
+import pathfinder.model.AttributeType;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Spell;
 import pathfinder.model.pathfinder.Spell.Level;
-import pathfinder.parser.AttributeType;
-import pathfinder.parser.NameToIdConverter;
-import pathfinder.source.local.ClassSourceDatabase;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
 
 @Component("Nethys Spells Scraper")

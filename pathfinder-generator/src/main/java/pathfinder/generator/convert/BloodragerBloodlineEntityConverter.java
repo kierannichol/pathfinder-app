@@ -8,6 +8,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import pathfinder.db.local.FeatSourceDatabase;
 import pathfinder.model.Effect;
 import pathfinder.model.Entity;
 import pathfinder.model.Entity.EntityBuilder;
@@ -20,7 +21,6 @@ import pathfinder.model.Template.TemplateBuilder;
 import pathfinder.model.pathfinder.BloodragerBloodline;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.Sources;
-import pathfinder.source.local.FeatSourceDatabase;
 import pathfinder.util.NameUtils;
 
 @Component

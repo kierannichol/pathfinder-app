@@ -9,17 +9,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
-import pathfinder.model.Sourced;
 import pathfinder.spring.OutputPathValue;
 import pathfinder.util.FileUtils;
 
-public abstract class AbstractDatabaseGenerator<MODEL extends NamedEntity, SUMMARY extends Message, DETAILED extends Message> implements
-        DatabaseGeneratorV4 {
-    protected static final Predicate<Sourced> KNOWN_SOURCES = sourced -> sourced.source() != null;
+public abstract class AbstractDatabaseGenerator<MODEL extends NamedEntity, SUMMARY extends Message, DETAILED extends Message> {
+
     protected static final Printer JSON_PRINTER = JsonFormat.printer();
 
     @OutputPathValue
@@ -32,7 +29,6 @@ public abstract class AbstractDatabaseGenerator<MODEL extends NamedEntity, SUMMA
     protected abstract DETAILED encodedDetailed(MODEL model, SUMMARY summary);
     protected abstract Message createSummaryDatabase(List<SUMMARY> summaries);
 
-    @Override
     public void generate() throws IOException {
         String relativeOutputPath = getRelativeOutputPath();
         Path detailedDataPath = (relativeOutputPath != null && !relativeOutputPath.isBlank())

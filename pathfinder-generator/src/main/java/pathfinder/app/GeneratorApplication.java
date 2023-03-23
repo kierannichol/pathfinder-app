@@ -7,14 +7,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import pathfinder.generator.v5.SourceModuleDatabaseGenerator;
+import pathfinder.generator.SourceModuleDatabaseGenerator;
 import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.Sources;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
         "pathfinder.generator",
-        "pathfinder.source"
+        "pathfinder.db"
 })
 @Slf4j
 public class GeneratorApplication {
@@ -26,17 +26,17 @@ public class GeneratorApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
+            //                    Sources.ADVANCED_RACE_GUIDE,
 
             var sources = List.of(
-                    Sources.CORE,
-                    Sources.ADVANCED_PLAYERS_GUIDE,
-                    Sources.GAMEMASTERY_GUIDE,
-//                    Sources.ADVANCED_RACE_GUIDE,
-                    Sources.ADVANCED_CLASS_GUIDE,
-                    Sources.ULTIMATE_COMBAT,
-                    Sources.ULTIMATE_MAGIC,
-                    Sources.ULTIMATE_EQUIPMENT,
-                    Sources.UNCHAINED
+//                    Sources.CORE,
+//                    Sources.ADVANCED_PLAYERS_GUIDE,
+//                    Sources.GAMEMASTERY_GUIDE,
+                    Sources.ADVANCED_CLASS_GUIDE
+//                    Sources.ULTIMATE_COMBAT,
+//                    Sources.ULTIMATE_MAGIC,
+//                    Sources.ULTIMATE_EQUIPMENT,
+//                    Sources.UNCHAINED
             );
 
             for (Source source : sources) {

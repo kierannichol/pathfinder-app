@@ -8,7 +8,6 @@ import static pathfinder.model.pathfinder.WeaponRange.REACH;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Predicate;
-import pathfinder.parser.db.WeaponType;
 
 public class Weapons {
 

@@ -3,7 +3,7 @@ package pathfinder.generator.convert;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pathfinder.generator.db.parse.PrerequisiteParser;
+import pathfinder.generator.parse.PrerequisiteParser;
 import pathfinder.model.Effect;
 import pathfinder.model.Entity;
 import pathfinder.model.Id;

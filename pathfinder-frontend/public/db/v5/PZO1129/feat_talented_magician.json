@@ -1,0 +1,19 @@
+{
+  "id": "feat:talented_magician",
+  "name": "Talented Magician",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@rogue_talent:major_magic,@rogue_talent:minor_magic)",
+  "description": {
+    "text": "Roguish magic comes easily to you.",
+    "sections": {
+      "Benefit": "You gain an additional daily use of each of your minor magic and major magic rogue talents.",
+      "Special": "You can take this feat multiple times. Each time you do, you gain an additional daily use of each talent."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:talented_magician",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

@@ -9,9 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Component;
+import pathfinder.db.local.ClassSourceDatabase;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Archetype;
-import pathfinder.source.local.ClassSourceDatabase;
 
 @Component
 @RequiredArgsConstructor

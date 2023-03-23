@@ -1,0 +1,18 @@
+{
+  "id": "feat:intimidating_performance",
+  "name": "Intimidating Performance",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "any(\"ability to start a performance (or raging song) as a move action\",@ability:bardic_performance,@ability:raging_song#skald)",
+  "description": {
+    "text": "Your performance strikes fear in the hearts of foes.",
+    "sections": {
+      "Benefit": "When you start a performance (or a raging song) as a move or swift action, you can use a standard action to demoralize a foe, attempting a Perform check appropriate to your performance in place of the Intimidate check. Your performance must be one with an audible component."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:intimidating_performance",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

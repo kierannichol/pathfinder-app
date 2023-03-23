@@ -12,7 +12,7 @@ import pathfinder.scraper.remote.d20pfsrd.D20pfsrdAlchemistDiscoveryScraper;
 @Slf4j
 @NotCached
 @RequiredArgsConstructor
-public class AlchemistDiscoveryYamlGenerator extends AbstractLocalYamlSourceDatabase implements LocalSourceDatabaseGenerator {
+public class AlchemistDiscoveryYamlGenerator extends AbstractLocalYamlDatabaseGenerator implements LocalSourceDatabaseGenerator {
 
     private final D20pfsrdAlchemistDiscoveryScraper scraper;
 

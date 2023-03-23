@@ -4,7 +4,7 @@ import java.util.Arrays;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import pathfinder.model.Id;
-import pathfinder.parser.NameToIdConverter;
+import pathfinder.util.NameToIdConverter;
 
 @RequiredArgsConstructor
 public enum ArmorProficiency {

@@ -1,4 +1,4 @@
-import {useEffect, useState, useTransition} from "react";
+import {useCallback, useEffect, useState, useTransition} from "react";
 import {Button, ListGroup} from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
 import {Link, useNavigate} from "react-router-dom";
@@ -14,18 +14,18 @@ function CharacterListView() {
   const characterRepository = useCharacterRepository();
 
   const [ characterList, setCharacterList ] = useState<Character[]>();
-
   const [ isLoading, startLoading ] = useTransition();
-  const loadCharacterList = async () => {
-    setCharacterList(await characterRepository.list());
-  };
+
+  const loadCharacterList = useCallback(
+      async () => setCharacterList(await characterRepository.list()),
+      [characterRepository]);
 
   useEffect(() => {
     startLoading(() => {
       loadCharacterList()
         .catch(e => console.log(e));
     });
-  }, [characterRepository]);
+  }, [loadCharacterList]);
 
   const handleChange = () => {
     startLoading(() => {

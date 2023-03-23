@@ -2,7 +2,9 @@ package pathfinder.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import pathfinder.data.v4.EntityDbo;
 import pathfinder.data.v4.EntitySummaryDbo;
 import pathfinder.model.pathfinder.Source;
@@ -68,7 +70,7 @@ public record Entity(Id id,
     public static class EntityBuilder {
         private Id id = Id.EMPTY;
         private String name = "";
-        private final Tags tags = Tags.of();
+        private final Set<Tag> tags = new HashSet<>();
         private String prerequisiteFormula = "";
         private Description description = Description.empty();
         private final List<Effect> effects = new ArrayList<>();
@@ -90,7 +92,7 @@ public record Entity(Id id,
         }
 
         public EntityBuilder tags(Tags tags) {
-            this.tags.addAll(tags);
+            this.tags.addAll(tags.list());
             return this;
         }
 
@@ -162,7 +164,7 @@ public record Entity(Id id,
         }
 
         public Entity build() {
-            return new Entity(id, name, tags, prerequisiteFormula, description, effects, choices, children, template, source);
+            return new Entity(id, name, Tags.of(tags), prerequisiteFormula, description, effects, choices, children, template, source);
         }
     }
 }

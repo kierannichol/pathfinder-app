@@ -11,8 +11,8 @@ import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.Feature.Type;
-import pathfinder.parser.AttributeType;
-import pathfinder.parser.NameToIdConverter;
+import pathfinder.model.AttributeType;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
 import pathfinder.util.StringUtils;
 

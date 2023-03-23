@@ -1,6 +1,6 @@
 package pathfinder.scraper.remote;
 
-import java.util.List;
+import java.util.function.Predicate;
 import lombok.RequiredArgsConstructor;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
@@ -30,7 +30,12 @@ public abstract class Element {
     public abstract Element next();
     public abstract Element parent();
     public abstract boolean is(String cssQuery);
-    public abstract List<Element> children();
+    public abstract String attribute(String attributeName);
+    public abstract Elements children();
+
+    public Elements children(Predicate<Element> predicateFn) {
+        return children().filter(predicateFn);
+    }
 
     public ElementSearch search() {
         return ElementSearch.descendantsOf(this);
@@ -61,15 +66,24 @@ public abstract class Element {
         }
 
         @Override
-        public List<Element> children() {
-            return element.childNodes().stream()
+        public String attribute(String attributeName) {
+            return element.attr(attributeName);
+        }
+
+        @Override
+        public Elements children() {
+            return Elements.of(element.childNodes().stream()
                     .map(Element::of)
-                    .toList();
+                    .toList());
         }
 
         @Override
         public String toString() {
             return element.toString();
+        }
+
+        public HtmlElement getElementById(String id) {
+            return new HtmlElement(element.getElementById(id));
         }
     }
 
@@ -98,10 +112,15 @@ public abstract class Element {
         }
 
         @Override
-        public List<Element> children() {
-            return textNode.childNodes().stream()
+        public String attribute(String attributeName) {
+            return null;
+        }
+
+        @Override
+        public Elements children() {
+            return Elements.of(textNode.childNodes().stream()
                     .map(Element::of)
-                    .toList();
+                    .toList());
         }
 
         @Override
@@ -130,10 +149,15 @@ public abstract class Element {
         }
 
         @Override
-        public List<Element> children() {
-            return node.childNodes().stream()
+        public String attribute(String attributeName) {
+            return null;
+        }
+
+        @Override
+        public Elements children() {
+            return Elements.of(node.childNodes().stream()
                     .map(Element::of)
-                    .toList();
+                    .toList());
         }
 
         @Override

@@ -12,11 +12,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
+import pathfinder.db.RaceSourceDatabase;
 import pathfinder.model.pathfinder.D20pfsrdRace;
 import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.Sources;
-import pathfinder.parser.NameToIdConverter;
-import pathfinder.source.RaceSourceDatabase;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
 
 @Service("d20pfsrd Race Scraper")

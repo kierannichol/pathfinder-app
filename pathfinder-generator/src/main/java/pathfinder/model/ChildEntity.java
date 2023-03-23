@@ -2,7 +2,9 @@ package pathfinder.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import pathfinder.data.v4.ChildEntityDbo;
 import pathfinder.data.v4.ChildEntitySummaryDbo;
 import pathfinder.util.ListUtils;
@@ -42,7 +44,7 @@ public record ChildEntity(String optionId,
         private String optionId;
         private String name = "";
         private String condition = "";
-        private final Tags additionalTags = Tags.of();
+        private final Set<Tag> additionalTags = new HashSet<>();
         private final List<Effect> effects = new ArrayList<>();
         private final List<Choice> choices = new ArrayList<>();
 
@@ -64,15 +66,12 @@ public record ChildEntity(String optionId,
         }
 
         public ChildEntityBuilder additionalTags(Tags tags) {
-            this.additionalTags.addAll(tags);
+            this.additionalTags.addAll(tags.list());
             return this;
         }
 
         public ChildEntityBuilder additionalTags(String... tag) {
-            Arrays.stream(tag)
-                    .map(Tag::of)
-                    .forEach(this.additionalTags::add);
-            return this;
+            return additionalTags(Tags.of(tag));
         }
 
         public ChildEntityBuilder effect(Effect... effect) {
@@ -96,7 +95,7 @@ public record ChildEntity(String optionId,
         }
 
         public ChildEntity build() {
-            return new ChildEntity(optionId, condition, name, additionalTags, effects, choices);
+            return new ChildEntity(optionId, condition, name, Tags.of(additionalTags), effects, choices);
         }
     }
 }

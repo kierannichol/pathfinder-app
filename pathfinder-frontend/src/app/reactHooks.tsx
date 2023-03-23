@@ -28,6 +28,7 @@ export function useOnScreen(ref: RefObject<HTMLDivElement|undefined>, rootMargin
   return isIntersecting;
 }
 
+/* eslint react-hooks/exhaustive-deps: "off" */
 export function useAsyncMemo<T>(promiseFn: () => Promise<T|undefined>, deps?: DependencyList): [ result: T|undefined, error: Error|undefined ] {
   const [ result, setResult ] = useState<T|undefined>();
   const [ error, setError ] = useState<Error|undefined>();
@@ -48,11 +49,11 @@ export function useAsyncMemo<T>(promiseFn: () => Promise<T|undefined>, deps?: De
     return () => {
       mounted = false;
     }
-  }, deps);
+  }, [ ...(deps ?? []), promiseFn ]);
   return [ result, error ];
 }
 
-function scrollToElement(elementRef: RefObject<HTMLDivElement>) {
+export function scrollToElement(elementRef: RefObject<HTMLDivElement>) {
   elementRef.current?.scrollIntoView({
     block: "start",
     inline: "nearest"
