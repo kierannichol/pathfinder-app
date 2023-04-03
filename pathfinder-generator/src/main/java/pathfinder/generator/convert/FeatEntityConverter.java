@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
+import logic.parse.FormulaOptimizer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -34,12 +35,17 @@ public class FeatEntityConverter {
         try {
             Tags tags = createFeatTags(feat);
             String prerequisiteFormula = prerequisiteParser.extractPrerequisiteFormula(feat.prerequisites());
+            if (!feat.multiples()) {
+                prerequisiteFormula = prerequisiteFormula.length() > 0
+                    ? "(%s) AND !@%s".formatted(prerequisiteFormula, feat.id())
+                    : "!@%s".formatted(feat.id());
+            }
 
             Entity entity = Entity.builder()
                     .id(feat.id())
                     .name(feat.name())
                     .tags(tags)
-                    .prerequisiteFormula(prerequisiteFormula)
+                    .prerequisiteFormula(FormulaOptimizer.optimize(prerequisiteFormula))
                     .description(Description.create(feat.description())
                             .addSection("Goal", feat.goal())
                             .addSection("Benefit", feat.benefit())
@@ -66,7 +72,6 @@ public class FeatEntityConverter {
                 .map(armor -> NamedEntity.of(Id.of(armor.id().key), armor.getName()))
                 .toList();
 
-        explodedIds.put(Id.of("feat:close_quarters_thrower"), Weapons.ALL_RANGED);
         explodedIds.put(Id.of("feat:close_quarters_thrower"), Weapons.ALL_THROWN);
         explodedIds.put(Id.of("feat:crusaders_flurry"), Weapons.ALL_WEAPONS);
         explodedIds.put(Id.of("feat:dazzling_display"), Weapons.ALL_WEAPONS);
@@ -81,7 +86,6 @@ public class FeatEntityConverter {
         explodedIds.put(Id.of("feat:greater_snap_shot"), Weapons.ALL_RANGED);
         explodedIds.put(Id.of("feat:greater_weapon_focus"), Weapons.ALL_WEAPONS);
         explodedIds.put(Id.of("feat:greater_weapon_specialization"), Weapons.ALL_WEAPONS);
-        explodedIds.put(Id.of("feat:greater_whip_mastery"), List.of(Weapons.WHIP, Weapons.WHIP_SCORPION));
         explodedIds.put(Id.of("feat:heros_display"), Weapons.ALL_WEAPONS);
         explodedIds.put(Id.of("feat:impaling_critical"), ListUtils.intersectionOf(Weapons.ALL_PIERCING, Weapons.ALL_MELEE));
         explodedIds.put(Id.of("feat:improved_critical"), Weapons.ALL_WEAPONS);
@@ -112,7 +116,8 @@ public class FeatEntityConverter {
         explodedIds.put(Id.of("feat:twin_thunders_master"), Weapons.ALL_WEAPONS);
         explodedIds.put(Id.of("feat:weapon_focus"), Weapons.ALL_WEAPONS);
         explodedIds.put(Id.of("feat:weapon_specialization"), Weapons.ALL_WEAPONS);
-        explodedIds.put(Id.of("feat:whip_mastery"), List.of(Weapons.WHIP));
+        explodedIds.put(Id.of("feat:whip_mastery"), List.of(Weapons.WHIP, Weapons.WHIP_SCORPION));
+        explodedIds.put(Id.of("feat:greater_whip_mastery"), List.of(Weapons.WHIP, Weapons.WHIP_SCORPION));
 
         explodedIds.put(Id.of("feat:critical_mastery"), List.of());
         explodedIds.put(Id.of("feat:seize_the_moment"), List.of());
@@ -153,20 +158,18 @@ public class FeatEntityConverter {
 
     private Stream<Entity> explodeForEachNamedEntity(Entity entity) {
         List<NamedEntity> namedEntities = new ArrayList<>(explodedIds.getOrDefault(entity.id(), List.of()));
-        List<String> source = new ArrayList<>();
-        explodedIds.forEach((key, value) -> {
-            if (entity.prerequisiteFormula().contains(key.string())) {
-                namedEntities.addAll(value);
+//        List<String> source = new ArrayList<>();
+//        explodedIds.forEach((key, value) -> {
+//            if (entity.prerequisiteFormula().contains(key.string())) {
+//                source.add(entity.prerequisiteFormula());
+//            }
+//        });
 
-                source.add(entity.prerequisiteFormula());
-            }
-        });
-
-        if (!explodedIds.containsKey(entity.id())) {
-            log.info("explodedIds.put(Id.of(\"%s\"), \"%s\");".formatted(
-                    entity.id().withoutOption().string(),
-                    String.join(", ", source)));
-        }
+//        if (!explodedIds.containsKey(entity.id())) {
+//            log.info("explodedIds.put(Id.of(\"%s\"), \"%s\");".formatted(
+//                    entity.id().withoutOption().string(),
+//                    String.join(", ", source)));
+//        }
 
         return Stream.of(explode(entity, namedEntities));
     }
@@ -219,7 +222,7 @@ public class FeatEntityConverter {
                     .optionId(namedEntity.id().key)
                     .name(namedEntity.name())
                     .effect(Effect.addNumber(id, 1))
-                    .condition(prerequisiteFormula)
+                    .condition(FormulaOptimizer.optimize(prerequisiteFormula))
                     .build());
         }
 

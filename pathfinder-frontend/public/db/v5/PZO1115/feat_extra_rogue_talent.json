@@ -2,7 +2,7 @@
   "id": "feat:extra_rogue_talent",
   "name": "Extra Rogue Talent",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@ability:rogue_talent#unchained_rogue",
+  "prerequisiteFormula": "all(@ability:rogue_talent#unchained_rogue,!@feat:extra_rogue_talent)",
   "description": {
     "sections": {
       "Benefit": "You gain one additional rogue talent. You must meet all of the prerequisites for this rogue talent.",

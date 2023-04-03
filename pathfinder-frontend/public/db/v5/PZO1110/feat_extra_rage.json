@@ -2,7 +2,7 @@
   "id": "feat:extra_rage",
   "name": "Extra Rage",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature]",
+  "prerequisiteFormula": "all(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],!@feat:extra_rage)",
   "description": {
     "sections": {
       "Benefit": "You can rage for 6 additional rounds per day.",

@@ -1,8 +1,8 @@
 {
   "id": "feat:sorcerous_bloodstrike",
   "name": "Sorcerous Bloodstrike",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@cha_score\u003e\u003d13,@ability:bloodline_power)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@cha_score\u003e\u003d13,@ability:bloodline_power,!@feat:sorcerous_bloodstrike)",
   "description": {
     "sections": {
       "Benefit": "Once per day, as an immediate action upon reducing a creature to 0 or fewer hit points with one of your sorcerer spells, you can regain one usage of a sorcerer bloodline power that has a limited number of uses per day. The slain creature must have at least half as many Hit Dice as your sorcerer level. You cannot use this feat to gain another usage of a bloodline power that you have not yet used today."

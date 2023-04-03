@@ -2,14 +2,8 @@
   "id": "rage_power:internal_fortitude",
   "name": "Internal Fortitude",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "@class:barbarian\u003e\u003d8 AND !@rage_power:internal_fortitude",
+  "prerequisiteFormula": "@class:barbarian\u003e\u003d8",
   "description": {
     "text": "Gain immunity to nauseated and sickened conditions"
-  },
-  "effects": [{
-    "targetKey": "rage_power:internal_fortitude",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

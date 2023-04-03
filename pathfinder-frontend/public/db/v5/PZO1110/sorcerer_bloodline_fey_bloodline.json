@@ -1,0 +1,154 @@
+{
+  "id": "sorcerer_bloodline:fey_bloodline",
+  "name": "Fey Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "description": {
+    "text": "The capricious nature of the fey runs in your family due to some intermingling of fey blood or magic. You are more emotional than most, prone to bouts of joy and rage."
+  },
+  "template": {
+    "id": "sorcerer_bloodline:fey_bloodline",
+    "sections": [{
+      "condition": "@class:sorcerer\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:laughing_touch#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:woodland_stride#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "ability:fleeting_glance#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "ability:greater_invisibility#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:fey_magic#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "choices": [{
+        "id": "sorcerer7:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus# (Knowledge [nature])"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "choices": [{
+        "id": "sorcerer13:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus# (Knowledge [nature])"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "choices": [{
+        "id": "sorcerer19:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus# (Knowledge [nature])"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "spell:entangle",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d5",
+      "effects": [{
+        "targetKey": "spell:hideous_laughter",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:deep_slumber",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "spell:poison",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d11",
+      "effects": [{
+        "targetKey": "spell:tree_stride",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:mislead",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "spell:phase_door",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d17",
+      "effects": [{
+        "targetKey": "spell:irresistible_dance",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "effects": [{
+        "targetKey": "spell:shapechange",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }]
+  }
+}

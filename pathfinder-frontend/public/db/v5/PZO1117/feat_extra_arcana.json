@@ -1,8 +1,8 @@
 {
   "id": "feat:extra_arcana",
   "name": "Extra Arcana",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:magus_arcana#magus",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:magus_arcana#magus,!@feat:extra_arcana)",
   "description": {
     "text": "You have unlocked the secret of a new magus arcana.",
     "sections": {

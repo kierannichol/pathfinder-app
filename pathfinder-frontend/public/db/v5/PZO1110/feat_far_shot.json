@@ -2,7 +2,7 @@
   "id": "feat:far_shot",
   "name": "Far Shot",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@feat:point_blank_shot",
+  "prerequisiteFormula": "all(@feat:point_blank_shot,!@feat:far_shot)",
   "description": {
     "sections": {
       "Benefit": "You only suffer a –1 penalty per full range increment between you and your target when using a ranged weapon.",

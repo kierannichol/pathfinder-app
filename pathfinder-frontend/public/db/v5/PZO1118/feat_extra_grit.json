@@ -1,8 +1,8 @@
 {
   "id": "feat:extra_grit",
   "name": "Extra Grit",
-  "tags": ["feat", "grit", "grit"],
-  "prerequisiteFormula": "any(@ability:grit#gunslinger,@feat:amateur_gunslinger)",
+  "tags": ["grit", "feat"],
+  "prerequisiteFormula": "all(any(@ability:grit#gunslinger,@feat:amateur_gunslinger),!@feat:extra_grit)",
   "description": {
     "text": "You have more grit than the ordinary gunslinger.",
     "sections": {

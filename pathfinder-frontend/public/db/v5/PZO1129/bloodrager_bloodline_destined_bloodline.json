@@ -97,6 +97,38 @@
           "ids": ["feat:diehard", "feat:endurance", "feat:improved_initiative", "feat:intimidating_prowess", "feat:leadership", "feat:lightning_reflexes", "feat:weapon_focus"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:blur",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:protection_from_energy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:freedom_of_movement",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

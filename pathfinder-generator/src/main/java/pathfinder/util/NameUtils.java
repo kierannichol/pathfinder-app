@@ -1,12 +1,16 @@
 package pathfinder.util;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import pathfinder.model.Id;
 
 public class NameUtils {
     private static final Pattern WITH_PARENTHESES = Pattern.compile("^(.*?)( *\\(.*\\))?$");
+
+    private static final Pattern NAME_AND_PARENTHESES = Pattern.compile("^(.*?)(?: *\\((.*?)\\))*$");
 
     public static String sanitize(String name) {
         return StringUtils.sanitize(name)
@@ -32,6 +36,24 @@ public class NameUtils {
             return List.of(text);
         }
         return List.of(namePart, parenthesesPart);
+    }
+
+    public static NameAndParentheses nameAndParentheses(String text) {
+        Matcher matcher = NAME_AND_PARENTHESES.matcher(text);
+        if (!matcher.find()) {
+            return new NameAndParentheses(text, List.of());
+        }
+
+        String namePart = matcher.group(1);
+        List<String> parenthesesParts = new ArrayList<>();
+        for (int i = 2; i <= matcher.groupCount(); i++) {
+            String group = matcher.group(i);
+            if (group == null) {
+                break;
+            }
+            parenthesesParts.add(group);
+        }
+        return new NameAndParentheses(namePart, parenthesesParts);
     }
 
     public static String fixNameOrder(String name) {
@@ -63,5 +85,15 @@ public class NameUtils {
             name.append(")");
         }
         return name.toString();
+    }
+
+    public record NameAndParentheses(String name, List<String> parentheses) {
+        public Optional<String> firstParentheses() {
+            return parentheses.size() > 0 ? Optional.of(parentheses.get(0)) : Optional.empty();
+        }
+
+        public Optional<String> lastParentheses() {
+            return parentheses.size() > 0 ? Optional.of(parentheses.get(parentheses.size() - 1)) : Optional.empty();
+        }
     }
 }

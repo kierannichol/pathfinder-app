@@ -80,7 +80,7 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
             characterAtLevel={characterChanges}
             onChange={onChange}/>
         <SpellSelectorButton
-            characterAtLevel={characterChanges}
+            characterAtLevel={characterAtLevel}
             onChange={onChange}/>
       </div>
 

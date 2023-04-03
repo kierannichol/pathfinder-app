@@ -1,0 +1,27 @@
+{
+  "id": "class:paladin#oath_against_the_wyrm",
+  "name": "Oath Against the Wyrm",
+  "tags": ["archetype", "paladin"],
+  "description": {
+  },
+  "template": {
+    "id": "class:paladin#oath_against_the_wyrm",
+    "sections": [{
+      "condition": "@class:paladin\u003e\u003d4",
+      "effects": [{
+        "targetKey": "ability:channel_positive_energy#paladin",
+        "renameAction": {
+          "renamedKey": "ability:breath_evasion#paladin_oath_against_the_wyrm"
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:holy_champion#paladin",
+        "renameAction": {
+          "renamedKey": "ability:dragon_slaying_strike#paladin_oath_against_the_wyrm"
+        }
+      }]
+    }]
+  }
+}

@@ -2,7 +2,7 @@
   "id": "feat:precise_shot",
   "name": "Precise Shot",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@feat:point_blank_shot",
+  "prerequisiteFormula": "all(@feat:point_blank_shot,!@feat:precise_shot)",
   "description": {
     "text": "You are adept at firing ranged attacks into melee.",
     "sections": {

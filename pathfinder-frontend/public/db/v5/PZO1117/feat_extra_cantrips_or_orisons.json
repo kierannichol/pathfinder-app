@@ -1,8 +1,8 @@
 {
   "id": "feat:extra_cantrips_or_orisons",
   "name": "Extra Cantrips or Orisons",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "any(@ability:cantrips#wizard,@ability:orisons#shaman)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(any(@ability:cantrips#wizard,@ability:orisons#shaman),!@feat:extra_cantrips_or_orisons)",
   "description": {
     "text": "You are a master of minor spells.",
     "sections": {

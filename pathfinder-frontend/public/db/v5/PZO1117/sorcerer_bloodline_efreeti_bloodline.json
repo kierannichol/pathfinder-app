@@ -1,0 +1,154 @@
+{
+  "id": "sorcerer_bloodline:efreeti_bloodline",
+  "name": "Efreeti Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "description": {
+    "text": "You were born with the power of fire genies, and the magic of the efreet is strong in you."
+  },
+  "template": {
+    "id": "sorcerer_bloodline:efreeti_bloodline",
+    "sections": [{
+      "condition": "@class:sorcerer\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:fire_ray#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:elemental_resistance#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "ability:efreeti_form#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "ability:giant_form_i#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:elemental_movement#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "choices": [{
+        "id": "sorcerer7:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus# (Knowledge [planes])", "feat:weapon_finesse"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "choices": [{
+        "id": "sorcerer13:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus# (Knowledge [planes])", "feat:weapon_finesse"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "choices": [{
+        "id": "sorcerer19:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus# (Knowledge [planes])", "feat:weapon_finesse"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "spell:enlarge_person",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d5",
+      "effects": [{
+        "targetKey": "spell:scorching_ray",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:fireball",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "spell:wall_of_fire",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d11",
+      "effects": [{
+        "targetKey": "spell:persistent_image",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:planar_binding",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "spell:plane_shift",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d17",
+      "effects": [{
+        "targetKey": "spell:giant_form_ii",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "effects": [{
+        "targetKey": "spell:wish",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }]
+  }
+}

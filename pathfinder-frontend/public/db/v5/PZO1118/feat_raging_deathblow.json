@@ -1,8 +1,8 @@
 {
   "id": "feat:raging_deathblow",
   "name": "Raging Deathblow",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:greater_rage#barbarian",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:greater_rage#barbarian,!@feat:raging_deathblow)",
   "description": {
     "text": "Every killing blow gives you a surge of vitality, further fueling your rage.",
     "sections": {

@@ -1,8 +1,8 @@
 {
   "id": "feat:sea_legs",
   "name": "Sea Legs",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@skill:profession#sailor\u003e\u003d5",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@skill:profession#sailor\u003e\u003d5,!@feat:sea_legs)",
   "description": {
     "text": "You have a sailor\u0027s instincts for moving about while aboard seagoing vessels.",
     "sections": {

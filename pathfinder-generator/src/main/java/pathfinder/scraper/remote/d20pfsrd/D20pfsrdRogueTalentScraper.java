@@ -10,7 +10,7 @@ import org.jsoup.UncheckedIOException;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import pathfinder.db.RogueTalentSourceDatabase;
+import pathfinder.generator.db.RogueTalentSourceDatabase;
 import pathfinder.model.AttributeType;
 import pathfinder.model.Description;
 import pathfinder.model.pathfinder.Feature;

@@ -2,14 +2,8 @@
   "id": "rage_power:spellbreaker",
   "name": "Spellbreaker",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:disruptive) AND !@rage_power:spellbreaker",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:disruptive)",
   "description": {
     "text": "Gain the Spellbreaker feat while raging"
-  },
-  "effects": [{
-    "targetKey": "rage_power:spellbreaker",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

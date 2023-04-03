@@ -1,8 +1,8 @@
 {
   "id": "feat:extra_ranger_trap",
   "name": "Extra Ranger Trap",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:trap",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:trap,!@feat:extra_ranger_trap)",
   "description": {
     "sections": {
       "Benefit": "You can set ranger traps two additional times per day."

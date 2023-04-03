@@ -2,7 +2,7 @@
   "id": "feat:charge_through",
   "name": "Charge Through",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@feat:improved_overrun,@feat:power_attack,@bab\u003e\u003d1)",
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@feat:improved_overrun,@feat:power_attack,@bab\u003e\u003d1,!@feat:charge_through)",
   "description": {
     "sections": {
       "Benefit": "When making a charge, you can attempt to overrun one creature in the path of the charge as a free action. If you successfully overrun that creature, you can complete the charge. If the overrun is unsuccessful, the charge ends in the space directly in front of that creature.",

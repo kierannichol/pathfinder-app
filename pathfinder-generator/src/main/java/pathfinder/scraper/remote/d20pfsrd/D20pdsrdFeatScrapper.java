@@ -35,7 +35,8 @@ public class D20pdsrdFeatScrapper extends AbstractD20pfsrdScraper {
                     scrapeFeatDirectoryPage(new URL("https://www.d20pfsrd.com/feats/metamagic-feats"), FeatType.METAMAGIC),
                     scrapeFeatDirectoryPage(new URL("https://www.d20pfsrd.com/feats/racial-feats"), FeatType.RACIAL),
                     scrapeFeatDirectoryPage(new URL("https://www.d20pfsrd.com/feats/style-feats"), FeatType.STYLE),
-                    scrapeFeatDirectoryPage(new URL("https://www.d20pfsrd.com/feats/teamwork-feats"), FeatType.TEAMWORK)
+                    scrapeFeatDirectoryPage(new URL("https://www.d20pfsrd.com/feats/teamwork-feats"), FeatType.TEAMWORK),
+                    scrapeFeatDirectoryPage(new URL("https://www.d20pfsrd.com/feats/item-creation-feats"), FeatType.ITEM_CREATION)
             ));
         } catch (IOException e) {
             throw new UncheckedIOException(e);

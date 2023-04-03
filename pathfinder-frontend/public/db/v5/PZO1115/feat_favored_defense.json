@@ -2,7 +2,7 @@
   "id": "feat:favored_defense",
   "name": "Favored Defense",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@ability:favored_enemy#ranger",
+  "prerequisiteFormula": "all(@ability:favored_enemy#ranger,!@feat:favored_defense)",
   "description": {
     "sections": {
       "Benefit": "Choose one of your favored enemy types. You add half your favored enemy bonus to your CMD and as a dodge bonus to AC when attacked by a favored enemy.",

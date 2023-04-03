@@ -2,7 +2,7 @@
   "id": "feat:improved_studied_combatant",
   "name": "Improved Studied Combatant",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "max(@skill:knowledge_*)[Any knowledge skill]",
+  "prerequisiteFormula": "all(max(@skill:knowledge_*)[Any knowledge skill],!@feat:improved_studied_combatant)",
   "description": {
     "text": "Deep understanding of your foes\u0027 tics grants you the upper hand in combat.",
     "sections": {

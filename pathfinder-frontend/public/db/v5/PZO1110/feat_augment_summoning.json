@@ -2,7 +2,7 @@
   "id": "feat:augment_summoning",
   "name": "Augment Summoning",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@feat:spell_focus#conjuration",
+  "prerequisiteFormula": "all(@feat:spell_focus#conjuration,!@feat:augment_summoning)",
   "description": {
     "text": "Your summoned creatures are more powerful and robust.",
     "sections": {

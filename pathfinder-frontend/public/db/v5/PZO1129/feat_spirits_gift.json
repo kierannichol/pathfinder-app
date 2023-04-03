@@ -2,7 +2,7 @@
   "id": "feat:spirits_gift",
   "name": "Spirit\u0027s Gift",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@ability:animal_companion#hunter,@ability:familiar#investigator_bonded_investigator)",
+  "prerequisiteFormula": "all(any(@ability:animal_companion#hunter,@ability:familiar#wizard_pact_wizard_ff),!@feat:spirits_gift)",
   "description": {
     "text": "You commune with a spirit of your choice, and it grants your animal companion or familiar a boon.",
     "sections": {

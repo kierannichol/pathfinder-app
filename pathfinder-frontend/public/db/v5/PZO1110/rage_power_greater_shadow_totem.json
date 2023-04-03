@@ -2,14 +2,8 @@
   "id": "rage_power:greater_shadow_totem",
   "name": "Greater Shadow Totem",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:shadow_totem) AND !@rage_power:greater_shadow_totem",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:shadow_totem)",
   "description": {
     "text": "Gain see in darkness ability while raging and immunity to blindness."
-  },
-  "effects": [{
-    "targetKey": "rage_power:greater_shadow_totem",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

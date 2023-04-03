@@ -1,0 +1,154 @@
+{
+  "id": "sorcerer_bloodline:stormborn_bloodline",
+  "name": "Stormborn Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "description": {
+    "text": "You trace your heritage to fierce and proud spirits of storm and sky, and living lightning sings in your veins."
+  },
+  "template": {
+    "id": "sorcerer_bloodline:stormborn_bloodline",
+    "sections": [{
+      "condition": "@class:sorcerer\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:thunderstaff#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:shock#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "ability:shocking_burst#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "ability:stormchild#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:thunderbolt#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "choices": [{
+        "id": "sorcerer7:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus# (Fly)", "feat:wind_stance"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "choices": [{
+        "id": "sorcerer13:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus# (Fly)", "feat:wind_stance"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "choices": [{
+        "id": "sorcerer19:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus# (Fly)", "feat:wind_stance"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "spell:shocking_grasp",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d5",
+      "effects": [{
+        "targetKey": "spell:gust_of_wind",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:lightning_bolt",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "spell:shout",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d11",
+      "effects": [{
+        "targetKey": "spell:overland_flight",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:chain_lightning",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "spell:control_weather",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d17",
+      "effects": [{
+        "targetKey": "spell:whirlwind",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "effects": [{
+        "targetKey": "spell:storm_of_vengeance",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }]
+  }
+}

@@ -1,8 +1,8 @@
 {
   "id": "feat:word_of_healing",
   "name": "Word of Healing",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:lay_on_hands#paladin",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:lay_on_hands#paladin,!@feat:word_of_healing)",
   "description": {
     "text": "Using the same divine energy as your lay on hands ability, you can heal others at a distance.",
     "sections": {

@@ -1,8 +1,8 @@
 {
   "id": "feat:channeled_revival",
   "name": "Channeled Revival",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:channel_positive_energy\u003e\u003d6",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:channel_positive_energy\u003e\u003d6,!@feat:channeled_revival)",
   "description": {
     "text": "You can expend a large portion of your channeling power to reverse death itself.",
     "sections": {

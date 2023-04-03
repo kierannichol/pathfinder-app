@@ -2,7 +2,7 @@
   "id": "feat:master_craftsman",
   "name": "Master Craftsman",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(max(@skill:craft#*)[Any craft skill]\u003e\u003d5,max(@skill:profession:#*)[Any profession skill]\u003e\u003d5)",
+  "prerequisiteFormula": "all(any(max(@skill:craft#*)[Any craft skill]\u003e\u003d5,max(@skill:profession:#*)[Any profession skill]\u003e\u003d5),!@feat:master_craftsman)",
   "description": {
     "text": "Your superior crafting skills allow you to create simple magic items.",
     "sections": {

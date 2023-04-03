@@ -1,8 +1,8 @@
 {
   "id": "feat:dispel_synergy",
   "name": "Dispel Synergy",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@skill:spellcraft\u003e\u003d5",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@skill:spellcraft\u003e\u003d5,!@feat:dispel_synergy)",
   "description": {
     "text": "By tearing away an opponent\u0027s magical defenses, you leave your enemy vulnerable, making it difficult for him to resist your spells.",
     "sections": {

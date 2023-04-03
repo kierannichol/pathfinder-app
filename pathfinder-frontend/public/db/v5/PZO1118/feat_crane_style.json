@@ -1,8 +1,8 @@
 {
   "id": "feat:crane_style",
   "name": "Crane Style",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@feat:dodge,@feat:improved_unarmed_strike,@bab\u003e\u003d2,@class:monk\u003e\u003d1)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@feat:dodge,@feat:improved_unarmed_strike,@bab\u003e\u003d2,@class:monk\u003e\u003d1),!@feat:crane_style)",
   "description": {
     "text": "Your unarmed fighting techniques blend poise with graceful defense.",
     "sections": {

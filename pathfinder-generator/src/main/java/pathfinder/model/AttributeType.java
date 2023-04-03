@@ -27,7 +27,7 @@ public enum AttributeType {
     SHAMAN_HEX("shaman_hex"),
     SLAYER_TALENT("slayer_talent"),
     SWASHBUCKLER_DEED("swashbuckler_deed"),
-    WARPRIEST_BLESSINGS("blessing"),
+    WARPRIEST_BLESSINGS("warpriest_blessing"),
     UNCHAINED_RAGE_POWER("unchained_rage_power"),
     UNCHAINED_KI_POWER("unchained_ki_power"),
     UNCHAINED_ROGUE_TALENT("unchained_rogue_talent"),

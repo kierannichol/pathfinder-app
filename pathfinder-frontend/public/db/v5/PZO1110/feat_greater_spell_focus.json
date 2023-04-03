@@ -2,7 +2,7 @@
   "id": "feat:greater_spell_focus",
   "name": "Greater Spell Focus",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@feat:spell_focus",
+  "prerequisiteFormula": "all(@feat:spell_focus,!@feat:greater_spell_focus)",
   "description": {
     "sections": {
       "Benefit": "Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select. This bonus stacks with the bonus from Spell Focus.",

@@ -1,8 +1,8 @@
 {
   "id": "feat:kirin_path",
   "name": "Kirin Path",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@skill:knowledge_dungeoneering\u003e\u003d5,@skill:knowledge_local\u003e\u003d5,@skill:knowledge_planes\u003e\u003d5,@skill:knowledge_religion\u003e\u003d5)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@skill:knowledge_dungeoneering\u003e\u003d5,@skill:knowledge_local\u003e\u003d5,@skill:knowledge_planes\u003e\u003d5,@skill:knowledge_religion\u003e\u003d5),!@feat:kirin_path)",
   "description": {
     "text": "You turn knowledge of your enemy into a flawless defense.",
     "sections": {

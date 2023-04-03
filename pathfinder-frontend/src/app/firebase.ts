@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import {signInWithPopup} from "@firebase/auth";
 import {FirebaseError, initializeApp} from "firebase/app";
 import {
   createUserWithEmailAndPassword,
@@ -7,7 +8,6 @@ import {
   GoogleAuthProvider,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
-  signInWithRedirect,
   signOut
 } from "firebase/auth";
 import {get, getDatabase, ref, remove, set} from 'firebase/database';
@@ -72,7 +72,7 @@ export function firebaseUser(): User|undefined {
 }
 
 export async function firebaseLoginWithGoogle(): Promise<void> {
-  const result = await signInWithRedirect(auth, googleAuthProvider);
+  const result = await signInWithPopup(auth, googleAuthProvider);
   const credential = GoogleAuthProvider.credentialFromResult(result);
   setGoogleToken(credential?.idToken);
 }

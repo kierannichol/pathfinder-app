@@ -1,8 +1,8 @@
 {
   "id": "feat:raging_hurler",
   "name": "Raging Hurler",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],@feat:throw_anything)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],@feat:throw_anything,!@feat:raging_hurler)",
   "description": {
     "text": "An opponent can do little to evade your wrathful pitching of weapons and objects.",
     "sections": {

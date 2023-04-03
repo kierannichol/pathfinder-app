@@ -1,8 +1,8 @@
 {
   "id": "feat:detect_expertise",
   "name": "Detect Expertise",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@int_score\u003e\u003d13,any(@spell:detect_chaos,@spell:detect_evil,@spell:detect_good,@spell:detect_law,@spell:detect_magic))",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@int_score\u003e\u003d13,any(@spell:detect_chaos,@spell:detect_evil,@spell:detect_good,@spell:detect_law,@spell:detect_magic),!@feat:detect_expertise)",
   "description": {
     "sections": {
       "Benefit": "When you use any of the spells listed in this feat\u0027s prerequisites to detect a creature\u0027s alignment or its magic, you have a chance of detecting what spellcasting expertise it has. After you observe a creature with the detect spell for 3 rounds, it must make a Will save (DC 10 + 1/2 your caster level + your Intelligence modifier). If it fails the saving throw, you learn what bloodlines, domains, hexes, schools, or mysteries (if any) the creature possesses. If the creature makes its save, it is immune to the effects of this feat for 24 hours."

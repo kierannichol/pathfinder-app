@@ -1,8 +1,8 @@
 {
   "id": "feat:rapid_reload",
   "name": "Rapid Reload",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "any(@ability:weapon_proficiency#witch_tatterdemalion#crossbow,@feat:exotic_weapon_proficiency#firearm)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(any(@ability:weapon_proficiency#bard_lotus_geisha#crossbow,@feat:exotic_weapon_proficiency#firearm),!@feat:rapid_reload)",
   "description": {
     "sections": {
       "Benefit": "The time required for you to reload your chosen type of weapon is reduced to a free action (for a hand or light crossbow), a move action (for heavy crossbow or one-handed firearm), or a standard action (two-handed firearm). Reloading a crossbow or firearm still provokes attacks of opportunity. If you have selected this feat for a hand crossbow or light crossbow, you may fire that weapon as many times in a full-attack action as you could attack if you were using a bow.",

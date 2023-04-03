@@ -2,14 +2,8 @@
   "id": "rage_power:battle_roar",
   "name": "Battle Roar",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:intimidating_glare) AND !@rage_power:battle_roar",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:intimidating_glare)",
   "description": {
     "text": "You deal an additional 1d6 points of sonic damage to an opponent you successfully demoralized using intimidating glare."
-  },
-  "effects": [{
-    "targetKey": "rage_power:battle_roar",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

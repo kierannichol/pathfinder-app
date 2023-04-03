@@ -2,9 +2,12 @@ package pathfinder.scraper.remote.d20pfsrd;
 
 import static pathfinder.util.EncoderUtils.whenType;
 
+import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 import org.jsoup.nodes.Document;
@@ -13,6 +16,7 @@ import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 import pathfinder.scraper.remote.AbstractWebScraper;
+import pathfinder.scraper.remote.d20pfsrd.AbstractD20pfsrdTablePageScraper.Row;
 import pathfinder.util.StringUtils;
 
 public abstract class AbstractD20pfsrdScraper extends AbstractWebScraper {
@@ -168,6 +172,14 @@ public abstract class AbstractD20pfsrdScraper extends AbstractWebScraper {
             next = next.nextSibling();
         }
         return StringUtils.sanitize(found.toString());
+    }
+
+    protected <T> Stream<T> scrapeTablePage(String url, Function<Row, T> transformFn) {
+        try {
+            return new D20pfsrdTablePageScraper<T>(url, transformFn).stream();
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
     }
 
     public record Block(String titleText, String contentText, Elements contentElements) {}

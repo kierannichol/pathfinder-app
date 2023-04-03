@@ -2,7 +2,7 @@
   "id": "feat:recovered_rage",
   "name": "Recovered Rage",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],max(@ability:raging_song#*)[Raging song class feature])",
+  "prerequisiteFormula": "all(any(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],max(@ability:raging_song#*)[Raging song class feature]),!@feat:recovered_rage)",
   "description": {
     "text": "You regain rounds of rage or raging performance when you drop a foe.",
     "sections": {

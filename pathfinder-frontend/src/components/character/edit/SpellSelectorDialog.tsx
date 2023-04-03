@@ -2,6 +2,7 @@ import React, {useMemo} from "react";
 import {Modal} from "react-bootstrap";
 import CharacterAtLevel from "../../../core/CharacterAtLevel";
 import {SelectChoiceNode} from "../../../core/Choice";
+import CharacterFeatureList from "./CharacterFeatureList";
 import styles from "./Dialog.module.scss";
 import {RepeatingChoiceSelector} from "./RepeatingChoiceSelector";
 
@@ -22,6 +23,8 @@ export default function SpellSelectorDialog({ show, onSelect, onCancel, characte
   }, [spellChoices]);
 
   const pointsAvailable = spellChoices.length;
+
+  const knownSpells = useMemo(() => characterAtLevel.find('spell:*').map(spell => spell.id), [characterAtLevel]);
 
   return <Modal
       show={show}
@@ -46,6 +49,8 @@ export default function SpellSelectorDialog({ show, onSelect, onCancel, characte
           choices={characterAtLevel.choicesOfType('spell') as SelectChoiceNode[]}
           characterAtLevel={characterAtLevel}
           onChange={onSelect} />
+      <label>Known</label>
+      <CharacterFeatureList featureIds={knownSpells}  />
     </Modal.Body>
   </Modal>
 }

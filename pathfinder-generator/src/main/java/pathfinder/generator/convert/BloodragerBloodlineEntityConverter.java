@@ -6,9 +6,11 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Stream;
+import logic.util.Ordinal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pathfinder.db.local.FeatSourceDatabase;
+import pathfinder.generator.db.local.FeatSourceDatabase;
+import pathfinder.generator.db.local.SpellYamlSourceDatabase;
 import pathfinder.model.Effect;
 import pathfinder.model.Entity;
 import pathfinder.model.Entity.EntityBuilder;
@@ -18,17 +20,20 @@ import pathfinder.model.SelectChoice;
 import pathfinder.model.Template;
 import pathfinder.model.Template.Section;
 import pathfinder.model.Template.TemplateBuilder;
-import pathfinder.model.pathfinder.BloodragerBloodline;
+import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.Sources;
+import pathfinder.model.pathfinder.Spell;
 import pathfinder.util.NameUtils;
+import pathfinder.util.NameUtils.NameAndParentheses;
 
 @Component
 @RequiredArgsConstructor
 public class BloodragerBloodlineEntityConverter {
     private final FeatSourceDatabase featSourceDatabase;
+    private final SpellYamlSourceDatabase spellSourceDatabase;
 
-    public Stream<Entity> toEntities(BloodragerBloodline model) {
+    public Stream<Entity> toEntities(Bloodline model) {
         try {
             EntityBuilder entity = Entity.builder()
                     .id(model.id())
@@ -45,10 +50,8 @@ public class BloodragerBloodlineEntityConverter {
                 }
                 String actualName = featName;
                 String option = nameAndParentheses.size() > 1 ? nameAndParentheses.get(1) : null;
-                return featSourceDatabase.namedEntities()
-                        .filter(feat -> feat.name().equalsIgnoreCase(actualName))
+                return featSourceDatabase.findFeatByName(actualName)
                         .map(Identity::id)
-                        .findFirst()
                         .orElseThrow(
                                 () -> new IllegalStateException("Unable to find bloodline bonus feat ID: " + actualName))
                         .withOption(option);
@@ -80,6 +83,19 @@ public class BloodragerBloodlineEntityConverter {
             template.section(createBonusFeatSection.apply(15));
             template.section(createBloodlinePowerSection.apply(16, model.bloodlinePowers().get(4)));
             template.section(createBonusFeatSection.apply(18));
+
+            model.bonusSpells().forEach(spellName -> {
+                NameAndParentheses nameAndParentheses = NameUtils.nameAndParentheses(spellName);
+                String actualName = nameAndParentheses.name();
+                int level = Ordinal.parseOrdinal(nameAndParentheses.lastParentheses().orElseThrow());
+
+                Spell spell = spellSourceDatabase.findSpellByName(actualName).orElseThrow();
+
+                template.section(Section.builder()
+                        .condition("@class:sorcerer>=" + level)
+                        .effect(Effect.setNumber(spell.id(), 1))
+                        .build());
+            });
 
             entity.template(template.build());
             return Stream.of(entity.build());

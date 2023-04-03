@@ -2,7 +2,7 @@
   "id": "feat:channel_smite",
   "name": "Channel Smite",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@ability:channel_energy#warpriest",
+  "prerequisiteFormula": "all(@ability:channel_energy#warpriest,!@feat:channel_smite)",
   "description": {
     "text": "You can channel your divine energy through a melee weapon you wield.",
     "sections": {

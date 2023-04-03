@@ -1,0 +1,17 @@
+{
+  "id": "feat:craft_rod",
+  "name": "Craft Rod",
+  "tags": ["item_creation", "feat"],
+  "prerequisiteFormula": "all(@caster_level\u003e\u003d9,!@feat:craft_rod)",
+  "description": {
+    "sections": {
+      "Benefit": "You can create magic rods. Crafting a rod takes 1 day for each 1,000 gp in its base price. To craft a rod, you must use up raw materials costing half of its base price."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:craft_rod",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

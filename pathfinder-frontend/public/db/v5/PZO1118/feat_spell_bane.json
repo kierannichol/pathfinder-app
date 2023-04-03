@@ -1,8 +1,8 @@
 {
   "id": "feat:spell_bane",
   "name": "Spell Bane",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:bane#inquisitor",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:bane#inquisitor,!@feat:spell_bane)",
   "description": {
     "text": "While your bane weapon is active, creatures that your bane affects find it more difficult to resist your spells.",
     "sections": {

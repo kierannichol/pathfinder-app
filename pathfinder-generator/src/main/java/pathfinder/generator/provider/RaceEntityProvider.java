@@ -3,7 +3,7 @@ package pathfinder.generator.provider;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pathfinder.db.local.RaceSourceDatabase;
+import pathfinder.generator.db.local.RaceSourceDatabase;
 import pathfinder.model.Entity;
 import pathfinder.model.pathfinder.Race;
 import pathfinder.model.pathfinder.Source;

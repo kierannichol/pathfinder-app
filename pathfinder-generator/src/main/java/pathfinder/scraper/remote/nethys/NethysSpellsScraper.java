@@ -16,7 +16,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import pathfinder.db.local.ClassSourceDatabase;
+import pathfinder.generator.db.local.ClassSourceDatabase;
 import pathfinder.model.AttributeType;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Spell;

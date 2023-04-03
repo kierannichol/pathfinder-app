@@ -97,6 +97,38 @@
           "ids": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:burning_hands",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:scorching_ray",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:protection_from_energy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:elemental_body_i",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

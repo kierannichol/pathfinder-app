@@ -2,7 +2,7 @@
   "id": "feat:twinned_feint",
   "name": "Twinned Feint",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@cha_score\u003e\u003d13",
+  "prerequisiteFormula": "all(@cha_score\u003e\u003d13,!@feat:twinned_feint)",
   "description": {
     "text": "You can fool two opponents with a single feint.",
     "sections": {

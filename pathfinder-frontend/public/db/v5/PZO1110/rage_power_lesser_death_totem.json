@@ -2,14 +2,8 @@
   "id": "rage_power:lesser_death_totem",
   "name": "Lesser Death Totem",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "any(@class:barbarian,@class:savage) AND !@rage_power:lesser_death_totem",
+  "prerequisiteFormula": "any(@class:barbarian,@class:savage)",
   "description": {
     "text": "While raging, roll Fortitude saves twice and choose the best result."
-  },
-  "effects": [{
-    "targetKey": "rage_power:lesser_death_totem",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

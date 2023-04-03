@@ -1,0 +1,154 @@
+{
+  "id": "sorcerer_bloodline:shadow_bloodline",
+  "name": "Shadow Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "description": {
+    "text": "Spirits from the shadow plane dally at times in the world of light, and such as these lay with your ancestors once upon a time, imparting the mystery of shadow-stuff into your lineage. You are often sullen and withdrawn, preferring to skulk at the fringes of social circles and keep to yourself, cultivating an air of mystery and majesty that is all your own."
+  },
+  "template": {
+    "id": "sorcerer_bloodline:shadow_bloodline",
+    "sections": [{
+      "condition": "@class:sorcerer\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:shadowstrike#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:nighteye#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "ability:shadow_well#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "ability:dimension_door#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:enveloping_darkness#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "choices": [{
+        "id": "sorcerer7:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus# (Stealth)", "feat:stealthy", "feat:weapon_finesse"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "choices": [{
+        "id": "sorcerer13:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus# (Stealth)", "feat:stealthy", "feat:weapon_finesse"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "choices": [{
+        "id": "sorcerer19:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus# (Stealth)", "feat:stealthy", "feat:weapon_finesse"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "spell:ray_of_enfeeblement",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d5",
+      "effects": [{
+        "targetKey": "spell:darkvision",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:deeper_darkness",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "spell:shadow_conjuration",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d11",
+      "effects": [{
+        "targetKey": "spell:shadow_evocation",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:shadow_walk",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "spell:power_word_blind",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d17",
+      "effects": [{
+        "targetKey": "spell:greater_shadow_evocation",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "effects": [{
+        "targetKey": "spell:shades",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }]
+  }
+}

@@ -2,7 +2,7 @@
   "id": "feat:fast_healer",
   "name": "Fast Healer",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "all(@con_score\u003e\u003d13,@feat:diehard,@feat:endurance)",
+  "prerequisiteFormula": "all(@con_score\u003e\u003d13,@feat:diehard,@feat:endurance,!@feat:fast_healer)",
   "description": {
     "sections": {
       "Benefit": "When you regain hit points by resting or through magical healing, you recover additional hit points equal to half your Constitution modifier (minimum +1)."

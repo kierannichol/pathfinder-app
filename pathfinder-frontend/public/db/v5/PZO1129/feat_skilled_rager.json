@@ -2,7 +2,7 @@
   "id": "feat:skilled_rager",
   "name": "Skilled Rager",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature]",
+  "prerequisiteFormula": "all(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],!@feat:skilled_rager)",
   "description": {
     "text": "With practice, you\u0027ve mastered your rage to allow yourself more versatility.",
     "sections": {

@@ -10,12 +10,14 @@ import pathfinder.model.Tags;
 import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.Sources;
+import pathfinder.util.StreamUtils;
 
 @Component
 public class ClassFeatureEntityConverter {
 
     public Stream<Entity> toEntities(CharacterClass model) {
         return model.class_features().stream()
+                .filter(StreamUtils.duplicates(Feature::id))
                 .map(feature -> {
                     Tags tags = createClassFeatureTags();
 

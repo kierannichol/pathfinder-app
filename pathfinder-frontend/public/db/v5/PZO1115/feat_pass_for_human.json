@@ -2,7 +2,7 @@
   "id": "feat:pass_for_human",
   "name": "Pass For Human",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@race:half_elf,@race:half_orc,@race:halfling)",
+  "prerequisiteFormula": "all(any(@race:half_elf,@race:half_orc,@race:halfling),!@feat:pass_for_human)",
   "description": {
     "text": "You\u0027re easily mistaken for a human rather than a member of your own race.",
     "sections": {

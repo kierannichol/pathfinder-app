@@ -2,7 +2,7 @@
   "id": "feat:alignment_channel",
   "name": "Alignment Channel",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@ability:channel_positive_energy,@ability:channel_negative_energy)",
+  "prerequisiteFormula": "all(any(@ability:channel_positive_energy,@ability:channel_negative_energy),!@feat:alignment_channel)",
   "description": {
     "sections": {
       "Benefit": "Instead of its normal effect, you can choose to have your ability to channel energy heal or harm outsiders of the chosen alignment subtype. You must make this choice each time you channel energy. If you choose to heal or harm creatures of the chosen alignment subtype, your channel energy has no effect on other creatures. The amount of damage healed or dealt and the DC to halve the damage is otherwise unchanged.",

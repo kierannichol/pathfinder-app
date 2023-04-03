@@ -1,0 +1,35 @@
+{
+  "id": "class:paladin#oath_against_corruption",
+  "name": "Oath Against Corruption",
+  "tags": ["archetype", "paladin"],
+  "description": {
+  },
+  "template": {
+    "id": "class:paladin#oath_against_corruption",
+    "sections": [{
+      "condition": "@class:paladin\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:aura_of_courage#paladin",
+        "renameAction": {
+          "renamedKey": "ability:aura_of_purity#paladin_oath_against_corruption"
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d11",
+      "effects": [{
+        "targetKey": "ability:aura_of_justice#paladin",
+        "renameAction": {
+          "renamedKey": "ability:cleansing_flame#paladin_oath_against_corruption"
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:holy_champion#paladin",
+        "renameAction": {
+          "renamedKey": "ability:cast_into_the_void#paladin_oath_against_corruption"
+        }
+      }]
+    }]
+  }
+}

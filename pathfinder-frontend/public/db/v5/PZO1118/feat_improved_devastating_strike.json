@@ -1,8 +1,8 @@
 {
   "id": "feat:improved_devastating_strike",
   "name": "Improved Devastating Strike",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@feat:devastating_strike,@feat:vital_strike,@bab\u003e\u003d13)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@feat:devastating_strike,@feat:vital_strike,@bab\u003e\u003d13,!@feat:improved_devastating_strike)",
   "description": {
     "sections": {
       "Benefit": "Whenever you use Vital Strike, Improved Vital Strike, or Greater Vital Strike, you gain a bonus on attack rolls to confirm a critical hit equal to the bonus on damage rolls you gain from Devastating Strike."

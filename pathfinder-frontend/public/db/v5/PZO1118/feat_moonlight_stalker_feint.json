@@ -1,8 +1,8 @@
 {
   "id": "feat:moonlight_stalker_feint",
   "name": "Moonlight Stalker Feint",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "any(@ability:darkvision,@ability:low_light_vision)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(any(@ability:darkvision,@ability:low_light_vision),!@feat:moonlight_stalker_feint)",
   "description": {
     "text": "You strike through the shadows so quickly that your opponent can barely react to your attacks.",
     "sections": {

@@ -2,14 +2,8 @@
   "id": "rage_power:energy_absorption",
   "name": "Energy Absorption",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:greater_energy_resistance) AND !@rage_power:energy_absorption",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:greater_energy_resistance)",
   "description": {
     "text": "Absorb energy to gain temporary hit points"
-  },
-  "effects": [{
-    "targetKey": "rage_power:energy_absorption",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

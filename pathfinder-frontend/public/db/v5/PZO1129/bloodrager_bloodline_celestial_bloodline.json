@@ -97,6 +97,38 @@
           "ids": ["feat:dodge", "feat:improved_initiative", "feat:iron_will", "feat:mobility", "feat:mounted_combat", "feat:ride_by_attack", "feat:weapon_focus"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:bless",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:resist_energy",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:heroism",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:holy_smite",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

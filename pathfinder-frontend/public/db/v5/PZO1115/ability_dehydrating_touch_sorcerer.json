@@ -1,0 +1,14 @@
+{
+  "id": "ability:dehydrating_touch#sorcerer",
+  "name": "Dehydrating Touch",
+  "tags": ["aquatic_bloodline", "sorcerer_bloodline_feature", "class_feature"],
+  "description": {
+    "text": ": Starting at 1st level, you can make a melee touch attack as a standard action that inflicts 1d6 points of nonlethal damage + 1 for every two sorcerer levels you possess and sickens the target for 1 round. Oozes, plants, and creatures with the aquatic or water subtypes suffer lethal damage instead. You can use this ability a number of times per day equal to 3 + your Charisma modifier."
+  },
+  "effects": [{
+    "targetKey": "ability:dehydrating_touch#sorcerer",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

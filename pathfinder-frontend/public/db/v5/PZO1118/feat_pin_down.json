@@ -1,8 +1,8 @@
 {
   "id": "feat:pin_down",
   "name": "Pin Down",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@feat:combat_reflexes,@class:fighter\u003e\u003d11)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@feat:combat_reflexes,@class:fighter\u003e\u003d11,!@feat:pin_down)",
   "description": {
     "text": "You easily block enemy escapes.",
     "sections": {

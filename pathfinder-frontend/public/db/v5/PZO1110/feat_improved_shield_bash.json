@@ -2,7 +2,7 @@
   "id": "feat:improved_shield_bash",
   "name": "Improved Shield Bash",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@feat:shield_proficiency",
+  "prerequisiteFormula": "all(@feat:shield_proficiency,!@feat:improved_shield_bash)",
   "description": {
     "text": "You can protect yourself with your shield, even if you use it to attack.",
     "sections": {

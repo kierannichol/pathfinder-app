@@ -97,6 +97,38 @@
           "ids": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:entangle",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:hideous_laughter",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:haste",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:confusion",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

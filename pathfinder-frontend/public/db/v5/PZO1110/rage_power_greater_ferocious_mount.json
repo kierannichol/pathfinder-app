@@ -2,14 +2,8 @@
   "id": "rage_power:greater_ferocious_mount",
   "name": "Greater Ferocious Mount",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:ferocious_mount) AND !@rage_power:greater_ferocious_mount",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:ferocious_mount)",
   "description": {
     "text": "Allow your mount to benefit from rage powers"
-  },
-  "effects": [{
-    "targetKey": "rage_power:greater_ferocious_mount",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

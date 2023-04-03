@@ -1,8 +1,8 @@
 {
   "id": "feat:passing_trick",
   "name": "Passing Trick",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "@size\u003c\u003d4",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@size\u003c\u003d4,!@feat:passing_trick)",
   "description": {
     "text": "Slipping past a foe gives you the chance to feint.",
     "sections": {

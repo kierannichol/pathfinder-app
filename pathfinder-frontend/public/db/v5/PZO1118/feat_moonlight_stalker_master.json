@@ -1,8 +1,8 @@
 {
   "id": "feat:moonlight_stalker_master",
   "name": "Moonlight Stalker Master",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "any(@ability:darkvision,@ability:low_light_vision)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(any(@ability:darkvision,@ability:low_light_vision),!@feat:moonlight_stalker_master)",
   "description": {
     "text": "You leave your opponents swinging at shadows while you slide elusively through the darkness.",
     "sections": {

@@ -1,8 +1,8 @@
 {
   "id": "feat:fast_empathy",
   "name": "Fast Empathy",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@skill:handle_animal\u003e\u003d5,@ability:wild_empathy#shifter)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@skill:handle_animal\u003e\u003d5,@ability:wild_empathy#shifter,!@feat:fast_empathy)",
   "description": {
     "sections": {
       "Benefit": "Using wild empathy is a standard action for you.",

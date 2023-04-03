@@ -1,8 +1,8 @@
 {
   "id": "feat:efreeti_style",
   "name": "Efreeti Style",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5),!@feat:efreeti_style)",
   "description": {
     "text": "Your mastery of the unpredictable power of flames allows you to unleash scorching strikes that burn your enemies even when you fail to make contact.",
     "sections": {

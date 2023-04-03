@@ -1,8 +1,8 @@
 {
   "id": "feat:furious_finish",
   "name": "Furious Finish",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],@feat:vital_strike,@bab\u003e\u003d6)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(any(max(@ability:rage#*),max(@ability:bloodrage#*))[Rage class feature],@feat:vital_strike,@bab\u003e\u003d6,!@feat:furious_finish)",
   "description": {
     "text": "You channel all of your rage into one massive blow to crush your enemy.",
     "sections": {

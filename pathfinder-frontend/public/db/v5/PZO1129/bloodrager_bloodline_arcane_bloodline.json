@@ -97,6 +97,38 @@
           "ids": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:magic_missile",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:invisibility",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:lightning_bolt",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:dimension_door",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

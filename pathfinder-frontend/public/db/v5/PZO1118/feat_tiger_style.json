@@ -1,8 +1,8 @@
 {
   "id": "feat:tiger_style",
   "name": "Tiger Style",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@feat:improved_unarmed_strike,@bab\u003e\u003d3,@class:monk\u003e\u003d3)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@feat:improved_unarmed_strike,@bab\u003e\u003d3,@class:monk\u003e\u003d3),!@feat:tiger_style)",
   "description": {
     "text": "Your unarmed fighting style emulates the strength and ferocity of a tiger.",
     "sections": {

@@ -2,7 +2,7 @@
   "id": "feat:breadth_of_experience",
   "name": "Breadth of Experience",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "all(any(@race:dwarf,@race:elf,@race:gnome),@age\u003e\u003d100)",
+  "prerequisiteFormula": "all(any(@race:dwarf,@race:elf,@race:gnome),@age\u003e\u003d100,!@feat:breadth_of_experience)",
   "description": {
     "sections": {
       "Benefit": "You get a +2 bonus on all Knowledge and Profession skill checks, and can make checks with those skills untrained."

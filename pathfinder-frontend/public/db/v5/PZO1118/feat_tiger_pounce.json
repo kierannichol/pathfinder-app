@@ -1,8 +1,8 @@
 {
   "id": "feat:tiger_pounce",
   "name": "Tiger Pounce",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@feat:improved_unarmed_strike,@feat:power_attack,@feat:tiger_claws,@feat:tiger_style,@bab\u003e\u003d9,@class:monk\u003e\u003d8)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@feat:improved_unarmed_strike,@feat:power_attack,@feat:tiger_claws,@feat:tiger_style,@bab\u003e\u003d9,@class:monk\u003e\u003d8),!@feat:tiger_pounce)",
   "description": {
     "text": "Your unarmed strikes are as precise as they are powerful, but they leave you open and you can pursue foes with blinding speed.",
     "sections": {

@@ -2,14 +2,8 @@
   "id": "rage_power:sunder_enchantment",
   "name": "Sunder Enchantment",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:spell_sunder) AND !@rage_power:sunder_enchantment",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:spell_sunder)",
   "description": {
     "text": "Suppress sundered magical item’s powers"
-  },
-  "effects": [{
-    "targetKey": "rage_power:sunder_enchantment",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

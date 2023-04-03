@@ -2,7 +2,7 @@
   "id": "feat:share_healing",
   "name": "Share Healing",
   "tags": ["teamwork", "feat"],
-  "prerequisiteFormula": "any(@feature:animal_companion,@feature:eidolon,@feature:familiar,@feature:special_mount)",
+  "prerequisiteFormula": "all(any(@feature:animal_companion,@feature:eidolon,@feature:familiar,@feature:special_mount),!@feat:share_healing)",
   "description": {
     "text": "Your link with your companion creature allows you to share with it any healing magic that\u0027s cast upon you.",
     "sections": {

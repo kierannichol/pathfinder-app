@@ -1,8 +1,8 @@
 {
   "id": "feat:expert_driver",
   "name": "Expert Driver",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@feat:skilled_driver#selected_vehicle",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@feat:skilled_driver#selected_vehicle,!@feat:expert_driver)",
   "description": {
     "text": "When driving a chosen type of vehicle, you exhibit incredible control, maneuvering the vehicle with greater ease and stopping with uncanny precision.",
     "sections": {

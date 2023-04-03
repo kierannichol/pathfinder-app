@@ -1,8 +1,8 @@
 {
   "id": "feat:eyes_of_judgment",
   "name": "Eyes of Judgment",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@ability:detect_alignment#inquisitor,@caster_level\u003e\u003d6)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:detect_alignment#inquisitor,@caster_level\u003e\u003d6,!@feat:eyes_of_judgment)",
   "description": {
     "sections": {
       "Benefit": "When using your detect alignment class feature, you may spend 3 rounds studying a creature within 60 feet. You cannot take any other actions while doing this. After that time has passed, you learn the alignment of the creature."

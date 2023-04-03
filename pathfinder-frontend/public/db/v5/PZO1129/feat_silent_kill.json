@@ -1,0 +1,18 @@
+{
+  "id": "feat:silent_kill",
+  "name": "Silent Kill",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@skill:stealth\u003e\u003d12,@slayer_talent:assassinate,!@feat:silent_kill)",
+  "description": {
+    "text": "You are quite adept at killing your prey without making noise or alerting others.",
+    "sections": {
+      "Benefit": "When you kill a creature during a surprise round, you can attempt a Stealth check, opposed by the Perception checks of potential observers, to prevent them from noticing your action and subsequently identifying you as the assailant."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:silent_kill",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

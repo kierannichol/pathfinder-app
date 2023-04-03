@@ -1,8 +1,8 @@
 {
   "id": "feat:crane_wing",
   "name": "Crane Wing",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@feat:crane_style,@feat:dodge,@feat:improved_unarmed_strike,@bab\u003e\u003d5,@class:monk\u003e\u003d5)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@feat:crane_style,@feat:dodge,@feat:improved_unarmed_strike,@bab\u003e\u003d5,@class:monk\u003e\u003d5),!@feat:crane_wing)",
   "description": {
     "text": "You move with the speed and finesse of an avian hunter, your sweeping blocks and graceful motions allowing you to deflect melee attacks with ease.",
     "sections": {

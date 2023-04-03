@@ -1,8 +1,8 @@
 {
   "id": "feat:efreeti_stance",
   "name": "Efreeti Stance",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:efreeti_style,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:efreeti_style,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9),!@feat:efreeti_stance)",
   "description": {
     "text": "Calling upon the burning spirits of incarnate flame, you can manipulate fire to protect yourself and immolate your foes.",
     "sections": {

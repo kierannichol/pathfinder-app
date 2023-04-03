@@ -1,8 +1,8 @@
 {
   "id": "feat:judgment_surge",
   "name": "Judgment Surge",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:judgment#inquisitor",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:judgment#inquisitor,!@feat:judgment_surge)",
   "description": {
     "sections": {
       "Benefit": "Once per day, you can treat your class level for your judgment class feature as if it were 3 higher than normal. If you have multiple judgments active at the same time, this benefit applies to all of them."

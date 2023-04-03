@@ -2,14 +2,8 @@
   "id": "rage_power:lesser_lunar_totem",
   "name": "Lesser Lunar Totem",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d4,@trait:bite_attack) AND !@rage_power:lesser_lunar_totem",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d4,@trait:bite_attack)",
   "description": {
     "text": "Gain a bonus to AC and saving throws against undead and shapechangers."
-  },
-  "effects": [{
-    "targetKey": "rage_power:lesser_lunar_totem",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

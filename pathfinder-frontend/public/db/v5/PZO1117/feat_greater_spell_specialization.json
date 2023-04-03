@@ -1,8 +1,8 @@
 {
   "id": "feat:greater_spell_specialization",
   "name": "Greater Spell Specialization",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:spell_focus,@feat:spell_specialization,@spells_per_day#5,!@ability:spontaneous_caster)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:spell_focus,@feat:spell_specialization,@spells_per_day#5,!@ability:spontaneous_caster,!@feat:greater_spell_specialization)",
   "description": {
     "text": "You can sacrifice a prepared spell in order to spontaneously cast your specialized spell.",
     "sections": {

@@ -2,7 +2,7 @@
   "id": "feat:slow_faller",
   "name": "Slow Faller",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@skill:acrobatics\u003e\u003d5,@ability:slow_fall#monk)",
+  "prerequisiteFormula": "all(any(@skill:acrobatics\u003e\u003d5,@ability:slow_fall#monk),!@feat:slow_faller)",
   "description": {
     "text": "You can reduce the amount of falling damage you take when you are close to a wall.",
     "sections": {

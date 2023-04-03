@@ -1,7 +1,7 @@
 import React, {useCallback} from "react";
 import AbilityScores from "../../database/AbilityScores";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
-import {ChoiceSelectorOption} from "./edit/ChoiceSelectorDialog";
+import {ChoiceSelectorOption} from "./edit/ChoiceSelectorList";
 
 interface AbilityScoreSelectButtonProps {
   value: string|undefined;

@@ -1,8 +1,8 @@
 {
   "id": "feat:tiger_claws",
   "name": "Tiger Claws",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@feat:improved_unarmed_strike,@feat:tiger_style,@bab\u003e\u003d6,@class:monk\u003e\u003d5)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@feat:improved_unarmed_strike,@feat:tiger_style,@bab\u003e\u003d6,@class:monk\u003e\u003d5),!@feat:tiger_claws)",
   "description": {
     "text": "You can sacrifice multiple attacks to make a single devastating strike.",
     "sections": {

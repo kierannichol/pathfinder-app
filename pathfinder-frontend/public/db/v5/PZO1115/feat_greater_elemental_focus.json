@@ -2,7 +2,7 @@
   "id": "feat:greater_elemental_focus",
   "name": "Greater Elemental Focus",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@feat:elemental_focus",
+  "prerequisiteFormula": "all(@feat:elemental_focus,!@feat:greater_elemental_focus)",
   "description": {
     "sections": {
       "Benefit": "Add +1 to the Difficulty Class for all saving throws against spells that deal damage of the energy type you select. This bonus stacks with the bonus from Elemental Focus.",

@@ -1,6 +1,5 @@
 package pathfinder.scraper.remote;
 
-import java.util.List;
 import java.util.stream.Stream;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +29,7 @@ public class ElementSearch {
         return elements.findFirst().orElse(null);
     }
 
-    public List<Element> all() {
-        return elements.toList();
+    public Elements all() {
+        return Elements.of(elements.toList());
     }
 }

@@ -1,0 +1,17 @@
+{
+  "id": "feat:channeled_shield_wall",
+  "name": "Channeled Shield Wall",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(any(@ability:channel_positive_energy\u003e\u003d3,@ability:channel_negative_energy\u003e\u003d3),any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield),!@feat:channeled_shield_wall)",
+  "description": {
+    "sections": {
+      "Benefit": "As a swift action, you can spend a use of your channel energy to grant yourself a +2 deflection bonus while using a shield. This bonus lasts 1 minute per cleric level or effective cleric level. While you benefit from this bonus, allies with shields also gain a +2 deflection bonus while they are adjacent to you."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:channeled_shield_wall",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

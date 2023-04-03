@@ -2,7 +2,7 @@
   "id": "feat:war_blessing",
   "name": "War Blessing",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@ability:mystery#oracle,@ability:domains)",
+  "prerequisiteFormula": "all(any(@ability:mystery#oracle,@ability:domains),!@feat:war_blessing)",
   "description": {
     "text": "Your fervent call to your deity imbues you with a temporary blessing.",
     "sections": {

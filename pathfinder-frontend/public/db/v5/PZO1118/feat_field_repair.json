@@ -1,8 +1,8 @@
 {
   "id": "feat:field_repair",
   "name": "Field Repair",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@skill:craft\u003e\u003d4",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@skill:craft\u003e\u003d4,!@feat:field_repair)",
   "description": {
     "text": "You can repair your broken weapon or armor to serviceability even without the benefits of artisan tools.",
     "sections": {

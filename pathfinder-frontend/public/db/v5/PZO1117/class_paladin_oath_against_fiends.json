@@ -1,0 +1,19 @@
+{
+  "id": "class:paladin#oath_against_fiends",
+  "name": "Oath Against Fiends",
+  "tags": ["archetype", "paladin"],
+  "description": {
+  },
+  "template": {
+    "id": "class:paladin#oath_against_fiends",
+    "sections": [{
+      "condition": "@class:paladin\u003e\u003d8",
+      "effects": [{
+        "targetKey": "ability:aura_of_resolve#paladin",
+        "renameAction": {
+          "renamedKey": "ability:anchoring_aura#paladin_oath_against_fiends"
+        }
+      }]
+    }]
+  }
+}

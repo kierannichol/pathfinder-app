@@ -2,14 +2,8 @@
   "id": "rage_power:regenerative_vigor",
   "name": "Regenerative Vigor",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:renewed_vigor) AND !@rage_power:regenerative_vigor",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:renewed_vigor)",
   "description": {
     "text": "Gain fast healing after using renewed vigor"
-  },
-  "effects": [{
-    "targetKey": "rage_power:regenerative_vigor",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

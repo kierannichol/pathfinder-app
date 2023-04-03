@@ -10,6 +10,7 @@ import pathfinder.data.v4.EntitySummaryDbo;
 import pathfinder.generator.provider.EntityProvider;
 import pathfinder.model.Entity;
 import pathfinder.model.pathfinder.Source;
+import pathfinder.util.StreamUtils;
 
 @RequiredArgsConstructor
 public class SourceModuleDatabaseGenerator extends AbstractDatabaseGenerator<Entity, EntitySummaryDbo, EntityDbo> {
@@ -19,7 +20,8 @@ public class SourceModuleDatabaseGenerator extends AbstractDatabaseGenerator<Ent
     @Override
     protected Stream<Entity> streamModels() {
         return entityProviders.stream()
-                .flatMap(provider -> provider.streamEntities(source));
+                .flatMap(provider -> provider.streamEntities(source))
+                .filter(StreamUtils.duplicates(Entity::id));
     }
 
     private String databaseId() {

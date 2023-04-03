@@ -6,12 +6,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import pathfinder.scraper.local.ClassYamlGenerator;
+import pathfinder.scraper.local.HexYamlGenerator;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
         "pathfinder.scraper",
-        "pathfinder.db"
+        "pathfinder.generator"
 })
 @Slf4j
 public class ScraperApplication {
@@ -24,7 +24,7 @@ public class ScraperApplication {
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
 
-            ctx.getBean(ClassYamlGenerator.class).generateLocalDatabase();
+            ctx.getBean(HexYamlGenerator.class).generateLocalDatabase();
 
 //            ctx.getBean(SpellYamlGenerator.class).generateLocalDatabase();
 //            ctx.getBean(D20pfsrdRaceYamlGenerator.class).generateLocalDatabase();

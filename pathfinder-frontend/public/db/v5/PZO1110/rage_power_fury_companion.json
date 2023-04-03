@@ -2,14 +2,8 @@
   "id": "rage_power:fury_companion",
   "name": "Fury Companion",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@rage_power:lesser_fury_companion,@class:barbarian\u003e\u003d6) AND !@rage_power:fury_companion",
+  "prerequisiteFormula": "all(@rage_power:lesser_fury_companion,@class:barbarian\u003e\u003d6)",
   "description": {
     "text": "Grant your fury companion barbarian rage powers."
-  },
-  "effects": [{
-    "targetKey": "rage_power:fury_companion",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

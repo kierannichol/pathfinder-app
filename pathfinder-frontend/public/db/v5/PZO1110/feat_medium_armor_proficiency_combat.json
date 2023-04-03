@@ -2,7 +2,7 @@
   "id": "feat:medium_armor_proficiency_combat",
   "name": "Medium Armor Proficiency (Combat)",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@proficiency:light_armor",
+  "prerequisiteFormula": "all(@proficiency:light_armor,!@feat:medium_armor_proficiency_combat)",
   "description": {
     "sections": {
       "Benefit": "See Armor Proficiency, Light.",

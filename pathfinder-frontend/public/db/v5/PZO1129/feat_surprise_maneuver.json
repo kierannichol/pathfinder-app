@@ -2,7 +2,7 @@
   "id": "feat:surprise_maneuver",
   "name": "Surprise Maneuver",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "all(@feat:combat_expertise,any(@ability:sneak_attack\u003e\u003d3,@ability:studied_strike#investigator\u003e\u003d3))",
+  "prerequisiteFormula": "all(@feat:combat_expertise,any(@ability:sneak_attack\u003e\u003d3,@ability:studied_strike#investigator\u003e\u003d3),!@feat:surprise_maneuver)",
   "description": {
     "text": "Your maneuvers are devastating against disadvantaged foes.",
     "sections": {

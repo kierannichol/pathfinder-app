@@ -2,7 +2,7 @@
   "id": "feat:sundering_strike",
   "name": "Sundering Strike",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@feat:improved_sunder,@feat:power_attack,@bab\u003e\u003d9)",
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@feat:improved_sunder,@feat:power_attack,@bab\u003e\u003d9,!@feat:sundering_strike)",
   "description": {
     "sections": {
       "Benefit": "Whenever you score a critical hit with a melee attack, you can sunder your opponent\u0027s weapon, in addition to the normal damage dealt by the attack. If your confirmation roll exceeds your opponent\u0027s CMD, you may deal damage to your opponent\u0027s weapon as if from the sunder combat maneuver (roll normal damage to the weapon separately). This does not provoke an attack of opportunity.",

@@ -1,8 +1,8 @@
 {
   "id": "feat:siege_commander",
   "name": "Siege Commander",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "@skill:profession#siege_engineer",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@skill:profession#siege_engineer,!@feat:siege_commander)",
   "description": {
     "text": "Under your leadership, the time required to assemble and move a siege engine is greatly reduced.",
     "sections": {

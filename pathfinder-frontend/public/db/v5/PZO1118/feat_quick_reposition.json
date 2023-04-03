@@ -1,8 +1,8 @@
 {
   "id": "feat:quick_reposition",
   "name": "Quick Reposition",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_reposition,@bab\u003e\u003d6)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_reposition,@bab\u003e\u003d6,!@feat:quick_reposition)",
   "description": {
     "text": "Your opponent becomes an unwitting dance partner, following your lead while you fight.",
     "sections": {

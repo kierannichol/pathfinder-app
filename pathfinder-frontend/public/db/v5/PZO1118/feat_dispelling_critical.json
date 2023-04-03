@@ -1,8 +1,8 @@
 {
   "id": "feat:dispelling_critical",
   "name": "Dispelling Critical",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@feat:arcane_strike,@bab\u003e\u003d11,@spell:dispel_magic)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@feat:arcane_strike,@bab\u003e\u003d11,@spell:dispel_magic,!@feat:dispelling_critical)",
   "description": {
     "text": "Your blows attack the physical and arcane forms of your enemies at the same time.",
     "sections": {

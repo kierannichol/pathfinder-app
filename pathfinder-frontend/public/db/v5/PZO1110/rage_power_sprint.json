@@ -2,14 +2,8 @@
   "id": "rage_power:sprint",
   "name": "Sprint",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d4,@rage_power:swift_foot) AND !@rage_power:sprint",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d4,@rage_power:swift_foot)",
   "description": {
     "text": "Move at x3 or x6 speed once per rage"
-  },
-  "effects": [{
-    "targetKey": "rage_power:sprint",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

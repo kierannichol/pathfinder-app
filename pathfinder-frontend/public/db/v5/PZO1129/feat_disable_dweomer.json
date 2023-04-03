@@ -2,7 +2,7 @@
   "id": "feat:disable_dweomer",
   "name": "Disable Dweomer",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "all(@skill:disable_device\u003e\u003d5,@skill:use_magic_device\u003e\u003d5,@ability:trapfinding#unchained_rogue)",
+  "prerequisiteFormula": "all(@skill:disable_device\u003e\u003d5,@skill:use_magic_device\u003e\u003d5,@slayer_talent:trapfinding,!@feat:disable_dweomer)",
   "description": {
     "text": "You can disable a magic item, suppressing it for a short time.",
     "sections": {

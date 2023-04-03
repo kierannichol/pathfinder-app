@@ -2,14 +2,8 @@
   "id": "rage_power:disruptive",
   "name": "Disruptive",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:superstition) AND !@rage_power:disruptive",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:superstition)",
   "description": {
     "text": "Gain the Disruptive feat as a bonus feat"
-  },
-  "effects": [{
-    "targetKey": "rage_power:disruptive",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

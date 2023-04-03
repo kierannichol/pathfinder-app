@@ -1,8 +1,8 @@
 {
   "id": "feat:felling_escape",
   "name": "Felling Escape",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_trip)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_trip,!@feat:felling_escape)",
   "description": {
     "text": "Through the use of fluid contortions and manipulations of leverage, you can throw your opponent to the ground after escaping a grapple.",
     "sections": {

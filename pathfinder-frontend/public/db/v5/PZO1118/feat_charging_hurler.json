@@ -1,8 +1,8 @@
 {
   "id": "feat:charging_hurler",
   "name": "Charging Hurler",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "@feat:point_blank_shot",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@feat:point_blank_shot,!@feat:charging_hurler)",
   "description": {
     "text": "You know how to use your momentum to enhance your thrown weapon attacks.",
     "sections": {

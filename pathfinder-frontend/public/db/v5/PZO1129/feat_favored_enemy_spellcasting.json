@@ -2,7 +2,7 @@
   "id": "feat:favored_enemy_spellcasting",
   "name": "Favored Enemy Spellcasting",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@ability:spells#magus_puppetmaster",
+  "prerequisiteFormula": "all(@ability:spells#magus_puppetmaster,!@feat:favored_enemy_spellcasting)",
   "description": {
     "text": "Your spells are more effective against creatures that you especially abhor.",
     "sections": {

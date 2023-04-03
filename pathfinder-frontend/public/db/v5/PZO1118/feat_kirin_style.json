@@ -1,8 +1,8 @@
 {
   "id": "feat:kirin_style",
   "name": "Kirin Style",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@skill:knowledge_dungeoneering,@skill:knowledge_local,@skill:knowledge_planes,@skill:knowledge_religion)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@skill:knowledge_dungeoneering,@skill:knowledge_local,@skill:knowledge_planes,@skill:knowledge_religion),!@feat:kirin_style)",
   "description": {
     "text": "Your study and your grace allows you to exploit your enemies\u0027 weaknesses.",
     "sections": {

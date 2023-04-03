@@ -2,7 +2,7 @@
   "id": "feat:grasping_strike",
   "name": "Grasping Strike",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "all(any(@feat:nature_magic,@class:druid,@spellbook:ranger),@feat:vital_strike,@skill:knowledge_nature\u003e\u003d5)",
+  "prerequisiteFormula": "all(any(@feat:nature_magic,@class:druid,@spellbook:ranger),@feat:vital_strike,@skill:knowledge_nature\u003e\u003d5,!@feat:grasping_strike)",
   "description": {
     "text": "The surrounding foliage lurches forth at your enemies in concert with your strikes.",
     "sections": {

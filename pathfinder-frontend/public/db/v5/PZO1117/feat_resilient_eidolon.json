@@ -1,8 +1,8 @@
 {
   "id": "feat:resilient_eidolon",
   "name": "Resilient Eidolon",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:eidolon#summoner",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:eidolon#summoner,!@feat:resilient_eidolon)",
   "description": {
     "sections": {
       "Benefit": "If you are knocked unconscious, fall asleep, or are killed, your eidolon remains for a number of rounds equal to your summoner level before it is banished. If you are brought back to consciousness before this duration expires, your eidolon is not banished. If the duration expires before you are brought back to consciousness, your eidolon is banished normally.",

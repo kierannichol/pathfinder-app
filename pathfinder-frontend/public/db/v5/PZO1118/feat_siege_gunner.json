@@ -1,8 +1,8 @@
 {
   "id": "feat:siege_gunner",
   "name": "Siege Gunner",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "@skill:profession#siege_engineer",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@skill:profession#siege_engineer,!@feat:siege_gunner)",
   "description": {
     "text": "Aiming outsized siege weapons poses little difficulty for you.",
     "sections": {

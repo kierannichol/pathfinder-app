@@ -2,14 +2,8 @@
   "id": "rage_power:fiend_totem",
   "name": "Fiend Totem",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:lesser_fiend_totem) AND !@rage_power:fiend_totem",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:lesser_fiend_totem)",
   "description": {
     "text": "Attackers take damage when they hit you in melee"
-  },
-  "effects": [{
-    "targetKey": "rage_power:fiend_totem",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

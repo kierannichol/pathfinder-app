@@ -2,14 +2,8 @@
   "id": "rage_power:spirit_steed",
   "name": "Spirit Steed",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:ferocious_mount) AND !@rage_power:spirit_steed",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:ferocious_mount)",
   "description": {
     "text": "Your mount gains DR/magic and its natural weapons count as magical"
-  },
-  "effects": [{
-    "targetKey": "rage_power:spirit_steed",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

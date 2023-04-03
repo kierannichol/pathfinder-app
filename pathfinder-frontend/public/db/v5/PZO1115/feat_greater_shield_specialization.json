@@ -4,7 +4,7 @@
   "tags": ["combat", "feat"],
   "children": [{
     "optionId": "other",
-    "condition": "all(@proficiency:other,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#other,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:other,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#other,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#other)",
     "name": "Other",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#other",
@@ -14,7 +14,7 @@
     }]
   }, {
     "optionId": "light_armor",
-    "condition": "all(@proficiency:light_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#light_armor,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:light_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#light_armor,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#light_armor)",
     "name": "Light Armor",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#light_armor",
@@ -24,7 +24,7 @@
     }]
   }, {
     "optionId": "medium_armor",
-    "condition": "all(@proficiency:medium_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#medium_armor,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:medium_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#medium_armor,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#medium_armor)",
     "name": "Medium Armor",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#medium_armor",
@@ -34,7 +34,7 @@
     }]
   }, {
     "optionId": "heavy_armor",
-    "condition": "all(@proficiency:heavy_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#heavy_armor,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:heavy_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#heavy_armor,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#heavy_armor)",
     "name": "Heavy Armor",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#heavy_armor",
@@ -44,7 +44,7 @@
     }]
   }, {
     "optionId": "buckler",
-    "condition": "all(@proficiency:buckler,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#buckler,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:buckler,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#buckler,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#buckler)",
     "name": "Buckler",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#buckler",
@@ -54,7 +54,7 @@
     }]
   }, {
     "optionId": "light_shield",
-    "condition": "all(@proficiency:light_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#light_shield,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:light_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#light_shield,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#light_shield)",
     "name": "Light Shield",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#light_shield",
@@ -64,7 +64,7 @@
     }]
   }, {
     "optionId": "heavy_shield",
-    "condition": "all(@proficiency:heavy_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#heavy_shield,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:heavy_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#heavy_shield,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#heavy_shield)",
     "name": "Heavy Shield",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#heavy_shield",
@@ -74,87 +74,7 @@
     }]
   }, {
     "optionId": "tower_shield",
-    "condition": "all(@proficiency:tower_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#tower_shield,@class:fighter\u003e\u003d12)",
-    "name": "Tower Shield",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#tower_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "other",
-    "condition": "all(@proficiency:other,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#other,@class:fighter\u003e\u003d12)",
-    "name": "Other",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#other",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_armor",
-    "condition": "all(@proficiency:light_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#light_armor,@class:fighter\u003e\u003d12)",
-    "name": "Light Armor",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#light_armor",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "medium_armor",
-    "condition": "all(@proficiency:medium_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#medium_armor,@class:fighter\u003e\u003d12)",
-    "name": "Medium Armor",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#medium_armor",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_armor",
-    "condition": "all(@proficiency:heavy_armor,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#heavy_armor,@class:fighter\u003e\u003d12)",
-    "name": "Heavy Armor",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#heavy_armor",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "buckler",
-    "condition": "all(@proficiency:buckler,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#buckler,@class:fighter\u003e\u003d12)",
-    "name": "Buckler",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#buckler",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_shield",
-    "condition": "all(@proficiency:light_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#light_shield,@class:fighter\u003e\u003d12)",
-    "name": "Light Shield",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#light_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_shield",
-    "condition": "all(@proficiency:heavy_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#heavy_shield,@class:fighter\u003e\u003d12)",
-    "name": "Heavy Shield",
-    "effects": [{
-      "targetKey": "feat:greater_shield_specialization#heavy_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "tower_shield",
-    "condition": "all(@proficiency:tower_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#tower_shield,@class:fighter\u003e\u003d12)",
+    "condition": "all(@proficiency:tower_shield,@feat:greater_shield_focus,@feat:shield_focus,@feat:shield_specialization#tower_shield,@class:fighter\u003e\u003d12,!@feat:greater_shield_specialization#tower_shield)",
     "name": "Tower Shield",
     "effects": [{
       "targetKey": "feat:greater_shield_specialization#tower_shield",

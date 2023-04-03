@@ -3,15 +3,17 @@ package pathfinder.scraper.remote.d20pfsrd;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.net.URL;
+import java.util.List;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Component;
-import pathfinder.db.local.ClassSourceDatabase;
+import pathfinder.generator.db.local.ClassSourceDatabase;
 import pathfinder.model.Id;
 import pathfinder.model.pathfinder.Archetype;
+import pathfinder.util.StreamUtils;
 
 @Component
 @RequiredArgsConstructor
@@ -21,7 +23,7 @@ public class D20pfsrdArchetypeScraper extends AbstractD20pfsrdScraper {
     private final ClassSourceDatabase classSourceDatabase;
 
     public Stream<Archetype> scrapeArchetypes() {
-        return classSourceDatabase.streamClasses()
+        return StreamUtils.concat(List.of(classSourceDatabase.streamClasses()
                 .flatMap(characterClass -> {
                     Id id = characterClass.id();
                     try {
@@ -32,7 +34,16 @@ public class D20pfsrdArchetypeScraper extends AbstractD20pfsrdScraper {
                         log.error("Error scraping archetypes for " + id, e);
                         return Stream.empty();
                     }
-                });
+                }),
+                scrapePaladinOaths()));
+    }
+
+    public Stream<Archetype> scrapePaladinOaths() {
+        try {
+            return scrapeArchetypes(Id.of("class:paladin"), "https://www.d20pfsrd.com/classes/core-classes/paladin/archetypes/paizo-paladin-archetypes/oathbound-paladin");
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
     }
 
     private Stream<Archetype> scrapeArchetypes(Id classId, String url) throws IOException {

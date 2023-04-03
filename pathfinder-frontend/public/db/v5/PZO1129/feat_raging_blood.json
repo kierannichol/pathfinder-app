@@ -2,7 +2,7 @@
   "id": "feat:raging_blood",
   "name": "Raging Blood",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@feat:eldritch_heritage,@ability:bloodline_power)",
+  "prerequisiteFormula": "all(any(@feat:eldritch_heritage,@ability:bloodline_power),!@feat:raging_blood)",
   "description": {
     "text": "Your blood boils with latent energy, filling you with an intense fury.",
     "sections": {

@@ -1,8 +1,8 @@
 {
   "id": "feat:defensive_weapon_training",
   "name": "Defensive Weapon Training",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@bab\u003e\u003d5)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@bab\u003e\u003d5,!@feat:defensive_weapon_training)",
   "description": {
     "text": "You know how to defend yourself against a certain class of weaponry.",
     "sections": {

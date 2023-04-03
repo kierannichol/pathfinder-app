@@ -2,7 +2,7 @@
   "id": "feat:expanded_arcana",
   "name": "Expanded Arcana",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@caster_level\u003e\u003d1",
+  "prerequisiteFormula": "all(@caster_level\u003e\u003d1,!@feat:expanded_arcana)",
   "description": {
     "text": "Your research has revealed new spells.",
     "sections": {

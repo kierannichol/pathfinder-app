@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import pathfinder.db.AlchemistDiscoverySourceDatabase;
+import pathfinder.generator.db.AlchemistDiscoverySourceDatabase;
 import pathfinder.model.AttributeType;
 import pathfinder.model.Description;
 import pathfinder.model.pathfinder.Feature;

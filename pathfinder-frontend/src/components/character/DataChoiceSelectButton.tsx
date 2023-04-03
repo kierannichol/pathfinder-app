@@ -5,7 +5,7 @@ import {IDataHub} from "../../core/DataHub";
 import Description from "../../core/Description";
 import {usePathfinderDatabase} from "../../database/v4/PathfinderDatabase";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
-import {ChoiceSelectorCategory, ChoiceSelectorOption,} from "./edit/ChoiceSelectorDialog";
+import {ChoiceSelectorCategory, ChoiceSelectorOption} from "./edit/ChoiceSelectorList";
 import EntityDescription from "./edit/EntityDescription";
 
 interface DataChoiceSelectButtonProps {

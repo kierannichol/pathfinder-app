@@ -1,0 +1,18 @@
+{
+  "id": "feat:forge_ring",
+  "name": "Forge Ring",
+  "tags": ["item_creation", "feat"],
+  "prerequisiteFormula": "all(@caster_level\u003e\u003d7,!@feat:forge_ring)",
+  "description": {
+    "text": "You can create magic rings.",
+    "sections": {
+      "Benefit": "You can create magic rings. Crafting a ring takes 1 day for each 1,000 gp in its base price. To craft a ring, you must use up raw materials costing half of the base price."
+    }
+  },
+  "effects": [{
+    "targetKey": "feat:forge_ring",
+    "addAction": {
+      "numberDelta": 1
+    }
+  }]
+}

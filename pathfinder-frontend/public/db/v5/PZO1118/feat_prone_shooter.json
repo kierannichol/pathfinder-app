@@ -1,10 +1,10 @@
 {
   "id": "feat:prone_shooter",
   "name": "Prone Shooter",
-  "tags": ["feat", "combat"],
+  "tags": ["combat", "feat"],
   "children": [{
     "optionId": "double_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#double_crossbow)",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#double_crossbow",
@@ -14,7 +14,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#hand_crossbow)",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#hand_crossbow",
@@ -24,7 +24,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#launching_crossbow)",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#launching_crossbow",
@@ -34,7 +34,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#heavy_crossbow)",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#heavy_crossbow",
@@ -44,7 +44,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#light_crossbow)",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#light_crossbow",
@@ -54,7 +54,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#crank_heavy_crossbow)",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#crank_heavy_crossbow",
@@ -64,7 +64,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#crank_light_crossbow)",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#crank_light_crossbow",
@@ -74,7 +74,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#repeating_heavy_crossbow)",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#repeating_heavy_crossbow",
@@ -84,7 +84,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "@bab\u003e\u003d1",
+    "condition": "all(@bab\u003e\u003d1,!@feat:prone_shooter#repeating_light_crossbow)",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:prone_shooter#repeating_light_crossbow",

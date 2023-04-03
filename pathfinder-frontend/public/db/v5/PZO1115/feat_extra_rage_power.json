@@ -2,7 +2,7 @@
   "id": "feat:extra_rage_power",
   "name": "Extra Rage Power",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@ability:rage_power",
+  "prerequisiteFormula": "all(@ability:rage_power,!@feat:extra_rage_power)",
   "description": {
     "sections": {
       "Benefit": "You gain one additional rage power. You must meet all of the prerequisites for this rage power.",

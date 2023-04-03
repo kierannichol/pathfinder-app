@@ -2,7 +2,7 @@
   "id": "feat:dodge",
   "name": "Dodge",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@dex_score\u003e\u003d13",
+  "prerequisiteFormula": "all(@dex_score\u003e\u003d13,!@feat:dodge)",
   "description": {
     "text": "Your training and reflexes allow you to react swiftly to avoid an opponents\u0027 attacks.",
     "sections": {

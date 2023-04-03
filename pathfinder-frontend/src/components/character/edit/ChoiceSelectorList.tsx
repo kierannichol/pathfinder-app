@@ -1,6 +1,33 @@
-import React from "react";
+import React, {ReactNode} from "react";
 import PathfinderSelect from "../../common/PathfinderSelect";
-import {ChoiceSelectorOption} from "./ChoiceSelectorDialog";
+
+export class ChoiceSelectorOption {
+  private cachedIsValid: boolean|undefined;
+
+  constructor(public readonly id: string,
+              public readonly name: string,
+              private readonly isValidFn: boolean|(() => boolean),
+              public readonly descriptionFn?: () => Promise<ReactNode>) {
+  }
+
+  public get isValid(): boolean {
+    if (this.cachedIsValid === undefined) {
+      this.cachedIsValid = typeof this.isValidFn === "boolean"
+          ? this.isValidFn
+          : this.isValidFn();
+    }
+    return this.cachedIsValid;
+  }
+}
+
+export class ChoiceSelectorCategory {
+  constructor(public readonly id: string,
+              public readonly name: string) {
+  }
+}
+
+export type ChoiceSelectorOptions = ChoiceSelectorOption
+    | Array<ChoiceSelectorOption>;
 
 interface ChoiceSelectorListProps {
   options: ChoiceSelectorOption[];

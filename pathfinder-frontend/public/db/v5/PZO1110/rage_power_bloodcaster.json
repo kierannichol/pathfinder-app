@@ -2,14 +2,8 @@
   "id": "rage_power:bloodcaster",
   "name": "Bloodcaster",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@cha_score\u003e\u003d13,@class:barbarian\u003e\u003d6) AND !@rage_power:bloodcaster",
+  "prerequisiteFormula": "all(@cha_score\u003e\u003d13,@class:barbarian\u003e\u003d6)",
   "description": {
     "text": "Cast bloodrager spells while raging."
-  },
-  "effects": [{
-    "targetKey": "rage_power:bloodcaster",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

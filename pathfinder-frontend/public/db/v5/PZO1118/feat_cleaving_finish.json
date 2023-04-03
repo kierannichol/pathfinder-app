@@ -1,8 +1,8 @@
 {
   "id": "feat:cleaving_finish",
   "name": "Cleaving Finish",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@feat:cleave,@feat:power_attack)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@feat:cleave,@feat:power_attack,!@feat:cleaving_finish)",
   "description": {
     "text": "When you strike down an opponent, you can continue your swing into another target.",
     "sections": {

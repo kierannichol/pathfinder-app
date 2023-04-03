@@ -4,7 +4,8 @@ import * as Icon from "react-bootstrap-icons";
 import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import PathfinderButton from "../../common/PathfinderButton";
 import styles from "./ChoiceSelectButton.module.scss";
-import ChoiceSelectorDialog, {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorDialog";
+import ChoiceSelectorDialog from "./ChoiceSelectorDialog";
+import {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorList";
 
 interface ChoiceSelectButtonProps {
   choiceName: string;

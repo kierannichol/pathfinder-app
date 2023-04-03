@@ -73,6 +73,7 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
         <DataChoiceSelectButton
             choice={raceChoice}
             characterAtLevel={character0}
+            search={true}
             onSelect={value => selectChoice(raceChoice.key, value)} />
         </>}
         {classChoice && <>
@@ -80,6 +81,7 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
         <DataChoiceSelectButton
             choice={classChoice}
             characterAtLevel={character0}
+            search={true}
             onSelect={value => {
               selectChoice(classChoice.key, value);
               setShowFavoredClassPrompt(true);

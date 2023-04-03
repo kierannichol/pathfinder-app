@@ -1,8 +1,8 @@
 {
   "id": "feat:two_handed_thrower",
   "name": "Two-Handed Thrower",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "@str_score\u003e\u003d15",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@str_score\u003e\u003d15,!@feat:two_handed_thrower)",
   "description": {
     "text": "You hurl weapons with both hands and with great force, sometimes using a whirling technique to send your weapon flying through the air at tremendous speeds.",
     "sections": {

@@ -2,14 +2,8 @@
   "id": "rage_power:greater_ferocious_beast",
   "name": "Greater Ferocious Beast",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:ferocious_beast) AND !@rage_power:greater_ferocious_beast",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d8,@rage_power:ferocious_beast)",
   "description": {
     "text": "Your animal companion shares the benefits of your rage powers that are constant in effect but gains no benefit from rage powers that require actions to activate, even if they are free actions."
-  },
-  "effects": [{
-    "targetKey": "rage_power:greater_ferocious_beast",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "class:magus",
   "name": "Magus",
-  "tags": ["class", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "core", "base", "base", "base", "base", "base", "base", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "hybrid", "base", "base"],
+  "tags": ["class", "base"],
   "description": {
     "text": "There are those who spend their lives poring over ancient tomes and texts, unlocking the power of magic, and there are those who spend their time perfecting the use of individual weapons, becoming masters without equal. The magus is at once a student of both philosophies, blending magical ability and martial prowess into something entirely unique, a discipline in which both spell and steel are used to devastating effect. As he grows in power, the magus unlocks powerful forms of arcana that allow him to merge his talents further, and at the pinnacle of his art, the magus becomes a blur of steel and magic, a force that few foes would dare to stand against. Role: Magi spend much of their time traveling the world, learning whatever martial or arcane secrets they can find. They might spend months learning a new sword-fighting style from a master warrior, while simultaneously moonlighting in the local library, poring through tomes of ancient lore. Most who take this path dabble in all sorts of lore, picking up anything that might aid them in their search for perfection. Alignment: Any. Hit Die: d8. Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
@@ -803,6 +803,14 @@
         }
       }],
       "choices": [{
+        "id": "class:magus3:magus_arcana",
+        "type": "magus_arcana",
+        "label": "Magus Arcana",
+        "condition": "@class:magus\u003e\u003d3",
+        "select": {
+          "tags": ["magus_arcana"]
+        }
+      }, {
         "id": "magus3:skill_rank:1",
         "type": "skill",
         "select": {
@@ -964,7 +972,7 @@
         "id": "class:magus5:bonus_feat",
         "type": "feat",
         "label": "Bonus Feat (Magus)",
-        "condition": "@class:magus\u003d\u003d5",
+        "condition": "@class:magus\u003e\u003d5",
         "select": {
           "tags": ["feat+combat", "feat+item_creation", "feat+metamagic"]
         }
@@ -1048,6 +1056,14 @@
         }
       }],
       "choices": [{
+        "id": "class:magus6:magus_arcana",
+        "type": "magus_arcana",
+        "label": "Magus Arcana",
+        "condition": "@class:magus\u003e\u003d6",
+        "select": {
+          "tags": ["magus_arcana"]
+        }
+      }, {
         "id": "magus6:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1320,6 +1336,14 @@
         }
       }],
       "choices": [{
+        "id": "class:magus9:magus_arcana",
+        "type": "magus_arcana",
+        "label": "Magus Arcana",
+        "condition": "@class:magus\u003e\u003d9",
+        "select": {
+          "tags": ["magus_arcana"]
+        }
+      }, {
         "id": "magus9:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1526,7 +1550,7 @@
         "id": "class:magus11:bonus_feat",
         "type": "feat",
         "label": "Bonus Feat (Magus)",
-        "condition": "@class:magus\u003d\u003d11",
+        "condition": "@class:magus\u003e\u003d11",
         "select": {
           "tags": ["feat+combat", "feat+item_creation", "feat+metamagic"]
         }
@@ -1630,6 +1654,14 @@
         }
       }],
       "choices": [{
+        "id": "class:magus12:magus_arcana",
+        "type": "magus_arcana",
+        "label": "Magus Arcana",
+        "condition": "@class:magus\u003e\u003d12",
+        "select": {
+          "tags": ["magus_arcana"]
+        }
+      }, {
         "id": "magus12:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1957,6 +1989,14 @@
         }
       }],
       "choices": [{
+        "id": "class:magus15:magus_arcana",
+        "type": "magus_arcana",
+        "label": "Magus Arcana",
+        "condition": "@class:magus\u003e\u003d15",
+        "select": {
+          "tags": ["magus_arcana"]
+        }
+      }, {
         "id": "magus15:skill_rank:1",
         "type": "skill",
         "select": {
@@ -2198,7 +2238,7 @@
         "id": "class:magus17:bonus_feat",
         "type": "feat",
         "label": "Bonus Feat (Magus)",
-        "condition": "@class:magus\u003d\u003d17",
+        "condition": "@class:magus\u003e\u003d17",
         "select": {
           "tags": ["feat+combat", "feat+item_creation", "feat+metamagic"]
         }
@@ -2322,6 +2362,14 @@
         }
       }],
       "choices": [{
+        "id": "class:magus18:magus_arcana",
+        "type": "magus_arcana",
+        "label": "Magus Arcana",
+        "condition": "@class:magus\u003e\u003d18",
+        "select": {
+          "tags": ["magus_arcana"]
+        }
+      }, {
         "id": "magus18:skill_rank:1",
         "type": "skill",
         "select": {

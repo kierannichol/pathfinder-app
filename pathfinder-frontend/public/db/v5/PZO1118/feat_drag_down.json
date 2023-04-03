@@ -1,8 +1,8 @@
 {
   "id": "feat:drag_down",
   "name": "Drag Down",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_trip)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_trip,!@feat:drag_down)",
   "description": {
     "text": "When you are knocked prone, you are skilled at bringing your opponent down with you.",
     "sections": {

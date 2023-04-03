@@ -2,7 +2,7 @@
   "id": "feat:exotic_weapon_proficiency",
   "name": "Exotic Weapon Proficiency",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@bab\u003e\u003d1",
+  "prerequisiteFormula": "all(@bab\u003e\u003d1,!@feat:exotic_weapon_proficiency)",
   "description": {
     "sections": {
       "Benefit": "You make attack rolls with the weapon normally.",

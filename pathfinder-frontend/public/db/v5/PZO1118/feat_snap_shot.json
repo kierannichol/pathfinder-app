@@ -1,10 +1,10 @@
 {
   "id": "feat:snap_shot",
   "name": "Snap Shot",
-  "tags": ["feat", "combat"],
+  "tags": ["combat", "feat"],
   "children": [{
     "optionId": "blowgun",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#blowgun,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#blowgun,@bab\u003e\u003d6,!@feat:snap_shot#blowgun)",
     "name": "Blowgun",
     "effects": [{
       "targetKey": "feat:snap_shot#blowgun",
@@ -14,7 +14,7 @@
     }]
   }, {
     "optionId": "heavy_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#heavy_crossbow)",
     "name": "Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#heavy_crossbow",
@@ -24,7 +24,7 @@
     }]
   }, {
     "optionId": "light_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#light_crossbow)",
     "name": "Light Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#light_crossbow",
@@ -34,7 +34,7 @@
     }]
   }, {
     "optionId": "dart",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dart,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dart,@bab\u003e\u003d6,!@feat:snap_shot#dart)",
     "name": "Dart",
     "effects": [{
       "targetKey": "feat:snap_shot#dart",
@@ -44,7 +44,7 @@
     }]
   }, {
     "optionId": "javelin",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#javelin,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#javelin,@bab\u003e\u003d6,!@feat:snap_shot#javelin)",
     "name": "Javelin",
     "effects": [{
       "targetKey": "feat:snap_shot#javelin",
@@ -54,7 +54,7 @@
     }]
   }, {
     "optionId": "sling",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sling,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sling,@bab\u003e\u003d6,!@feat:snap_shot#sling)",
     "name": "Sling",
     "effects": [{
       "targetKey": "feat:snap_shot#sling",
@@ -64,7 +64,7 @@
     }]
   }, {
     "optionId": "stingchuck",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stingchuck,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stingchuck,@bab\u003e\u003d6,!@feat:snap_shot#stingchuck)",
     "name": "Stingchuck",
     "effects": [{
       "targetKey": "feat:snap_shot#stingchuck",
@@ -74,7 +74,7 @@
     }]
   }, {
     "optionId": "stonebow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stonebow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stonebow,@bab\u003e\u003d6,!@feat:snap_shot#stonebow)",
     "name": "Stonebow",
     "effects": [{
       "targetKey": "feat:snap_shot#stonebow",
@@ -84,7 +84,7 @@
     }]
   }, {
     "optionId": "ammentum",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#ammentum,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#ammentum,@bab\u003e\u003d6,!@feat:snap_shot#ammentum)",
     "name": "Ammentum",
     "effects": [{
       "targetKey": "feat:snap_shot#ammentum",
@@ -94,7 +94,7 @@
     }]
   }, {
     "optionId": "chakram",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#chakram,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#chakram,@bab\u003e\u003d6,!@feat:snap_shot#chakram)",
     "name": "Chakram",
     "effects": [{
       "targetKey": "feat:snap_shot#chakram",
@@ -104,7 +104,7 @@
     }]
   }, {
     "optionId": "jolting_dart",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#jolting_dart,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#jolting_dart,@bab\u003e\u003d6,!@feat:snap_shot#jolting_dart)",
     "name": "Jolting Dart",
     "effects": [{
       "targetKey": "feat:snap_shot#jolting_dart",
@@ -114,7 +114,7 @@
     }]
   }, {
     "optionId": "hunga_munga",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hunga_munga,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hunga_munga,@bab\u003e\u003d6,!@feat:snap_shot#hunga_munga)",
     "name": "Hunga Munga",
     "effects": [{
       "targetKey": "feat:snap_shot#hunga_munga",
@@ -124,7 +124,7 @@
     }]
   }, {
     "optionId": "hurlbat",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hurlbat,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hurlbat,@bab\u003e\u003d6,!@feat:snap_shot#hurlbat)",
     "name": "Hurlbat",
     "effects": [{
       "targetKey": "feat:snap_shot#hurlbat",
@@ -134,7 +134,7 @@
     }]
   }, {
     "optionId": "longbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#longbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#longbow,@bab\u003e\u003d6,!@feat:snap_shot#longbow)",
     "name": "Longbow",
     "effects": [{
       "targetKey": "feat:snap_shot#longbow",
@@ -144,7 +144,7 @@
     }]
   }, {
     "optionId": "pilum",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#pilum,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#pilum,@bab\u003e\u003d6,!@feat:snap_shot#pilum)",
     "name": "Pilum",
     "effects": [{
       "targetKey": "feat:snap_shot#pilum",
@@ -154,7 +154,7 @@
     }]
   }, {
     "optionId": "shortbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shortbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shortbow,@bab\u003e\u003d6,!@feat:snap_shot#shortbow)",
     "name": "Shortbow",
     "effects": [{
       "targetKey": "feat:snap_shot#shortbow",
@@ -164,7 +164,7 @@
     }]
   }, {
     "optionId": "aklys",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#aklys,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#aklys,@bab\u003e\u003d6,!@feat:snap_shot#aklys)",
     "name": "Aklys",
     "effects": [{
       "targetKey": "feat:snap_shot#aklys",
@@ -174,7 +174,7 @@
     }]
   }, {
     "optionId": "bola",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bola,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bola,@bab\u003e\u003d6,!@feat:snap_shot#bola)",
     "name": "Bola",
     "effects": [{
       "targetKey": "feat:snap_shot#bola",
@@ -184,7 +184,7 @@
     }]
   }, {
     "optionId": "brutal_bola",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#brutal_bola,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#brutal_bola,@bab\u003e\u003d6,!@feat:snap_shot#brutal_bola)",
     "name": "Brutal Bola",
     "effects": [{
       "targetKey": "feat:snap_shot#brutal_bola",
@@ -194,7 +194,7 @@
     }]
   }, {
     "optionId": "boomerang",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#boomerang,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#boomerang,@bab\u003e\u003d6,!@feat:snap_shot#boomerang)",
     "name": "Boomerang",
     "effects": [{
       "targetKey": "feat:snap_shot#boomerang",
@@ -204,7 +204,7 @@
     }]
   }, {
     "optionId": "thorn_bow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#thorn_bow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#thorn_bow,@bab\u003e\u003d6,!@feat:snap_shot#thorn_bow)",
     "name": "Thorn Bow",
     "effects": [{
       "targetKey": "feat:snap_shot#thorn_bow",
@@ -214,7 +214,7 @@
     }]
   }, {
     "optionId": "crank_heavy_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crank_heavy_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crank_heavy_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#crank_heavy_crossbow)",
     "name": "Crank (heavy) Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#crank_heavy_crossbow",
@@ -224,7 +224,7 @@
     }]
   }, {
     "optionId": "crank_light_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crank_light_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crank_light_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#crank_light_crossbow)",
     "name": "Crank (light) Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#crank_light_crossbow",
@@ -234,7 +234,7 @@
     }]
   }, {
     "optionId": "double_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#double_crossbow)",
     "name": "Double Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#double_crossbow",
@@ -244,7 +244,7 @@
     }]
   }, {
     "optionId": "hand_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hand_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hand_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#hand_crossbow)",
     "name": "Hand Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#hand_crossbow",
@@ -254,7 +254,7 @@
     }]
   }, {
     "optionId": "launching_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#launching_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#launching_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#launching_crossbow)",
     "name": "Launching Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#launching_crossbow",
@@ -264,7 +264,7 @@
     }]
   }, {
     "optionId": "repeating_heavy_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#repeating_heavy_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#repeating_heavy_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#repeating_heavy_crossbow)",
     "name": "Repeating Heavy Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#repeating_heavy_crossbow",
@@ -274,7 +274,7 @@
     }]
   }, {
     "optionId": "repeating_light_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#repeating_light_crossbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#repeating_light_crossbow,@bab\u003e\u003d6,!@feat:snap_shot#repeating_light_crossbow)",
     "name": "Repeating Light Crossbow",
     "effects": [{
       "targetKey": "feat:snap_shot#repeating_light_crossbow",
@@ -284,7 +284,7 @@
     }]
   }, {
     "optionId": "flask_thrower",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flask_thrower,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flask_thrower,@bab\u003e\u003d6,!@feat:snap_shot#flask_thrower)",
     "name": "Flask Thrower",
     "effects": [{
       "targetKey": "feat:snap_shot#flask_thrower",
@@ -294,7 +294,7 @@
     }]
   }, {
     "optionId": "grappling_hook",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#grappling_hook,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#grappling_hook,@bab\u003e\u003d6,!@feat:snap_shot#grappling_hook)",
     "name": "Grappling Hook",
     "effects": [{
       "targetKey": "feat:snap_shot#grappling_hook",
@@ -304,7 +304,7 @@
     }]
   }, {
     "optionId": "orc_hornbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#orc_hornbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#orc_hornbow,@bab\u003e\u003d6,!@feat:snap_shot#orc_hornbow)",
     "name": "Orc Hornbow",
     "effects": [{
       "targetKey": "feat:snap_shot#orc_hornbow",
@@ -314,7 +314,7 @@
     }]
   }, {
     "optionId": "stormshaft_javelin",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stormshaft_javelin,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stormshaft_javelin,@bab\u003e\u003d6,!@feat:snap_shot#stormshaft_javelin)",
     "name": "Stormshaft Javelin",
     "effects": [{
       "targetKey": "feat:snap_shot#stormshaft_javelin",
@@ -324,7 +324,7 @@
     }]
   }, {
     "optionId": "lasso",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#lasso,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#lasso,@bab\u003e\u003d6,!@feat:snap_shot#lasso)",
     "name": "Lasso",
     "effects": [{
       "targetKey": "feat:snap_shot#lasso",
@@ -334,7 +334,7 @@
     }]
   }, {
     "optionId": "net",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#net,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#net,@bab\u003e\u003d6,!@feat:snap_shot#net)",
     "name": "Net",
     "effects": [{
       "targetKey": "feat:snap_shot#net",
@@ -344,7 +344,7 @@
     }]
   }, {
     "optionId": "snag_net",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#snag_net,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#snag_net,@bab\u003e\u003d6,!@feat:snap_shot#snag_net)",
     "name": "Snag Net",
     "effects": [{
       "targetKey": "feat:snap_shot#snag_net",
@@ -354,7 +354,7 @@
     }]
   }, {
     "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_heavy_pelletbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_heavy_pelletbow,@bab\u003e\u003d6,!@feat:snap_shot#dwarven_heavy_pelletbow)",
     "name": "Dwarven Heavy Pelletbow",
     "effects": [{
       "targetKey": "feat:snap_shot#dwarven_heavy_pelletbow",
@@ -364,7 +364,7 @@
     }]
   }, {
     "optionId": "dwarven_light_pelletbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_light_pelletbow,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_light_pelletbow,@bab\u003e\u003d6,!@feat:snap_shot#dwarven_light_pelletbow)",
     "name": "Dwarven Light Pelletbow",
     "effects": [{
       "targetKey": "feat:snap_shot#dwarven_light_pelletbow",
@@ -374,7 +374,7 @@
     }]
   }, {
     "optionId": "throwing_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#throwing_shield,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#throwing_shield,@bab\u003e\u003d6,!@feat:snap_shot#throwing_shield)",
     "name": "Throwing Shield",
     "effects": [{
       "targetKey": "feat:snap_shot#throwing_shield",
@@ -384,7 +384,7 @@
     }]
   }, {
     "optionId": "shrillshaft_javelin",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shrillshaft_javelin,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shrillshaft_javelin,@bab\u003e\u003d6,!@feat:snap_shot#shrillshaft_javelin)",
     "name": "Shrillshaft Javelin",
     "effects": [{
       "targetKey": "feat:snap_shot#shrillshaft_javelin",
@@ -394,7 +394,7 @@
     }]
   }, {
     "optionId": "shuriken_5",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shuriken_5,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shuriken_5,@bab\u003e\u003d6,!@feat:snap_shot#shuriken_5)",
     "name": "Shuriken (5)",
     "effects": [{
       "targetKey": "feat:snap_shot#shuriken_5",
@@ -404,7 +404,7 @@
     }]
   }, {
     "optionId": "double_sling",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_sling,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_sling,@bab\u003e\u003d6,!@feat:snap_shot#double_sling)",
     "name": "Double Sling",
     "effects": [{
       "targetKey": "feat:snap_shot#double_sling",
@@ -414,7 +414,7 @@
     }]
   }, {
     "optionId": "sling_glove",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sling_glove,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sling_glove,@bab\u003e\u003d6,!@feat:snap_shot#sling_glove)",
     "name": "Sling Glove",
     "effects": [{
       "targetKey": "feat:snap_shot#sling_glove",
@@ -424,7 +424,7 @@
     }]
   }, {
     "optionId": "halfling_sling_staff",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#halfling_sling_staff,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#halfling_sling_staff,@bab\u003e\u003d6,!@feat:snap_shot#halfling_sling_staff)",
     "name": "Halfling Sling Staff",
     "effects": [{
       "targetKey": "feat:snap_shot#halfling_sling_staff",
@@ -434,7 +434,7 @@
     }]
   }, {
     "optionId": "stitched_sling",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stitched_sling,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stitched_sling,@bab\u003e\u003d6,!@feat:snap_shot#stitched_sling)",
     "name": "Stitched Sling",
     "effects": [{
       "targetKey": "feat:snap_shot#stitched_sling",
@@ -444,7 +444,7 @@
     }]
   }, {
     "optionId": "wrist_launcher",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#wrist_launcher,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#wrist_launcher,@bab\u003e\u003d6,!@feat:snap_shot#wrist_launcher)",
     "name": "Wrist Launcher",
     "effects": [{
       "targetKey": "feat:snap_shot#wrist_launcher",
@@ -454,2127 +454,7 @@
     }]
   }, {
     "optionId": "heavy_wrist_launcher",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_wrist_launcher,@bab\u003e\u003d6)",
-    "name": "Heavy Wrist Launcher",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_wrist_launcher",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gauntlet",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gauntlet,@bab\u003e\u003d6)",
-    "name": "Gauntlet",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gauntlet",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "unarmed",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#unarmed,@bab\u003e\u003d6)",
-    "name": "Unarmed",
-    "effects": [{
-      "targetKey": "feat:snap_shot#unarmed",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "battle_aspergillum",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#battle_aspergillum,@bab\u003e\u003d6)",
-    "name": "Battle Aspergillum",
-    "effects": [{
-      "targetKey": "feat:snap_shot#battle_aspergillum",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "brass_knife",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#brass_knife,@bab\u003e\u003d6)",
-    "name": "Brass Knife",
-    "effects": [{
-      "targetKey": "feat:snap_shot#brass_knife",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "brass_knuckles",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#brass_knuckles,@bab\u003e\u003d6)",
-    "name": "Brass Knuckles",
-    "effects": [{
-      "targetKey": "feat:snap_shot#brass_knuckles",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "cestus",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#cestus,@bab\u003e\u003d6)",
-    "name": "Cestus",
-    "effects": [{
-      "targetKey": "feat:snap_shot#cestus",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dagger",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dagger,@bab\u003e\u003d6)",
-    "name": "Dagger",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dagger",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "punching_dagger",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#punching_dagger,@bab\u003e\u003d6)",
-    "name": "Punching Dagger",
-    "effects": [{
-      "targetKey": "feat:snap_shot#punching_dagger",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "spiked_gauntlet",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#spiked_gauntlet,@bab\u003e\u003d6)",
-    "name": "Spiked Gauntlet",
-    "effects": [{
-      "targetKey": "feat:snap_shot#spiked_gauntlet",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "handwraps",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#handwraps,@bab\u003e\u003d6)",
-    "name": "Handwraps",
-    "effects": [{
-      "targetKey": "feat:snap_shot#handwraps",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "traveling_kettle",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#traveling_kettle,@bab\u003e\u003d6)",
-    "name": "Traveling Kettle",
-    "effects": [{
-      "targetKey": "feat:snap_shot#traveling_kettle",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "hook_hand",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hook_hand,@bab\u003e\u003d6)",
-    "name": "Hook Hand",
-    "effects": [{
-      "targetKey": "feat:snap_shot#hook_hand",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "kunai",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#kunai,@bab\u003e\u003d6)",
-    "name": "Kunai",
-    "effects": [{
-      "targetKey": "feat:snap_shot#kunai",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_mace",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_mace,@bab\u003e\u003d6)",
-    "name": "Light Mace",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_mace",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sickle",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sickle,@bab\u003e\u003d6)",
-    "name": "Sickle",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sickle",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "spring_blade",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#spring_blade,@bab\u003e\u003d6)",
-    "name": "Spring Blade",
-    "effects": [{
-      "targetKey": "feat:snap_shot#spring_blade",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "wooden_stake",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#wooden_stake,@bab\u003e\u003d6)",
-    "name": "Wooden Stake",
-    "effects": [{
-      "targetKey": "feat:snap_shot#wooden_stake",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "club",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#club,@bab\u003e\u003d6)",
-    "name": "Club",
-    "effects": [{
-      "targetKey": "feat:snap_shot#club",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "mere_club",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#mere_club,@bab\u003e\u003d6)",
-    "name": "Mere Club",
-    "effects": [{
-      "targetKey": "feat:snap_shot#mere_club",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_mace",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_mace,@bab\u003e\u003d6)",
-    "name": "Heavy Mace",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_mace",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "morningstar",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#morningstar,@bab\u003e\u003d6)",
-    "name": "Morningstar",
-    "effects": [{
-      "targetKey": "feat:snap_shot#morningstar",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "shortspear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shortspear,@bab\u003e\u003d6)",
-    "name": "Shortspear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#shortspear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "bayonet",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bayonet,@bab\u003e\u003d6)",
-    "name": "Bayonet",
-    "effects": [{
-      "targetKey": "feat:snap_shot#bayonet",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "boarding_pike",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#boarding_pike,@bab\u003e\u003d6)",
-    "name": "Boarding Pike",
-    "effects": [{
-      "targetKey": "feat:snap_shot#boarding_pike",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "kumade",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#kumade,@bab\u003e\u003d6)",
-    "name": "Kumade",
-    "effects": [{
-      "targetKey": "feat:snap_shot#kumade",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "collapsible_kumade",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#collapsible_kumade,@bab\u003e\u003d6)",
-    "name": "Collapsible Kumade",
-    "effects": [{
-      "targetKey": "feat:snap_shot#collapsible_kumade",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "lantern_staff",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#lantern_staff,@bab\u003e\u003d6)",
-    "name": "Lantern Staff",
-    "effects": [{
-      "targetKey": "feat:snap_shot#lantern_staff",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "longspear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#longspear,@bab\u003e\u003d6)",
-    "name": "Longspear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#longspear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "quarterstaff",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#quarterstaff,@bab\u003e\u003d6)",
-    "name": "Quarterstaff",
-    "effects": [{
-      "targetKey": "feat:snap_shot#quarterstaff",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "spear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#spear,@bab\u003e\u003d6)",
-    "name": "Spear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#spear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "blowgun",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#blowgun,@bab\u003e\u003d6)",
-    "name": "Blowgun",
-    "effects": [{
-      "targetKey": "feat:snap_shot#blowgun",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_crossbow,@bab\u003e\u003d6)",
-    "name": "Heavy Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_crossbow,@bab\u003e\u003d6)",
-    "name": "Light Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dart",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dart,@bab\u003e\u003d6)",
-    "name": "Dart",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dart",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "javelin",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#javelin,@bab\u003e\u003d6)",
-    "name": "Javelin",
-    "effects": [{
-      "targetKey": "feat:snap_shot#javelin",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sling",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sling,@bab\u003e\u003d6)",
-    "name": "Sling",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sling",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "stingchuck",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stingchuck,@bab\u003e\u003d6)",
-    "name": "Stingchuck",
-    "effects": [{
-      "targetKey": "feat:snap_shot#stingchuck",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "stonebow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stonebow,@bab\u003e\u003d6)",
-    "name": "Stonebow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#stonebow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "axe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#axe,@bab\u003e\u003d6)",
-    "name": "Axe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#axe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "throwing_axe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#throwing_axe,@bab\u003e\u003d6)",
-    "name": "Throwing Axe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#throwing_axe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "blade_boot",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#blade_boot,@bab\u003e\u003d6)",
-    "name": "Blade Boot",
-    "effects": [{
-      "targetKey": "feat:snap_shot#blade_boot",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "whip",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#whip,@bab\u003e\u003d6)",
-    "name": "Whip",
-    "effects": [{
-      "targetKey": "feat:snap_shot#whip",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "claw_blades",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#claw_blades,@bab\u003e\u003d6)",
-    "name": "Claw Blades",
-    "effects": [{
-      "targetKey": "feat:snap_shot#claw_blades",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dueling_dagger",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dueling_dagger,@bab\u003e\u003d6)",
-    "name": "Dueling Dagger",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dueling_dagger",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dogslicer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dogslicer,@bab\u003e\u003d6)",
-    "name": "Dogslicer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dogslicer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_hammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_hammer,@bab\u003e\u003d6)",
-    "name": "Light Hammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_hammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gladius",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gladius,@bab\u003e\u003d6)",
-    "name": "Gladius",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gladius",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "handaxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#handaxe,@bab\u003e\u003d6)",
-    "name": "Handaxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#handaxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "katar",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#katar,@bab\u003e\u003d6)",
-    "name": "Katar",
-    "effects": [{
-      "targetKey": "feat:snap_shot#katar",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "kukri",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#kukri,@bab\u003e\u003d6)",
-    "name": "Kukri",
-    "effects": [{
-      "targetKey": "feat:snap_shot#kukri",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "machete",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#machete,@bab\u003e\u003d6)",
-    "name": "Machete",
-    "effects": [{
-      "targetKey": "feat:snap_shot#machete",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_pick",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_pick,@bab\u003e\u003d6)",
-    "name": "Light Pick",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_pick",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sap",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sap,@bab\u003e\u003d6)",
-    "name": "Sap",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sap",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_shield,@bab\u003e\u003d6)",
-    "name": "Light Shield",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "spiked_armor",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#spiked_armor,@bab\u003e\u003d6)",
-    "name": "Spiked Armor",
-    "effects": [{
-      "targetKey": "feat:snap_shot#spiked_armor",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_spiked_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_spiked_shield,@bab\u003e\u003d6)",
-    "name": "Light Spiked Shield",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_spiked_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "starknife",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#starknife,@bab\u003e\u003d6)",
-    "name": "Starknife",
-    "effects": [{
-      "targetKey": "feat:snap_shot#starknife",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "short_sword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#short_sword,@bab\u003e\u003d6)",
-    "name": "Short Sword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#short_sword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "war_razor",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#war_razor,@bab\u003e\u003d6)",
-    "name": "War Razor",
-    "effects": [{
-      "targetKey": "feat:snap_shot#war_razor",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "ankus",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#ankus,@bab\u003e\u003d6)",
-    "name": "Ankus",
-    "effects": [{
-      "targetKey": "feat:snap_shot#ankus",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "battleaxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#battleaxe,@bab\u003e\u003d6)",
-    "name": "Battleaxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#battleaxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "combat_scabbard",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#combat_scabbard,@bab\u003e\u003d6)",
-    "name": "Combat Scabbard",
-    "effects": [{
-      "targetKey": "feat:snap_shot#combat_scabbard",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "cutlass",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#cutlass,@bab\u003e\u003d6)",
-    "name": "Cutlass",
-    "effects": [{
-      "targetKey": "feat:snap_shot#cutlass",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "light_flail",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#light_flail,@bab\u003e\u003d6)",
-    "name": "Light Flail",
-    "effects": [{
-      "targetKey": "feat:snap_shot#light_flail",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gandasa",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gandasa,@bab\u003e\u003d6)",
-    "name": "Gandasa",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gandasa",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "klar",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#klar,@bab\u003e\u003d6)",
-    "name": "Klar",
-    "effects": [{
-      "targetKey": "feat:snap_shot#klar",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "longsword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#longsword,@bab\u003e\u003d6)",
-    "name": "Longsword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#longsword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "manople",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#manople,@bab\u003e\u003d6)",
-    "name": "Manople",
-    "effects": [{
-      "targetKey": "feat:snap_shot#manople",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_pick",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_pick,@bab\u003e\u003d6)",
-    "name": "Heavy Pick",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_pick",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "rapier",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#rapier,@bab\u003e\u003d6)",
-    "name": "Rapier",
-    "effects": [{
-      "targetKey": "feat:snap_shot#rapier",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "scimitar",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#scimitar,@bab\u003e\u003d6)",
-    "name": "Scimitar",
-    "effects": [{
-      "targetKey": "feat:snap_shot#scimitar",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "scizore",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#scizore,@bab\u003e\u003d6)",
-    "name": "Scizore",
-    "effects": [{
-      "targetKey": "feat:snap_shot#scizore",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_shield,@bab\u003e\u003d6)",
-    "name": "Heavy Shield",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_spiked_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_spiked_shield,@bab\u003e\u003d6)",
-    "name": "Heavy Spiked Shield",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_spiked_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sword_cane",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sword_cane,@bab\u003e\u003d6)",
-    "name": "Sword Cane",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sword_cane",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "terbutje",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#terbutje,@bab\u003e\u003d6)",
-    "name": "Terbutje",
-    "effects": [{
-      "targetKey": "feat:snap_shot#terbutje",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "trident",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#trident,@bab\u003e\u003d6)",
-    "name": "Trident",
-    "effects": [{
-      "targetKey": "feat:snap_shot#trident",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "warhammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#warhammer,@bab\u003e\u003d6)",
-    "name": "Warhammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#warhammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "bardiche",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bardiche,@bab\u003e\u003d6)",
-    "name": "Bardiche",
-    "effects": [{
-      "targetKey": "feat:snap_shot#bardiche",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "bill",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bill,@bab\u003e\u003d6)",
-    "name": "Bill",
-    "effects": [{
-      "targetKey": "feat:snap_shot#bill",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "earth_breaker",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#earth_breaker,@bab\u003e\u003d6)",
-    "name": "Earth Breaker",
-    "effects": [{
-      "targetKey": "feat:snap_shot#earth_breaker",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "falchion",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#falchion,@bab\u003e\u003d6)",
-    "name": "Falchion",
-    "effects": [{
-      "targetKey": "feat:snap_shot#falchion",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_flail",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_flail,@bab\u003e\u003d6)",
-    "name": "Heavy Flail",
-    "effects": [{
-      "targetKey": "feat:snap_shot#heavy_flail",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "glaive",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#glaive,@bab\u003e\u003d6)",
-    "name": "Glaive",
-    "effects": [{
-      "targetKey": "feat:snap_shot#glaive",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "greataxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#greataxe,@bab\u003e\u003d6)",
-    "name": "Greataxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#greataxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "greatclub",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#greatclub,@bab\u003e\u003d6)",
-    "name": "Greatclub",
-    "effects": [{
-      "targetKey": "feat:snap_shot#greatclub",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "greatsword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#greatsword,@bab\u003e\u003d6)",
-    "name": "Greatsword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#greatsword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "guisarme",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#guisarme,@bab\u003e\u003d6)",
-    "name": "Guisarme",
-    "effects": [{
-      "targetKey": "feat:snap_shot#guisarme",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "halberd",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#halberd,@bab\u003e\u003d6)",
-    "name": "Halberd",
-    "effects": [{
-      "targetKey": "feat:snap_shot#halberd",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "horsechopper",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#horsechopper,@bab\u003e\u003d6)",
-    "name": "Horsechopper",
-    "effects": [{
-      "targetKey": "feat:snap_shot#horsechopper",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "lance",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#lance,@bab\u003e\u003d6)",
-    "name": "Lance",
-    "effects": [{
-      "targetKey": "feat:snap_shot#lance",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "ogre_hook",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#ogre_hook,@bab\u003e\u003d6)",
-    "name": "Ogre Hook",
-    "effects": [{
-      "targetKey": "feat:snap_shot#ogre_hook",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "pickaxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#pickaxe,@bab\u003e\u003d6)",
-    "name": "Pickaxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#pickaxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "planson",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#planson,@bab\u003e\u003d6)",
-    "name": "Planson",
-    "effects": [{
-      "targetKey": "feat:snap_shot#planson",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "ranseur",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#ranseur,@bab\u003e\u003d6)",
-    "name": "Ranseur",
-    "effects": [{
-      "targetKey": "feat:snap_shot#ranseur",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "scythe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#scythe,@bab\u003e\u003d6)",
-    "name": "Scythe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#scythe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "syringe_spear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#syringe_spear,@bab\u003e\u003d6)",
-    "name": "Syringe Spear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#syringe_spear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "ammentum",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#ammentum,@bab\u003e\u003d6)",
-    "name": "Ammentum",
-    "effects": [{
-      "targetKey": "feat:snap_shot#ammentum",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "chakram",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#chakram,@bab\u003e\u003d6)",
-    "name": "Chakram",
-    "effects": [{
-      "targetKey": "feat:snap_shot#chakram",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "jolting_dart",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#jolting_dart,@bab\u003e\u003d6)",
-    "name": "Jolting Dart",
-    "effects": [{
-      "targetKey": "feat:snap_shot#jolting_dart",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "hunga_munga",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hunga_munga,@bab\u003e\u003d6)",
-    "name": "Hunga Munga",
-    "effects": [{
-      "targetKey": "feat:snap_shot#hunga_munga",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "hurlbat",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hurlbat,@bab\u003e\u003d6)",
-    "name": "Hurlbat",
-    "effects": [{
-      "targetKey": "feat:snap_shot#hurlbat",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "longbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#longbow,@bab\u003e\u003d6)",
-    "name": "Longbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#longbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "pilum",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#pilum,@bab\u003e\u003d6)",
-    "name": "Pilum",
-    "effects": [{
-      "targetKey": "feat:snap_shot#pilum",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "shortbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shortbow,@bab\u003e\u003d6)",
-    "name": "Shortbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#shortbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "aklys",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#aklys,@bab\u003e\u003d6)",
-    "name": "Aklys",
-    "effects": [{
-      "targetKey": "feat:snap_shot#aklys",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "knuckle_axe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#knuckle_axe,@bab\u003e\u003d6)",
-    "name": "Knuckle Axe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#knuckle_axe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "barbazu_beard",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#barbazu_beard,@bab\u003e\u003d6)",
-    "name": "Barbazu Beard",
-    "effects": [{
-      "targetKey": "feat:snap_shot#barbazu_beard",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "battle_poi",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#battle_poi,@bab\u003e\u003d6)",
-    "name": "Battle Poi",
-    "effects": [{
-      "targetKey": "feat:snap_shot#battle_poi",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "swordbreaker_dagger",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#swordbreaker_dagger,@bab\u003e\u003d6)",
-    "name": "Swordbreaker Dagger",
-    "effects": [{
-      "targetKey": "feat:snap_shot#swordbreaker_dagger",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flying_talon",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flying_talon,@bab\u003e\u003d6)",
-    "name": "Flying Talon",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flying_talon",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gnome_pincher",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gnome_pincher,@bab\u003e\u003d6)",
-    "name": "Gnome Pincher",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gnome_pincher",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "halfling_rope_shot",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#halfling_rope_shot,@bab\u003e\u003d6)",
-    "name": "Halfling Rope-shot",
-    "effects": [{
-      "targetKey": "feat:snap_shot#halfling_rope_shot",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_boulder_helmet",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_boulder_helmet,@bab\u003e\u003d6)",
-    "name": "Dwarven Boulder Helmet",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_boulder_helmet",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "kama",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#kama,@bab\u003e\u003d6)",
-    "name": "Kama",
-    "effects": [{
-      "targetKey": "feat:snap_shot#kama",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "butterfly_knife",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#butterfly_knife,@bab\u003e\u003d6)",
-    "name": "Butterfly Knife",
-    "effects": [{
-      "targetKey": "feat:snap_shot#butterfly_knife",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "deer_horn_knife",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#deer_horn_knife,@bab\u003e\u003d6)",
-    "name": "Deer Horn Knife",
-    "effects": [{
-      "targetKey": "feat:snap_shot#deer_horn_knife",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_maulaxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_maulaxe,@bab\u003e\u003d6)",
-    "name": "Dwarven Maulaxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_maulaxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "nunchaku",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#nunchaku,@bab\u003e\u003d6)",
-    "name": "Nunchaku",
-    "effects": [{
-      "targetKey": "feat:snap_shot#nunchaku",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "quadrens",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#quadrens,@bab\u003e\u003d6)",
-    "name": "Quadrens",
-    "effects": [{
-      "targetKey": "feat:snap_shot#quadrens",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "drow_razor",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#drow_razor,@bab\u003e\u003d6)",
-    "name": "Drow Razor",
-    "effects": [{
-      "targetKey": "feat:snap_shot#drow_razor",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "rope_gauntlet",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#rope_gauntlet,@bab\u003e\u003d6)",
-    "name": "Rope Gauntlet",
-    "effects": [{
-      "targetKey": "feat:snap_shot#rope_gauntlet",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sawtooth_sabre",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sawtooth_sabre,@bab\u003e\u003d6)",
-    "name": "Sawtooth Sabre",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sawtooth_sabre",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sai",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sai,@bab\u003e\u003d6)",
-    "name": "Sai",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sai",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sanpkhang",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sanpkhang,@bab\u003e\u003d6)",
-    "name": "Sanpkhang",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sanpkhang",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "siangham",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#siangham,@bab\u003e\u003d6)",
-    "name": "Siangham",
-    "effects": [{
-      "targetKey": "feat:snap_shot#siangham",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sica",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sica,@bab\u003e\u003d6)",
-    "name": "Sica",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sica",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "thorn_bracer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#thorn_bracer,@bab\u003e\u003d6)",
-    "name": "Thorn Bracer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#thorn_bracer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_war_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_war_shield,@bab\u003e\u003d6)",
-    "name": "Dwarven War-shield",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_war_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "waveblade",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#waveblade,@bab\u003e\u003d6)",
-    "name": "Waveblade",
-    "effects": [{
-      "targetKey": "feat:snap_shot#waveblade",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "scorpion_whip",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#scorpion_whip,@bab\u003e\u003d6)",
-    "name": "Scorpion Whip",
-    "effects": [{
-      "targetKey": "feat:snap_shot#scorpion_whip",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_heavy_axe_gauntlet",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_heavy_axe_gauntlet,@bab\u003e\u003d6)",
-    "name": "Dwarven Heavy Axe-Gauntlet",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_heavy_axe_gauntlet",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "hooked_axe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hooked_axe,@bab\u003e\u003d6)",
-    "name": "Hooked Axe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#hooked_axe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "broken_back_seax",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#broken_back_seax,@bab\u003e\u003d6)",
-    "name": "Broken-back Seax",
-    "effects": [{
-      "targetKey": "feat:snap_shot#broken_back_seax",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "estoc",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#estoc,@bab\u003e\u003d6)",
-    "name": "Estoc",
-    "effects": [{
-      "targetKey": "feat:snap_shot#estoc",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "falcata",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#falcata,@bab\u003e\u003d6)",
-    "name": "Falcata",
-    "effects": [{
-      "targetKey": "feat:snap_shot#falcata",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flickmace",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flickmace,@bab\u003e\u003d6)",
-    "name": "Flickmace",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flickmace",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flindbar",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flindbar,@bab\u003e\u003d6)",
-    "name": "Flindbar",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flindbar",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "khopesh",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#khopesh,@bab\u003e\u003d6)",
-    "name": "Khopesh",
-    "effects": [{
-      "targetKey": "feat:snap_shot#khopesh",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "knobkerrie",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#knobkerrie,@bab\u003e\u003d6)",
-    "name": "Knobkerrie",
-    "effects": [{
-      "targetKey": "feat:snap_shot#knobkerrie",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_ram_hammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_ram_hammer,@bab\u003e\u003d6)",
-    "name": "Dwarven Ram Hammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_ram_hammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "spiral_rapier",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#spiral_rapier,@bab\u003e\u003d6)",
-    "name": "Spiral Rapier",
-    "effects": [{
-      "targetKey": "feat:snap_shot#spiral_rapier",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "rhoka",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#rhoka,@bab\u003e\u003d6)",
-    "name": "Rhoka",
-    "effects": [{
-      "targetKey": "feat:snap_shot#rhoka",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "shotel",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shotel,@bab\u003e\u003d6)",
-    "name": "Shotel",
-    "effects": [{
-      "targetKey": "feat:snap_shot#shotel",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sickle_sword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sickle_sword,@bab\u003e\u003d6)",
-    "name": "Sickle-sword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sickle_sword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "split_blade_sword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#split_blade_sword,@bab\u003e\u003d6)",
-    "name": "Split-blade Sword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#split_blade_sword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dueling_sword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dueling_sword,@bab\u003e\u003d6)",
-    "name": "Dueling Sword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dueling_sword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "bastard_sword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bastard_sword,@bab\u003e\u003d6)",
-    "name": "Bastard Sword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#bastard_sword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "tongi",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#tongi,@bab\u003e\u003d6)",
-    "name": "Tongi",
-    "effects": [{
-      "targetKey": "feat:snap_shot#tongi",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_waraxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_waraxe,@bab\u003e\u003d6)",
-    "name": "Dwarven Waraxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_waraxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_double_waraxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_double_waraxe,@bab\u003e\u003d6)",
-    "name": "Dwarven Double Waraxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_double_waraxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "orc_double_axe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#orc_double_axe,@bab\u003e\u003d6)",
-    "name": "Orc Double Axe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#orc_double_axe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "butchering_axe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#butchering_axe,@bab\u003e\u003d6)",
-    "name": "Butchering Axe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#butchering_axe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gnome_battle_ladder",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gnome_battle_ladder,@bab\u003e\u003d6)",
-    "name": "Gnome Battle Ladder",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gnome_battle_ladder",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "boarding_gaff",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#boarding_gaff,@bab\u003e\u003d6)",
-    "name": "Boarding Gaff",
-    "effects": [{
-      "targetKey": "feat:snap_shot#boarding_gaff",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "chain_hammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#chain_hammer,@bab\u003e\u003d6)",
-    "name": "Chain-hammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#chain_hammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "spiked_chain",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#spiked_chain,@bab\u003e\u003d6)",
-    "name": "Spiked Chain",
-    "effects": [{
-      "targetKey": "feat:snap_shot#spiked_chain",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "crook",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crook,@bab\u003e\u003d6)",
-    "name": "Crook",
-    "effects": [{
-      "targetKey": "feat:snap_shot#crook",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "elven_curve_blade",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#elven_curve_blade,@bab\u003e\u003d6)",
-    "name": "Elven Curve Blade",
-    "effects": [{
-      "targetKey": "feat:snap_shot#elven_curve_blade",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_dorn_dergar",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_dorn_dergar,@bab\u003e\u003d6)",
-    "name": "Dwarven Dorn-Dergar",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_dorn_dergar",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "double_spear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_spear,@bab\u003e\u003d6)",
-    "name": "Double Spear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#double_spear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "elven_branched_spear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#elven_branched_spear,@bab\u003e\u003d6)",
-    "name": "Elven Branched Spear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#elven_branched_spear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "fauchard",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#fauchard,@bab\u003e\u003d6)",
-    "name": "Fauchard",
-    "effects": [{
-      "targetKey": "feat:snap_shot#fauchard",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dire_flail",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dire_flail,@bab\u003e\u003d6)",
-    "name": "Dire Flail",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dire_flail",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flailpole",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flailpole,@bab\u003e\u003d6)",
-    "name": "Flailpole",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flailpole",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flambard",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flambard,@bab\u003e\u003d6)",
-    "name": "Flambard",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flambard",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flying_blade",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flying_blade,@bab\u003e\u003d6)",
-    "name": "Flying Blade",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flying_blade",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "garrote",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#garrote,@bab\u003e\u003d6)",
-    "name": "Garrote",
-    "effects": [{
-      "targetKey": "feat:snap_shot#garrote",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_giant_sticker",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_giant_sticker,@bab\u003e\u003d6)",
-    "name": "Dwarven Giant-Sticker",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_giant_sticker",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gnome_hooked_hammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gnome_hooked_hammer,@bab\u003e\u003d6)",
-    "name": "Gnome Hooked Hammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gnome_hooked_hammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "harpoon",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#harpoon,@bab\u003e\u003d6)",
-    "name": "Harpoon",
-    "effects": [{
-      "targetKey": "feat:snap_shot#harpoon",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_longaxe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_longaxe,@bab\u003e\u003d6)",
-    "name": "Dwarven Longaxe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_longaxe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_longhammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_longhammer,@bab\u003e\u003d6)",
-    "name": "Dwarven Longhammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_longhammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "mancatcher",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#mancatcher,@bab\u003e\u003d6)",
-    "name": "Mancatcher",
-    "effects": [{
-      "targetKey": "feat:snap_shot#mancatcher",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "orc_skull_ram",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#orc_skull_ram,@bab\u003e\u003d6)",
-    "name": "Orc Skull Ram",
-    "effects": [{
-      "targetKey": "feat:snap_shot#orc_skull_ram",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gnome_piston_maul",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gnome_piston_maul,@bab\u003e\u003d6)",
-    "name": "Gnome Piston Maul",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gnome_piston_maul",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "gnome_ripsaw_glaive",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#gnome_ripsaw_glaive,@bab\u003e\u003d6)",
-    "name": "Gnome Ripsaw Glaive",
-    "effects": [{
-      "targetKey": "feat:snap_shot#gnome_ripsaw_glaive",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "bladed_scarf",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bladed_scarf,@bab\u003e\u003d6)",
-    "name": "Bladed Scarf",
-    "effects": [{
-      "targetKey": "feat:snap_shot#bladed_scarf",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "totem_spear",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#totem_spear,@bab\u003e\u003d6)",
-    "name": "Totem Spear",
-    "effects": [{
-      "targetKey": "feat:snap_shot#totem_spear",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_sphinx_hammer",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_sphinx_hammer,@bab\u003e\u003d6)",
-    "name": "Dwarven Sphinx Hammer",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_sphinx_hammer",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "switchscythe",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#switchscythe,@bab\u003e\u003d6)",
-    "name": "Switchscythe",
-    "effects": [{
-      "targetKey": "feat:snap_shot#switchscythe",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "two_bladed_sword",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#two_bladed_sword,@bab\u003e\u003d6)",
-    "name": "Two-bladed Sword",
-    "effects": [{
-      "targetKey": "feat:snap_shot#two_bladed_sword",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_urgrosh",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_urgrosh,@bab\u003e\u003d6)",
-    "name": "Dwarven Urgrosh",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_urgrosh",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "bola",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#bola,@bab\u003e\u003d6)",
-    "name": "Bola",
-    "effects": [{
-      "targetKey": "feat:snap_shot#bola",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "brutal_bola",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#brutal_bola,@bab\u003e\u003d6)",
-    "name": "Brutal Bola",
-    "effects": [{
-      "targetKey": "feat:snap_shot#brutal_bola",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "boomerang",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#boomerang,@bab\u003e\u003d6)",
-    "name": "Boomerang",
-    "effects": [{
-      "targetKey": "feat:snap_shot#boomerang",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "thorn_bow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#thorn_bow,@bab\u003e\u003d6)",
-    "name": "Thorn Bow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#thorn_bow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "crank_heavy_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crank_heavy_crossbow,@bab\u003e\u003d6)",
-    "name": "Crank (heavy) Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#crank_heavy_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "crank_light_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#crank_light_crossbow,@bab\u003e\u003d6)",
-    "name": "Crank (light) Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#crank_light_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "double_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_crossbow,@bab\u003e\u003d6)",
-    "name": "Double Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#double_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "hand_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#hand_crossbow,@bab\u003e\u003d6)",
-    "name": "Hand Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#hand_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "launching_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#launching_crossbow,@bab\u003e\u003d6)",
-    "name": "Launching Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#launching_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "repeating_heavy_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#repeating_heavy_crossbow,@bab\u003e\u003d6)",
-    "name": "Repeating Heavy Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#repeating_heavy_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "repeating_light_crossbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#repeating_light_crossbow,@bab\u003e\u003d6)",
-    "name": "Repeating Light Crossbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#repeating_light_crossbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "flask_thrower",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#flask_thrower,@bab\u003e\u003d6)",
-    "name": "Flask Thrower",
-    "effects": [{
-      "targetKey": "feat:snap_shot#flask_thrower",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "grappling_hook",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#grappling_hook,@bab\u003e\u003d6)",
-    "name": "Grappling Hook",
-    "effects": [{
-      "targetKey": "feat:snap_shot#grappling_hook",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "orc_hornbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#orc_hornbow,@bab\u003e\u003d6)",
-    "name": "Orc Hornbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#orc_hornbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "stormshaft_javelin",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stormshaft_javelin,@bab\u003e\u003d6)",
-    "name": "Stormshaft Javelin",
-    "effects": [{
-      "targetKey": "feat:snap_shot#stormshaft_javelin",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "lasso",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#lasso,@bab\u003e\u003d6)",
-    "name": "Lasso",
-    "effects": [{
-      "targetKey": "feat:snap_shot#lasso",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "net",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#net,@bab\u003e\u003d6)",
-    "name": "Net",
-    "effects": [{
-      "targetKey": "feat:snap_shot#net",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "snag_net",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#snag_net,@bab\u003e\u003d6)",
-    "name": "Snag Net",
-    "effects": [{
-      "targetKey": "feat:snap_shot#snag_net",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_heavy_pelletbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_heavy_pelletbow,@bab\u003e\u003d6)",
-    "name": "Dwarven Heavy Pelletbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_heavy_pelletbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "dwarven_light_pelletbow",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#dwarven_light_pelletbow,@bab\u003e\u003d6)",
-    "name": "Dwarven Light Pelletbow",
-    "effects": [{
-      "targetKey": "feat:snap_shot#dwarven_light_pelletbow",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "throwing_shield",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#throwing_shield,@bab\u003e\u003d6)",
-    "name": "Throwing Shield",
-    "effects": [{
-      "targetKey": "feat:snap_shot#throwing_shield",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "shrillshaft_javelin",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shrillshaft_javelin,@bab\u003e\u003d6)",
-    "name": "Shrillshaft Javelin",
-    "effects": [{
-      "targetKey": "feat:snap_shot#shrillshaft_javelin",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "shuriken_5",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#shuriken_5,@bab\u003e\u003d6)",
-    "name": "Shuriken (5)",
-    "effects": [{
-      "targetKey": "feat:snap_shot#shuriken_5",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "double_sling",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#double_sling,@bab\u003e\u003d6)",
-    "name": "Double Sling",
-    "effects": [{
-      "targetKey": "feat:snap_shot#double_sling",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "sling_glove",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#sling_glove,@bab\u003e\u003d6)",
-    "name": "Sling Glove",
-    "effects": [{
-      "targetKey": "feat:snap_shot#sling_glove",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "halfling_sling_staff",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#halfling_sling_staff,@bab\u003e\u003d6)",
-    "name": "Halfling Sling Staff",
-    "effects": [{
-      "targetKey": "feat:snap_shot#halfling_sling_staff",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "stitched_sling",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#stitched_sling,@bab\u003e\u003d6)",
-    "name": "Stitched Sling",
-    "effects": [{
-      "targetKey": "feat:snap_shot#stitched_sling",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "wrist_launcher",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#wrist_launcher,@bab\u003e\u003d6)",
-    "name": "Wrist Launcher",
-    "effects": [{
-      "targetKey": "feat:snap_shot#wrist_launcher",
-      "addAction": {
-        "numberDelta": 1
-      }
-    }]
-  }, {
-    "optionId": "heavy_wrist_launcher",
-    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_wrist_launcher,@bab\u003e\u003d6)",
+    "condition": "all(@dex_score\u003e\u003d13,@feat:point_blank_shot,@feat:rapid_shot,@feat:weapon_focus#heavy_wrist_launcher,@bab\u003e\u003d6,!@feat:snap_shot#heavy_wrist_launcher)",
     "name": "Heavy Wrist Launcher",
     "effects": [{
       "targetKey": "feat:snap_shot#heavy_wrist_launcher",

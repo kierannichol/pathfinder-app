@@ -2,7 +2,7 @@
   "id": "feat:step_up",
   "name": "Step Up",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@bab\u003e\u003d1",
+  "prerequisiteFormula": "all(@bab\u003e\u003d1,!@feat:step_up)",
   "description": {
     "sections": {
       "Benefit": "Whenever an adjacent foe attempts to take a 5-foot step away from you, you may also make a 5-foot step as an immediate action so long as you end up adjacent to the foe that triggered this ability. If you take this step, you cannot take a 5-foot step during your next turn. If you take an action to move during your next turn, subtract 5 feet from your total movement."

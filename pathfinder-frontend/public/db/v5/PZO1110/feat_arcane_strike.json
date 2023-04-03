@@ -2,7 +2,7 @@
   "id": "feat:arcane_strike",
   "name": "Arcane Strike",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "max(@spells_per_day:arcane#*)[Arcane spells]",
+  "prerequisiteFormula": "all(max(@spells_per_day:arcane#*)[Arcane spells],!@feat:arcane_strike)",
   "description": {
     "text": "You draw upon your arcane power to enhance your weapons with magical energy.",
     "sections": {

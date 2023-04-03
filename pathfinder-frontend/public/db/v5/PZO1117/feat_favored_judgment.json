@@ -1,8 +1,8 @@
 {
   "id": "feat:favored_judgment",
   "name": "Favored Judgment",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@wis_score\u003e\u003d13,@ability:judgment#inquisitor)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@wis_score\u003e\u003d13,@ability:judgment#inquisitor,!@feat:favored_judgment)",
   "description": {
     "sections": {
       "Benefit": "Select a favored race from the ranger\u0027s favored enemies chart. Any sacred or profane bonus you gain from a judgment is 1 higher for attacks you make against or take from creatures that match the selected favored enemy.",

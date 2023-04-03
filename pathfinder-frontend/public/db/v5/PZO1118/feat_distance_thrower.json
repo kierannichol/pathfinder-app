@@ -1,8 +1,8 @@
 {
   "id": "feat:distance_thrower",
   "name": "Distance Thrower",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "@str_score\u003e\u003d13",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,!@feat:distance_thrower)",
   "description": {
     "text": "You are accurate with thrown weapons at longer ranges than normal.",
     "sections": {

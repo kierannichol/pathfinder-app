@@ -1,8 +1,8 @@
 {
   "id": "feat:snapping_turtle_shell",
   "name": "Snapping Turtle Shell",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@feat:snapping_turtle_clutch,@feat:snapping_turtle_style,@feat:improved_grapple,@feat:improved_unarmed_strike,@bab\u003e\u003d5,@class:monk\u003e\u003d5)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@feat:snapping_turtle_clutch,@feat:snapping_turtle_style,@feat:improved_grapple,@feat:improved_unarmed_strike,@bab\u003e\u003d5,@class:monk\u003e\u003d5),!@feat:snapping_turtle_shell)",
   "description": {
     "text": "Your guarding hand is almost magical in its skill at deflecting incoming blows.",
     "sections": {

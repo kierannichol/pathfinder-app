@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
+import java.util.stream.Stream;
 import logic.util.Ordinal;
 import org.springframework.stereotype.Component;
 import pathfinder.model.Choice;
@@ -64,6 +64,7 @@ public class ClassEntityConverter {
                     Effect.setNumber("trained:" + skillId, 1)));
 
             effects.addAll(customClassEffects(characterClass.id()));
+            choices.addAll(customClassChoices(characterClass.id()));
 
             choices.add(new SelectChoice(id.key + ":archetype",
                     "Archetype", "archetype", "", true,
@@ -82,7 +83,7 @@ public class ClassEntityConverter {
 
         levelDefinition.classFeatureIds().forEach(featureId -> {
             effects.add(Effect.addNumber(featureId, 1));
-            tryFeatureChoice(id, level, featureId).ifPresent(choices::add);
+            tryFeatureChoice(id, level, featureId).forEach(choices::add);
         });
 
         levelDefinition.spellsPerDay().forEach((spellLevel, perDay) -> {
@@ -187,25 +188,47 @@ public class ClassEntityConverter {
         return List.of();
     }
 
+    private static List<Choice> customClassChoices(Id classId) {
+        String choicePrefix = "%s%d:".formatted(classId, 1);
+        String classLevelPrerequisite = "@%s>=%d".formatted(classId, 1);
+
+        return switch (classId.string()) {
+            case "class:sorcerer" -> List.of(new SelectChoice(choicePrefix + "bloodline", "Bloodline", "sorcerer_bloodline", classLevelPrerequisite, List.of("sorcerer_bloodline"), List.of()));
+            default -> List.of();
+        };
+    }
+
     private static List<Effect> customLevelEffects(Id classId, int classLevel) {
         return List.of();
     }
 
-    private static Optional<Choice> tryFeatureChoice(Id classId, int classLevel, Id featureId) {
+    private static Stream<Choice> tryFeatureChoice(Id classId, int classLevel, Id featureId) {
         String choicePrefix = "%s%d:".formatted(classId, classLevel);
-        String classLevelPrerequisite = "@%s==%d".formatted(classId, classLevel);
+        String classLevelPrerequisite = "@%s>=%d".formatted(classId, classLevel);
         return switch (featureId.string()) {
-            case "ability:rage_power#barbarian" -> Optional.of(
+            case "ability:rage_power#barbarian" -> Stream.of(
                     new SelectChoice(choicePrefix + "rage_power", "Rage Power", "rage_power", classLevelPrerequisite, List.of("rage_power"), List.of()));
-            case "ability:bloodline#bloodrager" -> Optional.of(
+            case "ability:bloodline#bloodrager" -> Stream.of(
                     new SelectChoice(choicePrefix + "bloodline", "Bloodline", "bloodrager_bloodline", classLevelPrerequisite, List.of("bloodrager_bloodline"), List.of()));
-            case "ability:mercy#paladin" -> Optional.of(
+            case "ability:mercy#paladin" -> Stream.of(
                     new SelectChoice(choicePrefix + "mercy", "Mercy", "mercy", classLevelPrerequisite, List.of("mercy"), List.of()));
-            case "ability:bonus_feat#magus" -> Optional.of(
+            case "ability:bonus_feat#magus" -> Stream.of(
                     new SelectChoice(choicePrefix + "bonus_feat", "Bonus Feat (Magus)", "feat", classLevelPrerequisite, List.of("feat+combat", "feat+item_creation", "feat+metamagic"), List.of()));
-            case "ability:arcanist_exploit#arcanist" -> Optional.of(
+            case "ability:arcanist_exploit#arcanist" -> Stream.of(
                     new SelectChoice(choicePrefix + "arcanist_exploit", "Arcanist Exploit", "arcanist_exploit", classLevelPrerequisite, List.of("arcanist_exploit"), List.of()));
-            default -> Optional.empty();
+            case "ability:slayer_talent#slayer" -> Stream.of(
+                    new SelectChoice(choicePrefix + "slayer_talent", "Slayer Talent", "slayer_talent", classLevelPrerequisite, List.of("slayer_talent"), List.of()));
+            case "ability:rogue_talent#rogue" -> Stream.of(
+                    new SelectChoice(choicePrefix + "rogue_talent", "Rogue Talent", "rogue_talent", classLevelPrerequisite, List.of("rogue_talent"), List.of()));
+            case "ability:blessings#warpriest" -> Stream.of(
+                    new SelectChoice(choicePrefix + "blessing_1", "Blessing #1", "warpriest_blessing", classLevelPrerequisite, List.of("warpriest_blessing"), List.of()),
+                    new SelectChoice(choicePrefix + "blessing_2", "Blessing #2", "warpriest_blessing", classLevelPrerequisite, List.of("warpriest_blessing"), List.of())
+            );
+            case "ability:discovery#alchemist" -> Stream.of(
+                    new SelectChoice(choicePrefix + "alchemist_discovery", "Discovery", "alchemist_discovery", classLevelPrerequisite, List.of("alchemist_discovery"), List.of()));
+            case "ability:magus_arcana#magus" -> Stream.of(
+                    new SelectChoice(choicePrefix + "magus_arcana", "Magus Arcana", "magus_arcana", classLevelPrerequisite, List.of("magus_arcana"), List.of()));
+            default -> Stream.empty();
         };
     }
 }

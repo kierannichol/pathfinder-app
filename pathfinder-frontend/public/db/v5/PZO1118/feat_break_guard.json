@@ -1,8 +1,8 @@
 {
   "id": "feat:break_guard",
   "name": "Break Guard",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@dex_score\u003e\u003d15,@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_disarm,@feat:two_weapon_fighting)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@dex_score\u003e\u003d15,@int_score\u003e\u003d13,@feat:combat_expertise,@feat:improved_disarm,@feat:two_weapon_fighting,!@feat:break_guard)",
   "description": {
     "text": "You can use one of your two weapons to occupy your opponent\u0027s defenses while attacking with the other.",
     "sections": {

@@ -2,14 +2,8 @@
   "id": "rage_power:greater_hurling",
   "name": "Greater Hurling",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:hurling) AND !@rage_power:greater_hurling",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d12,@rage_power:hurling)",
   "description": {
     "text": "Increase the range and size allowed for a hurled object"
-  },
-  "effects": [{
-    "targetKey": "rage_power:greater_hurling",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

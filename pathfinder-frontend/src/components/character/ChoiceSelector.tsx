@@ -20,7 +20,7 @@ export default function ChoiceSelector({ choice, characterAtLevel, onChange }: C
     return <DataChoiceSelectButton
         choice={choice as SelectChoiceNode}
         variant={choice.type}
-        search="auto"
+        search={true}
         characterAtLevel={characterAtLevel}
         onSelect={onChange} />
   }

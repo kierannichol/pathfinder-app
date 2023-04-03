@@ -2,7 +2,7 @@
   "id": "feat:missile_shield",
   "name": "Missile Shield",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "all(@dex_score\u003e\u003d13,@feat:shield_focus)",
+  "prerequisiteFormula": "all(@dex_score\u003e\u003d13,@feat:shield_focus,!@feat:missile_shield)",
   "description": {
     "text": "You are skilled at deflecting ranged attacks with your shield.",
     "sections": {

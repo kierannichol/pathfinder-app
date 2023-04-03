@@ -2,7 +2,7 @@
   "id": "feat:shield_wall",
   "name": "Shield Wall",
   "tags": ["teamwork", "feat"],
-  "prerequisiteFormula": "@feat:shield_proficiency",
+  "prerequisiteFormula": "all(@feat:shield_proficiency,!@feat:shield_wall)",
   "description": {
     "text": "You form a unified defense with those around you.",
     "sections": {

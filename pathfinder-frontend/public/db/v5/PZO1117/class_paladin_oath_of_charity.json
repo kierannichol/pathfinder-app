@@ -1,0 +1,19 @@
+{
+  "id": "class:paladin#oath_of_charity",
+  "name": "Oath of Charity",
+  "tags": ["archetype", "paladin"],
+  "description": {
+  },
+  "template": {
+    "id": "class:paladin#oath_of_charity",
+    "sections": [{
+      "condition": "@class:paladin\u003e\u003d5",
+      "effects": [{
+        "targetKey": "ability:divine_bond#paladin",
+        "renameAction": {
+          "renamedKey": "ability:charitable_mercy#paladin_oath_of_charity"
+        }
+      }]
+    }]
+  }
+}

@@ -2,7 +2,7 @@
   "id": "feat:animal_soul",
   "name": "Animal Soul",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@ability:animal_companion#hunter,@ability:mount#cavalier)",
+  "prerequisiteFormula": "all(any(@ability:animal_companion#hunter,@ability:mount#cavalier),!@feat:animal_soul)",
   "description": {
     "text": "Your close bond with an animal allows you to ignore harmful magic that cannot affect your wild side.",
     "sections": {

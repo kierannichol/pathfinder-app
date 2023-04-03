@@ -1,8 +1,8 @@
 {
   "id": "feat:final_embrace",
   "name": "Final Embrace",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@int_score\u003e\u003d3,any(@race:naga,@race:serpentfolk,@ability:constrict),@bab\u003e\u003d3)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@int_score\u003e\u003d3,any(@race:naga,@race:serpentfolk,@ability:constrict),@bab\u003e\u003d3,!@feat:final_embrace)",
   "description": {
     "text": "Your coils are particularly deadly, allowing you to constrict opponents of your size or smaller.",
     "sections": {

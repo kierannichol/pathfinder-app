@@ -1,8 +1,8 @@
 {
   "id": "feat:shaitan_earthblast",
   "name": "Shaitan Earthblast",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:elemental_fist,@feat:improved_unarmed_strike,@feat:shaitan_skin,@feat:shaitan_style,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:elemental_fist,@feat:improved_unarmed_strike,@feat:shaitan_skin,@feat:shaitan_style,@bab\u003e\u003d13,@class:monk\u003e\u003d11),!@feat:shaitan_earthblast)",
   "description": {
     "text": "With a forceful stomp you release a blast of acid from the earth to burn your enemies.",
     "sections": {

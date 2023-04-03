@@ -2,14 +2,8 @@
   "id": "rage_power:greater_beast_totem",
   "name": "Greater Beast Totem",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d10,@rage_power:beast_totem) AND !@rage_power:greater_beast_totem",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d10,@rage_power:beast_totem)",
   "description": {
     "text": "Gain a pounce attack"
-  },
-  "effects": [{
-    "targetKey": "rage_power:greater_beast_totem",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

@@ -2,7 +2,7 @@
   "id": "feat:coordinated_shot",
   "name": "Coordinated Shot",
   "tags": ["teamwork", "feat"],
-  "prerequisiteFormula": "@feat:point_blank_shot",
+  "prerequisiteFormula": "all(@feat:point_blank_shot,!@feat:coordinated_shot)",
   "description": {
     "text": "Your ranged attacks against an opponent take advantage of your ally\u0027s positioning.",
     "sections": {

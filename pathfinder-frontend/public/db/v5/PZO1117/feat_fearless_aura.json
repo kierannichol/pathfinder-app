@@ -1,8 +1,8 @@
 {
   "id": "feat:fearless_aura",
   "name": "Fearless Aura",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@ability:aura_of_courage#paladin,@caster_level\u003e\u003d8)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:aura_of_courage#paladin,@caster_level\u003e\u003d8,!@feat:fearless_aura)",
   "description": {
     "sections": {
       "Benefit": "Your aura of courage expands to a 20-foot-radius emanation. Allies within the aura are immune to fear effects.",

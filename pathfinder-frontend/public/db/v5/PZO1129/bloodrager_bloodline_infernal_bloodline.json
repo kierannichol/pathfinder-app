@@ -97,6 +97,38 @@
           "ids": ["feat:blind_fight", "feat:combat_reflexes", "feat:deceitful", "feat:improved_disarm", "feat:improved_sunder", "feat:intimidating_prowess", "feat:iron_will"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:protection_from_good",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:scorching_ray",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:suggestion",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:fire_shield",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

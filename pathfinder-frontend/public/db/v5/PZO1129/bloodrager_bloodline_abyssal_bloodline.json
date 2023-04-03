@@ -97,6 +97,38 @@
           "ids": ["feat:cleave", "feat:great_fortitude", "feat:improved_bull_rush", "feat:improved_sunder", "feat:intimidating_prowess", "feat:power_attack", "feat:toughness"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:ray_of_enfeeblement",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:bulls_strength",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:rage",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:stoneskin",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

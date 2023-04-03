@@ -1,8 +1,8 @@
 {
   "id": "feat:disorienting_maneuver",
   "name": "Disorienting Maneuver",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@feat:dodge,@skill:acrobatics\u003e\u003d5)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@feat:dodge,@skill:acrobatics\u003e\u003d5,!@feat:disorienting_maneuver)",
   "description": {
     "text": "Your erratic movements disorient your opponent.",
     "sections": {

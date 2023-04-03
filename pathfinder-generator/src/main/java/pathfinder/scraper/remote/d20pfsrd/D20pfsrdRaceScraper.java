@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import pathfinder.db.RaceSourceDatabase;
+import pathfinder.generator.db.RaceSourceDatabase;
 import pathfinder.model.pathfinder.D20pfsrdRace;
 import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.Sources;

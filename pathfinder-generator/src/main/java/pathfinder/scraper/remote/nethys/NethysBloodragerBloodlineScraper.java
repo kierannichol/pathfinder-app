@@ -17,7 +17,7 @@ import pathfinder.NotCached;
 import pathfinder.model.AttributeType;
 import pathfinder.model.Description;
 import pathfinder.model.Id;
-import pathfinder.model.pathfinder.BloodragerBloodline;
+import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
@@ -29,7 +29,7 @@ import pathfinder.util.StringUtils;
 @RequiredArgsConstructor
 public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
 
-    public Stream<BloodragerBloodline> streamBloodlines() {
+    public Stream<Bloodline> streamBloodlines() {
         try {
             Element results = search("*", SearchTarget.CLASSES);
             Elements content = selectSectionElements(
@@ -42,7 +42,7 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
         }
     }
 
-    private BloodragerBloodline scrapeBloodline(String target, String href) {
+    private Bloodline scrapeBloodline(String target, String href) {
         Document document = fetchLink(href);
 
         Element titleElement = document.select("h1.title:contains(%s)".formatted(target)).first();
@@ -63,7 +63,7 @@ public class NethysBloodragerBloodlineScraper extends AbstractNethysScraper {
         List<String> bonusSpells = parseBonusSpells(contents);
         List<Feature> bloodlinePowers = parseBloodlinePowers(contents, source);
 
-        return new BloodragerBloodline(
+        return new Bloodline(
                 id,
                 name,
                 Description.create(description),

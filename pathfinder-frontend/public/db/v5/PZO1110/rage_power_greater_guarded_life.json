@@ -2,14 +2,8 @@
   "id": "rage_power:greater_guarded_life",
   "name": "Greater Guarded Life",
   "tags": ["rage_power"],
-  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:guarded_life) AND !@rage_power:greater_guarded_life",
+  "prerequisiteFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:guarded_life)",
   "description": {
     "text": "Convert more damage to nonlethal damage"
-  },
-  "effects": [{
-    "targetKey": "rage_power:greater_guarded_life",
-    "addAction": {
-      "numberDelta": 1
-    }
-  }]
+  }
 }

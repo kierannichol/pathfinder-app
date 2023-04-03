@@ -2,7 +2,7 @@
   "id": "feat:saving_shield",
   "name": "Saving Shield",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@feat:shield_proficiency",
+  "prerequisiteFormula": "all(@feat:shield_proficiency,!@feat:saving_shield)",
   "description": {
     "text": "You deflect attacks that could mean your ally\u0027s death.",
     "sections": {

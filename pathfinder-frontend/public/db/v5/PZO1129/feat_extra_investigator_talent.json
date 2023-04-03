@@ -2,7 +2,7 @@
   "id": "feat:extra_investigator_talent",
   "name": "Extra Investigator Talent",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "@ability:investigator_talent#investigator",
+  "prerequisiteFormula": "all(@ability:investigator_talent#investigator,!@feat:extra_investigator_talent)",
   "description": {
     "text": "You learn a new way to use your training and inspiration.",
     "sections": {

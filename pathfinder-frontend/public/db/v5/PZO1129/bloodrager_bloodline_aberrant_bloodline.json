@@ -97,6 +97,38 @@
           "ids": ["feat:combat_reflexes", "feat:great_fortitude", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:enlarge_person",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:see_invisibility",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:displacement",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:black_tentacles",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

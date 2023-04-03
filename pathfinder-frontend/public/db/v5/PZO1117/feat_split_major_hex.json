@@ -1,8 +1,8 @@
 {
   "id": "feat:split_major_hex",
   "name": "Split Major Hex",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@feat:split_hex,@caster_level\u003e\u003d18)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@feat:split_hex,@caster_level\u003e\u003d18,!@feat:split_major_hex)",
   "description": {
     "text": "You can split the effect of one of your targeted hexes, affecting another creature you can see.",
     "sections": {

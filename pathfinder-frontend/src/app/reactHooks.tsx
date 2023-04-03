@@ -49,7 +49,7 @@ export function useAsyncMemo<T>(promiseFn: () => Promise<T|undefined>, deps?: De
     return () => {
       mounted = false;
     }
-  }, [ ...(deps ?? []), promiseFn ]);
+  }, deps);
   return [ result, error ];
 }
 

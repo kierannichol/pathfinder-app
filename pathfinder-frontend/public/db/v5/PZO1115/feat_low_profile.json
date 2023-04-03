@@ -2,7 +2,7 @@
   "id": "feat:low_profile",
   "name": "Low Profile",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@size\u003c\u003d4",
+  "prerequisiteFormula": "all(@size\u003c\u003d4,!@feat:low_profile)",
   "description": {
     "sections": {
       "Benefit": "You gain a +1 dodge bonus to AC against ranged attacks. In addition, you do not provide soft cover to creatures when ranged attacks pass through your square."

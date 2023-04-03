@@ -1,8 +1,8 @@
 {
   "id": "feat:improved_monster_lore",
   "name": "Improved Monster Lore",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "@ability:monster_lore#inquisitor",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@ability:monster_lore#inquisitor,!@feat:improved_monster_lore)",
   "description": {
     "sections": {
       "Benefit": "You gain a sacred bonus on all skill checks to identify the abilities and weaknesses of creatures equal to 1/2 your level in classes that grant you the monster lore class feature."

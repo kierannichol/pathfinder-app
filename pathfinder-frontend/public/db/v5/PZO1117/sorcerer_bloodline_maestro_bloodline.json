@@ -1,0 +1,154 @@
+{
+  "id": "sorcerer_bloodline:maestro_bloodline",
+  "name": "Maestro Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "description": {
+    "text": "The spiritual power of art and song runs strongly through your family line. This may be the result of ancient pacts made with azata patrons, or even an inheritance from a lillend or trumpet archon ancestor. It could also be the lingering taint of a less savory heritage, such as from a harpy or a forefather driven to madness by the disquieting gibbering of a shoggoth. However it came to be, your family\u0027s artistic bent shows itself strongly in your magic."
+  },
+  "template": {
+    "id": "sorcerer_bloodline:maestro_bloodline",
+    "sections": [{
+      "condition": "@class:sorcerer\u003e\u003d1",
+      "effects": [{
+        "targetKey": "ability:beguiling_voice#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "ability:daze#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "ability:fascinate#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "ability:perfect_voice#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d20",
+      "effects": [{
+        "targetKey": "ability:inspire#sorcerer",
+        "addAction": {
+          "numberDelta": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "choices": [{
+        "id": "sorcerer7:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:deceitful", "feat:greater_spell_focus# (enchantment)", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus# (Perform)", "feat:spell_focus# (enchantment)", "feat:spellsong", "feat:still_spell"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "choices": [{
+        "id": "sorcerer13:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:deceitful", "feat:greater_spell_focus# (enchantment)", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus# (Perform)", "feat:spell_focus# (enchantment)", "feat:spellsong", "feat:still_spell"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "choices": [{
+        "id": "sorcerer19:bloodline_feat",
+        "type": "feat",
+        "label": "Bloodline Feat",
+        "select": {
+          "ids": ["feat:deceitful", "feat:greater_spell_focus# (enchantment)", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus# (Perform)", "feat:spell_focus# (enchantment)", "feat:spellsong", "feat:still_spell"]
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d3",
+      "effects": [{
+        "targetKey": "spell:ventriloquism",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d5",
+      "effects": [{
+        "targetKey": "spell:hideous_laughter",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:suggestion",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d9",
+      "effects": [{
+        "targetKey": "spell:shout",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d11",
+      "effects": [{
+        "targetKey": "spell:dominate_person",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:mass_suggestion",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d15",
+      "effects": [{
+        "targetKey": "spell:power_word_blind",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d17",
+      "effects": [{
+        "targetKey": "spell:greater_shout",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d19",
+      "effects": [{
+        "targetKey": "spell:wail_of_the_banshee",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }]
+  }
+}

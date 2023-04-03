@@ -2,7 +2,7 @@
   "id": "feat:intimidating_performance",
   "name": "Intimidating Performance",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(\"ability to start a performance (or raging song) as a move action\",@ability:bardic_performance,@ability:raging_song#skald)",
+  "prerequisiteFormula": "all(any(\"Ability to start a performance (or raging song) as a move action\",@ability:bardic_performance,@ability:raging_song#skald),!@feat:intimidating_performance)",
   "description": {
     "text": "Your performance strikes fear in the hearts of foes.",
     "sections": {

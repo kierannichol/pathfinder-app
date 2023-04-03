@@ -1,8 +1,8 @@
 {
   "id": "feat:rebuffing_reduction",
   "name": "Rebuffing Reduction",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@ability:damage_reduction#barbarian,@feat:improved_bull_rush,@feat:power_attack,@bab\u003e\u003d1)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@str_score\u003e\u003d13,@ability:damage_reduction#barbarian,@feat:improved_bull_rush,@feat:power_attack,@bab\u003e\u003d1,!@feat:rebuffing_reduction)",
   "description": {
     "text": "Your damage reduction can turn the force of blows back on your enemies.",
     "sections": {

@@ -1,0 +1,27 @@
+{
+  "id": "class:paladin#oath_of_vengeance",
+  "name": "Oath of Vengeance",
+  "tags": ["archetype", "paladin"],
+  "description": {
+  },
+  "template": {
+    "id": "class:paladin#oath_of_vengeance",
+    "sections": [{
+      "condition": "@class:paladin\u003e\u003d4",
+      "effects": [{
+        "targetKey": "ability:channel_positive_energy#paladin",
+        "renameAction": {
+          "renamedKey": "ability:channel_wrath#paladin_oath_of_vengeance"
+        }
+      }]
+    }, {
+      "condition": "@class:paladin\u003e\u003d11",
+      "effects": [{
+        "targetKey": "ability:aura_of_justice#paladin",
+        "renameAction": {
+          "renamedKey": "ability:powerful_justice#paladin_oath_of_vengeance"
+        }
+      }]
+    }]
+  }
+}

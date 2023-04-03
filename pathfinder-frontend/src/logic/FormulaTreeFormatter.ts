@@ -132,7 +132,7 @@ export default class FormulaFormatter {
         .varargsFunction('all', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ALL, ...args))
         .variable('@', '', (state, key) => {
           const actual = state.get(key);
-          return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.none();
+          return actual ? new FormattedValue(actual, key) : ResolvedValue.none();
         })
         .variable('min(@', ')', (state, key) => {
           const actual = FormulaFormatter.noneIfEmpty(state.find(key))

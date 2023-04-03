@@ -1,8 +1,8 @@
 {
   "id": "feat:djinni_style",
   "name": "Djinni Style",
-  "tags": ["feat", "style", "style"],
-  "prerequisiteFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
+  "tags": ["style", "feat"],
+  "prerequisiteFormula": "all(any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5),!@feat:djinni_style)",
   "description": {
     "text": "Your hands sheathed in an auras of lightning, you move like the wind.",
     "sections": {

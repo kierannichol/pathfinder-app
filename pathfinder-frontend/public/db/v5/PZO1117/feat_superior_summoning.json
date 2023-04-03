@@ -1,8 +1,8 @@
 {
   "id": "feat:superior_summoning",
   "name": "Superior Summoning",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@feat:augment_summoning,@caster_level\u003e\u003d3)",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@feat:augment_summoning,@caster_level\u003e\u003d3,!@feat:superior_summoning)",
   "description": {
     "text": "You can summon more creatures.",
     "sections": {

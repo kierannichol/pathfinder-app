@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 import logic.parse.FormulaOptimizer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pathfinder.db.local.ClassSourceDatabase;
-import pathfinder.db.local.SpellSourceDatabase;
+import pathfinder.generator.db.local.ClassSourceDatabase;
+import pathfinder.generator.db.local.SpellYamlSourceDatabase;
 import pathfinder.model.Entity;
 import pathfinder.model.Id;
 import pathfinder.model.Tags;
@@ -17,16 +17,18 @@ import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Spell;
 import pathfinder.util.NameToIdConverter;
+import pathfinder.util.StreamUtils;
 
 @Component
 @RequiredArgsConstructor
 public class SpellEntityProvider implements EntityProvider {
-    private final SpellSourceDatabase spellSourceDatabase;
+    private final SpellYamlSourceDatabase spellSourceDatabase;
     private final ClassSourceDatabase classSourceDatabase;
 
     @Override
     public Stream<Entity> streamEntities(Source source) {
         return spellSourceDatabase.streamSpells()
+                .filter(StreamUtils.duplicates(Spell::id))
                 .map(this::createSpellEntity);
     }
 

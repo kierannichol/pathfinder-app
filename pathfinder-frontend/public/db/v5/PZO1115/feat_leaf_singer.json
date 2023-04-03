@@ -2,7 +2,7 @@
   "id": "feat:leaf_singer",
   "name": "Leaf Singer",
   "tags": ["general", "feat"],
-  "prerequisiteFormula": "any(@cha_score\u003e\u003d13,@ability:bardic_performance,@race:elf,@race:half_elf)",
+  "prerequisiteFormula": "all(any(@cha_score\u003e\u003d13,@ability:bardic_performance,@race:elf,@race:half_elf),!@feat:leaf_singer)",
   "description": {
     "sections": {
       "Benefit": "When you use bardic performance with audible components in a forest, the range or area of your chosen performance is doubled. In addition, the DC for saving throws against your bardic performance is increased by +2 for creatures of the fey type, regardless of where the performance occurs."

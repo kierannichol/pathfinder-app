@@ -1,8 +1,8 @@
 {
   "id": "feat:fire_music",
   "name": "Fire Music",
-  "tags": ["feat", "general"],
-  "prerequisiteFormula": "all(@skill:spellcraft\u003e\u003d5,max(@spells_per_day:bard#*)[Bard spells],\"an arcane fire spell from some other spellcasting\")",
+  "tags": ["general", "feat"],
+  "prerequisiteFormula": "all(@skill:spellcraft\u003e\u003d5,max(@spells_per_day:bard#*)[Bard spells],\"an arcane fire spell from some other spellcasting\",!@feat:fire_music)",
   "description": {
     "sections": {
       "Benefit": "When you cast a bard spell that deals damage, you may replace the spell\u0027s normal damage with fire damage or split the spell\u0027s damage so that half of it is the normal damage type and half is fire damage."

@@ -1,8 +1,8 @@
 {
   "id": "feat:domain_strike",
   "name": "Domain Strike",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@ability:domains,@feat:improved_unarmed_strike)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@ability:domains,@feat:improved_unarmed_strike,!@feat:domain_strike)",
   "description": {
     "text": "You unleash a domain power upon your enemy as part of your unarmed strike.",
     "sections": {

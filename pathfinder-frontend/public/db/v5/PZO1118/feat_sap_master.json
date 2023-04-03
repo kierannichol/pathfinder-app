@@ -1,8 +1,8 @@
 {
   "id": "feat:sap_master",
   "name": "Sap Master",
-  "tags": ["feat", "combat"],
-  "prerequisiteFormula": "all(@ability:sneak_attack\u003e\u003d3,@feat:sap_adept)",
+  "tags": ["combat", "feat"],
+  "prerequisiteFormula": "all(@ability:sneak_attack\u003e\u003d3,@feat:sap_adept,!@feat:sap_master)",
   "description": {
     "text": "You knock the sense out of foes with a well-timed surprise attack.",
     "sections": {

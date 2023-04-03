@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -19,6 +18,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+import pathfinder.generator.db.local.WarpriestBlessingSourceDatabase;
+import pathfinder.model.AttributeType;
 import pathfinder.model.Id;
 import pathfinder.model.Id.Key;
 import pathfinder.model.NamedEntity;
@@ -30,6 +31,7 @@ import pathfinder.model.pathfinder.Size;
 import pathfinder.model.pathfinder.Skill;
 import pathfinder.model.pathfinder.Skills;
 import pathfinder.model.pathfinder.Weapons;
+import pathfinder.util.NameToIdConverter;
 import pathfinder.util.PatternMapper;
 
 @Component("Prerequisite Parser")
@@ -48,6 +50,8 @@ public class PrerequisiteParser {
     private static final String SIZE_GROUP = "(" + Arrays.stream(Size.values()).map(Size::longName).map(Pattern::quote).collect(Collectors.joining("|")) + ")";
 
     private final List<NamedEntitySource> namedEntitySources;
+
+    private final WarpriestBlessingSourceDatabase warpriestBlessingSourceDatabase;
 
     private final Map<String, Id> specialNameToId = new HashMap<>();
     private final Map<String, Id> specialNameAndTypeToId = new HashMap<>();
@@ -84,12 +88,15 @@ public class PrerequisiteParser {
             .addReplacement("spiritualist {NUMBER}", "(0)")
             .addReplacement("sahirafiyun {NUMBER}", "(0)")
             .addReplacement("adept {NUMBER}", "(0)")
-            .addReplacement("detect undead paladin class feature", "\"Detect undead paladin class feature\"")
+            .addReplacement("detect undead paladin class feature", "@ability:detect_undead#paladin")
             .addReplacement("ability to use any polymorph effect", "\"Ability to use any polymorph effect\"")
             .addReplacement("Centaur or any tauric creature at the GM's discretion", "\"Centaur or any tauric creature at the GM's discretion\"")
             .addReplacement("alignment must be within one step of your deity's", "\"Alignment must be within one step of your deity's\"")
-            .addReplacement("must worship and receive spells from a deity", "\"Worship and receive spells from a deity\"")
-            .addReplacement("ability to start a performance (or raging song) as a move action", "\"ability to start a performance (or raging song) as a move action\"")
+            .addImmediateReplacement("must worship and receive spells from a deity", "\"Worship and receive spells from a deity\"")
+            .addImmediateReplacement("worship and receive spells from a deity", "\"Worship and receive spells from a deity\"")
+            .addReplacement("ability to start a performance (or raging song) as a move action", "\"Ability to start a performance (or raging song) as a move action\"")
+            .addReplacement("ability to spontaneously cast cure or inflict spells", "\"Ability to spontaneously cast cure or inflict spells\"")
+            .addImmediateReplacement("Animal or Plant domain", "any(@domain:animal, @domain:plant)")
 
             .addReplacement("You have no levels in a class that has the grit class feature", "!@ability:grit")
             .addReplacement("Siege Weapon Engineer", "@feat:siege_engineer")
@@ -120,6 +127,7 @@ public class PrerequisiteParser {
             .addReplacement("divine bond (armor)", "@ability:divine_bond#armor")
             .addReplacement("divine bond (shield)", "@ability:divine_bond#shield")
             .addReplacement("divine bond (armor or shield)", "@ability:divine_bond#armor OR @ability:divine_bond#shield")
+            .addReplacement("divine bond (armor or shield), or sacred armor class feature", "(@ability:divine_bond#armor OR @ability:divine_bond#shield) OR @ability:sacred_armor")
             .addReplacement("rage class feature", "any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature]")
             .addReplacement("rage or raging song class feature", "any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature] OR max(@ability:raging_song#*)[Raging song class feature]")
 
@@ -165,13 +173,13 @@ public class PrerequisiteParser {
             .addReplacement("either the {PHRASE}, {PHRASE} or {PHRASE}", "({0} OR {1} OR {2})")
             .addReplacement("either the {PHRASE}, {PHRASE}, or {PHRASE}", "({0} OR {1} OR {2})")
             .addReplacement("{ABILITY_SCORE} {NUMBER}", "{0} >= {1}")
-            .addReplacement("{CLASS} OR {CLASS} {LEVEL}", "({0} >= {2} OR {1} >= 2)")
-            .addReplacement("{CLASS} {LEVEL}", "{0} >= {1}")
-            .addReplacement("{CLASS} {LEVEL} ({NAME})", "all({0} >= {1}, {2})")
-            .addReplacement("{CLASS} {LEVEL} or {CLASS} {LEVEL} ({NAME})", "any({0} >= {1}, {2} >= {3}) AND {4}")
-            .addReplacement("{CLASS} {LEVEL} ({NAME})", "all({0} >= {1}, {2})")
-            .addReplacement("{CLASS} level {LEVEL}", "{0} >= {1}")
-            .addReplacement("{LEVEL}-level {CLASS}", "{1} >= {0}")
+            .addReplacement("{CLASS} OR {CLASS} {LEVEL}", "({class:0} >= {2} OR {class:1} >= 2)")
+            .addReplacement("{CLASS} {LEVEL}", "{class:0} >= {1}")
+            .addReplacement("{CLASS} {LEVEL} ({NAME})", "all({class:0} >= {1}, {2})")
+            .addReplacement("{CLASS} {LEVEL} or {CLASS} {LEVEL} ({NAME})", "any({class:0} >= {1}, {2} >= {3}) AND {4}")
+            .addReplacement("{CLASS} {LEVEL} ({NAME})", "all({class:0} >= {1}, {2})")
+            .addReplacement("{CLASS} level {LEVEL}", "{class:0} >= {1}")
+            .addReplacement("{LEVEL}-level {CLASS}", "{class:1} >= {0}")
             .addReplacement("caster level {LEVEL}", "@caster_level >= {0}")
             .addReplacement("character level {LEVEL}", "@character_level >= {0}")
             .addReplacement("{NAME} rage power", "{rage_power:0}")
@@ -180,6 +188,7 @@ public class PrerequisiteParser {
             .addReplacement("{NAME} discovery", "{discovery:0}")
             .addReplacement("{NAME} magus arcana", "{magus_arcana:0}")
             .addReplacement("{NAME} rogue talent", "{rogue_talent:0}")
+            .addReplacement("{NAME} advanced slayer talent or ninja master trick", "{slayer_talent:0}")
             .addReplacement("Trained in {NAME}", "{0}")
             .addReplacement("{PHRASE} {NUMBER} ranks", "{0} >= {1}")
             .addReplacement("{PHRASE} {NUMBER} rank", "{0} >= {1}")
@@ -191,9 +200,9 @@ public class PrerequisiteParser {
             .addReplacement("proficient with weapon", "@proficiency:selected_weapon")
             .addReplacement("proficiency with chosen weapon", "@proficiency:selected_weapon")
             .addReplacement("{NAME} Proficiency", "@proficiency:{0}")
+            .addReplacement("proficiency with a shield", "any(%s)".formatted(String.join(",", Arrays.stream(ArmorProficiency.values()).map(ArmorProficiency::getId).map(Id::string).map(id -> "@" + id).toList())))
             .addReplacement("proficiency with {NAME}", "@proficiency:{0}")
             .addReplacement("proficient with {NAME} or {NAME}", "(@proficiency:{0} OR @proficiency:{1})")
-            .addReplacement("a shield", "any(%s)".formatted(String.join(",", Arrays.stream(ArmorProficiency.values()).map(ArmorProficiency::getId).map(Id::string).toList())))
             .addReplacement("the selected weapon", "selected_weapon")
             .addReplacement("selected shield", "selected_shield")
             .addReplacement("selected weapon", "selected_weapon")
@@ -336,6 +345,7 @@ public class PrerequisiteParser {
             .addReplacement("wing-clipped", "@ability:wing_clipped")
             .addReplacement("multitalented", "@ability:multitalented")
             .addReplacement("animal fury", "@ability:animal_fury")
+            .addReplacement("opportune parry and riposte deed", "@swashbuckler_deed:opportune_parry_and_riposte")
 
             .addReplacement("{NAME} racial trait", "{0}")
 
@@ -397,6 +407,12 @@ public class PrerequisiteParser {
             .addReplacement("{ANY}; {ANY}; {ANY}", "all({0}, {1}, {2})")
             .addReplacement("{ANY}; {ANY}", "all({0}, {1})")
             .addReplacement("{PHRASE}, {PHRASE}", "all({0}, {1})")
+
+            // Brackets
+            .addReplacement("{NAME} ({NAME})", "{0}#{key:1}")
+            .addReplacement("{NAME} ({NAME} or {NAME})", "{0}#{key:1} OR {0}#{key:2}")
+            .addReplacement("{NAME} ({NAME}, {NAME} or {NAME})", "{0}#{key:1} OR {0}#{key:2} OR {0}#{key:3}")
+            .addReplacement("{NAME} ({NAME}, {NAME}, or {NAME})", "{0}#{key:1} OR {0}#{key:2} OR {0}#{key:3}")
             ;
 
     private final PatternMapper patternMapper = new PatternMapper();
@@ -409,7 +425,6 @@ public class PrerequisiteParser {
         try {
             String parsed = parsePrerequisites(prerequisites);
             Formula.parse(parsed);
-//            log.info(parsed);
 
             if (parsed.contains("#@")) {
                 log.warn("Contained illegal \"#@\":\n%s\n%s".formatted(prerequisites, parsed));
@@ -436,7 +451,7 @@ public class PrerequisiteParser {
         log.info("Initializing prerequisite parser");
 
         // generic terms
-        addNameMapping("proficiency", Id.partial("@proficiency"));
+        addNameMapping("proficiency:{NAME}", Id.partial("@proficiency:{key:0}"));
 
         // hard-coded
         addNameMapping("force spell", Id.partial("\"force spell\""));
@@ -486,6 +501,8 @@ public class PrerequisiteParser {
         addFeatTypeToSpecialIds(FeatType.TEAMWORK, "teamwork feat", "teamwork feats", "other teamwork feat");
         addFeatTypeToSpecialIds(FeatType.ITEM_CREATION, "item creation feat", "item creation feats");
 
+        addBlessingMajorPowerSpecialIds();
+
         // Custom missing things
         addNameMapping("craven", Id.of("ability:craven"));
         addNameMapping("fearless", Id.of("ability:fearless"));
@@ -525,12 +542,15 @@ public class PrerequisiteParser {
             });
         };
 
+        addTypeLookupFunction.accept("class");
         addTypeLookupFunction.accept("ability");
         addTypeLookupFunction.accept("feat");
         addTypeLookupFunction.accept("spell");
         addTypeLookupFunction.accept("magus_arcana");
         addTypeLookupFunction.accept("rogue_talent");
         addTypeLookupFunction.accept("rage_power");
+        addTypeLookupFunction.accept("slayer_talent");
+        addTypeLookupFunction.accept("ninja_trick");
         addTypeLookupFunction.accept("discovery");
 
         log.info("Finished initializing prerequisite parser");
@@ -540,13 +560,19 @@ public class PrerequisiteParser {
         if (to.type != null) {
             this.specialNameAndTypeToId.put((to.type + ":" + name).toLowerCase(), to);
         }
-//        if ("ability".equals(to.type) || "feat".equals(to.type)) {
-//            this.abilityNameToId.put(name.toLowerCase(), to);
-//        }
-//        if ("spell".equals(to.type)) {
-//            this.spellNameToId.put(name.toLowerCase(), to);
-//        }
         this.specialNameToId.put(name.toLowerCase(), to);
+    }
+
+    private void addBlessingMajorPowerSpecialIds() {
+        String blessings = warpriestBlessingSourceDatabase.streamBlessings()
+                .filter(blessing -> blessing.type().equalsIgnoreCase("MAJOR"))
+                .map(blessing -> "@" + NameToIdConverter.generateId(AttributeType.WARPRIEST_BLESSINGS, blessing.name()))
+                .collect(Collectors.joining(", "));
+        if (blessings.isBlank()) {
+            blessings = "0";
+        }
+        String mapping = "any(" + blessings + ")";
+        addNameMapping("access to a blessing's major power", Id.partial(mapping));
     }
 
     private void addFeatTypeToSpecialIds(FeatType type, String... names) {
@@ -624,16 +650,7 @@ public class PrerequisiteParser {
                 .replaceAll("\\.", "")
                 .trim();
 
-        Function<String, String> renameFunction = patternMapper::mapText;
-
-        prerequisites = renameFunction.apply(prerequisites);
-        return prerequisites;
-
-////        return Arrays.stream(prerequisites.split("[,;](?![^()*])"))
-//        return Stream.of(prerequisites)
-//                .filter(part -> !part.isBlank())
-//                .map(renameFunction)
-//                .collect(Collectors.joining(" AND "));
+        return patternMapper.mapText(prerequisites);
     }
 
 }

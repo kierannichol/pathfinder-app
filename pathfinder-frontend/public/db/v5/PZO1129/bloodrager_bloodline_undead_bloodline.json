@@ -97,6 +97,38 @@
           "ids": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"]
         }
       }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d7",
+      "effects": [{
+        "targetKey": "spell:chill_touch",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d10",
+      "effects": [{
+        "targetKey": "spell:false_life",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d13",
+      "effects": [{
+        "targetKey": "spell:vampiric_touch",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
+    }, {
+      "condition": "@class:sorcerer\u003e\u003d16",
+      "effects": [{
+        "targetKey": "spell:enervation",
+        "setAction": {
+          "numberValue": 1
+        }
+      }]
     }]
   }
 }

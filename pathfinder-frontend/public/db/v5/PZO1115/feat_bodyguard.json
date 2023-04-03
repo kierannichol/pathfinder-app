@@ -2,7 +2,7 @@
   "id": "feat:bodyguard",
   "name": "Bodyguard",
   "tags": ["combat", "feat"],
-  "prerequisiteFormula": "@feat:combat_reflexes",
+  "prerequisiteFormula": "all(@feat:combat_reflexes,!@feat:bodyguard)",
   "description": {
     "text": "Your swift strikes ward off enemies attacking nearby allies.",
     "sections": {
