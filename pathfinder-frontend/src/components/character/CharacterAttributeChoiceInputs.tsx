@@ -19,9 +19,9 @@ export default function CharacterAttributeChoiceInputs(
     .map(attribute => <CharacterAttributeRow
         key={`attribute_${attribute}`}
         attributeName={attribute}
-        baseValue={characterAtLevel.get(`${attribute}:base`)?.asText() ?? ''}
-        scoreValue={characterAtLevel.get(`${attribute}_score`)?.asText() ?? ''}
-        modifierValue={characterAtLevel.get(`${attribute}_mod`)?.asText() ?? ''}
+        baseValue={characterAtLevel.resolve(`${attribute}:base`)?.asText() ?? ''}
+        scoreValue={characterAtLevel.resolve(`${attribute}_score`)?.asText() ?? ''}
+        modifierValue={characterAtLevel.resolve(`${attribute}_mod`)?.asText() ?? ''}
         onCommit={value => onCommit(attribute, value)}
       />)}
   </Container>)

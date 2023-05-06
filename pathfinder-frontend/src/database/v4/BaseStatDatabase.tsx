@@ -1,6 +1,6 @@
+import {Resolvable} from "@kierannichol/formula-js";
 import {ChoiceTree} from "../../core/Choice";
 import Description from "../../core/Description";
-import Resolvable from "../../logic/Resolvable";
 import {Entity} from "../../v4/Entity";
 import EntityDatabase from "../../v4/EntityDatabase";
 import BaseStats, {BaseStat} from "../BaseStats";

@@ -1,6 +1,4 @@
-import {DataContext, MutableDataContext} from "../logic/DataContext";
-import {Formula} from "../logic/Formula";
-import Resolvable from "../logic/Resolvable";
+import {DataContext, Formula, MutableDataContext, Resolvable} from "@kierannichol/formula-js";
 import {Template} from "../v4/Template";
 import {IDataHub} from "./DataHub";
 import Description from "./Description";

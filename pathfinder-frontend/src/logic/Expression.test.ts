@@ -1,5 +1,5 @@
+import {DataContext} from "@kierannichol/formula-js";
 import Expression from "./Expression";
-import {DataContext} from "./DataContext";
 
 test('text only expression', () => {
   let expression = Expression.parse("This is a test");

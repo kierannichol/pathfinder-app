@@ -6,8 +6,8 @@
     "text": "Capable of calling upon the power of the gods in the form of blessings and spells, warpriests blend divine magic with martial skill. They are unflinching bastions of their faith, shouting gospel as they pummel foes into submission, and never shy away from a challenge to their beliefs. While clerics might be subtle and use diplomacy to accomplish their aims, warpriests aren\u0027t above using violence whenever the situation warrants it. In many faiths, warpriests form the core of the church\u0027s martial forces--reclaiming lost relics, rescuing captured clergy, and defending the church\u0027s tenets from all challenges. Role: Warpriests can serve as capable healers or spellcasters, calling upon their divine powers from the center of the fight, where their armor and martial skills are put to the test. Alignment: A warpriest\u0027s alignment must be within one step of his deity\u0027s, along either the law/chaos axis or the good/evil axis. Hit Die: d8. Parent Classes: Cleric and fighter. Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
   "effects": [{
-    "targetKey": "class:warpriest",
     "addAction": {
+      "targetKey": "class:warpriest",
       "numberDelta": 1
     }
   }],
@@ -16,123 +16,123 @@
     "sections": [{
       "condition": "@class:warpriest\u003e\u003d1",
       "effects": [{
-        "targetKey": "trained:skill:handle_animal",
         "setAction": {
+          "targetKey": "trained:skill:handle_animal",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:swim",
         "setAction": {
+          "targetKey": "trained:skill:swim",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:diplomacy",
         "setAction": {
+          "targetKey": "trained:skill:diplomacy",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:spellcraft",
         "setAction": {
+          "targetKey": "trained:skill:spellcraft",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:profession",
         "setAction": {
+          "targetKey": "trained:skill:profession",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:climb",
         "setAction": {
+          "targetKey": "trained:skill:climb",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:ride",
         "setAction": {
+          "targetKey": "trained:skill:ride",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:heal",
         "setAction": {
+          "targetKey": "trained:skill:heal",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:craft",
         "setAction": {
+          "targetKey": "trained:skill:craft",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:survival",
         "setAction": {
+          "targetKey": "trained:skill:survival",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:intimidate",
         "setAction": {
+          "targetKey": "trained:skill:intimidate",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:knowledge",
         "setAction": {
+          "targetKey": "trained:skill:knowledge",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:sense_motive",
         "setAction": {
+          "targetKey": "trained:skill:sense_motive",
           "numberValue": 1
         }
       }, {
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 0
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 0
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "ability:aura#warpriest",
         "addAction": {
+          "targetKey": "ability:aura#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:blessings#warpriest",
         "addAction": {
+          "targetKey": "ability:blessings#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:focus_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:focus_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 1
         }
       }],
@@ -143,22 +143,6 @@
         "repeating": true,
         "select": {
           "tags": ["archetype+warpriest"]
-        }
-      }, {
-        "id": "class:warpriest1:blessing_1",
-        "type": "warpriest_blessing",
-        "label": "Blessing #1",
-        "condition": "@class:warpriest\u003e\u003d1",
-        "select": {
-          "tags": ["warpriest_blessing"]
-        }
-      }, {
-        "id": "class:warpriest1:blessing_2",
-        "type": "warpriest_blessing",
-        "label": "Blessing #2",
-        "condition": "@class:warpriest\u003e\u003d1",
-        "select": {
-          "tags": ["warpriest_blessing"]
         }
       }, {
         "id": "warpriest1:skill_rank:1",
@@ -184,43 +168,43 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d2",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 1
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 0
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 2
         }
       }],
@@ -248,43 +232,43 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d3",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 2
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
+          "targetKey": "ability:bonus_feat#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 3
         }
       }],
@@ -312,53 +296,53 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d4",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 3
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ability:channel_energy#warpriest",
         "addAction": {
+          "targetKey": "ability:channel_energy#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 1
         }
       }],
@@ -386,48 +370,48 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d5",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 3
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 2
         }
       }],
@@ -455,48 +439,48 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d6",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 4
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
+          "targetKey": "ability:bonus_feat#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 3
         }
       }],
@@ -524,53 +508,53 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d7",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 5
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_armor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 1
         }
       }],
@@ -598,58 +582,58 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d8",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 6
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 2
         }
       }],
@@ -677,53 +661,53 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d9",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 6
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
+          "targetKey": "ability:bonus_feat#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 3
         }
       }],
@@ -751,58 +735,58 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d10",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 7
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 7
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 7
         }
       }, {
-        "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_armor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 1
         }
       }],
@@ -830,58 +814,58 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d11",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 8
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 7
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 7
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 2
         }
       }],
@@ -909,63 +893,63 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d12",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 9
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 8
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 8
         }
       }, {
-        "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
+          "targetKey": "ability:bonus_feat#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 3
         }
       }],
@@ -993,63 +977,63 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d13",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 9
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 8
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 8
         }
       }, {
-        "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_armor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 1
         }
       }],
@@ -1077,63 +1061,63 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d14",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 10
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 9
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 9
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 1
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 2
         }
       }],
@@ -1161,63 +1145,63 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d15",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 11
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 9
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 9
         }
       }, {
-        "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
+          "targetKey": "ability:bonus_feat#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 3
         }
       }],
@@ -1245,73 +1229,73 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d16",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 12
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 10
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 10
         }
       }, {
-        "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_armor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 1
         }
       }],
@@ -1339,68 +1323,68 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d17",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 12
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 10
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 10
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 2
         }
       }],
@@ -1428,68 +1412,68 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d18",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 13
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 11
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 11
         }
       }, {
-        "targetKey": "ability:bonus_feat#warpriest",
         "addAction": {
+          "targetKey": "ability:bonus_feat#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 3
         }
       }],
@@ -1517,68 +1501,68 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d19",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 14
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 11
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 11
         }
       }, {
-        "targetKey": "ability:sacred_armor#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_armor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 4
         }
       }],
@@ -1606,78 +1590,78 @@
     }, {
       "condition": "@class:warpriest\u003e\u003d20",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 15
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 12
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 12
         }
       }, {
-        "targetKey": "ability:aspect_of_war#warpriest",
         "addAction": {
+          "targetKey": "ability:aspect_of_war#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:fervor#warpriest",
         "addAction": {
+          "targetKey": "ability:fervor#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:sacred_weapon#warpriest",
         "addAction": {
+          "targetKey": "ability:sacred_weapon#warpriest",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 5
         }
       }],

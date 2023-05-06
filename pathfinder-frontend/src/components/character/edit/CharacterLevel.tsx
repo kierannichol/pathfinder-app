@@ -53,8 +53,8 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
       .filter(choice => choice.type !== 'class')) || [],
       [characterChanges]);
 
-  const featIds = useMemo(() => characterChanges?.find('feat:*').map(a => a.id), [characterChanges]);
-  const specialIds = useMemo(() => characterChanges?.find('ability:*').map(a => a.id), [characterChanges]);
+  const featIds = useMemo(() => characterChanges.search('feat:*').map(a => a.id), [characterChanges]);
+  const specialIds = useMemo(() => characterChanges.search('ability:*').map(a => a.id), [characterChanges]);
 
   if (characterAtLevel === undefined || specialIds === undefined || featIds === undefined || characterChanges === undefined) {
     return <div>Loading...</div>;
@@ -140,7 +140,7 @@ function CharacterClassEditButton({ characterAtLevel, classChoice, onChange }: C
       if (!classId) {
         return "Unknown";
       }
-      const classLevel = characterAtLevel.get(classId)?.asNumber() ?? 0;
+      const classLevel = characterAtLevel.resolve(classId)?.asNumber() ?? 0;
       const className = database.name(classId) ?? "Unknown";
       return `${className} ${classLevel}`;
     }).join('/');

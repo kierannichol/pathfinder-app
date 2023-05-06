@@ -34,14 +34,14 @@ interface SkillRowProps {
 }
 
 function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowProps) {
-  const current = useMemo(() => characterAtLevel.get(skill.id)?.asNumber() ?? 0, [skill, characterAtLevel]);
+  const current = useMemo(() => characterAtLevel.resolve(skill.id)?.asNumber() ?? 0, [skill, characterAtLevel]);
   const max = characterAtLevel.level;
 
   const choicesAvailable = useMemo(() => skillChoices.filter(choice => choice.current === ''), [skillChoices]);
   const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => choice.current === skill.id),
       [skill, skillChoices]);
 
-  const isTrained = useMemo(() => characterAtLevel.get("trained:" + skill.id)?.asBoolean() ?? false, [characterAtLevel, skill]);
+  const isTrained = useMemo(() => characterAtLevel.resolve("trained:" + skill.id)?.asBoolean() ?? false, [characterAtLevel, skill]);
 
   function handleSkillChanged(newValue: string) {
     const newValueNumber = parseInt(newValue);

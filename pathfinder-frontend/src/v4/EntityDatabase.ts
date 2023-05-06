@@ -11,19 +11,45 @@ export interface IEntityDatabase {
   find(...tags: string[]): EntitySummary[];
 }
 
+class EntityCachedEntry {
+  constructor(public readonly id: string, public readonly value: Promise<Entity|undefined>) {
+  }
+}
+
+class EntityCachedLoader {
+  private static readonly MaxCacheSize = 10;
+  private readonly cache: EntityCachedEntry[] = [];
+  private cacheIndex = 0;
+
+  constructor(private readonly loadFn: (id:string) => Promise<Entity|undefined>) {
+  }
+
+  load(id: string): Promise<Entity|undefined> {
+    const cached = this.cache.find(entry => entry.id === id);
+    if (cached) {
+      return cached.value;
+    }
+
+    const loaded = this.loadFn(id);
+    this.cache[this.cacheIndex++] = new EntityCachedEntry(id, loaded);
+    if (this.cacheIndex >= EntityCachedLoader.MaxCacheSize) {
+      this.cacheIndex = 0;
+    }
+    return loaded;
+  }
+}
+
 export default class EntityDatabase implements IEntityDatabase {
   private readonly _summaries: {[id:string]: EntitySummary};
 
-  private static readonly MaxCacheSize = 20;
-  private readonly cache: Entity[] = [];
-  private cacheIndex = 0;
-
   private readonly tags: Set<string> = new Set<string>();
+  private readonly cache: EntityCachedLoader;
 
   constructor(public readonly id: string,
               summaries: EntitySummary[],
-              private readonly loadFn: (id:string) => Promise<Entity|undefined>) {
+              loadFn: (id:string) => Promise<Entity|undefined>) {
     this._summaries = {};
+    this.cache = new EntityCachedLoader(loadFn);
     for (let summary of summaries) {
       if (summary.children && summary.children.length > 0) {
         summary.children.forEach(child => {
@@ -46,10 +72,6 @@ export default class EntityDatabase implements IEntityDatabase {
     const idObj = Id.of(id);
     const idWithoutOption = idObj.withoutOption().string();
 
-    const cached = this.cache.find(maybe => maybe.id === id);
-    if (cached) {
-      return cached;
-    }
     const summary = this.summary(id);
     if (!summary) {
       return undefined;
@@ -57,17 +79,10 @@ export default class EntityDatabase implements IEntityDatabase {
 
     const baseId = summary.parent ? idWithoutOption : id;
 
-    let loaded = await this.loadFn(baseId);
+    let loaded = await this.cache.load(baseId);
     if (loaded) {
       if (summary.parent && idObj.option) {
         loaded = loaded.child(idObj.option)?.toEntity(loaded);
-      }
-
-      if (loaded) {
-        this.cache[this.cacheIndex++] = loaded;
-        if (this.cacheIndex > EntityDatabase.MaxCacheSize) {
-          this.cacheIndex = 0;
-        }
       }
     }
     return loaded;

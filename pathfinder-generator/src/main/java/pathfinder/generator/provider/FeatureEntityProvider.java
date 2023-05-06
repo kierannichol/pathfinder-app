@@ -34,6 +34,5 @@ public class FeatureEntityProvider implements EntityProvider {
                 .source(Sources.findSourceByNameOrCode(feature.source()))
                 .tags(feature.id().type)
                 .build();
-
     }
 }

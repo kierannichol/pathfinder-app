@@ -1,6 +1,5 @@
+import {Formula, Resolvable} from "@kierannichol/formula-js";
 import AbilityScores from "../database/AbilityScores";
-import {Formula} from "../logic/Formula";
-import Resolvable from "../logic/Resolvable";
 import {ComponentTemplate, Template} from "../v4/Template";
 import {CharacterState} from "./CharacterState";
 import {Choice, OptionCategory} from "./Choice";
@@ -26,7 +25,7 @@ export const InitialState: CharacterState = {
 
   ...AbilityScores.map(s => s.id).reduce((state, ability) => ({
     ...state,
-    [`${ability}:base`]: 10,
+    [`${ability}:base`]: '10',
     [`${ability}_score`]: `{sum(@${ability}:*)}`,
     [`${ability}_mod`]: `{floor(@${ability}_score / 2) - 5}`,
     [`ability_point_cost:${ability}`]: `{if(@${ability}:base==7,-4,0) + if(@${ability}:base==8,-2,0) + if(@${ability}:base==9,-1,0) + if(@${ability}:base==10,0,0) + if(@${ability}:base==11,1,0) + if(@${ability}:base==12,2,0) + if(@${ability}:base==13,3,0) + if(@${ability}:base==14,5,0) + if(@${ability}:base==15,7,0) + if(@${ability}:base==16,10,0) + if(@${ability}:base==17,13,0) + if(@${ability}:base==18,17,0)}`

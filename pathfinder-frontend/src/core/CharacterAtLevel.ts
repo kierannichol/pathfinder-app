@@ -1,16 +1,14 @@
-import {DataContext} from "../logic/DataContext";
+import {BaseDataContext, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
 import Expression from "../logic/Expression";
-import Resolvable from "../logic/Resolvable";
-import ResolvedValue from "../logic/ResolvedValue";
-import ResolvedValueWithId from "../logic/ResolvedValueWithId";
 import {CharacterState} from "./CharacterState";
 import {ChoiceNode} from "./Choice";
 
-export default class CharacterAtLevel implements DataContext {
+export default class CharacterAtLevel extends BaseDataContext {
 
   constructor(public readonly level: number,
               private readonly state: CharacterState,
               public readonly choices: ChoiceNode[]) {
+    super();
   }
 
   public choice(key: string): ChoiceNode|undefined {
@@ -28,15 +26,24 @@ export default class CharacterAtLevel implements DataContext {
     return new CharacterAtLevel(this.level, copy, this.choices);
   }
 
-  public get(key: string): ResolvedValue {
-    let result: string|number|boolean|Resolvable|Expression|undefined = this.state[key];
+  public get(key: string): Resolvable|undefined {
+    if (key.includes('{')) {
+      return Expression.parse(key);
+    }
+
+    let result: string|number|boolean|Resolvable|ResolvedValue|Expression|undefined = this.state[key];
+    if (result === undefined) {
+      return Resolvable.None;
+    }
     if (typeof result === 'string') {
-      return Expression.parse(result).resolve(this) ?? ResolvedValue.none();
+      if (result.includes('{')) {
+        return Expression.parse(result);
+      }
     }
     if (result instanceof Resolvable) {
-      return result.resolve(this) ?? ResolvedValue.none();
+      return result;
     }
-    return ResolvedValue.of(result);
+    return Resolvable.just(result);
   }
 
   public has(key: string): boolean {
@@ -47,26 +54,11 @@ export default class CharacterAtLevel implements DataContext {
     return Object.keys(this.state);
   }
 
-  find(pattern: string): ResolvedValueWithId[] {
-    const regex = new RegExp(this.escapeRegExp(pattern).replaceAll(/\\\*/g, ".*?"));
-    return this.keys()
-        .filter((key: string) => regex.test(key))
-        .map(key => {
-          const value = this.get(key);
-          if (value === undefined) {
-            return undefined;
-          }
-          return new ResolvedValueWithId(key, value);
-        })
-        .filter(value => value !== undefined)
-        .map(value => value as ResolvedValueWithId);
-  }
-
   intersection(otherLevel: CharacterAtLevel): CharacterAtLevel {
     const intersectedState = { ...this.state };
     for (const key of otherLevel.keys()) {
-      const newer = this.get(key)?.asNumber() ?? 0;
-      const older = otherLevel.get(key)?.asNumber() ?? 0;
+      const newer = this.resolve(key)?.asNumber() ?? 0;
+      const older = otherLevel.resolve(key)?.asNumber() ?? 0;
       if (newer - older > 0) {
         continue;
       }
@@ -88,13 +80,5 @@ export default class CharacterAtLevel implements DataContext {
     const modifiedState = { ...this.state };
     delete modifiedState[key];
     return new CharacterAtLevel(this.level, modifiedState, this.choices);
-  }
-
-  private escapeRegExp(expression: string) {
-    return expression.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  }
-
-  resolve(expression: string): ResolvedValue|undefined {
-    return Expression.parse(expression).resolve(this);
   }
 }

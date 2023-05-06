@@ -27,7 +27,6 @@ $root.v4 = (function() {
          * @property {string|null} [id] ChoiceDbo id
          * @property {string|null} [type] ChoiceDbo type
          * @property {string|null} [label] ChoiceDbo label
-         * @property {string|null} [condition] ChoiceDbo condition
          * @property {boolean|null} [repeating] ChoiceDbo repeating
          * @property {v4.ChoiceDbo.TextChoiceDbo|null} [text] ChoiceDbo text
          * @property {v4.ChoiceDbo.SelectChoiceDbo|null} [select] ChoiceDbo select
@@ -71,14 +70,6 @@ $root.v4 = (function() {
          * @instance
          */
         ChoiceDbo.prototype.label = "";
-
-        /**
-         * ChoiceDbo condition.
-         * @member {string} condition
-         * @memberof v4.ChoiceDbo
-         * @instance
-         */
-        ChoiceDbo.prototype.condition = "";
 
         /**
          * ChoiceDbo repeating.
@@ -148,10 +139,8 @@ $root.v4 = (function() {
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.type);
             if (message.label != null && Object.hasOwnProperty.call(message, "label"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.label);
-            if (message.condition != null && Object.hasOwnProperty.call(message, "condition"))
-                writer.uint32(/* id 4, wireType 2 =*/34).string(message.condition);
             if (message.repeating != null && Object.hasOwnProperty.call(message, "repeating"))
-                writer.uint32(/* id 5, wireType 0 =*/40).bool(message.repeating);
+                writer.uint32(/* id 4, wireType 0 =*/32).bool(message.repeating);
             if (message.text != null && Object.hasOwnProperty.call(message, "text"))
                 $root.v4.ChoiceDbo.TextChoiceDbo.encode(message.text, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
             if (message.select != null && Object.hasOwnProperty.call(message, "select"))
@@ -203,10 +192,6 @@ $root.v4 = (function() {
                         break;
                     }
                 case 4: {
-                        message.condition = reader.string();
-                        break;
-                    }
-                case 5: {
                         message.repeating = reader.bool();
                         break;
                     }
@@ -263,9 +248,6 @@ $root.v4 = (function() {
             if (message.label != null && message.hasOwnProperty("label"))
                 if (!$util.isString(message.label))
                     return "label: string expected";
-            if (message.condition != null && message.hasOwnProperty("condition"))
-                if (!$util.isString(message.condition))
-                    return "condition: string expected";
             if (message.repeating != null && message.hasOwnProperty("repeating"))
                 if (typeof message.repeating !== "boolean")
                     return "repeating: boolean expected";
@@ -308,8 +290,6 @@ $root.v4 = (function() {
                 message.type = String(object.type);
             if (object.label != null)
                 message.label = String(object.label);
-            if (object.condition != null)
-                message.condition = String(object.condition);
             if (object.repeating != null)
                 message.repeating = Boolean(object.repeating);
             if (object.text != null) {
@@ -342,7 +322,6 @@ $root.v4 = (function() {
                 object.id = "";
                 object.type = "";
                 object.label = "";
-                object.condition = "";
                 object.repeating = false;
             }
             if (message.id != null && message.hasOwnProperty("id"))
@@ -351,8 +330,6 @@ $root.v4 = (function() {
                 object.type = message.type;
             if (message.label != null && message.hasOwnProperty("label"))
                 object.label = message.label;
-            if (message.condition != null && message.hasOwnProperty("condition"))
-                object.condition = message.condition;
             if (message.repeating != null && message.hasOwnProperty("repeating"))
                 object.repeating = message.repeating;
             if (message.text != null && message.hasOwnProperty("text")) {
@@ -3399,11 +3376,11 @@ $root.v4 = (function() {
          * Properties of an EffectDbo.
          * @memberof v4
          * @interface IEffectDbo
-         * @property {string|null} [targetKey] EffectDbo targetKey
-         * @property {string|null} [condition] EffectDbo condition
          * @property {v4.EffectDbo.SetActionDbo|null} [setAction] EffectDbo setAction
          * @property {v4.EffectDbo.AddActionDbo|null} [addAction] EffectDbo addAction
          * @property {v4.EffectDbo.RenameKeyDbo|null} [renameAction] EffectDbo renameAction
+         * @property {v4.EffectDbo.AddEntityDbo|null} [addEntity] EffectDbo addEntity
+         * @property {v4.EffectDbo.ReplaceEntityDbo|null} [replaceEntity] EffectDbo replaceEntity
          */
 
         /**
@@ -3420,22 +3397,6 @@ $root.v4 = (function() {
                     if (properties[keys[i]] != null)
                         this[keys[i]] = properties[keys[i]];
         }
-
-        /**
-         * EffectDbo targetKey.
-         * @member {string} targetKey
-         * @memberof v4.EffectDbo
-         * @instance
-         */
-        EffectDbo.prototype.targetKey = "";
-
-        /**
-         * EffectDbo condition.
-         * @member {string} condition
-         * @memberof v4.EffectDbo
-         * @instance
-         */
-        EffectDbo.prototype.condition = "";
 
         /**
          * EffectDbo setAction.
@@ -3461,17 +3422,33 @@ $root.v4 = (function() {
          */
         EffectDbo.prototype.renameAction = null;
 
+        /**
+         * EffectDbo addEntity.
+         * @member {v4.EffectDbo.AddEntityDbo|null|undefined} addEntity
+         * @memberof v4.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.addEntity = null;
+
+        /**
+         * EffectDbo replaceEntity.
+         * @member {v4.EffectDbo.ReplaceEntityDbo|null|undefined} replaceEntity
+         * @memberof v4.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.replaceEntity = null;
+
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
 
         /**
          * EffectDbo action.
-         * @member {"setAction"|"addAction"|"renameAction"|undefined} action
+         * @member {"setAction"|"addAction"|"renameAction"|"addEntity"|"replaceEntity"|undefined} action
          * @memberof v4.EffectDbo
          * @instance
          */
         Object.defineProperty(EffectDbo.prototype, "action", {
-            get: $util.oneOfGetter($oneOfFields = ["setAction", "addAction", "renameAction"]),
+            get: $util.oneOfGetter($oneOfFields = ["setAction", "addAction", "renameAction", "addEntity", "replaceEntity"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3499,16 +3476,16 @@ $root.v4 = (function() {
         EffectDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.targetKey != null && Object.hasOwnProperty.call(message, "targetKey"))
-                writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetKey);
-            if (message.condition != null && Object.hasOwnProperty.call(message, "condition"))
-                writer.uint32(/* id 2, wireType 2 =*/18).string(message.condition);
             if (message.setAction != null && Object.hasOwnProperty.call(message, "setAction"))
-                $root.v4.EffectDbo.SetActionDbo.encode(message.setAction, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
+                $root.v4.EffectDbo.SetActionDbo.encode(message.setAction, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
             if (message.addAction != null && Object.hasOwnProperty.call(message, "addAction"))
-                $root.v4.EffectDbo.AddActionDbo.encode(message.addAction, writer.uint32(/* id 101, wireType 2 =*/810).fork()).ldelim();
+                $root.v4.EffectDbo.AddActionDbo.encode(message.addAction, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             if (message.renameAction != null && Object.hasOwnProperty.call(message, "renameAction"))
-                $root.v4.EffectDbo.RenameKeyDbo.encode(message.renameAction, writer.uint32(/* id 102, wireType 2 =*/818).fork()).ldelim();
+                $root.v4.EffectDbo.RenameKeyDbo.encode(message.renameAction, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            if (message.addEntity != null && Object.hasOwnProperty.call(message, "addEntity"))
+                $root.v4.EffectDbo.AddEntityDbo.encode(message.addEntity, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+            if (message.replaceEntity != null && Object.hasOwnProperty.call(message, "replaceEntity"))
+                $root.v4.EffectDbo.ReplaceEntityDbo.encode(message.replaceEntity, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
             return writer;
         };
 
@@ -3544,23 +3521,23 @@ $root.v4 = (function() {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
-                        message.targetKey = reader.string();
-                        break;
-                    }
-                case 2: {
-                        message.condition = reader.string();
-                        break;
-                    }
-                case 100: {
                         message.setAction = $root.v4.EffectDbo.SetActionDbo.decode(reader, reader.uint32());
                         break;
                     }
-                case 101: {
+                case 2: {
                         message.addAction = $root.v4.EffectDbo.AddActionDbo.decode(reader, reader.uint32());
                         break;
                     }
-                case 102: {
+                case 3: {
                         message.renameAction = $root.v4.EffectDbo.RenameKeyDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 4: {
+                        message.addEntity = $root.v4.EffectDbo.AddEntityDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 5: {
+                        message.replaceEntity = $root.v4.EffectDbo.ReplaceEntityDbo.decode(reader, reader.uint32());
                         break;
                     }
                 default:
@@ -3599,12 +3576,6 @@ $root.v4 = (function() {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             var properties = {};
-            if (message.targetKey != null && message.hasOwnProperty("targetKey"))
-                if (!$util.isString(message.targetKey))
-                    return "targetKey: string expected";
-            if (message.condition != null && message.hasOwnProperty("condition"))
-                if (!$util.isString(message.condition))
-                    return "condition: string expected";
             if (message.setAction != null && message.hasOwnProperty("setAction")) {
                 properties.action = 1;
                 {
@@ -3633,6 +3604,26 @@ $root.v4 = (function() {
                         return "renameAction." + error;
                 }
             }
+            if (message.addEntity != null && message.hasOwnProperty("addEntity")) {
+                if (properties.action === 1)
+                    return "action: multiple values";
+                properties.action = 1;
+                {
+                    var error = $root.v4.EffectDbo.AddEntityDbo.verify(message.addEntity);
+                    if (error)
+                        return "addEntity." + error;
+                }
+            }
+            if (message.replaceEntity != null && message.hasOwnProperty("replaceEntity")) {
+                if (properties.action === 1)
+                    return "action: multiple values";
+                properties.action = 1;
+                {
+                    var error = $root.v4.EffectDbo.ReplaceEntityDbo.verify(message.replaceEntity);
+                    if (error)
+                        return "replaceEntity." + error;
+                }
+            }
             return null;
         };
 
@@ -3648,10 +3639,6 @@ $root.v4 = (function() {
             if (object instanceof $root.v4.EffectDbo)
                 return object;
             var message = new $root.v4.EffectDbo();
-            if (object.targetKey != null)
-                message.targetKey = String(object.targetKey);
-            if (object.condition != null)
-                message.condition = String(object.condition);
             if (object.setAction != null) {
                 if (typeof object.setAction !== "object")
                     throw TypeError(".v4.EffectDbo.setAction: object expected");
@@ -3666,6 +3653,16 @@ $root.v4 = (function() {
                 if (typeof object.renameAction !== "object")
                     throw TypeError(".v4.EffectDbo.renameAction: object expected");
                 message.renameAction = $root.v4.EffectDbo.RenameKeyDbo.fromObject(object.renameAction);
+            }
+            if (object.addEntity != null) {
+                if (typeof object.addEntity !== "object")
+                    throw TypeError(".v4.EffectDbo.addEntity: object expected");
+                message.addEntity = $root.v4.EffectDbo.AddEntityDbo.fromObject(object.addEntity);
+            }
+            if (object.replaceEntity != null) {
+                if (typeof object.replaceEntity !== "object")
+                    throw TypeError(".v4.EffectDbo.replaceEntity: object expected");
+                message.replaceEntity = $root.v4.EffectDbo.ReplaceEntityDbo.fromObject(object.replaceEntity);
             }
             return message;
         };
@@ -3683,14 +3680,6 @@ $root.v4 = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.targetKey = "";
-                object.condition = "";
-            }
-            if (message.targetKey != null && message.hasOwnProperty("targetKey"))
-                object.targetKey = message.targetKey;
-            if (message.condition != null && message.hasOwnProperty("condition"))
-                object.condition = message.condition;
             if (message.setAction != null && message.hasOwnProperty("setAction")) {
                 object.setAction = $root.v4.EffectDbo.SetActionDbo.toObject(message.setAction, options);
                 if (options.oneofs)
@@ -3705,6 +3694,16 @@ $root.v4 = (function() {
                 object.renameAction = $root.v4.EffectDbo.RenameKeyDbo.toObject(message.renameAction, options);
                 if (options.oneofs)
                     object.action = "renameAction";
+            }
+            if (message.addEntity != null && message.hasOwnProperty("addEntity")) {
+                object.addEntity = $root.v4.EffectDbo.AddEntityDbo.toObject(message.addEntity, options);
+                if (options.oneofs)
+                    object.action = "addEntity";
+            }
+            if (message.replaceEntity != null && message.hasOwnProperty("replaceEntity")) {
+                object.replaceEntity = $root.v4.EffectDbo.ReplaceEntityDbo.toObject(message.replaceEntity, options);
+                if (options.oneofs)
+                    object.action = "replaceEntity";
             }
             return object;
         };
@@ -3741,6 +3740,7 @@ $root.v4 = (function() {
              * Properties of a SetActionDbo.
              * @memberof v4.EffectDbo
              * @interface ISetActionDbo
+             * @property {string|null} [targetKey] SetActionDbo targetKey
              * @property {string|null} [formula] SetActionDbo formula
              * @property {number|null} [numberValue] SetActionDbo numberValue
              */
@@ -3759,6 +3759,14 @@ $root.v4 = (function() {
                         if (properties[keys[i]] != null)
                             this[keys[i]] = properties[keys[i]];
             }
+
+            /**
+             * SetActionDbo targetKey.
+             * @member {string} targetKey
+             * @memberof v4.EffectDbo.SetActionDbo
+             * @instance
+             */
+            SetActionDbo.prototype.targetKey = "";
 
             /**
              * SetActionDbo formula.
@@ -3814,10 +3822,12 @@ $root.v4 = (function() {
             SetActionDbo.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
+                if (message.targetKey != null && Object.hasOwnProperty.call(message, "targetKey"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetKey);
                 if (message.formula != null && Object.hasOwnProperty.call(message, "formula"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.formula);
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.formula);
                 if (message.numberValue != null && Object.hasOwnProperty.call(message, "numberValue"))
-                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.numberValue);
+                    writer.uint32(/* id 3, wireType 0 =*/24).int32(message.numberValue);
                 return writer;
             };
 
@@ -3853,10 +3863,14 @@ $root.v4 = (function() {
                     var tag = reader.uint32();
                     switch (tag >>> 3) {
                     case 1: {
-                            message.formula = reader.string();
+                            message.targetKey = reader.string();
                             break;
                         }
                     case 2: {
+                            message.formula = reader.string();
+                            break;
+                        }
+                    case 3: {
                             message.numberValue = reader.int32();
                             break;
                         }
@@ -3896,6 +3910,9 @@ $root.v4 = (function() {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
                 var properties = {};
+                if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+                    if (!$util.isString(message.targetKey))
+                        return "targetKey: string expected";
                 if (message.formula != null && message.hasOwnProperty("formula")) {
                     properties.value = 1;
                     if (!$util.isString(message.formula))
@@ -3923,6 +3940,8 @@ $root.v4 = (function() {
                 if (object instanceof $root.v4.EffectDbo.SetActionDbo)
                     return object;
                 var message = new $root.v4.EffectDbo.SetActionDbo();
+                if (object.targetKey != null)
+                    message.targetKey = String(object.targetKey);
                 if (object.formula != null)
                     message.formula = String(object.formula);
                 if (object.numberValue != null)
@@ -3943,6 +3962,10 @@ $root.v4 = (function() {
                 if (!options)
                     options = {};
                 var object = {};
+                if (options.defaults)
+                    object.targetKey = "";
+                if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+                    object.targetKey = message.targetKey;
                 if (message.formula != null && message.hasOwnProperty("formula")) {
                     object.formula = message.formula;
                     if (options.oneofs)
@@ -3991,6 +4014,7 @@ $root.v4 = (function() {
              * Properties of an AddActionDbo.
              * @memberof v4.EffectDbo
              * @interface IAddActionDbo
+             * @property {string|null} [targetKey] AddActionDbo targetKey
              * @property {number|null} [numberDelta] AddActionDbo numberDelta
              */
 
@@ -4008,6 +4032,14 @@ $root.v4 = (function() {
                         if (properties[keys[i]] != null)
                             this[keys[i]] = properties[keys[i]];
             }
+
+            /**
+             * AddActionDbo targetKey.
+             * @member {string} targetKey
+             * @memberof v4.EffectDbo.AddActionDbo
+             * @instance
+             */
+            AddActionDbo.prototype.targetKey = "";
 
             /**
              * AddActionDbo numberDelta.
@@ -4041,8 +4073,10 @@ $root.v4 = (function() {
             AddActionDbo.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
+                if (message.targetKey != null && Object.hasOwnProperty.call(message, "targetKey"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetKey);
                 if (message.numberDelta != null && Object.hasOwnProperty.call(message, "numberDelta"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.numberDelta);
+                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.numberDelta);
                 return writer;
             };
 
@@ -4078,6 +4112,10 @@ $root.v4 = (function() {
                     var tag = reader.uint32();
                     switch (tag >>> 3) {
                     case 1: {
+                            message.targetKey = reader.string();
+                            break;
+                        }
+                    case 2: {
                             message.numberDelta = reader.int32();
                             break;
                         }
@@ -4116,6 +4154,9 @@ $root.v4 = (function() {
             AddActionDbo.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+                    if (!$util.isString(message.targetKey))
+                        return "targetKey: string expected";
                 if (message.numberDelta != null && message.hasOwnProperty("numberDelta"))
                     if (!$util.isInteger(message.numberDelta))
                         return "numberDelta: integer expected";
@@ -4134,6 +4175,8 @@ $root.v4 = (function() {
                 if (object instanceof $root.v4.EffectDbo.AddActionDbo)
                     return object;
                 var message = new $root.v4.EffectDbo.AddActionDbo();
+                if (object.targetKey != null)
+                    message.targetKey = String(object.targetKey);
                 if (object.numberDelta != null)
                     message.numberDelta = object.numberDelta | 0;
                 return message;
@@ -4152,8 +4195,12 @@ $root.v4 = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
+                if (options.defaults) {
+                    object.targetKey = "";
                     object.numberDelta = 0;
+                }
+                if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+                    object.targetKey = message.targetKey;
                 if (message.numberDelta != null && message.hasOwnProperty("numberDelta"))
                     object.numberDelta = message.numberDelta;
                 return object;
@@ -4194,6 +4241,7 @@ $root.v4 = (function() {
              * Properties of a RenameKeyDbo.
              * @memberof v4.EffectDbo
              * @interface IRenameKeyDbo
+             * @property {string|null} [targetKey] RenameKeyDbo targetKey
              * @property {string|null} [renamedKey] RenameKeyDbo renamedKey
              */
 
@@ -4211,6 +4259,14 @@ $root.v4 = (function() {
                         if (properties[keys[i]] != null)
                             this[keys[i]] = properties[keys[i]];
             }
+
+            /**
+             * RenameKeyDbo targetKey.
+             * @member {string} targetKey
+             * @memberof v4.EffectDbo.RenameKeyDbo
+             * @instance
+             */
+            RenameKeyDbo.prototype.targetKey = "";
 
             /**
              * RenameKeyDbo renamedKey.
@@ -4244,8 +4300,10 @@ $root.v4 = (function() {
             RenameKeyDbo.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
+                if (message.targetKey != null && Object.hasOwnProperty.call(message, "targetKey"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetKey);
                 if (message.renamedKey != null && Object.hasOwnProperty.call(message, "renamedKey"))
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.renamedKey);
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.renamedKey);
                 return writer;
             };
 
@@ -4281,6 +4339,10 @@ $root.v4 = (function() {
                     var tag = reader.uint32();
                     switch (tag >>> 3) {
                     case 1: {
+                            message.targetKey = reader.string();
+                            break;
+                        }
+                    case 2: {
                             message.renamedKey = reader.string();
                             break;
                         }
@@ -4319,6 +4381,9 @@ $root.v4 = (function() {
             RenameKeyDbo.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+                    if (!$util.isString(message.targetKey))
+                        return "targetKey: string expected";
                 if (message.renamedKey != null && message.hasOwnProperty("renamedKey"))
                     if (!$util.isString(message.renamedKey))
                         return "renamedKey: string expected";
@@ -4337,6 +4402,8 @@ $root.v4 = (function() {
                 if (object instanceof $root.v4.EffectDbo.RenameKeyDbo)
                     return object;
                 var message = new $root.v4.EffectDbo.RenameKeyDbo();
+                if (object.targetKey != null)
+                    message.targetKey = String(object.targetKey);
                 if (object.renamedKey != null)
                     message.renamedKey = String(object.renamedKey);
                 return message;
@@ -4355,8 +4422,12 @@ $root.v4 = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
+                if (options.defaults) {
+                    object.targetKey = "";
                     object.renamedKey = "";
+                }
+                if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+                    object.targetKey = message.targetKey;
                 if (message.renamedKey != null && message.hasOwnProperty("renamedKey"))
                     object.renamedKey = message.renamedKey;
                 return object;
@@ -4389,6 +4460,436 @@ $root.v4 = (function() {
             };
 
             return RenameKeyDbo;
+        })();
+
+        EffectDbo.AddEntityDbo = (function() {
+
+            /**
+             * Properties of an AddEntityDbo.
+             * @memberof v4.EffectDbo
+             * @interface IAddEntityDbo
+             * @property {string|null} [entityId] AddEntityDbo entityId
+             */
+
+            /**
+             * Constructs a new AddEntityDbo.
+             * @memberof v4.EffectDbo
+             * @classdesc Represents an AddEntityDbo.
+             * @implements IAddEntityDbo
+             * @constructor
+             * @param {v4.EffectDbo.IAddEntityDbo=} [properties] Properties to set
+             */
+            function AddEntityDbo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AddEntityDbo entityId.
+             * @member {string} entityId
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @instance
+             */
+            AddEntityDbo.prototype.entityId = "";
+
+            /**
+             * Creates a new AddEntityDbo instance using the specified properties.
+             * @function create
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {v4.EffectDbo.IAddEntityDbo=} [properties] Properties to set
+             * @returns {v4.EffectDbo.AddEntityDbo} AddEntityDbo instance
+             */
+            AddEntityDbo.create = function create(properties) {
+                return new AddEntityDbo(properties);
+            };
+
+            /**
+             * Encodes the specified AddEntityDbo message. Does not implicitly {@link v4.EffectDbo.AddEntityDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {v4.EffectDbo.AddEntityDbo} message AddEntityDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AddEntityDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.entityId != null && Object.hasOwnProperty.call(message, "entityId"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.entityId);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AddEntityDbo message, length delimited. Does not implicitly {@link v4.EffectDbo.AddEntityDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {v4.EffectDbo.AddEntityDbo} message AddEntityDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AddEntityDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AddEntityDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v4.EffectDbo.AddEntityDbo} AddEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AddEntityDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v4.EffectDbo.AddEntityDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.entityId = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AddEntityDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v4.EffectDbo.AddEntityDbo} AddEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AddEntityDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AddEntityDbo message.
+             * @function verify
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AddEntityDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.entityId != null && message.hasOwnProperty("entityId"))
+                    if (!$util.isString(message.entityId))
+                        return "entityId: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an AddEntityDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v4.EffectDbo.AddEntityDbo} AddEntityDbo
+             */
+            AddEntityDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v4.EffectDbo.AddEntityDbo)
+                    return object;
+                var message = new $root.v4.EffectDbo.AddEntityDbo();
+                if (object.entityId != null)
+                    message.entityId = String(object.entityId);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AddEntityDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {v4.EffectDbo.AddEntityDbo} message AddEntityDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AddEntityDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults)
+                    object.entityId = "";
+                if (message.entityId != null && message.hasOwnProperty("entityId"))
+                    object.entityId = message.entityId;
+                return object;
+            };
+
+            /**
+             * Converts this AddEntityDbo to JSON.
+             * @function toJSON
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AddEntityDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AddEntityDbo
+             * @function getTypeUrl
+             * @memberof v4.EffectDbo.AddEntityDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AddEntityDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v4.EffectDbo.AddEntityDbo";
+            };
+
+            return AddEntityDbo;
+        })();
+
+        EffectDbo.ReplaceEntityDbo = (function() {
+
+            /**
+             * Properties of a ReplaceEntityDbo.
+             * @memberof v4.EffectDbo
+             * @interface IReplaceEntityDbo
+             * @property {string|null} [targetEntityId] ReplaceEntityDbo targetEntityId
+             * @property {string|null} [replacementEntityId] ReplaceEntityDbo replacementEntityId
+             */
+
+            /**
+             * Constructs a new ReplaceEntityDbo.
+             * @memberof v4.EffectDbo
+             * @classdesc Represents a ReplaceEntityDbo.
+             * @implements IReplaceEntityDbo
+             * @constructor
+             * @param {v4.EffectDbo.IReplaceEntityDbo=} [properties] Properties to set
+             */
+            function ReplaceEntityDbo(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * ReplaceEntityDbo targetEntityId.
+             * @member {string} targetEntityId
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @instance
+             */
+            ReplaceEntityDbo.prototype.targetEntityId = "";
+
+            /**
+             * ReplaceEntityDbo replacementEntityId.
+             * @member {string} replacementEntityId
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @instance
+             */
+            ReplaceEntityDbo.prototype.replacementEntityId = "";
+
+            /**
+             * Creates a new ReplaceEntityDbo instance using the specified properties.
+             * @function create
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {v4.EffectDbo.IReplaceEntityDbo=} [properties] Properties to set
+             * @returns {v4.EffectDbo.ReplaceEntityDbo} ReplaceEntityDbo instance
+             */
+            ReplaceEntityDbo.create = function create(properties) {
+                return new ReplaceEntityDbo(properties);
+            };
+
+            /**
+             * Encodes the specified ReplaceEntityDbo message. Does not implicitly {@link v4.EffectDbo.ReplaceEntityDbo.verify|verify} messages.
+             * @function encode
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {v4.EffectDbo.ReplaceEntityDbo} message ReplaceEntityDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            ReplaceEntityDbo.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.targetEntityId != null && Object.hasOwnProperty.call(message, "targetEntityId"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetEntityId);
+                if (message.replacementEntityId != null && Object.hasOwnProperty.call(message, "replacementEntityId"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.replacementEntityId);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified ReplaceEntityDbo message, length delimited. Does not implicitly {@link v4.EffectDbo.ReplaceEntityDbo.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {v4.EffectDbo.ReplaceEntityDbo} message ReplaceEntityDbo message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            ReplaceEntityDbo.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a ReplaceEntityDbo message from the specified reader or buffer.
+             * @function decode
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {v4.EffectDbo.ReplaceEntityDbo} ReplaceEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            ReplaceEntityDbo.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.v4.EffectDbo.ReplaceEntityDbo();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.targetEntityId = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            message.replacementEntityId = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a ReplaceEntityDbo message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {v4.EffectDbo.ReplaceEntityDbo} ReplaceEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            ReplaceEntityDbo.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a ReplaceEntityDbo message.
+             * @function verify
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            ReplaceEntityDbo.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.targetEntityId != null && message.hasOwnProperty("targetEntityId"))
+                    if (!$util.isString(message.targetEntityId))
+                        return "targetEntityId: string expected";
+                if (message.replacementEntityId != null && message.hasOwnProperty("replacementEntityId"))
+                    if (!$util.isString(message.replacementEntityId))
+                        return "replacementEntityId: string expected";
+                return null;
+            };
+
+            /**
+             * Creates a ReplaceEntityDbo message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {v4.EffectDbo.ReplaceEntityDbo} ReplaceEntityDbo
+             */
+            ReplaceEntityDbo.fromObject = function fromObject(object) {
+                if (object instanceof $root.v4.EffectDbo.ReplaceEntityDbo)
+                    return object;
+                var message = new $root.v4.EffectDbo.ReplaceEntityDbo();
+                if (object.targetEntityId != null)
+                    message.targetEntityId = String(object.targetEntityId);
+                if (object.replacementEntityId != null)
+                    message.replacementEntityId = String(object.replacementEntityId);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a ReplaceEntityDbo message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {v4.EffectDbo.ReplaceEntityDbo} message ReplaceEntityDbo
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            ReplaceEntityDbo.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    object.targetEntityId = "";
+                    object.replacementEntityId = "";
+                }
+                if (message.targetEntityId != null && message.hasOwnProperty("targetEntityId"))
+                    object.targetEntityId = message.targetEntityId;
+                if (message.replacementEntityId != null && message.hasOwnProperty("replacementEntityId"))
+                    object.replacementEntityId = message.replacementEntityId;
+                return object;
+            };
+
+            /**
+             * Converts this ReplaceEntityDbo to JSON.
+             * @function toJSON
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            ReplaceEntityDbo.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for ReplaceEntityDbo
+             * @function getTypeUrl
+             * @memberof v4.EffectDbo.ReplaceEntityDbo
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            ReplaceEntityDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/v4.EffectDbo.ReplaceEntityDbo";
+            };
+
+            return ReplaceEntityDbo;
         })();
 
         return EffectDbo;

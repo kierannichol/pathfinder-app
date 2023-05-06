@@ -1,7 +1,7 @@
 import {HTMLAttributes, useMemo} from "react";
 import classNames from "../../../../../app/classNames";
-import Skills from "../../../../../database/Skills";
 import CharacterAtLevel from "../../../../../core/CharacterAtLevel";
+import Skills from "../../../../../database/Skills";
 import {useCharacterAtLevel} from "../CharacterSheet";
 import Label from "../common/Label";
 import Section from "../common/Section";
@@ -16,11 +16,11 @@ export default function SkillsSection({ className, ...divProps }: HTMLAttributes
       {Skills.all.map(skill => <Section.Row key={skill.id} className={styles.skillRow}>
         <ClassTrainedBox skill={skill} characterAtLevel={characterAtLevel} />
         <div className={styles.skillName}>{skill.name}{skill.untrained ? '' : '*'}</div>
-        <UnderlinedValue className={styles.value}>{(characterAtLevel.get(skill.id)?.asNumber() ?? 0) + (characterAtLevel.get(skill.keyAbility + '_mod')?.asNumber() ?? 0)}</UnderlinedValue>
+        <UnderlinedValue className={styles.value}>{(characterAtLevel.resolve(skill.id)?.asNumber() ?? 0) + (characterAtLevel.resolve(skill.keyAbility + '_mod')?.asNumber() ?? 0)}</UnderlinedValue>
         <div className={styles.operator}>= <span className={styles.abilityName}>{skill.keyAbility}</span></div>
-        <UnderlinedValue className={styles.value}>{characterAtLevel.get(skill.keyAbility + '_mod')?.asText()}</UnderlinedValue>
+        <UnderlinedValue className={styles.value}>{characterAtLevel.resolve(skill.keyAbility + '_mod')?.asText()}</UnderlinedValue>
         <div className={styles.operator}>+</div>
-        <UnderlinedValue className={styles.value}>{characterAtLevel.get(skill.id)?.asNumber()}</UnderlinedValue>
+        <UnderlinedValue className={styles.value}>{characterAtLevel.resolve(skill.id)?.asNumber()}</UnderlinedValue>
         <div className={styles.operator}>+</div>
         <UnderlinedValue className={styles.value}></UnderlinedValue>
       </Section.Row>)}
@@ -40,6 +40,6 @@ interface ClassTrainedBoxProps {
 }
 
 function ClassTrainedBox({ skill, characterAtLevel }: ClassTrainedBoxProps) {
-  const isChecked = useMemo(() => characterAtLevel.get("trained:" + skill.id)?.asBoolean() ?? false, [skill, characterAtLevel]);
+  const isChecked = useMemo(() => characterAtLevel.resolve("trained:" + skill.id)?.asBoolean() ?? false, [skill, characterAtLevel]);
   return <div className={isChecked ? styles.classTrainedBoxChecked : styles.classTrainedBoxUnchecked} />
 }

@@ -1,4 +1,4 @@
-import {DataContextState} from "../../logic/DataContext";
+import {DataContextState} from "@kierannichol/formula-js";
 
 export default interface Trait {
 

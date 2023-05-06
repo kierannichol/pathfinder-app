@@ -10,8 +10,8 @@
     "sections": [{
       "condition": "@class:magus\u003e\u003d4",
       "effects": [{
-        "targetKey": "ability:spell_recall#magus",
         "renameAction": {
+          "targetKey": "ability:spell_recall#magus",
           "renamedKey": "ability:hex_magus#magus_hexcrafter"
         }
       }],
@@ -19,9 +19,48 @@
         "id": "class:magus#hexcrafter4:magus_hex",
         "type": "hex",
         "label": "Hex",
-        "condition": "@class:magus#hexcrafter\u003e\u003d4",
         "select": {
           "tags": ["hex"]
+        }
+      }]
+    }, {
+      "condition": "@class:magus\u003e\u003d6",
+      "effects": [{
+        "renameAction": {
+          "targetKey": "ability:magus_arcana#magus",
+          "renamedKey": "ability:hex_arcana#magus_hexcrafter"
+        }
+      }]
+    }, {
+      "condition": "@class:magus\u003e\u003d9",
+      "effects": [{
+        "renameAction": {
+          "targetKey": "ability:magus_arcana#magus",
+          "renamedKey": "ability:hex_arcana#magus_hexcrafter"
+        }
+      }]
+    }, {
+      "condition": "@class:magus\u003e\u003d12",
+      "effects": [{
+        "renameAction": {
+          "targetKey": "ability:magus_arcana#magus",
+          "renamedKey": "ability:hex_arcana#magus_hexcrafter"
+        }
+      }]
+    }, {
+      "condition": "@class:magus\u003e\u003d15",
+      "effects": [{
+        "renameAction": {
+          "targetKey": "ability:magus_arcana#magus",
+          "renamedKey": "ability:hex_arcana#magus_hexcrafter"
+        }
+      }]
+    }, {
+      "condition": "@class:magus\u003e\u003d18",
+      "effects": [{
+        "renameAction": {
+          "targetKey": "ability:magus_arcana#magus",
+          "renamedKey": "ability:hex_arcana#magus_hexcrafter"
         }
       }]
     }]

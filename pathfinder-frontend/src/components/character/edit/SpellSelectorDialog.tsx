@@ -24,7 +24,7 @@ export default function SpellSelectorDialog({ show, onSelect, onCancel, characte
 
   const pointsAvailable = spellChoices.length;
 
-  const knownSpells = useMemo(() => characterAtLevel.find('spell:*').map(spell => spell.id), [characterAtLevel]);
+  const knownSpells = useMemo(() => characterAtLevel.search('spell:*').map(spell => spell.id), [characterAtLevel]);
 
   return <Modal
       show={show}

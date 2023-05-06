@@ -6,8 +6,8 @@
     "text": "Some spellcasters seek the secrets of magic, pursuing the power to make the impossible possible. Others are born with magic in their blood, commanding unbelievable forces as effortlessly as they breathe. Yet still others seek to meld the science of arcane scholars with the natural might of innate casters. These arcanists seek to discover the mysterious laws of magic and through will and expertise bend those forces to their whims. Arcanists are the shapers and tinkers of the arcane world, and no magic can resist their control. Role: Arcanists are scholars of all things magical. They constantly seek out new forms of magic to discover how they work, and in many cases, to collect the energy of such magic for their own uses. Many arcanists are seen as reckless, more concerned with the potency of magic than the ramifications of unleashing such power. Alignment: Any. Hit Die: d6. Parent Classes: Sorcerer and wizard. Starting Wealth: 2d6 × 10 gp (average 70 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
   },
   "effects": [{
-    "targetKey": "class:arcanist",
     "addAction": {
+      "targetKey": "class:arcanist",
       "numberDelta": 1
     }
   }],
@@ -16,88 +16,88 @@
     "sections": [{
       "condition": "@class:arcanist\u003e\u003d1",
       "effects": [{
-        "targetKey": "trained:skill:fly",
         "setAction": {
+          "targetKey": "trained:skill:fly",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:craft",
         "setAction": {
+          "targetKey": "trained:skill:craft",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:use_magic_device",
         "setAction": {
+          "targetKey": "trained:skill:use_magic_device",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:spellcraft",
         "setAction": {
+          "targetKey": "trained:skill:spellcraft",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:profession",
         "setAction": {
+          "targetKey": "trained:skill:profession",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:knowledge",
         "setAction": {
+          "targetKey": "trained:skill:knowledge",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:appraise",
         "setAction": {
+          "targetKey": "trained:skill:appraise",
           "numberValue": 1
         }
       }, {
-        "targetKey": "trained:skill:linguistics",
         "setAction": {
+          "targetKey": "trained:skill:linguistics",
           "numberValue": 1
         }
       }, {
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 0
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 0
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 0
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "ability:arcane_reservoir#arcanist",
         "addAction": {
+          "targetKey": "ability:arcane_reservoir#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:cantrips#arcanist",
         "addAction": {
+          "targetKey": "ability:cantrips#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:consume_spells#arcanist",
         "addAction": {
+          "targetKey": "ability:consume_spells#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 2
         }
       }],
@@ -108,14 +108,6 @@
         "repeating": true,
         "select": {
           "tags": ["archetype+arcanist"]
-        }
-      }, {
-        "id": "class:arcanist1:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d1",
-        "select": {
-          "tags": ["arcanist_exploit"]
         }
       }, {
         "id": "arcanist1:skill_rank:1",
@@ -171,28 +163,28 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d2",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 1
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 0
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 0
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 3
         }
       }],
@@ -218,45 +210,37 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d3",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 1
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }],
       "choices": [{
-        "id": "class:arcanist3:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d3",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist3:skill_rank:1",
         "type": "skill",
         "select": {
@@ -279,33 +263,33 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d4",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 2
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 2
         }
       }],
@@ -338,50 +322,42 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d5",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 2
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 1
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist5:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d5",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist5:skill_rank:1",
         "type": "skill",
         "select": {
@@ -411,38 +387,38 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d6",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 3
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 2
         }
       }],
@@ -475,55 +451,47 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d7",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 3
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist7:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d7",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist7:skill_rank:1",
         "type": "skill",
         "select": {
@@ -560,43 +528,43 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d8",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 4
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 2
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 2
         }
       }],
@@ -629,60 +597,52 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d9",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 4
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist9:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d9",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist9:skill_rank:1",
         "type": "skill",
         "select": {
@@ -719,48 +679,48 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d10",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 5
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 7
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 2
         }
       }],
@@ -793,70 +753,62 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d11",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 5
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 3
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 7
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "ability:greater_exploits#arcanist",
         "addAction": {
+          "targetKey": "ability:greater_exploits#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist11:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d11",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist11:skill_rank:1",
         "type": "skill",
         "select": {
@@ -900,53 +852,53 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d12",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 6
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 8
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 2
         }
       }],
@@ -973,70 +925,62 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d13",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 6
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 8
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist13:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d13",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist13:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1073,58 +1017,58 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d14",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 7
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 4
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 9
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 2
         }
       }],
@@ -1151,75 +1095,67 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d15",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 7
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 9
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist15:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d15",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist15:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1256,63 +1192,63 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d16",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 8
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 10
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 2
         }
       }],
@@ -1339,80 +1275,72 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d17",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 8
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 5
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 10
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist17:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d17",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist17:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1442,68 +1370,68 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d18",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 9
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 11
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#9",
         "setAction": {
+          "targetKey": "spells_per_day#9",
           "numberValue": 2
         }
       }],
@@ -1530,85 +1458,77 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d19",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 9
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 11
         }
       }, {
-        "targetKey": "ability:arcanist_exploit#arcanist",
         "addAction": {
+          "targetKey": "ability:arcanist_exploit#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#9",
         "setAction": {
+          "targetKey": "spells_per_day#9",
           "numberValue": 3
         }
       }],
       "choices": [{
-        "id": "class:arcanist19:arcanist_exploit",
-        "type": "arcanist_exploit",
-        "label": "Arcanist Exploit",
-        "condition": "@class:arcanist\u003e\u003d19",
-        "select": {
-          "tags": ["arcanist_exploit"]
-        }
-      }, {
         "id": "arcanist19:skill_rank:1",
         "type": "skill",
         "select": {
@@ -1638,73 +1558,73 @@
     }, {
       "condition": "@class:arcanist\u003e\u003d20",
       "effects": [{
-        "targetKey": "bab",
         "setAction": {
+          "targetKey": "bab",
           "numberValue": 10
         }
       }, {
-        "targetKey": "fort:base",
         "setAction": {
+          "targetKey": "fort:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "ref:base",
         "setAction": {
+          "targetKey": "ref:base",
           "numberValue": 6
         }
       }, {
-        "targetKey": "will:base",
         "setAction": {
+          "targetKey": "will:base",
           "numberValue": 12
         }
       }, {
-        "targetKey": "ability:magical_supremacy#arcanist",
         "addAction": {
+          "targetKey": "ability:magical_supremacy#arcanist",
           "numberDelta": 1
         }
       }, {
-        "targetKey": "spells_per_day#1",
         "setAction": {
+          "targetKey": "spells_per_day#1",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#2",
         "setAction": {
+          "targetKey": "spells_per_day#2",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#3",
         "setAction": {
+          "targetKey": "spells_per_day#3",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#4",
         "setAction": {
+          "targetKey": "spells_per_day#4",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#5",
         "setAction": {
+          "targetKey": "spells_per_day#5",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#6",
         "setAction": {
+          "targetKey": "spells_per_day#6",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#7",
         "setAction": {
+          "targetKey": "spells_per_day#7",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#8",
         "setAction": {
+          "targetKey": "spells_per_day#8",
           "numberValue": 4
         }
       }, {
-        "targetKey": "spells_per_day#9",
         "setAction": {
+          "targetKey": "spells_per_day#9",
           "numberValue": 4
         }
       }],

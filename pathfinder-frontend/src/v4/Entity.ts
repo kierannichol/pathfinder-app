@@ -1,7 +1,7 @@
+import {Resolvable} from "@kierannichol/formula-js";
 import {ChoiceTree} from "../core/Choice";
 import Description from "../core/Description";
 import Effect from "../core/Effect";
-import Resolvable from "../logic/Resolvable";
 import {ChildEntity, ChildEntitySummary} from "./ChildEntity";
 import {Template} from "./Template";
 

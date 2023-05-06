@@ -35,8 +35,8 @@ interface AbilityScoreRowProps {
 
 function AbilityScoreRow({ ability }: AbilityScoreRowProps) {
   const characterAtLevel = useCharacterAtLevel();
-  const abilityScore = useMemo(() => characterAtLevel.get(`${ability}_score`)?.asText() ?? "", [ability, characterAtLevel]);
-  const abilityModifier = useMemo(() => characterAtLevel.get(`${ability}_mod`)?.asText() ?? "", [ability, characterAtLevel]);
+  const abilityScore = useMemo(() => characterAtLevel.resolve(`${ability}_score`)?.asText() ?? "", [ability, characterAtLevel]);
+  const abilityModifier = useMemo(() => characterAtLevel.resolve(`${ability}_mod`)?.asText() ?? "", [ability, characterAtLevel]);
 
   return <Section.Row>
     <Label className={styles.label}>{ability}</Label>

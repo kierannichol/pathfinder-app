@@ -381,15 +381,15 @@ Beastmorph	alchemist	archetype
 class:gunslinger
 Gunslingerclassbase;
 favored_class:gunslinger
-Gunslingerfavored_classbase:
+Gunslingerfavored_classbase2
+ability:nimble#gunslingerNimbleclass_feature>
+ability:gun_training#gunslingerGun Trainingclass_feature:
 ability:bonus_feat#gunslinger
-Bonus Featclass_feature2
-ability:nimble#gunslingerNimbleclass_feature0
-ability:deeds#gunslingerDeedsclass_feature>
-ability:gun_training#gunslingerGun Trainingclass_feature.
-ability:grit#gunslingerGritclass_feature6
-ability:gunsmith#gunslingerGunsmithclass_feature8
-ability:true_grit#gunslinger	True Gritclass_featureZ
+Bonus Featclass_feature6
+ability:gunsmith#gunslingerGunsmithclass_feature0
+ability:deeds#gunslingerDeedsclass_feature8
+ability:true_grit#gunslinger	True Gritclass_feature.
+ability:grit#gunslingerGritclass_featureZ
 feat:field_repairField Repairgeneralfeat"(all(@skill:craft>=4,!@feat:field_repair)‹
 feat:crane_styleCrane Stylestylefeat"]all(any(@feat:dodge,@feat:improved_unarmed_strike,@bab>=2,@class:monk>=1),!@feat:crane_style)v
 feat:raging_deathblowRaging Deathblowgeneralfeat"<all(@ability:greater_rage#barbarian,!@feat:raging_deathblow)U
@@ -2422,250 +2422,250 @@ shuriken_5˜all(@dex_score>=13,@feat:point_blank_shot,@feat:rapid_shot,@rogue_t
 feat:dimensional_savantDimensional Savantgeneralfeat"«all(@feat:dimensional_agility,@feat:dimensional_assault,@feat:dimensional_dervish,any(@ability:abundant_step#monk,@spell:dimension_door),@bab>=9,!@feat:dimensional_savant)Â
 feat:kirin_strikeKirin Strikestylefeat"‘all(any(@skill:knowledge_dungeoneering>=3,@skill:knowledge_local>=3,@skill:knowledge_planes>=3,@skill:knowledge_religion>=3),!@feat:kirin_strike)j
 feat:two_handed_throwerTwo-Handed Throwercombatfeat"-all(@str_score>=15,!@feat:two_handed_thrower)Î­
-feat:disposable_weaponDisposable Weapongeneralfeat*r
-wrist_launcherPall(@bab>=1,@proficiency:wrist_launcher,!@feat:disposable_weapon#wrist_launcher)Wrist Launcher*^
-	war_razorFall(@bab>=1,@proficiency:war_razor,!@feat:disposable_weapon#war_razor)	War Razor*n
-dueling_swordNall(@bab>=1,@proficiency:dueling_sword,!@feat:disposable_weapon#dueling_sword)Dueling Sword*V
-tridentBall(@bab>=1,@proficiency:trident,!@feat:disposable_weapon#trident)Trident*V
-harpoonBall(@bab>=1,@proficiency:harpoon,!@feat:disposable_weapon#harpoon)Harpoon*N
-sling>all(@bab>=1,@proficiency:sling,!@feat:disposable_weapon#sling)Sling*F
-axe:all(@bab>=1,@proficiency:axe,!@feat:disposable_weapon#axe)Axe*N
-ankus>all(@bab>=1,@proficiency:ankus,!@feat:disposable_weapon#ankus)Ankus*V
-gandasaBall(@bab>=1,@proficiency:gandasa,!@feat:disposable_weapon#gandasa)Gandasa*†
-gnome_ripsaw_glaiveZall(@bab>=1,@proficiency:gnome_ripsaw_glaive,!@feat:disposable_weapon#gnome_ripsaw_glaive)Gnome Ripsaw Glaive*–
-dwarven_heavy_pelletbowball(@bab>=1,@proficiency:dwarven_heavy_pelletbow,!@feat:disposable_weapon#dwarven_heavy_pelletbow)Dwarven Heavy Pelletbow*^
-	handwrapsFall(@bab>=1,@proficiency:handwraps,!@feat:disposable_weapon#handwraps)	Handwraps*j
-flying_talonLall(@bab>=1,@proficiency:flying_talon,!@feat:disposable_weapon#flying_talon)Flying Talon*‚
-launching_crossbowXall(@bab>=1,@proficiency:launching_crossbow,!@feat:disposable_weapon#launching_crossbow)Launching Crossbow*N
-kunai>all(@bab>=1,@proficiency:kunai,!@feat:disposable_weapon#kunai)Kunai*J
-bill<all(@bab>=1,@proficiency:bill,!@feat:disposable_weapon#bill)Bill*F
-sai:all(@bab>=1,@proficiency:sai,!@feat:disposable_weapon#sai)Sai*n
-scorpion_whipNall(@bab>=1,@proficiency:scorpion_whip,!@feat:disposable_weapon#scorpion_whip)Scorpion Whip*N
-spear>all(@bab>=1,@proficiency:spear,!@feat:disposable_weapon#spear)Spear*Z
-nunchakuDall(@bab>=1,@proficiency:nunchaku,!@feat:disposable_weapon#nunchaku)Nunchaku*‚
-stormshaft_javelinXall(@bab>=1,@proficiency:stormshaft_javelin,!@feat:disposable_weapon#stormshaft_javelin)Stormshaft Javelin*v
-dwarven_maulaxeRall(@bab>=1,@proficiency:dwarven_maulaxe,!@feat:disposable_weapon#dwarven_maulaxe)Dwarven Maulaxe*r
-grappling_hookPall(@bab>=1,@proficiency:grappling_hook,!@feat:disposable_weapon#grappling_hook)Grappling Hook*r
-stitched_slingPall(@bab>=1,@proficiency:stitched_sling,!@feat:disposable_weapon#stitched_sling)Stitched Sling*j
-light_hammerLall(@bab>=1,@proficiency:light_hammer,!@feat:disposable_weapon#light_hammer)Light Hammer*V
-falcataBall(@bab>=1,@proficiency:falcata,!@feat:disposable_weapon#falcata)Falcata*R
-dagger@all(@bab>=1,@proficiency:dagger,!@feat:disposable_weapon#dagger)Dagger*^
-	wavebladeFall(@bab>=1,@proficiency:waveblade,!@feat:disposable_weapon#waveblade)	Waveblade*b
-
-mancatcherHall(@bab>=1,@proficiency:mancatcher,!@feat:disposable_weapon#mancatcher)
-Mancatcher*V
-cutlassBall(@bab>=1,@proficiency:cutlass,!@feat:disposable_weapon#cutlass)Cutlass*†
-swordbreaker_daggerZall(@bab>=1,@proficiency:swordbreaker_dagger,!@feat:disposable_weapon#swordbreaker_dagger)Swordbreaker Dagger*^
-	starknifeFall(@bab>=1,@proficiency:starknife,!@feat:disposable_weapon#starknife)	Starknife*b
-
-sword_caneHall(@bab>=1,@proficiency:sword_cane,!@feat:disposable_weapon#sword_cane)
-Sword Cane*r
-dwarven_waraxePall(@bab>=1,@proficiency:dwarven_waraxe,!@feat:disposable_weapon#dwarven_waraxe)Dwarven Waraxe*n
-hand_crossbowNall(@bab>=1,@proficiency:hand_crossbow,!@feat:disposable_weapon#hand_crossbow)Hand Crossbow*b
-
-heavy_maceHall(@bab>=1,@proficiency:heavy_mace,!@feat:disposable_weapon#heavy_mace)
-Heavy Mace*^
-	boomerangFall(@bab>=1,@proficiency:boomerang,!@feat:disposable_weapon#boomerang)	Boomerang*~
-elven_curve_bladeVall(@bab>=1,@proficiency:elven_curve_blade,!@feat:disposable_weapon#elven_curve_blade)Elven Curve Blade*~
-gnome_piston_maulVall(@bab>=1,@proficiency:gnome_piston_maul,!@feat:disposable_weapon#gnome_piston_maul)Gnome Piston Maul*V
-handaxeBall(@bab>=1,@proficiency:handaxe,!@feat:disposable_weapon#handaxe)Handaxe*z
-two_bladed_swordTall(@bab>=1,@proficiency:two_bladed_sword,!@feat:disposable_weapon#two_bladed_sword)Two-bladed Sword*‚
-dwarven_longhammerXall(@bab>=1,@proficiency:dwarven_longhammer,!@feat:disposable_weapon#dwarven_longhammer)Dwarven Longhammer*r
-brass_knucklesPall(@bab>=1,@proficiency:brass_knuckles,!@feat:disposable_weapon#brass_knuckles)Brass Knuckles*Ž
-dwarven_giant_sticker^all(@bab>=1,@proficiency:dwarven_giant_sticker,!@feat:disposable_weapon#dwarven_giant_sticker)Dwarven Giant-Sticker*j
-throwing_axeLall(@bab>=1,@proficiency:throwing_axe,!@feat:disposable_weapon#throwing_axe)Throwing Axe*b
-
-light_pickHall(@bab>=1,@proficiency:light_pick,!@feat:disposable_weapon#light_pick)
-Light Pick*^
-	mere_clubFall(@bab>=1,@proficiency:mere_club,!@feat:disposable_weapon#mere_club)	Mere Club*n
-syringe_spearNall(@bab>=1,@proficiency:syringe_spear,!@feat:disposable_weapon#syringe_spear)Syringe Spear*j
-spiked_chainLall(@bab>=1,@proficiency:spiked_chain,!@feat:disposable_weapon#spiked_chain)Spiked Chain*Ž
-dwarven_sphinx_hammer^all(@bab>=1,@proficiency:dwarven_sphinx_hammer,!@feat:disposable_weapon#dwarven_sphinx_hammer)Dwarven Sphinx Hammer*Z
-flindbarDall(@bab>=1,@proficiency:flindbar,!@feat:disposable_weapon#flindbar)Flindbar*V
-khopeshBall(@bab>=1,@proficiency:khopesh,!@feat:disposable_weapon#khopesh)Khopesh*¢
-dwarven_heavy_axe_gauntlethall(@bab>=1,@proficiency:dwarven_heavy_axe_gauntlet,!@feat:disposable_weapon#dwarven_heavy_axe_gauntlet)Dwarven Heavy Axe-Gauntlet*f
-sling_gloveJall(@bab>=1,@proficiency:sling_glove,!@feat:disposable_weapon#sling_glove)Sling Glove*f
-morningstarJall(@bab>=1,@proficiency:morningstar,!@feat:disposable_weapon#morningstar)Morningstar*v
-throwing_shieldRall(@bab>=1,@proficiency:throwing_shield,!@feat:disposable_weapon#throwing_shield)Throwing Shield*Ž
-dwarven_double_waraxe^all(@bab>=1,@proficiency:dwarven_double_waraxe,!@feat:disposable_weapon#dwarven_double_waraxe)Dwarven Double Waraxe*‚
-collapsible_kumadeXall(@bab>=1,@proficiency:collapsible_kumade,!@feat:disposable_weapon#collapsible_kumade)Collapsible Kumade*r
-orc_double_axePall(@bab>=1,@proficiency:orc_double_axe,!@feat:disposable_weapon#orc_double_axe)Orc Double Axe*Z
-gauntletDall(@bab>=1,@proficiency:gauntlet,!@feat:disposable_weapon#gauntlet)Gauntlet*f
-heavy_flailJall(@bab>=1,@proficiency:heavy_flail,!@feat:disposable_weapon#heavy_flail)Heavy Flail*R
-scythe@all(@bab>=1,@proficiency:scythe,!@feat:disposable_weapon#scythe)Scythe*Z
-fauchardDall(@bab>=1,@proficiency:fauchard,!@feat:disposable_weapon#fauchard)Fauchard*‚
-dwarven_war_shieldXall(@bab>=1,@proficiency:dwarven_war_shield,!@feat:disposable_weapon#dwarven_war_shield)Dwarven War-shield*n
-boarding_gaffNall(@bab>=1,@proficiency:boarding_gaff,!@feat:disposable_weapon#boarding_gaff)Boarding Gaff*r
-dueling_daggerPall(@bab>=1,@proficiency:dueling_dagger,!@feat:disposable_weapon#dueling_dagger)Dueling Dagger*n
-gnome_pincherNall(@bab>=1,@proficiency:gnome_pincher,!@feat:disposable_weapon#gnome_pincher)Gnome Pincher*Z
-scimitarDall(@bab>=1,@proficiency:scimitar,!@feat:disposable_weapon#scimitar)Scimitar*Z
-terbutjeDall(@bab>=1,@proficiency:terbutje,!@feat:disposable_weapon#terbutje)Terbutje*†
-dwarven_dorn_dergarZall(@bab>=1,@proficiency:dwarven_dorn_dergar,!@feat:disposable_weapon#dwarven_dorn_dergar)Dwarven Dorn-Dergar*Z
-ammentumDall(@bab>=1,@proficiency:ammentum,!@feat:disposable_weapon#ammentum)Ammentum*F
-net:all(@bab>=1,@proficiency:net,!@feat:disposable_weapon#net)Net*b
-
-light_maceHall(@bab>=1,@proficiency:light_mace,!@feat:disposable_weapon#light_mace)
-Light Mace*f
-brutal_bolaJall(@bab>=1,@proficiency:brutal_bola,!@feat:disposable_weapon#brutal_bola)Brutal Bola*J
-sica<all(@bab>=1,@proficiency:sica,!@feat:disposable_weapon#sica)Sica*Z
-bardicheDall(@bab>=1,@proficiency:bardiche,!@feat:disposable_weapon#bardiche)Bardiche*‚
-halfling_rope_shotXall(@bab>=1,@proficiency:halfling_rope_shot,!@feat:disposable_weapon#halfling_rope_shot)Halfling Rope-shot*^
-	thorn_bowFall(@bab>=1,@proficiency:thorn_bow,!@feat:disposable_weapon#thorn_bow)	Thorn Bow*†
-light_spiked_shieldZall(@bab>=1,@proficiency:light_spiked_shield,!@feat:disposable_weapon#light_spiked_shield)Light Spiked Shield*v
-dwarven_urgroshRall(@bab>=1,@proficiency:dwarven_urgrosh,!@feat:disposable_weapon#dwarven_urgrosh)Dwarven Urgrosh*b
-
-shortspearHall(@bab>=1,@proficiency:shortspear,!@feat:disposable_weapon#shortspear)
-Shortspear*~
-split_blade_swordVall(@bab>=1,@proficiency:split_blade_sword,!@feat:disposable_weapon#split_blade_sword)Split-blade Sword*†
-shrillshaft_javelinZall(@bab>=1,@proficiency:shrillshaft_javelin,!@feat:disposable_weapon#shrillshaft_javelin)Shrillshaft Javelin*j
-heavy_shieldLall(@bab>=1,@proficiency:heavy_shield,!@feat:disposable_weapon#heavy_shield)Heavy Shield*R
-kumade@all(@bab>=1,@proficiency:kumade,!@feat:disposable_weapon#kumade)Kumade*V
-hurlbatBall(@bab>=1,@proficiency:hurlbat,!@feat:disposable_weapon#hurlbat)Hurlbat*Z
-stonebowDall(@bab>=1,@proficiency:stonebow,!@feat:disposable_weapon#stonebow)Stonebow*N
-lasso>all(@bab>=1,@proficiency:lasso,!@feat:disposable_weapon#lasso)Lasso*R
-rapier@all(@bab>=1,@proficiency:rapier,!@feat:disposable_weapon#rapier)Rapier*N
-aklys>all(@bab>=1,@proficiency:aklys,!@feat:disposable_weapon#aklys)Aklys*j
-double_slingLall(@bab>=1,@proficiency:double_sling,!@feat:disposable_weapon#double_sling)Double Sling*n
-earth_breakerNall(@bab>=1,@proficiency:earth_breaker,!@feat:disposable_weapon#earth_breaker)Earth Breaker*V
-plansonBall(@bab>=1,@proficiency:planson,!@feat:disposable_weapon#planson)Planson*j
-thorn_bracerLall(@bab>=1,@proficiency:thorn_bracer,!@feat:disposable_weapon#thorn_bracer)Thorn Bracer*Œ
-crank_light_crossbow\all(@bab>=1,@proficiency:crank_light_crossbow,!@feat:disposable_weapon#crank_light_crossbow)Crank (light) Crossbow*j
-jolting_dartLall(@bab>=1,@proficiency:jolting_dart,!@feat:disposable_weapon#jolting_dart)Jolting Dart*r
-heavy_crossbowPall(@bab>=1,@proficiency:heavy_crossbow,!@feat:disposable_weapon#heavy_crossbow)Heavy Crossbow*‚
-battle_aspergillumXall(@bab>=1,@proficiency:battle_aspergillum,!@feat:disposable_weapon#battle_aspergillum)Battle Aspergillum*j
-spiked_armorLall(@bab>=1,@proficiency:spiked_armor,!@feat:disposable_weapon#spiked_armor)Spiked Armor*^
-	ogre_hookFall(@bab>=1,@proficiency:ogre_hook,!@feat:disposable_weapon#ogre_hook)	Ogre Hook*†
-gnome_battle_ladderZall(@bab>=1,@proficiency:gnome_battle_ladder,!@feat:disposable_weapon#gnome_battle_ladder)Gnome Battle Ladder*r
-light_crossbowPall(@bab>=1,@proficiency:light_crossbow,!@feat:disposable_weapon#light_crossbow)Light Crossbow*j
-double_spearLall(@bab>=1,@proficiency:double_spear,!@feat:disposable_weapon#double_spear)Double Spear*j
-spring_bladeLall(@bab>=1,@proficiency:spring_blade,!@feat:disposable_weapon#spring_blade)Spring Blade*j
-bladed_scarfLall(@bab>=1,@proficiency:bladed_scarf,!@feat:disposable_weapon#bladed_scarf)Bladed Scarf*f
-totem_spearJall(@bab>=1,@proficiency:totem_spear,!@feat:disposable_weapon#totem_spear)Totem Spear*Œ
-crank_heavy_crossbow\all(@bab>=1,@proficiency:crank_heavy_crossbow,!@feat:disposable_weapon#crank_heavy_crossbow)Crank (heavy) Crossbow*N
-estoc>all(@bab>=1,@proficiency:estoc,!@feat:disposable_weapon#estoc)Estoc*^
-	dogslicerFall(@bab>=1,@proficiency:dogslicer,!@feat:disposable_weapon#dogslicer)	Dogslicer*J
-club<all(@bab>=1,@proficiency:club,!@feat:disposable_weapon#club)Club*^
-	battleaxeFall(@bab>=1,@proficiency:battleaxe,!@feat:disposable_weapon#battleaxe)	Battleaxe*r
-butchering_axePall(@bab>=1,@proficiency:butchering_axe,!@feat:disposable_weapon#butchering_axe)Butchering Axe*Z
-greataxeDall(@bab>=1,@proficiency:greataxe,!@feat:disposable_weapon#greataxe)Greataxe*V
-pickaxeBall(@bab>=1,@proficiency:pickaxe,!@feat:disposable_weapon#pickaxe)Pickaxe*N
-rhoka>all(@bab>=1,@proficiency:rhoka,!@feat:disposable_weapon#rhoka)Rhoka*b
-
-drow_razorHall(@bab>=1,@proficiency:drow_razor,!@feat:disposable_weapon#drow_razor)
-Drow Razor*j
-quarterstaffLall(@bab>=1,@proficiency:quarterstaff,!@feat:disposable_weapon#quarterstaff)Quarterstaff*Z
-quadrensDall(@bab>=1,@proficiency:quadrens,!@feat:disposable_weapon#quadrens)Quadrens*b
-
-greatswordHall(@bab>=1,@proficiency:greatsword,!@feat:disposable_weapon#greatsword)
-Greatsword*V
-blowgunBall(@bab>=1,@proficiency:blowgun,!@feat:disposable_weapon#blowgun)Blowgun*N
-katar>all(@bab>=1,@proficiency:katar,!@feat:disposable_weapon#katar)Katar*V
-bayonetBall(@bab>=1,@proficiency:bayonet,!@feat:disposable_weapon#bayonet)Bayonet*^
-	greatclubFall(@bab>=1,@proficiency:greatclub,!@feat:disposable_weapon#greatclub)	Greatclub*b
+feat:disposable_weaponDisposable Weapongeneralfeat*v
+dwarven_urgroshRall(@bab>=1,@proficiency:dwarven_urgrosh,!@feat:disposable_weapon#dwarven_urgrosh)Dwarven Urgrosh*‚
+battle_aspergillumXall(@bab>=1,@proficiency:battle_aspergillum,!@feat:disposable_weapon#battle_aspergillum)Battle Aspergillum*b
 
 stingchuckHall(@bab>=1,@proficiency:stingchuck,!@feat:disposable_weapon#stingchuck)
-Stingchuck*n
-bastard_swordNall(@bab>=1,@proficiency:bastard_sword,!@feat:disposable_weapon#bastard_sword)Bastard Sword*n
-rope_gauntletNall(@bab>=1,@proficiency:rope_gauntlet,!@feat:disposable_weapon#rope_gauntlet)Rope Gauntlet*v
-butterfly_knifeRall(@bab>=1,@proficiency:butterfly_knife,!@feat:disposable_weapon#butterfly_knife)Butterfly Knife*–
-dwarven_light_pelletbowball(@bab>=1,@proficiency:dwarven_light_pelletbow,!@feat:disposable_weapon#dwarven_light_pelletbow)Dwarven Light Pelletbow*j
-chain_hammerLall(@bab>=1,@proficiency:chain_hammer,!@feat:disposable_weapon#chain_hammer)Chain-hammer*v
-dwarven_longaxeRall(@bab>=1,@proficiency:dwarven_longaxe,!@feat:disposable_weapon#dwarven_longaxe)Dwarven Longaxe*^
-	warhammerFall(@bab>=1,@proficiency:warhammer,!@feat:disposable_weapon#warhammer)	Warhammer*n
-flask_throwerNall(@bab>=1,@proficiency:flask_thrower,!@feat:disposable_weapon#flask_thrower)Flask Thrower*Š
-heavy_wrist_launcher\all(@bab>=1,@proficiency:heavy_wrist_launcher,!@feat:disposable_weapon#heavy_wrist_launcher)Heavy Wrist Launcher*Z
-guisarmeDall(@bab>=1,@proficiency:guisarme,!@feat:disposable_weapon#guisarme)Guisarme*Z
-snag_netDall(@bab>=1,@proficiency:snag_net,!@feat:disposable_weapon#snag_net)Snag Net*F
-sap:all(@bab>=1,@proficiency:sap,!@feat:disposable_weapon#sap)Sap*j
-light_shieldLall(@bab>=1,@proficiency:light_shield,!@feat:disposable_weapon#light_shield)Light Shield*Z
-flambardDall(@bab>=1,@proficiency:flambard,!@feat:disposable_weapon#flambard)Flambard*v
-punching_daggerRall(@bab>=1,@proficiency:punching_dagger,!@feat:disposable_weapon#punching_dagger)Punching Dagger*Š
-elven_branched_spear\all(@bab>=1,@proficiency:elven_branched_spear,!@feat:disposable_weapon#elven_branched_spear)Elven Branched Spear*R
-glaive@all(@bab>=1,@proficiency:glaive,!@feat:disposable_weapon#glaive)Glaive*z
-traveling_kettleTall(@bab>=1,@proficiency:traveling_kettle,!@feat:disposable_weapon#traveling_kettle)Traveling Kettle*j
-wooden_stakeLall(@bab>=1,@proficiency:wooden_stake,!@feat:disposable_weapon#wooden_stake)Wooden Stake*f
-brass_knifeJall(@bab>=1,@proficiency:brass_knife,!@feat:disposable_weapon#brass_knife)Brass Knife*b
-
-blade_bootHall(@bab>=1,@proficiency:blade_boot,!@feat:disposable_weapon#blade_boot)
-Blade Boot*V
-ranseurBall(@bab>=1,@proficiency:ranseur,!@feat:disposable_weapon#ranseur)Ranseur*V
-longbowBall(@bab>=1,@proficiency:longbow,!@feat:disposable_weapon#longbow)Longbow*^
-	longswordFall(@bab>=1,@proficiency:longsword,!@feat:disposable_weapon#longsword)	Longsword*j
-horsechopperLall(@bab>=1,@proficiency:horsechopper,!@feat:disposable_weapon#horsechopper)Horsechopper*J
-bola<all(@bab>=1,@proficiency:bola,!@feat:disposable_weapon#bola)Bola*j
-flying_bladeLall(@bab>=1,@proficiency:flying_blade,!@feat:disposable_weapon#flying_blade)Flying Blade*^
-	longspearFall(@bab>=1,@proficiency:longspear,!@feat:disposable_weapon#longspear)	Longspear*j
-sickle_swordLall(@bab>=1,@proficiency:sickle_sword,!@feat:disposable_weapon#sickle_sword)Sickle-sword*b
-
-hooked_axeHall(@bab>=1,@proficiency:hooked_axe,!@feat:disposable_weapon#hooked_axe)
-Hooked Axe*b
+Stingchuck*b
 
 battle_poiHall(@bab>=1,@proficiency:battle_poi,!@feat:disposable_weapon#battle_poi)
-Battle Poi*n
-spiral_rapierNall(@bab>=1,@proficiency:spiral_rapier,!@feat:disposable_weapon#spiral_rapier)Spiral Rapier*R
-sickle@all(@bab>=1,@proficiency:sickle,!@feat:disposable_weapon#sickle)Sickle*Z
-sianghamDall(@bab>=1,@proficiency:siangham,!@feat:disposable_weapon#siangham)Siangham*J
-klar<all(@bab>=1,@proficiency:klar,!@feat:disposable_weapon#klar)Klar*^
-	flailpoleFall(@bab>=1,@proficiency:flailpole,!@feat:disposable_weapon#flailpole)	Flailpole*r
-sawtooth_sabrePall(@bab>=1,@proficiency:sawtooth_sabre,!@feat:disposable_weapon#sawtooth_sabre)Sawtooth Sabre*N
-lance>all(@bab>=1,@proficiency:lance,!@feat:disposable_weapon#lance)Lance*b
+Battle Poi*N
+tongi>all(@bab>=1,@proficiency:tongi,!@feat:disposable_weapon#tongi)Tongi*V
+plansonBall(@bab>=1,@proficiency:planson,!@feat:disposable_weapon#planson)Planson*Š
+elven_branched_spear\all(@bab>=1,@proficiency:elven_branched_spear,!@feat:disposable_weapon#elven_branched_spear)Elven Branched Spear*–
+dwarven_heavy_pelletbowball(@bab>=1,@proficiency:dwarven_heavy_pelletbow,!@feat:disposable_weapon#dwarven_heavy_pelletbow)Dwarven Heavy Pelletbow*Z
+bardicheDall(@bab>=1,@proficiency:bardiche,!@feat:disposable_weapon#bardiche)Bardiche*†
+light_spiked_shieldZall(@bab>=1,@proficiency:light_spiked_shield,!@feat:disposable_weapon#light_spiked_shield)Light Spiked Shield*V
+manopleBall(@bab>=1,@proficiency:manople,!@feat:disposable_weapon#manople)Manople*f
+orc_hornbowJall(@bab>=1,@proficiency:orc_hornbow,!@feat:disposable_weapon#orc_hornbow)Orc Hornbow*~
+split_blade_swordVall(@bab>=1,@proficiency:split_blade_sword,!@feat:disposable_weapon#split_blade_sword)Split-blade Sword*^
+	flailpoleFall(@bab>=1,@proficiency:flailpole,!@feat:disposable_weapon#flailpole)	Flailpole*†
+dwarven_dorn_dergarZall(@bab>=1,@proficiency:dwarven_dorn_dergar,!@feat:disposable_weapon#dwarven_dorn_dergar)Dwarven Dorn-Dergar*r
+stitched_slingPall(@bab>=1,@proficiency:stitched_sling,!@feat:disposable_weapon#stitched_sling)Stitched Sling*n
+boarding_gaffNall(@bab>=1,@proficiency:boarding_gaff,!@feat:disposable_weapon#boarding_gaff)Boarding Gaff*Z
+terbutjeDall(@bab>=1,@proficiency:terbutje,!@feat:disposable_weapon#terbutje)Terbutje*N
+lance>all(@bab>=1,@proficiency:lance,!@feat:disposable_weapon#lance)Lance*Z
+flindbarDall(@bab>=1,@proficiency:flindbar,!@feat:disposable_weapon#flindbar)Flindbar*j
+flying_bladeLall(@bab>=1,@proficiency:flying_blade,!@feat:disposable_weapon#flying_blade)Flying Blade*^
+	mere_clubFall(@bab>=1,@proficiency:mere_club,!@feat:disposable_weapon#mere_club)	Mere Club*‚
+stormshaft_javelinXall(@bab>=1,@proficiency:stormshaft_javelin,!@feat:disposable_weapon#stormshaft_javelin)Stormshaft Javelin*j
+horsechopperLall(@bab>=1,@proficiency:horsechopper,!@feat:disposable_weapon#horsechopper)Horsechopper*f
+knuckle_axeJall(@bab>=1,@proficiency:knuckle_axe,!@feat:disposable_weapon#knuckle_axe)Knuckle Axe*Ž
+dwarven_giant_sticker^all(@bab>=1,@proficiency:dwarven_giant_sticker,!@feat:disposable_weapon#dwarven_giant_sticker)Dwarven Giant-Sticker*j
+heavy_shieldLall(@bab>=1,@proficiency:heavy_shield,!@feat:disposable_weapon#heavy_shield)Heavy Shield*n
+orc_skull_ramNall(@bab>=1,@proficiency:orc_skull_ram,!@feat:disposable_weapon#orc_skull_ram)Orc Skull Ram*V
+unarmedBall(@bab>=1,@proficiency:unarmed,!@feat:disposable_weapon#unarmed)Unarmed*Z
+guisarmeDall(@bab>=1,@proficiency:guisarme,!@feat:disposable_weapon#guisarme)Guisarme*j
+spiked_chainLall(@bab>=1,@proficiency:spiked_chain,!@feat:disposable_weapon#spiked_chain)Spiked Chain*V
+blowgunBall(@bab>=1,@proficiency:blowgun,!@feat:disposable_weapon#blowgun)Blowgun*Ž
+dwarven_sphinx_hammer^all(@bab>=1,@proficiency:dwarven_sphinx_hammer,!@feat:disposable_weapon#dwarven_sphinx_hammer)Dwarven Sphinx Hammer*n
+barbazu_beardNall(@bab>=1,@proficiency:barbazu_beard,!@feat:disposable_weapon#barbazu_beard)Barbazu Beard*Z
+fauchardDall(@bab>=1,@proficiency:fauchard,!@feat:disposable_weapon#fauchard)Fauchard*N
+spear>all(@bab>=1,@proficiency:spear,!@feat:disposable_weapon#spear)Spear*^
+	warhammerFall(@bab>=1,@proficiency:warhammer,!@feat:disposable_weapon#warhammer)	Warhammer*f
+totem_spearJall(@bab>=1,@proficiency:totem_spear,!@feat:disposable_weapon#totem_spear)Totem Spear*z
+two_bladed_swordTall(@bab>=1,@proficiency:two_bladed_sword,!@feat:disposable_weapon#two_bladed_sword)Two-bladed Sword*v
+spiked_gauntletRall(@bab>=1,@proficiency:spiked_gauntlet,!@feat:disposable_weapon#spiked_gauntlet)Spiked Gauntlet*R
+cestus@all(@bab>=1,@proficiency:cestus,!@feat:disposable_weapon#cestus)Cestus*V
+bayonetBall(@bab>=1,@proficiency:bayonet,!@feat:disposable_weapon#bayonet)Bayonet*F
+net:all(@bab>=1,@proficiency:net,!@feat:disposable_weapon#net)Net*r
+dwarven_waraxePall(@bab>=1,@proficiency:dwarven_waraxe,!@feat:disposable_weapon#dwarven_waraxe)Dwarven Waraxe*^
+	boomerangFall(@bab>=1,@proficiency:boomerang,!@feat:disposable_weapon#boomerang)	Boomerang*^
+	longswordFall(@bab>=1,@proficiency:longsword,!@feat:disposable_weapon#longsword)	Longsword*b
+
+light_pickHall(@bab>=1,@proficiency:light_pick,!@feat:disposable_weapon#light_pick)
+Light Pick*~
+elven_curve_bladeVall(@bab>=1,@proficiency:elven_curve_blade,!@feat:disposable_weapon#elven_curve_blade)Elven Curve Blade*j
+throwing_axeLall(@bab>=1,@proficiency:throwing_axe,!@feat:disposable_weapon#throwing_axe)Throwing Axe*b
+
+drow_razorHall(@bab>=1,@proficiency:drow_razor,!@feat:disposable_weapon#drow_razor)
+Drow Razor*v
+butterfly_knifeRall(@bab>=1,@proficiency:butterfly_knife,!@feat:disposable_weapon#butterfly_knife)Butterfly Knife*f
+sling_gloveJall(@bab>=1,@proficiency:sling_glove,!@feat:disposable_weapon#sling_glove)Sling Glove*n
+hand_crossbowNall(@bab>=1,@proficiency:hand_crossbow,!@feat:disposable_weapon#hand_crossbow)Hand Crossbow*b
+
+blade_bootHall(@bab>=1,@proficiency:blade_boot,!@feat:disposable_weapon#blade_boot)
+Blade Boot*j
+spring_bladeLall(@bab>=1,@proficiency:spring_blade,!@feat:disposable_weapon#spring_blade)Spring Blade*R
+dagger@all(@bab>=1,@proficiency:dagger,!@feat:disposable_weapon#dagger)Dagger*F
+axe:all(@bab>=1,@proficiency:axe,!@feat:disposable_weapon#axe)Axe*V
+pickaxeBall(@bab>=1,@proficiency:pickaxe,!@feat:disposable_weapon#pickaxe)Pickaxe*J
+club<all(@bab>=1,@proficiency:club,!@feat:disposable_weapon#club)Club*v
+dwarven_maulaxeRall(@bab>=1,@proficiency:dwarven_maulaxe,!@feat:disposable_weapon#dwarven_maulaxe)Dwarven Maulaxe*n
+bastard_swordNall(@bab>=1,@proficiency:bastard_sword,!@feat:disposable_weapon#bastard_sword)Bastard Sword*‚
+dwarven_ram_hammerXall(@bab>=1,@proficiency:dwarven_ram_hammer,!@feat:disposable_weapon#dwarven_ram_hammer)Dwarven Ram Hammer*J
+bola<all(@bab>=1,@proficiency:bola,!@feat:disposable_weapon#bola)Bola*F
+sai:all(@bab>=1,@proficiency:sai,!@feat:disposable_weapon#sai)Sai*j
+double_slingLall(@bab>=1,@proficiency:double_sling,!@feat:disposable_weapon#double_sling)Double Sling*v
+deer_horn_knifeRall(@bab>=1,@proficiency:deer_horn_knife,!@feat:disposable_weapon#deer_horn_knife)Deer Horn Knife*V
+halberdBall(@bab>=1,@proficiency:halberd,!@feat:disposable_weapon#halberd)Halberd*V
+khopeshBall(@bab>=1,@proficiency:khopesh,!@feat:disposable_weapon#khopesh)Khopesh*f
+claw_bladesJall(@bab>=1,@proficiency:claw_blades,!@feat:disposable_weapon#claw_blades)Claw Blades*Z
+flambardDall(@bab>=1,@proficiency:flambard,!@feat:disposable_weapon#flambard)Flambard*N
+estoc>all(@bab>=1,@proficiency:estoc,!@feat:disposable_weapon#estoc)Estoc*Z
+sianghamDall(@bab>=1,@proficiency:siangham,!@feat:disposable_weapon#siangham)Siangham*Š
+heavy_wrist_launcher\all(@bab>=1,@proficiency:heavy_wrist_launcher,!@feat:disposable_weapon#heavy_wrist_launcher)Heavy Wrist Launcher*f
+brass_knifeJall(@bab>=1,@proficiency:brass_knife,!@feat:disposable_weapon#brass_knife)Brass Knife*J
+bill<all(@bab>=1,@proficiency:bill,!@feat:disposable_weapon#bill)Bill*v
+throwing_shieldRall(@bab>=1,@proficiency:throwing_shield,!@feat:disposable_weapon#throwing_shield)Throwing Shield*j
+sickle_swordLall(@bab>=1,@proficiency:sickle_sword,!@feat:disposable_weapon#sickle_sword)Sickle-sword*z
+broken_back_seaxTall(@bab>=1,@proficiency:broken_back_seax,!@feat:disposable_weapon#broken_back_seax)Broken-back Seax*^
+	war_razorFall(@bab>=1,@proficiency:war_razor,!@feat:disposable_weapon#war_razor)	War Razor*Z
+ammentumDall(@bab>=1,@proficiency:ammentum,!@feat:disposable_weapon#ammentum)Ammentum*^
+	thorn_bowFall(@bab>=1,@proficiency:thorn_bow,!@feat:disposable_weapon#thorn_bow)	Thorn Bow*b
+
+shortspearHall(@bab>=1,@proficiency:shortspear,!@feat:disposable_weapon#shortspear)
+Shortspear*N
+aklys>all(@bab>=1,@proficiency:aklys,!@feat:disposable_weapon#aklys)Aklys*V
+garroteBall(@bab>=1,@proficiency:garrote,!@feat:disposable_weapon#garrote)Garrote*Z
+falchionDall(@bab>=1,@proficiency:falchion,!@feat:disposable_weapon#falchion)Falchion*‚
+launching_crossbowXall(@bab>=1,@proficiency:launching_crossbow,!@feat:disposable_weapon#launching_crossbow)Launching Crossbow*†
+shrillshaft_javelinZall(@bab>=1,@proficiency:shrillshaft_javelin,!@feat:disposable_weapon#shrillshaft_javelin)Shrillshaft Javelin*j
+jolting_dartLall(@bab>=1,@proficiency:jolting_dart,!@feat:disposable_weapon#jolting_dart)Jolting Dart*^
+	flickmaceFall(@bab>=1,@proficiency:flickmace,!@feat:disposable_weapon#flickmace)	Flickmace*j
+wooden_stakeLall(@bab>=1,@proficiency:wooden_stake,!@feat:disposable_weapon#wooden_stake)Wooden Stake*f
+short_swordJall(@bab>=1,@proficiency:short_sword,!@feat:disposable_weapon#short_sword)Short Sword*V
+gladiusBall(@bab>=1,@proficiency:gladius,!@feat:disposable_weapon#gladius)Gladius*F
+sap:all(@bab>=1,@proficiency:sap,!@feat:disposable_weapon#sap)Sap*^
+	greatclubFall(@bab>=1,@proficiency:greatclub,!@feat:disposable_weapon#greatclub)	Greatclub*r
+grappling_hookPall(@bab>=1,@proficiency:grappling_hook,!@feat:disposable_weapon#grappling_hook)Grappling Hook*Œ
+crank_light_crossbow\all(@bab>=1,@proficiency:crank_light_crossbow,!@feat:disposable_weapon#crank_light_crossbow)Crank (light) Crossbow*V
+javelinBall(@bab>=1,@proficiency:javelin,!@feat:disposable_weapon#javelin)Javelin*N
+lasso>all(@bab>=1,@proficiency:lasso,!@feat:disposable_weapon#lasso)Lasso*N
+ankus>all(@bab>=1,@proficiency:ankus,!@feat:disposable_weapon#ankus)Ankus*V
+scizoreBall(@bab>=1,@proficiency:scizore,!@feat:disposable_weapon#scizore)Scizore*J
+whip<all(@bab>=1,@proficiency:whip,!@feat:disposable_weapon#whip)Whip*†
+heavy_spiked_shieldZall(@bab>=1,@proficiency:heavy_spiked_shield,!@feat:disposable_weapon#heavy_spiked_shield)Heavy Spiked Shield*J
+dart<all(@bab>=1,@proficiency:dart,!@feat:disposable_weapon#dart)Dart*b
+
+light_maceHall(@bab>=1,@proficiency:light_mace,!@feat:disposable_weapon#light_mace)
+Light Mace*N
+katar>all(@bab>=1,@proficiency:katar,!@feat:disposable_weapon#katar)Katar*r
+sawtooth_sabrePall(@bab>=1,@proficiency:sawtooth_sabre,!@feat:disposable_weapon#sawtooth_sabre)Sawtooth Sabre*R
+kumade@all(@bab>=1,@proficiency:kumade,!@feat:disposable_weapon#kumade)Kumade*V
+hurlbatBall(@bab>=1,@proficiency:hurlbat,!@feat:disposable_weapon#hurlbat)Hurlbat*f
+light_flailJall(@bab>=1,@proficiency:light_flail,!@feat:disposable_weapon#light_flail)Light Flail*b
+
+greatswordHall(@bab>=1,@proficiency:greatsword,!@feat:disposable_weapon#greatsword)
+Greatsword*R
+glaive@all(@bab>=1,@proficiency:glaive,!@feat:disposable_weapon#glaive)Glaive*b
+
+knobkerrieHall(@bab>=1,@proficiency:knobkerrie,!@feat:disposable_weapon#knobkerrie)
+Knobkerrie*J
+sica<all(@bab>=1,@proficiency:sica,!@feat:disposable_weapon#sica)Sica*Z
+scimitarDall(@bab>=1,@proficiency:scimitar,!@feat:disposable_weapon#scimitar)Scimitar*†
+gnome_hooked_hammerZall(@bab>=1,@proficiency:gnome_hooked_hammer,!@feat:disposable_weapon#gnome_hooked_hammer)Gnome Hooked Hammer*j
+switchscytheLall(@bab>=1,@proficiency:switchscythe,!@feat:disposable_weapon#switchscythe)Switchscythe*^
+	hook_handFall(@bab>=1,@proficiency:hook_hand,!@feat:disposable_weapon#hook_hand)	Hook Hand*f
+morningstarJall(@bab>=1,@proficiency:morningstar,!@feat:disposable_weapon#morningstar)Morningstar*N
+kukri>all(@bab>=1,@proficiency:kukri,!@feat:disposable_weapon#kukri)Kukri*~
+gnome_piston_maulVall(@bab>=1,@proficiency:gnome_piston_maul,!@feat:disposable_weapon#gnome_piston_maul)Gnome Piston Maul*Z
+gauntletDall(@bab>=1,@proficiency:gauntlet,!@feat:disposable_weapon#gauntlet)Gauntlet*r
+brass_knucklesPall(@bab>=1,@proficiency:brass_knuckles,!@feat:disposable_weapon#brass_knuckles)Brass Knuckles*–
+dwarven_light_pelletbowball(@bab>=1,@proficiency:dwarven_light_pelletbow,!@feat:disposable_weapon#dwarven_light_pelletbow)Dwarven Light Pelletbow*r
+dueling_daggerPall(@bab>=1,@proficiency:dueling_dagger,!@feat:disposable_weapon#dueling_dagger)Dueling Dagger*n
+gnome_pincherNall(@bab>=1,@proficiency:gnome_pincher,!@feat:disposable_weapon#gnome_pincher)Gnome Pincher*n
+flask_throwerNall(@bab>=1,@proficiency:flask_thrower,!@feat:disposable_weapon#flask_thrower)Flask Thrower*Ž
+dwarven_double_waraxe^all(@bab>=1,@proficiency:dwarven_double_waraxe,!@feat:disposable_weapon#dwarven_double_waraxe)Dwarven Double Waraxe*R
+sickle@all(@bab>=1,@proficiency:sickle,!@feat:disposable_weapon#sickle)Sickle*v
+combat_scabbardRall(@bab>=1,@proficiency:combat_scabbard,!@feat:disposable_weapon#combat_scabbard)Combat Scabbard*b
 
 heavy_pickHall(@bab>=1,@proficiency:heavy_pick,!@feat:disposable_weapon#heavy_pick)
 Heavy Pick*N
-kukri>all(@bab>=1,@proficiency:kukri,!@feat:disposable_weapon#kukri)Kukri*’
-dwarven_boulder_helmet`all(@bab>=1,@proficiency:dwarven_boulder_helmet,!@feat:disposable_weapon#dwarven_boulder_helmet)Dwarven Boulder Helmet*^
-	hook_handFall(@bab>=1,@proficiency:hook_hand,!@feat:disposable_weapon#hook_hand)	Hook Hand*†
-heavy_spiked_shieldZall(@bab>=1,@proficiency:heavy_spiked_shield,!@feat:disposable_weapon#heavy_spiked_shield)Heavy Spiked Shield*R
-shotel@all(@bab>=1,@proficiency:shotel,!@feat:disposable_weapon#shotel)Shotel*d
+crook>all(@bab>=1,@proficiency:crook,!@feat:disposable_weapon#crook)Crook*v
+punching_daggerRall(@bab>=1,@proficiency:punching_dagger,!@feat:disposable_weapon#punching_dagger)Punching Dagger*b
 
-shuriken_5Hall(@bab>=1,@proficiency:shuriken_5,!@feat:disposable_weapon#shuriken_5)Shuriken (5)*V
-garroteBall(@bab>=1,@proficiency:garrote,!@feat:disposable_weapon#garrote)Garrote*n
-orc_skull_ramNall(@bab>=1,@proficiency:orc_skull_ram,!@feat:disposable_weapon#orc_skull_ram)Orc Skull Ram*f
-hunga_mungaJall(@bab>=1,@proficiency:hunga_munga,!@feat:disposable_weapon#hunga_munga)Hunga Munga*v
-combat_scabbardRall(@bab>=1,@proficiency:combat_scabbard,!@feat:disposable_weapon#combat_scabbard)Combat Scabbard*n
-lantern_staffNall(@bab>=1,@proficiency:lantern_staff,!@feat:disposable_weapon#lantern_staff)Lantern Staff*v
-double_crossbowRall(@bab>=1,@proficiency:double_crossbow,!@feat:disposable_weapon#double_crossbow)Double Crossbow*f
-short_swordJall(@bab>=1,@proficiency:short_sword,!@feat:disposable_weapon#short_sword)Short Sword*f
-knuckle_axeJall(@bab>=1,@proficiency:knuckle_axe,!@feat:disposable_weapon#knuckle_axe)Knuckle Axe*R
-cestus@all(@bab>=1,@proficiency:cestus,!@feat:disposable_weapon#cestus)Cestus*N
-pilum>all(@bab>=1,@proficiency:pilum,!@feat:disposable_weapon#pilum)Pilum*v
-spiked_gauntletRall(@bab>=1,@proficiency:spiked_gauntlet,!@feat:disposable_weapon#spiked_gauntlet)Spiked Gauntlet*J
-kama<all(@bab>=1,@proficiency:kama,!@feat:disposable_weapon#kama)Kama*Š
-halfling_sling_staff\all(@bab>=1,@proficiency:halfling_sling_staff,!@feat:disposable_weapon#halfling_sling_staff)Halfling Sling Staff*V
-manopleBall(@bab>=1,@proficiency:manople,!@feat:disposable_weapon#manople)Manople*†
-gnome_hooked_hammerZall(@bab>=1,@proficiency:gnome_hooked_hammer,!@feat:disposable_weapon#gnome_hooked_hammer)Gnome Hooked Hammer*V
-chakramBall(@bab>=1,@proficiency:chakram,!@feat:disposable_weapon#chakram)Chakram*š
-repeating_light_crossbowdall(@bab>=1,@proficiency:repeating_light_crossbow,!@feat:disposable_weapon#repeating_light_crossbow)Repeating Light Crossbow*Z
-shortbowDall(@bab>=1,@proficiency:shortbow,!@feat:disposable_weapon#shortbow)Shortbow*N
-crook>all(@bab>=1,@proficiency:crook,!@feat:disposable_weapon#crook)Crook*Z
-falchionDall(@bab>=1,@proficiency:falchion,!@feat:disposable_weapon#falchion)Falchion*v
-deer_horn_knifeRall(@bab>=1,@proficiency:deer_horn_knife,!@feat:disposable_weapon#deer_horn_knife)Deer Horn Knife*V
-javelinBall(@bab>=1,@proficiency:javelin,!@feat:disposable_weapon#javelin)Javelin*f
-orc_hornbowJall(@bab>=1,@proficiency:orc_hornbow,!@feat:disposable_weapon#orc_hornbow)Orc Hornbow*n
-boarding_pikeNall(@bab>=1,@proficiency:boarding_pike,!@feat:disposable_weapon#boarding_pike)Boarding Pike*V
-unarmedBall(@bab>=1,@proficiency:unarmed,!@feat:disposable_weapon#unarmed)Unarmed*V
-halberdBall(@bab>=1,@proficiency:halberd,!@feat:disposable_weapon#halberd)Halberd*f
-claw_bladesJall(@bab>=1,@proficiency:claw_blades,!@feat:disposable_weapon#claw_blades)Claw Blades*J
-whip<all(@bab>=1,@proficiency:whip,!@feat:disposable_weapon#whip)Whip*‚
-dwarven_ram_hammerXall(@bab>=1,@proficiency:dwarven_ram_hammer,!@feat:disposable_weapon#dwarven_ram_hammer)Dwarven Ram Hammer*J
-dart<all(@bab>=1,@proficiency:dart,!@feat:disposable_weapon#dart)Dart*V
-macheteBall(@bab>=1,@proficiency:machete,!@feat:disposable_weapon#machete)Machete*j
-switchscytheLall(@bab>=1,@proficiency:switchscythe,!@feat:disposable_weapon#switchscythe)Switchscythe*N
-tongi>all(@bab>=1,@proficiency:tongi,!@feat:disposable_weapon#tongi)Tongi*n
-barbazu_beardNall(@bab>=1,@proficiency:barbazu_beard,!@feat:disposable_weapon#barbazu_beard)Barbazu Beard*f
-light_flailJall(@bab>=1,@proficiency:light_flail,!@feat:disposable_weapon#light_flail)Light Flail*b
-
-knobkerrieHall(@bab>=1,@proficiency:knobkerrie,!@feat:disposable_weapon#knobkerrie)
-Knobkerrie*b
+hooked_axeHall(@bab>=1,@proficiency:hooked_axe,!@feat:disposable_weapon#hooked_axe)
+Hooked Axe*†
+gnome_battle_ladderZall(@bab>=1,@proficiency:gnome_battle_ladder,!@feat:disposable_weapon#gnome_battle_ladder)Gnome Battle Ladder*^
+	sanpkhangFall(@bab>=1,@proficiency:sanpkhang,!@feat:disposable_weapon#sanpkhang)	Sanpkhang*V
+macheteBall(@bab>=1,@proficiency:machete,!@feat:disposable_weapon#machete)Machete*b
 
 dire_flailHall(@bab>=1,@proficiency:dire_flail,!@feat:disposable_weapon#dire_flail)
-Dire Flail*z
-broken_back_seaxTall(@bab>=1,@proficiency:broken_back_seax,!@feat:disposable_weapon#broken_back_seax)Broken-back Seax*^
-	sanpkhangFall(@bab>=1,@proficiency:sanpkhang,!@feat:disposable_weapon#sanpkhang)	Sanpkhang*^
-	flickmaceFall(@bab>=1,@proficiency:flickmace,!@feat:disposable_weapon#flickmace)	Flickmace*š
-repeating_heavy_crossbowdall(@bab>=1,@proficiency:repeating_heavy_crossbow,!@feat:disposable_weapon#repeating_heavy_crossbow)Repeating Heavy Crossbow*V
-scizoreBall(@bab>=1,@proficiency:scizore,!@feat:disposable_weapon#scizore)Scizore*V
-gladiusBall(@bab>=1,@proficiency:gladius,!@feat:disposable_weapon#gladius)Gladius£¦
+Dire Flail*n
+syringe_spearNall(@bab>=1,@proficiency:syringe_spear,!@feat:disposable_weapon#syringe_spear)Syringe Spear*Z
+snag_netDall(@bab>=1,@proficiency:snag_net,!@feat:disposable_weapon#snag_net)Snag Net*’
+dwarven_boulder_helmet`all(@bab>=1,@proficiency:dwarven_boulder_helmet,!@feat:disposable_weapon#dwarven_boulder_helmet)Dwarven Boulder Helmet*f
+brutal_bolaJall(@bab>=1,@proficiency:brutal_bola,!@feat:disposable_weapon#brutal_bola)Brutal Bola*Z
+nunchakuDall(@bab>=1,@proficiency:nunchaku,!@feat:disposable_weapon#nunchaku)Nunchaku*J
+klar<all(@bab>=1,@proficiency:klar,!@feat:disposable_weapon#klar)Klar*^
+	handwrapsFall(@bab>=1,@proficiency:handwraps,!@feat:disposable_weapon#handwraps)	Handwraps*R
+shotel@all(@bab>=1,@proficiency:shotel,!@feat:disposable_weapon#shotel)Shotel*^
+	wavebladeFall(@bab>=1,@proficiency:waveblade,!@feat:disposable_weapon#waveblade)	Waveblade*R
+scythe@all(@bab>=1,@proficiency:scythe,!@feat:disposable_weapon#scythe)Scythe*‚
+halfling_rope_shotXall(@bab>=1,@proficiency:halfling_rope_shot,!@feat:disposable_weapon#halfling_rope_shot)Halfling Rope-shot*^
+	dogslicerFall(@bab>=1,@proficiency:dogslicer,!@feat:disposable_weapon#dogslicer)	Dogslicer*J
+kama<all(@bab>=1,@proficiency:kama,!@feat:disposable_weapon#kama)Kama*z
+traveling_kettleTall(@bab>=1,@proficiency:traveling_kettle,!@feat:disposable_weapon#traveling_kettle)Traveling Kettle*j
+light_shieldLall(@bab>=1,@proficiency:light_shield,!@feat:disposable_weapon#light_shield)Light Shield*V
+ranseurBall(@bab>=1,@proficiency:ranseur,!@feat:disposable_weapon#ranseur)Ranseur*V
+handaxeBall(@bab>=1,@proficiency:handaxe,!@feat:disposable_weapon#handaxe)Handaxe*‚
+collapsible_kumadeXall(@bab>=1,@proficiency:collapsible_kumade,!@feat:disposable_weapon#collapsible_kumade)Collapsible Kumade*Z
+greataxeDall(@bab>=1,@proficiency:greataxe,!@feat:disposable_weapon#greataxe)Greataxe*†
+swordbreaker_daggerZall(@bab>=1,@proficiency:swordbreaker_dagger,!@feat:disposable_weapon#swordbreaker_dagger)Swordbreaker Dagger*^
+	battleaxeFall(@bab>=1,@proficiency:battleaxe,!@feat:disposable_weapon#battleaxe)	Battleaxe*n
+rope_gauntletNall(@bab>=1,@proficiency:rope_gauntlet,!@feat:disposable_weapon#rope_gauntlet)Rope Gauntlet*V
+longbowBall(@bab>=1,@proficiency:longbow,!@feat:disposable_weapon#longbow)Longbow*N
+pilum>all(@bab>=1,@proficiency:pilum,!@feat:disposable_weapon#pilum)Pilum*j
+chain_hammerLall(@bab>=1,@proficiency:chain_hammer,!@feat:disposable_weapon#chain_hammer)Chain-hammer*n
+scorpion_whipNall(@bab>=1,@proficiency:scorpion_whip,!@feat:disposable_weapon#scorpion_whip)Scorpion Whip*^
+	starknifeFall(@bab>=1,@proficiency:starknife,!@feat:disposable_weapon#starknife)	Starknife*b
+
+mancatcherHall(@bab>=1,@proficiency:mancatcher,!@feat:disposable_weapon#mancatcher)
+Mancatcher*V
+cutlassBall(@bab>=1,@proficiency:cutlass,!@feat:disposable_weapon#cutlass)Cutlass*j
+flying_talonLall(@bab>=1,@proficiency:flying_talon,!@feat:disposable_weapon#flying_talon)Flying Talon*V
+falcataBall(@bab>=1,@proficiency:falcata,!@feat:disposable_weapon#falcata)Falcata*b
+
+sword_caneHall(@bab>=1,@proficiency:sword_cane,!@feat:disposable_weapon#sword_cane)
+Sword Cane*R
+rapier@all(@bab>=1,@proficiency:rapier,!@feat:disposable_weapon#rapier)Rapier*Š
+halfling_sling_staff\all(@bab>=1,@proficiency:halfling_sling_staff,!@feat:disposable_weapon#halfling_sling_staff)Halfling Sling Staff*¢
+dwarven_heavy_axe_gauntlethall(@bab>=1,@proficiency:dwarven_heavy_axe_gauntlet,!@feat:disposable_weapon#dwarven_heavy_axe_gauntlet)Dwarven Heavy Axe-Gauntlet*V
+tridentBall(@bab>=1,@proficiency:trident,!@feat:disposable_weapon#trident)Trident*r
+butchering_axePall(@bab>=1,@proficiency:butchering_axe,!@feat:disposable_weapon#butchering_axe)Butchering Axe*j
+spiked_armorLall(@bab>=1,@proficiency:spiked_armor,!@feat:disposable_weapon#spiked_armor)Spiked Armor*N
+kunai>all(@bab>=1,@proficiency:kunai,!@feat:disposable_weapon#kunai)Kunai*V
+harpoonBall(@bab>=1,@proficiency:harpoon,!@feat:disposable_weapon#harpoon)Harpoon*Z
+quadrensDall(@bab>=1,@proficiency:quadrens,!@feat:disposable_weapon#quadrens)Quadrens*b
+
+heavy_maceHall(@bab>=1,@proficiency:heavy_mace,!@feat:disposable_weapon#heavy_mace)
+Heavy Mace*V
+gandasaBall(@bab>=1,@proficiency:gandasa,!@feat:disposable_weapon#gandasa)Gandasa*^
+	longspearFall(@bab>=1,@proficiency:longspear,!@feat:disposable_weapon#longspear)	Longspear*n
+spiral_rapierNall(@bab>=1,@proficiency:spiral_rapier,!@feat:disposable_weapon#spiral_rapier)Spiral Rapier*v
+double_crossbowRall(@bab>=1,@proficiency:double_crossbow,!@feat:disposable_weapon#double_crossbow)Double Crossbow*r
+heavy_crossbowPall(@bab>=1,@proficiency:heavy_crossbow,!@feat:disposable_weapon#heavy_crossbow)Heavy Crossbow*j
+thorn_bracerLall(@bab>=1,@proficiency:thorn_bracer,!@feat:disposable_weapon#thorn_bracer)Thorn Bracer*‚
+dwarven_longhammerXall(@bab>=1,@proficiency:dwarven_longhammer,!@feat:disposable_weapon#dwarven_longhammer)Dwarven Longhammer*†
+gnome_ripsaw_glaiveZall(@bab>=1,@proficiency:gnome_ripsaw_glaive,!@feat:disposable_weapon#gnome_ripsaw_glaive)Gnome Ripsaw Glaive*j
+double_spearLall(@bab>=1,@proficiency:double_spear,!@feat:disposable_weapon#double_spear)Double Spear*N
+rhoka>all(@bab>=1,@proficiency:rhoka,!@feat:disposable_weapon#rhoka)Rhoka*š
+repeating_light_crossbowdall(@bab>=1,@proficiency:repeating_light_crossbow,!@feat:disposable_weapon#repeating_light_crossbow)Repeating Light Crossbow*‚
+dwarven_war_shieldXall(@bab>=1,@proficiency:dwarven_war_shield,!@feat:disposable_weapon#dwarven_war_shield)Dwarven War-shield*d
+
+shuriken_5Hall(@bab>=1,@proficiency:shuriken_5,!@feat:disposable_weapon#shuriken_5)Shuriken (5)*^
+	ogre_hookFall(@bab>=1,@proficiency:ogre_hook,!@feat:disposable_weapon#ogre_hook)	Ogre Hook*V
+chakramBall(@bab>=1,@proficiency:chakram,!@feat:disposable_weapon#chakram)Chakram*n
+dueling_swordNall(@bab>=1,@proficiency:dueling_sword,!@feat:disposable_weapon#dueling_sword)Dueling Sword*n
+boarding_pikeNall(@bab>=1,@proficiency:boarding_pike,!@feat:disposable_weapon#boarding_pike)Boarding Pike*j
+bladed_scarfLall(@bab>=1,@proficiency:bladed_scarf,!@feat:disposable_weapon#bladed_scarf)Bladed Scarf*Z
+stonebowDall(@bab>=1,@proficiency:stonebow,!@feat:disposable_weapon#stonebow)Stonebow*n
+lantern_staffNall(@bab>=1,@proficiency:lantern_staff,!@feat:disposable_weapon#lantern_staff)Lantern Staff*r
+light_crossbowPall(@bab>=1,@proficiency:light_crossbow,!@feat:disposable_weapon#light_crossbow)Light Crossbow*Z
+shortbowDall(@bab>=1,@proficiency:shortbow,!@feat:disposable_weapon#shortbow)Shortbow*f
+heavy_flailJall(@bab>=1,@proficiency:heavy_flail,!@feat:disposable_weapon#heavy_flail)Heavy Flail*j
+light_hammerLall(@bab>=1,@proficiency:light_hammer,!@feat:disposable_weapon#light_hammer)Light Hammer*Œ
+crank_heavy_crossbow\all(@bab>=1,@proficiency:crank_heavy_crossbow,!@feat:disposable_weapon#crank_heavy_crossbow)Crank (heavy) Crossbow*r
+orc_double_axePall(@bab>=1,@proficiency:orc_double_axe,!@feat:disposable_weapon#orc_double_axe)Orc Double Axe*j
+quarterstaffLall(@bab>=1,@proficiency:quarterstaff,!@feat:disposable_weapon#quarterstaff)Quarterstaff*š
+repeating_heavy_crossbowdall(@bab>=1,@proficiency:repeating_heavy_crossbow,!@feat:disposable_weapon#repeating_heavy_crossbow)Repeating Heavy Crossbow*r
+wrist_launcherPall(@bab>=1,@proficiency:wrist_launcher,!@feat:disposable_weapon#wrist_launcher)Wrist Launcher*v
+dwarven_longaxeRall(@bab>=1,@proficiency:dwarven_longaxe,!@feat:disposable_weapon#dwarven_longaxe)Dwarven Longaxe*N
+sling>all(@bab>=1,@proficiency:sling,!@feat:disposable_weapon#sling)Sling*n
+earth_breakerNall(@bab>=1,@proficiency:earth_breaker,!@feat:disposable_weapon#earth_breaker)Earth Breaker*f
+hunga_mungaJall(@bab>=1,@proficiency:hunga_munga,!@feat:disposable_weapon#hunga_munga)Hunga Munga£¦
 feat:crusaders_flurryCrusader's Flurrygeneralfeat*¢
 gauntlet‹all(@ability:channel_energy#warpriest,@ability:flurry_of_blows#unchained_monk,@feat:weapon_focus#gauntlet,!@feat:crusaders_flurry#gauntlet)Gauntlet*ž
 unarmed‰all(@ability:channel_energy#warpriest,@ability:flurry_of_blows#unchained_monk,@feat:weapon_focus#unarmed,!@feat:crusaders_flurry#unarmed)Unarmed*Ê

@@ -305,6 +305,10 @@
     "name": "Hex Magus",
     "tags": ["archetype_feature", "class_feature", "class:magus#hexcrafter"]
   }, {
+    "id": "ability:hex_arcana#magus_hexcrafter",
+    "name": "Hex Arcana",
+    "tags": ["archetype_feature", "class_feature", "class:magus#hexcrafter"]
+  }, {
     "id": "class:magus#spellblade",
     "name": "Spellblade",
     "tags": ["archetype", "magus"]
@@ -632,72 +636,72 @@
     "name": "Magus",
     "tags": ["favored_class", "base"]
   }, {
-    "id": "ability:medium_armor#magus",
-    "name": "Medium Armor",
+    "id": "ability:greater_spell_access#magus",
+    "name": "Greater Spell Access",
     "tags": ["class_feature"]
   }, {
     "id": "ability:arcane_pool#magus",
     "name": "Arcane Pool",
     "tags": ["class_feature"]
   }, {
-    "id": "ability:counterstrike#magus",
-    "name": "Counterstrike",
-    "tags": ["class_feature"]
-  }, {
-    "id": "ability:cantrips#magus",
-    "name": "Cantrips",
-    "tags": ["class_feature"]
-  }, {
-    "id": "ability:bonus_feat#magus",
-    "name": "Bonus Feat",
+    "id": "ability:greater_spell_combat#magus",
+    "name": "Greater Spell Combat",
     "tags": ["class_feature"]
   }, {
     "id": "ability:magus_arcana#magus",
     "name": "Magus Arcana",
     "tags": ["class_feature"]
   }, {
-    "id": "ability:spell_recall#magus",
-    "name": "Spell Recall",
-    "tags": ["class_feature"]
-  }, {
-    "id": "ability:heavy_armor#magus",
-    "name": "Heavy Armor",
-    "tags": ["class_feature"]
-  }, {
-    "id": "ability:greater_spell_combat#magus",
-    "name": "Greater Spell Combat",
-    "tags": ["class_feature"]
-  }, {
-    "id": "ability:improved_spell_combat#magus",
-    "name": "Improved Spell Combat",
+    "id": "ability:bonus_feat#magus",
+    "name": "Bonus Feat",
     "tags": ["class_feature"]
   }, {
     "id": "ability:spell_combat#magus",
     "name": "Spell Combat",
     "tags": ["class_feature"]
   }, {
+    "id": "ability:spell_recall#magus",
+    "name": "Spell Recall",
+    "tags": ["class_feature"]
+  }, {
     "id": "ability:true_magus#magus",
     "name": "True Magus",
     "tags": ["class_feature"]
   }, {
-    "id": "ability:improved_spell_recall#magus",
-    "name": "Improved Spell Recall",
+    "id": "ability:cantrips#magus",
+    "name": "Cantrips",
     "tags": ["class_feature"]
   }, {
-    "id": "ability:knowledge_pool#magus",
-    "name": "Knowledge Pool",
+    "id": "ability:improved_spell_combat#magus",
+    "name": "Improved Spell Combat",
     "tags": ["class_feature"]
   }, {
-    "id": "ability:greater_spell_access#magus",
-    "name": "Greater Spell Access",
+    "id": "ability:medium_armor#magus",
+    "name": "Medium Armor",
     "tags": ["class_feature"]
   }, {
     "id": "ability:fighter_training#magus",
     "name": "Fighter Training",
     "tags": ["class_feature"]
   }, {
+    "id": "ability:heavy_armor#magus",
+    "name": "Heavy Armor",
+    "tags": ["class_feature"]
+  }, {
     "id": "ability:spellstrike#magus",
     "name": "Spellstrike",
+    "tags": ["class_feature"]
+  }, {
+    "id": "ability:improved_spell_recall#magus",
+    "name": "Improved Spell Recall",
+    "tags": ["class_feature"]
+  }, {
+    "id": "ability:counterstrike#magus",
+    "name": "Counterstrike",
+    "tags": ["class_feature"]
+  }, {
+    "id": "ability:knowledge_pool#magus",
+    "name": "Knowledge Pool",
     "tags": ["class_feature"]
   }, {
     "id": "feat:spell_bluff",
@@ -1066,7 +1070,7 @@
     "id": "feat:skeleton_summoner",
     "name": "Skeleton Summoner",
     "tags": ["general", "feat"],
-    "prerequisiteFormula": "all(@feat:spell_focus#necromancy,any(@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_vii#summoner,@spell:summon_monster_4,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_8,@spell:summon_monster_7,@spell:summon_monster_6,@spell:summon_monster_5,@spell:summon_monster_9)[Summon monster],!@feat:skeleton_summoner)"
+    "prerequisiteFormula": "all(@feat:spell_focus#necromancy,any(@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster#summoner,@spell:summon_monster_4,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_8,@spell:summon_monster_7,@spell:summon_monster_6,@spell:summon_monster_5,@spell:summon_monster_9)[Summon monster],!@feat:skeleton_summoner)"
   }, {
     "id": "feat:split_major_hex",
     "name": "Split Major Hex",
@@ -1091,7 +1095,7 @@
     "id": "feat:sacred_summons",
     "name": "Sacred Summons",
     "tags": ["general", "feat"],
-    "prerequisiteFormula": "all(@ability:aura#warpriest,any(@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_vii#summoner,@spell:summon_monster_4,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_8,@spell:summon_monster_7,@spell:summon_monster_6,@spell:summon_monster_5,@spell:summon_monster_9)[Summon monster],!@feat:sacred_summons)"
+    "prerequisiteFormula": "all(@ability:aura#warpriest,any(@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster#summoner,@spell:summon_monster_4,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_8,@spell:summon_monster_7,@spell:summon_monster_6,@spell:summon_monster_5,@spell:summon_monster_9)[Summon monster],!@feat:sacred_summons)"
   }, {
     "id": "feat:extra_ranger_trap",
     "name": "Extra Ranger Trap",
@@ -1101,7 +1105,7 @@
     "id": "feat:extra_summons",
     "name": "Extra Summons",
     "tags": ["general", "feat"],
-    "prerequisiteFormula": "all(any(@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_vii#summoner,@spell:summon_monster_4,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_8,@spell:summon_monster_7,@spell:summon_monster_6,@spell:summon_monster_5,@spell:summon_monster_9)[Summon monster],@class:summoner\u003e\u003d1,!@feat:extra_summons)"
+    "prerequisiteFormula": "all(any(@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster#summoner,@spell:summon_monster_4,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_8,@spell:summon_monster_7,@spell:summon_monster_6,@spell:summon_monster_5,@spell:summon_monster_9)[Summon monster],@class:summoner\u003e\u003d1,!@feat:extra_summons)"
   }, {
     "id": "feat:tripping_twirl",
     "name": "Tripping Twirl",

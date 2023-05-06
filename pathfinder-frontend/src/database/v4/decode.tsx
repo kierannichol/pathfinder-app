@@ -1,9 +1,8 @@
+import {Formula, Resolvable} from "@kierannichol/formula-js";
 import {v4} from "../../compiled";
 import {Choice, ChoiceNode, ChoiceTree} from "../../core/Choice";
 import Description from "../../core/Description";
 import Effect, {AddNumberEffect, SetFormulaEffect, SetNumberEffect} from "../../core/Effect";
-import {Formula} from "../../logic/Formula";
-import Resolvable from "../../logic/Resolvable";
 import {ChildEntity, ChildEntitySummary} from "../../v4/ChildEntity";
 import {Entity, EntitySummary} from "../../v4/Entity";
 import {ComponentTemplate, Template} from "../../v4/Template";
@@ -101,13 +100,13 @@ export function decodeEffect(dbo: EffectDbo): Effect {
           if (!formula) {
             throw Error("Invalid set formula effect DBO: missing formula");
           }
-          return new SetFormulaEffect(dbo.targetKey, formula).onlyIf(dbo.condition);
+          return new SetFormulaEffect(action.targetKey, formula);
         case "numberValue":
           let numberValue = action.numberValue;
           if (numberValue === null || numberValue === undefined) {
             throw Error("Invalid set number effect DBO: missing number value");
           }
-          return new SetNumberEffect(dbo.targetKey, numberValue).onlyIf(dbo.condition);
+          return new SetNumberEffect(action.targetKey, numberValue);
         default:
           throw Error("Invalid effect DBO");
       }
@@ -117,15 +116,29 @@ export function decodeEffect(dbo: EffectDbo): Effect {
       if (!action) {
         throw Error("Invalid effect DBO");
       }
-      return new AddNumberEffect(dbo.targetKey, action.numberDelta).onlyIf(dbo.condition);
+      return new AddNumberEffect(action.targetKey, action.numberDelta);
     }
     case "renameAction": {
       let action = dbo.renameAction;
       if (!action) {
         throw Error("Invalid effect DBO");
       }
-      return Effect.renameKey(dbo.targetKey, action.renamedKey).onlyIf(dbo.condition);
+      return Effect.renameKey(action.targetKey, action.renamedKey);
     }
+    // case "addEntity": {
+    //   let action = dbo.addEntity;
+    //   if (!action) {
+    //     throw Error("Invalid effect DBO");
+    //   }
+    //   return Effect.addEntity(action.entityId);
+    // }
+    // case "replaceEntity": {
+    //   let action = dbo.replaceEntity;
+    //   if (!action) {
+    //     throw Error("Invalid effect DBO");
+    //   }
+    //   return Effect.replaceEntity(action.targetEntityId, action.replacementEntityId);
+    // }
     default:
       throw Error("Invalid effect DBO");
   }

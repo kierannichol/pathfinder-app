@@ -5,18 +5,18 @@
   "description": {
   },
   "effects": [{
-    "targetKey": "race:dwarf",
     "setAction": {
+      "targetKey": "race:dwarf",
       "numberValue": 1
     }
   }, {
-    "targetKey": "size",
     "setAction": {
+      "targetKey": "size",
       "numberValue": 5
     }
   }, {
-    "targetKey": "speed:base",
     "setAction": {
+      "targetKey": "speed:base",
       "numberValue": 20
     }
   }],
@@ -25,18 +25,18 @@
     "sections": [{
       "condition": "@character_level\u003e\u003d0",
       "effects": [{
-        "targetKey": "con:race",
         "addAction": {
+          "targetKey": "con:race",
           "numberDelta": 2
         }
       }, {
-        "targetKey": "wis:race",
         "addAction": {
+          "targetKey": "wis:race",
           "numberDelta": 2
         }
       }, {
-        "targetKey": "cha:race",
         "addAction": {
+          "targetKey": "cha:race",
           "numberDelta": -2
         }
       }]

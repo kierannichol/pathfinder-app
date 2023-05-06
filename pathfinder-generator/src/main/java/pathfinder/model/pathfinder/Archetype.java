@@ -55,7 +55,7 @@ public record Archetype(Id id,
         String classLevelPrerequisite = "@%s==%d".formatted(classId, classLevel);
         return switch (featureId.string()) {
             case "ability:hex_magus#magus_hexcrafter" -> Stream.of(
-                    new SelectChoice(choicePrefix + "magus_hex", "Hex", "hex", classLevelPrerequisite, List.of("hex"), List.of()));
+                    new SelectChoice(choicePrefix + "magus_hex", "Hex", "hex", List.of("hex"), List.of()));
             default -> Stream.empty();
         };
     }

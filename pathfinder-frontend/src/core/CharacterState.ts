@@ -1,15 +1,18 @@
-import {DataContext, DataContextState, MutableDataContext} from "../logic/DataContext";
-import Resolvable from "../logic/Resolvable";
-import ResolvedValue from "../logic/ResolvedValue";
-import ResolvedValueWithId from "../logic/ResolvedValueWithId";
+import {DataContext, MutableDataContext, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
+import {DataContextState} from "@kierannichol/formula-js/dist/DataContext";
 
 export type CharacterState = DataContextState;
 
-export class CharacterStateMutator implements MutableDataContext {
+export class CharacterStateMutator extends DataContext implements MutableDataContext {
   public readonly state: CharacterState;
 
   constructor(state: CharacterState) {
-    this.state = { ...state };
+    super();
+    this.state = {...state};
+  }
+
+  resolve(key: string): ResolvedValue | undefined {
+    return this.get(key)?.resolve(this);
   }
 
   public set(key: string, value: string|number|boolean|Resolvable): this {
@@ -17,8 +20,8 @@ export class CharacterStateMutator implements MutableDataContext {
     return this;
   }
 
-  public get(key: string): ResolvedValue {
-    return DataContext.of(this.state).get(key) ?? ResolvedValue.none();
+  public get(key: string): Resolvable|undefined {
+    return DataContext.of(this.state).get(key);
   }
 
   public remove(key: string): this {
@@ -35,25 +38,6 @@ export class CharacterStateMutator implements MutableDataContext {
 
   public has(key: string): boolean {
     return key in this.state;
-  }
-
-  find(pattern: string): ResolvedValue[] {
-    const regex = new RegExp(this.escapeRegExp(pattern).replaceAll(/\\\*/g, ".*?"));
-    return this.keys()
-    .filter((key: string) => regex.test(key))
-    .map(key => {
-      const value = this.get(key);
-      if (value === undefined) {
-        return undefined;
-      }
-      return new ResolvedValueWithId(key, value);
-    })
-    .filter(value => value !== undefined)
-    .map(value => value as ResolvedValueWithId);
-  }
-
-  private escapeRegExp(expression: string) {
-    return expression.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   keys(): string[] {

@@ -1,7 +1,7 @@
+import {Resolvable} from "@kierannichol/formula-js";
 import React, {ReactNode, useMemo} from "react";
 import CharacterAtLevel from "../../../core/CharacterAtLevel";
 import Description from "../../../core/Description";
-import Resolvable from "../../../logic/Resolvable";
 import styles from "./EntityDescription.module.scss";
 import PrerequisiteList from "./PrerequisiteList";
 

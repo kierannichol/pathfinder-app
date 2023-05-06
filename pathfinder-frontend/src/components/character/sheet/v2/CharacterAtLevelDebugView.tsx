@@ -21,7 +21,7 @@ export default function CharacterAtLevelDebugView() {
           {keysAlphabetical.map(key =>
               <tr key={key}>
                 <td>{key}</td>
-                <td>{characterAtLevel.get(key)?.asText()}</td>
+                <td>{characterAtLevel.resolve(key)?.asText()}</td>
                 <td></td>
               </tr>)}
           </tbody>

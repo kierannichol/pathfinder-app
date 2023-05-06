@@ -1433,32 +1433,32 @@
     "name": "Gunslinger",
     "tags": ["favored_class", "base"]
   }, {
-    "id": "ability:bonus_feat#gunslinger",
-    "name": "Bonus Feat",
-    "tags": ["class_feature"]
-  }, {
     "id": "ability:nimble#gunslinger",
     "name": "Nimble",
-    "tags": ["class_feature"]
-  }, {
-    "id": "ability:deeds#gunslinger",
-    "name": "Deeds",
     "tags": ["class_feature"]
   }, {
     "id": "ability:gun_training#gunslinger",
     "name": "Gun Training",
     "tags": ["class_feature"]
   }, {
-    "id": "ability:grit#gunslinger",
-    "name": "Grit",
+    "id": "ability:bonus_feat#gunslinger",
+    "name": "Bonus Feat",
     "tags": ["class_feature"]
   }, {
     "id": "ability:gunsmith#gunslinger",
     "name": "Gunsmith",
     "tags": ["class_feature"]
   }, {
+    "id": "ability:deeds#gunslinger",
+    "name": "Deeds",
+    "tags": ["class_feature"]
+  }, {
     "id": "ability:true_grit#gunslinger",
     "name": "True Grit",
+    "tags": ["class_feature"]
+  }, {
+    "id": "ability:grit#gunslinger",
+    "name": "Grit",
     "tags": ["class_feature"]
   }, {
     "id": "feat:field_repair",
@@ -8802,341 +8802,429 @@
     "name": "Disposable Weapon",
     "tags": ["general", "feat"],
     "children": [{
-      "optionId": "wrist_launcher",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:wrist_launcher,!@feat:disposable_weapon#wrist_launcher)",
-      "name": "Wrist Launcher"
+      "optionId": "dwarven_urgrosh",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_urgrosh,!@feat:disposable_weapon#dwarven_urgrosh)",
+      "name": "Dwarven Urgrosh"
     }, {
-      "optionId": "war_razor",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:war_razor,!@feat:disposable_weapon#war_razor)",
-      "name": "War Razor"
+      "optionId": "battle_aspergillum",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:battle_aspergillum,!@feat:disposable_weapon#battle_aspergillum)",
+      "name": "Battle Aspergillum"
     }, {
-      "optionId": "dueling_sword",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dueling_sword,!@feat:disposable_weapon#dueling_sword)",
-      "name": "Dueling Sword"
+      "optionId": "stingchuck",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:stingchuck,!@feat:disposable_weapon#stingchuck)",
+      "name": "Stingchuck"
     }, {
-      "optionId": "trident",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:trident,!@feat:disposable_weapon#trident)",
-      "name": "Trident"
+      "optionId": "battle_poi",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:battle_poi,!@feat:disposable_weapon#battle_poi)",
+      "name": "Battle Poi"
     }, {
-      "optionId": "harpoon",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:harpoon,!@feat:disposable_weapon#harpoon)",
-      "name": "Harpoon"
+      "optionId": "tongi",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:tongi,!@feat:disposable_weapon#tongi)",
+      "name": "Tongi"
     }, {
-      "optionId": "sling",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sling,!@feat:disposable_weapon#sling)",
-      "name": "Sling"
+      "optionId": "planson",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:planson,!@feat:disposable_weapon#planson)",
+      "name": "Planson"
     }, {
-      "optionId": "axe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:axe,!@feat:disposable_weapon#axe)",
-      "name": "Axe"
-    }, {
-      "optionId": "ankus",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:ankus,!@feat:disposable_weapon#ankus)",
-      "name": "Ankus"
-    }, {
-      "optionId": "gandasa",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gandasa,!@feat:disposable_weapon#gandasa)",
-      "name": "Gandasa"
-    }, {
-      "optionId": "gnome_ripsaw_glaive",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_ripsaw_glaive,!@feat:disposable_weapon#gnome_ripsaw_glaive)",
-      "name": "Gnome Ripsaw Glaive"
+      "optionId": "elven_branched_spear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:elven_branched_spear,!@feat:disposable_weapon#elven_branched_spear)",
+      "name": "Elven Branched Spear"
     }, {
       "optionId": "dwarven_heavy_pelletbow",
       "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_heavy_pelletbow,!@feat:disposable_weapon#dwarven_heavy_pelletbow)",
       "name": "Dwarven Heavy Pelletbow"
     }, {
-      "optionId": "handwraps",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:handwraps,!@feat:disposable_weapon#handwraps)",
-      "name": "Handwraps"
-    }, {
-      "optionId": "flying_talon",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flying_talon,!@feat:disposable_weapon#flying_talon)",
-      "name": "Flying Talon"
-    }, {
-      "optionId": "launching_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:launching_crossbow,!@feat:disposable_weapon#launching_crossbow)",
-      "name": "Launching Crossbow"
-    }, {
-      "optionId": "kunai",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:kunai,!@feat:disposable_weapon#kunai)",
-      "name": "Kunai"
-    }, {
-      "optionId": "bill",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:bill,!@feat:disposable_weapon#bill)",
-      "name": "Bill"
-    }, {
-      "optionId": "sai",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sai,!@feat:disposable_weapon#sai)",
-      "name": "Sai"
-    }, {
-      "optionId": "scorpion_whip",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:scorpion_whip,!@feat:disposable_weapon#scorpion_whip)",
-      "name": "Scorpion Whip"
-    }, {
-      "optionId": "spear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:spear,!@feat:disposable_weapon#spear)",
-      "name": "Spear"
-    }, {
-      "optionId": "nunchaku",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:nunchaku,!@feat:disposable_weapon#nunchaku)",
-      "name": "Nunchaku"
-    }, {
-      "optionId": "stormshaft_javelin",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:stormshaft_javelin,!@feat:disposable_weapon#stormshaft_javelin)",
-      "name": "Stormshaft Javelin"
-    }, {
-      "optionId": "dwarven_maulaxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_maulaxe,!@feat:disposable_weapon#dwarven_maulaxe)",
-      "name": "Dwarven Maulaxe"
-    }, {
-      "optionId": "grappling_hook",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:grappling_hook,!@feat:disposable_weapon#grappling_hook)",
-      "name": "Grappling Hook"
-    }, {
-      "optionId": "stitched_sling",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:stitched_sling,!@feat:disposable_weapon#stitched_sling)",
-      "name": "Stitched Sling"
-    }, {
-      "optionId": "light_hammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:light_hammer,!@feat:disposable_weapon#light_hammer)",
-      "name": "Light Hammer"
-    }, {
-      "optionId": "falcata",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:falcata,!@feat:disposable_weapon#falcata)",
-      "name": "Falcata"
-    }, {
-      "optionId": "dagger",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dagger,!@feat:disposable_weapon#dagger)",
-      "name": "Dagger"
-    }, {
-      "optionId": "waveblade",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:waveblade,!@feat:disposable_weapon#waveblade)",
-      "name": "Waveblade"
-    }, {
-      "optionId": "mancatcher",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:mancatcher,!@feat:disposable_weapon#mancatcher)",
-      "name": "Mancatcher"
-    }, {
-      "optionId": "cutlass",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:cutlass,!@feat:disposable_weapon#cutlass)",
-      "name": "Cutlass"
-    }, {
-      "optionId": "swordbreaker_dagger",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:swordbreaker_dagger,!@feat:disposable_weapon#swordbreaker_dagger)",
-      "name": "Swordbreaker Dagger"
-    }, {
-      "optionId": "starknife",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:starknife,!@feat:disposable_weapon#starknife)",
-      "name": "Starknife"
-    }, {
-      "optionId": "sword_cane",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sword_cane,!@feat:disposable_weapon#sword_cane)",
-      "name": "Sword Cane"
-    }, {
-      "optionId": "dwarven_waraxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_waraxe,!@feat:disposable_weapon#dwarven_waraxe)",
-      "name": "Dwarven Waraxe"
-    }, {
-      "optionId": "hand_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:hand_crossbow,!@feat:disposable_weapon#hand_crossbow)",
-      "name": "Hand Crossbow"
-    }, {
-      "optionId": "heavy_mace",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_mace,!@feat:disposable_weapon#heavy_mace)",
-      "name": "Heavy Mace"
-    }, {
-      "optionId": "boomerang",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:boomerang,!@feat:disposable_weapon#boomerang)",
-      "name": "Boomerang"
-    }, {
-      "optionId": "elven_curve_blade",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:elven_curve_blade,!@feat:disposable_weapon#elven_curve_blade)",
-      "name": "Elven Curve Blade"
-    }, {
-      "optionId": "gnome_piston_maul",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_piston_maul,!@feat:disposable_weapon#gnome_piston_maul)",
-      "name": "Gnome Piston Maul"
-    }, {
-      "optionId": "handaxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:handaxe,!@feat:disposable_weapon#handaxe)",
-      "name": "Handaxe"
-    }, {
-      "optionId": "two_bladed_sword",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:two_bladed_sword,!@feat:disposable_weapon#two_bladed_sword)",
-      "name": "Two-bladed Sword"
-    }, {
-      "optionId": "dwarven_longhammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_longhammer,!@feat:disposable_weapon#dwarven_longhammer)",
-      "name": "Dwarven Longhammer"
-    }, {
-      "optionId": "brass_knuckles",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:brass_knuckles,!@feat:disposable_weapon#brass_knuckles)",
-      "name": "Brass Knuckles"
-    }, {
-      "optionId": "dwarven_giant_sticker",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_giant_sticker,!@feat:disposable_weapon#dwarven_giant_sticker)",
-      "name": "Dwarven Giant-Sticker"
-    }, {
-      "optionId": "throwing_axe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:throwing_axe,!@feat:disposable_weapon#throwing_axe)",
-      "name": "Throwing Axe"
-    }, {
-      "optionId": "light_pick",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:light_pick,!@feat:disposable_weapon#light_pick)",
-      "name": "Light Pick"
-    }, {
-      "optionId": "mere_club",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:mere_club,!@feat:disposable_weapon#mere_club)",
-      "name": "Mere Club"
-    }, {
-      "optionId": "syringe_spear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:syringe_spear,!@feat:disposable_weapon#syringe_spear)",
-      "name": "Syringe Spear"
-    }, {
-      "optionId": "spiked_chain",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:spiked_chain,!@feat:disposable_weapon#spiked_chain)",
-      "name": "Spiked Chain"
-    }, {
-      "optionId": "dwarven_sphinx_hammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_sphinx_hammer,!@feat:disposable_weapon#dwarven_sphinx_hammer)",
-      "name": "Dwarven Sphinx Hammer"
-    }, {
-      "optionId": "flindbar",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flindbar,!@feat:disposable_weapon#flindbar)",
-      "name": "Flindbar"
-    }, {
-      "optionId": "khopesh",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:khopesh,!@feat:disposable_weapon#khopesh)",
-      "name": "Khopesh"
-    }, {
-      "optionId": "dwarven_heavy_axe_gauntlet",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_heavy_axe_gauntlet,!@feat:disposable_weapon#dwarven_heavy_axe_gauntlet)",
-      "name": "Dwarven Heavy Axe-Gauntlet"
-    }, {
-      "optionId": "sling_glove",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sling_glove,!@feat:disposable_weapon#sling_glove)",
-      "name": "Sling Glove"
-    }, {
-      "optionId": "morningstar",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:morningstar,!@feat:disposable_weapon#morningstar)",
-      "name": "Morningstar"
-    }, {
-      "optionId": "throwing_shield",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:throwing_shield,!@feat:disposable_weapon#throwing_shield)",
-      "name": "Throwing Shield"
-    }, {
-      "optionId": "dwarven_double_waraxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_double_waraxe,!@feat:disposable_weapon#dwarven_double_waraxe)",
-      "name": "Dwarven Double Waraxe"
-    }, {
-      "optionId": "collapsible_kumade",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:collapsible_kumade,!@feat:disposable_weapon#collapsible_kumade)",
-      "name": "Collapsible Kumade"
-    }, {
-      "optionId": "orc_double_axe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:orc_double_axe,!@feat:disposable_weapon#orc_double_axe)",
-      "name": "Orc Double Axe"
-    }, {
-      "optionId": "gauntlet",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gauntlet,!@feat:disposable_weapon#gauntlet)",
-      "name": "Gauntlet"
-    }, {
-      "optionId": "heavy_flail",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_flail,!@feat:disposable_weapon#heavy_flail)",
-      "name": "Heavy Flail"
-    }, {
-      "optionId": "scythe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:scythe,!@feat:disposable_weapon#scythe)",
-      "name": "Scythe"
-    }, {
-      "optionId": "fauchard",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:fauchard,!@feat:disposable_weapon#fauchard)",
-      "name": "Fauchard"
-    }, {
-      "optionId": "dwarven_war_shield",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_war_shield,!@feat:disposable_weapon#dwarven_war_shield)",
-      "name": "Dwarven War-shield"
-    }, {
-      "optionId": "boarding_gaff",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:boarding_gaff,!@feat:disposable_weapon#boarding_gaff)",
-      "name": "Boarding Gaff"
-    }, {
-      "optionId": "dueling_dagger",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dueling_dagger,!@feat:disposable_weapon#dueling_dagger)",
-      "name": "Dueling Dagger"
-    }, {
-      "optionId": "gnome_pincher",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_pincher,!@feat:disposable_weapon#gnome_pincher)",
-      "name": "Gnome Pincher"
-    }, {
-      "optionId": "scimitar",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:scimitar,!@feat:disposable_weapon#scimitar)",
-      "name": "Scimitar"
-    }, {
-      "optionId": "terbutje",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:terbutje,!@feat:disposable_weapon#terbutje)",
-      "name": "Terbutje"
-    }, {
-      "optionId": "dwarven_dorn_dergar",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_dorn_dergar,!@feat:disposable_weapon#dwarven_dorn_dergar)",
-      "name": "Dwarven Dorn-Dergar"
-    }, {
-      "optionId": "ammentum",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:ammentum,!@feat:disposable_weapon#ammentum)",
-      "name": "Ammentum"
-    }, {
-      "optionId": "net",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:net,!@feat:disposable_weapon#net)",
-      "name": "Net"
-    }, {
-      "optionId": "light_mace",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:light_mace,!@feat:disposable_weapon#light_mace)",
-      "name": "Light Mace"
-    }, {
-      "optionId": "brutal_bola",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:brutal_bola,!@feat:disposable_weapon#brutal_bola)",
-      "name": "Brutal Bola"
-    }, {
-      "optionId": "sica",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sica,!@feat:disposable_weapon#sica)",
-      "name": "Sica"
-    }, {
       "optionId": "bardiche",
       "condition": "all(@bab\u003e\u003d1,@proficiency:bardiche,!@feat:disposable_weapon#bardiche)",
       "name": "Bardiche"
-    }, {
-      "optionId": "halfling_rope_shot",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:halfling_rope_shot,!@feat:disposable_weapon#halfling_rope_shot)",
-      "name": "Halfling Rope-shot"
-    }, {
-      "optionId": "thorn_bow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:thorn_bow,!@feat:disposable_weapon#thorn_bow)",
-      "name": "Thorn Bow"
     }, {
       "optionId": "light_spiked_shield",
       "condition": "all(@bab\u003e\u003d1,@proficiency:light_spiked_shield,!@feat:disposable_weapon#light_spiked_shield)",
       "name": "Light Spiked Shield"
     }, {
-      "optionId": "dwarven_urgrosh",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_urgrosh,!@feat:disposable_weapon#dwarven_urgrosh)",
-      "name": "Dwarven Urgrosh"
+      "optionId": "manople",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:manople,!@feat:disposable_weapon#manople)",
+      "name": "Manople"
     }, {
-      "optionId": "shortspear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:shortspear,!@feat:disposable_weapon#shortspear)",
-      "name": "Shortspear"
+      "optionId": "orc_hornbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:orc_hornbow,!@feat:disposable_weapon#orc_hornbow)",
+      "name": "Orc Hornbow"
     }, {
       "optionId": "split_blade_sword",
       "condition": "all(@bab\u003e\u003d1,@proficiency:split_blade_sword,!@feat:disposable_weapon#split_blade_sword)",
       "name": "Split-blade Sword"
     }, {
-      "optionId": "shrillshaft_javelin",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:shrillshaft_javelin,!@feat:disposable_weapon#shrillshaft_javelin)",
-      "name": "Shrillshaft Javelin"
+      "optionId": "flailpole",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flailpole,!@feat:disposable_weapon#flailpole)",
+      "name": "Flailpole"
+    }, {
+      "optionId": "dwarven_dorn_dergar",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_dorn_dergar,!@feat:disposable_weapon#dwarven_dorn_dergar)",
+      "name": "Dwarven Dorn-Dergar"
+    }, {
+      "optionId": "stitched_sling",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:stitched_sling,!@feat:disposable_weapon#stitched_sling)",
+      "name": "Stitched Sling"
+    }, {
+      "optionId": "boarding_gaff",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:boarding_gaff,!@feat:disposable_weapon#boarding_gaff)",
+      "name": "Boarding Gaff"
+    }, {
+      "optionId": "terbutje",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:terbutje,!@feat:disposable_weapon#terbutje)",
+      "name": "Terbutje"
+    }, {
+      "optionId": "lance",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:lance,!@feat:disposable_weapon#lance)",
+      "name": "Lance"
+    }, {
+      "optionId": "flindbar",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flindbar,!@feat:disposable_weapon#flindbar)",
+      "name": "Flindbar"
+    }, {
+      "optionId": "flying_blade",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flying_blade,!@feat:disposable_weapon#flying_blade)",
+      "name": "Flying Blade"
+    }, {
+      "optionId": "mere_club",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:mere_club,!@feat:disposable_weapon#mere_club)",
+      "name": "Mere Club"
+    }, {
+      "optionId": "stormshaft_javelin",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:stormshaft_javelin,!@feat:disposable_weapon#stormshaft_javelin)",
+      "name": "Stormshaft Javelin"
+    }, {
+      "optionId": "horsechopper",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:horsechopper,!@feat:disposable_weapon#horsechopper)",
+      "name": "Horsechopper"
+    }, {
+      "optionId": "knuckle_axe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:knuckle_axe,!@feat:disposable_weapon#knuckle_axe)",
+      "name": "Knuckle Axe"
+    }, {
+      "optionId": "dwarven_giant_sticker",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_giant_sticker,!@feat:disposable_weapon#dwarven_giant_sticker)",
+      "name": "Dwarven Giant-Sticker"
     }, {
       "optionId": "heavy_shield",
       "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_shield,!@feat:disposable_weapon#heavy_shield)",
       "name": "Heavy Shield"
+    }, {
+      "optionId": "orc_skull_ram",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:orc_skull_ram,!@feat:disposable_weapon#orc_skull_ram)",
+      "name": "Orc Skull Ram"
+    }, {
+      "optionId": "unarmed",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:unarmed,!@feat:disposable_weapon#unarmed)",
+      "name": "Unarmed"
+    }, {
+      "optionId": "guisarme",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:guisarme,!@feat:disposable_weapon#guisarme)",
+      "name": "Guisarme"
+    }, {
+      "optionId": "spiked_chain",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:spiked_chain,!@feat:disposable_weapon#spiked_chain)",
+      "name": "Spiked Chain"
+    }, {
+      "optionId": "blowgun",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:blowgun,!@feat:disposable_weapon#blowgun)",
+      "name": "Blowgun"
+    }, {
+      "optionId": "dwarven_sphinx_hammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_sphinx_hammer,!@feat:disposable_weapon#dwarven_sphinx_hammer)",
+      "name": "Dwarven Sphinx Hammer"
+    }, {
+      "optionId": "barbazu_beard",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:barbazu_beard,!@feat:disposable_weapon#barbazu_beard)",
+      "name": "Barbazu Beard"
+    }, {
+      "optionId": "fauchard",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:fauchard,!@feat:disposable_weapon#fauchard)",
+      "name": "Fauchard"
+    }, {
+      "optionId": "spear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:spear,!@feat:disposable_weapon#spear)",
+      "name": "Spear"
+    }, {
+      "optionId": "warhammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:warhammer,!@feat:disposable_weapon#warhammer)",
+      "name": "Warhammer"
+    }, {
+      "optionId": "totem_spear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:totem_spear,!@feat:disposable_weapon#totem_spear)",
+      "name": "Totem Spear"
+    }, {
+      "optionId": "two_bladed_sword",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:two_bladed_sword,!@feat:disposable_weapon#two_bladed_sword)",
+      "name": "Two-bladed Sword"
+    }, {
+      "optionId": "spiked_gauntlet",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:spiked_gauntlet,!@feat:disposable_weapon#spiked_gauntlet)",
+      "name": "Spiked Gauntlet"
+    }, {
+      "optionId": "cestus",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:cestus,!@feat:disposable_weapon#cestus)",
+      "name": "Cestus"
+    }, {
+      "optionId": "bayonet",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:bayonet,!@feat:disposable_weapon#bayonet)",
+      "name": "Bayonet"
+    }, {
+      "optionId": "net",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:net,!@feat:disposable_weapon#net)",
+      "name": "Net"
+    }, {
+      "optionId": "dwarven_waraxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_waraxe,!@feat:disposable_weapon#dwarven_waraxe)",
+      "name": "Dwarven Waraxe"
+    }, {
+      "optionId": "boomerang",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:boomerang,!@feat:disposable_weapon#boomerang)",
+      "name": "Boomerang"
+    }, {
+      "optionId": "longsword",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:longsword,!@feat:disposable_weapon#longsword)",
+      "name": "Longsword"
+    }, {
+      "optionId": "light_pick",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:light_pick,!@feat:disposable_weapon#light_pick)",
+      "name": "Light Pick"
+    }, {
+      "optionId": "elven_curve_blade",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:elven_curve_blade,!@feat:disposable_weapon#elven_curve_blade)",
+      "name": "Elven Curve Blade"
+    }, {
+      "optionId": "throwing_axe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:throwing_axe,!@feat:disposable_weapon#throwing_axe)",
+      "name": "Throwing Axe"
+    }, {
+      "optionId": "drow_razor",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:drow_razor,!@feat:disposable_weapon#drow_razor)",
+      "name": "Drow Razor"
+    }, {
+      "optionId": "butterfly_knife",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:butterfly_knife,!@feat:disposable_weapon#butterfly_knife)",
+      "name": "Butterfly Knife"
+    }, {
+      "optionId": "sling_glove",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sling_glove,!@feat:disposable_weapon#sling_glove)",
+      "name": "Sling Glove"
+    }, {
+      "optionId": "hand_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:hand_crossbow,!@feat:disposable_weapon#hand_crossbow)",
+      "name": "Hand Crossbow"
+    }, {
+      "optionId": "blade_boot",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:blade_boot,!@feat:disposable_weapon#blade_boot)",
+      "name": "Blade Boot"
+    }, {
+      "optionId": "spring_blade",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:spring_blade,!@feat:disposable_weapon#spring_blade)",
+      "name": "Spring Blade"
+    }, {
+      "optionId": "dagger",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dagger,!@feat:disposable_weapon#dagger)",
+      "name": "Dagger"
+    }, {
+      "optionId": "axe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:axe,!@feat:disposable_weapon#axe)",
+      "name": "Axe"
+    }, {
+      "optionId": "pickaxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:pickaxe,!@feat:disposable_weapon#pickaxe)",
+      "name": "Pickaxe"
+    }, {
+      "optionId": "club",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:club,!@feat:disposable_weapon#club)",
+      "name": "Club"
+    }, {
+      "optionId": "dwarven_maulaxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_maulaxe,!@feat:disposable_weapon#dwarven_maulaxe)",
+      "name": "Dwarven Maulaxe"
+    }, {
+      "optionId": "bastard_sword",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:bastard_sword,!@feat:disposable_weapon#bastard_sword)",
+      "name": "Bastard Sword"
+    }, {
+      "optionId": "dwarven_ram_hammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_ram_hammer,!@feat:disposable_weapon#dwarven_ram_hammer)",
+      "name": "Dwarven Ram Hammer"
+    }, {
+      "optionId": "bola",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:bola,!@feat:disposable_weapon#bola)",
+      "name": "Bola"
+    }, {
+      "optionId": "sai",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sai,!@feat:disposable_weapon#sai)",
+      "name": "Sai"
+    }, {
+      "optionId": "double_sling",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:double_sling,!@feat:disposable_weapon#double_sling)",
+      "name": "Double Sling"
+    }, {
+      "optionId": "deer_horn_knife",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:deer_horn_knife,!@feat:disposable_weapon#deer_horn_knife)",
+      "name": "Deer Horn Knife"
+    }, {
+      "optionId": "halberd",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:halberd,!@feat:disposable_weapon#halberd)",
+      "name": "Halberd"
+    }, {
+      "optionId": "khopesh",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:khopesh,!@feat:disposable_weapon#khopesh)",
+      "name": "Khopesh"
+    }, {
+      "optionId": "claw_blades",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:claw_blades,!@feat:disposable_weapon#claw_blades)",
+      "name": "Claw Blades"
+    }, {
+      "optionId": "flambard",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flambard,!@feat:disposable_weapon#flambard)",
+      "name": "Flambard"
+    }, {
+      "optionId": "estoc",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:estoc,!@feat:disposable_weapon#estoc)",
+      "name": "Estoc"
+    }, {
+      "optionId": "siangham",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:siangham,!@feat:disposable_weapon#siangham)",
+      "name": "Siangham"
+    }, {
+      "optionId": "heavy_wrist_launcher",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_wrist_launcher,!@feat:disposable_weapon#heavy_wrist_launcher)",
+      "name": "Heavy Wrist Launcher"
+    }, {
+      "optionId": "brass_knife",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:brass_knife,!@feat:disposable_weapon#brass_knife)",
+      "name": "Brass Knife"
+    }, {
+      "optionId": "bill",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:bill,!@feat:disposable_weapon#bill)",
+      "name": "Bill"
+    }, {
+      "optionId": "throwing_shield",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:throwing_shield,!@feat:disposable_weapon#throwing_shield)",
+      "name": "Throwing Shield"
+    }, {
+      "optionId": "sickle_sword",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sickle_sword,!@feat:disposable_weapon#sickle_sword)",
+      "name": "Sickle-sword"
+    }, {
+      "optionId": "broken_back_seax",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:broken_back_seax,!@feat:disposable_weapon#broken_back_seax)",
+      "name": "Broken-back Seax"
+    }, {
+      "optionId": "war_razor",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:war_razor,!@feat:disposable_weapon#war_razor)",
+      "name": "War Razor"
+    }, {
+      "optionId": "ammentum",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:ammentum,!@feat:disposable_weapon#ammentum)",
+      "name": "Ammentum"
+    }, {
+      "optionId": "thorn_bow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:thorn_bow,!@feat:disposable_weapon#thorn_bow)",
+      "name": "Thorn Bow"
+    }, {
+      "optionId": "shortspear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:shortspear,!@feat:disposable_weapon#shortspear)",
+      "name": "Shortspear"
+    }, {
+      "optionId": "aklys",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:aklys,!@feat:disposable_weapon#aklys)",
+      "name": "Aklys"
+    }, {
+      "optionId": "garrote",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:garrote,!@feat:disposable_weapon#garrote)",
+      "name": "Garrote"
+    }, {
+      "optionId": "falchion",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:falchion,!@feat:disposable_weapon#falchion)",
+      "name": "Falchion"
+    }, {
+      "optionId": "launching_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:launching_crossbow,!@feat:disposable_weapon#launching_crossbow)",
+      "name": "Launching Crossbow"
+    }, {
+      "optionId": "shrillshaft_javelin",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:shrillshaft_javelin,!@feat:disposable_weapon#shrillshaft_javelin)",
+      "name": "Shrillshaft Javelin"
+    }, {
+      "optionId": "jolting_dart",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:jolting_dart,!@feat:disposable_weapon#jolting_dart)",
+      "name": "Jolting Dart"
+    }, {
+      "optionId": "flickmace",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flickmace,!@feat:disposable_weapon#flickmace)",
+      "name": "Flickmace"
+    }, {
+      "optionId": "wooden_stake",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:wooden_stake,!@feat:disposable_weapon#wooden_stake)",
+      "name": "Wooden Stake"
+    }, {
+      "optionId": "short_sword",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:short_sword,!@feat:disposable_weapon#short_sword)",
+      "name": "Short Sword"
+    }, {
+      "optionId": "gladius",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gladius,!@feat:disposable_weapon#gladius)",
+      "name": "Gladius"
+    }, {
+      "optionId": "sap",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sap,!@feat:disposable_weapon#sap)",
+      "name": "Sap"
+    }, {
+      "optionId": "greatclub",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:greatclub,!@feat:disposable_weapon#greatclub)",
+      "name": "Greatclub"
+    }, {
+      "optionId": "grappling_hook",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:grappling_hook,!@feat:disposable_weapon#grappling_hook)",
+      "name": "Grappling Hook"
+    }, {
+      "optionId": "crank_light_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:crank_light_crossbow,!@feat:disposable_weapon#crank_light_crossbow)",
+      "name": "Crank (light) Crossbow"
+    }, {
+      "optionId": "javelin",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:javelin,!@feat:disposable_weapon#javelin)",
+      "name": "Javelin"
+    }, {
+      "optionId": "lasso",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:lasso,!@feat:disposable_weapon#lasso)",
+      "name": "Lasso"
+    }, {
+      "optionId": "ankus",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:ankus,!@feat:disposable_weapon#ankus)",
+      "name": "Ankus"
+    }, {
+      "optionId": "scizore",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:scizore,!@feat:disposable_weapon#scizore)",
+      "name": "Scizore"
+    }, {
+      "optionId": "whip",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:whip,!@feat:disposable_weapon#whip)",
+      "name": "Whip"
+    }, {
+      "optionId": "heavy_spiked_shield",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_spiked_shield,!@feat:disposable_weapon#heavy_spiked_shield)",
+      "name": "Heavy Spiked Shield"
+    }, {
+      "optionId": "dart",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dart,!@feat:disposable_weapon#dart)",
+      "name": "Dart"
+    }, {
+      "optionId": "light_mace",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:light_mace,!@feat:disposable_weapon#light_mace)",
+      "name": "Light Mace"
+    }, {
+      "optionId": "katar",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:katar,!@feat:disposable_weapon#katar)",
+      "name": "Katar"
+    }, {
+      "optionId": "sawtooth_sabre",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sawtooth_sabre,!@feat:disposable_weapon#sawtooth_sabre)",
+      "name": "Sawtooth Sabre"
     }, {
       "optionId": "kumade",
       "condition": "all(@bab\u003e\u003d1,@proficiency:kumade,!@feat:disposable_weapon#kumade)",
@@ -9146,509 +9234,421 @@
       "condition": "all(@bab\u003e\u003d1,@proficiency:hurlbat,!@feat:disposable_weapon#hurlbat)",
       "name": "Hurlbat"
     }, {
-      "optionId": "stonebow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:stonebow,!@feat:disposable_weapon#stonebow)",
-      "name": "Stonebow"
-    }, {
-      "optionId": "lasso",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:lasso,!@feat:disposable_weapon#lasso)",
-      "name": "Lasso"
-    }, {
-      "optionId": "rapier",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:rapier,!@feat:disposable_weapon#rapier)",
-      "name": "Rapier"
-    }, {
-      "optionId": "aklys",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:aklys,!@feat:disposable_weapon#aklys)",
-      "name": "Aklys"
-    }, {
-      "optionId": "double_sling",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:double_sling,!@feat:disposable_weapon#double_sling)",
-      "name": "Double Sling"
-    }, {
-      "optionId": "earth_breaker",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:earth_breaker,!@feat:disposable_weapon#earth_breaker)",
-      "name": "Earth Breaker"
-    }, {
-      "optionId": "planson",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:planson,!@feat:disposable_weapon#planson)",
-      "name": "Planson"
-    }, {
-      "optionId": "thorn_bracer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:thorn_bracer,!@feat:disposable_weapon#thorn_bracer)",
-      "name": "Thorn Bracer"
-    }, {
-      "optionId": "crank_light_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:crank_light_crossbow,!@feat:disposable_weapon#crank_light_crossbow)",
-      "name": "Crank (light) Crossbow"
-    }, {
-      "optionId": "jolting_dart",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:jolting_dart,!@feat:disposable_weapon#jolting_dart)",
-      "name": "Jolting Dart"
-    }, {
-      "optionId": "heavy_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_crossbow,!@feat:disposable_weapon#heavy_crossbow)",
-      "name": "Heavy Crossbow"
-    }, {
-      "optionId": "battle_aspergillum",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:battle_aspergillum,!@feat:disposable_weapon#battle_aspergillum)",
-      "name": "Battle Aspergillum"
-    }, {
-      "optionId": "spiked_armor",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:spiked_armor,!@feat:disposable_weapon#spiked_armor)",
-      "name": "Spiked Armor"
-    }, {
-      "optionId": "ogre_hook",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:ogre_hook,!@feat:disposable_weapon#ogre_hook)",
-      "name": "Ogre Hook"
-    }, {
-      "optionId": "gnome_battle_ladder",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_battle_ladder,!@feat:disposable_weapon#gnome_battle_ladder)",
-      "name": "Gnome Battle Ladder"
-    }, {
-      "optionId": "light_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:light_crossbow,!@feat:disposable_weapon#light_crossbow)",
-      "name": "Light Crossbow"
-    }, {
-      "optionId": "double_spear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:double_spear,!@feat:disposable_weapon#double_spear)",
-      "name": "Double Spear"
-    }, {
-      "optionId": "spring_blade",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:spring_blade,!@feat:disposable_weapon#spring_blade)",
-      "name": "Spring Blade"
-    }, {
-      "optionId": "bladed_scarf",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:bladed_scarf,!@feat:disposable_weapon#bladed_scarf)",
-      "name": "Bladed Scarf"
-    }, {
-      "optionId": "totem_spear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:totem_spear,!@feat:disposable_weapon#totem_spear)",
-      "name": "Totem Spear"
-    }, {
-      "optionId": "crank_heavy_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:crank_heavy_crossbow,!@feat:disposable_weapon#crank_heavy_crossbow)",
-      "name": "Crank (heavy) Crossbow"
-    }, {
-      "optionId": "estoc",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:estoc,!@feat:disposable_weapon#estoc)",
-      "name": "Estoc"
-    }, {
-      "optionId": "dogslicer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dogslicer,!@feat:disposable_weapon#dogslicer)",
-      "name": "Dogslicer"
-    }, {
-      "optionId": "club",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:club,!@feat:disposable_weapon#club)",
-      "name": "Club"
-    }, {
-      "optionId": "battleaxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:battleaxe,!@feat:disposable_weapon#battleaxe)",
-      "name": "Battleaxe"
-    }, {
-      "optionId": "butchering_axe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:butchering_axe,!@feat:disposable_weapon#butchering_axe)",
-      "name": "Butchering Axe"
-    }, {
-      "optionId": "greataxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:greataxe,!@feat:disposable_weapon#greataxe)",
-      "name": "Greataxe"
-    }, {
-      "optionId": "pickaxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:pickaxe,!@feat:disposable_weapon#pickaxe)",
-      "name": "Pickaxe"
-    }, {
-      "optionId": "rhoka",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:rhoka,!@feat:disposable_weapon#rhoka)",
-      "name": "Rhoka"
-    }, {
-      "optionId": "drow_razor",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:drow_razor,!@feat:disposable_weapon#drow_razor)",
-      "name": "Drow Razor"
-    }, {
-      "optionId": "quarterstaff",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:quarterstaff,!@feat:disposable_weapon#quarterstaff)",
-      "name": "Quarterstaff"
-    }, {
-      "optionId": "quadrens",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:quadrens,!@feat:disposable_weapon#quadrens)",
-      "name": "Quadrens"
+      "optionId": "light_flail",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:light_flail,!@feat:disposable_weapon#light_flail)",
+      "name": "Light Flail"
     }, {
       "optionId": "greatsword",
       "condition": "all(@bab\u003e\u003d1,@proficiency:greatsword,!@feat:disposable_weapon#greatsword)",
       "name": "Greatsword"
     }, {
-      "optionId": "blowgun",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:blowgun,!@feat:disposable_weapon#blowgun)",
-      "name": "Blowgun"
-    }, {
-      "optionId": "katar",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:katar,!@feat:disposable_weapon#katar)",
-      "name": "Katar"
-    }, {
-      "optionId": "bayonet",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:bayonet,!@feat:disposable_weapon#bayonet)",
-      "name": "Bayonet"
-    }, {
-      "optionId": "greatclub",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:greatclub,!@feat:disposable_weapon#greatclub)",
-      "name": "Greatclub"
-    }, {
-      "optionId": "stingchuck",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:stingchuck,!@feat:disposable_weapon#stingchuck)",
-      "name": "Stingchuck"
-    }, {
-      "optionId": "bastard_sword",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:bastard_sword,!@feat:disposable_weapon#bastard_sword)",
-      "name": "Bastard Sword"
-    }, {
-      "optionId": "rope_gauntlet",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:rope_gauntlet,!@feat:disposable_weapon#rope_gauntlet)",
-      "name": "Rope Gauntlet"
-    }, {
-      "optionId": "butterfly_knife",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:butterfly_knife,!@feat:disposable_weapon#butterfly_knife)",
-      "name": "Butterfly Knife"
-    }, {
-      "optionId": "dwarven_light_pelletbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_light_pelletbow,!@feat:disposable_weapon#dwarven_light_pelletbow)",
-      "name": "Dwarven Light Pelletbow"
-    }, {
-      "optionId": "chain_hammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:chain_hammer,!@feat:disposable_weapon#chain_hammer)",
-      "name": "Chain-hammer"
-    }, {
-      "optionId": "dwarven_longaxe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_longaxe,!@feat:disposable_weapon#dwarven_longaxe)",
-      "name": "Dwarven Longaxe"
-    }, {
-      "optionId": "warhammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:warhammer,!@feat:disposable_weapon#warhammer)",
-      "name": "Warhammer"
-    }, {
-      "optionId": "flask_thrower",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flask_thrower,!@feat:disposable_weapon#flask_thrower)",
-      "name": "Flask Thrower"
-    }, {
-      "optionId": "heavy_wrist_launcher",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_wrist_launcher,!@feat:disposable_weapon#heavy_wrist_launcher)",
-      "name": "Heavy Wrist Launcher"
-    }, {
-      "optionId": "guisarme",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:guisarme,!@feat:disposable_weapon#guisarme)",
-      "name": "Guisarme"
-    }, {
-      "optionId": "snag_net",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:snag_net,!@feat:disposable_weapon#snag_net)",
-      "name": "Snag Net"
-    }, {
-      "optionId": "sap",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sap,!@feat:disposable_weapon#sap)",
-      "name": "Sap"
-    }, {
-      "optionId": "light_shield",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:light_shield,!@feat:disposable_weapon#light_shield)",
-      "name": "Light Shield"
-    }, {
-      "optionId": "flambard",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flambard,!@feat:disposable_weapon#flambard)",
-      "name": "Flambard"
-    }, {
-      "optionId": "punching_dagger",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:punching_dagger,!@feat:disposable_weapon#punching_dagger)",
-      "name": "Punching Dagger"
-    }, {
-      "optionId": "elven_branched_spear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:elven_branched_spear,!@feat:disposable_weapon#elven_branched_spear)",
-      "name": "Elven Branched Spear"
-    }, {
       "optionId": "glaive",
       "condition": "all(@bab\u003e\u003d1,@proficiency:glaive,!@feat:disposable_weapon#glaive)",
       "name": "Glaive"
-    }, {
-      "optionId": "traveling_kettle",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:traveling_kettle,!@feat:disposable_weapon#traveling_kettle)",
-      "name": "Traveling Kettle"
-    }, {
-      "optionId": "wooden_stake",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:wooden_stake,!@feat:disposable_weapon#wooden_stake)",
-      "name": "Wooden Stake"
-    }, {
-      "optionId": "brass_knife",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:brass_knife,!@feat:disposable_weapon#brass_knife)",
-      "name": "Brass Knife"
-    }, {
-      "optionId": "blade_boot",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:blade_boot,!@feat:disposable_weapon#blade_boot)",
-      "name": "Blade Boot"
-    }, {
-      "optionId": "ranseur",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:ranseur,!@feat:disposable_weapon#ranseur)",
-      "name": "Ranseur"
-    }, {
-      "optionId": "longbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:longbow,!@feat:disposable_weapon#longbow)",
-      "name": "Longbow"
-    }, {
-      "optionId": "longsword",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:longsword,!@feat:disposable_weapon#longsword)",
-      "name": "Longsword"
-    }, {
-      "optionId": "horsechopper",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:horsechopper,!@feat:disposable_weapon#horsechopper)",
-      "name": "Horsechopper"
-    }, {
-      "optionId": "bola",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:bola,!@feat:disposable_weapon#bola)",
-      "name": "Bola"
-    }, {
-      "optionId": "flying_blade",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flying_blade,!@feat:disposable_weapon#flying_blade)",
-      "name": "Flying Blade"
-    }, {
-      "optionId": "longspear",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:longspear,!@feat:disposable_weapon#longspear)",
-      "name": "Longspear"
-    }, {
-      "optionId": "sickle_sword",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sickle_sword,!@feat:disposable_weapon#sickle_sword)",
-      "name": "Sickle-sword"
-    }, {
-      "optionId": "hooked_axe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:hooked_axe,!@feat:disposable_weapon#hooked_axe)",
-      "name": "Hooked Axe"
-    }, {
-      "optionId": "battle_poi",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:battle_poi,!@feat:disposable_weapon#battle_poi)",
-      "name": "Battle Poi"
-    }, {
-      "optionId": "spiral_rapier",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:spiral_rapier,!@feat:disposable_weapon#spiral_rapier)",
-      "name": "Spiral Rapier"
-    }, {
-      "optionId": "sickle",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sickle,!@feat:disposable_weapon#sickle)",
-      "name": "Sickle"
-    }, {
-      "optionId": "siangham",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:siangham,!@feat:disposable_weapon#siangham)",
-      "name": "Siangham"
-    }, {
-      "optionId": "klar",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:klar,!@feat:disposable_weapon#klar)",
-      "name": "Klar"
-    }, {
-      "optionId": "flailpole",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flailpole,!@feat:disposable_weapon#flailpole)",
-      "name": "Flailpole"
-    }, {
-      "optionId": "sawtooth_sabre",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:sawtooth_sabre,!@feat:disposable_weapon#sawtooth_sabre)",
-      "name": "Sawtooth Sabre"
-    }, {
-      "optionId": "lance",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:lance,!@feat:disposable_weapon#lance)",
-      "name": "Lance"
-    }, {
-      "optionId": "heavy_pick",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_pick,!@feat:disposable_weapon#heavy_pick)",
-      "name": "Heavy Pick"
-    }, {
-      "optionId": "kukri",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:kukri,!@feat:disposable_weapon#kukri)",
-      "name": "Kukri"
-    }, {
-      "optionId": "dwarven_boulder_helmet",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_boulder_helmet,!@feat:disposable_weapon#dwarven_boulder_helmet)",
-      "name": "Dwarven Boulder Helmet"
-    }, {
-      "optionId": "hook_hand",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:hook_hand,!@feat:disposable_weapon#hook_hand)",
-      "name": "Hook Hand"
-    }, {
-      "optionId": "heavy_spiked_shield",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_spiked_shield,!@feat:disposable_weapon#heavy_spiked_shield)",
-      "name": "Heavy Spiked Shield"
-    }, {
-      "optionId": "shotel",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:shotel,!@feat:disposable_weapon#shotel)",
-      "name": "Shotel"
-    }, {
-      "optionId": "shuriken_5",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:shuriken_5,!@feat:disposable_weapon#shuriken_5)",
-      "name": "Shuriken (5)"
-    }, {
-      "optionId": "garrote",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:garrote,!@feat:disposable_weapon#garrote)",
-      "name": "Garrote"
-    }, {
-      "optionId": "orc_skull_ram",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:orc_skull_ram,!@feat:disposable_weapon#orc_skull_ram)",
-      "name": "Orc Skull Ram"
-    }, {
-      "optionId": "hunga_munga",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:hunga_munga,!@feat:disposable_weapon#hunga_munga)",
-      "name": "Hunga Munga"
-    }, {
-      "optionId": "combat_scabbard",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:combat_scabbard,!@feat:disposable_weapon#combat_scabbard)",
-      "name": "Combat Scabbard"
-    }, {
-      "optionId": "lantern_staff",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:lantern_staff,!@feat:disposable_weapon#lantern_staff)",
-      "name": "Lantern Staff"
-    }, {
-      "optionId": "double_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:double_crossbow,!@feat:disposable_weapon#double_crossbow)",
-      "name": "Double Crossbow"
-    }, {
-      "optionId": "short_sword",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:short_sword,!@feat:disposable_weapon#short_sword)",
-      "name": "Short Sword"
-    }, {
-      "optionId": "knuckle_axe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:knuckle_axe,!@feat:disposable_weapon#knuckle_axe)",
-      "name": "Knuckle Axe"
-    }, {
-      "optionId": "cestus",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:cestus,!@feat:disposable_weapon#cestus)",
-      "name": "Cestus"
-    }, {
-      "optionId": "pilum",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:pilum,!@feat:disposable_weapon#pilum)",
-      "name": "Pilum"
-    }, {
-      "optionId": "spiked_gauntlet",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:spiked_gauntlet,!@feat:disposable_weapon#spiked_gauntlet)",
-      "name": "Spiked Gauntlet"
-    }, {
-      "optionId": "kama",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:kama,!@feat:disposable_weapon#kama)",
-      "name": "Kama"
-    }, {
-      "optionId": "halfling_sling_staff",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:halfling_sling_staff,!@feat:disposable_weapon#halfling_sling_staff)",
-      "name": "Halfling Sling Staff"
-    }, {
-      "optionId": "manople",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:manople,!@feat:disposable_weapon#manople)",
-      "name": "Manople"
-    }, {
-      "optionId": "gnome_hooked_hammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_hooked_hammer,!@feat:disposable_weapon#gnome_hooked_hammer)",
-      "name": "Gnome Hooked Hammer"
-    }, {
-      "optionId": "chakram",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:chakram,!@feat:disposable_weapon#chakram)",
-      "name": "Chakram"
-    }, {
-      "optionId": "repeating_light_crossbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:repeating_light_crossbow,!@feat:disposable_weapon#repeating_light_crossbow)",
-      "name": "Repeating Light Crossbow"
-    }, {
-      "optionId": "shortbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:shortbow,!@feat:disposable_weapon#shortbow)",
-      "name": "Shortbow"
-    }, {
-      "optionId": "crook",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:crook,!@feat:disposable_weapon#crook)",
-      "name": "Crook"
-    }, {
-      "optionId": "falchion",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:falchion,!@feat:disposable_weapon#falchion)",
-      "name": "Falchion"
-    }, {
-      "optionId": "deer_horn_knife",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:deer_horn_knife,!@feat:disposable_weapon#deer_horn_knife)",
-      "name": "Deer Horn Knife"
-    }, {
-      "optionId": "javelin",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:javelin,!@feat:disposable_weapon#javelin)",
-      "name": "Javelin"
-    }, {
-      "optionId": "orc_hornbow",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:orc_hornbow,!@feat:disposable_weapon#orc_hornbow)",
-      "name": "Orc Hornbow"
-    }, {
-      "optionId": "boarding_pike",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:boarding_pike,!@feat:disposable_weapon#boarding_pike)",
-      "name": "Boarding Pike"
-    }, {
-      "optionId": "unarmed",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:unarmed,!@feat:disposable_weapon#unarmed)",
-      "name": "Unarmed"
-    }, {
-      "optionId": "halberd",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:halberd,!@feat:disposable_weapon#halberd)",
-      "name": "Halberd"
-    }, {
-      "optionId": "claw_blades",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:claw_blades,!@feat:disposable_weapon#claw_blades)",
-      "name": "Claw Blades"
-    }, {
-      "optionId": "whip",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:whip,!@feat:disposable_weapon#whip)",
-      "name": "Whip"
-    }, {
-      "optionId": "dwarven_ram_hammer",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_ram_hammer,!@feat:disposable_weapon#dwarven_ram_hammer)",
-      "name": "Dwarven Ram Hammer"
-    }, {
-      "optionId": "dart",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dart,!@feat:disposable_weapon#dart)",
-      "name": "Dart"
-    }, {
-      "optionId": "machete",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:machete,!@feat:disposable_weapon#machete)",
-      "name": "Machete"
-    }, {
-      "optionId": "switchscythe",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:switchscythe,!@feat:disposable_weapon#switchscythe)",
-      "name": "Switchscythe"
-    }, {
-      "optionId": "tongi",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:tongi,!@feat:disposable_weapon#tongi)",
-      "name": "Tongi"
-    }, {
-      "optionId": "barbazu_beard",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:barbazu_beard,!@feat:disposable_weapon#barbazu_beard)",
-      "name": "Barbazu Beard"
-    }, {
-      "optionId": "light_flail",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:light_flail,!@feat:disposable_weapon#light_flail)",
-      "name": "Light Flail"
     }, {
       "optionId": "knobkerrie",
       "condition": "all(@bab\u003e\u003d1,@proficiency:knobkerrie,!@feat:disposable_weapon#knobkerrie)",
       "name": "Knobkerrie"
     }, {
-      "optionId": "dire_flail",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:dire_flail,!@feat:disposable_weapon#dire_flail)",
-      "name": "Dire Flail"
+      "optionId": "sica",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sica,!@feat:disposable_weapon#sica)",
+      "name": "Sica"
     }, {
-      "optionId": "broken_back_seax",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:broken_back_seax,!@feat:disposable_weapon#broken_back_seax)",
-      "name": "Broken-back Seax"
+      "optionId": "scimitar",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:scimitar,!@feat:disposable_weapon#scimitar)",
+      "name": "Scimitar"
+    }, {
+      "optionId": "gnome_hooked_hammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_hooked_hammer,!@feat:disposable_weapon#gnome_hooked_hammer)",
+      "name": "Gnome Hooked Hammer"
+    }, {
+      "optionId": "switchscythe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:switchscythe,!@feat:disposable_weapon#switchscythe)",
+      "name": "Switchscythe"
+    }, {
+      "optionId": "hook_hand",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:hook_hand,!@feat:disposable_weapon#hook_hand)",
+      "name": "Hook Hand"
+    }, {
+      "optionId": "morningstar",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:morningstar,!@feat:disposable_weapon#morningstar)",
+      "name": "Morningstar"
+    }, {
+      "optionId": "kukri",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:kukri,!@feat:disposable_weapon#kukri)",
+      "name": "Kukri"
+    }, {
+      "optionId": "gnome_piston_maul",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_piston_maul,!@feat:disposable_weapon#gnome_piston_maul)",
+      "name": "Gnome Piston Maul"
+    }, {
+      "optionId": "gauntlet",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gauntlet,!@feat:disposable_weapon#gauntlet)",
+      "name": "Gauntlet"
+    }, {
+      "optionId": "brass_knuckles",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:brass_knuckles,!@feat:disposable_weapon#brass_knuckles)",
+      "name": "Brass Knuckles"
+    }, {
+      "optionId": "dwarven_light_pelletbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_light_pelletbow,!@feat:disposable_weapon#dwarven_light_pelletbow)",
+      "name": "Dwarven Light Pelletbow"
+    }, {
+      "optionId": "dueling_dagger",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dueling_dagger,!@feat:disposable_weapon#dueling_dagger)",
+      "name": "Dueling Dagger"
+    }, {
+      "optionId": "gnome_pincher",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_pincher,!@feat:disposable_weapon#gnome_pincher)",
+      "name": "Gnome Pincher"
+    }, {
+      "optionId": "flask_thrower",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flask_thrower,!@feat:disposable_weapon#flask_thrower)",
+      "name": "Flask Thrower"
+    }, {
+      "optionId": "dwarven_double_waraxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_double_waraxe,!@feat:disposable_weapon#dwarven_double_waraxe)",
+      "name": "Dwarven Double Waraxe"
+    }, {
+      "optionId": "sickle",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sickle,!@feat:disposable_weapon#sickle)",
+      "name": "Sickle"
+    }, {
+      "optionId": "combat_scabbard",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:combat_scabbard,!@feat:disposable_weapon#combat_scabbard)",
+      "name": "Combat Scabbard"
+    }, {
+      "optionId": "heavy_pick",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_pick,!@feat:disposable_weapon#heavy_pick)",
+      "name": "Heavy Pick"
+    }, {
+      "optionId": "crook",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:crook,!@feat:disposable_weapon#crook)",
+      "name": "Crook"
+    }, {
+      "optionId": "punching_dagger",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:punching_dagger,!@feat:disposable_weapon#punching_dagger)",
+      "name": "Punching Dagger"
+    }, {
+      "optionId": "hooked_axe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:hooked_axe,!@feat:disposable_weapon#hooked_axe)",
+      "name": "Hooked Axe"
+    }, {
+      "optionId": "gnome_battle_ladder",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_battle_ladder,!@feat:disposable_weapon#gnome_battle_ladder)",
+      "name": "Gnome Battle Ladder"
     }, {
       "optionId": "sanpkhang",
       "condition": "all(@bab\u003e\u003d1,@proficiency:sanpkhang,!@feat:disposable_weapon#sanpkhang)",
       "name": "Sanpkhang"
     }, {
-      "optionId": "flickmace",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:flickmace,!@feat:disposable_weapon#flickmace)",
-      "name": "Flickmace"
+      "optionId": "machete",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:machete,!@feat:disposable_weapon#machete)",
+      "name": "Machete"
+    }, {
+      "optionId": "dire_flail",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dire_flail,!@feat:disposable_weapon#dire_flail)",
+      "name": "Dire Flail"
+    }, {
+      "optionId": "syringe_spear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:syringe_spear,!@feat:disposable_weapon#syringe_spear)",
+      "name": "Syringe Spear"
+    }, {
+      "optionId": "snag_net",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:snag_net,!@feat:disposable_weapon#snag_net)",
+      "name": "Snag Net"
+    }, {
+      "optionId": "dwarven_boulder_helmet",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_boulder_helmet,!@feat:disposable_weapon#dwarven_boulder_helmet)",
+      "name": "Dwarven Boulder Helmet"
+    }, {
+      "optionId": "brutal_bola",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:brutal_bola,!@feat:disposable_weapon#brutal_bola)",
+      "name": "Brutal Bola"
+    }, {
+      "optionId": "nunchaku",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:nunchaku,!@feat:disposable_weapon#nunchaku)",
+      "name": "Nunchaku"
+    }, {
+      "optionId": "klar",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:klar,!@feat:disposable_weapon#klar)",
+      "name": "Klar"
+    }, {
+      "optionId": "handwraps",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:handwraps,!@feat:disposable_weapon#handwraps)",
+      "name": "Handwraps"
+    }, {
+      "optionId": "shotel",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:shotel,!@feat:disposable_weapon#shotel)",
+      "name": "Shotel"
+    }, {
+      "optionId": "waveblade",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:waveblade,!@feat:disposable_weapon#waveblade)",
+      "name": "Waveblade"
+    }, {
+      "optionId": "scythe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:scythe,!@feat:disposable_weapon#scythe)",
+      "name": "Scythe"
+    }, {
+      "optionId": "halfling_rope_shot",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:halfling_rope_shot,!@feat:disposable_weapon#halfling_rope_shot)",
+      "name": "Halfling Rope-shot"
+    }, {
+      "optionId": "dogslicer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dogslicer,!@feat:disposable_weapon#dogslicer)",
+      "name": "Dogslicer"
+    }, {
+      "optionId": "kama",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:kama,!@feat:disposable_weapon#kama)",
+      "name": "Kama"
+    }, {
+      "optionId": "traveling_kettle",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:traveling_kettle,!@feat:disposable_weapon#traveling_kettle)",
+      "name": "Traveling Kettle"
+    }, {
+      "optionId": "light_shield",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:light_shield,!@feat:disposable_weapon#light_shield)",
+      "name": "Light Shield"
+    }, {
+      "optionId": "ranseur",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:ranseur,!@feat:disposable_weapon#ranseur)",
+      "name": "Ranseur"
+    }, {
+      "optionId": "handaxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:handaxe,!@feat:disposable_weapon#handaxe)",
+      "name": "Handaxe"
+    }, {
+      "optionId": "collapsible_kumade",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:collapsible_kumade,!@feat:disposable_weapon#collapsible_kumade)",
+      "name": "Collapsible Kumade"
+    }, {
+      "optionId": "greataxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:greataxe,!@feat:disposable_weapon#greataxe)",
+      "name": "Greataxe"
+    }, {
+      "optionId": "swordbreaker_dagger",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:swordbreaker_dagger,!@feat:disposable_weapon#swordbreaker_dagger)",
+      "name": "Swordbreaker Dagger"
+    }, {
+      "optionId": "battleaxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:battleaxe,!@feat:disposable_weapon#battleaxe)",
+      "name": "Battleaxe"
+    }, {
+      "optionId": "rope_gauntlet",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:rope_gauntlet,!@feat:disposable_weapon#rope_gauntlet)",
+      "name": "Rope Gauntlet"
+    }, {
+      "optionId": "longbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:longbow,!@feat:disposable_weapon#longbow)",
+      "name": "Longbow"
+    }, {
+      "optionId": "pilum",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:pilum,!@feat:disposable_weapon#pilum)",
+      "name": "Pilum"
+    }, {
+      "optionId": "chain_hammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:chain_hammer,!@feat:disposable_weapon#chain_hammer)",
+      "name": "Chain-hammer"
+    }, {
+      "optionId": "scorpion_whip",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:scorpion_whip,!@feat:disposable_weapon#scorpion_whip)",
+      "name": "Scorpion Whip"
+    }, {
+      "optionId": "starknife",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:starknife,!@feat:disposable_weapon#starknife)",
+      "name": "Starknife"
+    }, {
+      "optionId": "mancatcher",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:mancatcher,!@feat:disposable_weapon#mancatcher)",
+      "name": "Mancatcher"
+    }, {
+      "optionId": "cutlass",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:cutlass,!@feat:disposable_weapon#cutlass)",
+      "name": "Cutlass"
+    }, {
+      "optionId": "flying_talon",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:flying_talon,!@feat:disposable_weapon#flying_talon)",
+      "name": "Flying Talon"
+    }, {
+      "optionId": "falcata",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:falcata,!@feat:disposable_weapon#falcata)",
+      "name": "Falcata"
+    }, {
+      "optionId": "sword_cane",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sword_cane,!@feat:disposable_weapon#sword_cane)",
+      "name": "Sword Cane"
+    }, {
+      "optionId": "rapier",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:rapier,!@feat:disposable_weapon#rapier)",
+      "name": "Rapier"
+    }, {
+      "optionId": "halfling_sling_staff",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:halfling_sling_staff,!@feat:disposable_weapon#halfling_sling_staff)",
+      "name": "Halfling Sling Staff"
+    }, {
+      "optionId": "dwarven_heavy_axe_gauntlet",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_heavy_axe_gauntlet,!@feat:disposable_weapon#dwarven_heavy_axe_gauntlet)",
+      "name": "Dwarven Heavy Axe-Gauntlet"
+    }, {
+      "optionId": "trident",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:trident,!@feat:disposable_weapon#trident)",
+      "name": "Trident"
+    }, {
+      "optionId": "butchering_axe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:butchering_axe,!@feat:disposable_weapon#butchering_axe)",
+      "name": "Butchering Axe"
+    }, {
+      "optionId": "spiked_armor",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:spiked_armor,!@feat:disposable_weapon#spiked_armor)",
+      "name": "Spiked Armor"
+    }, {
+      "optionId": "kunai",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:kunai,!@feat:disposable_weapon#kunai)",
+      "name": "Kunai"
+    }, {
+      "optionId": "harpoon",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:harpoon,!@feat:disposable_weapon#harpoon)",
+      "name": "Harpoon"
+    }, {
+      "optionId": "quadrens",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:quadrens,!@feat:disposable_weapon#quadrens)",
+      "name": "Quadrens"
+    }, {
+      "optionId": "heavy_mace",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_mace,!@feat:disposable_weapon#heavy_mace)",
+      "name": "Heavy Mace"
+    }, {
+      "optionId": "gandasa",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gandasa,!@feat:disposable_weapon#gandasa)",
+      "name": "Gandasa"
+    }, {
+      "optionId": "longspear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:longspear,!@feat:disposable_weapon#longspear)",
+      "name": "Longspear"
+    }, {
+      "optionId": "spiral_rapier",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:spiral_rapier,!@feat:disposable_weapon#spiral_rapier)",
+      "name": "Spiral Rapier"
+    }, {
+      "optionId": "double_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:double_crossbow,!@feat:disposable_weapon#double_crossbow)",
+      "name": "Double Crossbow"
+    }, {
+      "optionId": "heavy_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_crossbow,!@feat:disposable_weapon#heavy_crossbow)",
+      "name": "Heavy Crossbow"
+    }, {
+      "optionId": "thorn_bracer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:thorn_bracer,!@feat:disposable_weapon#thorn_bracer)",
+      "name": "Thorn Bracer"
+    }, {
+      "optionId": "dwarven_longhammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_longhammer,!@feat:disposable_weapon#dwarven_longhammer)",
+      "name": "Dwarven Longhammer"
+    }, {
+      "optionId": "gnome_ripsaw_glaive",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:gnome_ripsaw_glaive,!@feat:disposable_weapon#gnome_ripsaw_glaive)",
+      "name": "Gnome Ripsaw Glaive"
+    }, {
+      "optionId": "double_spear",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:double_spear,!@feat:disposable_weapon#double_spear)",
+      "name": "Double Spear"
+    }, {
+      "optionId": "rhoka",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:rhoka,!@feat:disposable_weapon#rhoka)",
+      "name": "Rhoka"
+    }, {
+      "optionId": "repeating_light_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:repeating_light_crossbow,!@feat:disposable_weapon#repeating_light_crossbow)",
+      "name": "Repeating Light Crossbow"
+    }, {
+      "optionId": "dwarven_war_shield",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_war_shield,!@feat:disposable_weapon#dwarven_war_shield)",
+      "name": "Dwarven War-shield"
+    }, {
+      "optionId": "shuriken_5",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:shuriken_5,!@feat:disposable_weapon#shuriken_5)",
+      "name": "Shuriken (5)"
+    }, {
+      "optionId": "ogre_hook",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:ogre_hook,!@feat:disposable_weapon#ogre_hook)",
+      "name": "Ogre Hook"
+    }, {
+      "optionId": "chakram",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:chakram,!@feat:disposable_weapon#chakram)",
+      "name": "Chakram"
+    }, {
+      "optionId": "dueling_sword",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dueling_sword,!@feat:disposable_weapon#dueling_sword)",
+      "name": "Dueling Sword"
+    }, {
+      "optionId": "boarding_pike",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:boarding_pike,!@feat:disposable_weapon#boarding_pike)",
+      "name": "Boarding Pike"
+    }, {
+      "optionId": "bladed_scarf",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:bladed_scarf,!@feat:disposable_weapon#bladed_scarf)",
+      "name": "Bladed Scarf"
+    }, {
+      "optionId": "stonebow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:stonebow,!@feat:disposable_weapon#stonebow)",
+      "name": "Stonebow"
+    }, {
+      "optionId": "lantern_staff",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:lantern_staff,!@feat:disposable_weapon#lantern_staff)",
+      "name": "Lantern Staff"
+    }, {
+      "optionId": "light_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:light_crossbow,!@feat:disposable_weapon#light_crossbow)",
+      "name": "Light Crossbow"
+    }, {
+      "optionId": "shortbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:shortbow,!@feat:disposable_weapon#shortbow)",
+      "name": "Shortbow"
+    }, {
+      "optionId": "heavy_flail",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:heavy_flail,!@feat:disposable_weapon#heavy_flail)",
+      "name": "Heavy Flail"
+    }, {
+      "optionId": "light_hammer",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:light_hammer,!@feat:disposable_weapon#light_hammer)",
+      "name": "Light Hammer"
+    }, {
+      "optionId": "crank_heavy_crossbow",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:crank_heavy_crossbow,!@feat:disposable_weapon#crank_heavy_crossbow)",
+      "name": "Crank (heavy) Crossbow"
+    }, {
+      "optionId": "orc_double_axe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:orc_double_axe,!@feat:disposable_weapon#orc_double_axe)",
+      "name": "Orc Double Axe"
+    }, {
+      "optionId": "quarterstaff",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:quarterstaff,!@feat:disposable_weapon#quarterstaff)",
+      "name": "Quarterstaff"
     }, {
       "optionId": "repeating_heavy_crossbow",
       "condition": "all(@bab\u003e\u003d1,@proficiency:repeating_heavy_crossbow,!@feat:disposable_weapon#repeating_heavy_crossbow)",
       "name": "Repeating Heavy Crossbow"
     }, {
-      "optionId": "scizore",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:scizore,!@feat:disposable_weapon#scizore)",
-      "name": "Scizore"
+      "optionId": "wrist_launcher",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:wrist_launcher,!@feat:disposable_weapon#wrist_launcher)",
+      "name": "Wrist Launcher"
     }, {
-      "optionId": "gladius",
-      "condition": "all(@bab\u003e\u003d1,@proficiency:gladius,!@feat:disposable_weapon#gladius)",
-      "name": "Gladius"
+      "optionId": "dwarven_longaxe",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:dwarven_longaxe,!@feat:disposable_weapon#dwarven_longaxe)",
+      "name": "Dwarven Longaxe"
+    }, {
+      "optionId": "sling",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:sling,!@feat:disposable_weapon#sling)",
+      "name": "Sling"
+    }, {
+      "optionId": "earth_breaker",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:earth_breaker,!@feat:disposable_weapon#earth_breaker)",
+      "name": "Earth Breaker"
+    }, {
+      "optionId": "hunga_munga",
+      "condition": "all(@bab\u003e\u003d1,@proficiency:hunga_munga,!@feat:disposable_weapon#hunga_munga)",
+      "name": "Hunga Munga"
     }]
   }, {
     "id": "feat:crusaders_flurry",

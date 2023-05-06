@@ -1,14 +1,7 @@
-import {DataContext} from "./DataContext";
-import {Formula} from "./Formula";
-import Resolvable from "./Resolvable";
-import ResolvedValue from "./ResolvedValue";
+import {DataContext, Formula, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
 
 export default class Expression extends Resolvable {
   private static InlineRegex: RegExp = /(?<!\\)\{(.*?)}/;
-
-  static resolve(dataContext: DataContext, dataKey: string): ResolvedValue|undefined {
-    return dataContext.get(dataKey);
-  }
 
   static parse(text: string|Expression): Expression {
     if (text instanceof Expression) {
@@ -31,20 +24,24 @@ export default class Expression extends Resolvable {
       lastIndex = match.index + match[0].length;
     }
 
-    parts.push(text.substring(lastIndex)
+    const rest = text.substring(lastIndex)
       .replaceAll('\\{', '{')
-      .replaceAll('\\}', '}'));
+      .replaceAll('\\}', '}');
+    if (rest.length > 0) {
+      parts.push();
+    }
 
     return new Expression(text,parts);
   }
 
-  resolve(context?: DataContext): ResolvedValue|undefined {
+  resolve(context?: DataContext): ResolvedValue {
     return ResolvedValue.of(this.parts.map(part => {
       if (part instanceof Resolvable) {
-        part = part.resolve(context)?.asText();
+        return part.resolve(context)?.asText();
       }
       return part;
-    }).join(''));
+    })
+    .join(''));
   }
 
   asFormula(): string {
@@ -53,7 +50,7 @@ export default class Expression extends Resolvable {
 
   private constructor(
       public readonly original: string,
-      private readonly parts: any[]) {
+      private readonly parts: (string|Resolvable)[]) {
     super();
   }
 }

@@ -65,7 +65,6 @@ public class SorcererBloodlineEntityConverter {
                     .choice(new SelectChoice("sorcerer" + level + ":bloodline_feat",
                             "Bloodline Feat",
                             "feat",
-                            "",
                             List.of(),
                             bonusFeatIds))
                     .build();

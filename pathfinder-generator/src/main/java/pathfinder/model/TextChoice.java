@@ -9,7 +9,6 @@ public class TextChoice implements Choice {
     private final String id;
     private final String label;
     private final String type;
-    private final String condition;
 
     @Override
     public ChoiceDbo toDbo() {
@@ -17,7 +16,6 @@ public class TextChoice implements Choice {
                 .setId(id)
                 .setLabel(label)
                 .setType(type)
-                .setCondition(condition)
                 .setText(TextChoiceDbo.newBuilder().build())
                 .build();
     }

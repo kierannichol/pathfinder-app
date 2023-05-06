@@ -16,6 +16,7 @@ function LevelStatsDisplay({characterAtLevel}: LevelStatsDisplayProps) {
       <Col className={"header"}>Will</Col>
     </Row>
     <Row>
+      {/*<Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@bab)}')?.asText()}</Col>*/}
       <Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@bab)}')?.asText()}</Col>
       <Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@fort:base)}')?.asText()}</Col>
       <Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@ref:base)}')?.asText()}</Col>

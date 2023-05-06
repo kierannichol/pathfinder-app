@@ -1,6 +1,4 @@
-import {DataContext} from "./DataContext";
-import ResolvedValue from "./ResolvedValue";
-import {Associativity, ShuntingYard} from "./ShuntingYard";
+import {Associativity, DataContext, ResolvedValue, ShuntingYard} from "@kierannichol/formula-js";
 
 class FormattedValue extends ResolvedValue {
   constructor(private readonly actual: ResolvedValue,
@@ -89,8 +87,8 @@ export default class FormulaFormatter {
         .function('if', 3, (a: ResolvedValue, b: ResolvedValue, c: ResolvedValue) => a.asBoolean() ? b : c)
         .function('concat', 2, (a: ResolvedValue, b: ResolvedValue) => ResolvedValue.of(a.asText() + b.asText()))
         .variable('@', '', (state, key) => {
-          const actual = state.get(key);
-          return actual ? new FormattedValue(actual, lookup(key), true) : ResolvedValue.none();
+          const actual = state.resolve(key);
+          return actual ? new FormattedValue(actual, lookup(key), true) : ResolvedValue.None;
         })
         .variable('min(@', ')', (state, key) => ResolvedValue.of("minimum of " + lookup(key)))
         .variable('max(@', ')', (state, key) => ResolvedValue.of("maximum of " + lookup(key)))

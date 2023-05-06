@@ -29,12 +29,12 @@ public record Race(Id id, String name, String size, int speed, String type, Stri
             case "race:human" -> {
                 template.section(Section.builder()
                         .condition("@character_level>=0")
-                        .choice(new SelectChoice("level0:race_asi:human", "Ability Score Increase (Human)", "asi", "",
+                        .choice(new SelectChoice("level0:race_asi:human", "Ability Score Increase (Human)", "asi",
                                 List.of("ability_score"), List.of()))
                         .build());
                 template.section(Section.builder()
                         .condition("@character_level>=1")
-                        .choice(new SelectChoice("level1:human_bonus_feat", "Bonus Feat (Human)", "feat", "",
+                        .choice(new SelectChoice("level1:human_bonus_feat", "Bonus Feat (Human)", "feat",
                                 List.of("feat"), List.of()))
                         .build());
             }

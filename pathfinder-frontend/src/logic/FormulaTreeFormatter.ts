@@ -1,7 +1,4 @@
-import {DataContext} from "./DataContext";
-import Resolvable from "./Resolvable";
-import ResolvedValue from "./ResolvedValue";
-import {Associativity, ShuntingYard} from "./ShuntingYard";
+import {Associativity, DataContext, Resolvable, ResolvedValue, ShuntingYard} from "@kierannichol/formula-js";
 
 export enum TreeNodeOperator {
   ALL,
@@ -27,7 +24,7 @@ export class TreeNodeValue extends ResolvedValue {
     return this.actual.asText();
   }
 
-  map<T>(mapFn: (r: ResolvedValue) => T): T[] {
+  mapChildren<T>(mapFn: (r: ResolvedValue) => T): T[] {
     return this.children.map(mapFn);
   }
 
@@ -131,26 +128,25 @@ export default class FormulaFormatter {
         .varargsFunction('any', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ANY, ...args))
         .varargsFunction('all', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ALL, ...args))
         .variable('@', '', (state, key) => {
-          const actual = state.get(key);
-          return actual ? new FormattedValue(actual, key) : ResolvedValue.none();
+          const actual = state.resolve(key);
+          return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.None;
         })
         .variable('min(@', ')', (state, key) => {
-          const actual = FormulaFormatter.noneIfEmpty(state.find(key))
+          const actual = FormulaFormatter.noneIfEmpty(state.search(key))
               .reduce((a, b) => a.asNumber() < b.asNumber() ? a : b)
           return new FormattedValue(actual, '');
         })
         .variable('max(@', ')', (state, key) => {
-          const actual = FormulaFormatter.noneIfEmpty(state.find(key))
+          const actual = FormulaFormatter.noneIfEmpty(state.search(key))
               .reduce((a, b) => a.asNumber() > b.asNumber() ? a : b)
           return new FormattedValue(actual, '');
         })
         .variable('sum(@', ')', (state, key) => {
-          const actual = FormulaFormatter.noneIfEmpty(state.find(key))
+          const actual = FormulaFormatter.noneIfEmpty(state.search(key))
               .reduce((a, b) => ResolvedValue.of(a.asNumber() + b.asNumber()))
           return new FormattedValue(actual, '');
         })
         .comment('[', ']', (text, value) => {
-          console.log("Found comment: " + text + " for " + JSON.stringify(value))
           return new FormattedValue(value, text)
         })
   }
@@ -168,6 +164,6 @@ export default class FormulaFormatter {
   }
 
   private static noneIfEmpty(array: ResolvedValue[]): ResolvedValue[] {
-    return array.length > 0 ? array : [ ResolvedValue.none() ];
+    return array.length > 0 ? array : [ ResolvedValue.None ];
   }
 }

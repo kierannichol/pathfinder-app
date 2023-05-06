@@ -62,7 +62,6 @@ public class BloodragerBloodlineEntityConverter {
                     .choice(new SelectChoice("bloodrager" + level + ":bloodline_feat",
                             "Bloodline Feat",
                             "feat",
-                            "",
                             List.of(),
                             bonusFeatIds))
                     .build();

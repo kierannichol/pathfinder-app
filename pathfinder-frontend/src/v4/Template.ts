@@ -1,8 +1,7 @@
+import {DataContext, MutableDataContext, Resolvable} from "@kierannichol/formula-js";
 import {ChoiceNode} from "../core/Choice";
 import {IDataHub} from "../core/DataHub";
 import Effect from "../core/Effect";
-import {DataContext, MutableDataContext} from "../logic/DataContext";
-import Resolvable from "../logic/Resolvable";
 import {uniqBy} from "../util/pfutils";
 
 export class Template {

@@ -17,8 +17,7 @@ message ChoiceDbo {
   string id = 1;
   string type = 2;
   string label = 3;
-  string condition = 4;
-  bool repeating = 5;
+  bool repeating = 4;
 
   oneof choice {
     TextChoiceDbo text = 100;

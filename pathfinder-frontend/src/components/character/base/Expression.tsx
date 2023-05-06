@@ -1,5 +1,5 @@
+import {DataContext} from "@kierannichol/formula-js";
 import {DetailedHTMLProps, HTMLAttributes, useMemo} from "react";
-import {DataContext} from "../../../logic/DataContext";
 import {default as LogicExpression} from "../../../logic/Expression";
 
 interface ExpressionProps extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, 'children'> {

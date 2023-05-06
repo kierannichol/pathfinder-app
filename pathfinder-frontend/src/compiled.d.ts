@@ -15,9 +15,6 @@ export namespace v4 {
         /** ChoiceDbo label */
         label?: (string|null);
 
-        /** ChoiceDbo condition */
-        condition?: (string|null);
-
         /** ChoiceDbo repeating */
         repeating?: (boolean|null);
 
@@ -45,9 +42,6 @@ export namespace v4 {
 
         /** ChoiceDbo label. */
         public label: string;
-
-        /** ChoiceDbo condition. */
-        public condition: string;
 
         /** ChoiceDbo repeating. */
         public repeating: boolean;
@@ -1271,12 +1265,6 @@ export namespace v4 {
     /** Properties of an EffectDbo. */
     interface IEffectDbo {
 
-        /** EffectDbo targetKey */
-        targetKey?: (string|null);
-
-        /** EffectDbo condition */
-        condition?: (string|null);
-
         /** EffectDbo setAction */
         setAction?: (v4.EffectDbo.SetActionDbo|null);
 
@@ -1285,6 +1273,12 @@ export namespace v4 {
 
         /** EffectDbo renameAction */
         renameAction?: (v4.EffectDbo.RenameKeyDbo|null);
+
+        /** EffectDbo addEntity */
+        addEntity?: (v4.EffectDbo.AddEntityDbo|null);
+
+        /** EffectDbo replaceEntity */
+        replaceEntity?: (v4.EffectDbo.ReplaceEntityDbo|null);
     }
 
     /** Represents an EffectDbo. */
@@ -1296,12 +1290,6 @@ export namespace v4 {
          */
         constructor(properties?: v4.IEffectDbo);
 
-        /** EffectDbo targetKey. */
-        public targetKey: string;
-
-        /** EffectDbo condition. */
-        public condition: string;
-
         /** EffectDbo setAction. */
         public setAction?: (v4.EffectDbo.SetActionDbo|null);
 
@@ -1311,8 +1299,14 @@ export namespace v4 {
         /** EffectDbo renameAction. */
         public renameAction?: (v4.EffectDbo.RenameKeyDbo|null);
 
+        /** EffectDbo addEntity. */
+        public addEntity?: (v4.EffectDbo.AddEntityDbo|null);
+
+        /** EffectDbo replaceEntity. */
+        public replaceEntity?: (v4.EffectDbo.ReplaceEntityDbo|null);
+
         /** EffectDbo action. */
-        public action?: ("setAction"|"addAction"|"renameAction");
+        public action?: ("setAction"|"addAction"|"renameAction"|"addEntity"|"replaceEntity");
 
         /**
          * Creates a new EffectDbo instance using the specified properties.
@@ -1397,6 +1391,9 @@ export namespace v4 {
         /** Properties of a SetActionDbo. */
         interface ISetActionDbo {
 
+            /** SetActionDbo targetKey */
+            targetKey?: (string|null);
+
             /** SetActionDbo formula */
             formula?: (string|null);
 
@@ -1412,6 +1409,9 @@ export namespace v4 {
              * @param [properties] Properties to set
              */
             constructor(properties?: v4.EffectDbo.ISetActionDbo);
+
+            /** SetActionDbo targetKey. */
+            public targetKey: string;
 
             /** SetActionDbo formula. */
             public formula?: (string|null);
@@ -1503,6 +1503,9 @@ export namespace v4 {
         /** Properties of an AddActionDbo. */
         interface IAddActionDbo {
 
+            /** AddActionDbo targetKey */
+            targetKey?: (string|null);
+
             /** AddActionDbo numberDelta */
             numberDelta?: (number|null);
         }
@@ -1515,6 +1518,9 @@ export namespace v4 {
              * @param [properties] Properties to set
              */
             constructor(properties?: v4.EffectDbo.IAddActionDbo);
+
+            /** AddActionDbo targetKey. */
+            public targetKey: string;
 
             /** AddActionDbo numberDelta. */
             public numberDelta: number;
@@ -1600,6 +1606,9 @@ export namespace v4 {
         /** Properties of a RenameKeyDbo. */
         interface IRenameKeyDbo {
 
+            /** RenameKeyDbo targetKey */
+            targetKey?: (string|null);
+
             /** RenameKeyDbo renamedKey */
             renamedKey?: (string|null);
         }
@@ -1612,6 +1621,9 @@ export namespace v4 {
              * @param [properties] Properties to set
              */
             constructor(properties?: v4.EffectDbo.IRenameKeyDbo);
+
+            /** RenameKeyDbo targetKey. */
+            public targetKey: string;
 
             /** RenameKeyDbo renamedKey. */
             public renamedKey: string;
@@ -1688,6 +1700,206 @@ export namespace v4 {
 
             /**
              * Gets the default type url for RenameKeyDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of an AddEntityDbo. */
+        interface IAddEntityDbo {
+
+            /** AddEntityDbo entityId */
+            entityId?: (string|null);
+        }
+
+        /** Represents an AddEntityDbo. */
+        class AddEntityDbo implements IAddEntityDbo {
+
+            /**
+             * Constructs a new AddEntityDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v4.EffectDbo.IAddEntityDbo);
+
+            /** AddEntityDbo entityId. */
+            public entityId: string;
+
+            /**
+             * Creates a new AddEntityDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns AddEntityDbo instance
+             */
+            public static create(properties?: v4.EffectDbo.IAddEntityDbo): v4.EffectDbo.AddEntityDbo;
+
+            /**
+             * Encodes the specified AddEntityDbo message. Does not implicitly {@link v4.EffectDbo.AddEntityDbo.verify|verify} messages.
+             * @param message AddEntityDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v4.EffectDbo.AddEntityDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified AddEntityDbo message, length delimited. Does not implicitly {@link v4.EffectDbo.AddEntityDbo.verify|verify} messages.
+             * @param message AddEntityDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v4.EffectDbo.AddEntityDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an AddEntityDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns AddEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v4.EffectDbo.AddEntityDbo;
+
+            /**
+             * Decodes an AddEntityDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns AddEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v4.EffectDbo.AddEntityDbo;
+
+            /**
+             * Verifies an AddEntityDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an AddEntityDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns AddEntityDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v4.EffectDbo.AddEntityDbo;
+
+            /**
+             * Creates a plain object from an AddEntityDbo message. Also converts values to other types if specified.
+             * @param message AddEntityDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v4.EffectDbo.AddEntityDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this AddEntityDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for AddEntityDbo
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        /** Properties of a ReplaceEntityDbo. */
+        interface IReplaceEntityDbo {
+
+            /** ReplaceEntityDbo targetEntityId */
+            targetEntityId?: (string|null);
+
+            /** ReplaceEntityDbo replacementEntityId */
+            replacementEntityId?: (string|null);
+        }
+
+        /** Represents a ReplaceEntityDbo. */
+        class ReplaceEntityDbo implements IReplaceEntityDbo {
+
+            /**
+             * Constructs a new ReplaceEntityDbo.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: v4.EffectDbo.IReplaceEntityDbo);
+
+            /** ReplaceEntityDbo targetEntityId. */
+            public targetEntityId: string;
+
+            /** ReplaceEntityDbo replacementEntityId. */
+            public replacementEntityId: string;
+
+            /**
+             * Creates a new ReplaceEntityDbo instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns ReplaceEntityDbo instance
+             */
+            public static create(properties?: v4.EffectDbo.IReplaceEntityDbo): v4.EffectDbo.ReplaceEntityDbo;
+
+            /**
+             * Encodes the specified ReplaceEntityDbo message. Does not implicitly {@link v4.EffectDbo.ReplaceEntityDbo.verify|verify} messages.
+             * @param message ReplaceEntityDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: v4.EffectDbo.ReplaceEntityDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified ReplaceEntityDbo message, length delimited. Does not implicitly {@link v4.EffectDbo.ReplaceEntityDbo.verify|verify} messages.
+             * @param message ReplaceEntityDbo message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: v4.EffectDbo.ReplaceEntityDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a ReplaceEntityDbo message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns ReplaceEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): v4.EffectDbo.ReplaceEntityDbo;
+
+            /**
+             * Decodes a ReplaceEntityDbo message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns ReplaceEntityDbo
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): v4.EffectDbo.ReplaceEntityDbo;
+
+            /**
+             * Verifies a ReplaceEntityDbo message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a ReplaceEntityDbo message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns ReplaceEntityDbo
+             */
+            public static fromObject(object: { [k: string]: any }): v4.EffectDbo.ReplaceEntityDbo;
+
+            /**
+             * Creates a plain object from a ReplaceEntityDbo message. Also converts values to other types if specified.
+             * @param message ReplaceEntityDbo
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: v4.EffectDbo.ReplaceEntityDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this ReplaceEntityDbo to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for ReplaceEntityDbo
              * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
              * @returns The default type url
              */

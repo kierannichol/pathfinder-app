@@ -47,7 +47,7 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
     updateCharacter(character => character.selectAll(selected));
   }
 
-  const totalAbilityPointCost = useMemo(() => character0?.get('ability_point_cost').asText() ?? '0', [character0]);
+  const totalAbilityPointCost = useMemo(() => character0?.resolve('ability_point_cost')?.asText() ?? '0', [character0]);
 
   if (character0 === undefined) {
     return <main><LoadingBlock/></main>

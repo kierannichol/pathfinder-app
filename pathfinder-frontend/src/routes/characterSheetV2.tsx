@@ -39,7 +39,7 @@ export async function characterSheetV2Loader({ params }: any) {
 export default function CharacterSheetV2Route() {
   const { characterAtLevel, database } = useLoaderData() as any;
 
-  const pageTitle = useMemo(() => characterAtLevel.get('character_name')?.asText() + ' - Pathfinder App', [characterAtLevel]);
+  const pageTitle = useMemo(() => characterAtLevel?.resolve('character_name')?.asText() + ' - Pathfinder App', [characterAtLevel]);
 
   return <Page title={pageTitle}>
     <RequiresAuth>

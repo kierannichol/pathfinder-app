@@ -1,6 +1,4 @@
-import {MutableDataContext} from "../logic/DataContext";
-import {Formula} from "../logic/Formula";
-import Resolvable from "../logic/Resolvable";
+import {Formula, MutableDataContext, Resolvable} from "@kierannichol/formula-js";
 
 export default abstract class Effect {
 
@@ -88,7 +86,7 @@ export class AddNumberEffect extends Effect {
   }
 
   applyTo(state: MutableDataContext): void {
-    let current = state.get(this.targetKey)?.asNumber() ?? 0;
+    let current = state.resolve(this.targetKey)?.asNumber() ?? 0;
     state.set(this.targetKey, current + this.delta);
   }
 }

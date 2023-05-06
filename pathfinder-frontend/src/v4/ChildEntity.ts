@@ -1,8 +1,6 @@
+import {Formula, MutableDataContext, Resolvable} from "@kierannichol/formula-js";
 import {ChoiceTree} from "../core/Choice";
 import Effect, {ConditionalEffect} from "../core/Effect";
-import {MutableDataContext} from "../logic/DataContext";
-import {Formula} from "../logic/Formula";
-import Resolvable from "../logic/Resolvable";
 import {Entity, EntitySummary} from "./Entity";
 import {Template} from "./Template";
 
