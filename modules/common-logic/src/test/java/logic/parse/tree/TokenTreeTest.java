@@ -9,6 +9,7 @@ import static logic.parse.tree.NodeExpression.NUMBER;
 import static logic.parse.tree.NodeExpression.WORD;
 import static logic.parse.tree.NodeExpression.anyOf;
 import static logic.parse.tree.NodeExpression.literal;
+import static logic.parse.tree.NodeExpression.term;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -166,5 +167,17 @@ class TokenTreeTest {
                         ResolvedValue.of("two"),
                         ResolvedValue.of("<open>three four<close>"),
                         ResolvedValue.of("five"));
+    }
+
+    @Test
+    void oneOf() {
+        var tree = TokenTree.create()
+                .ignoreWhitespaces()
+                .add(NodeExpression.oneOf(term("foo"), term("bar")), ResolvedValue::of);
+
+        assertThat(tree.parse("foo bar")).containsExactly(
+                ResolvedValue.of("foo"),
+                ResolvedValue.of("bar")
+        );
     }
 }

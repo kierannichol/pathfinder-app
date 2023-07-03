@@ -5,6 +5,7 @@ import static logic.parse.tree.CharacterClass.DIGIT_CHARACTERS;
 import static logic.parse.tree.CharacterClass.WORD_CHARACTERS;
 
 import java.util.Arrays;
+import java.util.List;
 
 public interface NodeExpression {
 
@@ -45,6 +46,14 @@ public interface NodeExpression {
         return CompositeNodeExpression.of(term.chars()
                 .mapToObj(c -> (NodeExpression) just((char) c))
                 .toList());
+    }
+
+    static NodeExpression oneOf(String... expressions) {
+        return OneOfNodeExpression.of(Arrays.stream(expressions).map(NodeExpression::term).toList());
+    }
+
+    static NodeExpression oneOf(NodeExpression... expressions) {
+        return OneOfNodeExpression.of(List.of(expressions));
     }
 
     static NodeExpression optional(NodeExpression... expressions) {

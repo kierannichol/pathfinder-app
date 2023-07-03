@@ -28,4 +28,9 @@ public class CharacterTokenMatcher implements TokenMatcher {
     public int hashCode() {
         return character;
     }
+
+    @Override
+    public String toString() {
+        return Character.toString(character);
+    }
 }

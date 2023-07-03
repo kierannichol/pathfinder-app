@@ -30,4 +30,9 @@ public class MatcherNodeExpression implements NodeExpression {
     public MatcherNodeExpression not() {
         return new MatcherNodeExpression(new NotTokenMatcher(matcher));
     }
+
+    @Override
+    public String toString() {
+        return matcher.toString();
+    }
 }

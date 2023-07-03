@@ -55,9 +55,9 @@ public class TokenTree<T> {
     private TokenTree<T> addBranch(NodeExpression expression, TokenMapper<T> mapper) {
         Node<T> node = expression.chainTo(root);
 
-        MatcherNode<T> matcherNode = (MatcherNode<T>) node;
+        MappableNode<T> matcherNode = (MappableNode<T>) node;
         if (matcherNode.mapper() != null) {
-            throw new RuntimeException("Conflicting tokens");
+            throw new RuntimeException("Conflicting tokens: " + expression + " AND " + matcherNode);
         }
         matcherNode.mapper(mapper);
         return this;

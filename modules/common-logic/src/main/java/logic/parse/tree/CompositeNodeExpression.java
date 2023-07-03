@@ -1,6 +1,7 @@
 package logic.parse.tree;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor(staticName = "of")
@@ -14,5 +15,10 @@ public class CompositeNodeExpression implements NodeExpression {
             node = toAdd.chainTo(node);
         }
         return node;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + expressions.stream().map(NodeExpression::toString).collect(Collectors.joining("")) + "]";
     }
 }

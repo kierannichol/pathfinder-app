@@ -7,14 +7,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import pathfinder.generator.SourceModuleDatabaseGenerator;
 import pathfinder.model.pathfinder.Source;
 import pathfinder.model.pathfinder.Sources;
+import pathfinder.v6.generator.SourceModuleDatabaseGeneratorV6;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
-        "pathfinder.generator",
-        "pathfinder.db"
+//        "pathfinder.generator",
+//        "pathfinder.db"
+        "pathfinder.v6",
+        "pathfinder.generator"
 })
 @Slf4j
 public class GeneratorApplication {
@@ -41,7 +43,7 @@ public class GeneratorApplication {
 
             for (Source source : sources) {
                 log.info("Generating module \"%s\"...".formatted(source.name()));
-                ctx.getBean(SourceModuleDatabaseGenerator.class, source).generate();
+                ctx.getBean(SourceModuleDatabaseGeneratorV6.class, source).generate();
             }
         };
     }

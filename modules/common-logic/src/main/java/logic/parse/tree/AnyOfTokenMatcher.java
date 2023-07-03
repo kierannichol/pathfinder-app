@@ -43,4 +43,9 @@ public class AnyOfTokenMatcher implements TokenMatcher {
     public int hashCode() {
         return allowed != null ? Arrays.hashCode(allowed) : 0;
     }
+
+    @Override
+    public String toString() {
+        return "anyof(" + new String(allowed) + ")";
+    }
 }

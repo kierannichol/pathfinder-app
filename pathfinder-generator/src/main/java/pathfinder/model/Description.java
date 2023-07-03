@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import pathfinder.data.v4.DescriptionDbo;
+import pathfinder.data.DescriptionDbo;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Description {

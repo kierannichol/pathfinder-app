@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "Description.proto";
+import "v6/Effect.proto";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v6";
+
+package v6;
+
+message FeatureSummaryDbo {
+  string id = 1;
+  string name = 2;
+  repeated string tags = 3;
+  string enabled_formula = 4;
+}
+
+message FeatureDbo {
+  string id = 1;
+  string name = 2;
+  repeated string tags = 3;
+  string enabled_formula = 4;
+
+  DescriptionDbo description = 100;
+  repeated EffectDbo effects = 101;
+}

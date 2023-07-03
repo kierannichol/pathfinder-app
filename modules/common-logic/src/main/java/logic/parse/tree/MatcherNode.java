@@ -39,4 +39,9 @@ public class MatcherNode<T> extends MappableNode<T> {
         return getClass() == other.getClass()
                 && Objects.equals(matcher, ((MatcherNode<T>) other).matcher);
     }
+
+    @Override
+    public String toString() {
+        return matcher.toString();
+    }
 }
