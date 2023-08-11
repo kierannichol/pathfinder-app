@@ -60,7 +60,6 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     let filteredOptions = options;
 
     if (hasQuery) {
-      console.log(options);
       filteredOptions = filteredOptions
           .filter(option => option.name.toLowerCase().includes(query.trim().toLowerCase()));
     }

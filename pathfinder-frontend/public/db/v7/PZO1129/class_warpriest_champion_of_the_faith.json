@@ -1,0 +1,32 @@
+{
+  "id": "class:warpriest#champion_of_the_faith",
+  "name": "Champion of The Faith",
+  "tags": ["archetype", "warpriest"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Champions of the faith are crusaders who use the power of their divine patron to annihilate the faith\u0027s enemies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:sacred_weapon#warpriest_champion_of_the_faith",
+          "conditionFormula": "@class:warpriest\u003e\u003d1"
+        }, {
+          "featureId": "ability:detect_alignment#warpriest_champion_of_the_faith",
+          "conditionFormula": "@class:warpriest\u003e\u003d3"
+        }, {
+          "featureId": "ability:smite#warpriest_champion_of_the_faith",
+          "conditionFormula": "@class:warpriest\u003e\u003d4"
+        }],
+        "unlinks": [{
+          "featureId": "ability:sacred_weapon#warpriest"
+        }, {
+          "featureId": "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+        }, {
+          "featureId": "ability:channel_energy#warpriest"
+        }]
+      }]
+    }
+  }
+}

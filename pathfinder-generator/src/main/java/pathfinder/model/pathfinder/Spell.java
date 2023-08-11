@@ -22,7 +22,7 @@ public record Spell(Id id,
                     @JsonProperty("spell_resistance") String spellResistance,
                     String school,
                     List<Spell.Level> levels,
-                    String source) implements NamedEntity {
+                    String source) implements NamedEntity, FromSourceBook {
 
     public static SpellBuilder builder() {
         return new SpellBuilder();

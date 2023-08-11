@@ -1,0 +1,56 @@
+{
+  "id": "class:witch#mountain_witch",
+  "name": "Mountain Witch",
+  "tags": ["archetype", "witch"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d1"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d2"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d4"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d6"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d8"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d10"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d12"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d14"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d16"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d18"
+        }, {
+          "featureId": "ability:spell_casting#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d20"
+        }, {
+          "featureId": "ability:mountain_beast_empathy#witch_mountain_witch",
+          "conditionFormula": "@class:witch\u003e\u003d2"
+        }],
+        "unlinks": [{
+          "featureId": "ability:hex#witch"
+        }, {
+          "featureId": "ability:the_hex_gained_at_2nd_level#witch"
+        }]
+      }]
+    }
+  }
+}

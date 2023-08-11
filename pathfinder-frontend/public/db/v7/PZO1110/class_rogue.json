@@ -1,0 +1,429 @@
+{
+  "id": "class:rogue",
+  "name": "Rogue",
+  "tags": ["class"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Life is an endless adventure for those who live by their wits. Ever just one step ahead of danger, rogues bank on their cunning, skill, and charm to bend fate to their favor. Never knowing what to expect, they prepare for everything, becoming masters of a wide variety of skills, training themselves to be adept manipulators, agile acrobats, shadowy stalkers, or masters of any of dozens of other professions or talents. Thieves and gamblers, fast talkers and diplomats, bandits and bounty hunters, and explorers and investigators all might be considered rogues, as well as countless other professions that rely upon wits, prowess, or luck. Although many rogues favor cities and the innumerable opportunities of civilization, some embrace lives on the road, journeying far, meeting exotic people, and facing fantastic danger in pursuit of equally fantastic riches. In the end, any who desire to shape their fates and live life on their own terms might come to be called rogues. Role: Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents. Alignment: Any Hit Die: d8 Starting Wealth: 4d6 × 10 gp (average 140 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 2
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }, {
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "proficiency:brass_knife"
+        }, {
+          "featureId": "proficiency:hook_hand"
+        }, {
+          "featureId": "proficiency:dart"
+        }, {
+          "featureId": "proficiency:mere_club"
+        }, {
+          "featureId": "proficiency:stingchuck"
+        }, {
+          "featureId": "proficiency:handwraps"
+        }, {
+          "featureId": "proficiency:light_crossbow"
+        }, {
+          "featureId": "proficiency:spear"
+        }, {
+          "featureId": "proficiency:blowgun"
+        }, {
+          "featureId": "proficiency:spiked_gauntlet"
+        }, {
+          "featureId": "proficiency:sap"
+        }, {
+          "featureId": "proficiency:heavy_crossbow"
+        }, {
+          "featureId": "proficiency:unarmed"
+        }, {
+          "featureId": "proficiency:bayonet"
+        }, {
+          "featureId": "proficiency:javelin"
+        }, {
+          "featureId": "proficiency:brass_knuckles"
+        }, {
+          "featureId": "proficiency:battle_aspergillum"
+        }, {
+          "featureId": "proficiency:heavy_mace"
+        }, {
+          "featureId": "proficiency:dagger"
+        }, {
+          "featureId": "proficiency:short_sword"
+        }, {
+          "featureId": "proficiency:gauntlet"
+        }, {
+          "featureId": "proficiency:boarding_pike"
+        }, {
+          "featureId": "proficiency:cestus"
+        }, {
+          "featureId": "proficiency:kumade"
+        }, {
+          "featureId": "proficiency:shortspear"
+        }, {
+          "featureId": "proficiency:kunai"
+        }, {
+          "featureId": "proficiency:collapsible_kumade"
+        }, {
+          "featureId": "proficiency:lantern_staff"
+        }, {
+          "featureId": "proficiency:shortbow"
+        }, {
+          "featureId": "proficiency:sling"
+        }, {
+          "featureId": "proficiency:wooden_stake"
+        }, {
+          "featureId": "proficiency:rapier"
+        }, {
+          "featureId": "proficiency:spring_blade"
+        }, {
+          "featureId": "proficiency:quarterstaff"
+        }, {
+          "featureId": "proficiency:light_mace"
+        }, {
+          "featureId": "proficiency:club"
+        }, {
+          "featureId": "proficiency:punching_dagger"
+        }, {
+          "featureId": "proficiency:sickle"
+        }, {
+          "featureId": "proficiency:hand_crossbow"
+        }, {
+          "featureId": "proficiency:morningstar"
+        }, {
+          "featureId": "proficiency:traveling_kettle"
+        }, {
+          "featureId": "proficiency:stonebow"
+        }, {
+          "featureId": "proficiency:longspear"
+        }, {
+          "featureId": "proficiency:light_armor"
+        }],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "type": "archetype",
+          "featureSelect": {
+            "optionTags": ["archetype+rogue"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:evasion#rogue"
+        }, {
+          "featureId": "ability:rogue_talent#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rogue_talent#rogue"
+        }, {
+          "featureId": "ability:uncanny_dodge#rogue"
+        }]
+      }, {
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rogue_talent#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:improved_uncanny_dodge#rogue"
+        }, {
+          "featureId": "ability:rogue_talent#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:advanced_talents#rogue"
+        }, {
+          "featureId": "ability:rogue_talent#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rogue_talent#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }, {
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rogue_talent#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rogue_talent#rogue"
+        }]
+      }, {
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rogue_talent#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#rogue"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:master_strike#rogue"
+        }, {
+          "featureId": "ability:rogue_talent#rogue"
+        }]
+      }]
+    }
+  }
+}

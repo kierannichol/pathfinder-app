@@ -1,0 +1,62 @@
+{
+  "id": "sorcerer_bloodline:aberrant_bloodline",
+  "name": "Aberrant Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "There is a taint in your blood, one that is alien and bizarre. You tend to think in odd ways, approaching problems from an angle that most would not expect. Over time, this taint manifests itself in your physical form."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_casting", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will", "feat:silent_spell", "feat:skill_focus"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_casting", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will", "feat:silent_spell", "feat:skill_focus"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_casting", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will", "feat:silent_spell", "feat:skill_focus"]
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:acidic_ray#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:long_limbs#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:unusual_anatomy#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:alien_resistance#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:aberrant_form#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

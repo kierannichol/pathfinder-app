@@ -1,0 +1,31 @@
+{
+  "id": "class:slayer#cutthroat",
+  "name": "Cutthroat",
+  "tags": ["archetype", "slayer"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:street_stalker#slayer_cutthroat",
+          "conditionFormula": "@class:slayer\u003e\u003d1"
+        }, {
+          "featureId": "ability:opportune_target#slayer_cutthroat",
+          "conditionFormula": "@class:slayer\u003e\u003d2"
+        }, {
+          "featureId": "ability:stab_and_grab#slayer_cutthroat",
+          "conditionFormula": "@class:slayer\u003e\u003d6"
+        }],
+        "unlinks": [{
+          "featureId": "ability:track#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_6th_level#slayer"
+        }]
+      }]
+    }
+  }
+}

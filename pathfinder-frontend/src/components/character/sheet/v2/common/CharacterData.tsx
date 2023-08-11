@@ -1,8 +1,8 @@
 import {useMemo} from "react";
 import Alignments from "../../../../../database/Alignments";
-import {usePathfinderDatabase} from "../../../../../database/v4/PathfinderDatabase";
 import CreatureSize from "../../../../../model/character/CreatureSize";
 import {uniq} from "../../../../../util/pfutils";
+import {usePathfinderDatabaseV7} from "../../../../../v7/PathfinderDatabaseV7";
 import {useCharacterAtLevel} from "../CharacterSheet";
 
 interface CharacterValueProps {
@@ -43,7 +43,7 @@ function value(dataKey: string, lookupFn?: (value: string) => string) {
 
 export function CharacterLevel() {
   const characterAtLevel = useCharacterAtLevel();
-  const database = usePathfinderDatabase();
+  const database = usePathfinderDatabaseV7();
 
   const classLevelText = useMemo(() => {
     const classesSelected = uniq(characterAtLevel.choices
@@ -66,7 +66,7 @@ export function CharacterLevel() {
 
 export function Race() {
   const characterAtLevel = useCharacterAtLevel();
-  const database = usePathfinderDatabase();
+  const database = usePathfinderDatabaseV7();
   const text = useMemo(() => {
     const selected = characterAtLevel.choices
         .find(option => option.type === 'race')

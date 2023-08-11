@@ -2,6 +2,9 @@ syntax = "proto3";
 
 import "Description.proto";
 import "v6/Effect.proto";
+import "v6/Link.proto";
+import "v6/Choice.proto";
+import "v6/Stack.proto";
 
 option java_multiple_files = true;
 option java_package = "pathfinder.data.v6";
@@ -13,6 +16,7 @@ message FeatureSummaryDbo {
   string name = 2;
   repeated string tags = 3;
   string enabled_formula = 4;
+  optional uint32 max_stacks = 5;
 }
 
 message FeatureDbo {
@@ -20,7 +24,19 @@ message FeatureDbo {
   string name = 2;
   repeated string tags = 3;
   string enabled_formula = 4;
+  optional uint32 max_stacks = 5;
 
   DescriptionDbo description = 100;
-  repeated EffectDbo effects = 101;
+  StacksDbo stacks = 101;
+}
+
+message StacksDbo {
+  oneof stackable {
+    FixedStackDbo fixed_stack = 1;
+    StackDbo repeating_stack = 2;
+  }
+}
+
+message FixedStackDbo {
+  repeated StackDbo stacks = 1;
 }

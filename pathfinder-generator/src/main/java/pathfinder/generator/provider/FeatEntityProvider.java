@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import pathfinder.generator.convert.FeatEntityConverter;
 import pathfinder.generator.db.local.FeatSourceDatabase;
 import pathfinder.model.Entity;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 
 @Component
@@ -16,9 +16,9 @@ public class FeatEntityProvider implements EntityProvider {
     private final FeatEntityConverter featEntityConverter;
 
     @Override
-    public Stream<Entity> streamEntities(Source source) {
+    public Stream<Entity> streamEntities(SourceId sourceId) {
         return featSourceDatabase.streamFeats()
-                .filter(model -> source.equals(Sources.findSourceByNameOrCode(model.source())))
+                .filter(model -> sourceId.equals(Sources.findSourceByNameOrCode(model.source())))
                 .flatMap(featEntityConverter::toEntities);
     }
 }

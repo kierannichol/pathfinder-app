@@ -15,7 +15,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.scraper.remote.AbstractWebScraper;
 import pathfinder.util.StringUtils;
@@ -166,7 +166,7 @@ public class AbstractNethysScraper extends AbstractWebScraper {
         }
     }
 
-    protected Source parseSource(String sourceText) {
+    protected SourceId parseSource(String sourceText) {
         return Sources.findSourceByNameOrCode(formatSourceText(sourceText));
     }
 

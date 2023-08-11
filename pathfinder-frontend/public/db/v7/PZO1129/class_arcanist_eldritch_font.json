@@ -1,0 +1,37 @@
+{
+  "id": "class:arcanist#eldritch_font",
+  "name": "Eldritch Font",
+  "tags": ["archetype", "arcanist"],
+  "maxStacks": 1,
+  "description": {
+    "text": "For some arcanists, the power bubbling up from within is nearly too much to contain. They become adept at shaping this magical energy without needing to bind it up in spells."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:eldritch_surge#arcanist_eldritch_font",
+          "conditionFormula": "@class:arcanist\u003e\u003d3"
+        }, {
+          "featureId": "ability:improved_surge#arcanist_eldritch_font",
+          "conditionFormula": "@class:arcanist\u003e\u003d7"
+        }, {
+          "featureId": "ability:greater_surge#arcanist_eldritch_font",
+          "conditionFormula": "@class:arcanist\u003e\u003d13"
+        }, {
+          "featureId": "ability:bottomless_well#arcanist_eldritch_font",
+          "conditionFormula": "@class:arcanist\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_7th_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_13th_level#arcanist"
+        }, {
+          "featureId": "ability:magical_supremacy#arcanist"
+        }]
+      }]
+    }
+  }
+}

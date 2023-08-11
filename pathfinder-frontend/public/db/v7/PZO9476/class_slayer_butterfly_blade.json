@@ -1,0 +1,48 @@
+{
+  "id": "class:slayer#butterfly_blade",
+  "name": "Butterfly Blade",
+  "tags": ["archetype", "slayer"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d3"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d6"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d9"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d12"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d15"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d18"
+        }, {
+          "featureId": "ability:innocent_butterfly#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d7"
+        }, {
+          "featureId": "ability:deadly_butterfly#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:studied_target_and_replaces_track#slayer"
+        }, {
+          "featureId": "ability:sneak_attack#slayer"
+        }, {
+          "featureId": "ability:stalker_swift_tracker_and_quarry#slayer"
+        }, {
+          "featureId": "ability:improved_quarry#slayer"
+        }]
+      }]
+    }
+  }
+}

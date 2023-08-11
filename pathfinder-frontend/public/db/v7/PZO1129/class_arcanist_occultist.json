@@ -1,0 +1,29 @@
+{
+  "id": "class:arcanist#occultist",
+  "name": "Occultist",
+  "tags": ["archetype", "arcanist"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Not all arcanists peer inward to discern the deepest secrets of magic. Some look outward, connecting with extraplanar creatures and bartering for secrets, power, and favor."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:planar_contact#arcanist_occultist",
+          "conditionFormula": "@class:arcanist\u003e\u003d7"
+        }, {
+          "featureId": "ability:perfect_summoner#arcanist_occultist",
+          "conditionFormula": "@class:arcanist\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_arcanist_exploit_gained_at_1st_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_7th_level#arcanist"
+        }, {
+          "featureId": "ability:magical_supremacy#arcanist"
+        }]
+      }]
+    }
+  }
+}

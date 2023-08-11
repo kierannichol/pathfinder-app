@@ -1,0 +1,36 @@
+{
+  "id": "class:warpriest#forgepriest",
+  "name": "Forgepriest",
+  "tags": ["archetype", "warpriest"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Armorers of exquisite skill, forgepriests take inspiration from their deity to produce the most perfect weapons and armor they can, the better to equip the armies of the faithful."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:craft_magic_arms_and_armor#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d3"
+        }, {
+          "featureId": "ability:creators_bond#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d4"
+        }, {
+          "featureId": "ability:heat_of_the_forge#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d6"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_blessings_class_feature#warpriest"
+        }, {
+          "featureId": "ability:bonus_feats#warpriest"
+        }, {
+          "featureId": "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+        }, {
+          "featureId": "ability:channel_energy#warpriest"
+        }, {
+          "featureId": "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+        }]
+      }]
+    }
+  }
+}

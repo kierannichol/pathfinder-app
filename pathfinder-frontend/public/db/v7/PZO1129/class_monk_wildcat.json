@@ -1,0 +1,40 @@
+{
+  "id": "class:monk#wildcat",
+  "name": "Wildcat",
+  "tags": ["archetype", "monk"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:ready_for_anything#monk_wildcat",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:brawler_maneuver_training#monk_wildcat",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:turn_the_tables#monk_wildcat",
+          "conditionFormula": "@class:monk\u003e\u003d13"
+        }, {
+          "featureId": "ability:dirty_blow#monk_wildcat",
+          "conditionFormula": "@class:monk\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:ki_pool_and_high_jump#monk"
+        }, {
+          "featureId": "ability:all_instances_of_slow_fall#monk"
+        }, {
+          "featureId": "ability:improved_evasion_and_abundant_step#monk"
+        }, {
+          "featureId": "ability:diamond_soul#monk"
+        }, {
+          "featureId": "ability:empty_body#monk"
+        }]
+      }]
+    }
+  }
+}

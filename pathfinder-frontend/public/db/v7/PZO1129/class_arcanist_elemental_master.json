@@ -1,0 +1,42 @@
+{
+  "id": "class:arcanist#elemental_master",
+  "name": "Elemental Master",
+  "tags": ["archetype", "arcanist"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Arcanists with an affinity for elemental forces sometimes focus on one and display its power in everything they do."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:elemental_focus#arcanist_elemental_master",
+          "conditionFormula": "@class:arcanist\u003e\u003d1"
+        }, {
+          "featureId": "ability:elemental_attack#arcanist_elemental_master",
+          "conditionFormula": "@class:arcanist\u003e\u003d3"
+        }, {
+          "featureId": "ability:powerful_exploit#arcanist_elemental_master",
+          "conditionFormula": "@class:arcanist\u003e\u003d9"
+        }, {
+          "featureId": "ability:greater_elemental_attack#arcanist_elemental_master",
+          "conditionFormula": "@class:arcanist\u003e\u003d11"
+        }, {
+          "featureId": "ability:elemental_movement#arcanist_elemental_master",
+          "conditionFormula": "@class:arcanist\u003e\u003d15"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_arcanist_exploit_gained_at_1st_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_9th_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_11th_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_15th_level#arcanist"
+        }]
+      }]
+    }
+  }
+}

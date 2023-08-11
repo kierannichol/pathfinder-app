@@ -1,6 +1,6 @@
 import {ComponentProps, useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
 import PathfinderButton from "../../common/PathfinderButton";
 import {SkillEditor} from "./SkillEditor";
 import SkillEditorDialog from "./SkillEditorDialog";
@@ -20,7 +20,7 @@ export default function SkillEditorButton({ characterAtLevel, ...dialogProps }: 
   }, [characterAtLevel]);
 
   const pointsRemaining = useMemo(() => {
-    return skillChoices.filter(choice => choice.current === '').length;
+    return skillChoices.filter(choice => characterAtLevel.selected(choice.path) === '').length;
   }, [skillChoices]);
 
   const buttonLabel = <><Icon.PencilSquare/>&nbsp; Skills ({pointsRemaining}/{skillChoices.length})</>;

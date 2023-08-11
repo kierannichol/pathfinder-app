@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 import pathfinder.generator.db.RaceSourceDatabase;
 import pathfinder.model.pathfinder.D20pfsrdRace;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.util.NameToIdConverter;
 import pathfinder.util.NameUtils;
@@ -68,9 +68,9 @@ public class D20pfsrdRaceScraper extends AbstractD20pfsrdScraper implements
             if (sourceText.isBlank()) {
                 sourceText = Sources.CORE.code();
             }
-            Source source = Sources.findSourceByNameOrCode(sourceText);
-            if (source != null) {
-                sourceText = source.code();
+            SourceId sourceId = Sources.findSourceByNameOrCode(sourceText);
+            if (sourceId != null) {
+                sourceText = sourceId.code();
             }
 
             D20pfsrdRace race = new D20pfsrdRace(

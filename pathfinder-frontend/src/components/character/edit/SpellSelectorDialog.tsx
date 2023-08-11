@@ -1,7 +1,7 @@
 import React, {useMemo} from "react";
 import {Modal} from "react-bootstrap";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
-import {SelectChoiceNode} from "../../../core/Choice";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
+import {FeatureSelectChoiceRef} from "../../../v7/ChoiceRef";
 import CharacterFeatureList from "./CharacterFeatureList";
 import styles from "./Dialog.module.scss";
 import {RepeatingChoiceSelector} from "./RepeatingChoiceSelector";
@@ -19,7 +19,7 @@ export default function SpellSelectorDialog({ show, onSelect, onCancel, characte
   }, [characterAtLevel]);
 
   const pointsRemaining = useMemo(() => {
-    return spellChoices.filter(choice => choice.current === '').length;
+    return spellChoices.filter(choice => characterAtLevel.selected(choice) === '').length;
   }, [spellChoices]);
 
   const pointsAvailable = spellChoices.length;
@@ -46,7 +46,7 @@ export default function SpellSelectorDialog({ show, onSelect, onCancel, characte
 
     <Modal.Body>
       <RepeatingChoiceSelector
-          choices={characterAtLevel.choicesOfType('spell') as SelectChoiceNode[]}
+          choices={characterAtLevel.choicesOfType('spell') as FeatureSelectChoiceRef[]}
           characterAtLevel={characterAtLevel}
           onChange={onSelect} />
       <label>Known</label>

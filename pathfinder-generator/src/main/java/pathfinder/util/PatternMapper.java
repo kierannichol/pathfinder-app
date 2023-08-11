@@ -17,6 +17,7 @@ public class PatternMapper {
     private final Map<PatternReplacement, Pattern> replacementRegexCache = new HashMap<>();
     private final Map<String, String> staticReplacements = new HashMap<>();
     private final Map<String, BiFunction<String, String, String>> functionMap = new HashMap<>();
+    private final List<BiFunction<String, Object, String>> contextResolvers = new ArrayList<>();
 
     public PatternMapper() {
         replacements = new ArrayList<>();
@@ -57,15 +58,31 @@ public class PatternMapper {
         return this;
     }
 
-    public String mapText(String text) {
-        return internalMapText(text.trim().toLowerCase());
+    public PatternMapper addContextResolver(BiFunction<String, Object, String> resolver) {
+        this.contextResolvers.add(resolver);
+        return this;
     }
 
-    private String internalMapText(String text) {
+    public String mapText(String text) {
+        return mapText(text, null);
+    }
+
+    public String mapText(String text, Object context) {
+        return internalMapText(text.trim().toLowerCase(), context);
+    }
+
+    private String internalMapText(String text, Object context) {
         try {
             var staticReplacement = staticReplacements.get(text);
             if (staticReplacement != null) {
                 return staticReplacement;
+            }
+
+            for (BiFunction<String, Object, String> contextResolver : contextResolvers) {
+                String resolved = contextResolver.apply(text, context);
+                if (resolved != null) {
+                    return resolved;
+                }
             }
 
             for (PatternReplacement replacementEntry : replacements) {
@@ -78,7 +95,7 @@ public class PatternMapper {
                 String resolved = replacementEntry.replacement();
                 for (int i = 0; i < matcher.groupCount(); i++) {
                     String original = matcher.group(i + 1);
-                    String found = internalMapText(original);
+                    String found = internalMapText(original, context);
 
                     Pattern destinationPattern = Pattern.compile(REPLACEMENT_DESTINATION_PATTERN.formatted(i));
                     Matcher destinationMatcher = destinationPattern.matcher(resolved);

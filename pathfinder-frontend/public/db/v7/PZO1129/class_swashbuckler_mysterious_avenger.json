@@ -1,0 +1,39 @@
+{
+  "id": "class:swashbuckler#mysterious_avenger",
+  "name": "Mysterious Avenger",
+  "tags": ["archetype", "swashbuckler"],
+  "maxStacks": 1,
+  "description": {
+    "text": "While some swashbucklers fight for queen and country, and others for coin, glory, or just the enhancement of their own reputations, the mysterious avenger fights directly for a cause. Instead of gaining personal glory for her heroic deeds, she keeps her identity hidden in order to fight for those who cannot fight for themselves."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:avenger_finesse#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d1"
+        }, {
+          "featureId": "ability:secret_identity#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d3"
+        }, {
+          "featureId": "ability:greater_charmed_life#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d4"
+        }, {
+          "featureId": "ability:avengers_target#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_swashbucklers_weapon_and_armor_proficiency#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_finesse#swashbuckler"
+        }, {
+          "featureId": "ability:nimble#swashbuckler"
+        }, {
+          "featureId": "ability:the_bonus_feat_gained_at_4th_level#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_training#swashbuckler"
+        }]
+      }]
+    }
+  }
+}

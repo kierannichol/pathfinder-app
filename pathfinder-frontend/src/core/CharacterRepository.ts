@@ -1,14 +1,13 @@
 import {v4 as uuidv4} from 'uuid';
 import {getActiveUser} from "../app/auth";
 import {FirebaseRepository} from "../app/firebase";
-import Character from "./Character";
-import {BasePlayerTemplate, InitialState} from "./CharacterInitialState";
-import {IDataHub} from "./DataHub";
+import Character from "../v7/Character";
+import Database from "../v7/Database";
 
 export default class CharacterRepository {
   private cache?: {[id: string]: Character} = undefined;
 
-  public constructor(private readonly datahub: IDataHub) {
+  public constructor(private readonly database: Database) {
   }
 
   public async list(): Promise<Character[]> {
@@ -17,8 +16,10 @@ export default class CharacterRepository {
       return [];
     }
     const packedList = await FirebaseRepository.loadAll(user.id) || [];
-    const characterList = await Promise.all(packedList.map(async packed =>
-        Character.create(packed.id, this.datahub, InitialState, BasePlayerTemplate, packed.choices)));
+    const characterList = await Promise.all(packedList.map(async packed => {
+      const character = Character.create(packed.id, this.database);
+      return character.selectAll(packed.choices);
+    }));
 
     this.cache = Object.fromEntries(characterList.map(character => [ character.id, character ]));
     return characterList;
@@ -26,7 +27,7 @@ export default class CharacterRepository {
 
   public async create(id: string|undefined = undefined): Promise<Character> {
     const nextId = id ? id : uuidv4();
-    const created = await Character.create(nextId, this.datahub, InitialState, BasePlayerTemplate);
+    const created = Character.create(nextId, this.database);
 
     await this.save(created);
     this.cache = undefined;
@@ -45,7 +46,7 @@ export default class CharacterRepository {
     if (packed === undefined) {
       return this.create(id);
     }
-    const unpacked = await Character.create(id, this.datahub, InitialState, BasePlayerTemplate, packed.choices)
+    const unpacked = await Character.create(id, this.database).selectAll(packed.choices);
     if (this.cache === undefined) {
       this.cache = {};
     }

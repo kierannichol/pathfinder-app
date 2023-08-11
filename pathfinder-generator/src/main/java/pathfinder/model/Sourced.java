@@ -1,8 +1,8 @@
 package pathfinder.model;
 
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 
 public interface Sourced {
 
-    Source source();
+    SourceId source();
 }

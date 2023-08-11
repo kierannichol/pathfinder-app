@@ -1,0 +1,28 @@
+{
+  "id": "class:cleric#ecclesitheurge",
+  "name": "Ecclesitheurge",
+  "tags": ["archetype", "cleric"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:domain_mastery#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d1"
+        }, {
+          "featureId": "ability:bonded_holy_symbol#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_clerics_weapon_and_armor_proficiencies#cleric"
+        }, {
+          "featureId": "ability:the_normal_domain_ability#cleric"
+        }, {
+          "featureId": "ability:the_increase_to_channel_energy_gained_at_3rd_level#cleric"
+        }]
+      }]
+    }
+  }
+}

@@ -67,6 +67,7 @@ public class NethysSorcererBloodlineScraper extends AbstractNethysScraper {
                 id,
                 name,
                 Description.create(description),
+                null,
                 bonusFeats,
                 bonusSpells,
                 bloodlinePowers,

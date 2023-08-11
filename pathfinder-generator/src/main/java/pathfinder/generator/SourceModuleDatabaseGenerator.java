@@ -9,23 +9,23 @@ import pathfinder.data.v4.EntityDbo;
 import pathfinder.data.v4.EntitySummaryDbo;
 import pathfinder.generator.provider.EntityProvider;
 import pathfinder.model.Entity;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.util.StreamUtils;
 
 @RequiredArgsConstructor
 public class SourceModuleDatabaseGenerator extends AbstractDatabaseGenerator<Entity, EntitySummaryDbo, EntityDbo> {
-    private final Source source;
+    private final SourceId sourceId;
     private final List<EntityProvider> entityProviders;
 
     @Override
     protected Stream<Entity> streamModels() {
         return entityProviders.stream()
-                .flatMap(provider -> provider.streamEntities(source))
+                .flatMap(provider -> provider.streamEntities(sourceId))
                 .filter(StreamUtils.duplicates(Entity::id));
     }
 
     private String databaseId() {
-        return source.code();
+        return sourceId.code();
     }
 
     @Override

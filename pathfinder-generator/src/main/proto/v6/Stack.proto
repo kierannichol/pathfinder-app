@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "Description.proto";
+import "v6/Effect.proto";
+import "v6/Link.proto";
+import "v6/Choice.proto";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data.v6";
+
+package v6;
+
+message StackDbo {
+  repeated ConditionalStackComponentDbo conditional_components = 1;
+
+  repeated EffectDbo effects = 101;
+  repeated LinkDbo links = 102;
+  repeated UnlinkDbo unlinks = 103;
+  repeated ChoiceDbo choices = 104;
+}
+
+message ConditionalStackComponentDbo {
+  string condition_formula = 1;
+
+  repeated EffectDbo effects = 101;
+  repeated LinkDbo links = 102;
+  repeated UnlinkDbo unlinks = 103;
+  repeated ChoiceDbo choices = 104;
+}

@@ -1,7 +1,7 @@
 import React, {MouseEvent, ReactNode, useMemo, useState} from "react";
 import {CloseButton} from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
-import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
+import {usePathfinderDatabaseV7} from "../../../v7/PathfinderDatabaseV7";
 import PathfinderButton from "../../common/PathfinderButton";
 import styles from "./ChoiceSelectButton.module.scss";
 import ChoiceSelectorDialog from "./ChoiceSelectorDialog";
@@ -23,7 +23,7 @@ interface ChoiceSelectButtonProps {
 }
 
 export default function ChoiceSelectButton({ choiceName, value, onSelect, optionsFn, categoriesFn, buttonLabel, children, actionVerb = 'Select', removable = false, variant = 'white', dialogVariant = variant, search = false }: ChoiceSelectButtonProps) {
-  const pathfinderDatabase = usePathfinderDatabase();
+  const pathfinderDatabase = usePathfinderDatabaseV7();
   const [show, setShow] = useState(false);
   const [categories, setCategories] = useState<ChoiceSelectorCategory[]>();
 

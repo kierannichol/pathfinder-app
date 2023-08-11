@@ -1,0 +1,27 @@
+{
+  "id": "class:ranger#wild_hunter",
+  "name": "Wild Hunter",
+  "tags": ["archetype", "ranger"],
+  "maxStacks": 1,
+  "description": {
+    "text": "A wild hunter seeks to emulate the animals around him to keep him safe while he tracks his prey. Instead of studying the traits and behaviors of a favored enemy, a wild hunter studies those of various animals, incorporating those attributes into his hunting strategy."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:animal_focus#ranger_wild_hunter",
+          "conditionFormula": "@class:ranger\u003e\u003d1"
+        }, {
+          "featureId": "ability:shared_focus#ranger_wild_hunter",
+          "conditionFormula": "@class:ranger\u003e\u003d7"
+        }],
+        "unlinks": [{
+          "featureId": "ability:all_instances_of_the_favored_enemy_class_ability#ranger"
+        }, {
+          "featureId": "ability:woodland_stride_and_swift_tracker#ranger"
+        }]
+      }]
+    }
+  }
+}

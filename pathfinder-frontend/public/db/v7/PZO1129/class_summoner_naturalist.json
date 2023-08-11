@@ -1,0 +1,35 @@
+{
+  "id": "class:summoner#naturalist",
+  "name": "Naturalist",
+  "tags": ["archetype", "summoner"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:animal_focus#summoner_naturalist",
+          "conditionFormula": "@class:summoner\u003e\u003d4"
+        }, {
+          "featureId": "ability:shared_focus#summoner_naturalist",
+          "conditionFormula": "@class:summoner\u003e\u003d14"
+        }, {
+          "featureId": "ability:third_animal_focus#summoner_naturalist",
+          "conditionFormula": "@class:summoner\u003e\u003d18"
+        }],
+        "unlinks": [{
+          "featureId": "ability:summon_monster_i#summoner"
+        }, {
+          "featureId": "ability:shield_ally_and_greater_shield_ally#summoner"
+        }, {
+          "featureId": "ability:the_aspect_summoner_class_ability#summoner"
+        }, {
+          "featureId": "ability:life_bond#summoner"
+        }, {
+          "featureId": "ability:greater_aspect#summoner"
+        }]
+      }]
+    }
+  }
+}

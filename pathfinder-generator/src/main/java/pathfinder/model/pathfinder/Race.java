@@ -13,7 +13,7 @@ import pathfinder.model.Template;
 import pathfinder.model.Template.Section;
 import pathfinder.model.Template.TemplateBuilder;
 
-public record Race(Id id, String name, String size, int speed, String type, String source) implements NamedEntity {
+public record Race(Id id, String name, String size, int speed, String type, String source) implements NamedEntity, FromSourceBook {
     public Entity toEntity() {
         var tags = Tags.of("race");
         var effects = new ArrayList<Effect>();

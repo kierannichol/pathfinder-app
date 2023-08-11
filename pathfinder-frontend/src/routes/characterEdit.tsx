@@ -1,11 +1,18 @@
 import React from "react";
 import {useLoaderData} from "react-router-dom";
-import {withGlobalCharacterRepository} from "../app/reactCharacter";
+import {CharacterRepositoryContextProvider, withGlobalCharacterRepository} from "../app/reactCharacter";
 import Page from "../components/common/Page";
-import {withGlobalPathfinderDatabase} from "../database/v4/PathfinderDatabase";
+import Character from "../v7/Character";
+import Database from "../v7/Database";
+import {PathfinderDatabaseContextV7, withGlobalPathfinderDatabaseV7} from "../v7/PathfinderDatabaseV7";
 import CharacterEditView from "../views/CharacterEditView";
 
-export async function characterEditLoader({ params }: any) {
+interface CharacterEditLoaderData {
+  character: Character;
+  database: Database;
+}
+
+export async function characterEditLoader({ params }: any): Promise<CharacterEditLoaderData> {
   const characterId = params.id;
 
   if (characterId === undefined) {
@@ -18,13 +25,16 @@ export async function characterEditLoader({ params }: any) {
     throw new Response("Character not found", { status: 404 });
   }
 
-  const pathfinderDb = await withGlobalPathfinderDatabase();
+  const pathfinderDb = await withGlobalPathfinderDatabaseV7();
 
-  return { character, pathfinderDb };
+  return {
+    character: character,
+    database: pathfinderDb
+  };
 }
 
 export default function CharacterEditRoute() {
-  const { character } = useLoaderData() as any;
+  const { character, database } = useLoaderData() as CharacterEditLoaderData;
 
   // const params = useParams();
   // const characterRepository = useCharacterRepository();
@@ -35,15 +45,11 @@ export default function CharacterEditRoute() {
   // }
 
   return <Page title="Pathfinder App" className="pf-app">
-    <CharacterEditView loaded={character} />
-    {/*<Async promiseFn={() => characterRepository.load(id)}>*/}
-    {/*    <Async.Loading>*/}
-    {/*      <LoadingBlock />*/}
-    {/*    </Async.Loading>*/}
-    {/*    <Async.Fulfilled>*/}
-    {/*      {(character: Character) => <CharacterEditView loaded={character} />}*/}
-    {/*    </Async.Fulfilled>*/}
-    {/*</Async>*/}
+    <PathfinderDatabaseContextV7.Provider value={database}>
+      <CharacterRepositoryContextProvider database={database}>
+        <CharacterEditView loaded={character} />
+      </CharacterRepositoryContextProvider>
+    </PathfinderDatabaseContextV7.Provider>
   </Page>
 
   // const [ character, setCharacter ] = useState<Character | undefined>();

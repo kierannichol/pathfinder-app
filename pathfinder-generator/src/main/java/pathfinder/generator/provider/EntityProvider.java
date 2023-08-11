@@ -2,9 +2,9 @@ package pathfinder.generator.provider;
 
 import java.util.stream.Stream;
 import pathfinder.model.Entity;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 
 public interface EntityProvider {
 
-    Stream<Entity> streamEntities(Source source);
+    Stream<Entity> streamEntities(SourceId sourceId);
 }

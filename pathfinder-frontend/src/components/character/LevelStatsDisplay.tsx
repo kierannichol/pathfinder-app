@@ -1,5 +1,5 @@
 import {Col, Container, Row} from "react-bootstrap";
-import CharacterAtLevel from "../../core/CharacterAtLevel";
+import CharacterAtLevel from "../../v7/CharacterAtLevel";
 import "./LevelStatsDisplay.css";
 
 interface LevelStatsDisplayProps {
@@ -16,7 +16,6 @@ function LevelStatsDisplay({characterAtLevel}: LevelStatsDisplayProps) {
       <Col className={"header"}>Will</Col>
     </Row>
     <Row>
-      {/*<Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@bab)}')?.asText()}</Col>*/}
       <Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@bab)}')?.asText()}</Col>
       <Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@fort:base)}')?.asText()}</Col>
       <Col className={"numeric-value"}>{characterAtLevel.resolve('{signed(@ref:base)}')?.asText()}</Col>

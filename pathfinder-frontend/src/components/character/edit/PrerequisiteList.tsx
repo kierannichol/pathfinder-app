@@ -1,58 +1,70 @@
-import {faCircleCheck, faCircleQuestion, faCircleXmark} from "@fortawesome/free-solid-svg-icons";
+import {faCircleQuestion} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Resolvable, ResolvedValue} from "@kierannichol/formula-js";
 import React, {ReactNode, useMemo} from "react";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
-import {IDataHub} from "../../../core/DataHub";
-import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import FormulaTreeFormatter, {
   FormattedValue,
   TreeNodeOperator,
   TreeNodeValue
 } from "../../../logic/FormulaTreeFormatter";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
+import Database from "../../../v7/Database";
+import {usePathfinderDatabaseV7} from "../../../v7/PathfinderDatabaseV7";
+import styles from "./PrerequisiteList.module.scss";
 
 interface PrerequisiteListProps {
+  featureId: string,
   formula: Resolvable;
+  maxStacks: number|null,
   characterAtLevel: CharacterAtLevel;
 }
 
-export default function PrerequisiteList({ formula, characterAtLevel } : PrerequisiteListProps) {
-  const pathfinderDb = usePathfinderDatabase();
+function UnknownMark() {
+  return <FontAwesomeIcon style={{ color: 'var(--bs-warning)' }} icon={faCircleQuestion} />
+}
+
+export default function PrerequisiteList({ featureId, formula, maxStacks, characterAtLevel } : PrerequisiteListProps) {
+  const pathfinderDb = usePathfinderDatabaseV7();
 
   const block = useMemo(() => {
-    if (formula === undefined) {
-      return [];
+    const blocks = [];
+
+    const alreadyHasBlock = genAlreadyHasBlock(
+        (characterAtLevel.resolve(featureId)?.asNumber() ?? 0),
+        maxStacks);
+    if (alreadyHasBlock) {
+      blocks.push(alreadyHasBlock);
     }
 
-    return formatFormula(formula, characterAtLevel, pathfinderDb);
-  }, [formula, characterAtLevel, pathfinderDb]);
+    if (formula !== undefined) {
+      blocks.push(formatFormula(featureId, formula, maxStacks, characterAtLevel, pathfinderDb));
+    }
+
+    return blocks;
+  }, [featureId, maxStacks, formula, characterAtLevel, pathfinderDb]);
 
   return (<div>
     {block}
   </div>);
 }
 
-function formatFormula(formula: Resolvable, characterAtLevel: CharacterAtLevel, pathfinderDb: IDataHub): ReactNode {
+function formatFormula(featureId: string, formula: Resolvable, maxStacks: number|null, characterAtLevel: CharacterAtLevel, pathfinderDb: Database): ReactNode {
   const formatter = new FormulaTreeFormatter(variable => {
     return pathfinderDb.name(variable) ?? variable;
   });
 
   const tree = formatter.format(formula, characterAtLevel);
   if (tree === undefined) {
-    return '';
+    return <></>;
   }
-
-  const checkMark = <FontAwesomeIcon style={{ color: 'var(--bs-success)' }} icon={faCircleCheck} />
-  const xMark = <FontAwesomeIcon style={{ color: 'var(--bs-danger)' }} icon={faCircleXmark} />
-  const unknownMark = <FontAwesomeIcon style={{ color: 'var(--bs-warning)' }} icon={faCircleQuestion} />
-  const Empty = <></>
 
   function formatNode(node: ResolvedValue|undefined): ReactNode {
     if (node === undefined) {
       return undefined;
     }
     if (node instanceof FormattedValue) {
-      return <span>{node.asBoolean() ? checkMark : xMark} {node.asFormatted()}</span>
+      let formatted: ReactNode = node.asFormatted();
+      return <span className={node.asBoolean() ? styles.element : styles.elementInvalid}>{formatted}</span>
     }
 
     if (node instanceof TreeNodeValue) {
@@ -63,16 +75,16 @@ function formatFormula(formula: Resolvable, characterAtLevel: CharacterAtLevel, 
         // create OR block
         html = <span>{node.mapChildren(child => formatNode(child))
             .filter(x => x !== undefined)
-            .map((formatted, i) => <span>{formatted}</span>)
-            .reduce((a, b) => <span>{a} or {b}</span>)
+            .map((formatted, _) => <span>{formatted}</span>)
+            .reduce((a, b, i) => <span>{a} or {b}</span>)
         }</span>
       }
       else {
         // create AND block
         html = <span>{node.mapChildren(child => formatNode(child))
           .filter(x => x !== undefined)
-          .map((formatted, i) => <span>{formatted}</span>)
-          .reduce((a, b) => <span>{a}; {b}</span>)
+          .map((formatted, _) => <span>{formatted}</span>)
+          .reduce((a, b, i) => <span>{a}; {b}</span>)
         }</span>
       }
       return html
@@ -82,8 +94,21 @@ function formatFormula(formula: Resolvable, characterAtLevel: CharacterAtLevel, 
       return undefined;
     }
 
-    return <span>{unknownMark} {node.asText()}</span>
+    return <span className={styles.element}><UnknownMark/> {node.asText()}</span>
   }
 
-  return <div>{formatNode(tree)}</div>
+  return <div>
+    {/*<div><code>{formula.asFormula()}</code></div>*/}
+    <div>{formatNode(tree)}</div>
+  </div>
+}
+
+function genAlreadyHasBlock(currentStacks: number, maxStacks: number|null): ReactNode|undefined {
+  if (maxStacks === null || currentStacks < maxStacks) {
+    return undefined;
+  }
+  const message = maxStacks === 1
+      ? 'Must not already have this feature.'
+      : `Cannot have more than ${maxStacks} of this feature.';`
+  return <span key={'already-has'} className={styles.elementInvalid}>{message}</span>;
 }

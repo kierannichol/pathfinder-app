@@ -4,7 +4,7 @@ import {RequiresAuth} from "../app/auth";
 import {withGlobalCharacterRepository} from "../app/reactCharacter";
 import CharacterSheet from "../components/character/sheet/v2/CharacterSheet";
 import Page from "../components/common/Page";
-import {withGlobalPathfinderDatabase} from "../database/v4/PathfinderDatabase";
+import {withGlobalPathfinderDatabaseV7} from "../v7/PathfinderDatabaseV7";
 
 export async function characterSheetV2Loader({ params }: any) {
   const characterId = params.id;
@@ -31,7 +31,7 @@ export async function characterSheetV2Loader({ params }: any) {
     throw new Response("Character level not found", { status: 404 });
   }
 
-  const database = await withGlobalPathfinderDatabase();
+  const database = await withGlobalPathfinderDatabaseV7();
 
   return { characterAtLevel, database };
 }

@@ -1,15 +1,17 @@
+import {Formula} from "@kierannichol/formula-js";
 import React, {ReactNode} from "react";
-import CharacterAtLevel from "../../core/CharacterAtLevel";
-import {Option, SelectChoiceNode} from "../../core/Choice";
-import {IDataHub} from "../../core/DataHub";
 import Description from "../../core/Description";
-import {usePathfinderDatabase} from "../../database/v4/PathfinderDatabase";
+import CharacterAtLevel from "../../v7/CharacterAtLevel";
+import {FeatureSelectChoiceRef} from "../../v7/ChoiceRef";
+import Database from "../../v7/Database";
+import {FeatureSummary} from "../../v7/Feature";
+import {usePathfinderDatabaseV7} from "../../v7/PathfinderDatabaseV7";
 import ChoiceSelectButton from "./edit/ChoiceSelectButton";
-import {ChoiceSelectorCategory, ChoiceSelectorOption} from "./edit/ChoiceSelectorList";
-import EntityDescription from "./edit/EntityDescription";
+import {ChoiceSelectorOption} from "./edit/ChoiceSelectorList";
+import FeatureDescription from "./edit/FeatureDescription";
 
 interface DataChoiceSelectButtonProps {
-  choice: SelectChoiceNode;
+  choiceRef: FeatureSelectChoiceRef;
   characterAtLevel: CharacterAtLevel;
   onSelect?: (id: string) => void;
   label?: string;
@@ -21,44 +23,46 @@ interface DataChoiceSelectButtonProps {
   children?: ReactNode;
 }
 
-export default function DataChoiceSelectButton({ choice, characterAtLevel, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
-  const database = usePathfinderDatabase();
+export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
+  const database = usePathfinderDatabaseV7();
 
   return <ChoiceSelectButton
-      choiceName={label ?? choice.label}
+      choiceName={label ?? choiceRef.label}
       variant={variant ?? "default"}
       dialogVariant={dialogVariant}
-      value={choice.current}
+      value={characterAtLevel.selected(choiceRef)}
       buttonLabel={buttonLabel}
       onSelect={onSelect}
       search={search}
-      optionsFn={(categoryId: string|undefined) => Object.values(choice.options(database, categoryId)).map(option =>
-          optionToChoiceSelectorOption(option, choice, database, characterAtLevel, descriptionFn))}
-      categoriesFn={() => choice.categories.map(category => new ChoiceSelectorCategory(category.id, category.label))}
+      optionsFn={(categoryId: string|undefined) => choiceRef.options(database).map(option =>
+          featureToChoiceSelectorOption(option, choiceRef, database, characterAtLevel, descriptionFn))}
+      // categoriesFn={() => choice.categories.map(category => new ChoiceSelectorCategory(category.id, category.label))}
       children={children}
-      actionVerb={choice.repeatingIndex === 0 ? 'Select' : 'Add'}
-      removable={choice.repeatingIndex > 0 && choice.current !== ''}
+      // actionVerb={choice.repeatingIndex === 0 ? 'Select' : 'Add'}
+      // removable={choice.repeatingIndex > 0 && choice.current !== ''}
   />
 }
 
-function optionToChoiceSelectorOption(option: Option, choice: SelectChoiceNode, database: IDataHub, characterAtLevel: CharacterAtLevel, descriptionFn?: (description: Description) => ReactNode): ChoiceSelectorOption {
+function featureToChoiceSelectorOption(feature: FeatureSummary, choiceRef: FeatureSelectChoiceRef, database: Database, characterAtLevel: CharacterAtLevel, descriptionFn?: (description: Description) => ReactNode): ChoiceSelectorOption {
 
   return new ChoiceSelectorOption(
-      option.id,
-      option.name,
-      () => option.isValidFor(characterAtLevel),
+      feature.id,
+      feature.name,
+      () => feature.isEnabled(characterAtLevel),
       async () => {
-        const description = await database.description(option.id);
+        const description = await database.description(feature.id);
         if (!description) {
           return '';
         }
         if (descriptionFn !== undefined) {
           return descriptionFn(description);
         }
-        return <EntityDescription
+        return <FeatureDescription
+            featureId={feature.id}
             description={description}
             characterAtLevel={characterAtLevel}
-            prerequisiteFormula={option.prerequisiteFormula}/>
+            maxStacks={feature.maxStacks}
+            prerequisiteFormula={Formula.parse(feature.enabledFormula)}/>
       }
   )
 }

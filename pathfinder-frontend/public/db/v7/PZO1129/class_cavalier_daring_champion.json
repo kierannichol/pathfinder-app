@@ -1,0 +1,43 @@
+{
+  "id": "class:cavalier#daring_champion",
+  "name": "Daring Champion",
+  "tags": ["archetype", "cavalier"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:champions_finesse#cavalier_daring_champion",
+          "conditionFormula": "@class:cavalier\u003e\u003d1"
+        }, {
+          "featureId": "ability:nimble#cavalier_daring_champion",
+          "conditionFormula": "@class:cavalier\u003e\u003d3"
+        }, {
+          "featureId": "ability:panache_and_deeds#cavalier_daring_champion",
+          "conditionFormula": "@class:cavalier\u003e\u003d4"
+        }, {
+          "featureId": "ability:advanced_deeds#cavalier_daring_champion",
+          "conditionFormula": "@class:cavalier\u003e\u003d11"
+        }, {
+          "featureId": "ability:champions_weapon_mastery#cavalier_daring_champion",
+          "conditionFormula": "@class:cavalier\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_cavaliers_weapon_and_armor_proficiencies#cavalier"
+        }, {
+          "featureId": "ability:mount#cavalier"
+        }, {
+          "featureId": "ability:cavaliers_charge#cavalier"
+        }, {
+          "featureId": "ability:expert_trainer#cavalier"
+        }, {
+          "featureId": "ability:mighty_charge#cavalier"
+        }, {
+          "featureId": "ability:supreme_charge#cavalier"
+        }]
+      }]
+    }
+  }
+}

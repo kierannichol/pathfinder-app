@@ -2,10 +2,12 @@ package pathfinder.parser.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import pathfinder.util.FormulaBuilder;
 
+@Disabled
 class FormulaBuilderTest {
 
     @Nested

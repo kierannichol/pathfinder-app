@@ -1,0 +1,62 @@
+{
+  "id": "sorcerer_bloodline:fey_bloodline",
+  "name": "Fey Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The capricious nature of the fey runs in your family due to some intermingling of fey blood or magic. You are more emotional than most, prone to bouts of joy and rage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"]
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:laughing_touch#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:woodland_stride#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:fleeting_glance#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:fey_magic#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:soul_of_the_fey#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

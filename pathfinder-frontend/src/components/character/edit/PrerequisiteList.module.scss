@@ -6,6 +6,15 @@
   }
 }
 
+.element {
+  font-weight: bold;
+}
+
+.elementInvalid {
+  composes: element;
+  color: var(--bs-danger);
+}
+
 .blockHeader {
   font-size: 0.75rem;
   text-transform: uppercase;

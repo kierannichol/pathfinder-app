@@ -4,10 +4,11 @@ import java.util.Arrays;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import pathfinder.model.Id;
+import pathfinder.model.NamedEntity;
 import pathfinder.util.NameToIdConverter;
 
 @RequiredArgsConstructor
-public enum ArmorProficiency {
+public enum ArmorProficiency implements NamedEntity {
     OTHER("Other", Slot.NONE),
     LIGHT_ARMOR("Light Armor", Slot.BODY),
     MEDIUM_ARMOR("Medium Armor", Slot.BODY),

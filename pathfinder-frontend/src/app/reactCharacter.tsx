@@ -1,14 +1,15 @@
 import {createContext, useContext, useEffect, useState} from "react";
 import LoadingBlock from "../components/common/LoadingBlock";
 import CharacterRepository from "../core/CharacterRepository";
-import {usePathfinderDatabase, withGlobalPathfinderDatabase} from "../database/v4/PathfinderDatabase";
+import Database from "../v7/Database";
+import {withGlobalPathfinderDatabaseV7} from "../v7/PathfinderDatabaseV7";
 
 const CharacterRepositoryContext = createContext<CharacterRepository|undefined>(undefined);
 
 let globalCharacterRepository: Promise<CharacterRepository> | undefined = undefined;
 
 async function initializeCharacterRepository(): Promise<CharacterRepository> {
-  const dbs = await withGlobalPathfinderDatabase();
+  const dbs = await withGlobalPathfinderDatabaseV7();
   return new CharacterRepository(dbs);
 }
 
@@ -19,14 +20,14 @@ export function withGlobalCharacterRepository(): Promise<CharacterRepository> {
   return globalCharacterRepository;
 }
 
-export function CharacterRepositoryContextProvider({ children }: any) {
-  const pathfinderDatabase = usePathfinderDatabase();
-
+export function CharacterRepositoryContextProvider({ database, children }: { database: Database, children: any }) {
   const [ repository, setRepository ] = useState<CharacterRepository>();
 
   useEffect(() => {
-    setRepository(new CharacterRepository(pathfinderDatabase));
-  }, [pathfinderDatabase])
+    if (database) {
+      setRepository(new CharacterRepository(database));
+    }
+  }, [database])
 
   // const repository = useMemo(() => {
   //   const repository = new CharacterRepository(pathfinderDatabase);

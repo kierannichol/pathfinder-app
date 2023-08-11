@@ -1,0 +1,32 @@
+{
+  "id": "class:brawler#exemplar",
+  "name": "Exemplar",
+  "tags": ["archetype", "brawler"],
+  "maxStacks": 1,
+  "description": {
+    "text": "A versatile soldier who inspires her companions with her fighting prowess, an exemplar is at home on the front lines of battles anywhere."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:call_to_arms#brawler_exemplar",
+          "conditionFormula": "@class:brawler\u003e\u003d1"
+        }, {
+          "featureId": "ability:inspiring_prowess#brawler_exemplar",
+          "conditionFormula": "@class:brawler\u003e\u003d3"
+        }, {
+          "featureId": "ability:field_instruction#brawler_exemplar",
+          "conditionFormula": "@class:brawler\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:unarmed_strike_and_close_weapon_mastery#brawler"
+        }, {
+          "featureId": "ability:maneuver_training_and_ac_bonus#brawler"
+        }, {
+          "featureId": "ability:brawlers_strike#brawler"
+        }]
+      }]
+    }
+  }
+}

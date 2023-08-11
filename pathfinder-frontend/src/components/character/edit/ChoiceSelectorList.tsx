@@ -1,5 +1,7 @@
-import React, {ReactNode} from "react";
+import React, {ReactNode, useMemo} from "react";
+import {usePathfinderDatabaseV7} from "../../../v7/PathfinderDatabaseV7";
 import PathfinderSelect from "../../common/PathfinderSelect";
+import FeatureIcon from "../../feature/FeatureIcon";
 
 export class ChoiceSelectorOption {
   private cachedIsValid: boolean|undefined;
@@ -41,7 +43,7 @@ export default function ChoiceSelectorList({ options, variant, selected, onSelec
   function OptionItem(option: ChoiceSelectorOption) {
     return <PathfinderSelect.Item key={option.id}
                                   itemKey={option.id}
-                                  label={option.name}
+                                  label={<FeatureButtonLabel featureId={option.id} />}
                                   bodyFn={option.descriptionFn}
                                   disabled={!option.isValid}
                                   variant={variant} />
@@ -50,4 +52,17 @@ export default function ChoiceSelectorList({ options, variant, selected, onSelec
   return <PathfinderSelect activeKey={selected} onChange={onSelect}>
     {options.map(option => OptionItem(option))}
   </PathfinderSelect>
+}
+
+interface FeatureButtonLabelProps {
+  featureId: string;
+}
+
+function FeatureButtonLabel({ featureId }: FeatureButtonLabelProps) {
+  const pathfinderDatabase = usePathfinderDatabaseV7();
+  const summary = useMemo(() => pathfinderDatabase.feature(featureId), [featureId]);
+  return <div className="d-flex flex-row gap-2">
+    {summary && <FeatureIcon feature={summary} />}
+    <div className="d-flex align-self-center">{summary?.name ?? featureId}</div>
+  </div>;
 }

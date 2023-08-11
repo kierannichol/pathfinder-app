@@ -1,8 +1,8 @@
 import {useMemo, useState} from "react";
 import {Container} from "react-bootstrap";
-import CharacterAtLevel from "../../core/CharacterAtLevel";
 import AbilityScores from "../../database/AbilityScores";
 import TextLookup from "../../model/TextLookup";
+import CharacterAtLevel from "../../v7/CharacterAtLevel";
 import NumberSelect from "../common/NumberSelect";
 import "./CharacterAttributeChoiceInputs.scss";
 

@@ -1,0 +1,65 @@
+{
+  "id": "bloodrager_bloodline:fey_bloodline",
+  "name": "Fey Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "One of your ancestors was fey, or the fey realm somehow intermixed with your bloodline. It affects your bloodrage in tricky and surprising ways."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:bloodrager\u003e\u003d7",
+          "choices": [{
+            "choiceId": "bloodrager7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d13",
+          "choices": [{
+            "choiceId": "bloodrager13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d19",
+          "choices": [{
+            "choiceId": "bloodrager19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_reflexes", "feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:step_up", "feat:intimidating_prowess"]
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:confusing_critical#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d1"
+        }, {
+          "featureId": "ability:leaping_charger#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d4"
+        }, {
+          "featureId": "ability:blurring_movement#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d8"
+        }, {
+          "featureId": "ability:quickling_bloodrage#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d12"
+        }, {
+          "featureId": "ability:one_with_nature#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d16"
+        }, {
+          "featureId": "ability:fury_of_the_fey#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

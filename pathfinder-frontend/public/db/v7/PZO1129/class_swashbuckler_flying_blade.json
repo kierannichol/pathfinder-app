@@ -1,0 +1,34 @@
+{
+  "id": "class:swashbuckler#flying_blade",
+  "name": "Flying Blade",
+  "tags": ["archetype", "swashbuckler"],
+  "maxStacks": 1,
+  "description": {
+    "text": "While most swashbucklers prefer their battles up close, others prefer dealing death from a distance."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:panache#swashbuckler_flying_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d1"
+        }, {
+          "featureId": "ability:flying_blade_training#swashbuckler_flying_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d5"
+        }, {
+          "featureId": "ability:flying_blade_mastery#swashbuckler_flying_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:panache#swashbuckler"
+        }, {
+          "featureId": "ability:dodging_panache#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_training#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_mastery#swashbuckler"
+        }]
+      }]
+    }
+  }
+}

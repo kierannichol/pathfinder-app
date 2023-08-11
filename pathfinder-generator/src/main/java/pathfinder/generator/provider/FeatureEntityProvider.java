@@ -8,7 +8,7 @@ import pathfinder.generator.db.local.FeatureSourceDatabase;
 import pathfinder.generator.parse.PrerequisiteParser;
 import pathfinder.model.Entity;
 import pathfinder.model.pathfinder.Feature;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 
 @Component
@@ -18,10 +18,10 @@ public class FeatureEntityProvider implements EntityProvider {
     private final PrerequisiteParser prerequisiteParser;
 
     @Override
-    public Stream<Entity> streamEntities(Source source) {
+    public Stream<Entity> streamEntities(SourceId sourceId) {
         return featureSourceDatabases.stream()
                 .flatMap(FeatureSourceDatabase::streamFeatures)
-                .filter(feature -> source.equals(Sources.findSourceByNameOrCode(feature.source())))
+                .filter(feature -> sourceId.equals(Sources.findSourceByNameOrCode(feature.source())))
                 .map(this::featureToEntity);
     }
 

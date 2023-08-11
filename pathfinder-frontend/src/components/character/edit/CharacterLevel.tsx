@@ -3,10 +3,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useDeferredValue, useMemo} from "react";
 import * as Icon from "react-bootstrap-icons";
 import {Link} from "react-router-dom";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
-import {SelectChoiceNode} from "../../../core/Choice";
-import {usePathfinderDatabase} from "../../../database/v4/PathfinderDatabase";
 import {uniq} from "../../../util/pfutils";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
+import {FeatureSelectChoiceRef} from "../../../v7/ChoiceRef";
+import {usePathfinderDatabaseV7} from "../../../v7/PathfinderDatabaseV7";
 import ChoiceSelector from "../ChoiceSelector";
 import DataChoiceSelectButton from "../DataChoiceSelectButton";
 import LevelStatsDisplay from "../LevelStatsDisplay";
@@ -24,7 +24,7 @@ interface CharacterLevelProps {
 }
 
 export default function CharacterLevel({ characterId, characterAtLevel, characterAtPreviousLevel, onChange }: CharacterLevelProps) {
-  const database = usePathfinderDatabase();
+  const database = usePathfinderDatabaseV7();
   characterAtLevel = useDeferredValue(characterAtLevel);
   characterAtPreviousLevel = useDeferredValue(characterAtPreviousLevel);
 
@@ -39,11 +39,11 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
           && characterChanges.choicesOfType('class')[0]),
       [characterChanges]);
 
-  const className = useMemo(() => database.name(classChoice.current),
+  const className = useMemo(() => database.name(characterAtLevel.selected(classChoice)),
       [database, classChoice]);
 
   const archetypeChoices = useMemo(() => (characterChanges
-          && characterChanges.choicesOfType('archetype') as SelectChoiceNode[]),
+          && characterChanges.choicesOfType('archetype') as FeatureSelectChoiceRef[]),
       [characterChanges]);
 
   const choicesForLevel = useMemo(() => (characterChanges && characterChanges.choices
@@ -61,7 +61,7 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
   }
 
   const classEditButton = classChoice
-      ? <> - <CharacterClassEditButton characterAtLevel={characterAtLevel} classChoice={classChoice as SelectChoiceNode} onChange={onChange}/></>
+      ? <> - <CharacterClassEditButton characterAtLevel={characterAtLevel} classChoice={classChoice as FeatureSelectChoiceRef} onChange={onChange}/></>
       : <></>;
 
   return <fieldset>
@@ -74,7 +74,7 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
       </div>
     </legend>
     <div className='section'>
-      {characterAtLevel.has('bab') && <LevelStatsDisplay characterAtLevel={characterAtLevel} />}
+      {className !== undefined && <LevelStatsDisplay characterAtLevel={characterAtLevel} />}
       <div className='level-pillbox'>
         <SkillEditorButton
             characterAtLevel={characterChanges}
@@ -99,12 +99,12 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
       {choicesForLevel
           .sort((a, b) => a.type.localeCompare(b.type))
           .map(choice =>
-          <div key={choice.key}>
+          <div key={choice.path}>
             <label className={"label--option-type"}>{choice.label}</label>
             <ChoiceSelector
                 characterAtLevel={characterAtLevel}
                 choice={choice}
-                onChange={value => onChange(choice.key, value)} />
+                onChange={value => onChange(choice.path, value)} />
           </div>
       )}
       </div>}
@@ -125,16 +125,16 @@ export default function CharacterLevel({ characterId, characterAtLevel, characte
 
 interface CharacterLevelNameProps {
   characterAtLevel: CharacterAtLevel;
-  classChoice: SelectChoiceNode;
+  classChoice: FeatureSelectChoiceRef;
   onChange: (key:string, value:string) => void;
 }
 
 function CharacterClassEditButton({ characterAtLevel, classChoice, onChange }: CharacterLevelNameProps) {
-  const database = usePathfinderDatabase();
+  const database = usePathfinderDatabaseV7();
 
   const classLevelText = useMemo(() => {
     const classesSelected = uniq(characterAtLevel.choicesOfType('class')
-      .map(choice => choice.current));
+      .map(choice => characterAtLevel.selected(choice)));
 
     return classesSelected.map(classId => {
       if (!classId) {
@@ -150,8 +150,8 @@ function CharacterClassEditButton({ characterAtLevel, classChoice, onChange }: C
       variant={'header-link'}
       dialogVariant={'class'}
       characterAtLevel={characterAtLevel}
-      choice={classChoice}
-      onSelect={value => onChange(classChoice.key, value)}>
+      choiceRef={classChoice}
+      onSelect={value => onChange(classChoice.path, value)}>
     <Icon.PencilSquare/>&nbsp;{classLevelText}
   </DataChoiceSelectButton>
 }

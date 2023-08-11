@@ -1,0 +1,33 @@
+{
+  "id": "class:slayer#stygian_slayer",
+  "name": "Stygian Slayer",
+  "tags": ["archetype", "slayer"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:invisibility#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d4"
+        }, {
+          "featureId": "ability:spell_use#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d7"
+        }, {
+          "featureId": "ability:shadowy_mist_form#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_slayers_armor_proficiency#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_4th_level#slayer"
+        }, {
+          "featureId": "ability:stalker#slayer"
+        }, {
+          "featureId": "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+        }]
+      }]
+    }
+  }
+}

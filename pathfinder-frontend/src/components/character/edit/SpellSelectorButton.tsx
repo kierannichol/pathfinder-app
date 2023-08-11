@@ -1,6 +1,6 @@
 import {useMemo, useState} from "react";
 import * as Icon from "react-bootstrap-icons";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
 import PathfinderButton from "../../common/PathfinderButton";
 import SpellSelectorDialog from "./SpellSelectorDialog";
 
@@ -20,7 +20,7 @@ export default function SpellSelectorButton({ characterAtLevel, onChange }: Spel
   }, [characterAtLevel]);
 
   const spellsRemaining = useMemo(() => {
-    return spellChoices.filter(choice => choice.current === '').length;
+    return spellChoices.filter(choice => characterAtLevel.selected(choice) === '').length;
   }, [spellChoices]);
 
   if (spellChoices.length === 0) {

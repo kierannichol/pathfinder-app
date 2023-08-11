@@ -27,3 +27,8 @@ Character is made of choices.
 Each choice applies one or more effects.
 Effects provide stat changes, additional choices, or modifications to existing choices?
 
+
+
+# Numeric ID
+
+4 byte integer: <sourceId> <type> <feature> <option>

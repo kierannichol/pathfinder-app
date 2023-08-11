@@ -1,0 +1,28 @@
+{
+  "id": "class:cavalier#gallant",
+  "name": "Gallant",
+  "tags": ["archetype", "cavalier"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:symbol_of_inspiration#cavalier_gallant",
+          "conditionFormula": "@class:cavalier\u003e\u003d5"
+        }, {
+          "featureId": "ability:symbol_of_resilience#cavalier_gallant",
+          "conditionFormula": "@class:cavalier\u003e\u003d14"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_cavaliers_order#cavalier"
+        }, {
+          "featureId": "ability:banner#cavalier"
+        }, {
+          "featureId": "ability:greater_banner#cavalier"
+        }]
+      }]
+    }
+  }
+}

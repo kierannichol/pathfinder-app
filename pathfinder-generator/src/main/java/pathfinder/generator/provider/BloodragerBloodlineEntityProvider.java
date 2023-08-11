@@ -8,7 +8,7 @@ import pathfinder.generator.convert.BloodragerBloodlineEntityConverter;
 import pathfinder.generator.db.local.BloodragerBloodlineSourceDatabase;
 import pathfinder.model.Entity;
 import pathfinder.model.Tags;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 
 @Component
@@ -19,9 +19,9 @@ public class BloodragerBloodlineEntityProvider implements EntityProvider {
     private final BloodlineFeatureEntityConverter bloodlineFeatureEntityConverter;
 
     @Override
-    public Stream<Entity> streamEntities(Source source) {
+    public Stream<Entity> streamEntities(SourceId sourceId) {
         return bloodragerBloodlineSourceDatabase.streamBloodlines()
-                .filter(model -> source.equals(Sources.findSourceByNameOrCode(model.source())))
+                .filter(model -> sourceId.equals(Sources.findSourceByNameOrCode(model.source())))
                 .flatMap(bloodline -> Stream.concat(
                         bloodragerBloodlineEntityConverter.toEntities(bloodline),
                         bloodlineFeatureEntityConverter.toEntities(bloodline, Tags.of("bloodrager_bloodline_feature"))

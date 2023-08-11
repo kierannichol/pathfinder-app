@@ -1,6 +1,7 @@
 package pathfinder.util;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -13,6 +14,14 @@ public class StreamUtils {
         Stream<T> combined = Stream.empty();
         for (Stream<T> stream : streams) {
             combined = Stream.concat(combined, stream);
+        }
+        return combined;
+    }
+
+    public static <T> Stream<T> streamLists(Iterable<List<? extends T>> listOfLists) {
+        Stream<T> combined = Stream.empty();
+        for (List<? extends T> list : listOfLists) {
+            combined = Stream.concat(combined, list.stream());
         }
         return combined;
     }

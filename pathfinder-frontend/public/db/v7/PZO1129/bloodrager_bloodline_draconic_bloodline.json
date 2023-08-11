@@ -1,0 +1,65 @@
+{
+  "id": "bloodrager_bloodline:draconic_bloodline",
+  "name": "Draconic Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "At some point in your family\u0027s history, a dragon interbred with your bloodline. Now, the sublime monster\u0027s ancient power fuels your bloodrage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:bloodrager\u003e\u003d7",
+          "choices": [{
+            "choiceId": "bloodrager7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:cleave", "feat:great_fortitude", "feat:improved_initiative", "feat:power_attack", "feat:skill_focus", "feat:toughness"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d13",
+          "choices": [{
+            "choiceId": "bloodrager13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:cleave", "feat:great_fortitude", "feat:improved_initiative", "feat:power_attack", "feat:skill_focus", "feat:toughness"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d19",
+          "choices": [{
+            "choiceId": "bloodrager19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:cleave", "feat:great_fortitude", "feat:improved_initiative", "feat:power_attack", "feat:skill_focus", "feat:toughness"]
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:claws#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d1"
+        }, {
+          "featureId": "ability:draconic_resistance#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d4"
+        }, {
+          "featureId": "ability:breath_weapon#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d8"
+        }, {
+          "featureId": "ability:dragon_wings#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d12"
+        }, {
+          "featureId": "ability:dragon_form#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d16"
+        }, {
+          "featureId": "ability:power_of_wyrms#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

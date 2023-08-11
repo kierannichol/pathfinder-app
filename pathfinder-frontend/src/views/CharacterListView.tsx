@@ -6,7 +6,7 @@ import {useCharacterRepository} from "../app/reactCharacter";
 import NewCharacterDialog from "../components/character/NewCharacterDialog";
 import LoadingBlock from "../components/common/LoadingBlock";
 import {HeaderRow} from "../components/GridHelpers";
-import Character from "../core/Character";
+import Character from "../v7/Character";
 import "./CharacterListView.scss";
 
 function CharacterListView() {
@@ -83,7 +83,7 @@ function CharacterItemRow({ character, onChange }: CharacterItemRowProps) {
   return <ListGroup.Item>
     <div className="d-flex flex-row w-100 align-items-center">
       <Link className="d-flex flex-grow-1" to={`/character/edit/${character.id}`}>
-        {character.selected("level0:character_name")}
+        {character.selected("character_name")}
       </Link>
       <Link to={'#'} className="d-flex ms-3" onClick={_ => deleteAction()}>
         {deleting ? <LoadingBlock/> : <Icon.XLg />}

@@ -1,0 +1,41 @@
+{
+  "id": "class:hunter#packmaster",
+  "name": "Packmaster",
+  "tags": ["archetype", "hunter"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:pack_bond#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d1"
+        }, {
+          "featureId": "ability:pack_focus#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d1"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d3"
+        }, {
+          "featureId": "ability:second_pack_focus#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d8"
+        }, {
+          "featureId": "ability:master_of_the_pack#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:animal_companion#hunter"
+        }, {
+          "featureId": "ability:animal_focus#hunter"
+        }, {
+          "featureId": "ability:teamwork_feats#hunter"
+        }, {
+          "featureId": "ability:second_animal_focus#hunter"
+        }, {
+          "featureId": "ability:master_hunter#hunter"
+        }]
+      }]
+    }
+  }
+}

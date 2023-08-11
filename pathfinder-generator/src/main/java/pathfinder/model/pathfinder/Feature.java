@@ -7,7 +7,8 @@ import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 
 @Builder
-public record Feature(Id id, String name, String type, Description description, String prerequisites, String source) implements NamedEntity {
+public record Feature(Id id, String name, String type, Description description, String prerequisites, String source) implements NamedEntity, FromSourceBook {
+
     public static class Type {
         private static final Pattern FEATURE_NAME_PATTERN = Pattern.compile("^(?<name>.*?)(?: \\((?<type>Su|Sp|Ex)\\))?$");
 

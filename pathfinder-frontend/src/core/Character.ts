@@ -4,8 +4,14 @@ import {CharacterState, CharacterStateMutator} from "./CharacterState";
 import {IDataHub} from "./DataHub";
 import PackedCharacter, {PackedChoices} from "./PackedCharacter";
 
+export interface ICharacter {
+  select(choiceId: string, value: any): Promise<ICharacter>;
+  selected(key: string): string|undefined;
+  selectAll(values: PackedChoices): Promise<ICharacter>;
+  atLevel(level: number): CharacterAtLevel;
+}
 
-export default class Character {
+export default class Character implements ICharacter {
 
   static async create(id: string, db: IDataHub, initialState: CharacterState, template: Template, selections: PackedChoices = {}): Promise<Character> {
     const resolvedTemplate = await template.resolve(db, selections);

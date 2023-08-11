@@ -1,8 +1,8 @@
 import {useMemo} from "react";
 import * as Icon from "react-bootstrap-icons";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
-import {ChoiceNode} from "../../../core/Choice";
 import Skills from "../../../database/Skills";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
+import ChoiceRef from "../../../v7/ChoiceRef";
 import NumberSelect from "../../common/NumberSelect";
 import "./SkillEditor.scss";
 
@@ -29,7 +29,7 @@ export function SkillEditor({characterAtLevel, onChange }: SkillEditorProps) {
 interface SkillRowProps {
   skill: any;
   characterAtLevel: CharacterAtLevel;
-  skillChoices: ChoiceNode[];
+  skillChoices: ChoiceRef[];
   onChange: (choiceId: string, skillId: string) => void;
 }
 
@@ -37,8 +37,8 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
   const current = useMemo(() => characterAtLevel.resolve(skill.id)?.asNumber() ?? 0, [skill, characterAtLevel]);
   const max = characterAtLevel.level;
 
-  const choicesAvailable = useMemo(() => skillChoices.filter(choice => choice.current === ''), [skillChoices]);
-  const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => choice.current === skill.id),
+  const choicesAvailable = useMemo(() => skillChoices.filter(choice => characterAtLevel.selected(choice) === ''), [skillChoices]);
+  const choicesUsedForThisSkill = useMemo(() => skillChoices.filter(choice => characterAtLevel.selected(choice) === skill.id),
       [skill, skillChoices]);
 
   const isTrained = useMemo(() => characterAtLevel.resolve("trained:" + skill.id)?.asBoolean() ?? false, [characterAtLevel, skill]);
@@ -48,13 +48,13 @@ function SkillRow({ skill, characterAtLevel, skillChoices, onChange }: SkillRowP
     if (newValueNumber > current) {
       const availableSkill = choicesAvailable[0];
       if (availableSkill) {
-        onChange(availableSkill.key, skill.id);
+        onChange(availableSkill.path, skill.id);
       }
     }
     else if (newValueNumber < current) {
       const disposableSkill = choicesUsedForThisSkill[0];
       if (disposableSkill) {
-        onChange(disposableSkill.key, '');
+        onChange(disposableSkill.path, '');
       }
     }
   }

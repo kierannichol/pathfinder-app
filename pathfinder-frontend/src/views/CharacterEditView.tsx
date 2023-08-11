@@ -7,8 +7,8 @@ import DataChoiceSelectButton from "../components/character/DataChoiceSelectButt
 import CharacterLevel from "../components/character/edit/CharacterLevel";
 import PromptDialog from "../components/character/edit/PromptDialog";
 import LoadingBlock from "../components/common/LoadingBlock";
-import Character from "../core/Character";
-import {SelectChoiceNode} from "../core/Choice";
+import Character from "../v7/Character";
+import {FeatureSelectChoiceRef} from "../v7/ChoiceRef";
 import "./CharacterEditView.scss";
 
 interface CharacterEditViewProps {
@@ -31,32 +31,32 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
       });
   }
 
-  function selectChoice<T>(key: string, value: T) {
+  function selectChoice(key: string, value: string) {
     updateCharacter(character => character.select(key, value));
   }
 
   function applyFavoredClassToAllLevels() {
     const selected: {[key:string]:string} = {};
-    const favoredClass = character.selected('level0:favored_class')?.replace("favored_class", "class");
+    const favoredClass = character.selected('favored_class')?.replace("favored_class", "class");
     if (!favoredClass) {
       return;
     }
     for (let level = 1; level <= 20; level++) {
-      selected[`level${level}:class`] = favoredClass;
+      selected[`${level}:class`] = favoredClass;
     }
     updateCharacter(character => character.selectAll(selected));
   }
 
-  const totalAbilityPointCost = useMemo(() => character0?.resolve('ability_point_cost')?.asText() ?? '0', [character0]);
+  const totalAbilityPointCost = useMemo(() => character0?.resolve('ability_point_cost:str')?.asText() ?? '0', [character0]);
 
   if (character0 === undefined) {
     return <main><LoadingBlock/></main>
   }
 
-  const nameChoice = character0.choice('level0:character_name');
-  const raceChoice = character0.choice('level0:race') as SelectChoiceNode;
-  const classChoice = character0.choice('level0:favored_class') as SelectChoiceNode;
-  const alignmentChoice = character0.choice('level0:alignment') as SelectChoiceNode;
+  const nameChoice = character0.choice('character_name');
+  const raceChoice = character0.choice('race') as FeatureSelectChoiceRef;
+  const classChoice = character0.choice('favored_class') as FeatureSelectChoiceRef;
+  const alignmentChoice = character0.choice('alignment') as FeatureSelectChoiceRef;
 
   return (<main className={'pf-character-edit-view'}>
     <fieldset>
@@ -65,25 +65,25 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
         {nameChoice && <>
           <label htmlFor={'character_name'}>Character Name</label>
           <CharacterTextInput
-              value={nameChoice.current ?? ''}
-              onChange={(value: string) => selectChoice(nameChoice?.key, value)} />
+              value={character.selected(nameChoice.path) ?? ''}
+              onChange={(value: string) => selectChoice(nameChoice?.path, value)} />
         </>}
         {raceChoice && <>
         <label htmlFor={'character_race'}>Race</label>
         <DataChoiceSelectButton
-            choice={raceChoice}
+            choiceRef={raceChoice}
             characterAtLevel={character0}
             search={true}
-            onSelect={value => selectChoice(raceChoice.key, value)} />
+            onSelect={value => selectChoice(raceChoice.path, value)} />
         </>}
         {classChoice && <>
         <label htmlFor={'character_class'}>Favored Class</label>
         <DataChoiceSelectButton
-            choice={classChoice}
+            choiceRef={classChoice}
             characterAtLevel={character0}
             search={true}
             onSelect={value => {
-              selectChoice(classChoice.key, value);
+              selectChoice(classChoice.path, value);
               setShowFavoredClassPrompt(true);
             }} />
           <PromptDialog show={showFavoredClassPrompt}
@@ -98,9 +98,9 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
         {alignmentChoice && <>
         <label htmlFor={'alignment'}>Alignment</label>
         <DataChoiceSelectButton
-            choice={alignmentChoice}
+            choiceRef={alignmentChoice}
             characterAtLevel={character0}
-            onSelect={value => selectChoice(alignmentChoice.key, value)} />
+            onSelect={value => selectChoice(alignmentChoice.path, value)} />
         </>}
       </div>
     </fieldset>
@@ -110,16 +110,16 @@ function CharacterEditView({ loaded }: CharacterEditViewProps) {
         <div>Ability Point Cost: {totalAbilityPointCost}</div>
         <CharacterAttributeChoiceInputs
             characterAtLevel={character0}
-            onCommit={(ability, value) => selectChoice(`level0:${ability}_base`, value)} />
+            onCommit={(ability, value) => selectChoice(`${ability}_base`, value)} />
 
         {character0.choices.some(choice => choice.type === "asi") &&
             <>
               <label>Ability Score Increase</label>
               {character0.choices.filter(choice => choice.type === "asi").map(choice =>
               <AbilityScoreSelectButton
-                  key={choice.key}
-                  value={choice.current}
-                  onSelect={(value: string) => selectChoice(choice.key, value)} />
+                  key={choice.path}
+                  value={character.selected(choice.path)}
+                  onSelect={(value: string) => selectChoice(choice.path, value)} />
               )}
             </>
         }

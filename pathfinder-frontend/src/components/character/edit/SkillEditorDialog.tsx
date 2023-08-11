@@ -14,7 +14,7 @@ export default function SkillEditorDialog({ show, onCancel, characterAtLevel, ..
   }, [characterAtLevel]);
 
   const pointsRemaining = useMemo(() => {
-    return skillChoices.filter(choice => choice.current === '').length;
+    return skillChoices.filter(choice => characterAtLevel.selected(choice) === '').length;
   }, [skillChoices]);
 
   const pointsAvailable = skillChoices.length;

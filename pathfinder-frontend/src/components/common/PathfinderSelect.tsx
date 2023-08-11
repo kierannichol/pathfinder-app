@@ -35,12 +35,15 @@ interface PathfinderSelectItemProps {
   bodyFn?: () => Promise<ReactNode>;
   disabled?: boolean;
   variant?: string;
+  children?: ReactNode;
 }
 
-function PathfinderSelectItem({ itemKey, label, bodyFn, disabled = false, variant = 'special' }: PathfinderSelectItemProps) {
-  const hasBody = bodyFn !== undefined;
+function PathfinderSelectItem({ itemKey, label, bodyFn, disabled = false, variant = 'special', children = undefined }: PathfinderSelectItemProps) {
+  const hasBody = bodyFn !== undefined || children !== undefined;
   return hasBody
-      ? <PathfinderSelectItemWithBody itemKey={itemKey} label={label} bodyFn={bodyFn} disabled={disabled} variant={variant} />
+      ? <PathfinderSelectItemWithBody itemKey={itemKey} label={label} bodyFn={bodyFn} disabled={disabled} variant={variant}>
+        {children}
+      </PathfinderSelectItemWithBody>
       : <PathfinderSelectItemWithoutBody itemKey={itemKey} label={label} disabled={disabled} variant={variant} />
 }
 
@@ -64,7 +67,7 @@ function PathfinderSelectItemWithoutBody({ itemKey, label, disabled, variant }: 
       </div>);
 }
 
-function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, disabled, variant }: PathfinderSelectItemProps) {
+function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, disabled, variant, children }: PathfinderSelectItemProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(elementRef);
   const { activeEventKey } = useContext(AccordionContext);
@@ -77,6 +80,7 @@ function PathfinderSelectItemWithBody({ itemKey, label, bodyFn, disabled, varian
 
   const [ bodyState, setBodyState ] = useState<ReactNode>();
   useEffect(() => {
+    setBodyState(children);
     if (!onScreen || bodyFn === undefined) {
       return;
     }

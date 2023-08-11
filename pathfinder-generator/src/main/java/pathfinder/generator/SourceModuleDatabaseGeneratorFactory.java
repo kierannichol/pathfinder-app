@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import pathfinder.generator.provider.EntityProvider;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 
 @Configuration
 @RequiredArgsConstructor
@@ -16,7 +16,7 @@ public class SourceModuleDatabaseGeneratorFactory {
 
     @Bean
     @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-    public SourceModuleDatabaseGenerator getGenerator(Source source) {
-        return new SourceModuleDatabaseGenerator(source, entityProviders);
+    public SourceModuleDatabaseGenerator getGenerator(SourceId sourceId) {
+        return new SourceModuleDatabaseGenerator(sourceId, entityProviders);
     }
 }

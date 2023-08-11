@@ -1,0 +1,32 @@
+{
+  "id": "class:bloodrager#greenrager",
+  "name": "Greenrager",
+  "tags": ["archetype", "bloodrager"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Typically, nature finds its greatest harmony with divine magic, but sometimes a connection with the natural world manifest itself through the arcane current in the veins of the bloodragers called greenragers. These bloodragers funnel their eldritch heritage into abilities that allow them to call powerful allies from nature and empower them with their bloodrage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:unfettered_fury#bloodrager_greenrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d3"
+        }, {
+          "featureId": "ability:summoning_rager#bloodrager_greenrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d6"
+        }, {
+          "featureId": "ability:furious_summoning#bloodrager_greenrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:blood_sanctuary#bloodrager"
+        }, {
+          "featureId": "ability:the_bloodline_feat_gained_at_6th_level#bloodrager"
+        }, {
+          "featureId": "ability:the_bloodline_feat_at_9th_level#bloodrager"
+        }]
+      }]
+    }
+  }
+}

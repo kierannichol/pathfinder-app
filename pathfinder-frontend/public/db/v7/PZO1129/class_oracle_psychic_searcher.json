@@ -1,0 +1,27 @@
+{
+  "id": "class:oracle#psychic_searcher",
+  "name": "Psychic Searcher",
+  "tags": ["archetype", "oracle"],
+  "maxStacks": 1,
+  "description": {
+    "text": "A psychic searcher is devoted to revealing the hidden within the world around her by sensing and communing with residual mental energy, haunts, and fragments of living spirits that can dwell in objects or rooms."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:inspiration#oracle_psychic_searcher",
+          "conditionFormula": "@class:oracle\u003e\u003d2"
+        }, {
+          "featureId": "ability:psychic_talent#oracle_psychic_searcher",
+          "conditionFormula": "@class:oracle\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_mystery_spell_gained_at_2nd_level#oracle"
+        }, {
+          "featureId": "ability:the_revelation_gained_at_3rd_level#oracle"
+        }]
+      }]
+    }
+  }
+}

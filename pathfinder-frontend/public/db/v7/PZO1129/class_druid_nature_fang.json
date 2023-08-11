@@ -1,0 +1,36 @@
+{
+  "id": "class:druid#nature_fang",
+  "name": "Nature Fang",
+  "tags": ["archetype", "druid"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:studied_target#druid_nature_fang",
+          "conditionFormula": "@class:druid\u003e\u003d1"
+        }, {
+          "featureId": "ability:slayer_talent#druid_nature_fang",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }, {
+          "featureId": "ability:sneak_attack#druid_nature_fang",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }, {
+          "featureId": "ability:swift_studied_target#druid_nature_fang",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:nature_sense_wild_empathy_and_woodland_stride#druid"
+        }, {
+          "featureId": "ability:wild_shape#druid"
+        }, {
+          "featureId": "ability:resist_natures_lure#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }]
+      }]
+    }
+  }
+}

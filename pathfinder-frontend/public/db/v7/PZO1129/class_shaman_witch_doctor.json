@@ -1,0 +1,32 @@
+{
+  "id": "class:shaman#witch_doctor",
+  "name": "Witch Doctor",
+  "tags": ["archetype", "shaman"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The witch doctor is a healer who specializes in afflictions of the soul. Often misunderstood, she protects her tribe with healing powers, powerful defensive magic, and her own divine “witchcraft.\""
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:channel_energy#shaman_witch_doctor",
+          "conditionFormula": "@class:shaman\u003e\u003d4"
+        }, {
+          "featureId": "ability:counter_curse#shaman_witch_doctor",
+          "conditionFormula": "@class:shaman\u003e\u003d8"
+        }, {
+          "featureId": "ability:countering_hex#shaman_witch_doctor",
+          "conditionFormula": "@class:shaman\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_hexes_gained_at_4th_and_12th_levels#shaman"
+        }, {
+          "featureId": "ability:the_hex_gained_at_8th_level#shaman"
+        }, {
+          "featureId": "ability:the_hex_gained_at_10th_level#shaman"
+        }]
+      }]
+    }
+  }
+}

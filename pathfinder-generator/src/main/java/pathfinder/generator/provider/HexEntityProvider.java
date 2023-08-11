@@ -13,7 +13,7 @@ import pathfinder.model.Id;
 import pathfinder.model.Tags;
 import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.ClassLevel;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Spell;
 import pathfinder.model.pathfinder.Spell.Level;
@@ -26,7 +26,7 @@ public class HexEntityProvider implements EntityProvider {
     private final ClassSourceDatabase classSourceDatabase;
 
     @Override
-    public Stream<Entity> streamEntities(Source source) {
+    public Stream<Entity> streamEntities(SourceId sourceId) {
         return hexDatabase.streamHexes()
                 .map(this::createSpellEntity);
     }

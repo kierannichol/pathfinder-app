@@ -3,12 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {createHashRouter, RouterProvider} from "react-router-dom";
-import {CharacterRepositoryContextProvider} from "./app/reactCharacter";
-import {PathfinderDatabaseContextProvider} from "./database/v4/PathfinderDatabase";
 import './index.css';
 import reportWebVitals from "./reportWebVitals";
+import BrowseRoute, {browseLoader} from "./routes/browse";
 import CharacterEditRoute, {characterEditLoader} from "./routes/characterEdit";
-import CharacterListRoute from "./routes/characterList";
+import CharacterListRoute, {characterListLoader} from "./routes/characterList";
 import CharacterSheetV2Route, {characterSheetV2Loader} from "./routes/characterSheetV2";
 import {loginLoader, LoginRoute} from "./routes/loginRoute";
 import LayoutRoute from "./routes/root";
@@ -24,7 +23,8 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <CharacterListRoute />
+        element: <CharacterListRoute />,
+        loader: characterListLoader
       },
       {
         path: "/login",
@@ -35,6 +35,11 @@ const routes = [
         path: "character/edit/:id",
         element: <CharacterEditRoute />,
         loader: characterEditLoader
+      },
+      {
+        path: "/browse",
+        element: <BrowseRoute />,
+        loader: browseLoader
       }
     ]
   },
@@ -51,11 +56,7 @@ const clientId = "740015667994-sm7d6frk97un3v09bk2nr5dqakg5pnhc.apps.googleuserc
 
 root.render(
   <GoogleOAuthProvider clientId={clientId}>
-      <PathfinderDatabaseContextProvider>
-        <CharacterRepositoryContextProvider>
-          <RouterProvider router={router}/>
-        </CharacterRepositoryContextProvider>
-      </PathfinderDatabaseContextProvider>
+    <RouterProvider router={router}/>
   </GoogleOAuthProvider>
 );
 

@@ -1,0 +1,27 @@
+{
+  "id": "class:hunter#divine_hunter",
+  "name": "Divine Hunter",
+  "tags": ["archetype", "hunter"],
+  "maxStacks": 1,
+  "description": {
+    "text": "While most hunters heed the call of nature and fight to protect its bounty, some are inspired to serve a higher power. These divine hunters use faith to aid them in their struggles, and their faith infuses their animal companions, making these companions champions of their deities."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:domain#hunter_divine_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d3"
+        }, {
+          "featureId": "ability:otherworldly_companion#hunter_divine_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:teamwork_feats#hunter"
+        }, {
+          "featureId": "ability:hunter_tactics#hunter"
+        }]
+      }]
+    }
+  }
+}

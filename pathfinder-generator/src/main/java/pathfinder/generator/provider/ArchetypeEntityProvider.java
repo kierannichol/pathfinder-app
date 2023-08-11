@@ -7,7 +7,7 @@ import pathfinder.generator.convert.ArchetypeEntityConverter;
 import pathfinder.generator.convert.ArchetypeFeatureEntityConverter;
 import pathfinder.generator.db.local.ArchetypeSourceDatabase;
 import pathfinder.model.Entity;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 
 @Component
@@ -18,9 +18,9 @@ public class ArchetypeEntityProvider implements EntityProvider {
     private final ArchetypeFeatureEntityConverter archetypeFeatureEntityConverter;
 
     @Override
-    public Stream<Entity> streamEntities(Source source) {
+    public Stream<Entity> streamEntities(SourceId sourceId) {
         return archetypeSourceDatabase.streamArchetypes()
-                .filter(model -> source.equals(Sources.findSourceByNameOrCode(model.source())))
+                .filter(model -> sourceId.equals(Sources.findSourceByNameOrCode(model.source())))
                 .flatMap(archetype -> Stream.concat(
                         Stream.of(archetypeEntityConverter.toEntity(archetype)),
                         archetypeFeatureEntityConverter.toEntities(archetype)

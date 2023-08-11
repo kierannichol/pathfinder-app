@@ -1,0 +1,39 @@
+{
+  "id": "class:bloodrager#steelblood",
+  "name": "Steelblood",
+  "tags": ["archetype", "bloodrager"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Most bloodragers prefer light armor, but some learn the secret of using heavy armors. These steelbloods plod around the battlefield inspiring fear and delivering carnage from within a steel shell."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:indomitable_stance#bloodrager_steelblood",
+          "conditionFormula": "@class:bloodrager\u003e\u003d1"
+        }, {
+          "featureId": "ability:armored_swiftness#bloodrager_steelblood",
+          "conditionFormula": "@class:bloodrager\u003e\u003d2"
+        }, {
+          "featureId": "ability:armor_training#bloodrager_steelblood",
+          "conditionFormula": "@class:bloodrager\u003e\u003d5"
+        }, {
+          "featureId": "ability:blood_deflection#bloodrager_steelblood",
+          "conditionFormula": "@class:bloodrager\u003e\u003d7"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_bloodragers_armor_proficiency#bloodrager"
+        }, {
+          "featureId": "ability:fast_movement#bloodrager"
+        }, {
+          "featureId": "ability:uncanny_dodge#bloodrager"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#bloodrager"
+        }, {
+          "featureId": "ability:damage_reduction#bloodrager"
+        }]
+      }]
+    }
+  }
+}

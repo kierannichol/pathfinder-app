@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import pathfinder.data.v4.EntityDbo;
 import pathfinder.data.v4.EntitySummaryDbo;
-import pathfinder.model.pathfinder.Source;
+import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.util.ListUtils;
 
@@ -20,7 +20,7 @@ public record Entity(Id id,
                      List<Choice> choices,
                      List<ChildEntity> children,
                      Template template,
-                     Source source) implements NamedEntity {
+                     SourceId sourceId) implements NamedEntity {
 
     public static EntityBuilder builder() {
         return new EntityBuilder();
@@ -77,7 +77,7 @@ public record Entity(Id id,
         private final List<Choice> choices = new ArrayList<>();
         private final List<ChildEntity> children = new ArrayList<>();
         private Template template = null;
-        private Source source = Source.NONE;
+        private SourceId sourceId = SourceId.NONE;
 
         private EntityBuilder() {}
 
@@ -153,18 +153,19 @@ public record Entity(Id id,
             return this;
         }
 
-        public EntityBuilder source(Source source) {
-            this.source = source;
+        public EntityBuilder source(SourceId sourceId) {
+            this.sourceId = sourceId;
             return this;
         }
 
         public EntityBuilder source(String source) {
-            this.source = Sources.findSourceByNameOrCode(source);
+            this.sourceId = Sources.findSourceByNameOrCode(source);
             return this;
         }
 
         public Entity build() {
-            return new Entity(id, name, Tags.of(tags), prerequisiteFormula, description, effects, choices, children, template, source);
+            return new Entity(id, name, Tags.of(tags), prerequisiteFormula, description, effects, choices, children, template,
+                    sourceId);
         }
     }
 }

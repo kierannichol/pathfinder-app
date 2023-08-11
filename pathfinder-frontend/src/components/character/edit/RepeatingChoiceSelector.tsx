@@ -1,12 +1,12 @@
 import {useMemo} from "react";
-import CharacterAtLevel from "../../../core/CharacterAtLevel";
-import {SelectChoiceNode} from "../../../core/Choice";
+import CharacterAtLevel from "../../../v7/CharacterAtLevel";
+import {FeatureSelectChoiceRef} from "../../../v7/ChoiceRef";
 import {PathfinderButtonGroup} from "../../common/PathfinderButtonGroup";
 import DataChoiceSelectButton from "../DataChoiceSelectButton";
 import "./RepeatingChoiceSelector.module.scss";
 
 interface RepeatingChoiceSelectorProps {
-  choices: SelectChoiceNode[];
+  choices: FeatureSelectChoiceRef[];
   characterAtLevel: CharacterAtLevel;
   variant?: string;
   dialogVariant?: string;
@@ -15,30 +15,30 @@ interface RepeatingChoiceSelectorProps {
 
 export function RepeatingChoiceSelector({choices, characterAtLevel, onChange, variant = 'default', dialogVariant = 'default' }: RepeatingChoiceSelectorProps) {
   const selectedChoices = useMemo(() => {
-    return choices.filter(choice => choice.current !== '' || choice.repeatingIndex === 0);
+    return choices.filter(choice => characterAtLevel.selected(choice) !== '' || choice.repeatingIndex === 0);
   }, [choices]);
 
   const addChoice = useMemo(() => {
-    return choices.find(choice => choice.current === '' && choice.repeatingIndex > 0)
+    return choices.find(choice => characterAtLevel.selected(choice) === '' && choice.repeatingIndex > 0)
   }, [choices]);
 
   return <div>
     <PathfinderButtonGroup>
       {selectedChoices.map(choice =>
-          <DataChoiceSelectButton key={choice.key}
+          <DataChoiceSelectButton key={choice.path}
                                   search={true}
-                                  choice={choice as SelectChoiceNode}
+                                  choiceRef={choice as FeatureSelectChoiceRef}
                                   characterAtLevel={characterAtLevel}
-                                  onSelect={selected => onChange?.(choice.key, selected)}
+                                  onSelect={selected => onChange?.(choice.path, selected)}
                                   variant={variant}
                                   dialogVariant={dialogVariant}
           />)}
     </PathfinderButtonGroup>
     {addChoice && <DataChoiceSelectButton
         search={true}
-        choice={addChoice}
+        choiceRef={addChoice}
         characterAtLevel={characterAtLevel}
-        onSelect={selected => onChange?.(addChoice.key, selected)}
+        onSelect={selected => onChange?.(addChoice.path, selected)}
         variant={'link'}
         dialogVariant={dialogVariant}
     >+ Add {addChoice.label}</DataChoiceSelectButton>}

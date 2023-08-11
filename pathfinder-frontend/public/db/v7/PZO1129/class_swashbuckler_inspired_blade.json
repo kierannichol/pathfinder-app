@@ -1,0 +1,36 @@
+{
+  "id": "class:swashbuckler#inspired_blade",
+  "name": "Inspired Blade",
+  "tags": ["archetype", "swashbuckler"],
+  "maxStacks": 1,
+  "description": {
+    "text": "An inspired blade is both a force of personality and a sage of swordplay dedicated to the perfection of combat with the rapier. They use the science and geometry with swordplay to beautiful and deadly effect."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:inspired_finesse#swashbuckler_inspired_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d1"
+        }, {
+          "featureId": "ability:rapier_training#swashbuckler_inspired_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d5"
+        }, {
+          "featureId": "ability:rapier_weapon_mastery#swashbuckler_inspired_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_panache_class_feature#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_finesse#swashbuckler"
+        }, {
+          "featureId": "ability:bleeding_wound#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_training#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_mastery#swashbuckler"
+        }]
+      }]
+    }
+  }
+}

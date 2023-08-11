@@ -1,0 +1,610 @@
+{
+  "id": "class:paladin",
+  "name": "Paladin",
+  "tags": ["class"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to banish evil, heal the innocent, and inspire the faithful. Although their convictions might lead them into conflict with the very souls they would save, paladins weather endless challenges of faith and dark temptations, risking their lives to do right and fighting to bring about a brighter future. Role: Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting. Alignment: Lawful good Hit Die: d10 Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:spellcaster",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:divine_spellcaster",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_good#paladin"
+        }, {
+          "featureId": "ability:detect_evil#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }, {
+          "featureId": "proficiency:mere_club"
+        }, {
+          "featureId": "proficiency:blade_boot"
+        }, {
+          "featureId": "proficiency:spiked_gauntlet"
+        }, {
+          "featureId": "proficiency:spiked_armor"
+        }, {
+          "featureId": "proficiency:heavy_crossbow"
+        }, {
+          "featureId": "proficiency:unarmed"
+        }, {
+          "featureId": "proficiency:dogslicer"
+        }, {
+          "featureId": "proficiency:ogre_hook"
+        }, {
+          "featureId": "proficiency:handaxe"
+        }, {
+          "featureId": "proficiency:light_flail"
+        }, {
+          "featureId": "proficiency:dagger"
+        }, {
+          "featureId": "proficiency:pickaxe"
+        }, {
+          "featureId": "proficiency:whip"
+        }, {
+          "featureId": "proficiency:guisarme"
+        }, {
+          "featureId": "proficiency:shortspear"
+        }, {
+          "featureId": "proficiency:lantern_staff"
+        }, {
+          "featureId": "proficiency:gandasa"
+        }, {
+          "featureId": "proficiency:club"
+        }, {
+          "featureId": "proficiency:warhammer"
+        }, {
+          "featureId": "proficiency:jolting_dart"
+        }, {
+          "featureId": "proficiency:dart"
+        }, {
+          "featureId": "proficiency:chakram"
+        }, {
+          "featureId": "proficiency:light_pick"
+        }, {
+          "featureId": "proficiency:spear"
+        }, {
+          "featureId": "proficiency:ammentum"
+        }, {
+          "featureId": "proficiency:heavy_shield"
+        }, {
+          "featureId": "proficiency:halberd"
+        }, {
+          "featureId": "proficiency:light_shield"
+        }, {
+          "featureId": "proficiency:brass_knuckles"
+        }, {
+          "featureId": "proficiency:battle_aspergillum"
+        }, {
+          "featureId": "proficiency:sword_cane"
+        }, {
+          "featureId": "proficiency:falchion"
+        }, {
+          "featureId": "proficiency:heavy_mace"
+        }, {
+          "featureId": "proficiency:gauntlet"
+        }, {
+          "featureId": "proficiency:cestus"
+        }, {
+          "featureId": "proficiency:kukri"
+        }, {
+          "featureId": "proficiency:greatsword"
+        }, {
+          "featureId": "proficiency:bardiche"
+        }, {
+          "featureId": "proficiency:wooden_stake"
+        }, {
+          "featureId": "proficiency:rapier"
+        }, {
+          "featureId": "proficiency:dueling_dagger"
+        }, {
+          "featureId": "proficiency:axe"
+        }, {
+          "featureId": "proficiency:sickle"
+        }, {
+          "featureId": "proficiency:horsechopper"
+        }, {
+          "featureId": "proficiency:traveling_kettle"
+        }, {
+          "featureId": "proficiency:hook_hand"
+        }, {
+          "featureId": "proficiency:brass_knife"
+        }, {
+          "featureId": "proficiency:light_spiked_shield"
+        }, {
+          "featureId": "proficiency:handwraps"
+        }, {
+          "featureId": "proficiency:greatclub"
+        }, {
+          "featureId": "proficiency:blowgun"
+        }, {
+          "featureId": "proficiency:ranseur"
+        }, {
+          "featureId": "proficiency:manople"
+        }, {
+          "featureId": "proficiency:battleaxe"
+        }, {
+          "featureId": "proficiency:gladius"
+        }, {
+          "featureId": "proficiency:combat_scabbard"
+        }, {
+          "featureId": "proficiency:greataxe"
+        }, {
+          "featureId": "proficiency:bayonet"
+        }, {
+          "featureId": "proficiency:pilum"
+        }, {
+          "featureId": "proficiency:klar"
+        }, {
+          "featureId": "proficiency:boarding_pike"
+        }, {
+          "featureId": "proficiency:planson"
+        }, {
+          "featureId": "proficiency:glaive"
+        }, {
+          "featureId": "proficiency:collapsible_kumade"
+        }, {
+          "featureId": "proficiency:hunga_munga"
+        }, {
+          "featureId": "proficiency:shortbow"
+        }, {
+          "featureId": "proficiency:scythe"
+        }, {
+          "featureId": "proficiency:sling"
+        }, {
+          "featureId": "proficiency:spring_blade"
+        }, {
+          "featureId": "proficiency:light_hammer"
+        }, {
+          "featureId": "proficiency:light_mace"
+        }, {
+          "featureId": "proficiency:morningstar"
+        }, {
+          "featureId": "proficiency:longsword"
+        }, {
+          "featureId": "proficiency:scizore"
+        }, {
+          "featureId": "proficiency:terbutje"
+        }, {
+          "featureId": "proficiency:scimitar"
+        }, {
+          "featureId": "proficiency:earth_breaker"
+        }, {
+          "featureId": "proficiency:stingchuck"
+        }, {
+          "featureId": "proficiency:light_crossbow"
+        }, {
+          "featureId": "proficiency:hurlbat"
+        }, {
+          "featureId": "proficiency:sap"
+        }, {
+          "featureId": "proficiency:katar"
+        }, {
+          "featureId": "proficiency:machete"
+        }, {
+          "featureId": "proficiency:trident"
+        }, {
+          "featureId": "proficiency:ankus"
+        }, {
+          "featureId": "proficiency:starknife"
+        }, {
+          "featureId": "proficiency:javelin"
+        }, {
+          "featureId": "proficiency:heavy_spiked_shield"
+        }, {
+          "featureId": "proficiency:heavy_flail"
+        }, {
+          "featureId": "proficiency:war_razor"
+        }, {
+          "featureId": "proficiency:short_sword"
+        }, {
+          "featureId": "proficiency:kumade"
+        }, {
+          "featureId": "proficiency:longbow"
+        }, {
+          "featureId": "proficiency:lance"
+        }, {
+          "featureId": "proficiency:claw_blades"
+        }, {
+          "featureId": "proficiency:kunai"
+        }, {
+          "featureId": "proficiency:throwing_axe"
+        }, {
+          "featureId": "proficiency:bill"
+        }, {
+          "featureId": "proficiency:heavy_pick"
+        }, {
+          "featureId": "proficiency:quarterstaff"
+        }, {
+          "featureId": "proficiency:cutlass"
+        }, {
+          "featureId": "proficiency:punching_dagger"
+        }, {
+          "featureId": "proficiency:syringe_spear"
+        }, {
+          "featureId": "proficiency:stonebow"
+        }, {
+          "featureId": "proficiency:longspear"
+        }, {
+          "featureId": "proficiency:light_shield"
+        }, {
+          "featureId": "proficiency:heavy_armor"
+        }, {
+          "featureId": "proficiency:light_armor"
+        }, {
+          "featureId": "proficiency:buckler"
+        }, {
+          "featureId": "proficiency:medium_armor"
+        }, {
+          "featureId": "proficiency:heavy_shield"
+        }],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "type": "archetype",
+          "featureSelect": {
+            "optionTags": ["archetype+paladin"]
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:divine_grace#paladin"
+        }, {
+          "featureId": "ability:lay_on_hands#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_courage#paladin"
+        }, {
+          "featureId": "ability:divine_health#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:channel_positive_energy#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:divine_bond#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_resolve#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_justice#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_faith#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_righteousness#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:holy_champion#paladin"
+        }]
+      }]
+    }
+  }
+}

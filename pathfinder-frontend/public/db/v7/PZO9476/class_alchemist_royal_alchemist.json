@@ -1,0 +1,21 @@
+{
+  "id": "class:alchemist#royal_alchemist",
+  "name": "Royal Alchemist",
+  "tags": ["archetype", "alchemist"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:alchemical_antidote#alchemist_royal_alchemist",
+          "conditionFormula": "@class:alchemist\u003e\u003d2"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_alchemists_poison_use_and_swift_poisoning#alchemist"
+        }]
+      }]
+    }
+  }
+}

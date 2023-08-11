@@ -1,0 +1,62 @@
+{
+  "id": "sorcerer_bloodline:elemental_bloodline",
+  "name": "Elemental Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The power of the elements resides in you, and at times you can hardly control its fury. This influence comes from an elemental outsider in your family history or a time when you or your relatives were exposed to a powerful elemental force."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus", "feat:weapon_finesse"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus", "feat:weapon_finesse"]
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus", "feat:weapon_finesse"]
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:elemental_ray#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:elemental_resistance#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:elemental_blast#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:elemental_movement#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:elemental_body#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}
