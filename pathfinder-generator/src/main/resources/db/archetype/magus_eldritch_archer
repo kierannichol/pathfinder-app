@@ -1,0 +1,69 @@
+id: "class:magus#eldritch_archer"
+name: "Eldritch Archer"
+description: ""
+modifications:
+- add: "ability:arcane_pool#magus_eldritch_archer"
+  remove:
+  - "ability:the_maguss_arcane_pool#magus"
+- add: "ability:ranged_spell_combat#magus_eldritch_archer"
+  remove:
+  - "ability:spell_combat#magus"
+- add: "ability:ranged_spellstrike#magus_eldritch_archer"
+  remove:
+  - "ability:spellstrike#magus"
+- add: "ability:focusing_spellstrike#magus_eldritch_archer"
+  remove:
+  - "ability:counterstrike#magus"
+features:
+- id: "ability:arcane_pool#magus_eldritch_archer"
+  name: "Arcane Pool"
+  label: null
+  type: null
+  description: "An eldritch archer's choices of weapon special abilities to apply\
+    \ with arcane pool at 5th level include distance, nimble shot, and returning but\
+    \ not dancing, keen, or vorpal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:ranged_spell_combat#magus_eldritch_archer"
+  name: "Ranged Spell Combat"
+  label: null
+  type: null
+  description: "Instead of a light or one-handed melee weapon, an eldritch archer\
+    \ must use a ranged weapon for spell combat. She doesn't need a free hand for\
+    \ ranged spell combat. The eldritch archer cannot accept an attack penalty to\
+    \ gain a bonus on concentration checks to cast a spell defensively."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:ranged_spellstrike#magus_eldritch_archer"
+  name: "Ranged Spellstrike"
+  label: null
+  type: null
+  description: "At 2nd level, whenever an eldritch archer casts a spell that calls\
+    \ for a ranged attack, she can deliver the spell through a ranged weapon she wields\
+    \ as part of a ranged attack. Instead of the free ranged attack normally allowed\
+    \ to deliver the spell, an eldritch archer can make one free ranged attack with\
+    \ a ranged weapon (at her highest base attack bonus) as part of casting this spell.\
+    \ The attack does not increase the spell's range.\nIf the spell can normally affect\
+    \ multiple targets, only a single missile, ray, or effect accompanies each attack;\
+    \ if the spell allows multiple attacks and the eldritch archer can make additional\
+    \ ranged attacks as part of a full-round action with spell combat, one additional\
+    \ ray, missile, or effect from the spell accompanies each subsequent ranged attack\
+    \ the eldritch archer makes in the same round until all attacks allowed by the\
+    \ spell are made. Unused missiles, rays, or effects remaining at the end of the\
+    \ eldritch archer's turn are wasted.\nThis ability alters spellstrike."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:focusing_spellstrike#magus_eldritch_archer"
+  name: "Focusing Spellstrike"
+  label: null
+  type: null
+  description: "At 16th level, an eldritch archer can use ranged spellstrike to deliver\
+    \ a cone- or line-shaped spell as a ray, affecting only the creature or object\
+    \ struck."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+source: "Pathfinder Player Companion: Heroes of the Street"

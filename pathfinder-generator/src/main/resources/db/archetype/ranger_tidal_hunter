@@ -1,0 +1,72 @@
+id: "class:ranger#tidal_hunter"
+name: "Tidal Hunter"
+description: "The tidal hunter draws strength from the fish and other wildlife of\
+  \ the deep."
+modifications:
+- add: "ability:waterborn#ranger_tidal_hunter"
+  remove:
+  - "ability:wild_empathy#ranger"
+  - "ability:the_6th_level_combat_style_feat#ranger"
+- add: "ability:keen_scent#ranger_tidal_hunter"
+  remove:
+  - "ability:track#ranger"
+  - "ability:camouflage#ranger"
+- add: "ability:aquatic_mastery#ranger_tidal_hunter"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:wave_rush#ranger_tidal_hunter"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:tidal_surge#ranger_tidal_hunter"
+  remove:
+  - "ability:improved_evasion#ranger"
+features:
+- id: "ability:waterborn#ranger_tidal_hunter"
+  name: "Waterborn"
+  label: null
+  type: null
+  description: "A tidal hunter can breathe water for up to 10 minutes per ranger level\
+    \ each day. At 6th level, he can breathe underwater indefinitely."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:keen_scent#ranger_tidal_hunter"
+  name: "Keen Scent"
+  label: null
+  type: null
+  description: "A tidal hunter gains scent, as per the universal monster rule. At\
+    \ 12th level, while in water, the tidal hunter can detect particularly strong\
+    \ or distinct odors (such as blood) up to 1 mile away."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:aquatic_mastery#ranger_tidal_hunter"
+  name: "Aquatic Mastery"
+  label: null
+  type: null
+  description: "At 3rd level, a tidal hunter must select water as his favored terrain,\
+    \ and he doesn't gain additional favored terrains. At 8th level and every 5 levels\
+    \ thereafter, the bonus from this favored terrain increases by 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:wave_rush#ranger_tidal_hunter"
+  name: "Wave Rush"
+  label: null
+  type: null
+  description: "At 7th level, a tidal hunter gains a swim speed equal to his base\
+    \ speed. If he already has a swim speed, it increases by 10 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:tidal_surge#ranger_tidal_hunter"
+  name: "Tidal Surge"
+  label: null
+  type: null
+  description: "At 16th level, a tidal hunter gains control over water, and he can\
+    \ use the tides to attack his foes. Once per day, he can cast tidal surge as a\
+    \ spell-like ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,49 @@
+id: "class:bard#negotiator"
+name: "Negotiator"
+description: "Bards are experts at manipulating the emotions and perceptions of others.\
+  \ Negotiators are those bards who take the skills of a performer and apply them\
+  \ to the realms of business and law."
+modifications:
+- add: "ability:bardic_performance#bard_negotiator"
+  remove:
+  - "ability:inspire_courage#bard"
+- add: "ability:rogue_talents#bard_negotiator"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:master_of_rhetoric#bard_negotiator"
+  remove:
+  - "ability:lore_master#bard"
+features:
+- id: "ability:bardic_performance#bard_negotiator"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A negotiator gains the following types of bardic performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Champions of Balance"
+- id: "ability:rogue_talents#bard_negotiator"
+  name: "Rogue Talents"
+  label: null
+  type: null
+  description: "At 2nd level, a negotiator gains a rogue talent, as the rogue class\
+    \ feature of the same name. At 6th level and every 4 levels thereafter, the negotiator\
+    \ gains an additional rogue talent. A negotiator cannot select a rogue talent\
+    \ that modifies the sneak attack ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Champions of Balance"
+- id: "ability:master_of_rhetoric#bard_negotiator"
+  name: "Master of Rhetoric"
+  label: null
+  type: null
+  description: "At 5th level, the negotiator can take 10 on any Bluff, Diplomacy,\
+    \ Intimidate, Knowledge (local), or Sense Motive check if he has ranks in that\
+    \ skill.\nA negotiator can choose not to take 10 and can instead roll normally.\
+    \ In addition, the negotiator can take 20 on one of those skill checks (without\
+    \ spending any additional time). The negotiator can do this once per day at 5th\
+    \ level, twice per day at 11th level, and three times per day at 17th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Champions of Balance"
+source: "Pathfinder Player Companion: Champions of Balance"

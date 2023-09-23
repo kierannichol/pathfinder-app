@@ -1,0 +1,535 @@
+id: "class:shifter"
+name: "Shifter"
+category: "BASE"
+description: "Whether riding on the wind as a falcon or hiding in some fetid bog waiting\
+  \ to strike, the shifter is a true master of the wild. Both a devoted defender of\
+  \ druidic circles and a fierce predator, the shifter can take on the forms of nature\
+  \ and even fuse them together with devastating effect and unbridled savagery. By\
+  \ way of the druidic discipline of wild shape, they become living aspects of the\
+  \ wild. At first, they are able to assume only a minor aspect, but with time and\
+  \ practice they can fully transform into ever more powerful forms. The shifter class\
+  \ offers players a way to experience a shapeshifting character that is more martially\
+  \ inclined than a spellcasting druid. With each new level, the shifter's powers\
+  \ grow in new and surprising ways, creating a character that thrives in battle,\
+  \ exploration, and stealth. Shifters are protectors of druidic circles and avengers\
+  \ of nature, yet a shifter's magic is different from that of her druidic kin. Rather\
+  \ than invoking spells from the natural world or forging alliances with animals,\
+  \ shifters focus their supernatural powers inward to gain control over their own\
+  \ forms. Their ability to change their forms is as varied as the wonders of the\
+  \ wilds themselves but always remains at least partially rooted in the natural world.\
+  \ There are many paths to becoming a shifter; most are trained in that role by druidic\
+  \ circles and have their powers unlocked via rituals of initiation. Yet some stumble\
+  \ upon the gift naturally, as if their blood bore the secrets of shifter transformation.\
+  \ For those leaning toward the causes of law and good, the path of the shifter is\
+  \ one of contemplation and understanding. They become one with nature through mental\
+  \ and physical mimicry and gain an ever deeper spiritual understanding of the ebb\
+  \ and flow of the natural world. Those leaning toward the chaotic and evil teachings\
+  \ of druidic philosophy find such enlightenment through more violent means. These\
+  \ are typically quicker transformations, both brutal and painful, imparting the\
+  \ dark lessons of nature through its most catastrophic forms. Shifters who lean\
+  \ toward true neutrality are the most diverse when it comes to their command of\
+  \ metamorphic secrets. Role: The shifter is so attuned to nature and the wild beasts\
+  \ of the world that she can call upon those powers to mystically fortify her being.\
+  \ Fluid in form and function, she can shape herself to overcome hardships and support\
+  \ those she befriends or serves. Alignment: Any neutral. Hit Die: d10. Starting\
+  \ Wealth: 3d6x10 gp (average 105 gp)."
+source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+hit_die: "D10"
+alignment: "Any neutral"
+class_skills:
+- "skill:fly"
+- "skill:perception"
+- "skill:craft"
+- "skill:handle_animal"
+- "skill:swim"
+- "skill:survival"
+- "skill:stealth"
+- "skill:acrobatics"
+- "skill:profession"
+- "skill:climb"
+- "skill:knowledge"
+- "skill:ride"
+skill_ranks_per_level: "4"
+bab: "A"
+fort: "A"
+ref: "A"
+will: "B"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_aspect#shifter"
+  - "ability:shifter_claws#shifter"
+  - "ability:wild_empathy#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:defensive_instinct#shifter"
+  - "ability:track#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_claws_increase#shifter"
+  - "ability:woodland_stride#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:defensive_instinct#shifter"
+  - "ability:wild_shape#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:second_aspect#shifter"
+  - "ability:trackless_step#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifters_fury#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_claws_increase#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:defensive_instinct#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:chimeric_aspect#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:third_aspect#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_claws_increase#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:defensive_instinct#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_claws_increase#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:greater_chimeric_aspect#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:fourth_aspect#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:defensive_instinct#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_claws_increase#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:a_thousand_faces#shifter"
+  - "ability:timeless_body#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:shifter_claws_increase#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#shifter"
+  - "trait:weapon_proficiency#shifter"
+  - "ability:defensive_instinct#shifter"
+  - "ability:final_aspect#shifter"
+  spells_per_day: {}
+  spells_known: {}
+  level: 20
+spell_caster_types: []
+class_features:
+- id: "ability:shifters_fury#shifter"
+  name: "Shifter's Fury"
+  label: null
+  type: "Ex"
+  description: "This ability has been added based on this FAQ entry.At 6th level,\
+    \ a shifter gains the ability to make several ferocious attacks with the same\
+    \ natural weapon. Instead of attacking with all her natural weapons, the shifter\
+    \ can choose a single natural weapon and make a full attack with that natural\
+    \ weapon, gaining a second iterative attack at a –5 as if it was a manufactured\
+    \ weapon. When she does so, all her other natural attacks count as secondary attacks\
+    \ and don't benefit from shifter's claws.At 11th level, she gains a third iterative\
+    \ attack at a –10 and at 16th level, she gains a fourth iterative attack at –\
+    15."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:shifter_claws_increase#shifter"
+  name: "Shifter Claws Increase"
+  label: null
+  type: "Su"
+  description: "At will, a shifter in her natural form can extend her claws as a swift\
+    \ action to use as a weapon. This magical transformation is fueled as much by\
+    \ the shifter's faith in the natural world as it is by inborn talent. The claws\
+    \ on each hand can be used as a primary natural attack, dealing 1d4 points of\
+    \ piercing and slashing damage (1d3 if she is Small). If she uses one of her claw\
+    \ attacks in concert with a weapon held in the other hand, the claw acts as a\
+    \ secondary natural attack instead.As the shifter gains levels, the power of her\
+    \ claws increases.At 3rd level, her claws count as magic weaponsSOURCE, ignore\
+    \ DR/cold iron and DR/silver. At 7th level, her claw damage increases to 1d6 (1d4\
+    \ if Small). At 11th level, her claw damage increases to 1d8 (1d6 if Small). At\
+    \ 13th level, her claw damage increases to 1d10 (1d8 if Small). At 17th level,\
+    \ the damage die does not increase, but the critical multiplier becomes ×3. Lastly,\
+    \ at 19th level, the claws ignore DR/adamantine and DR/--.While a shifter uses\
+    \ wild shape to assume her aspect‘s major form, her natural attacks gain the same\
+    \ benefits granted by her shifter claws ability. If the form she takes has claw\
+    \ attacks, she can use either the base damage of her shifter claws or the damage\
+    \ of the form's claws, whichever is greater. If the form does not have claw attacks,\
+    \ she can choose up to two natural attacks that would deal less damage than her\
+    \ shifter claw damage and have those attacks instead deal the same damage as her\
+    \ shifter claws."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:wild_empathy#shifter"
+  name: "Wild Empathy"
+  label: null
+  type: "Ex"
+  description: "A shifter can improve the attitude of an animal. This ability functions\
+    \ as a Diplomacy check to improve the attitude of a person. The shifter rolls\
+    \ 1d20 and adds her shifter level and Charisma modifier to determine the wild\
+    \ empathy check result. The typical domestic animal has a starting attitude of\
+    \ indifferent, while wild animals are usually unfriendly.To use wild empathy,\
+    \ the shifter and the animal must be within 30 feet of one another and under normal\
+    \ conditions. Generally, influencing an animal in this way takes 1 minute but,\
+    \ as with influencing people, it might take more or less time.The shifter can\
+    \ also use this ability to influence a magical beast with an Intelligence score\
+    \ of 1 or 2, but she takes a –4 penalty on the check."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:third_aspect#shifter"
+  name: "Third Aspect"
+  label: null
+  type: "Su"
+  description: "At 1st level, a shifter gains her first aspect--a category of animal\
+    \ to which her body and soul have become supernaturally attuned. She can shift\
+    \ into her aspect's minor form (see Aspects) for a number of minutes per day equal\
+    \ to 3 + her shifter level. The duration need not be consecutive but must be spent\
+    \ in 1-minute increments. Shifting into a minor form is a swift action, while\
+    \ ending the effect is a free action that can be taken only on the shifter's turn.\
+    \ Until a shifter reaches 9th level and gains the chimeric aspect class feature,\
+    \ she can assume only one minor form at a time. Shifting to a new aspect (or aspects,\
+    \ in the case of chimeric aspects or greater chimeric aspects) ends all minor\
+    \ forms currently manifested. The minor forms of aspects are not polymorph effects,\
+    \ and the shifter does not lose the benefits of a minor form while affected by\
+    \ polymorph effects.As the shifter gains levels, she gains more aspects; she gains\
+    \ her second aspect at 5th level, a third aspect at 10th level, and a fourth at\
+    \ 15th level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:timeless_body#shifter"
+  name: "Timeless Body"
+  label: null
+  type: "Ex"
+  description: "This ability has been added based on this FAQ entry.After attaining\
+    \ 18th level, a shifter no longer takes ability score penalties for aging and\
+    \ cannot be magically aged. Any penalties she may have already incurred, however,\
+    \ remain in place. Bonuses still accrue, and the shifter still dies of old age\
+    \ when her time is up."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:second_aspect#shifter"
+  name: "Second Aspect"
+  label: null
+  type: "Su"
+  description: "At 1st level, a shifter gains her first aspect--a category of animal\
+    \ to which her body and soul have become supernaturally attuned. She can shift\
+    \ into her aspect's minor form (see Aspects) for a number of minutes per day equal\
+    \ to 3 + her shifter level. The duration need not be consecutive but must be spent\
+    \ in 1-minute increments. Shifting into a minor form is a swift action, while\
+    \ ending the effect is a free action that can be taken only on the shifter's turn.\
+    \ Until a shifter reaches 9th level and gains the chimeric aspect class feature,\
+    \ she can assume only one minor form at a time. Shifting to a new aspect (or aspects,\
+    \ in the case of chimeric aspects or greater chimeric aspects) ends all minor\
+    \ forms currently manifested. The minor forms of aspects are not polymorph effects,\
+    \ and the shifter does not lose the benefits of a minor form while affected by\
+    \ polymorph effects.As the shifter gains levels, she gains more aspects; she gains\
+    \ her second aspect at 5th level, a third aspect at 10th level, and a fourth at\
+    \ 15th level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:chimeric_aspect#shifter"
+  name: "Chimeric Aspect"
+  label: null
+  type: "Su"
+  description: "At 9th level, when a shifter uses her shifter aspect ability to take\
+    \ on a minor form, she can choose two aspects and assume the minor form of each\
+    \ aspect."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:wild_shape#shifter"
+  name: "Wild Shape"
+  label: null
+  type: "Su"
+  description: "The ability details below have been updated based on this FAQ entry.At\
+    \ 4th level, a shifter gains the ability to turn herself into the major form of\
+    \ one of her aspects and back again. This ability functions as beast shape II,\
+    \ except as noted here. The shifter can turn into the major form of only one of\
+    \ her aspects at a time. Using wild shape to change to a major form or back is\
+    \ a standard action that doesn't provoke attacks of opportunity. Often a particular\
+    \ aspect's major form grants abilities beyond the normal effect of beast shape\
+    \ II. Each major form details the abilities the shifter gains with that major\
+    \ form and at what level; she gains these instead of the form abilities from beast\
+    \ shape II, but she still gains beast shape II abilities that are size dependent.A\
+    \ shifter loses her ability to speak while in animal form because she is limited\
+    \ to the sounds that a normal, untrained animal of that form can make, but she\
+    \ can communicate with other animals of the same general grouping as her form.\
+    \ She can also communicate in nonverbal ways with allies.A shifter can use wild\
+    \ shape for a number of hours each day equal to her shifter level + her Wisdom\
+    \ modifier. It need not be consecutive but must be spent in 1 hour increments.\
+    \ For abilities that function based on ‘uses of wild shape,' each hour of wild\
+    \ shape counts as a use.Shifters can take feats and other abilities that require\
+    \ wild shape; for the purpose of qualifying for prerequisites, her effective druid\
+    \ level is equal to her shifter level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:trackless_step#shifter"
+  name: "Trackless Step"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a shifter leaves no trail in natural surroundings and\
+    \ cannot be tracked. She can choose to leave a trail if she so desires."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:shifter_claws#shifter"
+  name: "Shifter Claws"
+  label: null
+  type: "Su"
+  description: "At will, a shifter in her natural form can extend her claws as a swift\
+    \ action to use as a weapon. This magical transformation is fueled as much by\
+    \ the shifter's faith in the natural world as it is by inborn talent. The claws\
+    \ on each hand can be used as a primary natural attack, dealing 1d4 points of\
+    \ piercing and slashing damage (1d3 if she is Small). If she uses one of her claw\
+    \ attacks in concert with a weapon held in the other hand, the claw acts as a\
+    \ secondary natural attack instead.As the shifter gains levels, the power of her\
+    \ claws increases.At 3rd level, her claws count as magic weaponsSOURCE, ignore\
+    \ DR/cold iron and DR/silver. At 7th level, her claw damage increases to 1d6 (1d4\
+    \ if Small). At 11th level, her claw damage increases to 1d8 (1d6 if Small). At\
+    \ 13th level, her claw damage increases to 1d10 (1d8 if Small). At 17th level,\
+    \ the damage die does not increase, but the critical multiplier becomes ×3. Lastly,\
+    \ at 19th level, the claws ignore DR/adamantine and DR/--.While a shifter uses\
+    \ wild shape to assume her aspect‘s major form, her natural attacks gain the same\
+    \ benefits granted by her shifter claws ability. If the form she takes has claw\
+    \ attacks, she can use either the base damage of her shifter claws or the damage\
+    \ of the form's claws, whichever is greater. If the form does not have claw attacks,\
+    \ she can choose up to two natural attacks that would deal less damage than her\
+    \ shifter claw damage and have those attacks instead deal the same damage as her\
+    \ shifter claws."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:woodland_stride#shifter"
+  name: "Woodland Stride"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, a shifter can move through any sort of undergrowth (such\
+    \ as briars, natural thorns, overgrown areas, and similar terrain) at her normal\
+    \ speed and without taking damage or suffering any other impairment. Briars, thorns,\
+    \ and overgrown areas that are enchanted or magically manipulated to impede motion\
+    \ still affect the shifter."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:a_thousand_faces#shifter"
+  name: "A Thousand Faces"
+  label: null
+  type: "Ex"
+  description: "This ability has been added based on this FAQ entry.At 18th level,\
+    \ a shifter gains the ability to change her appearance at will, as if using the\
+    \ alter self spell, but only while in her normal form."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "trait:weapon_proficiency#shifter"
+  name: "Weapon Proficiency (Shifter)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:scimitar 1"
+  - "SET proficiency:dart 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:sickle 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:scythe 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:greater_chimeric_aspect#shifter"
+  name: "Greater Chimeric Aspect"
+  label: null
+  type: "Su"
+  description: "At 14th level, when a shifter uses her shifter aspect ability to take\
+    \ on a minor form, she can choose up to three aspects and assume the minor form\
+    \ of each aspect."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:final_aspect#shifter"
+  name: "Final Aspect"
+  label: null
+  type: "Su"
+  description: "This ability has been updated based on this FAQ entry.At 20th level,\
+    \ a shifter gains access to a fifth aspect, when she uses shifter aspect she can\
+    \ assume the minor forms of all her aspects, and the shifter can use her major\
+    \ and minor forms at will."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "trait:armor_proficiency#shifter"
+  name: "Armor Proficiency (Shifter)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:track#shifter"
+  name: "Track"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, a shifter adds half her level as a bonus on Survival\
+    \ checks to follow tracks."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:defensive_instinct#shifter"
+  name: "Defensive Instinct"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, when unarmored, not using a shield, unencumbered, and\
+    \ conscious, the shifter adds her Wisdom bonus (if any) to her AC and CMD. If\
+    \ she is wearing nonmetal armor or using a nonmetal shield, she instead adds half\
+    \ her Wisdom bonus to her AC (minimum 0). In addition, the shifter gains a +1\
+    \ bonus to her AC and CMD at 4th level. This bonus increases by 1 for every 4\
+    \ shifter levels thereafter (up to a maximum of +5 at 20th level).These bonuses\
+    \ to AC apply even against touch attacks and when the shifter is flat-footed.\
+    \ She loses these bonuses when she is immobilized or helpless. These bonuses do\
+    \ not stack with the monk AC bonus class feature."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:shifter_aspect#shifter"
+  name: "Shifter Aspect"
+  label: null
+  type: "Su"
+  description: "At 1st level, a shifter gains her first aspect--a category of animal\
+    \ to which her body and soul have become supernaturally attuned. She can shift\
+    \ into her aspect's minor form (see Aspects) for a number of minutes per day equal\
+    \ to 3 + her shifter level. The duration need not be consecutive but must be spent\
+    \ in 1-minute increments. Shifting into a minor form is a swift action, while\
+    \ ending the effect is a free action that can be taken only on the shifter's turn.\
+    \ Until a shifter reaches 9th level and gains the chimeric aspect class feature,\
+    \ she can assume only one minor form at a time. Shifting to a new aspect (or aspects,\
+    \ in the case of chimeric aspects or greater chimeric aspects) ends all minor\
+    \ forms currently manifested. The minor forms of aspects are not polymorph effects,\
+    \ and the shifter does not lose the benefits of a minor form while affected by\
+    \ polymorph effects.As the shifter gains levels, she gains more aspects; she gains\
+    \ her second aspect at 5th level, a third aspect at 10th level, and a fourth at\
+    \ 15th level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:fourth_aspect#shifter"
+  name: "Fourth Aspect"
+  label: null
+  type: "Su"
+  description: "At 1st level, a shifter gains her first aspect--a category of animal\
+    \ to which her body and soul have become supernaturally attuned. She can shift\
+    \ into her aspect's minor form (see Aspects) for a number of minutes per day equal\
+    \ to 3 + her shifter level. The duration need not be consecutive but must be spent\
+    \ in 1-minute increments. Shifting into a minor form is a swift action, while\
+    \ ending the effect is a free action that can be taken only on the shifter's turn.\
+    \ Until a shifter reaches 9th level and gains the chimeric aspect class feature,\
+    \ she can assume only one minor form at a time. Shifting to a new aspect (or aspects,\
+    \ in the case of chimeric aspects or greater chimeric aspects) ends all minor\
+    \ forms currently manifested. The minor forms of aspects are not polymorph effects,\
+    \ and the shifter does not lose the benefits of a minor form while affected by\
+    \ polymorph effects.As the shifter gains levels, she gains more aspects; she gains\
+    \ her second aspect at 5th level, a third aspect at 10th level, and a fourth at\
+    \ 15th level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,48 @@
+id: "class:summoner#pyroclast"
+name: "Pyroclast"
+description: ""
+modifications:
+- add: "ability:diminished_spellcasting#summoner_pyroclast"
+  remove:
+  - "ability:the_summoners_spells#summoner"
+- add: "ability:detonate#summoner_pyroclast"
+  remove:
+  - "ability:makers_call#summoner"
+- add: "ability:heart_of_earth_and_fire#summoner_pyroclast"
+  remove:
+  - "ability:transposition#summoner"
+features:
+- id: "ability:diminished_spellcasting#summoner_pyroclast"
+  name: "Diminished Spellcasting"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Adventure Path #95: Anvil of Fire"
+- id: "ability:detonate#summoner_pyroclast"
+  name: "Detonate"
+  label: null
+  type: null
+  description: "At 6th level, a pyroclast can banish his eidolon in an explosion of\
+    \ fiery shards. This slays the eidolon and deals 1d6 points of damage per Hit\
+    \ Die of the eidolon to every creature in a 20-foot-radius burst (Reflex half,\
+    \ DC = 10 + 1/2 his summoner level + his Charisma modifier).\nHalf of this damage\
+    \ is fire, and the other half is piercing.\nAt 12th level, the pyroclast can reduce\
+    \ the damage by 4d6 to increase the burst radius to 40 feet. The pyroclast can\
+    \ use this ability once per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Adventure Path #95: Anvil of Fire"
+- id: "ability:heart_of_earth_and_fire#summoner_pyroclast"
+  name: "Heart of Earth and Fire"
+  label: null
+  type: null
+  description: "At 8th level, a pyroclast grants any of his summoned creatures with\
+    \ the earth or fire subtypes a +1 morale bonus on attack rolls, saving throws,\
+    \ and weapon damage rolls when he is within 30 feet.\nAt 10th level, the pyroclast\
+    \ also grants these bonuses to his eidolon."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Adventure Path #95: Anvil of Fire"
+source: "Pathfinder Adventure Path #95: Anvil of Fire"

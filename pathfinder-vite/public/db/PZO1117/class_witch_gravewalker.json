@@ -1,0 +1,50 @@
+{
+  "id": "class:witch#gravewalker",
+  "name": "Gravewalker",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:the_witchs_hex_gained_at_8th_level#witch AND !@modifies:ability:familiar#witch AND !@modifies:ability:the_witchs_1st_level_hex#witch AND !@modifies:ability:the_witchs_hex_gained_at_4th_level#witch",
+  "maxStacks": 1,
+  "description": {
+    "text": "Having much in common with necromancers, the gravewalker is obsessed with the occult manipulations of the dead, particularly mindless undead such as zombies. Unlike the creations of standard necromancers, a gravewalker\u0027s creations remain forever tied to her will, and she can produce vile apparitions of tremendous power."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_hex_gained_at_8th_level#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:familiar#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_1st_level_hex#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_hex_gained_at_4th_level#witch",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bonethrall#witch_gravewalker",
+          "conditionFormula": "@class:witch\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:familiar#witch"
+        }, {
+          "featureId": "ability:the_witchs_1st_level_hex#witch"
+        }, {
+          "featureId": "ability:the_witchs_hex_gained_at_4th_level#witch"
+        }, {
+          "featureId": "ability:the_witchs_hex_gained_at_8th_level#witch"
+        }]
+      }]
+    }
+  }
+}

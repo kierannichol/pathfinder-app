@@ -1,0 +1,46 @@
+id: "class:ranger#groom"
+name: "Groom"
+description: "This archetype can be taken by a character's torchbearer, as well as\
+  \ other characters that qualify."
+modifications:
+- add: "ability:hide_the_horses#ranger_groom"
+  remove:
+  - "ability:track#ranger"
+- add: "ability:horse_whisperer#ranger_groom"
+  remove:
+  - "ability:endurance#ranger"
+- add: "ability:scout_the_area#ranger_groom"
+  remove:
+  - "ability:the_rangers_1st_favored_terrain#ranger"
+features:
+- id: "ability:hide_the_horses#ranger_groom"
+  name: "Hide the Horses"
+  label: null
+  type: null
+  description: "A groom finds the best place to stable and conceal a party's mounts\
+    \ while the group explores a dungeon. A groom adds half her level (minimum 1)\
+    \ on Stealth skill checks for both herself and the mounts she's hiding while she\
+    \ is concealing a party's mounts."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+- id: "ability:horse_whisperer#ranger_groom"
+  name: "Horse Whisperer"
+  label: null
+  type: null
+  description: "At 3rd level, a groom can use speak with animals at will, but can\
+    \ use this power only on horses, riding dogs, and other mounts of the animal type."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+- id: "ability:scout_the_area#ranger_groom"
+  name: "Scout the Area"
+  label: null
+  type: null
+  description: "At 3rd level, a groom gains a +4 bonus on Knowledge (local) checks.\
+    \ In addition, she always knows where to find the nearest expert or spellcaster\
+    \ who can provide a particular service, such as the nearest source of raise dead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+source: "Pathfinder Player Companion: Dungeoneer's Handbook"

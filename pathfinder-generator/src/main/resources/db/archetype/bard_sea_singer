@@ -1,0 +1,84 @@
+id: "class:bard#sea_singer"
+name: "Sea Singer"
+description: ""
+modifications:
+- add: "ability:bardic_performance#bard_sea_singer"
+  remove:
+  - "ability:countersong#bard"
+- add: "ability:world_traveler#bard_sea_singer"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:familiar#bard_sea_singer"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:sea_legs#bard_sea_singer"
+  remove:
+  - "ability:well_versed#bard"
+features:
+- id: "ability:bardic_performance#bard_sea_singer"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A sea singer gains the following types of bardic performance:\nSea\
+    \ Shanty (Su): A sea singer learns to counter seasickness and exhaustion during\
+    \ long sea voyages. Each round of a sea shanty, he makes a Perform skill check.\
+    \ Allies within 30 feet (including the sea singer) may use his Perform check in\
+    \ place of a saving throw against becoming exhausted, fatigued, nauseated, or\
+    \ sickened; if already under such an effect, a new save is allowed each round\
+    \ of the sea shanty, using the bard's Perform check for the save. A sea shanty\
+    \ has no effect on instantaneous effects or effects that do not allow saves. This\
+    \ ability requires audible components.\nThis performance replaces countersong.\n\
+    Still Water (Su): At 3rd level, a sea singer can use performance to calm rough\
+    \ waters within 30 feet, reducing the DC for Profession (sailor) and Swim checks,\
+    \ as well as for Acrobatics and Climb checks aboard ship, by an amount equal to\
+    \ the bard's level (to a minimum of DC 10) for as long he continues to perform.\
+    \ He can extend this duration to 1 hour by playing for 10 consecutive rounds.\
+    \ This ability requires audible components.\nThis performance replaces inspire\
+    \ competence.\nWhistle the Wind (Su): A sea singer of 6th level or higher can\
+    \ use performance to create a gust of wind. This wind lasts for as long as he\
+    \ continues his performance. He can extend this duration to 1 minute by playing\
+    \ for 5 consecutive rounds.\nThis performance replaces suggestion.\nCall the Storm\
+    \ (Su): At 18th level, a sea singer can use performance to duplicate control water,\
+    \ control weather, control winds, or storm of vengeance, using his bard level\
+    \ as the caster level. Using this ability requires 1 round of continuous performance\
+    \ per level of the spell (as if he were a druid). These effects continue for as\
+    \ long as the bard continues performing (the effects of control weather happen\
+    \ immediately), but not longer than the spell's normal duration."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:world_traveler#bard_sea_singer"
+  name: "World Traveler"
+  label: null
+  type: null
+  description: "A sea singer gains a bonus equal to half his bard level on Knowledge\
+    \ (geography), Knowledge (local), Knowledge (nature), and Linguistics checks.\
+    \ He can reroll a check against one of these skills, but must take the result\
+    \ of the second roll even if it is worse. He can reroll one additional time per\
+    \ day at 5th level and every five levels thereafter.\nThis ability replaces bardic\
+    \ knowledge."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:familiar#bard_sea_singer"
+  name: "Familiar"
+  label: null
+  type: null
+  description: "At 2nd level, a sea singer acquires an exotic pet--a monkey or parrot\
+    \ (treat as raven)--that gains abilities as a wizard's familiar, using the sea\
+    \ singer's bard level as his wizard level.\nThis ability replaces versatile performance."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:sea_legs#bard_sea_singer"
+  name: "Sea Legs"
+  label: null
+  type: null
+  description: "At 2nd level, a sea singer gains a +4 bonus on saving throws against\
+    \ air and water effects and effects that would cause the sea singer to slip, trip,\
+    \ or otherwise be knocked prone. He gains a +2 bonus to CMD against grapple, overrun,\
+    \ and trip."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

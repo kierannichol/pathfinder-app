@@ -1,0 +1,112 @@
+{
+  "id": "class:monk#monk_of_the_empty_hand",
+  "name": "Monk of the Empty Hand",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:purity_of_body#monk AND !@modifies:trait:weapon_proficiency#monk AND !@modifies:ability:diamond_body#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d20"
+        }, {
+          "featureId": "ability:versatile_improvisation#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:ki_weapons#monk_monk_of_the_empty_hand",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "trait:weapon_proficiency#monk"
+        }, {
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:diamond_body#monk"
+        }, {
+          "featureId": "ability:purity_of_body#monk"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+id: "class:hunter#pelagic_hunter"
+name: "Pelagic Hunter"
+description: ""
+modifications:
+- add: "ability:pelagic_companion#hunter_pelagic_hunter"
+  remove:
+  - "ability:animal_companion#hunter"
+- add: "ability:pelagic_focus#hunter_pelagic_hunter"
+  remove:
+  - "ability:animal_focus#hunter"
+- add: "ability:blood_to_water#hunter_pelagic_hunter"
+  remove:
+  - "ability:woodland_stride#hunter"
+features:
+- id: "ability:pelagic_companion#hunter_pelagic_hunter"
+  name: "Pelagic Companion"
+  label: null
+  type: null
+  description: "A pelagic hunter must select an aquatic animal companion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+- id: "ability:pelagic_focus#hunter_pelagic_hunter"
+  name: "Pelagic Focus"
+  label: null
+  type: null
+  description: "Unlike with a normal hunter's animal focus, pelagic focus allows the\
+    \ hunter to contact magical deep sea creatures instead of animals, using the options\
+    \ below instead of the normal hunter options.\nThis alters animal focus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+- id: "ability:blood_to_water#hunter_pelagic_hunter"
+  name: "Blood to Water"
+  label: null
+  type: null
+  description: "At 5th level, when a pelagic hunter or her animal companion bleeds\
+    \ underwater into the surrounding water (whether from piercing or slashing damage,\
+    \ a bleed effect, or another effect that causes blood to spill), the blood transmutes\
+    \ into ordinary water within 1 round. This prevents sharks and other predators\
+    \ with keen scent from being drawn to the pelagic hunter's position by the blood\
+    \ and makes it harder for such creatures to track her."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+source: "Pathfinder Campaign Setting: Aquatic Adventures"

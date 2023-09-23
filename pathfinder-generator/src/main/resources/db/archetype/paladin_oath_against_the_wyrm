@@ -1,0 +1,52 @@
+id: "class:paladin#oath_against_the_wyrm"
+name: "Oath Against the Wyrm"
+description: ""
+modifications:
+- add: "ability:breath_evasion#paladin_oath_against_the_wyrm"
+  remove:
+  - "ability:channel_positive_energy#paladin"
+- add: "ability:divine_bond#paladin_oath_against_the_wyrm"
+  remove:
+  - "ability:the_standard_divine_bond_ability#paladin"
+- add: "ability:dragon_slaying_strike#paladin_oath_against_the_wyrm"
+  remove:
+  - "ability:holy_champion#paladin"
+features:
+- id: "ability:breath_evasion#paladin_oath_against_the_wyrm"
+  name: "Breath Evasion"
+  label: null
+  type: null
+  description: "At 4th level, a paladin with this oath gains evasion, but only against\
+    \ the breath weapons of creatures with the dragon type."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:divine_bond#paladin_oath_against_the_wyrm"
+  name: "Divine Bond"
+  label: null
+  type: null
+  description: "This works like the paladin's normal divine bond ability, except as\
+    \ follows. If the paladin's bond is with a weapon, she cannot use that ability\
+    \ to add the brilliant energy, disruption, or merciful weapon properties, but\
+    \ she can add the bane weapon property (but only against dragons). If the paladin's\
+    \ bond is with her steed, the steed gains the paladin's aura-based immunities\
+    \ and her aura does not affect allies.\nThis replaces the standard divine bond\
+    \ ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:dragon_slaying_strike#paladin_oath_against_the_wyrm"
+  name: "Dragon-Slaying Strike"
+  label: null
+  type: null
+  description: "At 20th level, an oathbound paladin becomes a conduit of holy power.\
+    \ Her DR increases to 10/evil. Whenever she uses smite evil and successfully strikes\
+    \ a dragon, the dragon is also subject to a single-target holy word, using her\
+    \ paladin level + 10 as the caster level. After the banishment effect and the\
+    \ damage from the attack are resolved, the smite immediately ends. In addition,\
+    \ whenever she uses lay on hands to heal a creature, she heals the maximum possible\
+    \ amount.\nThis ability replaces holy champion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

@@ -1,0 +1,26 @@
+casting_time: "1 round"
+saving_throw: ""
+spell_resistance: ""
+id: "spell:spell_absorption"
+name: "Spell Absorption"
+description: "If you successfully counterspell a 3rd-level or lower level spell (through\
+  \ either dispel magicor normal means) while spell absorptionis in effect, you absorb\
+  \ the countered spell and use it to regain spells you have already cast. If you're\
+  \ a wizard, you regain the use of any single spell that you have cast since the\
+  \ last time you prepared spells. If you're a sorcerer, you regain a single spell\
+  \ slot. The spell recovered or spell slot regained must be of an equal level or\
+  \ lower than the spell you counterspelled."
+prerequisites: ""
+components: "V, S, M (a prism)"
+range: "personal"
+targets: "you"
+duration: "1 round/level"
+school: "abjuration"
+levels:
+- class_id: "class:arcanist"
+  level: 5
+- class_id: "class:sorcerer"
+  level: 5
+- class_id: "class:wizard"
+  level: 5
+source: "Inner Sea Magic"

@@ -1,0 +1,30 @@
+id: "class:bard#mute_musician"
+name: "Mute Musician"
+description: "A mute musician forswears speech for the unnatural songs and thunderous\
+  \ silences of the depths of space. She learns to blend light and sound in seemingly\
+  \ impossible ways."
+modifications:
+- add: "ability:eschew_materials#bard_mute_musician"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:bardic_performance#bard_mute_musician"
+  remove:
+  - "ability:inspire_heroics#bard"
+features:
+- id: "ability:eschew_materials#bard_mute_musician"
+  name: "Eschew Materials"
+  label: null
+  type: null
+  description: "A mute musician gains Eschew Materials as a bonus feat at 1st level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Horror Realms"
+- id: "ability:bardic_performance#bard_mute_musician"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A mute musician gains the following bardic performances."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Horror Realms"
+source: "Pathfinder Campaign Setting: Horror Realms"

@@ -1,0 +1,61 @@
+id: "class:fighter#swordlord"
+name: "Swordlord"
+description: ""
+modifications:
+- add: "ability:defensive_parry#fighter_swordlord"
+  remove:
+  - "ability:armor_training#fighter@3"
+  - "ability:armor_training#fighter@15"
+- add: "ability:disarming_strike#fighter_swordlord"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:steel_net#fighter_swordlord"
+  remove:
+  - "ability:armor_training#fighter@7"
+- add: "ability:counterattack#fighter_swordlord"
+  remove:
+  - "ability:armor_training#fighter@11"
+features:
+- id: "ability:defensive_parry#fighter_swordlord"
+  name: "Defensive Parry"
+  label: null
+  type: null
+  description: "At 3rd level, when a swordlord makes a full attack with a dueling\
+    \ sword, he gains a +1 bonus to AC against melee attacks until the beginning of\
+    \ his next turn. This bonus increases by +1 every four levels after 3rd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Inner Sea Primer"
+- id: "ability:disarming_strike#fighter_swordlord"
+  name: "Disarming Strike"
+  label: null
+  type: null
+  description: "At 5th level, when a swordlord successfully disarms an opponent using\
+    \ a dueling sword, the swordlord also deals normal damage to the target, but without\
+    \ the normal Strength bonus to damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Inner Sea Primer"
+- id: "ability:steel_net#fighter_swordlord"
+  name: "Steel Net"
+  label: null
+  type: null
+  description: "At 7th level, a swordlord can throw up a blazing wall of steel to\
+    \ defend himself. When fighting defensively as a full-round action with a dueling\
+    \ sword, the swordlord's penalties on all attacks in a round are reduced by 2,\
+    \ and the dodge bonus to AC is increased by 2 for the same round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Inner Sea Primer"
+- id: "ability:counterattack#fighter_swordlord"
+  name: "Counterattack"
+  label: null
+  type: null
+  description: "At 11th level, a swordlord can make an attack of opportunity as an\
+    \ immediate action against an opponent who hits the swordlord with a melee attack,\
+    \ so long as the attacking creature is within the swordlord's reach.\nThis ability\
+    \ replaces armor training 3."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Inner Sea Primer"
+source: "Pathfinder Player Companion: Inner Sea Primer"

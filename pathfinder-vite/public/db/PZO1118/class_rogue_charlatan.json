@@ -1,0 +1,29 @@
+{
+  "id": "class:rogue#charlatan",
+  "name": "Charlatan",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "A charlatan is a master of lies and deception. Whether creating simple cons or elaborately woven hoaxes capable of swaying the masses and those in positions of power, a charlatan is often a purveyor of snake-oil, forgeries, and rumormongering."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:natural_born_liar#rogue_charlatan",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }]
+      }]
+    }
+  }
+}

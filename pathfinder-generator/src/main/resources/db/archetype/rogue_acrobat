@@ -1,0 +1,41 @@
+id: "class:rogue#acrobat"
+name: "Acrobat"
+description: "Agility and daring are both excellent rogue traits, and their confluence\
+  \ can create spectacular feats of acrobatics. Whether they are daring thieves, infiltrating\
+  \ assassins, or intrepid spies, proper training in acrobatics is a valuable boon\
+  \ for rogues."
+modifications:
+- add: "ability:expert_acrobat#rogue_acrobat"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:second_chance#rogue_acrobat"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:expert_acrobat#rogue_acrobat"
+  name: "Expert Acrobat"
+  label: null
+  type: null
+  description: "At 1st level, an acrobat does not suffer any armor check penalties\
+    \ on Acrobatics, Climb, Fly, Sleight of Hand, or Stealth skill checks while wearing\
+    \ light armor. When she is not wearing armor, she gains a +2 competency bonus\
+    \ on Acrobatics and Fly skill checks."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:second_chance#rogue_acrobat"
+  name: "Second Chance"
+  label: null
+  type: null
+  description: "At 3rd level, an acrobat can reroll any Acrobatics, Climb, or Fly\
+    \ skill check she has just made. This reroll is made at a –5 penalty. She must\
+    \ take the second result, even if it is worse. An acrobat can use this ability\
+    \ only once on any given skill check. She can use this ability once per day at\
+    \ 3rd level, plus one additional time per day for every 3 levels beyond 3rd.\n\
+    This ability replaces trap sense.\nRogue Talents: The following rogue talents\
+    \ complement the acrobat archetype: expert leaper, ledge walker*, nimble climber,\
+    \ peerless maneuver, rogue crawl*, and stand up*."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

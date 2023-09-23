@@ -1,0 +1,52 @@
+id: "class:alchemist#reanimator"
+name: "Reanimator"
+description: "A reanimator is an alchemist who has discovered how to infuse a corpse\
+  \ with a semblance of life. Many work in tandem with necromancers to explore the\
+  \ fine border between the worlds of the living and the dead."
+modifications:
+- add: "ability:simple_reanimation#alchemist_reanimator"
+  remove:
+  - "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+- add: "ability:create_undead#alchemist_reanimator"
+  remove:
+  - "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+- add: "ability:create_greater_undead#alchemist_reanimator"
+  remove:
+  - "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+features:
+- id: "ability:simple_reanimation#alchemist_reanimator"
+  name: "Simple Reanimation"
+  label: null
+  type: null
+  description: "At 7th level, a reanimator adds lesser animate dead to his formula\
+    \ book as a 3rd-level extract. When he uses that extract, rather than drinking\
+    \ it, he injects it into the corpse he intends to animate, which rises as an undead\
+    \ creature under his control 1 hour later. The extract can only create zombies\
+    \ (including variant zombies).\nThis ability replaces the increase to bomb damage\
+    \ at this level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:create_undead#alchemist_reanimator"
+  name: "Create Undead"
+  label: null
+  type: null
+  description: "At 13th level, a reanimator adds create undead to his formula book\
+    \ as a 4th-level extract. When he uses that extract, rather than drinking it,\
+    \ he injects it into the corpse he intends to animate, which rises as an uncontrolled\
+    \ undead 1 hour later. The extract can only create corporeal undead.\nThis ability\
+    \ replaces the increase to bomb damage at this level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:create_greater_undead#alchemist_reanimator"
+  name: "Create Greater Undead"
+  label: null
+  type: null
+  description: "At 15th level, a reanimator adds create greater undead to his formula\
+    \ book as a 5th-level extract. This otherwise acts similarly to a create undead\
+    \ extract.\nThis ability replaces the increase to bomb damage at this level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

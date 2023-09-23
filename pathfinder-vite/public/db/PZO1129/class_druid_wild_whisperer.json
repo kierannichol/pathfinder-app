@@ -1,0 +1,58 @@
+{
+  "id": "class:druid#wild_whisperer",
+  "name": "Wild Whisperer",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:the_additional_use_of_wild_shape_at_6th_level#druid AND !@modifies:ability:the_additional_use_of_wild_shape_at_8th_level#druid AND !@modifies:ability:wild_shape#druid AND !@modifies:ability:woodland_stride_trackless_step_and_resist_natures_lure#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_additional_use_of_wild_shape_at_6th_level#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_additional_use_of_wild_shape_at_8th_level#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride_trackless_step_and_resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:inspiration#druid_wild_whisperer",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:wild_shape#druid_wild_whisperer",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }, {
+          "featureId": "ability:natural_expertise#druid_wild_whisperer",
+          "conditionFormula": "@class:druid\u003e\u003d6"
+        }, {
+          "featureId": "ability:investigator_talent#druid_wild_whisperer",
+          "conditionFormula": "@class:druid\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:woodland_stride_trackless_step_and_resist_natures_lure#druid"
+        }, {
+          "featureId": "ability:wild_shape#druid"
+        }, {
+          "featureId": "ability:the_additional_use_of_wild_shape_at_6th_level#druid"
+        }, {
+          "featureId": "ability:the_additional_use_of_wild_shape_at_8th_level#druid"
+        }]
+      }]
+    }
+  }
+}

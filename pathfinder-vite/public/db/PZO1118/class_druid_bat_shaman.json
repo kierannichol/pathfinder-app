@@ -1,0 +1,49 @@
+{
+  "id": "class:druid#bat_shaman",
+  "name": "Bat Shaman",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "The bat shaman\u0027s totem is the agile bat, flitting and turning with incredible speed through even the most convoluted mazes. Her enemies do not know when she will appear, and when she does, she strikes fast and hard before disappearing into the night."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:totem_transformation#druid_bat_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:totemic_summons#druid_bat_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d5"
+        }, {
+          "featureId": "ability:bonus_feat#druid_bat_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:a_thousand_faces#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }]
+      }]
+    }
+  }
+}

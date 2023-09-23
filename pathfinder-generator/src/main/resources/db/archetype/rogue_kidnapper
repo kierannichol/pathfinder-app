@@ -1,0 +1,37 @@
+id: "class:rogue#kidnapper"
+name: "Kidnapper"
+description: "A kidnapper is adept at hiding and quickly subduing prey."
+modifications:
+- add: "ability:clean_capture#rogue_kidnapper"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:abductor#rogue_kidnapper"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:clean_capture#rogue_kidnapper"
+  name: "Clean Capture"
+  label: null
+  type: null
+  description: "At 1st level, a kidnapper reduces the penalty to her combat maneuver\
+    \ check to tie up a pinned or otherwise restrained target by an amount equal to\
+    \ 1/2 her rogue level. In addition, she can take the feats Improved Grapple and\
+    \ Greater Grapple as rogue talents. She can ignore the Improved Unarmed Strike\
+    \ requirement when selecting these feats as rogue talents, but must meet all other\
+    \ prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:abductor#rogue_kidnapper"
+  name: "Abductor"
+  label: null
+  type: null
+  description: "At 3rd level, a kidnapper gains a +1 bonus on combat maneuver checks\
+    \ to grapple a foe. In addition, the kidnapper treats her combat maneuver bonus\
+    \ as 1 higher when a foe tries to grapple her or when a grappled target attempts\
+    \ to break free of her grapple. These bonuses increase by 1 for every 3 levels\
+    \ beyond 3rd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

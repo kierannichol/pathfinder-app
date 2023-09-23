@@ -1,58 +1,87 @@
 package pathfinder.generator;
 
 import com.google.protobuf.Message;
+import com.google.protobuf.util.JsonFormat;
+import com.google.protobuf.util.JsonFormat.Printer;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
-import pathfinder.data.v4.EntityDatabaseDbo;
-import pathfinder.data.v4.EntityDbo;
-import pathfinder.data.v4.EntitySummaryDbo;
-import pathfinder.generator.provider.EntityProvider;
-import pathfinder.model.Entity;
+import pathfinder.data.FeatureDbo;
+import pathfinder.data.FeatureSummaryDbo;
+import pathfinder.data.SourceModuleDbo;
+import pathfinder.model.Id;
 import pathfinder.model.pathfinder.SourceId;
+import pathfinder.spring.OutputPathValue;
+import pathfinder.util.FileUtils;
 import pathfinder.util.StreamUtils;
+import pathfinder.model.Feature;
 
 @RequiredArgsConstructor
-public class SourceModuleDatabaseGenerator extends AbstractDatabaseGenerator<Entity, EntitySummaryDbo, EntityDbo> {
-    private final SourceId sourceId;
-    private final List<EntityProvider> entityProviders;
+public class SourceModuleDatabaseGenerator {
 
-    @Override
-    protected Stream<Entity> streamModels() {
-        return entityProviders.stream()
-                .flatMap(provider -> provider.streamEntities(sourceId))
-                .filter(StreamUtils.duplicates(Entity::id));
+    private final SourceId sourceId;
+    private final List<FeatureProvider> featureProviders;
+    private final DatabaseWriter writer;
+
+    protected Stream<Feature> streamFeatures() {
+        return featureProviders.stream()
+                .flatMap(provider -> provider.features(sourceId))
+                .filter(StreamUtils.duplicates(Feature::id));
     }
 
     private String databaseId() {
         return sourceId.code();
     }
 
-    @Override
     protected String getRelativeOutputPath() {
-        return "v5/" + databaseId();
+        return databaseId();
     }
 
-    @Override
     protected String getOutputDatabaseName() {
-        return "v5/" + databaseId();
+        return databaseId();
     }
 
-    @Override
-    protected EntitySummaryDbo encodedSummary(Entity entity) {
-        return entity.toSummaryDbo();
+    protected FeatureSummaryDbo encodedFeatureSummary(Feature feature) {
+        return feature.toSummaryDbo();
     }
 
-    @Override
-    protected EntityDbo encodedDetailed(Entity entity, EntitySummaryDbo entitySummaryDbo) {
-        return entity.toDbo();
+    protected FeatureDbo encodedFeatureDetailed(Feature feature) {
+        return feature.toDbo();
     }
 
-    @Override
-    protected Message createSummaryDatabase(List<EntitySummaryDbo> summaries) {
-        return EntityDatabaseDbo.newBuilder()
-                .setDatabaseId(databaseId())
-                .addAllSummaries(summaries)
+    protected Message createSummaryDatabase(List<FeatureSummaryDbo> features) {
+        return SourceModuleDbo.newBuilder()
+                .setSourceId(databaseId())
+                .addAllFeatures(features)
                 .build();
+    }
+
+    public void generate() throws IOException {
+        String relativeOutputPath = getRelativeOutputPath();
+
+        List<FeatureSummaryDbo> summaries = new ArrayList<>();
+        streamFeatures()
+                .distinct()
+                .forEachOrdered(model -> {
+                    FeatureSummaryDbo summary = encodedFeatureSummary(model);
+                    if (summary != null) {
+                        summaries.add(summary);
+                    }
+
+                    FeatureDbo detailed = encodedFeatureDetailed(model);
+                    if (detailed != null) {
+                        writer.write(detailed, model.id().string(), relativeOutputPath);
+                    }
+                });
+
+        Message database = createSummaryDatabase(summaries);
+        if (database != null) {
+            writer.write(database, getOutputDatabaseName(), "");
+        }
     }
 }

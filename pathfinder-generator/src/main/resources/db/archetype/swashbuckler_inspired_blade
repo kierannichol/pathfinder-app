@@ -1,0 +1,79 @@
+id: "class:swashbuckler#inspired_blade"
+name: "Inspired Blade"
+description: "An inspired blade is both a force of personality and a sage of swordplay\
+  \ dedicated to the perfection of combat with the rapier. They use the science and\
+  \ geometry with swordplay to beautiful and deadly effect."
+modifications:
+- add: "ability:inspired_panache#swashbuckler_inspired_blade"
+  remove:
+  - "ability:the_panache_class_feature#swashbuckler"
+- add: "ability:inspired_finesse#swashbuckler_inspired_blade"
+  remove:
+  - "ability:swashbuckler_finesse#swashbuckler"
+- add: "ability:deeds#swashbuckler_inspired_blade"
+  remove:
+  - "ability:bleeding_wound#swashbuckler"
+- add: "ability:rapier_training#swashbuckler_inspired_blade"
+  remove:
+  - "ability:swashbuckler_weapon_training#swashbuckler"
+- add: "ability:rapier_weapon_mastery#swashbuckler_inspired_blade"
+  remove:
+  - "ability:swashbuckler_weapon_mastery#swashbuckler"
+features:
+- id: "ability:inspired_panache#swashbuckler_inspired_blade"
+  name: "Inspired Panache"
+  label: null
+  type: null
+  description: "Each day, an inspired blade gains a number of panache points equal\
+    \ to her Charisma modifier (minimum 1) plus her Intelligence modifier (minimum\
+    \ 1), instead of just her Charisma modifier.\nUnlike other swashbucklers, an inspired\
+    \ blade regains no panache from scoring a killing blow. She regains panache only\
+    \ from scoring a critical hit with a rapier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:inspired_finesse#swashbuckler_inspired_blade"
+  name: "Inspired Finesse"
+  label: null
+  type: null
+  description: "At 1st level, an inspired blade gains the benefits of Weapon Finesse\
+    \ with the rapier (this ability counts as having the Weapon Finesse feat for the\
+    \ purpose of meeting feat prerequisites) and gains Weapon Focus (rapier) as a\
+    \ bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:deeds#swashbuckler_inspired_blade"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "The inspired blade gains the following deeds, each of which replaces\
+    \ an existing deed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:rapier_training#swashbuckler_inspired_blade"
+  name: "Rapier Training"
+  label: null
+  type: null
+  description: "At 5th level, an inspired blade gains a +1 bonus on attack rolls and\
+    \ a +2 bonus on damage rolls with rapiers. While wielding a rapier, she gains\
+    \ the benefit of the Improved Critical feat. These attack and damage bonuses increase\
+    \ by 1 for every 4 levels beyond 5th (to a maximum of +4 on attack rolls and +5\
+    \ on damage rolls at 17th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:rapier_weapon_mastery#swashbuckler_inspired_blade"
+  name: "Rapier Weapon Mastery"
+  label: null
+  type: null
+  description: "At 20th level, when an inspired blade threatens a critical hit with\
+    \ a rapier, that critical hit is automatically confirmed. Furthermore, the critical\
+    \ threat range increases by 1 (this increase to the critical threat range stacks\
+    \ with the increase from rapier training, to a total threat range of 14–20), and\
+    \ the critical modifier of the weapon increases by 1 (×2 becomes ×3, for example)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

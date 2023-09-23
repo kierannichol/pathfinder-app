@@ -1,0 +1,66 @@
+id: "class:investigator#bonded_investigator"
+name: "Bonded Investigator"
+description: ""
+modifications:
+- add: "ability:familiar#investigator_bonded_investigator"
+  remove:
+  - "ability:poison_immunity#investigator"
+  - "ability:poison_lore_poison_resistance#investigator"
+- add: "ability:inspired_familiar#investigator_bonded_investigator"
+  remove:
+  - "ability:the_studied_strike_damage_gained_at_4th_level#investigator"
+- add: "ability:studied_strike#investigator_bonded_investigator"
+  remove:
+  - "ability:studied_strike#investigator"
+- add: "ability:improved_familiar#investigator_bonded_investigator"
+  remove:
+  - "ability:the_investigator_talent_gained_at_7th_level#investigator"
+features:
+- id: "ability:familiar#investigator_bonded_investigator"
+  name: "Familiar"
+  label: null
+  type: null
+  description: "At 2nd level, a bonded investigator gains a familiar to aid him. This\
+    \ familiar functions as the wizard arcane bond class feature, using the bonded\
+    \ investigator's class level to determine the familiar's special abilities.\n\
+    The bonded investigator's extracts are considered spells for the purposes of familiar\
+    \ abilities like share spell and deliver touch spells."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:inspired_familiar#investigator_bonded_investigator"
+  name: "Inspired Familiar"
+  label: null
+  type: null
+  description: "At 4th level, a bonded investigator's familiar becomes a cunning assistant\
+    \ to the investigator. The familiar can access the investigator's inspiration\
+    \ pool to augment its own actions; the use of inspiration is deducted from the\
+    \ investigator's number of daily uses as normal. The familiar can use the inspiration\
+    \ ability (and gains the increased benefits of investigator talents that affect\
+    \ the bonus dice used in this ability) but cannot expend uses of inspiration for\
+    \ other purposes."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:studied_strike#investigator_bonded_investigator"
+  name: "Studied Strike"
+  label: null
+  type: null
+  description: "At 6th level, a bonded investigator gains studied strike +1d6. At\
+    \ 10th level and every 4 investigator levels thereafter, this damage increases\
+    \ by +1d6."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:improved_familiar#investigator_bonded_investigator"
+  name: "Improved Familiar"
+  label: null
+  type: null
+  description: "At 7th level, a bonded investigator gains the Improved Familiar feat\
+    \ as a bonus feat, treating his investigator level as his arcane caster level\
+    \ for the purposes of determining what familiars are available to him.\nThis replaces\
+    \ the investigator talent gained at 7th level."
+  effects: null
+  prerequisites: null
+  source: ""
+source: ""

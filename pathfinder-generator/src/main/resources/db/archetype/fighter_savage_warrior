@@ -1,0 +1,86 @@
+id: "class:fighter#savage_warrior"
+name: "Savage Warrior"
+description: ""
+modifications:
+- add: "ability:spark_of_life#fighter_savage_warrior"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:natural_savagery#fighter_savage_warrior"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:savage_charge#fighter_savage_warrior"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:careful_claw#fighter_savage_warrior"
+  remove:
+  - "ability:weapon_training#fighter@13"
+- add: "ability:greater_savage_charge#fighter_savage_warrior"
+  remove:
+  - "ability:weapon_training#fighter@17"
+- add: "ability:natural_weapon_mastery#fighter_savage_warrior"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:spark_of_life#fighter_savage_warrior"
+  name: "Spark of Life"
+  label: null
+  type: null
+  description: "At 2nd level, a savage warrior gains a +1 bonus on saving throws made\
+    \ against energy drain and death effects. This bonus increases by +1 for every\
+    \ four levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:natural_savagery#fighter_savage_warrior"
+  name: "Natural Savagery"
+  label: null
+  type: null
+  description: "At 5th level, a savage warrior gains a +1 bonus on attack and damage\
+    \ rolls with natural weapons. This bonus also applies to CMB and CMD for grappling.\
+    \ This bonus increases by +1 for every four levels beyond 5th."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:savage_charge#fighter_savage_warrior"
+  name: "Savage Charge"
+  label: null
+  type: null
+  description: "At 9th level, when a savage warrior attacks with a natural weapon\
+    \ at the end of a charge, he gains a bonus on his natural weapon attack rolls\
+    \ equal to half his fighter level, while suffering a penalty to his AC equal to\
+    \ half his fighter level. These replace the normal attack roll bonus and AC penalty\
+    \ for charging. This bonus also applies to his CMB for a bull rush or overrun\
+    \ combat maneuvers made when charging."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:careful_claw#fighter_savage_warrior"
+  name: "Careful Claw"
+  label: null
+  type: null
+  description: "At 13th level, when using a natural weapon to attack a creature using\
+    \ fire shield or a similar effect that damages creatures attacking it (such as\
+    \ a barbed devil's barbed defense), a savage warrior reduces the damage from such\
+    \ effects by an amount equal to 1/2 his fighter level."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:greater_savage_charge#fighter_savage_warrior"
+  name: "Greater Savage Charge"
+  label: null
+  type: null
+  description: "At 17th level, when using savage charge, the AC penalty is reduced\
+    \ to 1/4 his fighter level instead of 1/2 his fighter level. In addition, a savage\
+    \ warrior can charge through friendly creatures and difficult terrain."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:natural_weapon_mastery#fighter_savage_warrior"
+  name: "Natural Weapon Mastery"
+  label: null
+  type: null
+  description: "At 20th level, a savage warrior must choose one natural weapon."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

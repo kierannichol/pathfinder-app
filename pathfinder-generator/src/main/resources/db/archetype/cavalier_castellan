@@ -1,0 +1,102 @@
+id: "class:cavalier#castellan"
+name: "Castellan"
+description: ""
+modifications:
+- add: "ability:castle_defender#cavalier_castellan"
+  remove:
+  - "ability:mount#cavalier"
+- add: "ability:castle_lore#cavalier_castellan"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:guard_companion#cavalier_castellan"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:mighty_defense#cavalier_castellan"
+  remove:
+  - "ability:mighty_charge#cavalier"
+- add: "ability:defending_challenge#cavalier_castellan"
+  remove:
+  - "ability:demanding_challenge#cavalier"
+- add: "ability:supreme_defense#cavalier_castellan"
+  remove:
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:castle_defender#cavalier_castellan"
+  name: "Castle Defender"
+  label: null
+  type: null
+  description: "At 1st level, a castellan gains a +1 bonus to Armor Class and an additional\
+    \ +1 bonus on attack rolls when he is on higher ground. He also gains an additional\
+    \ +1 bonus to Armor Class and on Reflex saves when he has cover other than soft\
+    \ cover from other creatures. At 6th level, a castellan gains evasion (as a rogue)\
+    \ when he has cover (but not soft cover) against the source of the attack.\nAt\
+    \ 11th level, these bonuses increase by 1. At 16th level, he gains improved evasion\
+    \ instead of evasion. Both the evasion and improved evasion abilities work even\
+    \ when the castellan wears medium or heavy armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:castle_lore#cavalier_castellan"
+  name: "Castle Lore"
+  label: null
+  type: null
+  description: "At 3rd level, the castellan gains a +2 bonus on initiative checks\
+    \ and Knowledge (engineering), Knowledge (local), Knowledge (nobility), Perception,\
+    \ and Stealth checks when he is in urban terrain, including fortifications. A\
+    \ castellan in an urban environment can always act in a surprise round, though\
+    \ he remains flat-footed until he acts. At 8th level and every 5 levels thereafter,\
+    \ the castellan's bonuses on skill and initiative checks increase by 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:guard_companion#cavalier_castellan"
+  name: "Guard Companion"
+  label: null
+  type: null
+  description: "At 4th level, the castellan forms a bond with an animal companion\
+    \ that serves as a guard.\nWhile most castellans select birds or canines, the\
+    \ castellan can choose any animal companions available to rangers.\nThis ability\
+    \ functions like the druid nature bond ability, except that the castellan's effective\
+    \ druid level is equal to his cavalier level – 3 and his animal companion doesn't\
+    \ gain the share spells special ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:mighty_defense#cavalier_castellan"
+  name: "Mighty Defense"
+  label: null
+  type: null
+  description: "At 11th level, when the castellan readies an action to make a melee\
+    \ attack against a creature that is not yet adjacent to him, he doubles the threat\
+    \ range of any melee weapons wielded during the attack. This increase doesn't\
+    \ stack with other effects that increase the threat range of his weapons. In addition,\
+    \ the cavalier can attempt a free dirty trick, disarm, sunder, or trip combat\
+    \ maneuver if his readied attack is successful.\nThis free combat maneuver doesn't\
+    \ provoke an attack of opportunity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:defending_challenge#cavalier_castellan"
+  name: "Defending Challenge"
+  label: null
+  type: null
+  description: "At 12th level, the castellan takes no penalty to Armor Class when\
+    \ using his challenge ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:supreme_defense#cavalier_castellan"
+  name: "Supreme Defense"
+  label: null
+  type: null
+  description: "At 20th level, whenever the castellan readies an action to make a\
+    \ melee attack against a creature that is not yet adjacent to him, his readied\
+    \ attack deals double the normal amount of damage (or triple the damage if using\
+    \ a brace weapon against a charge). In addition, if the cavalier confirms a critical\
+    \ hit on the readied attack, the target is stunned for 1d4 rounds. A successful\
+    \ Will save (DC = 10 + the cavalier's class level + the cavalier's Strength modifier)\
+    \ reduces this to being staggered for 1d4 rounds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+source: "Pathfinder Player Companion: Melee Tactics Toolbox"

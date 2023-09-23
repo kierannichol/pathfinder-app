@@ -1,0 +1,519 @@
+id: "class:alchemist"
+name: "Alchemist"
+category: "BASE"
+description: "Whether secreted away in a smoky basement laboratory or gleefully experimenting\
+  \ in a well-respected school of magic, the alchemist is often regarded as being\
+  \ just as unstable, unpredictable, and dangerous as the concoctions he brews. While\
+  \ some creators of alchemical items content themselves with sedentary lives as merchants,\
+  \ providing tindertwigs and smokesticks, the true alchemist answers a deeper calling.\
+  \ Rather than cast magic like a spellcaster, the alchemist captures his own magic\
+  \ potential within liquids and extracts he creates, infusing his chemicals with\
+  \ virulent power to grant him impressive skill with poisons, explosives, and all\
+  \ manner of self-transformative magic. Role: The alchemist's reputation is not softened\
+  \ by his exuberance (some would say dangerous recklessness) in perfecting his magical\
+  \ extracts and potion-like creations, infusing these substances with magic siphoned\
+  \ from his aura and using his own body as experimental stock. Nor is it mollified\
+  \ by the alchemist's almost gleeful passion for building explosive bombs and discovering\
+  \ strange new poisons and methods for their use. These traits, while making him\
+  \ a liability and risk for most civilized organizations and institutions of higher\
+  \ learning, seem to fit quite well with most adventuring groups. Alignment: Any.\
+  \ Hit Die: d8. Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character\
+  \ begins play with an outfit worth 10 gp or less."
+source: " Advanced Player's Guide"
+hit_die: "D8"
+alignment: "Any"
+class_skills:
+- "skill:fly"
+- "skill:perception"
+- "skill:craft"
+- "skill:sleight_of_hand"
+- "skill:use_magic_device"
+- "skill:survival"
+- "skill:disable_device"
+- "skill:spellcraft"
+- "skill:profession"
+- "skill:knowledge"
+- "skill:heal"
+- "skill:appraise"
+skill_ranks_per_level: "4"
+bab: "B"
+fort: "A"
+ref: "A"
+will: "B"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:alchemy#alchemist"
+  - "ability:bomb#alchemist"
+  - "ability:brew_potion#alchemist"
+  - "ability:mutagen#alchemist"
+  - "ability:throw_anything#alchemist"
+  spells_per_day:
+    1: 1
+  spells_known: {}
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  - "ability:poison_resistance#alchemist"
+  - "ability:poison_use#alchemist"
+  spells_per_day:
+    1: 2
+  spells_known: {}
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  - "ability:swift_alchemy#alchemist"
+  spells_per_day:
+    1: 3
+  spells_known: {}
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  spells_per_day:
+    1: 3
+    2: 1
+  spells_known: {}
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  - "ability:poison_resistance#alchemist"
+  spells_per_day:
+    1: 4
+    2: 2
+  spells_known: {}
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  - "ability:swift_poisoning#alchemist"
+  spells_per_day:
+    1: 4
+    2: 3
+  spells_known: {}
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 4
+    2: 3
+    3: 1
+  spells_known: {}
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  - "ability:poison_resistance#alchemist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 2
+  spells_known: {}
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 3
+  spells_known: {}
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  - "ability:poison_immunity#alchemist"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 3
+    4: 1
+  spells_known: {}
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 4
+    4: 2
+  spells_known: {}
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+  spells_known: {}
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 1
+  spells_known: {}
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  - "ability:persistent_mutagen#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 2
+  spells_known: {}
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 3
+  spells_known: {}
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 3
+    6: 1
+  spells_known: {}
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 4
+    6: 2
+  spells_known: {}
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:discovery#alchemist"
+  - "ability:instant_alchemy#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 4
+    6: 3
+  spells_known: {}
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:bomb#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 5
+    6: 4
+  spells_known: {}
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#alchemist"
+  - "trait:weapon_proficiency#alchemist"
+  - "ability:grand_discovery#alchemist"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 5
+    6: 5
+  spells_known: {}
+  level: 20
+spell_caster_types: []
+class_features:
+- id: "ability:poison_immunity#alchemist"
+  name: "Poison Immunity"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, an alchemist gains a +2 bonus on all saving throws against\
+    \ poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th\
+    \ level. At 10th level, an alchemist becomes completely immune to poison."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:brew_potion#alchemist"
+  name: "Brew Potion"
+  label: null
+  type: "Ex"
+  description: "At 1st level, alchemists receive Brew Potion as a bonus feat. An alchemist\
+    \ can brew potions of any formulae he knows (up to 3rd level), using his alchemist\
+    \ level as his caster level. The spell must be one that can be made into a potion.\
+    \ The alchemist does not need to meet the prerequisites for this feat."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:swift_poisoning#alchemist"
+  name: "Swift Poisoning"
+  label: null
+  type: "Ex"
+  description: "At 6th level, an alchemist can apply a dose of poison to a weapon\
+    \ as a swift action."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:swift_alchemy#alchemist"
+  name: "Swift Alchemy"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, an alchemist can create alchemical items with astounding\
+    \ speed. It takes an alchemist half the normal amount of time to create alchemical\
+    \ items, and he can apply poison to a weapon as a move action."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:poison_use#alchemist"
+  name: "Poison Use"
+  label: null
+  type: "Ex"
+  description: "Alchemists are trained in the use of poison and starting at 2nd level,\
+    \ cannot accidentally poison themselves when applying poison to a weapon."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:alchemy#alchemist"
+  name: "Alchemy"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:throw_anything#alchemist"
+  name: "Throw Anything"
+  label: null
+  type: "Ex"
+  description: "All alchemists gain the Throw Anything feat as a bonus feat at 1st\
+    \ level. An alchemist adds his Intelligence modifier to damage done with splash\
+    \ weapons, including the splash damage if any. This bonus damage is already included\
+    \ in the bomb class feature."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:bomb#alchemist"
+  name: "Bomb"
+  label: null
+  type: "Su"
+  description: "In addition to magical extracts, alchemists are adept at swiftly mixing\
+    \ various volatile chemicals and infusing them with their magical reserves to\
+    \ create powerful bombs that they can hurl at their enemies. An alchemist can\
+    \ use a number of bombs each day equal to his class level + his Intelligence modifier.\
+    \ Bombs are unstable, and if not used in the round they are created, they degrade\
+    \ and become inert--their method of creation prevents large volumes of explosive\
+    \ material from being created and stored. In order to create a bomb, the alchemist\
+    \ must use a small vial containing an ounce of liquid catalyst--the alchemist\
+    \ can create this liquid catalyst from small amounts of chemicals from an alchemy\
+    \ lab, and these supplies can be readily refilled in the same manner as a spellcaster's\
+    \ component pouch. Most alchemists create a number of catalyst vials at the start\
+    \ of the day equal to the total number of bombs they can create in that day--once\
+    \ created, a catalyst vial remains usable by the alchemist for years.Drawing the\
+    \ components of, creating, and throwing a bomb requires a standard action that\
+    \ provokes an attack of opportunity. Thrown bombs have a range of 20 feet and\
+    \ use the Throw Splash Weapon special attack. Bombs are considered weapons and\
+    \ can be selected using feats such as Point-Blank Shot and Weapon Focus. On a\
+    \ direct hit, an alchemist's bomb inflicts 1d6 points of fire damage + additional\
+    \ damage equal to the alchemist's Intelligence modifier. The damage of an alchemist's\
+    \ bomb increases by 1d6 points at every odd-numbered alchemist level (this bonus\
+    \ damage is not multiplied on a critical hit or by using feats such as Vital Strike).\
+    \ Splash damage from an alchemist bomb is always equal to the bomb's minimum damage\
+    \ (so if the bomb would deal 2d6+4 points of fire damage on a direct hit, its\
+    \ splash damage would be 6 points of fire damage). Those caught in the splash\
+    \ damage can attempt a Reflex save for half damage. The DC of this save is equal\
+    \ to 10 + 1/2 the alchemist's level + the alchemist's Intelligence modifier.Alchemists\
+    \ can learn new types of bombs as discoveries (see the Discovery ability) as they\
+    \ level up. An alchemist's bomb, like an extract, becomes inert if used or carried\
+    \ by anyone else."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "trait:weapon_proficiency#alchemist"
+  name: "Weapon Proficiency (Alchemist)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:brass_knife 1"
+  - "SET proficiency:hook_hand 1"
+  - "SET proficiency:dart 1"
+  - "SET proficiency:mere_club 1"
+  - "SET proficiency:stingchuck 1"
+  - "SET proficiency:handwraps 1"
+  - "SET proficiency:light_crossbow 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:blowgun 1"
+  - "SET proficiency:spiked_gauntlet 1"
+  - "SET proficiency:heavy_crossbow 1"
+  - "SET proficiency:unarmed 1"
+  - "SET proficiency:bayonet 1"
+  - "SET proficiency:javelin 1"
+  - "SET proficiency:brass_knuckles 1"
+  - "SET proficiency:battle_aspergillum 1"
+  - "SET proficiency:heavy_mace 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:gauntlet 1"
+  - "SET proficiency:boarding_pike 1"
+  - "SET proficiency:cestus 1"
+  - "SET proficiency:kumade 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:kunai 1"
+  - "SET proficiency:collapsible_kumade 1"
+  - "SET proficiency:lantern_staff 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:wooden_stake 1"
+  - "SET proficiency:spring_blade 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:light_mace 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:punching_dagger 1"
+  - "SET proficiency:sickle 1"
+  - "SET proficiency:morningstar 1"
+  - "SET proficiency:traveling_kettle 1"
+  - "SET proficiency:stonebow 1"
+  - "SET proficiency:longspear 1"
+  prerequisites: null
+  source: " Advanced Player's Guide"
+- id: "ability:poison_resistance#alchemist"
+  name: "Poison Resistance"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, an alchemist gains a +2 bonus on all saving throws against\
+    \ poison. This bonus increases to +4 at 5th level, and then again to +6 at 8th\
+    \ level. At 10th level, an alchemist becomes completely immune to poison."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:discovery#alchemist"
+  name: "Discovery"
+  label: null
+  type: "Su"
+  description: "At 2nd level, and then again every 2 levels thereafter (up to 18th\
+    \ level), an alchemist makes an incredible alchemical discovery. Unless otherwise\
+    \ noted, an alchemist cannot select an individual discovery more than once. Some\
+    \ discoveries can only be made if the alchemist has met certain prerequisites\
+    \ first, such as uncovering other discoveries. Discoveries that modify bombs that\
+    \ are marked with an asterisk (*) do not stack. Only one such discovery can be\
+    \ applied to an individual bomb. The DC of any saving throw called for by a discovery\
+    \ is equal to 10 + 1/2 the alchemist's level + the alchemist's Intelligence modifier."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:mutagen#alchemist"
+  name: "Mutagen"
+  label: null
+  type: "Su"
+  description: "At 1st level, an alchemist discovers how to create a mutagen that\
+    \ he can imbibe in order to heighten his physical prowess at the cost of his personality.\
+    \ It takes 1 hour to brew a dose of mutagen, and once brewed, it remains potent\
+    \ until used. An alchemist can only maintain one dose of mutagen at a time--if\
+    \ he brews a second dose, any existing mutagen becomes inert. As with an extract\
+    \ or bomb, a mutagen that is not in an alchemist's possession becomes inert until\
+    \ an alchemist picks it up again.When an alchemist brews a mutagen, he selects\
+    \ one physical ability score--either Strength, Dexterity, or Constitution. It's\
+    \ a standard action to drink a mutagen. Upon being imbibed, the mutagen causes\
+    \ the alchemist to grow bulkier and more bestial, granting him a +2 natural armor\
+    \ bonus and a +4 alchemical bonus to the selected ability score for 10 minutes\
+    \ per alchemist level. In addition, while the mutagen is in effect, the alchemist\
+    \ takes a –2 penalty to one of his mental ability scores. If the mutagen enhances\
+    \ his Strength, it applies a penalty to his Intelligence. If it enhances his Dexterity,\
+    \ it applies a penalty to his Wisdom. If it enhances his Constitution, it applies\
+    \ a penalty to his Charisma.A non-alchemist who drinks a mutagen must make a Fortitude\
+    \ save (DC 10 + 1/2 the alchemist's level + the alchemist's Intelligence modifier)\
+    \ or become nauseated for 1 hour--a non-alchemist can never gain the benefit of\
+    \ a mutagen, but an alchemist can gain the effects of another alchemist's mutagen\
+    \ if he drinks it. (Although if the other alchemist creates a different mutagen,\
+    \ the effects of the “stolen\" mutagen immediately cease.) The effects of a mutagen\
+    \ do not stack. Whenever an alchemist drinks a mutagen, the effects of any previous\
+    \ mutagen immediately end."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "trait:armor_proficiency#alchemist"
+  name: "Armor Proficiency (Alchemist)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_armor 1"
+  prerequisites: null
+  source: " Advanced Player's Guide"
+- id: "ability:grand_discovery#alchemist"
+  name: "Grand Discovery"
+  label: null
+  type: "Su"
+  description: "At 20th level, the alchemist makes a grand discovery. He immediately\
+    \ learns two normal discoveries, but also learns a third discovery chosen from\
+    \ the linked list below, representing a truly astounding alchemical breakthrough\
+    \ of significant import. For many alchemists, the promise of one of these grand\
+    \ discoveries is the primary goal of their experiments and hard work."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:persistent_mutagen#alchemist"
+  name: "Persistent Mutagen"
+  label: null
+  type: "Su"
+  description: "At 14th level, the effects of a mutagen last for 1 hour per level."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:instant_alchemy#alchemist"
+  name: "Instant Alchemy"
+  label: null
+  type: "Ex"
+  description: "At 18th level, an alchemist can create alchemical items with almost\
+    \ supernatural speed. He can create any alchemical item as a full-round action\
+    \ if he succeeds at the Craft (alchemy) check and has the appropriate resources\
+    \ at hand to fund the creation. He can apply poison to a weapon as an immediate\
+    \ action."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"

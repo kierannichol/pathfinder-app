@@ -1,0 +1,46 @@
+{
+  "id": "class:witch#beast_bonded",
+  "name": "Beast-bonded",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:the_witchs_8th_level_hex#witch AND !@modifies:ability:the_witchs_major_hex_at_10th_level#witch AND !@modifies:ability:the_witchs_4th_level_hex#witch",
+  "maxStacks": 1,
+  "description": {
+    "text": "While all witches are intimately tied to their familiars, a beast-bonded witch\u0027s craft focuses specifically on her familiar bond and developing the relationship with her patron through her familiar."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_8th_level_hex#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_major_hex_at_10th_level#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_4th_level_hex#witch",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:enhanced_familiar#witch_beast_bonded",
+          "conditionFormula": "@class:witch\u003e\u003d4"
+        }, {
+          "featureId": "ability:familiar_form#witch_beast_bonded",
+          "conditionFormula": "@class:witch\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_witchs_4th_level_hex#witch"
+        }, {
+          "featureId": "ability:the_witchs_8th_level_hex#witch"
+        }, {
+          "featureId": "ability:the_witchs_major_hex_at_10th_level#witch"
+        }]
+      }]
+    }
+  }
+}

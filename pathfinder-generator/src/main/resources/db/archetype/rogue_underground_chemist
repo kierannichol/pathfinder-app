@@ -1,0 +1,54 @@
+id: "class:rogue#underground_chemist"
+name: "Underground Chemist"
+description: "Underground chemists are part of the rotting, fetid underbelly of the\
+  \ alchemical world. While underground chemists can't hold a candle to dedicated\
+  \ alchemists, they're tricky and dangerous with alchemical substances and potions."
+modifications:
+- add: "ability:chemical_weapons#rogue_underground_chemist"
+  remove:
+  - "ability:evasion#rogue"
+- add: "ability:precise_splash_weapons#rogue_underground_chemist"
+  remove:
+  - "ability:the_rogue_talent_gained_at_4th_level#rogue"
+- add: "ability:discovery#rogue_underground_chemist"
+  remove:
+  - "ability:advanced_talents#rogue"
+features:
+- id: "ability:chemical_weapons#rogue_underground_chemist"
+  name: "Chemical Weapons"
+  label: null
+  type: null
+  description: "At 2nd level, an underground chemist is able to retrieve an alchemical\
+    \ item as if drawing a weapon. She adds her Intelligence modifier to damage dealt\
+    \ with splash weapons, including any splash damage. She adds 1/2 her level to\
+    \ Craft (alchemy) checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:precise_splash_weapons#rogue_underground_chemist"
+  name: "Precise Splash Weapons"
+  label: null
+  type: null
+  description: "At 4th level, an underground chemist can deal sneak attack damage\
+    \ with splash weapons. The attack must be her first attack that round, qualify\
+    \ for dealing sneak attack damage (such as against a flat-footed target), and\
+    \ be directed at a creature rather than a square."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:discovery#rogue_underground_chemist"
+  name: "Discovery"
+  label: null
+  type: null
+  description: "At 10th level, an underground chemist can select one of the following\
+    \ alchemist discoveries in place of a rogue talent: concentrate poison, dilution,\
+    \ enhance potion, extend potion, mummification, nauseating flesh, poison conversion,\
+    \ preserve organs, spontaneous healing, or sticky poison. She uses her rogue level\
+    \ as her alchemist level for determining the effects of her discoveries and whether\
+    \ she is able to select one.\nThis ability alters advanced talents.\nRogue Talents:\
+    \ The following rogue talents complement the underground chemist archetype: black\
+    \ market connections, fast fingers, lasting poison, sniper's eye, and swift poison."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

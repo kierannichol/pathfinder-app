@@ -1,0 +1,68 @@
+id: "class:cleric#idealist"
+name: "Idealist"
+description: ""
+modifications:
+- add: "ability:planar_bond#cleric_idealist"
+  remove:
+  - "ability:spontaneous_casting#cleric"
+- add: "ability:invoke_realm#cleric_idealist"
+  remove:
+  - "ability:channel_energy#cleric"
+features:
+- id: "ability:planar_bond#cleric_idealist"
+  name: "Planar Bond"
+  label: null
+  type: null
+  description: "At 1st level, an idealist must choose one plane as his planar bond.\
+    \ This plane must be his deity's home plane. An idealist can spontaneously cast\
+    \ the 1st-, 4th-, and 7th-level spells listed below for his chosen plane (provided\
+    \ he can cast spells of that level), in addition to cure or inflict spells.\n\
+    Abaddon: Protection from good, unholy blight, and blasphemy.\nAbyss: Doom, unholy\
+    \ blight, and blasphemy.\nAstral: Summon monster I, dismissal, and lesser create\
+    \ demiplane.\nAxis: Protection from chaos, order's wrath, and dictum.\nBoneyard:\
+    \ Deathwatch, death ward, and arbitrament (page 39).\nElysium: Remove fear, freedom\
+    \ of movement, and word of chaos.\nEthereal: Obscuring mist, sending, and ethereal\
+    \ jaunt.\nFirst World: Entropic shield, giant vermin, and regenerate.\nHeaven:\
+    \ Sanctuary, discern lies, and holy word.\nHell: Command, tongues, and dictum.\n\
+    Maelstrom: Protection from law, chaos hammer, and word of chaos.\nNirvana: Protection\
+    \ from evil, holy smite, and holy word.\nPlane of Air: Alter winds, air walk,\
+    \ and control weather.\nPlane of Earth: Magic stone, stoneskin, and statue.\n\
+    Plane of Fire: Produce flame†, wall of fire, and delayed blast fireball.\nPlane\
+    \ of Water: Hydraulic push, control water, and vortex.\nShadow Plane: Cause fear,\
+    \ shadow conjuration†, and destruction.\nOther (Including Positive and Negative\
+    \ Energy Planes, Material Plane, or Demiplanes): Work with your GM to select three\
+    \ spells that match the themes of the deity you worship.\n† This spell is not\
+    \ added to your cleric list--you can cast it spontaneously only using planar bond."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Planar Adventures"
+- id: "ability:invoke_realm#cleric_idealist"
+  name: "Invoke Realm"
+  label: null
+  type: null
+  description: "When an idealist channels energy, she channels raw essence rather\
+    \ than positive or negative energy, superimposing a portion of her deity's planar\
+    \ realm over her location. This effect extends out to a radius of 10 feet, plus\
+    \ 5 feet for every 2 cleric levels she has beyond 1st, to a maximum radius of\
+    \ 55 feet at 19th level. This effect lasts for 1 round plus 1 round per point\
+    \ of the idealist's Charisma bonus. While this effect is active, the idealist\
+    \ gains a +1 bonus on Diplomacy checks against creatures who worship her deity\
+    \ and a +1 bonus on Intimidate checks against creatures who do not. This bonus\
+    \ increases by 1 at 5th level and every 5 levels thereafter.\nThis channeled energy\
+    \ imposes itself over the current terrain, changing its visual appearance to more\
+    \ thematically suit the energy's associated planar realm, but cannot hide obvious\
+    \ hazards or otherwise allow for a creature to hide any more effectively than\
+    \ the normal terrain would. This is an illusion (glamer) effect with a caster\
+    \ level equal to the idealist's level.\nWithin the radius of the idealist's channeling,\
+    \ all alignment and magic planar traits are suppressed and replaced with the traits\
+    \ of the plane that matches the idealist's planar bond. This includes alignment,\
+    \ gravity, and magic traits. In the case of the Astral Plane, since the time trait\
+    \ remains unaltered, your spellcasting only feels fast--you gain a +4 bonus on\
+    \ all concentration checks rather than the ability to apply Quickened Spell effects.\n\
+    This ability is considered channel energy for purposes of feats that grant additional\
+    \ uses of channel energy or allow the cleric to exclude creatures from channel\
+    \ energy's effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Planar Adventures"
+source: "Pathfinder Roleplaying Game Planar Adventures"

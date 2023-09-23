@@ -1,0 +1,67 @@
+id: "class:druid#toxicologist"
+name: "Toxicologist"
+description: ""
+modifications:
+- add: "ability:expanded_repertoire#druid_toxicologist"
+  remove:
+  - "ability:spontaneous_casting#druid"
+  - "ability:spells#druid"
+- add: "ability:natural_poison_lore#druid_toxicologist"
+  remove:
+  - "ability:woodland_stride#druid"
+  - "ability:wild_empathy#druid"
+- add: "ability:expert_poisoner#druid_toxicologist"
+  remove:
+  - "ability:trackless_step#druid"
+  - "ability:resist_natures_lure#druid"
+- add: "ability:toxic_shaper#druid_toxicologist"
+  remove:
+  - "ability:wild_shape#druid"
+features:
+- id: "ability:expanded_repertoire#druid_toxicologist"
+  name: "Expanded Repertoire"
+  label: null
+  type: null
+  description: "A toxicologist adds the following extracts and spells to her druid\
+    \ spell list as druid spells of the listed spell level: poisoned egg (1st level),\
+    \ transmute potion to poison (2nd level), stinking cloud (3rd level), toxic gift\
+    \ (4th level), and cloudkill (5th level). A toxicologist can channel stored spell\
+    \ energy only into summoning spells she has prepared ahead of time."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+- id: "ability:natural_poison_lore#druid_toxicologist"
+  name: "Natural Poison Lore"
+  label: null
+  type: null
+  description: "A toxicologist has a deep understanding of and appreciation for poisons.\
+    \ At 2nd level, she cannot accidentally poison herself when applying poison to\
+    \ a weapon and cannot accidentally poison an animal companion or summoned creature\
+    \ when applying poison to its claws (though poison obviously should not be applied\
+    \ to a creature's bite)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+- id: "ability:expert_poisoner#druid_toxicologist"
+  name: "Expert Poisoner"
+  label: null
+  type: null
+  description: "At 4th level, a toxicologist increases the DCs of any spells she casts\
+    \ with the poison descriptor by 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+- id: "ability:toxic_shaper#druid_toxicologist"
+  name: "Toxic Shaper"
+  label: null
+  type: null
+  description: "A toxicologist never gains the ability to use wild shape to transform\
+    \ into an elemental or plant. At 8th level, a toxicologist can transform into\
+    \ a Small or Medium vermin. When she takes this form, her wild shape functions\
+    \ as vermin shape I. At 10th level, a toxicologist can transform into a tiny or\
+    \ large vermin. When she takes this form, her wild shape functions as vermin shape\
+    \ II."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+source: "Pathfinder Player Companion: Magic Tactics Toolbox"

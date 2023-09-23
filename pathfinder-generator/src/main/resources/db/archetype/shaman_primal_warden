@@ -1,0 +1,73 @@
+id: "class:shaman#primal_warden"
+name: "Primal Warden"
+description: "The influence of primal magic extends beyond what is visible and material.\
+  \ Spirits that linger in areas where primal magic reigns can become warped, losing\
+  \ touch with their former selves and experiencing random surges of power. a shaman\
+  \ who communes with such spirits learns to stabilize these erratic energies and\
+  \ draw upon them to her benefit."
+modifications:
+- add: "ability:spirit_animal#shaman_primal_warden"
+  remove:
+  - "ability:the_abilities_the_shamans_spirit_animal_gains_from_the_shamans_chosen_spirit#shaman"
+- add: "ability:unstable_spellcasting#shaman_primal_warden"
+  remove:
+  - "ability:spirit_magic#shaman"
+  - "ability:hex_gained_at_8th_level#shaman"
+- add: "ability:hexes#shaman_primal_warden"
+  remove:
+  - "ability:12th_levels#shaman"
+  - "ability:hexes#shaman"
+  - "ability:hexes_gained_at_4th#shaman"
+features:
+- id: "ability:spirit_animal#shaman_primal_warden"
+  name: "Spirit Animal"
+  label: null
+  type: null
+  description: "A primal warden's spirit animal exhibits unusual physical features\
+    \ for a creature of its type, such as unnatural colorations and extra or missing\
+    \ appendages.\nEach day, the spirit animal gains resistance 10 against a random\
+    \ element. Roll 1d4 to determine the type of resistance (1 = acid, 2 = cold, 3\
+    \ = electricity, 4 = fire)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:unstable_spellcasting#shaman_primal_warden"
+  name: "Unstable Spellcasting"
+  label: null
+  type: null
+  description: "A primal warden's spirit is ever shifting, and the spells it grants\
+    \ the primal warden change from moment to moment.\nWhen the primal warden would\
+    \ spontaneously cast a 1st- through 8th-level spell using the spirit magic class\
+    \ feature, she produces a random spell from the list of shaman spells of 1 spell\
+    \ level higher than the spell slot expended; use an appropriate die or another\
+    \ randomization method to determine the spell. When she would spontaneously cast\
+    \ a 9th-level spell using spirit magic, she instead casts a random 9th-level spell\
+    \ from the shaman spell list, treating her caster level as 2 higher.\nThere is\
+    \ no way to predict the spell before the shaman begins casting it using spirit\
+    \ magic, and she cannot enhance the spell using metamagic feats. The spell uses\
+    \ the shaman's caster level, even if that caster level would normally be too low\
+    \ to cast the spell. There are 47 potential 2nd-level spells, 46 potential 3rd-level\
+    \ spells, 41 potential 4th-level spells, 30 potential 5th-level spells, 22 potential\
+    \ 6th-level spells, 22 potential 7th-level spells, 18 potential 8th-level spells,\
+    \ and 14 potential 9th-level spells.\nAt 8th level, after determining the spell\
+    \ that she would cast using spirit magic, once per day as a free action, the primal\
+    \ warden shaman can choose to randomly select another spell instead, using the\
+    \ same method of randomization as she used before (if she obtains the same result\
+    \ a second time, she must keep that result). At 12th level and every 4 shaman\
+    \ levels thereafter, she can choose to randomly select a different spirit magic\
+    \ spell one additional time per day, up to a maximum of four times per day at\
+    \ 20th level. She cannot use this ability more than once in the same round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:hexes#shaman_primal_warden"
+  name: "Hexes"
+  label: null
+  type: null
+  description: "A primal warden shaman gains the hexes below at the specified levels.\n\
+    A primal warden shaman cannot select the chant hex, the evil eye hex, the misfortune\
+    \ hex, or any witch hexes."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+source: "Pathfinder Player Companion: People of the Wastes"

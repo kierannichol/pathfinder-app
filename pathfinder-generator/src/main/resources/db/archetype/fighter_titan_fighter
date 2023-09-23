@@ -1,0 +1,51 @@
+id: "class:fighter#titan_fighter"
+name: "Titan Fighter"
+description: ""
+modifications:
+- add: "ability:giant_weapon_wielder#fighter_titan_fighter"
+  remove:
+  - "ability:the_fighters_1st_level_bonus_feat#fighter"
+- add: "ability:incredible_heft#fighter_titan_fighter"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:unstoppable_momentum#fighter_titan_fighter"
+  remove:
+  - "ability:weapon_training#fighter"
+features:
+- id: "ability:giant_weapon_wielder#fighter_titan_fighter"
+  name: "Giant Weapon Wielder"
+  label: null
+  type: null
+  description: "At 1st level, a titan fighter can wield two-handed melee weapons intended\
+    \ for creatures one size category larger than himself, treating them as two-handed\
+    \ weapons. He takes an additional –2 penalty on attack rolls when using an over-sized\
+    \ two-handed weapon."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+- id: "ability:incredible_heft#fighter_titan_fighter"
+  name: "Incredible Heft"
+  label: null
+  type: null
+  description: "At 3rd level, a titan fighter becomes more skilled at wielding weapons\
+    \ intended for creatures one size category larger than himself. The penalty on\
+    \ attack rolls for using such weapons is reduced by 1, including when using over-sized\
+    \ two-handed weapons.\nAt 7th level and every 4 levels thereafter, this penalty\
+    \ is reduced by another 1 (minimum 0)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+- id: "ability:unstoppable_momentum#fighter_titan_fighter"
+  name: "Unstoppable Momentum"
+  label: null
+  type: null
+  description: "At 5th level, a titan fighter gains a +1 bonus on combat maneuver\
+    \ checks and to CMD while wielding a weapon sized for a creature of a larger size\
+    \ category.\nAt 9th level and every 4 levels thereafter, this bonus increases\
+    \ by 1. When wielding over-sized weapons, the titan fighter can attempt to bull\
+    \ rush, drag, overrun, reposition, and trip creatures up to two sizes categories\
+    \ larger than himself."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+source: "Pathfinder Player Companion: Giant Hunter's Handbook"

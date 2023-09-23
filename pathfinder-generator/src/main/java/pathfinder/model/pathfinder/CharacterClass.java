@@ -20,8 +20,6 @@ public record CharacterClass(
         String fort,
         String ref,
         String will,
-        Set<Id> weapon_proficiencies,
-        Set<Id> armor_proficiencies,
         List<ClassLevel> levels,
         List<String> spell_caster_types,
         Set<Feature> class_features) implements NamedEntity {

@@ -1,0 +1,91 @@
+id: "class:rogue#eldritch_scoundrel"
+name: "Eldritch Scoundrel"
+description: "Students of arcane magic, legerdemain, and stealth, eldritch scoundrels\
+  \ are a rare breed of adventurer most commonly found seeking lost and valuable arcane\
+  \ writings in the ruins of fallen empires."
+modifications:
+- add: "ability:armor_proficiencies#rogue_eldritch_scoundrel"
+  remove:
+  - "ability:the_rogues_armor_proficiencies#rogue"
+- add: "ability:class_skills#rogue_eldritch_scoundrel"
+  remove:
+  - "ability:the_rogues_skills#rogue"
+- add: "ability:alarm_sense#rogue_eldritch_scoundrel"
+  remove:
+  - "ability:trap_sense#rogue"
+- add: "ability:sneak_attack#rogue_eldritch_scoundrel"
+  remove:
+  - "ability:the_rogues_normal_sneak_attack_progression#rogue"
+- add: "ability:rogue_talents#rogue_eldritch_scoundrel"
+  remove:
+  - "ability:advanced_talent#rogue"
+  - "ability:the_normal_rogue_talent_progression#rogue"
+- add: "ability:uncanny_training#rogue_eldritch_scoundrel"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:armor_proficiencies#rogue_eldritch_scoundrel"
+  name: "Armor Proficiencies"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:class_skills#rogue_eldritch_scoundrel"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:alarm_sense#rogue_eldritch_scoundrel"
+  name: "Alarm Sense"
+  label: null
+  type: null
+  description: "At 3rd level, an eldritch scoundrel gains an intuitive sense that\
+    \ warns her when she is near a magic trap. This functions as the trap spotter\
+    \ rogue talent, but applies only if the eldritch scoundrel comes within 10 feet\
+    \ of a magic trap."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:sneak_attack#rogue_eldritch_scoundrel"
+  name: "Sneak Attack"
+  label: null
+  type: null
+  description: "The eldritch scoundrel doesn't acquire the sneak attack class feature\
+    \ until 3rd level, when she gains a +1d6 sneak attack. This increases by 1d6 at\
+    \ 7th level, and again at every 4 rogue levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:rogue_talents#rogue_eldritch_scoundrel"
+  name: "Rogue Talents"
+  label: null
+  type: null
+  description: "At 4th level and every 4 levels thereafter, the eldritch scoundrel\
+    \ gains a rogue or ninja talent for which she meets the prerequisites (treating\
+    \ her rogue level as her ninja level). If a talent requires her to expend points\
+    \ from her ki pool, she can instead expend a spell slot with a spell level equal\
+    \ to the number of ki points she would normally expend. If a talent functions\
+    \ only if she has ki in her ki pool, it functions as long as she still has a spell\
+    \ of 1st level or higher prepared. At 12th level, she can select an advanced talent\
+    \ in place of a rogue talent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:uncanny_training#rogue_eldritch_scoundrel"
+  name: "Uncanny Training"
+  label: null
+  type: null
+  description: "An eldritch scoundrel does not gain uncanny dodge or improved uncanny\
+    \ dodge. Beginning at 4th level, she can take uncanny dodge instead of a rogue\
+    \ talent. Beginning at 12th level, the eldritch scoundrel can choose to take improved\
+    \ uncanny dodge in place of an advanced talent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+source: "Pathfinder Player Companion: Arcane Anthology"

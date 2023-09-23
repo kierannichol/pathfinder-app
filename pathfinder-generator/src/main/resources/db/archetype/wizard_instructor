@@ -1,0 +1,49 @@
+id: "class:wizard#instructor"
+name: "Instructor"
+description: ""
+modifications:
+- add: "ability:apprentice#wizard_instructor"
+  remove:
+  - "ability:arcane_bond#wizard"
+- add: "ability:trained_teamwork#wizard_instructor"
+  remove:
+  - "ability:20th_level#wizard"
+  - "ability:the_bonus_feats_gained_at_5th_10th_15th#wizard"
+features:
+- id: "ability:apprentice#wizard_instructor"
+  name: "Apprentice"
+  label: null
+  type: null
+  description: "At 1st level, an instructor acquires the services of a loyal apprentice.\
+    \ She functions similarly to a cohort, though your apprentice begins as a 1st-level\
+    \ commoner with Magical Aptitude as their 1st-level feat and NPC ability scores\
+    \ (13, 12, 11, 10, 9, 8 before racial modifiers). When the instructor reaches\
+    \ 3rd level, if his Leadership score is at least 2, the apprentice becomes a 1st-level\
+    \ wizard of the same school specialization as the instructor, and she gains heroic\
+    \ ability scores (15, 14, 13, 12, 10, 8 before racial modifiers). The apprentice\
+    \ never gains item creation feats, but otherwise follows the normal rules for\
+    \ a cohort.\nEach time the instructor gains a level, he may dismiss his existing\
+    \ apprentice as graduated (or expelled, depending on her performance), and gain\
+    \ a new cohort following the same rules. If an apprentice dies in service to the\
+    \ instructor, the instructor takes a –2 penalty to his Leadership score. This\
+    \ penalty is reduced by 1 for every level the instructor gains after the death,\
+    \ to a minimum of 0.\nBecause cohorts are most interested in the instructor's\
+    \ magical ability, the instructor uses his Intelligence modifier, rather than\
+    \ Charisma, to determine his Leadership score. At 7th level, an instructor may\
+    \ select the Leadership feat--using his Intelligence modifier to determine his\
+    \ Leadership score--but doing so only provides followers, never a second cohort."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:trained_teamwork#wizard_instructor"
+  name: "Trained Teamwork"
+  label: null
+  type: null
+  description: "Starting at 5th level, the instructor can take a teamwork feat as\
+    \ his wizard bonus feat. As long as his apprentice is within 60 feet, the apprentice\
+    \ gains all such teamwork feats as bonus feats. The apprentice does not have to\
+    \ meet the feat's prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+source: "Pathfinder Player Companion: Cohorts and Companions"

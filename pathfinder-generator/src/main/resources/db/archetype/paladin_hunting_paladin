@@ -1,0 +1,97 @@
+id: "class:paladin#hunting_paladin"
+name: "Hunting Paladin"
+description: "Hunting paladins are tenacious trackers and stealthy stalkers in pursuit\
+  \ of evildoers."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#paladin_hunting_paladin"
+  remove:
+  - "ability:the_paladins_armor_proficiencies#paladin"
+- add: "ability:hunt_evil#paladin_hunting_paladin"
+  remove:
+  - "ability:the_use_of_smite_evil_gained_at_1st_level#paladin"
+- add: "ability:detect_evil#paladin_hunting_paladin"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:smite_evil#paladin_hunting_paladin"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:spellcasting#paladin_hunting_paladin"
+  remove:
+  - "ability:spells#paladin"
+- add: "ability:tireless_aura#paladin_hunting_paladin"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+features:
+- id: "ability:weapon_and_armor_proficiency#paladin_hunting_paladin"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A hunting paladin is not proficient with heavy armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:hunt_evil#paladin_hunting_paladin"
+  name: "Hunt Evil"
+  label: null
+  type: null
+  description: "Once per day, a hunting paladin can designate a single evil creature\
+    \ within her sight or one that she has determined to be evil by declaring it the\
+    \ target of her hunt and following its tracks; this allows her to add her Charisma\
+    \ modifier as a bonus on Survival checks to follow that creature's tracks and\
+    \ on Perception and Stealth checks opposed by the target of her hunt. She can\
+    \ sense her target's presence and location, which lets her pinpoint her target's\
+    \ location when within 10 feet; if the target has concealment, she can roll twice\
+    \ and use the better result on rolls to determine whether she misses due to the\
+    \ concealment. She gains uncanny dodge as per the barbarian class feature against\
+    \ her target.\nIf the hunting paladin targets a nonevil creature with hunt evil,\
+    \ the ability fails and it is wasted. This ability ends after 24 hours (unless\
+    \ she spends the next day's use of this ability to continue hunting the same target),\
+    \ after the hunting paladin or the target is killed or when she designates a new\
+    \ target for her hunt."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:detect_evil#paladin_hunting_paladin"
+  name: "Detect Evil"
+  label: null
+  type: null
+  description: "A hunting paladin cannot use this ability as a move action. However,\
+    \ when a hunting paladin has successfully followed a creature's tracks for at\
+    \ least 1 minute, she can discern whether the tracked creature's alignment was\
+    \ evil, as if she had cast detect evil in its presence and concentrated for 3\
+    \ rounds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:smite_evil#paladin_hunting_paladin"
+  name: "Smite Evil"
+  label: null
+  type: null
+  description: "A hunting paladin gains this ability at 4th level, and it functions\
+    \ at her paladin level – 3. She can expend a daily use of smite evil to gain an\
+    \ additional daily use of hunt evil. She can use smite evil and hunt evil against\
+    \ the same target."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:spellcasting#paladin_hunting_paladin"
+  name: "Spellcasting"
+  label: null
+  type: null
+  description: "For each level of spell she can cast, a hunting paladin can prepare\
+    \ and cast one spell per day from the ranger spell list rather than the paladin\
+    \ spell list."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:tireless_aura#paladin_hunting_paladin"
+  name: "Tireless Aura"
+  label: null
+  type: null
+  description: "At 8th level, a hunting paladin becomes immune to fatigue and sleep\
+    \ effects, and allies within 10 feet gain a +4 bonus on saving throws to avoid\
+    \ becoming fatigued or falling asleep."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

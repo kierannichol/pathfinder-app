@@ -1,0 +1,46 @@
+{
+  "id": "class:paladin#oath_of_loyalty",
+  "name": "Oath of Loyalty",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:smite_evil#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d1"
+        }, {
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d4"
+        }, {
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d7"
+        }, {
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d10"
+        }, {
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d13"
+        }, {
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d16"
+        }, {
+          "featureId": "ability:loyal_oath#paladin_oath_of_loyalty",
+          "conditionFormula": "@class:paladin\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:smite_evil#paladin"
+        }]
+      }]
+    }
+  }
+}

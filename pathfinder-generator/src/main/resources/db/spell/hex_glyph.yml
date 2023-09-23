@@ -1,0 +1,22 @@
+casting_time: "10 minutes"
+saving_throw: "see text"
+spell_resistance: "no (object) and yes (see text)"
+id: "spell:hex_glyph"
+name: "Hex Glyph"
+description: "This spell functions like the spell glyph version of glyph of warding,\
+  \ except you can store a hex you know (but not a major hex or a grand hex) instead\
+  \ of a spell. If the hex has a target, it targets the intruder. If the hex has an\
+  \ area or an amorphous effect, the area or effect is centered on the intruder. The\
+  \ triggered hex uses this spell's caster level and DC."
+prerequisites: ""
+components: "V, S, M (powdered diamond worth 200 gp)"
+range: "touch"
+targets: "or Area object touched or up to 5 sq. ft./level"
+duration: "permanent until discharged (D)"
+school: "abjuration"
+levels:
+- class_id: "class:shaman"
+  level: 3
+- class_id: "class:witch"
+  level: 3
+source: "Advanced Class Guide"

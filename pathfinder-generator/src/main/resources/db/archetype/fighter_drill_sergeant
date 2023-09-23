@@ -1,0 +1,72 @@
+id: "class:fighter#drill_sergeant"
+name: "Drill Sergeant"
+description: ""
+modifications:
+- add: "ability:tactician#fighter_drill_sergeant"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:weapon_training#fighter_drill_sergeant"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:greater_tactician#fighter_drill_sergeant"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:weapon_trainer#fighter_drill_sergeant"
+  remove:
+  - "ability:weapon_training#fighter@13"
+- add: "ability:master_tactician#fighter_drill_sergeant"
+  remove:
+  - "ability:weapon_training#fighter@17"
+features:
+- id: "ability:tactician#fighter_drill_sergeant"
+  name: "Tactician"
+  label: null
+  type: null
+  description: "At 2nd level, a drill sergeant gains the cavalier's tactician class\
+    \ feature, treating his fighter level as his cavalier level for the purposes of\
+    \ this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:weapon_training#fighter_drill_sergeant"
+  name: "Weapon Training"
+  label: null
+  type: null
+  description: "At 5th level, a drill sergeant gains weapon training with one group\
+    \ of weapons. He doesn't gain weapon training with other groups at later levels,\
+    \ though his weapon training bonus improves by 1 for every 4 levels after 5th\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:greater_tactician#fighter_drill_sergeant"
+  name: "Greater Tactician"
+  label: null
+  type: null
+  description: "At 9th level, the drill sergeant gains the cavalier's greater tactician\
+    \ class feature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:weapon_trainer#fighter_drill_sergeant"
+  name: "Weapon Trainer"
+  label: null
+  type: null
+  description: "At 13th level, when a drill sergeant wields a weapon he has weapon\
+    \ training in, all allies within 30 feet who can see and hear the drill sergeant\
+    \ gain half his weapon training bonus when they wield any weapon from the same\
+    \ weapon group.\nThis bonus doesn't stack with any weapon training bonus an ally\
+    \ already possesses."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:master_tactician#fighter_drill_sergeant"
+  name: "Master Tactician"
+  label: null
+  type: null
+  description: "At 17th level, the drill sergeant gains the cavalier's master tactician\
+    \ class feature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+source: "Pathfinder Player Companion: Melee Tactics Toolbox"

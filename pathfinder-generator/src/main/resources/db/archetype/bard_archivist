@@ -1,0 +1,95 @@
+id: "class:bard#archivist"
+name: "Archivist"
+description: "Some bards greatly prefer academic pursuits to the drama (and sometimes\
+  \ melodrama) of their artistic brethren."
+modifications:
+- add: "ability:bardic_performance#bard_archivist"
+  remove:
+  - "ability:inspire_courage#bard"
+- add: "ability:lore_master#bard_archivist"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:magic_lore#bard_archivist"
+  remove:
+  - "ability:well_versed#bard"
+- add: "ability:jack_of_all_trades#bard_archivist"
+  remove:
+  - "ability:lore_master#bard"
+- add: "ability:probable_path#bard_archivist"
+  remove:
+  - "ability:jack_of_all_trades#bard"
+features:
+- id: "ability:bardic_performance#bard_archivist"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "An archivist gains the following types of bardic performance:\nNaturalist\
+    \ (Ex): An archivist who has identified a creature with a Knowledge check appropriate\
+    \ to its type can use performance to share strategies for defeating it with allies\
+    \ in combat. The archivist and any allies within 30 feet gain a +1 insight bonus\
+    \ to AC and on attack rolls and saving throws against extraordinary, supernatural,\
+    \ and spell-like abilities used by creatures of that specific kind of monster\
+    \ (e.g., frost giants, not all giants or all humanoids). This bonus increases\
+    \ by +1 at 5th level and every six levels thereafter. This language-dependent\
+    \ ability requires visual and audible components.\nThis ability replaces inspire\
+    \ courage.\nLamentable Belaborment (Ex): At 6th level, an archivist can bewilder\
+    \ a creature already fascinated by his performance. Using this ability does not\
+    \ disrupt the fascinate effect, but it does require a standard action to activate\
+    \ (in addition to the free action to continue the fascinate effect). The target\
+    \ must make a Will save (DC 10 + 1/2 the bard's level + the bard's Cha modifier).\
+    \ Success renders the target immune to this power for 24 hours, but failure leaves\
+    \ the target either dazed or confused (archivist's choice) for as long as the\
+    \ performance continues. If the target takes damage, this effect ends immediately.\
+    \ This mind-affecting ability relies on audible components.\nThis ability replaces\
+    \ suggestion.\nPedantic Lecture (Su): At 18th level, an archivist can affect as\
+    \ many creatures with lamentable belaborment as he currently has fascinated. In\
+    \ addition, he may choose to cause targets to fall asleep rather than be dazed\
+    \ or confused."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:lore_master#bard_archivist"
+  name: "Lore Master"
+  label: null
+  type: null
+  description: "At 2nd level, an archivist may take 20 on Knowledge checks once per\
+    \ day, plus once per six levels beyond 2nd.\nThis ability replaces versatile performance."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:magic_lore#bard_archivist"
+  name: "Magic Lore"
+  label: null
+  type: null
+  description: "At 2nd level, an archivist gains a bonus on Spellcraft checks to identify\
+    \ magic items or decipher scrolls equal to half his bard level and may take 10\
+    \ on such checks. An archivist can use Disable Device to disarm magical traps\
+    \ as per a rogue's trapfinding ability and gains a +4 bonus on saves against magical\
+    \ traps, language-dependent effects, and symbols, glyphs, and magical writings\
+    \ of any kind."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:jack_of_all_trades#bard_archivist"
+  name: "Jack of All Trades"
+  label: null
+  type: null
+  description: "At 5th level, an archivist can use any skill, even if the skill normally\
+    \ requires him to be trained. At 11th level, he considers all skills to be class\
+    \ skills, and at 17th level he can take 10 on any skill check, even if it is not\
+    \ normally allowed."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:probable_path#bard_archivist"
+  name: "Probable Path"
+  label: null
+  type: null
+  description: "At 10th level, an archivist can calculate the action likely to bring\
+    \ success with the least risk. Once per day, he can take 10 on any d20 roll. He\
+    \ may use this ability one additional time per day for every three levels after\
+    \ 10th.\nThis ability replaces jack of all trades."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

@@ -1,0 +1,37 @@
+id: "class:rogue#master_of_disguise"
+name: "Master of Disguise"
+description: ""
+modifications:
+- add: "ability:consummate_actor#rogue_master_of_disguise"
+  remove:
+  - "ability:the_rogue_talent_gained_at_2nd_level#rogue"
+  - "ability:trapfinding#rogue"
+- add: "ability:grandmaster_of_disguise#rogue_master_of_disguise"
+  remove:
+  - "ability:the_rogue_talent_gained_at_10th_level#rogue"
+features:
+- id: "ability:consummate_actor#rogue_master_of_disguise"
+  name: "Consummate Actor"
+  label: null
+  type: null
+  description: "A master of disguise adds half her rogue level (minimum 1) on all\
+    \ Disguise checks and on Bluff checks to stay in character while using Disguise.\n\
+    At 2nd level, she gains the quick disguise rogue talent, and she can create a\
+    \ disguise twice as quickly as normal even for that rogue talent (she can create\
+    \ a disguise that encompasses only minor details as a standard action)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:grandmaster_of_disguise#rogue_master_of_disguise"
+  name: "Grandmaster of Disguise"
+  label: null
+  type: null
+  description: "At 10th level, a master of disguise gains the master of disguise advanced\
+    \ rogue talent and can use it an unlimited number of times per day. Because she\
+    \ must still don a physical disguise to gain this bonus, it doesn't stack with\
+    \ the bonuses from spells like alter self and disguise self, but since it is completely\
+    \ non-magical, it is more reliable when scrutinized under magical detection."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

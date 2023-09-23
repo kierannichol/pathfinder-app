@@ -1,0 +1,70 @@
+id: "class:alchemist#eldritch_poisoner"
+name: "Eldritch Poisoner"
+description: ""
+modifications:
+- add: "ability:arcanotoxin#alchemist_eldritch_poisoner"
+  remove:
+  - "ability:bomb#alchemist"
+- add: "ability:toxicologist#alchemist_eldritch_poisoner"
+  remove:
+  - "ability:throw_anything#alchemist"
+- add: "ability:sneak_attack#alchemist_eldritch_poisoner"
+  remove:
+  - "ability:mutagen#alchemist"
+  - "ability:persistent_mutagen#alchemist"
+- add: "ability:careful_injection#alchemist_eldritch_poisoner"
+  remove:
+  - "ability:the_discovery_gained_at_4th_level#alchemist"
+features:
+- id: "ability:arcanotoxin#alchemist_eldritch_poisoner"
+  name: "Arcanotoxin"
+  label: null
+  type: null
+  description: "An eldritch poisoner can blend volatile chemicals and her own personal\
+    \ magic to create deadly poisons known as arcanotoxins. She can use this ability\
+    \ a number of times each day equal to her alchemist level + her Intelligence modifier.\
+    \ An arcanotoxin functions only when used by the eldritch poisoner and becomes\
+    \ inert if not used within 1 minute. Creating an arcanotoxin is a standard action,\
+    \ and it can be applied to a weapon as a move action.\nAt 1st level, an eldritch\
+    \ poisoner must choose whether her arcanotoxin deals Strength or Dexterity damage.\
+    \ At 3rd level and every 2 alchemist levels thereafter, she can enhance her arcanotoxin\
+    \ in one of the following ways. She can't select the same improvement twice in\
+    \ a row.\nSelect one additional form of ability damage: Charisma, Dexterity, Intelligence,\
+    \ Strength, or Wisdom. Grant an onset time of 1 round, or increase an existing\
+    \ onset time by 2 rounds (maximum 11 rounds). Increase the ability damage die\
+    \ by one step (maximum 1d6). Increase the number of consecutive saves required\
+    \ to cure the poison by 1 (maximum 3). Increase the frequency by 2 rounds (maximum\
+    \ 10 rounds).\nIf an eldritch poisoner can deal different kinds of ability damage,\
+    \ she selects which ability to affect each time she creates a dose of arcanotoxin,\
+    \ and can willingly reduce enhanced aspects of her arcanotoxin, such as the save\
+    \ DC or onset time. Some discoveries apply secondary effects; a dose of arcanotoxin\
+    \ can cause only one secondary effect.\nAlchemist discoveries that affect mundane\
+    \ poisons do not apply to an arcanotoxin.\nThis ability replaces bomb."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:toxicologist#alchemist_eldritch_poisoner"
+  name: "Toxicologist"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:sneak_attack#alchemist_eldritch_poisoner"
+  name: "Sneak Attack"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:careful_injection#alchemist_eldritch_poisoner"
+  name: "Careful Injection"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+source: "Pathfinder Player Companion: Black Markets"

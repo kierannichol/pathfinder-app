@@ -1,0 +1,85 @@
+id: "class:rogue#consigliere"
+name: "Consigliere"
+description: "Consiglieres act as trusted mediators and administrators for crime families\
+  \ and various criminal organizations, and many serve as the right hand to the leaders\
+  \ of such groups. Other consiglieres prefer to work as independent operators and\
+  \ sell their advice and expertise to the highest bidder. Though some consiglieres\
+  \ insulate themselves from violence and criminal activities, many enjoy getting\
+  \ their hands dirty leading strike teams or gangs of hardened thugs."
+modifications:
+- add: "ability:class_skills#rogue_consigliere"
+  remove:
+  - "ability:the_rogues_class_skills#rogue"
+- add: "ability:convincing_attitude#rogue_consigliere"
+  remove:
+  - "ability:trapfinding#rogue"
+  - "ability:evasion#rogue"
+- add: "ability:combat_advisor#rogue_consigliere"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:bonus_feats#rogue_consigliere"
+  remove:
+  - "ability:all_instances_of_trap_sense#rogue"
+- add: "ability:field_boss#rogue_consigliere"
+  remove:
+  - "ability:the_rogue_talent_normally_gained_at_10th_level#rogue"
+features:
+- id: "ability:class_skills#rogue_consigliere"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A consigliere adds Knowledge (nobility) to his list of class skills,\
+    \ instead of Knowledge (dungeoneering)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:convincing_attitude#rogue_consigliere"
+  name: "Convincing Attitude"
+  label: null
+  type: null
+  description: "At 1st level, a consigliere gains Persuasive as a bonus feat.\nAt\
+    \ 2nd level, he gains the charmer rogue talent (or the certainty [Diplomacy] rogue\
+    \ talent if he is an unchained rogue).\nAt 3rd level, if a consigliere attempts\
+    \ a Diplomacy check and fails to influence a creature's attitude by 5 or more,\
+    \ the creature's attitude remains unchanged instead of decreasing by one step."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:combat_advisor#rogue_consigliere"
+  name: "Combat Advisor"
+  label: null
+  type: null
+  description: "At 4th level, whenever a consigliere misses with a melee attack against\
+    \ an opponent, he can designate an ally within 30 feet of the target to receive\
+    \ a +1 insight bonus on her next attack roll against that opponent before the\
+    \ consigliere's next turn.\nAt 8th level, the insight bonus increases to +2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:bonus_feats#rogue_consigliere"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "Starting at 4th level, a consigliere can choose to gain a single teamwork\
+    \ feat instead of a single rogue talent.\nStarting at 12th level, the consigliere\
+    \ can choose to gain teamwork feats instead of rogue talents as many times as\
+    \ he chooses."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:field_boss#rogue_consigliere"
+  name: "Field Boss"
+  label: null
+  type: null
+  description: "At 10th level, as a standard action, a consigliere can grant a teamwork\
+    \ feat to all allies within 30 feet who can see and hear her. This teamwork feat\
+    \ must be one the consigliere knows. Allies retain the use of this feat for 3\
+    \ rounds plus 1 round for every 2 rogue levels the consigliere has. Allies do\
+    \ not need to meet the prerequisites of this teamwork feat. The consigliere can\
+    \ use this ability once per day at 10th level, plus 1 additional time per day\
+    \ every 4 rogue levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

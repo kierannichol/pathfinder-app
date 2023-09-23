@@ -1,0 +1,35 @@
+{
+  "id": "class:bard#geisha",
+  "name": "Geisha",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:the_normal_bard_armor_and_weapon_proficiencies#bard",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_normal_bard_armor_and_weapon_proficiencies#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:geisha_knowledge#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_normal_bard_armor_and_weapon_proficiencies#bard"
+        }, {
+          "featureId": "ability:bardic_knowledge#bard"
+        }]
+      }]
+    }
+  }
+}

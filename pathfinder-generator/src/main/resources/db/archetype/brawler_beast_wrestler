@@ -1,0 +1,41 @@
+id: "class:brawler#beast_wrestler"
+name: "Beast-Wrestler"
+description: "For these mighty grapplers, wrestling normal opponents has lost its\
+  \ challenge--they seek greater targets for glory. Beast-wrestlers challenge trolls\
+  \ to unarmed combat, and the greatest seek out the great linnorm their lands are\
+  \ known for and wrestle these primeval dragons into submission."
+modifications:
+- add: "ability:beast_training#brawler_beast_wrestler"
+  remove:
+  - "ability:maneuver_training#brawler"
+- add: "ability:beast_defenses#brawler_beast_wrestler"
+  remove:
+  - "ability:ac_bonus#brawler"
+features:
+- id: "ability:beast_training#brawler_beast_wrestler"
+  name: "Beast Training"
+  label: null
+  type: null
+  description: "At 3rd level, a beast-wrestler selects a creature type from the ranger\
+    \ favored enemies table. The only humanoid subtype the beast-wrestler can select\
+    \ is giant. She gains a +2 bonus on combat maneuver checks and to her CMD against\
+    \ creatures of the type she selected.\nAt 7th, 11th, 15th, and 19th levels, the\
+    \ beast-wrestler can select an additional type of creature. In addition, at each\
+    \ such interval the bonuses against any one type of creature she's chosen (including\
+    \ the one just selected, if so desired) increase by 2. If a specific creature\
+    \ falls into more than one category, the beast-wrestler's bonuses don't stack;\
+    \ she simply uses whichever bonus is higher."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:beast_defenses#brawler_beast_wrestler"
+  name: "Beast Defenses"
+  label: null
+  type: null
+  description: "At 4th level, when facing enemies she selected with beast training,\
+    \ the beast-wrestler gains a bonus to AC equal to 1/2 her beast training bonus\
+    \ against that creature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+source: "Pathfinder Player Companion: Advanced Class Origins"

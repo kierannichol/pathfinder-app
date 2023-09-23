@@ -1,0 +1,68 @@
+id: "class:monk#harrow_warden"
+name: "Harrow Warden"
+description: ""
+modifications:
+- add: "ability:idiot_strike#monk_harrow_warden"
+  remove:
+  - "ability:stunning_fist#monk"
+- add: "ability:mute_hag_stance#monk_harrow_warden"
+  remove:
+  - "ability:improved_evasion#monk"
+- add: "ability:big_sky_stance#monk_harrow_warden"
+  remove:
+  - "ability:diamond_body#monk"
+- add: "ability:eclipse_strike#monk_harrow_warden"
+  remove:
+  - "ability:quivering_palm#monk"
+features:
+- id: "ability:idiot_strike#monk_harrow_warden"
+  name: "Idiot Strike"
+  label: null
+  type: null
+  description: "At 1st level, the harrow warden can make an unarmed strike against\
+    \ a target and curse the creature with bad luck. Foes damaged by an idiot strike\
+    \ must succeed at a Will save (DC 10 + 1/2 the monk's level + the monk's Wisdom\
+    \ modifier) or become jinxed. A jinxed creature must roll twice whenever it attempts\
+    \ an attack roll, a saving throw, a skill check, or a caster level check for 1\
+    \ round, taking the lower result in each instance. The harrow warden can use idiot\
+    \ strike once per day per monk level. She must declare that she is using an idiot\
+    \ strike before making the attack roll; thus, a failed roll wastes the attempt.\n\
+    At 4th level and again at 12th level, the jinx effect lasts an additional round.\n\
+    At 16th level, a harrow warden can expend two uses of idiot strike to instead\
+    \ curse her target as the bestow curse spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+- id: "ability:mute_hag_stance#monk_harrow_warden"
+  name: "Mute Hag Stance"
+  label: null
+  type: null
+  description: "Beginning at 9th level, the harrow warden can block opponents' metaphysical\
+    \ ties to one another. Enemies threatened by the harrow warden do not gain the\
+    \ effects of any morale or insight bonuses on attack rolls or skill checks as\
+    \ long as they are within the harrow warden's threatened area."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+- id: "ability:big_sky_stance#monk_harrow_warden"
+  name: "Big Sky Stance"
+  label: null
+  type: null
+  description: "At 11th level, the harrow warden becomes secure in her role within\
+    \ the larger story. She gains immunity to curses and polymorph effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+- id: "ability:eclipse_strike#monk_harrow_warden"
+  name: "Eclipse Strike"
+  label: null
+  type: null
+  description: "Beginning at 15th level, the harrow warden can strike a target with\
+    \ enough force to realign its place in the world. Foes damaged by the harrow warden's\
+    \ idiot strike can attempt a Fortitude save (DC 10 + 1/2 the monk's level + the\
+    \ monk's Wisdom modifier). Those that fail are transmuted into a harmless form,\
+    \ as per the baleful polymorph spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+source: "Pathfinder Player Companion: The Harrow Handbook"

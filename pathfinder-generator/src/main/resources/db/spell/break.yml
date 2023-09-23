@@ -1,0 +1,25 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates (object)"
+spell_resistance: "yes (object)"
+id: "spell:break"
+name: "Break"
+description: "You can attempt to break or at least damage any one Medium or smaller\
+  \ object within range. If the target fails its Fortitude saving throw, it gains\
+  \ the broken condition. If cast on a broken item, that item is destroyed on a failed\
+  \ save."
+prerequisites: ""
+components: "V, S, M (a twig)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one Medium or smaller object"
+duration: "instantaneous"
+school: "transmutation"
+levels:
+- class_id: "class:arcanist"
+  level: 1
+- class_id: "class:bloodrager"
+  level: 1
+- class_id: "class:sorcerer"
+  level: 1
+- class_id: "class:wizard"
+  level: 1
+source: "Advanced Player's Guide"

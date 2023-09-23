@@ -1,0 +1,68 @@
+{
+  "id": "class:hunter#packmaster",
+  "name": "Packmaster",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_companion#hunter AND !@modifies:ability:teamwork_feats#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:second_animal_focus#hunter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:master_hunter#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_companion#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:teamwork_feats#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_focus#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:second_animal_focus#hunter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:pack_bond#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d1"
+        }, {
+          "featureId": "ability:pack_focus#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d1"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d3"
+        }, {
+          "featureId": "ability:second_pack_focus#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d8"
+        }, {
+          "featureId": "ability:master_of_the_pack#hunter_packmaster",
+          "conditionFormula": "@class:hunter\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:animal_companion#hunter"
+        }, {
+          "featureId": "ability:animal_focus#hunter"
+        }, {
+          "featureId": "ability:teamwork_feats#hunter"
+        }, {
+          "featureId": "ability:second_animal_focus#hunter"
+        }, {
+          "featureId": "ability:master_hunter#hunter"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+id: "class:rogue#vexing_dodger"
+name: "Vexing Dodger"
+description: "Vexing dodgers take advantage of their smaller size to outmaneuver larger\
+  \ foes such as giants."
+modifications:
+- add: "ability:limb_climber#rogue_vexing_dodger"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:improved_dirty_trick#rogue_vexing_dodger"
+  remove:
+  - "ability:the_rogue_talent_gained_at_2nd_level#rogue"
+- add: "ability:underfoot_agility#rogue_vexing_dodger"
+  remove:
+  - "ability:trap_sense#rogue"
+- add: "ability:underfoot_trickster#rogue_vexing_dodger"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:distracting_climber#rogue_vexing_dodger"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:limb_climber#rogue_vexing_dodger"
+  name: "Limb-Climber"
+  label: null
+  type: null
+  description: "When adjacent to or in the space of a corporeal creature at least\
+    \ one size category larger than herself, a vexing dodger can climb that creature's\
+    \ body with a successful Climb check against a DC equal to the target creature's\
+    \ CMD. Although the vexing dodger is holding on to the creature, this action isn't\
+    \ a grapple; it doesn't provoke attacks of opportunity from the creature, and\
+    \ neither the vexing dodger nor the creature she climbs gains the grappled condition.\
+    \ While the vexing dodger is on the climbed creature, the creature takes a penalty\
+    \ on attack rolls against the vexing dodger equal to the number of sneak attack\
+    \ dice the dodger possesses."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+- id: "ability:improved_dirty_trick#rogue_vexing_dodger"
+  name: "Improved Dirty Trick"
+  label: null
+  type: null
+  description: "At 2nd level, a vexing dodger gains Improved Dirty Trick as a bonus\
+    \ feat, even if she doesn't meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+- id: "ability:underfoot_agility#rogue_vexing_dodger"
+  name: "Underfoot Agility"
+  label: null
+  type: null
+  description: "At 3rd level, a vexing dodger gains a +1 morale bonus on Acrobatics,\
+    \ Climb, and Escape Artist attempts against creatures at least one size category\
+    \ larger than herself. This bonus increases by 1 for every 3 levels beyond 3rd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+- id: "ability:underfoot_trickster#rogue_vexing_dodger"
+  name: "Underfoot Trickster"
+  label: null
+  type: null
+  description: "At 4th level, a vexing dodger can move through the space of a creature\
+    \ two size categories larger than herself without needing to attempt an Acrobatics\
+    \ check. She would still need to succeed at Acrobatics checks to avoid attacks\
+    \ of opportunity provoked by leaving a threatened space; this ability covers only\
+    \ the ability to move. Additionally, whenever the vexing dodger hits a larger\
+    \ foe with a melee sneak attack, she can choose to forgo the sneak attack bonus\
+    \ damage and instead attempt make a dirty trick combat maneuver as a swift action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+- id: "ability:distracting_climber#rogue_vexing_dodger"
+  name: "Distracting Climber"
+  label: null
+  type: null
+  description: "At 8th level, when a vexing dodger attempts a dirty trick maneuver\
+    \ against a creature she's climbing, she gets a bonus on the combat maneuver check\
+    \ equal to the number of sneak attack dice she has.\nIf she chooses to sicken\
+    \ the target with her dirty trick and succeeds at her combat maneuver check, the\
+    \ target must succeed at a Fortitude saving throw (DC = 10 + 1/2 the vexing dodger's\
+    \ level + her Intelligence modifier) or be nauseated for 1 round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Giant Hunter's Handbook"
+source: "Pathfinder Player Companion: Giant Hunter's Handbook"

@@ -1,22 +1,23 @@
 package pathfinder.model;
 
-import lombok.RequiredArgsConstructor;
-import pathfinder.data.v4.ChoiceDbo;
-import pathfinder.data.v4.ChoiceDbo.TextChoiceDbo;
+import pathfinder.data.ChoiceDbo;
+import pathfinder.data.TextChoiceInputDbo;
 
-@RequiredArgsConstructor
-public class TextChoice implements Choice {
-    private final String id;
-    private final String label;
-    private final String type;
+public record TextChoice(String choiceId, String label, String type, boolean repeating) implements Choice {
+
+    public TextChoice(String choiceId, String label, String type) {
+        this(choiceId, label, type, false);
+    }
 
     @Override
     public ChoiceDbo toDbo() {
         return ChoiceDbo.newBuilder()
-                .setId(id)
+                .setChoiceId(choiceId)
                 .setLabel(label)
                 .setType(type)
-                .setText(TextChoiceDbo.newBuilder().build())
+                .setRepeating(repeating)
+                .setText(TextChoiceInputDbo.newBuilder()
+                        .build())
                 .build();
     }
 }

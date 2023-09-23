@@ -1,0 +1,53 @@
+id: "class:skald#demon_dancer"
+name: "Demon Dancer"
+description: "While the twisted power of the demon-worshiping skalds is great, it\
+  \ comes at a terrible price."
+modifications:
+- add: "ability:versatile_performance#skald_demon_dancer"
+  remove:
+  - "ability:versatile_performance#skald"
+- add: "ability:fiendish_maw#skald_demon_dancer"
+  remove:
+  - "ability:the_rage_power_gained_at_3rd_level#skald"
+- add: "ability:abyssal_wrath#skald_demon_dancer"
+  remove:
+  - "ability:9th_levels#skald"
+  - "ability:the_rage_powers_gained_at_6th#skald"
+features:
+- id: "ability:versatile_performance#skald_demon_dancer"
+  name: "Versatile Performance"
+  label: null
+  type: null
+  description: "A demon dancer can choose Perform (dance) for the versatile performance\
+    \ class feature. Its associated skills are Acrobatics and Fly."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:fiendish_maw#skald_demon_dancer"
+  name: "Fiendish Maw"
+  label: null
+  type: null
+  description: "At 3rd level, whenever a demon dancer inspires rage, all who accept\
+    \ his rage gain a bite attack dealing 1d6 points of damage (for Medium allies;\
+    \ 1d4 points of damage if Small). This damage increases to 1d8 (1d6 if Small)\
+    \ at 7th level, to 2d6 (1d8 if Small) at 12th level, and to 3d6 (2d6 if Small)\
+    \ at 17th level.\nThese increases effectively treat the affected creatures as\
+    \ though their sizes had increased by one size category, and so don't stack with\
+    \ any similar damage increases (such as the increase from the strong jaw spell)\
+    \ other than those due to an actual increase in size. If used as part of a full\
+    \ attack action, the bite attack is made at the creature's full base attack bonus\
+    \ –5."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:abyssal_wrath#skald_demon_dancer"
+  name: "Abyssal Wrath"
+  label: null
+  type: null
+  description: "At 6th level, the demon dancer gains the fiend totem rage power, even\
+    \ if he doesn't qualify for it. At 9th level, he gains the greater fiend totem\
+    \ rage power, ignoring the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+source: "Pathfinder Player Companion: Advanced Class Origins"

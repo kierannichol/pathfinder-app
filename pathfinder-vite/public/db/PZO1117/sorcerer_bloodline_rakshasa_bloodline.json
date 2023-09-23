@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:rakshasa_bloodline",
+  "name": "Rakshasa Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "At some point in your family\u0027s history, one of your ancestors was tainted by the influence of a rakshasa. Though most of your family seem entirely normal, you have always felt your own skin is a prison from which magic allows you to escape. Your birthright is a secret you may be forced to keep from societies that would never deal with you if your heritage were known."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:arcane_armor_mastery", "feat:arcane_armor_training", "feat:deceitful", "feat:detect_expertise", "feat:empower_spell", "feat:light_armor_proficiency", "feat:martial_weapon_proficiency", "feat:stealthy"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:arcane_armor_mastery", "feat:arcane_armor_training", "feat:deceitful", "feat:detect_expertise", "feat:empower_spell", "feat:light_armor_proficiency", "feat:martial_weapon_proficiency", "feat:stealthy"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:arcane_armor_mastery", "feat:arcane_armor_training", "feat:deceitful", "feat:detect_expertise", "feat:empower_spell", "feat:light_armor_proficiency", "feat:martial_weapon_proficiency", "feat:stealthy"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:silver_tongue#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:mind_reader#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:detect_thoughts#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:hide_aura#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:alter_self#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:outsider#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

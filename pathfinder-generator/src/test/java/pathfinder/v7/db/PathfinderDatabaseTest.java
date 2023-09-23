@@ -3,7 +3,7 @@ package pathfinder.v7.db;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import pathfinder.v7.local.LocalPathfinderDatabaseLoader;
+import pathfinder.db.LocalPathfinderDatabaseLoader;
 
 @Slf4j
 @Disabled

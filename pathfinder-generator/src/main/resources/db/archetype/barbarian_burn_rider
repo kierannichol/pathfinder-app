@@ -1,0 +1,79 @@
+id: "class:barbarian#burn_rider"
+name: "Burn Rider"
+description: ""
+modifications:
+- add: "ability:flame_runner#barbarian_burn_rider"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:cinder_sight#barbarian_burn_rider"
+  remove:
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:cinder_dance#barbarian_burn_rider"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:mount#barbarian_burn_rider"
+  remove:
+  - "ability:16th_level#barbarian"
+  - "ability:the_rage_powers_gained_at_4th_8th_12th#barbarian"
+- add: "ability:give_me_fire#barbarian_burn_rider"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+features:
+- id: "ability:flame_runner#barbarian_burn_rider"
+  name: "Flame Runner"
+  label: null
+  type: null
+  description: "At 1st level, once per rage, a burn rider can goad her mount into\
+    \ a burst of incredible speed. The mount's speed increases by 10 feet until the\
+    \ end of the burn rider's turn. This bonus to speed increases by 10 feet at 9th\
+    \ level and again at 15th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:cinder_sight#barbarian_burn_rider"
+  name: "Cinder Sight"
+  label: null
+  type: null
+  description: "At 2nd level, a burn rider can see through fire, fog, and smoke without\
+    \ penalty as long as the light is sufficient to allow her to see normally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:cinder_dance#barbarian_burn_rider"
+  name: "Cinder Dance"
+  label: null
+  type: null
+  description: "At 3rd level, when a burn rider succeeds at a Reflex save to avoid\
+    \ fire damage, she can spend an immediate action to move up to half her speed.\
+    \ If the burn rider ends this movement outside the area of effect, she takes no\
+    \ damage from the effect. After this sudden movement, the burn rider is staggered\
+    \ until the end of her next turn. If the burn rider is mounted, her mount makes\
+    \ the movement instead, and both the mount and the burn rider are staggered until\
+    \ the end of the burn rider's next turn."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:mount#barbarian_burn_rider"
+  name: "Mount"
+  label: null
+  type: null
+  description: "At 4th level, a burn rider gains a loyal mount.\nThis ability functions\
+    \ like the druid's animal companion ability (as described in the nature bond class\
+    \ feature), except that the burn rider always gains a horse or pony (though she\
+    \ can gain additional options at the GM's discretion) and her effective druid\
+    \ level is equal to her burn rider level – 3."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:give_me_fire#barbarian_burn_rider"
+  name: "Give Me Fire"
+  label: null
+  type: null
+  description: "At 5th level, if a burn rider takes fire damage while raging, she\
+    \ regains 1 round of rage. The burn rider regains the round of rage only if the\
+    \ fire damage bypasses or exceeds any energy resistance or other protections in\
+    \ effect. The burn rider can only regain 1 round of rage per round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

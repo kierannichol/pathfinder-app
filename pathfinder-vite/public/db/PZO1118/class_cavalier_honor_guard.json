@@ -1,0 +1,59 @@
+{
+  "id": "class:cavalier#honor_guard",
+  "name": "Honor Guard",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:the_challenge_ability#cavalier AND !@modifies:ability:demanding_challenge#cavalier",
+  "maxStacks": 1,
+  "description": {
+    "text": "Certain cavaliers are trained not as advance combatants, but as loyal guards, standing as firm defenders in the face of threats to their chosen charge. These honor guards are sometimes merely ornamental, performing their functions on a ceremonial basis, but a surprising number are capable, deadly opponents, able to take down a threat long before their liege knows of the danger. To be an honor guard is to constantly place one\u0027s self in harm\u0027s way, and to always be willing to lay down one\u0027s life at a moment\u0027s notice."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mighty_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cavaliers_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_challenge_ability#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:demanding_challenge#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sworn_defense#cavalier_honor_guard",
+          "conditionFormula": "@class:cavalier\u003e\u003d1"
+        }, {
+          "featureId": "ability:intercept#cavalier_honor_guard",
+          "conditionFormula": "@class:cavalier\u003e\u003d3"
+        }, {
+          "featureId": "ability:warding_charge#cavalier_honor_guard",
+          "conditionFormula": "@class:cavalier\u003e\u003d11"
+        }, {
+          "featureId": "ability:defensive_challenge#cavalier_honor_guard",
+          "conditionFormula": "@class:cavalier\u003e\u003d12"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_challenge_ability#cavalier"
+        }, {
+          "featureId": "ability:cavaliers_charge#cavalier"
+        }, {
+          "featureId": "ability:mighty_charge#cavalier"
+        }, {
+          "featureId": "ability:demanding_challenge#cavalier"
+        }]
+      }]
+    }
+  }
+}

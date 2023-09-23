@@ -1,0 +1,100 @@
+id: "class:fighter#archer"
+name: "Archer"
+description: ""
+modifications:
+- add: "ability:hawkeye#fighter_archer"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:trick_shot#fighter_archer"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:expert_archer#fighter_archer"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:safe_shot#fighter_archer"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:evasive_archer#fighter_archer"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:volley#fighter_archer"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:ranged_defense#fighter_archer"
+  remove:
+  - "ability:armor_mastery#fighter"
+features:
+- id: "ability:hawkeye#fighter_archer"
+  name: "Hawkeye"
+  label: null
+  type: null
+  description: "At 2nd level, an archer gains a +1 bonus on Perception checks, and\
+    \ the range increment for any bow he uses increases by 5 feet. These bonuses increase\
+    \ by +1 and 5 additional feet for every 4 levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:trick_shot#fighter_archer"
+  name: "Trick Shot"
+  label: null
+  type: null
+  description: "At 3rd level, an archer can choose one of the following combat maneuvers\
+    \ or actions: disarm, feint, or sunder. He can perform this action with a bow\
+    \ against any target within 30 feet, with a –4 penalty to his CMB. Every four\
+    \ levels beyond 3rd, he may choose an additional trick shot to learn. These maneuvers\
+    \ use up arrows as normal.\nAt 11th level, he may also choose from the following\
+    \ combat maneuvers: bull rush, grapple, trip. A target grappled by an arrow can\
+    \ break free by destroying the archer's arrow (hardness 5, hit points 1, break\
+    \ DC 13) or with an Escape Artist or CMB check (against the archer's CMD –4)."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:expert_archer#fighter_archer"
+  name: "Expert Archer"
+  label: null
+  type: null
+  description: "At 5th level, an archer gains a +1 bonus on attack and damage rolls\
+    \ with bows. This bonus increases by +1 for every four levels beyond 5th."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:safe_shot#fighter_archer"
+  name: "Safe Shot"
+  label: null
+  type: null
+  description: "At 9th level, an archer does not provoke attacks of opportunity when\
+    \ making ranged attacks with a bow."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:evasive_archer#fighter_archer"
+  name: "Evasive Archer"
+  label: null
+  type: null
+  description: "At 13th level, an archer gains a +2 dodge bonus to AC against ranged\
+    \ attacks. This bonus increases to +4 at 17th level."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:volley#fighter_archer"
+  name: "Volley"
+  label: null
+  type: null
+  description: "At 17th level, as a full-round action, an archer can make a single\
+    \ bow attack at his highest base attack bonus against any number of creatures\
+    \ in a 15-foot radius burst, making separate attack and damage rolls for each\
+    \ creature."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:ranged_defense#fighter_archer"
+  name: "Ranged Defense"
+  label: null
+  type: null
+  description: "At 19th level, an archer gains DR 5/-- against ranged attacks. In\
+    \ addition, as an immediate action, he can catch an arrow fired at him and shoot\
+    \ it any target he chooses, as if he had the Snatch Arrows feat."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

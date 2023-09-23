@@ -1,0 +1,67 @@
+{
+  "id": "class:monk#kata_master",
+  "name": "Kata Master",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:quivering_palm#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:wholeness_of_body#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ki_pool#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wholeness_of_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:menacing_swordplay#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:ki_pool#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:ki_pool#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d7"
+        }, {
+          "featureId": "ability:ki_pool#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d10"
+        }, {
+          "featureId": "ability:ki_pool#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d16"
+        }, {
+          "featureId": "ability:targeted_strike#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d7"
+        }, {
+          "featureId": "ability:dizzying_defense#monk_kata_master",
+          "conditionFormula": "@class:monk\u003e\u003d15"
+        }],
+        "unlinks": [{
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:ki_pool#monk"
+        }, {
+          "featureId": "ability:wholeness_of_body#monk"
+        }, {
+          "featureId": "ability:quivering_palm#monk"
+        }]
+      }]
+    }
+  }
+}

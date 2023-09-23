@@ -1,0 +1,52 @@
+id: "class:skald#bacchanal"
+name: "Bacchanal"
+description: "Bacchanals are skalds who use ecstatic dancing and ribald songs to influence\
+  \ the primal instincts of listeners. To these skalds, the passionate frenzy of a\
+  \ celebration or feast shares many features with the violence of combat, and several\
+  \ of their talents blur the line between festival and battle in dramatic ways."
+modifications:
+- add: "ability:fermented_fruit#skald_bacchanal"
+  remove:
+  - "ability:scribe_scroll#skald"
+- add: "ability:drunken_dancer#skald_bacchanal"
+  remove:
+  - "ability:versatile_performance#skald"
+features:
+- id: "ability:fermented_fruit#skald_bacchanal"
+  name: "Fermented Fruit"
+  label: null
+  type: null
+  description: "A bacchanal adds goodberry to his list of 1st-level skald spells known.\
+    \ In addition, he can cast it as a spell-like ability once per day. When he casts\
+    \ goodberry as a spell or spell-like ability, the targeted berries ferment; this\
+    \ causes each berry to act as a serving of an alcoholic beverage. A creature that\
+    \ eats a fermented berry does not gain a meal's nourishment, but it is cured of\
+    \ 1 point of damage and becomes slightly foolhardy as if tipsy, gaining a +1 bonus\
+    \ on saves against fear effects for 1 minute after eating the berry."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:drunken_dancer#skald_bacchanal"
+  name: "Drunken Dancer"
+  label: null
+  type: null
+  description: "At 2nd level, while maintaining a raging song, a bacchanal can consume\
+    \ a berry affected by goodberry, a potion, or a serving of alcohol as a move action\
+    \ that does not provoke attacks of opportunity. A berry affected by goodberry\
+    \ or a potion has its normal effect, while an alcoholic drink or a berry affected\
+    \ by goodberry via fermented fruit (see above) allows the skald to maintain his\
+    \ raging song that round without expending a round of raging song for the day\
+    \ (instead of the normal effects of the alcohol or fermented berry). For each\
+    \ alcoholic drink or fermented berry consumed while raging, the skald is nauseated\
+    \ for 1 round after his raging song ends. The internal fortitude rage power prevents\
+    \ this nauseated condition from occurring.\nAt 7th level, when the bacchanal consumes\
+    \ an alcoholic drink or fermented berry while maintaining his rage song, he can\
+    \ gain the benefits of cure light wounds or remove fear (for the duration of the\
+    \ raging song) at his caster level by spending 2 rounds of raging song. At 12th\
+    \ level, the bacchanal can gain the benefits of heroism (for the duration of the\
+    \ raging song) in this manner. At 17th level, he can gain the benefits of persistent\
+    \ vigor (for the duration of the raging song) in this manner."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

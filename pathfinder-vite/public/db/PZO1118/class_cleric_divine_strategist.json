@@ -1,0 +1,56 @@
+{
+  "id": "class:cleric#divine_strategist",
+  "name": "Divine Strategist",
+  "tags": ["archetype", "cleric"],
+  "enabledFormula": "!@modifies:ability:channel_energy#cleric",
+  "maxStacks": 1,
+  "description": {
+    "text": "The divine strategist leads the armies of the faithful, not from the front lines but through her clever strategy and tactical acumen."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_energy#cleric",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d1"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d3"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d5"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d7"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d9"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d11"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d13"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d15"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d17"
+        }, {
+          "featureId": "ability:master_tactician#cleric_divine_strategist",
+          "conditionFormula": "@class:cleric\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:channel_energy#cleric"
+        }]
+      }]
+    }
+  }
+}

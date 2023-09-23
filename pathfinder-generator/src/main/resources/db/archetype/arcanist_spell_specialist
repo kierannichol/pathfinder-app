@@ -1,0 +1,23 @@
+id: "class:arcanist#spell_specialist"
+name: "Spell Specialist"
+description: "Where most arcanists are broad in their study of magic, a spell specialist\
+  \ has her power focused in a few spells. Spell specialists are able to warp and\
+  \ twist the magic of their signature spells in ways other casters cannot."
+modifications:
+- add: "ability:spellwarp#arcanist_spell_specialist"
+  remove:
+  - "ability:the_arcanist_exploits_gained_at_1st_7th_13th#arcanist"
+  - "ability:19th_levels#arcanist"
+features:
+- id: "ability:spellwarp#arcanist_spell_specialist"
+  name: "Spellwarp"
+  label: null
+  type: null
+  description: "A spell specialist can reduce the radius of a spread or burst effect\
+    \ or shorten the length of a cone. All changes must occur in 5-foot increments,\
+    \ to a minimum of 5 feet. Alternatively, the spell specialist can change the area\
+    \ of effect of a cone spell to a line with a length equal to the spell's range."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

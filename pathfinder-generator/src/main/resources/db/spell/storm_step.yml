@@ -1,0 +1,29 @@
+casting_time: "1 standard action"
+saving_throw: "Reflex halves"
+spell_resistance: "yes"
+id: "spell:storm_step"
+name: "Storm Step"
+description: "You are able to harness the power of the storm to transport yourself\
+  \ a short distance, by taking the form of a furious, sizzling bolt of elemental\
+  \ electricity. You must either have line of sight to your destination or you must\
+  \ specify a direction and distance within range. Creatures and objects in the path\
+  \ of your passage take 1d8 points of electricity damage per 2 caster levels (maximum\
+  \ 5d8). A successful Reflex save halves the damage."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "you"
+duration: "instantaneous"
+school: "conjuration (teleportation) [electricity]"
+levels:
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:magus"
+  level: 3
+- class_id: "class:sorcerer"
+  level: 3
+- class_id: "class:witch"
+  level: 3
+- class_id: "class:wizard"
+  level: 3
+source: "Blood of the Elements"

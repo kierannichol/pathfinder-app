@@ -50,4 +50,12 @@ public class Description {
                 .putAllSections(this.sections())
                 .build();
     }
+
+    @Override
+    public String toString() {
+        return "Description{" +
+                "text='" + text + '\'' +
+                ", sections=" + sections +
+                '}';
+    }
 }

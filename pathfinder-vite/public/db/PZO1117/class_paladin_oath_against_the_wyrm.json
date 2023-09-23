@@ -1,0 +1,45 @@
+{
+  "id": "class:paladin#oath_against_the_wyrm",
+  "name": "Oath Against the Wyrm",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:the_standard_divine_bond_ability#paladin AND !@modifies:ability:holy_champion#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_positive_energy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_standard_divine_bond_ability#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:holy_champion#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:breath_evasion#paladin_oath_against_the_wyrm",
+          "conditionFormula": "@class:paladin\u003e\u003d4"
+        }, {
+          "featureId": "ability:dragon_slaying_strike#paladin_oath_against_the_wyrm",
+          "conditionFormula": "@class:paladin\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:channel_positive_energy#paladin"
+        }, {
+          "featureId": "ability:the_standard_divine_bond_ability#paladin"
+        }, {
+          "featureId": "ability:holy_champion#paladin"
+        }]
+      }]
+    }
+  }
+}

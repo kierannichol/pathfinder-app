@@ -1,0 +1,65 @@
+{
+  "id": "sorcerer_bloodline:djinni_bloodline",
+  "name": "Djinni Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You were born with the power of air genies, and the magic of the djinn is strong in you."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus", "feat:weapon_finesse"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus", "feat:weapon_finesse"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:dodge", "feat:empower_spell", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:skill_focus", "feat:weapon_finesse"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:electricity_ray#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:elemental_resistance#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:whirlwind#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:elemental_movement#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:power_of_the_djinn#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

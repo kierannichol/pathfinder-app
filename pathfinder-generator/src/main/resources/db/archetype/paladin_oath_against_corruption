@@ -1,0 +1,55 @@
+id: "class:paladin#oath_against_corruption"
+name: "Oath Against Corruption"
+description: ""
+modifications:
+- add: "ability:aura_of_purity#paladin_oath_against_corruption"
+  remove:
+  - "ability:aura_of_courage#paladin"
+- add: "ability:cleansing_flame#paladin_oath_against_corruption"
+  remove:
+  - "ability:aura_of_justice#paladin"
+- add: "ability:cast_into_the_void#paladin_oath_against_corruption"
+  remove:
+  - "ability:holy_champion#paladin"
+features:
+- id: "ability:aura_of_purity#paladin_oath_against_corruption"
+  name: "Aura of Purity"
+  label: null
+  type: null
+  description: "At 3rd level, you gain a +4 sacred bonus on saves against spells and\
+    \ effects from creatures of the aberration type. Allies within 10 feet gain a\
+    \ +1 sacred bonus on these saves. This ability functions only while the paladin\
+    \ is conscious, not if she is unconscious or dead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:cleansing_flame#paladin_oath_against_corruption"
+  name: "Cleansing Flame"
+  label: null
+  type: null
+  description: "At 11th level, you may expend two uses of your smite evil ability\
+    \ to ignite your weapon with a cleansing blue flame for 1 minute. This flame sheds\
+    \ light as a torch. Aberrations within 20 feet of the flame take a –4 penalty\
+    \ on attack rolls against you and your allies, and your allies within 20 feet\
+    \ of the flame gain a +2 sacred bonus on saving throws against spells and effects\
+    \ from aberrations.\nThis ability replaces aura of justice."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:cast_into_the_void#paladin_oath_against_corruption"
+  name: "Cast into the Void"
+  label: null
+  type: null
+  description: "At 20th level, a paladin becomes a conduit for the power of her god.\
+    \ Her DR increases to 10/evil. Whenever she uses smite evil and successfully strikes\
+    \ an aberration, the creature must make a Will save (DC 10 + 1/2 the paladin's\
+    \ level + the paladin's Charisma modifier) or be banished to oblivion. This ability\
+    \ does not kill the creature, but it is sent to a remote place, such as deep underground\
+    \ or far into space (if it is a creature native to space), and cannot return under\
+    \ its own power for at least 100 years.\nWhenever the paladin channels positive\
+    \ energy or uses lay on hands to heal a creature, she heals the maximum possible\
+    \ amount."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

@@ -1,0 +1,51 @@
+id: "class:gunslinger#gun_scavenger"
+name: "Gun Scavenger"
+description: ""
+modifications:
+- add: "ability:deeds#gunslinger_gun_scavenger"
+  remove:
+  - "ability:the_quick_clear_deed#gunslinger"
+- add: "ability:arbitrary_aim#gunslinger_gun_scavenger"
+  remove:
+  - "ability:nimble#gunslinger"
+features:
+- id: "ability:deeds#gunslinger_gun_scavenger"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A gun scavenger gains the following deeds at the listed level.\nChange\
+    \ Out (Ex) At 1st level, as a full-round action, a gun scavenger can remove the\
+    \ broken condition from a single firearm she is currently wielding, as long as\
+    \ that condition was gained by a firearm misfire. When she does, she can replace\
+    \ the broken part with a specialized, short-lived component that does one of the\
+    \ following: gives the firearm the scatter weapon quality; increases the damage\
+    \ dealt by the pistol-whip deed by one die size; or increases the firearm's range\
+    \ increment by 10 feet. A firearm with such a modification increases its misfire\
+    \ chance cumulatively by 1 each time it is fired until it misfires. When it does\
+    \ misfire, the effects of the temporary component are lost. A gun scavenger must\
+    \ have at least 1 grit point to perform this deed. Alternatively, if the gun scavenger\
+    \ spends 1 grit point to perform a change out, she can either perform the change\
+    \ out as a standard action instead of a full-round action, or perform the change\
+    \ out on a firearm that isn't broken.\nThis deed replaces the quick clear deed.\n\
+    Jury-Rig (Ex) At 7th level, as a standard action, a gun scavenger can adjust a\
+    \ firearm she is currently wielding to fire in an unconventional way. She can\
+    \ spend 1 grit point to grant her firearm one of the following magic weapon enhancements\
+    \ for 1 round per gunslinger level: distance, flaming, glamered, or thundering.\
+    \ If she spends 2 grit points, she can instead grant the firearm flaming burst\
+    \ or stalking. Multiple uses of this ability don't stack with themselves."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:arbitrary_aim#gunslinger_gun_scavenger"
+  name: "Arbitrary Aim"
+  label: null
+  type: null
+  description: "Starting at 2nd level, a gun scavenger's attacks with firearms are\
+    \ difficult to predict. When shooting a firearm at a creature that has a dodge\
+    \ or insight bonus to its Armor Class, the gun scavenger treats the combined bonus\
+    \ as if it were 1 lower. This value increases by 1 for every 4 levels beyond 2nd\
+    \ level (to a maximum of 5 at 20th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

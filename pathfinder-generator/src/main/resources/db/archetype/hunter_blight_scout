@@ -1,0 +1,55 @@
+id: "class:hunter#blight_scout"
+name: "Blight Scout"
+description: "Blight scouts are an elite band of elves skilled and brave enough to\
+  \ take the offensive against their foes. Blight scouts rely on their close bonds\
+  \ with their animal companions to survive such raids. One blight scout who accompanied\
+  \ an expedition to put his demon-fighting skills to work has retired to teach his\
+  \ techniques to others, so these skills are slowly being passed on to non-elves."
+modifications:
+- add: "ability:lore_of_the_blight#hunter_blight_scout"
+  remove:
+  - "ability:improved_empathic_link_speak_with_master#hunter"
+  - "ability:greater_empathic_link#hunter"
+- add: "ability:unnatural_stride#hunter_blight_scout"
+  remove:
+  - "ability:raise_animal_companion#hunter"
+- add: "ability:demons_end#hunter_blight_scout"
+  remove:
+  - "ability:one_with_the_wild#hunter"
+features:
+- id: "ability:lore_of_the_blight#hunter_blight_scout"
+  name: "Lore of the Blight"
+  label: null
+  type: null
+  description: "At 6th level, a blight scout and her animal companion gain a +2 bonus\
+    \ on initiative checks and on Knowledge (geography), Perception, Stealth, and\
+    \ Survival skill checks when she's in the Abyss or Abyss-tainted terrain.\nWhen\
+    \ she travels through this terrain, she leaves no trail and can't be tracked (though\
+    \ she can leave a trail if she so chooses). This bonus increases to +4 at 11th\
+    \ level and +6 at 16th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:unnatural_stride#hunter_blight_scout"
+  name: "Unnatural Stride"
+  label: null
+  type: null
+  description: "At 10th level, the blight scout and her animal companion learn how\
+    \ to move through undergrowth (as woodland stride) that has been enchanted, corrupted,\
+    \ or magically manipulated."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:demons_end#hunter_blight_scout"
+  name: "Demon's End"
+  label: null
+  type: null
+  description: "At 17th level, even demons must respect the number of their kindred\
+    \ an blight scout has slain, and lesser demons quake before her. The blight scout\
+    \ and her companion can attempt to demoralize a demon as a swift action, rolling\
+    \ 1d20 and adding the scout's level and her Charisma modifier to determine the\
+    \ Intimidate check result."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+source: "Pathfinder Player Companion: Advanced Class Origins"

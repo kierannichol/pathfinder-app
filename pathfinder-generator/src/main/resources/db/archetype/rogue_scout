@@ -1,0 +1,39 @@
+id: "class:rogue#scout"
+name: "Scout"
+description: "Not all rogues live in the city. Scouts frequently roam the wilderness,\
+  \ often banding together as bandits, but sometimes serving as guides, as trailblazers,\
+  \ or as companions to a ranger or barbarian warrior. More comfortable with sneaking\
+  \ and hiding outdoors, the scout is still effective in the city and the dungeon."
+modifications:
+- add: "ability:scouts_charge#rogue_scout"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:skirmisher#rogue_scout"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:scouts_charge#rogue_scout"
+  name: "Scout's Charge"
+  label: null
+  type: null
+  description: "At 4th level, whenever a scout makes a charge, her attack deals sneak\
+    \ attack damage as if the target were flat-footed. Foes with uncanny dodge are\
+    \ immune to this ability."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:skirmisher#rogue_scout"
+  name: "Skirmisher"
+  label: null
+  type: null
+  description: "At 8th level, whenever a scout moves more than 10 feet in a round\
+    \ and makes an attack action, the attack deals sneak attack damage as if the target\
+    \ was flat-footed. If the scout makes more than one attack this turn, this ability\
+    \ only applies to the first attack. Foes with uncanny dodge are immune to this\
+    \ ability.\nThis ability replaces improved uncanny dodge.\nRogue Talents: The\
+    \ following rogue talents complement the scout archetype: assault leader, camouflage,\
+    \ cunning trigger, survivalist, and trap spotter*."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

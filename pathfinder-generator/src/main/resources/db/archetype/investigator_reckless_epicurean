@@ -1,0 +1,57 @@
+id: "class:investigator#reckless_epicurean"
+name: "Reckless Epicurean"
+description: ""
+modifications:
+- add: "ability:a_familiar_taste#investigator_reckless_epicurean"
+  remove:
+  - "ability:trapfinding#investigator"
+- add: "ability:experimental_potable#investigator_reckless_epicurean"
+  remove:
+  - "ability:the_investigator_talent_gained_at_5th_level#investigator"
+- add: "ability:sympathetic_resistance#investigator_reckless_epicurean"
+  remove:
+  - "ability:the_investigator_talent_gained_at_13th_level#investigator"
+features:
+- id: "ability:a_familiar_taste#investigator_reckless_epicurean"
+  name: "A Familiar Taste"
+  label: null
+  type: null
+  description: "At 2nd level, a reckless epicurean adds half her level as a bonus\
+    \ on Perception and Spellcraft checks to identify potions. The benefits she receives\
+    \ from poison resistance and poison immunity also apply against harmful potions\
+    \ and other ingested substances with negative effects, such as drugs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:experimental_potable#investigator_reckless_epicurean"
+  name: "Experimental Potable"
+  label: null
+  type: null
+  description: "At 5th level, once per day, a reckless epicurean can prepare one experimental\
+    \ potable using a formula that she does not know from the alchemist formulae list\
+    \ into an extract slot of the appropriate level.\nThese experimental potables\
+    \ often have side effects. When a creature consumes one of these potables, the\
+    \ investigator must succeed at a Spellcraft check (DC = 15 + the formula's level).\
+    \ On a failure, she must roll on the Wild Magic Surge table to determine the extra\
+    \ effects. If the wild magic surge effect isn't possible due to the nature of\
+    \ the spell or effect, roll instead on the Universal Surge Effects table.\nResults\
+    \ concerning the caster affect the drinker of the experimental potable instead.\n\
+    At 8th level, and every 3 levels thereafter, the reckless epicurean can prepare\
+    \ one additional experimental potable per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:sympathetic_resistance#investigator_reckless_epicurean"
+  name: "Sympathetic Resistance"
+  label: null
+  type: null
+  description: "At 13th level, when a reckless epicurean drinks an extract or a potion,\
+    \ she gains an alchemical bonus on saves against spells and spell-like abilities\
+    \ of the same school as that potion or extract for a number of rounds equal to\
+    \ her Intelligence modifier.\nThis bonus is equal to the level of the spell contained\
+    \ in the extract or potion. The investigator can use this ability a number of\
+    \ times per day equal to her Intelligence modifier (minimum 1)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+source: "Pathfinder Player Companion: Potions & Poisons"

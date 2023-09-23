@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#swashbuckler",
+  "name": "Swashbuckler",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "A paragon of mobile swordplay, the swashbuckler is a rogue who focuses almost exclusively on honing her skill at arms and perfecting daring acrobatic moves and elaborate flourishes that border on performance."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:martial_training#rogue_swashbuckler",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }, {
+          "featureId": "ability:daring#rogue_swashbuckler",
+          "conditionFormula": "@class:rogue\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }]
+    }
+  }
+}

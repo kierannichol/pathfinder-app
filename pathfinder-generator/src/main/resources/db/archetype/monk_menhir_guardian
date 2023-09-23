@@ -1,0 +1,77 @@
+id: "class:monk#menhir_guardian"
+name: "Menhir Guardian"
+description: "Menhir guardians are ascetic protectors of sacred druidic sites, less\
+  \ concerned with structure and maintaining internal order than they are with preserving\
+  \ the natural balance of the world."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#monk_menhir_guardian"
+  remove:
+  - "ability:the_monks_weapon#monk"
+  - "ability:armor_proficiency#monk"
+- add: "ability:claws#monk_menhir_guardian"
+  remove:
+  - "ability:alters_ki_pool#monk"
+  - "ability:unarmed_strike#monk"
+- add: "ability:wild_flurry#monk_menhir_guardian"
+  remove:
+  - "ability:furry_of_blows#monk"
+- add: "ability:rebuking_strike#monk_menhir_guardian"
+  remove:
+  - "ability:stunning_fist_high_jump#monk"
+  - "ability:quivering_palm#monk"
+features:
+- id: "ability:weapon_and_armor_proficiency#monk_menhir_guardian"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A menhir guardian is proficient with the club, dagger, dart, quarterstaff,\
+    \ sickle, shortspear, sling, and spear. A menhir guardian can use these weapons\
+    \ in conjunction with his wild flurry ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:claws#monk_menhir_guardian"
+  name: "Claws"
+  label: null
+  type: null
+  description: "A menhir guardian learns to draw upon natural forces to subtly change\
+    \ his body. He gains the shifter's shifter claws class feature and treats his\
+    \ monk level as his shifter level for the purposes of this ability. The menhir\
+    \ guardian cannot use the ki strike aspect of ki pool."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:wild_flurry#monk_menhir_guardian"
+  name: "Wild Flurry"
+  label: null
+  type: null
+  description: "A menhir guardian gains flurry of blows.\nHe can use this ability\
+    \ with the natural attacks provided by his shifter claws ability or the weapons\
+    \ specified above under weapon and armor proficiency."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:rebuking_strike#monk_menhir_guardian"
+  name: "Rebuking Strike"
+  label: null
+  type: null
+  description: "At 1st level, a menhir guardian can channel his ki into a devastating\
+    \ strike that repels his enemies. A menhir guardian must declare that he is using\
+    \ rebuking strike before making a natural attack with his claws. On a hit, a foe\
+    \ damaged by the menhir guardian's claws must succeed at a Fortitude saving throw\
+    \ (DC = 10 + half the menhir guardian's level + his Wisdom modifier) or be pushed\
+    \ back 5 feet directly away from the menhir guardian, plus an additional 5 feet\
+    \ for every 4 levels the menhir guardian has beyond 1st. If this movement would\
+    \ be blocked by a solid object, the target of rebuking strike takes 1d6 points\
+    \ of damage per 10 feet moved and falls prone at the end of the movement.\nAt\
+    \ 5th level, a creature that fails its save against a menhir guardian's rebuking\
+    \ strike also has its speed reduced by half for a number of rounds equal to the\
+    \ menhir guardian's level.\nAt 15th level, a creature that fails its save is also\
+    \ affected by aversion, making it avoid the menhir guardian's current location\
+    \ for 1 round per level the menhir guardian has.\nThe menhir guardian can attempt\
+    \ a rebuking strike a number of times per day equal to his monk level but only\
+    \ once per round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

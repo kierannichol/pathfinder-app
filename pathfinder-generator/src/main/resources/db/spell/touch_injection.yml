@@ -1,0 +1,32 @@
+casting_time: "1 standard action"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:touch_injection"
+name: "Touch Injection"
+description: "You must hold an elixir, infused extract, poison, or potion in hand\
+  \ as you cast this spell. The held substance drains from its container into a magical\
+  \ sac in your body. While the spell lasts, you can deliver the substance with a\
+  \ mere touch. To do so to an opponent, you must make a successful melee touch attack.\
+  \ If you hit, the substance takes effect immediately, despite any onset period,\
+  \ and that opponent receives the normal saving throw (if any) against the substance.\
+  \ In the case of a personal infused extract, the opponent receives both a Fortitude\
+  \ save and spell resistance. If you miss, the substance remains in the magical sac\
+  \ for you to use later."
+prerequisites: ""
+components: "V, S"
+range: "personal"
+targets: "you"
+duration: "1 hour/level"
+school: "transmutation"
+levels:
+- class_id: "class:alchemist"
+  level: 2
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:investigator"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 3
+- class_id: "class:wizard"
+  level: 3
+source: "Ultimate Combat"

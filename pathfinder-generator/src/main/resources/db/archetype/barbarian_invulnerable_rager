@@ -1,0 +1,36 @@
+id: "class:barbarian#invulnerable_rager"
+name: "Invulnerable Rager"
+description: "Some barbarians learn to take whatever comes their way, shrugging off\
+  \ mortal wounds with ease. These barbarians invite their enemies to attack them,\
+  \ and use pain to fuel their rage."
+modifications:
+- add: "ability:invulnerability#barbarian_invulnerable_rager"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+  - "ability:damage_reduction#barbarian"
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:extreme_endurance#barbarian_invulnerable_rager"
+  remove:
+  - "ability:trap_sense#barbarian"
+features:
+- id: "ability:invulnerability#barbarian_invulnerable_rager"
+  name: "Invulnerability"
+  label: null
+  type: null
+  description: "At 2nd level, the invulnerable rager gains DR/-- equal to half her\
+    \ barbarian level. This damage reduction is doubled against nonlethal damage."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:extreme_endurance#barbarian_invulnerable_rager"
+  name: "Extreme Endurance"
+  label: null
+  type: null
+  description: "At 3rd level, the invulnerable rager is inured to either hot or cold\
+    \ climate effects (choose one) as if using endure elements. In addition, the barbarian\
+    \ gains 1 point of fire or cold resistance for every three levels beyond 3rd.\n\
+    This ability replaces trap sense."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

@@ -1,0 +1,37 @@
+casting_time: "1 immediate action"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:instant_restoration"
+name: "Instant Restoration"
+description: "Instant restoration channels planar energy into a summoned creature.\
+  \ This spell can be cast as an immediate action when a summoned creature you control\
+  \ drops to 0 or fewer hit points. Rather than immediately disappear, the creature\
+  \ is healed for 4d8 hp + 1 hit point per caster level (maximum 4d8+10 hit points).\
+  \ If this healing brings your summoned creature's hit point total to 1 or more hit\
+  \ points, it remains as if its hit points had never dropped to 0 or fewer. Creatures\
+  \ slain by death effects cannot be saved by instant restoration. A summoner can\
+  \ target his eidolon with this spell."
+prerequisites: ""
+components: "V, S, F/DF (a thimble of water and a seed)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one summoned creature you control"
+duration: "1 round/level (D)"
+school: "conjuration (healing)"
+levels:
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:druid"
+  level: 4
+- class_id: "class:hunter"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:shaman"
+  level: 4
+- class_id: "class:summoner"
+  level: 4
+- class_id: "class:warpriest"
+  level: 4
+- class_id: "class:witch"
+  level: 4
+source: "Monster Summoner's Handbook"

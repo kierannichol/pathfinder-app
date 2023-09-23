@@ -1,0 +1,55 @@
+id: "class:bard#fey_courtier"
+name: "Fey Courtier"
+description: "Fey who associate with courts often become bards skilled at navigating\
+  \ the inhuman societies of the trackless wilds."
+modifications:
+- add: "ability:bardic_performance#bard_fey_courtier"
+  remove:
+  - "ability:dirge_of_doom#bard"
+  - "ability:frightening_tune#bard"
+- add: "ability:fey_contacts#bard_fey_courtier"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:summon_fey_allies#bard_fey_courtier"
+  remove:
+  - "ability:inspire_competence#bard"
+features:
+- id: "ability:bardic_performance#bard_fey_courtier"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "The fey courtier has access to the following bardic performances."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:fey_contacts#bard_fey_courtier"
+  name: "Fey Contacts"
+  label: null
+  type: null
+  description: "At 2nd level, thanks to his fey contacts and knowledge of the byzantine\
+    \ trade customs of the fey courts, a fey courtier can treat any wilderness area\
+    \ with fey residents as a settlement with a certain base value and purchase limit\
+    \ based on his bard level for the purpose of buying and selling magic items. See\
+    \ the rules on settlement base values and purchase limits. The fey courtier can\
+    \ also use these contacts to gather information about the residents, geography,\
+    \ and nearby areas with Diplomacy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:summon_fey_allies#bard_fey_courtier"
+  name: "Summon Fey Allies"
+  label: null
+  type: null
+  description: "At 3rd level, the fey courtier gains Augment Summoning as a bonus\
+    \ feat and can call upon natural allies who owe him favors. He adds summon nature's\
+    \ ally I to his list of 1st-level bard spells known. Whenever he gains access\
+    \ to another spell level, he adds the next-higher summon nature's ally spell to\
+    \ his list of bard spells known. The fey courtier adds the following creatures\
+    \ to the summon nature's ally list: 1st--grimple (gremlin), mite, sprite; 2nd--atomie,\
+    \ fuath (gremlin), nixie; 3rd--leprechaun, nuglub (gremlin), pooka; 4th--kelpie,\
+    \ korred, twigjack; 5th--lampad, lurker in light, swan maiden; 6th--cold rider,\
+    \ oceanid, sangoi."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,90 @@
+id: "class:fighter#weapon_master"
+name: "Weapon Master"
+description: "Devoted to the perfection of a single weapon, the weapon master's meditations\
+  \ upon his favored weapon border on the obsessive, but none can deny his consummate\
+  \ skill. The weapon master must select a single type of weapon (such as longsword\
+  \ or shortbow). All of his abilities apply to that weapon type."
+modifications:
+- add: "ability:weapon_guard#fighter_weapon_master"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:weapon_training#fighter_weapon_master"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:reliable_strike#fighter_weapon_master"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:mirror_move#fighter_weapon_master"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:deadly_critical#fighter_weapon_master"
+  remove:
+  - "ability:weapon_training#fighter@13"
+- add: "ability:critical_specialist#fighter_weapon_master"
+  remove:
+  - "ability:weapon_training#fighter@17"
+features:
+- id: "ability:weapon_guard#fighter_weapon_master"
+  name: "Weapon Guard"
+  label: null
+  type: null
+  description: "At 2nd level, a weapon master gains a +1 bonus to CMD against disarm\
+    \ and sunder attempts while wielding his chosen weapon. This bonus also applies\
+    \ on saves against any effect that targets his chosen weapon (for example, grease,\
+    \ heat metal, shatter, warp wood). The bonus increases by +1 for every four levels\
+    \ beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:weapon_training#fighter_weapon_master"
+  name: "Weapon Training"
+  label: null
+  type: null
+  description: "At 3rd level, a weapon master gains a +1 bonus on attack and damage\
+    \ rolls with his chosen weapon. The bonus improves by +1 for every four levels\
+    \ beyond 3rd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:reliable_strike#fighter_weapon_master"
+  name: "Reliable Strike"
+  label: null
+  type: null
+  description: "At 5th level, a weapon master may reroll an attack roll, critical\
+    \ hit confirmation roll, miss chance check, or damage roll as an immediate action.\
+    \ He must accept the second roll even if it is worse. He can use this ability\
+    \ once per day at 5th level, plus one additional time per day for every five levels\
+    \ beyond 5th."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:mirror_move#fighter_weapon_master"
+  name: "Mirror Move"
+  label: null
+  type: null
+  description: "At 9th level, a weapon master gains his Weapon Training bonus as an\
+    \ insight bonus to AC when attacked by his chosen weapon."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:deadly_critical#fighter_weapon_master"
+  name: "Deadly Critical"
+  label: null
+  type: null
+  description: "At 13th level, when a weapon master confirms a critical hit with his\
+    \ chosen weapon, he can increase the weapon's damage multiplier by +1 as an immediate\
+    \ action. He can use this ability once per day at 13th level, plus one additional\
+    \ time per day for every three levels above 13th."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:critical_specialist#fighter_weapon_master"
+  name: "Critical Specialist"
+  label: null
+  type: null
+  description: "At 17th level, the save DCs of any effects caused by a critical hit\
+    \ with a weapon master's chosen weapon increase by +4."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

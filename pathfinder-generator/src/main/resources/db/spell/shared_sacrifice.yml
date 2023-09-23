@@ -1,0 +1,32 @@
+casting_time: "1 round"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:shared_sacrifice"
+name: "Shared Sacrifice"
+description: "You create a link to a target and can direct pain and damage through\
+  \ this link. You take only half damage from effects and attacks that deal hit point\
+  \ damage. The target of this spell takes the remainder of the damage. Forms of harm\
+  \ that do not involve hit points, such as charm effects, temporary ability damage,\
+  \ level drain, and death effects cannot be shared through this link. If you suffer\
+  \ a reduction in hit points because of a lowered Constitution score, the reduction\
+  \ is not split with the target of this spell because it is not hit point damage.\
+  \ When the spell ends, subsequent damage is no longer divided between the subject\
+  \ and you, but damage already split is not reassigned back to you."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature"
+duration: "1 round/level (D)"
+school: "necromancy [evil]"
+levels:
+- class_id: "class:cleric"
+  level: 2
+- class_id: "class:oracle"
+  level: 2
+- class_id: "class:shaman"
+  level: 2
+- class_id: "class:summoner"
+  level: 3
+- class_id: "class:warpriest"
+  level: 2
+source: "Inner Sea Gods, Faiths of Corruption"

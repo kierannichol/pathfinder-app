@@ -1,0 +1,25 @@
+casting_time: "10 minutes (see text)"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:undetectable_trap"
+name: "Undetectable Trap"
+description: "You shroud a single trap with a powerful illusion to make it more difficult\
+  \ to locate. Spells like detect magic can't locate any magic aura from either the\
+  \ target trap or from undetectable trap. Furthermore, a character under the effect\
+  \ of the find traps spell doesn't receive an automatic chance to locate the target\
+  \ trap when she comes within 10 feet of it, and the bonus on Perception checks from\
+  \ find traps doesn't apply to attempts to notice the target trap. Add 1/2 your caster\
+  \ level to the DC for any creature without the trapfinding class ability to notice\
+  \ the target trap with Perception checks."
+prerequisites: ""
+components: "V, S, M (a square of black silk worth 50 gp)"
+range: "touch"
+targets: "trap touched"
+duration: "1 day/level (D)"
+school: "illusion (glamer)"
+levels:
+- class_id: "class:hunter"
+  level: 2
+- class_id: "class:ranger"
+  level: 2
+source: "Ultimate Intrigue"

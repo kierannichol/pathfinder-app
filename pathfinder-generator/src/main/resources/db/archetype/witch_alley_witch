@@ -1,0 +1,67 @@
+id: "class:witch#alley_witch"
+name: "Alley Witch"
+description: ""
+modifications:
+- add: "ability:child_of_the_streets#witch_alley_witch"
+  remove:
+  - "ability:the_witchs_class_skills#witch"
+- add: "ability:crowd_patron#witch_alley_witch"
+  remove:
+  - "ability:witchs_familiar#witch"
+- add: "ability:speak_to_the_city#witch_alley_witch"
+  remove:
+  - "ability:the_witchs_1st_level_hex#witch"
+- add: "ability:hex_trader#witch_alley_witch"
+  remove:
+  - "ability:the_witchs_6th_level_hex#witch"
+features:
+- id: "ability:child_of_the_streets#witch_alley_witch"
+  name: "Child of the Streets"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:crowd_patron#witch_alley_witch"
+  name: "Crowd Patron"
+  label: null
+  type: null
+  description: "An alley witch draws power not from a patron, but from the crowd of\
+    \ minds around her. She doesn't select a patron at 1st level; instead, she gains\
+    \ the following bonus spells at the listed levels.\n2nd--ears of the city, 4th--alter\
+    \ self, 6th--witness, 8th--shadow step, 10th--mage's private sanctum, 12th--heroes'\
+    \ feast, 14th--limited wish, 16th--create demiplane, 18th--shades."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:speak_to_the_city#witch_alley_witch"
+  name: "Speak to the City"
+  label: null
+  type: null
+  description: "An alley witch builds a special rapport with a single city. At 1st\
+    \ level, she can select one settlement whose type is large town size or larger.\
+    \ Within this settlement, she gains a +2 bonus on initiative checks, as well as\
+    \ Knowledge (local), Perception, Stealth, and Sense Motive checks. At 6th level\
+    \ and every 5 witch levels thereafter, this bonus increases by 2. The alley witch\
+    \ can build a rapport with a new city after 30 days of remaining there; this severs\
+    \ her bond to her previous settlement."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:hex_trader#witch_alley_witch"
+  name: "Hex Trader"
+  label: null
+  type: null
+  description: "At 6th level, once per day as a full-round action, an alley witch\
+    \ can bind a hex she knows into a feather, bead, or other small token. Any creature\
+    \ holding this token can use that hex once as if using a potion, targeting itself\
+    \ or a creature it touches. While a hex is sealed into a token, the alley witch\
+    \ loses her ability to use that hex until the token is used or she can recover\
+    \ the token. If a hex can be used in increments (like the disguise hex), the alley\
+    \ witch decides how many increments the token contains when making it. If a hex\
+    \ has no set duration, it lasts for 1 minute once activated."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+source: "Pathfinder Player Companion: Heroes of the Street"

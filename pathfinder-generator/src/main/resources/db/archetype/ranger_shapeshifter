@@ -1,0 +1,98 @@
+id: "class:ranger#shapeshifter"
+name: "Shapeshifter"
+description: "Most rangers venture into the wilderness, but there are some who let\
+  \ the wilderness seep into them. Whether by curse, disease, ancient rite, a slight\
+  \ lycanthropic influence in the blood, or the corrupting influence of chaos, these\
+  \ rangers embrace the wild to transform themselves into something untamed and feral.\
+  \ Shapeshifters are often held in awe, but are even more often feared."
+modifications:
+- add: "ability:shifters_blessing#ranger_shapeshifter"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:dual_form_shifter#ranger_shapeshifter"
+  remove:
+  - "ability:camouflage#ranger"
+- add: "ability:master_shifter#ranger_shapeshifter"
+  remove:
+  - "ability:master_hunter#ranger"
+features:
+- id: "ability:shifters_blessing#ranger_shapeshifter"
+  name: "Shifter's Blessing"
+  label: null
+  type: null
+  description: "At 3rd level, the shapeshifter can take on the aspects of a wild creature\
+    \ once per day as a swift action. He can remain in this form for a number of rounds\
+    \ equal to his Ranger level + his Wisdom modifier. While in one of his shifter's\
+    \ blessing forms, the Ranger gains the shapeshifter subtype. The shapeshifter\
+    \ must choose one of the following forms. Once this choice is made, it cannot\
+    \ be changed.\nForm of the Bear: The Ranger's muscles enlarge and tighten, and\
+    \ his facial features become more ursine. While in this form, the Ranger gains\
+    \ a +4 enhancement bonus to Strength, but his base speed becomes 20 feet.\nForm\
+    \ of the Cat: The Ranger's muscles become lean and defined, and his gait more\
+    \ deliberate and graceful. While in this form, the Ranger increases his base speed\
+    \ by 10 feet, and he gains a +4 bonus on Acrobatics and Climb checks.\nForm of\
+    \ the Dragon: The Ranger's skin becomes rough and scaly. While in this form, the\
+    \ Ranger gains a +2 natural armor bonus to AC.\nForm of the Eagle: The Ranger's\
+    \ skin stretches, his nose becomes hooked, and his eyes enlarge. While in this\
+    \ form, the Ranger gains a +10 bonus on Perception checks.\nForm of the Jackal:\
+    \ The Ranger becomes thin and hyperactive, his movements taking on a nervous spryness.\
+    \ While in this form, the Ranger can spend a move action to move up to 1/2 his\
+    \ speed without provoking attacks of opportunity.\nForm of the Otter: The Ranger's\
+    \ hands and feet grow webs, and his body grows an oily fur that is water resistant.\
+    \ While in this form, the Ranger gains a swim speed of 30 feet and a +8 bonus\
+    \ on Swim checks.\nAt 8th level and again every five levels thereafter, the Ranger\
+    \ may select an additional form for his shifter's blessing and may use this ability\
+    \ one additional time per day. This is not a polymorph ability; a Ranger with\
+    \ shifter's blessing in one of his shifted forms can be affected by a polymorph\
+    \ ability and retain his bonus and Traits gained by the class feature.\nThis ability\
+    \ replaces favored terrain."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:dual_form_shifter#ranger_shapeshifter"
+  name: "Dual Form Shifter"
+  label: null
+  type: null
+  description: "At 12th level, when the shapeshifter takes on a shifter's blessing\
+    \ form, he can take on a hybrid of two of his forms. He gains the bonuses for\
+    \ both forms."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:master_shifter#ranger_shapeshifter"
+  name: "Master Shifter"
+  label: null
+  type: null
+  description: "At 20th level, the Ranger's shifter's blessing forms improve, and\
+    \ he can take on true forms of beasts. The Ranger can use dual form shifter with\
+    \ this ability, although he cannot use more than one polymorph effect at any one\
+    \ time. The Ranger's forms from shifter's blessing improve to the following:\n\
+    Form of the Bear: The Ranger's muscles enlarge and tighten, and his facial features\
+    \ become more ursine. While in this form, the Ranger gains a +8 enhancement bonus\
+    \ to Strength and he does not suffer any reduction of speed. Alternatively, the\
+    \ Ranger can polymorph into the form of a bear as if the caster of beast shape\
+    \ IV.\nForm of the Cat: The Ranger's muscles become lean and defined, and his\
+    \ gait more deliberate and graceful. While in this form, the Ranger increases\
+    \ his base speed by 20 feet and he gains a +10 bonus on Acrobatics and Climb checks.\
+    \ Alternatively, the Ranger can polymorph into the form of a cat of any size as\
+    \ if the caster of beast shape IV.\nForm of the Dragon: The Ranger's skin becomes\
+    \ rough and scaly. While in this form, the Ranger gains a +4 natural armor bonus\
+    \ to AC and a fly speed of 30 feet with average maneuverability. Alternately,\
+    \ the Ranger can polymorph into the form of a dragon as if the caster of form\
+    \ of the dragon I.\nForm of the Eagle: The Ranger's skin stretches, his nose becomes\
+    \ hooked, and his eyes enlarge. While in this form, the Ranger gains a +10 bonus\
+    \ on Perception checks and a fly speed of 40 feet with good maneuverability.\n\
+    Alternatively, the Ranger can polymorph into the form of an eagle or similar raptor\
+    \ as if the caster of beast shape IV.\nForm of the Jackal: The Ranger becomes\
+    \ thin and hyperactive, his movements taking on a nervous spryness. While in this\
+    \ form, the Ranger does not provoke attacks of opportunity due to movement. Alternatively,\
+    \ the Ranger can polymorph into the form of a jackal or other canine creature\
+    \ as if the caster of beast shape IV.\nForm of the Otter: The Ranger's hands and\
+    \ feet grow webs, and his body grows an oily fur that is water resistant. While\
+    \ in this form, the Ranger gains a swim speed of 60 feet and a +5 bonus on Swim\
+    \ checks. Alternatively, the Ranger can polymorph into the form of an otter or\
+    \ similar river mammal as if the caster of beast shape IV."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

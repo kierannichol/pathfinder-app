@@ -1,0 +1,30 @@
+casting_time: "1 round"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:soothe_construct"
+name: "Soothe Construct"
+description: "You soothe the elemental spirit of a targeted construct, reducing its\
+  \ chance of going berserk by 1d4% per four caster levels (maximum 5d4%). If cast\
+  \ on a construct that has already gone berserk and you are its master, you may immediately\
+  \ roll d% to end the construct's berserk state, it returns to normal functioning,\
+  \ and its berserk chance returns to 0%."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one construct"
+duration: "instantaneous"
+school: "abjuration"
+levels:
+- class_id: "class:arcanist"
+  level: 5
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:sorcerer"
+  level: 5
+- class_id: "class:warpriest"
+  level: 4
+- class_id: "class:wizard"
+  level: 5
+source: "Ultimate Magic"

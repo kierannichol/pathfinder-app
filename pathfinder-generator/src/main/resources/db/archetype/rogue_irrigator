@@ -1,0 +1,57 @@
+id: "class:rogue#irrigator"
+name: "Irrigator"
+description: ""
+modifications:
+- add: "ability:poison_use#rogue_irrigator"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:grafting#rogue_irrigator"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+  - "ability:the_rogue_talent_gained_at_4th_level#rogue"
+- add: "ability:irrigation#rogue_irrigator"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:poison_use#rogue_irrigator"
+  name: "Poison Use"
+  label: null
+  type: null
+  description: "A Harvester irrigator is trained in the use of poison and cannot accidentally\
+    \ poison himself when applying poison to a weapon."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:grafting#rogue_irrigator"
+  name: "Grafting"
+  label: null
+  type: null
+  description: "At 4th level, a harvester irrigator is considered to be flanking an\
+    \ opponent if at least two members of his Harvester crop are threatening that\
+    \ opponent, regardless of the irrigator's actual positioning."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:irrigation#rogue_irrigator"
+  name: "Irrigation"
+  label: null
+  type: null
+  description: "At 8th level, if a harvester irrigator studies his target for 3 rounds\
+    \ (spending a standard action each round to do so) and then makes a sneak attack\
+    \ with a melee weapon that successfully deals damage, the attack has the additional\
+    \ effect of possibly either paralyzing or killing the target (Harvester irrigator's\
+    \ choice). The death attack fails if the target detects the harvester irrigator\
+    \ or recognizes him as an enemy. If the victim of the attack fails a Fortitude\
+    \ save (DC = 10 + 1/2 the harvester irrigator's class level + the harvester irrigator's\
+    \ Intelligence modifier) against the kill effect, she dies. If the saving throw\
+    \ fails against the paralysis effect, the victim is rendered helpless and unable\
+    \ to act for 1d6 rounds plus 1 round per 2 rogue levels that the harvester irrigator\
+    \ has. If the victim's saving throw succeeds, the attack is just a normal sneak\
+    \ attack. Once the harvester irrigator has completed the 3 rounds of study, he\
+    \ must make the irrigation attempt within the next 3 rounds. A Harvester irrigator\
+    \ can attempt to kill or paralyze a creature in this way once per day, plus one\
+    \ additional time per day for every 4 additional rogue levels he has after 8th."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

@@ -1,0 +1,35 @@
+id: "class:cleric#iron_priest"
+name: "Iron Priest"
+description: ""
+modifications:
+- add: "ability:channel_energy#cleric_iron_priest"
+  remove:
+  - "ability:channel_energy#cleric"
+- add: "ability:spontaneous_casting#cleric_iron_priest"
+  remove:
+  - "ability:spell_casting#cleric"
+features:
+- id: "ability:channel_energy#cleric_iron_priest"
+  name: "Channel Energy"
+  label: null
+  type: null
+  description: "When an iron priest channels energy to heal or harm living creatures,\
+    \ she heals or harms constructs with the clockwork or robot subtypes as well.\
+    \ Constructs without those subtypes are also affected, but gain only half the\
+    \ normal amount of healing or take only half the normal amount of damage, as appropriate.\
+    \ An iron priest cannot harm or heal undead with channel energy. Note: The text\
+    \ has been updated to reflect the 2nd printing errata. [Source]"
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+- id: "ability:spontaneous_casting#cleric_iron_priest"
+  name: "Spontaneous Casting"
+  label: null
+  type: null
+  description: "An iron priest can spontaneously cast make whole and greater make\
+    \ whole in place of cure/inflict moderate wounds and cure/inflict critical wounds,\
+    \ regardless of whether she channels positive or negative energy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+source: "Pathfinder Campaign Setting: Technology Guide"

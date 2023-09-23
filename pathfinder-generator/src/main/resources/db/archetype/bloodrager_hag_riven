@@ -1,0 +1,79 @@
+id: "class:bloodrager#hag_riven"
+name: "Hag-Riven"
+description: "All changelings have the potential to transform into hags, but the process\
+  \ is a slow one, requiring several nights to complete. When left incomplete--by\
+  \ virtue of a wily changeling's escape or her mother's death--the creature is scarred\
+  \ and saturated in arcane power. Though she remains in possession of her own faculties,\
+  \ the seeds of hag hatred sprout within her. These hag-riven wield powerful magic\
+  \ interlaced with more powerful emotions."
+modifications:
+- add: "ability:arcane_influence#bloodrager_hag_riven"
+  remove:
+  - "ability:the_bloodragers_weapon#bloodrager"
+  - "ability:armor_proficiencies#bloodrager"
+- add: "ability:claws_of_the_hag#bloodrager_hag_riven"
+  remove:
+  - "ability:fast_movement#bloodrager"
+  - "ability:uncanny_dodge#bloodrager"
+- add: "ability:sorcerous_claws#bloodrager_hag_riven"
+  remove:
+  - "ability:improved_uncanny_dodge#bloodrager"
+- add: "ability:hexing_claws#bloodrager_hag_riven"
+  remove:
+  - "ability:damage_reduction#bloodrager"
+features:
+- id: "ability:arcane_influence#bloodrager_hag_riven"
+  name: "Arcane Influence"
+  label: null
+  type: null
+  description: "A hag-riven bloodrager does not gain proficiency with martial weapons\
+    \ and must choose from one of the following bloodrager bloodlines: arcane, destined,\
+    \ elemental, fey, or hag (see below)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:claws_of_the_hag#bloodrager_hag_riven"
+  name: "Claws of the Hag"
+  label: null
+  type: null
+  description: "A hag-riven grows a pair of vicious claws that are treated as natural\
+    \ weapons. These claws are primary attacks and deal 1d4 points of damage each\
+    \ (1d3 for a Small creature) plus the hag-riven's Strength modifier. At 2nd level,\
+    \ these claws are considered magic weapons for the purpose of overcoming damage\
+    \ reduction. At 5th level, the damage increases to 1d6 points (1d4 for a Small\
+    \ creature).\nAt 13th level, the hag-riven's claws threaten a critical hit on\
+    \ a natural roll of 19–20. At 16th level, the damage increases again to 1d8 points\
+    \ (1d6 for a Small creature)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:sorcerous_claws#bloodrager_hag_riven"
+  name: "Sorcerous Claws"
+  label: null
+  type: null
+  description: "At 5th level, a hag-riven can expend one of her daily spell slots\
+    \ as a swift action to grant her claws an enhancement bonus equal to the level\
+    \ of the spell slot sacrificed. This bonus lasts for 1 minute and stacks with\
+    \ existing enhancement bonuses (such as those provided by magic fang or magic\
+    \ items) to a maximum of +5. Multiple uses of this ability do not stack with themselves.\n\
+    Beginning at 7th level, the hag-riven can also expend some or all of the bonus\
+    \ provided by her sorcerous claws to add any of the following weapon properties\
+    \ to her claws for 1 minute: flaming, flaming burst, frost, icy burst, keen, nullifying,\
+    \ seaborne, spellstealing, shock, shocking burst, or wounding.\nHer claws must\
+    \ have a minimum enhancement bonus of +1 before any special abilities can be added."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:hexing_claws#bloodrager_hag_riven"
+  name: "Hexing Claws"
+  label: null
+  type: null
+  description: "At 10th level, a hag-riven gains Critical Focus as a bonus feat, but\
+    \ she can apply its benefits only to her claw attacks. Each morning, she can select\
+    \ a single feat with Critical Focus as a prerequisite and apply its benefits to\
+    \ her claw attacks. She must meet all other prerequisites for any feat she wishes\
+    \ to apply with this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+source: "Pathfinder Player Companion: Blood of the Coven"

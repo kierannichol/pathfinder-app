@@ -1,0 +1,57 @@
+id: "class:druid#bat_shaman"
+name: "Bat Shaman"
+description: "The bat shaman's totem is the agile bat, flitting and turning with incredible\
+  \ speed through even the most convoluted mazes. Her enemies do not know when she\
+  \ will appear, and when she does, she strikes fast and hard before disappearing\
+  \ into the night."
+modifications:
+- add: "ability:totem_transformation#druid_bat_shaman"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:totemic_summons#druid_bat_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:bonus_feat#druid_bat_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totem_transformation#druid_bat_shaman"
+  name: "Totem Transformation"
+  label: null
+  type: null
+  description: "At 2nd level, a bat shaman may adopt an aspect of the bat while retaining\
+    \ her normal form. This ability functions as the ape shaman ability, but the druid\
+    \ may select from the following sets of bonuses and abilities\nmovement (fly speed\
+    \ 30 ft. [average]; the druid must be at least 5th level to select this bonus)\
+    \ senses (blindsense 20 ft.) natural weapons (bite [1d4 for a Medium shaman])\n\
+    While using totem transformation, the bat shaman may speak normally and can cast\
+    \ speak with animals (bats only) at will."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:totemic_summons#druid_bat_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, an bat shaman may cast summon nature's ally as a standard\
+    \ action when summoning bats, and these summoned creatures gain temporary hit\
+    \ points equal to her druid level. She can apply the young template to any bat\
+    \ to reduce the level of the summoning spell required by one. She can also increase\
+    \ the level of summoning required by one in order to apply either the advanced\
+    \ or the giant template, or increase it by two to apply both the advanced and\
+    \ giant templates."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:bonus_feat#druid_bat_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every four levels thereafter, a bat shaman gains\
+    \ one of the following bonus feats: Acrobatic, Agile Maneuvers, Improved Initiative,\
+    \ Lightning Reflexes, or Skill Focus (Perception). She must meet the prerequisites\
+    \ for these bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

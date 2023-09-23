@@ -1,0 +1,23 @@
+casting_time: "1 round"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:dominate_animal"
+name: "Dominate Animal"
+description: "This spell allows you to enchant the targeted animal and direct it with\
+  \ simple commands such as “Attack,\" “Run,\" and “Fetch.\" Suicidal or self-destructive\
+  \ commands (including an order to attack a creature two or more size categories\
+  \ larger than the dominated animal) are simply ignored."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one animal"
+duration: "1 round/level"
+school: "enchantment (compulsion) [mind-affecting]"
+levels:
+- class_id: "class:druid"
+  level: 3
+- class_id: "class:hunter"
+  level: 3
+- class_id: "class:shaman"
+  level: 3
+source: "PRPG Core Rulebook"

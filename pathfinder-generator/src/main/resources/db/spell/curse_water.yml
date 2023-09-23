@@ -1,0 +1,24 @@
+casting_time: "1 minute"
+saving_throw: "Will negates (object)"
+spell_resistance: "yes (object)"
+id: "spell:curse_water"
+name: "Curse Water"
+description: "This spell imbues a flask (1 pint) of water with negative energy, turning\
+  \ it into unholy water (see Equipment). Unholy water damages good outsiders the\
+  \ way holy water damages undead and evil outsiders."
+prerequisites: ""
+components: "V, S, M (5 lbs. of powdered silver worth 25 gp)"
+range: "touch"
+targets: "flask of water touched"
+duration: "instantaneous"
+school: "necromancy [evil]"
+levels:
+- class_id: "class:cleric"
+  level: 1
+- class_id: "class:inquisitor"
+  level: 1
+- class_id: "class:oracle"
+  level: 1
+- class_id: "class:warpriest"
+  level: 1
+source: "PRPG Core Rulebook"

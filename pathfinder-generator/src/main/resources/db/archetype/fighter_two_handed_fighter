@@ -1,0 +1,101 @@
+id: "class:fighter#two_handed_fighter"
+name: "Two-Handed Fighter"
+description: "Some fighters focus their efforts on finding the biggest, heaviest,\
+  \ most imposing weapon they can find and training to manage and harness the weight\
+  \ of their massive weapons for maximum impact. These fighting school benefits only\
+  \ apply when using two-handed weapons."
+modifications:
+- add: "ability:shattering_strike#fighter_two_handed_fighter"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:overhand_chop#fighter_two_handed_fighter"
+  remove:
+  - "ability:armor_training#fighter@3"
+- add: "ability:weapon_training#fighter_two_handed_fighter"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:backswing#fighter_two_handed_fighter"
+  remove:
+  - "ability:armor_training#fighter@7"
+- add: "ability:piledriver#fighter_two_handed_fighter"
+  remove:
+  - "ability:armor_training#fighter@11"
+- add: "ability:greater_power_attack#fighter_two_handed_fighter"
+  remove:
+  - "ability:armor_training#fighter@15"
+- add: "ability:devastating_blow#fighter_two_handed_fighter"
+  remove:
+  - "ability:armor_mastery#fighter"
+features:
+- id: "ability:shattering_strike#fighter_two_handed_fighter"
+  name: "Shattering Strike"
+  label: null
+  type: null
+  description: "At 2nd level, a two-handed fighter gains a +1 bonus to CMB and CMD\
+    \ on sunder attempts and on damage rolls made against objects. These bonuses increase\
+    \ by +1 for every four levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:overhand_chop#fighter_two_handed_fighter"
+  name: "Overhand Chop"
+  label: null
+  type: null
+  description: "At 3rd level, when a two-handed fighter makes a single attack (with\
+    \ the attack action or a charge) with a two-handed weapon, he adds double his\
+    \ Strength bonus on damage rolls."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:weapon_training#fighter_two_handed_fighter"
+  name: "Weapon Training"
+  label: null
+  type: null
+  description: "As the fighter class feature, but the bonuses only apply when wielding\
+    \ two-handed melee weapons."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:backswing#fighter_two_handed_fighter"
+  name: "Backswing"
+  label: null
+  type: null
+  description: "At 7th level, when a two-handed fighter makes a full-attack with a\
+    \ two-handed weapon, he adds double his Strength bonus on damage rolls for all\
+    \ attacks after the first."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:piledriver#fighter_two_handed_fighter"
+  name: "Piledriver"
+  label: null
+  type: null
+  description: "At 11th level, as a standard action, a two-handed fighter can make\
+    \ a single melee attack with a two-handed weapon. If the attack hits, he may make\
+    \ a bull rush or trip combat maneuver against the target of his attack as a free\
+    \ action that does not provoke an attack of opportunity."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:greater_power_attack#fighter_two_handed_fighter"
+  name: "Greater Power Attack"
+  label: null
+  type: null
+  description: "At 15th level, when using Power Attack with a two-handed melee weapon,\
+    \ the bonus damage from Power Attack is doubled (+100%) instead of increased by\
+    \ half (+50%)."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:devastating_blow#fighter_two_handed_fighter"
+  name: "Devastating Blow"
+  label: null
+  type: null
+  description: "At 19th level, as a standard action, a two-handed fighter may make\
+    \ a single melee attack with a two-handed weapon at a –5 penalty. If the attack\
+    \ hits, it is treated as a critical threat. Special weapon abilities that activate\
+    \ only on a critical hit do not activate if this critical hit is confirmed."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

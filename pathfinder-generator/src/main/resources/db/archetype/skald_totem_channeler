@@ -1,0 +1,58 @@
+id: "class:skald#totem_channeler"
+name: "Totem Channeler"
+description: ""
+modifications:
+- add: "ability:totemic_versatility#skald_totem_channeler"
+  remove:
+  - "ability:bardic_knowledge#skald"
+  - "ability:alters_rage_powers#skald"
+- add: "ability:tandem_totems#skald_totem_channeler"
+  remove:
+  - "ability:spell_kenning#skald"
+- add: "ability:totems_guidance#skald_totem_channeler"
+  remove:
+  - "ability:damage_reduction#skald"
+features:
+- id: "ability:totemic_versatility#skald_totem_channeler"
+  name: "Totemic Versatility"
+  label: null
+  type: null
+  description: "When a totem channeler learns a new rage power, he can select from\
+    \ more than one group of totem rage powers, even though he normally could not\
+    \ do so. Totem rage powers grant benefits related to a theme, are organized in\
+    \ groups of three, and usually have the word “totem\"in their name. When the totem\
+    \ channeler starts an inspired rage raging song, he can add totem rage powers\
+    \ from only one group at a time.\nHe can change the group of added totem rage\
+    \ powers by ending the current inspired rage and starting a new one."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:tandem_totems#skald_totem_channeler"
+  name: "Tandem Totems"
+  label: null
+  type: null
+  description: "At 5th level, when a totem channeler starts an inspired rage raging\
+    \ song and adds a totem rage power, he can add totem rage powers from a different\
+    \ group. Adding or maintaining totem rage powers from the additional group requires\
+    \ spending 1 additional round of raging song each round. He can activate up to\
+    \ two additional totem groups at 11th level and up to three additional totem groups\
+    \ at 17th level. He must spend 1 additional round of raging song each round for\
+    \ each additional totem group.\nIf the totem channeler does not have enough rounds\
+    \ of raging song remaining to maintain his inspired rage, the song ends."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:totems_guidance#skald_totem_channeler"
+  name: "Totem's Guidance"
+  label: null
+  type: null
+  description: "At 9th level, the totem channeler can draw strength and protection\
+    \ from his totem powers when he wades into battle with song on his lips. When\
+    \ he adds a totem rage power to his inspired rage, he and his allies gain a +1\
+    \ insight bonus to AC and on saving throws for the duration of the totem channeler's\
+    \ raging song. At 14th level, this bonus increases to +2. This bonus applies only\
+    \ to the first totem rage power he applies to his inspired rage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+source: "Pathfinder Player Companion: Disciple's Doctrine"

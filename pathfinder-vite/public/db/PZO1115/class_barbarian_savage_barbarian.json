@@ -1,0 +1,39 @@
+{
+  "id": "class:barbarian#savage_barbarian",
+  "name": "Savage Barbarian",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:damage_reduction#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some barbarians are truly savage, having little training in modern arms. These savage barbarians learn to avoid blows and toughen up their skin."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:naked_courage#barbarian_savage_barbarian",
+          "conditionFormula": "@class:barbarian\u003e\u003d3"
+        }, {
+          "featureId": "ability:natural_toughness#barbarian_savage_barbarian",
+          "conditionFormula": "@class:barbarian\u003e\u003d7"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trap_sense#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }]
+      }]
+    }
+  }
+}

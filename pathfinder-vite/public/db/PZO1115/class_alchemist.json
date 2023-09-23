@@ -1,0 +1,3004 @@
+{
+  "id": "class:alchemist",
+  "name": "Alchemist",
+  "tags": ["class", "base"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Whether secreted away in a smoky basement laboratory or gleefully experimenting in a well-respected school of magic, the alchemist is often regarded as being just as unstable, unpredictable, and dangerous as the concoctions he brews. While some creators of alchemical items content themselves with sedentary lives as merchants, providing tindertwigs and smokesticks, the true alchemist answers a deeper calling. Rather than cast magic like a spellcaster, the alchemist captures his own magic potential within liquids and extracts he creates, infusing his chemicals with virulent power to grant him impressive skill with poisons, explosives, and all manner of self-transformative magic. Role: The alchemist\u0027s reputation is not softened by his exuberance (some would say dangerous recklessness) in perfecting his magical extracts and potion-like creations, infusing these substances with magic siphoned from his aura and using his own body as experimental stock. Nor is it mollified by the alchemist\u0027s almost gleeful passion for building explosive bombs and discovering strange new poisons and methods for their use. These traits, while making him a liability and risk for most civilized organizations and institutions of higher learning, seem to fit quite well with most adventuring groups. Alignment: Any. Hit Die: d8. Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:alchemy#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }, {
+          "featureId": "ability:brew_potion#alchemist"
+        }, {
+          "featureId": "ability:mutagen#alchemist"
+        }, {
+          "featureId": "ability:throw_anything#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "type": "archetype",
+          "repeating": true,
+          "featureSelect": {
+            "optionTags": ["archetype+alchemist"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }, {
+          "featureId": "ability:poison_resistance#alchemist"
+        }, {
+          "featureId": "ability:poison_use#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }, {
+          "featureId": "ability:swift_alchemy#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }, {
+          "featureId": "ability:poison_resistance#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }, {
+          "featureId": "ability:swift_poisoning#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }, {
+          "featureId": "ability:poison_resistance#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }, {
+          "featureId": "ability:poison_immunity#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }, {
+          "featureId": "ability:persistent_mutagen#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:discovery#alchemist"
+        }, {
+          "featureId": "ability:instant_alchemy#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_5",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_3",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:bomb#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_5",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_5",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_3",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_4",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#alchemist",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#alchemist"
+        }, {
+          "featureId": "trait:weapon_proficiency#alchemist"
+        }, {
+          "featureId": "ability:grand_discovery#alchemist"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_5",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_5",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_3",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_4",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_5",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+alchemist5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }]
+    }
+  }
+}

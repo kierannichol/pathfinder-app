@@ -1,0 +1,33 @@
+casting_time: "1 immediate action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:deflect_blame"
+name: "Deflect Blame"
+description: "You can cast this spell immediately after attacking a creature, causing\
+  \ that creature to believe that a different creature that threatens it was responsible\
+  \ for the attack rather than you. You can instead cast this spell immediately after\
+  \ a failed Bluff, Diplomacy, or Intimidate check, causing the target of that check\
+  \ to believe that a different creature you designate within spell range was responsible\
+  \ for the content of that failed check. Using the spell in these ways doesn't compel\
+  \ the target to undertake a specific action in response to its belief of where the\
+  \ blame lies."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature"
+duration: "instantaneous"
+school: "enchantment (compulsion) [mind-affecting]"
+levels:
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:bard"
+  level: 2
+- class_id: "class:skald"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 3
+- class_id: "class:witch"
+  level: 3
+- class_id: "class:wizard"
+  level: 3
+source: "Ultimate Intrigue"

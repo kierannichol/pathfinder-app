@@ -1,0 +1,82 @@
+id: "class:ranger#deeplands_sailor"
+name: "Deeplands Sailor"
+description: "Those plying the lightless waters of the Deeplands learn to use sound\
+  \ to augment their compromised vision, providing insight into the hazards lurking\
+  \ below the surface. A Deeplands sailor has the following class features."
+modifications:
+- add: "ability:skilled_pilot#ranger_deeplands_sailor"
+  remove:
+  - "ability:track#ranger"
+- add: "ability:keen_ear#ranger_deeplands_sailor"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:quick_swim#ranger_deeplands_sailor"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:subsonic_warning#ranger_deeplands_sailor"
+  remove:
+  - "ability:swift_tracker#ranger"
+- add: "ability:hidden_depths#ranger_deeplands_sailor"
+  remove:
+  - "ability:camouflage#ranger"
+  - "ability:hide_in_plain_sight#ranger"
+features:
+- id: "ability:skilled_pilot#ranger_deeplands_sailor"
+  name: "Skilled Pilot"
+  label: null
+  type: null
+  description: "A Deeplands sailor adds half his level (minimum 1) to Profession (sailor)\
+    \ and Survival checks to navigate or avoid natural hazards in subterranean waterways."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:keen_ear#ranger_deeplands_sailor"
+  name: "Keen Ear"
+  label: null
+  type: null
+  description: "At 3rd level, a Deeplands sailor learns how to use sound to compensate\
+    \ for poor visibility when facing threats above and below the water. He gains\
+    \ the uncanny dodge rogue ability when underground and either swimming or aboard\
+    \ a boat.\nAt 8th level, he gains improved uncanny dodge under these conditions,\
+    \ treating his Deeplands sailor level as his effective rogue level for the purpose\
+    \ of denying an enemy's sneak attacks.\nAt 13th level, he gains blindsense with\
+    \ a range of 30 feet against creatures touching water.\nAt 18th level, his blindsense\
+    \ range increases to 60 feet or equal to the range of his darkvision, whichever\
+    \ is greater. If the Deeplands sailor becomes deafened, he loses all benefits\
+    \ of this ability until his hearing is restored."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:quick_swim#ranger_deeplands_sailor"
+  name: "Quick Swim"
+  label: null
+  type: null
+  description: "At 7th level, a Deeplands sailor can swim at his full speed as a move\
+    \ action without penalty."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:subsonic_warning#ranger_deeplands_sailor"
+  name: "Subsonic Warning"
+  label: null
+  type: null
+  description: "At 8th level as a swift action, a Deeplands sailor can provide the\
+    \ benefits of his keen ear ability to the subjects of his hunter's bond. This\
+    \ effect lasts for a number of rounds per day equal to the Deeplands sailor's\
+    \ Wisdom modifier. These rounds need not be consecutive. A deafened creature can't\
+    \ benefit from a Deeplands sailor's subsonic warning."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:hidden_depths#ranger_deeplands_sailor"
+  name: "Hidden Depths"
+  label: null
+  type: null
+  description: "At 12th level, a Deeplands sailor can use the Stealth skill to hide\
+    \ while underground or underwater, even if he doesn't have cover or concealment.\
+    \ At 17th level, he can use the Stealth skill even while being observed when underground\
+    \ or underwater."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+source: "Pathfinder Player Companion: Heroes of the Darklands"

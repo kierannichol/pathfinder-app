@@ -1,0 +1,51 @@
+id: "class:fighter#corsair"
+name: "Corsair"
+description: "A corsair is a pirate who focuses on shipboard combat relying on his\
+  \ strength of arms over his agility. He specializes in traditional pirate weapons,\
+  \ but often wears heavier armor than is normally seen on a ship. A corsair moves\
+  \ and fights easily in his armor, however, even in the water. Captains value corsairs\
+  \ because of the skill they exhibit in defending the ship and in boarding actions."
+modifications:
+- add: "ability:deck_fighting#fighter_corsair"
+  remove:
+  - "ability:the_fighters_2nd_level_bonus_feat#fighter"
+- add: "ability:armored_pirate#fighter_corsair"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:improved_deck_fighting#fighter_corsair"
+  remove:
+  - "ability:the_fighters_6th_level_bonus_feat#fighter"
+features:
+- id: "ability:deck_fighting#fighter_corsair"
+  name: "Deck Fighting"
+  label: null
+  type: null
+  description: "A corsair is used to fighting on crowded decks, and isn't fazed by\
+    \ fighting multiple opponents at once. At 2nd level, he gains Cleave as a bonus\
+    \ feat. He may use this feat even if he does not meet the prerequisites. A corsair\
+    \ does not take the normal –2 penalty to his AC when using the Cleave feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Pirates of the Inner Sea"
+- id: "ability:armored_pirate#fighter_corsair"
+  name: "Armored Pirate"
+  label: null
+  type: null
+  description: "A corsair wears heavier armor than is common aboard a ship. At 3rd\
+    \ level, the corsair reduces the armor check penalty of any light armor he wears\
+    \ to 0 for purposes of Acrobatics and Swim checks. At 7th level, this becomes\
+    \ true of medium armor as well. At 11th level, it includes heavy armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Pirates of the Inner Sea"
+- id: "ability:improved_deck_fighting#fighter_corsair"
+  name: "Improved Deck Fighting"
+  label: null
+  type: null
+  description: "At 6th level, the corsair gains Great Cleave as a bonus feat. He may\
+    \ use this feat even if he does not meet the prerequisites. A corsair does not\
+    \ take the normal –2 penalty to his AC when using the Great Cleave feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Pirates of the Inner Sea"
+source: "Pathfinder Player Companion: Pirates of the Inner Sea"

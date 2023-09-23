@@ -1,0 +1,2973 @@
+{
+  "id": "class:summoner",
+  "name": "Summoner",
+  "tags": ["class", "base"],
+  "maxStacks": 20,
+  "description": {
+    "text": "While many who dabble in the arcane become adept at beckoning monsters from the farthest reaches of the planes, none are more skilled at it than the summoner. This practitioner of the arcane arts forms a close bond with one particular outsider, known as an eidolon, who gains power as the summoner becomes more proficient at his summoning. Over time, the two become linked, eventually even sharing a shard of the same soul. But this power comes with a price: the summoner\u0027s spells and abilities are limited due to his time spent enhancing the power and exploring the nature of his eidolon. Role: Summoners spend much of their time exploring the arcane arts alongside their eidolons. While their power comes from within, they rely heavily on their eidolon companions in dangerous situations. While a summoner and his eidolon function as individuals, their true power lies in what they can accomplish together. Alignment: Any. Hit Die: d8. Starting Wealth: 2d6 × 10 gp (average 70gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:spellcaster",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:arcane_spellcaster",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:cantrips#summoner"
+        }, {
+          "featureId": "ability:eidolon#summoner"
+        }, {
+          "featureId": "ability:life_link#summoner"
+        }, {
+          "featureId": "ability:summon_monster#summoner"
+        }],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "type": "archetype",
+          "repeating": true,
+          "featureSelect": {
+            "optionTags": ["archetype+summoner"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:bond_senses#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_ii#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:shield_ally#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_iii#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:makers_call#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_iv#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:transposition#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_v#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:aspect#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_vi#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:greater_shield_ally#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_vii#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:life_bond#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_viii#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:merge_forms#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:summon_monster_ix#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:greater_aspect#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_5",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_3",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:gate#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_5",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_5",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_3",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_4",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#summoner",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#summoner"
+        }, {
+          "featureId": "trait:weapon_proficiency#summoner"
+        }, {
+          "featureId": "ability:twin_eidolon#summoner"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_5",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_5",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_4",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_5",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_4",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_5",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_1",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_2",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_3",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_4",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell4_5",
+          "label": "Level 4 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner4"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_1",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_2",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_3",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_4",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell5_5",
+          "label": "Level 5 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+summoner5"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }]
+    }
+  }
+}

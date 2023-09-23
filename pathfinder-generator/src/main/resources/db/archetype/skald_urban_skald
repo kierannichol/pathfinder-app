@@ -1,0 +1,63 @@
+id: "class:skald#urban_skald"
+name: "Urban Skald"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#skald_urban_skald"
+  remove:
+  - "ability:armor_proficiencies#skald"
+  - "ability:the_skalds_weapon#skald"
+- add: "ability:controlled_inspired_rage#skald_urban_skald"
+  remove:
+  - "ability:inspired_rage#skald"
+- add: "ability:infuriating_mockery#skald_urban_skald"
+  remove:
+  - "ability:damage_reduction#skald"
+  - "ability:song_of_marching#skald"
+- add: "ability:humiliating_defamation#skald_urban_skald"
+  remove:
+  - "ability:dirge_of_doom#skald"
+features:
+- id: "ability:weapon_and_armor_proficiency#skald_urban_skald"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "An urban skald is not proficient with medium armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:controlled_inspired_rage#skald_urban_skald"
+  name: "Controlled Inspired Rage"
+  label: null
+  type: null
+  description: "When the urban skald inspires rage, he does not grant the normal benefits."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:infuriating_mockery#skald_urban_skald"
+  name: "Infuriating Mockery"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:humiliating_defamation#skald_urban_skald"
+  name: "Humiliating Defamation"
+  label: null
+  type: null
+  description: "At 10th level, the urban skald can ostracize a foe. The song has one\
+    \ primary target, who the skald must see and name or describe. That target must\
+    \ attempt a Will save. On a failed save, the primary target cannot benefit from\
+    \ any morale bonus or teamwork feats, cannot treat any creature as an ally, and\
+    \ must attempt to save against any spell cast on it (including harmless spells,\
+    \ even if it casts them on itself ). These effects remain as long as the primary\
+    \ target can hear the skald and the skald maintains the performance.\nAll other\
+    \ foes within 60 feet of the skald are secondary targets. Secondary targets must\
+    \ succeed at Will saves or they cannot treat the primary target as an ally, and\
+    \ cannot target it with spells or abilities that are harmless.\nThese effects\
+    \ remain as long as the secondary targets are within 60 feet of the skald and\
+    \ the skald maintains the performance. This is a sonic mind-affecting charm effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+source: "Pathfinder Player Companion: Heroes of the Street"

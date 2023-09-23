@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:serpentine_bloodline",
+  "name": "Serpentine Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your bloodline carries the lingering stain of ancient serpent races that ruled when the world was young; your forebears were likely favored slaves anointed by their reptilian masters and gifted with their cold cunning and subtle manipulation. While deception and a mesmeric charm are your birthright, you may struggle for truth in spite of your heritage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:serpents_fang#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:cure#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d5"
+        }, {
+          "featureId": "ability:serpentfriend#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:snakeskin#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:den_of_vipers#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:scaled_soul#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

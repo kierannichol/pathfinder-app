@@ -1,0 +1,61 @@
+id: "class:skald#instigator"
+name: "Instigator"
+description: ""
+modifications:
+- add: "ability:song_of_rabble_rousing#skald_instigator"
+  remove:
+  - "ability:spell_kenning#skald"
+- add: "ability:song_of_riot#skald_instigator"
+  remove:
+  - "ability:dirge_of_doom#skald"
+- add: "ability:revolutionary_heart#skald_instigator"
+  remove:
+  - "ability:lore_master#skald"
+features:
+- id: "ability:song_of_rabble_rousing#skald_instigator"
+  name: "Song of Rabble-Rousing"
+  label: null
+  type: null
+  description: "At 5th level, the instigator can perform for 1 full round and spend\
+    \ 4 rounds of raging song. This affects those who hear the song for up to 1 hour\
+    \ as per enthrall."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:song_of_riot#skald_instigator"
+  name: "Song of Riot"
+  label: null
+  type: null
+  description: "At 10th level, the instigator can fill the hearts of his listeners\
+    \ with hatred and rouse them into a frenzy. He can use this performance on all\
+    \ targets with fewer than 4 Hit Dice and a Wisdom score lower than 16 who are\
+    \ currently enthralled, without disrupting the enthrall effect (even if a creature\
+    \ succeeds at its saving throw). This ability requires a standard action to activate\
+    \ and costs 4 additional rounds of raging song.\nEnthralled creatures must each\
+    \ attempt a new saving throw against an effect that functions as the foster hatred\
+    \ spell, except that, unlike with the spell, the instigator is free to choose\
+    \ subgroups, organizations, religions, or the like regardless of the targets'\
+    \ races. Creatures that fail the saving throw or choose to forgo it also gain\
+    \ the effects of the instigator's raging song whenever they attack the target\
+    \ of their hatred, for as long as the foster hatred effect lasts; however, they\
+    \ do not gain the effects of the instigator's rage powers when they're under the\
+    \ effects of raging song in this way."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:revolutionary_heart#skald_instigator"
+  name: "Revolutionary Heart"
+  label: null
+  type: null
+  description: "At 7th level, an instigator's tumultuous mastery of demagoguery and\
+    \ revolution makes it difficult for others' compulsions to sway him.\nOnce per\
+    \ day, when he fails a saving throw against a compulsion effect, he can attempt\
+    \ another saving throw after 1 time increment (1 round if the effect is measured\
+    \ in rounds, 1 minute if the effect is measured in minutes, 10 minutes if the\
+    \ spell is measured in 10-minute increments, and so on). Every 6 skald levels\
+    \ thereafter, he gains an additional daily use of this ability (to a maximum of\
+    \ 3 per day at 19th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

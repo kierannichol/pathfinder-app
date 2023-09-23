@@ -1,0 +1,1436 @@
+{
+  "id": "class:paladin",
+  "name": "Paladin",
+  "tags": ["class", "core"],
+  "maxStacks": 20,
+  "description": {
+    "text": "Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to banish evil, heal the innocent, and inspire the faithful. Although their convictions might lead them into conflict with the very souls they would save, paladins weather endless challenges of faith and dark temptations, risking their lives to do right and fighting to bring about a brighter future. Role: Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting. Alignment: Lawful good Hit Die: d10 Starting Wealth: 5d6 × 10 gp (average 175 gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_good#paladin"
+        }, {
+          "featureId": "ability:detect_evil#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }, {
+          "featureId": "trait:armor_proficiency#paladin"
+        }],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "type": "archetype",
+          "repeating": true,
+          "featureSelect": {
+            "optionTags": ["archetype+paladin"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:divine_grace#paladin"
+        }, {
+          "featureId": "ability:lay_on_hands#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_courage#paladin"
+        }, {
+          "featureId": "ability:divine_health#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:spellcaster",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trait:divine_spellcaster",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:channel_positive_energy#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }, {
+          "featureId": "ability:spellcasting#paladin"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:divine_bond#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_resolve#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_justice#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_faith#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_righteousness#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:mercy#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "caster_level#paladin",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#paladin"
+        }, {
+          "featureId": "trait:weapon_proficiency#paladin"
+        }, {
+          "featureId": "ability:holy_champion#paladin"
+        }],
+        "choices": [{
+          "choiceId": "spell0_1",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_2",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_3",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell0_4",
+          "label": "Level 0 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin0"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_1",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_2",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_3",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell1_4",
+          "label": "Level 1 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin1"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_1",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_2",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell2_3",
+          "label": "Level 2 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin2"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_1",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_2",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }, {
+          "choiceId": "spell3_3",
+          "label": "Level 3 Spell",
+          "type": "spell",
+          "featureSelect": {
+            "optionTags": ["spell+paladin3"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }]
+    }
+  }
+}

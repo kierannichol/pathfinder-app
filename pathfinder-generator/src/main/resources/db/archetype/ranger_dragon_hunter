@@ -1,0 +1,80 @@
+id: "class:ranger#dragon_hunter"
+name: "Dragon Hunter"
+description: "The quintessential dragonslayers, dragon hunters are experts at forging\
+  \ through the wilds in search of great wyrms."
+modifications:
+- add: "ability:predatory_deduction#ranger_dragon_hunter"
+  remove:
+  - "ability:track#ranger"
+- add: "ability:dragoncrafting#ranger_dragon_hunter"
+  remove:
+  - "ability:the_additional_favored_enemy#ranger"
+  - "ability:any_bonuses_to_existing_favored_enemies_gained_at_5th_level#ranger"
+- add: "ability:undaunted#ranger_dragon_hunter"
+  remove:
+  - "ability:the_additional_favored_enemy#ranger"
+  - "ability:any_bonuses_to_existing_favored_enemies_gained_at_10th_level#ranger"
+- add: "ability:expert_dragoncrafter#ranger_dragon_hunter"
+  remove:
+  - "ability:any_bonuses_to_existing_favored_enemies_gained_at_15th_level#ranger"
+  - "ability:the_additional_favored_enemy#ranger"
+- add: "ability:elemental_resilience#ranger_dragon_hunter"
+  remove:
+  - "ability:the_additional_favored_enemy#ranger"
+  - "ability:any_bonuses_to_existing_favored_enemies_gained_at_20th_level#ranger"
+features:
+- id: "ability:predatory_deduction#ranger_dragon_hunter"
+  name: "Predatory Deduction"
+  label: null
+  type: null
+  description: "Beginning at 1st level, when a dragon hunter successfully uses Survival\
+    \ to spot the trail of a creature of the dragon type, the hunter may attempt an\
+    \ immediate DC 15 Knowledge (arcana) check.\nOn a success, the dragon hunter is\
+    \ able to deduce the species, age category, size, and color of the dragon. If\
+    \ the trail is less than 48 hours old, the dragon hunter gains a +2 circumstance\
+    \ bonus on the Knowledge check."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragonslayer's Handbook"
+- id: "ability:dragoncrafting#ranger_dragon_hunter"
+  name: "Dragoncrafting"
+  label: null
+  type: null
+  description: "Dragon hunters are experts not only at tracking and killing dragons,\
+    \ but also at using dragon bodies to craft unique equipment. A dragon hunter gains\
+    \ Dragoncrafting as a bonus feat at 5th level, even if she does not meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragonslayer's Handbook"
+- id: "ability:undaunted#ranger_dragon_hunter"
+  name: "Undaunted"
+  label: null
+  type: null
+  description: "Beginning at 10th level, a dragon hunter gains a +4 bonus on Will\
+    \ saves made to resist mind-affecting fear effects, Reflex saves made to avoid\
+    \ damage from breath weapons, Reflex saves made to avoid crush attacks, and Reflex\
+    \ saves made to avoid damage from tail sweep attacks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragonslayer's Handbook"
+- id: "ability:expert_dragoncrafter#ranger_dragon_hunter"
+  name: "Expert Dragoncrafter"
+  label: null
+  type: null
+  description: "At 15th level, a dragon hunter may take 10 on Heal and Craft skill\
+    \ checks to harvest dragoncraft materials and to create dragoncraft items. Additionally,\
+    \ the amount of time required to create a dragoncraft item is reduced by half."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragonslayer's Handbook"
+- id: "ability:elemental_resilience#ranger_dragon_hunter"
+  name: "Elemental Resilience"
+  label: null
+  type: null
+  description: "At 20th level, a dragon hunter gains energy resistance 30 against\
+    \ a single energy type for 1 hour. The energy types he may choose are acid, cold,\
+    \ electricity, and fire. He may use this ability once per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragonslayer's Handbook"
+source: "Pathfinder Player Companion: Dragonslayer's Handbook"

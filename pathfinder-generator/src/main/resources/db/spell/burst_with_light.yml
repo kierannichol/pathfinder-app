@@ -1,0 +1,30 @@
+casting_time: "1 standard action"
+saving_throw: "see text"
+spell_resistance: "yes"
+id: "spell:burst_with_light"
+name: "Burst with Light"
+description: "The target becomes filled with intense magical light, taking 2d6 points\
+  \ of damage as the light bursts from its wounds and orifices (if the target is an\
+  \ undead creature, it instead takes 2d8 points of damage). In addition, the creature\
+  \ radiates bright light in a 30-foot radius and increases the light level by one\
+  \ step for an additional 30 feet beyond that area--darkness becomes dim light, dim\
+  \ light becomes normal light, and normal light becomes bright light. Creatures that\
+  \ take penalties in bright light take them while within the 30-foot radius of this\
+  \ magical light. A successful Will save halves the damage and negates the light\
+  \ effect."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature"
+duration: "1 round/4 levels"
+school: "evocation [light]"
+levels:
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:paladin"
+  level: 4
+- class_id: "class:warpriest"
+  level: 4
+source: "Demon Hunter's Handbook"

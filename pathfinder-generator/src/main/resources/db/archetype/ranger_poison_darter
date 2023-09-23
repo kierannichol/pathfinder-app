@@ -1,0 +1,50 @@
+id: "class:ranger#poison_darter"
+name: "Poison Darter"
+description: "In dense jungles, foliage and tight spaces hinder all but the most deceptively\
+  \ humble weapons: blowguns and poison."
+modifications:
+- add: "ability:poison_use#ranger_poison_darter"
+  remove:
+  - "ability:wild_empathy#ranger"
+- add: "ability:poison_style#ranger_poison_darter"
+  remove:
+  - "ability:combat_style_feat#ranger"
+- add: "ability:precise_dart#ranger_poison_darter"
+  remove:
+  - "ability:hunters_bond#ranger"
+features:
+- id: "ability:poison_use#ranger_poison_darter"
+  name: "Poison Use"
+  label: null
+  type: null
+  description: "A poison darter is trained in the use of poison and cannot accidentally\
+    \ poison himself when applying poison to a weapon."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:poison_style#ranger_poison_darter"
+  name: "Poison Style"
+  label: null
+  type: null
+  description: "At 2nd level, in place of a combat style feat, a poison darter can\
+    \ select any rogue talent that modifies sneak attacks or any alchemist discovery\
+    \ that modifies poisons he creates and applies, using his Wisdom modifier in place\
+    \ of his Intelligence modifier and his ranger level in place of his alchemist\
+    \ or rogue level for the purpose of meeting prerequisites. He can use the sticky\
+    \ poison discovery to apply a single dose of poison to two blowgun darts without\
+    \ reducing its potency."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:precise_dart#ranger_poison_darter"
+  name: "Precise Dart"
+  label: null
+  type: null
+  description: "At 4th level, a poison darter gains a sneak attack identical to the\
+    \ rogue class feature, but only when attacking with a blowgun. This deals 1d6\
+    \ extra points of damage, and the damage increases by 1d6 at 6th level and every\
+    \ 2 ranger levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+source: "Pathfinder Player Companion: Blood of the Beast"

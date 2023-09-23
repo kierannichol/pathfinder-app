@@ -1,0 +1,78 @@
+id: "class:hunter#feral_hunter"
+name: "Feral Hunter"
+description: ""
+modifications:
+- add: "ability:feral_focus#hunter_feral_hunter"
+  remove:
+  - "ability:speak_with_master_class_abilities#hunter"
+  - "ability:animal_focus#hunter"
+  - "ability:hunter_tactics#hunter"
+- add: "ability:precise_summoned_animal#hunter_feral_hunter"
+  remove:
+  - "ability:precise_companion#hunter"
+- add: "ability:wild_shape#hunter_feral_hunter"
+  remove:
+  - "ability:raise_animal_companion_class_abilities#hunter"
+  - "ability:the_bonus_tricks_improved_empathic_link_greater_empathic_link#hunter"
+- add: "ability:summon_pack#hunter_feral_hunter"
+  remove:
+  - "ability:18th_levels#hunter"
+  - "ability:the_teamwork_feats_gained_at_6th_9th_12th_15th#hunter"
+features:
+- id: "ability:feral_focus#hunter_feral_hunter"
+  name: "Feral Focus"
+  label: null
+  type: null
+  description: "At 1st level, a feral hunter gains a limited ability to change her\
+    \ shape into hybrid animal forms. This functions as the animal focus class feature,\
+    \ except that the hunter always applies the animal aspect to herself, and there\
+    \ is no limit to this ability's duration. She can end this ability as a free action.\n\
+    When a feral hunter uses this ability, her body takes on cosmetic aspects of an\
+    \ animal, such as furry skin, longer nails, elongated teeth, and oddly colored\
+    \ eyes; these changes do not grant her any abilities other than what is stated\
+    \ in the animal focus, and end when she takes on a different aspect or ends the\
+    \ ability. This physical change is a polymorph effect, though the effects of the\
+    \ animal focus are not.\nThis ability alters animal focus and replaces the hunter\
+    \ tactics and speak with master class abilities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:precise_summoned_animal#hunter_feral_hunter"
+  name: "Precise Summoned Animal"
+  label: null
+  type: null
+  description: "This functions like the precise companion class ability, except the\
+    \ hunter grants all her teamwork feats.\nif the hunter chooses Outflank as a bonus\
+    \ feat , she grants it to all animals she summons with summon nature's ally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:wild_shape#hunter_feral_hunter"
+  name: "Wild Shape"
+  label: null
+  type: null
+  description: "At 4th level, a feral hunter gains the ability to change shape. This\
+    \ ability functions like the druid wild shape ability, except the hunter can take\
+    \ only animal forms (not elemental or plant forms). The hunter's effective druid\
+    \ level is equal to her class level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:summon_pack#hunter_feral_hunter"
+  name: "Summon Pack"
+  label: null
+  type: null
+  description: "Starting at 6th level, whenever a feral hunter casts a summon nature's\
+    \ ally spell to summon one or more animals, she summons one additional animal\
+    \ of the same type. The summoned creature or creatures must be animals and must\
+    \ be of the same type as the hunter's current aspect or of a similar type (bears\
+    \ for bear aspect, dogs or wolves for wolf aspect, great cats for the tiger aspect,\
+    \ and so on). The additional creature immediately vanishes if the hunter chooses\
+    \ a different aspect or ends his feral focus ability. She can increase the duration\
+    \ of any one summon nature's ally spell affected by this ability to 1 minute per\
+    \ level. She can have only one spell with a duration increased by this ability\
+    \ active at a time."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

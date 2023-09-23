@@ -1,0 +1,47 @@
+id: "class:cleric#sacred_attendant"
+name: "Sacred Attendant"
+description: ""
+modifications:
+- add: "ability:channel_beauty#cleric_sacred_attendant"
+  remove:
+  - "ability:channel_energy#cleric"
+- add: "ability:domains#cleric_sacred_attendant"
+  remove:
+  - "ability:domains#cleric"
+- add: "ability:nimble#cleric_sacred_attendant"
+  remove:
+  - "ability:the_clerics_proficiency_with_light#cleric"
+  - "ability:medium_armor#cleric"
+features:
+- id: "ability:channel_beauty#cleric_sacred_attendant"
+  name: "Channel Beauty"
+  label: null
+  type: null
+  description: "Whenever a sacred attendant channels energy to heal, she can opt to\
+    \ reduce the number of dice she rolls by 1 or more. For every die the sacred attendant\
+    \ subtracts, each of the targets of the channeled energy is healed of 1 point\
+    \ of Charisma damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:domains#cleric_sacred_attendant"
+  name: "Domains"
+  label: null
+  type: null
+  description: "The sacred attendant can choose only one domain from those belonging\
+    \ to her deity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:nimble#cleric_sacred_attendant"
+  name: "Nimble"
+  label: null
+  type: null
+  description: "The sacred attendant gains a +1 dodge bonus to AC and CMD when unarmored,\
+    \ unencumbered, and not denied her Dexterity bonus to AC (regardless of whether\
+    \ she has a Dexterity bonus). At 2nd level and every 4 cleric levels thereafter,\
+    \ the dodge bonus increases by 1 (to a maximum of +6 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+source: "Pathfinder Player Companion: Healer's Handbook"

@@ -1,0 +1,27 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (object)"
+spell_resistance: "no"
+id: "spell:mages_disjunction"
+name: "Mage's Disjunction"
+description: "All magical effects and magic items within the radius of the spell,\
+  \ except for those that you carry or touch, are disjoined. That is, spells and spell-like\
+  \ effects are unraveled and destroyed completely (ending the effect as a dispel\
+  \ magic spell does), and each permanent magic item must make a successful Will save\
+  \ or be turned into a normal item for the duration of this spell. An item in a creature's\
+  \ possession uses its own Will save bonus or its possessor's Will save bonus, whichever\
+  \ is higher. If an item's saving throw results in a natural 1 on the die, the item\
+  \ is destroyed instead of being suppressed."
+prerequisites: ""
+components: "V"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: ""
+duration: "1 minute/level"
+school: "abjuration"
+levels:
+- class_id: "class:arcanist"
+  level: 9
+- class_id: "class:sorcerer"
+  level: 9
+- class_id: "class:wizard"
+  level: 9
+source: "PRPG Core Rulebook"

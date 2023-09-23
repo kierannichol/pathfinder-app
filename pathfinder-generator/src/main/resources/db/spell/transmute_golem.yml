@@ -1,0 +1,30 @@
+casting_time: "8 hours"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:transmute_golem"
+name: "Transmute Golem"
+description: "You turn one type of golem into another. The golem must be willing--it\
+  \ must be commanded to transform by its master or must be a creature able to make\
+  \ informed decisions that opts to submit to the spell. You must provide various\
+  \ powdered metals with a value equal to 150% of the difference in creation costs\
+  \ between the old and new type of golem, even if the new golem type is cheaper to\
+  \ create. Both types of golems must share the same subtypes, if any. You cannot\
+  \ transmute a golem into a new type of golem with a CR higher than your caster level."
+prerequisites: ""
+components: "V, S, M (powdered metals with a variable cost, see text)"
+range: "touch"
+targets: "golem touched"
+duration: "instantaneous"
+school: "transmutation (polymorph)"
+levels:
+- class_id: "class:alchemist"
+  level: 6
+- class_id: "class:arcanist"
+  level: 9
+- class_id: "class:investigator"
+  level: 6
+- class_id: "class:sorcerer"
+  level: 9
+- class_id: "class:wizard"
+  level: 9
+source: "Arcane Anthology"

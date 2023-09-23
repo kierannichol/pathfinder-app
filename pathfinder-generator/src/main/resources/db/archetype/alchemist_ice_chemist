@@ -1,0 +1,44 @@
+id: "class:alchemist#ice_chemist"
+name: "Ice Chemist"
+description: "Reclusive alchemists who dwell in the highest mountains or on the frozen\
+  \ tundra devote their skills to mastering the cold."
+modifications:
+- add: "ability:icy_bombs#alchemist_ice_chemist"
+  remove:
+  - "ability:the_bomb_class_feature#alchemist"
+- add: "ability:cold_sweat#alchemist_ice_chemist"
+  remove:
+  - "ability:poison_resistance#alchemist"
+  - "ability:poison_immunity#alchemist"
+- add: "ability:frost_bomb#alchemist_ice_chemist"
+  remove:
+  - "ability:the_discovery_that_the_alchemist_normally_gains_at_2nd_level#alchemist"
+features:
+- id: "ability:icy_bombs#alchemist_ice_chemist"
+  name: "Icy Bombs"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:cold_sweat#alchemist_ice_chemist"
+  name: "Cold Sweat"
+  label: null
+  type: null
+  description: "At 2nd level, an ice chemist channels her affinity for cold energy\
+    \ into her personal space, keeping herself and her gear cool. She gains cold resistance\
+    \ equal to her alchemist level and can survive comfortably in temperatures as\
+    \ low as –50º Fahrenheit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:frost_bomb#alchemist_ice_chemist"
+  name: "Frost Bomb"
+  label: null
+  type: null
+  description: "At 2nd level, an ice chemist gains the frost bomb discovery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

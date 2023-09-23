@@ -1,0 +1,839 @@
+{
+  "levels": [{
+    "effects": [{
+      "setAction": {
+        "targetKey": "str:base",
+        "numberValue": 10
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_score",
+        "formula": "sum(@str:*)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "str_mod",
+        "formula": "floor(@str_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost:str",
+        "formula": "if(@str:base\u003d\u003d7,-4,0) + if(@str:base\u003d\u003d8,-2,0) + if(@str:base\u003d\u003d9,-1,0) + if(@str:base\u003d\u003d10,0,0) + if(@str:base\u003d\u003d11,1,0) + if(@str:base\u003d\u003d12,2,0) + if(@str:base\u003d\u003d13,3,0) + if(@str:base\u003d\u003d14,5,0) + if(@str:base\u003d\u003d15,7,0) + if(@str:base\u003d\u003d16,10,0) + if(@str:base\u003d\u003d17,13,0) + if(@str:base\u003d\u003d18,17,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex:base",
+        "numberValue": 10
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_score",
+        "formula": "sum(@dex:*)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "dex_mod",
+        "formula": "floor(@dex_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost:dex",
+        "formula": "if(@dex:base\u003d\u003d7,-4,0) + if(@dex:base\u003d\u003d8,-2,0) + if(@dex:base\u003d\u003d9,-1,0) + if(@dex:base\u003d\u003d10,0,0) + if(@dex:base\u003d\u003d11,1,0) + if(@dex:base\u003d\u003d12,2,0) + if(@dex:base\u003d\u003d13,3,0) + if(@dex:base\u003d\u003d14,5,0) + if(@dex:base\u003d\u003d15,7,0) + if(@dex:base\u003d\u003d16,10,0) + if(@dex:base\u003d\u003d17,13,0) + if(@dex:base\u003d\u003d18,17,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con:base",
+        "numberValue": 10
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_score",
+        "formula": "sum(@con:*)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "con_mod",
+        "formula": "floor(@con_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost:con",
+        "formula": "if(@con:base\u003d\u003d7,-4,0) + if(@con:base\u003d\u003d8,-2,0) + if(@con:base\u003d\u003d9,-1,0) + if(@con:base\u003d\u003d10,0,0) + if(@con:base\u003d\u003d11,1,0) + if(@con:base\u003d\u003d12,2,0) + if(@con:base\u003d\u003d13,3,0) + if(@con:base\u003d\u003d14,5,0) + if(@con:base\u003d\u003d15,7,0) + if(@con:base\u003d\u003d16,10,0) + if(@con:base\u003d\u003d17,13,0) + if(@con:base\u003d\u003d18,17,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int:base",
+        "numberValue": 10
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_score",
+        "formula": "sum(@int:*)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "int_mod",
+        "formula": "floor(@int_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost:int",
+        "formula": "if(@int:base\u003d\u003d7,-4,0) + if(@int:base\u003d\u003d8,-2,0) + if(@int:base\u003d\u003d9,-1,0) + if(@int:base\u003d\u003d10,0,0) + if(@int:base\u003d\u003d11,1,0) + if(@int:base\u003d\u003d12,2,0) + if(@int:base\u003d\u003d13,3,0) + if(@int:base\u003d\u003d14,5,0) + if(@int:base\u003d\u003d15,7,0) + if(@int:base\u003d\u003d16,10,0) + if(@int:base\u003d\u003d17,13,0) + if(@int:base\u003d\u003d18,17,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis:base",
+        "numberValue": 10
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_score",
+        "formula": "sum(@wis:*)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "wis_mod",
+        "formula": "floor(@wis_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost:wis",
+        "formula": "if(@wis:base\u003d\u003d7,-4,0) + if(@wis:base\u003d\u003d8,-2,0) + if(@wis:base\u003d\u003d9,-1,0) + if(@wis:base\u003d\u003d10,0,0) + if(@wis:base\u003d\u003d11,1,0) + if(@wis:base\u003d\u003d12,2,0) + if(@wis:base\u003d\u003d13,3,0) + if(@wis:base\u003d\u003d14,5,0) + if(@wis:base\u003d\u003d15,7,0) + if(@wis:base\u003d\u003d16,10,0) + if(@wis:base\u003d\u003d17,13,0) + if(@wis:base\u003d\u003d18,17,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha:base",
+        "numberValue": 10
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_score",
+        "formula": "sum(@cha:*)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cha_mod",
+        "formula": "floor(@cha_score / 2) - 5"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost:cha",
+        "formula": "if(@cha:base\u003d\u003d7,-4,0) + if(@cha:base\u003d\u003d8,-2,0) + if(@cha:base\u003d\u003d9,-1,0) + if(@cha:base\u003d\u003d10,0,0) + if(@cha:base\u003d\u003d11,1,0) + if(@cha:base\u003d\u003d12,2,0) + if(@cha:base\u003d\u003d13,3,0) + if(@cha:base\u003d\u003d14,5,0) + if(@cha:base\u003d\u003d15,7,0) + if(@cha:base\u003d\u003d16,10,0) + if(@cha:base\u003d\u003d17,13,0) + if(@cha:base\u003d\u003d18,17,0)"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ability_point_cost",
+        "formula": "sum(@ability_point_cost:*)"
+      }
+    }],
+    "choices": [{
+      "choiceId": "character_name",
+      "label": "Character Name",
+      "type": "name",
+      "text": {
+      }
+    }, {
+      "choiceId": "race",
+      "label": "Race",
+      "type": "race",
+      "featureSelect": {
+        "optionTags": ["race"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "favored_class",
+      "label": "Favored Class",
+      "type": "favored_class",
+      "featureSelect": {
+        "optionTags": ["favored_class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "alignment",
+      "label": "Alignment",
+      "type": "alignment",
+      "featureSelect": {
+        "optionTags": ["alignment"]
+      }
+    }, {
+      "choiceId": "str:base",
+      "label": "Strength",
+      "type": "ability_score",
+      "text": {
+      }
+    }, {
+      "choiceId": "dex:base",
+      "label": "Dexterity",
+      "type": "ability_score",
+      "text": {
+      }
+    }, {
+      "choiceId": "con:base",
+      "label": "Constitution",
+      "type": "ability_score",
+      "text": {
+      }
+    }, {
+      "choiceId": "int:base",
+      "label": "Intelligence",
+      "type": "ability_score",
+      "text": {
+      }
+    }, {
+      "choiceId": "wis:base",
+      "label": "Wisdom",
+      "type": "ability_score",
+      "text": {
+      }
+    }, {
+      "choiceId": "cha:base",
+      "label": "Charisma",
+      "type": "ability_score",
+      "text": {
+      }
+    }]
+  }, {
+    "levelNumber": 1,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 2,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 3,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 4,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 5,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 6,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 7,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 8,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 9,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 10,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 11,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 12,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 13,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 14,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 15,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 16,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 17,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 18,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 19,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }, {
+      "choiceId": "feat",
+      "label": "Feat",
+      "type": "feat",
+      "featureSelect": {
+        "optionTags": ["feat"],
+        "categories": [{
+          "label": "General",
+          "tag": "general"
+        }, {
+          "label": "Combat",
+          "tag": "combat"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "levelNumber": 20,
+    "choices": [{
+      "choiceId": "class",
+      "label": "Class",
+      "type": "class",
+      "featureSelect": {
+        "optionTags": ["class"],
+        "categories": [{
+          "label": "Core",
+          "tag": "core"
+        }, {
+          "label": "Base",
+          "tag": "base"
+        }, {
+          "label": "Hybrid",
+          "tag": "hybrid"
+        }, {
+          "label": "Unchained",
+          "tag": "unchained"
+        }],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

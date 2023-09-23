@@ -1,0 +1,56 @@
+{
+  "id": "class:paladin#sacred_servant",
+  "name": "Sacred Servant",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:smite_evil#paladin AND !@modifies:ability:aura_of_resolve#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d1"
+        }, {
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d4"
+        }, {
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d7"
+        }, {
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d10"
+        }, {
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d13"
+        }, {
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d16"
+        }, {
+          "featureId": "ability:smite_evil#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d19"
+        }, {
+          "featureId": "ability:call_celestial_ally#paladin_sacred_servant",
+          "conditionFormula": "@class:paladin\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:smite_evil#paladin"
+        }, {
+          "featureId": "ability:aura_of_resolve#paladin"
+        }]
+      }]
+    }
+  }
+}

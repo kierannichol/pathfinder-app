@@ -1,0 +1,68 @@
+id: "class:wizard#clocksmith"
+name: "Clocksmith"
+description: ""
+modifications:
+- add: "ability:clockwork_bond#wizard_clocksmith"
+  remove:
+  - "ability:arcane_bond#wizard"
+- add: "ability:clockwork_expertise#wizard_clocksmith"
+  remove:
+  - "ability:the_school_powers_granted_by_the_wizards_arcane_school#wizard"
+- add: "ability:craft_construct#wizard_clocksmith"
+  remove:
+  - "ability:scribe_scroll#wizard"
+- add: "ability:familiar_tinkering#wizard_clocksmith"
+  remove:
+  - "ability:the_bonus_feats_gained_at_5th_10th_15th#wizard"
+  - "ability:20th_levels#wizard"
+features:
+- id: "ability:clockwork_bond#wizard_clocksmith"
+  name: "Clockwork Bond"
+  label: null
+  type: null
+  description: "A clocksmith forms a bond with one of his clockwork creations and\
+    \ begins play with a constructed familiar. He must select this familiar as his\
+    \ arcane bond. The constructed familiar functions as a typical familiar of its\
+    \ type except as noted here.\nThe construct familiar is always a construct with\
+    \ the clockwork subtype. A construct familiar grants only half of its typical\
+    \ bonus (minimum +1 bonus) from its special familiar ability to its master."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:clockwork_expertise#wizard_clocksmith"
+  name: "Clockwork Expertise"
+  label: null
+  type: null
+  description: "A clocksmith is especially adept at dealing with clockworks. He gains\
+    \ a +2 bonus on saving throws against effects created by creatures of the clockwork\
+    \ subtype. This bonus increases to +4 at 8th level.\nAdditionally, he treats his\
+    \ caster level as 1 higher when casting a spell that affects or targets only creatures\
+    \ of the clockwork subtype. At 8th level, he treats his caster level as 2 higher\
+    \ when casting such a spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:craft_construct#wizard_clocksmith"
+  name: "Craft Construct"
+  label: null
+  type: null
+  description: "A clocksmith gains Craft Construct as a bonus feat, even if he does\
+    \ not meet the prerequisites. He can create any construct, but he increases the\
+    \ cost required to create constructs without the clockwork subtype by 50%."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:familiar_tinkering#wizard_clocksmith"
+  name: "Familiar Tinkering"
+  label: null
+  type: null
+  description: "At 5th level, a clocksmith learns to improve upon his construct familiar.\
+    \ A clocksmith can grant his familiar 1 evolution point worth of eidolon evolutions\
+    \ for every 5 wizard levels he has, though he can't select any evolutions that\
+    \ require a specific base form.\nEach time the clocksmith gains a level, he can\
+    \ change his familiar's evolutions. These evolutions stack with those from the\
+    \ Evolved Familiar feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+source: "Pathfinder Campaign Setting: Construct Handbook"

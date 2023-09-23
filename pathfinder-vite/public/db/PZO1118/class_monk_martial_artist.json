@@ -1,0 +1,99 @@
+{
+  "id": "class:monk#martial_artist",
+  "name": "Martial Artist",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:purity_of_body_diamond_body_and_perfect_self#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:wholeness_of_body_timeless_body_and_tongue_of_sun_and_moon#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The martial artist pursues a mastery of pure martial arts without the monastic traditions. He is a master of form, but lacks the ability to harness his ki."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body_diamond_body_and_perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ki_pool#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wholeness_of_body_timeless_body_and_tongue_of_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:empty_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_soul#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:pain_points#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:martial_arts_master#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:exploit_weakness#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:extreme_endurance#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:physical_resistance#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d7"
+        }, {
+          "featureId": "ability:bonus_feat#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d12"
+        }, {
+          "featureId": "ability:defensive_roll#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d13"
+        }, {
+          "featureId": "ability:greater_defensive_roll#monk_martial_artist",
+          "conditionFormula": "@class:monk\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:slow_fall#monk"
+        }, {
+          "featureId": "ability:ki_pool#monk"
+        }, {
+          "featureId": "ability:purity_of_body_diamond_body_and_perfect_self#monk"
+        }, {
+          "featureId": "ability:wholeness_of_body_timeless_body_and_tongue_of_sun_and_moon#monk"
+        }, {
+          "featureId": "ability:abundant_step#monk"
+        }, {
+          "featureId": "ability:diamond_soul#monk"
+        }, {
+          "featureId": "ability:empty_body#monk"
+        }]
+      }]
+    }
+  }
+}

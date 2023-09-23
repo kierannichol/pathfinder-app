@@ -1,0 +1,102 @@
+id: "class:investigator#malice_binder"
+name: "Malice Binder"
+description: "A lock of hair, a bit of blood, even a footprint is enough to grant\
+  \ a wily witch hunter an edge. Malice binders often rise from the ranks of the common\
+  \ folk rather than from wealthy nobles or the church. Their magic is old and crude,\
+  \ but devastatingly effective against those they hunt."
+modifications:
+- add: "ability:witch_lore#investigator_malice_binder"
+  remove:
+  - "ability:inspiration#investigator"
+- add: "ability:take_a_bit#investigator_malice_binder"
+  remove:
+  - "ability:trapfinding#investigator"
+  - "ability:trap_sense#investigator"
+- add: "ability:fettering#investigator_malice_binder"
+  remove:
+  - "ability:alchemy#investigator"
+- add: "ability:take_a_bit_more#investigator_malice_binder"
+  remove:
+  - "ability:poison_resistance#investigator"
+- add: "ability:witch_trapper#investigator_malice_binder"
+  remove:
+  - "ability:poison_immunity#investigator"
+features:
+- id: "ability:witch_lore#investigator_malice_binder"
+  name: "Witch Lore"
+  label: null
+  type: null
+  description: "Malice binders hunt and kill those who would plague the world with\
+    \ supernatural power. A malice binder can use inspiration on Knowledge (arcana),\
+    \ Spellcraft, Sleight of Hand, and Survival checks without expending a use of\
+    \ inspiration, provided he is trained in the skill, rather than on any Knowledge\
+    \ and Linguistics checks.\nHe can later spend an investigator talent to gain the\
+    \ ability to use inspiration on any Knowledge and Linguistics checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:take_a_bit#investigator_malice_binder"
+  name: "Take a Bit"
+  label: null
+  type: null
+  description: "The malice binder gains Improved Steal as a bonus feat at 1st level.\
+    \ At 3rd level, he can use inspiration to improve a steal combat maneuver check\
+    \ by spending one use of inspiration rather than two."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:fettering#investigator_malice_binder"
+  name: "Fettering"
+  label: null
+  type: null
+  description: "A malice binder forgoes alchemy for the study of sympathetic magic\
+    \ that allows him to hinder foes.\nFetters rely on the magical resonance of creatures\
+    \ capable of casting spells (spellcasters and creatures with spell-like abilities)\
+    \ which saturates even their hair and clothing.\nFetters cannot target a creature\
+    \ with no magical ability. The malice binder knows one fetter at 1st level and\
+    \ gains another at 4th level and every 2 levels thereafter.\nEvery fetter requires\
+    \ a token taken from his desired target: a few hairs, a lost tooth, nail clippings,\
+    \ a scrap of clothing, or a small treasured possession with some significance.\n\
+    An investigator can obtain a single token in any of the following ways: a successful\
+    \ Sleight of Hand check against an unsuspecting target, a successful steal combat\
+    \ maneuver, or a successful Perception check (DC = 15 + the creature's CR) to\
+    \ search an area his target occupied for at least 2 hours.\nMalice binders can\
+    \ search such a location for additional tokens, but each subsequent Perception\
+    \ check increases the DC by 5, regardless of success or failure. Tokens rely on\
+    \ the magic that clings to spellcasters and creatures with spell-like abilities;\
+    \ they must be carefully preserved as soon as they are recovered and before they\
+    \ can be used. Preparing a token requires a move action, and a malice binder can\
+    \ maintain one prepared token per class level. Each token can be used only to\
+    \ power a fetter targeting the creature it came from, and it is consumed in the\
+    \ process. At 7th level, the malice binder can instead prepare a token as a swift\
+    \ action.\nThe DC to resist a fetter is equal to 10 + half the investigator's\
+    \ class level + the investigator's Charisma bonus. Activating a fetter is a standard\
+    \ action that provokes attacks of opportunity, and unless otherwise stated the\
+    \ target must be within 30 feet, plus 5 feet per 2 levels. Once a creature has\
+    \ been the target of a specific fetter, it is immune to that effect for 24 hours.\n\
+    This replaces alchemy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:take_a_bit_more#investigator_malice_binder"
+  name: "Take a Bit More"
+  label: null
+  type: null
+  description: "At 8th level, taking a bit of clothing or hair to use as a token becomes\
+    \ second nature for the malice binder. He gains Quick Steal as a bonus feat. When\
+    \ attempting to steal a token, he gains a +2 competence bonus on combat maneuver\
+    \ checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:witch_trapper#investigator_malice_binder"
+  name: "Witch Trapper"
+  label: null
+  type: null
+  description: "Beginning at 11th level, whenever the malice binder would gain a fetter,\
+    \ he can instead select a ranger trap, treating his investigator level as his\
+    \ ranger level for the purpose of determining the trap's effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+source: "Pathfinder Player Companion: Blood of the Coven"

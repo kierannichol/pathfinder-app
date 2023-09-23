@@ -1,0 +1,14 @@
+{
+  "id": "feat:greater_spell_specialization",
+  "name": "Greater Spell Specialization",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(@int_score\u003e\u003d13,@feat:spell_focus,@feat:spell_specialization,@spells_per_day#5,!@ability:spontaneous_caster)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You can sacrifice a prepared spell in order to spontaneously cast your specialized spell."
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "class:skald#totemic_skald",
+  "name": "Totemic Skald",
+  "tags": ["archetype", "skald"],
+  "enabledFormula": "!@modifies:ability:uncanny_dodge_and_improved_uncanny_dodge#skald AND !@modifies:ability:spell_kenning#skald AND !@modifies:ability:the_rage_power_gained_at_3rd_level#skald",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge_and_improved_uncanny_dodge#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spell_kenning#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rage_power_gained_at_3rd_level#skald",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:totem#skald_totemic_skald",
+          "conditionFormula": "@class:skald\u003e\u003d3"
+        }, {
+          "featureId": "ability:totem_empathy#skald_totemic_skald",
+          "conditionFormula": "@class:skald\u003e\u003d4"
+        }, {
+          "featureId": "ability:wild_shape#skald_totemic_skald",
+          "conditionFormula": "@class:skald\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_rage_power_gained_at_3rd_level#skald"
+        }, {
+          "featureId": "ability:uncanny_dodge_and_improved_uncanny_dodge#skald"
+        }, {
+          "featureId": "ability:spell_kenning#skald"
+        }]
+      }]
+    }
+  }
+}

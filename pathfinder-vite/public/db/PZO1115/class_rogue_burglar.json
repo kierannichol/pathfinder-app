@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#burglar",
+  "name": "Burglar",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Adept at infiltration, trap removal, and lock picking, burglars prey on the homes of the wealthy and forgotten tombs alike. Such riches are guarded with vicious traps and hazards, but the devious mind of the burglar allows her to find such dangers and avoid them."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:careful_disarm#rogue_burglar",
+          "conditionFormula": "@class:rogue\u003e\u003d4"
+        }, {
+          "featureId": "ability:distraction#rogue_burglar",
+          "conditionFormula": "@class:rogue\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:uncanny_dodge#rogue"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#rogue"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+id: "class:bard#archaeologist"
+name: "Archaeologist"
+description: "No stodgy researcher, this archaeologist meets his research head-on\
+  \ in the field. Archaeologists sacrifice the bard's inspirational performance for\
+  \ a smattering of rogue talents."
+modifications:
+- add: "ability:clever_explorer#bard_archaeologist"
+  remove:
+  - "ability:the_versatile_performance_ability#bard"
+- add: "ability:uncanny_dodge#bard_archaeologist"
+  remove:
+  - "ability:well_versed#bard"
+features:
+- id: "ability:clever_explorer#bard_archaeologist"
+  name: "Clever Explorer"
+  label: null
+  type: null
+  description: "At 2nd level, an archaeologist gains a bonus equal to half his class\
+    \ level on Disable Device and Perception checks. He can disable intricate and\
+    \ complex devices in half the normal amount of time (minimum 1 round) and open\
+    \ a lock as a standard action. At 6th level, an archaeologist can take 10 on Disable\
+    \ Device checks, even if distracted or endangered, and can disarm magical traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:uncanny_dodge#bard_archaeologist"
+  name: "Uncanny Dodge"
+  label: null
+  type: null
+  description: "At 2nd level, an archaeologist gains uncanny dodge, as the rogue class\
+    \ feature of the same name."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

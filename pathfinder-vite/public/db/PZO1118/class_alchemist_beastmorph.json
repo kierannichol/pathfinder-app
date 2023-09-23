@@ -1,0 +1,59 @@
+{
+  "id": "class:alchemist#beastmorph",
+  "name": "Beastmorph",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:swift_alchemy#alchemist AND !@modifies:ability:poison_resistance_ AND !@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:persistent_mutagen#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Beastmorphs study the anatomy of monsters, learning how they achieve their strange powers. They use their knowledge to duplicate these abilities, but at the cost of taking on inhuman shapes when they use mutagens."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:swift_alchemy#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_resistance_",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_poisoning#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:persistent_mutagen#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:beastform_mutagen#alchemist_beastmorph",
+          "conditionFormula": "@class:alchemist\u003e\u003d3"
+        }, {
+          "featureId": "ability:improved_beastform_mutagen#alchemist_beastmorph",
+          "conditionFormula": "@class:alchemist\u003e\u003d6"
+        }, {
+          "featureId": "ability:greater_beastform_mutagen#alchemist_beastmorph",
+          "conditionFormula": "@class:alchemist\u003e\u003d10"
+        }, {
+          "featureId": "ability:grand_beastform_mutagen#alchemist_beastmorph",
+          "conditionFormula": "@class:alchemist\u003e\u003d14"
+        }],
+        "unlinks": [{
+          "featureId": "ability:swift_alchemy#alchemist"
+        }, {
+          "featureId": "ability:swift_poisoning#alchemist"
+        }, {
+          "featureId": "ability:poison_resistance_"
+        }, {
+          "featureId": "ability:persistent_mutagen#alchemist"
+        }]
+      }]
+    }
+  }
+}

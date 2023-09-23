@@ -1,0 +1,69 @@
+{
+  "id": "class:monk#flowing_monk",
+  "name": "Flowing Monk",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:quivering_palm#monk AND !@modifies:ability:the_bonus_feat_gained_at_2nd_level#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:purity_of_body_and_diamond_body#monk AND !@modifies:ability:fast_movement#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The flowing monk is the wind and the river. He knows how the world flows, and forces his enemies to flow with it. Even the most powerful stone breaks under the graceful and persistent pressure of wind and water."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_bonus_feat_gained_at_2nd_level#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body_and_diamond_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:redirection#monk_flowing_monk",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:unbalancing_counter#monk_flowing_monk",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:flowing_dodge#monk_flowing_monk",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:elusive_target#monk_flowing_monk",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:volley_spell#monk_flowing_monk",
+          "conditionFormula": "@class:monk\u003e\u003d15"
+        }],
+        "unlinks": [{
+          "featureId": "ability:stunning_fist#monk"
+        }, {
+          "featureId": "ability:the_bonus_feat_gained_at_2nd_level#monk"
+        }, {
+          "featureId": "ability:fast_movement#monk"
+        }, {
+          "featureId": "ability:purity_of_body_and_diamond_body#monk"
+        }, {
+          "featureId": "ability:quivering_palm#monk"
+        }]
+      }]
+    }
+  }
+}

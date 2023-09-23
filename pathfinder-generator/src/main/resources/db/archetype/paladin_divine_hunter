@@ -1,0 +1,112 @@
+id: "class:paladin#divine_hunter"
+name: "Divine Hunter"
+description: "Most paladins rush into battle, meeting evil toe-to-toe. The divine\
+  \ hunter prefers to engage evil from afar, striking down her foes before they can\
+  \ threaten her allies."
+modifications:
+- add: "ability:precise_shot#paladin_divine_hunter"
+  remove:
+  - "ability:her_heavy_armor_proficiency#paladin"
+- add: "ability:shared_precision#paladin_divine_hunter"
+  remove:
+  - "ability:aura_of_courage#paladin"
+- add: "ability:divine_bond#paladin_divine_hunter"
+  remove:
+  - "ability:the_standard_paladins_divine_bond#paladin"
+- add: "ability:distant_mercy#paladin_divine_hunter"
+  remove:
+  - "ability:the_paladins_6th_level_mercy#paladin"
+- add: "ability:aura_of_care#paladin_divine_hunter"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+- add: "ability:hunters_blessing#paladin_divine_hunter"
+  remove:
+  - "ability:aura_of_justice#paladin"
+- add: "ability:righteous_hunter#paladin_divine_hunter"
+  remove:
+  - "ability:aura_of_faith#paladin"
+features:
+- id: "ability:precise_shot#paladin_divine_hunter"
+  name: "Precise Shot"
+  label: null
+  type: null
+  description: "A divine hunter gains Precise Shot as a bonus feat at 1st level, even\
+    \ if she doesn't meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:shared_precision#paladin_divine_hunter"
+  name: "Shared Precision"
+  label: null
+  type: null
+  description: "At 3rd level, when a divine hunter hits a creature with a ranged attack,\
+    \ she grants her allies within 10 feet of her the benefit of the Precise Shot\
+    \ feat against that target until the start of her next turn. Her allies must remain\
+    \ within 10 feet of her, and must be able both to see and hear the divine hunter\
+    \ to gain this benefit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:divine_bond#paladin_divine_hunter"
+  name: "Divine Bond"
+  label: null
+  type: null
+  description: "At 5th level, a divine hunter forms a bond with her deity. This functions\
+    \ as the paladin's divine bond ability, except the bond must always take the form\
+    \ of a ranged or throwing weapon (excluding ammunition). In addition to the listed\
+    \ abilities, a divine hunter can add the distance, returning, or seeking special\
+    \ abilities to her weapon, but she cannot add the defending or disruption special\
+    \ abilities. Special abilities added to throwing weapons function normally when\
+    \ the weapon is used in melee."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:distant_mercy#paladin_divine_hunter"
+  name: "Distant Mercy"
+  label: null
+  type: null
+  description: "At 6th level, a divine hunter can expend two uses of her lay on hand\
+    \ ability to use her lay on hands ability on a target within 5 feet per paladin\
+    \ level. Distant mercy has no effect on creatures harmed by positive energy, such\
+    \ as undead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:aura_of_care#paladin_divine_hunter"
+  name: "Aura of Care"
+  label: null
+  type: null
+  description: "At 8th level, a divine hunter and her allies gain a preternatural\
+    \ awareness of each other's position in battle. She and any allies within 10 feet\
+    \ of her no longer provide cover against each other's ranged attacks unless they\
+    \ wish to. Allies who cannot move or otherwise take actions still provide cover,\
+    \ as do flat-footed allies. The divine hunter and her allies must be able to see\
+    \ or hear each other to use this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:hunters_blessing#paladin_divine_hunter"
+  name: "Hunter's Blessing"
+  label: null
+  type: null
+  description: "At 11th level, a divine hunter can expend a use of her smite evil\
+    \ ability as a swift action to grant herself and all allies within 10 feet the\
+    \ Deadly Aim, Precise Shot, and Improved Precise Shot feats, even if they lack\
+    \ the prerequisites. The effects last for 1 minute. Evil creatures gain no benefit\
+    \ from this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:righteous_hunter#paladin_divine_hunter"
+  name: "Righteous Hunter"
+  label: null
+  type: null
+  description: "At 14th level, a divine hunter's ranged weapons are treated as good-aligned\
+    \ for the purposes of overcoming damage reduction. Any ranged attacks made by\
+    \ an ally within 10 feet of her are likewise treated as good-aligned for the purposes\
+    \ of overcoming damage reduction. This ability functions only while the divine\
+    \ hunter is conscious."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

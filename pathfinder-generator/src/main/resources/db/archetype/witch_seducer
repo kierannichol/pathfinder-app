@@ -1,0 +1,57 @@
+id: "class:witch#seducer"
+name: "Seducer"
+description: ""
+modifications:
+- add: "ability:fey_charm#witch_seducer"
+  remove:
+  - "ability:the_hex_gained_at_1st_level#witch"
+- add: "ability:seducers_kiss#witch_seducer"
+  remove:
+  - "ability:the_hex_gained_at_6th_level#witch"
+- add: "ability:garden_of_delight#witch_seducer"
+  remove:
+  - "ability:the_hex_gained_at_8th_level#witch"
+features:
+- id: "ability:fey_charm#witch_seducer"
+  name: "Fey Charm"
+  label: null
+  type: null
+  description: "A seducer gains the charm hex at 1st level. The save DC of this hex\
+    \ is increased by 1. If the target is (or could be) sexually attracted to the\
+    \ seducer, the save DC is instead increased by 2. If she and the target have had\
+    \ willing sexual relations in the past 24 hours, the save DC is instead increased\
+    \ by 3."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+- id: "ability:seducers_kiss#witch_seducer"
+  name: "Seducer's Kiss"
+  label: null
+  type: null
+  description: "At 6th level, a seducer can kiss another creature as a melee touch\
+    \ attack. The target must succeed at a Will save (DC 10 + half the seducer's level\
+    \ + her Charisma modifier) or be staggered for 1 round. If the target is (or could\
+    \ be) sexually attracted to the seducer, the save DC is increased by 2. If the\
+    \ seducer and the target have had willing sexual relations in the past 24 hours,\
+    \ the save DC is instead increased by 4. Whether or not the creature succeeds\
+    \ at this save, it cannot be the target of this ability again for 1 day. At 10th\
+    \ level, this ability causes the target to become stunned for 1 round, then staggered\
+    \ for an additional round. This is a mind-affecting charm effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+- id: "ability:garden_of_delight#witch_seducer"
+  name: "Garden of Delight"
+  label: null
+  type: null
+  description: "At 8th level, the seducer can create a magical bower once per day.\
+    \ This functions as tiny hut with a caster level equal to the seducer's witch\
+    \ level, but the interior is a lush garden. Those who rest for 8 hours within\
+    \ the garden heal at twice the usual rate. In addition, any creature engaging\
+    \ in willing sexual relations with the seducer in this garden gains a +2 morale\
+    \ bonus on saving throws for the next 24 hours. This bonus does not apply on saving\
+    \ throws against the seducer's spells or abilities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+source: "Pathfinder Player Companion: Legacy of the First World"

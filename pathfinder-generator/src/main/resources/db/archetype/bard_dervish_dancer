@@ -1,0 +1,126 @@
+id: "class:bard#dervish_dancer"
+name: "Dervish Dancer"
+description: "Not all bards inspire others with their performances. Dervish dancers\
+  \ enter a near-mystical trance that allows them to push their bodies beyond normal\
+  \ limits."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#bard_dervish_dancer"
+  remove:
+  - "ability:their_proficiency_with_the_rapier#bard"
+  - "ability:whip#bard"
+- add: "ability:rain_of_blows#bard_dervish_dancer"
+  remove:
+  - "ability:suggestion#bard"
+  - "ability:mass_suggestion#bard"
+- add: "ability:razors_kiss#bard_dervish_dancer"
+  remove:
+  - "ability:dirge_of_doom#bard"
+- add: "ability:leaf_on_the_wind#bard_dervish_dancer"
+  remove:
+  - "ability:frightening_tune#bard"
+- add: "ability:fleet#bard_dervish_dancer"
+  remove:
+  - "ability:lore_master#bard"
+  - "ability:bardic_knowledge#bard"
+- add: "ability:versatile_dance#bard_dervish_dancer"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:dance_of_fury#bard_dervish_dancer"
+  remove:
+  - "ability:soothing_performance#bard"
+- add: "ability:battle_fury#bard_dervish_dancer"
+  remove:
+  - "ability:deadly_performance#bard"
+features:
+- id: "ability:weapon_and_armor_proficiency#bard_dervish_dancer"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Dervish dancers gain weapon proficiency with the scimitar and kukri."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:rain_of_blows#bard_dervish_dancer"
+  name: "Rain of Blows"
+  label: null
+  type: null
+  description: "At 6th level, a dervish dancer can use his battle dance to speed up\
+    \ his attacks. When making a full attack action, he may make one extra attack\
+    \ with any weapon he is holding, as though under the effects of a haste spell.\
+    \ He also gains a +1 bonus on attack rolls and a +1 dodge bonus to AC and on Reflex\
+    \ saves. At 9th level, and every three bard levels thereafter, these bonuses increase\
+    \ by +1, to a maximum of +5 at 18th level. These bonuses do not stack with the\
+    \ haste spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:razors_kiss#bard_dervish_dancer"
+  name: "Razor's Kiss"
+  label: null
+  type: null
+  description: "At 8th level, a dervish dancer can use his battle dance to improve\
+    \ his weapons' critical range. All attacks he makes with manufactured weapons\
+    \ are treated as though he had the Improved Critical feat. Natural weapons and\
+    \ spells are not affected."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:leaf_on_the_wind#bard_dervish_dancer"
+  name: "Leaf on the Wind"
+  label: null
+  type: null
+  description: "At 14th level, a dervish dancer can use his battle dance to evade\
+    \ attacks with unearthly grace and to shake off the effects of his wounds. Unlike\
+    \ other battle dances, leaf on the wind requires a standard action each round\
+    \ to start or maintain the performance. Each round it is maintained, including\
+    \ the first, the dervish dancer gains a +6 dodge bonus to Armor Class and on Reflex\
+    \ saves. If wounded, he heals 1 hit point of damage per bard level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:fleet#bard_dervish_dancer"
+  name: "Fleet"
+  label: null
+  type: null
+  description: "While performing a battle dance, a dervish dancer gains a +10 enhancement\
+    \ bonus to his land speed. This bonus increases by 5 feet for every four bard\
+    \ levels gained after 1st level, to a maximum of +30 feet at 17th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:versatile_dance#bard_dervish_dancer"
+  name: "Versatile Dance"
+  label: null
+  type: null
+  description: "At 2nd level, a dervish dancer gains a bonus equal to half his level\
+    \ on Perform (dance) checks. He can use his bonus for his Perform (dance) skill\
+    \ in place of his bonus for Acrobatics."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:dance_of_fury#bard_dervish_dancer"
+  name: "Dance of Fury"
+  label: null
+  type: null
+  description: "At 12th level, a dervish dancer can attack more than once as he moves\
+    \ while performing a battle dance. He can combine a full-attack action with a\
+    \ single move, taking the attacks at any point during his movement, but must move\
+    \ at least 5 feet between each attack. This movement provokes attacks of opportunity\
+    \ as normal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:battle_fury#bard_dervish_dancer"
+  name: "Battle Fury"
+  label: null
+  type: null
+  description: "At 20th level, the dervish dancer can unleash a whirlwind of blows\
+    \ while performing a battle dance. As a full-round action, he can take a single\
+    \ move action and unleash a single attack at his highest bonus against each target\
+    \ within his reach during any point of his move, up to a maximum number of attacks\
+    \ equal to the dervish dancer's character level. This movement provokes attacks\
+    \ of opportunity as normal.\nThis ability replaces deadly performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

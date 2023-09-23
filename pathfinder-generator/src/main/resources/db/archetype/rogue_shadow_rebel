@@ -1,0 +1,36 @@
+id: "class:rogue#shadow_rebel"
+name: "Shadow Rebel"
+description: ""
+modifications:
+- add: "ability:sophisticated_stealth#rogue_shadow_rebel"
+  remove:
+  - "ability:trap_sense#rogue"
+- add: "ability:misdirection#rogue_shadow_rebel"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+features:
+- id: "ability:sophisticated_stealth#rogue_shadow_rebel"
+  name: "Sophisticated Stealth"
+  label: null
+  type: null
+  description: "At 3rd level, a shadow rebel gains a +1 bonus on Knowledge (nobility)\
+    \ checks. In addition, she gains a +1 bonus on Bluff checks to convey a secret\
+    \ message and on Sense Motive checks to discern secret messages. These bonuses\
+    \ increase by 1 every 3 rogue levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:misdirection#rogue_shadow_rebel"
+  name: "Misdirection"
+  label: null
+  type: null
+  description: "At 4th level, a shadow rebel gains the ability to cast misdirection\
+    \ on herself once per day, though instead of choosing an object for the second\
+    \ target, she must choose a creature in range. The caster level for this ability\
+    \ is equal to her class level, and the save DC for this spell is 12 + the shadow\
+    \ rebel's Intelligence modifier. The save DC of this ability increases by 1 if\
+    \ the secondary target is lawful or evil."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

@@ -1,0 +1,74 @@
+id: "class:druid#desert_druid"
+name: "Desert Druid"
+description: ""
+modifications:
+- add: "ability:desert_native#druid_desert_druid"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:sandwalker#druid_desert_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:desert_endurance#druid_desert_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:shaded_vision#druid_desert_druid"
+  remove:
+  - "ability:venom_immunity#druid"
+- add: "ability:dunemeld#druid_desert_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:desert_native#druid_desert_druid"
+  name: "Desert Native"
+  label: null
+  type: null
+  description: "At 2nd level, a desert druid gains a bonus on Initiative checks and\
+    \ Knowledge (geography), Perception, Stealth, and Survival checks equal to 1/2\
+    \ her druid level in desert terrain, and she cannot be tracked in such environments."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:sandwalker#druid_desert_druid"
+  name: "Sandwalker"
+  label: null
+  type: null
+  description: "At 3rd level, a desert druid suffers no penalty to speed or on Acrobatics\
+    \ or Stealth checks when moving through sandy or desert terrain.\nThis ability\
+    \ replaces trackless step."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:desert_endurance#druid_desert_druid"
+  name: "Desert Endurance"
+  label: null
+  type: null
+  description: "At 4th level, a desert druid ignores the effects of a hot climate\
+    \ as if using endure elements. She also has a reduced need to eat and drink, as\
+    \ if wearing a ring of sustenance (though normal sleep is still required).\nThis\
+    \ ability replaces resist nature's lure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shaded_vision#druid_desert_druid"
+  name: "Shaded Vision"
+  label: null
+  type: null
+  description: "At 9th level, a desert druid becomes immune to blinding and dazzling\
+    \ effects and gains a +2 bonus on saving throws against gaze attacks and illusions\
+    \ of the figment and pattern subschools.\nThis ability replaces venom immunity."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:dunemeld#druid_desert_druid"
+  name: "Dunemeld"
+  label: null
+  type: null
+  description: "At 13th level, a desert druid can assume the form of a swirling mass\
+    \ of sand at will. This is equivalent to gaseous form, but the druid gains a land\
+    \ and burrow speed of 10 feet rather than a fly speed. While in this form, the\
+    \ druid gains a circumstance bonus on Stealth checks made in desert terrain equal\
+    \ to her druid level."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

@@ -1,0 +1,64 @@
+{
+  "id": "class:rogue#pirate",
+  "name": "Pirate",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:the_2nd_level_rogue_talent#rogue AND !@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "A pirate breaks from the confines of country and king to commit her crimes upon the high seas. She holds allegiance only to her ship and its captain (if even that much is true), and lives a lawless life upon the waves, plundering ships and shorelines as suits her whim."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_2nd_level_rogue_talent#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sea_legs#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }, {
+          "featureId": "ability:swinging_reposition#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d2"
+        }, {
+          "featureId": "ability:unflinching#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d3"
+        }, {
+          "featureId": "ability:unflinching#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d6"
+        }, {
+          "featureId": "ability:unflinching#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d9"
+        }, {
+          "featureId": "ability:unflinching#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d12"
+        }, {
+          "featureId": "ability:unflinching#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d15"
+        }, {
+          "featureId": "ability:unflinching#rogue_pirate",
+          "conditionFormula": "@class:rogue\u003e\u003d18"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "ability:the_2nd_level_rogue_talent#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }]
+    }
+  }
+}

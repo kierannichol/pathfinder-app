@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#acrobat",
+  "name": "Acrobat",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Agility and daring are both excellent rogue traits, and their confluence can create spectacular feats of acrobatics. Whether they are daring thieves, infiltrating assassins, or intrepid spies, proper training in acrobatics is a valuable boon for rogues."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:expert_acrobat#rogue_acrobat",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }, {
+          "featureId": "ability:second_chance#rogue_acrobat",
+          "conditionFormula": "@class:rogue\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }]
+    }
+  }
+}

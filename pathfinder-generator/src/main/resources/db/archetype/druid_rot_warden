@@ -1,0 +1,100 @@
+id: "class:druid#rot_warden"
+name: "Rot Warden"
+description: "Harbingers of decay, rot wardens live in damp lands where insects and\
+  \ rot break down the dead to feed the living. They see in the process of rot the\
+  \ beauty of nature's capacity to recycle and repurpose material into something wondrous\
+  \ and new."
+modifications:
+- add: "ability:invoke_decay#druid_rot_warden"
+  remove:
+  - "ability:spontaneous_casting#druid"
+- add: "ability:nature_bond#druid_rot_warden"
+  remove:
+  - "ability:nature_bond#druid"
+- add: "ability:vermin_empathy#druid_rot_warden"
+  remove:
+  - "ability:wild_empathy#druid"
+- add: "ability:swarmcaller#druid_rot_warden"
+  remove:
+  - "ability:trackless_step#druid"
+  - "ability:venom_immunity#druid"
+- add: "ability:enduring_druid#druid_rot_warden"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:wild_shape#druid_rot_warden"
+  remove:
+  - "ability:wild_shape#druid"
+features:
+- id: "ability:invoke_decay#druid_rot_warden"
+  name: "Invoke Decay"
+  label: null
+  type: null
+  description: "A rot warden can channel stored spell energy into specific spells\
+    \ he hasn't prepared ahead of time. He can “lose\"a prepared spell in order to\
+    \ cast the following spells at the indicated levels: 1st--decompose corpse, 2nd--warp\
+    \ wood, 3rd--fungal infestation, 4th--explosion of rot, 5th--insect plague, 6th--swarm\
+    \ skin, 7th--creeping doom, 8th--horrid wilting, 9th--massacre."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:nature_bond#druid_rot_warden"
+  name: "Nature Bond"
+  label: null
+  type: null
+  description: "A rot warden who chooses a cleric domain as his nature bond must choose\
+    \ from the Destruction, Erosion, Repose, or Vermin domains."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:vermin_empathy#druid_rot_warden"
+  name: "Vermin Empathy"
+  label: null
+  type: null
+  description: "A rot warden can improve the attitude of vermin as a normal druid\
+    \ can with animals. Vermin have a starting attitude of unfriendly. The rot warden\
+    \ can also improve the attitude of vermin swarms, but he takes a –4 penalty on\
+    \ the check unless the swarm consists of the same kind of vermin as his vermin\
+    \ companion or his current wild shape."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:swarmcaller#druid_rot_warden"
+  name: "Swarmcaller"
+  label: null
+  type: null
+  description: "At 3rd level, a rot warden can summon a swarm of vermin once per day\
+    \ as a standard action. This functions like summon swarm, except the swarm the\
+    \ rot warden summons must be a cockroach, locust, or spider swarm. If he uses\
+    \ this ability during the surprise round of combat, nearby animals and vermin\
+    \ become hushed until the first round of combat ends; during this surprise round\
+    \ and first round of combat, flat-footed creatures also gain the shaken condition\
+    \ (this doesn't stack with other fear effects).\nAt 9th level, he adds army ant,\
+    \ centipede, and wasp swarms to the list of swarms he can call with this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:enduring_druid#druid_rot_warden"
+  name: "Enduring Druid"
+  label: null
+  type: null
+  description: "At 4th level, a rot warden gains a +4 bonus on saving throws against\
+    \ attacks and special abilities of vermin and swarms with the vermin type. This\
+    \ bonus also applies on saving throws against effects that would age or decay\
+    \ the rot warden or his equipment."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:wild_shape#druid_rot_warden"
+  name: "Wild Shape"
+  label: null
+  type: null
+  description: "A rot warden gains this ability at 6th level, except his effective\
+    \ druid level is his druid level – 2. He cannot take the form of an elemental.\n\
+    At 8th level, a rot warden can assume the form of a Small or Medium vermin as\
+    \ if using vermin shape I.\nAt 10th level, the rot warden can assume the shape\
+    \ of a Tiny or Large vermin as if using vermin shape II.\nAt 12th level, he can\
+    \ take the form of a Huge vermin as if using vermin shape III."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,74 @@
+{
+  "id": "class:fighter#polearm_master",
+  "name": "Polearm Master",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "The polearm master is schooled in the ancient wisdom that enemies are best faced at the end of long striking pole, lashing like a serpent before clumsy swords and axes can even be brought to bear."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:pole_fighting#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:steadfast_pike#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d3"
+        }, {
+          "featureId": "ability:polearm_training#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:flexible_flanker#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:sweeping_fend#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d13"
+        }, {
+          "featureId": "ability:step_aside#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d17"
+        }, {
+          "featureId": "ability:polearm_parry#fighter_polearm_master",
+          "conditionFormula": "@class:fighter\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

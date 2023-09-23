@@ -1,0 +1,100 @@
+:root {
+  --pf-border-width: 2px;
+  --pf-text-color: dimgray;
+  --pf-border: var(--pf-border-width) solid var(--pf-text-color);
+}
+
+body, html {
+  height: 100vh;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+
+  font-weight: bold;
+  font-size: 14pt;
+  color: var(--pf-text-color);
+}
+
+main {
+  background-color: white;
+  padding: 0;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+section {
+  padding: 1rem;
+}
+
+input {
+  width: 100%;
+  display: flex;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: left;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px 18px;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: center;
+  height: 56px;
+
+  background-color: white;
+  border: var(--pf-border-width) solid var(--pf-text-color);
+  color: var(--pf-text-color);
+}
+
+.btn-link {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.clickable {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+hr {
+  color: dimgray;
+  background-color: dimgray;
+  width: 100%;
+  opacity: unset;
+  height: 2px;
+}
+
+/* Start of non-mobile screens */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: lightgrey;
+  }
+
+  main {
+    background-color: white;
+    width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 768px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    width: 992px;
+  }
+}

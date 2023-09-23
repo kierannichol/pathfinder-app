@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#trapsmith",
+  "name": "Trapsmith",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some rogues are not content with just disabling traps--they love to build them, finding a captivating beauty in the turning of gears and the slither of ropes over pulleys. The trapsmith may have started out putting together traps in order to better understand how to disable them, but for most, it\u0027s long since gone beyond that--they now relish the challenge of creating the perfect combat machine."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:careful_disarm#rogue_trapsmith",
+          "conditionFormula": "@class:rogue\u003e\u003d4"
+        }, {
+          "featureId": "ability:trap_master#rogue_trapsmith",
+          "conditionFormula": "@class:rogue\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:uncanny_dodge#rogue"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#rogue"
+        }]
+      }]
+    }
+  }
+}

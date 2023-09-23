@@ -1,0 +1,83 @@
+{
+  "id": "class:fighter#two_handed_fighter",
+  "name": "Two-Handed Fighter",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some fighters focus their efforts on finding the biggest, heaviest, most imposing weapon they can find and training to manage and harness the weight of their massive weapons for maximum impact. These fighting school benefits only apply when using two-handed weapons."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:shattering_strike#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:overhand_chop#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_training#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_training#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_training#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_training#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d17"
+        }, {
+          "featureId": "ability:backswing#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d7"
+        }, {
+          "featureId": "ability:piledriver#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d11"
+        }, {
+          "featureId": "ability:greater_power_attack#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d15"
+        }, {
+          "featureId": "ability:devastating_blow#fighter_two_handed_fighter",
+          "conditionFormula": "@class:fighter\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

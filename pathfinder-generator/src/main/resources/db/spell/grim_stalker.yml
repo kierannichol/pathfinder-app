@@ -1,0 +1,38 @@
+casting_time: "1 minute"
+saving_throw: "Will negates (object); see text"
+spell_resistance: "yes (object)"
+id: "spell:grim_stalker"
+name: "Grim Stalker"
+description: "You bind spirits of ill fate to an object, focusing their wrath onto\
+  \ the next creature that touches the object. When a creature touches the target\
+  \ object, it can attempt a Will save to negate the spell's effect. Although a successful\
+  \ save prevents the creature from becoming haunted, the haunt still resides within\
+  \ the object, and targets either the next creature to touch the object or the same\
+  \ creature again if it still holds the object after 24 hours. The haunt remains\
+  \ within the object until a creature fails its save or the spell's duration ends."
+prerequisites: ""
+components: "V, S, M/DF (a hound's fang)"
+range: "touch"
+targets: ""
+duration: "1 day/level (D)"
+school: "necromancy (haunted) [emotion, fear, mind-affecting]"
+levels:
+- class_id: "class:arcanist"
+  level: 7
+- class_id: "class:cleric"
+  level: 7
+- class_id: "class:magus"
+  level: 6
+- class_id: "class:oracle"
+  level: 7
+- class_id: "class:shaman"
+  level: 7
+- class_id: "class:sorcerer"
+  level: 7
+- class_id: "class:summoner"
+  level: 6
+- class_id: "class:witch"
+  level: 7
+- class_id: "class:wizard"
+  level: 7
+source: "Haunted Heroes Handbook"

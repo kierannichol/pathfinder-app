@@ -1,0 +1,77 @@
+id: "class:fighter#tower_shield_specialist"
+name: "Tower Shield Specialist"
+description: "Many fighters believe the tower shield is a tool suitable only for troops\
+  \ on the battlefield, claiming it is too large and bulky to use in skirmishes or\
+  \ within dungeon corridors. tower shield specialists defy those notions, using their\
+  \ massive shields with startling skill and incredible effect. They use these seemingly\
+  \ clumsy shields to perform deft maneuvers that confound their enemies."
+modifications:
+- add: "ability:burst_barrier#fighter_tower_shield_specialist"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:tower_shield_specialist#fighter_tower_shield_specialist"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:tower_shield_defense#fighter_tower_shield_specialist"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:immediate_repositioning#fighter_tower_shield_specialist"
+  remove:
+  - "ability:weapon_training#fighter@13"
+- add: "ability:tower_shield_evasion#fighter_tower_shield_specialist"
+  remove:
+  - "ability:weapon_mastery#fighter"
+  - "ability:both_weapon_training_4#fighter"
+features:
+- id: "ability:burst_barrier#fighter_tower_shield_specialist"
+  name: "Burst Barrier"
+  label: null
+  type: null
+  description: "At 2nd level, a tower shield specialist can use his shield to screen\
+    \ himself from burst spells and effects, gaining a +1 bonus on Reflex saves against\
+    \ them while employing a tower shield. This bonus increases by +1 for every four\
+    \ levels after 2nd (to a maximum of +5 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:tower_shield_specialist#fighter_tower_shield_specialist"
+  name: "Tower Shield Specialist"
+  label: null
+  type: null
+  description: "At 5th level, when a tower shield specialist employs a tower shield\
+    \ in combat, he does not take the –2 penalty on attack rolls because of the shield's\
+    \ encumbrance.\nThis ability replaces weapon training 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:tower_shield_defense#fighter_tower_shield_specialist"
+  name: "Tower Shield Defense"
+  label: null
+  type: null
+  description: "At 9th level, while using a tower shield, a tower shield specialist\
+    \ gains his shield bonus against touch attacks.\nThis ability replaces weapon\
+    \ training 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:immediate_repositioning#fighter_tower_shield_specialist"
+  name: "Immediate Repositioning"
+  label: null
+  type: null
+  description: "At 13th level, as an immediate action, a tower shield specialist can\
+    \ reposition his tower shield to another facing, but he cannot use this ability\
+    \ to interrupt an attack.\nThis ability replaces weapon training 3."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:tower_shield_evasion#fighter_tower_shield_specialist"
+  name: "Tower Shield Evasion"
+  label: null
+  type: null
+  description: "At 16th level, while using a tower shield, the tower shield specialist\
+    \ gains evasion, as the rogue class ability. At 20th level, the shield specialist\
+    \ gains improved evasion, as the rogue advanced talent, while using a tower shield."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

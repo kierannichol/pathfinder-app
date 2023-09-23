@@ -1,0 +1,30 @@
+id: "class:cleric#stoic_caregiver"
+name: "Stoic Caregiver"
+description: ""
+modifications:
+- add: "ability:positive_channeler#cleric_stoic_caregiver"
+  remove:
+  - "ability:channel_energy#cleric"
+- add: "ability:domains#cleric_stoic_caregiver"
+  remove:
+  - "ability:domains#cleric"
+features:
+- id: "ability:positive_channeler#cleric_stoic_caregiver"
+  name: "Positive Channeler"
+  label: null
+  type: null
+  description: "A stoic caregiver must choose to channel positive energy, even if\
+    \ she worships a deity who is neutral or if she is not devoted to a particular\
+    \ deity. A stoic caregiver cannot worship a deity who is evil."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:domains#cleric_stoic_caregiver"
+  name: "Domains"
+  label: null
+  type: null
+  description: "A stoic caregiver chooses only one domain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+source: "Pathfinder Player Companion: Healer's Handbook"

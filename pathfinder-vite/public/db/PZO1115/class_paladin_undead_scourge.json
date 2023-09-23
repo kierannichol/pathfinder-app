@@ -1,0 +1,38 @@
+{
+  "id": "class:paladin#undead_scourge",
+  "name": "Undead Scourge",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:aura_of_life#paladin_undead_scourge",
+          "conditionFormula": "@class:paladin\u003e\u003d8"
+        }, {
+          "featureId": "ability:undead_annihilation#paladin_undead_scourge",
+          "conditionFormula": "@class:paladin\u003e\u003d11"
+        }],
+        "unlinks": [{
+          "featureId": "ability:aura_of_resolve#paladin"
+        }, {
+          "featureId": "ability:aura_of_justice#paladin"
+        }]
+      }]
+    }
+  }
+}

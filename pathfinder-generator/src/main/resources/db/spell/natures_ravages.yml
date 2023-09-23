@@ -1,0 +1,28 @@
+casting_time: "1 minute/HD of target"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:natures_ravages"
+name: "Nature's Ravages"
+description: "You greatly speed up the decomposition process of a nearby corpse and\
+  \ warp the fibers of time that permeate it, aging the corpse an additional amount\
+  \ of time equal to up to 1 day per 2 caster levels (maximum 10 days at 20th level).\
+  \ This spell prompts all the natural effects of the intended decomposition period,\
+  \ including crumbled clothing, rotted or liquefied flesh, maggot infestations, and\
+  \ the infiltration of any surrounding vegetation."
+prerequisites: ""
+components: "V, S, M/DF (dried maggots)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "corpse of creature whose total number of HD does not exceed your caster\
+  \ level"
+duration: "instantaneous"
+school: "necromancy"
+levels:
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:warpriest"
+  level: 4
+- class_id: "class:witch"
+  level: 3
+source: "Dungeoneer's Handbook"

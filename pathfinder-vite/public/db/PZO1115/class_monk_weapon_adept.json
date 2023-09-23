@@ -1,0 +1,68 @@
+{
+  "id": "class:monk#weapon_adept",
+  "name": "Weapon Adept",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:timeless_body#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:evasion#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:perfect_strike#monk_weapon_adept",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:way_of_the_weapon_master#monk_weapon_adept",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:evasion#monk_weapon_adept",
+          "conditionFormula": "@class:monk\u003e\u003d9"
+        }, {
+          "featureId": "ability:uncanny_initiative#monk_weapon_adept",
+          "conditionFormula": "@class:monk\u003e\u003d17"
+        }, {
+          "featureId": "ability:pure_power#monk_weapon_adept",
+          "conditionFormula": "@class:monk\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:stunning_fist#monk"
+        }, {
+          "featureId": "ability:evasion#monk"
+        }, {
+          "featureId": "ability:improved_evasion#monk"
+        }, {
+          "featureId": "ability:timeless_body#monk"
+        }, {
+          "featureId": "ability:perfect_self#monk"
+        }]
+      }]
+    }
+  }
+}

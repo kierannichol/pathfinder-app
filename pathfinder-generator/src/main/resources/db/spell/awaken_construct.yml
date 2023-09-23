@@ -1,0 +1,32 @@
+casting_time: "24 hours"
+saving_throw: "Will negates"
+spell_resistance: "no"
+id: "spell:awaken_construct"
+name: "Awaken Construct"
+description: "You amplify the animating force of a construct to more closely resemble\
+  \ a true soul, granting the construct humanlike sentience. To do so, you must succeed\
+  \ at a Spellcraft check (DC = 15 + the construct's current Hit Dice). If the construct's\
+  \ master (if any) is present, this is an opposed Spellcraft check. You have no special\
+  \ empathy or connection with a creature you awaken--it is a free-willed creature.\
+  \ Golems previously under another creature's control, either as shield guardians\
+  \ or a golem crafter's creations, break all connections with that creature."
+prerequisites: ""
+components: "V, S, M (herbs and oils worth 2,000 gp per HD of target), DF"
+range: "touch"
+targets: "mindless construct touched"
+duration: "instantaneous"
+school: "transmutation"
+levels:
+- class_id: "class:arcanist"
+  level: 7
+- class_id: "class:cleric"
+  level: 7
+- class_id: "class:oracle"
+  level: 7
+- class_id: "class:shaman"
+  level: 6
+- class_id: "class:sorcerer"
+  level: 7
+- class_id: "class:wizard"
+  level: 7
+source: "Occult Adventures"

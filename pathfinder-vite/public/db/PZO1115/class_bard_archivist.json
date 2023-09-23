@@ -1,0 +1,78 @@
+{
+  "id": "class:bard#archivist",
+  "name": "Archivist",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:inspire_courage#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:jack_of_all_trades#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some bards greatly prefer academic pursuits to the drama (and sometimes melodrama) of their artistic brethren."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bardic_performance#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:bardic_performance#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:lore_master#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:magic_lore#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:jack_of_all_trades#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:probable_path#bard_archivist",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:versatile_performance#bard"
+        }, {
+          "featureId": "ability:well_versed#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }, {
+          "featureId": "ability:jack_of_all_trades#bard"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,88 @@
+id: "class:ranger#fortune_finder"
+name: "Fortune Finder"
+description: "Adventurers seek fortune and and travel to mysterious lands. The most\
+  \ skilled of these thrillseekers are often called fortune-finders."
+modifications:
+- add: "ability:hinterlander#ranger_fortune_finder"
+  remove:
+  - "ability:track#ranger"
+- add: "ability:adaptable_study#ranger_fortune_finder"
+  remove:
+  - "ability:hunters_bond#ranger"
+- add: "ability:trailblazer#ranger_fortune_finder"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:fast_study#ranger_fortune_finder"
+  remove:
+  - "ability:improved_quarry#ranger"
+  - "ability:quarry#ranger"
+- add: "ability:master_explorer#ranger_fortune_finder"
+  remove:
+  - "ability:master_hunter#ranger"
+features:
+- id: "ability:hinterlander#ranger_fortune_finder"
+  name: "Hinterlander"
+  label: null
+  type: null
+  description: "A fortune-finder adds 1/2 his level (minimum 1) on all Climb and Swim\
+    \ checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:adaptable_study#ranger_fortune_finder"
+  name: "Adaptable Study"
+  label: null
+  type: null
+  description: "At 4th level, a fortune-finder can adapt and orient himself to new\
+    \ environments and new enemies. He gains a +1 bonus on initiative checks and Knowledge\
+    \ (geography), Perception, Stealth, and Survival checks whenever he is in a terrain\
+    \ he hasn't selected as one of his favored terrains. He leaves no trail and can't\
+    \ be tracked in any such terrain (though he can leave a trail if he so chooses).\n\
+    In addition to this, the fortune-finder can study an opponent he can see as a\
+    \ move action. He then gains a bonus on Bluff, Knowledge, Perception, Sense Motive,\
+    \ and Survival checks attempted against that opponent, as well as on weapon attack\
+    \ and damage rolls against it. The bonus is equal to half the fortune-seeker's\
+    \ highest favored enemy bonus. A fortune-finder can't attempt Knowledge checks\
+    \ untrained to identify an opponent he has studied with adaptable study. Bonuses\
+    \ from adaptable study don't stack with those from the favored enemy ability.\
+    \ The ranger can study only a single target at a time."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:trailblazer#ranger_fortune_finder"
+  name: "Trailblazer"
+  label: null
+  type: null
+  description: "Starting at 7th level, a fortune-finder can move through any sort\
+    \ of difficult terrain at his normal speed. Terrain that is enchanted or magically\
+    \ manipulated to impede movement, however, still affects the fortune-finder."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:fast_study#ranger_fortune_finder"
+  name: "Fast Study"
+  label: null
+  type: null
+  description: "Beginning at 11th level, a fortune-finder can study an opponent using\
+    \ adaptable study as a swift or move action. In addition to this, he can maintain\
+    \ bonuses from adaptable study against one additional opponent. At 19th level,\
+    \ he can study an opponent using adaptable study as an immediate, swift, or move\
+    \ action and can maintain the bonuses from adaptable study against a total of\
+    \ three opponents."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:master_explorer#ranger_fortune_finder"
+  name: "Master Explorer"
+  label: null
+  type: null
+  description: "A fortune-finder of 20th level becomes a master explorer. He can move\
+    \ through any sort of terrain that impedes movement at his full speed, even if\
+    \ it is enchanted or magically manipulated to impede motion. As a full-round action,\
+    \ he can study one opponent he can see and has already studied with adaptable\
+    \ study, increasing the benefits he gains from that ability to equal his full\
+    \ favored enemy bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+source: "Pathfinder Player Companion: Blood of the Beast"

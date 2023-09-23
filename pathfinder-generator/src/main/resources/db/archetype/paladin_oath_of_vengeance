@@ -1,0 +1,34 @@
+id: "class:paladin#oath_of_vengeance"
+name: "Oath of Vengeance"
+description: ""
+modifications:
+- add: "ability:channel_wrath#paladin_oath_of_vengeance"
+  remove:
+  - "ability:channel_positive_energy#paladin"
+- add: "ability:powerful_justice#paladin_oath_of_vengeance"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:channel_wrath#paladin_oath_of_vengeance"
+  name: "Channel Wrath"
+  label: null
+  type: null
+  description: "When an oathbound paladin reach 4th level, she can spend two uses\
+    \ of her lay on hands ability to gain an extra use of smite evil that day. This\
+    \ ability has no effect for a paladin who does not have the smite evil ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:powerful_justice#paladin_oath_of_vengeance"
+  name: "Powerful Justice"
+  label: null
+  type: null
+  description: "At 11th level, an oathbound paladin may spends one use of her smite\
+    \ evil ability to grant her allies within 10 feet the ability to smite evil, except\
+    \ they only gain the paladin's bonus to damage, not her smite's attack bonus or\
+    \ ability to bypass DR.\nThis ability replaces aura of justice.\nCode of Conduct:\
+    \ Never let lesser evils distract you from your pursuit of just vengeance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

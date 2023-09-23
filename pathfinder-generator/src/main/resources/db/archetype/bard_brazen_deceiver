@@ -1,0 +1,86 @@
+id: "class:bard#brazen_deceiver"
+name: "Brazen Deceiver"
+description: "Where other thieves use stealth or intimidation to achieve their goals,\
+  \ the brazen deceiver depends on lies. Thieves guilds often send brazen deceivers\
+  \ to acquire blackmail materials, arrange the release of incarcerated agents, or\
+  \ otherwise manipulate events."
+modifications:
+- add: "ability:deceptive_tale#bard_brazen_deceiver"
+  remove:
+  - "ability:distraction_bardic_performances#bard"
+  - "ability:the_countersong#bard"
+- add: "ability:shameless_scoundrel#bard_brazen_deceiver"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:blatant_subtlety#bard_brazen_deceiver"
+  remove:
+  - "ability:well_versed#bard"
+- add: "ability:invoke_the_blood#bard_brazen_deceiver"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:devils_tongue#bard_brazen_deceiver"
+  remove:
+  - "ability:lore_master#bard"
+features:
+- id: "ability:deceptive_tale#bard_brazen_deceiver"
+  name: "Deceptive Tale"
+  label: null
+  type: null
+  description: "A brazen deceiver learns the deceptive tale bardic performance, allowing\
+    \ him to weave magic into his lies and imbue the most fantastic claims with the\
+    \ appearance of truth. While the brazen deceiver maintains this performance, he\
+    \ takes half the normal penalty on Bluff checks for unlikely lies (rounding down\
+    \ to -2). At 5th level, this effect also applies to Bluff checks for far-fetched\
+    \ lies, and at 11th level, it applies to Bluff checks for impossible lies. Deceptive\
+    \ tale relies on audible components."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:shameless_scoundrel#bard_brazen_deceiver"
+  name: "Shameless Scoundrel"
+  label: null
+  type: null
+  description: "A brazen deceiver adds half his level (minimum +1) on Bluff, Disguise,\
+    \ and Stealth checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:blatant_subtlety#bard_brazen_deceiver"
+  name: "Blatant Subtlety"
+  label: null
+  type: null
+  description: "At 2nd level, a brazen deceiver has mastered the art of using magic\
+    \ without being detected. The brazen deceiver gains Spellsong as a bonus feat.\
+    \ Observers do not automatically recognize his bardic performances as anything\
+    \ other than ordinary speech or performance. Those specifically looking for abnormal\
+    \ effects must succeed at a Sense Motive check (DC = 10 + half the brazen deceiver's\
+    \ bard level + the brazen deceiver's Charisma modifier) to detect his performances."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:invoke_the_blood#bard_brazen_deceiver"
+  name: "Invoke the Blood"
+  label: null
+  type: null
+  description: "A brazen deceiver adds the following spells to his bard spells known\
+    \ at the listed class levels. At 2nd level, the brazen deceiver adds bleed and\
+    \ touch of fatigue to his 0-level bard spells known. At 6th level, the brazen\
+    \ deceiver adds darkness and darkvision to his 2nd-level bard spells known. At\
+    \ 10th level, he adds shadow conjuration and shadow step to his 4th-level bard\
+    \ spells known. At 14th level, he adds shadow evocation and shadow walk to his\
+    \ 5th-level bard spells known. At 18th level, he adds greater shadow conjuration\
+    \ and greater shadow evocation to his 6th-level bard spells known."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:devils_tongue#bard_brazen_deceiver"
+  name: "Devil's Tongue"
+  label: null
+  type: null
+  description: "At 5th level, a brazen deceiver beguiles others with astonishing skill.\
+    \ This functions as the lore master ability, but its effects apply to Bluff checks\
+    \ instead of Knowledge skill checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

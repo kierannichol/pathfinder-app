@@ -1,0 +1,44 @@
+id: "class:ranger#lycanthrope_hunter"
+name: "Lycanthrope Hunter"
+description: "Lycanthropes, most notably werewolves, instill singular dread in the\
+  \ stories and fears of the Frontier's peoples. While most simply pray that they'll\
+  \ never encounter such bloodthirsty beasts, others hone their skills and sharpen\
+  \ silver blades, preparing themselves to hunt the most savage of quarries."
+modifications:
+- add: "ability:shapechangers_bane#ranger_lycanthrope_hunter"
+  remove:
+  - "ability:favored_enemy#ranger"
+- add: "ability:forced_form#ranger_lycanthrope_hunter"
+  remove:
+  - "ability:swift_tracker#ranger"
+features:
+- id: "ability:shapechangers_bane#ranger_lycanthrope_hunter"
+  name: "Shapechanger's Bane"
+  label: null
+  type: null
+  description: "At 1st level, a lycanthrope hunter gains the following benefits against\
+    \ creatures with the animal type as well as creatures with the shapechanger subtype.\
+    \ The lycanthrope hunter gains a +2 bonus on Bluff, Knowledge, Perception, Sense\
+    \ Motive, and Survival checks when dealing with these creatures, and a +2 bonus\
+    \ on weapon attack and damage rolls against them. Additionally, a lycanthrope\
+    \ hunter can attempt Knowledge skill checks untrained when attempting to identify\
+    \ these creatures.\nAt 5th, 10th, 15th, and 20th level, the lycanthrope hunter's\
+    \ bonuses against animals and shapechangers increase by 2 (maximum bonus of +10\
+    \ at 20th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: The World of Vampire Hunter D"
+- id: "ability:forced_form#ranger_lycanthrope_hunter"
+  name: "Forced Form"
+  label: null
+  type: null
+  description: "At 8th level, upon confirming a critical hit against an opponent,\
+    \ a lycanthrope hunter can force that opponent to attempt a Will saving throw\
+    \ (DC = 10 + the lycanthrope hunter's level + the lycanthrope hunter's Charisma\
+    \ modifier). If the creature fails and it has the shapechanger subtype or is under\
+    \ the effect of any polymorph effect, it immediately reverts to its natural form.\
+    \ If it is already in its natural and unaltered form, this ability has no effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: The World of Vampire Hunter D"
+source: "Pathfinder Roleplaying Game: The World of Vampire Hunter D"

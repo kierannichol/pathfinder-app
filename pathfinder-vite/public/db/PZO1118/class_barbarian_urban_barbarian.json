@@ -1,0 +1,39 @@
+{
+  "id": "class:barbarian#urban_barbarian",
+  "name": "Urban Barbarian",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:fast_movement#barbarian AND !@modifies:ability:rage#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Every barbarian knows that city life can soften the spirit and the body, but some barbarians take on the trappings and ways of their adoptive homes and bend their savage powers to its challenges. While these urban barbarians\u0027 rough edges are smoothed into civility, they can use their primal nature and upbringing to move with the ebb and flow of civilization\u0027s natural rhythms."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rage#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:crowd_control#barbarian_urban_barbarian",
+          "conditionFormula": "@class:barbarian\u003e\u003d1"
+        }, {
+          "featureId": "ability:controlled_rage#barbarian_urban_barbarian",
+          "conditionFormula": "@class:barbarian\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:fast_movement#barbarian"
+        }, {
+          "featureId": "ability:rage#barbarian"
+        }]
+      }]
+    }
+  }
+}

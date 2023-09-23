@@ -1,0 +1,25 @@
+{
+  "id": "class:oracle#enlightened_philosopher",
+  "name": "Enlightened Philosopher",
+  "tags": ["archetype", "oracle"],
+  "enabledFormula": "!@modifies:ability:the_final_revelation_of_the_oracles_mystery#oracle",
+  "maxStacks": 1,
+  "description": {
+    "text": "The enlightened philosopher seeks enlightenment through compassion, moderation, and humility. By following her philosophy\u0027s teachings, the enlightened philosopher seeks to reach enlightenment and become one with the universe."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_final_revelation_of_the_oracles_mystery#oracle",
+            "numberValue": 1
+          }
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_final_revelation_of_the_oracles_mystery#oracle"
+        }]
+      }]
+    }
+  }
+}

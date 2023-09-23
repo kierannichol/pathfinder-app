@@ -1,0 +1,47 @@
+id: "class:cleric#angelfire_apostle"
+name: "Angelfire Apostle"
+description: ""
+modifications:
+- add: "ability:armor_proficiency#cleric_angelfire_apostle"
+  remove:
+  - "ability:the_clerics_armor_proficiency#cleric"
+- add: "ability:diminished_spellcasting#cleric_angelfire_apostle"
+  remove:
+  - "ability:the_clerics_spellcasting#cleric"
+- add: "ability:channel_angelfire#cleric_angelfire_apostle"
+  remove:
+  - "ability:channel_energy#cleric"
+features:
+- id: "ability:armor_proficiency#cleric_angelfire_apostle"
+  name: "Armor Proficiency"
+  label: null
+  type: null
+  description: "Angelfire apostles are not proficient with medium armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:diminished_spellcasting#cleric_angelfire_apostle"
+  name: "Diminished Spellcasting"
+  label: null
+  type: null
+  description: "An angelfire apostle is less concerned with the traditional divine\
+    \ magic that many religious adherents receive. The angelfire apostle receives\
+    \ one fewer spell slot at each spell level. When an angelfire apostle gets no\
+    \ spells per day at a spell level, he can cast domain spells of that level normally,\
+    \ but can only cast nondomain spells of that level if he gets them as bonus spells."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:channel_angelfire#cleric_angelfire_apostle"
+  name: "Channel Angelfire"
+  label: null
+  type: null
+  description: "An angelfire apostle must be of good or neutral alignment and must\
+    \ choose to channel positive energy, even if his deity is neutral or if he is\
+    \ not devoted to a particular deity. When an angelfire apostle channels positive\
+    \ energy, affected nongood creatures are dazzled for 1 round, with no saving throw\
+    \ for this effect, in addition to experiencing the normal effects of channel energy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+source: "Pathfinder Player Companion: Healer's Handbook"

@@ -1,0 +1,39 @@
+id: "class:rogue#relic_raider"
+name: "Relic Raider"
+description: ""
+modifications:
+- add: "ability:curse_sense#rogue_relic_raider"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:disable_curse#rogue_relic_raider"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:curse_sense#rogue_relic_raider"
+  name: "Curse Sense"
+  label: null
+  type: null
+  description: "At 4th level, a relic raider adds 1/2 her rogue level on Perception\
+    \ checks to notice haunts and on Spellcraft checks to identify cursed items (using\
+    \ detect magic or similar effects).\nIn addition, the relic raider gains a +1\
+    \ bonus on saving throws against curses and haunts and a +1 dodge bonus to AC\
+    \ against attacks by haunts. These bonuses increase by 1 at 6th level and every\
+    \ 3 rogue levels thereafter (to a maximum of +6 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:disable_curse#rogue_relic_raider"
+  name: "Disable Curse"
+  label: null
+  type: null
+  description: "At 8th level, a relic raider can attempt to disable a curse as she\
+    \ would a magical trap. This ability acts as remove curse, except instead of a\
+    \ caster level check, the relic raider attempts a Disable Device check (DC = 15\
+    \ + the DC of the curse). Disabling a curse takes 2d4 rounds, and the relic raider\
+    \ cannot take 10 or 20 on this check. A relic raider can use this ability once\
+    \ per day at 8th level. At 12th level and every 4 rogue levels thereafter, a relic\
+    \ raider can use disable curse one additional time per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+source: "Pathfinder Player Companion: Black Markets"

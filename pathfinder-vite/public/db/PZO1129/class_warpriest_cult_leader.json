@@ -1,0 +1,66 @@
+{
+  "id": "class:warpriest#cult_leader",
+  "name": "Cult Leader",
+  "tags": ["archetype", "warpriest"],
+  "enabledFormula": "!@modifies:ability:focus_weapon#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_12th_level#warpriest AND !@modifies:ability:the_warpriests_weapon_and_armor_proficiencies#warpriest AND !@modifies:ability:the_bonus_feats_gained_at_3rd_9th_and_15th_levels#warpriest AND !@modifies:ability:channel_energy#warpriest",
+  "maxStacks": 1,
+  "description": {
+    "text": "Referred to as fanatics, lunatics, or obsessives, cultists see themselves as genuine devotees of their deity. And the hierarchs of those devotees, the cult leaders, are the most fanatical of them all. Cult leaders are known for turning reasonable hearts toward corrupted teachings and striking at those that get in the way of their agenda."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:focus_weapon#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_bonus_feat_gained_at_12th_level#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_warpriests_weapon_and_armor_proficiencies#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_bonus_feats_gained_at_3rd_9th_and_15th_levels#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:channel_energy#warpriest",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:well_hidden#warpriest_cult_leader",
+          "conditionFormula": "@class:warpriest\u003e\u003d1"
+        }, {
+          "featureId": "ability:sneak_attack#warpriest_cult_leader",
+          "conditionFormula": "@class:warpriest\u003e\u003d3"
+        }, {
+          "featureId": "ability:enthrall#warpriest_cult_leader",
+          "conditionFormula": "@class:warpriest\u003e\u003d4"
+        }, {
+          "featureId": "ability:hide_in_plain_sight#warpriest_cult_leader",
+          "conditionFormula": "@class:warpriest\u003e\u003d12"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_warpriests_weapon_and_armor_proficiencies#warpriest"
+        }, {
+          "featureId": "ability:focus_weapon#warpriest"
+        }, {
+          "featureId": "ability:the_bonus_feats_gained_at_3rd_9th_and_15th_levels#warpriest"
+        }, {
+          "featureId": "ability:channel_energy#warpriest"
+        }, {
+          "featureId": "ability:the_bonus_feat_gained_at_12th_level#warpriest"
+        }]
+      }]
+    }
+  }
+}

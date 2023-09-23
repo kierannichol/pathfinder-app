@@ -1,0 +1,48 @@
+id: "class:barbarian#savage_technologist"
+name: "Savage Technologist"
+description: ""
+modifications:
+- add: "ability:rage#barbarian_savage_technologist"
+  remove:
+  - "ability:rage#barbarian"
+- add: "ability:sword_and_gun#barbarian_savage_technologist"
+  remove:
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:crack_shot#barbarian_savage_technologist"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+features:
+- id: "ability:rage#barbarian_savage_technologist"
+  name: "Rage"
+  label: null
+  type: null
+  description: "A savage technologist can enter rage as a barbarian, except she gains\
+    \ a morale bonus to Strength and Dexterity instead of Strength and Constitution,\
+    \ and she does not take a penalty to Armor Class. She retains the bonus on Will\
+    \ saving throws. When a barbarian ability would increase the savage technologist's\
+    \ Strength while raging, it increases her Dexterity instead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+- id: "ability:sword_and_gun#barbarian_savage_technologist"
+  name: "Sword and Gun"
+  label: null
+  type: null
+  description: "At 2nd level, when a raging savage technologist wields a one-handed\
+    \ firearm in one hand and a light or one-handed melee weapon in the other, she\
+    \ can make ranged attacks with the firearm without provoking attacks of opportunity.\
+    \ She also gains the benefits of the Two-Weapon Fighting feat, but only if all\
+    \ attacks are made with those weapons."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+- id: "ability:crack_shot#barbarian_savage_technologist"
+  name: "Crack Shot"
+  label: null
+  type: null
+  description: "At 5th level, a savage technologist adds her Dexterity modifier to\
+    \ her damage rolls when making ranged attacks with a firearm while raging."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+source: "Pathfinder Campaign Setting: Technology Guide"

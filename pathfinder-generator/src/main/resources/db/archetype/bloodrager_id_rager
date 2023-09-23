@@ -1,0 +1,71 @@
+id: "class:bloodrager#id_rager"
+name: "Id Rager"
+description: "An id rager lacks a supernatural taint to his blood, instead drawing\
+  \ power from pure emotion."
+modifications:
+- add: "ability:atavistic_avatar#bloodrager_id_rager"
+  remove:
+  - "ability:bloodline_all_bloodline_spells#bloodrager"
+  - "ability:all_bloodline_powers#bloodrager"
+- add: "ability:atavistic_caster#bloodrager_id_rager"
+  remove:
+  - "ability:the_bloodragers_spellcasting#bloodrager"
+  - "ability:eschew_materials#bloodrager"
+- add: "ability:bonus_feats#bloodrager_id_rager"
+  remove:
+  - "ability:all_bloodline_feats#bloodrager"
+features:
+- id: "ability:atavistic_avatar#bloodrager_id_rager"
+  name: "Atavistic Avatar"
+  label: null
+  type: null
+  description: "An id rager chooses one emotional focus to define his core: anger,\
+    \ dedication, despair, fear, hatred, jealousy, remorse, or zeal.\nAt 1st level,\
+    \ he gains Skill Focus as a bonus feat in one skill associated with his atavistic\
+    \ focus.\nAnger: Intimidate or Survival. Dedication: Diplomacy or Sense Motive.\
+    \ Despair: Intimidate or Stealth. Fear: Intimidate or Stealth. Hatred: Acrobatics\
+    \ or Perception. Jealousy: Appraise or Bluff. Remorse: Perception or Sense Motive.\
+    \ Zeal: Acrobatics or Survival.\nWhen the id rager enters a bloodrage, he gains\
+    \ additional powers as if he were a phantom with the emotional focus he selected\
+    \ as his atavistic focus. He is considered to be both a phantom and a spiritualist\
+    \ for the purposes of abilities whose effect references both a phantom and a spiritualist,\
+    \ such as a dedication phantom's dutiful strike, and treats his bloodrager level\
+    \ as both his spiritualist level and his phantom Hit Dice when determining abilities\
+    \ and save DCs.\nThis ability does not allow the id rager to become incorporeal.\n\
+    At 4th level, the id rager gains Lightning Reflexes, Great Fortitude, or Iron\
+    \ Will as a bonus feat.\nAt 8th level, the id rager can meditate for 1 hour to\
+    \ change his atavistic focus for 24 hours or until he decides to return to his\
+    \ permanent atavistic focus as a free action. When he changes his focus, he loses\
+    \ access to his Skill Focus feat and the feat he gained at 4th level, and he wields\
+    \ emotional focus powers as if his spiritualist level and phantom Hit Dice were\
+    \ 3 lower.\nAt 12th level, the id rager gains Skill Focus in both of the skills\
+    \ associated with his atavistic focus. If circumstances cause him to lose one\
+    \ Skill Focus feat, he loses both."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Occult Origins"
+- id: "ability:atavistic_caster#bloodrager_id_rager"
+  name: "Atavistic Caster"
+  label: null
+  type: null
+  description: "At 4th level, a id rager's bloodrager spells are treated as psychic\
+    \ magic.\nThe bloodrager's bloodrage does not prevent him from casting spells\
+    \ with emotional components, and he is considered to be a psychic spellcaster\
+    \ for the purposes of prerequisites (such as for the prerequisites of psychic\
+    \ duels and occult skill unlocks)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Occult Origins"
+- id: "ability:bonus_feats#bloodrager_id_rager"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "At 6th level and every 3 bloodrager levels thereafter, an id rager\
+    \ can select one of the following feats as a bonus feat: Combat Casting, Empath,\
+    \ Extra Rage, Intuitive Spell, Logical Spell, Psychic Combatant, Psychic Defender,\
+    \ Psychic Healing, Psychic Maestro, Psychic Virtuoso, Raging Concentration, Spell\
+    \ Focus, or Spell Penetration."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Occult Origins"
+source: "Pathfinder Player Companion: Occult Origins"

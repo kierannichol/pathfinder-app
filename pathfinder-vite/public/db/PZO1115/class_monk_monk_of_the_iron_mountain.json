@@ -1,0 +1,68 @@
+{
+  "id": "class:monk#monk_of_the_iron_mountain",
+  "name": "Monk of the Iron Mountain",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:high_jump#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:evasion#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:high_jump#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tongue_of_the_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:iron_monk#monk_monk_of_the_iron_mountain",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:bastion_stance#monk_monk_of_the_iron_mountain",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:iron_limb_defense#monk_monk_of_the_iron_mountain",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:adamantine_monk#monk_monk_of_the_iron_mountain",
+          "conditionFormula": "@class:monk\u003e\u003d9"
+        }, {
+          "featureId": "ability:vow_of_silence#monk_monk_of_the_iron_mountain",
+          "conditionFormula": "@class:monk\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:evasion#monk"
+        }, {
+          "featureId": "ability:slow_fall#monk"
+        }, {
+          "featureId": "ability:high_jump#monk"
+        }, {
+          "featureId": "ability:improved_evasion#monk"
+        }, {
+          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
+        }]
+      }]
+    }
+  }
+}

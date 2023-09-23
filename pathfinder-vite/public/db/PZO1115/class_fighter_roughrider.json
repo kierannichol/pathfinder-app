@@ -1,0 +1,78 @@
+{
+  "id": "class:fighter#roughrider",
+  "name": "Roughrider",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:steadfast_mount#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:armored_charger#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d3"
+        }, {
+          "featureId": "ability:mounted_mettle#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:leap_from_the_saddle#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d7"
+        }, {
+          "featureId": "ability:relentless_steed#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d11"
+        }, {
+          "featureId": "ability:ride_them_down#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d15"
+        }, {
+          "featureId": "ability:unavoidable_onslaught#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d15"
+        }, {
+          "featureId": "ability:indomitable_steed#fighter_roughrider",
+          "conditionFormula": "@class:fighter\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

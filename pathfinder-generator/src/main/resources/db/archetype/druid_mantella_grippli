@@ -1,0 +1,37 @@
+id: "class:druid#mantella_grippli"
+name: "Mantella (Grippli)"
+description: ""
+modifications:
+- add: "ability:poison_affinity#druid_mantella_grippli"
+  remove:
+  - "ability:wild_shape#druid"
+- add: "ability:toxic_diet#druid_mantella_grippli"
+  remove:
+  - "ability:spontaneous_casting#druid"
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:poison_affinity#druid_mantella_grippli"
+  name: "Poison Affinity"
+  label: null
+  type: null
+  description: "At 4th level, if a form the mantella assumes with wild shape has any\
+    \ poison abilities, the mantella also gains those abilities. However, the mantilla\
+    \ can never use wild shape to take the form of an elemental."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:toxic_diet#druid_mantella_grippli"
+  name: "Toxic Diet"
+  label: null
+  type: null
+  description: "At 6th level, both the mantella and her animal companion gain immunity\
+    \ to poison. Additionally, as an immediate action when exposed to a dose of poison,\
+    \ a mantella can absorb the toxin and store it internally for up to 1 day. As\
+    \ a swift action, a mantella can secrete this poison; this changes the poison's\
+    \ type to injury and applies the dose of poison to all of the druid's natural\
+    \ attacks. A mantella can use this ability three times per day, plus one additional\
+    \ time per day at 8th level and every 2 druid levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+source: "Pathfinder Player Companion: Potions & Poisons"

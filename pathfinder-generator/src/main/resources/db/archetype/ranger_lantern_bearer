@@ -1,0 +1,124 @@
+id: "class:ranger#lantern_bearer"
+name: "Lantern Bearer"
+description: "Lantern bearers are entrusted with secretly eliminating the drow and\
+  \ containing any knowledge of their existence. While the vast majority of lantern\
+  \ bearers are elves, a rare few members of the organization have proven themselves\
+  \ trustworthy and dedicated enough to join their ranks despite their non-elven heritage."
+modifications:
+- add: "ability:enhanced_vision#ranger_lantern_bearer"
+  remove:
+  - "ability:wild_empathy#ranger"
+- add: "ability:poison_resistance#ranger_lantern_bearer"
+  remove:
+  - "ability:endurance#ranger"
+- add: "ability:favored_terrain#ranger_lantern_bearer"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:cavern_stride#ranger_lantern_bearer"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:darkvision#ranger_lantern_bearer"
+  remove:
+  - "ability:the_favored_terrain_gained_at_8th_level#ranger"
+- add: "ability:poison_immunity#ranger_lantern_bearer"
+  remove:
+  - "ability:camouflage#ranger"
+- add: "ability:stunning_light#ranger_lantern_bearer"
+  remove:
+  - "ability:the_favored_terrain_gained_at_13th_level#ranger"
+- add: "ability:camouflage#ranger_lantern_bearer"
+  remove:
+  - "ability:hide_in_plain_sight#ranger"
+- add: "ability:paralyzing_light#ranger_lantern_bearer"
+  remove:
+  - "ability:the_favored_terrain_gained_at_18th_level#ranger"
+features:
+- id: "ability:enhanced_vision#ranger_lantern_bearer"
+  name: "Enhanced Vision"
+  label: null
+  type: null
+  description: "A lantern bearer hones his senses to better combat subterranean enemies.\
+    \ He gains low-light vision. If the lantern bearer already has low-light vision,\
+    \ he can instead see three times as far as humans in areas of dim light."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:poison_resistance#ranger_lantern_bearer"
+  name: "Poison Resistance"
+  label: null
+  type: null
+  description: "At 3rd level, a lantern bearer gains a +4 bonus on saving throws against\
+    \ poison."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:favored_terrain#ranger_lantern_bearer"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "At 3rd level, a lantern bearer selects a favored terrain as normal.\
+    \ The skill bonus and initiative bonus granted in this favored terrain increase\
+    \ by 2 at 8th level and every 5 ranger levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:cavern_stride#ranger_lantern_bearer"
+  name: "Cavern Stride"
+  label: null
+  type: null
+  description: "At 7th level, a lantern bearer's movement is unimpeded by non-magical\
+    \ difficult terrain underground and non-magical webs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:darkvision#ranger_lantern_bearer"
+  name: "Darkvision"
+  label: null
+  type: null
+  description: "At 8th level, a lantern bearer's senses fully attune to the darkness,\
+    \ granting him darkvision to a distance of 60 feet. If the lantern bearer already\
+    \ has darkvision, its range increases by 30 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:poison_immunity#ranger_lantern_bearer"
+  name: "Poison Immunity"
+  label: null
+  type: null
+  description: "At 12th level, a lantern bearer gains immunity to poison."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:stunning_light#ranger_lantern_bearer"
+  name: "Stunning Light"
+  label: null
+  type: null
+  description: "At 13th level, a lantern bearer learns to increase the effectiveness\
+    \ of bright light on creatures with light blindness. Daylight spells cast by the\
+    \ lantern bearer or other sources of bright light wielded by him cause creatures\
+    \ with light blindness within the area of bright light to become stunned for 1\
+    \ round in addition to being blinded."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:camouflage#ranger_lantern_bearer"
+  name: "Camouflage"
+  label: null
+  type: null
+  description: "At 17th level, a lantern bearer gains camouflage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:paralyzing_light#ranger_lantern_bearer"
+  name: "Paralyzing Light"
+  label: null
+  type: null
+  description: "At 18th level, a lantern bearer can stop light-blind enemies in their\
+    \ tracks, often gaining a great edge in battle. Daylight spells cast by the lantern\
+    \ bearer or sources of bright light wielded by him cause creatures with light\
+    \ blindness within the area of bright light to become paralyzed for 1 round in\
+    \ addition to being blinded and stunned."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+source: "Pathfinder Campaign Setting: Inner Sea Intrigue"

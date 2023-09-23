@@ -1,0 +1,54 @@
+id: "class:wizard#spirit_binder"
+name: "Spirit Binder"
+description: ""
+modifications:
+- add: "ability:soulbound_familiar#wizard_spirit_binder"
+  remove:
+  - "ability:arcane_bond#wizard"
+- add: "ability:arcane_school#wizard_spirit_binder"
+  remove:
+  - "ability:arcane_school#wizard"
+- add: "ability:lost_talents#wizard_spirit_binder"
+  remove:
+  - "ability:scribe_scroll#wizard"
+  - "ability:the_wizards_bonus_feats#wizard"
+features:
+- id: "ability:soulbound_familiar#wizard_spirit_binder"
+  name: "Soulbound Familiar"
+  label: null
+  type: null
+  description: "A spirit binder must select a familiar for his arcane bond. Unlike\
+    \ in a normal familiar-summoning ritual, a spirit binder created his special familiar\
+    \ through a dangerous ritual catalyzed by the death of a loved one. Before the\
+    \ loved one's spirit fully passed on, the spirit binder was able to bind the spirit\
+    \ to an animal or vermin, which then became his familiar.\nA soulbound familiar's\
+    \ personality is that of the lost loved one, rather than a servant of the spirit\
+    \ binder. It can have any alignment, even one that is diametrically opposed to\
+    \ the spirit binder's. A soulbound familiar has the base attack bonus and base\
+    \ saving throws of the loved one's favored class (using the spirit binder's level\
+    \ as its level). If the loved one died before the beginning of the campaign, the\
+    \ spirit binder selects the familiar's favored class at 1st level and it cannot\
+    \ be changed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:arcane_school#wizard_spirit_binder"
+  name: "Arcane School"
+  label: null
+  type: null
+  description: "A spirit binder can't choose necromancy as an opposition school."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:lost_talents#wizard_spirit_binder"
+  name: "Lost Talents"
+  label: null
+  type: null
+  description: "A spirit binder's soulbound familiar possesses some of the ability\
+    \ of the lost loved one, and it is capable of learning more. At 1st level, 5th\
+    \ level, and every 5 levels thereafter, the spirit binder's familiar gains a new\
+    \ feat for which it meets the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+source: "Pathfinder Player Companion: Familiar Folio"

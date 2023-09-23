@@ -1,0 +1,48 @@
+id: "class:fighter#eldritch_guardian"
+name: "Eldritch Guardian"
+description: ""
+modifications:
+- add: "ability:familiar#fighter_eldritch_guardian"
+  remove:
+  - "ability:bonus_feat#fighter"
+- add: "ability:share_training#fighter_eldritch_guardian"
+  remove:
+  - "ability:bonus_feat#fighter"
+- add: "ability:steel_will#fighter_eldritch_guardian"
+  remove:
+  - "ability:bravery#fighter"
+features:
+- id: "ability:familiar#fighter_eldritch_guardian"
+  name: "Familiar"
+  label: null
+  type: null
+  description: "At 1st level, an eldritch guardian gains a familiar, treating his\
+    \ fighter level as his effective wizard level for the purpose of this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:share_training#fighter_eldritch_guardian"
+  name: "Share Training"
+  label: null
+  type: null
+  description: "At 2nd level, when the familiar can see and hear its master, it can\
+    \ use any combat feat possessed by the eldritch guardian. The familiar doesn't\
+    \ have to meet the feat's prerequisites, but at the GM's discretion may be precluded\
+    \ from using certain combat feats due to its physical form. For example, an eldritch\
+    \ guardian's pig familiar with access to Exotic Weapon Proficiency (spiked chain)\
+    \ would not gain the ability to use spiked chains, since it doesn't have any limbs\
+    \ capable of properly handling them."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:steel_will#fighter_eldritch_guardian"
+  name: "Steel Will"
+  label: null
+  type: null
+  description: "At 2nd level, the eldritch guardian gains a +1 bonus on Will saves\
+    \ against fear and mind-affecting effects. This bonus increases by 1 for every\
+    \ 4 levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+source: "Pathfinder Player Companion: Familiar Folio"

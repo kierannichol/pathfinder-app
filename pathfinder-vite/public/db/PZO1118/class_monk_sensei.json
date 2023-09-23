@@ -1,0 +1,46 @@
+{
+  "id": "class:monk#sensei",
+  "name": "Sensei",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:flurry_of_blows_fast_movement_and_improved_evasion#monk AND !@modifies:ability:the_bonus_feats_gained_at_6th_10th_and_14th_level#monk AND !@modifies:ability:evasion_and_the_bonus_feat_gained_at_2nd_level#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The sensei is a revered teacher who imparts lessons on the oneness of mind, body, and spirit, along with occasional correction that is subtle and swift. Rather than using wisdom for his own benefit alone, he uses it to better those around him."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:flurry_of_blows_fast_movement_and_improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_bonus_feats_gained_at_6th_10th_and_14th_level#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion_and_the_bonus_feat_gained_at_2nd_level#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:insightful_strike#monk_sensei",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:mystic_wisdom#monk_sensei",
+          "conditionFormula": "@class:monk\u003e\u003d6"
+        }],
+        "unlinks": [{
+          "featureId": "ability:flurry_of_blows_fast_movement_and_improved_evasion#monk"
+        }, {
+          "featureId": "ability:evasion_and_the_bonus_feat_gained_at_2nd_level#monk"
+        }, {
+          "featureId": "ability:the_bonus_feats_gained_at_6th_10th_and_14th_level#monk"
+        }]
+      }]
+    }
+  }
+}

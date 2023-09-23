@@ -1,0 +1,46 @@
+{
+  "id": "class:bard#voice_of_the_wild",
+  "name": "Voice of the Wild",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:all_increments_of_inspire_competence_dirge_of_doom_and_inspire_heroics#bard AND !@modifies:ability:countersong_all_instances_of_versatile_performance_and_jack_of_all_trades#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most bards are inspired by the art of civilization, yet the voice of the wild\u0027s muse is the grandeur and beauty of nature. The voice of the wild has discovered some of nature\u0027s magical secrets, and can use his performance to bring out the bestial side in his allies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:all_increments_of_inspire_competence_dirge_of_doom_and_inspire_heroics#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong_all_instances_of_versatile_performance_and_jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:wild_knowledge#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:nature_magic#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:countersong_all_instances_of_versatile_performance_and_jack_of_all_trades#bard"
+        }, {
+          "featureId": "ability:all_increments_of_inspire_competence_dirge_of_doom_and_inspire_heroics#bard"
+        }]
+      }]
+    }
+  }
+}

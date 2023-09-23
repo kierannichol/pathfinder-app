@@ -1,0 +1,85 @@
+id: "class:druid#defender_of_the_true_world"
+name: "Defender of the True World"
+description: ""
+modifications:
+- add: "ability:enemy_of_the_fey#druid_defender_of_the_true_world"
+  remove:
+  - "ability:spontaneous_casting#druid"
+- add: "ability:fey_empathy#druid_defender_of_the_true_world"
+  remove:
+  - "ability:wild_empathy#druid"
+- add: "ability:fey_stalker#druid_defender_of_the_true_world"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:feybane#druid_defender_of_the_true_world"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:beguiling_immunity#druid_defender_of_the_true_world"
+  remove:
+  - "ability:venom_immunity#druid"
+- add: "ability:fey_deceiver#druid_defender_of_the_true_world"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:enemy_of_the_fey#druid_defender_of_the_true_world"
+  name: "Enemy of the Fey"
+  label: null
+  type: null
+  description: "A defender of the true world cannot use summon nature's ally to summon\
+    \ fey creatures."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:fey_empathy#druid_defender_of_the_true_world"
+  name: "Fey Empathy"
+  label: null
+  type: null
+  description: "A defender of the true world gains a +2 competence bonus on Bluff,\
+    \ Diplomacy, and Intimidate checks when interacting with fey creatures. This bonus\
+    \ increases by 1 for every 4 druid levels she has (maximum +7 at 20th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:fey_stalker#druid_defender_of_the_true_world"
+  name: "Fey Stalker"
+  label: null
+  type: null
+  description: "At 3rd level, the defender of the true world's animal companion and\
+    \ any creatures she summons with summon nature's ally gain a +1 morale bonus on\
+    \ attack and damage rolls against fey creatures. This bonus increases to +2 at\
+    \ 8th level, +3 at 13th level, and +4 at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:feybane#druid_defender_of_the_true_world"
+  name: "Feybane"
+  label: null
+  type: null
+  description: "At 4th level, a defender of the true world doesn't gain a bonus on\
+    \ saving throws against spells and effects that utilize or target plants. She\
+    \ instead treats her natural attacks as cold iron for the purpose of overcoming\
+    \ damage reduction, and she gains a +2 bonus on caster level checks to overcome\
+    \ the spell resistance of fey creatures."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:beguiling_immunity#druid_defender_of_the_true_world"
+  name: "Beguiling Immunity"
+  label: null
+  type: null
+  description: "At 9th level, a defender of the true world becomes immune to the mind-affecting\
+    \ effects of fey."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:fey_deceiver#druid_defender_of_the_true_world"
+  name: "Fey Deceiver"
+  label: null
+  type: null
+  description: "At 13th level, a defender of the true world gains the ability to change\
+    \ her appearance as per alter self, except she can take the form of a humanoid\
+    \ or fey creature. Her base land speed from this ability cannot exceed 60 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+source: "Pathfinder Player Companion: Monster Hunter's Handbook"

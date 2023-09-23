@@ -1,0 +1,56 @@
+id: "class:bard#provocateur"
+name: "Provocateur"
+description: "Provocateurs are bards who use their art to make controversial political\
+  \ statements, undermine enemies' reputations, and upset the status quo on a large\
+  \ scale."
+modifications:
+- add: "ability:provocateur#bard_provocateur"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:calumny#bard_provocateur"
+  remove:
+  - "ability:the_versatile_performance_gained_at_2nd_level#bard"
+- add: "ability:damning_performance#bard_provocateur"
+  remove:
+  - "ability:suggestion#bard"
+  - "ability:mass_suggestion#bard"
+features:
+- id: "ability:provocateur#bard_provocateur"
+  name: "Provocateur"
+  label: null
+  type: null
+  description: "A provocateur adds 1/2 his bard level on skill checks to reduce a\
+    \ target's influence and on skill checks to reduce a target's attitude toward\
+    \ another creature or organization."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:calumny#bard_provocateur"
+  name: "Calumny"
+  label: null
+  type: null
+  description: "At 2nd level, a provocateur can use his Perform (comedy, oratory,\
+    \ or sing) modifier in place of his Bluff and Diplomacy modifier on checks to\
+    \ spread a rumor and in place of his Intimidate modifier on checks to demoralize\
+    \ foes."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:damning_performance#bard_provocateur"
+  name: "Damning Performance"
+  label: null
+  type: null
+  description: "At 4th level, a provocateur can cause all observers fascinated by\
+    \ her fascinate performance to become less friendly to a target creature or group\
+    \ of her choice for 10 minutes per bard level. Affected observers' attitudes toward\
+    \ the target, the target's influence with affected observers, and affected observers'\
+    \ trust level as contacts for the target are all reduced by one step. If she reveals\
+    \ information during the performance that would reduce those creatures' attitudes\
+    \ anyway, those attitudes worsen by an additional step for the duration.\nIf the\
+    \ provocateur engages in a verbal duel against the target with an audience affected\
+    \ by damning performance, she automatically gains two edges.\nAt 18th level, the\
+    \ duration increases to 1 day per bard level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+source: "Pathfinder Campaign Setting: Inner Sea Intrigue"

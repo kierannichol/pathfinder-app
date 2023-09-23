@@ -1,0 +1,67 @@
+id: "class:skald#totemic_skald"
+name: "Totemic Skald"
+description: ""
+modifications:
+- add: "ability:totem#skald_totemic_skald"
+  remove:
+  - "ability:the_rage_power_gained_at_3rd_level#skald"
+- add: "ability:totem_empathy#skald_totemic_skald"
+  remove:
+  - "ability:uncanny_dodge#skald"
+  - "ability:improved_uncanny_dodge#skald"
+- add: "ability:wild_shape#skald_totemic_skald"
+  remove:
+  - "ability:spell_kenning#skald"
+features:
+- id: "ability:totem#skald_totemic_skald"
+  name: "Totem"
+  label: null
+  type: null
+  description: "At 3rd level, the totemic skald chooses one animal from the hunter's\
+    \ animal focus list. Once selected, this choice cannot be changed. This animal\
+    \ becomes the skald's personal totem animal and influences his later abilities.\
+    \ He gains the following rage power.\nSong of the Beast (Su): The totemic skald\
+    \ grants the animal focus abilities of his totem animal (as the hunter's animal\
+    \ focus ability) to all allies affected by his raging song. He treats his skald\
+    \ level as his hunter level for determining the abilities of the animal focus\
+    \ (such as the improvements gained at 8th and 15th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:totem_empathy#skald_totemic_skald"
+  name: "Totem Empathy"
+  label: null
+  type: null
+  description: "At 4th level, the totemic skald can improve the attitude of animals\
+    \ of the same type as his totem. This ability functions just like a Diplomacy\
+    \ check to improve the attitude of a person. The skald rolls 1d20 and adds his\
+    \ skald level and his Charisma modifier to determine the totem empathy check result.\
+    \ The typical domestic animal has a starting attitude of indifferent, while wild\
+    \ animals are usually unfriendly.\nIn addition, at 4th level, the totemic skald\
+    \ can cast charm animal once per day as a spell-like ability, using his skald\
+    \ level as his caster level and his Charisma modifier to determine the DC. This\
+    \ only functions against animals that are of the same type as his totem animal\
+    \ (subject to GM discretion). At 8th level, and every 4 levels thereafter, he\
+    \ can use this ability one additional time per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:wild_shape#skald_totemic_skald"
+  name: "Wild Shape"
+  label: null
+  type: null
+  description: "At 5th level, a totemic skald gains the ability to wild shape into\
+    \ the form of a Small or Medium version of his totem animal, as the druid class\
+    \ feature. His effective druid level for this ability is equal to his skald level\
+    \ – 1. He can use this ability twice per day at 11th level, and three times per\
+    \ day at 17th level. This doesn't allow the skald to assume other forms, such\
+    \ as elementals, plants, or other kinds of animals.\nWhen in animal form, the\
+    \ skald is treated as able to speak normally for the purpose of using raging song,\
+    \ but not for using other abilities that require speech (such as spellcasting).\
+    \ The skald uses his class level as his druid level for the purpose of qualifying\
+    \ for feats that affect wild shape (such as Wild Speech).\nThis ability replaces\
+    \ spell kenning."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

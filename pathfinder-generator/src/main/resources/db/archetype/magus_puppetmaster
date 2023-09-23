@@ -1,0 +1,124 @@
+id: "class:magus#puppetmaster"
+name: "Puppetmaster"
+description: ""
+modifications:
+- add: "ability:skills#magus_puppetmaster"
+  remove:
+  - "ability:the_maguss_skills#magus"
+- add: "ability:spells#magus_puppetmaster"
+  remove:
+  - "ability:knowledge_pool#magus"
+  - "ability:greater_spell_access#magus"
+- add: "ability:arcane_pool#magus_puppetmaster"
+  remove:
+  - "ability:the_maguss_arcane_pool_ability#magus"
+- add: "ability:puppet_combat#magus_puppetmaster"
+  remove:
+  - "ability:spell_combat_improved_spell_combat#magus"
+  - "ability:greater_spell_combat#magus"
+- add: "ability:charmstrike#magus_puppetmaster"
+  remove:
+  - "ability:counterstrike#magus"
+  - "ability:spellstrike_fighter_training#magus"
+- add: "ability:the_show_must_go_on#magus_puppetmaster"
+  remove:
+  - "ability:medium_armor#magus"
+  - "ability:heavy_armor#magus"
+- add: "ability:scene_stealer#magus_puppetmaster"
+  remove:
+  - "ability:true_magus#magus"
+features:
+- id: "ability:skills#magus_puppetmaster"
+  name: "Skills"
+  label: null
+  type: null
+  description: "A puppetmaster gains 4 skill points per level. He adds Knowledge (history,\
+    \ local, religion) and all Perform skills to his list of class skills. He does\
+    \ not gain Climb, Ride, and Swim as class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:spells#magus_puppetmaster"
+  name: "Spells"
+  label: null
+  type: null
+  description: "A puppetmaster can cast spells from the bard and magus spell lists,\
+    \ and treats bard spells as magus spells.\nBecause he does not have a bardic performance\
+    \ ability, some bard spells (which modify or require bardic performance) are poor\
+    \ choices for a puppetmaster. He must add bard spells to his spellbook prior to\
+    \ preparing them as normal.\nA puppetmaster can learn bard spells from a formula\
+    \ book or spellbook (if they are also alchemist extracts or wizard spells) or\
+    \ a scroll (as if learning a wizard spell from a scroll), or can select them to\
+    \ be one or more of the two magus spells he adds to his spellbook at each magus\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:arcane_pool#magus_puppetmaster"
+  name: "Arcane Pool"
+  label: null
+  type: null
+  description: "A puppetmaster cannot expend points from his arcane pool to grant\
+    \ enhancement bonuses or weapon special abilities to a weapon he is holding. As\
+    \ a swift action whenever the puppetmaster casts a spell of the enchantment or\
+    \ illusion school, he can expend 1 point from his arcane pool to increase the\
+    \ spell's save DC or caster level by 1. At 7th level, the increase to the spell's\
+    \ save DC or caster level changes to 2, at 13th level to 3, and at 19th to 4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:puppet_combat#magus_puppetmaster"
+  name: "Puppet Combat"
+  label: null
+  type: null
+  description: "A puppetmaster can use spell combat, improved spell combat, and greater\
+    \ spell combat only with spells of the enchantment and illusion schools of magic."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:charmstrike#magus_puppetmaster"
+  name: "Charmstrike"
+  label: null
+  type: null
+  description: "At 2nd level, as a swift action when a foe fails a saving throw against\
+    \ a spell (but not a spell-like or supernatural ability) cast by a puppetmaster,\
+    \ the puppetmaster can expend 1 point from his arcane pool to cast a prepared\
+    \ 1st-level enchantment on the foe. The foe must be one that the spell can target,\
+    \ and is the only creature affected (even if the spell can normally target multiple\
+    \ creatures). At 10th level, the puppetmaster can instead cast a 2nd-level enchantment\
+    \ spell on the foe, and at 16th level, a 3rd-level enchantment spell. The prepared\
+    \ spell is expended, as if cast normally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:the_show_must_go_on#magus_puppetmaster"
+  name: "The Show Must Go On"
+  label: null
+  type: null
+  description: "When a puppetmaster has a creature under the effects of an enchantment\
+    \ spell and that creature has line of sight to an illusion spell the puppetmaster\
+    \ has cast with a duration of concentration, the puppetmaster can link the illusion\
+    \ spell to the enchanted target. As long as the target has line of sight to the\
+    \ illusion and is enchanted, and the puppetmaster has line of sight to both the\
+    \ target and the illusion, the puppetmaster can maintain the illusion as a free\
+    \ action each round. The puppetmaster can maintain only one illusion spell in\
+    \ this way. At 13th level, the puppetmaster can maintain two illusion spells in\
+    \ this way, requiring a separate enchanted target for each illusion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:scene_stealer#magus_puppetmaster"
+  name: "Scene Stealer"
+  label: null
+  type: null
+  description: "At 20th level, if a puppetmaster successfully disbelieves an illusion,\
+    \ he can expend 1 point from his arcane pool to try to negate or steal control\
+    \ of the illusion. The puppetmaster attempts a caster level check as if he were\
+    \ dispelling the effect with dispel magic. If he succeeds, he can either end the\
+    \ effect or alter it as if he were the spell's caster. If the spell's duration\
+    \ is concentration, the puppetmaster must concentrate on the new effect (or transfer\
+    \ it to an enchanted target using the show must go on) or it ends."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+source: "Pathfinder Player Companion: Arcane Anthology"

@@ -1,0 +1,52 @@
+id: "class:slayer#turncoat"
+name: "Turncoat"
+description: ""
+modifications:
+- add: "ability:dubious_recognition#slayer_turncoat"
+  remove:
+  - "ability:track#slayer"
+- add: "ability:double_speak#slayer_turncoat"
+  remove:
+  - "ability:stalker#slayer"
+- add: "ability:sudden_betrayal#slayer_turncoat"
+  remove:
+  - "ability:quarry#slayer"
+  - "ability:improved_quarry#slayer"
+features:
+- id: "ability:dubious_recognition#slayer_turncoat"
+  name: "Dubious Recognition"
+  label: null
+  type: null
+  description: "A turncoat adds half his level (minimum 1) to Sense Motive checks\
+    \ to recognize when a creature is lying or attempting to take advantage of the\
+    \ turncoat and his allies."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:double_speak#slayer_turncoat"
+  name: "Double Speak"
+  label: null
+  type: null
+  description: "At 7th level, a turncoat can attempt a Bluff check in place of a Diplomacy\
+    \ check against a studied target. The target can attempt an opposed Sense Motive\
+    \ check."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:sudden_betrayal#slayer_turncoat"
+  name: "Sudden Betrayal"
+  label: null
+  type: null
+  description: "At 14th level, as a standard action a turncoat can choose a single\
+    \ creature within 30 feet. He gains a +4 circumstance bonus on Diplomacy checks\
+    \ against this target. If the target has an attitude of indifferent or better\
+    \ toward him, the first attack roll the turncoat makes against that target is\
+    \ automatically treated as threatening a critical hit. If the target's attitude\
+    \ is friendly or better, a successful attack is treated as a confirmed critical\
+    \ hit. This ability can be used only once per day.\nAt 19th level, the bonus increases\
+    \ to +6, and the attack is treated as a confirmed critical hit if the target is\
+    \ at least indifferent to the turncoat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+source: "Pathfinder Player Companion: Heroes of the Darklands"

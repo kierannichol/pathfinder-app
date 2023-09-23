@@ -1,0 +1,77 @@
+id: "class:druid#fungal_pilgrim"
+name: "Fungal Pilgrim"
+description: ""
+modifications:
+- add: "ability:devotion_to_ascension#druid_fungal_pilgrim"
+  remove:
+  - "ability:nature_bond#druid"
+- add: "ability:spore_spawning#druid_fungal_pilgrim"
+  remove:
+  - "ability:wild_shape_if_the_fungal_pilgrim_selected_the_plant_domain_as_her_nature_bond#druid"
+- add: "ability:fungal_companion#druid_fungal_pilgrim"
+  remove:
+  - "ability:wild_shape_if_the_fungal_pilgrim_selected_an_animal_companion_as_her_nature_bond#druid"
+- add: "ability:mycological_transformation#druid_fungal_pilgrim"
+  remove:
+  - "ability:timeless_body#druid"
+features:
+- id: "ability:devotion_to_ascension#druid_fungal_pilgrim"
+  name: "Devotion to Ascension"
+  label: null
+  type: null
+  description: "A fungal pilgrim must select the Plant domain for her nature bond\
+    \ if she does not select an animal companion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:spore_spawning#druid_fungal_pilgrim"
+  name: "Spore Spawning"
+  label: null
+  type: null
+  description: "At 4th level, a fungal pilgrim who selected the Plant domain for her\
+    \ nature bond gains the ability to grow fungal creatures from the spores of her\
+    \ body. Once per day, when casting a summon nature's ally spell to summon a single\
+    \ creature, the fungal pilgrim can infuse her fungal connection into the casting.\
+    \ The creature summoned must be selected from the summon nature's ally list for\
+    \ 1 spell level lower than the spell cast. For example, if the fungal pilgrim\
+    \ casts summon nature's ally III, she must choose a creature from the list in\
+    \ summon nature's ally II.\nCreatures summoned in this manner gain the fungal\
+    \ creature template, except they do not gain the create spawn and poison spore\
+    \ cloud special attacks. A creature summoned in this manner cannot be harvested\
+    \ for its poison.\nA druid can use this ability an additional time per day at\
+    \ 6th level and every 2 levels thereafter, for a total of eight times at 18th\
+    \ level. At 20th level, it can be used any number of times per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:fungal_companion#druid_fungal_pilgrim"
+  name: "Fungal Companion"
+  label: null
+  type: null
+  description: "At 4th level, a fungal pilgrim who selected an animal companion for\
+    \ her nature bond initiates a transformation in her companion. The animal companion\
+    \ gains the fungal creature template, but does not gain the create spawn, poison\
+    \ spore cloud, and poisonous blood special attacks. At 10th level, the animal\
+    \ companion gains the poisonous blood special attack. At 14th level, the animal\
+    \ companion gains the poison spore cloud special attack. At 20th level, the animal\
+    \ companion gains the create spawn special attack; created spawn are under the\
+    \ control of the fungal pilgrim. Spawn created in this way last for only 48 hours\
+    \ before rotting away."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:mycological_transformation#druid_fungal_pilgrim"
+  name: "Mycological Transformation"
+  label: null
+  type: null
+  description: "Fungal spores become fully integrated into the druid's body, inside\
+    \ and out. At 15th level, she gains all immunities granted by the plant creature\
+    \ type as well as the light sensitivity universal monster rule. She counts as\
+    \ a plant for the purposes of effects that would negatively affect or damage plants.\
+    \ In addition, she no longer needs to eat or sleep in the typical manner, and\
+    \ instead gains the fungal creature's rejuvenation ability. She can perform her\
+    \ daily meditation during her rejuvenation."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+source: "Pathfinder Player Companion: Heroes of the Darklands"

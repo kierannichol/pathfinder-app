@@ -1,0 +1,57 @@
+{
+  "id": "class:gunslinger#thronewarden",
+  "name": "Thronewarden",
+  "tags": ["archetype", "gunslinger"],
+  "enabledFormula": "!@modifies:ability:bonus_feat#gunslinger AND !@modifies:ability:startling_shot#gunslinger AND !@modifies:ability:nimble#gunslinger",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:startling_shot#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nimble#gunslinger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
+          "conditionFormula": "@class:gunslinger\u003e\u003d2"
+        }, {
+          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
+          "conditionFormula": "@class:gunslinger\u003e\u003d6"
+        }, {
+          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
+          "conditionFormula": "@class:gunslinger\u003e\u003d10"
+        }, {
+          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
+          "conditionFormula": "@class:gunslinger\u003e\u003d14"
+        }, {
+          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
+          "conditionFormula": "@class:gunslinger\u003e\u003d18"
+        }, {
+          "featureId": "ability:eye_for_trouble#gunslinger_thronewarden",
+          "conditionFormula": "@class:gunslinger\u003e\u003d4"
+        }],
+        "unlinks": [{
+          "featureId": "ability:nimble#gunslinger"
+        }, {
+          "featureId": "ability:bonus_feat#gunslinger"
+        }, {
+          "featureId": "ability:startling_shot#gunslinger"
+        }]
+      }]
+    }
+  }
+}

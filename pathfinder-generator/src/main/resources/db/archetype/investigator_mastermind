@@ -1,0 +1,82 @@
+id: "class:investigator#mastermind"
+name: "Mastermind"
+description: ""
+modifications:
+- add: "ability:masterminds_inspiration#investigator_mastermind"
+  remove:
+  - "ability:inspiration#investigator"
+- add: "ability:a_quiet_word#investigator_mastermind"
+  remove:
+  - "ability:trap_sense#investigator"
+  - "ability:trapfinding#investigator"
+- add: "ability:mastermind_defense#investigator_mastermind"
+  remove:
+  - "ability:swift_alchemy#investigator"
+- add: "ability:impregnable_mind#investigator_mastermind"
+  remove:
+  - "ability:the_investigator_talent_gained_at_9th_level#investigator"
+features:
+- id: "ability:masterminds_inspiration#investigator_mastermind"
+  name: "Mastermind's Inspiration"
+  label: null
+  type: null
+  description: "A mastermind can use inspiration on Diplomacy and Intimidate checks\
+    \ without expending a use of inspiration, but can't do so for Linguistics or Spellcraft\
+    \ checks.\nA mastermind can use inspiration on any Diplomacy, Intimidate, Knowledge,\
+    \ or skill checks without spending a use of inspiration."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:a_quiet_word#investigator_mastermind"
+  name: "A Quiet Word"
+  label: null
+  type: null
+  description: "A mastermind's reputation precedes him. At 1st level, once per day\
+    \ a mastermind can spend 10 minutes preparing an ally to make a single Diplomacy\
+    \ or Intimidate check (mastermind's choice when preparing the ally) within the\
+    \ next 24-hour period at the mastermind's behest. This skill check uses the mastermind's\
+    \ skill ranks instead of the ally's. The mastermind's affected ally still uses\
+    \ its own ability bonus for the check.\nFurthermore, when a mastermind uses this\
+    \ ability, he can expend one use of inspiration to give the ally use of the inspiration\
+    \ die when making the check.\nAt 3rd level, a mastermind can use this ability\
+    \ an additional time each day, and the number of times he can use this ability\
+    \ per day increases by 1 for every third level thereafter. Multiple uses of this\
+    \ ability on the same ally grant that ally the benefit on additional Diplomacy\
+    \ or Intimidate checks.\nAt 12th level, a mastermind can use this ability to bestow\
+    \ on his ally the use of his skill ranks, similar to the 1st-level effects of\
+    \ this ability but with a wider range of skills to choose from. The mastermind\
+    \ can only bestow this for a skill check that he can use inspiration on without\
+    \ expending uses of inspiration. For instance, a mastermind with the underworld\
+    \ inspiration talent can bolster his ally's Bluff, Disable Device, Disguise, or\
+    \ Sleight of Hand skill checks, selecting a single skill for each use of the ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:mastermind_defense#investigator_mastermind"
+  name: "Mastermind Defense"
+  label: null
+  type: null
+  description: "At 4th level, a mastermind can, as an immediate action, expend two\
+    \ uses of inspiration to make an inspired defense. He rolls his inspiration die\
+    \ and applies the result as a penalty on an attack roll made against him. If the\
+    \ mastermind has the combat inspiration talent, he can expend one use of inspiration\
+    \ instead of two."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:impregnable_mind#investigator_mastermind"
+  name: "Impregnable Mind"
+  label: null
+  type: null
+  description: "At 9th level, a mastermind's secrecy, obscurity, and mental conditioning\
+    \ reach superhuman levels. He becomes immune to any divination spell, spell-like\
+    \ ability, or effect that allows a saving throw (though he can still allow a divination\
+    \ effect to affect him if he wishes). Even divination effects that do not allow\
+    \ a saving throw have difficulty piercing a mastermind's barriers, as a mastermind\
+    \ can now choose to think in any language he speaks. Unless the opponent reading\
+    \ a mastermind's thoughts speaks all of the mastermind's languages, attempts at\
+    \ thought reading automatically fail."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

@@ -1,0 +1,521 @@
+id: "class:sorcerer"
+name: "Sorcerer"
+category: "CORE"
+description: "Scions of innately magical bloodlines, the chosen of deities, the spawn\
+  \ of monsters, pawns of fate and destiny, or simply flukes of fickle magic, sorcerers\
+  \ look within themselves for arcane prowess and draw forth might few mortals can\
+  \ imagine. Emboldened by lives ever threatening to be consumed by their innate powers,\
+  \ these magic-touched souls endlessly indulge in and refine their mysterious abilities,\
+  \ gradually learning how to harness their birthright and coax forth ever greater\
+  \ arcane feats. Just as varied as these innately powerful spellcasters' abilities\
+  \ and inspirations are the ways in which they choose to utilize their gifts. While\
+  \ some seek to control their abilities through meditation and discipline, becoming\
+  \ masters of their fantastic birthright, others give in to their magic, letting\
+  \ it rule their lives with often explosive results. Regardless, sorcerers live and\
+  \ breathe that which other spellcasters devote their lives to mastering, and for\
+  \ them magic is more than a boon or a field of study; it is life itself. Role: Sorcerers\
+  \ excel at casting a selection of favored spells frequently, making them powerful\
+  \ battle mages. As they become familiar with a specific and ever-widening set of\
+  \ spells, sorcerers often discover new and versatile ways of making use of magics\
+  \ other spellcasters might overlook. Their bloodlines also grant them additional\
+  \ abilities, assuring that no two sorcerers are ever quite alike. Alignment: Any\
+  \ Hit Die: d6 Starting Wealth: 2d6 × 10 gp (average 70 gp.) In addition, each character\
+  \ begins play with an outfit worth 10 gp or less."
+source: " Pathfinder RPG Core Rulebook"
+hit_die: "D6"
+alignment: "Any"
+class_skills:
+- "skill:fly"
+- "skill:craft"
+- "skill:use_magic_device"
+- "skill:bluff"
+- "skill:intimidate"
+- "skill:spellcraft"
+- "skill:profession"
+- "skill:knowledge"
+- "skill:appraise"
+skill_ranks_per_level: "2"
+bab: "C"
+fort: "B"
+ref: "B"
+will: "A"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_power#sorcerer"
+  - "ability:cantrips#sorcerer"
+  - "ability:eschew_materials#sorcerer"
+  spells_per_day:
+    1: 3
+  spells_known:
+    0: 4
+    1: 2
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 4
+  spells_known:
+    0: 5
+    1: 2
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_power#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 5
+  spells_known:
+    0: 5
+    1: 3
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 3
+  spells_known:
+    0: 6
+    1: 3
+    2: 1
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 4
+  spells_known:
+    0: 6
+    1: 4
+    2: 2
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 5
+    3: 3
+  spells_known:
+    0: 7
+    1: 4
+    2: 2
+    3: 1
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_feat#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 4
+  spells_known:
+    0: 7
+    1: 5
+    2: 3
+    3: 2
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 5
+    4: 3
+  spells_known:
+    0: 8
+    1: 5
+    2: 3
+    3: 2
+    4: 1
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_power#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 4
+  spells_known:
+    0: 8
+    1: 5
+    2: 4
+    3: 3
+    4: 2
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 4
+    3: 3
+    4: 2
+    5: 1
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 4
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 2
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 5
+    6: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 2
+    6: 1
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_feat#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 4
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 3
+    6: 2
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 5
+    7: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 3
+    6: 2
+    7: 1
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_power#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 6
+    7: 4
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 2
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 6
+    7: 5
+    8: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 2
+    8: 1
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 6
+    7: 6
+    8: 4
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 2
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 6
+    7: 6
+    8: 5
+    9: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 2
+    9: 1
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_feat#sorcerer"
+  - "ability:bloodline_spell#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 6
+    7: 6
+    8: 6
+    9: 4
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 3
+    9: 2
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#sorcerer"
+  - "trait:weapon_proficiency#sorcerer"
+  - "ability:bloodline_power#sorcerer"
+  spells_per_day:
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 6
+    6: 6
+    7: 6
+    8: 6
+    9: 6
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 3
+    9: 3
+  level: 20
+spell_caster_types:
+- "arcane"
+class_features:
+- id: "ability:eschew_materials#sorcerer"
+  name: "Eschew Materials"
+  label: null
+  type: ""
+  description: "A sorcerer gains Eschew Materials as a bonus feat at 1st level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:cantrips#sorcerer"
+  name: "Cantrips"
+  label: null
+  type: ""
+  description: "Sorcerers learn a number of cantrips, or 0-level spells, as noted\
+    \ on Table: Sorcerer Spells Known under “Spells Known.\" These spells are cast\
+    \ like any other spell, but they do not consume any slots and may be used again."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bloodline_feat#sorcerer"
+  name: "Bloodline Feat"
+  label: null
+  type: ""
+  description: "Each sorcerer has a source of magic somewhere in her heritage that\
+    \ grants her spells, bonus feats, an additional class skill, and other special\
+    \ abilities. This source can represent a blood relation or an extreme event involving\
+    \ a creature somewhere in the family's past. For example, a sorcerer might have\
+    \ a dragon as a distant relative or her grandfather might have signed a terrible\
+    \ contract with a devil. Regardless of the source, this influence manifests in\
+    \ a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline\
+    \ upon taking her first level of sorcerer. Once made, this choice cannot be changed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "trait:armor_proficiency#sorcerer"
+  name: "Armor Proficiency (Sorcerer)"
+  label: null
+  type: null
+  description: null
+  effects: []
+  prerequisites: null
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bloodline_spell#sorcerer"
+  name: "Bloodline Spell"
+  label: null
+  type: ""
+  description: "Each sorcerer has a source of magic somewhere in her heritage that\
+    \ grants her spells, bonus feats, an additional class skill, and other special\
+    \ abilities. This source can represent a blood relation or an extreme event involving\
+    \ a creature somewhere in the family's past. For example, a sorcerer might have\
+    \ a dragon as a distant relative or her grandfather might have signed a terrible\
+    \ contract with a devil. Regardless of the source, this influence manifests in\
+    \ a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline\
+    \ upon taking her first level of sorcerer. Once made, this choice cannot be changed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "trait:weapon_proficiency#sorcerer"
+  name: "Weapon Proficiency (Sorcerer)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:brass_knife 1"
+  - "SET proficiency:hook_hand 1"
+  - "SET proficiency:dart 1"
+  - "SET proficiency:mere_club 1"
+  - "SET proficiency:stingchuck 1"
+  - "SET proficiency:handwraps 1"
+  - "SET proficiency:light_crossbow 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:blowgun 1"
+  - "SET proficiency:spiked_gauntlet 1"
+  - "SET proficiency:heavy_crossbow 1"
+  - "SET proficiency:unarmed 1"
+  - "SET proficiency:bayonet 1"
+  - "SET proficiency:javelin 1"
+  - "SET proficiency:brass_knuckles 1"
+  - "SET proficiency:battle_aspergillum 1"
+  - "SET proficiency:heavy_mace 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:gauntlet 1"
+  - "SET proficiency:boarding_pike 1"
+  - "SET proficiency:cestus 1"
+  - "SET proficiency:kumade 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:kunai 1"
+  - "SET proficiency:collapsible_kumade 1"
+  - "SET proficiency:lantern_staff 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:wooden_stake 1"
+  - "SET proficiency:spring_blade 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:light_mace 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:punching_dagger 1"
+  - "SET proficiency:sickle 1"
+  - "SET proficiency:morningstar 1"
+  - "SET proficiency:traveling_kettle 1"
+  - "SET proficiency:stonebow 1"
+  - "SET proficiency:longspear 1"
+  prerequisites: null
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bloodline_power#sorcerer"
+  name: "Bloodline Power"
+  label: null
+  type: ""
+  description: "Each sorcerer has a source of magic somewhere in her heritage that\
+    \ grants her spells, bonus feats, an additional class skill, and other special\
+    \ abilities. This source can represent a blood relation or an extreme event involving\
+    \ a creature somewhere in the family's past. For example, a sorcerer might have\
+    \ a dragon as a distant relative or her grandfather might have signed a terrible\
+    \ contract with a devil. Regardless of the source, this influence manifests in\
+    \ a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline\
+    \ upon taking her first level of sorcerer. Once made, this choice cannot be changed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"

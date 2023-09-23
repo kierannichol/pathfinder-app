@@ -1,0 +1,69 @@
+{
+  "id": "class:barbarian#titan_mauler",
+  "name": "Titan Mauler",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:fast_movement#barbarian AND !@modifies:ability:uncanny_dodge#barbarian AND !@modifies:ability:indomitable_will#barbarian AND !@modifies:ability:improved_uncanny_dodge#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "In lands overrun by giants, dragons, and other hulking beasts, entire fellowships of barbarians hone tactics and traditions with one purpose--to bring low these massive foes. While her enemies\u0027 size makes the creatures strong, the titan mauler is even stronger, taking up weapons from her fallen foes that no lesser warrior can lift, and using them when she beseeches the spirits to grant her increased size and greater ferocity against her titanic foes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:indomitable_will#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:big_game_hunter#barbarian_titan_mauler",
+          "conditionFormula": "@class:barbarian\u003e\u003d1"
+        }, {
+          "featureId": "ability:jotungrip#barbarian_titan_mauler",
+          "conditionFormula": "@class:barbarian\u003e\u003d2"
+        }, {
+          "featureId": "ability:massive_weapons#barbarian_titan_mauler",
+          "conditionFormula": "@class:barbarian\u003e\u003d3"
+        }, {
+          "featureId": "ability:evade_reach#barbarian_titan_mauler",
+          "conditionFormula": "@class:barbarian\u003e\u003d5"
+        }, {
+          "featureId": "ability:titanic_rage#barbarian_titan_mauler",
+          "conditionFormula": "@class:barbarian\u003e\u003d14"
+        }],
+        "unlinks": [{
+          "featureId": "ability:fast_movement#barbarian"
+        }, {
+          "featureId": "ability:uncanny_dodge#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#barbarian"
+        }, {
+          "featureId": "ability:indomitable_will#barbarian"
+        }]
+      }]
+    }
+  }
+}

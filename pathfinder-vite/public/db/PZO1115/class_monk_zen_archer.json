@@ -1,0 +1,98 @@
+{
+  "id": "class:monk#zen_archer",
+  "name": "Zen Archer",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:purity_of_body#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:evasion#monk AND !@modifies:ability:diamond_body#monk AND !@modifies:ability:maneuver_training#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tongue_of_the_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:maneuver_training#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:perfect_strike#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:way_of_the_bow#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:zen_archery#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:point_blank_master#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:ki_arrows#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:reflexive_shot#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d9"
+        }, {
+          "featureId": "ability:trick_shot#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d11"
+        }, {
+          "featureId": "ability:ki_focus_bow#monk_zen_archer",
+          "conditionFormula": "@class:monk\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:stunning_fist#monk"
+        }, {
+          "featureId": "ability:evasion#monk"
+        }, {
+          "featureId": "ability:maneuver_training#monk"
+        }, {
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:purity_of_body#monk"
+        }, {
+          "featureId": "ability:improved_evasion#monk"
+        }, {
+          "featureId": "ability:diamond_body#monk"
+        }, {
+          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
+        }]
+      }]
+    }
+  }
+}

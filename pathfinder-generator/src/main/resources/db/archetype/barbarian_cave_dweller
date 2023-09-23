@@ -1,0 +1,67 @@
+id: "class:barbarian#cave_dweller"
+name: "Cave Dweller"
+description: "Unused to the light of the sun, cave dwellers use their subterranean\
+  \ expertise to protect their clans from the manifold dangers of deep caverns and\
+  \ tunnels. The typical cave dweller is perfectly content to live his entire life\
+  \ underground, and he may even view the light of the sun as particularly abhorrent\
+  \ or taboo. While this lifestyle doesn't in and of itself imply evil or sinister\
+  \ intent, many outlanders ignorantly assume that cave dwellers avoid the light of\
+  \ the sun for malicious reasons."
+modifications:
+- add: "ability:alternate_skills#barbarian_cave_dweller"
+  remove:
+  - "ability:the_barbarians_skills#barbarian"
+- add: "ability:tight_tunnels#barbarian_cave_dweller"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:tunnel_vision#barbarian_cave_dweller"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:sun_walker#barbarian_cave_dweller"
+  remove:
+  - "ability:damage_reduction#barbarian"
+features:
+- id: "ability:alternate_skills#barbarian_cave_dweller"
+  name: "Alternate Skills"
+  label: null
+  type: null
+  description: "A cave dweller gains Stealth as a class skill in place of Ride."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:tight_tunnels#barbarian_cave_dweller"
+  name: "Tight Tunnels"
+  label: null
+  type: null
+  description: "Cave dwellers pursue prey through the winding tunnels of the deep,\
+    \ which rarely accommodate open sprints. A cave dweller can make a single turn\
+    \ up to 90 degrees while running (though not while charging). Additionally, a\
+    \ cave dweller takes no penalties to movement speed while squeezing."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:tunnel_vision#barbarian_cave_dweller"
+  name: "Tunnel Vision"
+  label: null
+  type: null
+  description: "At 3rd level, a cave dweller's senses become sharp in the dark. She\
+    \ gains darkvision to a range of 60 feet and a +1 bonus on Perception checks to\
+    \ detect ambushes, movement, and sound while in darkness. This bonus increases\
+    \ by 1 at 6th level and every 3 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:sun_walker#barbarian_cave_dweller"
+  name: "Sun Walker"
+  label: null
+  type: null
+  description: "At 7th level, a cave dweller gains a +1 dodge bonus to AC and on saving\
+    \ throws against effects with the light descriptor or that produce bright or sudden\
+    \ light. Any penalties on attack rolls, saving throws, or skill checks because\
+    \ of bright light are reduced by 1. At 10th level and every 3 levels after 10th,\
+    \ the bonus to AC and saving throws, as well as the reduction of light-based penalties,\
+    \ increases by 1.\nThis replaces damage reduction."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

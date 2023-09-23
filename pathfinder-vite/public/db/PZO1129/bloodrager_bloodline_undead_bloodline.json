@@ -1,0 +1,68 @@
+{
+  "id": "bloodrager_bloodline:undead_bloodline",
+  "name": "Undead Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The foul corruption of undeath is a part of you. Somewhere in the past, death became infused with your lineage. Your connection to the attributes of the undead bestows frightening power when your bloodrage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:bloodrager\u003e\u003d7",
+          "choices": [{
+            "choiceId": "bloodrager7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d13",
+          "choices": [{
+            "choiceId": "bloodrager13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d19",
+          "choices": [{
+            "choiceId": "bloodrager19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:diehard", "feat:dodge", "feat:endurance", "feat:intimidating_prowess", "feat:iron_will", "feat:mobility", "feat:toughness"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:frightful_charger#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d1"
+        }, {
+          "featureId": "ability:ghost_strike#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d4"
+        }, {
+          "featureId": "ability:deaths_gift#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d8"
+        }, {
+          "featureId": "ability:frightful_strikes#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d12"
+        }, {
+          "featureId": "ability:incorporeal_bloodrager#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d16"
+        }, {
+          "featureId": "ability:one_foot_in_the_grave#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

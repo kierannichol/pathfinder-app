@@ -1,0 +1,41 @@
+id: "class:cleric#devout_pilgrim"
+name: "Devout Pilgrim"
+description: "While most clerics are associated with a particular temple, adventuring\
+  \ clerics spend much of their time away from their favored place of worship, and\
+  \ there are those who worship primarily on the road and during the journey. These\
+  \ clerics see the act of travel and the arrival at sites sacred to their religion\
+  \ as valuable, and perhaps more so than time spent sequestered inside a church.\
+  \ These pilgrims love to travel, typically on foot or with caravans."
+modifications:
+- add: "ability:caravan_bond#cleric_devout_pilgrim"
+  remove:
+  - "ability:the_clerics_proficiency_with_medium_armor#cleric"
+  - "ability:shields__she_retains_proficiency_with_light_armor_only#cleric"
+- add: "ability:blessing_of_the_harrow#cleric_devout_pilgrim"
+  remove:
+  - "ability:an_8th_level_domain_power_of_the_devout_pilgrims_choice#cleric"
+features:
+- id: "ability:caravan_bond#cleric_devout_pilgrim"
+  name: "Caravan Bond"
+  label: null
+  type: null
+  description: "At 1st level, by leading a group prayer for 1 minute, a devout pilgrim\
+    \ can select a number of traveling companions equal to her cleric level + her\
+    \ Wisdom bonus. She may use her domain-granted powers on any of these traveling\
+    \ companions as if they were her. She can use these abilities on her traveling\
+    \ companions at a range of up to 30 feet, even if the ability normally requires\
+    \ her touch."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Magic"
+- id: "ability:blessing_of_the_harrow#cleric_devout_pilgrim"
+  name: "Blessing of the Harrow"
+  label: null
+  type: null
+  description: "At 8th level, once per day the pilgrim may perform a harrowing for\
+    \ herself or another creature. This is otherwise identical to the blessing of\
+    \ the harrow from the harrower prestige class."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Magic"
+source: "Pathfinder Campaign Setting: Inner Sea Magic"

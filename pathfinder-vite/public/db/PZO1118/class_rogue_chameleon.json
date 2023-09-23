@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#chameleon",
+  "name": "Chameleon",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "An absolute master of disguise, a chameleon effortlessly blends into any environment. Whether disappearing into crowded city streets, vanishing into desert sands, or slipping into the darkness of subterranean tunnels, the chameleon relies upon her ability to become part of her surroundings."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:misdirection#rogue_chameleon",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }, {
+          "featureId": "ability:effortless_sneak#rogue_chameleon",
+          "conditionFormula": "@class:rogue\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }]
+    }
+  }
+}

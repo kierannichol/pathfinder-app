@@ -1,0 +1,85 @@
+id: "class:witch#hagbound"
+name: "Hagbound"
+description: "Whether a changeling in the process of succumbing to her mother's call,\
+  \ a witch cursed by a hag to become her instrument of torment, a vain and petty\
+  \ witch overeager for power, or some other unfortunate soul, a hagbound witch finds\
+  \ its soul has been infected by a hag's spite and powerful, corrupt arcane magic.\
+  \ Her mind and body begin to transform to reflect her new being. Hagbound witches\
+  \ suffer a slow transformative taint that is similar to the accursed corruption\
+  \ and make ideal candidates for this additional power--and tragedy."
+modifications:
+- add: "ability:hags_claws#witch_hagbound"
+  remove:
+  - "ability:the_hex_gained_at_1st_level#witch"
+- add: "ability:hunched_muscle#witch_hagbound"
+  remove:
+  - "ability:14th_levels#witch"
+  - "ability:the_hexes_gained_at_2nd_8th#witch"
+- add: "ability:vain_glamour#witch_hagbound"
+  remove:
+  - "ability:12th_levels#witch"
+  - "ability:the_hexes_gained_at_4th#witch"
+- add: "ability:vile_curse#witch_hagbound"
+  remove:
+  - "ability:the_hex_gained_at_10th_level#witch"
+- add: "ability:hag_transformation#witch_hagbound"
+  remove:
+  - "ability:the_hex_gained_at_20th_level#witch"
+features:
+- id: "ability:hags_claws#witch_hagbound"
+  name: "Hag's Claws"
+  label: null
+  type: null
+  description: "A hagbound's hands grow into a pair of hideous claws that deal 1d4\
+    \ points of damage for a Medium hagbound (1d3 for a Small creature)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:hunched_muscle#witch_hagbound"
+  name: "Hunched Muscle"
+  label: null
+  type: null
+  description: "At 2nd level, warty growths and knobby muscles twist the hagbound's\
+    \ body. She gains a +2 size bonus to her Strength score. This bonus increases\
+    \ by 2 at 8th level and 14th level, to a maximum of +6."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:vain_glamour#witch_hagbound"
+  name: "Vain Glamour"
+  label: null
+  type: null
+  description: "At 4th level, the hagbound gains the ability to disguise her hideous\
+    \ form behind various pleasing shapes. This allows her to magically disguise herself\
+    \ at will, as per disguise self. At 12th level, she can transform herself at will\
+    \ rather than spin illusions, as per alter self."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:vile_curse#witch_hagbound"
+  name: "Vile Curse"
+  label: null
+  type: null
+  description: "At 10th level, the hagbound becomes exceptionally skilled at cursing\
+    \ others. She can cast bestow curse at will, but its duration becomes 24 hours.\
+    \ Once a creature has been affected by this ability, it is immune to the witch's\
+    \ vile curse ability for 24 hours. If the witch learns some secret fear or vulnerability\
+    \ of her target and tailors the curse to exploit this, her target takes a –2 penalty\
+    \ on its Will saving throw against the effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+- id: "ability:hag_transformation#witch_hagbound"
+  name: "Hag Transformation"
+  label: null
+  type: null
+  description: "At 20th level, the hagbound transforms into a true hag, purging all\
+    \ goodness and light from her in exchange for dark power. Her alignment becomes\
+    \ evil if it isn't already. Her type changes to monstrous humanoid, and she gains\
+    \ darkvision 60 feet; immunity to charm, fear, and spell effects; and the ability\
+    \ to join a coven.\nShe gains spell resistance 31, and she grants this benefit\
+    \ to her other coven members."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Coven"
+source: "Pathfinder Player Companion: Blood of the Coven"

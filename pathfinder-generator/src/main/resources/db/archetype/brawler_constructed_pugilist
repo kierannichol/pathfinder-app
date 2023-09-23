@@ -1,0 +1,48 @@
+id: "class:brawler#constructed_pugilist"
+name: "Constructed Pugilist"
+description: "Mutants whose mutations make using standard weapons or other gear difficult\
+  \ sometimes attach mechanical prostheses to their existing limbs. Many develop combat\
+  \ skills that use their prostheses so they always have a weapon at hand. Over time,\
+  \ these brawlers customize their mechanical limbs, adding additional weaponry and\
+  \ other mechanisms."
+modifications:
+- add: "ability:class_skills#brawler_constructed_pugilist"
+  remove:
+  - "ability:the_brawlers_class_skills#brawler"
+- add: "ability:limb_modifications#brawler_constructed_pugilist"
+  remove:
+  - "ability:martial_flexibility#brawler"
+- add: "ability:bonus_item_creation_feats#brawler_constructed_pugilist"
+  remove:
+  - "ability:bonus_combat_feats#brawler"
+features:
+- id: "ability:class_skills#brawler_constructed_pugilist"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A constructed pugilist gains Craft (weapons) as a class skill."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:limb_modifications#brawler_constructed_pugilist"
+  name: "Limb Modifications"
+  label: null
+  type: null
+  description: "A constructed pugilist chooses one of the following limb modifications\
+    \ at 1st level and another at 6th, 10th, 12th, and 20th levels. These modifications\
+    \ do not require the constructed pugilist to rebuild her constructed limb.\nThis\
+    \ replaces martial flexibility."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:bonus_item_creation_feats#brawler_constructed_pugilist"
+  name: "Bonus Item Creation Feats"
+  label: null
+  type: null
+  description: "At 2nd level, a constructed pugilist adds Craft Magic Arms and Armor,\
+    \ Master Craftsman (Craft [weapons]), and Skill Focus (Craft [weapons]) to the\
+    \ list of bonus feats she can choose (instead of just combat feats)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+source: "Pathfinder Player Companion: People of the Wastes"

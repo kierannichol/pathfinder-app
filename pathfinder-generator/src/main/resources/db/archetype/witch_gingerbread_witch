@@ -1,0 +1,127 @@
+id: "class:witch#gingerbread_witch"
+name: "Gingerbread Witch"
+description: ""
+modifications:
+- add: "ability:gingerbread_familiar#witch_gingerbread_witch"
+  remove:
+  - "ability:familiar#witch"
+- add: "ability:cauldron_cook#witch_gingerbread_witch"
+  remove:
+  - "ability:10th_levels#witch"
+  - "ability:the_hexes_gained_at_1st#witch"
+- add: "ability:tricky_treats_hex#witch_gingerbread_witch"
+  remove:
+  - "ability:the_hex_gained_at_4th_level#witch"
+- add: "ability:confection_conjuring#witch_gingerbread_witch"
+  remove:
+  - "ability:the_hex_gained_at_8th_level#witch"
+- add: "ability:gruesome_gobbler#witch_gingerbread_witch"
+  remove:
+  - "ability:the_hex_gained_at_12th_level#witch"
+- add: "ability:horrible_hunger#witch_gingerbread_witch"
+  remove:
+  - "ability:the_hex_gained_at_16th_level#witch"
+features:
+- id: "ability:gingerbread_familiar#witch_gingerbread_witch"
+  name: "Gingerbread Familiar"
+  label: null
+  type: null
+  description: "A gingerbread witch concocts her familiar out of gingerbread, sugar,\
+    \ and other confections.\nIt has the shape of the original animal or vermin, but\
+    \ its type changes to construct. As a construct, it gains 60-foot darkvision and\
+    \ construct immunities, it loses any special abilities the animal or vermin has\
+    \ other than movement speed, and it doesn't provide the usual familiar benefit\
+    \ (for instance, a gingerbread toad doesn't provide 3 bonus hit points). With\
+    \ a supply of flour and sugar at hand, the gingerbread witch can spend 8 hours\
+    \ and use her cauldron to restore her familiar to full health at no cost, unless\
+    \ the familiar is destroyed, in which case she must follow the usual rules for\
+    \ replacing her familiar.\nA gingerbread witch can never gain an improved familiar."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:cauldron_cook#witch_gingerbread_witch"
+  name: "Cauldron Cook"
+  label: null
+  type: null
+  description: "A gingerbread witch gains the cauldron and child-scent hexes at 1st\
+    \ level. When brewing potions with her cauldron, she can create small candies,\
+    \ pastries, or similar edible items identical in effect and application to normal\
+    \ potions. At 10th level, she gains the Cook People hex."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:tricky_treats_hex#witch_gingerbread_witch"
+  name: "Tricky Treats Hex"
+  label: null
+  type: null
+  description: "At 4th level, a gingerbread witch learns a unique hex that lets her\
+    \ create a piece of candy or a similar sweet as a full-round action. If eaten\
+    \ by the witch or a single creature she designates when she creates it, the sweet\
+    \ functions as goodberry or a polypurpose panacea (as determined at creation).\n\
+    Anyone else that eats the sweet becomes nauseated (Fort negates); a creature nauseated\
+    \ by the sweet can attempt a new saving throw each round at the end of its turn\
+    \ to end this effect.\nA creature that fails its initial save is also affected\
+    \ as per the scar hex for a number of days equal to the witch's witch level, except\
+    \ that at extended range, the witch can use only harmful hexes on the creature.\n\
+    She can create a number of sweets each day equal to her Intelligence modifier\
+    \ + her level. These sweets retain their potency for 24 hours and then turn to\
+    \ crumbs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:confection_conjuring#witch_gingerbread_witch"
+  name: "Confection Conjuring"
+  label: null
+  type: null
+  description: "At 8th level, a gingerbread witch can use shadow conjuration as a\
+    \ spell-like ability. Items and creatures she conjures appear to be made of fanciful\
+    \ foodstuffs, and because of this, sentient creatures gain a +2 bonus on Will\
+    \ saves to disbelieve the illusion. However, they otherwise function as described\
+    \ for the shadow conjuration spell. For every 3 witch levels beyond 8th, the gingerbread\
+    \ witch can duplicate conjuration (creation) and conjuration (summoning) spells\
+    \ of 1 level higher, up to a maximum of 7th-level spell effects at 20th level\
+    \ (though they are still only 20% real). The witch can use this ability once per\
+    \ day for every 4 witch levels she has."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:gruesome_gobbler#witch_gingerbread_witch"
+  name: "Gruesome Gobbler"
+  label: null
+  type: null
+  description: "At 12th level, a gingerbread witch gains a bite attack that deals\
+    \ 1d6 points of damage for a Medium witch. As a full-round action, she can make\
+    \ a single bite attack that deals double base damage (2d6 for a Medium witch)\
+    \ and functions as if she had the grab and swallow whole special attacks, allowing\
+    \ her to grab and swallow a creature of her size or smaller. Her stomach doesn't\
+    \ deal damage to swallowed creatures, but a living creature she swallows must\
+    \ succeed at a Fortitude save (DC = 10 + 1/2 her witch level + Constitution modifier)\
+    \ at the beginning of each of its turns or become nauseated for 1 round.\nIf a\
+    \ gingerbread witch successfully swallows a creature, her torso distends grotesquely\
+    \ and she is treated as if she were carrying a heavy load if the creature is the\
+    \ same size and a medium load if it's one size smaller; regardless, she can swallow\
+    \ only one such creature at a time. Creatures two or more sizes smaller do not\
+    \ distend her belly, though every four creatures of a smaller size count as one\
+    \ creature one size category larger (she can swallow 4 Tiny, 16 Diminutive, or\
+    \ 64 Fine creatures). She can regurgitate a swallowed creature of her choice as\
+    \ a move action, leaving it prone in an adjacent open square. If she is struck\
+    \ with a confirmed critical hit while she has a creature swallowed, the swallowed\
+    \ creatures each take half as much damage as the witch does (this doesn't reduce\
+    \ the damage the gingerbread witch takes)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:horrible_hunger#witch_gingerbread_witch"
+  name: "Horrible Hunger"
+  label: null
+  type: null
+  description: "At 16th level, a gingerbread witch can affect a target as if she had\
+    \ cast feast of ashes on it, but with her hex DC instead of the spell's DC. This\
+    \ hunger is so intense that any creature can offer the target food as a standard\
+    \ action and the target is compelled to eat it, as if the creature offering it\
+    \ had cast beguiling gift (with a DC and caster level equal to that of the witch's\
+    \ hexes). She can use this ability once per day for every 4 witch levels she has."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+source: "Pathfinder Roleplaying Game Horror Adventures"

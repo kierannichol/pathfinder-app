@@ -1,0 +1,66 @@
+id: "class:brawler#exemplar"
+name: "Exemplar"
+description: "A versatile soldier who inspires her companions with her fighting prowess,\
+  \ an exemplar is at home on the front lines of battles anywhere."
+modifications:
+- add: "ability:call_to_arms#brawler_exemplar"
+  remove:
+  - "ability:unarmed_strike#brawler"
+  - "ability:close_weapon_mastery#brawler"
+- add: "ability:inspiring_prowess#brawler_exemplar"
+  remove:
+  - "ability:maneuver_training#brawler"
+  - "ability:ac_bonus#brawler"
+- add: "ability:field_instruction#brawler_exemplar"
+  remove:
+  - "ability:brawlers_strike#brawler"
+features:
+- id: "ability:call_to_arms#brawler_exemplar"
+  name: "Call to Arms"
+  label: null
+  type: null
+  description: "At 1st level, an exemplar can expend a use of martial flexibility\
+    \ to rouse her allies into action. All allies within 30 feet are no longer flat-footed,\
+    \ even if they are surprised. Using this ability is a move action. At 6th level,\
+    \ the exemplar can use it as a swift action instead. At 10th level, she can use\
+    \ it as a free action. At 12th level, she can use it as an immediate action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:inspiring_prowess#brawler_exemplar"
+  name: "Inspiring Prowess"
+  label: null
+  type: null
+  description: "At 3rd level, an exemplar gains the ability to use certain bardic\
+    \ performances. She can use this ability for a number of rounds per day equal\
+    \ to 3 + her Charisma modifier; this increases by 1 round per brawler level thereafter.\
+    \ The exemplar's effective bard level for this ability is equal to her brawler\
+    \ level – 2. At 3rd level, the exemplar can use inspire courage. At 11th level,\
+    \ the exemplar can use inspire greatness. At 15th level, the exemplar can use\
+    \ inspire heroics. Instead of the Perform skill, she activates this ability with\
+    \ impressive flourishes and displays of martial talent (this uses visual components).\n\
+    This ability otherwise functions as bardic performance; feats and other effects\
+    \ that affect bardic performance (such as the Extra Performance feat) apply to\
+    \ it."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:field_instruction#brawler_exemplar"
+  name: "Field Instruction"
+  label: null
+  type: null
+  description: "At 5th level, as a standard action an exemplar can grant a teamwork\
+    \ feat to all allies within 30 feet who can see and hear her. This teamwork feat\
+    \ must be one the exemplar knows or has gained with the martial flexibility ability.\
+    \ Allies retain the use of this teamwork feat for 3 rounds + 1 round for every\
+    \ 2 brawler levels. If the granted teamwork feat is one gained from martial flexibility,\
+    \ this duration ends immediately if the exemplar loses access to that feat. Allies\
+    \ don't need to meet the prerequisites of this teamwork feat. The exemplar can\
+    \ use this ability once per day at 5th level, plus one additional time per day\
+    \ at 9th, 12th, and 17th level.\nThis ability otherwise counts as the cavalier's\
+    \ tactician class feature; feats and other effects which affect tactician (such\
+    \ as Practiced Tactician) apply to it."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

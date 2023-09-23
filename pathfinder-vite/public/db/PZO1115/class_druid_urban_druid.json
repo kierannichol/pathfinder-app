@@ -1,0 +1,55 @@
+{
+  "id": "class:druid#urban_druid",
+  "name": "Urban Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:lorekeeper#druid_urban_druid",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:resist_temptation#druid_urban_druid",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }, {
+          "featureId": "ability:mental_strength#druid_urban_druid",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trackless_step#druid"
+        }, {
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:resist_natures_lure#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+id: "class:paladin#hospitaler"
+name: "Hospitaler"
+description: ""
+modifications:
+- add: "ability:channel_positive_energy#paladin_hospitaler"
+  remove:
+  - "ability:channel_positive_energy#paladin"
+- add: "ability:aura_of_healing#paladin_hospitaler"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:channel_positive_energy#paladin_hospitaler"
+  name: "Channel Positive Energy"
+  label: null
+  type: null
+  description: "When a hospitaler reaches 4th level, she gains the ability to channel\
+    \ positive energy as a cleric equal to her paladin level –3. She can use this\
+    \ ability a number of times per day equal to 3 + her Charisma modifier. Using\
+    \ this ability does not expend uses of lay on hands, as it does with other paladins.\n\
+    This ability replaces the standard paladin's channel positive energy ability."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:aura_of_healing#paladin_hospitaler"
+  name: "Aura of Healing"
+  label: null
+  type: null
+  description: "At 11th level, a hospitaler can expend one use of her channel positive\
+    \ energy ability to emit a 30-foot aura of healing for a number of rounds equal\
+    \ to her paladin level. Allies in this aura (including the hospitaler) automatically\
+    \ stabilize if below 0 hit points and are immune to bleed damage. In addition,\
+    \ allies (including the paladin) that spend at least 1 full round inside the aura\
+    \ are healed an amount of damage equal to their total number of Hit Dice and may\
+    \ make a saving throw against any afflictions they are suffering from, such as\
+    \ a curse, disease, or poison. This saving throw only counts toward curing the\
+    \ affliction and does not impose any penalty on a failed save. Allies can only\
+    \ be healed once by a use of this ability and they can only attempt additional\
+    \ saving throws once per day, even if they are exposed to this aura multiple times."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

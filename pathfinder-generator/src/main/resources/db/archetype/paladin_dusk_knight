@@ -1,0 +1,80 @@
+id: "class:paladin#dusk_knight"
+name: "Dusk Knight"
+description: ""
+modifications:
+- add: "ability:shadow_smite#paladin_dusk_knight"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:illuminating_zeal#paladin_dusk_knight"
+  remove:
+  - "ability:channel_positive_energy#paladin"
+- add: "ability:shadows_embrace#paladin_dusk_knight"
+  remove:
+  - "ability:divine_bond#paladin"
+- add: "ability:cloak_of_shadow#paladin_dusk_knight"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+- add: "ability:clouding_smite#paladin_dusk_knight"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:shadow_smite#paladin_dusk_knight"
+  name: "Shadow Smite"
+  label: null
+  type: null
+  description: "A dusk knight gains concealment for 1 round per paladin level against\
+    \ the target of her smite evil ability in addition to its other effects. The dusk\
+    \ knight doesn't deal additional damage with her smite evil ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:illuminating_zeal#paladin_dusk_knight"
+  name: "Illuminating Zeal"
+  label: null
+  type: null
+  description: "At 4th level, a dusk knight gains the ability to grant darkvision\
+    \ to her allies. As a standard action, the dusk knight grants one target touched\
+    \ darkvision with a range of 60 feet for 1 hour. If the target already has darkvision,\
+    \ the range increases by 60 feet instead. If the dusk knight targets herself,\
+    \ using this ability is a swift action. Using this ability consumes two uses of\
+    \ her lay on hands ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:shadows_embrace#paladin_dusk_knight"
+  name: "Shadow's Embrace"
+  label: null
+  type: null
+  description: "At 5th level, a dusk knight learns to fight effectively in areas of\
+    \ darkness. She gains Blind-Fight as a bonus feat and darkvision with a range\
+    \ of 60 feet.\nIf she already has darkvision, the range increases by 30 feet instead.\
+    \ At 10th level, a dusk knight gains Improved Blind-Fight as a bonus feat. At\
+    \ 15th level, a dusk knight gains the see in darkness ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:cloak_of_shadow#paladin_dusk_knight"
+  name: "Cloak of Shadow"
+  label: null
+  type: null
+  description: "At 8th level, a dusk knight becomes adept at moving through darkness.\
+    \ She ignores her armor penalty when attempting Stealth checks and gains a bonus\
+    \ on Stealth checks equal to half her paladin level while in areas of dim light\
+    \ or darkness."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:clouding_smite#paladin_dusk_knight"
+  name: "Clouding Smite"
+  label: null
+  type: null
+  description: "At 11th level, a dusk knight's smite impairs her foe's abilities in\
+    \ the dark. When a dusk knight successfully smites a foe, she reduces the target's\
+    \ darkvision by 60 feet for the duration of the smite. If the target has the see\
+    \ in darkness ability, it must succeed at a Fortitude save or lose this ability\
+    \ for the duration of the smite. The save DC is equal to 10 + 1/2 the dusk knight's\
+    \ paladin level + her Charisma modifier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+source: "Pathfinder Player Companion: Blood of Shadows"

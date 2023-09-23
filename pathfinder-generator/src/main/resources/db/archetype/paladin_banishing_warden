@@ -1,0 +1,51 @@
+id: "class:paladin#banishing_warden"
+name: "Banishing Warden"
+description: ""
+modifications:
+- add: "ability:smite_evil#paladin_banishing_warden"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:banishing_smite#paladin_banishing_warden"
+  remove:
+  - "ability:the_mercy_gained_at_3rd_level#paladin"
+- add: "ability:smiting_aura#paladin_banishing_warden"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:smite_evil#paladin_banishing_warden"
+  name: "Smite Evil"
+  label: null
+  type: null
+  description: "A banishing warden's smite evil deals its bonus damage only on the\
+    \ first attack against outsiders (but not dragons or undead). However, it damages\
+    \ any evil outsider, not only those with the evil subtype (including native outsiders)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:banishing_smite#paladin_banishing_warden"
+  name: "Banishing Smite"
+  label: null
+  type: null
+  description: "At 3rd level, once per day when the banishing warden confirms a critical\
+    \ hit against a target of her smite evil effect, she can attempt to forcibly banish\
+    \ the target to its home plane. The creature struck must succeed at a Will save\
+    \ (DC = 10 + half the banishing warden's level + the banishing warden's Charisma\
+    \ modifier) or be sent back to its home plane as per dismissal. At 10th level,\
+    \ a creature dismissed in this manner takes an amount of damage equal to 2 points\
+    \ per paladin level at the start of its next turn. The banishing warden gains\
+    \ an additional daily use of this ability at 9th and 15th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:smiting_aura#paladin_banishing_warden"
+  name: "Smiting Aura"
+  label: null
+  type: null
+  description: "At 11th level, when an ally of the banishing warden is affected by\
+    \ her aura of justice, that ally can use banishing smite. This counts toward the\
+    \ banishing warden's number of uses per day and cannot be activated if the banishing\
+    \ warden has no uses of banishing smite remaining."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+source: "Pathfinder Player Companion: Monster Hunter's Handbook"

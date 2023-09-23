@@ -1,0 +1,109 @@
+{
+  "id": "class:fighter#cad",
+  "name": "Cad",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_training_3_and_4#fighter AND !@modifies:ability:armor_training_4#fighter AND !@modifies:ability:weapon_training_1_3_and_4#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training_2#fighter AND !@modifies:ability:armor_training_1#fighter AND !@modifies:ability:armor_training_2#fighter AND !@modifies:ability:armor_training_3#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "In combat, most fighters have some sort of code of honor. Some believe that one should not kick enemies when they are down, or should limit use of other such dirty tricks to the most dire of circumstances. The cad places no such limitations on himself. Battles are for winning, and anything that gives the cad the upper hand against his enemies is a legitimate tactic. No trick is too treacherous if it leads to victory."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training_3_and_4#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training_4#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training_1_3_and_4#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training_2#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training_1#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training_2#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training_3#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:dirty_maneuvers#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:catch_off_guard#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d3"
+        }, {
+          "featureId": "ability:payback#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:deadly_surprise#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d7"
+        }, {
+          "featureId": "ability:razor_sharp_chair_leg#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:craven_combatant#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d11"
+        }, {
+          "featureId": "ability:sweeping_prank#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d13"
+        }, {
+          "featureId": "ability:treacherous_blow#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d15"
+        }, {
+          "featureId": "ability:ultimate_payback#fighter_cad",
+          "conditionFormula": "@class:fighter\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:armor_training_1#fighter"
+        }, {
+          "featureId": "ability:weapon_training_1_3_and_4#fighter"
+        }, {
+          "featureId": "ability:armor_training_2#fighter"
+        }, {
+          "featureId": "ability:weapon_training_2#fighter"
+        }, {
+          "featureId": "ability:armor_training_3#fighter"
+        }, {
+          "featureId": "ability:weapon_training_3_and_4#fighter"
+        }, {
+          "featureId": "ability:armor_training_4#fighter"
+        }, {
+          "featureId": "ability:weapon_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

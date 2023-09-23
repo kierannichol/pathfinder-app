@@ -1,0 +1,110 @@
+package pathfinder.generator.mapper;
+
+import java.util.List;
+import java.util.OptionalInt;
+import org.springframework.stereotype.Component;
+import pathfinder.model.Effect;
+import pathfinder.model.Feature;
+import pathfinder.model.Feature.FeatureBuilder;
+import pathfinder.model.FeatureSelectByTagChoice;
+import pathfinder.model.FeatureSelectSortBy;
+import pathfinder.model.core.BaseAttackBonus;
+import pathfinder.model.core.SaveBonus;
+import pathfinder.model.pathfinder.CharacterClass;
+import pathfinder.model.pathfinder.ClassLevel;
+import pathfinder.model.wrapper.ClassLevelEditor;
+
+@Component
+public class ClassMapper {
+
+    public Feature map(CharacterClass characterClass) {
+        FeatureBuilder feature = new FeatureBuilder(characterClass.id())
+                .setName(characterClass.name())
+                .setDescription(characterClass.description())
+                .addTag("class")
+                .addTag(characterClass.category());
+
+        ClassLevelEditor levelEditor = ClassLevelEditor.create();
+
+        BaseAttackBonus.generateClassBabEffects(characterClass, levelEditor);
+        SaveBonus.FORT.generateSaveBonuses(characterClass.fort(), levelEditor);
+        SaveBonus.WILL.generateSaveBonuses(characterClass.will(), levelEditor);
+        SaveBonus.REF.generateSaveBonuses(characterClass.ref(), levelEditor);
+        addClassFeaturesToClass(characterClass, levelEditor);
+
+        levelEditor.level(1).addRepeatingFeatureSelectByTagChoice("archetype", "Archetype", "archetype", "archetype+" + characterClass.id().key);
+
+        addCasterLevels(characterClass, levelEditor);
+        addSpellChoices(characterClass, levelEditor);
+
+        addSpecialClassChoicesToClass(characterClass, levelEditor);
+
+        levelEditor.addTo(feature);
+
+        return feature.build();
+    }
+
+    private void addClassFeaturesToClass(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+        characterClass.levels().forEach(classLevelDefinition -> {
+            int level = classLevelDefinition.level();
+            classLevelDefinition.classFeatureIds().forEach(classFeatureId -> {
+                levelEditor.level(level).addLink(classFeatureId);
+            });
+        });
+    }
+
+    private void addSpecialClassChoicesToClass(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+        switch (characterClass.id().string()) {
+            case "class:sorcerer":
+                levelEditor.level(1).addFeatureSelectByTagChoice("sorcerer1:bloodline",
+                        "Sorcerer Bloodline",
+                        "sorcerer_bloodline",
+                        "sorcerer_bloodline");
+                break;
+        }
+    }
+
+    private void addCasterLevels(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+        OptionalInt maybeMinimumCasterLevel = characterClass.levels().stream()
+                .filter(level -> !level.spellsKnown().isEmpty() || !level.spellsPerDay().isEmpty())
+                .mapToInt(ClassLevel::level)
+                .min();
+
+        if (maybeMinimumCasterLevel.isEmpty()) {
+            return;
+        }
+
+        int minimumCasterLevel = maybeMinimumCasterLevel.getAsInt();
+
+        for (int level = minimumCasterLevel; level <= 20; level++) {
+            levelEditor.level(level).addEffect(Effect.addNumber("caster_level", 1));
+            levelEditor.level(level).addEffect(Effect.addNumber("caster_level#" + characterClass.id().key, 1));
+        }
+
+        if (!characterClass.spell_caster_types().isEmpty()) {
+            levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:spellcaster", 1));
+        }
+        characterClass.spell_caster_types().forEach(casterType ->
+                levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:" + casterType + "_spellcaster", 1)));
+    }
+
+    private void addSpellChoices(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+        for (var level : characterClass.levels()) {
+            level.spellsPerDay().forEach((spellLevel, knownCount) -> {
+                spellLevel = spellLevel - 1; // bad data
+                for (int i = 0; i < knownCount; i++) {
+                    levelEditor.level(level.level()).addChoice(
+                            new FeatureSelectByTagChoice(
+                                    "spell%d_%d".formatted(spellLevel, i+1),
+                                    "Level %d Spell".formatted(spellLevel),
+                                    "spell",
+                                    List.of("spell+%s%d".formatted(characterClass.id().key, spellLevel)),
+                                    List.of(),
+                                    List.of(),
+                                    FeatureSelectSortBy.NAME
+                            ));
+                }
+            });
+        }
+    }
+}

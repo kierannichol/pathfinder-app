@@ -1,0 +1,64 @@
+id: "class:monk#elemental_monk"
+name: "Elemental Monk"
+description: ""
+modifications:
+- add: "ability:elemental_strike#monk_elemental_monk"
+  remove:
+  - "ability:all_of_the_monks_bonus_feats#monk"
+  - "ability:stunning_fist#monk"
+- add: "ability:genie_style#monk_elemental_monk"
+  remove:
+  - "ability:diamond_body#monk"
+  - "ability:purity_of_body#monk"
+  - "ability:evasion#monk"
+- add: "ability:elemental_precision#monk_elemental_monk"
+  remove:
+  - "ability:the_monks_ki_pool#monk"
+features:
+- id: "ability:elemental_strike#monk_elemental_monk"
+  name: "Elemental Strike"
+  label: null
+  type: null
+  description: "An elemental monk gains Elemental Fist as a bonus feat, even if she\
+    \ doesn't meet the prerequisites. She does not have to select an element; instead,\
+    \ each time she hits with an Elemental Fist attack, she can choose acid, cold,\
+    \ electricity, or fire for the type of the additional damage granted by that feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:genie_style#monk_elemental_monk"
+  name: "Genie Style"
+  label: null
+  type: null
+  description: "At 2nd level, as a swift action an elemental monk can gain the benefits\
+    \ of one of the following style feats, based on one of the five types of genies.\
+    \ When she does so, she automatically enters that feat's stance: Djinni Style,\
+    \ Efreeti Style, Janni Style, Marid Style, or Shaitan Style.\nAt 6th level, while\
+    \ the elemental monk is using a genie style feat, she also gains the benefits\
+    \ of a feat from the following list, as appropriate for that style's feat path:\
+    \ Djinni Spirit, Efreeti Stance, Janni Tempest, Marid Spirit, and Shaitan Skin.\n\
+    At 10th level, while the elemental monk is using a genie style feat, she also\
+    \ gains the benefits of a feat from the following list, as appropriate for that\
+    \ style's feat path: Djinni Spin, Efreeti Touch, Janni Rush, Marid Coldsnap, and\
+    \ Shaitan Earthblast.\nAt 18th level, when the elemental monk gains the benefits\
+    \ of Djinni Spirit, Efreeti Stance, Marid Spirit, or Shaitan Skin, her elemental\
+    \ resistance from that feat instead becomes immunity to that element, as long\
+    \ as she is not denied her Dexterity bonus to AC. While she is using Janni Style,\
+    \ she gains the effects of enlarge person or reduce person (her choice), even\
+    \ if she is not humanoid. This is a spell-like ability with a caster level equal\
+    \ to the elemental monk's level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:elemental_precision#monk_elemental_monk"
+  name: "Elemental Precision"
+  label: null
+  type: null
+  description: "At 10th level, instead of treating her unarmed strikes as lawful for\
+    \ the purpose of overcoming damage reduction, an elemental monk overcomes all\
+    \ damage reduction of creatures with the air, earth, fire, or water subtypes except\
+    \ DR/-- and DR/epic."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+source: "Pathfinder Player Companion: Disciple's Doctrine"

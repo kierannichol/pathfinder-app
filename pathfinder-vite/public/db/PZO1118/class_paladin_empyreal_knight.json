@@ -1,0 +1,49 @@
+{
+  "id": "class:paladin#empyreal_knight",
+  "name": "Empyreal Knight",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:lay_on_hands_and_channel_positive_energy#paladin AND !@modifies:ability:divine_grace#paladin AND !@modifies:ability:holy_champion#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "The empyreal knight dedicates her life to serving the celestial beings that guide mortals in their struggle toward the light."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lay_on_hands_and_channel_positive_energy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_grace#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:holy_champion#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:voices_of_the_spheres#paladin_empyreal_knight",
+          "conditionFormula": "@class:paladin\u003e\u003d2"
+        }, {
+          "featureId": "ability:celestial_ally#paladin_empyreal_knight",
+          "conditionFormula": "@class:paladin\u003e\u003d4"
+        }, {
+          "featureId": "ability:empyreal_champion#paladin_empyreal_knight",
+          "conditionFormula": "@class:paladin\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:divine_grace#paladin"
+        }, {
+          "featureId": "ability:lay_on_hands_and_channel_positive_energy#paladin"
+        }, {
+          "featureId": "ability:holy_champion#paladin"
+        }]
+      }]
+    }
+  }
+}

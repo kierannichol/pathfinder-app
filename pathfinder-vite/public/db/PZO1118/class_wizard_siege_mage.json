@@ -1,0 +1,56 @@
+{
+  "id": "class:wizard#siege_mage",
+  "name": "Siege Mage",
+  "tags": ["archetype", "wizard"],
+  "enabledFormula": "!@modifies:ability:scribe_scroll#wizard AND !@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard AND !@modifies:ability:cantrips_but_the_siege_mage_gains_the_detect_magic_and_read_magic_cantrips_and_places_them_in_his_spellbook#wizard",
+  "maxStacks": 1,
+  "description": {
+    "text": "The siege mage combines his arcane mastery with a supernatural link to siege engines."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:scribe_scroll#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_school#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_bond#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cantrips_but_the_siege_mage_gains_the_detect_magic_and_read_magic_cantrips_and_places_them_in_his_spellbook#wizard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:siege_engineer#wizard_siege_mage",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }, {
+          "featureId": "ability:siege_engine_bond#wizard_siege_mage",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }, {
+          "featureId": "ability:siege_school#wizard_siege_mage",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:scribe_scroll#wizard"
+        }, {
+          "featureId": "ability:arcane_bond#wizard"
+        }, {
+          "featureId": "ability:cantrips_but_the_siege_mage_gains_the_detect_magic_and_read_magic_cantrips_and_places_them_in_his_spellbook#wizard"
+        }, {
+          "featureId": "ability:arcane_school#wizard"
+        }]
+      }]
+    }
+  }
+}

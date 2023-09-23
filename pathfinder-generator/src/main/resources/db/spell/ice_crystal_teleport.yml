@@ -1,0 +1,34 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:ice_crystal_teleport"
+name: "Ice Crystal Teleport"
+description: "This spell functions as teleport, except you use it to teleport yourself\
+  \ or one other creature to a safe location you specify (the target can bring along\
+  \ objects as long as their weight doesn't exceed the target's heavy load). You can\
+  \ only send the target to a location with which you are very familiar. The target\
+  \ is first trapped in ice (hardness 0, 3 hit points per inch of thickness, 1 inch\
+  \ thick per caster level) for 1d4 rounds, during which time it is paralyzed, aware\
+  \ but unable to take any physical actions, and begins to fade away as the teleportation\
+  \ aspect takes effect. At the end of the 1d4 rounds, the target teleports to the\
+  \ specified location, and the ice's hit points drop to 0 and it quickly melts away.\
+  \ If the ice is destroyed before the target teleports, the spell ends and the teleport\
+  \ doesn't occur."
+prerequisites: ""
+components: "V"
+range: "long (400 ft. + 40 ft./level)"
+targets: "one creature"
+duration: "1d4 rounds and instantaneous"
+school: "conjuration (teleportation) [cold]"
+levels:
+- class_id: "class:arcanist"
+  level: 6
+- class_id: "class:sorcerer"
+  level: 6
+- class_id: "class:summoner"
+  level: 5
+- class_id: "class:witch"
+  level: 6
+- class_id: "class:wizard"
+  level: 6
+source: "Ultimate Magic"

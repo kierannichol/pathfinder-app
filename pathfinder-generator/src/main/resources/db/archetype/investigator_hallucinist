@@ -1,0 +1,115 @@
+id: "class:investigator#hallucinist"
+name: "Hallucinist"
+description: ""
+modifications:
+- add: "ability:psychedelic_perception#investigator_hallucinist"
+  remove:
+  - "ability:15th_levels#investigator"
+  - "ability:trapfinding_the_trap_sense_gained_at_3rd_level#investigator"
+  - "ability:the_investigator_talents_gained_at_3rd_7th_11th#investigator"
+- add: "ability:drug_lore#investigator_hallucinist"
+  remove:
+  - "ability:poison_lore#investigator"
+- add: "ability:drug_resistance#investigator_hallucinist"
+  remove:
+  - "ability:all_instances_of_poison_resistance#investigator"
+  - "ability:poison_immunity#investigator"
+- add: "ability:shared_hallucinations#investigator_hallucinist"
+  remove:
+  - "ability:the_investigator_talents_gained_at_5th#investigator"
+  - "ability:keen_recollection#investigator"
+  - "ability:9th_levels#investigator"
+- add: "ability:simultaneous_study#investigator_hallucinist"
+  remove:
+  - "ability:studied_combat#investigator"
+  - "ability:all_remaining_trap_sense#investigator"
+features:
+- id: "ability:psychedelic_perception#investigator_hallucinist"
+  name: "Psychedelic Perception"
+  label: null
+  type: null
+  description: "In addition to magical extracts, a hallucinist learns to swiftly mix\
+    \ various psychoactive substances, using a fraction of his own power to create\
+    \ a magical hallucinogen that he can imbibe to grant himself powers of psychedelic\
+    \ perception. A hallucinogen follows all the normal rules and restrictions for\
+    \ an alchemist's mutagen as if they were the same substance, just as a cognatogen\
+    \ does.\nAt 1st level, the effects of a hallucinogen last for 1 minute per investigator\
+    \ level, and the hallucinogen grants low-light vision and a +2 insight bonus on\
+    \ Perception checks, but imposes a –2 penalty to his Dexterity. At 3rd level,\
+    \ the duration increases to 10 minutes per the hallucinist's investigator level\
+    \ and the insight bonus on Perception checks increases to +4. At 7th level, the\
+    \ hallucinogen also grants see invisibility and darkvision 60 feet (or if the\
+    \ hallucinist drinking it already has darkvision, it increases the range of the\
+    \ darkvision by 30 feet) and the Perception bonus increases to +6. At 11th level,\
+    \ the hallucinogen also grants aura sight and the Perception bonus increases to\
+    \ +8. At 15th level, the hallucinogen also grants blindsense 60 feet and the Perception\
+    \ bonus increases to +10."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:drug_lore#investigator_hallucinist"
+  name: "Drug Lore"
+  label: null
+  type: null
+  description: "At 2nd level, a hallucinist has a deep understanding and appreciation\
+    \ of drugs. If the hallucinist spends 1 minute physically examining a drug, he\
+    \ can attempt a Knowledge (nature) check to identify any natural drug or a Knowledge\
+    \ (arcana) check to identify any magical drug (DC = the drug's addiction saving\
+    \ throw DC). Once he identifies a drug, he can spend 1 minute and attempt a Craft\
+    \ (alchemy) check (DC = the drug's addiction saving throw DC) to neutralize 1\
+    \ dose of the drug. Success renders the dose harmless. The hallucinist has no\
+    \ chance of accidentally drugging herself when examining or attempting to neutralize\
+    \ a drug."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:drug_resistance#investigator_hallucinist"
+  name: "Drug Resistance"
+  label: null
+  type: null
+  description: "At 2nd level, a hallucinist gains a +2 bonus on all saving throws\
+    \ against drug addiction. This bonus increases to +4 at 5th level, and to +6 at\
+    \ 8th level. At 11th level, a hallucinist becomes completely immune to drug addiction,\
+    \ but he can choose to lower this immunity for any particular drug. If he becomes\
+    \ addicted to a drug, he must fully recover from the addiction before he can resume\
+    \ his immunity to addiction to that drug."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:shared_hallucinations#investigator_hallucinist"
+  name: "Shared Hallucinations"
+  label: null
+  type: null
+  description: "At 3rd level, a hallucinist under the effects of his hallucinogen\
+    \ can share and manipulate his hallucinatory revelations. By expending 10 minutes\
+    \ of the duration of his hallucinogen or one use of inspiration, he can create\
+    \ an effect similar to minor image or oneiric horror. At 5th level, he can create\
+    \ an effect similar to synesthesia.\nAny of the effects remain only while the\
+    \ hallucinist concentrates upon it, for up to 1 round per hallucinist's investigator\
+    \ level, but otherwise function as the spell.\nThe DC of saving throws against\
+    \ these effects is equal to 10 + 1/2 the hallucinist's investigator level + his\
+    \ modifier.\nAt 9th level, a hallucinist can expend 10 minutes of the duration\
+    \ of the hallucinogen or one use of inspiration to use aura alteration on one\
+    \ creature or object (unlike the other three abilities, this does not require\
+    \ concentration)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:simultaneous_study#investigator_hallucinist"
+  name: "Simultaneous Study"
+  label: null
+  type: null
+  description: "At 6th level and every 3 investigator levels thereafter, the expanded\
+    \ mind of a hallucinist is able to maintain his studied combat bonuses against\
+    \ an additional target at the same time. In order to do so, the hallucinist must\
+    \ be using his psychedelic perception ability and must expend one use of inspiration\
+    \ in order to designate each target beyond the first target (this cost stacks\
+    \ with the use of inspiration required to designate a target more than once per\
+    \ 24 hours). He still needs to take a move action for each target, designating\
+    \ them one at a time. The hallucinist can discard this connection to a target\
+    \ of studied combat as a free action, allowing him to study another target in\
+    \ its place."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

@@ -1,0 +1,69 @@
+{
+  "id": "class:fighter#tower_shield_specialist",
+  "name": "Tower Shield Specialist",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_training_3#fighter AND !@modifies:ability:weapon_training_1#fighter AND !@modifies:ability:weapon_training_2#fighter AND !@modifies:ability:both_weapon_training_4_and_weapon_mastery#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Many fighters believe the tower shield is a tool suitable only for troops on the battlefield, claiming it is too large and bulky to use in skirmishes or within dungeon corridors. tower shield specialists defy those notions, using their massive shields with startling skill and incredible effect. They use these seemingly clumsy shields to perform deft maneuvers that confound their enemies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training_3#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training_1#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training_2#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:both_weapon_training_4_and_weapon_mastery#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:burst_barrier#fighter_tower_shield_specialist",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:tower_shield_specialist#fighter_tower_shield_specialist",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:tower_shield_defense#fighter_tower_shield_specialist",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:immediate_repositioning#fighter_tower_shield_specialist",
+          "conditionFormula": "@class:fighter\u003e\u003d13"
+        }, {
+          "featureId": "ability:tower_shield_evasion#fighter_tower_shield_specialist",
+          "conditionFormula": "@class:fighter\u003e\u003d16"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:weapon_training_1#fighter"
+        }, {
+          "featureId": "ability:weapon_training_2#fighter"
+        }, {
+          "featureId": "ability:weapon_training_3#fighter"
+        }, {
+          "featureId": "ability:both_weapon_training_4_and_weapon_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

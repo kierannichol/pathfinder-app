@@ -1,0 +1,67 @@
+{
+  "id": "class:bard#street_performer",
+  "name": "Street Performer",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:countersong#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:inspire_courage#bard",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bardic_performance#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:bardic_performance#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:gladhanding#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:streetwise#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:quick_change#bard_street_performer",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:countersong#bard"
+        }, {
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }]
+      }]
+    }
+  }
+}

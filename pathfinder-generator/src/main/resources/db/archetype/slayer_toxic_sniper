@@ -1,0 +1,106 @@
+id: "class:slayer#toxic_sniper"
+name: "Toxic Sniper"
+description: "With significant firepower in hand, the toxic snipers bring poisonous\
+  \ death to the wastes."
+modifications:
+- add: "ability:weapon_and_armor_proficiencies#slayer_toxic_sniper"
+  remove:
+  - "ability:armor_proficiency#slayer"
+  - "ability:the_toxic_snipers_weapon#slayer"
+- add: "ability:scrappers_gun#slayer_toxic_sniper"
+  remove:
+  - "ability:track#slayer"
+- add: "ability:sharpshooters_study#slayer_toxic_sniper"
+  remove:
+  - "ability:studied_target#slayer"
+- add: "ability:toxic_grit#slayer_toxic_sniper"
+  remove:
+  - "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+- add: "ability:toxic_shots#slayer_toxic_sniper"
+  remove:
+  - "ability:the_slayer_talent_gained_at_4th_level#slayer"
+- add: "ability:marksman#slayer_toxic_sniper"
+  remove:
+  - "ability:slayer_talents_gained_at_6th_8th_12th_14th_16th_18th#slayer"
+  - "ability:20th_levels#slayer"
+- add: "ability:precise_toxin#slayer_toxic_sniper"
+  remove:
+  - "ability:the_slayer_talent_gained_at_10th_level#slayer"
+features:
+- id: "ability:weapon_and_armor_proficiencies#slayer_toxic_sniper"
+  name: "Weapon and Armor Proficiencies"
+  label: null
+  type: null
+  description: "A toxic sniper is proficient with all simple weapons and firearms.\
+    \ He is proficient with light armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:scrappers_gun#slayer_toxic_sniper"
+  name: "Scrapper's Gun"
+  label: null
+  type: null
+  description: "A toxic sniper gains the Gunsmithing feat, a battered gun identical\
+    \ to that gained by a 1st-level gunslinger, and the ability to restore his battered\
+    \ gun as if he were a gunslinger."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:sharpshooters_study#slayer_toxic_sniper"
+  name: "Sharpshooter's Study"
+  label: null
+  type: null
+  description: "A toxic sniper's focus makes him extremely deadly with ranged weapons.\
+    \ He gains a bonus on attack and damage rolls against his studied target only\
+    \ when attacking with a ranged weapon."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:toxic_grit#slayer_toxic_sniper"
+  name: "Toxic Grit"
+  label: null
+  type: null
+  description: "At 2nd level, the toxic sniper gains the Amateur Gunslinger feat as\
+    \ a bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:toxic_shots#slayer_toxic_sniper"
+  name: "Toxic Shots"
+  label: null
+  type: null
+  description: "At 4th level, a toxic sniper can coat his ammunition in poison without\
+    \ requiring a pitted bullet. He is trained in applying poison in this way and\
+    \ cannot accidentally poison himself when applying poison to his ammunition.\n\
+    The toxic sniper can create a number of toxic shots per day equal to half his\
+    \ slayer level plus his Wisdom modifier. The penetrating nature of a toxic shot\
+    \ increases the DC of any poisons applied in this way by 2. A toxic sniper cannot\
+    \ create a toxic shot that is part of an alchemical cartridge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:marksman#slayer_toxic_sniper"
+  name: "Marksman"
+  label: null
+  type: null
+  description: "At 6th level, a toxic sniper reduces the penalty on Stealth checks\
+    \ while sniping by 5. He reduces the penalty by 5 again at 12th level and at 18th\
+    \ level. At 8th level, he increases the distance from which he can deliver a ranged\
+    \ sneak attack against his studied target by 10 feet.\nThis increases by 10 feet\
+    \ again at 14th level and at 20th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:precise_toxin#slayer_toxic_sniper"
+  name: "Precise Toxin"
+  label: null
+  type: null
+  description: "At 10th level, a toxic sniper can deliver a toxic shot to especially\
+    \ vulnerable areas. When he hits an opponent with a toxic shot and deals sneak\
+    \ attack damage, he can forgo all his bonus damage to increase the DC of the his\
+    \ toxic shot's poison. The DC increases by 1 for every 2d6 points of sneak attack\
+    \ damage he forgoes in this way."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+source: "Pathfinder Player Companion: People of the Wastes"

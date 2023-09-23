@@ -1,0 +1,68 @@
+id: "class:magus#nature_bonded_magus"
+name: "Nature-Bonded Magus"
+description: "A nature-bonded magus synergizes arcane magic and the divine magic traditions\
+  \ of druids into a deadly synthesis."
+modifications:
+- add: "ability:plant_familiar#magus_nature_bonded_magus"
+  remove:
+  - "ability:arcane_pool#magus"
+- add: "ability:familiar_symbiosis#magus_nature_bonded_magus"
+  remove:
+  - "ability:spell_recall#magus"
+- add: "ability:woodland_stride#magus_nature_bonded_magus"
+  remove:
+  - "ability:knowledge_pool#magus"
+- add: "ability:improved_familiar_symbiosis#magus_nature_bonded_magus"
+  remove:
+  - "ability:improved_spell_recall#magus"
+features:
+- id: "ability:plant_familiar#magus_nature_bonded_magus"
+  name: "Plant Familiar"
+  label: null
+  type: null
+  description: "A nature-bonded magus gains the familiar magus arcana. A nature-bonded\
+    \ magus must choose a plant familiar as his familiar."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:familiar_symbiosis#magus_nature_bonded_magus"
+  name: "Familiar Symbiosis"
+  label: null
+  type: null
+  description: "A 4th level, when a nature-bonded magus is adjacent to his familiar,\
+    \ he can merge with his familiar as a standard action; both the nature-bonded\
+    \ magus and the familiar provoke attacks of opportunity with this action. Doing\
+    \ so causes the plant familiar to bond with a part of the nature-bonded magus's\
+    \ body as though it were growing on him. While merged, the nature-bonded magus's\
+    \ familiar can take no actions (but can still attempt Perception checks and communicate\
+    \ with the nature-bonded magus), and it can't be targeted or harmed by effects.\
+    \ As long as his familiar is merged, the nature-bonded magus gains half his plant\
+    \ familiar's natural armor adjustment to AC.\nThe nature-bonded magus can separate\
+    \ from his plant familiar as a standard action that provokes attacks of opportunity\
+    \ for both of them. Once they have separated, the familiar appears in an adjacent\
+    \ square of the nature-bonded magus' choosing."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:woodland_stride#magus_nature_bonded_magus"
+  name: "Woodland Stride"
+  label: null
+  type: null
+  description: "At 7th level, a nature-bonded magus can move through any sort of undergrowth\
+    \ (such as natural briars, overgrown areas, thorns, and similar terrain) at his\
+    \ normal speed and without taking damage or suffering any other impairment. Briars,\
+    \ overgrown areas, and thorns that are enchanted or magically manipulated to impede\
+    \ motion, however, still affect him."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:improved_familiar_symbiosis#magus_nature_bonded_magus"
+  name: "Improved Familiar Symbiosis"
+  label: null
+  type: null
+  description: "At 11th level, when a nature-bonded magus is merged with his familiar,\
+    \ he gains a +4 enhancement bonus to his Strength and Constitution."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

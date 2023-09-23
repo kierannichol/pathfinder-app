@@ -1,0 +1,115 @@
+id: "class:warpriest#sacred_fist"
+name: "Sacred Fist"
+description: "Unlike many warpriests, sacred fists leave behind armor and shield and\
+  \ instead rely on their fists and whatever protection their deity bestows on them."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#warpriest_sacred_fist"
+  remove:
+  - "ability:armor_proficiency#warpriest"
+  - "ability:the_warpriests_weapon#warpriest"
+- add: "ability:flurry_of_blows#warpriest_sacred_fist"
+  remove:
+  - "ability:sacred_weapon#warpriest"
+- add: "ability:unarmed_strike#warpriest_sacred_fist"
+  remove:
+  - "ability:focus_weapon#warpriest"
+- add: "ability:blessed_fortitude#warpriest_sacred_fist"
+  remove:
+  - "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+- add: "ability:bonus_style_feat#warpriest_sacred_fist"
+  remove:
+  - "ability:18th_levels#warpriest"
+  - "ability:the_bonus_feats_gained_at_6th_12th#warpriest"
+- add: "ability:ki_pool#warpriest_sacred_fist"
+  remove:
+  - "ability:sacred_armor#warpriest"
+- add: "ability:miraculous_fortitude#warpriest_sacred_fist"
+  remove:
+  - "ability:the_bonus_feat_gained_at_9th_level#warpriest"
+features:
+- id: "ability:weapon_and_armor_proficiency#warpriest_sacred_fist"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Sacred fists are proficient with the club, crossbow (light or heavy),\
+    \ dagger, handaxe, javelin, kama, nunchaku, quarterstaff, sai, shortspear, short\
+    \ sword, shuriken, siangham, sling, and spear. Sacred fists are not proficient\
+    \ with any armor or shields. When wearing armor, using a shield, or carrying a\
+    \ medium or heavy load, a sacred fist loses his AC bonus and flurry of blows."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:flurry_of_blows#warpriest_sacred_fist"
+  name: "Flurry of Blows"
+  label: null
+  type: null
+  description: "At 1st level, a sacred fist can make a flurry of blows attack as a\
+    \ full-attack action. This ability works like the monk ability of the same name,\
+    \ except the sacred fist's attack bonus from warpriest levels does not count as\
+    \ his warpriest level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:unarmed_strike#warpriest_sacred_fist"
+  name: "Unarmed Strike"
+  label: null
+  type: null
+  description: "At 1st level, a sacred fist gains Improved Unarmed Strike as a bonus\
+    \ feat. He uses his warpriest levels as monk levels for determining the amount\
+    \ of damage dealt with an unarmed strike."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:blessed_fortitude#warpriest_sacred_fist"
+  name: "Blessed Fortitude"
+  label: null
+  type: null
+  description: "At 3rd level, a sacred fist can avoid even magical and unusual attacks\
+    \ with help from his deity. If he succeeds at a Fortitude saving throw against\
+    \ an attack that has a reduced effect on a successful save, he instead avoids\
+    \ the effect entirely. A helpless sacred fist does not gain the benefit of the\
+    \ blessed fortitude ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:bonus_style_feat#warpriest_sacred_fist"
+  name: "Bonus Style Feat"
+  label: null
+  type: null
+  description: "At 6th level, the sacred fist gains a style feat as a bonus feat.\
+    \ The sacred fist must meet the style feat's prerequisites. He uses his warpriest\
+    \ levels as monk levels for the purposes of meeting the feat's prerequisites.\
+    \ At 12th and 18th levels, a sacred fist gains either another style feat or a\
+    \ feat that requires a style feat as a prerequisite."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:ki_pool#warpriest_sacred_fist"
+  name: "Ki Pool"
+  label: null
+  type: null
+  description: "At 7th level, the sacred fist gains a ki pool. This functions as the\
+    \ monk class feature, using the sacred fist's level – 3 as his monk level when\
+    \ determining the number of points in his pool and bonuses granted to his unarmed\
+    \ strike. Additionally, the sacred fist can as a swift action spend 1 point from\
+    \ his ki pool to grant himself a +1 insight bonus to his AC for 1 minute. (This\
+    \ is in addition the normal ki ability to gain a dodge bonus to AC.) This insight\
+    \ bonus increases by 1 for every 3 levels above 7th (to a maximum of +5 at 19th\
+    \ level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:miraculous_fortitude#warpriest_sacred_fist"
+  name: "Miraculous Fortitude"
+  label: null
+  type: null
+  description: "At 9th level, the sacred fist's blessed fortitude ability improves.\
+    \ He still takes no damage or negative effect when he succeeds at a Fortitude\
+    \ save, but now when he fails a Fortitude saving throw against a spell or effect\
+    \ that deals damage (including ability damage and drain), he takes only half the\
+    \ amount of damage. A helpless sacred fist does not gain the benefit of miraculous\
+    \ fortitude."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

@@ -1,0 +1,51 @@
+id: "class:fighter#spear_fighter"
+name: "Spear Fighter"
+description: ""
+modifications:
+- add: "ability:armor_proficiency#fighter_spear_fighter"
+  remove:
+  - "ability:the_fighters_armor_proficiencies#fighter"
+- add: "ability:balanced_stride#fighter_spear_fighter"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:spear_parry#fighter_spear_fighter"
+  remove:
+  - "ability:armor_mastery#fighter"
+  - "ability:armor_training#fighter"
+features:
+- id: "ability:armor_proficiency#fighter_spear_fighter"
+  name: "Armor Proficiency"
+  label: null
+  type: null
+  description: "A spear fighter is not proficient with heavy armor or tower shields.\
+    \ Instead, he gains Dodge as a bonus feat, even if he doesn't fulfill the prerequisites,\
+    \ but he can't use this feat while wearing heavy armor or using a shield."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:balanced_stride#fighter_spear_fighter"
+  name: "Balanced Stride"
+  label: null
+  type: null
+  description: "At 2nd level, the spear fighter gains a +1 bonus on Acrobatics checks\
+    \ to avoid attacks of opportunity. This bonus increases by 1 for every 4 levels\
+    \ he has beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:spear_parry#fighter_spear_fighter"
+  name: "Spear Parry"
+  label: null
+  type: null
+  description: "At 3rd level, a spear fighter learns to parry his opponents' attacks\
+    \ with his spear. This functions as a swashbuckler's opportune parry and riposte\
+    \ deed except as noted below. The spear fighter must use a weapon from the spears\
+    \ weapon group to perform the parry. He doesn't need panache to parry an attack\
+    \ or to make an attack against a creature whose attack he has parried; instead,\
+    \ he takes a cumulative –4 penalty on all attacks (including further parry attempts)\
+    \ until the end of his next turn. At 7th, 11th, and 15th levels, the penalty decreases\
+    \ by 1. At 19th level, a spear fighter can use spear parry without penalty."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+source: "Pathfinder Player Companion: Martial Arts Handbook"

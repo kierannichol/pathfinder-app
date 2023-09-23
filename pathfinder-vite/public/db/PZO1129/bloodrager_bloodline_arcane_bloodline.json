@@ -1,0 +1,68 @@
+{
+  "id": "bloodrager_bloodline:arcane_bloodline",
+  "name": "Arcane Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "While others of your kin may be powerful wizards and sorcerers, the eldritch nature of the blood coursing through your veins transforms you into a spell-breaking terror."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:bloodrager\u003e\u003d7",
+          "choices": [{
+            "choiceId": "bloodrager7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d13",
+          "choices": [{
+            "choiceId": "bloodrager13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d19",
+          "choices": [{
+            "choiceId": "bloodrager19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:disruptive_bloodrage#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d1"
+        }, {
+          "featureId": "ability:arcane_bloodrage#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d4"
+        }, {
+          "featureId": "ability:greater_arcane_bloodrage#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d8"
+        }, {
+          "featureId": "ability:casters_scourge#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d12"
+        }, {
+          "featureId": "ability:true_arcane_bloodrage#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d16"
+        }, {
+          "featureId": "ability:casters_bane#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

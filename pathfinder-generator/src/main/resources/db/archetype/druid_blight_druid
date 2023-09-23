@@ -1,0 +1,68 @@
+id: "class:druid#blight_druid"
+name: "Blight Druid"
+description: ""
+modifications:
+- add: "ability:vermin_empathy#druid_blight_druid"
+  remove:
+  - "ability:wild_empathy#druid"
+- add: "ability:miasma#druid_blight_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+  - "ability:trackless_step#druid"
+- add: "ability:blightblooded#druid_blight_druid"
+  remove:
+  - "ability:venom_immunity#druid"
+- add: "ability:plaguebearer#druid_blight_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:vermin_empathy#druid_blight_druid"
+  name: "Vermin Empathy"
+  label: null
+  type: null
+  description: "A blight druid can improve the attitude of vermin as a normal druid\
+    \ can with animals. Vermin have a starting attitude of unfriendly. The blight\
+    \ druid can also improve the attitude of animals and mindless undead creatures\
+    \ that were formerly animals, but she takes a –4 penalty on the check unless the\
+    \ animal or undead has a disease special attack.\nThis ability replaces wild empathy."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:miasma#druid_blight_druid"
+  name: "Miasma"
+  label: null
+  type: null
+  description: "Starting at 5th level, if a blight druid is adjacent to a creature\
+    \ at the beginning of its turn, the creature must succeed at a Fortitude save\
+    \ with a DC of 10 + 1/2 the druid's level + the druid's Wisdom modifier or become\
+    \ sickened for 1 round. A creature of the animal, fey, or plant type that fails\
+    \ its save is nauseated for 1 round and sickened for 1 minute thereafter. If the\
+    \ creature makes its save, it is immune to this effect for 24 hours, as are creatures\
+    \ immune to disease.\nThis ability replaces trackless step and resist nature's\
+    \ lure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:blightblooded#druid_blight_druid"
+  name: "Blightblooded"
+  label: null
+  type: null
+  description: "At 9th level, a blight druid gains immunity to all diseases, including\
+    \ natural and supernatural diseases. She also becomes immune to effects that would\
+    \ cause her to become sickened or nauseated.\nThis ability replaces venom immunity."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:plaguebearer#druid_blight_druid"
+  name: "Plaguebearer"
+  label: null
+  type: null
+  description: "Starting at 13th level, any creature that strikes a blight druid with\
+    \ a touch attack, unarmed strike, or natural weapon must succeed at a Fortitude\
+    \ save with a DC of 10 + 1/2 the druid's level + the druid's Wisdom modifier or\
+    \ contract a disease, as the contagion spell. If the creature makes its save,\
+    \ it is immune to this effect for 24 hours."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

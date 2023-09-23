@@ -1,0 +1,95 @@
+id: "class:paladin#virtuous_bravo"
+name: "Virtuous Bravo"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#paladin_virtuous_bravo"
+  remove:
+  - "trait:armor_proficiency#paladin"
+- add: "ability:bravos_smite#paladin_virtuous_bravo"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:nimble#paladin_virtuous_bravo"
+  remove:
+  - "ability:mercy#paladin"
+- add: "ability:panache_and_deeds#paladin_virtuous_bravo"
+  remove:
+  - "ability:spellcasting#paladin"
+- add: "ability:advanced_deeds#paladin_virtuous_bravo"
+  remove:
+  - "ability:aura_of_justice#paladin"
+- add: "ability:bravos_holy_strike#paladin_virtuous_bravo"
+  remove:
+  - "ability:holy_champion#paladin"
+features:
+- id: "ability:weapon_and_armor_proficiency#paladin_virtuous_bravo"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Virtuous bravos aren't proficient with heavy armor or shields (except\
+    \ for bucklers)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:bravos_smite#paladin_virtuous_bravo"
+  name: "Bravo's Smite"
+  label: null
+  type: null
+  description: "When using smite evil, a virtuous bravo doesn't gain a deflection\
+    \ bonus to AC."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:nimble#paladin_virtuous_bravo"
+  name: "Nimble"
+  label: null
+  type: null
+  description: "At 3rd level, a virtuous bravo gains a +1 dodge bonus to AC while\
+    \ wearing light armor or no armor.\nAnything that causes the virtuous bravo to\
+    \ lose her Dexterity bonus to AC also causes her to lose this dodge bonus. This\
+    \ bonus increases by 1 for every 4 paladin levels beyond 3rd (to a maximum of\
+    \ +5 at 19th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:panache_and_deeds#paladin_virtuous_bravo"
+  name: "Panache and Deeds"
+  label: null
+  type: null
+  description: "At 4th level, a virtuous bravo gains the swashbuckler's panache class\
+    \ feature along with the following swashbuckler deeds: dodging panache, menacing\
+    \ swordplay, opportune parry and riposte, precise strike, and swashbuckler initiative.\
+    \ The virtuous bravo's paladin levels stack with any swashbuckler levels when\
+    \ using these deeds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:advanced_deeds#paladin_virtuous_bravo"
+  name: "Advanced Deeds"
+  label: null
+  type: null
+  description: "At 11th level, a virtuous bravo gains the following swashbuckler deeds:\
+    \ bleeding wound, evasive, subtle blade, superior feint, swashbuckler's grace,\
+    \ and targeted strike."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:bravos_holy_strike#paladin_virtuous_bravo"
+  name: "Bravo's Holy Strike"
+  label: null
+  type: null
+  description: "At 20th level, a virtuous bravo becomes a master at dispensing holy\
+    \ justice with her blade.\nWhen the virtuous bravo confirms a critical hit with\
+    \ a light or one-handed piercing melee weapon, she can choose one of the following\
+    \ three effects in addition to dealing damage: the target is rendered unconscious\
+    \ for 1d4 hours, the target is paralyzed for 2d6 rounds, or the target is slain.\
+    \ Regardless of the effect chosen, the target can attempt a Fortitude save.\n\
+    On a success, the target is instead stunned for 1 round (it still takes damage).\
+    \ The DC of this save is equal to 10 + 1/2 the virtuous bravo's paladin level\
+    \ + her Charisma modifier. Once a creature has been the target of a bravo's holy\
+    \ strike, regardless of whether or not it succeeds at the save, that creature\
+    \ is immune to that bravo's holy strike for 24 hours. Creatures that are immune\
+    \ to critical hits are also immune to this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+source: "Pathfinder Player Companion: Heroes of the High Court"

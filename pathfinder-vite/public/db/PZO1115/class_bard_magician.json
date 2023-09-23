@@ -1,0 +1,98 @@
+{
+  "id": "class:bard#magician",
+  "name": "Magician",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:countersong#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:inspire_courage#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:jack_of_all_trades#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "A magician dabbles in performance, but sees it as a means to tap into universal energies and channel them."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bardic_performance#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:bardic_performance#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:magical_talent#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:improved_counterspell#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:extended_performance#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:expanded_repertoire#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:arcane_bond#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:wand_mastery#bard_magician",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:countersong#bard"
+        }, {
+          "featureId": "ability:well_versed#bard"
+        }, {
+          "featureId": "ability:versatile_performance#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }, {
+          "featureId": "ability:jack_of_all_trades#bard"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+id: "class:alchemist#dimensional_excavator"
+name: "Dimensional Excavator"
+description: ""
+modifications:
+- add: "ability:extradimensional_extract#alchemist_dimensional_excavator"
+  remove:
+  - "ability:the_discovery_ability#alchemist"
+  - "ability:discovery_gained_at_4th_level#alchemist"
+- add: "ability:precipitous_discoveries#alchemist_dimensional_excavator"
+  remove:
+  - "ability:the_discovery_ability#alchemist"
+features:
+- id: "ability:extradimensional_extract#alchemist_dimensional_excavator"
+  name: "Extradimensional Extract"
+  label: null
+  type: null
+  description: "The intense study a dimensional excavator applies to dimensional forces\
+    \ causes him to treat his class level as 2 lower when qualifying for alchemist\
+    \ discoveries other than those granted by Precipitous Discoveries (see below).\
+    \ At 4th level, the dimensional excavator adds create pit to his list of extracts\
+    \ known, treating it as a 2nd-level alchemist extract. He can create an extract\
+    \ of this spell, which can then be thrown as a ranged attack, targeting a creature\
+    \ or square. If it strikes a square, the pit manifests in that area and all nearby\
+    \ creatures are affected normally. If a creature is struck, the pit manifests\
+    \ in the creature's location, and the struck creature must succeed at a Reflex\
+    \ save with a –2 penalty or fall into the pit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+- id: "ability:precipitous_discoveries#alchemist_dimensional_excavator"
+  name: "Precipitous Discoveries"
+  label: null
+  type: null
+  description: "At 6th level, a dimensional excavator can choose to learn an additional\
+    \ pit spell in place of learning a new discovery. The alchemist must be able to\
+    \ use an extract of the appropriate level to select a pit spell as an extract.\
+    \ He can add the following spells to his extracts known, and use them as per the\
+    \ extradimensional extract ability: spiked pit (3rd-level extract), acid pit (4th-level\
+    \ extract), hungry pit (5th-level extract). This alters the discovery ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+source: "Pathfinder Player Companion: Magic Tactics Toolbox"

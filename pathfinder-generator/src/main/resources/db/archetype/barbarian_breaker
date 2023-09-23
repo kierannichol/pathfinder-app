@@ -1,0 +1,36 @@
+id: "class:barbarian#breaker"
+name: "Breaker"
+description: "While most barbarians are skilled at breaking things, some find the\
+  \ need to destroy their surroundings an almost uncontrollable urge when in the middle\
+  \ of a rage. These barbarians are a danger not only to their foes, but also to the\
+  \ very environment around them."
+modifications:
+- add: "ability:destructive#barbarian_breaker"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:battle_scavenger#barbarian_breaker"
+  remove:
+  - "ability:trap_sense#barbarian"
+features:
+- id: "ability:destructive#barbarian_breaker"
+  name: "Destructive"
+  label: null
+  type: null
+  description: "Whenever the breaker barbarian makes a melee attack that targets an\
+    \ unattended object or makes a sunder combat maneuver, she adds half her barbarian\
+    \ level (minimum +1) on the damage roll."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:battle_scavenger#barbarian_breaker"
+  name: "Battle Scavenger"
+  label: null
+  type: null
+  description: "At 3rd level, the breaker barbarian suffers no penalty on attack rolls\
+    \ when using an improvised weapon or a weapon with the broken condition. In addition,\
+    \ she gains a +1 bonus on damage rolls with improvised or broken weapons for every\
+    \ three levels beyond 3rd.\nThis ability replaces trap sense."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

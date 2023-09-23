@@ -1,0 +1,36 @@
+casting_time: "1 minute"
+saving_throw: "Will negates (object)"
+spell_resistance: "yes (object)"
+id: "spell:improve_trap"
+name: "Improve Trap"
+description: "When this spell is cast upon a trap, it improves one specific element\
+  \ of the trap chosen at the time of casting. The caster can improve the trap in\
+  \ any of the following ways (each one raises the trap's CR by +1). Increase DC of\
+  \ the Perception check required to locate the trap by +5. Increase DC of the Disable\
+  \ Device check required to disarm trap by +5. Increase the trap's attack bonus or\
+  \ saving throw by +2. To cast this on a trap, you must know that the trap exists\
+  \ and its precise location. A trap can only have one improvement from this spell\
+  \ at a time. A second casting changes the improvement on the trap, but does not\
+  \ add another improvement."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one trap"
+duration: "instantaneous"
+school: "transmutation"
+levels:
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:druid"
+  level: 3
+- class_id: "class:hunter"
+  level: 2
+- class_id: "class:inquisitor"
+  level: 3
+- class_id: "class:ranger"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 3
+- class_id: "class:witch"
+  level: 3
+source: "Advanced Race Guide"

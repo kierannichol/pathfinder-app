@@ -1,0 +1,64 @@
+id: "class:ranger#yokai_hunter"
+name: "Yokai Hunter"
+description: "Yokai hunters possess a supernatural tether to the spirit worlds that\
+  \ shroud mortal existence. They use their powers to peer into the realm of the dead,\
+  \ and are adept at hunting those who dwell in the realm between the Material Plane\
+  \ and the Great Beyond, the supernatural beings which humans refer to as yokai."
+modifications:
+- add: "ability:favored_yokai#ranger_yokai_hunter"
+  remove:
+  - "ability:favored_enemy#ranger"
+- add: "ability:yokai_sense#ranger_yokai_hunter"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:resist_yokai#ranger_yokai_hunter"
+  remove:
+  - "ability:camouflage#ranger"
+features:
+- id: "ability:favored_yokai#ranger_yokai_hunter"
+  name: "Favored Yokai"
+  label: null
+  type: null
+  description: "A yokai hunter possesses a supernatural ability to sense beings connected\
+    \ to the spirit world, such as kami, oni, and ghosts, and is formidable at fighting\
+    \ them.\nAt 1st level, a yokai hunter gains a +2 bonus on weapon attacks and damage\
+    \ rolls against one of the following creature types (and subtypes, if applicable),\
+    \ which are considered yokai for the purposes of this archetype: aberration, dragon,\
+    \ fey, magical beast, outsider (native), and undead (incorporeal). (A GM may choose\
+    \ to alter this list for the purposes of her campaign.)\nAt 5th level and every\
+    \ five levels thereafter, a yokai hunter may select another favored yokai from\
+    \ this list, gaining a +2 bonus on weapon attacks and damage rolls against that\
+    \ yokai.\nIn addition, whenever a yokai hunter sees a favored yokai that is disguised\
+    \ or has not made its otherworldly essence known, he gains an automatic check\
+    \ to identify the creature as such. To make this check, a yokai hunter rolls 1d20\
+    \ and adds his yokai hunter level and Charisma modifier (DC 10 + 1/2 the yokai's\
+    \ Hit Dice + the yokai's Cha modifier). A successful check means that the yokai\
+    \ hunter recognizes the creature's ties to the spiritual world. Regardless of\
+    \ whether the check is successful, a yokai hunter gains the bonus on weapon attacks\
+    \ and damage rolls against favored yokai."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragon Empires Primer"
+- id: "ability:yokai_sense#ranger_yokai_hunter"
+  name: "Yokai Sense"
+  label: null
+  type: null
+  description: "At 7th level, a yokai hunter can sense yokai he has identified with\
+    \ his favored yokai ability as though he had blindsense out to a range of 60 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragon Empires Primer"
+- id: "ability:resist_yokai#ranger_yokai_hunter"
+  name: "Resist Yokai"
+  label: null
+  type: null
+  description: "At 12th level, a yokai hunter can attempt to shrug off the magical\
+    \ energies of a yokai. He gains a +4 insight bonus on saving throws to resist\
+    \ the spells, spell-like abilities, and supernatural abilities of favored yokai.\
+    \ In addition, once per day as a standard action, a yokai hunter can shed an effect\
+    \ placed on him by a yokai as break enchantment, using his yokai hunter level\
+    \ as his caster level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dragon Empires Primer"
+source: "Pathfinder Player Companion: Dragon Empires Primer"

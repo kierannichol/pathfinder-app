@@ -1,0 +1,50 @@
+id: "class:barbarian#jungle_rager"
+name: "Jungle Rager"
+description: ""
+modifications:
+- add: "ability:home_ground_advantage#barbarian_jungle_rager"
+  remove:
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:jungle_endurance#barbarian_jungle_rager"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:home_ground_supremacy#barbarian_jungle_rager"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+features:
+- id: "ability:home_ground_advantage#barbarian_jungle_rager"
+  name: "Home Ground Advantage"
+  label: null
+  type: null
+  description: "At 2nd level, a jungle rager learns how to make optimal use of the\
+    \ natural cover of her homeland. She chooses a specific terrain type from the\
+    \ ranger list of favored terrains. When in this terrain, she increases her bonus\
+    \ to AC and on Reflex saving throws gained from cover, partial cover, and improved\
+    \ cover (but not soft cover) by 1. In this terrain, she also increases the miss\
+    \ chance caused by concealment for attacks against her by 5%."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:jungle_endurance#barbarian_jungle_rager"
+  name: "Jungle Endurance"
+  label: null
+  type: null
+  description: "At 3rd level, a jungle rager gains a +1 bonus on Fortitude saves to\
+    \ resist the effects of hot weather and diseases. This bonus increases by +1 every\
+    \ 3 barbarian levels after 3rd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:home_ground_supremacy#barbarian_jungle_rager"
+  name: "Home Ground Supremacy"
+  label: null
+  type: null
+  description: "At 5th level, a jungle rager becomes even more capable when navigating\
+    \ and fighting in her preferred terrain. She gains the woodland stride ranger\
+    \ ability, though this ability works only in the terrain she selected for the\
+    \ home ground advantage ability. In this terrain, she gains an additional +1 bonus\
+    \ to AC when benefiting from cover or improved cover (but not soft cover)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

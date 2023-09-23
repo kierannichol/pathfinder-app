@@ -1,0 +1,26 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:mindwipe"
+name: "Mindwipe"
+description: "You erase a portion of the target's mind and experiences, inflicting\
+  \ 2 temporary negative levels on the target for 1 day per caster level. If the target\
+  \ is a spellcaster who must choose and prepare spells in advance, each negative\
+  \ level imposed by mindwipe also causes the target to lose one prepared spell from\
+  \ her highest level of spells known for each of her spellcasting classes for which\
+  \ she must prepare spells. These lost spells are no longer considered known by the\
+  \ target until the corresponding negative levels are removed."
+prerequisites: ""
+components: "V"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature"
+duration: "instantaneous; see text"
+school: "enchantment (compulsion) [mind-affecting]"
+levels:
+- class_id: "class:arcanist"
+  level: 4
+- class_id: "class:sorcerer"
+  level: 4
+- class_id: "class:wizard"
+  level: 4
+source: "Occult Adventures"

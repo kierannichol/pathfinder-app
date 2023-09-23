@@ -1,0 +1,24 @@
+casting_time: "1 immediate action"
+saving_throw: "none"
+spell_resistance: "yes"
+id: "spell:dweomer_retaliation"
+name: "Dweomer Retaliation"
+description: "You may only cast this spell immediately after successfully counterspelling\
+  \ an opponent. Drawing upon the residual energy of the countered spells, you gain\
+  \ a number of temporary hit points equal to the level of the countered spell plus\
+  \ your Charisma or Intelligence modifier (for sorcerers and wizards, respectively);\
+  \ your counterspelled opponent takes damage equal to this amount."
+prerequisites: ""
+components: "V"
+range: "long (400 ft. + 40 ft./level)"
+targets: "one creature you counterspelled since your last turn"
+duration: "instantaneous"
+school: "abjuration"
+levels:
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:sorcerer"
+  level: 3
+- class_id: "class:wizard"
+  level: 3
+source: "Cheliax, Empire of Devils"

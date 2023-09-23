@@ -1,0 +1,72 @@
+id: "class:hunter#patient_ambusher"
+name: "Patient Ambusher"
+description: "Wandering the wilds, some hunters eschew the bond of innate teamwork\
+  \ with their animal companions. Instead, these hunters master the creation and deployment\
+  \ of intricate ranger traps, often using themselves or their animal companions to\
+  \ lure foes into their snares."
+modifications:
+- add: "ability:trapfinding#hunter_patient_ambusher"
+  remove:
+  - "ability:wild_empathy#hunter"
+  - "ability:nature_training#hunter"
+- add: "ability:snare_trap#hunter_patient_ambusher"
+  remove:
+  - "ability:the_hunter_tactics_class_feature#hunter"
+- add: "ability:additional_traps#hunter_patient_ambusher"
+  remove:
+  - "ability:teamwork_feats#hunter"
+- add: "ability:launch_trap#hunter_patient_ambusher"
+  remove:
+  - "ability:raise_animal_companion#hunter"
+features:
+- id: "ability:trapfinding#hunter_patient_ambusher"
+  name: "Trapfinding"
+  label: null
+  type: null
+  description: "A patient ambusher adds half her hunter level (minimum +1) on Perception\
+    \ checks to locate traps and on Disable Device skill checks. A patient ambusher\
+    \ can use Disable Device to disarm magic traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:snare_trap#hunter_patient_ambusher"
+  name: "Snare Trap"
+  label: null
+  type: null
+  description: "At 3rd level, a patient ambusher learns how to create a snare trap.\
+    \ The patient ambusher can use this and other learned traps a total number of\
+    \ times per day equal to half her hunter level + her Wisdom modifier. This snare\
+    \ trap otherwise functions the same as the ranger snare trap."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:additional_traps#hunter_patient_ambusher"
+  name: "Additional Traps"
+  label: null
+  type: null
+  description: "At 3rd level and every 3 hunter levels thereafter, a patient ambusher\
+    \ can learn a new type of trap, selected from the list of ranger traps. Once a\
+    \ trap is learned, it can't be unlearned and replaced with a different type of\
+    \ trap. The patient ambusher cannot learn an individual trap more than once."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:launch_trap#hunter_patient_ambusher"
+  name: "Launch Trap"
+  label: null
+  type: null
+  description: "At 10th level, a patient ambusher can affix a magical ranger trap\
+    \ to an arrow, a crossbow bolt, or a thrown weapon, allowing her to set the trap\
+    \ remotely or use it as a direct attack. Attaching the trap to the projectile\
+    \ is part of the full-round action to create a new trap. The trapped projectile\
+    \ is fired or thrown in the normal manner. If fired at a square, the trap is treated\
+    \ as if the hunter had set the trap in that square, except the DC is 5 lower than\
+    \ normal. If the trap is fired at a creature, the target takes damage from the\
+    \ ranged weapon and is treated as if it had triggered the trap (attempting a saving\
+    \ throw, if any). The attack has a maximum range of 60 feet, and penalties from\
+    \ range increments apply on the attack roll. The duration of the trap starts when\
+    \ it is created, not when it is triggered."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,40 @@
+id: "class:rogue#rake"
+name: "Rake"
+description: "The rake is a rogue who is open about her skills and talents, often\
+  \ to the point of being boastful. Usually she has the protection of an important\
+  \ figure who finds her services useful, but sometimes her bravado is enough to keep\
+  \ enemies away. She is often used as a face for the group for diplomacy, gathering\
+  \ information, negotiations, or to gain the most lucrative contracts and quests\
+  \ from local authorities."
+modifications:
+- add: "ability:bravados_blade#rogue_rake"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:rakes_smile#rogue_rake"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:bravados_blade#rogue_rake"
+  name: "Bravado's Blade"
+  label: null
+  type: null
+  description: "When a rake hits an opponent and deals sneak attack damage, she can\
+    \ forgo 1d6 points of that damage and make a free Intimidate check to demoralize\
+    \ the foe. For every additional 1d6 points of sneak attack damage she forgoes,\
+    \ she receives a +5 circumstance bonus on this check."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:rakes_smile#rogue_rake"
+  name: "Rake's Smile"
+  label: null
+  type: null
+  description: "At 3rd level, a rake gains a +1 morale bonus on Bluff and Diplomacy\
+    \ checks. This bonus increases by +1 for every 3 levels beyond 3rd.\nThis ability\
+    \ replaces trap sense.\nRogue Talents: The following rogue talents complement\
+    \ the rake archetype: befuddling strike, charmer, honeyed words, and surprise\
+    \ attack*."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

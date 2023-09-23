@@ -1,0 +1,51 @@
+id: "class:paladin#divine_guardian"
+name: "Divine Guardian"
+description: ""
+modifications:
+- add: "ability:divine_troth#paladin_divine_guardian"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:guarding_hands#paladin_divine_guardian"
+  remove:
+  - "ability:lay_on_hands#paladin"
+- add: "ability:courageous_defense#paladin_divine_guardian"
+  remove:
+  - "ability:aura_of_courage#paladin"
+features:
+- id: "ability:divine_troth#paladin_divine_guardian"
+  name: "Divine Troth"
+  label: null
+  type: null
+  description: "Once per day the divine guardian pledges her protection to a willing\
+    \ creature for the day. This is done at the same time she prepares her spells.\n\
+    When the paladin first selects a creature for divine troth, that creature must\
+    \ be present and agree to receive the paladin's protection, but if the paladin\
+    \ already has a creature selected for divine troth, she can maintain that selection\
+    \ each day without her charge being present. Once per day, the divine guardian\
+    \ can cast locate creature to find the current target of her divine troth."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:guarding_hands#paladin_divine_guardian"
+  name: "Guarding Hands"
+  label: null
+  type: null
+  description: "The paladin can use lay on hands to heal herself or her divine troth\
+    \ as a move action, but cannot use lay on hands to heal herself as a swift action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:courageous_defense#paladin_divine_guardian"
+  name: "Courageous Defense"
+  label: null
+  type: null
+  description: "At 3rd level a divine guardian can intercept attacks directed at the\
+    \ target of her divine troth as if she had the Bodyguard and In Harm's Way feats.\
+    \ The divine guardian's aura of courage does not grant a bonus to allies within\
+    \ 10 feet, but still grants her immunity to fear effects.\nThis ability modifies\
+    \ aura of courage.\nBonus Feat: A divine guardian gains a bonus feat at 7th level,\
+    \ and additional bonus feats at 10th and 13th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+source: "Pathfinder Player Companion: Cohorts and Companions"

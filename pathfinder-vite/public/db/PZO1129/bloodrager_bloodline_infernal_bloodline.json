@@ -1,0 +1,68 @@
+{
+  "id": "bloodrager_bloodline:infernal_bloodline",
+  "name": "Infernal Bloodline",
+  "tags": ["bloodrager_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The Pit lives in your blood. Maybe one of your ancestors was seduced by the powers of Hell or made a deal with a devil. Either way, its corruption seethes within your lineage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:bloodrager\u003e\u003d7",
+          "choices": [{
+            "choiceId": "bloodrager7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:deceitful", "feat:improved_disarm", "feat:improved_sunder", "feat:intimidating_prowess", "feat:iron_will"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d13",
+          "choices": [{
+            "choiceId": "bloodrager13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:deceitful", "feat:improved_disarm", "feat:improved_sunder", "feat:intimidating_prowess", "feat:iron_will"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:bloodrager\u003e\u003d19",
+          "choices": [{
+            "choiceId": "bloodrager19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:combat_reflexes", "feat:deceitful", "feat:improved_disarm", "feat:improved_sunder", "feat:intimidating_prowess", "feat:iron_will"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:hellfire_strike#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d1"
+        }, {
+          "featureId": "ability:infernal_resistance#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d4"
+        }, {
+          "featureId": "ability:diabolical_arrogance#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d8"
+        }, {
+          "featureId": "ability:dark_wings#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d12"
+        }, {
+          "featureId": "ability:hellfire_charge#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d16"
+        }, {
+          "featureId": "ability:fiend_of_the_pit#bloodrager",
+          "conditionFormula": "@class:bloodrager\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

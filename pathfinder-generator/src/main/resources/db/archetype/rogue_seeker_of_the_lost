@@ -1,0 +1,53 @@
+id: "class:rogue#seeker_of_the_lost"
+name: "Seeker of the Lost"
+description: ""
+modifications:
+- add: "ability:arcana_breaker#rogue_seeker_of_the_lost"
+  remove:
+  - "ability:the_2nd_level_rogue_talent#rogue"
+- add: "ability:underwater_striker#rogue_seeker_of_the_lost"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:wary_disarm#rogue_seeker_of_the_lost"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:arcana_breaker#rogue_seeker_of_the_lost"
+  name: "Arcana Breaker"
+  label: null
+  type: null
+  description: "Typically, only magical traps survive for long periods underwater,\
+    \ so a seeker of the lost specializes in noticing and disarming such traps. At\
+    \ 3rd level, a seeker of the lost gains a +1 competence bonus on Perception checks\
+    \ to notice magical traps and on Disable Device checks to disarm magical traps.\
+    \ This bonus increases by an additional +1 every 3 levels beyond 3rd (to a maximum\
+    \ of +6 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+- id: "ability:underwater_striker#rogue_seeker_of_the_lost"
+  name: "Underwater Striker"
+  label: null
+  type: null
+  description: "At 4th level, a seeker of the lost gains the ability to strike precisely\
+    \ underwater.\nWhen a seeker of the lost makes a sneak attack with a melee weapon,\
+    \ the damage is not halved for being made underwater, as is usually the case for\
+    \ attacks that deal slashing or bludgeoning damage or, if the rogue is off-balance,\
+    \ attacks that deal piercing damage (see off-balance). In addition, when a seeker\
+    \ of the lost makes a sneak attack with a melee weapon against a construct, she\
+    \ ignores any hardness the construct has."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+- id: "ability:wary_disarm#rogue_seeker_of_the_lost"
+  name: "Wary Disarm"
+  label: null
+  type: null
+  description: "At 8th level, whenever a seeker of the lost attempts to disarm a trap\
+    \ using Disable Device, she does not spring the trap unless she fails by an amount\
+    \ equal to her rogue level or more. If she does set off a trap she was attempting\
+    \ to disarm, she doubles her trap sense bonus to avoid the trap."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+source: "Pathfinder Player Companion: Blood of the Sea"

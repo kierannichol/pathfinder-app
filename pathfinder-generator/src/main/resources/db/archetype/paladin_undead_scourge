@@ -1,0 +1,38 @@
+id: "class:paladin#undead_scourge"
+name: "Undead Scourge"
+description: ""
+modifications:
+- add: "ability:aura_of_life#paladin_undead_scourge"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+- add: "ability:undead_annihilation#paladin_undead_scourge"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:aura_of_life#paladin_undead_scourge"
+  name: "Aura of Life"
+  label: null
+  type: null
+  description: "At 8th level, an undead scourge emits a 10-foot aura of life around\
+    \ her that weakens undead creatures. Undead in this aura take a –4 penalty on\
+    \ Will saves made to resist positive energy. In addition, undead in this aura\
+    \ do not regain hit points from channeled negative energy.\nThis ability replaces\
+    \ aura of resolve."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:undead_annihilation#paladin_undead_scourge"
+  name: "Undead Annihilation"
+  label: null
+  type: null
+  description: "At 11th level, an undead scourge can expend one use of her smite evil\
+    \ ability as a standard action and make a single melee attack against an undead\
+    \ creature. If this attack hits, the undead creature must make a Will save or\
+    \ be destroyed. The save DC is equal to 10 + 1/2 the undead scourge's level +\
+    \ the undead scourge's Charisma modifier. Undead with twice as many Hit Dice as\
+    \ the undead scourge are unaffected by this ability. If the attack misses, the\
+    \ smite evil is wasted without effect."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

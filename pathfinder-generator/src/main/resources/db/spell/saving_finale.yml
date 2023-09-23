@@ -1,0 +1,21 @@
+casting_time: "1 immediate action"
+saving_throw: "Will negates (harmless)"
+spell_resistance: "yes (harmless)"
+id: "spell:saving_finale"
+name: "Saving Finale"
+description: "You must have a bardic performance in effect to cast this spell. With\
+  \ a flourish, you can immediately end your bardic performance when a creature within\
+  \ range affected by your bardic performance fails a saving throw, allowing the subject\
+  \ to immediately reroll the failed saving throw."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one living creature"
+duration: "instantaneous"
+school: "evocation [mind-affecting]"
+levels:
+- class_id: "class:bard"
+  level: 1
+- class_id: "class:skald"
+  level: 1
+source: "Advanced Player's Guide"

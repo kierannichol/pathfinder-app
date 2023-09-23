@@ -1,0 +1,58 @@
+{
+  "id": "class:skald#herald_of_the_horn",
+  "name": "Herald of the Horn",
+  "tags": ["archetype", "skald"],
+  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:the_second_and_third_daily_uses_of_spell_kenning_gained_at_11th_and_17th_levels#skald AND !@modifies:ability:lore_master#skald AND !@modifies:ability:the_first_daily_use_of_spell_kenning_gained_at_5th_level#skald",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:scribe_scroll#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_second_and_third_daily_uses_of_spell_kenning_gained_at_11th_and_17th_levels#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_first_daily_use_of_spell_kenning_gained_at_5th_level#skald",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:arcane_bond#skald_herald_of_the_horn",
+          "conditionFormula": "@class:skald\u003e\u003d1"
+        }, {
+          "featureId": "ability:rousing_retort#skald_herald_of_the_horn",
+          "conditionFormula": "@class:skald\u003e\u003d5"
+        }, {
+          "featureId": "ability:horn_call#skald_herald_of_the_horn",
+          "conditionFormula": "@class:skald\u003e\u003d7"
+        }, {
+          "featureId": "ability:crumbling_blast#skald_herald_of_the_horn",
+          "conditionFormula": "@class:skald\u003e\u003d11"
+        }],
+        "unlinks": [{
+          "featureId": "ability:scribe_scroll#skald"
+        }, {
+          "featureId": "ability:the_first_daily_use_of_spell_kenning_gained_at_5th_level#skald"
+        }, {
+          "featureId": "ability:lore_master#skald"
+        }, {
+          "featureId": "ability:the_second_and_third_daily_uses_of_spell_kenning_gained_at_11th_and_17th_levels#skald"
+        }]
+      }]
+    }
+  }
+}

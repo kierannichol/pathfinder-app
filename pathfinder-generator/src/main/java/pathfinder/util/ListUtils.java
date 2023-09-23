@@ -1,5 +1,6 @@
 package pathfinder.util;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -10,11 +11,11 @@ import java.util.stream.Collectors;
 
 public class ListUtils {
 
-    public static <T,U> List<U> mapList(List<T> list, Function<T,U> mappingFn) {
+    public static <T,U> List<U> mapList(Collection<T> list, Function<T,U> mappingFn) {
         return list.stream().map(mappingFn).toList();
     }
 
-    public static <T,U> Set<U> mapSet(Set<T> list, Function<T,U> mappingFn) {
+    public static <T,U> Set<U> mapSet(Collection<T> list, Function<T,U> mappingFn) {
         return list.stream().map(mappingFn).collect(Collectors.toSet());
     }
 

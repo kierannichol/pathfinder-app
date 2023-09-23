@@ -1,0 +1,35 @@
+{
+  "id": "class:fighter#martial_master",
+  "name": "Martial Master",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:martial_flexibility#fighter_martial_master",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:weapon_mastery#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }]
+      }]
+    }
+  }
+}

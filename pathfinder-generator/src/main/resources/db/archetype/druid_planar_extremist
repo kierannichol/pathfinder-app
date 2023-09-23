@@ -1,0 +1,103 @@
+id: "class:druid#planar_extremist"
+name: "Planar Extremist"
+description: ""
+modifications:
+- add: "ability:spells#druid_planar_extremist"
+  remove:
+  - "ability:the_druids_spells#druid"
+- add: "ability:planar_bond#druid_planar_extremist"
+  remove:
+  - "ability:natures_bond#druid"
+- add: "ability:spontaneous_casting#druid_planar_extremist"
+  remove:
+  - "ability:a_druids_spontaneous_casting#druid"
+- add: "ability:resist_the_opposite#druid_planar_extremist"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:planar_aspect#druid_planar_extremist"
+  remove:
+  - "ability:wild_shape#druid"
+features:
+- id: "ability:spells#druid_planar_extremist"
+  name: "Spells"
+  label: null
+  type: null
+  description: "A planar extremist gains one fewer spell slot per spell level than\
+    \ normal in which to prepare spells. The planar extremist removes all summon nature's\
+    \ ally spells from her spell list and replaces them with the summon monster spells\
+    \ of the same levels. The druid can otherwise cast spells as normal for a druid\
+    \ of her level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:planar_bond#druid_planar_extremist"
+  name: "Planar Bond"
+  label: null
+  type: null
+  description: "A planar extremist forms a bond with a manifestation of the Outer\
+    \ Planes with which she is aligned.\nThis bond can take one of two forms. The\
+    \ first is a close tie to the plane to which she is aligned, granting the planar\
+    \ extremist one of the domains of her alignment (for example, a lawful good planar\
+    \ extremist could take either the Lawful or Good domain). This option otherwise\
+    \ functions as a druid's nature bond if she chose a close tie to the natural world.\n\
+    The second option is to form a close bond with an outsider from an Outer Planes.\
+    \ The abilities of this outsider companion are determined using the rules for\
+    \ eidolons for the unchained summoner class, as if the planar extremist were a\
+    \ summoner of her druid level, except the outsider companion gains no additional\
+    \ evolution pool (only the evolutions from its base form and base evolutions for\
+    \ its subtype), and it must be of a subtype whose alignment exactly matches the\
+    \ alignment of the planar extremist. The planar extremist can summon her outsider\
+    \ companion with the same 1-minute ritual a summoner normally uses to do so, but\
+    \ she can't cast summon monster spells if she currently has her outsider companion\
+    \ summoned, and she can't summon her companion if she already has a creature summoned\
+    \ through other means.\nAs the planar ally gains class levels, her eidolon's base\
+    \ statistics and base evolutions increase as if her druid level were her summoner\
+    \ level. The eidolon gains the darkvision, link, share spells, evasion, ability\
+    \ score increase, devotion, multiattack, and improved evasion abilities at the\
+    \ appropriate levels, but never gains an evolution pool.\nAbilities and spells\
+    \ that grant additional evolution points to eidolons do not function for her outsider\
+    \ companion, though any abilities that would grant evolution points to an animal\
+    \ companion do work. The planar extremist does not gain life link or any other\
+    \ class features a summoner gains in relation to her eidolon."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:spontaneous_casting#druid_planar_extremist"
+  name: "Spontaneous Casting"
+  label: null
+  type: null
+  description: "A planar extremist can channel stored spell energy into summoning\
+    \ spells that she hasn't prepared ahead of time. She can lose a prepared spell\
+    \ in order to cast a summon monster spell of the same level or lower, but only\
+    \ to summon creatures whose alignment matches hers."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:resist_the_opposite#druid_planar_extremist"
+  name: "Resist the Opposite"
+  label: null
+  type: null
+  description: "At 4th level, a planar extremist gains a +2 bonus on saving throws\
+    \ against the spell-like and supernatural abilities of creatures whose alignment\
+    \ is diametrically opposed to her own."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:planar_aspect#druid_planar_extremist"
+  name: "Planar Aspect"
+  label: null
+  type: null
+  description: "At 4th level, as a standard action, a planar extremist can gain the\
+    \ benefits of the bloodrager bloodline associated with her alignment (choosing\
+    \ from Abyssal, Celestial, or Infernal), as if she were a bloodrager of her druid\
+    \ level. She can gain these benefits for 1 minute per druid level as if she were\
+    \ bloodraging (but she gains no other benefits or penalties of bloodrage) or until\
+    \ she dismisses it as a swift action; this duration need not be used consecutively\
+    \ but must be spent in 1-minute increments. She can use this ability an additional\
+    \ time per day at 6th level and every 4 levels thereafter, for a total of five\
+    \ times per day at 18th level.\nAt 20th level, a planar extremist can use planar\
+    \ aspect at will."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+source: "Pathfinder Player Companion: Antihero's Handbook"

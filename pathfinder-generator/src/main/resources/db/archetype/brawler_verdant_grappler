@@ -1,0 +1,55 @@
+id: "class:brawler#verdant_grappler"
+name: "Verdant Grappler"
+description: "By accepting spirits of nature into her soul, a verdant grappler can\
+  \ entangle her foes with tangled undergrowth."
+modifications:
+- add: "ability:green_grasp#brawler_verdant_grappler"
+  remove:
+  - "ability:the_bonus_feat_gained_at_2nd_level#brawler"
+  - "ability:alters_maneuver_training#brawler"
+- add: "ability:thorny_embrace#brawler_verdant_grappler"
+  remove:
+  - "ability:close_weapon_mastery#brawler"
+- add: "ability:phytological_anatomy#brawler_verdant_grappler"
+  remove:
+  - "ability:the_combat_feat_gained_at_11th_level#brawler"
+features:
+- id: "ability:green_grasp#brawler_verdant_grappler"
+  name: "Green Grasp"
+  label: null
+  type: null
+  description: "At 2nd level, a verdant grappler gains Improved Grapple as a bonus\
+    \ feat. At 3rd level, she must choose grapple as her first combat maneuver for\
+    \ maneuver training. When she pins a creature, she can cause roots and vines to\
+    \ burst from the ground (no matter the surrounding terrain), allowing the verdant\
+    \ grappler to attempt to tie up the creature without needing to retrieve rope\
+    \ or use a hand to hold the rope; as usual, a tied-up creature is pinned and not\
+    \ helpless. The verdant grappler must remain within 30 feet of the tied-up creature,\
+    \ or the vines automatically release it. She can tie up only one creature at a\
+    \ time with green grasp."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:thorny_embrace#brawler_verdant_grappler"
+  name: "Thorny Embrace"
+  label: null
+  type: null
+  description: "At 5th level, when a verdant grappler uses green grasp to tie up a\
+    \ creature, she can have the roots and vines grow vicious thorns that automatically\
+    \ damage the tied-up creature each round at the start of the verdant grappler's\
+    \ turn. The thorns deal damage equal to the base unarmed strike damage of a brawler\
+    \ 4 levels lower than the verdant grappler."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:phytological_anatomy#brawler_verdant_grappler"
+  name: "Phytological Anatomy"
+  label: null
+  type: null
+  description: "At 11th level, the verdant grappler transforms partially into a plant.\
+    \ She gains a +2 bonus on saving throws against mind-affecting, paralysis, poison,\
+    \ polymorph, sleep, and stunning effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,64 @@
+id: "class:barbarian#sharptooth"
+name: "Sharptooth"
+description: "Coastal hunters and agents of the ocean's rage, sharptooth barbarians\
+  \ emulate the greatest predators of the sea. Sharks, in particular, are respected\
+  \ and admired by many such tribes, if not as manifestations of divine power, then\
+  \ merely as scions of the power and fury of the natural world."
+modifications:
+- add: "ability:swim_like_a_fish#barbarian_sharptooth"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:scent_of_blood#barbarian_sharptooth"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:ocean_breath#barbarian_sharptooth"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:blood_in_the_water#barbarian_sharptooth"
+  remove:
+  - "ability:the_rage_powers_normally_gained_at_6th#barbarian"
+  - "ability:12th_levels#barbarian"
+features:
+- id: "ability:swim_like_a_fish#barbarian_sharptooth"
+  name: "Swim Like a Fish"
+  label: null
+  type: null
+  description: "A sharptooth gains a swim speed of 10 feet. At 5th level and every\
+    \ 5 levels thereafter, her swim speed increases by 5 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:scent_of_blood#barbarian_sharptooth"
+  name: "Scent of Blood"
+  label: null
+  type: null
+  description: "At 2nd level, a sharptooth gains scent as per the universal monster\
+    \ rule. At 5th level, she also gains keen scent as per universal monster rule."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:ocean_breath#barbarian_sharptooth"
+  name: "Ocean Breath"
+  label: null
+  type: null
+  description: "At 3rd level, a sharptooth counts her Constitution score as 1 higher\
+    \ for the purposes of holding her breath. She also gains a +1 bonus on Constitution\
+    \ checks to continue holding her breath. This bonus and the addition to her effective\
+    \ Constitution score both increase by 1 at 6th level and every 3 levels thereafter,\
+    \ to a maximum bonus of +6 at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:blood_in_the_water#barbarian_sharptooth"
+  name: "Blood in the Water"
+  label: null
+  type: null
+  description: "At 6th level, a sharptooth can tear the flesh from living creatures.\
+    \ Her attacks add 3 points of bleed damage while she is raging.\nAt 12th level,\
+    \ this bleed damage increases to equal her Constitution modifier if it's higher.\n\
+    This replaces the rage powers normally gained at 6th and 12th levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

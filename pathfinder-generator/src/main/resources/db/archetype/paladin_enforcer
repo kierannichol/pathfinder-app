@@ -1,0 +1,63 @@
+id: "class:paladin#enforcer"
+name: "Enforcer"
+description: ""
+modifications:
+- add: "ability:detect_chaos#paladin_enforcer"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:smite_chaos#paladin_enforcer"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:aura_of_order#paladin_enforcer"
+  remove:
+  - "ability:aura_of_faith#paladin"
+- add: "ability:armor_of_law#paladin_enforcer"
+  remove:
+  - "ability:the_aura_of_righteousness#paladin"
+  - "ability:holy_champion#paladin"
+features:
+- id: "ability:detect_chaos#paladin_enforcer"
+  name: "Detect Chaos"
+  label: null
+  type: null
+  description: "At will, an enforcer can use detect chaos, as per the spell. The enforcer\
+    \ can, as a move action, concentrate on a single item or individual within 60\
+    \ feet and determine whether it is chaotic, learning the strength of its aura\
+    \ as if she had studied it for 3 rounds. While focusing on one individual or object,\
+    \ the enforcer can't use detect chaos on any other object or individual within\
+    \ range."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+- id: "ability:smite_chaos#paladin_enforcer"
+  name: "Smite Chaos"
+  label: null
+  type: null
+  description: "This ability functions as the paladin's smite evil ability, but against\
+    \ chaotic-aligned creatures.\nSmite chaos is twice as effective against chaotic-aligned\
+    \ aberrations, outsiders with the chaotic subtype, and fey."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+- id: "ability:aura_of_order#paladin_enforcer"
+  name: "Aura of Order"
+  label: null
+  type: null
+  description: "At 14th level, the paladin's weapons are treated as lawful-aligned\
+    \ for the purposes of overcoming damage reduction. Any attack made against an\
+    \ enemy within 10 feet of the enforcer is treated as if it were lawful-aligned\
+    \ for the purpose of overcoming damage reduction."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+- id: "ability:armor_of_law#paladin_enforcer"
+  name: "Armor of Law"
+  label: null
+  type: null
+  description: "When an enforcer gains damage reduction from aura of righteousness,\
+    \ it is DR 5/chaos instead of DR 5/evil. When that DR increases from the holy\
+    \ champion class feature, it increases to DR 10/chaos."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+source: "Pathfinder Player Companion: Divine Anthology"

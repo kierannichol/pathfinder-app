@@ -1,0 +1,50 @@
+id: "class:barbarian#pack_hunter"
+name: "Pack Hunter"
+description: "Pack hunter barbarians team up to hunt dangerous prey to feed, to protect\
+  \ their camps, and as a rite of passage. Often, a tribe of pack hunters looks to\
+  \ a specific species of animal (such as wolves) who themselves hunt in packs, and\
+  \ view these animals as sacred manifestations of their people's traditions and values."
+modifications:
+- add: "ability:bonus_feats#barbarian_pack_hunter"
+  remove:
+  - "ability:rage_power#barbarian"
+- add: "ability:in_and_out#barbarian_pack_hunter"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:sympathetic_rage#barbarian_pack_hunter"
+  remove:
+  - "ability:the_rage_power_normally_gained_at_6th_level#barbarian"
+features:
+- id: "ability:bonus_feats#barbarian_pack_hunter"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "Whenever a pack hunter would gain a new rage power, she can instead\
+    \ select a teamwork feat. She must still meet the prerequisites for the teamwork\
+    \ feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:in_and_out#barbarian_pack_hunter"
+  name: "In and Out"
+  label: null
+  type: null
+  description: "At 3rd level, a pack hunter gains a +1 dodge bonus to AC against attacks\
+    \ of opportunity. This bonus increases by 1 for every 3 barbarian levels after\
+    \ 3rd (to a maximum bonus of +6 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:sympathetic_rage#barbarian_pack_hunter"
+  name: "Sympathetic Rage"
+  label: null
+  type: null
+  description: "At 6th level, if an ally within 30 feet is bloodraging or raging,\
+    \ a pack hunter counts as raging even if knocked unconscious. She has to have\
+    \ been raging when incapacitated to maintain her rage, and she ceases raging normally\
+    \ if she depletes her maximum number of rounds of rage in a day.\nThis replaces\
+    \ the rage power normally gained at 6th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

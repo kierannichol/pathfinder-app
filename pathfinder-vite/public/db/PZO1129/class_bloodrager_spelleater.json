@@ -1,0 +1,36 @@
+{
+  "id": "class:bloodrager#spelleater",
+  "name": "Spelleater",
+  "tags": ["archetype", "bloodrager"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#bloodrager AND !@modifies:ability:uncanny_dodge_and_damage_reduction#bloodrager",
+  "maxStacks": 1,
+  "description": {
+    "text": "Where other bloodragers learn to avoid or shrug off minor damage of all sorts, spelleaters tap into the power of their bloodline in order to heal damage as it comes, and can even cannibalize their own magical energy to heal more damage and continue taking the fight to the enemy."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge_and_damage_reduction#bloodrager",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:spell_eating#bloodrager_spelleater",
+          "conditionFormula": "@class:bloodrager\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:uncanny_dodge_and_damage_reduction#bloodrager"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#bloodrager"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+id: "class:arcanist#elemental_master"
+name: "Elemental Master"
+description: "Arcanists with an affinity for elemental forces sometimes focus on one\
+  \ and display its power in everything they do."
+modifications:
+- add: "ability:elemental_focus#arcanist_elemental_master"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_1st_level#arcanist"
+- add: "ability:elemental_attack#arcanist_elemental_master"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+- add: "ability:powerful_exploit#arcanist_elemental_master"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_9th_level#arcanist"
+- add: "ability:greater_elemental_attack#arcanist_elemental_master"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_11th_level#arcanist"
+- add: "ability:elemental_movement#arcanist_elemental_master"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_15th_level#arcanist"
+features:
+- id: "ability:elemental_focus#arcanist_elemental_master"
+  name: "Elemental Focus"
+  label: null
+  type: null
+  description: "At 1st level, the elemental master must select one element: air, earth,\
+    \ fire, or water. The arcanist can prepare one additional spell per day of each\
+    \ level she can cast, but it must have the elemental descriptor of her chosen\
+    \ element. In addition, any spell she prepares from the opposite elemental school\
+    \ (air opposes earth, fire opposes water) takes up two of her prepared spell slots."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:elemental_attack#arcanist_elemental_master"
+  name: "Elemental Attack"
+  label: null
+  type: null
+  description: "At 3rd level, the elemental master gains an arcanist exploit tied\
+    \ to her element. If she selected air, she gains the lightning lance arcanist\
+    \ exploit. If she selected earth, she gains the acid jet arcanist exploit. If\
+    \ she selected fire, she gains the flame arc arcanist exploit. If she selected\
+    \ water, she gains the ice missile arcanist exploit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:powerful_exploit#arcanist_elemental_master"
+  name: "Powerful Exploit"
+  label: null
+  type: null
+  description: "At 9th level, an elemental master increases the damage done by her\
+    \ elemental attack to 1d8 points of energy damage plus 1d8 points of damage per\
+    \ two arcanist levels she possesses. The type of damage is determined by the elemental\
+    \ attack. In addition, the range for the elemental attack ability increases to\
+    \ 60 feet (in the case of flame arc, a 60-foot line)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:greater_elemental_attack#arcanist_elemental_master"
+  name: "Greater Elemental Attack"
+  label: null
+  type: null
+  description: "At 11th level, the elemental master gains a greater arcanist exploit\
+    \ tied to her element. If she selected air, she gains the dancing electricity\
+    \ arcanist exploit. If she selected earth, she gains the lingering acid arcanist\
+    \ exploit. If she selected fire, she gains the burning flame arcanist exploit.\
+    \ If she selected water, she gains the icy tomb arcanist exploit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:elemental_movement#arcanist_elemental_master"
+  name: "Elemental Movement"
+  label: null
+  type: null
+  description: "At 15th level, an elemental master gains an elemental movement. This\
+    \ enhancement is based on her chosen element type. Air grants a fly speed of 90\
+    \ feet (average maneuverability), earth grants a burrow speed of 30 feet, fire\
+    \ grants a increase of 30 feet to base land speed, and water grants a swim speed\
+    \ of 60 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

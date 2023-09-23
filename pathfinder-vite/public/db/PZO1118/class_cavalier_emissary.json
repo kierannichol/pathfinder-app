@@ -1,0 +1,69 @@
+{
+  "id": "class:cavalier#emissary",
+  "name": "Emissary",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:greater_banner#cavalier AND !@modifies:ability:tactician#cavalier AND !@modifies:ability:banner#cavalier AND !@modifies:ability:supreme_charge#cavalier AND !@modifies:ability:greater_tactician#cavalier",
+  "maxStacks": 1,
+  "description": {
+    "text": "Cavaliers serve many roles on the battlefield, from bold leaders and shock troops to dashing knights and mounted juggernauts. Some cavaliers, however, focus more on speed and mobility than they do on the raw power of the mounted charge. On foot or in the saddle, the emissary is usually first to meet the enemy, with a pointed lance, a drawn sword, or terms for surrender."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:greater_banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:supreme_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_tactician#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:in_or_out_of_the_saddle#cavalier_emissary",
+          "conditionFormula": "@class:cavalier\u003e\u003d1"
+        }, {
+          "featureId": "ability:battlefield_agility#cavalier_emissary",
+          "conditionFormula": "@class:cavalier\u003e\u003d5"
+        }, {
+          "featureId": "ability:mounted_acrobatics#cavalier_emissary",
+          "conditionFormula": "@class:cavalier\u003e\u003d9"
+        }, {
+          "featureId": "ability:mounted_dervish#cavalier_emissary",
+          "conditionFormula": "@class:cavalier\u003e\u003d14"
+        }, {
+          "featureId": "ability:erratic_charge#cavalier_emissary",
+          "conditionFormula": "@class:cavalier\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:tactician#cavalier"
+        }, {
+          "featureId": "ability:banner#cavalier"
+        }, {
+          "featureId": "ability:greater_tactician#cavalier"
+        }, {
+          "featureId": "ability:greater_banner#cavalier"
+        }, {
+          "featureId": "ability:supreme_charge#cavalier"
+        }]
+      }]
+    }
+  }
+}

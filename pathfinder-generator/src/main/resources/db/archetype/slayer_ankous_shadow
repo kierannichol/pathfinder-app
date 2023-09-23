@@ -1,0 +1,76 @@
+id: "class:slayer#ankous_shadow"
+name: "Ankou's Shadow"
+description: ""
+modifications:
+- add: "ability:shadow_double#slayer_ankous_shadow"
+  remove:
+  - "ability:studied_target#slayer"
+- add: "ability:ankous_vision#slayer_ankous_shadow"
+  remove:
+  - "ability:stalker#slayer"
+- add: "ability:shadow_prey#slayer_ankous_shadow"
+  remove:
+  - "ability:quarry#slayer"
+  - "ability:improved_quarry#slayer"
+features:
+- id: "ability:shadow_double#slayer_ankous_shadow"
+  name: "Shadow Double"
+  label: null
+  type: null
+  description: "An ankou's shadow can take a full-round action to create a single,\
+    \ quasi-real, shadowy duplicate. This shadow double remains in his square, mimicking\
+    \ his movements as a single mirror image, except that it lasts until it is destroyed\
+    \ or he chooses to dismiss it as a swift action. This ability does not stack with\
+    \ the mirror image spell or with similar abilities, such as the copycat ability\
+    \ of the Trickery domain.\nAt 5th level, an ankou's shadow gains a second shadow\
+    \ double. In addition to using these shadow doubles as mirror images in his square,\
+    \ he can move his doubles as part of his own move action, dividing his movement\
+    \ between himself and his doubles. When outside his square, shadow doubles do\
+    \ not protect the ankou's shadow as mirror image and are limited in the actions\
+    \ they can take. Shadow doubles provide flanking for the ankou's shadow and his\
+    \ allies, but they do not possess teamwork feats or special abilities that alter\
+    \ the effects of flanking or aiding another. As a swift action, the ankou's shadow\
+    \ can direct his shadow doubles to use the aid another action, using his own base\
+    \ attack bonus plus his Intelligence modifier for the roll. Although a shadow\
+    \ double appears to duplicate the ankou's shadow's gear, this gear is part of\
+    \ its form; a shadow double's gear cannot be destroyed, dropped, or stolen. A\
+    \ shadow double disappears if it ventures more than 50 feet from the ankou's shadow\
+    \ or if it leaves his line of sight or effect. A shadow double that is hit by\
+    \ an attack roll or takes any damage is destroyed. The AC of a shadow double is\
+    \ equal to the ankou's shadow's touch AC, and it has the same CMD and saving throw\
+    \ bonuses as the ankou's shadow. Shadow doubles possess evasion if the ankou's\
+    \ shadow does. Mind-affecting effects targeting a shadow double affect the ankou's\
+    \ shadow instead, though he isn't affected twice by effects that target both him\
+    \ and a shadow double.\nAt 10th level, an ankou's shadow gains a third shadow\
+    \ double. He can divide his actions between his actual body and his shadow doubles,\
+    \ using them as the origin point for attacks or abilities. For example, an ankou's\
+    \ shadow making three attacks as a part of a full attack could make his primary\
+    \ attack from his own body and his other two attacks from two of his shadow doubles.\n\
+    At 15th level, an ankou's shadow gains a fourth shadow double. In addition to\
+    \ the abilities above, an ankou's shadow can assign the doubles to perform simple\
+    \ tasks on their own, as the unseen servant spell, except that the shadow doubles\
+    \ have an effective Strength score of 10."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+- id: "ability:ankous_vision#slayer_ankous_shadow"
+  name: "Ankou's Vision"
+  label: null
+  type: null
+  description: "At 7th level, an ankou's shadow can use see invisibility, as per the\
+    \ spell, as a swift action for 1 minute per level per day. This duration does\
+    \ not need to be consecutive, but it must be used in 1-minute increments."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+- id: "ability:shadow_prey#slayer_ankous_shadow"
+  name: "Shadow Prey"
+  label: null
+  type: null
+  description: "An ankou's shadow cannot denote a target as his quarry unless he has\
+    \ a shadow double present, but unlike other slayers, the target does not need\
+    \ to be one of his studied targets."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+source: "Pathfinder Player Companion: Legacy of the First World"

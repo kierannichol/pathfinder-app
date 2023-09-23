@@ -1,0 +1,36 @@
+{
+  "id": "class:cavalier#gendarme",
+  "name": "Gendarme",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:supreme_charge#cavalier AND !@modifies:ability:tactician_greater_tactician_master_tactician_and_the_standard_cavaliers_selection_of_bonus_feats#cavalier",
+  "maxStacks": 1,
+  "description": {
+    "text": "The gendarme cares less for the finer points of tactical precision than he does for the exhilaration of the charge: the rush of wind through the visor of his helmet, the feel of his couched lance, the satisfying shriek of armor giving way before his weapon\u0027s force as the point drives past metal into his foes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:supreme_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tactician_greater_tactician_master_tactician_and_the_standard_cavaliers_selection_of_bonus_feats#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:transfixing_charge#cavalier_gendarme",
+          "conditionFormula": "@class:cavalier\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:tactician_greater_tactician_master_tactician_and_the_standard_cavaliers_selection_of_bonus_feats#cavalier"
+        }, {
+          "featureId": "ability:supreme_charge#cavalier"
+        }]
+      }]
+    }
+  }
+}

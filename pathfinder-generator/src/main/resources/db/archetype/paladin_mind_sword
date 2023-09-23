@@ -1,0 +1,38 @@
+id: "class:paladin#mind_sword"
+name: "Mind Sword"
+description: ""
+modifications:
+- add: "ability:mind_arsenal#paladin_mind_sword"
+  remove:
+  - "ability:lay_on_hands#paladin"
+- add: "ability:touch_treatment#paladin_mind_sword"
+  remove:
+  - "ability:mercy#paladin"
+features:
+- id: "ability:mind_arsenal#paladin_mind_sword"
+  name: "Mind Arsenal"
+  label: null
+  type: null
+  description: "At 2nd level, a mind sword can make a telekinetic attack with a melee\
+    \ weapon. This functions as the hand of the apprentice universalist wizard school\
+    \ ability, but any calculations of that ability based on Intelligence are instead\
+    \ based on Charisma. At 6th level, a mind sword can expend two uses of this ability\
+    \ as a full-round action to attack the same opponent multiple times, as if using\
+    \ the full-attack action. At 12th level, a mind sword can expend one use of this\
+    \ ability as a full-round action to combine melee attacks and ranged attacks aimed\
+    \ at different targets within 60 feet as part of a single full-attack action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Occult Origins"
+- id: "ability:touch_treatment#paladin_mind_sword"
+  name: "Touch Treatment"
+  label: null
+  type: null
+  description: "At 3rd level, a mind sword can expend one use of her mind arsenal\
+    \ ability to remove minor harmful mental conditions, as per the mesmerist touch\
+    \ treatment class feature.\nAt 9th level, she can remove moderate conditions,\
+    \ and at 15th level, she can remove major conditions."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Occult Origins"
+source: "Pathfinder Player Companion: Occult Origins"

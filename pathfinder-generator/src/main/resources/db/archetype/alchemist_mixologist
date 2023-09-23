@@ -1,0 +1,71 @@
+id: "class:alchemist#mixologist"
+name: "Mixologist"
+description: ""
+modifications:
+- add: "ability:alcoholic_alchemy#alchemist_mixologist"
+  remove:
+  - "ability:brew_potion#alchemist"
+  - "ability:mutagen#alchemist"
+  - "ability:alchemy#alchemist"
+- add: "ability:alcoholic_bombs#alchemist_mixologist"
+  remove:
+  - "ability:the_discovery_gained_at_2nd_level#alchemist"
+- add: "ability:alcoholic_resistance#alchemist_mixologist"
+  remove:
+  - "ability:poison_resistance#alchemist"
+- add: "ability:mixologist_master#alchemist_mixologist"
+  remove:
+  - "ability:persistent_mutagen#alchemist"
+features:
+- id: "ability:alcoholic_alchemy#alchemist_mixologist"
+  name: "Alcoholic Alchemy"
+  label: null
+  type: null
+  description: "A mixologist can infuse potions and extracts he creates with alcohol,\
+    \ increasing their potency. When a mixologist brews a potion, he can spend an\
+    \ additional 10 gp in raw materials to increase his caster level by 1 for the\
+    \ purpose of the potion's effects, but the potion counts as a strong alcoholic\
+    \ drink. When a mixologist creates his extracts, he can spend 1 extra minute doing\
+    \ so to increase his caster level by 1 for the purpose of that extract's effects,\
+    \ but the extract counts as a strong alcoholic drink. A mixologist can prepare\
+    \ one alcoholic extract for each level of extracts he can prepare. A mixologist\
+    \ can't ever gain a mutagen or discoveries that alter mutagens."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Taverns"
+- id: "ability:alcoholic_bombs#alchemist_mixologist"
+  name: "Alcoholic Bombs"
+  label: null
+  type: null
+  description: "When the mixologist creates a bomb, he can cause the detonation to\
+    \ produce intoxicating fumes. A creature that takes a direct hit from an alcoholic\
+    \ bomb becomes tipsy if it fails a Fortitude saving throw. If the creature is\
+    \ already tipsy, it becomes drunk instead. If the creature is already drunk, it\
+    \ becomes soused instead. A soused creature that fails its Fortitude saving throw\
+    \ passes out for 1d3 hours and wakes up with a hangover. This ability counts as\
+    \ a discovery that modifies bombs, so it doesn't stack with other discoveries\
+    \ that modify bombs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Taverns"
+- id: "ability:alcoholic_resistance#alchemist_mixologist"
+  name: "Alcoholic Resistance"
+  label: null
+  type: null
+  description: "At 2nd level, a mixologist's bonus on saving throws against poison\
+    \ also applies on saving throws to become less drunk and to avoid passing out.\
+    \ This doesn't allow a mixologist to become immune to alcohol."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Taverns"
+- id: "ability:mixologist_master#alchemist_mixologist"
+  name: "Mixologist Master"
+  label: null
+  type: null
+  description: "At 14th level, a mixologist can have up to two alcoholic extracts\
+    \ for each level of extracts he can prepare as long as he can prepare at least\
+    \ two extracts of that level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Taverns"
+source: "Pathfinder Campaign Setting: Inner Sea Taverns"

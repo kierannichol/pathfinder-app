@@ -1,0 +1,39 @@
+{
+  "id": "class:barbarian#wild_rager",
+  "name": "Wild Rager",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:uncanny_dodge#barbarian AND !@modifies:ability:improved_uncanny_dodge#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Rages are barely controlled, but there are those who wholly give in to their more savage side, letting their rages take them to a confusing and uncontrolled place of terrible savagery. These barbarians become beasts, consumed with absolute bloodlust to the point where they cannot tell friend from foe."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:wild_fighting#barbarian_wild_rager",
+          "conditionFormula": "@class:barbarian\u003e\u003d2"
+        }, {
+          "featureId": "ability:rage_conversion#barbarian_wild_rager",
+          "conditionFormula": "@class:barbarian\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:uncanny_dodge#barbarian"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#barbarian"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+id: "class:fighter#mobile_fighter"
+name: "Mobile Fighter"
+description: "Where some fighters focus on strength and raw power, the mobile fighter\
+  \ relies on swiftness and mobility, gliding across the battlefield like a steel\
+  \ whirlwind and leaving destruction in his wake."
+modifications:
+- add: "ability:agility#fighter_mobile_fighter"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:leaping_attack#fighter_mobile_fighter"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:rapid_attack#fighter_mobile_fighter"
+  remove:
+  - "ability:armor_training#fighter@11"
+- add: "ability:fleet_footed#fighter_mobile_fighter"
+  remove:
+  - "ability:armor_training#fighter@15"
+- add: "ability:whirlwind_blitz#fighter_mobile_fighter"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:agility#fighter_mobile_fighter"
+  name: "Agility"
+  label: null
+  type: null
+  description: "At 2nd level, a mobile fighter gains a +1 bonus on saving throws made\
+    \ against effects that cause him to become paralyzed, slowed, or entangled. This\
+    \ bonus increases by +1 for every four levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:leaping_attack#fighter_mobile_fighter"
+  name: "Leaping Attack"
+  label: null
+  type: null
+  description: "At 5th level, when a mobile fighter moves at least 5 feet prior to\
+    \ attacking, he gains a +1 bonus on attack and damage rolls. This bonus increases\
+    \ by +1 for every four levels beyond 5th."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:rapid_attack#fighter_mobile_fighter"
+  name: "Rapid Attack"
+  label: null
+  type: null
+  description: "At 11th level, a mobile fighter can combine a full-attack action with\
+    \ a single move. He must forgo the attack at his highest bonus but may take the\
+    \ remaining attacks at any point during his movement. This movement provokes attacks\
+    \ of opportunity as normal."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:fleet_footed#fighter_mobile_fighter"
+  name: "Fleet Footed"
+  label: null
+  type: null
+  description: "At 15th level, the mobile fighter's speed increases by 10 feet. He\
+    \ can take 10 on Acrobatics checks even while distracted or threatened, and can\
+    \ take 20 on an Acrobatics check once per day for every five fighter levels he\
+    \ possesses."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:whirlwind_blitz#fighter_mobile_fighter"
+  name: "Whirlwind Blitz"
+  label: null
+  type: null
+  description: "At 20th level, a mobile fighter can make a full-attack action as a\
+    \ standard action. He may also use the Whirlwind Attack feat as a standard action."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

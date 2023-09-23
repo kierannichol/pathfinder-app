@@ -1,0 +1,60 @@
+id: "class:swashbuckler#courser"
+name: "Courser"
+description: ""
+modifications:
+- add: "ability:swift_target#swashbuckler_courser"
+  remove:
+  - "ability:riposte_deeds#swashbuckler"
+  - "ability:the_swashbucklers_opportune_parry#swashbuckler"
+- add: "ability:nimble_toes#swashbuckler_courser"
+  remove:
+  - "ability:nimble#swashbuckler"
+- add: "ability:confounding_target#swashbuckler_courser"
+  remove:
+  - "ability:the_bonus_feat_gained_at_4th_level#swashbuckler"
+- add: "ability:deeds#swashbuckler_courser"
+  remove:
+  - "ability:menacing_swordplay#swashbuckler"
+features:
+- id: "ability:swift_target#swashbuckler_courser"
+  name: "Swift Target"
+  label: null
+  type: null
+  description: "At 1st level, the courser gains Dodge as a bonus feat even if she\
+    \ does not meet the prerequisites.\nAs long as she has at least 1 panache point\
+    \ and is wearing light armor or no armor, her base speed increases by 5 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:nimble_toes#swashbuckler_courser"
+  name: "Nimble Toes"
+  label: null
+  type: null
+  description: "At 3rd level, the AC bonus gained from the nimble class feature increases\
+    \ by 1 as long as the courser moves at least 20 feet during her turn, though it\
+    \ is reduced by 1 if she does not move at least 10 feet on her turn. These modifiers\
+    \ last until the beginning of the courser's next turn."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:confounding_target#swashbuckler_courser"
+  name: "Confounding Target"
+  label: null
+  type: null
+  description: "At 4th level, the courser gains Spring Attack as a bonus feat even\
+    \ if she does not meet the prerequisites. As long as she has at least 1 panache\
+    \ point and is wearing light armor or no armor, her base speed increases by 10\
+    \ feet rather than 5 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+- id: "ability:deeds#swashbuckler_courser"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A courser gains the following deeds, each of which replaces an existing\
+    \ deed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Beast"
+source: "Pathfinder Player Companion: Blood of the Beast"

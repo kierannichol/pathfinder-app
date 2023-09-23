@@ -1,0 +1,75 @@
+id: "class:bard#argent_voice"
+name: "Argent Voice"
+description: "Argent voices explore the magic and power of the song of silver."
+modifications:
+- add: "ability:limning_verse#bard_argent_voice"
+  remove:
+  - "ability:fascinate#bard"
+- add: "ability:shattering_crescendo#bard_argent_voice"
+  remove:
+  - "ability:mass_suggestion#bard"
+  - "ability:suggestion#bard"
+- add: "ability:devilbane_refrain#bard_argent_voice"
+  remove:
+  - "ability:dirge_of_doom#bard"
+  - "ability:frightening_tune#bard"
+- add: "ability:dedicated_performance#bard_argent_voice"
+  remove:
+  - "ability:versatile_performance#bard"
+features:
+- id: "ability:limning_verse#bard_argent_voice"
+  name: "Limning Verse"
+  label: null
+  type: null
+  description: "At 1st level, the argent voice can sing a song that causes fiends\
+    \ to glow with an aura of silvery light. Outsiders with the evil subtype within\
+    \ 10 feet of the argent voice are affected as per faerie fire. At 4th level and\
+    \ every 4 levels thereafter, the range of this ability increases by 10 feet, to\
+    \ a maximum of 60 feet at 20th level. Any defense that prevents the detection\
+    \ of alignment or evil also prevents limning verse from outlining a creature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:shattering_crescendo#bard_argent_voice"
+  name: "Shattering Crescendo"
+  label: null
+  type: null
+  description: "At 6th level, the argent voice learns to sing at frequencies capable\
+    \ of shattering magical effects. As a full-round action, an argent voice can use\
+    \ 2 rounds of bardic performance to attempt to dispel a single evil spell or enchantment\
+    \ spell cast by an evil creature. This functions as per dispel magic, using the\
+    \ bard's level as his caster level. At 18th level, this ability can be used on\
+    \ effects that can be removed by the spell break enchantment."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:devilbane_refrain#bard_argent_voice"
+  name: "Devilbane Refrain"
+  label: null
+  type: null
+  description: "At 8th level, the argent voice learns how to mimic aspects of the\
+    \ magical Song of Silver with his performance, enhancing his allies' ability to\
+    \ combat devils and similar fiends. To be affected, a creature must be able to\
+    \ hear the argent voice's singing and be within 30 feet of him. Natural and manufactured\
+    \ weapons wielded by affected allies are treated as though they were silver for\
+    \ the purpose of bypassing damage reduction. At 14th level, allies' natural and\
+    \ manufactured weapons also gain the benefit of the evil outsider bane weapon\
+    \ special ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:dedicated_performance#bard_argent_voice"
+  name: "Dedicated Performance"
+  label: null
+  type: null
+  description: "At 2nd level, an argent voice must choose Perform (sing) as his versatile\
+    \ performance skill. At 6th level, the argent voice gains a bonus on Perform (sing)\
+    \ checks made as part of a versatile performance equal to the number of additional\
+    \ Perform skills in which he has the maximum number of ranks possible at his level.\
+    \ This bonus increases by 1 per maximized Perform skill at 10th level and every\
+    \ four levels thereafter, to a maximum of a +4 bonus per fully ranked Perform\
+    \ skill other than Perform (sing) at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

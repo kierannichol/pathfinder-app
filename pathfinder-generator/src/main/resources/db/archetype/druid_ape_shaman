@@ -1,0 +1,60 @@
+id: "class:druid#ape_shaman"
+name: "Ape Shaman"
+description: "A shaman with this totem calls upon the mighty ape, a peaceful but powerful\
+  \ simian whose strength is beyond compare. An ape shaman is a friendly protector\
+  \ of the forest, but will crush those enemies who rouse her anger."
+modifications:
+- add: "ability:totem_transformation#druid_ape_shaman"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:totemic_summons#druid_ape_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:bonus_feat#druid_ape_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totem_transformation#druid_ape_shaman"
+  name: "Totem Transformation"
+  label: null
+  type: null
+  description: "At 2nd level, an ape shaman may adopt an aspect of the ape while retaining\
+    \ her normal form. She gains one of the following bonuses:\nmovement (climb speed\
+    \ 20 ft., +4 racial bonus on Climb checks) senses (low-light vision, scent) natural\
+    \ weapons (2 slams [1d6 for a Medium shaman], +2 on combat maneuver checks to\
+    \ grapple) toughness (+2 natural armor bonus to AC, Endurance feat)\nWhile using\
+    \ totem transformation, the ape shaman may speak normally and can cast speak with\
+    \ animals (primates only) at will. Using this ability is a standard action at\
+    \ 2nd level, a move action at 7th level, and a swift action at 12th level. The\
+    \ ape shaman can use this ability for a number of minutes per day equal to her\
+    \ druid level. These minutes do not need to be consecutive, but they must be used\
+    \ in 1-minute increments. This is a polymorph effect and cannot be used while\
+    \ the druid is using another polymorph effect, such as wild shape."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:totemic_summons#druid_ape_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, an ape shaman may cast summon nature's ally as a standard\
+    \ action when summoning primates, and these summoned creatures gain temporary\
+    \ hit points equal to her druid level. She can apply the young template to any\
+    \ primate to reduce the level of the summoning spell required by one. She can\
+    \ also increase the level of summoning required by one in order to apply either\
+    \ the advanced or the giant template, or increase it by two to apply both the\
+    \ advanced and giant templates."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:bonus_feat#druid_ape_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every four levels thereafter, an ape shaman gains\
+    \ one of the following bonus feats: Diehard, Endurance, Great Fortitude, Improved\
+    \ Bull Rush, and Toughness. She must meet the prerequisites for these bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

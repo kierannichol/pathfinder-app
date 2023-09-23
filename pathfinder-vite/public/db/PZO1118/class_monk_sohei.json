@@ -1,0 +1,66 @@
+{
+  "id": "class:monk#sohei",
+  "name": "Sohei",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:the_monks_weapon_and_armor_proficiencies#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:fast_movement_and_increased_unarmed_damage#monk AND !@modifies:ability:slow_fall_and_abundant_step#monk AND !@modifies:ability:purity_of_body_diamond_body_quivering_palm_timeless_body_and_tongue_of_the_sun_and_moon#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The sohei are masters of the horse and the hunt. A monastic soldier, the sohei is equally adept at combat afoot or on horseback. While skilled in unarmed techniques, many sohei favor weapons they can use while mounted on horseback or against others\u0027 horses."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_monks_weapon_and_armor_proficiencies#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement_and_increased_unarmed_damage#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall_and_abundant_step#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body_diamond_body_quivering_palm_timeless_body_and_tongue_of_the_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:devoted_guardian#monk_sohei",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:monastic_mount#monk_sohei",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:ki_weapon#monk_sohei",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_training#monk_sohei",
+          "conditionFormula": "@class:monk\u003e\u003d6"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_monks_weapon_and_armor_proficiencies#monk"
+        }, {
+          "featureId": "ability:stunning_fist#monk"
+        }, {
+          "featureId": "ability:fast_movement_and_increased_unarmed_damage#monk"
+        }, {
+          "featureId": "ability:slow_fall_and_abundant_step#monk"
+        }, {
+          "featureId": "ability:purity_of_body_diamond_body_quivering_palm_timeless_body_and_tongue_of_the_sun_and_moon#monk"
+        }]
+      }]
+    }
+  }
+}

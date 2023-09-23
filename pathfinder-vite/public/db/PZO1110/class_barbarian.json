@@ -1,0 +1,445 @@
+{
+  "id": "class:barbarian",
+  "name": "Barbarian",
+  "tags": ["class", "core"],
+  "maxStacks": 20,
+  "description": {
+    "text": "For some, there is only rage. In the ways of their people, in the fury of their passion, in the howl of battle, conflict is all these brutal souls know. Savages, hired muscle, masters of vicious martial techniques, they are not soldiers or professional warriors--they are the battle possessed, creatures of slaughter and spirits of war. Known as barbarians, these warmongers know little of training, preparation, or the rules of warfare; for them, only the moment exists, with the foes that stand before them and the knowledge that the next moment might hold their death. They possess a sixth sense in regard to danger and the endurance to weather all that might entail. These brutal warriors might rise from all walks of life, both civilized and savage, though whole societies embracing such philosophies roam the wild places of the world. Within barbarians storms the primal spirit of battle, and woe to those who face their rage. Role: Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves. With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way. Alignment: Any non-lawful Hit Die: d12 Starting Wealth: 3d6 × 10 gp (average 105gp.) In addition, each character begins play with an outfit worth 10 gp or less."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 2
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base"
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base"
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:fast_movement#barbarian"
+        }, {
+          "featureId": "ability:rage#barbarian"
+        }],
+        "choices": [{
+          "choiceId": "archetype",
+          "label": "Archetype",
+          "type": "archetype",
+          "repeating": true,
+          "featureSelect": {
+            "optionTags": ["archetype+barbarian"],
+            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }, {
+          "featureId": "ability:uncanny_dodge#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:greater_rage#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:indomitable_will#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:tireless_rage#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }, {
+          "featureId": "ability:trap_sense#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": [{
+          "featureId": "trait:armor_proficiency#barbarian"
+        }, {
+          "featureId": "trait:weapon_proficiency#barbarian"
+        }, {
+          "featureId": "ability:mighty_rage#barbarian"
+        }, {
+          "featureId": "ability:rage_power#barbarian"
+        }]
+      }]
+    }
+  }
+}

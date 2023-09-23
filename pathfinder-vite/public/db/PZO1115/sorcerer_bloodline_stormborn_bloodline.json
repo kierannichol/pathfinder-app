@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:stormborn_bloodline",
+  "name": "Stormborn Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You trace your heritage to fierce and proud spirits of storm and sky, and living lightning sings in your veins."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus", "feat:wind_stance"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus", "feat:wind_stance"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus", "feat:wind_stance"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:thunderstaff#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:shock#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:stormchild#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:thunderbolt#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:ride_the_lightning#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:storm_lord#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

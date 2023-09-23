@@ -1,0 +1,68 @@
+{
+  "id": "class:druid#arctic_druid",
+  "name": "Arctic Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:arctic_native#druid_arctic_druid",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:icewalking#druid_arctic_druid",
+          "conditionFormula": "@class:druid\u003e\u003d3"
+        }, {
+          "featureId": "ability:arctic_endurance#druid_arctic_druid",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }, {
+          "featureId": "ability:snowcaster#druid_arctic_druid",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }, {
+          "featureId": "ability:flurry_form#druid_arctic_druid",
+          "conditionFormula": "@class:druid\u003e\u003d13"
+        }],
+        "unlinks": [{
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:trackless_step#druid"
+        }, {
+          "featureId": "ability:resist_natures_lure#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }, {
+          "featureId": "ability:a_thousand_faces#druid"
+        }]
+      }]
+    }
+  }
+}

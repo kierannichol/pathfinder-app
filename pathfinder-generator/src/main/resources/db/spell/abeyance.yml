@@ -1,0 +1,29 @@
+casting_time: "1 minute"
+saving_throw: "Will negates (harmless)"
+spell_resistance: "yes (harmless)"
+id: "spell:abeyance"
+name: "Abeyance"
+description: "Abeyancesuppresses the effects of a single curse on a creature. It does\
+  \ not restore any damage or drain that might have been caused by the curse. Abeyancecannot\
+  \ suppress curses that cannot be removed by remove curse, but it can suppress curses\
+  \ such as lycanthropy that require remove cursealong with additional measures. An\
+  \ individual curse can be suppressed only once by abeyance, even if cast by a different\
+  \ caster."
+prerequisites: ""
+components: "V, S, M (a flask of holy water worth 25 gp), DF"
+range: "touch"
+targets: "creature touched"
+duration: "24 hours"
+school: "abjuration"
+levels:
+- class_id: "class:cleric"
+  level: 2
+- class_id: "class:inquisitor"
+  level: 2
+- class_id: "class:oracle"
+  level: 2
+- class_id: "class:paladin"
+  level: 2
+- class_id: "class:warpriest"
+  level: 2
+source: "Pathfinder #82: Secrets of the Sphinx"

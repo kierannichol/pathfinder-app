@@ -1,0 +1,38 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (harmless)"
+spell_resistance: "yes"
+id: "spell:life_pact"
+name: "Life Pact"
+description: "You bind the life forces of the targets into a mystical pact. If any\
+  \ target is reduced to fewer than 0 hit points, that target automatically triggers\
+  \ the power of the pact. The triggering target drains 1 hit point from all other\
+  \ targets who have at least 1 hit point and are within 30 feet of the triggering\
+  \ target; these hit points are applied to the triggering target as magical healing.\
+  \ This healing can prevent the triggering creature from dying, if the attack would\
+  \ cause the target's to have an amount of negative hit points equal to its Constitution\
+  \ score. This healing cannot raise the triggering creature above 1 hit point; any\
+  \ excess hit points drained from other targets are wasted."
+prerequisites: ""
+components: "V, S, DF/M (a drop of blood from each target)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: ""
+duration: "1 minute/level"
+school: "necromancy"
+levels:
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:cleric"
+  level: 2
+- class_id: "class:oracle"
+  level: 2
+- class_id: "class:shaman"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:warpriest"
+  level: 2
+- class_id: "class:witch"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Advanced Class Guide"

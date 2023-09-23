@@ -1,0 +1,63 @@
+{
+  "id": "class:fighter#savage_warrior",
+  "name": "Savage Warrior",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:spark_of_life#fighter_savage_warrior",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:natural_savagery#fighter_savage_warrior",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:savage_charge#fighter_savage_warrior",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:careful_claw#fighter_savage_warrior",
+          "conditionFormula": "@class:fighter\u003e\u003d13"
+        }, {
+          "featureId": "ability:greater_savage_charge#fighter_savage_warrior",
+          "conditionFormula": "@class:fighter\u003e\u003d17"
+        }, {
+          "featureId": "ability:natural_weapon_mastery#fighter_savage_warrior",
+          "conditionFormula": "@class:fighter\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

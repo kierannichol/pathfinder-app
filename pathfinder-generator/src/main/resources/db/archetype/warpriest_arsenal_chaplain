@@ -1,0 +1,54 @@
+id: "class:warpriest#arsenal_chaplain"
+name: "Arsenal Chaplain"
+description: "Arsenal chaplains are warpriests trained in the militant aspects of\
+  \ their gods."
+modifications:
+- add: "ability:war_blessing#warpriest_arsenal_chaplain"
+  remove:
+  - "ability:sacred_armor#warpriest"
+  - "ability:blessing#warpriest"
+- add: "ability:sacred_weapon#warpriest_arsenal_chaplain"
+  remove:
+  - "ability:sacred_weapon#warpriest"
+- add: "ability:weapon_training#warpriest_arsenal_chaplain"
+  remove:
+  - "ability:channel_energy#warpriest"
+features:
+- id: "ability:war_blessing#warpriest_arsenal_chaplain"
+  name: "War Blessing"
+  label: null
+  type: null
+  description: "An arsenal chaplain must choose War as his blessing, and can do so\
+    \ even if it is a domain not normally granted by his deity. He does not receive\
+    \ a second blessing.\nAt 7th level, an arsenal chaplain gains Quicken Blessing\
+    \ (War) as a bonus feat even if he does not meet the prerequisites, but cannot\
+    \ grant a War blessing to himself as a swift action with Quicken Blessing until\
+    \ he is at least 10th level.\nAt 13th level, an arsenal chaplain can use the War\
+    \ blessing on an ally at a range of up to 30 feet by spending an additional use\
+    \ of the blessing ability.\nAt 16th level, an arsenal chaplain can use the War\
+    \ blessing on a second target with a single use of the blessing ability.\nAt 19th\
+    \ level, an arsenal chaplain can use the War blessing on any number of targets\
+    \ at once with a single use of the blessing ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:sacred_weapon#warpriest_arsenal_chaplain"
+  name: "Sacred Weapon"
+  label: null
+  type: null
+  description: "The base damage of an arsenal chaplain's sacred weapon does not increase\
+    \ above 1d6."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:weapon_training#warpriest_arsenal_chaplain"
+  name: "Weapon Training"
+  label: null
+  type: null
+  description: "At 5th level, an arsenal chaplain gains weapon training as per the\
+    \ fighter class feature, but the benefits of this weapon training apply only to\
+    \ the his sacred weapons (weapons with which the warpriest has taken Weapon Focus)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+source: "Pathfinder Player Companion: Weapon Master's Handbook"

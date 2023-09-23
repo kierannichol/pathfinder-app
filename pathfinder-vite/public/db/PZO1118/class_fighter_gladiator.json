@@ -1,0 +1,29 @@
+{
+  "id": "class:fighter#gladiator",
+  "name": "Gladiator",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most fighters battle out of necessity, with each battle a contest of life and death. Some, however, fight for glory and for the adulation of the crowd. The gladiator is both a cunning warrior and a consummate performer, knowing life and death are balanced not only on a sword\u0027s edge, but also on the cheers or jeers of the crowd."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:fame#fighter_gladiator",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }]
+      }]
+    }
+  }
+}

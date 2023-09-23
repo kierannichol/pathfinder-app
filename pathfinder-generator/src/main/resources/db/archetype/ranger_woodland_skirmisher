@@ -1,0 +1,38 @@
+id: "class:ranger#woodland_skirmisher"
+name: "Woodland Skirmisher"
+description: "The forested regions are known for their rangers--skilled trackers,\
+  \ marksmen, and silent stalkers under the leafy canopy. The people love freedom\
+  \ and are reluctant to take orders from anyone, so defense falls to individual scouts\
+  \ and small groups of allied commandos. Many rangers take the guide or skirmisher\
+  \ archetypes, but some focus on the magic of stealth. These irregular troops fight\
+  \ against the frequent invasions by foreign soldiers, striking quickly and melting\
+  \ into the green shadows as soon as their opponents rally themselves for a counterattack."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#ranger_woodland_skirmisher"
+  remove:
+  - "ability:the_normal_ranger_armor#ranger"
+  - "ability:weapon_proficiency#ranger"
+- add: "ability:forest_ghost#ranger_woodland_skirmisher"
+  remove:
+  - "ability:wild_empathy#ranger"
+features:
+- id: "ability:weapon_and_armor_proficiency#ranger_woodland_skirmisher"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A woodland skirmisher is proficient with all simple and martial weapons\
+    \ and with light armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Magic"
+- id: "ability:forest_ghost#ranger_woodland_skirmisher"
+  name: "Forest Ghost"
+  label: null
+  type: null
+  description: "At 1st level, a woodland skirmisher adds a bonus equal to 1/2 his\
+    \ level on all Perception and Survival skill checks he makes while located in\
+    \ forest terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Magic"
+source: "Pathfinder Campaign Setting: Inner Sea Magic"

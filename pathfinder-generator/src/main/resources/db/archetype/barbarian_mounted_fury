@@ -1,0 +1,39 @@
+id: "class:barbarian#mounted_fury"
+name: "Mounted Fury"
+description: "Many barbarian tribes are masters of the horse, teaching their members\
+  \ how to ride from a young age. As a result, barbarians from such tribes are even\
+  \ more terrifying when mounted, using their steeds' speed and strength to great\
+  \ advantage."
+modifications:
+- add: "ability:fast_rider#barbarian_mounted_fury"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:bestial_mount#barbarian_mounted_fury"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+  - "ability:uncanny_dodge#barbarian"
+features:
+- id: "ability:fast_rider#barbarian_mounted_fury"
+  name: "Fast Rider"
+  label: null
+  type: null
+  description: "The speed of any mount the barbarian rides is increased by 10 feet."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:bestial_mount#barbarian_mounted_fury"
+  name: "Bestial Mount"
+  label: null
+  type: null
+  description: "At 5th level, the mounted fury gains the service of a feral mount.\
+    \ This ability functions as a druid's animal companion, using the barbarian's\
+    \ level –4 as her effective druid level. This companion must be one that she is\
+    \ capable of riding and is suitable as a mount. A Medium barbarian can select\
+    \ a camel or a horse. A Small barbarian can select a pony or a wolf, but can also\
+    \ select a boar or a dog if she is at least 8th level. Whenever a barbarian is\
+    \ raging while mounted on her bestial mount, the mount gains a +2 morale bonus\
+    \ to its Strength.\nThis ability replaces uncanny dodge and improved uncanny dodge."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

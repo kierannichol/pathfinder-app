@@ -1,0 +1,92 @@
+id: "class:rogue#gun_smuggler"
+name: "Gun Smuggler"
+description: "Gun smugglers are adept at procuring firearms and concealing their secret\
+  \ weapons."
+modifications:
+- add: "ability:weapon_and_armor_proficiencies#rogue_gun_smuggler"
+  remove:
+  - "ability:the_rogues_weapon_proficiencies#rogue"
+- add: "ability:hidden_gun#rogue_gun_smuggler"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:selective_targeting#rogue_gun_smuggler"
+  remove:
+  - "ability:sneak_attack#rogue"
+- add: "ability:stolen_shots#rogue_gun_smuggler"
+  remove:
+  - "ability:trap_sense#rogue"
+  - "ability:the_rogue_talent_gained_at_6th_level#rogue"
+- add: "ability:uncanny_aim#rogue_gun_smuggler"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+  - "ability:uncanny_dodge#rogue"
+features:
+- id: "ability:weapon_and_armor_proficiencies#rogue_gun_smuggler"
+  name: "Weapon and Armor Proficiencies"
+  label: null
+  type: null
+  description: "A gun smuggler is proficient with all simple weapons and one-handed\
+    \ firearms, plus the rapier, sap, short sword, and sword cane."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:hidden_gun#rogue_gun_smuggler"
+  name: "Hidden Gun"
+  label: null
+  type: null
+  description: "A gun smuggler gains a bonus equal to half her rogue level on Sleight\
+    \ of Hand checks to conceal a one-handed firearm on her body. She increases the\
+    \ DCs of opponents' Perception checks to realize the true nature of disguised\
+    \ weapons (such as a sword cane) within 5 feet of her by an amount equal to her\
+    \ rogue level (maximum DC 25 plus her rogue level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:selective_targeting#rogue_gun_smuggler"
+  name: "Selective Targeting"
+  label: null
+  type: null
+  description: "A gun smuggler focuses on concealable firearms for her sneak attacks.\
+    \ When she makes a sneak attack using any weapon other than a coat pistol, dagger\
+    \ pistol, or sword cane pistol (either firing the weapon or making a melee attack),\
+    \ her sneak attack damage dice are d4s instead of d6s."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:stolen_shots#rogue_gun_smuggler"
+  name: "Stolen Shots"
+  label: null
+  type: null
+  description: "At 3rd level, a gun smuggler can access small quantities of cutting-edge\
+    \ firearm technology through clandestine dealers. She gains the benefits of the\
+    \ black market connections rogue talent, though only for the purpose of securing\
+    \ firearms and related equipment.\nAt the beginning of each day, the gun smuggler\
+    \ gains a number of bullets (with accompanying black powder) or paper cartridges--referred\
+    \ to as shots--in any combination equal to her rogue level, representing ammunition\
+    \ smuggled to her by contacts. Her contacts provide only enough shots to replenish\
+    \ this small supply, so she can't accumulate ammunition indefinitely, and these\
+    \ shots have a market price of 0 gp.\nAt 6th level, the gun smuggler can elect\
+    \ to gain one or more pieces of magic ammunition, though each one replaces a number\
+    \ of her daily shots equal to the ammunition's enhancement bonus (maximum enhancement\
+    \ bonus of +2 for any one piece of ammunition).\nShe can choose to add any of\
+    \ the following weapon special abilities to the shot, though the shot must have\
+    \ at least a +1 enhancement bonus, and these special abilities use an amount of\
+    \ bonus equal to the ability's normal price:\nDistance, flaming, flaming burst,\
+    \ merciful, seeking, or thundering.\nAt 9th level and every 3 rogue levels thereafter,\
+    \ the maximum enhancement bonus of a gun smuggler's shots increases by 1 (to a\
+    \ maximum of +6 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:uncanny_aim#rogue_gun_smuggler"
+  name: "Uncanny Aim"
+  label: null
+  type: null
+  description: "At 4th level, a gun smuggler increases the range increment of any\
+    \ coat pistol, dagger pistol, or sword cane pistol she wields by 10 feet. At 8th\
+    \ level, the base damage of bullets fired by these weapons increases by one die\
+    \ step."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+source: "Pathfinder Player Companion: People of the Wastes"

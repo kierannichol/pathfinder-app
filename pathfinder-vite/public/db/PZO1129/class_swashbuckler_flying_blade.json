@@ -1,0 +1,56 @@
+{
+  "id": "class:swashbuckler#flying_blade",
+  "name": "Flying Blade",
+  "tags": ["archetype", "swashbuckler"],
+  "enabledFormula": "!@modifies:ability:panache#swashbuckler AND !@modifies:ability:dodging_panache#swashbuckler AND !@modifies:ability:swashbuckler_weapon_mastery#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler",
+  "maxStacks": 1,
+  "description": {
+    "text": "While most swashbucklers prefer their battles up close, others prefer dealing death from a distance."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:panache#swashbuckler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:dodging_panache#swashbuckler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swashbuckler_weapon_mastery#swashbuckler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swashbuckler_weapon_training#swashbuckler",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:panache#swashbuckler_flying_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d1"
+        }, {
+          "featureId": "ability:flying_blade_training#swashbuckler_flying_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d5"
+        }, {
+          "featureId": "ability:flying_blade_mastery#swashbuckler_flying_blade",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:panache#swashbuckler"
+        }, {
+          "featureId": "ability:dodging_panache#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_training#swashbuckler"
+        }, {
+          "featureId": "ability:swashbuckler_weapon_mastery#swashbuckler"
+        }]
+      }]
+    }
+  }
+}

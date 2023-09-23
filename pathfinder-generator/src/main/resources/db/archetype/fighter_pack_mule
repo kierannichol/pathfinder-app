@@ -1,0 +1,62 @@
+id: "class:fighter#pack_mule"
+name: "Pack Mule"
+description: ""
+modifications:
+- add: "ability:unobtrusive#fighter_pack_mule"
+  remove:
+  - "ability:bonus_feat#fighter"
+- add: "ability:efficient_packer#fighter_pack_mule"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:weight_training#fighter_pack_mule"
+  remove:
+  - "ability:armor_training_1_4#fighter"
+- add: "ability:healthy_as_a_mule#fighter_pack_mule"
+  remove:
+  - "ability:armor_mastery#fighter"
+features:
+- id: "ability:unobtrusive#fighter_pack_mule"
+  name: "Unobtrusive"
+  label: null
+  type: null
+  description: "A pack mule gains Bluff (Cha), Disguise (Cha), Sleight of Hand (Dex),\
+    \ and Stealth (Dex) as class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:efficient_packer#fighter_pack_mule"
+  name: "Efficient Packer"
+  label: null
+  type: null
+  description: "At 2nd level, a pack mule adds a bonus equal to 1/2 his fighter level\
+    \ on Sleight of Hand checks to conceal objects on his body. He also adds a bonus\
+    \ equal to 1/2 his class level to his Strength score for the purpose of determining\
+    \ his carrying capacity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:weight_training#fighter_pack_mule"
+  name: "Weight Training"
+  label: null
+  type: null
+  description: "At 3rd level, a pack mule learns to be more maneuverable when carrying\
+    \ loads. Whenever he is carrying a medium or heavy load, he reduces the check\
+    \ penalty by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed\
+    \ by 1. At 7th, 11th, and 15th levels, these benefits increase by 1 (to a maximum\
+    \ of 4 at 15th level).\nIn addition, a pack mule can move at his normal speed\
+    \ while carrying a medium load. At 7th level, a pack mule can move at his normal\
+    \ speed while carrying a heavy load."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+- id: "ability:healthy_as_a_mule#fighter_pack_mule"
+  name: "Healthy as a Mule"
+  label: null
+  type: null
+  description: "At 19th level, whenever the pack mule takes Constitution, Dexterity,\
+    \ or Strength damage, he reduces the amount of ability damage taken by 2, to a\
+    \ minimum of 0."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Black Markets"
+source: "Pathfinder Player Companion: Black Markets"

@@ -1,0 +1,53 @@
+id: "class:druid#veiled_adept"
+name: "Veiled Adept"
+description: "Veiled adepts learn the secret magic of the fey."
+modifications:
+- add: "ability:nature_bond#druid_veiled_adept"
+  remove:
+  - "ability:nature_bond#druid"
+- add: "ability:animal_speech#druid_veiled_adept"
+  remove:
+  - "ability:spontaneous_casting#druid"
+- add: "ability:resist_fey_influence#druid_veiled_adept"
+  remove:
+  - "ability:resist_natures_lure#druid"
+features:
+- id: "ability:nature_bond#druid_veiled_adept"
+  name: "Nature Bond"
+  label: null
+  type: null
+  description: "A veiled adept cannot select an animal companion, and can take only\
+    \ a domain. If she worships an Eldest, the veiled adept can choose any of the\
+    \ domains or subdomains granted by that Eldest in addition to those normally available\
+    \ to druids."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:animal_speech#druid_veiled_adept"
+  name: "Animal Speech"
+  label: null
+  type: null
+  description: "A veiled adept can imbue normal animals with the ability to speak\
+    \ for a brief period. Once per day as a standard action, the veiled adept can\
+    \ touch an animal to grant it the ability to speak any language the druid knows\
+    \ for 1 minute per druid level. This does not increase the animal's Intelligence\
+    \ or improve its attitude, and the animal behaves as though communicating with\
+    \ someone under the effects of a speak with animals spell, save that it can speak\
+    \ with anyone who understands the language the veiled adept grants it. The veiled\
+    \ adept gains one additional use of this ability at 4th level and every 4 levels\
+    \ thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:resist_fey_influence#druid_veiled_adept"
+  name: "Resist Fey Influence"
+  label: null
+  type: null
+  description: "At 4th level, a veiled adept gains a +4 bonus on saving throws against\
+    \ the spell-like and supernatural abilities of fey. Once per day before attempting\
+    \ such a saving throw, the veiled adept can choose to roll two dice and take the\
+    \ better result, applying the +4 bonus as normal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+source: "Pathfinder Campaign Setting: Inner Sea Intrigue"

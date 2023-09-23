@@ -1,0 +1,29 @@
+{
+  "id": "class:oracle#planar_oracle",
+  "name": "Planar Oracle",
+  "tags": ["archetype", "oracle"],
+  "enabledFormula": "!@modifies:ability:the_final_revelation_of_the_oracles_mystery#oracle",
+  "maxStacks": 1,
+  "description": {
+    "text": "A planar oracle has an affinity with one of the Outer Planes. She is at home on the multiple planes of the Great Beyond, and can eventually become an outsider herself."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_final_revelation_of_the_oracles_mystery#oracle",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:final_revelation#oracle_planar_oracle",
+          "conditionFormula": "@class:oracle\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_final_revelation_of_the_oracles_mystery#oracle"
+        }]
+      }]
+    }
+  }
+}

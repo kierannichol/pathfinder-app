@@ -1,0 +1,50 @@
+id: "class:alchemist#chirurgeon"
+name: "Chirurgeon"
+description: "An alchemist who studies anatomy and uses this knowledge to heal is\
+  \ a chirurgeon."
+modifications:
+- add: "ability:infused_curative#alchemist_chirurgeon"
+  remove:
+  - "ability:poison_use#alchemist"
+- add: "ability:anaesthetic#alchemist_chirurgeon"
+  remove:
+  - "ability:poison_resistance_"
+- add: "ability:power_over_death#alchemist_chirurgeon"
+  remove:
+  - "ability:poison_immunity#alchemist"
+features:
+- id: "ability:infused_curative#alchemist_chirurgeon"
+  name: "Infused Curative"
+  label: null
+  type: null
+  description: "At 2nd level, a chirurgeon's extracts of cure spells automatically\
+    \ act as infusions, and can be used by non-alchemists. When a chirurgeon prepares\
+    \ his extracts, he may choose to render any or all of his infused curatives inert\
+    \ and prepare other extracts to replace them (unlike infusions, which continue\
+    \ to occupy the alchemist's daily extract slots until consumed or used)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:anaesthetic#alchemist_chirurgeon"
+  name: "Anaesthetic"
+  label: null
+  type: null
+  description: "At 5th level, a chirurgeon learns how to supplement uses of the Heal\
+    \ skill with pain-killing drugs. He gains Skill Focus (Heal) as a bonus feat.\
+    \ Any use of the Heal skill that has a risk of harming the patient (such as extracting\
+    \ a barb) only deals the minimum damage when performed by a chirurgeon.\nThis\
+    \ ability replaces poison resistance +4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:power_over_death#alchemist_chirurgeon"
+  name: "Power Over Death"
+  label: null
+  type: null
+  description: "At 10th level, a chirurgeon adds breath of life to his formula book\
+    \ as a 4th-level extract. His infused curative ability applies to this extract.\n\
+    This ability replaces poison immunity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

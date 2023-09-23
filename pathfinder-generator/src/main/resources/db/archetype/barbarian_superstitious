@@ -1,0 +1,37 @@
+id: "class:barbarian#superstitious"
+name: "Superstitious"
+description: "Many barbarians distrust magic. While most just shy away from magic,\
+  \ others focus their rage on users of such foul arts. These barbarians are naturally\
+  \ distrusting, and develop keen senses to protect them from harm."
+modifications:
+- add: "ability:sixth_sense#barbarian_superstitious"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:keen_senses#barbarian_superstitious"
+  remove:
+  - "ability:damage_reduction#barbarian"
+features:
+- id: "ability:sixth_sense#barbarian_superstitious"
+  name: "Sixth Sense"
+  label: null
+  type: null
+  description: "At 3rd level, the superstitious barbarian gains a +1 bonus on initiative\
+    \ and a +1 insight bonus to AC during surprise rounds. This bonus increases by\
+    \ +1 for every three levels after 3rd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:keen_senses#barbarian_superstitious"
+  name: "Keen Senses"
+  label: null
+  type: null
+  description: "At 7th level, the superstitious barbarian gains low-light vision (triple\
+    \ normal vision range in dim light if she already has low-light vision). At 10th\
+    \ level, she gains darkvision 60 feet (or adds 60 feet to the range of any darkvision\
+    \ already possessed). At 13th level, she gains scent. At 16th level, she gains\
+    \ blindsense 30 feet. At 19th level, she gains blindsight 30 feet.\nThis ability\
+    \ replaces damage reduction."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

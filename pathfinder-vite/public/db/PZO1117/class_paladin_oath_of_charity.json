@@ -1,0 +1,28 @@
+{
+  "id": "class:paladin#oath_of_charity",
+  "name": "Oath of Charity",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:divine_bond#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:divine_bond#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:charitable_mercy#paladin_oath_of_charity",
+          "conditionFormula": "@class:paladin\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:divine_bond#paladin"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,141 @@
+id: "class:fighter#cad"
+name: "Cad"
+description: "In combat, most fighters have some sort of code of honor. Some believe\
+  \ that one should not kick enemies when they are down, or should limit use of other\
+  \ such dirty tricks to the most dire of circumstances. The cad places no such limitations\
+  \ on himself. Battles are for winning, and anything that gives the cad the upper\
+  \ hand against his enemies is a legitimate tactic. No trick is too treacherous if\
+  \ it leads to victory."
+modifications:
+- add: "ability:dirty_maneuvers#fighter_cad"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:catch_off_guard#fighter_cad"
+  remove:
+  - "ability:armor_training#fighter@3"
+- add: "ability:payback#fighter_cad"
+  remove:
+  - "ability:weapon_training#fighter@13"
+  - "ability:weapon_training#fighter@5"
+  - "ability:weapon_training#fighter@17"
+- add: "ability:deadly_surprise#fighter_cad"
+  remove:
+  - "ability:armor_training#fighter@7"
+- add: "ability:razor_sharp_chair_leg#fighter_cad"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:craven_combatant#fighter_cad"
+  remove:
+  - "ability:armor_training#fighter@11"
+- add: "ability:sweeping_prank#fighter_cad"
+  remove:
+  - "ability:weapon_training#fighter@17"
+  - "ability:weapon_training#fighter@13"
+- add: "ability:treacherous_blow#fighter_cad"
+  remove:
+  - "ability:armor_training#fighter@15"
+- add: "ability:ultimate_payback#fighter_cad"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:dirty_maneuvers#fighter_cad"
+  name: "Dirty Maneuvers"
+  label: null
+  type: null
+  description: "At 2nd level, a cad becomes skilled at deceiving and discomfiting\
+    \ his opponents. The cad gains a +1 bonus on disarm, dirty trick, and steal combat\
+    \ maneuver checks. The cad also gains a +1 bonus to CMD when attacked with the\
+    \ disarm, dirty trick, and steal combat maneuvers. These bonuses increase by 1\
+    \ for every four levels after 2nd (to a maximum of +5 at 18th level).\nThis ability\
+    \ replaces bravery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:catch_off_guard#fighter_cad"
+  name: "Catch Off-Guard"
+  label: null
+  type: null
+  description: "At 3rd level, the cad gains the Catch Off-Guard feat.\nThis ability\
+    \ replaces armor training 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:payback#fighter_cad"
+  name: "Payback"
+  label: null
+  type: null
+  description: "At 5th level, a cad gains a +1 bonus on attack and damage rolls against\
+    \ any creature that has attacked the cad since the beginning of his last turn.\
+    \ This bonus increases by +1 for every four levels beyond 5th (to a maximum of\
+    \ +4 at 17th level).\nThis ability replaces weapon training 1, 3, and 4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:deadly_surprise#fighter_cad"
+  name: "Deadly Surprise"
+  label: null
+  type: null
+  description: "At 7th level, when a cad hits an opponent that is denied its Dexterity\
+    \ bonus to AC against him with a weapon or unarmed attack, he may attempt a dirty\
+    \ trick combat maneuver as an immediate action as part of the attack.\nThis ability\
+    \ replaces armor training 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:razor_sharp_chair_leg#fighter_cad"
+  name: "Razor-Sharp Chair Leg"
+  label: null
+  type: null
+  description: "At 9th level, as a swift action, a cad may alter the type of damage\
+    \ dealt by an improvised weapon to bludgeoning, piercing, or slashing damage.\
+    \ In addition, the cad has a critical threat range of 19–20/×2 with any improvised\
+    \ melee weapon.\nThis ability replaces weapon training 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:craven_combatant#fighter_cad"
+  name: "Craven Combatant"
+  label: null
+  type: null
+  description: "At 11th level, when fighting defensively or using Combat Expertise\
+    \ or total defense, a cad cannot be flanked except by a rogue or ninja whose level\
+    \ is four or more higher than the cad's fighter level.\nThis ability replaces\
+    \ armor training 3."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:sweeping_prank#fighter_cad"
+  name: "Sweeping Prank"
+  label: null
+  type: null
+  description: "At 13th level, as a standard action, a cad can use a dirty trickmaneuver\
+    \ against any two adjacent opponents that he can reach, making a separate combat\
+    \ maneuver check against each opponent. He must use the same dirty trick maneuver\
+    \ against each opponent. At 17th level, the cad can use this ability as a full-round\
+    \ action to attempt a dirty trick maneuver against a number of enemies equal to\
+    \ 2 + his Dexterity bonus (if any).\nThis ability replaces weapon training 3 and\
+    \ 4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:treacherous_blow#fighter_cad"
+  name: "Treacherous Blow"
+  label: null
+  type: null
+  description: "At 15th level, when a cad confirms a critical hit, he can attempt\
+    \ a dirty trick combat maneuver as part of that attack as an immediate action.\n\
+    This ability replaces armor training 4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:ultimate_payback#fighter_cad"
+  name: "Ultimate Payback"
+  label: null
+  type: null
+  description: "At 20th level, any critical threats a cad makes against an opponent\
+    \ that has attacked him since the beginning of his last turn are automatically\
+    \ confirmed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

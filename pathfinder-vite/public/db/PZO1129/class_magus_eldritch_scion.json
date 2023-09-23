@@ -1,0 +1,82 @@
+{
+  "id": "class:magus#eldritch_scion",
+  "name": "Eldritch Scion",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:arcane_pool_and_abilities_that_modify_arcane_pool_also_modify_eldritch_pool#magus AND !@modifies:ability:improved_spell_combat#magus AND !@modifies:ability:knowledge_pool#magus AND !@modifies:ability:the_maguss_spells_class_feature#magus AND !@modifies:ability:spell_combat#magus AND !@modifies:ability:greater_spell_combat#magus",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_pool_and_abilities_that_modify_arcane_pool_also_modify_eldritch_pool#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_spell_combat#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:knowledge_pool#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_maguss_spells_class_feature#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spell_combat#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_spell_combat#magus",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bloodline#magus_eldritch_scion",
+          "conditionFormula": "@class:magus\u003e\u003d4"
+        }, {
+          "featureId": "ability:spell_combat#magus_eldritch_scion",
+          "conditionFormula": "@class:magus\u003e\u003d1"
+        }, {
+          "featureId": "ability:bonus_spells#magus_eldritch_scion",
+          "conditionFormula": "@class:magus\u003e\u003d7"
+        }, {
+          "featureId": "ability:improved_spell_combat#magus_eldritch_scion",
+          "conditionFormula": "@class:magus\u003e\u003d14"
+        }, {
+          "featureId": "ability:greater_spell_combat#magus_eldritch_scion",
+          "conditionFormula": "@class:magus\u003e\u003d18"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_maguss_spells_class_feature#magus"
+        }, {
+          "featureId": "ability:spell_recall#magus"
+        }, {
+          "featureId": "ability:arcane_pool_and_abilities_that_modify_arcane_pool_also_modify_eldritch_pool#magus"
+        }, {
+          "featureId": "ability:spell_combat#magus"
+        }, {
+          "featureId": "ability:knowledge_pool#magus"
+        }, {
+          "featureId": "ability:improved_spell_combat#magus"
+        }, {
+          "featureId": "ability:greater_spell_combat#magus"
+        }]
+      }]
+    }
+  }
+}

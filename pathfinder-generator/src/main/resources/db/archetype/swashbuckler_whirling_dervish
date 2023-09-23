@@ -1,0 +1,51 @@
+id: "class:swashbuckler#whirling_dervish"
+name: "Whirling Dervish"
+description: "Some warriors have adapted dances into graceful martial forms, and their\
+  \ swashbuckling style is feared throughout the world its ability to devastate foes\
+  \ with a scimitar through motion and agility regardless of strength of arms."
+modifications:
+- add: "ability:dervish_finesse#swashbuckler_whirling_dervish"
+  remove:
+  - "ability:swashbuckler_finesse#swashbuckler"
+- add: "ability:merciful#swashbuckler_whirling_dervish"
+  remove:
+  - "ability:panache#swashbuckler"
+- add: "ability:deeds#swashbuckler_whirling_dervish"
+  remove:
+  - "ability:targeted_strike#swashbuckler"
+  - "ability:superior_feint#swashbuckler"
+features:
+- id: "ability:dervish_finesse#swashbuckler_whirling_dervish"
+  name: "Dervish Finesse"
+  label: null
+  type: null
+  description: "A whirling dervish can treat a scimitar as a one-handed piercing melee\
+    \ weapon for the purposes of the swashbuckler's finesse and all feats and class\
+    \ abilities that refer to such a weapon. She must not be carrying a weapon or\
+    \ shield in her off hand to gain this benefit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:merciful#swashbuckler_whirling_dervish"
+  name: "Merciful"
+  label: null
+  type: null
+  description: "While violence is sometimes necessary to cleanse evil, dervishes rarely\
+    \ revel in a foe's defeat. A whirling dervish does not gain any panache for dropping\
+    \ a foe below 0 hit points unless that foe is an evil outsider or undead, or if\
+    \ the damage she dealt was nonlethal.\nAdditionally, she gains 1 panache point\
+    \ if she causes an evildoer with a number of Hit Dice equal to at least 1/2 her\
+    \ character level to surrender to her. She can gain this benefit no more than\
+    \ once per round, even if multiple enemies surrender."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:deeds#swashbuckler_whirling_dervish"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A whirling dervish gains the following deeds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+source: "Pathfinder Player Companion: Advanced Class Origins"

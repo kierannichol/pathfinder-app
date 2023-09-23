@@ -1,0 +1,63 @@
+id: "class:rogue#sharper"
+name: "Sharper"
+description: ""
+modifications:
+- add: "ability:scam_artist#rogue_sharper"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:sticky_fingers#rogue_sharper"
+  remove:
+  - "ability:8th_levels#rogue"
+  - "ability:the_rogue_talents_gained_at_2nd_6th#rogue"
+- add: "ability:lucky_save#rogue_sharper"
+  remove:
+  - "ability:trap_sense#rogue"
+- add: "ability:audacious_overconfidence#rogue_sharper"
+  remove:
+  - "ability:16th_levels#rogue"
+  - "ability:the_rogue_talents_gained_at_4th_10th#rogue"
+features:
+- id: "ability:scam_artist#rogue_sharper"
+  name: "Scam Artist"
+  label: null
+  type: null
+  description: "A sharper gains a bonus equal to half her rogue level (minimum +1)\
+    \ on all Bluff and Sleight of Hand checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:sticky_fingers#rogue_sharper"
+  name: "Sticky Fingers"
+  label: null
+  type: null
+  description: "At 2nd level, a sharper receives Improved Steal as a bonus feat.\n\
+    At 6th level, she receives Greater Steal as a bonus feat, and at 8th level, she\
+    \ receives Quick Steal as a bonus feat. The sharper gains these feats even if\
+    \ she doesn't meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:lucky_save#rogue_sharper"
+  name: "Lucky Save"
+  label: null
+  type: null
+  description: "At 3rd level, when a sharper's wits aren't enough to pull her out\
+    \ of a bad situation, her luck still just might save her. She gains a +1 luck\
+    \ bonus on all saving throws. This bonus increases to +2 at 9th level and to +3\
+    \ at 15th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:audacious_overconfidence#rogue_sharper"
+  name: "Audacious Overconfidence"
+  label: null
+  type: null
+  description: "At 4th level, after failing an attack roll, skill check, or saving\
+    \ throw, a sharper can reduce her saving throw bonus from lucky save by 1 for\
+    \ 24 hours in order to reroll the failed roll. She can use this ability once per\
+    \ day at 4th level, plus an additional time per day at 10th level and again at\
+    \ 16th level. The decreases to her bonus from lucky save stack with each other."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

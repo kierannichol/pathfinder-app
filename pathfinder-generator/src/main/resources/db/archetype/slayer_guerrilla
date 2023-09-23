@@ -1,0 +1,52 @@
+id: "class:slayer#guerrilla"
+name: "Guerrilla"
+description: "Slayers characterized by cunning and patience, guerrillas specialize\
+  \ in ambush and harassment of enemies."
+modifications:
+- add: "ability:strike_last_strike_first_ex#slayer_guerrilla"
+  remove:
+  - "ability:track#slayer"
+  - "ability:swift_tracker#slayer"
+- add: "ability:quick_start#slayer_guerrilla"
+  remove:
+  - "ability:the_6th_level_slayer_talent#slayer"
+- add: "ability:astonishing_strike#slayer_guerrilla"
+  remove:
+  - "ability:improved_quarry#slayer"
+  - "ability:quarry#slayer"
+features:
+- id: "ability:strike_last_strike_first_ex#slayer_guerrilla"
+  name: "Strike Last Strike First (Ex)"
+  label: null
+  type: null
+  description: "A guerrilla adds half his level on Stealth checks when remaining motionless\
+    \ and reduces the penalty on Stealth checks when sniping by an equal amount. He\
+    \ also gains this bonus on his initiative checks in surprise rounds whenever he\
+    \ is aware of the surprise round and at least one enemy is unaware."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:quick_start#slayer_guerrilla"
+  name: "Quick Start"
+  label: null
+  type: null
+  description: "At 6th level, the guerrilla can take a normal charge action during\
+    \ the surprise round, rather than a charge with half the usual distance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:astonishing_strike#slayer_guerrilla"
+  name: "Astonishing Strike"
+  label: null
+  type: null
+  description: "At 14th level, when the guerrilla deals sneak attack damage to a target\
+    \ of his studied target ability during the surprise round, that target is denied\
+    \ its Dexterity bonus to AC against attacks from the same guerrilla until the\
+    \ end of the guerrilla's next turn. When the guerrilla reaches 19th level, this\
+    \ ability works any time he deals sneak attack damage to a target of his studied\
+    \ target ability during the first round of combat, whether or not it's a surprise\
+    \ round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

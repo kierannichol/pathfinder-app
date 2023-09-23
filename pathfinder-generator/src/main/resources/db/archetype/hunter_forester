@@ -1,0 +1,139 @@
+id: "class:hunter#forester"
+name: "Forester"
+description: "While all hunters have a bond with the natural world, a forester has\
+  \ a stronger tie to her environment than to the animals within it. While most foresters\
+  \ feel strong bonds with woodland regions, the archetype functions well in other\
+  \ terrains as well. In such cases, a forester might refer to herself by a different\
+  \ name that more accurately reflects her chosen terrain. For example, a forester\
+  \ who favors bogs and marshes might call herself a “swamper,\"while one who favors\
+  \ frozen regions might call herself a “glacier guardian.\"As foresters gain levels\
+  \ and take on new favored terrains, they often eschew such titles completely, viewing\
+  \ them as unnecessary, and merely refer to themselves as guardians of the wild or\
+  \ champions of nature's will--but regardless of the name, their devotion remains."
+modifications:
+- add: "ability:animal_focus#hunter_forester"
+  remove:
+  - "ability:animal_focus#hunter"
+- add: "ability:favored_terrain#hunter_forester"
+  remove:
+  - "ability:animal_companion#hunter"
+- add: "ability:bonus_feat#hunter_forester"
+  remove:
+  - "ability:precise_companion#hunter"
+- add: "ability:tactician#hunter_forester"
+  remove:
+  - "ability:hunter_tactics#hunter"
+- add: "ability:evasion#hunter_forester"
+  remove:
+  - "ability:improved_empathic_link#hunter"
+- add: "ability:camouflage#hunter_forester"
+  remove:
+  - "ability:bonus_tricks#hunter"
+- add: "ability:breath_of_life#hunter_forester"
+  remove:
+  - "ability:raise_animal_companion#hunter"
+- add: "ability:improved_evasion#hunter_forester"
+  remove:
+  - "ability:speak_with_master#hunter"
+- add: "ability:hide_in_plain_sight#hunter_forester"
+  remove:
+  - "ability:greater_empathic_link#hunter"
+features:
+- id: "ability:animal_focus#hunter_forester"
+  name: "Animal Focus"
+  label: null
+  type: null
+  description: "As a forester has no animal companion, the aspects granted by this\
+    \ ability always apply to the forester herself, just as if a normal hunter's companion\
+    \ were dead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:favored_terrain#hunter_forester"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "A forester gains the ranger's favored terrain ability. She gains her\
+    \ first favored terrain at 5th level and a new favored terrain every 4 levels\
+    \ thereafter. In addition, at each such interval, the bonuses on initiative checks\
+    \ and skill checks in one favored terrain (including the one just selected, if\
+    \ so desired) increase by 2. Starting at 5th level, a forester adds half her favored\
+    \ terrain bonus on damage rolls while in her favored terrain and fighting a creature\
+    \ native to that terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:bonus_feat#hunter_forester"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 2nd level, a forester gains one bonus combat feat. She must meet\
+    \ the prerequisites for this feat as normal. She gains an additional bonus combat\
+    \ feat at 7th, 13th, and 19th levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:tactician#hunter_forester"
+  name: "Tactician"
+  label: null
+  type: null
+  description: "At 3rd level as a standard action, a forester can grant the benefits\
+    \ of one teamwork feat to all allies within 30 feet who can see and hear her.\
+    \ Allies retain the use of this bonus feat for 3 rounds plus 1 round for every\
+    \ 2 levels the forester has. Allies do not need to meet the prerequisites of these\
+    \ bonus feats. The forester can use this ability once per day at 3rd level, plus\
+    \ one additional time per day at 7th level and every 5 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:evasion#hunter_forester"
+  name: "Evasion"
+  label: null
+  type: null
+  description: "At 4th level, a forester can avoid even magical and unusual attacks\
+    \ with great agility. If she makes a successful Reflex saving throw against an\
+    \ attack that normally deals half damage on a successful save, she instead takes\
+    \ no damage. Evasion can be used only if the forester is wearing light armor,\
+    \ medium armor, or no armor. A helpless forester does not gain the benefit of\
+    \ evasion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:camouflage#hunter_forester"
+  name: "Camouflage"
+  label: null
+  type: null
+  description: "At 7th level, a forester can use the Stealth skill to hide in any\
+    \ of her favored terrains, even if the terrain doesn't grant cover or concealment."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:breath_of_life#hunter_forester"
+  name: "Breath of Life"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:improved_evasion#hunter_forester"
+  name: "Improved Evasion"
+  label: null
+  type: null
+  description: "At 11th level, a forester's evasion improves. Improved evasion works\
+    \ like evasion, except while the forester still takes no damage on a successful\
+    \ Reflex saving throw against attacks, she takes only half damage on a failed\
+    \ save. A helpless forester does not gain the benefit of improved evasion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:hide_in_plain_sight#hunter_forester"
+  name: "Hide in Plain Sight"
+  label: null
+  type: null
+  description: "At 14th level, while in any of her favored terrains, a forester can\
+    \ use the Stealth skill even while being observed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

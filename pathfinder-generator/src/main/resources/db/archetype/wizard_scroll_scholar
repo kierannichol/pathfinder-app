@@ -1,0 +1,57 @@
+id: "class:wizard#scroll_scholar"
+name: "Scroll Scholar"
+description: "A scroll scholar values knowledge and learning as much as her other\
+  \ abilities, trading a portion of her potential in her chosen class for greater\
+  \ breadth of skill at deciphering old texts, piecing together strange fragments\
+  \ of esoteric lore, and deciphering the hidden qualities of strange and unusual\
+  \ magical items."
+modifications:
+- add: "ability:diligent_student#wizard_scroll_scholar"
+  remove:
+  - "ability:diviners_fortune_if_a_diviner_or_hand_of_the_apprentice_if_a_universalist#wizard"
+- add: "ability:secrets_revealed#wizard_scroll_scholar"
+  remove:
+  - "ability:her_bonus_feat_for_5th_level#wizard"
+- add: "ability:flash_of_insight#wizard_scroll_scholar"
+  remove:
+  - "ability:the_normal_addition_of_a_new_4th_level_spell_slot_to_the_characters_spells_per_day___from_this_point_on_the_wizard_has_one_fewer_4th_level_spell_slot_than_other_wizards#wizard"
+features:
+- id: "ability:diligent_student#wizard_scroll_scholar"
+  name: "Diligent Student"
+  label: null
+  type: null
+  description: "At 1st level, a scroll scholar chooses one Knowledge skill. This becomes\
+    \ a class skill if it is not already one. The scroll scholar adds half her class\
+    \ level to all Knowledge checks of this type (minimum 1). At 5th level and every\
+    \ five levels thereafter, a scroll scholar chooses 1 additional Knowledge skill\
+    \ to receive this bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+- id: "ability:secrets_revealed#wizard_scroll_scholar"
+  name: "Secrets Revealed"
+  label: null
+  type: null
+  description: "At 5th level, a scroll scholar gains the ability to cast comprehend\
+    \ languages and identify as spell-like abilities. Her caster level is equal to\
+    \ her character level in whatever class she took the scroll scholar archetype\
+    \ for. She can cast these spells once per day each at 5th level, twice per day\
+    \ each at 7th level, and three times per day each at 9th level. At 11th level,\
+    \ one of these spell-like abilities (scholar's choice) becomes a constant spell-like\
+    \ ability, and at 13th level, the second one becomes a constant spell-like ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+- id: "ability:flash_of_insight#wizard_scroll_scholar"
+  name: "Flash of Insight"
+  label: null
+  type: null
+  description: "At 10th level, once per day, a scroll scholar can gain a +5 bonus\
+    \ on a single attack roll, caster level check, or saving throw as an immediate\
+    \ action. This decision must be made before the results of the roll are known,\
+    \ but can be made after the die is rolled. This ability can be used twice per\
+    \ day at 15th level, and 3 times per day at 20th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"

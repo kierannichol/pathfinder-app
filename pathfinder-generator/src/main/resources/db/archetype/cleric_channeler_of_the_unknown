@@ -1,0 +1,97 @@
+id: "class:cleric#channeler_of_the_unknown"
+name: "Channeler of the Unknown"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#cleric_channeler_of_the_unknown"
+  remove:
+  - "ability:the_clerics_weapon#cleric"
+  - "ability:armor_proficiency#cleric"
+- add: "ability:spells#cleric_channeler_of_the_unknown"
+  remove:
+  - "ability:the_clerics_spells#cleric"
+- add: "ability:unknown_aura#cleric_channeler_of_the_unknown"
+  remove:
+  - "ability:the_clerics_aura#cleric"
+- add: "ability:channel_entropy#cleric_channeler_of_the_unknown"
+  remove:
+  - "ability:channel_energy#cleric"
+- add: "ability:power_of_the_unknown#cleric_channeler_of_the_unknown"
+  remove:
+  - "ability:the_clerics_domains#cleric"
+- add: "ability:spontaneous_casting#cleric_channeler_of_the_unknown"
+  remove:
+  - "ability:spontaneous_casting#cleric"
+features:
+- id: "ability:weapon_and_armor_proficiency#cleric_channeler_of_the_unknown"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A channeler of the unknown loses proficiency with her deity's favored\
+    \ weapon. She instead gains proficiency with one martial or exotic weapon, chosen\
+    \ when she first takes this archetype, which thereafter effectively functions\
+    \ as her holy or unholy symbol for the purposes of class abilities and spellcasting.\
+    \ The weapon chosen cannot be one associated with her former deity.\nOnce she\
+    \ makes this choice, she can't later change it."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:spells#cleric_channeler_of_the_unknown"
+  name: "Spells"
+  label: null
+  type: null
+  description: "A channeler of the unknown has one fewer spell slot per spell level\
+    \ in which she can prepare spells than normal. She is no longer restricted by\
+    \ alignment descriptors, and she gains access to all spells on the cleric spell\
+    \ list, even spells her alignment would normally prohibit."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:unknown_aura#cleric_channeler_of_the_unknown"
+  name: "Unknown Aura"
+  label: null
+  type: null
+  description: "A channeler of the unknown never radiates an alignment aura, as if\
+    \ under the effect of a permanent undetectable alignment spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:channel_entropy#cleric_channeler_of_the_unknown"
+  name: "Channel Entropy"
+  label: null
+  type: null
+  description: "A channeler of the unknown can channel entropy as a cleric channels\
+    \ negative or positive energy, releasing a wave of twisting void that harms creatures\
+    \ in the area of effect. The amount of damage dealt is equal to that an evil cleric\
+    \ of her level would deal by channeling negative energy, except it affects living,\
+    \ unliving, and undead creatures alike. This functions in all other ways as a\
+    \ cleric's channel energy class feature, including benefiting from feats that\
+    \ affect channel energy (such as Selective Channeling)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:power_of_the_unknown#cleric_channeler_of_the_unknown"
+  name: "Power of the Unknown"
+  label: null
+  type: null
+  description: "A channeler of the unknown has lost the benefit of the domains granted\
+    \ by her deity, but the unknown entity that answers her supplications instead\
+    \ grants her the benefits of one domain from the following list: Darkness, Destruction,\
+    \ Luck, Madness, or Void. Instead of a single domain spell slot, the channeler\
+    \ of the unknown gains two domain spell slots per spell level she can cast. A\
+    \ channeler of the unknown cannot select a subdomain in place of the domain available\
+    \ to her."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:spontaneous_casting#cleric_channeler_of_the_unknown"
+  name: "Spontaneous Casting"
+  label: null
+  type: null
+  description: "Instead of converting prepared spells into cure or inflict spells,\
+    \ a channeler of the unknown can channel stored spell energy into her domain spells.\n\
+    She can lose a prepared spell, including a domain spell, to spontaneously cast\
+    \ a domain spell of the same spell level or lower."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+source: "Pathfinder Player Companion: Antihero's Handbook"

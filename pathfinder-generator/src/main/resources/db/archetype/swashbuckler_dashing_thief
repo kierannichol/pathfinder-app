@@ -1,0 +1,90 @@
+id: "class:swashbuckler#dashing_thief"
+name: "Dashing Thief"
+description: ""
+modifications:
+- add: "ability:bold_thief#swashbuckler_dashing_thief"
+  remove:
+  - "ability:swashbucklers_edge_deeds#swashbuckler"
+  - "ability:the_swashbucklers_class_skills#swashbuckler"
+  - "ability:the_derring_do#swashbuckler"
+- add: "ability:thiefs_confidence#swashbuckler_dashing_thief"
+  remove:
+  - "ability:panache#swashbuckler"
+  - "ability:swashbucklers_ability_to_regain_panache_from_a_killing_blow#swashbuckler"
+- add: "ability:rogue_talents#swashbuckler_dashing_thief"
+  remove:
+  - "ability:the_swashbucklers_bonus_feats#swashbuckler"
+- add: "ability:dazing_charm_deed#swashbuckler_dashing_thief"
+  remove:
+  - "ability:the_menacing_swordplay_deed#swashbuckler"
+- add: "ability:swaying_charm_deed#swashbuckler_dashing_thief"
+  remove:
+  - "ability:the_dizzying_defense_deed#swashbuckler"
+features:
+- id: "ability:bold_thief#swashbuckler_dashing_thief"
+  name: "Bold Thief"
+  label: null
+  type: null
+  description: "A dashing thief fulfills the Council's larcenous goals with style.\
+    \ Her derring-do and swashbuckler's edge deeds apply to Disable Device and Sleight\
+    \ of Hand, but not to Fly and Ride. She adds Disable Device to her list of class\
+    \ skills, but does not have Fly or Ride as class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:thiefs_confidence#swashbuckler_dashing_thief"
+  name: "Thief's Confidence"
+  label: null
+  type: null
+  description: "A dashing thief's panache is fueled by bold acts of thievery. Whenever\
+    \ a dashing thief uses the steal combat maneuver to steal an object worth at least\
+    \ 100 gp x her class level from an opponent, she regains 1 panache point. She\
+    \ cannot regain panache in this way from a given opponent more than once per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:rogue_talents#swashbuckler_dashing_thief"
+  name: "Rogue Talents"
+  label: null
+  type: null
+  description: "Council training grants a dashing thief numerous opportunities to\
+    \ learn trade secrets from fellow scoundrels. At 4th level and every 4 levels\
+    \ thereafter, a dashing thief gains a rogue talent, treating her class level as\
+    \ her rogue level when determining the talents' benefits. Starting at 12th level,\
+    \ the dashing thief can choose advanced rogue talents."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:dazing_charm_deed#swashbuckler_dashing_thief"
+  name: "Dazing Charm Deed"
+  label: null
+  type: null
+  description: "A dashing thief takes foes aback with her forwardness, shocking them\
+    \ into submission long enough to rush past or stage a getaway. At 3rd level, as\
+    \ a free action when she successfully feints against a foe, she can spend 1 panache\
+    \ point to pull the enemy into a quick kiss (or similar gesture).\nThe target\
+    \ is dazed for 1 round unless it succeeds at a Will save (DC = 10 + half the dashing\
+    \ thief's class level + her Charisma modifier). A creature dazed this way is immune\
+    \ to that dashing thief's dazing charm deed for 24 hours. Whether or not a creature\
+    \ could potentially be affected by a dazing charm deed is ultimately subject to\
+    \ GM adjudication. As a general rule, however, it works on creatures of the dashing\
+    \ thief's creature type, or on those of a different type but who share significant\
+    \ thematic similarities (for example, a human dashing thief could use her dazing\
+    \ charm deed on any humanoid, but also potentially on creatures as diverse as\
+    \ dryads, tieflings, or even centaurs or sphinxes)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:swaying_charm_deed#swashbuckler_dashing_thief"
+  name: "Swaying Charm Deed"
+  label: null
+  type: null
+  description: "A dashing thief eventually becomes truly irresistible. At 15th level,\
+    \ when a dashing thief successfully dazes a creature using her dazing charm deed,\
+    \ she can instead charm the target for 1 day (as per charm monster). Only one\
+    \ creature can be charmed this way at a time; if the dashing thief charms another\
+    \ creature this way, the first charm effect immediately ends."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

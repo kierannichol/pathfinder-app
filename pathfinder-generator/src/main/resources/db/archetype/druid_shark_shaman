@@ -1,0 +1,35 @@
+id: "class:druid#shark_shaman"
+name: "Shark Shaman"
+description: ""
+modifications:
+- add: "ability:totemic_summons#druid_shark_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:bonus_feat#druid_shark_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totemic_summons#druid_shark_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, a shark shaman may use summon nature's ally I to summon\
+    \ a stingray and summon nature's ally II to summon a manta ray. She may cast summon\
+    \ nature's ally as a standard action when summoning rays and sharks, and summoned\
+    \ rays and sharks gain a number of temporary hit points equal to her druid level.\
+    \ This ability otherwise functions as the dragon shaman's totemic summons ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:bonus_feat#druid_shark_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every 4 levels thereafter, a shark shaman gains one\
+    \ of the following bonus feats: Bleeding Critical, Improved Initiative, Lightning\
+    \ Reflexes, Self-Sufficient, or Skill Focus (Swim). She must meet prerequisites\
+    \ for these bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

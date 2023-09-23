@@ -1,0 +1,48 @@
+{
+  "id": "class:summoner#spirit_summoner",
+  "name": "Spirit Summoner",
+  "tags": ["archetype", "summoner"],
+  "enabledFormula": "!@modifies:ability:aspect_makers_call_merge_forms_and_transposition#summoner AND !@modifies:ability:summon_monster#summoner AND !@modifies:ability:the_eidolon_class_feature#summoner",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aspect_makers_call_merge_forms_and_transposition#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:summon_monster#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_eidolon_class_feature#summoner",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:spirit#summoner_spirit_summoner",
+          "conditionFormula": "@class:summoner\u003e\u003d1"
+        }, {
+          "featureId": "ability:eidolon#summoner_spirit_summoner",
+          "conditionFormula": "@class:summoner\u003e\u003d1"
+        }, {
+          "featureId": "ability:hex#summoner_spirit_summoner",
+          "conditionFormula": "@class:summoner\u003e\u003d6"
+        }],
+        "unlinks": [{
+          "featureId": "ability:summon_monster#summoner"
+        }, {
+          "featureId": "ability:the_eidolon_class_feature#summoner"
+        }, {
+          "featureId": "ability:aspect_makers_call_merge_forms_and_transposition#summoner"
+        }]
+      }]
+    }
+  }
+}

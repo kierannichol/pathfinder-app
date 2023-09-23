@@ -1,0 +1,26 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (harmless)"
+spell_resistance: "yes"
+id: "spell:hidden_speech"
+name: "Hidden Speech"
+description: "You greatly enhance the ability of the subjects to communicate hidden\
+  \ messages to each other. Each target gains a +10 competence bonus on Bluff checks\
+  \ to send secret message to other recipients. Others using opposed Sense Motive\
+  \ checks to decipher these messages receive a –5 penalty. All subjects affected\
+  \ by the spell must share a language to be able to pass messages."
+prerequisites: ""
+components: "V, S, M/DF (a cipher written on a piece of parchment)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "you plus one creature/level, no two of which can be more than 30 ft. apart"
+duration: "10 minutes/level (D)"
+school: "transmutation [language-dependent]"
+levels:
+- class_id: "class:bard"
+  level: 2
+- class_id: "class:inquisitor"
+  level: 3
+- class_id: "class:skald"
+  level: 2
+- class_id: "class:witch"
+  level: 2
+source: "Advanced Player's Guide"

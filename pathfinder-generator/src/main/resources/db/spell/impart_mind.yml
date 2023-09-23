@@ -1,0 +1,32 @@
+casting_time: "2 rounds"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:impart_mind"
+name: "Impart Mind"
+description: "This spell grants the target magic item temporary intelligence by siphoning\
+  \ off a tiny portion of your own mind to infuse the object. Only permanent magic\
+  \ items may be enhanced by this spell--one-use items and charged items cannot be\
+  \ affected by impart mind. Intelligent magic items cannot be affected by impart\
+  \ mind."
+prerequisites: ""
+components: "V, S, M (diamond dust worth at least 1,000 gp)"
+range: "touch"
+targets: "permanent nonintelligent magic item touched"
+duration: "1 hour/level"
+school: "transmutation"
+levels:
+- class_id: "class:arcanist"
+  level: 6
+- class_id: "class:cleric"
+  level: 6
+- class_id: "class:magus"
+  level: 5
+- class_id: "class:oracle"
+  level: 6
+- class_id: "class:sorcerer"
+  level: 6
+- class_id: "class:warpriest"
+  level: 6
+- class_id: "class:wizard"
+  level: 6
+source: "Inner Sea Magic"

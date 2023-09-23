@@ -1,0 +1,38 @@
+casting_time: "1 standard action"
+saving_throw: "none"
+spell_resistance: "yes (see text)"
+id: "spell:fiery_runes"
+name: "Fiery Runes"
+description: "You charge a weapon with a magic rune of fire. When the wielder of the\
+  \ weapon successfully strikes a foe in melee with the weapon, the wielder can discharge\
+  \ the rune as a swift action to deal 1d4+1 points of fire damage to the target.\
+  \ This damage isn't multiplied on a critical hit. If the target has spell resistance,\
+  \ you attempt a caster level check (1d20 + caster level) against that spell resistance\
+  \ when the rune is discharged. If the rune is successfully resisted, the spell is\
+  \ dispelled; otherwise, the rune deals damage normally."
+prerequisites: ""
+components: "V, S"
+range: "touch"
+targets: "melee weapon touched"
+duration: "1 minute/level or until discharged (see text)"
+school: "evocation [fire]"
+levels:
+- class_id: "class:alchemist"
+  level: 2
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:bloodrager"
+  level: 2
+- class_id: "class:druid"
+  level: 2
+- class_id: "class:hunter"
+  level: 2
+- class_id: "class:investigator"
+  level: 2
+- class_id: "class:magus"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Melee Tactics Toolbox"

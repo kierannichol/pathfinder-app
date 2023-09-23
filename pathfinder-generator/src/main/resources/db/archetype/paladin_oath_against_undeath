@@ -1,0 +1,66 @@
+id: "class:paladin#oath_against_undeath"
+name: "Oath Against Undeath"
+description: ""
+modifications:
+- add: "ability:detect_undead#paladin_oath_against_undeath"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:ghost_touch_aura#paladin_oath_against_undeath"
+  remove:
+  - "ability:the_paladins_3rd_level#paladin"
+  - "ability:9th_level_mercies#paladin"
+- add: "ability:aura_of_life#paladin_oath_against_undeath"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+- add: "ability:superior_channeler#paladin_oath_against_undeath"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:detect_undead#paladin_oath_against_undeath"
+  name: "Detect Undead"
+  label: null
+  type: null
+  description: "This ability works like the standard paladin ability to detect evil,\
+    \ except as detect undead instead of detect evil."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+- id: "ability:ghost_touch_aura#paladin_oath_against_undeath"
+  name: "Ghost Touch Aura"
+  label: null
+  type: null
+  description: "At 3rd level, the paladin's armor is treated as if it had the ghost\
+    \ touch armor property. This does not affect the cost or effect of any other abilities\
+    \ of the armor. At 9th level, this ability also applies to the paladin's shield.\n\
+    This ability replaces the paladin's 3rd-level and 9th-level mercies."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+- id: "ability:aura_of_life#paladin_oath_against_undeath"
+  name: "Aura of Life"
+  label: null
+  type: null
+  description: "At 8th level, the paladin gains a +4 morale bonus on saves against\
+    \ attacks that grant negative levels and saves to overcome negative levels. Each\
+    \ ally within 10 feet of her gains a +2 morale bonus on these saves.\nThis ability\
+    \ functions only while the paladin is conscious, not if she is unconscious or\
+    \ dead.\nThis ability replaces aura of resolve."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+- id: "ability:superior_channeler#paladin_oath_against_undeath"
+  name: "Superior Channeler"
+  label: null
+  type: null
+  description: "At 11th level, a paladin can channel positive energy to harm undead\
+    \ by expending a single usage of her lay on hands ability instead of two.\nThis\
+    \ ability replaces aura of justice."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+  \ Magic"

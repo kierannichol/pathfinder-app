@@ -1,0 +1,111 @@
+id: "class:magus#esoteric"
+name: "Esoteric"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#magus_esoteric"
+  remove:
+  - "ability:armor_proficiency#magus"
+  - "ability:the_maguss_weapon#magus"
+- add: "ability:arcane_pool#magus_esoteric"
+  remove:
+  - "ability:arcane_pool#magus"
+- add: "ability:unarmed_spellstrike#magus_esoteric"
+  remove:
+  - "ability:spellstrike#magus"
+- add: "ability:ki_arcana#magus_esoteric"
+  remove:
+  - "ability:spell_recall#magus"
+- add: "ability:tattooed_spell#magus_esoteric"
+  remove:
+  - "ability:bonus_feats#magus"
+- add: "ability:ac_bonus#magus_esoteric"
+  remove:
+  - "ability:medium_armor#magus"
+  - "ability:heavy_armor#magus"
+- add: "ability:improved_tattooed_spell#magus_esoteric"
+  remove:
+  - "ability:improved_spell_recall#magus"
+features:
+- id: "ability:weapon_and_armor_proficiency#magus_esoteric"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "An esoteric is proficient with simple weapons only. This alters the\
+    \ magus's weapon and armor proficiency.\nDiminished Spellcasting: An esoteric\
+    \ has one fewer spell slot of each level than a regular magus. If this reduces\
+    \ his number of spell slots of a particular level to zero, he can cast spells\
+    \ of that level only if his Intelligence allows bonus spells of that level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:arcane_pool#magus_esoteric"
+  name: "Arcane Pool"
+  label: null
+  type: null
+  description: "At 1st level, an esoteric can use his arcane pool to enhance his unarmed\
+    \ strikes as if they were manufactured weapons. At 5th level, he can use these\
+    \ bonuses to add any of the following weapon special abilities to his weapons\
+    \ or unarmed strikes: defending, flaming, flaming burst, frost, icy burst, impact,\
+    \ shock, shocking burst, speed, or thundering.\nThis ability alters arcane pool."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:unarmed_spellstrike#magus_esoteric"
+  name: "Unarmed Spellstrike"
+  label: null
+  type: null
+  description: "At 1st level, an esoteric gains the magus spellstrike class feature.\
+    \ However, an esoteric can deliver spells with spellstrike only with his unarmed\
+    \ strikes."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:ki_arcana#magus_esoteric"
+  name: "Ki Arcana"
+  label: null
+  type: null
+  description: "At 4th level, an esoteric's arcane pool is also considered a ki pool\
+    \ for the purposes of meeting feat and ability requirements. Points from an esoteric's\
+    \ arcane pool can be used for abilities that normally require ki. If an esoteric\
+    \ gains a ki pool, he can use points from his arcane pool and ki pool interchangeably\
+    \ (though not special points such as drunken ki)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:tattooed_spell#magus_esoteric"
+  name: "Tattooed Spell"
+  label: null
+  type: null
+  description: "At 5th level and every 6 levels thereafter, an esoteric can permanently\
+    \ tattoo one spell from his magus spellbook onto his body; the first tattooed\
+    \ spell must be of 2nd level or lower, the second must be of 4th level or lower,\
+    \ and the last can be of any level. The spell that is tattooed must not have an\
+    \ expensive material component or a focus. The esoteric can prepare any tattooed\
+    \ spell without needing his spellbook. Additionally, he can cast each of his tattooed\
+    \ spells as a spell-like ability once per day. When the esoteric uses these spell-like\
+    \ abilities, the tattoo associated with the spell-like ability glows as light\
+    \ for a number of rounds equal to the spell's level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:ac_bonus#magus_esoteric"
+  name: "AC Bonus"
+  label: null
+  type: null
+  description: "At 7th level when an esoteric wears light or no armor, he gains a\
+    \ +1 dodge bonus to AC and CMD.\nThis bonus increases by 1 at 13th level. He loses\
+    \ these bonuses while immobilized or helpless, or while wearing medium or heavy\
+    \ armor, using a shield, or carrying a medium or heavy load."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:improved_tattooed_spell#magus_esoteric"
+  name: "Improved Tattooed Spell"
+  label: null
+  type: null
+  description: "At 11th level, an esoteric can use each of his spell-like abilities\
+    \ from tattooed spell one additional time per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+source: "Pathfinder Roleplaying Game Occult Adventures"

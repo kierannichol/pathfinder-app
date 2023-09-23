@@ -1,0 +1,25 @@
+casting_time: "1 standard action"
+saving_throw: "none"
+spell_resistance: "yes"
+id: "spell:power_word_blind"
+name: "Power Word Blind"
+description: "You utter a single word of power that causes a creature to become blinded,\
+  \ whether the creature can hear the word or not. The duration of the spell depends\
+  \ on the target's current hit point total. Any creature that currently has 201 or\
+  \ more hit points is unaffected."
+prerequisites: ""
+components: "V"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature with 200 hp or less"
+duration: "see text"
+school: "enchantment (compulsion) [mind-affecting]"
+levels:
+- class_id: "class:arcanist"
+  level: 7
+- class_id: "class:sorcerer"
+  level: 7
+- class_id: "class:witch"
+  level: 7
+- class_id: "class:wizard"
+  level: 7
+source: "PRPG Core Rulebook"

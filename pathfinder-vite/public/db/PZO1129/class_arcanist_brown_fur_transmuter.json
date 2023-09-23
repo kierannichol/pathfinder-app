@@ -1,0 +1,49 @@
+{
+  "id": "class:arcanist#brown_fur_transmuter",
+  "name": "Brown-Fur Transmuter",
+  "tags": ["archetype", "arcanist"],
+  "enabledFormula": "!@modifies:ability:the_arcanist_exploit_gained_at_9th_level#arcanist AND !@modifies:ability:magical_supremacy#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_3rd_level#arcanist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Frequently called “brown-furs,\"these transmutation-focused arcanists are known for transforming themselves into animals. What few realize is that these specialized arcanists excel at turning themselves--and others--into all kinds of creatures."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_9th_level#arcanist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:magical_supremacy#arcanist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_3rd_level#arcanist",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:powerful_change#arcanist_brown_fur_transmuter",
+          "conditionFormula": "@class:arcanist\u003e\u003d3"
+        }, {
+          "featureId": "ability:share_transmutation#arcanist_brown_fur_transmuter",
+          "conditionFormula": "@class:arcanist\u003e\u003d9"
+        }, {
+          "featureId": "ability:transmutation_supremacy#arcanist_brown_fur_transmuter",
+          "conditionFormula": "@class:arcanist\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+        }, {
+          "featureId": "ability:the_arcanist_exploit_gained_at_9th_level#arcanist"
+        }, {
+          "featureId": "ability:magical_supremacy#arcanist"
+        }]
+      }]
+    }
+  }
+}

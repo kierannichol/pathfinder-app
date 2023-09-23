@@ -1,0 +1,35 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates"
+spell_resistance: "yes"
+id: "spell:languid_venom"
+name: "Languid Venom"
+description: "You greatly extend the time it takes for the poison you touch to take\
+  \ effect, giving that poison an onset time up to 1 hour per caster level. (You touch\
+  \ the poison's container, so you don't risk exposing yourself to a contact poison.)\
+  \ The target doesn't attempt a saving throw when initially exposed to the languid\
+  \ venom, but instead saves at the end of the poison's onset time. If the poison\
+  \ is neutralized or otherwise cured prior to the end of its onset time, it is rendered\
+  \ harmless. Failing saves against multiple doses of languid venom have the normal\
+  \ cumulative effect for poisons (Pathfinder RPG Core Rulebook 558)."
+prerequisites: ""
+components: "V, S, M (herbs used in antitoxin worth 25 gp)"
+range: "touch"
+targets: "one dose of poison or one venomous creature"
+duration: "permanent until discharged (D)"
+school: "necromancy [poison]"
+levels:
+- class_id: "class:alchemist"
+  level: 2
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:investigator"
+  level: 2
+- class_id: "class:shaman"
+  level: 2
+- class_id: "class:skald"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Ultimate Intrigue"

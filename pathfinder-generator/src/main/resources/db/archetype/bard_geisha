@@ -1,0 +1,34 @@
+id: "class:bard#geisha"
+name: "Geisha"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#bard_geisha"
+  remove:
+  - "ability:weapon_proficiencies#bard"
+  - "ability:the_normal_bard_armor#bard"
+- add: "ability:geisha_knowledge#bard_geisha"
+  remove:
+  - "ability:bardic_knowledge#bard"
+features:
+- id: "ability:weapon_and_armor_proficiency#bard_geisha"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Geisha are proficient in all simple weapons and one monk weapon. Geisha\
+    \ are not proficient in any armor or shield; unlike bards, geisha are subject\
+    \ to arcane spell failure even when casting in light armor or when using a shield."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:geisha_knowledge#bard_geisha"
+  name: "Geisha Knowledge"
+  label: null
+  type: null
+  description: "A geisha adds half her class level (minimum 1) on Craft (calligraphy)\
+    \ checks, Diplomacy checks, Knowledge (nobility) checks, and one type of Perform\
+    \ check (act, dance, oratory, percussion, string instruments, or sing); she may\
+    \ make checks with these skills untrained.\nThis replaces bardic knowledge.\n"
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

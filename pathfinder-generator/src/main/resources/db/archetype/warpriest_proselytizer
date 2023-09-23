@@ -1,0 +1,80 @@
+id: "class:warpriest#proselytizer"
+name: "Proselytizer"
+description: "The proselytizer is the perfect militant missionary. He seeks to win\
+  \ the hearts and lay claim to the souls of those he meets, and--failing that--spreads\
+  \ the word of his deity at the edge of the sword."
+modifications:
+- add: "ability:weapon_and_armor_proficiencies#warpriest_proselytizer"
+  remove:
+  - "ability:armor_proficiencies#warpriest"
+  - "ability:the_warpriests_weapon#warpriest"
+- add: "ability:emotional_appeal#warpriest_proselytizer"
+  remove:
+  - "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+  - "ability:sacred_armor#warpriest"
+- add: "ability:sacred_subdual#warpriest_proselytizer"
+  remove:
+  - "ability:sacred_weapon#warpriest"
+- add: "ability:blessing_of_conversion#warpriest_proselytizer"
+  remove:
+  - "ability:blessings#warpriest"
+- add: "ability:voice_of_the_faithful#warpriest_proselytizer"
+  remove:
+  - "ability:blessings_major#warpriest"
+features:
+- id: "ability:weapon_and_armor_proficiencies#warpriest_proselytizer"
+  name: "Weapon and Armor Proficiencies"
+  label: null
+  type: null
+  description: "A proselytizer does not gain proficiency with heavy armor or with\
+    \ all martial weapons, though he does gain proficiency in his deity's favored\
+    \ weapon. If his deity's favored weapon is unarmed strike, he gains Improved Unarmed\
+    \ Strike as a bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:emotional_appeal#warpriest_proselytizer"
+  name: "Emotional Appeal"
+  label: null
+  type: null
+  description: "A proselytizer has great power over the emotions of others, wielding\
+    \ his voice like a weapon to pierce the heart of listeners and bring them closer\
+    \ to communion with his deity's power. The warpriest adds the following spells\
+    \ to his warpriest spell list at the indicated levels. He casts these as divine\
+    \ warpriest spells: 1st--charm person, rally point, wrath; 2nd--castigate, heroism,\
+    \ suggestion; 3rd--charm monster, geas (lesser); 4th--forced repentance, serenity;\
+    \ 5th--castigate (mass), suggestion (mass); 6th--antipathy, sympathy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:sacred_subdual#warpriest_proselytizer"
+  name: "Sacred Subdual"
+  label: null
+  type: null
+  description: "When a proselytizer uses his sacred weapon damage in place of his\
+    \ normal weapon damage, all damage he deals with that weapon is nonlethal damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:blessing_of_conversion#warpriest_proselytizer"
+  name: "Blessing of Conversion"
+  label: null
+  type: null
+  description: "The proselytizer always gains the conversion bonus upon converting\
+    \ an NPC, rather than only the first time he does so each level. The bonuses overlap\
+    \ their durations, and do not stack. The proselytizer does not gain access to\
+    \ the minor blessings granted by his blessing class feature until 3rd level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:voice_of_the_faithful#warpriest_proselytizer"
+  name: "Voice of the Faithful"
+  label: null
+  type: null
+  description: "A proselytizer of 10th level or higher can expend a use of his major\
+    \ blessing to be able to speak to and understand any creature with a language\
+    \ for 1 hour."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+source: "Pathfinder Player Companion: Cohorts and Companions"

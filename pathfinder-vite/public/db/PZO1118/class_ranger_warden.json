@@ -1,0 +1,69 @@
+{
+  "id": "class:ranger#warden",
+  "name": "Warden",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger AND !@modifies:ability:the_rangers_fifth_favored_enemy_and_master_hunter#ranger AND !@modifies:ability:all_combat_style_feats#ranger AND !@modifies:ability:the_rangers_first_favored_enemy_ability#ranger AND !@modifies:ability:the_rangers_second_third_and_fourth_favored_enemies#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "All rangers have a bond with the wilderness, but the warden may have the strongest. This protector sits guard in the middle of the wilderness, keeping a lookout for any dangers that might spill from the deeper wilderness beyond, and protecting civilization from the savagery of nature--and vice versa. His long weeks, months, and sometimes years of isolation cause him to “hear\"what the land is saying. Not all are crazy."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rangers_fifth_favored_enemy_and_master_hunter#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:all_combat_style_feats#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rangers_first_favored_enemy_ability#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rangers_second_third_and_fourth_favored_enemies#ranger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:master_of_terrain#ranger_warden",
+          "conditionFormula": "@class:ranger\u003e\u003d1"
+        }, {
+          "featureId": "ability:live_in_comfort#ranger_warden",
+          "conditionFormula": "@class:ranger\u003e\u003d2"
+        }, {
+          "featureId": "ability:terrain_bond#ranger_warden",
+          "conditionFormula": "@class:ranger\u003e\u003d4"
+        }, {
+          "featureId": "ability:able_explorer#ranger_warden",
+          "conditionFormula": "@class:ranger\u003e\u003d5"
+        }, {
+          "featureId": "ability:wilderness_whispers#ranger_warden",
+          "conditionFormula": "@class:ranger\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_rangers_first_favored_enemy_ability#ranger"
+        }, {
+          "featureId": "ability:all_combat_style_feats#ranger"
+        }, {
+          "featureId": "ability:hunters_bond#ranger"
+        }, {
+          "featureId": "ability:the_rangers_second_third_and_fourth_favored_enemies#ranger"
+        }, {
+          "featureId": "ability:the_rangers_fifth_favored_enemy_and_master_hunter#ranger"
+        }]
+      }]
+    }
+  }
+}

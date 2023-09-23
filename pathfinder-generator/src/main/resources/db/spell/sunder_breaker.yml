@@ -1,0 +1,27 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (harmless) and see text"
+spell_resistance: "yes (harmless) and see text"
+id: "spell:sunder_breaker"
+name: "Sunder Breaker"
+description: "You place an invisible ward upon the target. The next time a creature\
+  \ succeeds at a sunder combat maneuver against the target, the attacker's weapon\
+  \ takes 1d6 points of damage per caster level (maximum 10d6). If the attacker used\
+  \ a natural weapon for the sunder, the attacker takes half this damage. Spell resistance\
+  \ applies to this damage. The attacker can attempt a Fortitude save to halve this\
+  \ damage."
+prerequisites: ""
+components: "V, S"
+range: "touch"
+targets: "creature touched"
+duration: "1 minute/level (D) or until discharged"
+school: "abjuration [force]"
+levels:
+- class_id: "class:arcanist"
+  level: 1
+- class_id: "class:magus"
+  level: 1
+- class_id: "class:sorcerer"
+  level: 1
+- class_id: "class:wizard"
+  level: 1
+source: "Advanced Class Guide"

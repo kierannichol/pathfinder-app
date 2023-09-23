@@ -1,0 +1,29 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates (object)"
+spell_resistance: "yes (object)"
+id: "spell:kinetic_reverberation"
+name: "Kinetic Reverberation"
+description: "This spell converts the momentum and force from melee attacks made against\
+  \ the target of the spell, reflecting them back upon the attacker's weapon. After\
+  \ making a successful melee attack against the target, an attacker must make a Fortitude\
+  \ saving throw for the weapon used. If the weapon fails the save, it takes damage\
+  \ equal to the damage rolled against the target. Creatures using natural attacks\
+  \ or unarmed strikes are unaffected by this spell."
+prerequisites: ""
+components: "V, S, M (rubber tree sap)"
+range: "touch"
+targets: "creature touched"
+duration: "1 round/level"
+school: "transmutation"
+levels:
+- class_id: "class:alchemist"
+  level: 2
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:investigator"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Ultimate Combat"

@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#survivalist",
+  "name": "Survivalist",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "The survivalist focuses her talents on surviving harsh and unforgiving conditions that would kill a lesser rogue. Whether in blazing deserts or frigid arctic wastes--or simply the cold, hard reality of the streets--the survivalist uses her training to both ensure her own success and provide for the safety of her allies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:hardy#rogue_survivalist",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }, {
+          "featureId": "ability:endure_elements#rogue_survivalist",
+          "conditionFormula": "@class:rogue\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }]
+    }
+  }
+}

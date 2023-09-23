@@ -1,0 +1,32 @@
+id: "class:bard#thundercaller_prg"
+name: "Thundercaller (PRG:UW)"
+description: "Thundercallers bear the knowledge of the ancients, wielding it like\
+  \ a weapon to protect the land for which they care so deeply. Their voices ring\
+  \ like thunder, calling the sky's wrath down upon their enemies and summoning furious\
+  \ rage to bolster their allies."
+modifications:
+- add: "ability:bound_to_the_land#bard_thundercaller_prg"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:bardic_performance#bard_thundercaller_prg"
+  remove:
+  - "ability:inspire_competence#bard"
+features:
+- id: "ability:bound_to_the_land#bard_thundercaller_prg"
+  name: "Bound to the Land"
+  label: null
+  type: null
+  description: "A thundercaller gains a bonus equal to half her level on Handle Animal\
+    \ checks, Knowledge (nature) checks, and Survival checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:bardic_performance#bard_thundercaller_prg"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A thundercaller gains the following types of bardic performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

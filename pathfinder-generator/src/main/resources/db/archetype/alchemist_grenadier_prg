@@ -1,0 +1,88 @@
+id: "class:alchemist#grenadier_prg"
+name: "Grenadier (PRG:MC)"
+description: ""
+modifications:
+- add: "ability:martial_weapon_proficiency#alchemist_grenadier_prg"
+  remove:
+  - "ability:brew_potion#alchemist"
+- add: "ability:alchemical_weapon#alchemist_grenadier_prg"
+  remove:
+  - "ability:poison_resistance#alchemist"
+- add: "ability:precise_bombs#alchemist_grenadier_prg"
+  remove:
+  - "ability:poison_use#alchemist"
+- add: "ability:directed_blast#alchemist_grenadier_prg"
+  remove:
+  - "ability:swift_poisoning#alchemist"
+- add: "ability:staggering_blast#alchemist_grenadier_prg"
+  remove:
+  - "ability:poison_immunity#alchemist"
+features:
+- id: "ability:martial_weapon_proficiency#alchemist_grenadier_prg"
+  name: "Martial Weapon Proficiency"
+  label: null
+  type: null
+  description: "At 1st level, a grenadier picks one martial weapon and becomes proficient\
+    \ in its use."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+- id: "ability:alchemical_weapon#alchemist_grenadier_prg"
+  name: "Alchemical Weapon"
+  label: null
+  type: null
+  description: "At 2nd level, a grenadier can infuse a weapon or piece of ammunition\
+    \ with a single harmful alchemical liquid or powder, such as alchemist's fire\
+    \ or sneezing powder, as a move action.\nThis action consumes the alchemical item,\
+    \ but transfers its effect to the weapon in question. The alchemical item takes\
+    \ full effect on the next creature struck by the weapon, but does not splash,\
+    \ spread, affect additional targets, or benefit from any other effects that specifically\
+    \ affect splash weapons. Any extra damage added is not doubled on a critical hit.\
+    \ The alchemical treatment causes no harm to the weapon treated, and wears off\
+    \ 1 minute after being applied if no blow is struck. Infusing a new alchemical\
+    \ item also removes the effect of any alchemical liquid or powder previously applied\
+    \ with this ability. At 6th level, a grenadier can use her alchemical weapon ability\
+    \ as a swift action. At 15th level, this ability becomes a free action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+- id: "ability:precise_bombs#alchemist_grenadier_prg"
+  name: "Precise Bombs"
+  label: null
+  type: null
+  description: "At 2nd level, a grenadier gains the precise bombs alchemist discovery\
+    \ as a bonus discovery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+- id: "ability:directed_blast#alchemist_grenadier_prg"
+  name: "Directed Blast"
+  label: null
+  type: null
+  description: "At 6th level, a grenadier can detonate a bomb so that it splashes\
+    \ in a 20-foot cone rather than affecting a radius. The cone starts at the alchemist\
+    \ and extends away from her in the direction she chooses. The alchemist designates\
+    \ one creature in the squares affected by the cone to be the target of the bomb\
+    \ and makes her attack roll against that creature; all other squares in the cone\
+    \ take splash damage. If the alchemist has the explosive bomb discovery and throws\
+    \ an explosive directed blast, the cone of splash damage is 30 feet long instead\
+    \ of 20 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+- id: "ability:staggering_blast#alchemist_grenadier_prg"
+  name: "Staggering Blast"
+  label: null
+  type: null
+  description: "At 10th level, a grenadier's bombs become particularly overwhelming\
+    \ when they explode.\nWhenever a grenadier confirms a critical hit with a bomb,\
+    \ the creature directly struck by that bomb is staggered for 1d4+1 rounds. A successful\
+    \ Fortitude saving throw (DC equals the bomb's Reflex save DC to avoid splash\
+    \ damage) reduces the duration to 1 round. The effects of this ability stack with\
+    \ a frost bomb's staggering effect, but not with the effects of the Staggering\
+    \ Critical feat. Additional critical hits with bombs add to any duration remaining\
+    \ from previous ones."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+source: "Pathfinder Roleplaying Game Monster Codex"

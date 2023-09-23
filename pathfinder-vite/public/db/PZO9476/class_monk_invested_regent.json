@@ -1,0 +1,46 @@
+{
+  "id": "class:monk#invested_regent",
+  "name": "Invested Regent",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:bonus_feat#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:investiture#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:investiture#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }, {
+          "featureId": "ability:investiture#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d6"
+        }, {
+          "featureId": "ability:investiture#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d10"
+        }, {
+          "featureId": "ability:investiture#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d14"
+        }, {
+          "featureId": "ability:investiture#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d18"
+        }, {
+          "featureId": "ability:vested_power#monk_invested_regent",
+          "conditionFormula": "@class:monk\u003e\u003d2"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bonus_feat#monk"
+        }]
+      }]
+    }
+  }
+}

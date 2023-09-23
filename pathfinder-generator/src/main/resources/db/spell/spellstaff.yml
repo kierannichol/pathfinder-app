@@ -1,0 +1,23 @@
+casting_time: "10 minutes"
+saving_throw: "Will negates (object)"
+spell_resistance: "yes (object)"
+id: "spell:spellstaff"
+name: "Spellstaff"
+description: "You store one spell that you can normally cast in a wooden quarterstaff.\
+  \ Only one such spell can be stored in a staff at a given time, and you cannot have\
+  \ more than one spellstaff at any given time. You can cast a spell stored within\
+  \ a staff just as though it were among those you had prepared, but it does not count\
+  \ against your normal allotment for a given day. You use up any applicable material\
+  \ components required to cast the spell when you store it in the spellstaff."
+prerequisites: ""
+components: "V, S, F (the staff that stores the spell)"
+range: "touch"
+targets: "wooden quarterstaff touched"
+duration: "permanent until discharged (D)"
+school: "transmutation"
+levels:
+- class_id: "class:druid"
+  level: 6
+- class_id: "class:hunter"
+  level: 6
+source: "PRPG Core Rulebook"

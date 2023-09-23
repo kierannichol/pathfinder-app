@@ -1,0 +1,51 @@
+id: "class:bard#songhealer"
+name: "Songhealer"
+description: ""
+modifications:
+- add: "ability:enhance_healing#bard_songhealer"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:bardic_performance#bard_songhealer"
+  remove:
+  - "ability:frightening_tune#bard"
+- add: "ability:funereal_ballad#bard_songhealer"
+  remove:
+  - "ability:deadly_performance#bard"
+features:
+- id: "ability:enhance_healing#bard_songhealer"
+  name: "Enhance Healing"
+  label: null
+  type: null
+  description: "A number of times per day equal to his Charisma modifier, a songhealer\
+    \ can cause any healing effect from a spell completion or spell trigger item to\
+    \ function at a caster level equal to his class level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:bardic_performance#bard_songhealer"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A songhealer gains the following type of bardic performance.\nHealing\
+    \ Performance (Su): A bard of 14th level or higher can use his performance to\
+    \ create an effect equivalent to heal on a living target (or harm on an undead\
+    \ target), using the bard's level as the caster level. Using this ability requires\
+    \ 5 rounds of continuous performance, and the target must be able to see and hear\
+    \ the bard throughout the performance. The healing performance relies on audible\
+    \ and visual components."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:funereal_ballad#bard_songhealer"
+  name: "Funereal Ballad"
+  label: null
+  type: null
+  description: "A bard of 20th level or higher can use his performance to create an\
+    \ effect equivalent to resurrection on a dead creature, using the bard's level\
+    \ as the caster level. Using this ability requires 20 rounds of continuous performance,\
+    \ and the target must be within 10 feet of the bard for the entire performance.\
+    \ Funereal ballad relies on audible and visual components."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

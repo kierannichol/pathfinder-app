@@ -1,0 +1,89 @@
+id: "class:ranger#galvanic_saboteur"
+name: "Galvanic Saboteur"
+description: "Some rangers develop special skills to combat robots and devious arcanists."
+modifications:
+- add: "ability:favored_enemy#ranger_galvanic_saboteur"
+  remove:
+  - "ability:favored_enemy#ranger"
+- add: "ability:reprogram#ranger_galvanic_saboteur"
+  remove:
+  - "ability:wild_empathy#ranger"
+- add: "ability:lucky_dodge#ranger_galvanic_saboteur"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:static_strike#ranger_galvanic_saboteur"
+  remove:
+  - "ability:camouflage#ranger"
+  - "ability:swift_tracker#ranger"
+- add: "ability:sensor_evasion#ranger_galvanic_saboteur"
+  remove:
+  - "ability:hide_in_plain_sight#ranger"
+features:
+- id: "ability:favored_enemy#ranger_galvanic_saboteur"
+  name: "Favored Enemy"
+  label: null
+  type: null
+  description: "At 1st level, a galvanic saboteur must select construct creatures\
+    \ as his first favored enemy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the River"
+- id: "ability:reprogram#ranger_galvanic_saboteur"
+  name: "Reprogram"
+  label: null
+  type: null
+  description: "At 1st level, a galvanic saboteur can improve the initial attitude\
+    \ of a mindless construct. This ability functions as wild empathy, except only\
+    \ against mindless constructs. The ranger can use this ability against constructs\
+    \ with an Intelligence score, but he takes a –4 penalty on the check."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the River"
+- id: "ability:lucky_dodge#ranger_galvanic_saboteur"
+  name: "Lucky Dodge"
+  label: null
+  type: null
+  description: "At 3rd level, a galvanic saboteur can dodge the precise attacks of\
+    \ even the most technologically advanced foes. The ranger gains a luck bonus to\
+    \ AC against attacks that target his touch AC as long as his opponent's type matches\
+    \ that of his first favored enemy. This luck bonus is equal to 1/2 the ranger's\
+    \ favored enemy bonus against that creature type. At 8th, 13th, and 18th levels,\
+    \ the ranger gains this luck bonus to AC against attacks that target touch his\
+    \ AC as long as his opponent's type matches his second, third, and fourth favored\
+    \ enemy, respectively. A galvanic saboteur's animal companion (if he chose one\
+    \ for his hunter's bond) also gains this luck bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the River"
+- id: "ability:static_strike#ranger_galvanic_saboteur"
+  name: "Static Strike"
+  label: null
+  type: null
+  description: "At 8th level, the galvanic saboteur has gathered enough parts and\
+    \ scrap from his constructed enemies that he can infuse some of his attacks with\
+    \ a bit of their alien energy. Once per day as a standard action, the ranger can\
+    \ make a static strike as a melee attack at his full base attack bonus. If the\
+    \ attack hits, it deals an additional 1d6 points of electricity damage and the\
+    \ ranger can make an additional attack at his full base attack bonus against a\
+    \ foe that is adjacent to the previous foe and still within his reach, as if he\
+    \ had Cleave, except he doesn't take a –2 penalty to his AC and the second attack\
+    \ deals an additional 2d6 points of electricity damage.\nAt 12th level, the ranger\
+    \ can continue to make attacks against adjacent creatures, as if he had Greater\
+    \ Cleave, with each hit increasing the amount of electricity damage dealt to the\
+    \ next foe in line.\nThe ranger can use this ability twice per day at 14th level\
+    \ and three times per day at 20th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the River"
+- id: "ability:sensor_evasion#ranger_galvanic_saboteur"
+  name: "Sensor Evasion"
+  label: null
+  type: null
+  description: "At 17th level, a galvanic saboteur has mastered the art of evading\
+    \ technological and magical observation. He can use the Stealth skill against\
+    \ constructs and magical sensors (such as those created by arcane eye or clairaudience/clairvoyance)\
+    \ even while being observed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the River"
+source: "Pathfinder Player Companion: People of the River"

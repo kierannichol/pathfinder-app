@@ -1,0 +1,40 @@
+casting_time: "1 swift action"
+saving_throw: "none (see below)"
+spell_resistance: "yes"
+id: "spell:conditional_favor"
+name: "Conditional Favor"
+description: "You must cast this spell immediately before casting another spell on\
+  \ the same creature, eliciting a promise or warning against a behavior and binding\
+  \ the target to the paired spell. If you don't cast a paired spell, conditional\
+  \ favor has no effect. The paired spell must be from the abjuration, conjuration\
+  \ (healing), enchantment, or transmutation school or subschool, and must be cast\
+  \ on a willing creature. If the spell's recipient violates the oath or prohibition\
+  \ while conditional favor remains in effect, the paired spell is undone as if never\
+  \ cast. If the spell was a healing spell, the hit point damage or condition you\
+  \ removed returns immediately, even if the subject has enjoyed subsequent rest or\
+  \ healing. Poisons, diseases, curses, restored ability damage, and negative levels\
+  \ removed by the paired spell return as well."
+prerequisites: ""
+components: "V"
+range: ""
+targets: "one creature"
+duration: "1 day/level (D)"
+school: "abjuration"
+levels:
+- class_id: "class:bard"
+  level: 2
+- class_id: "class:cleric"
+  level: 2
+- class_id: "class:inquisitor"
+  level: 2
+- class_id: "class:oracle"
+  level: 2
+- class_id: "class:paladin"
+  level: 1
+- class_id: "class:skald"
+  level: 2
+- class_id: "class:warpriest"
+  level: 2
+- class_id: "class:witch"
+  level: 2
+source: "Ultimate Intrigue"

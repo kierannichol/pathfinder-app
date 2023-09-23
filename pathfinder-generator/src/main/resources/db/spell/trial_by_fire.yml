@@ -1,0 +1,31 @@
+casting_time: "1 standard action"
+saving_throw: "none"
+spell_resistance: "yes"
+id: "spell:trial_by_fire"
+name: "Trial by Fire"
+description: "You test a creature's purity of convictions by exposing it to a sheet\
+  \ of divine fire. Unless the target's alignment is within one step of your deity's,\
+  \ the spell deals 1d6 points of damage per 2 caster levels (maximum 5d6 points of\
+  \ damage). Half the damage is fire damage, but the other half results directly from\
+  \ divine power and is therefore not subject to being reduced by resistance to firebased\
+  \ attacks. Additionally, if the target has an element of its alignment that is in\
+  \ direct opposition to your (chaos opposes law and evil opposes good), you can also\
+  \ attempt an Intimidate check to demoralize the target as a free action."
+prerequisites: ""
+components: "V, S, DF"
+range: "touch"
+targets: "creature touched"
+duration: "instantaneous"
+school: "evocation [fire]"
+levels:
+- class_id: "class:cleric"
+  level: 3
+- class_id: "class:inquisitor"
+  level: 3
+- class_id: "class:oracle"
+  level: 3
+- class_id: "class:paladin"
+  level: 3
+- class_id: "class:warpriest"
+  level: 3
+source: "Spymaster's Handbook"

@@ -1,0 +1,95 @@
+id: "class:cavalier#disciple_of_the_pike"
+name: "Disciple of the Pike"
+description: ""
+modifications:
+- add: "ability:bigger_they_are#cavalier_disciple_of_the_pike"
+  remove:
+  - "ability:mount#cavalier"
+- add: "ability:pike_charge#cavalier_disciple_of_the_pike"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:monster_hunter#cavalier_disciple_of_the_pike"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:weapon_training#cavalier_disciple_of_the_pike"
+  remove:
+  - "ability:banner#cavalier"
+  - "ability:greater_banner#cavalier"
+- add: "ability:agile_charger#cavalier_disciple_of_the_pike"
+  remove:
+  - "ability:mighty_charge#cavalier"
+- add: "ability:deadly_charge#cavalier_disciple_of_the_pike"
+  remove:
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:bigger_they_are#cavalier_disciple_of_the_pike"
+  name: "Bigger They Are"
+  label: null
+  type: null
+  description: "A disciple of the pike gains a +1 dodge bonus to AC against creatures\
+    \ larger than he is. This bonus increases by 1 if the creature is two size categories\
+    \ larger. At 6th level, the bonus increases to +3 against a creature three size\
+    \ categories larger, and at 12th level, the bonus increases to +4 against creatures\
+    \ four size categories larger."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:pike_charge#cavalier_disciple_of_the_pike"
+  name: "Pike Charge"
+  label: null
+  type: null
+  description: "At 3rd level, a disciple of the pike learns to make more accurate\
+    \ charge attacks with weapons from the polearms or spears fighter weapon group\
+    \ (Pathfinder RPG Core Rulebook 56). He receives a +4 bonus on melee attacks when\
+    \ charging with a polearm or spear (instead of the normal +2). In addition, the\
+    \ disciple of the pike takes no penalty to his AC after making a charge attack\
+    \ with a polearm or spear."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:monster_hunter#cavalier_disciple_of_the_pike"
+  name: "Monster Hunter"
+  label: null
+  type: null
+  description: "At 4th level, a disciple of the pike has an uncanny ability to identify\
+    \ monsters. He can attempt Knowledge checks untrained to identify monsters and\
+    \ their weaknesses, and gains a bonus equal to half of his cavalier level on Knowledge\
+    \ checks to identify monsters."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:weapon_training#cavalier_disciple_of_the_pike"
+  name: "Weapon Training"
+  label: null
+  type: null
+  description: "At 5th level, a disciple of the pike gains weapon training, just like\
+    \ a fighter. He must select polearms or spears as his weapon group, and never\
+    \ gains another weapon group. His bonuses with the selected group otherwise progress\
+    \ as though his fighter level were equal to his cavalier level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:agile_charger#cavalier_disciple_of_the_pike"
+  name: "Agile Charger"
+  label: null
+  type: null
+  description: "At 11th level, a disciple of the pike takes no penalties caused by\
+    \ difficult terrain while charging. His movement is still hampered by obstacles,\
+    \ poor visibility, and other conditions. This ability doesn't allow him to move\
+    \ through impassible terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:deadly_charge#cavalier_disciple_of_the_pike"
+  name: "Deadly Charge"
+  label: null
+  type: null
+  description: "At 20th level, whenever a disciple of the pike makes a charge attack\
+    \ with a polearm or spear, he deals double the normal amount of damage. In addition,\
+    \ if he confirms a critical hit on a deadly charge, the target is stunned for\
+    \ 1d4 rounds. If the target succeeds at a Will save (DC = 10 + the cavalier's\
+    \ base attack bonus), it is instead staggered for 1d4 rounds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+source: "Pathfinder Player Companion: Monster Hunter's Handbook"

@@ -1,0 +1,107 @@
+id: "class:cavalier#horselord"
+name: "Horselord"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#cavalier_horselord"
+  remove:
+  - "ability:armor_proficiencies#cavalier"
+  - "ability:the_cavaliers_normal_weapon#cavalier"
+- add: "ability:mount#cavalier_horselord"
+  remove:
+  - "ability:the_cavalier_mount_class_feature#cavalier"
+- add: "ability:desert_wind#cavalier_horselord"
+  remove:
+  - "ability:tactician#cavalier"
+- add: "ability:desert_mastery#cavalier_horselord"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:sand_storm#cavalier_horselord"
+  remove:
+  - "ability:the_bonus_feat_gained_at_6th_level#cavalier"
+- add: "ability:as_one#cavalier_horselord"
+  remove:
+  - "ability:greater_tactician#cavalier"
+- add: "ability:sand_scourge#cavalier_horselord"
+  remove:
+  - "ability:master_tactician#cavalier"
+features:
+- id: "ability:weapon_and_armor_proficiency#cavalier_horselord"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A horselord is proficient with all simple and martial weapons, with\
+    \ light and medium armor, and with shields (except tower shields)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:mount#cavalier_horselord"
+  name: "Mount"
+  label: null
+  type: null
+  description: "A horselord must select a horse or pony as his mount. At the GM's\
+    \ discretion, a different mount can be selected."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:desert_wind#cavalier_horselord"
+  name: "Desert Wind"
+  label: null
+  type: null
+  description: "The speed of a horselord's mount increases by 5 feet. Its speed increases\
+    \ by an additional 5 feet at 5th level and every 5 cavalier levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:desert_mastery#cavalier_horselord"
+  name: "Desert Mastery"
+  label: null
+  type: null
+  description: "At 3rd level, a horselord gains favored terrain (desert) as per the\
+    \ ranger ability of the same name. At 8th level and every 5 levels thereafter,\
+    \ the granted bonus on initiative and skill checks increases by 2, but the horselord\
+    \ never selects additional favored terrains. Additionally, his mount gains all\
+    \ the benefits of the favored terrain ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:sand_storm#cavalier_horselord"
+  name: "Sand Storm"
+  label: null
+  type: null
+  description: "At 6th level, a horselord gains the benefits of the Mobility feat\
+    \ so long as he is mounted. Additionally, he deals double damage while using a\
+    \ one-handed slashing weapon from the back of a charging mount, as though using\
+    \ a lance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:as_one#cavalier_horselord"
+  name: "As One"
+  label: null
+  type: null
+  description: "At 9th level, a horselord gains the benefits of the Spring Attack\
+    \ feat so long as he is mounted. He uses his mount's movement for this action,\
+    \ and neither he nor his mount provokes attacks of opportunity from the target.\
+    \ When he makes a single attack with a one-handed slashing weapon in this way,\
+    \ the attack deals 1d6 additional points of damage. This bonus damage increases\
+    \ to 3d6 at 17th level. This ability counts as the Spring Attack feat for the\
+    \ purpose of meeting feat prerequisites, but only while the horselord is mounted."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:sand_scourge#cavalier_horselord"
+  name: "Sand Scourge"
+  label: null
+  type: null
+  description: "At 17th level, a horselord and his mount can make a tactical rush\
+    \ through enemy ranks as a full-round action. His mount can move up to twice its\
+    \ normal speed in a straight line. The horselord can make a single attack against\
+    \ each creature he threatens during his mount's movement, up to his normal number\
+    \ of attacks per round. These attacks use his full base attack bonus and take\
+    \ a -2 penalty; this is not a charge, and these attacks deal normal damage. The\
+    \ horselord provokes attacks of opportunity during this movement, but his mount\
+    \ does not."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

@@ -1,0 +1,136 @@
+id: "class:cavalier#dune_drifter"
+name: "Dune Drifter"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#cavalier_dune_drifter"
+  remove:
+  - "ability:the_cavaliers_normal_weapon#cavalier"
+  - "ability:armor_proficiencies#cavalier"
+- add: "ability:have_gun#cavalier_dune_drifter"
+  remove:
+  - "ability:tactician#cavalier"
+- add: "ability:daring_deeds#cavalier_dune_drifter"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:bonus_feats#cavalier_dune_drifter"
+  remove:
+  - "ability:the_cavaliers_normal_bonus_feats#cavalier"
+- add: "ability:notorious_deeds#cavalier_dune_drifter"
+  remove:
+  - "ability:greater_tactician#cavalier"
+- add: "ability:old_reliable#cavalier_dune_drifter"
+  remove:
+  - "ability:mighty_charge#cavalier"
+- add: "ability:spell_severed#cavalier_dune_drifter"
+  remove:
+  - "ability:demanding_challenge#cavalier"
+- add: "ability:infamous_deeds#cavalier_dune_drifter"
+  remove:
+  - "ability:master_tactician#cavalier"
+- add: "ability:tough_as_nails#cavalier_dune_drifter"
+  remove:
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:weapon_and_armor_proficiency#cavalier_dune_drifter"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:have_gun#cavalier_dune_drifter"
+  name: "Have Gun"
+  label: null
+  type: null
+  description: "At 1st level, the dune drifter gains Amateur Gunslinger and Gunsmithing\
+    \ as bonus feats. The dune drifter uses his Charisma modifier (minimum 1) in place\
+    \ of his Wisdom modifier when determining his maximum grit points and for any\
+    \ other abilities which use grit. Additionally, he also gains a battered gun identical\
+    \ to the one gained by the gunslinger."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:daring_deeds#cavalier_dune_drifter"
+  name: "Daring Deeds"
+  label: null
+  type: null
+  description: "At 3rd level, a Dune drifter gains Rapid Reload as a bonus feat. The\
+    \ dune drifter must choose a firearm to associate with this feat. Additionally,\
+    \ the dune drifter can select one additional 1st-level gunslinger deed which he\
+    \ can use with his Amateur Gunslinger feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:bonus_feats#cavalier_dune_drifter"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "At 6th level, and at every 6 levels thereafter, a dune drifter gains\
+    \ a bonus feat in addition to those gained from normal advancement. These bonus\
+    \ feats must be either combat or grit feats, and the dune drifter must meet the\
+    \ prerequisites as normal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:notorious_deeds#cavalier_dune_drifter"
+  name: "Notorious Deeds"
+  label: null
+  type: null
+  description: "At 9th level, a dune drifter can select two additional gunslinger\
+    \ deeds which he can use with his Amateur Gunslinger feat. The dune drifter can\
+    \ choose one deed from the list of deeds available to 3rd-level gunslingers and\
+    \ one from the list available to 7th-level gunslingers."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:old_reliable#cavalier_dune_drifter"
+  name: "Old Reliable"
+  label: null
+  type: null
+  description: "At 11th level, whenever a Dune drifter declares a challenge, the threat\
+    \ range of the dune drifter's firearm is doubled against the target of his challenge.\
+    \ This increase only affects one weapon and does not stack with other effects\
+    \ that increase the threat range of the weapon. In addition, if the dune drifter\
+    \ rolls a misfire during his challenge, the Dune drifter can spend 1 grit point\
+    \ to reroll the attack roll.\nThe dune drifter must accept the results of the\
+    \ second roll, even if it is worse."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:spell_severed#cavalier_dune_drifter"
+  name: "Spell Severed"
+  label: null
+  type: null
+  description: "At 12th level, a dune drifter gains spell resistance equal to 10 +\
+    \ his character level. The dune drifter can drop this spell resistance for 1 round\
+    \ as a standard action, or he can spend 1 grit point to drop it as a swift action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:infamous_deeds#cavalier_dune_drifter"
+  name: "Infamous Deeds"
+  label: null
+  type: null
+  description: "At 17th level, a dune drifter can select two additional gunslinger\
+    \ deeds which he can use with his Amateur Gunslinger feat. The dune drifter can\
+    \ choose one deed from the list of deeds available to 7th-level gunslingers and\
+    \ one from the list available to 11th-level gunslingers."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:tough_as_nails#cavalier_dune_drifter"
+  name: "Tough as Nails"
+  label: null
+  type: null
+  description: "At 20th level, a dune drifter is able to select three additional deeds\
+    \ for use with his Amateur Gunslinger feat--two from the list of deeds available\
+    \ to 15th-level gunslingers, and one from the list available to 19th-level gunslingers.\n\
+    In addition, if the dune drifter confirms a critical hit on an attack made with\
+    \ a firearm, the target is stunned for 1d4 rounds. A successful Will saving throw\
+    \ (DC = 10 + the dune drifter's base attack bonus) reduces this effect to staggered\
+    \ instead of stunned."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

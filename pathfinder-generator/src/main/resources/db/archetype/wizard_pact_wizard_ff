@@ -1,0 +1,32 @@
+id: "class:wizard#pact_wizard_ff"
+name: "Pact Wizard (FF)"
+description: ""
+modifications:
+- add: "ability:familiar#wizard_pact_wizard_ff"
+  remove:
+  - "ability:arcane_bond#wizard"
+- add: "ability:pact_focus#wizard_pact_wizard_ff"
+  remove:
+  - "ability:arcane_school#wizard"
+features:
+- id: "ability:familiar#wizard_pact_wizard_ff"
+  name: "Familiar"
+  label: null
+  type: null
+  description: "A pact wizard must select a familiar for his arcane bond. The familiar's\
+    \ loyalty ultimately lies with the pact wizard's patron, and it reports back to\
+    \ the patron on the wizard's activities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:pact_focus#wizard_pact_wizard_ff"
+  name: "Pact Focus"
+  label: null
+  type: null
+  description: "At 1st level, a pact wizard must choose one additional opposition\
+    \ school, even if he is a universalist. A pact wizard can't pick conjuration as\
+    \ an opposition school."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+source: "Pathfinder Player Companion: Familiar Folio"

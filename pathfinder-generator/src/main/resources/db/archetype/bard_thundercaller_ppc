@@ -1,0 +1,31 @@
+id: "class:bard#thundercaller_ppc"
+name: "Thundercaller (PPC:VBL)"
+description: "Among mystical leaders are those who speak for the spirits of the land,\
+  \ who bear the knowledge of the ancients, and whose voices ring like thunder, calling\
+  \ the sky's wrath down upon their enemies."
+modifications:
+- add: "ability:bound_to_the_land#bard_thundercaller_ppc"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:bardic_performance#bard_thundercaller_ppc"
+  remove:
+  - "ability:inspire_competence#bard"
+features:
+- id: "ability:bound_to_the_land#bard_thundercaller_ppc"
+  name: "Bound to the Land"
+  label: null
+  type: null
+  description: "A thundercaller gains a bonus equal to 1/2 her level on Handle Animal\
+    \ checks, Knowledge (nature) checks, and Survival checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Varisia, Birthplace of Legends"
+- id: "ability:bardic_performance#bard_thundercaller_ppc"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A thundercaller gains the following types of bardic performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Varisia, Birthplace of Legends"
+source: "Pathfinder Player Companion: Varisia, Birthplace of Legends"

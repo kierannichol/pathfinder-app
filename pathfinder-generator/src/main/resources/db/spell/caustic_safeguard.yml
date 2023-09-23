@@ -1,0 +1,34 @@
+casting_time: "1 round"
+saving_throw: "Reflex half (see text)"
+spell_resistance: "no"
+id: "spell:caustic_safeguard"
+name: "Caustic Safeguard"
+description: "You imbue a single object with an acidic protective ward. Any creature\
+  \ other than you that touches the object takes 1d6 points of acid damage per 2 caster\
+  \ levels (maximum 10d6; Reflex half). Each time the spell discharges, the number\
+  \ of damage dice it deals is halved (rounded down); when the spell's damage dice\
+  \ reach 0, the spell ends. While casting this spell, you can touch up to one creature\
+  \ per 4 caster levels, which allows them to handle the warded object without triggering\
+  \ this spell."
+prerequisites: ""
+components: "V, S, M (a thin metal wire and a vial of acid)"
+range: "touch"
+targets: "object touched"
+duration: "1 hour/level (D)"
+school: "abjuration [acid]"
+levels:
+- class_id: "class:alchemist"
+  level: 3
+- class_id: "class:arcanist"
+  level: 4
+- class_id: "class:bloodrager"
+  level: 3
+- class_id: "class:investigator"
+  level: 3
+- class_id: "class:magus"
+  level: 3
+- class_id: "class:sorcerer"
+  level: 4
+- class_id: "class:wizard"
+  level: 4
+source: "Agents of Evil"

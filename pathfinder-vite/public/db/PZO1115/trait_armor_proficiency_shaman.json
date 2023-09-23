@@ -1,0 +1,25 @@
+{
+  "id": "trait:armor_proficiency#shaman",
+  "name": "Armor Proficiency (Shaman)",
+  "tags": ["class_feature", "shaman", "trait"],
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "proficiency:light_armor",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "proficiency:medium_armor",
+            "numberValue": 1
+          }
+        }]
+      }]
+    }
+  }
+}

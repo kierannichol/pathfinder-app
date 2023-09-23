@@ -1,0 +1,87 @@
+id: "class:monk#sin_monk"
+name: "Sin Monk"
+description: ""
+modifications:
+- add: "ability:well_of_sin#monk_sin_monk"
+  remove:
+  - "ability:alters_high_jump#monk"
+  - "ability:ki_pool#monk"
+- add: "ability:sinful_strike#monk_sin_monk"
+  remove:
+  - "ability:wholeness_of_body#monk"
+- add: "ability:burden_with_sin#monk_sin_monk"
+  remove:
+  - "ability:abundant_step#monk"
+- add: "ability:simultaneous_sins#monk_sin_monk"
+  remove:
+  - "ability:empty_body#monk"
+- add: "ability:spawn_of_sin#monk_sin_monk"
+  remove:
+  - "ability:perfect_self#monk"
+features:
+- id: "ability:well_of_sin#monk_sin_monk"
+  name: "Well of Sin"
+  label: null
+  type: null
+  description: "At 4th level, a sin monk gains a pool of sin points, representing\
+    \ energy he has gained from indulging in forbidden vices. The sin monk has a number\
+    \ of sin points equal to half his class level + his Wisdom modifier; these points\
+    \ cannot be used on abilities that require spending ki points. As a swift action,\
+    \ he can spend 1 point from his sin pool to activate one of the following abilities\
+    \ until the start of his next turn."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:sinful_strike#monk_sin_monk"
+  name: "Sinful Strike"
+  label: null
+  type: null
+  description: "At 7th level, a sin monk can spend 2 sin points as a swift action\
+    \ to focus his power. The next time he deals damage before the end of his next\
+    \ turn, he deals an additional amount damage equal to his monk level."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:burden_with_sin#monk_sin_monk"
+  name: "Burden with Sin"
+  label: null
+  type: null
+  description: "At 12th level, a sin monk can spend a swift action and one daily use\
+    \ of Stunning Fist to draw his sinful nature to the fore of his consciousness.\n\
+    The next person he hits with a melee attack before the end of his next turn must\
+    \ succeed at a Will save (DC = 10 + half the sin monk's class level + his Wisdom\
+    \ modifier) or suffer the burden of the sin monk's sins. The target is treated\
+    \ as if she were carrying a load one step heavier (from a light load to a medium\
+    \ load, and so on) and must succeed at a caster level check to use any form of\
+    \ teleportation (DC = 10 + the monk's class level). This is a curse effect that\
+    \ lasts a number of rounds equal to the sin monk's Wisdom modifier unless it is\
+    \ removed through remove curse or a similar effect."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:simultaneous_sins#monk_sin_monk"
+  name: "Simultaneous Sins"
+  label: null
+  type: null
+  description: "At 19th level, a sin monk can spend 3 points from his sin pool as\
+    \ a swift action to gain the benefits of two different sins simultaneously."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:spawn_of_sin#monk_sin_monk"
+  name: "Spawn of Sin"
+  label: null
+  type: null
+  description: "At 20th level, the sin monk becomes the physical manifestation of\
+    \ his sins. He is forevermore treated as an aberration rather than a humanoid\
+    \ (or whatever the monk's creature type was) for the purpose of spells and magical\
+    \ effects, and his mind is so consumed by sin that he gains immunity to mind-affecting\
+    \ effects.\nHe does not change in appearance or gain other abilities; however,\
+    \ should the sin monk be slain and brought back from the dead, he returns to life\
+    \ as a sinspawn, retaining his class levels but otherwise replacing his creature\
+    \ type and racial abilities with those of his new form and becoming an NPC under\
+    \ the GM's control."
+  effects: null
+  prerequisites: null
+  source: ""
+source: ""

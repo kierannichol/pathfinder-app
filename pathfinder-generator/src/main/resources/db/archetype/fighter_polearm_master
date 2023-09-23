@@ -1,0 +1,106 @@
+id: "class:fighter#polearm_master"
+name: "Polearm Master"
+description: "The polearm master is schooled in the ancient wisdom that enemies are\
+  \ best faced at the end of long striking pole, lashing like a serpent before clumsy\
+  \ swords and axes can even be brought to bear."
+modifications:
+- add: "ability:pole_fighting#fighter_polearm_master"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:steadfast_pike#fighter_polearm_master"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:polearm_training#fighter_polearm_master"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:flexible_flanker#fighter_polearm_master"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:sweeping_fend#fighter_polearm_master"
+  remove:
+  - "ability:weapon_training#fighter@13"
+- add: "ability:step_aside#fighter_polearm_master"
+  remove:
+  - "ability:weapon_training#fighter@17"
+- add: "ability:polearm_parry#fighter_polearm_master"
+  remove:
+  - "ability:armor_mastery#fighter"
+features:
+- id: "ability:pole_fighting#fighter_polearm_master"
+  name: "Pole Fighting"
+  label: null
+  type: null
+  description: "At 2nd level, as an immediate action, a polearm master can shorten\
+    \ the grip on his spear or polearm with reach and use it against adjacent targets.\
+    \ This action results in a –4 penalty on attack rolls with that weapon until he\
+    \ spends another immediate action to return to the normal grip. The penalty is\
+    \ reduced by –1 for every four levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:steadfast_pike#fighter_polearm_master"
+  name: "Steadfast Pike"
+  label: null
+  type: null
+  description: "At 3rd level, a polearm master gains a +1 bonus on attack rolls with\
+    \ readied attacks and attacks of opportunity made with a spear or polearm. The\
+    \ bonus increases by +1 for every four levels beyond 3rd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:polearm_training#fighter_polearm_master"
+  name: "Polearm Training"
+  label: null
+  type: null
+  description: "At 5th level a polearm master gains a +1 bonus on attack and damage\
+    \ rolls with spears and polearms. The bonus increases by +1 for every four levels\
+    \ beyond 5th."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:flexible_flanker#fighter_polearm_master"
+  name: "Flexible Flanker"
+  label: null
+  type: null
+  description: "At 9th level, a polearm master may choose any square adjacent to him\
+    \ and treat that square as his location for determining who he is flanking, even\
+    \ if that square is occupied by a creature, object, or solid barrier."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:sweeping_fend#fighter_polearm_master"
+  name: "Sweeping Fend"
+  label: null
+  type: null
+  description: "At 13th level, a polearm master can use any spear or polearm to make\
+    \ bull rush maneuvers, though he takes a –4 penalty on combat maneuver checks\
+    \ when making such attempts. When using a spear or polearm to make a trip maneuver,\
+    \ he treats these weapons as if they had the trip weapon feature.*"
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:step_aside#fighter_polearm_master"
+  name: "Step Aside"
+  label: null
+  type: null
+  description: "At 17th level, when a creature threatened by a polearm master takes\
+    \ a 5-foot step into a square adjacent to him, he can take a 5-foot step as an\
+    \ immediate action. This 5-foot step must be subtracted from his movement on the\
+    \ next turn. He also gains a +2 dodge bonus to his AC against that opponent until\
+    \ the end of his next turn."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:polearm_parry#fighter_polearm_master"
+  name: "Polearm Parry"
+  label: null
+  type: null
+  description: "At 19th level, when an opponent threatened by a polearm master makes\
+    \ a melee attack against an ally, he may take an immediate action to grant his\
+    \ ally a +2 shield bonus to AC and DR 5/-- against that attack. He may use this\
+    \ ability to protect himself, but only if the attacking creature is not adjacent\
+    \ to him."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

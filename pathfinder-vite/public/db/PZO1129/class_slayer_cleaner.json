@@ -1,0 +1,48 @@
+{
+  "id": "class:slayer#cleaner",
+  "name": "Cleaner",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:deceitful#slayer_cleaner",
+          "conditionFormula": "@class:slayer\u003e\u003d1"
+        }, {
+          "featureId": "ability:without_a_trace#slayer_cleaner",
+          "conditionFormula": "@class:slayer\u003e\u003d4"
+        }, {
+          "featureId": "ability:mislead#slayer_cleaner",
+          "conditionFormula": "@class:slayer\u003e\u003d7"
+        }],
+        "unlinks": [{
+          "featureId": "ability:track#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_4th_level#slayer"
+        }, {
+          "featureId": "ability:stalker#slayer"
+        }]
+      }]
+    }
+  }
+}

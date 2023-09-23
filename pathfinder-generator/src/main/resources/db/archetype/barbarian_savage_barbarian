@@ -1,0 +1,33 @@
+id: "class:barbarian#savage_barbarian"
+name: "Savage Barbarian"
+description: "Some barbarians are truly savage, having little training in modern arms.\
+  \ These savage barbarians learn to avoid blows and toughen up their skin."
+modifications:
+- add: "ability:naked_courage#barbarian_savage_barbarian"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:natural_toughness#barbarian_savage_barbarian"
+  remove:
+  - "ability:damage_reduction#barbarian"
+features:
+- id: "ability:naked_courage#barbarian_savage_barbarian"
+  name: "Naked Courage"
+  label: null
+  type: null
+  description: "At 3rd level, the savage barbarian gains a +1 dodge bonus to AC and\
+    \ a +1 morale bonus on saving throws against fear when wearing no armor (shields\
+    \ are allowed). This bonus increases by +1 for every six levels after 3rd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:natural_toughness#barbarian_savage_barbarian"
+  name: "Natural Toughness"
+  label: null
+  type: null
+  description: "At 7th level, the savage barbarian gains a +1 natural armor bonus\
+    \ to AC when wearing no armor (shields are allowed). This bonus increases by +1\
+    \ for every three levels beyond 7th.\nThis ability replaces damage reduction."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

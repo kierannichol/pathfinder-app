@@ -1,0 +1,55 @@
+{
+  "id": "class:bard#celebrity",
+  "name": "Celebrity",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:inspire_courage#bard AND !@modifies:ability:dirge_of_doom#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Known for being known, a celebrity bard is a master of performance who captures the imagination and attention of his audience. He trades on his charisma, his wit, and his exploits to build his renown--and that of his companions."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:dirge_of_doom#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:famous#bard_celebrity",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_celebrity",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:bardic_performance#bard_celebrity",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_celebrity",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:shining_star#bard_celebrity",
+          "conditionFormula": "@class:bard\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }, {
+          "featureId": "ability:dirge_of_doom#bard"
+        }]
+      }]
+    }
+  }
+}

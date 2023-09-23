@@ -1,0 +1,86 @@
+{
+  "id": "class:paladin#divine_hunter",
+  "name": "Divine Hunter",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:her_heavy_armor_proficiency#paladin AND !@modifies:ability:the_standard_paladins_divine_bond#paladin AND !@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:aura_of_faith#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:the_paladins_6th_level_mercy#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most paladins rush into battle, meeting evil toe-to-toe. The divine hunter prefers to engage evil from afar, striking down her foes before they can threaten her allies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:her_heavy_armor_proficiency#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_standard_paladins_divine_bond#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_courage#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_faith#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_paladins_6th_level_mercy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:shared_precision#paladin_divine_hunter",
+          "conditionFormula": "@class:paladin\u003e\u003d3"
+        }, {
+          "featureId": "ability:divine_bond#paladin_divine_hunter",
+          "conditionFormula": "@class:paladin\u003e\u003d5"
+        }, {
+          "featureId": "ability:distant_mercy#paladin_divine_hunter",
+          "conditionFormula": "@class:paladin\u003e\u003d6"
+        }, {
+          "featureId": "ability:aura_of_care#paladin_divine_hunter",
+          "conditionFormula": "@class:paladin\u003e\u003d8"
+        }, {
+          "featureId": "ability:hunters_blessing#paladin_divine_hunter",
+          "conditionFormula": "@class:paladin\u003e\u003d11"
+        }, {
+          "featureId": "ability:righteous_hunter#paladin_divine_hunter",
+          "conditionFormula": "@class:paladin\u003e\u003d14"
+        }],
+        "unlinks": [{
+          "featureId": "ability:her_heavy_armor_proficiency#paladin"
+        }, {
+          "featureId": "ability:aura_of_courage#paladin"
+        }, {
+          "featureId": "ability:the_standard_paladins_divine_bond#paladin"
+        }, {
+          "featureId": "ability:the_paladins_6th_level_mercy#paladin"
+        }, {
+          "featureId": "ability:aura_of_resolve#paladin"
+        }, {
+          "featureId": "ability:aura_of_justice#paladin"
+        }, {
+          "featureId": "ability:aura_of_faith#paladin"
+        }]
+      }]
+    }
+  }
+}

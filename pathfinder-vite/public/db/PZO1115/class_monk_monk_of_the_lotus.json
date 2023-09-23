@@ -1,0 +1,58 @@
+{
+  "id": "class:monk#monk_of_the_lotus",
+  "name": "Monk of the Lotus",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:quivering_palm#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:abundant_step#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tongue_of_the_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:touch_of_serenity#monk_monk_of_the_lotus",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:touch_of_surrender#monk_monk_of_the_lotus",
+          "conditionFormula": "@class:monk\u003e\u003d12"
+        }, {
+          "featureId": "ability:touch_of_peace#monk_monk_of_the_lotus",
+          "conditionFormula": "@class:monk\u003e\u003d15"
+        }, {
+          "featureId": "ability:learned_master#monk_monk_of_the_lotus",
+          "conditionFormula": "@class:monk\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:stunning_fist#monk"
+        }, {
+          "featureId": "ability:abundant_step#monk"
+        }, {
+          "featureId": "ability:quivering_palm#monk"
+        }, {
+          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
+        }]
+      }]
+    }
+  }
+}

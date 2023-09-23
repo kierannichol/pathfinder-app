@@ -1,0 +1,29 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates (harmless)"
+spell_resistance: "yes (harmless)"
+id: "spell:callback"
+name: "Callback"
+description: "If the target takes hit point damage while within range of this spell,\
+  \ it immediately teleports to your space (or adjacent to your space) after the damage\
+  \ is applied. If the target is killed, its corpse teleports instead. Optionally,\
+  \ you can specify a number of points of damage for your familiar to take before\
+  \ the spell takes effect, but you must do so when the spell is cast. Once the familiar\
+  \ has teleported back to you, the spell ends."
+prerequisites: ""
+components: "V, S, M (a crushed grasshopper)"
+range: "long (400 ft. + 40 ft./level)"
+targets: "your familiar or spirit animal"
+duration: "10 minutes/level or until expended (see text)"
+school: "conjuration (teleportation)"
+levels:
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:shaman"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:witch"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Ultimate Wilderness, Familiar Folio"

@@ -1,0 +1,61 @@
+id: "class:barbarian#mad_dog"
+name: "Mad Dog"
+description: "Though named for the wild savages who fight alongside rabid dogs, mad\
+  \ dogs employ all manner of beasts as their battle brethren."
+modifications:
+- add: "ability:war_beast#barbarian_mad_dog"
+  remove:
+  - "ability:18th_level#barbarian"
+  - "ability:the_rage_powers_gained_at_2nd_6th_10th_14th#barbarian"
+- add: "ability:pack_tactics#barbarian_mad_dog"
+  remove:
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:ferocious_fetch#barbarian_mad_dog"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+- add: "ability:throat_cutter#barbarian_mad_dog"
+  remove:
+  - "ability:indomitable_will#barbarian"
+features:
+- id: "ability:war_beast#barbarian_mad_dog"
+  name: "War Beast"
+  label: null
+  type: null
+  description: "At 1st level, a mad dog gains the service of an animal companion,\
+    \ using the barbarian's level as her effective druid level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:pack_tactics#barbarian_mad_dog"
+  name: "Pack Tactics"
+  label: null
+  type: null
+  description: "At 2nd level, a mad dog and her war beast gain a +4 bonus on attack\
+    \ rolls while flanking the same opponent (instead of the normal +2 bonus)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:ferocious_fetch#barbarian_mad_dog"
+  name: "Ferocious Fetch"
+  label: null
+  type: null
+  description: "At 5th level, a mad dog's war beast gains Improved Drag as a bonus\
+    \ feat. As a swift action, a mad dog can command her war beast to move toward\
+    \ an opponent within 30 feet and attempt a drag combat maneuver to pull the target\
+    \ back toward the mad dog. The war beast can move before and after performing\
+    \ the maneuver, but this movement counts toward the war beast's total movement\
+    \ during its turn."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:throat_cutter#barbarian_mad_dog"
+  name: "Throat Cutter"
+  label: null
+  type: null
+  description: "At 14th level, whenever her war beast succeeds at a bull rush, drag,\
+    \ grapple, overrun, or trip combat maneuver against an opponent threatened by\
+    \ the mad dog, a mad dog can take an attack of opportunity against that opponent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+source: "Pathfinder Player Companion: Animal Archive"

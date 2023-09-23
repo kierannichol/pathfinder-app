@@ -1,0 +1,38 @@
+id: "class:barbarian#wild_rager"
+name: "Wild Rager"
+description: "Rages are barely controlled, but there are those who wholly give in\
+  \ to their more savage side, letting their rages take them to a confusing and uncontrolled\
+  \ place of terrible savagery. These barbarians become beasts, consumed with absolute\
+  \ bloodlust to the point where they cannot tell friend from foe."
+modifications:
+- add: "ability:wild_fighting#barbarian_wild_rager"
+  remove:
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:rage_conversion#barbarian_wild_rager"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+features:
+- id: "ability:wild_fighting#barbarian_wild_rager"
+  name: "Wild Fighting"
+  label: null
+  type: null
+  description: "At 2nd level, even when not raging, wild ragers often fight with reckless,\
+    \ savage abandon. A wild rager using the full-attack action can make one extra\
+    \ attack per round at her highest base attack bonus. Until the beginning of her\
+    \ next turn, however, she takes a –2 penalty on attack rolls and –4 penalty to\
+    \ AC."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:rage_conversion#barbarian_wild_rager"
+  name: "Rage Conversion"
+  label: null
+  type: null
+  description: "At 5th level, a wild rager who fails a saving throw against any mind-affecting\
+    \ effect can attempt a new saving throw at the beginning of her next turn. If\
+    \ the save succeeds, that effect ends and she instead rages and becomes confused\
+    \ as noted above.\nThis ability replaces improved uncanny dodge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

@@ -1,0 +1,49 @@
+{
+  "id": "class:alchemist#internal_alchemist",
+  "name": "Internal Alchemist",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:swift_alchemy#alchemist AND !@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:throw_anything#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "An internal alchemist studies medicine, diet, and the living body to purify the self in the hope of gaining immortality by means of alchemical concoctions and controlling vital energy. Internal alchemists develop unusual physical abilities from heightened knowledge of how their bodies work."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:swift_alchemy#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_poisoning#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:throw_anything#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:breath_mastery#alchemist_internal_alchemist",
+          "conditionFormula": "@class:alchemist\u003e\u003d1"
+        }, {
+          "featureId": "ability:disease_resistance#alchemist_internal_alchemist",
+          "conditionFormula": "@class:alchemist\u003e\u003d3"
+        }, {
+          "featureId": "ability:uncanny_dodge#alchemist_internal_alchemist",
+          "conditionFormula": "@class:alchemist\u003e\u003d6"
+        }],
+        "unlinks": [{
+          "featureId": "ability:throw_anything#alchemist"
+        }, {
+          "featureId": "ability:swift_alchemy#alchemist"
+        }, {
+          "featureId": "ability:swift_poisoning#alchemist"
+        }]
+      }]
+    }
+  }
+}

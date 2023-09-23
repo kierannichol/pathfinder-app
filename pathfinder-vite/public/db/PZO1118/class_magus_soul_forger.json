@@ -1,0 +1,69 @@
+{
+  "id": "class:magus#soul_forger",
+  "name": "Soul Forger",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:counterstrike#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:improved_spell_recall#magus AND !@modifies:ability:knowledge_pool#magus",
+  "maxStacks": 1,
+  "description": {
+    "text": "The soul forger has learned the skill of infusing the raw magical essence of his soul into armaments of surpassing power, combining the mystic arts with the arts of war in a unity of steely perfection."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:counterstrike#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_spell_access#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:knowledge_pool#magus",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:master_smith#magus_soul_forger",
+          "conditionFormula": "@class:magus\u003e\u003d7"
+        }, {
+          "featureId": "ability:fortify_bond#magus_soul_forger",
+          "conditionFormula": "@class:magus\u003e\u003d4"
+        }, {
+          "featureId": "ability:reforge#magus_soul_forger",
+          "conditionFormula": "@class:magus\u003e\u003d11"
+        }, {
+          "featureId": "ability:destructive_counterstrike#magus_soul_forger",
+          "conditionFormula": "@class:magus\u003e\u003d16"
+        }, {
+          "featureId": "ability:instantaneous_reconstruction#magus_soul_forger",
+          "conditionFormula": "@class:magus\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:knowledge_pool#magus"
+        }, {
+          "featureId": "ability:spell_recall#magus"
+        }, {
+          "featureId": "ability:improved_spell_recall#magus"
+        }, {
+          "featureId": "ability:counterstrike#magus"
+        }, {
+          "featureId": "ability:greater_spell_access#magus"
+        }]
+      }]
+    }
+  }
+}

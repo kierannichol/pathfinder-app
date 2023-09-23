@@ -1,0 +1,69 @@
+id: "class:druid#green_scourge"
+name: "Green Scourge"
+description: ""
+modifications:
+- add: "ability:natures_armaments#druid_green_scourge"
+  remove:
+  - "ability:spontaneous_casting#druid"
+- add: "ability:aberration_sense#druid_green_scourge"
+  remove:
+  - "ability:nature_sense#druid"
+- add: "ability:scentless#druid_green_scourge"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:resist_unnatural_influence#druid_green_scourge"
+  remove:
+  - "ability:resist_natures_lure#druid"
+features:
+- id: "ability:natures_armaments#druid_green_scourge"
+  name: "Nature's Armaments"
+  label: null
+  type: null
+  description: "A green scourge can lose a prepared 1st- or 2nd-level spell in order\
+    \ to cast shillelagh or flame blade, respectively. She can instead choose to lose\
+    \ a higher-level spell in order to increase the enhancement bonus of her shillelagh,\
+    \ or to add any of the following weapon special abilities to her shillelagh or\
+    \ flame blade: bane (aberrations only), frost, mighty cleaving, returning, shock,\
+    \ throwing, or vicious. If the target weapon is a quarterstaff, these bonuses\
+    \ apply to only one of its ends. If a flame blade gains the frost or shock special\
+    \ ability, the base damage of the spell changes to match the energy type; neither\
+    \ a flame blade nor shillelagh can gain both of these special abilities. A green\
+    \ scourge cannot add the throwing property to a flame blade unless she also adds\
+    \ the returning property.\nWhen adding weapon special abilities or increasing\
+    \ the enhancement bonus, the final level of the spell expended is 1 higher than\
+    \ the base spell level (2nd for shillelagh and 3rd for flame blade), increased\
+    \ by the additional special abilities' total base price modifier. For example,\
+    \ creating an aberration–bane vicious flame blade requires spending a 5th-level\
+    \ spell slot, which also counts as a 5th-level spell for purposes of dispelling."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:aberration_sense#druid_green_scourge"
+  name: "Aberration Sense"
+  label: null
+  type: null
+  description: "At 1st level, a green scourge adds Knowledge (dungeoneering) to her\
+    \ class skills and gains a +2 bonus on Knowledge (dungeoneering) checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:scentless#druid_green_scourge"
+  name: "Scentless"
+  label: null
+  type: null
+  description: "At 3rd level, a green scourge cannot be detected or tracked with the\
+    \ scent ability or any other special senses that rely on acute smell. She can\
+    \ choose to exude a scent if desired."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:resist_unnatural_influence#druid_green_scourge"
+  name: "Resist Unnatural Influence"
+  label: null
+  type: null
+  description: "At 4th level, a green scourge gains a +4 bonus on saving throws against\
+    \ aberrations' spell-like abilities, supernatural abilities, and poisons."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+source: "Pathfinder Player Companion: Monster Hunter's Handbook"

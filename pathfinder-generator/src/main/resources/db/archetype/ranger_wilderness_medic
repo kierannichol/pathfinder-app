@@ -1,0 +1,70 @@
+id: "class:ranger#wilderness_medic"
+name: "Wilderness Medic"
+description: "Wilderness medics know a variety of ways they can supply and preserve\
+  \ a rebellion or similar movement without requiring any resources that might make\
+  \ them easier to track down."
+modifications:
+- add: "ability:herbalist_training#ranger_wilderness_medic"
+  remove:
+  - "ability:wild_empathy#ranger"
+- add: "ability:herbal_medicine#ranger_wilderness_medic"
+  remove:
+  - "ability:evasion_abilities#ranger"
+  - "ability:the_endurance#ranger"
+- add: "ability:rallying_bond#ranger_wilderness_medic"
+  remove:
+  - "ability:improved_evasion#ranger"
+  - "ability:hunters_bond#ranger"
+features:
+- id: "ability:herbalist_training#ranger_wilderness_medic"
+  name: "Herbalist Training"
+  label: null
+  type: null
+  description: "At 1st level, a wilderness medic can attempt Profession (herbalism)\
+    \ checks untrained and the wilderness medic gains a bonus equal to 1/2 his ranger\
+    \ level (minimum +1) on Heal checks and Profession (herbalism) checks. When he\
+    \ successfully forages for herbs, he finds twice as many doses of any herb he\
+    \ would normally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:herbal_medicine#ranger_wilderness_medic"
+  name: "Herbal Medicine"
+  label: null
+  type: null
+  description: "At 3rd level, a wilderness medic can mimic the effects of stabilize\
+    \ at will in any wilderness area by spending one use of a healer's kit as long\
+    \ as he can see the target.\nAdditionally, as a standard action a number of times\
+    \ per day equal to 3 + his Wisdom modifier, the wilderness medic can use encouraging\
+    \ words and herbs to lessen the severity of certain conditions affecting a touched\
+    \ target. If the target is exhausted, it becomes fatigued instead. If the target\
+    \ is frightened, it becomes shaken instead. If the target is nauseated, it becomes\
+    \ sickened instead. The duration of the effect is unchanged; the effect is simply\
+    \ reduced to the lesser version.\nAt 9th level, the wilderness medic can lessen\
+    \ the severity of additional conditions for the target and cure other conditions\
+    \ that the target suffers. If the target creature is blinded, it becomes dazzled\
+    \ instead. If the target is panicked, it becomes shaken instead. If it has any\
+    \ of the following conditions, they are cured: deafened, fatigued, shaken, and\
+    \ sickened. The wilderness medic is able to use this ability on a given touched\
+    \ target once every 24 hours."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:rallying_bond#ranger_wilderness_medic"
+  name: "Rallying Bond"
+  label: null
+  type: null
+  description: "At 4th level, a wilderness medic must choose his companions for his\
+    \ hunter's bond.\nAt 9th level, the wilderness medic can encourage all of his\
+    \ companions when he uses his hunter's bond to benefit his companions (see the\
+    \ ranger's hunter's bond ability for more details). As a free action when the\
+    \ wilderness medic uses a move action to grant affected allies half his favored\
+    \ enemy bonus, he can also grant affected allies the benefits of remove fear.\
+    \ The wilderness medic can use this ability a number of times per day equal to\
+    \ his Wisdom modifier.\nAt 14th level, when the wilderness medic uses this ability,\
+    \ he can instead affect all allies that benefit from his hunter's bond with blessing\
+    \ of fervor, using his ranger level as his caster level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+source: "Pathfinder Player Companion: Healer's Handbook"

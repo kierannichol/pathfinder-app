@@ -1,0 +1,70 @@
+id: "class:cavalier#luring_cavalier"
+name: "Luring Cavalier"
+description: "Those who study the perfection of strategy and tactics know that picking\
+  \ the battlefield can grant advantages that only overwhelming numbers of allies\
+  \ can eclipse. The luring cavalier is a special type of cavalier that helps accomplish\
+  \ that goal. Typically, he uses a bow or other ranged weapon to lure opponents toward\
+  \ him, and then makes strategic retreats to position his enemies exactly where he\
+  \ wants them."
+modifications:
+- add: "ability:careful_aim#cavalier_luring_cavalier"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:infuriating_aim#cavalier_luring_cavalier"
+  remove:
+  - "ability:mighty_charge#cavalier"
+- add: "ability:versatile_challenge#cavalier_luring_cavalier"
+  remove:
+  - "ability:demanding_challenge#cavalier"
+- add: "ability:supreme_aim#cavalier_luring_cavalier"
+  remove:
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:careful_aim#cavalier_luring_cavalier"
+  name: "Careful Aim"
+  label: null
+  type: null
+  description: "At 3rd level, when a luring cavalier makes a ranged attack with his\
+    \ highest base attack bonus, he can ignore the penalties for firing up to three\
+    \ range increments away. If he is using a firearm, he can target touch AC up to\
+    \ two range increments away. This effect stacks with effects that allow the cavalier\
+    \ to make ranged attacks farther without penalty or that allow him to target touch\
+    \ AC with a firearm beyond the first range increment.\nThis ability replaces cavalier's\
+    \ charge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:infuriating_aim#cavalier_luring_cavalier"
+  name: "Infuriating Aim"
+  label: null
+  type: null
+  description: "At 11th level, when a luring cavalier confirms a critical hit with\
+    \ a ranged attack made at his highest base attack bonus against the target of\
+    \ a far challenge, the target becomes infuriated for 1 round. While infuriated,\
+    \ the target must spend its turn moving closer to the cavalier, making move, run,\
+    \ or charge actions only (challenged creature's choice). This is a mind-affecting\
+    \ effect.\nThis ability replaces mighty charge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:versatile_challenge#cavalier_luring_cavalier"
+  name: "Versatile Challenge"
+  label: null
+  type: null
+  description: "At 12th level, a luring cavalier can expend a use of his challenge\
+    \ to gain the benefit of far challenge or the normal cavalier challenge. He can\
+    \ even change the type of challenge an opponent is under the effects of as a swift\
+    \ action, as long as the target of the challenge is within line of sight."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:supreme_aim#cavalier_luring_cavalier"
+  name: "Supreme Aim"
+  label: null
+  type: null
+  description: "At 20th level, the luring cavalier gains the careful aim bonus and\
+    \ the effect of infuriating aim on all ranged attacks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

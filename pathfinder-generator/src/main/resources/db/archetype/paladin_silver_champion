@@ -1,0 +1,40 @@
+id: "class:paladin#silver_champion"
+name: "Silver Champion"
+description: ""
+modifications:
+- add: "ability:drake_mount#paladin_silver_champion"
+  remove:
+  - "ability:alters_smite_evil#paladin"
+  - "ability:aura_of_righteousness#paladin"
+  - "ability:mercy#paladin"
+  - "ability:divine_bond_channel_energy_aura_of_justice#paladin"
+- add: "ability:dragon_magic#paladin_silver_champion"
+  remove:
+  - "ability:spellcasting#paladin"
+features:
+- id: "ability:drake_mount#paladin_silver_champion"
+  name: "Drake Mount"
+  label: null
+  type: null
+  description: "At 5th level, a silver champion gains a drake companion. If the drake\
+    \ companion is at least one size larger than the silver champion, it gains the\
+    \ mount drake power as a bonus power. However, a silver champion doesn't gain\
+    \ additional uses per day of smite evil at 4th, 10th, and 16th levels, and doesn't\
+    \ gain mercies at 6th, 12th, and 18th levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:dragon_magic#paladin_silver_champion"
+  name: "Dragon Magic"
+  label: null
+  type: null
+  description: "The silver champion does not have access to the normal paladin spell\
+    \ list. She instead adds the 1stthrough 4th-level spells from the domains Artifice,\
+    \ Good, Law, Scalykind, Travel and the associated subdomains Archon, Construct,\
+    \ Dragon, Exploration, Toil, and Trade to her class spell list. A silver champion\
+    \ casts one fewer spell of each level than normal. If this reduces the number\
+    \ to less than 0, she can't cast spells of that level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+source: "Pathfinder Player Companion: Legacy of Dragons"

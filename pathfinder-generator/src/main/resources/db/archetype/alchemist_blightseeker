@@ -1,0 +1,64 @@
+id: "class:alchemist#blightseeker"
+name: "Blightseeker"
+description: ""
+modifications:
+- add: "ability:spore_bomb#alchemist_blightseeker"
+  remove:
+  - "ability:bombs#alchemist"
+- add: "ability:blights#alchemist_blightseeker"
+  remove:
+  - "ability:the_discoveries_gained_at_6th_12th#alchemist"
+  - "ability:18th_levels#alchemist"
+- add: "ability:blight_engineering#alchemist_blightseeker"
+  remove:
+  - "ability:persistent_mutagen#alchemist"
+features:
+- id: "ability:spore_bomb#alchemist_blightseeker"
+  name: "Spore Bomb"
+  label: null
+  type: null
+  description: "At 1st level, a blightseeker creates a special kind of alchemist bomb\
+    \ that delivers a payload of alchemically engineered fungal spores. These bombs\
+    \ infest their target with a virulent blight (see below). The blightseeker's bombs\
+    \ deal 1d4 points of damage (instead of 1d6), plus 1d4 points of damage for every\
+    \ 2 alchemist levels beyond 1st.\nA creature that takes a direct hit from a spore\
+    \ bomb must succeed at a Fortitude save (DC = 10 + half the blightseeker's level\
+    \ + his Intelligence modifier) or suffer the associated blight effects. Creatures\
+    \ that take splash damage from the bomb are not affected by the blight."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:blights#alchemist_blightseeker"
+  name: "Blights"
+  label: null
+  type: null
+  description: "At 1st level, a blightseeker gains the blights from the list below.\
+    \ When he prepares bombs at the start of the day, a blightseeker chooses which\
+    \ blight to apply to each bomb. If a blight has no duration listed, it lasts a\
+    \ number of rounds equal to the blightseeker's Intelligence modifier. At 1st level,\
+    \ a blightseeker gains the following blights.\nImpairing: The target's base land\
+    \ speed decreases by 10 feet, to a minimum of 10 feet. This effect doesn't stack\
+    \ with itself. Minor Sickening: The target is sickened, but it takes only a –\
+    1 penalty on affected rolls.\nAt 6th level, a blightseeker adds the following\
+    \ blights to the list of those that can be applied to his bombs.\nFatiguing: The\
+    \ target is fatigued. Fear-Inducing: The target is shaken. Sickening: The target\
+    \ is sickened.\nAt 12th level, a blightseeker adds the following blights to the\
+    \ list of those blights that can be applied to his bombs.\nConfusing: The target\
+    \ is confused. Exhausting: The target is exhausted. Nauseating: The target is\
+    \ nauseated for 1 round. Staggering: The target becomes staggered for 1 round.\n\
+    At 18th level, a blightseeker adds the following blights to the list of those\
+    \ that can be selected.\nBlinding: The target is blinded. Deafening: The target\
+    \ is deafened. Stunning: The target is stunned for 1 round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:blight_engineering#alchemist_blightseeker"
+  name: "Blight Engineering"
+  label: null
+  type: null
+  description: "At 14th level, a blightseeker can apply two blights that he knows\
+    \ to each spore bomb he creates."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+source: "Pathfinder Player Companion: Heroes of the Darklands"

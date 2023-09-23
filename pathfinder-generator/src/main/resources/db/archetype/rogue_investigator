@@ -1,0 +1,29 @@
+id: "class:rogue#investigator"
+name: "Investigator"
+description: "Not all rogues work against the law. Investigators use their skills\
+  \ to serve the law, often in the employ of nobles or in the pursuit of noble causes.\
+  \ In some cities cabals of investigators work for rulers or bureaucracies, but often\
+  \ an investigator is a free agent who pursues whatever mysteries come across her\
+  \ path. of course, not all investigators serve the law. Crime lords and guildmasters\
+  \ often have squads of investigators serving their own nefarious purposes."
+modifications:
+- add: "ability:follow_up#rogue_investigator"
+  remove:
+  - "ability:trapfinding#rogue"
+features:
+- id: "ability:follow_up#rogue_investigator"
+  name: "Follow Up"
+  label: null
+  type: null
+  description: "An investigator can roll twice on any Diplomacy check made to gather\
+    \ information, and receives the information for both results. This takes the same\
+    \ amount of time as one check. If the lesser of the two checks reveals false information,\
+    \ the rogue is aware of it.\nFalse information is not revealed in this way if\
+    \ the people she questioned do not know it to be false.\nThis ability replaces\
+    \ trapfinding.\nRogue Talents: The following rogue talents complement the investigator\
+    \ archetype: coax information, fast picks, follow clues, hard to fool, and minor\
+    \ magic*."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

@@ -1,0 +1,55 @@
+id: "class:rogue#desert_raider"
+name: "Desert Raider"
+description: "Desert raiders constantly threaten caravans that cross vast, desolate\
+  \ expanses. Some desert raiders are tribespeople who raid to supplement their hardscrabble\
+  \ existence, while others are career thieves who take to the desert to avoid the\
+  \ noose. To survive, a desert raider must learn the secrets of the deserts and become\
+  \ inured to their dangers."
+modifications:
+- add: "ability:desert_tracker#rogue_desert_raider"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:sun_at_your_back#rogue_desert_raider"
+  remove:
+  - "ability:the_rogue_talent_gained_at_2nd_level#rogue"
+- add: "ability:light_step#rogue_desert_raider"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:desert_tracker#rogue_desert_raider"
+  name: "Desert Tracker"
+  label: null
+  type: null
+  description: "A desert raider is immune to the dazzled condition. A desert raider\
+    \ adds half her level (minimum 1) as a bonus on Survival skill checks to follow\
+    \ or identify tracks in desert terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:sun_at_your_back#rogue_desert_raider"
+  name: "Sun at Your Back"
+  label: null
+  type: null
+  description: "At 2nd level, a desert raider can use the reflected light of the blinding\
+    \ sun to conceal her presence. A desert raider in bright light can attempt Stealth\
+    \ checks without cover or concealment but takes a –5 penalty on her check. The\
+    \ desert raider cannot use this ability to hide from creatures immune to the blinded\
+    \ or dazzled conditions."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:light_step#rogue_desert_raider"
+  name: "Light Step"
+  label: null
+  type: null
+  description: "At 3rd level, the DC of Survival checks to track the desert raider\
+    \ increase by 3. In addition, she gains a +1 bonus on Perception checks to avoid\
+    \ being surprised by a foe. The DC increase and the bonus on Perception checks\
+    \ increase by 1 every 3 rogue levels thereafter (to a maximum increase of 8 and\
+    \ a maximum bonus of +6 at 18th level).\nThis replaces trap sense.\nRogue Talents:\
+    \ The following rogue talents complement the desert raider archetype: fast stealth,\
+    \ getaway artist, ledge walker, rogue crawl, stand up, surprise attack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

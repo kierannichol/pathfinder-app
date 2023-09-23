@@ -1,0 +1,51 @@
+id: "class:slayer#cutthroat"
+name: "Cutthroat"
+description: ""
+modifications:
+- add: "ability:street_stalker#slayer_cutthroat"
+  remove:
+  - "ability:track#slayer"
+- add: "ability:opportune_target#slayer_cutthroat"
+  remove:
+  - "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+- add: "ability:stab_and_grab#slayer_cutthroat"
+  remove:
+  - "ability:the_slayer_talent_gained_at_6th_level#slayer"
+features:
+- id: "ability:street_stalker#slayer_cutthroat"
+  name: "Street Stalker"
+  label: null
+  type: null
+  description: "At 1st level, a cutthroat selects the Acrobatics, Climb, or Knowledge\
+    \ (local) skill. Once selected, this cannot be changed. When in urban environments,\
+    \ the cutthroat adds 1/2 his slayer level (minimum 1) to checks attempted with\
+    \ this skill."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:opportune_target#slayer_cutthroat"
+  name: "Opportune Target"
+  label: null
+  type: null
+  description: "At 2nd level, a cutthroat who catches a foe by surprise can quickly\
+    \ study that foe to find its weaknesses. If a cutthroat can act in the surprise\
+    \ round, once during that surprise round he can study a foe as a free action (instead\
+    \ of a move action) and select it as his studied target."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:stab_and_grab#slayer_cutthroat"
+  name: "Stab and Grab"
+  label: null
+  type: null
+  description: "At 6th level, as a swift action a cutthroat can attempt a steal combat\
+    \ maneuver against a dead or unconscious target or a studied target he has just\
+    \ confirmed a critical hit against. A dead or unconscious opponent takes a –10\
+    \ penalty to its CMD against this maneuver.\nThis ability replaces the slayer\
+    \ talent gained at 6th level.\nSlayer Talents: The following slayer talents (and\
+    \ rogue talents) complement the cutthroat archetype: fast stealth, poison use*,\
+    \ slowing strike*, surprise attack, and terrain mastery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

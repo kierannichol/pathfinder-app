@@ -1,0 +1,36 @@
+id: "class:paladin#sacred_servant"
+name: "Sacred Servant"
+description: ""
+modifications:
+- add: "ability:smite_evil#paladin_sacred_servant"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:call_celestial_ally#paladin_sacred_servant"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+features:
+- id: "ability:smite_evil#paladin_sacred_servant"
+  name: "Smite Evil"
+  label: null
+  type: null
+  description: "This functions as the paladin ability, but the sacred servant can\
+    \ smite evil one additional time per day at 7th level, and every six levels thereafter\
+    \ (instead of 4th level and every three levels thereafter)."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:call_celestial_ally#paladin_sacred_servant"
+  name: "Call Celestial Ally"
+  label: null
+  type: null
+  description: "At 8th level, a sacred servant can call upon her deity for aid, in\
+    \ the form of a powerful servant. This allows the sacred servant to cast lesser\
+    \ planar ally once per week as a spell-like ability without having to pay the\
+    \ material component cost or the servant (for reasonable tasks). At 12th level,\
+    \ this improves to planar ally and at 16th level, this improves to greater planar\
+    \ ally. The sacred servant's caster level for this effect is equal to her paladin\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

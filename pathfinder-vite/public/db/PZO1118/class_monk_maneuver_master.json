@@ -1,0 +1,79 @@
+{
+  "id": "class:monk#maneuver_master",
+  "name": "Maneuver Master",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:quivering_palm#monk AND !@modifies:ability:purity_of_body#monk AND !@modifies:ability:flurry_of_blows#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:diamond_body#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The maneuver master specializes in more complicated moves than simple damage-dealing strikes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:flurry_of_blows#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:flurry_of_maneuvers#monk_maneuver_master",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:maneuver_defense#monk_maneuver_master",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:reliable_maneuver#monk_maneuver_master",
+          "conditionFormula": "@class:monk\u003e\u003d4"
+        }, {
+          "featureId": "ability:meditative_maneuver#monk_maneuver_master",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:sweeping_maneuver#monk_maneuver_master",
+          "conditionFormula": "@class:monk\u003e\u003d11"
+        }, {
+          "featureId": "ability:whirlwind_maneuver#monk_maneuver_master",
+          "conditionFormula": "@class:monk\u003e\u003d15"
+        }],
+        "unlinks": [{
+          "featureId": "ability:flurry_of_blows#monk"
+        }, {
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:slow_fall#monk"
+        }, {
+          "featureId": "ability:purity_of_body#monk"
+        }, {
+          "featureId": "ability:diamond_body#monk"
+        }, {
+          "featureId": "ability:quivering_palm#monk"
+        }]
+      }]
+    }
+  }
+}

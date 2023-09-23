@@ -1,0 +1,86 @@
+id: "class:ranger#warden"
+name: "Warden"
+description: "All rangers have a bond with the wilderness, but the warden may have\
+  \ the strongest. This protector sits guard in the middle of the wilderness, keeping\
+  \ a lookout for any dangers that might spill from the deeper wilderness beyond,\
+  \ and protecting civilization from the savagery of nature--and vice versa. His long\
+  \ weeks, months, and sometimes years of isolation cause him to “hear\"what the land\
+  \ is saying. Not all are crazy."
+modifications:
+- add: "ability:master_of_terrain#ranger_warden"
+  remove:
+  - "ability:the_rangers_first_favored_enemy_ability#ranger"
+- add: "ability:live_in_comfort#ranger_warden"
+  remove:
+  - "ability:all_combat_style_feats#ranger"
+- add: "ability:terrain_bond#ranger_warden"
+  remove:
+  - "ability:hunters_bond#ranger"
+- add: "ability:able_explorer#ranger_warden"
+  remove:
+  - "ability:fourth_favored_enemies#ranger"
+  - "ability:the_rangers_second_third#ranger"
+- add: "ability:wilderness_whispers#ranger_warden"
+  remove:
+  - "ability:master_hunter#ranger"
+  - "ability:the_rangers_fifth_favored_enemy#ranger"
+features:
+- id: "ability:master_of_terrain#ranger_warden"
+  name: "Master of Terrain"
+  label: null
+  type: null
+  description: "At 1st level, a warden selects his first favored terrain. He gains\
+    \ another one at 3rd level, and then every five levels thereafter (for a maximum\
+    \ of five favored terrains at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:live_in_comfort#ranger_warden"
+  name: "Live in Comfort"
+  label: null
+  type: null
+  description: "At 2nd level, a warden is truly at home within his favored terrains.\
+    \ He knows all the signs of the wilderness. He rarely gets lost. He can easily\
+    \ live off the land in comfort, and can provide for companions. The warden can\
+    \ take 10 on any Survival check involving any of his favored terrains, even when\
+    \ in immediate danger and distracted. If the warden is not in immediate danger\
+    \ and distracted, he can take 20 even if the check has a penalty for failure."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:terrain_bond#ranger_warden"
+  name: "Terrain Bond"
+  label: null
+  type: null
+  description: "At 4th level, a warden forms a bond with the land itself, enabling\
+    \ him to direct others in such terrain. When in his favored terrain, the warden\
+    \ grants all allies within line of sight and that can hear him a +2 bonus on initiative\
+    \ checks and Perception, Stealth, and Survival skill checks. Also, as long as\
+    \ they travel with him, the warden's allies leave no trail and can't be tracked.\
+    \ The warden can choose for the group to leave a trail, or even for specific members\
+    \ of the group to leave a trail if he so desires."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:able_explorer#ranger_warden"
+  name: "Able Explorer"
+  label: null
+  type: null
+  description: "At 5th level, when making an Acrobatics, Climb, Fly, Ride, or Swim\
+    \ check in any of his favored terrains, a warden can make two skill checks and\
+    \ take the higher."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:wilderness_whispers#ranger_warden"
+  name: "Wilderness Whispers"
+  label: null
+  type: null
+  description: "At 20th level, a warden cannot be surprised and always acts as if\
+    \ he had rolled a natural 20 on any initiative check while within any of his favored\
+    \ terrains. A warden can always move at full speed while using Survival to follow\
+    \ tracks without penalty."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

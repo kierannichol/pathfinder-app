@@ -1,0 +1,58 @@
+id: "class:wizard#spirit_whisperer"
+name: "Spirit Whisperer"
+description: ""
+modifications:
+- add: "ability:arcane_bond#wizard_spirit_whisperer"
+  remove:
+  - "ability:spellbooks#wizard"
+  - "ability:arcane_bond#wizard"
+- add: "ability:spirit_link#wizard_spirit_whisperer"
+  remove:
+  - "ability:arcane_school#wizard"
+  - "ability:the_bonus_feat_gained_at_20th_level#wizard"
+- add: "ability:spirit_hex#wizard_spirit_whisperer"
+  remove:
+  - "ability:bonus_feats#wizard"
+features:
+- id: "ability:arcane_bond#wizard_spirit_whisperer"
+  name: "Arcane Bond"
+  label: null
+  type: null
+  description: "When a spirit whisperer chooses an arcane bond, he must choose the\
+    \ familiar arcane bond, and the familiar gains the spirit animal ability of his\
+    \ selected spirit (see spirit link, below). The spirit whisperer does not need\
+    \ a spellbook, but instead stores and prepares his spell by communing with the\
+    \ familiar as the witch's familiar class feature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spirit_link#wizard_spirit_whisperer"
+  name: "Spirit Link"
+  label: null
+  type: null
+  description: "At 1st level, a spirit whisperer forms a mystical bond with a spirit.\
+    \ The spirit whisperer picks a spirit from the shaman's list of spirits. At 1st\
+    \ level, he gains a spirit ability granted by that spirit. At 8th level, he gains\
+    \ the greater spirit ability granted by that spirit. At 20th level, the spirit\
+    \ whisperer gains the manifestation ability granted by the spirit. He uses his\
+    \ wizard level as his shaman level for determining the effects and DCs of abilities\
+    \ granted by the spirit. In addition, he uses his Intelligence modifier in place\
+    \ of his Wisdom modifier for these abilities. He does not gain hexes, spirit magic\
+    \ spells, or the true spirit ability typically granted to a shaman by these spirits."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spirit_hex#wizard_spirit_whisperer"
+  name: "Spirit Hex"
+  label: null
+  type: null
+  description: "At 5th level, a spirit whisperer can select one hex from the list\
+    \ of those granted by his chosen spirit. He uses his wizard level as his shaman\
+    \ level when determining the effects and DC of this hex. In addition, he uses\
+    \ his Intelligence modifier in place of his Wisdom modifier for these hexes. At\
+    \ 10th and 15th level, he can select another hex from those granted by his spirit.\
+    \ Each hex selected in this way replaces the bonus feat gained at that level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

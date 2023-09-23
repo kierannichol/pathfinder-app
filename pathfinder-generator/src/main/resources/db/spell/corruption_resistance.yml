@@ -1,0 +1,24 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates (harmless)"
+spell_resistance: "yes (harmless)"
+id: "spell:corruption_resistance"
+name: "Corruption Resistance"
+description: "You grant the touched creature limited protection from magical effects\
+  \ that inflict damage based on the target creature's alignment, such as holy smite,\
+  \ order's wrath, a paladin's smite evil attack, or an unholyweapon. Choose one alignment\
+  \ type: chaos, evil, good, or law. The subject takes 5 less points of damage from\
+  \ effects that specifically harm creatures of that alignment. The value of the protection\
+  \ increases to 10 points at 7th level and 15 points at 11th level. The spell protects\
+  \ the recipient's equipment as well."
+prerequisites: ""
+components: "V, S, DF"
+range: "touch"
+targets: "creature touched"
+duration: "10 minutes/level"
+school: "abjuration [chaotic, evil, good, or lawful]"
+levels:
+- class_id: "class:inquisitor"
+  level: 2
+- class_id: "class:paladin"
+  level: 2
+source: "Advanced Player's Guide"

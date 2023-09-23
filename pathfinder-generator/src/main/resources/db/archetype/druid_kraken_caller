@@ -1,0 +1,96 @@
+id: "class:druid#kraken_caller"
+name: "Kraken Caller"
+description: "Some druids draw upon power irreverently stolen from one of the most\
+  \ dangerous creatures of the depths: the kraken."
+modifications:
+- add: "ability:bonus_languages#druid_kraken_caller"
+  remove:
+  - "ability:the_druids_bonus_languages_class_feature#druid"
+- add: "ability:dauntless_swimmer#druid_kraken_caller"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:hold_breath#druid_kraken_caller"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:resist_the_waves_lure#druid_kraken_caller"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:wild_shape#druid_kraken_caller"
+  remove:
+  - "ability:wild_shape#druid"
+- add: "ability:beast_of_the_depths#druid_kraken_caller"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:bonus_languages#druid_kraken_caller"
+  name: "Bonus Languages"
+  label: null
+  type: null
+  description: "A kraken caller's bonus language options include Aquan instead of\
+    \ Sylvan."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dirty Tactics Toolbox"
+- id: "ability:dauntless_swimmer#druid_kraken_caller"
+  name: "Dauntless Swimmer"
+  label: null
+  type: null
+  description: "At 2nd level, a kraken caller can always take 10 on Swim checks, even\
+    \ if she is rushed or threatened."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dirty Tactics Toolbox"
+- id: "ability:hold_breath#druid_kraken_caller"
+  name: "Hold Breath"
+  label: null
+  type: null
+  description: "At 3rd level, a kraken caller can hold her breath for a number of\
+    \ minutes equal to her Constitution score before she risks drowning."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dirty Tactics Toolbox"
+- id: "ability:resist_the_waves_lure#druid_kraken_caller"
+  name: "Resist the Waves' Lure"
+  label: null
+  type: null
+  description: "At 4th level, a kraken caller gains a +4 bonus on saving throws against\
+    \ the spell-like and supernatural abilities of creatures with the aquatic subtype."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dirty Tactics Toolbox"
+- id: "ability:wild_shape#druid_kraken_caller"
+  name: "Wild Shape"
+  label: null
+  type: null
+  description: "A kraken caller's options for wild shape are limited to animals with\
+    \ the aquatic or water subtype or that have the amphibious special quality.\n\
+    The kraken caller can alternatively expend a daily use of wild shape to grow tentacles\
+    \ out of her body while otherwise retaining her own form. This effect lasts for\
+    \ 10 minutes per level, or until the kraken caller changes back.\nAt 4th level,\
+    \ the kraken caller grows two tentacles while in this form. The tentacles have\
+    \ a reach of 5 feet regardless of the kraken caller's size, and the kraken caller\
+    \ can use them as secondary natural attacks that deal 1d4 points of damage (1d3\
+    \ for a Small kraken caller). She also gains a racial bonus on Climb, Swim, and\
+    \ dirty trick combat maneuver checks equal to the number of tentacles grown.\n\
+    At each of 6th, 8th, 10th, and 12th levels, a kraken caller can grow an additional\
+    \ tentacle. As a move action, she can retract or regrow any number of the additional\
+    \ tentacles, redistributing the mass of any retracted tentacles. For every 2 retracted\
+    \ tentacles, she can increase the reach of the remaining tentacles by 5 feet (to\
+    \ a maximum of 15 feet), or increase the damage dealt by her tentacles as if she\
+    \ were one size category larger.\nWhile in this form, a kraken caller can expel\
+    \ a 10-foot-radius cloud of ink once per minute as a standard action.\nThis cloud\
+    \ provides total concealment in water and persists for 1 round per level. The\
+    \ ink has no effect out of water."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dirty Tactics Toolbox"
+- id: "ability:beast_of_the_depths#druid_kraken_caller"
+  name: "Beast of the Depths"
+  label: null
+  type: null
+  description: "At 13th level, a kraken caller gains a swim speed equal to her base\
+    \ land speed and can breathe water as though affected by the spell water breathing."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dirty Tactics Toolbox"
+source: "Pathfinder Player Companion: Dirty Tactics Toolbox"

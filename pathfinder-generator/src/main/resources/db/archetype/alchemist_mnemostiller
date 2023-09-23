@@ -1,0 +1,92 @@
+id: "class:alchemist#mnemostiller"
+name: "Mnemostiller"
+description: ""
+modifications:
+- add: "ability:mental_ambix#alchemist_mnemostiller"
+  remove:
+  - "ability:alchemy#alchemist"
+  - "ability:throw_anything#alchemist"
+- add: "ability:rasugen#alchemist_mnemostiller"
+  remove:
+  - "ability:mutagen#alchemist"
+- add: "ability:anguish_bomb#alchemist_mnemostiller"
+  remove:
+  - "ability:bombs#alchemist"
+- add: "ability:brewed_memories#alchemist_mnemostiller"
+  remove:
+  - "ability:poison_resistance#alchemist"
+- add: "ability:natural_empath#alchemist_mnemostiller"
+  remove:
+  - "ability:poison_use#alchemist"
+features:
+- id: "ability:mental_ambix#alchemist_mnemostiller"
+  name: "Mental Ambix"
+  label: null
+  type: null
+  description: "A mnemostiller's alchemy relies on force of personality, using his\
+    \ own mind as an alchemy lab to draw and purify the mnemos collected from others.\n\
+    A mnemostiller uses his Charisma score in place of his Intelligence score for\
+    \ the purpose of extracts and bonus extracts. A mnemostiller still uses his Intelligence\
+    \ score to learn new formulae.\nThe mnemostiller can cast detect thoughts as a\
+    \ spell-like ability a number of times per day equal to his Charisma modifier\
+    \ (minimum 1)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Distant Realms"
+- id: "ability:rasugen#alchemist_mnemostiller"
+  name: "Rasugen"
+  label: null
+  type: null
+  description: "A mnemostiller learns to brew a unique type of mutagen, called a rasugen,\
+    \ that suppresses his mind to enter a state of sublime purity. In this state,\
+    \ a mnemostiller becomes incredibly resilient, but cannot perform complex skills.\
+    \ Once imbibed, a rasugen grants a +2 alchemical bonus on all saving throws and\
+    \ 2 temporary hit points per alchemist level for 10 minutes per alchemist level.\
+    \ In addition, while the rasugen is in effect, a mnemostiller takes a –2 penalty\
+    \ to his Intelligence score and can't attempt checks using Appraise, Craft, Disable\
+    \ Device, Heal, Knowledge (any), Profession, Sleight of Hand, or Spellcraft. This\
+    \ acts in all other ways like a mutagen."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Distant Realms"
+- id: "ability:anguish_bomb#alchemist_mnemostiller"
+  name: "Anguish Bomb"
+  label: null
+  type: null
+  description: "A mnemostiller crafts his bombs from mnemos of pain and discomfort,\
+    \ inflicting psychic damage. An anguish bomb is identical to a bomb except that\
+    \ it deals nonlethal damage, it deals no damage to inanimate objects and creatures\
+    \ immune to mental effects, and creatures caught in the anguish bomb's splash\
+    \ can attempt a Will save for half damage. A mnemostiller uses his Charisma score\
+    \ in place of his Intelligence score to determine the bonus damage of his anguish\
+    \ bomb and the save DC of the anguish bomb's splash damage. He still uses his\
+    \ Intelligence score to determine his number of bombs per day. If the mnemostiller\
+    \ has taken any hit point damage in the past 24 hours, his anguish bombs inflict\
+    \ 1 additional point of nonlethal damage for every 2 alchemist levels he has."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Distant Realms"
+- id: "ability:brewed_memories#alchemist_mnemostiller"
+  name: "Brewed Memories"
+  label: null
+  type: null
+  description: "A mnemostiller can create several unique extracts from the mnemos\
+    \ he pulls from the minds of others. At 2nd level, he adds mindlink, placebo effect,\
+    \ and thought echo to his formula book as 1stlevel extracts. At 5th level, he\
+    \ adds aura alteration, detect mindscape, and mindscape door to his formula book\
+    \ as 2nd-level extracts. At 8th level, he adds mindwipe and thoughtsense to his\
+    \ formula book as 3rd-level extracts; the range for a mindwipe extract becomes\
+    \ creature touched, and it can be applied only to a helpless or willing creature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Distant Realms"
+- id: "ability:natural_empath#alchemist_mnemostiller"
+  name: "Natural Empath"
+  label: null
+  type: null
+  description: "A mnemostiller's studies naturally focus on others. He gains infusion\
+    \ as a bonus discovery at 2nd level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Distant Realms"
+source: "Pathfinder Campaign Setting: Distant Realms"

@@ -1,0 +1,66 @@
+id: "class:investigator#questioner"
+name: "Questioner"
+description: ""
+modifications:
+- add: "ability:inspiration_for_subterfuge#investigator_questioner"
+  remove:
+  - "ability:inspiration#investigator"
+- add: "ability:spellcasting#investigator_questioner"
+  remove:
+  - "ability:alchemy#investigator"
+- add: "ability:know_it_all#investigator_questioner"
+  remove:
+  - "ability:poison_lore#investigator"
+features:
+- id: "ability:inspiration_for_subterfuge#investigator_questioner"
+  name: "Inspiration for Subterfuge"
+  label: null
+  type: null
+  description: "A questioner can use inspiration on any Knowledge, Linguistics, or\
+    \ Stealth checks he attempts without expending a use of inspiration, provided\
+    \ he's trained in that skill."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+- id: "ability:spellcasting#investigator_questioner"
+  name: "Spellcasting"
+  label: null
+  type: null
+  description: "A questioner casts arcane spells drawn from the bard spell list. He\
+    \ can cast any spell he knows without preparing it ahead of time. To learn or\
+    \ cast a spell, a questioner must have an Intelligence score equal to at least\
+    \ 10 + the spell's level. The saving throw DC against a questioner's spell is\
+    \ equal to 10 + the spell's level + the questioner's Intelligence modifier.\n\
+    Like other spellcasters, a questioner can cast only a certain number of spells\
+    \ of each spell level per day. He knows the same number of spells and receives\
+    \ the same number of spell slots per day as a bard of his investigator level,\
+    \ including for cantrips. In addition, he receives bonus spells per day if he\
+    \ has a high Intelligence score.\nAt 5th level and every 3 investigator levels\
+    \ thereafter, a questioner can learn a new spell in place of one he already knows,\
+    \ using the same rules as a bard. In effect, the questioner loses the old spell\
+    \ in exchange for the new one. The new spell's level must be the same as that\
+    \ of the spell being exchanged, and it must be at least 1 level lower than the\
+    \ highest-level spell the questioner can cast.\nA questioner need not prepare\
+    \ his spells in advance. He can cast any bard spell he knows at any time, assuming\
+    \ he has not yet used up his allotment of spells per day for the spell's level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+- id: "ability:know_it_all#investigator_questioner"
+  name: "Know-It-All"
+  label: null
+  type: null
+  description: "At 2nd level, a questioner receives a +1 bonus on skill checks for\
+    \ all Knowledge skills in which he is trained. This bonus increases by 1 at 5th\
+    \ level and every 3 investigator levels thereafter, to a maximum of +6 at 17th\
+    \ level. If he has the perceptive tracking investigator talent, he also adds this\
+    \ bonus on Perception checks to find and follow tracks. At 5th level, the questioner\
+    \ gains the eidetic recollection investigator talent as a bonus talent, ignoring\
+    \ its prerequisites.\nThis ability replaces poison lore.\nRestricted Talents:\
+    \ A questioner selects investigator talents as normal, except he cannot select\
+    \ the alchemist discovery investigator talent.\nThis ability alters investigator\
+    \ talents."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Magic Tactics Toolbox"
+source: "Pathfinder Player Companion: Magic Tactics Toolbox"

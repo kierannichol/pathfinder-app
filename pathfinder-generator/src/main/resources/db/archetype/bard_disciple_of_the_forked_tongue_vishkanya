@@ -1,0 +1,55 @@
+id: "class:bard#disciple_of_the_forked_tongue_vishkanya"
+name: "Disciple of the Forked Tongue (Vishkanya)"
+description: "Studied in venomous words as well as venomous blood, a disciple of the\
+  \ forked tongue knows just the right phrase to slowly poison the soul. His voice\
+  \ can sink deep into his victims' hearts, destroying friendships and devouring the\
+  \ mind. The disciple of the forked tongue is an archetype of the bard class available\
+  \ to vishkanya characters."
+modifications:
+- add: "ability:discordant_spiral#bard_disciple_of_the_forked_tongue_vishkanya"
+  remove:
+  - "ability:inspire_courage#bard"
+- add: "ability:venomous_whispers#bard_disciple_of_the_forked_tongue_vishkanya"
+  remove:
+  - "ability:inspire_greatness#bard"
+- add: "ability:serpent_of_the_mind#bard_disciple_of_the_forked_tongue_vishkanya"
+  remove:
+  - "ability:versatile_performance#bard"
+features:
+- id: "ability:discordant_spiral#bard_disciple_of_the_forked_tongue_vishkanya"
+  name: "Discordant Spiral"
+  label: null
+  type: null
+  description: "The disciple can disrupt the thought processes of enemies who hear\
+    \ his performance, causing them to take a –1 penalty on saves against mind-affecting\
+    \ and curse effects and a –2 penalty on concentration checks. These penalties\
+    \ increase by 1 at 5th level and every 6 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:venomous_whispers#bard_disciple_of_the_forked_tongue_vishkanya"
+  name: "Venomous Whispers"
+  label: null
+  type: null
+  description: "At 9th level, a disciple of the forked tongue can use his performance\
+    \ to sow distrust into the mind of an enemy within 30 feet. An affected creature\
+    \ treats its allies as hostile for the purposes of their spells and abilities--it\
+    \ is never considered a willing target of spells and must attempt saving throws\
+    \ against them when possible, and it gains no benefit from allied bardic performances\
+    \ and other abilities that specifically target allies. For every 3 levels a disciple\
+    \ of the forked tongue has beyond 9th, he can target one additional enemy while\
+    \ using this performance (up to a maximum of four at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:serpent_of_the_mind#bard_disciple_of_the_forked_tongue_vishkanya"
+  name: "Serpent of the Mind"
+  label: null
+  type: null
+  description: "A disciple of the forked tongue can add one spell with the curse descriptor\
+    \ from the spell list of any spellcasting class to his list of spells known at\
+    \ 2nd level and every 4 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+source: "Pathfinder Player Companion: Potions & Poisons"

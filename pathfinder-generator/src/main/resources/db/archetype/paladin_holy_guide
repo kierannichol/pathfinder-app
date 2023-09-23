@@ -1,0 +1,36 @@
+id: "class:paladin#holy_guide"
+name: "Holy Guide"
+description: ""
+modifications:
+- add: "ability:favored_terrain#paladin_holy_guide"
+  remove:
+  - "ability:the_mercy_gained_at_3rd_level#paladin"
+- add: "ability:teamwork_feat#paladin_holy_guide"
+  remove:
+  - "ability:the_mercy_gained_at_6th_level#paladin"
+features:
+- id: "ability:favored_terrain#paladin_holy_guide"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "At 3rd level, a holy guide chooses a favored terrain from the ranger\
+    \ favored terrains table. This otherwise functions like the ranger ability of\
+    \ the same name."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:teamwork_feat#paladin_holy_guide"
+  name: "Teamwork Feat"
+  label: null
+  type: null
+  description: "At 6th level, a holy guide gains a teamwork feat as a bonus feat.\
+    \ He must meet the prerequisites for this feat. As a standard action, He can expend\
+    \ one use of smite evil to grant this feat to all allies within 30 feet who can\
+    \ see and hear him. Allies retain the use of this bonus feat for 3 rounds plus\
+    \ 1 round for every 2 levels the holy guide possesses. Allies do not need to meet\
+    \ the prerequisites of this bonus feat. Evil creatures do not gain the benefit\
+    \ of this teamwork feat, even if the paladin considers them allies."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

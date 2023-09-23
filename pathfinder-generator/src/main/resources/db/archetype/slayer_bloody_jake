@@ -1,0 +1,94 @@
+id: "class:slayer#bloody_jake"
+name: "Bloody Jake"
+description: ""
+modifications:
+- add: "ability:favored_terrain#slayer_bloody_jake"
+  remove:
+  - "ability:the_slayers_proficiency_in_medium_armor#slayer"
+  - "ability:shields#slayer"
+- add: "ability:the_woods_have_eyes#slayer_bloody_jake"
+  remove:
+  - "ability:the_slayer_talents_gained_at_4th_8th_12th#slayer"
+  - "ability:the_1st_level_studied_target#slayer"
+  - "ability:16th_level#slayer"
+- add: "ability:poor_study#slayer_bloody_jake"
+  remove:
+  - "ability:studied_target#slayer"
+- add: "ability:sadistic_snare#slayer_bloody_jake"
+  remove:
+  - "ability:the_slayer_talent_gained_at_6th_level#slayer"
+- add: "ability:cruel_trick#slayer_bloody_jake"
+  remove:
+  - "ability:swift_tracker#slayer"
+- add: "ability:woodland_shortcut#slayer_bloody_jake"
+  remove:
+  - "ability:slayers_advance#slayer"
+features:
+- id: "ability:favored_terrain#slayer_bloody_jake"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "At 1st (level, a bloody jake can select a type of terrain from the\
+    \ favored terrain table for rangers, though he is restricted to cold, desert,\
+    \ forest, jungle, mountains, plains, and swamp.\nHis bonuses when in this terrain\
+    \ increase by 2 at 5th level and every 5 slayer levels thereafter, though he does\
+    \ not gain the ability to select additional favored terrains unless he takes the\
+    \ terrain mastery rogue talent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:the_woods_have_eyes#slayer_bloody_jake"
+  name: "The Woods Have Eyes"
+  label: null
+  type: null
+  description: "At 12th level, a bloody jake in his favored terrain can spend one\
+    \ use of cruel tricks as a swift action to gain blindsense in a 30-foot radius\
+    \ for 1 round; this blindsense is sound-based."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:poor_study#slayer_bloody_jake"
+  name: "Poor Study"
+  label: null
+  type: null
+  description: "A bloody jake gains this ability at 5th level rather than 1st (level,\
+    \ beginning with a bonus of +1 at 5th level and increasing by 1 for every 5 slayer\
+    \ levels thereafter. A bloody jake must be 11th level to study an opponent as\
+    \ a move or swift action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:sadistic_snare#slayer_bloody_jake"
+  name: "Sadistic Snare"
+  label: null
+  type: null
+  description: "At 6th level, a bloody jake gains Learn Ranger Trap as a bonus feat,\
+    \ benefiting from it as if he were a ranger. He can expend two uses of his traps\
+    \ ability to add his sneak attack damage to the trap's damage; any slayer talents\
+    \ or rogue talents he has that modify sneak attack damage, such as bleeding attack,\
+    \ also apply to sneak attack damage dealt by his ranger traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:cruel_trick#slayer_bloody_jake"
+  name: "Cruel Trick"
+  label: null
+  type: null
+  description: "At 11th level, a bloody jake can maim or humiliate his target with\
+    \ a sneak attack, substituting 1 point of Dexterity or Charisma damage per die\
+    \ of sneak attack damage forfeited. A successful Will save negates this ability\
+    \ damage (DC = 10 + 1/2 the bloody jake's slayer level + his Charisma modifier)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:woodland_shortcut#slayer_bloody_jake"
+  name: "Woodland Shortcut"
+  label: null
+  type: null
+  description: "At 13th level, a bloody jake can move with supernatural ease among\
+    \ the trees once per day, as if using tree stride with a caster level equal to\
+    \ his slayer level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+source: "Pathfinder Roleplaying Game Horror Adventures"

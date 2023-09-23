@@ -1,0 +1,55 @@
+id: "class:druid#cave_druid"
+name: "Cave Druid"
+description: ""
+modifications:
+- add: "ability:cavesense#druid_cave_druid"
+  remove:
+  - "ability:nature_sense#druid"
+- add: "ability:tunnelrunner#druid_cave_druid"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:lightfoot#druid_cave_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:resist_subterranean_corruption#druid_cave_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+features:
+- id: "ability:cavesense#druid_cave_druid"
+  name: "Cavesense"
+  label: null
+  type: null
+  description: "A underground druid adds Knowledge (dungeoneering) rather than Knowledge\
+    \ (geography) as a class skill and gains a +2 bonus on Knowledge (dungeoneering)\
+    \ and Survival skill checks."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:tunnelrunner#druid_cave_druid"
+  name: "Tunnelrunner"
+  label: null
+  type: null
+  description: "At 2nd level, a cave druid can move through areas of rubble or narrow\
+    \ passages that require squeezing at her normal movement rate and without penalty."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:lightfoot#druid_cave_druid"
+  name: "Lightfoot"
+  label: null
+  type: null
+  description: "At 3rd level, a cave druid cannot be detected with tremorsense."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:resist_subterranean_corruption#druid_cave_druid"
+  name: "Resist Subterranean Corruption"
+  label: null
+  type: null
+  description: "At 4th level, a cave druid gains a +2 bonus on saves against exceptional*,\
+    \ supernatural, and spell-like abilities of oozes and aberrations.\n*Probably\
+    \ meant to say Extraordinary (since there's no such thing as “exceptional\" abilities.)"
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

@@ -1,0 +1,58 @@
+{
+  "id": "class:monk#monk_of_the_four_winds",
+  "name": "Monk of the Four Winds",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:timeless_body#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:abundant_step#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:elemental_fist#monk_monk_of_the_four_winds",
+          "conditionFormula": "@class:monk\u003e\u003d1"
+        }, {
+          "featureId": "ability:slow_time#monk_monk_of_the_four_winds",
+          "conditionFormula": "@class:monk\u003e\u003d12"
+        }, {
+          "featureId": "ability:aspect_master#monk_monk_of_the_four_winds",
+          "conditionFormula": "@class:monk\u003e\u003d17"
+        }, {
+          "featureId": "ability:immortality#monk_monk_of_the_four_winds",
+          "conditionFormula": "@class:monk\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:stunning_fist#monk"
+        }, {
+          "featureId": "ability:abundant_step#monk"
+        }, {
+          "featureId": "ability:timeless_body#monk"
+        }, {
+          "featureId": "ability:perfect_self#monk"
+        }]
+      }]
+    }
+  }
+}

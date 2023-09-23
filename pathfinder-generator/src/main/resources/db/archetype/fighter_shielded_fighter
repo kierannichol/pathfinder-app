@@ -1,0 +1,98 @@
+id: "class:fighter#shielded_fighter"
+name: "Shielded Fighter"
+description: "A shielded fighter focuses on both offense and defense, blending weapon\
+  \ and shield in perfect balance to impede his enemies while delivering deadly blows,\
+  \ and even turning the shield itself into a formidable weapon. These fighting school\
+  \ benefits apply when wielding a weapon and a shield simultaneously."
+modifications:
+- add: "ability:active_defense#fighter_shielded_fighter"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:shield_fighter#fighter_shielded_fighter"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:shield_buffet#fighter_shielded_fighter"
+  remove:
+  - "ability:weapon_training#fighter@9"
+  - "ability:weapon_training#fighter@13"
+- add: "ability:shield_guard#fighter_shielded_fighter"
+  remove:
+  - "ability:weapon_training#fighter@17"
+- add: "ability:shield_mastery#fighter_shielded_fighter"
+  remove:
+  - "ability:armor_mastery#fighter"
+- add: "ability:shield_ward#fighter_shielded_fighter"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:active_defense#fighter_shielded_fighter"
+  name: "Active Defense"
+  label: null
+  type: null
+  description: "At 3rd level, a shielded fighter gains a +1 dodge bonus to AC when\
+    \ wielding a shield and fighting defensively, using Combat Expertise, or using\
+    \ total defense. This bonus increases by +1 for every four levels beyond 3rd.\
+    \ As a swift action, he may share this bonus with one adjacent ally, or half of\
+    \ the bonus (minimum +0) with all adjacent allies, until the beginning of his\
+    \ next turn."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shield_fighter#fighter_shielded_fighter"
+  name: "Shield Fighter"
+  label: null
+  type: null
+  description: "At 5th level, a shielded fighter gains a +1 bonus on attack and damage\
+    \ rolls when making a shield bash. These bonuses increase by +1 every four levels\
+    \ beyond 5th. With a full-attack action, a shielded fighter may alternate between\
+    \ using his weapon or his shield for each attack. This action does not grant additional\
+    \ attacks or incur penalties as two-weapon fighting does."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shield_buffet#fighter_shielded_fighter"
+  name: "Shield Buffet"
+  label: null
+  type: null
+  description: "At 9th level, as a move action, a shielded fighter may make a combat\
+    \ maneuver check to use his shield to impede an adjacent enemy. If successful,\
+    \ the target suffers a –2 penalty on its attack rolls against the shielded fighter\
+    \ and a –2 penalty to AC on attacks made by the shielded fighter until the beginning\
+    \ of his next turn. At 13th level, a shielded fighter may use this ability as\
+    \ a swift action."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shield_guard#fighter_shielded_fighter"
+  name: "Shield Guard"
+  label: null
+  type: null
+  description: "At 17th level, as a swift action, a shielded fighter may designate\
+    \ one square adjacent to him. He may designate two squares if using a heavy shield\
+    \ or three squares if using a tower shield, but these squares must be contiguous.\
+    \ Enemies in these squares cannot flank the shielded fighter and do not count\
+    \ for flanking with other creatures. This effect lasts until he moves from his\
+    \ position or uses another swift action to change the affected squares."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shield_mastery#fighter_shielded_fighter"
+  name: "Shield Mastery"
+  label: null
+  type: null
+  description: "At 19th level, a shielded fighter gains DR 5/-- when wielding a shield."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shield_ward#fighter_shielded_fighter"
+  name: "Shield Ward"
+  label: null
+  type: null
+  description: "At 20th level, a shielded fighter gains evasion (as a rogue) while\
+    \ wielding a shield, and adds his shield bonus to his AC (not including enhancement\
+    \ bonuses) on Reflex saves and to his touch AC. In addition, his shield cannot\
+    \ be disarmed or sundered."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

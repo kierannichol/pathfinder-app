@@ -1,0 +1,52 @@
+id: "class:fighter#venomblade_nagaji"
+name: "Venomblade (Nagaji)"
+description: ""
+modifications:
+- add: "ability:venom_projection#fighter_venomblade_nagaji"
+  remove:
+  - "ability:bravery#fighter"
+  - "ability:alters_the_bonus_feat_gained_at_1st_level#fighter"
+- add: "ability:sneak_attack#fighter_venomblade_nagaji"
+  remove:
+  - "ability:the_bonus_feat_gained_at_6th_level#fighter"
+- add: "ability:viper_strike#fighter_venomblade_nagaji"
+  remove:
+  - "ability:the_bonus_feat_gained_at_12th_level#fighter"
+features:
+- id: "ability:venom_projection#fighter_venomblade_nagaji"
+  name: "Venom Projection"
+  label: null
+  type: null
+  description: "The venomblade must take the Spit Venom nagaji racial feat as his\
+    \ 1st-level fighter bonus feat if he does not already have that ability. At 2nd\
+    \ level, he does not provoke an attack of opportunity for using the ability granted\
+    \ by the Spit Venom feat. At 4th level, he can use the ability granted by the\
+    \ Spit Venom feat as a standard action; at 8th level, he can use it as a move\
+    \ action; and at 12th level, he can use it as a swift action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:sneak_attack#fighter_venomblade_nagaji"
+  name: "Sneak Attack"
+  label: null
+  type: null
+  description: "At 6th level, a venomblade deals 1d6 additional points of damage to\
+    \ targets within 30 feet that he flanks or that are denied their Dexterity bonus\
+    \ to AC against him. This damage increases by 1d6 every 4 levels beyond 6th."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:viper_strike#fighter_venomblade_nagaji"
+  name: "Viper Strike"
+  label: null
+  type: null
+  description: "At 12th level, upon making a successful attack with a slashing or\
+    \ piercing weapon, the venomblade can spend a use of the ability granted by the\
+    \ Spit Venom feat as a swift action to spray his toxin into the wound. This imposes\
+    \ a –4 penalty on the victim's saving throw against the poison and causes the\
+    \ target to take 1d6 additional points of damage from all successful attacks for\
+    \ 1 round.\nThis is a poison effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+source: "Pathfinder Player Companion: Potions & Poisons"

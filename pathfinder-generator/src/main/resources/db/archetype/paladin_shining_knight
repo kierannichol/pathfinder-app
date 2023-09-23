@@ -1,0 +1,37 @@
+id: "class:paladin#shining_knight"
+name: "Shining Knight"
+description: ""
+modifications:
+- add: "ability:skilled_rider#paladin_shining_knight"
+  remove:
+  - "ability:divine_health#paladin"
+- add: "ability:knights_charge#paladin_shining_knight"
+  remove:
+  - "ability:aura_of_justice#paladin"
+features:
+- id: "ability:skilled_rider#paladin_shining_knight"
+  name: "Skilled Rider"
+  label: null
+  type: null
+  description: "At 3rd level, a shining knight does not take any penalty to her Ride\
+    \ skill due to her armor check penalty. In addition, any mount she is riding gains\
+    \ the benefit of her divine grace class feature, adding her Charisma bonus (if\
+    \ any) to its saving throws."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:knights_charge#paladin_shining_knight"
+  name: "Knight's Charge"
+  label: null
+  type: null
+  description: "At 11th level, whenever a mounted shining knight charges a foe, her\
+    \ movement does not provoke attacks of opportunity, for either her or her mount.\
+    \ In addition, if her target is also the target of her smite evil ability and\
+    \ the charge attack hits, the target must make a Will save or be panicked for\
+    \ a number of rounds equal to 1/2 the shining knight's level. The DC of this save\
+    \ is equal to 10 + 1/2 the shining knight's level + the shining knight's Charisma\
+    \ modifier."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

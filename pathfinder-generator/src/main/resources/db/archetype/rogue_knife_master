@@ -1,0 +1,36 @@
+id: "class:rogue#knife_master"
+name: "Knife Master"
+description: "The knife master is a trained killer who specializes in close-up combat\
+  \ and the wave and weave of knife fighting. In her hands, daggers and other similar\
+  \ light blades become truly deadly instruments."
+modifications:
+- add: "ability:hidden_blade#rogue_knife_master"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:blade_sense#rogue_knife_master"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:hidden_blade#rogue_knife_master"
+  name: "Hidden Blade"
+  label: null
+  type: null
+  description: "A knife master adds 1/2 her level on Sleight of Hand checks made to\
+    \ conceal a light blade."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:blade_sense#rogue_knife_master"
+  name: "Blade Sense"
+  label: null
+  type: null
+  description: "At 3rd level, a knife master is so skilled in combat involving light\
+    \ blades that she gains a +1 dodge bonus to AC against attacks made against her\
+    \ with light blades. This bonus increases by +1 for every three levels, to a maximum\
+    \ of +6 at 18th level.\nThis ability replaces trap sense.\nRogue Talents: The\
+    \ following rogue talents complement the knife master archetype: befuddling strike,\
+    \ combat trick, offensive defense, surprise attack, underhanded, and weapon training."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

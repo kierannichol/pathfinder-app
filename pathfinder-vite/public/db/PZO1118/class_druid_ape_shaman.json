@@ -1,0 +1,49 @@
+{
+  "id": "class:druid#ape_shaman",
+  "name": "Ape Shaman",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "A shaman with this totem calls upon the mighty ape, a peaceful but powerful simian whose strength is beyond compare. An ape shaman is a friendly protector of the forest, but will crush those enemies who rouse her anger."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:totem_transformation#druid_ape_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:totemic_summons#druid_ape_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d5"
+        }, {
+          "featureId": "ability:bonus_feat#druid_ape_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:a_thousand_faces#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }]
+      }]
+    }
+  }
+}

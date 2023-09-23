@@ -1,0 +1,103 @@
+id: "class:monk#karmic_monk"
+name: "Karmic Monk"
+description: ""
+modifications:
+- add: "ability:karmic_strike#monk_karmic_monk"
+  remove:
+  - "ability:stunning_fist#monk"
+- add: "ability:balanced_mind#monk_karmic_monk"
+  remove:
+  - "ability:still_mind#monk"
+- add: "ability:ki_pool#monk_karmic_monk"
+  remove:
+  - "ability:10th_level_ki_pool_abilities#monk"
+  - "ability:the_7th_#monk"
+- add: "ability:harmony#monk_karmic_monk"
+  remove:
+  - "ability:improved_evasion#monk"
+- add: "ability:karmic_disruption#monk_karmic_monk"
+  remove:
+  - "ability:slow_fall_80_feet#monk"
+  - "ability:alters_slow_fall_at_19th_level_to_become_slow_fall_80_feet#monk"
+- add: "ability:harmonic_self#monk_karmic_monk"
+  remove:
+  - "ability:perfect_self#monk"
+features:
+- id: "ability:karmic_strike#monk_karmic_monk"
+  name: "Karmic Strike"
+  label: null
+  type: null
+  description: "At 1st level, a karmic monk gains bonuses against creatures that attack\
+    \ him first. If a creature the karmic monk has not attacked within the past 24\
+    \ hours makes an attack roll against the karmic monk or casts an offensive spell\
+    \ that affects the karmic monk, the karmic monk receives a +2 bonus on attack\
+    \ rolls and damage rolls against that creature. If the karmic monk hits such a\
+    \ target, this bonus lasts until the end of the karmic monk's turn (or until the\
+    \ beginning of the karmic monk's next turn, if it isn't his turn). Otherwise,\
+    \ the bonus against a particular creature lasts for 1 minute after the creature's\
+    \ last attack against the karmic monk."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:balanced_mind#monk_karmic_monk"
+  name: "Balanced Mind"
+  label: null
+  type: null
+  description: "At 3rd level, a karmic monk receives a +2 bonus on saving throws against\
+    \ effects with the chaos, evil, good, or law subtype. He also receives this bonus\
+    \ against the abilities and effects of creatures of the listed subtypes."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:ki_pool#monk_karmic_monk"
+  name: "Ki Pool"
+  label: null
+  type: null
+  description: "At 7th level, when a karmic monk makes unarmed strikes, they're treated\
+    \ as chaotic, evil, good, and lawful."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:harmony#monk_karmic_monk"
+  name: "Harmony"
+  label: null
+  type: null
+  description: "At 9th level, as an immediate action, a karmic monk can shift his\
+    \ alignment by one step for the purpose of all effects dependent on alignment\
+    \ until the beginning of his next turn. This does not actually alter the karmic\
+    \ monk's alignment."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:karmic_disruption#monk_karmic_monk"
+  name: "Karmic Disruption"
+  label: null
+  type: null
+  description: "At 16th level, a karmic monk can spend 1 point from his ki pool as\
+    \ a swift action to add 1d6 points of damage to his unarmed strikes against creatures\
+    \ of either chaotic, evil, good, or lawful alignment for 1 round. This stacks\
+    \ with other abilities that deal damage based on alignment. He cannot alter his\
+    \ alignment choice until the next time he uses this ability.\nCreatures that are\
+    \ of the appropriate alignment and are struck by this attack must succeed at a\
+    \ Will save (DC = 10 + 1/2 the karmic monk's class level + the karmic monk's Wisdom\
+    \ modifier) or lose any damage reduction based on alignment for a number of rounds\
+    \ equal to the karmic monk's Wisdom modifier (minimum 1 round). A creature that\
+    \ succeeds at this save is immune to having its damage reduction disrupted by\
+    \ that karmic monk for 24 hours. This attack disrupts only alignment components\
+    \ of damage reduction, not any other components; for example, DR/cold iron and\
+    \ good becomes DR/cold iron."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:harmonic_self#monk_karmic_monk"
+  name: "Harmonic Self"
+  label: null
+  type: null
+  description: "At 20th level, a karmic monk is truly in tune with the harmonic balance\
+    \ of the universe. He gains the abilities of perfect self, except that instead\
+    \ of DR 10/chaotic, he gains DR 10 that is overcome only by attacks that do not\
+    \ count as chaotic, evil, good, or lawful."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+source: "Pathfinder Roleplaying Game Occult Adventures"

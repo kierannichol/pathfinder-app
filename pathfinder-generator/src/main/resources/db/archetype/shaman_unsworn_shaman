@@ -1,0 +1,75 @@
+id: "class:shaman#unsworn_shaman"
+name: "Unsworn Shaman"
+description: "An unsworn shaman never binds herself to one specific spirit, always\
+  \ making new deals as she deems necessary for the circumstances that she finds herself\
+  \ in. While this weakens the powers she can access from any one spirit, it gives\
+  \ her access to a broader overall range of abilities."
+modifications:
+- add: "ability:minor_spirit#shaman_unsworn_shaman"
+  remove:
+  - "ability:alters_hex#shaman"
+  - "ability:spirit#shaman"
+- add: "ability:spirit_animal#shaman_unsworn_shaman"
+  remove:
+  - "ability:spirit_animal#shaman"
+- add: "ability:wandering_spirit#shaman_unsworn_shaman"
+  remove:
+  - "ability:wandering_hex#shaman"
+  - "ability:wandering_spirit#shaman"
+- add: "ability:spirit_magic#shaman_unsworn_shaman"
+  remove:
+  - "ability:spirit_magic#shaman"
+features:
+- id: "ability:minor_spirit#shaman_unsworn_shaman"
+  name: "Minor Spirit"
+  label: null
+  type: null
+  description: "At 1st level, the unsworn shaman also forms a temporary bond with\
+    \ a minor spirit each day, granting her access to a shaman or witch hex of her\
+    \ choosing, but not a major hex or a grand hex. She must make this selection each\
+    \ day when she prepares her spells for the day. Until she changes the minor spirit,\
+    \ she continues to have access to the shaman or witch hex. At 2nd level, she can\
+    \ instead select a hex from one of her wandering spirits selected for that day.\
+    \ If she selects a shaman or witch hex, she treats her shaman level as her witch\
+    \ level, and uses her Wisdom in place of her Intelligence for the purpose of that\
+    \ hex.\nShe can make temporary bonds with two minor spirits (thus gaining two\
+    \ hexes) at 4th level, and with one additional minor spirit (and hex) every 4\
+    \ levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spirit_animal#shaman_unsworn_shaman"
+  name: "Spirit Animal"
+  label: null
+  type: null
+  description: "At 2nd level, an unsworn shaman's spirit animal gains the spirit animal\
+    \ bonus from one of her wandering spirits (see below). This bonus can be changed\
+    \ each day when the shaman prepares spells, but it must correspond to one of the\
+    \ shaman's wandering spirits."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:wandering_spirit#shaman_unsworn_shaman"
+  name: "Wandering Spirit"
+  label: null
+  type: null
+  description: "At 2nd level, the unsworn shaman gains access to the wandering spirit\
+    \ class feature. At 10th level, she gains the abilities listed in the greater\
+    \ version of her wandering spirit. At 18th level, she gains the abilities listed\
+    \ in the true version of her wandering spirit.\nAdditionally, at 6th level, she\
+    \ also gains a second wandering spirit, gaining the abilities listed in the greater\
+    \ version of that spirit at 14th level, and the abilities listed in the true version\
+    \ at 20th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spirit_magic#shaman_unsworn_shaman"
+  name: "Spirit Magic"
+  label: null
+  type: null
+  description: "The unsworn shaman gains this ability at 2nd level rather than at\
+    \ 1st."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

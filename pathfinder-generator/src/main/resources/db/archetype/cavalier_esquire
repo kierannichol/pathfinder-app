@@ -1,0 +1,114 @@
+id: "class:cavalier#esquire"
+name: "Esquire"
+description: ""
+modifications:
+- add: "ability:aide_de_camp#cavalier_esquire"
+  remove:
+  - "ability:mount#cavalier"
+- add: "ability:teamwork#cavalier_esquire"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:shared_challenge#cavalier_esquire"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:banner#cavalier_esquire"
+  remove:
+  - "ability:banner#cavalier"
+- add: "ability:avenge_me#cavalier_esquire"
+  remove:
+  - "ability:mighty_charge#cavalier"
+- add: "ability:fight_as_one#cavalier_esquire"
+  remove:
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:aide_de_camp#cavalier_esquire"
+  name: "Aide-De-Camp"
+  label: null
+  type: null
+  description: "At 3rd level, an esquire acquires the services of a loyal aide-de-camp.\
+    \ This NPC functions similarly to a cohort, though the aide-de-camp must advance\
+    \ in a class that grants proficiency with all martial weapons and cannot multiclass\
+    \ until the esquire reaches 7th level (though the aide-de-camp can select an archetype).\n\
+    If the aide-de-camp is a cavalier, he must follow the same order as the esquire.\n\
+    The aide-de-camp gains Swift Aid as a bonus feat, and provides a +2 (rather than\
+    \ +1) bonus when using this feat to aid the esquire. As a move action, the aide-de-camp\
+    \ can retrieve a stored item or an item on the ground and hand it to the esquire.\
+    \ The esquire does not have to take an action to receive the item, though he must\
+    \ be conscious and have a free hand. This action does not provoke attacks of opportunity\
+    \ for the aide-de-camp or esquire.\nIf the aide-de-camp dies performing an act\
+    \ that directly supports the edicts of the esquire's order (GM's discretion),\
+    \ the esquire does not take a penalty to his Leadership score. If an aide-de-camp\
+    \ dies, or is released from the esquire's service, the esquire may gain a new\
+    \ aide-de-camp by scouting for potential candidates in a city or large town. This\
+    \ requires 1 day per 5 levels of the aide-de-camp to be recruited."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:teamwork#cavalier_esquire"
+  name: "Teamwork"
+  label: null
+  type: null
+  description: "At 3rd level, as long as an esquire and his aide-de-camp are adjacent,\
+    \ the aide-de-camp is treated as having any teamwork feats the esquire has. They\
+    \ also share any teamwork feats that function when two or more allies threaten\
+    \ the same target, as long as they both threaten the same target."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:shared_challenge#cavalier_esquire"
+  name: "Shared Challenge"
+  label: null
+  type: null
+  description: "At 4th level, whenever an esquire challenges an opponent when his\
+    \ aide-de-camp is within 30 feet, he may grant his aide-de-camp bonuses equal\
+    \ to one-half of the bonuses he gains from challenge, including bonuses derived\
+    \ from the cavalier's order. If the aide-decamp is also a cavalier and challenges\
+    \ the same target, these bonuses do not stack. Like the esquire, his aide-decamp\
+    \ takes a –2 penalty to Armor Class against attacks from creatures other than\
+    \ the challenged opponent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:banner#cavalier_esquire"
+  name: "Banner"
+  label: null
+  type: null
+  description: "An aide-de-camp can carry an esquire's banner for him and still grant\
+    \ allies within range the banner's bonuses. While doing so the aide-de-camp gains\
+    \ double the normal morale bonuses provided by the banner."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:avenge_me#cavalier_esquire"
+  name: "Avenge Me"
+  label: null
+  type: null
+  description: "At 11th level, whenever the esquire is killed, dying, stunned, dazed,\
+    \ or otherwise unable to take actions, his aide-de-camp gains the full benefits\
+    \ of the esquire's challenge and order abilities against all creatures that attacked\
+    \ the esquire in the previous round. If the aidede- camp is also a cavalier and\
+    \ challenges the same target, these bonuses do not stack. These benefits last\
+    \ until the esquire regains the ability to take actions, or until the aide-de-camp\
+    \ or the triggering opponents are killed.\nIf his aide-de-camp is killed, dying,\
+    \ or otherwise unable to take actions the esquire may declare one creature of\
+    \ his choice that attacked the aide-de-camp in the past round as his quarry; this\
+    \ functions identically to the ranger class ability. These bonuses last until\
+    \ the aide-de-camp recovers or until the cavalier or the triggering opponents\
+    \ are killed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+- id: "ability:fight_as_one#cavalier_esquire"
+  name: "Fight As One"
+  label: null
+  type: null
+  description: "At 20th level, the shared challenge ability increases in power, granting\
+    \ the aide-de-camp full benefit of the esquire's challenge. In addition, if the\
+    \ esquire and aide-de-camp both confirm a critical hit against the same target\
+    \ within the same round, the target must make a Fortitude save (DC 10 +1/2 the\
+    \ esquire's cavalier level + the esquire's Charisma bonus) or be staggered for\
+    \ 1d4 rounds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Cohorts and Companions"
+source: "Pathfinder Player Companion: Cohorts and Companions"

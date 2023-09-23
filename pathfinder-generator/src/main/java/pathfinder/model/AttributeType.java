@@ -2,6 +2,7 @@ package pathfinder.model;
 
 import lombok.Getter;
 
+@Getter
 public enum AttributeType {
     NONE(""),
     FEAT("feat"),
@@ -37,7 +38,7 @@ public enum AttributeType {
     SPELL("spell"),
     ;
 
-    @Getter private final String key;
+    private final String key;
 
     AttributeType(String label) {
         this.key = label;

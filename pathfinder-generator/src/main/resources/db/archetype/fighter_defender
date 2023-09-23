@@ -1,0 +1,61 @@
+id: "class:fighter#defender"
+name: "Defender"
+description: ""
+modifications:
+- add: "ability:defensive_parry#fighter_defender"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:disarming_strike#fighter_defender"
+  remove:
+  - "ability:the_bonus_feat_the_fighter_would_normally_gain_at_6th_level#fighter"
+- add: "ability:steel_net#fighter_defender"
+  remove:
+  - "ability:the_bonus_feat_the_fighter_would_normally_gain_at_8th_level#fighter"
+- add: "ability:counterattack#fighter_defender"
+  remove:
+  - "ability:the_bonus_feat_the_fighter_would_normally_gain_at_10th_level#fighter"
+features:
+- id: "ability:defensive_parry#fighter_defender"
+  name: "Defensive Parry"
+  label: null
+  type: null
+  description: "At 3rd level, when a defender makes a full attack with a dueling sword,\
+    \ he gains a +1 shield bonus to his AC against melee attacks until the beginning\
+    \ of his next turn. This bonus increases to +2 at 7th level, +3 at 11th level,\
+    \ and +4 at 15th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:disarming_strike#fighter_defender"
+  name: "Disarming Strike"
+  label: null
+  type: null
+  description: "At 6th level, when a defender successfully disarms an opponent using\
+    \ a dueling sword, he also deals normal damage to the target, but without the\
+    \ normal Strength bonus to damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:steel_net#fighter_defender"
+  name: "Steel Net"
+  label: null
+  type: null
+  description: "At 8th level, a defender can create a blazing wall of steel to defend\
+    \ himself. When fighting defensively as a full-round action with a dueling sword,\
+    \ the defender's penalties on all attacks in a round are reduced by 2, and his\
+    \ dodge bonus to AC increases by 2 for the same round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:counterattack#fighter_defender"
+  name: "Counterattack"
+  label: null
+  type: null
+  description: "At 10th level, once per round, a defender can make an attack of opportunity\
+    \ against an opponent who hits him with a melee attack (regardless of how many\
+    \ attacks of opportunity the defender can otherwise make), so long as the attacking\
+    \ creature is within the his reach."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

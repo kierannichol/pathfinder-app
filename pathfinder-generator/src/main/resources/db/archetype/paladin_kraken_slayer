@@ -1,0 +1,67 @@
+id: "class:paladin#kraken_slayer"
+name: "Kraken Slayer"
+description: ""
+modifications:
+- add: "ability:smite_deepest_evil#paladin_kraken_slayer"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:divine_immunity#paladin_kraken_slayer"
+  remove:
+  - "ability:divine_health#paladin"
+- add: "ability:divine_bond#paladin_kraken_slayer"
+  remove:
+  - "ability:divine_bond#paladin"
+- add: "ability:aura_of_elusion#paladin_kraken_slayer"
+  remove:
+  - "ability:aura_of_faith#paladin"
+features:
+- id: "ability:smite_deepest_evil#paladin_kraken_slayer"
+  name: "Smite Deepest Evil"
+  label: null
+  type: null
+  description: "This functions as the smite evil ability, but the kraken slayer does\
+    \ not get a bonus of 2 points of damage per level on the first successful attack\
+    \ against any creatures other than evil creatures with the aquatic or water subtype.\
+    \ She gains a bonus of 2 points of damage per level on all smite attacks made\
+    \ against evil creatures with the aquatic or water subtype."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+- id: "ability:divine_immunity#paladin_kraken_slayer"
+  name: "Divine Immunity"
+  label: null
+  type: null
+  description: "At 3rd level, a kraken slayer is immune to poisons and diseases, including\
+    \ supernatural and magical diseases, delivered by the natural attacks of creatures\
+    \ with the aquatic or water subtype."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+- id: "ability:divine_bond#paladin_kraken_slayer"
+  name: "Divine Bond"
+  label: null
+  type: null
+  description: "A kraken slayer who chooses a weapon as her divine bond may either\
+    \ increase her weapon's enhancement bonus or add any of the following properties\
+    \ to her weapon: axiomatic, brilliant energy, defending, grayflame, holy, keen,\
+    \ merciful, seaborne, and speed. A kraken slayer who chooses a mount must select\
+    \ one suitable for an aquatic environment, such as an elasmosaurus, giant seahorse,\
+    \ or orca."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+- id: "ability:aura_of_elusion#paladin_kraken_slayer"
+  name: "Aura of Elusion"
+  label: null
+  type: null
+  description: "At 14th level, a kraken slayer gains a sacred bonus equal to her kraken\
+    \ slayer level on Escape Artist checks and combat maneuver checks to escape a\
+    \ grapple and to her CMD to avoid being grappled. Each ally within 10 feet of\
+    \ her gains a sacred bonus equal to half her kraken slayer level on Escape Artist\
+    \ checks and combat maneuver checks to escape a grapple and to CMD to avoid being\
+    \ grappled. This ability functions only while the paladin is conscious, not if\
+    \ she is unconscious or dead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Sea"
+source: "Pathfinder Player Companion: Blood of the Sea"

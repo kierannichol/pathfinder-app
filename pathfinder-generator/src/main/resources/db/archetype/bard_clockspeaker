@@ -1,0 +1,74 @@
+id: "class:bard#clockspeaker"
+name: "Clockspeaker"
+description: ""
+modifications:
+- add: "ability:soothing_the_machine#bard_clockspeaker"
+  remove:
+  - "ability:fascinate#bard"
+- add: "ability:speaker_of_dread#bard_clockspeaker"
+  remove:
+  - "ability:dirge_of_doom#bard"
+- add: "ability:relight_the_spark#bard_clockspeaker"
+  remove:
+  - "ability:soothing_performance#bard"
+- add: "ability:makers_wrath#bard_clockspeaker"
+  remove:
+  - "ability:frightening_tune#bard"
+features:
+- id: "ability:soothing_the_machine#bard_clockspeaker"
+  name: "Soothing the Machine"
+  label: null
+  type: null
+  description: "A clockspeaker can pacify constructs. This functions as the fascinate\
+    \ bardic performance, except it can target only constructs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:speaker_of_dread#bard_clockspeaker"
+  name: "Speaker of Dread"
+  label: null
+  type: null
+  description: "At 8th level, a clockspeaker can instill constructs with a sense of\
+    \ dread. This functions as the dirge of doom bardic performance, except it can\
+    \ target only constructs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:relight_the_spark#bard_clockspeaker"
+  name: "Relight the Spark"
+  label: null
+  type: null
+  description: "At 12th level, a clockspeaker can reanimate a destroyed construct.\
+    \ The clockspeaker selects a destroyed construct within 60 feet and expends 1\
+    \ round of bardic performance to reanimate the chosen construct. The construct\
+    \ reanimates with a number of hit points equal to the clockspeaker's level, but\
+    \ it is staggered. The affected construct follows the clockspeaker's orders while\
+    \ reanimated. Each round, the bard can expend another round of bardic performance\
+    \ to keep that construct reanimated for another round. The construct regains a\
+    \ number of hit points equal to the clockspeaker's level for every round it remains\
+    \ reanimated. If the construct recovers all of its hit points in this way, it\
+    \ becomes fully reanimated and no longer requires bardic performance to remain\
+    \ animated. A construct fully reanimated in this way follows the orders of the\
+    \ clockspeaker that reanimated it, as if the clockspeaker were its original creator,\
+    \ for 24 hours. Afterwards, the construct reverts to its original programming.\
+    \ The construct is completely destroyed if the clockspeaker ends this performance\
+    \ before the construct regains its full hit points, is interrupted, or is reduced\
+    \ to 0 hit points. A completely destroyed construct cannot be repowered or reanimated,\
+    \ even by another clockspeaker. The clockspeaker can reanimate multiple constructs\
+    \ with this ability (either at the same time or over successive rounds) but must\
+    \ expend 1 round of bardic performance per reanimated construct per round to maintain\
+    \ the effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:makers_wrath#bard_clockspeaker"
+  name: "Maker's Wrath"
+  label: null
+  type: null
+  description: "At 14th level, a clockspeaker can instill in constructs a fear of\
+    \ destruction. This functions as the frightening tune bardic performance, except\
+    \ it can target only constructs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+source: "Pathfinder Campaign Setting: Construct Handbook"

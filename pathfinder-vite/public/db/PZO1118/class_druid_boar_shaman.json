@@ -1,0 +1,49 @@
+{
+  "id": "class:druid#boar_shaman",
+  "name": "Boar Shaman",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+    "text": "A boar shaman chooses the stolid and ferocious boar as her totem. Content to be left alone, she becomes one of the most dangerous creatures of the wild when provoked."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:totem_transformation#druid_boar_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:totemic_summons#druid_boar_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d5"
+        }, {
+          "featureId": "ability:bonus_feat#druid_boar_shaman",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:a_thousand_faces#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }]
+      }]
+    }
+  }
+}

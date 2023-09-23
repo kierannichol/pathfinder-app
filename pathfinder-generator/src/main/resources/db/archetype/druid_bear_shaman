@@ -1,0 +1,36 @@
+id: "class:druid#bear_shaman"
+name: "Bear Shaman"
+description: ""
+modifications:
+- add: "ability:totemic_summons#druid_bear_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:bonus_feat#druid_bear_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totemic_summons#druid_bear_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, a bear shaman may cast summon nature's ally as a standard\
+    \ action when summoning bears, and summoned bears gain temporary hit points equal\
+    \ to her druid level. She can apply the young template to any bear to reduce the\
+    \ level of the summoning spell required by one. She can also increase the level\
+    \ of summoning required by one in order to apply either the advanced or the giant\
+    \ template, or increase it by two to apply both the advanced and giant templates."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:bonus_feat#druid_bear_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every 4 levels thereafter, a bear shaman gains one\
+    \ of the following bonus feats: Diehard, Endurance, Great Fortitude, Improved\
+    \ Great Fortitude, Toughness. She must meet the prerequisites for these bonus\
+    \ feats."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

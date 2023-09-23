@@ -1,0 +1,36 @@
+casting_time: "1 standard action"
+saving_throw: "none"
+spell_resistance: "yes"
+id: "spell:umbral_weapon"
+name: "Umbral Weapon"
+description: "A shadowy afterimage trails behind the targeted weapon, potentially\
+  \ damaging foes even when the weapon misses. Once per round, when the weapon's wielder\
+  \ misses a creature with the target weapon, the wielder can reroll the attack. If\
+  \ the reroll hits, the spell hits the targeted creature and deals 1d8 points of\
+  \ cold damage, plus 1 additional point per 2 caster levels (maximum +10). If an\
+  \ attacked creature has spell resistance, you must attempt a caster level check\
+  \ (1d20 + caster level) against that spell resistance the first time the spell damages\
+  \ the target. If the creature successfully resists umbral weapon, the spell is dispelled.\
+  \ If not, the creature takes damage as normal."
+prerequisites: ""
+components: "V, S, M (a pair of miniature swords)"
+range: "touch"
+targets: "melee weapon touched"
+duration: "1 round/level"
+school: "illusion [cold, shadow]"
+levels:
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:bard"
+  level: 2
+- class_id: "class:magus"
+  level: 2
+- class_id: "class:skald"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:witch"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Melee Tactics Toolbox"

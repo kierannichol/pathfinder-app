@@ -1,0 +1,48 @@
+id: "class:rogue#scavenger"
+name: "Scavenger"
+description: ""
+modifications:
+- add: "ability:technic_training#rogue_scavenger"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:lucky_glitch#rogue_scavenger"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:robot_slayer#rogue_scavenger"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:technic_training#rogue_scavenger"
+  name: "Technic Training"
+  label: null
+  type: null
+  description: "A scavenger adds 1/2 her rogue level to Perception skill checks to\
+    \ locate mechanical or high-tech traps and to Disable Device skill checks against\
+    \ these traps (minimum +1). She gains Technologist as a bonus feat. She cannot\
+    \ use Disable Device to disarm magical traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+- id: "ability:lucky_glitch#rogue_scavenger"
+  name: "Lucky Glitch"
+  label: null
+  type: null
+  description: "Starting at 4th level, whenever a scavenger triggers a glitch when\
+    \ using a timeworn technological item, she rolls twice and can choose which of\
+    \ the two glitch effects actually occurs. A scavenger always adds her level to\
+    \ rolls to determine what kind of glitch occurs, and treats rolls of over 100\
+    \ as 100."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+- id: "ability:robot_slayer#rogue_scavenger"
+  name: "Robot Slayer"
+  label: null
+  type: null
+  description: "At 8th level, a scavenger knows just where to strike robots to incapacitate\
+    \ and disable them. When she deals sneak attack damage to a robot, she ignores\
+    \ all hardness that robot possesses."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Technology Guide"
+source: "Pathfinder Campaign Setting: Technology Guide"

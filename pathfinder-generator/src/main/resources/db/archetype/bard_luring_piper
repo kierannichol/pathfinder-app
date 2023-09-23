@@ -1,0 +1,60 @@
+id: "class:bard#luring_piper"
+name: "Luring Piper"
+description: ""
+modifications:
+- add: "ability:fey_secrets#bard_luring_piper"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:luring_presentation#bard_luring_piper"
+  remove:
+  - "ability:bardic_performance#bard"
+- add: "ability:bardic_performance#bard_luring_piper"
+  remove:
+  - "ability:fascinate#bard"
+- add: "ability:pipers_attention#bard_luring_piper"
+  remove:
+  - "ability:well_versed#bard"
+features:
+- id: "ability:fey_secrets#bard_luring_piper"
+  name: "Fey Secrets"
+  label: null
+  type: null
+  description: "A luring piper adds half his class level (minimum 1) on Bluff, Knowledge\
+    \ (nature), Perception, Sense Motive, and Survival checks when interacting with\
+    \ fey."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:luring_presentation#bard_luring_piper"
+  name: "Luring Presentation"
+  label: null
+  type: null
+  description: "Creatures that have the animal or fey type take a –2 penalty on saving\
+    \ throws imposed by a luring piper's bardic performances. Creatures with any other\
+    \ type gain a +2 bonus on saving throws against a luring piper's bardic performances."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:bardic_performance#bard_luring_piper"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "The luring piper gains the following types of bardic performances\
+    \ that can only be made when using Perform (wind instruments) and a when employing\
+    \ a wind instrument."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+- id: "ability:pipers_attention#bard_luring_piper"
+  name: "Piper's Attention"
+  label: null
+  type: null
+  description: "Starting at 2nd level, whenever a luring piper is actively using Perform\
+    \ (wind instruments) as part of a bardic performance, he gains a +4 bonus on saving\
+    \ throws against language-dependent, mind-affecting, and sonic effects. If this\
+    \ effect is caused by a fey creature, the luring piper can also roll the saving\
+    \ throw twice and take the better result."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Monster Hunter's Handbook"
+source: "Pathfinder Player Companion: Monster Hunter's Handbook"

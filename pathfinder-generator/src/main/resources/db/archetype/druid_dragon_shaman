@@ -1,0 +1,51 @@
+id: "class:druid#dragon_shaman"
+name: "Dragon Shaman"
+description: ""
+modifications:
+- add: "ability:totemic_summons#druid_dragon_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:dragon_bite#druid_dragon_shaman"
+  remove:
+  - "ability:the_additional_use_of_wild_shape_at_8th_level#druid"
+- add: "ability:bonus_feat#druid_dragon_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totemic_summons#druid_dragon_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, a dragon shaman may cast summon nature's ally as a standard\
+    \ action when summoning lizards, and summoned lizards gain temporary hit points\
+    \ equal to her druid level. She can apply the young template to any lizard to\
+    \ reduce the level of the summoning spell required by one. She can also increase\
+    \ the level of summoning required by one in order to apply either the advanced\
+    \ or the giant template, or increase it by two to apply both the advanced and\
+    \ giant templates."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:dragon_bite#druid_dragon_shaman"
+  name: "Dragon Bite"
+  label: null
+  type: null
+  description: "At 8th level, a dragon shaman's bite attack (whether using totem transformation\
+    \ or wild shape to take the form of a lizard) deals +1d6 points of energy damage\
+    \ (acid, cold, electricity, or fire). She chooses what kind of energy damage that\
+    \ she deals each time she bites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:bonus_feat#druid_dragon_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every 4 levels thereafter, a dragon shaman gains\
+    \ one of the following bonus feats: Combat Casting, Dazzling Display, Magical\
+    \ Aptitude, Skill Focus (Knowledge [arcana]), and Spell Penetration. She must\
+    \ meet the prerequisites for these bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

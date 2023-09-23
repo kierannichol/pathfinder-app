@@ -9,14 +9,14 @@ import pathfinder.util.NameToIdConverter;
 
 @RequiredArgsConstructor
 public enum ArmorProficiency implements NamedEntity {
-    OTHER("Other", Slot.NONE),
-    LIGHT_ARMOR("Light Armor", Slot.BODY),
-    MEDIUM_ARMOR("Medium Armor", Slot.BODY),
-    HEAVY_ARMOR("Heavy Armor", Slot.BODY),
-    BUCKLER("Buckler", Slot.HAND),
-    LIGHT_SHIELD("Light Shield", Slot.HAND),
-    HEAVY_SHIELD("Heavy Shield", Slot.HAND),
-    TOWER_SHIELD("Tower Shield", Slot.HAND);
+    OTHER("proficiency:other", "Other", Slot.NONE),
+    LIGHT_ARMOR("proficiency:light_armor", "Light Armor Proficiency", Slot.BODY),
+    MEDIUM_ARMOR("proficiency:medium_armor", "Medium Armor Proficiency", Slot.BODY),
+    HEAVY_ARMOR("proficiency:heavy_armor", "Heavy Armor Proficiency", Slot.BODY),
+    BUCKLER("proficiency:buckler", "Buckler Proficiency", Slot.HAND),
+    LIGHT_SHIELD("proficiency:light_shield", "Light Shield Proficiency", Slot.HAND),
+    HEAVY_SHIELD("proficiency:heavy_shield", "Heavy Shield Proficiency", Slot.HAND),
+    TOWER_SHIELD("proficiency:tower_shield", "Tower Shield Proficiency", Slot.HAND);
 
     public static ArmorProficiency find(Id id) {
         return Arrays.stream(ArmorProficiency.values())
@@ -35,8 +35,8 @@ public enum ArmorProficiency implements NamedEntity {
     private final String name;
     private final Slot slot;
 
-    ArmorProficiency(String name, Slot slot) {
-        this.id = NameToIdConverter.proficiencyId(name);
+    ArmorProficiency(String id, String name, Slot slot) {
+        this.id = Id.of(id);
         this.name = name;
         this.slot = slot;
     }

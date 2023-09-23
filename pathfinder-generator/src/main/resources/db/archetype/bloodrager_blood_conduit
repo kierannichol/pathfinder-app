@@ -1,0 +1,58 @@
+id: "class:bloodrager#blood_conduit"
+name: "Blood Conduit"
+description: "Blood conduits learn to channel their arcane might directly through\
+  \ their flesh, without the need for mystical words or gestures."
+modifications:
+- add: "ability:contact_specialist#bloodrager_blood_conduit"
+  remove:
+  - "ability:fast_movement#bloodrager"
+  - "ability:alters_bloodline_feats#bloodrager"
+- add: "ability:spell_conduit#bloodrager_blood_conduit"
+  remove:
+  - "ability:improved_uncanny_dodge#bloodrager"
+  - "ability:uncanny_dodge#bloodrager"
+- add: "ability:reflexive_conduit#bloodrager_blood_conduit"
+  remove:
+  - "ability:indomitable_will#bloodrager"
+features:
+- id: "ability:contact_specialist#bloodrager_blood_conduit"
+  name: "Contact Specialist"
+  label: null
+  type: null
+  description: "At 1st level, a blood conduit selects a bonus feat from the following:\
+    \ Improved Bull Rush, Improved Grapple, Improved Reposition, Improved Trip, and\
+    \ Improved Unarmed Strike. He does not need to meet the prerequisites to take\
+    \ this feat. He also adds those feats to his list of bloodline feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spell_conduit#bloodrager_blood_conduit"
+  name: "Spell Conduit"
+  label: null
+  type: null
+  description: "At 5th level, as long as a blood conduit is wearing light or no armor,\
+    \ he can deliver bloodrager spells with a range of touch through bodily contact.\
+    \ When he succeeds at a combat maneuver check to bull rush, grapple, pin, reposition,\
+    \ or trip an opponent, or makes an unarmed strike against an enemy, he can as\
+    \ a swift action cast a touch spell on the creature that he affected with the\
+    \ combat maneuver, requiring no further touch attack roll. If this spell would\
+    \ usually require a successful touch attack, his successful combat maneuver check\
+    \ counts as this attack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:reflexive_conduit#bloodrager_blood_conduit"
+  name: "Reflexive Conduit"
+  label: null
+  type: null
+  description: "At 14th level, a blood conduit can discharge his power into foes that\
+    \ attempt bodily contact with him. While wearing light or no armor, when the blood\
+    \ conduit is subject to a combat maneuver check made to bull rush, grapple, pin,\
+    \ reposition, or trip him, as an immediate action he can target his attacker with\
+    \ a bloodrager spell that has a range of touch. If the spell would normally require\
+    \ a touch attack, a blood conduit can attempt a combat maneuver check for this\
+    \ attack instead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

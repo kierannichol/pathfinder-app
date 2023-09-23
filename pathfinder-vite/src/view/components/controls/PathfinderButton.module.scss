@@ -1,0 +1,48 @@
+.button {
+  --pf-button-background-color: white;
+  --pf-button-text-color: dimgray;
+  --pf-button-selected-background-color: var(--pf-button-background-color);
+  --pf-button-selected-text-color: var(--pf-button-text-color);
+  --pf-button-border-width: 2px;
+
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: left;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: center;
+  align-items: center;
+  min-height: 56px;
+
+  background-color: var(--pf-button-background-color);
+  border: var(--pf-button-border-width) solid var(--pf-button-text-color);
+  color: var(--pf-button-text-color);
+}
+
+.group>.button:not(:last-child) {
+  border-bottom: 0;
+}
+
+// Button Colors
+
+.active {
+  background-color: var(--pf-button-selected-background-color);
+  color: var(--pf-button-selected-text-color);
+}
+
+.disabled {
+  --pf-button-background-color: #E8E4E0;
+  --pf-button-text-color: dimgray;
+  --pf-button-selected-background-color: #E8E4E0;
+  --pf-button-selected-text-color: dimgray;
+}

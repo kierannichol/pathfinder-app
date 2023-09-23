@@ -1,0 +1,57 @@
+id: "class:warpriest#proclaimer"
+name: "Proclaimer"
+description: "A proclaimer is the polar opposite of a faithful wanderer (see above),\
+  \ rushing into Abyss-twisted wastes with nothing but his weapon in his hand and\
+  \ his faith in his heart, shouting his deity's name to the skies. Most proclaimers\
+  \ don't survive their first day in a hostile environment, but those who do become\
+  \ the stuff of legend, bolstering the spirits of crusaders near and far."
+modifications:
+- add: "ability:righteous_oath#warpriest_proclaimer"
+  remove:
+  - "ability:the_warpriests_spellcasting#warpriest"
+- add: "ability:cleanser_of_evil#warpriest_proclaimer"
+  remove:
+  - "ability:sacred_armor#warpriest"
+  - "ability:fervor#warpriest"
+- add: "ability:zone_of_sanctification#warpriest_proclaimer"
+  remove:
+  - "ability:channel_energy#warpriest"
+features:
+- id: "ability:righteous_oath#warpriest_proclaimer"
+  name: "Righteous Oath"
+  label: null
+  type: null
+  description: "A proclaimer cannot be evil or worship an evil deity, and he must\
+    \ choose cure spells for his spontaneous casting."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:cleanser_of_evil#warpriest_proclaimer"
+  name: "Cleanser of Evil"
+  label: null
+  type: null
+  description: "At 2nd level, a proclaimer can hold his weapon aloft and shout his\
+    \ deity's name as a swift action, spending one use of fervor to deal 1d6 points\
+    \ of damage to all evil outsiders within 5 feet. At 5th level and every 3 levels\
+    \ thereafter, this damage increases by an additional 1d6. This damage has the\
+    \ same alignment as the proclaimer's deity. At 7th level, the effect expands to\
+    \ include an area within 10 feet of the proclaimer, and it expands by 5 feet every\
+    \ 6 levels thereafter. A proclaimer can't use fervor to damage undead or to heal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:zone_of_sanctification#warpriest_proclaimer"
+  name: "Zone of Sanctification"
+  label: null
+  type: null
+  description: "At 4th level, when a proclaimer uses fervor to damage evil outsiders\
+    \ with his cleanser of evil ability, he can spend one additional use of fervor\
+    \ as a move action to create a zone of sanctification in the same area for 1 round.\
+    \ All evil outsiders in the zone when it becomes active must succeed at a Will\
+    \ saving throw (DC 10 + half the proclaimer's level + his Wisdom modifier) or\
+    \ be pushed back until they are out of the area.\nEvil outsiders that end their\
+    \ turns in the area take damage as if affected by cleanser of evil."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+source: "Pathfinder Player Companion: People of the Wastes"

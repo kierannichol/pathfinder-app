@@ -1,0 +1,76 @@
+id: "class:alchemist#psychonaut"
+name: "Psychonaut"
+description: "A psychonaut uses his knowledge to explore altered states of consciousness\
+  \ and even other planes of existence."
+modifications:
+- add: "ability:precognition#alchemist_psychonaut"
+  remove:
+  - "ability:poison_resistance_"
+- add: "ability:psychic_senses#alchemist_psychonaut"
+  remove:
+  - "ability:poison_resistance_"
+- add: "ability:remote_consciousness#alchemist_psychonaut"
+  remove:
+  - "ability:poison_immunity#alchemist"
+- add: "ability:greater_precognition#alchemist_psychonaut"
+  remove:
+  - "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+- add: "ability:master_precognition#alchemist_psychonaut"
+  remove:
+  - "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+features:
+- id: "ability:precognition#alchemist_psychonaut"
+  name: "Precognition"
+  label: null
+  type: null
+  description: "At 5th level, a psychonaut adds augury to his formula book as a 2nd-level\
+    \ extract (this extract does not require a divine focus component).\nThis replaces\
+    \ poison resistance +4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:psychic_senses#alchemist_psychonaut"
+  name: "Psychic Senses"
+  label: null
+  type: null
+  description: "At 8th level, a psychonaut adds clairaudience/clairvoyance, detect\
+    \ scrying, scrying, and speak with dead to his formula book as 3rd-level extracts\
+    \ (a scrying extract does not require a focus or divine focus component). When\
+    \ a psychonaut uses a speak with dead extract, he gains the power to hear the\
+    \ lingering spirit within a corpse rather than enabling the corpse to audibly\
+    \ speak, but the extract otherwise works as the spell.\nThis ability replaces\
+    \ poison resistance +6."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:remote_consciousness#alchemist_psychonaut"
+  name: "Remote Consciousness"
+  label: null
+  type: null
+  description: "At 10th level, a psychonaut adds dream, lesser astral projection,\
+    \ nightmare, plane shift, sending, and telepathic bond to his formula book as\
+    \ 4th-level extracts (a plane shift extract does not require a focus component)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:greater_precognition#alchemist_psychonaut"
+  name: "Greater Precognition"
+  label: null
+  type: null
+  description: "At 15th level, a psychonaut adds moment of prescience to his formula\
+    \ book as a 5th-level extract.\nThis ability replaces the increase to bomb damage\
+    \ at this level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:master_precognition#alchemist_psychonaut"
+  name: "Master Precognition"
+  label: null
+  type: null
+  description: "At 17th level, a psychonaut adds foresight to his formula book as\
+    \ a 6th-level extract.\nThis ability replaces the increase to bomb damage at this\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

@@ -1,0 +1,34 @@
+id: "class:ranger#elemental_envoy"
+name: "Elemental Envoy"
+description: ""
+modifications:
+- add: "ability:planar_combatant#ranger_elemental_envoy"
+  remove:
+  - "ability:the_rangers_combat_style_feats#ranger"
+- add: "ability:elemental_explorer#ranger_elemental_envoy"
+  remove:
+  - "ability:favored_terrain#ranger"
+features:
+- id: "ability:planar_combatant#ranger_elemental_envoy"
+  name: "Planar Combatant"
+  label: null
+  type: null
+  description: "At 2nd level, an elemental envoy must choose the elemental combat\
+    \ style, choosing his combat style feats from that list."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:elemental_explorer#ranger_elemental_envoy"
+  name: "Elemental Explorer"
+  label: null
+  type: null
+  description: "At 3rd level, instead of selecting a favored terrain, an elemental\
+    \ envoy gains the typical favored terrain bonuses when traveling on the Plane\
+    \ of Air, Plane of Earth, Plane of Fire, and Plane of Water, except the elemental\
+    \ envoy gains a bonus on Knowledge (planes) checks instead of Knowledge (geography)\
+    \ checks. At 8th level and every 5 levels thereafter, he does not select an additional\
+    \ favored terrain, but his favored terrain bonuses increase by 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+source: "Pathfinder Player Companion: Disciple's Doctrine"

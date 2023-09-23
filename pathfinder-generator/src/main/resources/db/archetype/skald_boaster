@@ -1,0 +1,56 @@
+id: "class:skald#boaster"
+name: "Boaster"
+description: "Boasters use incredible tales and claims to challenge themselves and\
+  \ their allies to accomplish remarkable feats. With a properly delivered boast,\
+  \ a boaster can inspire listeners to attempt, and more often than not, succeed at\
+  \ stunts or tasks they may not have realized they were capable of doing."
+modifications:
+- add: "ability:endurance#skald_boaster"
+  remove:
+  - "ability:scribe_scroll#skald"
+- add: "ability:frightful_boast#skald_boaster"
+  remove:
+  - "ability:song_of_the_fallen#skald"
+- add: "ability:rage_power#skald_boaster"
+  remove:
+  - "ability:the_skalds_rage_powers#skald"
+- add: "ability:greater_endurance#skald_boaster"
+  remove:
+  - "ability:the_rage_power_gained_at_6th_level#skald"
+features:
+- id: "ability:endurance#skald_boaster"
+  name: "Endurance"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:frightful_boast#skald_boaster"
+  name: "Frightful Boast"
+  label: null
+  type: null
+  description: "At 14th level, the boaster's raging song can frighten foes, as per\
+    \ the frightening tune bardic performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:rage_power#skald_boaster"
+  name: "Rage Power"
+  label: null
+  type: null
+  description: "The boaster does not gain this ability until 4th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:greater_endurance#skald_boaster"
+  name: "Greater Endurance"
+  label: null
+  type: null
+  description: "At 6th level, the boaster gains a bonus feat that he qualifies for.\
+    \ The feat must have Endurance as a prerequisite (such as Diehard or Fast Healer).\n\
+    This replaces the rage power gained at 6th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

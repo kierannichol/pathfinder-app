@@ -1,0 +1,40 @@
+id: "class:alchemist#gloom_chymist"
+name: "Gloom Chymist"
+description: ""
+modifications:
+- add: "ability:gloom#alchemist_gloom_chymist"
+  remove:
+  - "ability:bomb#alchemist"
+- add: "ability:umbral_gloom#alchemist_gloom_chymist"
+  remove:
+  - "ability:poison_resistance_poison_use#alchemist"
+  - "ability:swift_poisoning#alchemist"
+features:
+- id: "ability:gloom#alchemist_gloom_chymist"
+  name: "Gloom"
+  label: null
+  type: null
+  description: "A gloom chymist is skilled at mixing potent concoctions known as glooms,\
+    \ which are infused with shadow energy. A gloom is identical to a bomb except\
+    \ that it deals 1d6 points of cold damage + additional damage equal to the gloom\
+    \ chymist's Intelligence modifier. This damage increases by 1d6 for every 2 alchemist\
+    \ levels beyond 1st the gloom chymist has. A gloom does not qualify as a bomb\
+    \ for the purposes of feats or discoveries."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:umbral_gloom#alchemist_gloom_chymist"
+  name: "Umbral Gloom"
+  label: null
+  type: null
+  description: "At 2nd level, whenever a gloom chymist makes a gloom, he can have\
+    \ it increase or decrease the light level by one step within its splash radius,\
+    \ in addition to its other effects. This change lasts for a number of rounds equal\
+    \ to the gloom chymist's Intelligence modifier. At 8th level, the gloom chymist\
+    \ expend two uses of his daily glooms to increase or decrease light levels as\
+    \ per daylight or deeper darkness, respectively, using his alchemist level as\
+    \ the caster level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+source: "Pathfinder Player Companion: Blood of Shadows"

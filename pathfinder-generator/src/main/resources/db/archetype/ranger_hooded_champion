@@ -1,0 +1,44 @@
+id: "class:ranger#hooded_champion"
+name: "Hooded Champion"
+description: "The hooded champion lives on the periphery of civilized lands, and is\
+  \ often at odds with the forces of law and order. He is frequently a hero of oppressed\
+  \ peoples, lurking in the woods near their homes and trying to right the injustices\
+  \ inflicted upon them by the wealthy and powerful."
+modifications:
+- add: "ability:panache#ranger_hooded_champion"
+  remove:
+  - "ability:favored_enemy_at_1st_level#ranger"
+- add: "ability:combat_style#ranger_hooded_champion"
+  remove:
+  - "ability:improved_evasion#ranger"
+  - "ability:wild_empathy_endurance_evasion#ranger"
+features:
+- id: "ability:panache#ranger_hooded_champion"
+  name: "Panache"
+  label: null
+  type: null
+  description: "At 1st level, the hooded champion gains the swashbuckler's panache\
+    \ class feature. He regains panache through critical hits and killing blows when\
+    \ using a bow of any kind, rather than when using a light or one-handed piercing\
+    \ melee weapon. If the hooded champion has this ability and the panache ability\
+    \ from another class or archetype, the panache points from the two sources do\
+    \ not stack, but the hooded champion regains panache in any way either class feature\
+    \ allows him to. For example, a character with a Charisma score of 16 who has\
+    \ both the hooded champion's and the swashbuckler's panache has a base of 3 panache\
+    \ points, and regains panache from critical hits and killing blows from both bows\
+    \ and light or one-handed piercing melee weapons."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:combat_style#ranger_hooded_champion"
+  name: "Combat Style"
+  label: null
+  type: null
+  description: "At 2nd level, the hooded champion must select the archery combat style.\
+    \ At 9th level, the hooded champion gains the swashbuckler's grace and evasive\
+    \ deeds. At 16th level, the hooded champion gains the swashbuckler's edge and\
+    \ cheat death deeds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

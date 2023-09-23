@@ -1,0 +1,59 @@
+id: "class:skald#bold_schemer"
+name: "Bold Schemer"
+description: ""
+modifications:
+- add: "ability:class_skills#skald_bold_schemer"
+  remove:
+  - "ability:the_skalds_class_skills#skald"
+  - "ability:bardic_knowledge#skald"
+- add: "ability:skald_of_twists_and_turns#skald_bold_schemer"
+  remove:
+  - "ability:uncanny_dodge_improved_uncanny_dodge#skald"
+  - "ability:damage_reduction#skald"
+- add: "ability:bold_strategy#skald_bold_schemer"
+  remove:
+  - "ability:dirge_of_doom#skald"
+features:
+- id: "ability:class_skills#skald_bold_schemer"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A bold schemer gains Disable Device, Sleight of Hand, and Stealth\
+    \ as class skills, instead of Knowledge (arcana), Knowledge (dungeoneering), and\
+    \ Knowledge (planes).\nHer bardic knowledge does not apply to those skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:skald_of_twists_and_turns#skald_bold_schemer"
+  name: "Skald of Twists and Turns"
+  label: null
+  type: null
+  description: "At 4th level, a bold schemer becomes increasingly adept at infiltration\
+    \ and devising cunning strategies to overcome enemy fortifications.\nA bold schemer\
+    \ can spend 8 hours observing a physical location (such as a fortress, a walled\
+    \ city, or perhaps even a section of an underground dungeon or cavern complex),\
+    \ contemplating methods to infiltrate the location and engage its defenders in\
+    \ battle in ways that subvert their defensive advantages.\nAt the end of the 8\
+    \ hours, the bold schemer gains a +2 insight bonus on her Bluff, Disable Device,\
+    \ Disguise, Sleight of Hand, and Stealth checks while in that same physical location.\
+    \ This bonus increases by 2 at 8th level and every 4 skald levels thereafter,\
+    \ to a maximum of +10 at 20th level. The bonus lasts until the bold schemer observes\
+    \ a new location. While observing a location, the bold schemer must fully focus\
+    \ her attention; any distractions, such as engaging in combat, immediately ends\
+    \ the observation and the bold schemer must start a new period of observing a\
+    \ physical location to receive the bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:bold_strategy#skald_bold_schemer"
+  name: "Bold Strategy"
+  label: null
+  type: null
+  description: "At 10th level, a bold schemer can tailor her plans and observations\
+    \ so they are able to assist her allies as well. As long as they can see or hear\
+    \ the bold schemer while inside the observed location, all of her allies gain\
+    \ half the insight bonus she gains from the skald of twists and turns ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

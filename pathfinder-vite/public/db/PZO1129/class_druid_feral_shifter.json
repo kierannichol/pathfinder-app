@@ -1,0 +1,38 @@
+{
+  "id": "class:druid#feral_shifter",
+  "name": "Feral Shifter",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:nature_bond#druid AND !@modifies:ability:venom_immunity_a_thousand_faces_and_timeless_body#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:nature_bond#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity_a_thousand_faces_and_timeless_body#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:animal_focus#druid_feral_shifter",
+          "conditionFormula": "@class:druid\u003e\u003d1"
+        }, {
+          "featureId": "ability:second_animal_focus#druid_feral_shifter",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:nature_bond#druid"
+        }, {
+          "featureId": "ability:venom_immunity_a_thousand_faces_and_timeless_body#druid"
+        }]
+      }]
+    }
+  }
+}

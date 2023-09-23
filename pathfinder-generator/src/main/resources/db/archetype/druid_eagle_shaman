@@ -1,0 +1,34 @@
+id: "class:druid#eagle_shaman"
+name: "Eagle Shaman"
+description: ""
+modifications:
+- add: "ability:totemic_summons#druid_eagle_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:bonus_feat#druid_eagle_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totemic_summons#druid_eagle_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, an eagle shaman may cast summon nature's ally as a standard\
+    \ action when summoning eagles, rocs, and giant eagles (added to the 4th-level\
+    \ list), and these summoned creatures gain temporary hit points equal to her druid\
+    \ level. This ability otherwise functions as the bear shaman ability."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:bonus_feat#druid_eagle_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every 4 levels thereafter, an eagle shaman gains\
+    \ one of the following bonus feats: Flyby Attack, Improved Lightning Reflexes,\
+    \ Lightning Reflexes, Skill Focus (Perception), or Wind Stance. She must meet\
+    \ the prerequisites for these bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

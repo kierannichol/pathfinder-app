@@ -1,0 +1,61 @@
+id: "class:witch#venom_siphoner"
+name: "Venom Siphoner"
+description: ""
+modifications:
+- add: "ability:poisonous_familiar#witch_venom_siphoner"
+  remove:
+  - "ability:the_hex_gained_at_1st_level#witch"
+  - "ability:the_familiars_alertness_special_ability#witch"
+- add: "ability:venom_expert#witch_venom_siphoner"
+  remove:
+  - "ability:the_hex_gained_at_2nd_level#witch"
+- add: "ability:toxic_blood#witch_venom_siphoner"
+  remove:
+  - "ability:the_hex_gained_at_6th_level#witch"
+features:
+- id: "ability:poisonous_familiar#witch_venom_siphoner"
+  name: "Poisonous Familiar"
+  label: null
+  type: null
+  description: "The venom siphoner chooses either her familiar's bite attack or its\
+    \ claw attacks; once chosen, this selection can't be changed. The chosen natural\
+    \ attack gains the following poison ability:\nSiphoner Poison: Natural attack--injury;\
+    \ save Fort DC 10 + half the witch's level + the witch's Intelligence modifier;\
+    \ frequency 1/round for 6 rounds; effect 1d2 Dex; cure 1 save.\nFamiliars without\
+    \ an appropriate natural attack instead gain the ability to spit the poison as\
+    \ a ranged touch attack.\nThis spit attack deals no damage, but it exposes the\
+    \ struck creature to the poison, forcing it to attempt a saving throw to resist\
+    \ the poison as normal. If the familiar already has a poison, the witch can instead\
+    \ empower its poison. An empowered poison's frequency increases by 50%. If the\
+    \ witch ever replaces her familiar, she must choose how this ability applies to\
+    \ her new familiar as soon as she receives it."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:venom_expert#witch_venom_siphoner"
+  name: "Venom Expert"
+  label: null
+  type: null
+  description: "At 2nd level, a venom siphoner does not risk exposure to her familiar's\
+    \ poison when attempting to milk venom from it."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:toxic_blood#witch_venom_siphoner"
+  name: "Toxic Blood"
+  label: null
+  type: null
+  description: "At 6th level, the venom siphoner's blood becomes toxic, empowering\
+    \ her abilities. Any creature that deals bleed damage to her with a natural, light\
+    \ or one-handed weapon is automatically exposed to the same poison granted to\
+    \ her familiar and must succeed at the save or be affected by the poison. Additionally,\
+    \ when casting spells that have a single target and require a Fortitude save,\
+    \ she can cause the spell to deliver this poison as a free action; a target who\
+    \ succeeds at the save against the spell also avoids being affected by the poison.\
+    \ She can cause spells to deliver poison in this way a number of times per day\
+    \ equal to 3 + her Intelligence modifier. This ability refreshes when the venom\
+    \ siphoner communes with her familiar to prepare her daily spells."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+source: "Pathfinder Player Companion: Potions & Poisons"

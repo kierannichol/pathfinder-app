@@ -1,0 +1,46 @@
+id: "class:fighter#scrapper"
+name: "Scrapper"
+description: ""
+modifications:
+- add: "ability:scrap_armor#fighter_scrapper"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:scrapper_training#fighter_scrapper"
+  remove:
+  - "ability:weapon_training#fighter@5"
+features:
+- id: "ability:scrap_armor#fighter_scrapper"
+  name: "Scrap Armor"
+  label: null
+  type: null
+  description: "At 3rd level, a scrapper learns to salvage scrap from constructs or\
+    \ other pieces of armor and attach them to his own armor. Salvaging scrap from\
+    \ a destroyed construct or from another creature's armor takes 1 minute.\nScrap\
+    \ from a construct grants the scrapper a natural armor bonus to AC equal to one-quarter\
+    \ the construct's Hit Dice (minimum +1). If the scrap is salvaged from a piece\
+    \ of armor, it instead grants a natural armor bonus to AC equal to 1 + the armor's\
+    \ enhancement bonus (if any). The salvaged armor piece is flimsy and prone to\
+    \ breaking. Scrap is immediately destroyed by any sunder combat maneuver that\
+    \ targets the armor to which the scrap is attached. Otherwise, scrap crumbles\
+    \ and falls away after a number of days equal to the natural armor bonus that\
+    \ it grants. At 11th level, scrap salvaged from a construct also grants DR/adamantine\
+    \ equal to one-quarter of the construct's Hit Dice."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:scrapper_training#fighter_scrapper"
+  name: "Scrapper Training"
+  label: null
+  type: null
+  description: "At 5th level, a scrapper selects one fighter weapon group. He gains\
+    \ a +1 bonus on attack and damage rolls when performing a sunder combat maneuver\
+    \ with a weapon from the chosen group. He does not provoke attacks of opportunity\
+    \ when performing a sunder combat maneuver with a weapon from the chosen group.\
+    \ If the scrapper has the Improved Sunder feat, the bonuses on attack and damage\
+    \ rolls from this ability double. At 9th level and every 4 levels thereafter,\
+    \ a scrapper can either take the fighter's weapon training class feature or improve\
+    \ his bonuses from the scrapper training class feature by 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+source: "Pathfinder Campaign Setting: Construct Handbook"

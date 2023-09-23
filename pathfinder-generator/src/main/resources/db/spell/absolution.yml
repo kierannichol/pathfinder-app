@@ -1,0 +1,28 @@
+casting_time: "1 round"
+saving_throw: "none"
+spell_resistance: "no"
+id: "spell:absolution"
+name: "Absolution"
+description: "You purge impure thoughts from the target's mind and fill him with exultant\
+  \ relief at the forgiveness of his sins. Absolution ends all charm or compulsion\
+  \ effects affecting the target (including harmless compulsions, such as heroism)\
+  \ as per break enchantment. If the target was forced to perform any actions contrary\
+  \ to his alignment, monk vows, paladin oath, or similar code of conduct by that\
+  \ charm or compulsion effect, that action doesn't cause him to lose access to class\
+  \ abilities, including divine spellcasting."
+prerequisites: ""
+components: "V, S, M (a vial of holy water), DF"
+range: "touch"
+targets: "living creature touched"
+duration: "instantaneous"
+school: "abjuration"
+levels:
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:paladin"
+  level: 4
+- class_id: "class:warpriest"
+  level: 4
+source: "Ultimate Intrigue"

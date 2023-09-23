@@ -1,0 +1,64 @@
+{
+  "id": "class:fighter#weapon_master",
+  "name": "Weapon Master",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "Devoted to the perfection of a single weapon, the weapon master\u0027s meditations upon his favored weapon border on the obsessive, but none can deny his consummate skill. The weapon master must select a single type of weapon (such as longsword or shortbow). All of his abilities apply to that weapon type."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:weapon_guard#fighter_weapon_master",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_training#fighter_weapon_master",
+          "conditionFormula": "@class:fighter\u003e\u003d3"
+        }, {
+          "featureId": "ability:reliable_strike#fighter_weapon_master",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:mirror_move#fighter_weapon_master",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:deadly_critical#fighter_weapon_master",
+          "conditionFormula": "@class:fighter\u003e\u003d13"
+        }, {
+          "featureId": "ability:critical_specialist#fighter_weapon_master",
+          "conditionFormula": "@class:fighter\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }]
+      }]
+    }
+  }
+}

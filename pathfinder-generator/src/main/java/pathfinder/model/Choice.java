@@ -1,6 +1,6 @@
 package pathfinder.model;
 
-import pathfinder.data.v4.ChoiceDbo;
+import pathfinder.data.ChoiceDbo;
 
 public interface Choice {
 

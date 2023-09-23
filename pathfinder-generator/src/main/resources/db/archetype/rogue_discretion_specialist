@@ -1,0 +1,92 @@
+id: "class:rogue#discretion_specialist"
+name: "Discretion Specialist"
+description: "Often brought in to handle messy situations, discretion specialists\
+  \ deal with bodies, inconvenient witnesses, and other loose ends. Many organizations\
+  \ employ them to cover up activities that might be unpopular--should they become\
+  \ known to the general populace."
+modifications:
+- add: "ability:fast_talker#rogue_discretion_specialist"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:obfuscation#rogue_discretion_specialist"
+  remove:
+  - "ability:trap_sense_for_a_core_rogue_or_danger_sense_for_an_unchained_rogue#rogue"
+- add: "ability:evidence_disposal#rogue_discretion_specialist"
+  remove:
+  - "ability:the_rogue_talents_gained_at_4th#rogue"
+  - "ability:12th_levels#rogue"
+- add: "ability:no_loose_ends#rogue_discretion_specialist"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:fast_talker#rogue_discretion_specialist"
+  name: "Fast Talker"
+  label: null
+  type: null
+  description: "A discretion specialist adds half her rogue level (minimum +1) as\
+    \ a bonus on Bluff, Diplomacy, and Intimidate checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:obfuscation#rogue_discretion_specialist"
+  name: "Obfuscation"
+  label: null
+  type: null
+  description: "A discretion specialist is highly skilled at convincing others not\
+    \ to trust their own senses. At 3rd level as a full-round action, the discretion\
+    \ specialist can convince one living creature within 30 feet that up to 5 minutes\
+    \ of its memories from the past hour are unreliable. If the target fails a Will\
+    \ saving throw (DC = 10 + half the discretion specialist's rogue level + her Intelligence\
+    \ modifier), the target is convinced that those memories didn't happen or that\
+    \ it's confusing the memories with a dream (or is otherwise hazy as to the memories'\
+    \ reality).\nEach hour after the discretion specialist uses this ability, the\
+    \ target can attempt a new Will saving throw to realize that its relevant memories\
+    \ have been tampered with, although not necessarily that the discretion specialist\
+    \ was the originator of the tampering.\nThe discretion specialist can use this\
+    \ ability once per day, and one additional time per day for every 5 rogue levels\
+    \ she has. At 6th level and every 3 levels thereafter, the discretion specialist\
+    \ can obfuscate memories from an additional hour in the past (to a maximum of\
+    \ 6 hours at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:evidence_disposal#rogue_discretion_specialist"
+  name: "Evidence Disposal"
+  label: null
+  type: null
+  description: "A discretion specialist can cover up a corpse's cause of a death--or\
+    \ dispose of it entirely. At 4th level, the discretion specialist gains the ability\
+    \ to cast dress corpse as a spell-like ability, using her rogue level as her caster\
+    \ level. She can use this ability once per day, plus one additional time per day\
+    \ for every 5 rogue levels she has (to a maximum of five times at 20th level).\n\
+    At 12th level, she can spend two uses of this ability to disintegrate a corpse\
+    \ entirely as a full-round action, leaving behind only a trace of fine dust (a\
+    \ disintegrated creature's equipment is unaffected). The target cannot be an undead\
+    \ creature. A corpse disintegrated this way cannot be brought back to life except\
+    \ by resurrection or more powerful magic, including miracle or wish."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+- id: "ability:no_loose_ends#rogue_discretion_specialist"
+  name: "No Loose Ends"
+  label: null
+  type: null
+  description: "At 4th level, the discretion specialist can prevent opponents from\
+    \ escaping. Opponents damaged by the discretion specialist's sneak attack are\
+    \ unable to take the withdraw action for 1 round, though they can still move as\
+    \ normal.\nAt 8th level, a creature damaged by the discretion specialist's sneak\
+    \ attack is hampered in casting spells of the teleportation subschool (such as\
+    \ dimension door) as well as using methods of magical transport such as shadow\
+    \ walk. A target attempting to cast such a spell before the end of the discretion\
+    \ specialist's next turn must succeed at a concentration check (in addition to\
+    \ any concentration checks required for casting while threatened or other circumstances)\
+    \ or lose the spell. The DC of this check is equal to 10 + half the discretion\
+    \ specialist's rogue level + her Intelligence modifier.\nThis replaces uncanny\
+    \ dodge and improved uncanny dodge.\nRogue Talents: The following rogue talents\
+    \ complement this archetype: camouflage, charmer, convincing lie, honeyed words,\
+    \ and quick disguise."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Antihero's Handbook"
+source: "Pathfinder Player Companion: Antihero's Handbook"

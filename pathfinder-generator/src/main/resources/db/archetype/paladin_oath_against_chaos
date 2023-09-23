@@ -1,0 +1,49 @@
+id: "class:paladin#oath_against_chaos"
+name: "Oath Against Chaos"
+description: ""
+modifications:
+- add: "ability:detect_chaos#paladin_oath_against_chaos"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:smite_chaos#paladin_oath_against_chaos"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:order_of_good#paladin_oath_against_chaos"
+  remove:
+  - "ability:channel_positive_energy#paladin"
+features:
+- id: "ability:detect_chaos#paladin_oath_against_chaos"
+  name: "Detect Chaos"
+  label: null
+  type: null
+  description: "This ability works like the standard paladin ability to detect evil,\
+    \ except as detect chaos instead of detect evil."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:smite_chaos#paladin_oath_against_chaos"
+  name: "Smite Chaos"
+  label: null
+  type: null
+  description: "This ability works like the standard paladin ability to smite evil,\
+    \ except the paladin gains bonuses against targets with chaotic alignments instead\
+    \ of evil. The paladin deals additional damage against outsiders with the chaotic\
+    \ subtype, chaotic-aligned dragons, and aberrations, instead of against evil outsiders,\
+    \ evil dragons, and undead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:order_of_good#paladin_oath_against_chaos"
+  name: "Order of Good"
+  label: null
+  type: null
+  description: "When an oathbound paladin reaches 4th level, she gains the ability\
+    \ to spend one use of her lay on hands ability when using her smite chaos ability\
+    \ to instead smite evil, as the paladin ability of the same name.\nThis ability\
+    \ replaces channel positive energy.\nCode of Conduct: Spread the order of law\
+    \ wherever you go, so long as the law is just; do not serve as a tool of tyranny.\
+    \ Fight vigilantly the servants of chaos."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

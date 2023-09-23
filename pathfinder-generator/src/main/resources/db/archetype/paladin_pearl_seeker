@@ -1,0 +1,85 @@
+id: "class:paladin#pearl_seeker"
+name: "Pearl Seeker"
+description: "Some paladins are called to their faith by strange empathic visions\
+  \ and dreams that beckon them to the oceans and beyond, to right aquatic injustice\
+  \ and search for a glorious gasping and whispering pearl they don't understand.\
+  \ Their contact with the strange but benevolent entity sending the dreams grants\
+  \ them unusual powers compared to other paladins."
+modifications:
+- add: "ability:armor_proficiency_and_class_skills#paladin_pearl_seeker"
+  remove:
+  - "ability:the_paladins_armor_proficiency#paladin"
+  - "ability:class_skills#paladin"
+- add: "ability:seek_impressions#paladin_pearl_seeker"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:aquatic_domain#paladin_pearl_seeker"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+  - "ability:aura_of_courage#paladin"
+- add: "ability:vision_magic#paladin_pearl_seeker"
+  remove:
+  - "ability:the_paladins_spells#paladin"
+- add: "ability:divine_hippocampus#paladin_pearl_seeker"
+  remove:
+  - "ability:divine_bond#paladin"
+  - "ability:channel_positive_energy#paladin"
+features:
+- id: "ability:armor_proficiency_and_class_skills#paladin_pearl_seeker"
+  name: "Armor Proficiency and Class Skills"
+  label: null
+  type: null
+  description: "A pearl seeker is proficient with light and medium armor but not with\
+    \ shields, and gains Swim as a class skill."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+- id: "ability:seek_impressions#paladin_pearl_seeker"
+  name: "Seek Impressions"
+  label: null
+  type: null
+  description: "Pearl seekers gain their power from a rare resonant sensitivity to\
+    \ the vision-granting entity. A pearl seeker gains Psychic Sensitivity as a bonus\
+    \ feat and can use detect psychic significance at will as a spell-like ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+- id: "ability:aquatic_domain#paladin_pearl_seeker"
+  name: "Aquatic Domain"
+  label: null
+  type: null
+  description: "At 3rd level, a pearl seeker gains the 1st-level domain power of the\
+    \ Aquatic terrain domain, using her paladin level as her effective druid level.\
+    \ At 8th level, she gains the 6th-level domain power of the Aquatic terrain domain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+- id: "ability:vision_magic#paladin_pearl_seeker"
+  name: "Vision Magic"
+  label: null
+  type: null
+  description: "A pearl seeker casts divine spells spontaneously, using the spells\
+    \ known and spells per day from the bloodrager progression table. At 7th level,\
+    \ she gains slipstream as a bonus 1st-level spell known; at 10th level, she gains\
+    \ ride the waves as a bonus 2nd-level spell known; at 13th level, she gains fluid\
+    \ form as a bonus 3rd-level spell known; and at 16th level, she gains seamantle\
+    \ as a bonus 4th-level spell known. She also adds hydraulic push and hydraulic\
+    \ torrent (as a 1st and 3rd level spells, respectively) to her paladin spell list\
+    \ (but must learn these spells as normal)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+- id: "ability:divine_hippocampus#paladin_pearl_seeker"
+  name: "Divine Hippocampus"
+  label: null
+  type: null
+  description: "At 5th level, a pearl seeker must choose a mount as her divine bond,\
+    \ gaining a hippocampus mount with the following companion statistics.\nSize Large;\
+    \ Speed 5 ft., swim 80 ft.; AC +4 natural armor; Attack bite (1d6), tail slap\
+    \ (1d4; secondary attack); Ability Scores Str 18, Dex 13, Con 15, Int 2, Wis 12,\
+    \ Cha 11; Special Qualities darkvision 60 ft., low-light vision, scent, water\
+    \ dependency."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Aquatic Adventures"
+source: "Pathfinder Campaign Setting: Aquatic Adventures"

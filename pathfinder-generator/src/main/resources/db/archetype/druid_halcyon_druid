@@ -1,0 +1,113 @@
+id: "class:druid#halcyon_druid"
+name: "Halcyon Druid"
+description: "Halcyon druids are less focused on emulating its inhabitants. Instead,\
+  \ they treat with beings from the Outer Sphere. As a sign of their allegiance, these\
+  \ druids wear fantastical masks depicting celestials, fiends, and-most often-the\
+  \ bestial agathions."
+modifications:
+- add: "ability:bonded_mask#druid_halcyon_druid"
+  remove:
+  - "ability:nature_bond#druid"
+- add: "ability:well_trained#druid_halcyon_druid"
+  remove:
+  - "ability:alters_the_druids_class_skills#druid"
+  - "ability:nature_sense#druid"
+- add: "ability:peacekeeper#druid_halcyon_druid"
+  remove:
+  - "ability:wild_empathy#druid"
+- add: "ability:spontaneous_casting#druid_halcyon_druid"
+  remove:
+  - "ability:spontaneous_casting#druid"
+- add: "ability:natural_arcana#druid_halcyon_druid"
+  remove:
+  - "ability:wild_shape#druid"
+- add: "ability:resist_fiendish_influence#druid_halcyon_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:embody_mask#druid_halcyon_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:bonded_mask#druid_halcyon_druid"
+  name: "Bonded Mask"
+  label: null
+  type: null
+  description: "A halcyon druid forms a powerful bond with a mask, which functions\
+    \ identically to a wizard's bonded object except that it can be used to cast druid\
+    \ spells (including those gained from class abilities) instead of wizard spells.\
+    \ A bonded mask must be worn to have an effect, and it occupies the head slot.\
+    \ A halcyon druid can enhance her mask with abilities appropriate for a head slot\
+    \ item, and can designate an existing head slot item as her bonded mask (but only\
+    \ if it covers her face)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:well_trained#druid_halcyon_druid"
+  name: "Well-Trained"
+  label: null
+  type: null
+  description: "A halcyon druid adds Diplomacy and all Knowledge skills to her list\
+    \ of class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:peacekeeper#druid_halcyon_druid"
+  name: "Peacekeeper"
+  label: null
+  type: null
+  description: "A halcyon druid adds half her class level (minimum 1) to Diplomacy\
+    \ and Knowledge (local) checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:spontaneous_casting#druid_halcyon_druid"
+  name: "Spontaneous Casting"
+  label: null
+  type: null
+  description: "A halcyon druid adds all spells from the Good cleric domain to her\
+    \ druid spell list, and she can focus stored spell energy into spells from the\
+    \ Good domain that she hasn't prepared ahead of time. She can lose a prepared\
+    \ spell to cast any spell of the same level or lower from the Good domain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:natural_arcana#druid_halcyon_druid"
+  name: "Natural Arcana"
+  label: null
+  type: null
+  description: "At 4th level and every 2 levels thereafter, a halcyon druid chooses\
+    \ two spells from the wizard/sorcerer spell list and adds them to her druid spell\
+    \ list. The chosen spells must be at least 1 level lower than the highest level\
+    \ spell she can currently cast. At 20th level, the halcyon druid can choose wizard/sorcerer\
+    \ spells of any level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:resist_fiendish_influence#druid_halcyon_druid"
+  name: "Resist Fiendish Influence"
+  label: null
+  type: null
+  description: "At 4th level, a halcyon druid gains a +4 bonus on saving throws against\
+    \ the spell-like and supernatural abilities of outsiders with the evil subtype\
+    \ and spells with the evil descriptor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:embody_mask#druid_halcyon_druid"
+  name: "Embody Mask"
+  label: null
+  type: null
+  description: "At 13th level, a halcyon druid wearing her bonded mask can embody\
+    \ the spirit it represents, which can be any Tiny to Large agathion, angel, archon,\
+    \ or azata. This ability requires a standard action to activate and functions\
+    \ as per beast shape IV (using the adjustments for magical beasts), but adds the\
+    \ following abilities if the assumed form has them: aura of menace, protective\
+    \ aura, speak with animals, telepathy, and truespeech. If the assumed form has\
+    \ immunity to a condition, the druid gains a +4 bonus on saving throws against\
+    \ effects that cause that condition. A halcyon druid can use this ability for\
+    \ a number of minutes per day equal to her druid level. The duration does not\
+    \ need to be consecutive, but must be used in 1-minute increments."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

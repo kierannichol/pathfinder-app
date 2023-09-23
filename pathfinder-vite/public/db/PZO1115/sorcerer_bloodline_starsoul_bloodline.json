@@ -1,0 +1,65 @@
+{
+  "id": "sorcerer_bloodline:starsoul_bloodline",
+  "name": "Starsoul Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You come from a line of stargazers and explorers who delved deeply into the darkness beyond the stars. In touching the void, the void touched them, and your mind, spirit, and body yearn to span the gulf between worlds."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "conditionalComponents": [{
+          "conditionFormula": "@class:sorcerer\u003e\u003d7",
+          "choices": [{
+            "choiceId": "sorcerer7:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:craft_rod", "feat:dodge", "feat:endurance", "feat:improved_counterspell", "feat:improved_iron_will", "feat:iron_will", "feat:quicken_spell", "feat:skill_focus", "feat:toughness"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d13",
+          "choices": [{
+            "choiceId": "sorcerer13:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:craft_rod", "feat:dodge", "feat:endurance", "feat:improved_counterspell", "feat:improved_iron_will", "feat:iron_will", "feat:quicken_spell", "feat:skill_focus", "feat:toughness"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }, {
+          "conditionFormula": "@class:sorcerer\u003e\u003d19",
+          "choices": [{
+            "choiceId": "sorcerer19:bloodline_feat",
+            "label": "Bloodline Feat",
+            "type": "bonus_feat",
+            "featureSelect": {
+              "featureIds": ["feat:blind_fight", "feat:craft_rod", "feat:dodge", "feat:endurance", "feat:improved_counterspell", "feat:improved_iron_will", "feat:iron_will", "feat:quicken_spell", "feat:skill_focus", "feat:toughness"],
+              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+            }
+          }]
+        }],
+        "links": [{
+          "featureId": "ability:minute_meteors#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d1"
+        }, {
+          "featureId": "ability:voidwalker#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d3"
+        }, {
+          "featureId": "ability:aurora_borealis#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d9"
+        }, {
+          "featureId": "ability:breaching_the_gulf#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d15"
+        }, {
+          "featureId": "ability:starborn#sorcerer",
+          "conditionFormula": "@class:sorcerer\u003e\u003d20"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (object)"
+spell_resistance: "yes (object)"
+id: "spell:chill_metal"
+name: "Chill Metal"
+description: "Chill metal makes metal extremely cold. Unattended, nonmagical metal\
+  \ gets no saving throw. Magical metal is allowed a saving throw against the spell.\
+  \ An item in a creature's possession uses the creature's saving throw bonus unless\
+  \ its own is higher."
+prerequisites: ""
+components: "V, S, DF"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "metal equipment of one creature per two levels, no two of which can be more\
+  \ than 30 ft. apart; or 25 lbs. of metal/level, none of which can be more than 30\
+  \ ft. away from any of the rest"
+duration: "7 rounds"
+school: "transmutation [cold]"
+levels:
+- class_id: "class:druid"
+  level: 2
+- class_id: "class:hunter"
+  level: 2
+source: "PRPG Core Rulebook"

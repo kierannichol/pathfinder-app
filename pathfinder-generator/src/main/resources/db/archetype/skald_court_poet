@@ -1,0 +1,53 @@
+id: "class:skald#court_poet"
+name: "Court Poet"
+description: ""
+modifications:
+- add: "ability:insightful_contemplation#skald_court_poet"
+  remove:
+  - "ability:inspired_rage#skald"
+- add: "ability:song_of_inspiration#skald_court_poet"
+  remove:
+  - "ability:song_of_strength#skald"
+- add: "ability:handling_the_crowd#skald_court_poet"
+  remove:
+  - "ability:well_versed#skald"
+features:
+- id: "ability:insightful_contemplation#skald_court_poet"
+  name: "Insightful Contemplation"
+  label: null
+  type: null
+  description: "At 1st level, affected allies gain a +2 morale bonus to Intelligence\
+    \ and Charisma and a +1 morale bonus on Will saving throws, but they also take\
+    \ a –1 penalty to AC. While under the effects of insightful contemplation, allies\
+    \ other than the court poet can't use any Strength-based skills or make any physical\
+    \ effort that requires a Constitution check. At 4th level and every 4 skald levels\
+    \ thereafter, the song's bonus on Will saves increases by 1; the penalty to AC\
+    \ doesn't change. At 8th and 16th levels, the song's bonuses to Intelligence and\
+    \ Charisma increase by 2. (Unlike the barbarian's rage ability, those affected\
+    \ are not fatigued after the song ends.)"
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:song_of_inspiration#skald_court_poet"
+  name: "Song of Inspiration"
+  label: null
+  type: null
+  description: "At 6th level, a court poet can use raging song to inspire her allies\
+    \ to greater mental clarity. Once each round while the court poet uses this performance,\
+    \ allies within 60 feet who can hear her can add 1/2 the court poet's skald level\
+    \ to a single Wisdom check or Wisdom-based skill check."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:handling_the_crowd#skald_court_poet"
+  name: "Handling the Crowd"
+  label: null
+  type: null
+  description: "At 2nd level, a court poet gains a +1 bonus to AC and on Perform checks\
+    \ when adjacent to two or more creatures. In addition, her movement is not impeded\
+    \ by crowds and she gains a bonus equal to 1/2 her skald level on Diplomacy checks\
+    \ to influence crowds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+source: "Pathfinder Player Companion: Heroes of the High Court"

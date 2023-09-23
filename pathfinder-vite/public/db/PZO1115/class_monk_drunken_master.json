@@ -1,0 +1,68 @@
+{
+  "id": "class:monk#drunken_master",
+  "name": "Drunken Master",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:purity_of_body#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk AND !@modifies:ability:diamond_body#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:empty_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_soul#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:drunken_ki#monk_drunken_master",
+          "conditionFormula": "@class:monk\u003e\u003d3"
+        }, {
+          "featureId": "ability:drunken_strength#monk_drunken_master",
+          "conditionFormula": "@class:monk\u003e\u003d5"
+        }, {
+          "featureId": "ability:drunken_courage#monk_drunken_master",
+          "conditionFormula": "@class:monk\u003e\u003d11"
+        }, {
+          "featureId": "ability:drunken_resilience#monk_drunken_master",
+          "conditionFormula": "@class:monk\u003e\u003d13"
+        }, {
+          "featureId": "ability:firewater_breath#monk_drunken_master",
+          "conditionFormula": "@class:monk\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:still_mind#monk"
+        }, {
+          "featureId": "ability:purity_of_body#monk"
+        }, {
+          "featureId": "ability:diamond_body#monk"
+        }, {
+          "featureId": "ability:diamond_soul#monk"
+        }, {
+          "featureId": "ability:empty_body#monk"
+        }]
+      }]
+    }
+  }
+}

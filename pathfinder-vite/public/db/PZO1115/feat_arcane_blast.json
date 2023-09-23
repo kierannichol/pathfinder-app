@@ -1,0 +1,14 @@
+{
+  "id": "feat:arcane_blast",
+  "name": "Arcane Blast",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(max(@spells_per_day:arcane#*)[Arcane spellcaster],@caster_level\u003e\u003d10)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You can convert any spell into an attack."
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

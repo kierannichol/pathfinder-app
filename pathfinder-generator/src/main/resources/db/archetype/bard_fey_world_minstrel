@@ -1,0 +1,41 @@
+id: "class:bard#fey_world_minstrel"
+name: "Fey World Minstrel"
+description: ""
+modifications:
+- add: "ability:fey_magic#bard_fey_world_minstrel"
+  remove:
+  - "ability:the_fey_world_minstrels_spell_list#bard"
+- add: "ability:wild_empathy#bard_fey_world_minstrel"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:bardic_performance#bard_fey_world_minstrel"
+  remove:
+  - "ability:inspire_courage#bard"
+features:
+- id: "ability:fey_magic#bard_fey_world_minstrel"
+  name: "Fey Magic"
+  label: null
+  type: null
+  description: "A Fey World minstrel adds summon nature's ally spells to his spell\
+    \ list instead of the equivalent summon monster spells."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+- id: "ability:wild_empathy#bard_fey_world_minstrel"
+  name: "Wild Empathy"
+  label: null
+  type: null
+  description: "A Fey World minstrel gains the wild empathy druid class feature, using\
+    \ his bard level as his druid level for this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+- id: "ability:bardic_performance#bard_fey_world_minstrel"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A Fey World minstrel gains the following types of bardic performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of the First World"
+source: "Pathfinder Player Companion: Legacy of the First World"

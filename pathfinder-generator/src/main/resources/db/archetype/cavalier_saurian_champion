@@ -1,0 +1,94 @@
+id: "class:cavalier#saurian_champion"
+name: "Saurian Champion"
+description: "These primeval cavaliers idolize dinosaurs as apex predators and value\
+  \ them as powerful, oversized mounts."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#cavalier_saurian_champion"
+  remove:
+  - "ability:the_cavaliers_weapon#cavalier"
+  - "ability:armor_proficiencies#cavalier"
+- add: "ability:titanic_challenge#cavalier_saurian_champion"
+  remove:
+  - "ability:challenge#cavalier"
+- add: "ability:wild_warrior#cavalier_saurian_champion"
+  remove:
+  - "ability:order#cavalier"
+- add: "ability:dinosaur_mount#cavalier_saurian_champion"
+  remove:
+  - "ability:the_cavaliers_mount#cavalier"
+  - "ability:master_tactician#cavalier"
+  - "ability:tactician_greater_tactician#cavalier"
+- add: "ability:fierce_devotion#cavalier_saurian_champion"
+  remove:
+  - "ability:banner#cavalier"
+- add: "ability:primeval_devotion#cavalier_saurian_champion"
+  remove:
+  - "ability:greater_banner#cavalier"
+features:
+- id: "ability:weapon_and_armor_proficiency#cavalier_saurian_champion"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A saurian champion does not gain proficiency with medium or heavy\
+    \ armor."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:titanic_challenge#cavalier_saurian_champion"
+  name: "Titanic Challenge"
+  label: null
+  type: null
+  description: "A saurian champion considers only the largest creatures a true challenge.\
+    \ His titanic challenge adds only half his level on damage rolls against Medium\
+    \ or smaller creatures, but he adds a +1 bonus on attack rolls against a target\
+    \ of his challenge that is at least two size categories larger than himself (Huge\
+    \ for Medium saurian champions) and a +2 bonus on attack rolls against a Colossal\
+    \ target of his challenge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:wild_warrior#cavalier_saurian_champion"
+  name: "Wild Warrior"
+  label: null
+  type: null
+  description: "A saurian champion hails from primeval lands where the civilized orders\
+    \ hold little sway. He does not select an order or gain any order-related benefits."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:dinosaur_mount#cavalier_saurian_champion"
+  name: "Dinosaur Mount"
+  label: null
+  type: null
+  description: "A saurian champion bonds with a dinosaur companion that willingly\
+    \ serves as his mount. This mount functions as a cavalier's normal mount with\
+    \ the following adjustments: The saurian champion's mount must be a dinosaur.\
+    \ The saurian champion can ride mounts of his size category and larger, rather\
+    \ than only those of a larger size. Increase the mount's Strength score by 8 for\
+    \ the purpose of determining its carrying capacity. Whenever an ability or feat\
+    \ allows the saurian champion's mount to make a hoof attack, the mount can make\
+    \ a claw or bite attack instead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:fierce_devotion#cavalier_saurian_champion"
+  name: "Fierce Devotion"
+  label: null
+  type: null
+  description: "At 5th level, a saurian champion's mount gains the devotion ability,\
+    \ and its effects also apply against emotion and fear effects. The mount is immune\
+    \ to the effects of unnatural aura."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:primeval_devotion#cavalier_saurian_champion"
+  name: "Primeval Devotion"
+  label: null
+  type: null
+  description: "At 14th level, the bonus on saving throws provided by the mount's\
+    \ devotion ability increases by 2. In addition, the mount adds half this bonus\
+    \ to other saving throws."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

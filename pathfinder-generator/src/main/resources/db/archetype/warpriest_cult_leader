@@ -1,0 +1,79 @@
+id: "class:warpriest#cult_leader"
+name: "Cult Leader"
+description: "Referred to as fanatics, lunatics, or obsessives, cultists see themselves\
+  \ as genuine devotees of their deity. And the hierarchs of those devotees, the cult\
+  \ leaders, are the most fanatical of them all. Cult leaders are known for turning\
+  \ reasonable hearts toward corrupted teachings and striking at those that get in\
+  \ the way of their agenda."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#warpriest_cult_leader"
+  remove:
+  - "ability:the_warpriests_weapon#warpriest"
+  - "ability:armor_proficiencies#warpriest"
+- add: "ability:well_hidden#warpriest_cult_leader"
+  remove:
+  - "ability:focus_weapon#warpriest"
+- add: "ability:sneak_attack#warpriest_cult_leader"
+  remove:
+  - "ability:15th_levels#warpriest"
+  - "ability:the_bonus_feats_gained_at_3rd_9th#warpriest"
+- add: "ability:enthrall#warpriest_cult_leader"
+  remove:
+  - "ability:channel_energy#warpriest"
+- add: "ability:hide_in_plain_sight#warpriest_cult_leader"
+  remove:
+  - "ability:the_bonus_feat_gained_at_12th_level#warpriest"
+features:
+- id: "ability:weapon_and_armor_proficiency#warpriest_cult_leader"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Cult leaders are proficient with all simple weapons, plus the hand\
+    \ crossbow, rapier, sap, shortbow, and short sword, as well as the favored weapon\
+    \ of their deity. They are proficient with light armor and light shields. The\
+    \ cult leader does not gain Weapon Focus as a bonus feat as a warpriest normally\
+    \ would."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:well_hidden#warpriest_cult_leader"
+  name: "Well-Hidden"
+  label: null
+  type: null
+  description: "A cult leader gains a +2 bonus on Disguise and Stealth checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:sneak_attack#warpriest_cult_leader"
+  name: "Sneak Attack"
+  label: null
+  type: null
+  description: "At 3rd level, a cult leader gains the sneak attack ability, as the\
+    \ rogue class feature. If he already has sneak attack from another class, the\
+    \ extra damage from the classes that grant sneak attack stack for the purpose\
+    \ of determining the sneak attack's extra damage dice. This extra damage is 1d6\
+    \ at 3rd level and increases by 1d6 every 3 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:enthrall#warpriest_cult_leader"
+  name: "Enthrall"
+  label: null
+  type: null
+  description: "At 4th level, a cult leader can cast enthrall. Using this ability\
+    \ consumes two uses of his fervor ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:hide_in_plain_sight#warpriest_cult_leader"
+  name: "Hide in Plain Sight"
+  label: null
+  type: null
+  description: "At 12th level, a cult leader can use the Stealth skill even while\
+    \ being observed. As long as he is within 10 feet of an area of dim light, a cult\
+    \ leader can hide himself from view in the open without anything to actually hide\
+    \ behind. He cannot, however, hide in his own shadow."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

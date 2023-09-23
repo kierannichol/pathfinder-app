@@ -1,0 +1,24 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (harmless)"
+spell_resistance: "no"
+id: "spell:guardian_of_faith"
+name: "Guardian of Faith"
+description: "The target gains the benefit of shield of faith and your choice of protection\
+  \ from chaos, evil, good, or law. As a move action, the target can transfer this\
+  \ spell to a touched ally, who becomes the new target of the spell."
+prerequisites: ""
+components: "V, S, M (parchment with a holy text written on it)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one ally"
+duration: "1 minute/level"
+school: "abjuration [see text]"
+levels:
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:paladin"
+  level: 4
+- class_id: "class:warpriest"
+  level: 4
+source: "Advanced Class Guide"

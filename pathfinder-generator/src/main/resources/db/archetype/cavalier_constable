@@ -1,0 +1,108 @@
+id: "class:cavalier#constable"
+name: "Constable"
+description: ""
+modifications:
+- add: "ability:class_skills#cavalier_constable"
+  remove:
+  - "ability:the_cavaliers_class_skills#cavalier"
+- add: "ability:apprehend#cavalier_constable"
+  remove:
+  - "ability:mount#cavalier"
+- add: "ability:squad_commander#cavalier_constable"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:quick_interrogator#cavalier_constable"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:badge#cavalier_constable"
+  remove:
+  - "ability:banner#cavalier"
+- add: "ability:instant_order#cavalier_constable"
+  remove:
+  - "ability:mighty_charge#cavalier"
+  - "ability:supreme_charge#cavalier"
+- add: "ability:greater_badge#cavalier_constable"
+  remove:
+  - "ability:greater_banner#cavalier"
+features:
+- id: "ability:class_skills#cavalier_constable"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "Perception is a class skill for constables."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:apprehend#cavalier_constable"
+  name: "Apprehend"
+  label: null
+  type: null
+  description: "A constable gains Improved Unarmed Strike as a bonus feat and can\
+    \ attempt a grapple combat maneuver check in place of the attack at the end of\
+    \ a charge. At 2nd level, the constable receives a +1 bonus on Perception checks\
+    \ and combat maneuver checks to disarm, grapple, or trip opponents. At 7th level\
+    \ and every 5 levels thereafter, this bonus improves by 1. At 4th level, the constable\
+    \ does not treat crowds as difficult terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:squad_commander#cavalier_constable"
+  name: "Squad Commander"
+  label: null
+  type: null
+  description: "At 3rd level, a constable can spend 1 minute laying out a plan to\
+    \ activate the tactician ability without having it count against his number of\
+    \ uses per day. The ability must be triggered within 1 hour of the plan being\
+    \ made, and the benefits last for 1 minute per cavalier level he has. The constable\
+    \ can have only one plan at a time, and if a new plan is made, any old plan is\
+    \ lost."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:quick_interrogator#cavalier_constable"
+  name: "Quick Interrogator"
+  label: null
+  type: null
+  description: "At 4th level, a constable can attempt a Diplomacy check to gather\
+    \ information in 1d6 × 5 minutes and attempt a Diplomacy or Intimidate check to\
+    \ change someone's attitude in 5 rounds."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:badge#cavalier_constable"
+  name: "Badge"
+  label: null
+  type: null
+  description: "At 5th level, a constable's badge becomes a powerful symbol of rules\
+    \ and authority. As long as he wears his badge, allies within 30 feet who can\
+    \ see him gain a +2 morale bonus on saving throws against charm, compulsion, and\
+    \ fear effects and a +1 morale bonus on attack rolls against targets the constable\
+    \ has challenged.\nAt 10th level and every 5 levels thereafter, the bonuses increase\
+    \ by 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:instant_order#cavalier_constable"
+  name: "Instant Order"
+  label: null
+  type: null
+  description: "At 11th level, a constable can bark an order to an ally within 30\
+    \ feet as a standard action. That ally can instantly take a single move or standard\
+    \ action to comply with the order. Taking the action dazes the ally for 1 round\
+    \ afterward. At 20th level, the constable can use this ability as a move action,\
+    \ but no more than once per round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+- id: "ability:greater_badge#cavalier_constable"
+  name: "Greater Badge"
+  label: null
+  type: null
+  description: "At 14th level, a constable can hold his badge aloft as a standard\
+    \ action to inspire his allies to be steadfast. All allies within 30 feet gain\
+    \ a number of temporary hit points equal to twice the constable's cavalier level\
+    \ for 10 minutes. A given ally can benefit from this ability only once per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Street"
+source: "Pathfinder Player Companion: Heroes of the Street"

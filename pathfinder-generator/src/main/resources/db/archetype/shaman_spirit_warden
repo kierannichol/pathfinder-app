@@ -1,0 +1,48 @@
+id: "class:shaman#spirit_warden"
+name: "Spirit Warden"
+description: "Not all spirits deserve reverence and respect. Some are twisted and\
+  \ despicable. It's a spirit warden's duty to end these spirits' existence."
+modifications:
+- add: "ability:restless_magic#shaman_spirit_warden"
+  remove:
+  - "ability:the_spirit_magic_spells_gained_from_the_shamans_spirit#shaman"
+- add: "ability:rebuke_spirits#shaman_spirit_warden"
+  remove:
+  - "ability:the_hex_gained_at_2nd_level#shaman"
+- add: "ability:laugh_at_death#shaman_spirit_warden"
+  remove:
+  - "ability:the_hex_gained_at_10th_level#shaman"
+features:
+- id: "ability:restless_magic#shaman_spirit_warden"
+  name: "Restless Magic"
+  label: null
+  type: null
+  description: "The spirit warden adds the following spells to the list of spells\
+    \ she can cast using spirit magic: detect undead (1st), command undead (2nd),\
+    \ halt undead (3rd), death ward (4th), possess object (5th), undead to death (6th),\
+    \ ethereal jaunt (7th), control undead (8th), foresight (9th)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:rebuke_spirits#shaman_spirit_warden"
+  name: "Rebuke Spirits"
+  label: null
+  type: null
+  description: "At 2nd level, the spirit warden gains the ability to channel positive\
+    \ energy as a cleric of her level. Regardless of her alignment, she can only use\
+    \ this ability to harm undead creatures. The spirit warden can use this ability\
+    \ a number of times per day equal to 3 + her Charisma modifier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:laugh_at_death#shaman_spirit_warden"
+  name: "Laugh at Death"
+  label: null
+  type: null
+  description: "At 10th level, the spirit warden's familiarity with the dead has filled\
+    \ her with contempt for death itself. She gains a +4 insight bonus on saving throws\
+    \ against death effects and to avoid or remove negative levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

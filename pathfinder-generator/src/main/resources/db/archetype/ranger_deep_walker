@@ -1,0 +1,66 @@
+id: "class:ranger#deep_walker"
+name: "Deep Walker"
+description: "Some rangers devote their lives to the woods, becoming hunters, protectors,\
+  \ and wilderness guides among its diverse terrain types. The deep walker is instead\
+  \ a master of the strange terrain of the deep earth, exploring its caverns and caves,\
+  \ becoming a master of the dark corridors most surface dwellers fear to explore--and\
+  \ perhaps the reason they fear to explore them."
+modifications:
+- add: "ability:deep_knowledge#ranger_deep_walker"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:rock_hopper#ranger_deep_walker"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:deep_walker_camouflage#ranger_deep_walker"
+  remove:
+  - "ability:camouflage#ranger"
+- add: "ability:one_with_the_stone#ranger_deep_walker"
+  remove:
+  - "ability:hide_in_plain_sight#ranger"
+features:
+- id: "ability:deep_knowledge#ranger_deep_walker"
+  name: "Deep Knowledge"
+  label: null
+  type: null
+  description: "At 3rd level, a deep walker gains a +2 bonus on initiative checks\
+    \ and Knowledge (dungeoneering), Perception, Stealth, and Survival skill checks\
+    \ while underground (in caves and dungeons). Every 5 levels thereafter, the deep\
+    \ walker gains an additional +3 on each of those checks while underground (to\
+    \ a maximum of +11 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:rock_hopper#ranger_deep_walker"
+  name: "Rock Hopper"
+  label: null
+  type: null
+  description: "At 7th level, a deep walker instinctively grasps for the most stable\
+    \ surfaces and holds on tighter while moving over underground rock and stone.\
+    \ The deep walker gains a +5 bonus on all Acrobatics and Climb checks made to\
+    \ traverse underground terrain. Furthermore, the deep walker ignores difficult\
+    \ terrain created by underground terrain and subterranean flora.\nThis ability\
+    \ replaces woodland stride."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:deep_walker_camouflage#ranger_deep_walker"
+  name: "Deep Walker Camouflage"
+  label: null
+  type: null
+  description: "At 12th level, a deep walker can use the Stealth skill to hide in\
+    \ underground environments, even if the terrain does not grant cover or concealment.\n\
+    This ability replaces camouflage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:one_with_the_stone#ranger_deep_walker"
+  name: "One with the Stone"
+  label: null
+  type: null
+  description: "At 17th level, a deep walker can use the Stealth skill while he is\
+    \ underground, even when being observed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

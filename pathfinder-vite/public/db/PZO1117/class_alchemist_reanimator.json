@@ -1,0 +1,39 @@
+{
+  "id": "class:alchemist#reanimator",
+  "name": "Reanimator",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:the_increase_to_bomb_damage_at_this_level#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "A reanimator is an alchemist who has discovered how to infuse a corpse with a semblance of life. Many work in tandem with necromancers to explore the fine border between the worlds of the living and the dead."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_increase_to_bomb_damage_at_this_level#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:simple_reanimation#alchemist_reanimator",
+          "conditionFormula": "@class:alchemist\u003e\u003d7"
+        }, {
+          "featureId": "ability:create_undead#alchemist_reanimator",
+          "conditionFormula": "@class:alchemist\u003e\u003d13"
+        }, {
+          "featureId": "ability:create_greater_undead#alchemist_reanimator",
+          "conditionFormula": "@class:alchemist\u003e\u003d15"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+        }, {
+          "featureId": "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+        }, {
+          "featureId": "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
+        }]
+      }]
+    }
+  }
+}

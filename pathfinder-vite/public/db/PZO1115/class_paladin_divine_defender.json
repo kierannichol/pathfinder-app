@@ -1,0 +1,38 @@
+{
+  "id": "class:paladin#divine_defender",
+  "name": "Divine Defender",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:mercy#paladin AND !@modifies:ability:divine_bond#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mercy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_bond#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:shared_defense#paladin_divine_defender",
+          "conditionFormula": "@class:paladin\u003e\u003d3"
+        }, {
+          "featureId": "ability:divine_bond#paladin_divine_defender",
+          "conditionFormula": "@class:paladin\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:mercy#paladin"
+        }, {
+          "featureId": "ability:divine_bond#paladin"
+        }]
+      }]
+    }
+  }
+}

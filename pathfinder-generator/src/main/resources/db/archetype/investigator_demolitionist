@@ -1,0 +1,68 @@
+id: "class:investigator#demolitionist"
+name: "Demolitionist"
+description: ""
+modifications:
+- add: "ability:structural_knowledge#investigator_demolitionist"
+  remove:
+  - "ability:poison_lore#investigator"
+- add: "ability:structural_insight#investigator_demolitionist"
+  remove:
+  - "ability:poison_resistance#investigator"
+- add: "ability:ricochet#investigator_demolitionist"
+  remove:
+  - "ability:9th_levels#investigator"
+  - "ability:the_investigator_talents_gained_at_3rd#investigator"
+- add: "ability:studied_strike#investigator_demolitionist"
+  remove:
+  - "ability:studied_strike#investigator"
+features:
+- id: "ability:structural_knowledge#investigator_demolitionist"
+  name: "Structural Knowledge"
+  label: null
+  type: null
+  description: "At 2nd level, a demolitionist gains Improved Sunder as a bonus feat,\
+    \ even if he does not meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of Golarion"
+- id: "ability:structural_insight#investigator_demolitionist"
+  name: "Structural Insight"
+  label: null
+  type: null
+  description: "At 2nd level, a demolitionist gains an insight bonus equal to his\
+    \ investigator level on Acrobatics checks to move through difficult terrain.\n\
+    At 5th level, when attempting to damage objects and structures, he ignores the\
+    \ first 5 points of hardness.\nAt 8th level, the demolitionist gains a +2 insight\
+    \ bonus on attack rolls when attempting to sunder an item.\nAt 11th level, he\
+    \ can attempt a sunder combat maneuver check against a wall no more than 5 feet\
+    \ thick. If the damage from the sunder combat maneuver exceeds the wall's hardness,\
+    \ the demolitionist creates a 5-foot opening in the wall, through which a Medium\
+    \ creature can easily pass."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of Golarion"
+- id: "ability:ricochet#investigator_demolitionist"
+  name: "Ricochet"
+  label: null
+  type: null
+  description: "At 3rd level as a standard action, the demolitionist can attack an\
+    \ adjacent wall or object with a melee weapon. On a hit, he creates a 15-foot-cone\
+    \ of rock shards or splinters that deals 2d6 points of damage to targets in the\
+    \ area of effect. A target can attempt a Reflex save (DC = 10 + half the demolitionist's\
+    \ level + his Intelligence modifier) to reduce this damage by half. At 9th level,\
+    \ the damage increases to 4d6, and the investigator can create this effect with\
+    \ a ranged weapon by targeting a wall or object within 30 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of Golarion"
+- id: "ability:studied_strike#investigator_demolitionist"
+  name: "Studied Strike"
+  label: null
+  type: null
+  description: "A demolitionist's studied strike damage increases every 4 levels,\
+    \ rather than every 2 (to 2d6 at 8th, 3d6 at 12th, 4d6 at 16th, and 5d6 at 20th\
+    \ level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of Golarion"
+source: "Pathfinder Player Companion: Heroes of Golarion"

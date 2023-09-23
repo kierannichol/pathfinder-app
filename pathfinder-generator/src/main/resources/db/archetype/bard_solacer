@@ -1,0 +1,71 @@
+id: "class:bard#solacer"
+name: "Solacer"
+description: ""
+modifications:
+- add: "ability:class_skills#bard_solacer"
+  remove:
+  - "ability:the_bards_class_skills#bard"
+- add: "ability:learned_physician#bard_solacer"
+  remove:
+  - "ability:lore_master#bard"
+  - "ability:bardic_knowledge#bard"
+- add: "ability:creative_treatment#bard_solacer"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:invigorating_artistry#bard_solacer"
+  remove:
+  - "ability:jack_of_all_trades#bard"
+features:
+- id: "ability:class_skills#bard_solacer"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A solacer adds Heal to his list of class skills instead of Appraise."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:learned_physician#bard_solacer"
+  name: "Learned Physician"
+  label: null
+  type: null
+  description: "A solacer adds 1/2 his class level (minimum 1) on Heal checks and\
+    \ can attempt Knowledge checks untrained.\nAt 5th level, a solacer can take 10\
+    \ on checks with any Knowledge skill he has ranks in. The solacer can choose not\
+    \ to take 10 and can instead roll normally. In addition, once per day, the solacer\
+    \ can take 20 on any Heal check, though this does not affect the time it takes\
+    \ to perform the task attempted. He can use this ability one additional time per\
+    \ day for every 6 bard levels he has beyond 5th, to a maximum of three times per\
+    \ day at 17th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:creative_treatment#bard_solacer"
+  name: "Creative Treatment"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:invigorating_artistry#bard_solacer"
+  name: "Invigorating Artistry"
+  label: null
+  type: null
+  description: "At 10th level, a solacer can use his performances to protect and heal\
+    \ a target's soul. The solacer can perform for 1 hour (this requires no skill\
+    \ check) and grant several benefits for 24 hours to the creatures that can hear\
+    \ or see his performance, or both, depending on whether the performance has audible\
+    \ or visual components. Affected creatures gain a +3 bonus on saving throws against\
+    \ curses, possession spells and effects (such as magic jar), and domination and\
+    \ mind control spells and effects (such as dominate person). If the target is\
+    \ suffering any or multiple such effects, it immediately can attempt a new saving\
+    \ throw against each; the effect ends if the saving throw is successful. Only\
+    \ one such extra saving throw can be granted against each condition in any 24-hour\
+    \ period. If a creature benefits from the daily performance between saving throws\
+    \ against a corruption (Horror Adventures 14) progressing, it gains a +3 bonus\
+    \ on the next saving throw against that corruption.\nThe amount of this bonus\
+    \ increases by 1 at 16th and 19th levels (maximum +5 at 19th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+source: "Pathfinder Player Companion: Healer's Handbook"

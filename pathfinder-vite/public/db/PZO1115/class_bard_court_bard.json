@@ -1,0 +1,65 @@
+{
+  "id": "class:bard#court_bard",
+  "name": "Court Bard",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:inspire_courage#bard AND !@modifies:ability:jack_of_all_trades#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "Spending years studying all of the finer points of erudition and etiquette, the court bard takes up the role of resplendent proclaimer and artist-in-residence at the hand of nobility, royalty, and the well-moneyed elite who aspire to join their ranks."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bardic_performance#bard_court_bard",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_court_bard",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:bardic_performance#bard_court_bard",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_court_bard",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:heraldic_expertise#bard_court_bard",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:wide_audience#bard_court_bard",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }, {
+          "featureId": "ability:jack_of_all_trades#bard"
+        }]
+      }]
+    }
+  }
+}

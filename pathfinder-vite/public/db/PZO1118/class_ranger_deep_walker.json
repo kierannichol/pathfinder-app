@@ -1,0 +1,59 @@
+{
+  "id": "class:ranger#deep_walker",
+  "name": "Deep Walker",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:camouflage#ranger AND !@modifies:ability:favored_terrain#ranger AND !@modifies:ability:hide_in_plain_sight#ranger AND !@modifies:ability:woodland_stride#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some rangers devote their lives to the woods, becoming hunters, protectors, and wilderness guides among its diverse terrain types. The deep walker is instead a master of the strange terrain of the deep earth, exploring its caverns and caves, becoming a master of the dark corridors most surface dwellers fear to explore--and perhaps the reason they fear to explore them."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:favored_terrain#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#ranger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:deep_knowledge#ranger_deep_walker",
+          "conditionFormula": "@class:ranger\u003e\u003d3"
+        }, {
+          "featureId": "ability:rock_hopper#ranger_deep_walker",
+          "conditionFormula": "@class:ranger\u003e\u003d7"
+        }, {
+          "featureId": "ability:deep_walker_camouflage#ranger_deep_walker",
+          "conditionFormula": "@class:ranger\u003e\u003d12"
+        }, {
+          "featureId": "ability:one_with_the_stone#ranger_deep_walker",
+          "conditionFormula": "@class:ranger\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:favored_terrain#ranger"
+        }, {
+          "featureId": "ability:woodland_stride#ranger"
+        }, {
+          "featureId": "ability:camouflage#ranger"
+        }, {
+          "featureId": "ability:hide_in_plain_sight#ranger"
+        }]
+      }]
+    }
+  }
+}

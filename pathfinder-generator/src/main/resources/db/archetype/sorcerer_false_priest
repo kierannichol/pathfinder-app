@@ -1,0 +1,38 @@
+id: "class:sorcerer#false_priest"
+name: "False Priest"
+description: "These “priests\"are magical charlatans--missionary servants who spread\
+  \ fervent devotion wherever they travel. Altered by divine magic, he can perform\
+  \ feats impossible for other sorcerers."
+modifications:
+- add: "ability:lay_healer#sorcerer_false_priest"
+  remove:
+  - "ability:the_bloodline_spells_gained_at_3rd_level#sorcerer"
+  - "ability:5th_level_respectively#sorcerer"
+- add: "ability:false_channel#sorcerer_false_priest"
+  remove:
+  - "ability:the_bloodline_power_gained_at_9th_level#sorcerer"
+features:
+- id: "ability:lay_healer#sorcerer_false_priest"
+  name: "Lay Healer"
+  label: null
+  type: null
+  description: "At 3rd level, the false priest adds aid to his list of spells known\
+    \ as a 2nd-level spell. At 5th level, he adds remove disease to his list of spells\
+    \ known as a 3rd-level spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Magic"
+- id: "ability:false_channel#sorcerer_false_priest"
+  name: "False Channel"
+  label: null
+  type: null
+  description: "At 9th level, the false priest can use his own magic to power spell\
+    \ completion and spell trigger items that use divine spells. He expends a sorcerer\
+    \ spell slot that is at least 1 level higher than the level of the spell he's\
+    \ trying to activate, then makes a Use Magic Device check. If he succeeds, the\
+    \ item's spell occurs and the item or charge is not expended. If he fails, nothing\
+    \ happens. Whether he succeeds or fail, his spell slot is expended."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Magic"
+source: "Pathfinder Campaign Setting: Inner Sea Magic"

@@ -1,0 +1,97 @@
+id: "class:investigator#spiritualist"
+name: "Spiritualist"
+description: ""
+modifications:
+- add: "ability:commune_with_spirits#investigator_spiritualist"
+  remove:
+  - "ability:alchemy#investigator"
+- add: "ability:spirit_sense#investigator_spiritualist"
+  remove:
+  - "ability:poison_lore#investigator"
+- add: "ability:strong_life#investigator_spiritualist"
+  remove:
+  - "ability:poison_resistance#investigator"
+- add: "ability:sixth_sense#investigator_spiritualist"
+  remove:
+  - "ability:trap_sense#investigator"
+- add: "ability:whispering_spirits#investigator_spiritualist"
+  remove:
+  - "ability:swift_alchemy#investigator"
+- add: "ability:touched_by_the_beyond#investigator_spiritualist"
+  remove:
+  - "ability:poison_immunity#investigator"
+features:
+- id: "ability:commune_with_spirits#investigator_spiritualist"
+  name: "Commune with Spirits"
+  label: null
+  type: null
+  description: "Instead of relying on alchemical research to find clues, a spiritualist\
+    \ relies on communion with the world beyond death. At 1st level, a spiritualist\
+    \ gains the ability to use comprehend languages, detect secret doors, and identify,\
+    \ but each has a casting time of 1 minute, as the spiritualist needs to consult\
+    \ with the spirits of the dead that dwell in his area or that are somehow attached\
+    \ to him in some way. The spiritualist can use this ability a number of times\
+    \ per day equal to his investigator level + his Wisdom modifier.\nAs he goes up\
+    \ in level, the spiritualist gains the ability to use other spells with the casting\
+    \ time as above. At 5th level, he can use augury. At 7th level, he can use speak\
+    \ with dead and locate object. At 9th level, he can use legend lore. Each of these\
+    \ requires one use of this ability."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:spirit_sense#investigator_spiritualist"
+  name: "Spirit Sense"
+  label: null
+  type: null
+  description: "At 2nd level, when a spiritualist attempts a saving throw against\
+    \ an ability or an effect delivered by an incorporeal creature, he can expend\
+    \ one use of his inspiration instead of two to augment that saving throw. If the\
+    \ spiritualist has the combat inspiration investigator talent, he need not spend\
+    \ any inspiration to augment such saving throws."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:strong_life#investigator_spiritualist"
+  name: "Strong Life"
+  label: null
+  type: null
+  description: "His dealings with the other side and knowledge of what lies beyond\
+    \ strengthens the spiritualist's will. He gains a +2 bonus on saving throws against\
+    \ death effects and negative energy damage. This bonus increases to +4 at 5th\
+    \ level, and to +6 at 8th level."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:sixth_sense#investigator_spiritualist"
+  name: "Sixth Sense"
+  label: null
+  type: null
+  description: "At 3rd level, a spiritualist can spend one of his uses of the commune\
+    \ with spirits ability to reroll a single saving throw that he has failed. He\
+    \ must take the results of the reroll, even if it is lower."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:whispering_spirits#investigator_spiritualist"
+  name: "Whispering Spirits"
+  label: null
+  type: null
+  description: "At 4th level, the spiritualist can open a conduit with the spirit\
+    \ world that can aid him in combat for a short time. He can expend one use of\
+    \ his commune with spirits ability in order to gain an insight bonus to both AC\
+    \ and saving throws equal to his Wisdom modifier (minimum 1) for 1 minute."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:touched_by_the_beyond#investigator_spiritualist"
+  name: "Touched by the Beyond"
+  label: null
+  type: null
+  description: "At 11th level, the spiritualist's ability to touch the beyond grants\
+    \ him further protection against the dangers of death and negative energy. The\
+    \ spiritualist becomes immune to death effects, and he takes half damage from\
+    \ negative energy.\nThis ability replaces poison immunity."
+  effects: null
+  prerequisites: null
+  source: ""
+source: ""

@@ -1,0 +1,85 @@
+id: "class:slayer#dune_rider"
+name: "Dune Rider"
+description: "Mounted harriers, saboteurs, and skirmishers, dune riders can disrupt\
+  \ even the most organized opposition."
+modifications:
+- add: "ability:sand_foot#slayer_dune_rider"
+  remove:
+  - "ability:track#slayer"
+  - "ability:fast_tracker#slayer"
+- add: "ability:desert_skirmisher#slayer_dune_rider"
+  remove:
+  - "ability:studied_target#slayer"
+- add: "ability:galloping_fire#slayer_dune_rider"
+  remove:
+  - "ability:stalker#slayer"
+  - "ability:the_slayer_talent_normally_gained_at_4th_level#slayer"
+- add: "ability:dust_vision#slayer_dune_rider"
+  remove:
+  - "ability:the_slayer_talent_normally_gained_at_8th_level#slayer"
+- add: "ability:dunes_of_death#slayer_dune_rider"
+  remove:
+  - "ability:master_slayer#slayer"
+features:
+- id: "ability:sand_foot#slayer_dune_rider"
+  name: "Sand Foot"
+  label: null
+  type: null
+  description: "The dune rider adds half his level as a bonus on Ride checks in warm\
+    \ deserts, hills, and mountains. At 11th level, the dune rider and his mount no\
+    \ longer treat sand or rocky ground as difficult terrain, and they gain a +10-foot\
+    \ enhancement bonus to their base speed in warm deserts, hills, and mountains."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:desert_skirmisher#slayer_dune_rider"
+  name: "Desert Skirmisher"
+  label: null
+  type: null
+  description: "The dune rider excels in combat in warm deserts, hills, and mountains.\
+    \ While in such terrain, he gains a +2 bonus on initiative, Perception, and Stealth\
+    \ checks, and a +1 bonus on attack and damage rolls. At 5th level and every 5\
+    \ levels thereafter, the bonus on initiative, Perception, and Stealth checks increases\
+    \ by 2 (maximum +10) and the bonus on attack and damage rolls increases by 1 (maximum\
+    \ +5)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:galloping_fire#slayer_dune_rider"
+  name: "Galloping Fire"
+  label: null
+  type: null
+  description: "At 4th level, the penalties for the dune rider's ranged attacks while\
+    \ mounted decrease by 2. These penalties decrease by an additional 2 at 7th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:dust_vision#slayer_dune_rider"
+  name: "Dust Vision"
+  label: null
+  type: null
+  description: "At 8th level, the dune rider is at home in the desert. He exists comfortably\
+    \ in hot conditions up to 140º Fahrenheit without having to attempt Fortitude\
+    \ saves.\nHis equipment is likewise protected. He takes no penalties on Perception\
+    \ checks from blowing sand, dust, or heat shimmers, nor do these effects grant\
+    \ concealment to the dune rider's enemies within 30 feet. Effects that would grant\
+    \ total concealment work normally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:dunes_of_death#slayer_dune_rider"
+  name: "Dunes of Death"
+  label: null
+  type: null
+  description: "At 20th level, a dune rider can use the desert's heat to finish off\
+    \ his foes. As a standard action, he can make a single attack at his full base\
+    \ attack bonus while in warm desert, hills, or mountains, choosing one of the\
+    \ following effects: kill, knock unconscious for 1d4 hours, or paralyze for 2d6\
+    \ rounds. If the attack hits, the target takes damage normally and must succeed\
+    \ at a Fortitude save or suffer the additional effect. The DC of this save is\
+    \ 20 + the dune rider's Intelligence modifier. Whether or not the target succeeds,\
+    \ it can't be targeted by this ability again for 24 hours."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

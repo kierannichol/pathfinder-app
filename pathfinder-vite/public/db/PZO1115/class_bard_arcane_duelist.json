@@ -1,0 +1,91 @@
+{
+  "id": "class:bard#arcane_duelist",
+  "name": "Arcane Duelist",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:countersong#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:jack_of_all_trades#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "A master of the martial applications of steel and spell, the arcane duelist blends both into a lethal combination."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:arcane_strike#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bonus_feats#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:bonus_feats#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:bonus_feats#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d6"
+        }, {
+          "featureId": "ability:bonus_feats#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }, {
+          "featureId": "ability:bonus_feats#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d14"
+        }, {
+          "featureId": "ability:bonus_feats#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d18"
+        }, {
+          "featureId": "ability:arcane_bond#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:arcane_armor#bard_arcane_duelist",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:countersong#bard"
+        }, {
+          "featureId": "ability:well_versed#bard"
+        }, {
+          "featureId": "ability:versatile_performance#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }, {
+          "featureId": "ability:jack_of_all_trades#bard"
+        }]
+      }]
+    }
+  }
+}

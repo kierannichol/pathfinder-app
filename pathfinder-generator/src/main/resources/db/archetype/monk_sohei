@@ -1,0 +1,87 @@
+id: "class:monk#sohei"
+name: "Sohei"
+description: "The sohei are masters of the horse and the hunt. A monastic soldier,\
+  \ the sohei is equally adept at combat afoot or on horseback. While skilled in unarmed\
+  \ techniques, many sohei favor weapons they can use while mounted on horseback or\
+  \ against others' horses."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#monk_sohei"
+  remove:
+  - "ability:armor_proficiencies#monk"
+  - "ability:the_monks_weapon#monk"
+- add: "ability:devoted_guardian#monk_sohei"
+  remove:
+  - "ability:stunning_fist#monk"
+- add: "ability:monastic_mount#monk_sohei"
+  remove:
+  - "ability:fast_movement#monk"
+  - "ability:increased_unarmed_damage#monk"
+- add: "ability:ki_weapon#monk_sohei"
+  remove:
+  - "ability:slow_fall#monk"
+  - "ability:abundant_step#monk"
+- add: "ability:weapon_training#monk_sohei"
+  remove:
+  - "ability:purity_of_body_diamond_body_quivering_palm_timeless_body#monk"
+  - "ability:tongue_of_the_sun_and_moon#monk"
+features:
+- id: "ability:weapon_and_armor_proficiency#monk_sohei"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A sohei is proficient with all simple and martial weapons and with\
+    \ light armor, instead of a monk's usual weapon and armor proficiencies."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:devoted_guardian#monk_sohei"
+  name: "Devoted Guardian"
+  label: null
+  type: null
+  description: "At 1st level, a sohei can always act in a surprise round even if he\
+    \ does not notice his enemies, though he remains flat-footed until he acts. In\
+    \ addition, a sohei gains a bonus on initiative rolls equal to 1/2 his monk level.\
+    \ At 20th level, a sohei's initiative roll is automatically a natural 20."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:monastic_mount#monk_sohei"
+  name: "Monastic Mount"
+  label: null
+  type: null
+  description: "At 4th level, a sohei may spend 1 point from his ki pool to grant\
+    \ his mount temporary hit points equal to twice his level for 1 hour per level.\
+    \ In addition, as long as the sohei and his mount are adjacent, including when\
+    \ mounted, the mount gains any of the following abilities the sohei possesses:\
+    \ AC bonus, diamond soul, evasion, high jump, improved evasion, ki strike (as\
+    \ long as the sohei has at least 1 point in his ki pool), perfect self, and still\
+    \ mind. When a sohei spends points from his ki pool, his mount gains the same\
+    \ benefits as the sohei."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:ki_weapon#monk_sohei"
+  name: "Ki Weapon"
+  label: null
+  type: null
+  description: "At 4th level, as a swift action, a sohei may spend 1 point from his\
+    \ ki pool to grant any weapon he wields (including his unarmed strike) a +1 enhancement\
+    \ bonus on attack and damage rolls, increasing by +1 per four levels after 4th\
+    \ to a maximum bonus of +5 at 20th level, until the end of his next turn."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:weapon_training#monk_sohei"
+  name: "Weapon Training"
+  label: null
+  type: null
+  description: "At 6th level, a sohei gains weapon training in one of the following\
+    \ weapon groups, as the fighter class feature: bows, crossbows, monk weapons,\
+    \ polearms, spears, or thrown weapons. He may select an additional group of weapons\
+    \ for every six levels after 6th, to a maximum of three at 18th level. A sohei\
+    \ may use flurry of blows and ki strike with any weapon in which he has weapon\
+    \ training."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

@@ -1,0 +1,25 @@
+casting_time: "1 standard action"
+saving_throw: "Will disbelief, then Fortitude (see text)"
+spell_resistance: "yes"
+id: "spell:illusory_poison"
+name: "Illusory Poison"
+description: "You create a phantasm of an oily green phantasmal poison on the target\
+  \ weapon. The first creature hit by the poisoned weapon must make a Will save against\
+  \ the illusion spell; success means the spell has no effect and is expended from\
+  \ the weapon. If the creature fails its save, it believes it has been poisoned and\
+  \ must make Fortitude saves at the spell's DC to avoid suffering illusory poison\
+  \ damage."
+prerequisites: ""
+components: "V, S"
+range: "touch"
+targets: "weapon touched"
+duration: "1 minute/level or until discharged (see text)"
+school: "illusion (phantasm) [mind-affecting]"
+levels:
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:sorcerer"
+  level: 3
+- class_id: "class:wizard"
+  level: 3
+source: "Gnomes of Golarion"

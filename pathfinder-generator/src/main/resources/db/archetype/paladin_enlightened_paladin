@@ -1,0 +1,68 @@
+id: "class:paladin#enlightened_paladin"
+name: "Enlightened Paladin"
+description: ""
+modifications:
+- add: "ability:confident_defense#paladin_enlightened_paladin"
+  remove:
+  - "ability:shields#paladin"
+  - "ability:his_proficiency_with_medium_armor_heavy_armor#paladin"
+- add: "ability:aura_of_law#paladin_enlightened_paladin"
+  remove:
+  - "ability:aura_of_good#paladin"
+- add: "ability:sense_perfection#paladin_enlightened_paladin"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:personal_trial#paladin_enlightened_paladin"
+  remove:
+  - "ability:smite_evil#paladin"
+features:
+- id: "ability:confident_defense#paladin_enlightened_paladin"
+  name: "Confident Defense"
+  label: null
+  type: null
+  description: "At 1st level, when wearing light or no armor and not using a shield,\
+    \ an Enlightened paladin adds 1 point of his Charisma bonus (if any) per class\
+    \ level to his Dexterity bonus to his Armor Class. If he is caught flat-footed\
+    \ or otherwise denied his Dexterity bonus, he also loses this bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:aura_of_law#paladin_enlightened_paladin"
+  name: "Aura of Law"
+  label: null
+  type: null
+  description: "The power of an enlightened paladin's aura of law is equal to his\
+    \ class level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:sense_perfection#paladin_enlightened_paladin"
+  name: "Sense Perfection"
+  label: null
+  type: null
+  description: "At 1st level, at will, an enlightened paladin can detect life forces\
+    \ as if he were using a paladin's detect evil class ability; however, instead\
+    \ of sensing evil creatures, he senses creatures that have a ki pool. Each such\
+    \ creature has an aura like a cleric of an aligned deity, and treats its current\
+    \ number of ki points as its Hit Dice for the purposes of this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:personal_trial#paladin_enlightened_paladin"
+  name: "Personal Trial"
+  label: null
+  type: null
+  description: "Once per day, an enlightened paladin can as a swift action declare\
+    \ one target within line of sight as his personal trial. The Enlightened paladin\
+    \ gains a +1 insight bonus on attack rolls and damage rolls against that creature,\
+    \ to his AC against attacks made by the target, and on saving throws against the\
+    \ target's spells and special abilities. This bonus increases by 1 at 4th level\
+    \ and every 4 levels thereafter, to a maximum bonus of +6 at 20th level. The personal\
+    \ trial effect remains until the target of the trial is dead or the next time\
+    \ the paladin rests and regains daily uses of this ability. At 4th level and every\
+    \ three levels thereafter, the Enlightened paladin can use personal trial one\
+    \ additional time per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

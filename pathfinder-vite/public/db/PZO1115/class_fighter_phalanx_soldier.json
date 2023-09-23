@@ -1,0 +1,76 @@
+{
+  "id": "class:fighter#phalanx_soldier",
+  "name": "Phalanx Soldier",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "The phalanx soldier specializes in defensive tactics, using his shield to guard himself and his allies and forming a shield wall like an unbreakable anvil against which his enemies break."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bravery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:stand_firm#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d2"
+        }, {
+          "featureId": "ability:phalanx_fighting#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d3"
+        }, {
+          "featureId": "ability:ready_pike#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d5"
+        }, {
+          "featureId": "ability:deft_shield#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d7"
+        }, {
+          "featureId": "ability:shield_ally#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d9"
+        }, {
+          "featureId": "ability:irresistible_advance#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d15"
+        }, {
+          "featureId": "ability:shielded_fortress#fighter_phalanx_soldier",
+          "conditionFormula": "@class:fighter\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bravery#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_mastery#fighter"
+        }]
+      }]
+    }
+  }
+}

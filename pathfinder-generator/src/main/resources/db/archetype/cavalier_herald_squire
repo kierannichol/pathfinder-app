@@ -1,0 +1,50 @@
+id: "class:cavalier#herald_squire"
+name: "Herald Squire"
+description: "The herald squire is the eyes and ears of a traveling knight, often\
+  \ arriving ahead of her liege to bring word of his arrival, find lodgings, and get\
+  \ the lay of the land."
+modifications:
+- add: "ability:introduction#cavalier_herald_squire"
+  remove:
+  - "ability:tactician#cavalier"
+- add: "ability:fleet_of_foot#cavalier_herald_squire"
+  remove:
+  - "ability:the_2nd_level_order_ability#cavalier"
+- add: "ability:transcend_language#cavalier_herald_squire"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+features:
+- id: "ability:introduction#cavalier_herald_squire"
+  name: "Introduction"
+  label: null
+  type: null
+  description: "At 1st level, whenever a herald squire tries to influence a creature's\
+    \ attitude with the Diplomacy skill for the first time, she may roll her Diplomacy\
+    \ check twice and take the best result. In addition, any improvement of a creature's\
+    \ attitude toward the herald squire also applies to her knight."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Knights of the Inner Sea"
+- id: "ability:fleet_of_foot#cavalier_herald_squire"
+  name: "Fleet of Foot"
+  label: null
+  type: null
+  description: "At 2nd level, a herald squire gains fast movement, as the barbarian\
+    \ class feature of the same name. If the herald squire gains fast movement from\
+    \ another class, the bonuses to her speed do not stack. Whenever she makes long\
+    \ overland journeys alone or with only her mount, the distance a herald squire\
+    \ can travel each day increases by 20%."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Knights of the Inner Sea"
+- id: "ability:transcend_language#cavalier_herald_squire"
+  name: "Transcend Language"
+  label: null
+  type: null
+  description: "At 3rd level, three times per day, a herald squire can cast tongues\
+    \ on herself, using her herald squire level as her caster level. The effects of\
+    \ this ability last for a number of rounds equal to her herald squire level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Knights of the Inner Sea"
+source: "Pathfinder Player Companion: Knights of the Inner Sea"

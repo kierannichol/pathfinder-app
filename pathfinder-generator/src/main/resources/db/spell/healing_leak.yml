@@ -1,0 +1,37 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:healing_leak"
+name: "Healing Leak"
+description: "Whenever the target is affected by a spell or effect that heals hit\
+  \ point damage through the use of positive or negative energy, it regains only half\
+  \ the number of hit points it normally would recover. If the target employs a spell\
+  \ or effect that heals itself or other creatures through the use of positive or\
+  \ negative energy, the target must succeed at a concentration check (DC = this spell's\
+  \ save DC) or the effect restores only half of the normal number of hit points.\
+  \ Other forms of healing (such as from the Heal skill) are not affected by this\
+  \ spell."
+prerequisites: ""
+components: "V, S, M/DF (a piece of muslin)"
+range: "touch"
+targets: "creature touched"
+duration: "1 round/level"
+school: "necromancy"
+levels:
+- class_id: "class:arcanist"
+  level: 3
+- class_id: "class:cleric"
+  level: 3
+- class_id: "class:oracle"
+  level: 3
+- class_id: "class:paladin"
+  level: 2
+- class_id: "class:shaman"
+  level: 3
+- class_id: "class:warpriest"
+  level: 3
+- class_id: "class:witch"
+  level: 3
+- class_id: "class:wizard"
+  level: 3
+source: "Plane-Hopper's Handbook"

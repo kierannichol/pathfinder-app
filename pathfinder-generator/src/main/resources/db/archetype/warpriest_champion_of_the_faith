@@ -1,0 +1,72 @@
+id: "class:warpriest#champion_of_the_faith"
+name: "Champion of The Faith"
+description: "Champions of the faith are crusaders who use the power of their divine\
+  \ patron to annihilate the faith's enemies."
+modifications:
+- add: "ability:sacred_weapon#warpriest_champion_of_the_faith"
+  remove:
+  - "ability:sacred_weapon#warpriest"
+- add: "ability:detect_alignment#warpriest_champion_of_the_faith"
+  remove:
+  - "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+- add: "ability:smite#warpriest_champion_of_the_faith"
+  remove:
+  - "ability:channel_energy#warpriest"
+features:
+- id: "ability:sacred_weapon#warpriest_champion_of_the_faith"
+  name: "Sacred Weapon"
+  label: null
+  type: null
+  description: "At 1st level, a champion of the faith gains the sacred weapon class\
+    \ feature as normal. However, this ability does not grant the 4th-level ability\
+    \ to enhance the champion of the faith's weapon with divine power, nor does it\
+    \ grant any subsequent increases to that ability. Instead, at 4th level, any sacred\
+    \ weapon wielded by a champion of the faith counts as having his chosen alignment\
+    \ for the purposes of overcoming damage reduction.\nAt 12th level, once per day\
+    \ as a swift action, a champion of the faith can enhance any one sacred weapon\
+    \ with a weapon special ability based on his chosen alignment (anarchic for chaos,\
+    \ unholy for evil, holy for good, and axiomatic for law). This effect lasts for\
+    \ 1 minute. He can use this ability one additional time per day at 16th and 20th\
+    \ levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:detect_alignment#warpriest_champion_of_the_faith"
+  name: "Detect Alignment"
+  label: null
+  type: null
+  description: "At 3rd level, a champion of the faith can detect his opposed alignment.\
+    \ As a move action, the champion of the faith can focus on a single item or creature\
+    \ within 60 feet and determine whether it possesses the opposed alignment, as\
+    \ detect chaos/evil/good/law, learning the strength of the aura as if he had studied\
+    \ it for 3 rounds. The champion of the faith does not detect alignment in any\
+    \ other object or creature when using this ability in this way."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:smite#warpriest_champion_of_the_faith"
+  name: "Smite"
+  label: null
+  type: null
+  description: "At 4th level, a champion of the faith can focus his powers against\
+    \ his chosen foes. As a swift action, the champion of the faith chooses one target\
+    \ within sight to smite. If this target is of his opposed alignment, the champion\
+    \ of the faith adds his Charisma bonus (if any) to his attack rolls and adds his\
+    \ warpriest level to all damage rolls made against the target of his smite. If\
+    \ the target of his smite is an outsider with the subtype corresponding to his\
+    \ opposed alignment, the bonus to damage on the first successful attack increases\
+    \ to 2 points of damage per warpriest level the champion of the faith possesses.\
+    \ Regardless of the target, smite attacks automatically bypass any DR the target\
+    \ possesses.\nIn addition, while smite is in effect, the champion of the faith\
+    \ gains a deflection bonus equal to his Charisma modifier (if any) to his AC against\
+    \ attacks made by the target of the smite. If the smite targets a creature that's\
+    \ not of the champion of the faith's opposed alignment, the smite is wasted with\
+    \ no effect.\nThe smite effect remains until the target of the smite is dead or\
+    \ the next time the champion of the faith regains spells. The champion of the\
+    \ faith can use this ability once per day, plus one additional time per day for\
+    \ every 4 levels beyond 4th (to a maximum of five times per day at 20th level).\
+    \ Using this ability consumes two uses of his fervor ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

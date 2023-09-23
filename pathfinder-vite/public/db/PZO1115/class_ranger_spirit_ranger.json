@@ -1,0 +1,39 @@
+{
+  "id": "class:ranger#spirit_ranger",
+  "name": "Spirit Ranger",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger AND !@modifies:ability:camouflage#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some rangers nurture a connection with the spirits that reside in all things. By communing with these spirits, the spirit Ranger can gain glimpses of things to come."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:spirit_bond#ranger_spirit_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d4"
+        }, {
+          "featureId": "ability:wisdom_of_the_spirits#ranger_spirit_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d12"
+        }],
+        "unlinks": [{
+          "featureId": "ability:hunters_bond#ranger"
+        }, {
+          "featureId": "ability:camouflage#ranger"
+        }]
+      }]
+    }
+  }
+}

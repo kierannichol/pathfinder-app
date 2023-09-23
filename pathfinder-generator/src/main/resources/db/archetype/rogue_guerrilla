@@ -1,0 +1,75 @@
+id: "class:rogue#guerrilla"
+name: "Guerrilla"
+description: "Guerrillas fight against oppressive leadership and governments--often\
+  \ under cover of night. Any rogue (including the unchained rogue) can select the\
+  \ guerrilla archetype."
+modifications:
+- add: "ability:skilled_liar#rogue_guerrilla"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:cover_of_night#rogue_guerrilla"
+  remove:
+  - "ability:evasion#rogue"
+- add: "ability:secret_messenger#rogue_guerrilla"
+  remove:
+  - "ability:trap_sense#rogue"
+- add: "ability:guerrilla_sniping#rogue_guerrilla"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:uncanny_dodge#rogue_guerrilla"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:skilled_liar#rogue_guerrilla"
+  name: "Skilled Liar"
+  label: null
+  type: null
+  description: "Whenever a guerrilla uses Bluff to attempt to deceive someone, she\
+    \ gains a bonus on the opposed roll equal to 1/2 her rogue level (minimum +1).\
+    \ A guerrilla can still use Disable Device to disarm magic traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:cover_of_night#rogue_guerrilla"
+  name: "Cover of Night"
+  label: null
+  type: null
+  description: "At 2nd level, a guerrilla learns to use darkness to her advantage.\
+    \ She gains a +5 bonus on Disguise, Sleight of Hand, and Stealth checks while\
+    \ she is in areas of dim light or darkness, and can create mundane disguises in\
+    \ dim light or darkness with a full-round action (instead of the normal 1d3 ×\
+    \ 10 minutes). Additionally, while in dim light or darkness, if a guerrilla would\
+    \ have concealment, she instead has total concealment."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:secret_messenger#rogue_guerrilla"
+  name: "Secret Messenger"
+  label: null
+  type: null
+  description: "At 3rd level, a guerrilla gains a +1 bonus on Bluff checks to convey\
+    \ secret messages and on Sense Motive checks to discern secret messages. These\
+    \ bonuses increase by 1 every 3 rogue levels thereafter (to a maximum of +6 at\
+    \ 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:guerrilla_sniping#rogue_guerrilla"
+  name: "Guerrilla Sniping"
+  label: null
+  type: null
+  description: "At 4th level, when a guerrilla is in an area of dim light or darkness,\
+    \ she takes only a –10 penalty on her Stealth check to maintain her obscured location\
+    \ while sniping."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+- id: "ability:uncanny_dodge#rogue_guerrilla"
+  name: "Uncanny Dodge"
+  label: null
+  type: null
+  description: "At 8th level, a guerrilla gains uncanny dodge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Intrigue"
+source: "Pathfinder Campaign Setting: Inner Sea Intrigue"

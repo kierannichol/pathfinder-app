@@ -1,0 +1,49 @@
+{
+  "id": "class:wizard#arcane_bomber",
+  "name": "Arcane Bomber",
+  "tags": ["archetype", "wizard"],
+  "enabledFormula": "!@modifies:ability:cantrips_but_the_arcana_bomber_gains_the_detect_magic_and_read_magic_cantrips_and_places_them_in_his_spellbook#wizard AND !@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard",
+  "maxStacks": 1,
+  "description": {
+    "text": "To many wizards, the experimentation of the alchemist seems quaint, if not dangerous or frightening. A few wizards take up the secrets of the bomb, however, fusing alchemy with their already considerable magical power."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:cantrips_but_the_arcana_bomber_gains_the_detect_magic_and_read_magic_cantrips_and_places_them_in_his_spellbook#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_school#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_bond#wizard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:bomb#wizard_arcane_bomber",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }, {
+          "featureId": "ability:spellblast_bombs#wizard_arcane_bomber",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }, {
+          "featureId": "ability:school_of_the_bomb#wizard_arcane_bomber",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:arcane_bond#wizard"
+        }, {
+          "featureId": "ability:cantrips_but_the_arcana_bomber_gains_the_detect_magic_and_read_magic_cantrips_and_places_them_in_his_spellbook#wizard"
+        }, {
+          "featureId": "ability:arcane_school#wizard"
+        }]
+      }]
+    }
+  }
+}

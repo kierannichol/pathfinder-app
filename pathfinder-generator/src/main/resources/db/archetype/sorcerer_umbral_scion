@@ -1,0 +1,56 @@
+id: "class:sorcerer#umbral_scion"
+name: "Umbral Scion"
+description: ""
+modifications:
+- add: "ability:encroaching_darkness#sorcerer_umbral_scion"
+  remove:
+  - "ability:the_shadowstrike_bloodline_power#sorcerer"
+- add: "ability:potent_shadows#sorcerer_umbral_scion"
+  remove:
+  - "ability:the_7th_level_bloodline_feat#sorcerer"
+- add: "ability:crippling_darkness#sorcerer_umbral_scion"
+  remove:
+  - "ability:the_13th_level_bloodline_feat#sorcerer"
+features:
+- id: "ability:encroaching_darkness#sorcerer_umbral_scion"
+  name: "Encroaching Darkness"
+  label: null
+  type: null
+  description: "An umbral scion is capable of influencing light around her. As a standard\
+    \ action, she can produce a 10-foot-radius veil centered on a creature or object\
+    \ within 30 feet. This veil decreases the light level by one step and remains\
+    \ for a number of rounds equal to the sorcerer's Charisma modifier.\nAt 7th level,\
+    \ the veil increases to a 30-foot radius. At 8th level, the veil decreases the\
+    \ light level by two steps. If the light level is decreased past darkness, the\
+    \ veil is treated as deeper darkness.\nAt 14th level, the veil increases to 60\
+    \ feet and grants any creature within it cover (even against senses normally able\
+    \ to penetrate total darkness, such as the see in darkness ability).\nAn umbral\
+    \ scion can use this ability a number of times per day equal to 3 + her Charisma\
+    \ modifier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:potent_shadows#sorcerer_umbral_scion"
+  name: "Potent Shadows"
+  label: null
+  type: null
+  description: "At 7th level, when an umbral scion casts a spell of the shadow subschool\
+    \ or a spell with the darkness or shadow descriptor within an area of dim light\
+    \ or darkness, she treats her caster level as 1 higher. Only the sorcerer herself\
+    \ needs to be in dim light or darkness. This bonus increases by 1 every 4 sorcerer\
+    \ levels beyond 7th she has to a maximum of +4 at 19th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+- id: "ability:crippling_darkness#sorcerer_umbral_scion"
+  name: "Crippling Darkness"
+  label: null
+  type: null
+  description: "At 13th level, when an umbral scion targets a creature within an area\
+    \ of dim light or darkness with a spell of the shadow subschool or a spell with\
+    \ the darkness or shadow descriptor, the DC for the spell increases by 1. This\
+    \ bonus increases by 1 at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of Shadows"
+source: "Pathfinder Player Companion: Blood of Shadows"

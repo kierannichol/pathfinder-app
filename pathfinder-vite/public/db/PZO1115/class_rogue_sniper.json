@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#sniper",
+  "name": "Sniper",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some say that the sniper is the worst kind of assassin: a killer who waits silently in the shadows and then strikes from a distance without remorse. Snipers, of course, understand that such protestations about “cowardice\"and “honor\"regarding their profession are in fact merely the bleatings of sheep fearing the slaughter and pay them no heed. Most snipers take pride in their formidable abilities, which allow them to take life quickly, quietly, and efficiently, then disappear into their surroundings without a trace."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:accuracy#rogue_sniper",
+          "conditionFormula": "@class:rogue\u003e\u003d1"
+        }, {
+          "featureId": "ability:deadly_range#rogue_sniper",
+          "conditionFormula": "@class:rogue\u003e\u003d3"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trapfinding#rogue"
+        }, {
+          "featureId": "ability:trap_sense#rogue"
+        }]
+      }]
+    }
+  }
+}

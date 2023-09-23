@@ -1,0 +1,54 @@
+id: "class:alchemist#ragechemist"
+name: "Ragechemist"
+description: ""
+modifications:
+- add: "ability:rage_mutagen#alchemist_ragechemist"
+  remove:
+  - "ability:poison_use#alchemist"
+- add: "ability:sturdy_rage#alchemist_ragechemist"
+  remove:
+  - "ability:swift_poisoning#alchemist"
+- add: "ability:lumbering_rage#alchemist_ragechemist"
+  remove:
+  - "ability:poison_immunity#alchemist"
+features:
+- id: "ability:rage_mutagen#alchemist_ragechemist"
+  name: "Rage Mutagen"
+  label: null
+  type: null
+  description: "At 2nd level, whenever a ragechemist creates a mutagen that improves\
+    \ his Strength, that mutagen's bonus to Strength increases by +2 and penalizes\
+    \ the alchemist's Intelligence score.\nFurthermore, while under the effects of\
+    \ this mutagen, whenever the alchemist takes damage, his rage grows, with detrimental\
+    \ effects. At the end of each turn that he takes hit point damage, the ragechemist\
+    \ must succeed at a Will saving throw (DC 15, or DC 20 if any of the damage came\
+    \ from a critical hit that turn) or take a –2 penalty on Will saving throws and\
+    \ to Intelligence. These penalties end 1 hour after the mutagen ends and stack\
+    \ with themselves. If the penalty lowers the ragechemist's Intelligence score\
+    \ to 0, the ragechemist is comatose until 1 hour after the mutagen expires.\n\
+    This ability replaces poison use."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:sturdy_rage#alchemist_ragechemist"
+  name: "Sturdy Rage"
+  label: null
+  type: null
+  description: "At 6th level, whenever a ragechemist uses his rage mutagen, he also\
+    \ gains a +4 bonus to natural armor, but the penalty on Will saving throws and\
+    \ to Intelligence for taking damage increases to –4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:lumbering_rage#alchemist_ragechemist"
+  name: "Lumbering Rage"
+  label: null
+  type: null
+  description: "At 10th level, whenever a ragechemist uses his rage mutagen ability,\
+    \ he may have the mutagen also give him a +2 morale bonus to Constitution, but\
+    \ when he takes a penalty on Will saving throws and to Intelligence, he also takes\
+    \ a –1 penalty to Dexterity.\nThis ability replaces poison immunity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

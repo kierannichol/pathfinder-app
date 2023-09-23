@@ -1,0 +1,70 @@
+id: "class:bloodrager#symbol_striker"
+name: "Symbol Striker"
+description: "Symbol strikers are honored warriors wielding strange runic energies\
+  \ becoming a form of runewielding berserker spellcaster."
+modifications:
+- add: "ability:rune_training#bloodrager_symbol_striker"
+  remove:
+  - "ability:fast_movement#bloodrager"
+- add: "ability:weapon_rune#bloodrager_symbol_striker"
+  remove:
+  - "ability:18th_levels#bloodrager"
+  - "ability:the_bloodline_feats_gained_at_6th_12th#bloodrager"
+- add: "ability:rune_trap#bloodrager_symbol_striker"
+  remove:
+  - "ability:the_bloodline_feat_gained_at_9th_level#bloodrager"
+features:
+- id: "ability:rune_training#bloodrager_symbol_striker"
+  name: "Rune Training"
+  label: null
+  type: null
+  description: "A symbol striker can cast read magic at will and comprehend languages\
+    \ once per day, but only to decipher written text. A symbol striker also adds\
+    \ arcane mark and erase to his bloodrager spell list as 1st-level spells, though\
+    \ he must select these as spells known to be able to cast them."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+- id: "ability:weapon_rune#bloodrager_symbol_striker"
+  name: "Weapon Rune"
+  label: null
+  type: null
+  description: "At 6th level, once per day as a standard action, a symbol striker\
+    \ can imbue any spell he knows that has a range of touch or greater and a defined\
+    \ number of targets (rather than an area or other nontarget-based effect) into\
+    \ a melee weapon he is holding.\nThe spell forms itself into a brightly glowing\
+    \ rune, which is obvious to a casual observer. This ability functions only while\
+    \ the symbol striker wields the weapon. If dropped or taken, the weapon ceases\
+    \ granting this ability until it is returned to the symbol striker. The symbol\
+    \ striker can have only a single weapon rune active at a time; if he casts an\
+    \ additional weapon rune while a previous rune is active, the earlier rune fades.\
+    \ Weapon runes also fade when the symbol striker regains his spell slots for the\
+    \ day. Otherwise, the rune remains until the spell is discharged or dispelled.\n\
+    At 12th level, a symbol striker can use this ability twice per day. At 18th level,\
+    \ he can use this ability three times per day.\nAs a standard action, the symbol\
+    \ striker can make a melee attack with a weapon that has an active weapon rune\
+    \ and, if the attack is successful, deal normal weapon damage and also expend\
+    \ the weapon rune to discharge the stored spell into the target, as if delivering\
+    \ the spell with the magus spellstrike class feature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+- id: "ability:rune_trap#bloodrager_symbol_striker"
+  name: "Rune Trap"
+  label: null
+  type: null
+  description: "At 9th level, as a standard action, the symbol striker can use a melee\
+    \ weapon to place a rune trap in any adjacent square. Any creature entering a\
+    \ square containing a rune trap takes 1d6 points of damage plus 1 additional point\
+    \ of damage for every 2 bloodrager levels the symbol striker has. This rune deals\
+    \ either acid, cold, electricity, or fire damage, which is decided at the rune's\
+    \ creation. The rune is clearly visible and lasts a number of minutes equal to\
+    \ the symbol striker's bloodrager level or until discharged. A symbol striker\
+    \ cannot create a rune trap in a square occupied by another creature. This rune\
+    \ counts as a 1st-level spell for the purpose of dispelling. A creature can disarm\
+    \ the rune by succeeding at a DC 26 Disable Device check. The symbol striker can\
+    \ use this ability a number of times per day equal to 3 plus his Charisma modifier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+source: "Pathfinder Player Companion: Heroes from the Fringe"

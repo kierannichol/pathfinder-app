@@ -1,0 +1,76 @@
+id: "class:slayer#pureblade"
+name: "Pureblade"
+description: "Pureblades are skilled at slaying naturally arising aberrations and\
+  \ any creatures that have been mutated by exposure to the bizarre alien technology\
+  \ that pervades the land. Pureblades lead forays to eliminate aberrations before\
+  \ the creatures can threaten their lands."
+modifications:
+- add: "ability:aberration_hunter#slayer_pureblade"
+  remove:
+  - "ability:track#slayer"
+- add: "ability:alien_prescience#slayer_pureblade"
+  remove:
+  - "ability:the_slayer_talent_received_at_2nd_level#slayer"
+- add: "ability:discern_weakness#slayer_pureblade"
+  remove:
+  - "ability:stalker#slayer"
+- add: "ability:steely_mind#slayer_pureblade"
+  remove:
+  - "ability:the_slayer_talent_received_at_8th_level#slayer"
+- add: "ability:aberration_slayer#slayer_pureblade"
+  remove:
+  - "ability:master_slayer#slayer"
+features:
+- id: "ability:aberration_hunter#slayer_pureblade"
+  name: "Aberration Hunter"
+  label: null
+  type: null
+  description: "If a pureblade deals damage to an aberration, as an immediate action\
+    \ he can apply his studied target bonus against that target even if he didn't\
+    \ sneak attack it. In addition, a pureblade can attempt Knowledge (dungeoneering)\
+    \ skill checks untrained when trying to identify aberrations."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:alien_prescience#slayer_pureblade"
+  name: "Alien Prescience"
+  label: null
+  type: null
+  description: "At 2nd level, as a standard action a pureblade can detect aberrations.\
+    \ This works like detect undead, except it detects aberrations instead of undead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:discern_weakness#slayer_pureblade"
+  name: "Discern Weakness"
+  label: null
+  type: null
+  description: "At 7th level, a pureblade becomes an expert at locating an aberration's\
+    \ weak points. The pureblade rolls twice to confirm critical hits against aberrations\
+    \ and keeps the higher roll."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:steely_mind#slayer_pureblade"
+  name: "Steely Mind"
+  label: null
+  type: null
+  description: "At 8th level, a pureblade gains a +2 resistance bonus on saving throws\
+    \ against mind-affecting spells and effects. This bonus increases to +4 at 12th\
+    \ level and +6 at 16th level. In addition, once per day as a standard action,\
+    \ a pureblade can shed a magical effect placed on him by an aberration as break\
+    \ enchantment, using his slayer level as his caster level. A pureblade can use\
+    \ this ability twice per day at 12th level and three times per day at 16th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+- id: "ability:aberration_slayer#slayer_pureblade"
+  name: "Aberration Slayer"
+  label: null
+  type: null
+  description: "At 20th level, a pureblade can use his master slayer ability on any\
+    \ aberration, even if it's not his studied target."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Advanced Class Origins"
+source: "Pathfinder Player Companion: Advanced Class Origins"

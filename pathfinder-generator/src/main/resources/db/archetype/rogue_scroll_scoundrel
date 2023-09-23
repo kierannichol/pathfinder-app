@@ -1,0 +1,87 @@
+id: "class:rogue#scroll_scoundrel"
+name: "Scroll Scoundrel"
+description: "The scroll scoundrel is a rogue archetype that relies on cunning and\
+  \ quick wits to stay alive. He excels in exploiting overconfidence and predictability,\
+  \ using knowledge he's gained from his extensive research and field experience combined\
+  \ with hearsay and recent observations to react to problems as soon as they arise\
+  \ with swift but unnaturally accurate guesswork. A scroll scoundrel is often called\
+  \ upon to undertake missions where killing a foe isn't nearly as important as humiliating\
+  \ them in public duels or similar conflicts."
+modifications:
+- add: "ability:fast_talker#rogue_scroll_scoundrel"
+  remove:
+  - "ability:the_rogues_2nd_level_rogue_talent#rogue"
+- add: "ability:adaptive_learning#rogue_scroll_scoundrel"
+  remove:
+  - "ability:trap_sense#rogue"
+- add: "ability:pay_it_back#rogue_scroll_scoundrel"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:elusive_gambit#rogue_scroll_scoundrel"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+- add: "ability:spot_weakness#rogue_scroll_scoundrel"
+  remove:
+  - "ability:the_scroll_scoundrels_10th_level_rogue_talent#rogue"
+features:
+- id: "ability:fast_talker#rogue_scroll_scoundrel"
+  name: "Fast Talker"
+  label: null
+  type: null
+  description: "At 2nd level, a scroll scoundrel's penalty on Bluff checks that are\
+    \ unlikely, farfetched, or impossible to achieve is reduced by 5. When he makes\
+    \ a Diplomacy check to adjust a creature's starting attitude, he gains a +3 competence\
+    \ bonus on the skill check."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+- id: "ability:adaptive_learning#rogue_scroll_scoundrel"
+  name: "Adaptive Learning"
+  label: null
+  type: null
+  description: "At 3rd level, a scroll scoundrel gains a +1 bonus on saving throws\
+    \ against abilities and spells he has already successfully saved against within\
+    \ the past minute (even if the spells or abilities in question were used by different\
+    \ creatures). This bonus increases by +1 when the scroll scoundrel reaches 6th\
+    \ level, and by an additional +1 for every three levels thereafter, to a maximum\
+    \ of +6 at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+- id: "ability:pay_it_back#rogue_scroll_scoundrel"
+  name: "Pay It Back"
+  label: null
+  type: null
+  description: "At 4th level, a scroll scoundrel receives a +1 bonus on attack rolls\
+    \ and weapon damage rolls against foes who made melee attacks against him in the\
+    \ previous round. This bonus increases to +2 at 10th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+- id: "ability:elusive_gambit#rogue_scroll_scoundrel"
+  name: "Elusive Gambit"
+  label: null
+  type: null
+  description: "At 6th level, a scroll scoundrel's movement can leave a foe off-balance.\
+    \ If a scroll scoundrel provokes an attack of opportunity by moving past an opponent\
+    \ and that opponent then misses with the attack, that foe is considered to be\
+    \ flat-footed against the scroll scoundrel's next melee attack, provided that\
+    \ melee attack comes within 1 round of the missed attack of opportunity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+- id: "ability:spot_weakness#rogue_scroll_scoundrel"
+  name: "Spot Weakness"
+  label: null
+  type: null
+  description: "At 10th level, a scroll scoundrel can discover a weakness in his enemy's\
+    \ defenses as a swift action. His next successful hit in the same round ignores\
+    \ 5 points of the foe's damage reduction or hardness.\nAt 15th level, he ignores\
+    \ the first 10 points, and at 20th level, the first 15 points. If the attack deals\
+    \ any sneak attack damage, he ignores all of the foe's damage reduction or hardness\
+    \ for that attack. He cannot use this ability on foes that are immune to critical\
+    \ hits."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"
+source: "Pathfinder Campaign Setting: Pathfinder Society Field Guide"

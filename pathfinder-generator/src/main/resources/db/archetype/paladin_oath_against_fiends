@@ -1,0 +1,44 @@
+id: "class:paladin#oath_against_fiends"
+name: "Oath Against Fiends"
+description: ""
+modifications:
+- add: "ability:anchoring_aura#paladin_oath_against_fiends"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+- add: "ability:holy_vessel#paladin_oath_against_fiends"
+  remove:
+  - "ability:the_mercy_gained_at_9th_level#paladin"
+features:
+- id: "ability:anchoring_aura#paladin_oath_against_fiends"
+  name: "Anchoring Aura"
+  label: null
+  type: null
+  description: "At 8th level, a paladin's aura hampers extra-dimensional travel by\
+    \ evil outsiders. The aura extends 20 feet from the paladin. Evil outsiders attempting\
+    \ to use abilities such as dimension door, plane shift, or teleport to leave or\
+    \ enter the aura must succeed at a Will save (DC 10 + 1/2 the paladin's level\
+    \ + the paladin's Charisma modifier); failure means the ability does not function,\
+    \ as if the outsider were affected by dimensional anchor. The aura functions only\
+    \ while the paladin is conscious, not if she is unconscious or dead.\nAlternatively,\
+    \ as an immediate action, the paladin can expend one use of her smite evil ability\
+    \ to target an evil outsider within 30 feet with dimensional anchor. A targeted\
+    \ dimensional anchor persists even if the paladin is unconscious or dead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:holy_vessel#paladin_oath_against_fiends"
+  name: "Holy Vessel"
+  label: null
+  type: null
+  description: "At 9th level, a paladin whose divine bond is with a weapon can also\
+    \ use her divine bond to augment her armor or shield with enhancement bonuses,\
+    \ or add any of the following armor or shield properties: bashing, fortification,\
+    \ and spell resistance. Adding these properties consumes an amount of bonus equal\
+    \ to the property's cost (see Tables 15–4 and 15–5 in the Core Rulebook). She\
+    \ can divide her bonuses from the divine bond ability among her weapon, armor,\
+    \ and shield as she sees fit. This ability has no effect for a paladin whose divine\
+    \ bond is with a mount.\nThis ability replaces the mercy gained at 9th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

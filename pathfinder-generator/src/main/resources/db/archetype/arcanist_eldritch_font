@@ -1,0 +1,74 @@
+id: "class:arcanist#eldritch_font"
+name: "Eldritch Font"
+description: "For some arcanists, the power bubbling up from within is nearly too\
+  \ much to contain. They become adept at shaping this magical energy without needing\
+  \ to bind it up in spells."
+modifications:
+- add: "ability:eldritch_surge#arcanist_eldritch_font"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+- add: "ability:improved_surge#arcanist_eldritch_font"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_7th_level#arcanist"
+- add: "ability:greater_surge#arcanist_eldritch_font"
+  remove:
+  - "ability:the_arcanist_exploit_gained_at_13th_level#arcanist"
+- add: "ability:bottomless_well#arcanist_eldritch_font"
+  remove:
+  - "ability:magical_supremacy#arcanist"
+features:
+- id: "ability:eldritch_surge#arcanist_eldritch_font"
+  name: "Eldritch Surge"
+  label: null
+  type: null
+  description: "At 3rd level, an eldritch font can, as a swift action, pour more power\
+    \ into her spells and abilities. She can add 2 to the caster level and DC of a\
+    \ spell, or increase her effective arcanist level by 2 when using an arcanist\
+    \ exploit. She becomes fatigued upon using this ability. If she is already fatigued,\
+    \ she becomes exhausted. If she's already exhausted, or something would prevent\
+    \ her from becoming fatigued or exhausted, she cannot use this ability. This ability\
+    \ does not stack with spending points from her arcane reservoir to increase the\
+    \ spell's caster level or DC (as the arcane reservoir class feature). Only rest\
+    \ can remove fatigue or exhaustion caused by an eldritch surge--spells and abilities\
+    \ have no effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:improved_surge#arcanist_eldritch_font"
+  name: "Improved Surge"
+  label: null
+  type: null
+  description: "At 7th level, an eldritch font can use her eldritch surge ability\
+    \ to reroll an attack roll associated with a spell or arcanist exploit, or to\
+    \ reroll all of the damage dice associated with a spell or arcanist exploit. In\
+    \ the case of attack rolls, this ability must be used after the die is rolled\
+    \ but before the results are revealed. The eldritch font must take the results\
+    \ of the reroll, even if they are lower."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:greater_surge#arcanist_eldritch_font"
+  name: "Greater Surge"
+  label: null
+  type: null
+  description: "At 13th level, an eldritch font can use her eldritch surge ability\
+    \ to force a creature to reroll a saving throw against one spell or arcanist exploit\
+    \ and take the lower value. The eldritch font must declare the use of this ability\
+    \ before the result of that creature's saving throw is revealed. If the spell\
+    \ or arcanist exploit affects more than one target, only one target is affected\
+    \ by this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:bottomless_well#arcanist_eldritch_font"
+  name: "Bottomless Well"
+  label: null
+  type: null
+  description: "At 20th level, an eldritch font can spend 1 hour studying her spellbook\
+    \ to refuel herself. Doing so allows her to prepare new spells and regain points\
+    \ of arcane reservoir equal to 1/2 her level. She can use this ability multiple\
+    \ times per day, however she still only regains spell slots once per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

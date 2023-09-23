@@ -1,0 +1,66 @@
+id: "class:monk#sage_counselor"
+name: "Sage Counselor"
+description: ""
+modifications:
+- add: "ability:class_skills#monk_sage_counselor"
+  remove:
+  - "ability:the_monks_class_skills#monk"
+- add: "ability:cunning_fist#monk_sage_counselor"
+  remove:
+  - "ability:the_bonus_feats_gained_at_1st_2nd#monk"
+  - "ability:6th_levels#monk"
+- add: "ability:feinting_flurry#monk_sage_counselor"
+  remove:
+  - "ability:flurry_of_blows#monk"
+  - "ability:ki_pool#monk"
+  - "ability:it_bonus_feat_gained_at_10th_level#monk"
+- add: "ability:deceptive_ki#monk_sage_counselor"
+  remove:
+  - "ability:ki_pool#monk"
+  - "ability:it_ki_power_gained_at_4th_level_for_an_unchained_monk#monk"
+features:
+- id: "ability:class_skills#monk_sage_counselor"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A sage counselor adds Bluff, Diplomacy, and Knowledge (nobility) to\
+    \ his list of class skills, instead of Climb, Escape Artist, and Perception."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:cunning_fist#monk_sage_counselor"
+  name: "Cunning Fist"
+  label: null
+  type: null
+  description: "A sage counselor gains Combat Expertise as a bonus feat, even if he\
+    \ doesn't meet the prerequisites, and he can ignore the Intelligence prerequisite\
+    \ on feats that have Combat Expertise as a prerequisite. At 2nd level, he gains\
+    \ Improved Feint, and at 6th level, he gains Greater Feint, even if he doesn't\
+    \ meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:feinting_flurry#monk_sage_counselor"
+  name: "Feinting Flurry"
+  label: null
+  type: null
+  description: "At 4th level, a sage counselor can spend 1 ki point while performing\
+    \ a flurry of blows to feint an opponent as a swift action, but he can't spend\
+    \ 1 ki point to make an additional attack when making a flurry of blows.\nAt 10th\
+    \ level, he can also choose to replace his first attack during a flurry of blows\
+    \ with a feint check."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:deceptive_ki#monk_sage_counselor"
+  name: "Deceptive Ki"
+  label: null
+  type: null
+  description: "At 4th level, the sage counselor can spend 1 point from his ki pool\
+    \ as a swift action to give himself a +4 insight bonus on his next Bluff check.\
+    \ The sage counselor does not gain the ability to spend ki to increase his speed\
+    \ by 20 feet for 1 round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

@@ -1,0 +1,59 @@
+{
+  "id": "class:ranger#battle_scout",
+  "name": "Battle Scout",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:master_hunter#ranger AND !@modifies:ability:the_rangers_second_favored_enemy#ranger AND !@modifies:ability:the_rangers_third_favored_enemy#ranger AND !@modifies:ability:the_rangers_fourth_favored_enemy#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Armies need clean water, safe routes, and intelligence about their enemies. Though regular outdoorsmen might suffice in many cases, some large forces look to battle scouts to keep the body of their troops safe and prepared for the terrain and whatever dangers that terrain hides."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:master_hunter#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rangers_second_favored_enemy#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rangers_third_favored_enemy#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rangers_fourth_favored_enemy#ranger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:advantageous_terrain#ranger_battle_scout",
+          "conditionFormula": "@class:ranger\u003e\u003d5"
+        }, {
+          "featureId": "ability:infiltration#ranger_battle_scout",
+          "conditionFormula": "@class:ranger\u003e\u003d10"
+        }, {
+          "featureId": "ability:superior_tactics#ranger_battle_scout",
+          "conditionFormula": "@class:ranger\u003e\u003d15"
+        }, {
+          "featureId": "ability:perfect_advantage#ranger_battle_scout",
+          "conditionFormula": "@class:ranger\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_rangers_second_favored_enemy#ranger"
+        }, {
+          "featureId": "ability:the_rangers_third_favored_enemy#ranger"
+        }, {
+          "featureId": "ability:the_rangers_fourth_favored_enemy#ranger"
+        }, {
+          "featureId": "ability:master_hunter#ranger"
+        }]
+      }]
+    }
+  }
+}

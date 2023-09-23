@@ -1,0 +1,35 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:summoner_conduit"
+name: "Summoner Conduit"
+description: "You exploit the invisible, mystic connection between the target creature\
+  \ and its summoner to harm that summoner. Whenever the target's summoned creature\
+  \ is the target of a spell that deals damage, the target's summoner is also considered\
+  \ to be a target of that spell. Such a summoner gains his normal defenses against\
+  \ the spell, such as a saving throw and spell resistance, and cannot be affected\
+  \ if he is on another plane of existence."
+prerequisites: ""
+components: "V, S, M (two flies)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one summoned creature or eidolon"
+duration: "1 minute/level"
+school: "necromancy"
+levels:
+- class_id: "class:arcanist"
+  level: 5
+- class_id: "class:cleric"
+  level: 4
+- class_id: "class:oracle"
+  level: 4
+- class_id: "class:sorcerer"
+  level: 5
+- class_id: "class:summoner"
+  level: 4
+- class_id: "class:warpriest"
+  level: 4
+- class_id: "class:witch"
+  level: 5
+- class_id: "class:wizard"
+  level: 5
+source: "Ultimate Combat"

@@ -1,0 +1,60 @@
+id: "class:druid#swamp_druid"
+name: "Swamp Druid"
+description: ""
+modifications:
+- add: "ability:marshwight#druid_swamp_druid"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:swamp_strider#druid_swamp_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:pond_scum#druid_swamp_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:slippery#druid_swamp_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:marshwight#druid_swamp_druid"
+  name: "Marshwight"
+  label: null
+  type: null
+  description: "At 2nd level, a swamp druid gains a bonus on Initiative checks and\
+    \ Knowledge (geography), Perception, Stealth, Swim, and Survival checks equal\
+    \ to 1/2 her druid level in swamp terrain, and she cannot be tracked in such an\
+    \ environment."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:swamp_strider#druid_swamp_druid"
+  name: "Swamp Strider"
+  label: null
+  type: null
+  description: "At 3rd level, a swamp druid suffers no penalty to speed or on Acrobatics\
+    \ or Stealth checks in bogs and undergrowth.\nThis ability replaces trackless\
+    \ step."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:pond_scum#druid_swamp_druid"
+  name: "Pond Scum"
+  label: null
+  type: null
+  description: "At 4th level, a swamp druid gains a +4 bonus on saves against disease\
+    \ and the exceptional, supernatural, and spell-like abilities of monstrous humanoids.\
+    \ A swamp druid also gains DR/-- equal to half her druid level against attacks\
+    \ by swarms. If this damage resistance prevents damage, the druid is unaffected\
+    \ by distraction or other special attacks of the swarm.\nThis ability replaces\
+    \ resist nature's lure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:slippery#druid_swamp_druid"
+  name: "Slippery"
+  label: null
+  type: null
+  description: "At 13th level, a swamp druid gains continuous freedom of movement."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

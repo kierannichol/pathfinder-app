@@ -1,0 +1,77 @@
+id: "class:bard#dirge_bard"
+name: "Dirge Bard"
+description: "A composer of sonorous laments for the dead and elaborate requiems for\
+  \ those lost yet long remembered, dirge bards master musical tools and tropes that\
+  \ must appeal to the ears and hearts of both the living and the dead."
+modifications:
+- add: "ability:bardic_performance#bard_dirge_bard"
+  remove:
+  - "ability:jack_of_all_trades#bard"
+- add: "ability:haunted_eyes#bard_dirge_bard"
+  remove:
+  - "ability:well_versed#bard"
+- add: "ability:secrets_of_the_grave#bard_dirge_bard"
+  remove:
+  - "ability:versatile_performance#bard"
+- add: "ability:haunting_refrain#bard_dirge_bard"
+  remove:
+  - "ability:lore_master#bard"
+features:
+- id: "ability:bardic_performance#bard_dirge_bard"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A dirge bard gains the following type of bardic performance:\nDance\
+    \ of the Dead (Su): At 10th level, a dirge bard can use his bardic performance\
+    \ to cause dead bones or bodies to rise up and move or fight at his command. This\
+    \ ability functions like animate dead, but the created skeletons or zombies remain\
+    \ fully animate only as long as the dirge bard continues the performance. Once\
+    \ it stops, any created undead collapse into carrion. Bodies or bones cannot be\
+    \ animated more than once using this ability. Unlike animate dead, dance of the\
+    \ dead requires no components and does not have the evil descriptor."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+- id: "ability:haunted_eyes#bard_dirge_bard"
+  name: "Haunted Eyes"
+  label: null
+  type: null
+  description: "At 2nd level, a dirge bard gains a +4 bonus on saves against fear,\
+    \ energy drain, death effects, and necromantic effects."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+- id: "ability:secrets_of_the_grave#bard_dirge_bard"
+  name: "Secrets of the Grave"
+  label: null
+  type: null
+  description: "At 2nd level, a dirge bard gains a bonus equal to half his bard level\
+    \ on Knowledge (religion) checks made to identify undead creatures and their abilities.\
+    \ A dirge bard may use mind-affecting spells to affect undead as if they were\
+    \ living creatures, even if they are mindless (though spells that affect only\
+    \ humanoids do not affect them, even if they were humanoids in life). In addition,\
+    \ he may add one necromancy spell from the spell list of any arcane spellcasting\
+    \ class to his list of spells known at 2nd level and every four levels thereafter.\n\
+    This ability replaces versatile performance."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+- id: "ability:haunting_refrain#bard_dirge_bard"
+  name: "Haunting Refrain"
+  label: null
+  type: null
+  description: "At 5th level, a dirge bard is able to stir primal terrors in the hearts\
+    \ of listeners. He can use a Perform (keyboard) or Perform (percussion) check\
+    \ in place of an Intimidate check to demoralize an opponent, with a bonus equal\
+    \ to half his bard level. In addition, saving throws against any fear effect he\
+    \ creates are made with a –2 penalty, and this penalty increases by –1 every 5\
+    \ levels beyond 5th."
+  effects: null
+  prerequisites: null
+  source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+    \ Magic"
+source: "– Pathfinder Roleplaying Game: PRG:UM Pathfinder Roleplaying Game: Ultimate\
+  \ Magic"

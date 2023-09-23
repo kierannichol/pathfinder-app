@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import pathfinder.model.Id;
 
 public class FileUtils {
 
@@ -15,5 +16,11 @@ public class FileUtils {
             }
         }
         Files.deleteIfExists(path);
+    }
+
+    public static String toFileName(Id id) {
+        return id.string()
+                .replaceAll(":", "_")
+                .replaceAll("#", "_");
     }
 }

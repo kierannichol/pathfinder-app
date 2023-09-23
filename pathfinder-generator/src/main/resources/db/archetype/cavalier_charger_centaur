@@ -1,0 +1,90 @@
+id: "class:cavalier#charger_centaur"
+name: "Charger (Centaur)"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#cavalier_charger_centaur"
+  remove:
+  - "ability:weapon_proficiency#cavalier"
+  - "ability:armor_proficiency#cavalier"
+- add: "ability:natural_mount#cavalier_charger_centaur"
+  remove:
+  - "ability:mount#cavalier"
+- add: "ability:thundering_hooves#cavalier_charger_centaur"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:courser#cavalier_charger_centaur"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:ride_down#cavalier_charger_centaur"
+  remove:
+  - "ability:mighty_charge#cavalier"
+features:
+- id: "ability:weapon_and_armor_proficiency#cavalier_charger_centaur"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A charger is proficient with all simple and martial weapons, with\
+    \ light and medium armor, and with shields (except tower shields). A charger's\
+    \ cavalier levels stack with any fighter levels he possesses for the purpose of\
+    \ meeting the level prerequisite for feats that can specify a lance, such as Weapon\
+    \ Specialization."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:natural_mount#cavalier_charger_centaur"
+  name: "Natural Mount"
+  label: null
+  type: null
+  description: "A charger counts as having the Mounted Combat feat only for the purpose\
+    \ of meeting feat prerequisites, and substitutes the Acrobatics skill for any\
+    \ Ride skill prerequisites when acquiring feats that have Mounted Combat as a\
+    \ prerequisite. Because of his equine form, a charger can wield a lance one-handed\
+    \ as if mounted and deals double damage with a lance while charging. A charger\
+    \ can never gain the benefit of the Mounted Combat feat (or other similar feats\
+    \ or effects, such as Trick Riding) if ridden by another creature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:thundering_hooves#cavalier_charger_centaur"
+  name: "Thundering Hooves"
+  label: null
+  type: null
+  description: "At 3rd level, a charger's hoof attack deals an additional 1d6 points\
+    \ of damage and its critical threat range increases to 19–20. This effect doesn't\
+    \ stack with any other effect that expands the critical threat range of a weapon.\
+    \ Whenever he performs a charge, the charger can make an additional hoof attack\
+    \ against his target with a –5 penalty on his attack roll."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:courser#cavalier_charger_centaur"
+  name: "Courser"
+  label: null
+  type: null
+  description: "At 4th level, a charger's constant training increases his land speed\
+    \ by 10 feet. A charger can also move through up to 10 feet of difficult terrain\
+    \ each round as if it were normal terrain. These benefits apply only when he is\
+    \ wearing no armor, light armor, or medium armor, and not carrying a heavy load.\
+    \ Apply this bonus before modifying the charger's speed because of any load carried\
+    \ or armor worn. These bonuses stack with any other bonuses to the charger's land\
+    \ speed or ability to ignore difficult terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:ride_down#cavalier_charger_centaur"
+  name: "Ride Down"
+  label: null
+  type: null
+  description: "At 11th level, a charger can attempt to overrun any number of targets\
+    \ in the path of his charge as a free action. For each successful overrun combat\
+    \ maneuver check, the charger automatically deals an amount of damage to the overrun\
+    \ target equal to that of his hoof attack and can continue with his charge. If\
+    \ any overrun attempt fails during the charge, the charger's progress ends in\
+    \ the space directly in front of the target where the maneuver failed. These overrun\
+    \ attempts do not provoke attacks of opportunity. For each target in the path\
+    \ of his charge, the charger incurs a cumulative –2 penalty on his overrun combat\
+    \ maneuver checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"

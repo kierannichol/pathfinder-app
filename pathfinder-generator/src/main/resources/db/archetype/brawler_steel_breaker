@@ -1,0 +1,44 @@
+id: "class:brawler#steel_breaker"
+name: "Steel-Breaker"
+description: "The steel-breaker studies destruction and practices it as an art form.\
+  \ She knows every defense has a breaking point, and can shatter those defenses with\
+  \ carefully planned strikes."
+modifications:
+- add: "ability:exploit_weakness#brawler_steel_breaker"
+  remove:
+  - "ability:brawlers_strike#brawler"
+- add: "ability:sunder_training#brawler_steel_breaker"
+  remove:
+  - "ability:maneuver_training#brawler"
+features:
+- id: "ability:exploit_weakness#brawler_steel_breaker"
+  name: "Exploit Weakness"
+  label: null
+  type: null
+  description: "At 5th level, as a swift action a steel-breaker can observe a creature\
+    \ or object to find its weak point by succeeding at a Wisdom check, adding her\
+    \ brawler level against a DC of 10 + the object's hardness or the target's CR.\
+    \ If it succeeds, the steel-breaker gains a +2 bonus on attack rolls until the\
+    \ end of her turn, and any attacks she makes until the end of her turn ignore\
+    \ the creature or object's DR or hardness.\nA steel-breaker can instead use this\
+    \ ability as a swift action to analyze the movements and expressions of one creature\
+    \ within 30 feet, granting a bonus on Sense Motive checks and Reflex saving throws,\
+    \ as well as a dodge bonus to AC against that opponent equal to 1/2 her brawler\
+    \ level until the start of her next turn."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:sunder_training#brawler_steel_breaker"
+  name: "Sunder Training"
+  label: null
+  type: null
+  description: "At 3rd level, a steel-breaker receives additional training in sunder\
+    \ combat maneuvers. She gains a +2 bonus when attempting a sunder combat maneuver\
+    \ checks and a +2 bonus to her CMD when defending against this maneuver. At 7th\
+    \ level, these bonuses increase by 1, and she gains a +2 bonus on disarm combat\
+    \ maneuver checks and a +2 bonus to her CMD when defending against a disarm maneuver.\
+    \ At 11th, 15th, and 19th levels, all of these bonuses increase by 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

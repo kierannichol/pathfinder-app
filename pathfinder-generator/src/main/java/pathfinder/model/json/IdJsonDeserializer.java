@@ -15,6 +15,10 @@ public class IdJsonDeserializer extends StdScalarDeserializer<Id> {
 
     @Override
     public Id deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
+        if (p.getCurrentToken() == JsonToken.VALUE_NULL) {
+            return null;
+        }
+
         if (p.getCurrentToken() != JsonToken.VALUE_STRING) {
             ctxt.reportWrongTokenException(Id.class, JsonToken.VALUE_STRING, "Expected string value");
         }

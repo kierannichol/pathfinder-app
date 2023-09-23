@@ -1,0 +1,65 @@
+id: "class:barbarian#armored_hulk"
+name: "Armored Hulk"
+description: "Some barbarians disdain the hides and leather used as armor by most\
+  \ of their kin. Instead they master the heaviest of armors, even those created by\
+  \ more civilized people, to gain greater protection and stability in battle."
+modifications:
+- add: "ability:indomitable_stance#barbarian_armored_hulk"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:armored_swiftness#barbarian_armored_hulk"
+  remove:
+  - "ability:uncanny_dodge#barbarian"
+- add: "ability:resilience_of_steel#barbarian_armored_hulk"
+  remove:
+  - "ability:trap_sense#barbarian"
+- add: "ability:improved_armored_swiftness#barbarian_armored_hulk"
+  remove:
+  - "ability:improved_uncanny_dodge#barbarian"
+features:
+- id: "ability:indomitable_stance#barbarian_armored_hulk"
+  name: "Indomitable Stance"
+  label: null
+  type: null
+  description: "An armored hulk gains a +1 bonus on combat maneuver checks and to\
+    \ CMD for overrun combat maneuvers, and on Reflex saves against trample attacks.\
+    \ She also gains a +1 bonus to her AC against charge attacks and on attack and\
+    \ damage rolls against charging creatures."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:armored_swiftness#barbarian_armored_hulk"
+  name: "Armored Swiftness"
+  label: null
+  type: null
+  description: "At 2nd level, an armored hulk moves faster in medium and heavy armor.\
+    \ When wearing medium or heavy armor, an armored hulk can move 5 feet faster than\
+    \ normal, to a maximum of her speed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:resilience_of_steel#barbarian_armored_hulk"
+  name: "Resilience of Steel"
+  label: null
+  type: null
+  description: "At 3rd level, an armored hulk is able to use her armor to help avoid\
+    \ deadly hits. While wearing heavy armor, she gains a +1 bonus to AC that applies\
+    \ only on critical hit confirmation rolls. This bonus increases by +1 every 3\
+    \ levels beyond 3rd (maximum +6 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:improved_armored_swiftness#barbarian_armored_hulk"
+  name: "Improved Armored Swiftness"
+  label: null
+  type: null
+  description: "At 5th level, an armored hulk's land speed is faster than the norm\
+    \ for her race by +10 feet. This benefit applies when she is wearing any armor,\
+    \ including heavy armor, but not while carrying a heavy load. Apply this bonus\
+    \ before modifying the armored hulk's speed because of any load carried or armor\
+    \ worn. This bonus stacks with any other bonuses to the barbarian's land speed.\n\
+    This ability replaces improved uncanny dodge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

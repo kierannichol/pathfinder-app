@@ -1,0 +1,102 @@
+id: "class:skald#spell_warrior"
+name: "Spell Warrior"
+description: ""
+modifications:
+- add: "ability:improved_counterspell#skald_spell_warrior"
+  remove:
+  - "ability:scribe_scroll#skald"
+- add: "ability:weapon_song#skald_spell_warrior"
+  remove:
+  - "ability:the_inspired_rage_raging_song#skald"
+- add: "ability:greater_counterspell#skald_spell_warrior"
+  remove:
+  - "ability:spell_kenning#skald"
+- add: "ability:song_of_arcane_manipulation#skald_spell_warrior"
+  remove:
+  - "ability:the_dirge_of_doom_raging_song#skald"
+- add: "ability:spell_tamper#skald_spell_warrior"
+  remove:
+  - "ability:master_skald#skald"
+features:
+- id: "ability:improved_counterspell#skald_spell_warrior"
+  name: "Improved Counterspell"
+  label: null
+  type: null
+  description: "At 1st level, the spell warrior receives the Improved Counterspell\
+    \ feat as a bonus feat."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:weapon_song#skald_spell_warrior"
+  name: "Weapon Song"
+  label: null
+  type: null
+  description: "A spell warrior gains the following raging song, allowing him to grant\
+    \ his ally's weapons enhancement bonuses and special powers.\nEnhance Weapons\
+    \ (Su) At 1st level, the spell warrior can grant a +1 enhancement bonus to the\
+    \ weapons (including ammunition) of allies within 60 feet. At 5th level and every\
+    \ 5 levels thereafter, this enhancement bonus increases by 1. The maximum bonus\
+    \ gained is based upon the number of weapons affected: +5 to one weapon, +4 to\
+    \ two weapons, +3 to three weapons, or +2 to four or more weapons. Fifty pieces\
+    \ of ammunition count as one weapon for this purpose. The wielder of a weapon\
+    \ enhanced by this raging song counts as if he were under the effect of an inspired\
+    \ rage raging song for all purposes involving the skald's rage powers. These bonuses\
+    \ can also be used to add any of the following weapon special abilities to the\
+    \ weapons enhanced by this ability: dancing, defending, distance, flaming, frost,\
+    \ ghost touch, keen, mighty cleaving, returning, shock, seeking, or speed. Adding\
+    \ these weapon special abilities consumes an amount of bonus equal to the special\
+    \ ability's cost (see Table: Melee Weapon Special Abilities). These enhancement\
+    \ bonuses and special abilities overlap with any enhancements or special abilities\
+    \ the weapon already has, though duplicate special abilities do not stack. If\
+    \ an affected weapon is not magical, at least a +1 enhancement bonus must be added\
+    \ before any other special abilities can be. The bonus and special abilities granted\
+    \ by this raging song are determined when the song begins, and cannot be changed\
+    \ until the raging song ends and another is begun. These bonuses apply to only\
+    \ one end of a double weapon."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:greater_counterspell#skald_spell_warrior"
+  name: "Greater Counterspell"
+  label: null
+  type: null
+  description: "At 5th level, the spell warrior gains increased versatility when attempting\
+    \ to counteract enemy spellcasting. When counterspelling, he can expend two skald\
+    \ spell slots of the same level or higher than the opponent's spell, regardless\
+    \ of the school of that spell.\nAt 11th level, when counterspelling an opponent's\
+    \ spell, the spell warrior only has to expend one skald spell slot of the level\
+    \ of the spell being cast.\nAt 17th level, the spell warrior gains Parry Spell\
+    \ as a bonus feat. The skald does not have to meet the prerequisites for this\
+    \ feat."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:song_of_arcane_manipulation#skald_spell_warrior"
+  name: "Song of Arcane Manipulation"
+  label: null
+  type: null
+  description: "At 10th level, a spell warrior can sacrifice his own rage magic to\
+    \ counter an opponent's spell. When using raging song, he can counterspell as\
+    \ an immediate action without interrupting his raging song. However, in addition\
+    \ to expending a spell slot (or spell slots) to attempt to counter the opponent's\
+    \ spell, the skald must expend 1 round of raging song per spell level of the opponent's\
+    \ spell (for example, if attempting to counterspell a 3rd-level spell, the skald\
+    \ must expend one of his own 3rd-level spell slots and 3 rounds of raging song)."
+  effects: null
+  prerequisites: null
+  source: ""
+- id: "ability:spell_tamper#skald_spell_warrior"
+  name: "Spell Tamper"
+  label: null
+  type: null
+  description: "At 20th level, when a spell warrior successfully counterspells an\
+    \ opponent's spell, the opponent suffers a backlash of magical energy and takes\
+    \ 1d6 points of damage per spell level of the countered spell. If the opponent\
+    \ succeeds at a Will saving throw (DC = 10 + 1/2 the skald's level + the skald's\
+    \ Charisma modifier), the damage is reduced by half. This damage is magical and\
+    \ is not subject to damage reduction or energy resistance.\nThis ability replaces\
+    \ master skald."
+  effects: null
+  prerequisites: null
+  source: ""
+source: ""

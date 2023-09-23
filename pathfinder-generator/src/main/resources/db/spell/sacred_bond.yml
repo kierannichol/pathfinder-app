@@ -1,0 +1,29 @@
+casting_time: "1 round"
+saving_throw: "Will negates (harmless)"
+spell_resistance: "yes (harmless)"
+id: "spell:sacred_bond"
+name: "Sacred Bond"
+description: "To use this spell, you first touch the intended recipient, creating\
+  \ a sympathetic field of healing energies between you. Once the spell has been cast,\
+  \ you and the target may cast conjuration (healing) spells with a range of touch\
+  \ upon each other so long as you are within close range (25 ft. + 5 ft./2 levels).\
+  \ Should either you or the target remove your bracelet, the spell immediately ends."
+prerequisites: ""
+components: "V, S, F (a pair of golden bracelets worth 100 gp each worn by both you\
+  \ and the target)"
+range: "touch; see text"
+targets: "creature touched"
+duration: "10 minutes/level (D)"
+school: "conjuration (healing)"
+levels:
+- class_id: "class:cleric"
+  level: 3
+- class_id: "class:inquisitor"
+  level: 2
+- class_id: "class:oracle"
+  level: 3
+- class_id: "class:paladin"
+  level: 2
+- class_id: "class:warpriest"
+  level: 3
+source: "Advanced Player's Guide"

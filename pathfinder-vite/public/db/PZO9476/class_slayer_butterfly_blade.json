@@ -1,0 +1,109 @@
+{
+  "id": "class:slayer#butterfly_blade",
+  "name": "Butterfly Blade",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:studied_target#slayer AND !@modifies:ability:track#slayer AND !@modifies:ability:quarry#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:swift_tracker#slayer AND !@modifies:ability:improved_quarry#slayer AND !@modifies:ability:sneak_attack#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:studied_target#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:quarry#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_tracker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_quarry#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:sneak_attack#slayer",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d1"
+        }, {
+          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d1"
+        }, {
+          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d5"
+        }, {
+          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d10"
+        }, {
+          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d15"
+        }, {
+          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d20"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d3"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d6"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d9"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d12"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d15"
+        }, {
+          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d18"
+        }, {
+          "featureId": "ability:innocent_butterfly#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d7"
+        }, {
+          "featureId": "ability:deadly_butterfly#slayer_butterfly_blade",
+          "conditionFormula": "@class:slayer\u003e\u003d19"
+        }],
+        "unlinks": [{
+          "featureId": "ability:studied_target#slayer"
+        }, {
+          "featureId": "ability:track#slayer"
+        }, {
+          "featureId": "ability:sneak_attack#slayer"
+        }, {
+          "featureId": "ability:swift_tracker#slayer"
+        }, {
+          "featureId": "ability:quarry#slayer"
+        }, {
+          "featureId": "ability:stalker#slayer"
+        }, {
+          "featureId": "ability:improved_quarry#slayer"
+        }]
+      }]
+    }
+  }
+}

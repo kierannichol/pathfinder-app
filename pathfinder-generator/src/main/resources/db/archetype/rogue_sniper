@@ -1,0 +1,39 @@
+id: "class:rogue#sniper"
+name: "Sniper"
+description: "Some say that the sniper is the worst kind of assassin: a killer who\
+  \ waits silently in the shadows and then strikes from a distance without remorse.\
+  \ Snipers, of course, understand that such protestations about “cowardice\"and “\
+  honor\"regarding their profession are in fact merely the bleatings of sheep fearing\
+  \ the slaughter and pay them no heed. Most snipers take pride in their formidable\
+  \ abilities, which allow them to take life quickly, quietly, and efficiently, then\
+  \ disappear into their surroundings without a trace."
+modifications:
+- add: "ability:accuracy#rogue_sniper"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:deadly_range#rogue_sniper"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:accuracy#rogue_sniper"
+  name: "Accuracy"
+  label: null
+  type: null
+  description: "At 1st level, a sniper halves all range increment penalties when making\
+    \ ranged attacks with a bow or crossbow."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:deadly_range#rogue_sniper"
+  name: "Deadly Range"
+  label: null
+  type: null
+  description: "At 3rd level, a sniper increases the range at which she can apply\
+    \ her sneak attack damage by 10 feet. This range increases by 10 feet for every\
+    \ 3 levels after 3rd.\nThis ability replaces trap sense.\nRogue Talents: The following\
+    \ rogue talents complement the sniper archetype: camouflage, snap shot, sniper's\
+    \ eye, and weapon training*."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

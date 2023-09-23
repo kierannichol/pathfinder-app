@@ -1,0 +1,56 @@
+id: "class:slayer#cleaner"
+name: "Cleaner"
+description: ""
+modifications:
+- add: "ability:deceitful#slayer_cleaner"
+  remove:
+  - "ability:track#slayer"
+- add: "ability:without_a_trace#slayer_cleaner"
+  remove:
+  - "ability:the_slayer_talent_gained_at_4th_level#slayer"
+- add: "ability:mislead#slayer_cleaner"
+  remove:
+  - "ability:stalker#slayer"
+features:
+- id: "ability:deceitful#slayer_cleaner"
+  name: "Deceitful"
+  label: null
+  type: null
+  description: "At 1st level, a cleaner becomes skilled at deceiving others, and gains\
+    \ Deceitful as a bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:without_a_trace#slayer_cleaner"
+  name: "Without a Trace"
+  label: null
+  type: null
+  description: "At 4th level, a cleaner is able to study a location, conceal evidence,\
+    \ and hide in or extricate himself quickly from that location. Studying a location\
+    \ takes 1 minute for each 10-foot square. Once he has studied an area, the cleaner\
+    \ can attempt a Disguise check to alter evidence or a Stealth check to conceal\
+    \ evidence (by doing things such as cleaning up bloodstains, obscuring footprints,\
+    \ moving a dead body, and so on). Altering an area takes 1d3 x 10 minutes of work\
+    \ per 10-foot square. Anyone attempting to determine what actually happened in\
+    \ that area must succeed at an opposed Perception check against the result of\
+    \ the cleaner's Disguise or Stealth check (cleaner's choice) or accept the altered\
+    \ scene as truth. The cleaner gains a +4 bonus on this check, on Sleight of Hand\
+    \ checks to hide objects from that location on his person, and on Stealth checks\
+    \ to hide within or escape from that location. This lasts as long as the scene\
+    \ remains unaltered (except by the cleaner)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:mislead#slayer_cleaner"
+  name: "Mislead"
+  label: null
+  type: null
+  description: "At 7th level, a cleaner can cast misdirection on himself at will.\
+    \ This lasts until the cleaner uses the ability again or ends the effect as a\
+    \ standard action.\nThis ability replaces stalker.\nSlayer Talents: The following\
+    \ slayer talents (and rogue talents) complement the cleaner archetype: camouflage,\
+    \ fast stealth, foil scrutiny*, rogue crawl, surprise attack, and terrain mastery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

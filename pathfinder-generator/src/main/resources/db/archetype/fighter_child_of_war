@@ -1,0 +1,94 @@
+id: "class:fighter#child_of_war"
+name: "Child of War"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#fighter_child_of_war"
+  remove:
+  - "ability:armor_proficiency#fighter"
+  - "ability:weapon_proficiency#fighter"
+- add: "ability:eldritch_lore#fighter_child_of_war"
+  remove:
+  - "ability:bonus_feat#fighter@1"
+- add: "ability:lore_of_arcana#fighter_child_of_war"
+  remove:
+  - "ability:bonus_feat#fighter"
+- add: "ability:eldritch_armor_training#fighter_child_of_war"
+  remove:
+  - "ability:armor_training#fighter"
+- add: "ability:spellcasting#fighter_child_of_war"
+  remove:
+  - "ability:the_bonus_feats_gained_at_8th_12th_16th#fighter"
+  - "ability:20th_level#fighter"
+  - "ability:all_weapon_training#fighter"
+features:
+- id: "ability:weapon_and_armor_proficiency#fighter_child_of_war"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A child of war is not proficient with two-handed martial weapons or\
+    \ tower shields."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:eldritch_lore#fighter_child_of_war"
+  name: "Eldritch Lore"
+  label: null
+  type: null
+  description: "A child of war gains 4 skill ranks + a number of skill ranks equal\
+    \ to her Intelligence modifier at each level, instead of the normal 2 skill ranks\
+    \ + her Intelligence modifier at each level.\nFurthermore, Knowledge (arcana,\
+    \ religion), Linguistics, and Spellcraft are all class skills for the child of\
+    \ war."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:lore_of_arcana#fighter_child_of_war"
+  name: "Lore of Arcana"
+  label: null
+  type: null
+  description: "At 2nd level, a child of war is further initiated into arcane secrets.\
+    \ This gives her minor spellcasting abilities and access to lore collected to\
+    \ give her an edge against the enemies of humanity.\nThe child of war gains a\
+    \ spellbook containing 4 0-level wizard spells of her choice. She can prepare\
+    \ and cast these spells as a wizard, using her fighter level as her caster level.\
+    \ She can prepare a number of 0-level spells each day equal to 1 + 1 per 6 fighter\
+    \ levels.\nShe also gains a +2 bonus on Knowledge checks to identify and learn\
+    \ the powers and weaknesses of aboleths, demons, serpentfolk, and undead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:eldritch_armor_training#fighter_child_of_war"
+  name: "Eldritch Armor Training"
+  label: null
+  type: null
+  description: "At 3rd level, a child of war gains eldritch armor training. This functions\
+    \ as armor training, except as a swift action she can also reduce the arcane spell\
+    \ failure chance due to armor she is wearing by 15% for any spells she casts this\
+    \ round. This reduction increases to 20% at 7th level, 25% at 11th level, and\
+    \ 30% at 15th level. In addition, if she has Arcane Armor Training or Arcane Armor\
+    \ Mastery, rather than having their normal effects, each of those feats increases\
+    \ the arcane spell failure reduction of her eldritch armor training by 10%."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:spellcasting#fighter_child_of_war"
+  name: "Spellcasting"
+  label: null
+  type: null
+  description: "Starting at 5th level, the spellcasting ability of a child of war\
+    \ increases to allow her to cast a limited number of spells drawn from the bloodrager\
+    \ spell list. She automatically adds to her spellbook a number of 1st-level bloodrager\
+    \ spells equal to 3 + her Intelligence modifier. Her caster level for these spells\
+    \ is equal to her fighter level, and the bloodrager class spell list is considered\
+    \ to be her class spell list for the purposes of meeting prerequisites and using\
+    \ magic items.\nShe uses the ranger's spells per day, but uses her Intelligence\
+    \ score to determine her bonus spells and spell saving throw DCs, just as a wizard\
+    \ does. She does not gain any other wizard abilities, such as an arcane bond or\
+    \ school.\nEach time she attains a new fighter level, she gains one bloodrager\
+    \ spell of her choice to add to her spellbook. The free spells must be of spell\
+    \ levels she can cast. She otherwise follows the rules for a wizard regarding\
+    \ her spellbook and learning or preparing spells."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+source: "Pathfinder Player Companion: Arcane Anthology"

@@ -1,0 +1,45 @@
+{
+  "id": "class:bard#demagogue",
+  "name": "Demagogue",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:inspire_courage_",
+  "maxStacks": 1,
+  "description": {
+    "text": "Not content with providing amusing and occasionally instructive performances, the demagogue seeks to inflame and ignite his audience, driving them toward a specific purpose with carefully chosen words and tones that may spark momentous change."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage_",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:famous#bard_demagogue",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_demagogue",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:bardic_performance#bard_demagogue",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_demagogue",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:inspire_courage_"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }]
+      }]
+    }
+  }
+}

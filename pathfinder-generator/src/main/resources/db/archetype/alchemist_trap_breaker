@@ -1,0 +1,74 @@
+id: "class:alchemist#trap_breaker"
+name: "Trap Breaker"
+description: ""
+modifications:
+- add: "ability:trapfinding#alchemist_trap_breaker"
+  remove:
+  - "ability:poison_use"
+  - "ability:poison_resistance_"
+- add: "ability:explosive_disarm#alchemist_trap_breaker"
+  remove:
+  - "ability:poison_resistance_"
+- add: "ability:land_mine#alchemist_trap_breaker"
+  remove:
+  - "ability:swift_poisoning#alchemist"
+- add: "ability:mine_engineering#alchemist_trap_breaker"
+  remove:
+  - "ability:poison_immunity#alchemist"
+features:
+- id: "ability:trapfinding#alchemist_trap_breaker"
+  name: "Trapfinding"
+  label: null
+  type: null
+  description: "Starting at 2nd level, a trap breaker adds 1/2 his alchemist level\
+    \ on Perception checks made to locate traps and on Disable Device checks. A trap\
+    \ breaker can use Disable Device to disarm magic traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+- id: "ability:explosive_disarm#alchemist_trap_breaker"
+  name: "Explosive Disarm"
+  label: null
+  type: null
+  description: "At 5th level, a trap breaker can attempt to disarm a mechanical trap\
+    \ by detonating it rather than disarming it with a Disable Device check. As a\
+    \ full-round action, a trap breaker may expend one of his bombs to make a ranged\
+    \ touch attack against a trap, using the trap's Disable Device DC as its AC. If\
+    \ the attack misses, the bomb's splash damage activates the trap. If the attack\
+    \ hits, the bomb deactivates the trap without setting it off. The trap breaker\
+    \ must both know the location of the trap and be able to reach the trap's trigger\
+    \ with a ranged touch attack in order to use this ability. At 8th level, a trap\
+    \ breaker can disarm magic traps with this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+- id: "ability:land_mine#alchemist_trap_breaker"
+  name: "Land Mine"
+  label: null
+  type: null
+  description: "At 6th level, a trap breaker can turn his bombs into land mines. Setting\
+    \ a land mine is a full-round action that provokes attacks of opportunity. The\
+    \ land mine fills a single 5-foot square, and can't be placed in the same space\
+    \ as another trap, land mine, or magic trap. The trap breaker can arm the land\
+    \ mine with any bomb he is eligible to use, and the effects of this bomb are immediately\
+    \ transferred to the land mine. Creating a land mine uses up two of the alchemist's\
+    \ bombs per day. The DCs for Perception checks to notice the land mine, Disable\
+    \ Device checks to disable it, and saving throws to avoid its effects are equal\
+    \ to 10 + 1/2 the alchemist's level + his Intelligence modifier. All alchemist\
+    \ land mines are mechanical traps with the qualities Trigger: location and Reset:\
+    \ none. Land mines last for 1 day per alchemist level or until they are triggered,\
+    \ whichever comes first."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+- id: "ability:mine_engineering#alchemist_trap_breaker"
+  name: "Mine Engineering"
+  label: null
+  type: null
+  description: "At 10th level, a trap breaker's expertise in improving explosives\
+    \ allows him to create land mines with minimal expense. Creating a land mine uses\
+    \ up only one of the alchemist's bombs per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Dungeoneer's Handbook"
+source: "Pathfinder Player Companion: Dungeoneer's Handbook"

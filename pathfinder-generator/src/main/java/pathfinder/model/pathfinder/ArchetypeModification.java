@@ -1,7 +1,7 @@
 package pathfinder.model.pathfinder;
 
-import pathfinder.model.Id;
+import java.util.Set;
 
-public record ArchetypeModification(Id add, Id remove) {
+public record ArchetypeModification(IdAndLevel add, Set<IdAndLevel> remove) {
 
 }

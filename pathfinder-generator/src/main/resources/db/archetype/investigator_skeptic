@@ -1,0 +1,74 @@
+id: "class:investigator#skeptic"
+name: "Skeptic"
+description: ""
+modifications:
+- add: "ability:hauntfinding#investigator_skeptic"
+  remove:
+  - "ability:trapfinding#investigator"
+- add: "ability:suspect_hoax#investigator_skeptic"
+  remove:
+  - "ability:poison_resistance#investigator"
+- add: "ability:smite_haunt#investigator_skeptic"
+  remove:
+  - "ability:swift_alchemy#investigator"
+- add: "ability:exorcising_touch#investigator_skeptic"
+  remove:
+  - "ability:the_investigator_talent_the_skeptic_would_otherwise_gain_at_7th_level#investigator"
+features:
+- id: "ability:hauntfinding#investigator_skeptic"
+  name: "Hauntfinding"
+  label: null
+  type: null
+  description: "At 1st level, a skeptic's knowledge of haunts allows her to notice\
+    \ them with ease, regardless of the methods by which the haunts make their presence\
+    \ known in the realm of the living. The skeptic adds 1/2 her level to all skill\
+    \ checks to notice haunts. If she notices a haunt, she adds this same bonus to\
+    \ any initiative check made as a result of that haunt activating. This bonus is\
+    \ an insight bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Haunted Heroes Handbook"
+- id: "ability:suspect_hoax#investigator_skeptic"
+  name: "Suspect Hoax"
+  label: null
+  type: null
+  description: "Regardless of the actual situation at hand, a skeptic naturally suspects\
+    \ that trickery or hoaxing is at hand. This mindset helps to set the skeptic at\
+    \ ease even when confronted by the most terrifying of situations, be the source\
+    \ of that fear mundane or legitimately supernatural. At 2nd level, a skeptic gains\
+    \ a +1 insight bonus on saving throws against spells and spell-like abilities\
+    \ used to falsely create the impression of a supernatural presence, as well as\
+    \ a +1 insight bonus on saving throws caused by the effects of actual haunts or\
+    \ incorporeal undead. This bonus increases to +2 at 5th level, and to +3 at 8th\
+    \ level. At 11th level, a skeptic is immune to fear effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Haunted Heroes Handbook"
+- id: "ability:smite_haunt#investigator_skeptic"
+  name: "Smite Haunt"
+  label: null
+  type: null
+  description: "Normally, damaging a haunt is a tricky affair requiring the ability\
+    \ to channel positive energy or wield spells capable of doing the same, but the\
+    \ skeptic learns methods of using her own convictions to accomplish the same feat.\
+    \ At 4th level, as a standard action, a skeptic can focus her willpower to damage\
+    \ an active haunt. She must be within a haunt's area to smite the haunt. When\
+    \ the skeptic uses this ability, she deals an amount of damage to the haunt equal\
+    \ to her studied strike bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Haunted Heroes Handbook"
+- id: "ability:exorcising_touch#investigator_skeptic"
+  name: "Exorcising Touch"
+  label: null
+  type: null
+  description: "At 7th level, a skeptic can damage a creature currently possessing\
+    \ another without lethally harming the possessed creature. To make an exorcising\
+    \ strike, the skeptic must make a touch attack against the possessed creature.\
+    \ On a hit, she damages the possessing creature or entity, dealing an amount of\
+    \ lethal damage equal to her studied strike bonus damage.\nThe possessed creature\
+    \ takes this amount of damage as nonlethal damage at the same time."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Haunted Heroes Handbook"
+source: "Pathfinder Player Companion: Haunted Heroes Handbook"

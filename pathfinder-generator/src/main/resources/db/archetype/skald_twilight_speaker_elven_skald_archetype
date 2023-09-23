@@ -1,0 +1,73 @@
+id: "class:skald#twilight_speaker_elven_skald_archetype"
+name: "Twilight Speaker (Elven Skald Archetype)"
+description: ""
+modifications:
+- add: "ability:twilight_envoy#skald_twilight_speaker_elven_skald_archetype"
+  remove:
+  - "ability:bardic_knowledge#skald"
+- add: "ability:song_of_secrecy#skald_twilight_speaker_elven_skald_archetype"
+  remove:
+  - "ability:dirge_of_doom#skald"
+  - "ability:inspired_rage_song_of_strength#skald"
+- add: "ability:community_domain#skald_twilight_speaker_elven_skald_archetype"
+  remove:
+  - "ability:well_versed#skald"
+  - "ability:versatile_performance#skald"
+- add: "ability:twilights_blessing#skald_twilight_speaker_elven_skald_archetype"
+  remove:
+  - "ability:lore_master#skald"
+- add: "ability:twilights_hand#skald_twilight_speaker_elven_skald_archetype"
+  remove:
+  - "ability:master_skald#skald"
+features:
+- id: "ability:twilight_envoy#skald_twilight_speaker_elven_skald_archetype"
+  name: "Twilight Envoy"
+  label: null
+  type: null
+  description: "A twilight speaker gains a bonus equal to half his skald level on\
+    \ Bluff, Diplomacy, and Sense Motive checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+- id: "ability:song_of_secrecy#skald_twilight_speaker_elven_skald_archetype"
+  name: "Song of Secrecy"
+  label: null
+  type: null
+  description: "At 10th level, a twilight speaker can use his song to shroud allies\
+    \ from detection. Affected allies gain a bonus equal to half the twilight speaker's\
+    \ skald level on Stealth checks, and they can attempt such checks without cover\
+    \ or concealment. Song of secrecy is audible only to those affected."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+- id: "ability:community_domain#skald_twilight_speaker_elven_skald_archetype"
+  name: "Community Domain"
+  label: null
+  type: null
+  description: "At 2nd level, a twilight speaker gains the Community domain and gains\
+    \ the powers and spells of the domain. He treats his skald level as his cleric\
+    \ level, and he uses his Charisma modifier in place of his Wisdom modifier for\
+    \ the purposes of the domain's abilities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+- id: "ability:twilights_blessing#skald_twilight_speaker_elven_skald_archetype"
+  name: "Twilight's Blessing"
+  label: null
+  type: null
+  description: "At 7th level, once per day a twilight speaker can activate any spell\
+    \ trigger or spell completion item as though the spell were on the skald spell\
+    \ list. He can use this ability an additional time per day at 13th and 19th levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+- id: "ability:twilights_hand#skald_twilight_speaker_elven_skald_archetype"
+  name: "Twilight's Hand"
+  label: null
+  type: null
+  description: "At 20th level, the twilight speaker can use twilight's blessing at\
+    \ will."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes from the Fringe"
+source: "Pathfinder Player Companion: Heroes from the Fringe"

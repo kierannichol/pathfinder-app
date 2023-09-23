@@ -1,0 +1,32 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates"
+spell_resistance: "yes"
+id: "spell:rotting_alliance"
+name: "Rotting Alliance"
+description: "You curse two or more creatures to sicken and waste away while in each\
+  \ others' company. Each target that fails a Fortitude save becomes cursed with a\
+  \ wasting sickness. The disease has no onset period, and those who contracted it\
+  \ must attempt a second Fortitude save immediately. A target that fails this second\
+  \ saving throw takes 1d6 points of Constitution damage and 1d6 points of Charisma\
+  \ damage. Every day thereafter, each target that was within 100 feet of another\
+  \ target during the previous 24 hours takes 1d6 points of Constitution damage and\
+  \ 1d6 points of Charisma damage (reroll to determine the specific amount of damage\
+  \ each day). A successful Fortitude save negates the damage for that day only."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one living creature/level, no two of which can be more than 60 feet apart"
+duration: "permanent"
+school: "necromancy [curse, disease]"
+levels:
+- class_id: "class:cleric"
+  level: 8
+- class_id: "class:druid"
+  level: 8
+- class_id: "class:inquisitor"
+  level: 6
+- class_id: "class:oracle"
+  level: 8
+- class_id: "class:witch"
+  level: 8
+source: "Inner Sea Intrigue"

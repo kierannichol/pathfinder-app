@@ -1,0 +1,111 @@
+id: "class:ranger#deep_diver"
+name: "Deep Diver"
+description: "Named for the vicious and unending storm in the southern Arcadian Ocean,\
+  \ deep divers have pushed their bodies to their limits, holding their breath to\
+  \ expand their lung capacity and swimming until ocean travel is second nature to\
+  \ them."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#ranger_deep_diver"
+  remove:
+  - "ability:armor_proficiencies#ranger"
+  - "ability:the_rangers_weapon#ranger"
+- add: "ability:oceans_blessing#ranger_deep_diver"
+  remove:
+  - "ability:track#ranger"
+- add: "ability:deep_diver#ranger_deep_diver"
+  remove:
+  - "ability:wild_empathy#ranger"
+- add: "ability:aquatic_terrain#ranger_deep_diver"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:aquatic_adaptation#ranger_deep_diver"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:shark_sense#ranger_deep_diver"
+  remove:
+  - "ability:swift_tracker#ranger"
+- add: "ability:killer_of_the_deep#ranger_deep_diver"
+  remove:
+  - "ability:master_hunter#ranger"
+features:
+- id: "ability:weapon_and_armor_proficiency#ranger_deep_diver"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A deep diver is not proficient with shields but is proficient with\
+    \ harpoons and nets."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:oceans_blessing#ranger_deep_diver"
+  name: "Ocean's Blessing"
+  label: null
+  type: null
+  description: "A deep diver adds buoyancy, control water, elemental speech (water\
+    \ only), hydraulic push, hydraulic torrent, ride the waves, river whip, water\
+    \ breathing, and wave shield to his ranger spell list at the same spell level\
+    \ as they appear on the cleric spell list or sorcerer/wizard spell list, whichever\
+    \ is lower. He still must select them as spells known, as normal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:deep_diver#ranger_deep_diver"
+  name: "Deep Diver"
+  label: null
+  type: null
+  description: "At 1st level, a deep diver can hold his breath for twice as long as\
+    \ usual (4 rounds times his Constitution score instead of the normal 2)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:aquatic_terrain#ranger_deep_diver"
+  name: "Aquatic Terrain"
+  label: null
+  type: null
+  description: "At 3rd level, a deep diver gains a +2 bonus on initiative checks and\
+    \ Knowledge (geography), Perception, Stealth, and Survival skill checks while\
+    \ underwater.\nEvery 5 levels thereafter, the bonus on each of those checks increases\
+    \ by 2 while the deep diver is underwater (to a maximum of +8 at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:aquatic_adaptation#ranger_deep_diver"
+  name: "Aquatic Adaptation"
+  label: null
+  type: null
+  description: "At 7th level, a deep diver gains a swim speed equal to his unmodified\
+    \ base speed. Because he has a swim speed, he gains the standard +8 bonus on Swim\
+    \ checks to perform a special action or evade a hazard, the ability to take 10\
+    \ on a Swim check even if distracted or threatened, and the ability to use the\
+    \ run action while swimming if he swims in a straight line. If he already has\
+    \ a swim speed, his swim speed increases by 10 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:shark_sense#ranger_deep_diver"
+  name: "Shark Sense"
+  label: null
+  type: null
+  description: "At 8th level, a deep diver gains the scent ability while underwater."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:killer_of_the_deep#ranger_deep_diver"
+  name: "Killer of the Deep"
+  label: null
+  type: null
+  description: "At 20th level, a deep diver is peerless at detecting prey underwater\
+    \ and delivering killing blows. He can notice other creatures by scent in a 180-foot\
+    \ radius underwater and can detect blood in the water up to a mile away. As a\
+    \ standard action, he can make a single attack against a favored enemy at his\
+    \ full attack bonus while underwater. If the attack hits, the target takes damage\
+    \ normally and must succeed at a Fortitude save or die. The DC of this save is\
+    \ equal to 10 + half the ranger's level + the ranger's Wisdom modifier. A deep\
+    \ diver can instead deal an additional amount of nonlethal damage equal to the\
+    \ creature's current hit points. A successful save negates this damage.\nA deep\
+    \ diver can use this ability once per day against each of his favored enemy types\
+    \ but not against the same creature more than once in a 24-hour period."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+source: "Pathfinder Player Companion: Elemental Master's Handbook"

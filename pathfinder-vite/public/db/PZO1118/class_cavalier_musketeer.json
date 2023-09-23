@@ -1,0 +1,39 @@
+{
+  "id": "class:cavalier#musketeer",
+  "name": "Musketeer",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:the_standard_cavaliers_mount_ability#cavalier AND !@modifies:ability:expert_trainer#cavalier",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some cavaliers are entrusted by their masters with the care and use of expensive and powerful oddities--firearms. Capable of inflicting shocking amounts of destruction without the aid of magic, these musketeers lead the advance of their troops, firing devastating fusillades long before the enemy can prepare for the armed charge that follows."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_standard_cavaliers_mount_ability#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:expert_trainer#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:gifted_firearm#cavalier_musketeer",
+          "conditionFormula": "@class:cavalier\u003e\u003d1"
+        }, {
+          "featureId": "ability:swift_powder#cavalier_musketeer",
+          "conditionFormula": "@class:cavalier\u003e\u003d4"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_standard_cavaliers_mount_ability#cavalier"
+        }, {
+          "featureId": "ability:expert_trainer#cavalier"
+        }]
+      }]
+    }
+  }
+}

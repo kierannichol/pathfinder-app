@@ -1,0 +1,51 @@
+id: "class:barbarian#true_primitive"
+name: "True Primitive"
+description: "Isolated and xenophobic tribes that dwell in areas untouched by civilization\
+  \ often see anything from cities and organized settlements as strange, dangerous,\
+  \ and decadent. They gain power from their truly primitive nature; their bodies\
+  \ and spirits are hardened by the wild and untainted existence far from the pathetic\
+  \ softness of so-called civilization. Even when forced to mingle with civilization,\
+  \ the true primitive stays apart in both traditions and trappings."
+modifications:
+- add: "ability:favored_terrain#barbarian_true_primitive"
+  remove:
+  - "ability:fast_movement#barbarian"
+- add: "ability:trophy_fetish#barbarian_true_primitive"
+  remove:
+  - "ability:trap_sense#barbarian"
+features:
+- id: "ability:favored_terrain#barbarian_true_primitive"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "A true primitive has a favored terrain representing her native homeland.\
+    \ This ability functions as the ranger class feature, and the true primitive's\
+    \ bonuses in that terrain improve by +2 at 5th level and every five levels thereafter.\
+    \ However, she does not gain any additional favored terrains."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:trophy_fetish#barbarian_true_primitive"
+  name: "Trophy Fetish"
+  label: null
+  type: null
+  description: "A true primitive collects teeth, bones, hair, and other trophies from\
+    \ vanquished enemies, representing their power and strength.\nAt 3rd level, a\
+    \ true primitive can attach a trophy fetish to one of the traditional true primitive\
+    \ weapons listed above. When wielding that weapon, the true primitive gains a\
+    \ +1 morale bonus on damage rolls. Furthermore, if that weapon has the fragile\
+    \ property, once per day, the true primitive can ignore the effects of a single\
+    \ natural 1 roll. A trophy fetish can also be attached to a suit of hide or bone\
+    \ armor, granting the true primitive a +1 morale bonus on saving throws. Furthermore,\
+    \ if that armor has the fragile property, once per day, the true primitive can\
+    \ chose not to have the armor break on the confirmation of a critical hit made\
+    \ against her.\nEvery five levels beyond 3rd, a true primitive can use an additional\
+    \ trophy fetish. Multiple trophy fetishes can be attached to the same armor or\
+    \ weapon; their effects stack. A trophy fetish can be sundered (hardness 5, 1\
+    \ hit point) but is not damaged by area attacks or attacks that do not specifically\
+    \ target it. It has no effect if attached to other types of weapons or armor.\n\
+    This ability replaces trap sense."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

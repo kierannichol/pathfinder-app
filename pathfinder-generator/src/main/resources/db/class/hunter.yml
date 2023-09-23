@@ -1,0 +1,740 @@
+id: "class:hunter"
+name: "Hunter"
+category: "HYBRID"
+description: "Hunters are warriors of the wilds that have forged close bonds with\
+  \ trusted animal companions. They focus their tactics on fighting alongside their\
+  \ companion animals as a formidable team of two. Able to cast a wide variety of\
+  \ nature spells and take on the abilities and attributes of beasts, hunters magically\
+  \ improve both themselves and their animal companions. Role: Hunters can adapt their\
+  \ tactics to many kinds of opponents, and cherish their highly trained animal companions.\
+  \ As a team, the hunter and her companion can react to danger with incredible speed,\
+  \ making them excellent scouts, explorers, and saboteurs. Alignment: Any neutral.\
+  \ Hit Die: d8. Parent Classes: Druid and ranger. Starting Wealth: 4d6 × 10 gp (average\
+  \ 140 gp.) In addition, each character begins play with an outfit worth 10 gp or\
+  \ less."
+source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+hit_die: "D8"
+alignment: "Any neutral"
+class_skills:
+- "skill:handle_animal"
+- "skill:swim"
+- "skill:spellcraft"
+- "skill:profession"
+- "skill:climb"
+- "skill:ride"
+- "skill:heal"
+- "skill:perception"
+- "skill:craft"
+- "skill:survival"
+- "skill:intimidate"
+- "skill:stealth"
+- "skill:knowledge"
+skill_ranks_per_level: "6"
+bab: "B"
+fort: "A"
+ref: "A"
+will: "B"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:animal_companion#hunter"
+  - "ability:animal_focus#hunter"
+  - "ability:nature_training#hunter"
+  - "ability:orisons#hunter"
+  - "ability:wild_empathy#hunter"
+  spells_per_day:
+    1: 1
+  spells_known:
+    0: 4
+    1: 2
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:precise_companion#hunter"
+  - "ability:track#hunter"
+  spells_per_day:
+    1: 2
+  spells_known:
+    0: 5
+    1: 3
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:hunter_tactics#hunter"
+  - "ability:teamwork_feat#hunter"
+  spells_per_day:
+    1: 3
+  spells_known:
+    0: 6
+    1: 4
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:improved_empathic_link#hunter"
+  spells_per_day:
+    1: 3
+    2: 1
+  spells_known:
+    0: 6
+    1: 4
+    2: 2
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:woodland_stride#hunter"
+  spells_per_day:
+    1: 4
+    2: 2
+  spells_known:
+    0: 6
+    1: 4
+    2: 3
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:teamwork_feat#hunter"
+  spells_per_day:
+    1: 4
+    2: 3
+  spells_known:
+    0: 6
+    1: 4
+    2: 4
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:bonus_trick#hunter"
+  spells_per_day:
+    1: 4
+    2: 3
+    3: 1
+  spells_known:
+    0: 6
+    1: 5
+    2: 4
+    3: 2
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:second_animal_focus#hunter"
+  - "ability:swift_tracker#hunter"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 2
+  spells_known:
+    0: 6
+    1: 5
+    2: 4
+    3: 3
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:teamwork_feat#hunter"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 3
+  spells_known:
+    0: 6
+    1: 5
+    2: 4
+    3: 4
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:raise_animal_companion#hunter"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 3
+    4: 1
+  spells_known:
+    0: 6
+    1: 5
+    2: 5
+    3: 4
+    4: 2
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:speak_with_master#hunter"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 4
+    4: 2
+  spells_known:
+    0: 6
+    1: 6
+    2: 5
+    3: 4
+    4: 3
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:teamwork_feat#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+  spells_known:
+    0: 6
+    1: 6
+    2: 5
+    3: 4
+    4: 4
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:bonus_trick#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 1
+  spells_known:
+    0: 6
+    1: 6
+    2: 5
+    3: 5
+    4: 4
+    5: 2
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:greater_empathic_link#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 2
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 5
+    4: 4
+    5: 3
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:teamwork_feat#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 3
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 5
+    4: 4
+    5: 4
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 3
+    6: 1
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 5
+    4: 5
+    5: 4
+    6: 2
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:one_with_the_wild#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 4
+    6: 2
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 4
+    6: 3
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:teamwork_feat#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 4
+    6: 3
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 4
+    6: 4
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:bonus_trick#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 5
+    6: 4
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 5
+    6: 4
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#hunter"
+  - "trait:weapon_proficiency#hunter"
+  - "ability:master_hunter#hunter"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 5
+    6: 5
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 5
+    6: 5
+  level: 20
+spell_caster_types: []
+class_features:
+- id: "ability:master_hunter#hunter"
+  name: "Master Hunter"
+  label: null
+  type: "Ex"
+  description: "At 20th level, a hunter becomes a master hunter, able to track down\
+    \ foes with ease. She can always move at full speed while using Survival to follow\
+    \ tracks without penalty.Additionally, each day when the hunter regains her spell\
+    \ slots, she chooses one animal focus to be active on herself for the entire day.\
+    \ This focus is in addition to using her animal focus class ability (including\
+    \ the additional focus ability she is able to use on herself if her animal companion\
+    \ is dead)."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:bonus_trick#hunter"
+  name: "Bonus Trick"
+  label: null
+  type: "Ex"
+  description: "At 7th level and every 6 levels thereafter, a hunter's animal companion\
+    \ learns a bonus trick (in addition to the bonus tricks gained from the hunter's\
+    \ effective druid level)."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:swift_tracker#hunter"
+  name: "Swift Tracker"
+  label: null
+  type: "Ex"
+  description: "At 8th level, a hunter can move at her normal speed while using Survival\
+    \ to follow tracks without taking the normal –5 penalty. She takes only a –10\
+    \ penalty (instead of the normal –20) when moving at up to twice normal speed\
+    \ while tracking."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:orisons#hunter"
+  name: "Orisons"
+  label: null
+  type: ""
+  description: "Hunters learn a number of orisons, or 0-level spells, as noted on\
+    \ Table: Hunter Spells Known. These spells are cast like any other spell, but\
+    \ they do not consume any slots and may be used again.Chaotic, Evil, Good, and\
+    \ Lawful Spells: A hunter can't cast spells of an alignment opposed to her own\
+    \ or her deity's (if she has one). Spells associated with particular alignments\
+    \ are indicated by the chaos, evil, good, and law descriptors in their spell descriptions."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:improved_empathic_link#hunter"
+  name: "Improved Empathic Link"
+  label: null
+  type: "Su"
+  description: "At 4th level, the hunter gains an empathic link with her animal companion.\
+    \ This functions like an empathic link with a familiar, except the hunter can\
+    \ also see through a companion's eyes as a swift action, maintaining this connection\
+    \ as long as she likes (as long as the companion is within 1 mile) and ending\
+    \ it as a free action. The hunter is blinded while maintaining this connection."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:wild_empathy#hunter"
+  name: "Wild Empathy"
+  label: null
+  type: "Ex"
+  description: "A hunter can improve the initial attitude of an animal. This ability\
+    \ functions as a Diplomacy check to improve the attitude of a person. The hunter\
+    \ rolls 1d20 and adds her hunter level and her Charisma modifier to determine\
+    \ the wild empathy check result. The typical domestic animal has a starting attitude\
+    \ of indifferent, while wild animals are usually unfriendly.To use wild empathy,\
+    \ the hunter and the animal must be within 30 feet of one another under normal\
+    \ conditions. Generally, influencing an animal in this way takes 1 minute but,\
+    \ as with influencing people, it might take more or less time.The hunter can also\
+    \ use this ability to influence a magical beast with an Intelligence score of\
+    \ 1 or 2, but she takes a –4 penalty on the check."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:one_with_the_wild#hunter"
+  name: "One With The Wild"
+  label: null
+  type: "Ex"
+  description: "At 17th level, the hunter and her animal companion are respected or\
+    \ even feared by other animals, so long as the animals are approximately of the\
+    \ same type as any of the hunter's current animal foci: bat for bats, tiger with\
+    \ felines, falcon for birds, snake for reptiles, and so on. No animal in this\
+    \ category (including dire varieties) willingly attacks the hunter or her companion\
+    \ unless magically compelled to or if the hunter or companion attacks it first.The\
+    \ hunter and her companion can attempt to demoralize animals in the appropriate\
+    \ category as a swift action, rolling 1d20 and adding the hunter's level and her\
+    \ Charisma modifier to determine the Intimidate check result."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:speak_with_master#hunter"
+  name: "Speak With Master"
+  label: null
+  type: "Ex"
+  description: "At 11th level, a hunter and her animal companion can communicate verbally,\
+    \ as if they were using a common language. Other creatures cannot understand the\
+    \ communication without magical aid."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:animal_companion#hunter"
+  name: "Animal Companion"
+  label: null
+  type: "Ex"
+  description: "At 1st level, a hunter forms a bond with an animal companion. A hunter\
+    \ may begin play with any of the animals available to a druid. This animal is\
+    \ a loyal companion that accompanies the hunter on her adventures. This ability\
+    \ functions like the druid animal companion ability (which is part of the nature\
+    \ bond class feature). The hunter's effective druid level is equal to her hunter\
+    \ level. If a character receives an animal companion from more than one source,\
+    \ her effective druid levels stack for the purposes of determining the companion's\
+    \ statistics and abilities. A hunter may teach her companion hunter's tricks from\
+    \ the skirmisher ranger archetype instead of standard tricks. The animal companion\
+    \ can use skirmisher tricks when commanded, a number of times per day equal to\
+    \ half its Hit Dice plus its Wisdom modifier.If a hunter releases her companion\
+    \ from service or her animal companion perishes, she may gain a new one by performing\
+    \ a ceremony requiring 24 uninterrupted hours of prayer in the environment where\
+    \ the new companion typically lives. While the hunter's animal companion is dead,\
+    \ any animal she summons with a summon nature's ally spell remains for 1 minute\
+    \ per level instead of 1 round per level. A hunter cannot have more than one summon\
+    \ nature's ally spell active in this way at one time. If this ability is used\
+    \ again, any existing summon nature's ally immediately ends."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:weapon_proficiency#hunter"
+  name: "Weapon Proficiency (Hunter)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:mere_club 1"
+  - "SET proficiency:blade_boot 1"
+  - "SET proficiency:spiked_gauntlet 1"
+  - "SET proficiency:spiked_armor 1"
+  - "SET proficiency:heavy_crossbow 1"
+  - "SET proficiency:unarmed 1"
+  - "SET proficiency:dogslicer 1"
+  - "SET proficiency:ogre_hook 1"
+  - "SET proficiency:handaxe 1"
+  - "SET proficiency:light_flail 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:pickaxe 1"
+  - "SET proficiency:whip 1"
+  - "SET proficiency:guisarme 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:lantern_staff 1"
+  - "SET proficiency:gandasa 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:warhammer 1"
+  - "SET proficiency:jolting_dart 1"
+  - "SET proficiency:dart 1"
+  - "SET proficiency:chakram 1"
+  - "SET proficiency:light_pick 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:ammentum 1"
+  - "SET proficiency:heavy_shield 1"
+  - "SET proficiency:halberd 1"
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:brass_knuckles 1"
+  - "SET proficiency:battle_aspergillum 1"
+  - "SET proficiency:sword_cane 1"
+  - "SET proficiency:falchion 1"
+  - "SET proficiency:heavy_mace 1"
+  - "SET proficiency:gauntlet 1"
+  - "SET proficiency:cestus 1"
+  - "SET proficiency:kukri 1"
+  - "SET proficiency:greatsword 1"
+  - "SET proficiency:bardiche 1"
+  - "SET proficiency:wooden_stake 1"
+  - "SET proficiency:rapier 1"
+  - "SET proficiency:dueling_dagger 1"
+  - "SET proficiency:axe 1"
+  - "SET proficiency:sickle 1"
+  - "SET proficiency:horsechopper 1"
+  - "SET proficiency:traveling_kettle 1"
+  - "SET proficiency:hook_hand 1"
+  - "SET proficiency:brass_knife 1"
+  - "SET proficiency:light_spiked_shield 1"
+  - "SET proficiency:handwraps 1"
+  - "SET proficiency:greatclub 1"
+  - "SET proficiency:blowgun 1"
+  - "SET proficiency:ranseur 1"
+  - "SET proficiency:manople 1"
+  - "SET proficiency:battleaxe 1"
+  - "SET proficiency:gladius 1"
+  - "SET proficiency:combat_scabbard 1"
+  - "SET proficiency:greataxe 1"
+  - "SET proficiency:bayonet 1"
+  - "SET proficiency:pilum 1"
+  - "SET proficiency:klar 1"
+  - "SET proficiency:boarding_pike 1"
+  - "SET proficiency:planson 1"
+  - "SET proficiency:glaive 1"
+  - "SET proficiency:collapsible_kumade 1"
+  - "SET proficiency:hunga_munga 1"
+  - "SET proficiency:shortbow 1"
+  - "SET proficiency:scythe 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:spring_blade 1"
+  - "SET proficiency:light_hammer 1"
+  - "SET proficiency:light_mace 1"
+  - "SET proficiency:morningstar 1"
+  - "SET proficiency:longsword 1"
+  - "SET proficiency:scizore 1"
+  - "SET proficiency:terbutje 1"
+  - "SET proficiency:scimitar 1"
+  - "SET proficiency:earth_breaker 1"
+  - "SET proficiency:stingchuck 1"
+  - "SET proficiency:light_crossbow 1"
+  - "SET proficiency:hurlbat 1"
+  - "SET proficiency:sap 1"
+  - "SET proficiency:katar 1"
+  - "SET proficiency:machete 1"
+  - "SET proficiency:trident 1"
+  - "SET proficiency:ankus 1"
+  - "SET proficiency:starknife 1"
+  - "SET proficiency:javelin 1"
+  - "SET proficiency:heavy_spiked_shield 1"
+  - "SET proficiency:heavy_flail 1"
+  - "SET proficiency:war_razor 1"
+  - "SET proficiency:short_sword 1"
+  - "SET proficiency:kumade 1"
+  - "SET proficiency:longbow 1"
+  - "SET proficiency:lance 1"
+  - "SET proficiency:claw_blades 1"
+  - "SET proficiency:kunai 1"
+  - "SET proficiency:throwing_axe 1"
+  - "SET proficiency:bill 1"
+  - "SET proficiency:heavy_pick 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:cutlass 1"
+  - "SET proficiency:punching_dagger 1"
+  - "SET proficiency:syringe_spear 1"
+  - "SET proficiency:stonebow 1"
+  - "SET proficiency:longspear 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:track#hunter"
+  name: "Track"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, a hunter adds 1/2 her level to Survival skill checks\
+    \ made to follow tracks."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:greater_empathic_link#hunter"
+  name: "Greater Empathic Link"
+  label: null
+  type: "Su"
+  description: "At 14th level, the range of the hunter's empathic link with her animal\
+    \ companion increases to 10 miles. If the animal companion is within 1 mile, the\
+    \ hunter can communicate with it telepathically."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:teamwork_feat#hunter"
+  name: "Teamwork Feat"
+  label: null
+  type: ""
+  description: "At 3rd level and every 3 levels thereafter, the hunter gains a bonus\
+    \ teamwork feat in addition to those gained from normal advancement. The hunter\
+    \ must meet the prerequisites of the selected bonus teamwork feat.As a standard\
+    \ action, the hunter can choose to learn a new bonus teamwork feat in place of\
+    \ the most recent bonus teamwork feat she has already learned. In effect, the\
+    \ hunter loses the bonus feat in exchange for the new one. She can change only\
+    \ the most recent teamwork feat gained, and must meet the prerequisites for the\
+    \ newly selected feat. A hunter can change her most recent teamwork feat a number\
+    \ of times per day equal to her Wisdom modifier (minimum 1). Whenever she gains\
+    \ a new teamwork feat, her previous teamwork feats become permanent."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:raise_animal_companion#hunter"
+  name: "Raise Animal Companion"
+  label: null
+  type: "Sp"
+  description: "At 10th level, a hunter gains raise animal companion as a spell-like\
+    \ ability; this is not restricted to raising only her own animal companion. Using\
+    \ this spell-like ability gives the hunter a permanent negative level. This negative\
+    \ level cannot be overcome in any way (including by restoration), but automatically\
+    \ ends after 24 hours. At 16th level, this functions as resurrection instead of\
+    \ raise dead, but otherwise operates as normal."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:armor_proficiency#hunter"
+  name: "Armor Proficiency (Hunter)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:woodland_stride#hunter"
+  name: "Woodland Stride"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a hunter and her animal companion may move through any\
+    \ sort of undergrowth (such as natural thorns, briars, overgrown areas, and similar\
+    \ terrain) at their normal speed and without taking damage or suffering any other\
+    \ impairment.Thorns, briars, and overgrown areas that are enchanted or magically\
+    \ manipulated to impede motion will still affect the hunter and her animal companion."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:animal_focus#hunter"
+  name: "Animal Focus"
+  label: null
+  type: "Su"
+  description: "At 1st level, a hunter can take on the aspect of an animal as a swift\
+    \ action. She must select one type of animal to emulate, gaining a bonus or special\
+    \ ability based on the type of animal emulated and her hunter level. The hunter\
+    \ can use this ability for a number of minutes per day equal to her level. This\
+    \ duration does not need to be consecutive, but must be spent in 1-minute increments.\
+    \ The hunter can emulate only one animal at a time.The hunter can also apply one\
+    \ of these aspects to her animal companion. Unlike with the hunter herself, there\
+    \ is no duration on the animal aspect applied to her animal companion. An aspect\
+    \ applied in this way does not count against the hunter's minutes of duration\
+    \ per day--it remains in effect until the hunter changes it. The companion's aspect\
+    \ can be the same aspect the hunter has taken on or a different one. The hunter\
+    \ can select or change the animal foci on both herself and her animal companion\
+    \ as part of the same swift action.If the hunter's animal companion is dead, the\
+    \ hunter can apply her companion's animal focus to herself instead of her animal\
+    \ companion. This is in addition to the normal one she can choose, and (as with\
+    \ a companion's focus) remains in effect until the hunter changes it instead of\
+    \ counting against her minutes per day."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:hunter_tactics#hunter"
+  name: "Hunter Tactics"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, the hunter automatically grants her teamwork feats to\
+    \ her animal companion. The companion doesn't need to meet the prerequisites of\
+    \ these teamwork feats."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:nature_training#hunter"
+  name: "Nature Training"
+  label: null
+  type: "Ex"
+  description: "A hunter counts her total hunter level as both druid levels and ranger\
+    \ levels for the purpose of qualifying for feats, traits, and options that modify\
+    \ or improve an animal companion."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:second_animal_focus#hunter"
+  name: "Second Animal Focus"
+  label: null
+  type: "Su"
+  description: "At 8th level, whenever a hunter uses her animal focus ability, she\
+    \ selects two different animal aspects for herself instead of one, and can assign\
+    \ two aspects to her companion instead of one. As with the companion's previous\
+    \ aspect, the second one does not count against the minutes per day a hunter can\
+    \ take on an aspect.If the hunter's animal companion is dead and the hunter has\
+    \ applied the companion's animal aspect to herself, that aspect does not count\
+    \ toward her maximum of two aspects at once. The hunter can still apply only one\
+    \ of her dead companion's aspects to herself, not both."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:precise_companion#hunter"
+  name: "Precise Companion"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, a hunter chooses either Precise Shot or Outflank as\
+    \ a bonus feat. She does not need to meet the prerequisites for this feat. If\
+    \ she chooses Outflank, she automatically grants this feat to her animal companion\
+    \ as well."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"

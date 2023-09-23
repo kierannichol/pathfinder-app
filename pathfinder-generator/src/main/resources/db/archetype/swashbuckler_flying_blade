@@ -1,0 +1,62 @@
+id: "class:swashbuckler#flying_blade"
+name: "Flying Blade"
+description: "While most swashbucklers prefer their battles up close, others prefer\
+  \ dealing death from a distance."
+modifications:
+- add: "ability:panache#swashbuckler_flying_blade"
+  remove:
+  - "ability:panache#swashbuckler"
+- add: "ability:deeds#swashbuckler_flying_blade"
+  remove:
+  - "ability:dodging_panache#swashbuckler"
+- add: "ability:flying_blade_training#swashbuckler_flying_blade"
+  remove:
+  - "ability:swashbuckler_weapon_training#swashbuckler"
+- add: "ability:flying_blade_mastery#swashbuckler_flying_blade"
+  remove:
+  - "ability:swashbuckler_weapon_mastery#swashbuckler"
+features:
+- id: "ability:panache#swashbuckler_flying_blade"
+  name: "Panache"
+  label: null
+  type: null
+  description: "Unlike other swashbucklers, a flying blade regains panache only when\
+    \ she confirms a critical hit or makes a killing blow with a dagger or starknife."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:deeds#swashbuckler_flying_blade"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A flying blade gains the following deeds, each of which replaces an\
+    \ existing deed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:flying_blade_training#swashbuckler_flying_blade"
+  name: "Flying Blade Training"
+  label: null
+  type: null
+  description: "At 5th level, a flying blade gains a +1 bonus on attack and damage\
+    \ rolls when using daggers or starknives in combat. When a flying blade wields\
+    \ a dagger or starknife, she gains the benefit of the Improved Critical feat with\
+    \ those weapons. Additionally, a flying blade increases the range increment of\
+    \ a thrown dagger or starknife by 5 feet. The increase of range increment stacks\
+    \ with that of precise throw.\nEvery 4 levels thereafter, the bonus on attack\
+    \ and damage rolls increases by 1, and the range increment increases by 5 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:flying_blade_mastery#swashbuckler_flying_blade"
+  name: "Flying Blade Mastery"
+  label: null
+  type: null
+  description: "At 20th level, when an attack that a flying blade makes with a dagger\
+    \ or starknife threatens a critical hit, that critical hit is automatically confirmed.\
+    \ Furthermore, the critical modifiers of daggers and starknives increase by 1\
+    \ (×2 becomes ×3, and so on)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

@@ -1,0 +1,69 @@
+{
+  "id": "class:ranger#urban_ranger",
+  "name": "Urban Ranger",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:camouflage#ranger AND !@modifies:ability:favored_terrain#ranger AND !@modifies:ability:endurance#ranger AND !@modifies:ability:hide_in_plain_sight#ranger AND !@modifies:ability:woodland_stride#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "For the urban ranger, the streets and sewers of the city are just as dangerous as the barren wastelands or the deep forests."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:favored_terrain#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:endurance#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#ranger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:favored_community#ranger_urban_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d3"
+        }, {
+          "featureId": "ability:trapfinding#ranger_urban_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d3"
+        }, {
+          "featureId": "ability:push_through#ranger_urban_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d7"
+        }, {
+          "featureId": "ability:blend_in#ranger_urban_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d12"
+        }, {
+          "featureId": "ability:invisibility_trick#ranger_urban_ranger",
+          "conditionFormula": "@class:ranger\u003e\u003d17"
+        }],
+        "unlinks": [{
+          "featureId": "ability:favored_terrain#ranger"
+        }, {
+          "featureId": "ability:endurance#ranger"
+        }, {
+          "featureId": "ability:woodland_stride#ranger"
+        }, {
+          "featureId": "ability:camouflage#ranger"
+        }, {
+          "featureId": "ability:hide_in_plain_sight#ranger"
+        }]
+      }]
+    }
+  }
+}

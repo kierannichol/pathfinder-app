@@ -1,0 +1,87 @@
+id: "class:oracle#cyclopean_seer"
+name: "Cyclopean Seer"
+description: "A cyclopean seer draws power from the mysterious prophetic abilities\
+  \ of ancient giants."
+modifications:
+- add: "ability:bonus_spells#oracle_cyclopean_seer"
+  remove:
+  - "ability:the_bonus_spells_granted_by_the_oracles_mystery#oracle"
+- add: "ability:assume_fate#oracle_cyclopean_seer"
+  remove:
+  - "ability:the_revelation_gained_at_1st_level#oracle"
+- add: "ability:brutal_trance#oracle_cyclopean_seer"
+  remove:
+  - "ability:the_revelation_gained_at_7th_level#oracle"
+- add: "ability:revelations#oracle_cyclopean_seer"
+  remove:
+  - "ability:the_revelation_class_feature#oracle"
+- add: "ability:final_revelation#oracle_cyclopean_seer"
+  remove:
+  - "ability:the_final_revelation_of_the_oracles_mystery#oracle"
+features:
+- id: "ability:bonus_spells#oracle_cyclopean_seer"
+  name: "Bonus Spells"
+  label: null
+  type: null
+  description: "Each time a cyclopean seer would gain a bonus spell from her mystery,\
+    \ she instead selects a divination spell from any class's spell list. If the spell\
+    \ is not on the cleric spell list, it must be at least 1 level lower than the\
+    \ highest-level oracle spell the cyclopean seer can cast."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:assume_fate#oracle_cyclopean_seer"
+  name: "Assume Fate"
+  label: null
+  type: null
+  description: "As an immediate action when targeted by an effect that requires a\
+    \ saving throw, you can choose another creature within line of sight that is attempting\
+    \ a save against the same effect. The target takes a penalty on its saving throw\
+    \ equal to 1d4 + 1 for every 4 levels you possess. You gain the value of their\
+    \ penalty as a luck bonus on your saving throw. You can use this ability a number\
+    \ of times per day equal to your Charisma bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:brutal_trance#oracle_cyclopean_seer"
+  name: "Brutal Trance"
+  label: null
+  type: null
+  description: "Once per day as a standard action, you can enter a trance that lasts\
+    \ 1 round per oracle level you possess. While in this trance, you are confused,\
+    \ but each round that you can act normally, you can ask a single question as if\
+    \ using commune."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:revelations#oracle_cyclopean_seer"
+  name: "Revelations"
+  label: null
+  type: null
+  description: "All cyclopean seers have access to the following revelations, regardless\
+    \ of their chosen mysteries.\nDoomsaying (Su): As a standard action, you can pronounce\
+    \ doom on a creature within 30 feet. The target takes a penalty equal to your\
+    \ oracle level on either all skill checks, all savings throws, or all attack rolls\
+    \ (your choice) for 1 minute or until he fails one such roll. You can use this\
+    \ ability a number of times per day equal to your Charisma bonus. This is a curse\
+    \ effect. Flash of Insight (Su): You gain the cyclops racial ability of the same\
+    \ name. If you already possess this ability, you gain an additional daily use.\
+    \ Prescience (Ex): You gain a +2 bonus to your Armor Class against attacks of\
+    \ opportunity and a +2 bonus on concentration checks. At 5th level and every 5\
+    \ levels thereafter, these bonuses increase by 1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+- id: "ability:final_revelation#oracle_cyclopean_seer"
+  name: "Final Revelation"
+  label: null
+  type: null
+  description: "Upon reaching 20th level, you embody ancient cyclopes' insight. You\
+    \ can use each of the following once per day as a spell-like ability: discern\
+    \ location, prying eyes, and stone tell. In addition, using flash of insight to\
+    \ select a d20 roll result equal to or lower than your Charisma modifier doesn't\
+    \ expend that ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"
+source: "Pathfinder Campaign Setting: Inner Sea Monster Codex"

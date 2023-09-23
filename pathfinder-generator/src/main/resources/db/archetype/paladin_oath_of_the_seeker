@@ -1,0 +1,66 @@
+id: "class:paladin#oath_of_the_seeker"
+name: "Oath of the Seeker"
+description: ""
+modifications:
+- add: "ability:smite_evil_hordes#paladin_oath_of_the_seeker"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:divine_bond#paladin_oath_of_the_seeker"
+  remove:
+  - "ability:divine_bond#paladin"
+- add: "ability:mercy_for_the_lost#paladin_oath_of_the_seeker"
+  remove:
+  - "ability:aura_of_justice#paladin"
+- add: "ability:stalwart#paladin_oath_of_the_seeker"
+  remove:
+  - "ability:aura_of_faith#paladin"
+features:
+- id: "ability:smite_evil_hordes#paladin_oath_of_the_seeker"
+  name: "Smite Evil Hordes"
+  label: null
+  type: null
+  description: "When the paladin or an ally defeats the target of the paladin's smite\
+    \ evil ability, the paladin can change the target of her smite to a different\
+    \ target within 30 feet of the previously defeated target without using an action.\
+    \ The new target must be of the same creature type and subtype as the previous\
+    \ target. If no applicable target is within 30 feet, then the smite evil effect\
+    \ ends. The paladin's smite does not deal more damage to evil outsiders, dragons,\
+    \ or undead than to other evil creatures."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+- id: "ability:divine_bond#paladin_oath_of_the_seeker"
+  name: "Divine Bond"
+  label: null
+  type: null
+  description: "At 5th level, the paladin adds mighty cleaving to the list of weapon\
+    \ special abilities that can be added to her weapon and removes flaming from the\
+    \ list."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+- id: "ability:mercy_for_the_lost#paladin_oath_of_the_seeker"
+  name: "Mercy for the Lost"
+  label: null
+  type: null
+  description: "At 11th level, if the paladin is on the Material Plane, the paladin\
+    \ can use find the path once per day at her paladin level, but only to find her\
+    \ way to a known citadel. If she is not on the Material Plane, she can instead\
+    \ use this ability to use plane shift as per the spell to travel to a known citadel.\
+    \ If she is in a citadel, she can expend her daily use of this ability to use\
+    \ plane shift to travel to the realm of her deity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+- id: "ability:stalwart#paladin_oath_of_the_seeker"
+  name: "Stalwart"
+  label: null
+  type: null
+  description: "At 14th level, the paladin's quest has strengthened her body and mind.\
+    \ If she succeeds at a Fortitude or Will saving throw against an effect that has\
+    \ a reduced effect on a successful save, she instead avoids the effect entirely.\
+    \ A helpless paladin does not gain the benefit of the stalwart ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Divine Anthology"
+source: "Pathfinder Player Companion: Divine Anthology"

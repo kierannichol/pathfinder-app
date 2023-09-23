@@ -1,0 +1,99 @@
+id: "class:monk#maneuver_master"
+name: "Maneuver Master"
+description: "The maneuver master specializes in more complicated moves than simple\
+  \ damage-dealing strikes."
+modifications:
+- add: "ability:flurry_of_maneuvers#monk_maneuver_master"
+  remove:
+  - "ability:flurry_of_blows#monk"
+- add: "ability:maneuver_defense#monk_maneuver_master"
+  remove:
+  - "ability:still_mind#monk"
+- add: "ability:reliable_maneuver#monk_maneuver_master"
+  remove:
+  - "ability:slow_fall#monk"
+- add: "ability:meditative_maneuver#monk_maneuver_master"
+  remove:
+  - "ability:purity_of_body#monk"
+- add: "ability:sweeping_maneuver#monk_maneuver_master"
+  remove:
+  - "ability:diamond_body#monk"
+- add: "ability:whirlwind_maneuver#monk_maneuver_master"
+  remove:
+  - "ability:quivering_palm#monk"
+features:
+- id: "ability:flurry_of_maneuvers#monk_maneuver_master"
+  name: "Flurry of Maneuvers"
+  label: null
+  type: null
+  description: "At 1st level, as part of a full-attack action, a maneuver master can\
+    \ make one additional combat maneuver, regardless of whether the maneuver normally\
+    \ replaces a melee attack or requires a standard action. The maneuver master uses\
+    \ his monk level in place of his base attack bonus to determine his CMB for the\
+    \ bonus maneuvers, though all combat maneuver checks suffer a –2 penalty when\
+    \ using a flurry.\nAt 8th level, a maneuver master may attempt a second additional\
+    \ combat maneuver, with an additional –3 penalty on combat maneuver checks.\n\
+    At 15th level, a maneuver master may attempt a third additional combat maneuver,\
+    \ with an additional –7 penalty on combat maneuver checks.\nA maneuver master\
+    \ loses this ability when wearing armor, using a shield, or carrying a medium\
+    \ or heavy load.\nThis ability replaces flurry of blows."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:maneuver_defense#monk_maneuver_master"
+  name: "Maneuver Defense"
+  label: null
+  type: null
+  description: "At 3rd level, if a maneuver master has an Improved combat maneuver\
+    \ feat, any creature attempting that maneuver against the maneuver master provokes\
+    \ an attack of opportunity, even if it would not normally do so.\nThis ability\
+    \ replaces still mind."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:reliable_maneuver#monk_maneuver_master"
+  name: "Reliable Maneuver"
+  label: null
+  type: null
+  description: "At 4th level, as a swift action, a maneuver master may spend 1 point\
+    \ from his ki pool before attempting a combat maneuver. He can roll his combat\
+    \ maneuver check for that maneuver twice and use the better result.\nThis ability\
+    \ replaces slow fall."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:meditative_maneuver#monk_maneuver_master"
+  name: "Meditative Maneuver"
+  label: null
+  type: null
+  description: "At 5th level, as a swift action, a maneuver master can add his Wisdom\
+    \ modifier on any combat maneuver check he makes before the beginning of his next\
+    \ turn. He must choose which combat maneuver check to grant the bonus to before\
+    \ making the combat maneuver check.\nThis ability replaces purity of body."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:sweeping_maneuver#monk_maneuver_master"
+  name: "Sweeping Maneuver"
+  label: null
+  type: null
+  description: "At 11th level, a maneuver master can make two combat maneuvers as\
+    \ a standard action, as long as neither maneuver requires the maneuver master\
+    \ to move. He may perform two identical maneuvers against two adjacent enemies,\
+    \ or he may perform two different combat maneuvers against the same target.\n\
+    This ability replaces diamond body."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:whirlwind_maneuver#monk_maneuver_master"
+  name: "Whirlwind Maneuver"
+  label: null
+  type: null
+  description: "At 15th level, once per day as a full-round action, a maneuver master\
+    \ can attempt a single combat maneuver against every opponent he threatens, as\
+    \ long as the combat maneuver does not require movement. He makes a single combat\
+    \ maneuver check, and it applies to all targets."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

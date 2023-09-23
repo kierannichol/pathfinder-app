@@ -1,0 +1,49 @@
+{
+  "id": "class:rogue#underground_chemist",
+  "name": "Underground Chemist",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:advanced_talents#rogue AND !@modifies:ability:evasion#rogue AND !@modifies:ability:the_rogue_talent_gained_at_4th_level#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Underground chemists are part of the rotting, fetid underbelly of the alchemical world. While underground chemists can\u0027t hold a candle to dedicated alchemists, they\u0027re tricky and dangerous with alchemical substances and potions."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:advanced_talents#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rogue_talent_gained_at_4th_level#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:chemical_weapons#rogue_underground_chemist",
+          "conditionFormula": "@class:rogue\u003e\u003d2"
+        }, {
+          "featureId": "ability:precise_splash_weapons#rogue_underground_chemist",
+          "conditionFormula": "@class:rogue\u003e\u003d4"
+        }, {
+          "featureId": "ability:discovery#rogue_underground_chemist",
+          "conditionFormula": "@class:rogue\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:evasion#rogue"
+        }, {
+          "featureId": "ability:the_rogue_talent_gained_at_4th_level#rogue"
+        }, {
+          "featureId": "ability:advanced_talents#rogue"
+        }]
+      }]
+    }
+  }
+}

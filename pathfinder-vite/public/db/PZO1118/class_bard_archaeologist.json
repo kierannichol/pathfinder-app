@@ -1,0 +1,39 @@
+{
+  "id": "class:bard#archaeologist",
+  "name": "Archaeologist",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:the_versatile_performance_ability#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "No stodgy researcher, this archaeologist meets his research head-on in the field. Archaeologists sacrifice the bard\u0027s inspirational performance for a smattering of rogue talents."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_versatile_performance_ability#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:clever_explorer#bard_archaeologist",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:uncanny_dodge#bard_archaeologist",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_versatile_performance_ability#bard"
+        }, {
+          "featureId": "ability:well_versed#bard"
+        }]
+      }]
+    }
+  }
+}

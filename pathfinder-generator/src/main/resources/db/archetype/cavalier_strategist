@@ -1,0 +1,63 @@
+id: "class:cavalier#strategist"
+name: "Strategist"
+description: "Some cavaliers make a lifelong mission out of their exceptional ability\
+  \ to direct troops on the battlefield, combining tactical insight with a preternatural\
+  \ skill at improving the teamwork of their allies in order to win the day. Such\
+  \ strategists are masters at learning the strengths and weaknesses of those they\
+  \ fight alongside, and at employing those observations at the most opportune moments.\
+  \ The best of them are also skilled at determining the strengths and weaknesses\
+  \ of their enemies, as well as at countering some of those strengths with their\
+  \ own formidable abilities."
+modifications:
+- add: "ability:drill_instructor#cavalier_strategist"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:tactical_advantage#cavalier_strategist"
+  remove:
+  - "ability:greater_banner#cavalier"
+- add: "ability:strategic_supremacy#cavalier_strategist"
+  remove:
+  - "ability:the_cavaliers_18th_level_bonus_feat#cavalier"
+features:
+- id: "ability:drill_instructor#cavalier_strategist"
+  name: "Drill Instructor"
+  label: null
+  type: null
+  description: "At 4th level, a strategist learns to train his fellow adventurers\
+    \ in the nuances of squad combat. By spending 10 minutes and expending 1 use of\
+    \ his challenge ability, the strategist can grant the use of a teamwork feat that\
+    \ he knows to up to four of his allies, similar to the tactician ability. As with\
+    \ tactician, allies need not meet the prerequisites of the granted feat, but they\
+    \ retain the use of this feat for 10 minutes plus 1 minute for every two levels\
+    \ the cavalier possesses, as long as the cavalier is visible and can be heard\
+    \ by his allies. If the cavalier falls unconscious or cannot be both seen and\
+    \ heard, his allies lose the benefit of the granted feat until the condition is\
+    \ remedied.\nThis ability replaces expert trainer."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:tactical_advantage#cavalier_strategist"
+  name: "Tactical Advantage"
+  label: null
+  type: null
+  description: "At 14th level, whenever a strategist uses his tactician ability to\
+    \ grant the use of a teamwork feat to his allies, he can move up to his speed\
+    \ as a free action either before or after granting the feat. This movement provokes\
+    \ attacks of opportunity normally.\nThis ability replaces greater banner."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:strategic_supremacy#cavalier_strategist"
+  name: "Strategic Supremacy"
+  label: null
+  type: null
+  description: "At 18th level, a strategist gains the ability not only to improve\
+    \ his allies' abilities, but also to disrupt the teamwork of his enemies. Whenever\
+    \ the strategist uses the tactician ability, he can choose to cancel out the effects\
+    \ of one teamwork feat employed by any of his opponents within 30 feet instead\
+    \ of granting the use of a teamwork feat to his allies.\nThis ability replaces\
+    \ the cavalier's 18th-level bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

@@ -1,0 +1,57 @@
+id: "class:paladin#chaos_knight"
+name: "Chaos Knight"
+description: ""
+modifications:
+- add: "ability:entropic_touch#paladin_chaos_knight"
+  remove:
+  - "ability:lay_on_hands#paladin"
+- add: "ability:blessings_of_the_maelstrom#paladin_chaos_knight"
+  remove:
+  - "ability:mercy#paladin"
+- add: "ability:aura_of_chaos#paladin_chaos_knight"
+  remove:
+  - "ability:aura_of_faith#paladin"
+features:
+- id: "ability:entropic_touch#paladin_chaos_knight"
+  name: "Entropic Touch"
+  label: null
+  type: null
+  description: "At 2nd level, a chaos knight can employ the forces of entropy with\
+    \ a touch to shatter a mind-affecting spell or effect currently affecting an ally.\
+    \ As a standard action, he can touch a creature to grant that creature a new saving\
+    \ throw against one mind-affecting effect, with a bonus on the save equal to one-third\
+    \ the chaos knight's level (minimum +0). If the chaos knight targets himself,\
+    \ he can use this ability as a swift action. A chaos knight can use this ability\
+    \ a number of times per day equal to half his paladin level + his Charisma modifier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Plane-Hopper's Handbook"
+- id: "ability:blessings_of_the_maelstrom#paladin_chaos_knight"
+  name: "Blessings of the Maelstrom"
+  label: null
+  type: null
+  description: "At 3rd level, a chaos knight can harness the unpredictable essence\
+    \ of the Maelstrom to bless a creature. When he uses his entropic touch ability,\
+    \ the chaos knight can grant the touched creature a blessing from the table below\
+    \ that lasts for a number of rounds equal to 1 + the chaos knight's Charisma modifier\
+    \ (minimum 1 round). Only one creature can have this blessing at a time. If another\
+    \ creature gains the blessing, the previous blessing ends. The creature rolls\
+    \ 1d4 and compares the result to the table below to determine the blessing. If\
+    \ the chaos knight targets himself with the blessing, he can roll twice and choose\
+    \ his preferred result.\nAt 5th level and every 3 levels thereafter, the chaos\
+    \ knight can grant a blessing to one additional creature at a time."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Plane-Hopper's Handbook"
+- id: "ability:aura_of_chaos#paladin_chaos_knight"
+  name: "Aura of Chaos"
+  label: null
+  type: null
+  description: "At 14th level, a chaos knight treats his weapons as chaos-aligned\
+    \ for the purposes of bypassing damage reduction. In addition, the chaos knight\
+    \ treats attacks targeting enemies within 10 feet of him as chaos-aligned for\
+    \ the purpose of overcoming damage reduction."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Plane-Hopper's Handbook"
+source: "Pathfinder Player Companion: Plane-Hopper's Handbook"

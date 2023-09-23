@@ -1,0 +1,60 @@
+id: "class:magus#beastblade"
+name: "Beastblade"
+description: ""
+modifications:
+- add: "ability:familiar#magus_beastblade"
+  remove:
+  - "ability:the_magus_arcana_gained_at_3rd_level#magus"
+- add: "ability:tandem_touch#magus_beastblade"
+  remove:
+  - "ability:spell_recall#magus"
+- add: "ability:familiar_pool#magus_beastblade"
+  remove:
+  - "ability:knowledge_pool#magus"
+- add: "ability:familiar_spellstrike#magus_beastblade"
+  remove:
+  - "ability:improved_spell_recall#magus"
+features:
+- id: "ability:familiar#magus_beastblade"
+  name: "Familiar"
+  label: null
+  type: null
+  description: "At 3rd level, the beastblade gains the familiar magus arcana."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:tandem_touch#magus_beastblade"
+  name: "Tandem Touch"
+  label: null
+  type: null
+  description: "At 4th level, while the beastblade's familiar is holding the charge\
+    \ for a touch spell, the beastblade can cast another spell without discharging\
+    \ the familiar's held charge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:familiar_pool#magus_beastblade"
+  name: "Familiar Pool"
+  label: null
+  type: null
+  description: "At 7th level, when a beastblade prepares his magus spells, he can\
+    \ expend points from his arcane pool (up to a maximum number of points equal to\
+    \ his Intelligence modifier) to empower his familiar. For each point expended\
+    \ in this way, the familiar can cast one magus spell as a spell-like ability once\
+    \ that day. Each spell selected must be 3 spell levels lower than the highest\
+    \ spell level the beastblade can cast, and can't require a material component\
+    \ that costs more than 1 gp."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+- id: "ability:familiar_spellstrike#magus_beastblade"
+  name: "Familiar Spellstrike"
+  label: null
+  type: null
+  description: "At 11th level, whenever a beastblade's familiar successfully delivers\
+    \ a touch spell against a creature the magus threatens, the target provokes an\
+    \ attack of opportunity from the magus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Familiar Folio"
+source: "Pathfinder Player Companion: Familiar Folio"

@@ -1,0 +1,35 @@
+id: "class:druid#feral_shifter"
+name: "Feral Shifter"
+description: ""
+modifications:
+- add: "ability:animal_focus#druid_feral_shifter"
+  remove:
+  - "ability:nature_bond#druid"
+- add: "ability:second_animal_focus#druid_feral_shifter"
+  remove:
+  - "ability:timeless_body#druid"
+  - "ability:venom_immunity_a_thousand_faces#druid"
+features:
+- id: "ability:animal_focus#druid_feral_shifter"
+  name: "Animal Focus"
+  label: null
+  type: null
+  description: "At 1st level, as a swift action, a feral shifter can take on the aspect\
+    \ of an animal, gaining a bonus or special ability based on the type of animal\
+    \ emulated. This functions as the hunter's animal focus class feature. The feral\
+    \ shifter can use this ability for a number of minutes per day equal to her druid\
+    \ level. This duration does not need to be consecutive, but it must be spent in\
+    \ 1-minute increments. She can emulate only one animal at a time."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:second_animal_focus#druid_feral_shifter"
+  name: "Second Animal Focus"
+  label: null
+  type: null
+  description: "At 9th level, when a feral shifter uses her animal focus ability,\
+    \ she selects two different animal aspects for herself instead of one."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

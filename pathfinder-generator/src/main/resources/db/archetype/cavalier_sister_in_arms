@@ -1,0 +1,79 @@
+id: "class:cavalier#sister_in_arms"
+name: "Sister-In-Arms"
+description: ""
+modifications:
+- add: "ability:halfhearted_challenge#cavalier_sister_in_arms"
+  remove:
+  - "ability:challenge#cavalier"
+- add: "ability:maidens_order#cavalier_sister_in_arms"
+  remove:
+  - "ability:mount#cavalier"
+  - "ability:order#cavalier"
+- add: "ability:devoted_defender#cavalier_sister_in_arms"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:maidens_loyalty#cavalier_sister_in_arms"
+  remove:
+  - "ability:expert_trainer#cavalier"
+- add: "ability:dedicated_commander#cavalier_sister_in_arms"
+  remove:
+  - "ability:mighty_charge#cavalier"
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:halfhearted_challenge#cavalier_sister_in_arms"
+  name: "Halfhearted Challenge"
+  label: null
+  type: null
+  description: "Sisters-in-arms vigilantly protect their allies, weakening their focus\
+    \ on their challenged foe. A sister-in-arms adds only half her cavalier level\
+    \ (minimum 1) to damage rolls against her challenge target."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:maidens_order#cavalier_sister_in_arms"
+  name: "Maiden's Order"
+  label: null
+  type: null
+  description: "A sister-in-arms does not choose an order. Instead, she is considered\
+    \ to belong to both the order of the dragon and the order of the lion, and she\
+    \ gains all of the benefits of both orders (including additional class skills\
+    \ and conditional skill bonuses, additional challenge benefits, and order abilities)\
+    \ at the appropriate levels. At 1st level, a sister-in-arms chooses which order's\
+    \ edicts she must follow; generally, those of the fanged crown choose the order\
+    \ of the lion's edicts, while those of the scarlet rose choose the order of the\
+    \ dragon's edicts."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:devoted_defender#cavalier_sister_in_arms"
+  name: "Devoted Defender"
+  label: null
+  type: null
+  description: "Sisters-in-arms cling to their fellow Gray Maidens as closely as family\
+    \ and protect them with intense devotion. At 3rd level, a sister-in-arms gains\
+    \ Bodyguard as a bonus feat (she does not need to meet the feat's prerequisite)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:maidens_loyalty#cavalier_sister_in_arms"
+  name: "Maiden's Loyalty"
+  label: null
+  type: null
+  description: "The loyalty of a sister-in-arms is absolute. At 4th level, a sister-in-arms\
+    \ gains a +2 bonus on Will saves against any effect that would compel her to attack\
+    \ or betray her allies. This bonus increases by 1 for every 4 levels beyond 4th."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:dedicated_commander#cavalier_sister_in_arms"
+  name: "Dedicated Commander"
+  label: null
+  type: null
+  description: "A sister-in-arms can inspire and direct allies with great efficiency.\
+    \ At 11th level, the sister-in-arms can use lion's call or strategy order as a\
+    \ move action, rather than as a standard action. At 20th level, she can use act\
+    \ as one, lion's call, or strategy order as a swift or move action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

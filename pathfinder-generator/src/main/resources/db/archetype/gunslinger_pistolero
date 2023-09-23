@@ -1,0 +1,37 @@
+id: "class:gunslinger#pistolero"
+name: "Pistolero"
+description: "While most gunslingers have favorite firearms, there are those rare\
+  \ ones who choose to specialize in one-handed firearms exclusively. These gunslingers\
+  \ are called pistoleros. While they lack the flexibility of being able to pick up\
+  \ any kind of firearm and use it with reasonable proficiency, they are crackerjack\
+  \ shots with pistols and similar firearms. Their skill and aim with these firearms\
+  \ at close range is second to none, and they rarely misfire with these weapons."
+modifications:
+- add: "ability:deeds#gunslinger_pistolero"
+  remove:
+  - "ability:the_deadeye_deed#gunslinger"
+- add: "ability:pistol_training#gunslinger_pistolero"
+  remove:
+  - "ability:gun_training_1_to_4#gunslinger"
+features:
+- id: "ability:deeds#gunslinger_pistolero"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A pistolero swaps a trio of deeds for the following."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:pistol_training#gunslinger_pistolero"
+  name: "Pistol Training"
+  label: null
+  type: null
+  description: "Starting at 5th level, a pistolero increases her skill with one-handed\
+    \ firearms. She gains a bonus on damage rolls equal to her Dexterity modifier,\
+    \ and when she misfires with a one-handed firearm, the misfire value increases\
+    \ by 2 instead of 4. Every four levels thereafter (9th, 13th, and 17th), the bonus\
+    \ on damage rolls increases by +1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

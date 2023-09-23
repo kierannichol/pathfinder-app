@@ -1,0 +1,101 @@
+id: "class:monk#softstrike_monk"
+name: "Softstrike Monk"
+description: ""
+modifications:
+- add: "ability:weapon_proficiency#monk_softstrike_monk"
+  remove:
+  - "trait:weapon_proficiency#monk"
+- add: "ability:nonlethal_strikes#monk_softstrike_monk"
+  remove:
+  - "ability:unarmed_strike#monk"
+- add: "ability:life_giving_blows#monk_softstrike_monk"
+  remove:
+  - "ability:10th_levels#monk"
+  - "ability:the_bonus_feats_gained_at_6th#monk"
+- add: "ability:wholeness_of_body_and_spirit#monk_softstrike_monk"
+  remove:
+  - "ability:wholeness_of_body#monk"
+- add: "ability:incapacitating_palm#monk_softstrike_monk"
+  remove:
+  - "ability:quivering_palm#monk"
+- add: "ability:resilient_body#monk_softstrike_monk"
+  remove:
+  - "ability:empty_body#monk"
+features:
+- id: "ability:weapon_proficiency#monk_softstrike_monk"
+  name: "Weapon Proficiency"
+  label: null
+  type: null
+  description: "A softstrike monk is proficient with the aklys, bolas, club, light\
+    \ flail, light mace, nunchaku, quarterstaff, sap, sling, and any weapon with the\
+    \ monk special quality that can deal bludgeoning damage. He is considered proficient\
+    \ only with monk weapons that can deal multiple types of damage when dealing bludgeoning\
+    \ damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:nonlethal_strikes#monk_softstrike_monk"
+  name: "Nonlethal Strikes"
+  label: null
+  type: null
+  description: "A softstrike monk focuses on blows that do not inflict deadly harm.\
+    \ When a softstrike monk deals nonlethal damage with his unarmed strikes, his\
+    \ monk level is treated as 4 levels higher for the purposes of determining the\
+    \ damage he deals (to a maximum of 4d8 at 20th level for a Medium monk). When\
+    \ dealing lethal damage with his unarmed strikes, his monk level is treated as\
+    \ if it were 4 levels lower (minimum 1st level) for the purpose of determining\
+    \ damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:life_giving_blows#monk_softstrike_monk"
+  name: "Life-Giving Blows"
+  label: null
+  type: null
+  description: "At 6th level, a softstrike monk can force a piece of his life force\
+    \ into a nonliving creature to disrupt its animating essence. If he hits an undead\
+    \ foe with an unarmed attack, he can spend 1 ki point as a free action to remove\
+    \ the target's immunity to nonlethal damage for a number of minutes equal to his\
+    \ Wisdom modifier. If, during this time, the target's nonlethal damage exceeds\
+    \ its current hit points, it is destroyed. At 10th level, a softstrike monk can\
+    \ also use this ability against constructs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:wholeness_of_body_and_spirit#monk_softstrike_monk"
+  name: "Wholeness of Body and Spirit"
+  label: null
+  type: null
+  description: "At 7th level, a softstrike monk can use wholeness of body on both\
+    \ himself and other creatures, though it heals only nonlethal damage. If he uses\
+    \ this ability on an unconscious foe, he can spend 1 additional ki point to force\
+    \ the creature to accept a pact of life. The creature must succeed at a Will saving\
+    \ throw (DC = 10 + half the softstrike monk's level + his Wisdom modifier) or\
+    \ the pact renders it unable to directly attack the monk and any allies within\
+    \ 60 feet, as per sanctuary, for a number of days equal to the softstrike monk's\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:incapacitating_palm#monk_softstrike_monk"
+  name: "Incapacitating Palm"
+  label: null
+  type: null
+  description: "At 15th level, a softstrike monk renders the target of his quivering\
+    \ palm unconscious instead of killing the creature. Upon failing its Fortitude\
+    \ saving throw, the target is knocked unconscious for a number of minutes equal\
+    \ to the softstrike monk's level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:resilient_body#monk_softstrike_monk"
+  name: "Resilient Body"
+  label: null
+  type: null
+  description: "At 19th level, a softstrike monk's mastery of nonlethal combat lets\
+    \ him apply his techniques to his defense. A softstrike monk converts any precision\
+    \ damage he takes to nonlethal damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+source: "Pathfinder Player Companion: Martial Arts Handbook"

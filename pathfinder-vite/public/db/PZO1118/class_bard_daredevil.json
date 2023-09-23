@@ -1,0 +1,78 @@
+{
+  "id": "class:bard#daredevil",
+  "name": "Daredevil",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:inspire_courage#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "As quick at wordplay as at swordplay, daredevils are dashing heroes, inspiring their allies to match their clever repartee and acrobatic feats. Daredevils often lean toward comedy, dance, oratory, and singing."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_courage#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:agile#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:derring_do#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:derring_do#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:derring_do#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:derring_do#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:canny_foe#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:dauntless#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:scoundrels_fortune#bard_daredevil",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:versatile_performance#bard"
+        }, {
+          "featureId": "ability:well_versed#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
+        }]
+      }]
+    }
+  }
+}

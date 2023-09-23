@@ -1,0 +1,56 @@
+id: "class:monk#windstep_master"
+name: "Windstep Master"
+description: ""
+modifications:
+- add: "ability:hurricane_punch#monk_windstep_master"
+  remove:
+  - "ability:stunning_fist#monk"
+- add: "ability:wind_step#monk_windstep_master"
+  remove:
+  - "ability:slow_fall_or_the_ki_power_gained_at_4th_level_for_an_unchained_monk#monk"
+- add: "ability:swift_ki#monk_windstep_master"
+  remove:
+  - "ability:ki_pool#monk"
+features:
+- id: "ability:hurricane_punch#monk_windstep_master"
+  name: "Hurricane Punch"
+  label: null
+  type: null
+  description: "At 1st level, a windstep master gains Hurricane Punch as a bonus feat,\
+    \ even if he does not meet the prerequisites. While using this feat, he doesn't\
+    \ provoke an attack of opportunity, even if he doesn't have the Improved Bull\
+    \ Rush feat.\nAt 4th level, while using the Hurricane Punch feat, the windstep\
+    \ master can bull rush a target up to two size categories larger. At 12th level,\
+    \ the windstep master's target can be up to three size categories larger. At 20th\
+    \ level, the target can be of any size category.\nAt 8th level, when the windstep\
+    \ master uses the Hurricane Punch feat to successfully bull rush a creature, he\
+    \ can push the creature back an additional 5 feet. At 16th level, he can push\
+    \ the creature back an additional 10 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:wind_step#monk_windstep_master"
+  name: "Wind Step"
+  label: null
+  type: null
+  description: "At 4th level, the windstep master's steps become supernaturally light.\
+    \ As a move action, he can use air walk (as per the spell) up to a distance equal\
+    \ to his fast movement bonus. He must reach a solid, level surface able to support\
+    \ his weight by the end of his turn or he falls."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:swift_ki#monk_windstep_master"
+  name: "Swift Ki"
+  label: null
+  type: null
+  description: "At 4th level, the windstep master can spend 1 point from his ki pool\
+    \ as a swift action to sustain his wind step for 1 minute. During this time, the\
+    \ windstep master can remain airborne even if he doesn't reach a solid surface.\n\
+    He can also spend 1 point from his ki pool as a swift action to increase his wind\
+    \ step distance by 20 feet for 1 round.\nThe windstep master does not gain the\
+    \ ability to spend ki to increase his base speed by 20 feet for 1 round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+source: "Pathfinder Player Companion: Elemental Master's Handbook"

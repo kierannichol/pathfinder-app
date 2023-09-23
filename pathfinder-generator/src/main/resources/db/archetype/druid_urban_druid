@@ -1,0 +1,57 @@
+id: "class:druid#urban_druid"
+name: "Urban Druid"
+description: ""
+modifications:
+- add: "ability:spontaneous_casting#druid_urban_druid"
+  remove: []
+- add: "ability:lorekeeper#druid_urban_druid"
+  remove:
+  - "ability:trackless_step#druid"
+  - "ability:woodland_stride#druid"
+- add: "ability:resist_temptation#druid_urban_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:mental_strength#druid_urban_druid"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:spontaneous_casting#druid_urban_druid"
+  name: "Spontaneous Casting"
+  label: null
+  type: null
+  description: "An urban druid can channel stored spell energy into domain spells\
+    \ that she has not prepared ahead of time. She can “lose\"a prepared spell in\
+    \ order to cast any domain spell of the same level or lower."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:lorekeeper#druid_urban_druid"
+  name: "Lorekeeper"
+  label: null
+  type: null
+  description: "At 2nd level, an urban druid adds Diplomacy, Knowledge (history),\
+    \ Knowledge (local), and Knowledge (nobility) skills to her list of class skills.\
+    \ She also receives a +2 bonus on these skill checks.\nThis ability replaces a\
+    \ druid's woodland stride and trackless step abilities."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:resist_temptation#druid_urban_druid"
+  name: "Resist Temptation"
+  label: null
+  type: null
+  description: "At 4th level, an urban druid gains a +2 bonus on saves vs. divinations\
+    \ and enchantments.\nThis ability replaces the resist nature's lure ability."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:mental_strength#druid_urban_druid"
+  name: "Mental Strength"
+  label: null
+  type: null
+  description: "At 9th level, an urban druid gains immunity to charm and compulsion\
+    \ effects."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

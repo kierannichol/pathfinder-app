@@ -1,0 +1,646 @@
+id: "class:bard"
+name: "Bard"
+category: "CORE"
+description: "Untold wonders and secrets exist for those skillful enough to discover\
+  \ them. Through cleverness, talent, and magic, these cunning few unravel the wiles\
+  \ of the world, becoming adept in the arts of persuasion, manipulation, and inspiration.\
+  \ Typically masters of one or many forms of artistry, bards possess an uncanny ability\
+  \ to know more than they should and use what they learn to keep themselves and their\
+  \ allies ever one step ahead of danger. Bards are quick-witted and captivating,\
+  \ and their skills might lead them down many paths, be they gamblers or jacks-of-all-trades,\
+  \ scholars or performers, leaders or scoundrels, or even all of the above. For bards,\
+  \ every day brings its own opportunities, adventures, and challenges, and only by\
+  \ bucking the odds, knowing the most, and being the best might they claim the treasures\
+  \ of each. Role: Bards capably confuse and confound their foes while inspiring their\
+  \ allies to ever-greater daring. While accomplished with both weapons and magic,\
+  \ the true strength of bards lies outside melee, where they can support their companions\
+  \ and undermine their foes without fear of interruptions to their performances.\
+  \ Alignment: Any Hit Die: d8 Starting Wealth: 3d6 × 10 gp (average 105 gp.) In addition,\
+  \ each character begins play with an outfit worth 10 gp or less."
+source: " Pathfinder RPG Core Rulebook"
+hit_die: "D8"
+alignment: "Any"
+class_skills:
+- "skill:sleight_of_hand"
+- "skill:diplomacy"
+- "skill:bluff"
+- "skill:spellcraft"
+- "skill:acrobatics"
+- "skill:profession"
+- "skill:climb"
+- "skill:perception"
+- "skill:craft"
+- "skill:use_magic_device"
+- "skill:escape_artist"
+- "skill:intimidate"
+- "skill:stealth"
+- "skill:disguise"
+- "skill:knowledge"
+- "skill:sense_motive"
+- "skill:appraise"
+- "skill:linguistics"
+- "skill:perform"
+skill_ranks_per_level: "6"
+bab: "B"
+fort: "B"
+ref: "A"
+will: "A"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:bardic_knowledge#bard"
+  - "ability:bardic_performance#bard"
+  - "ability:cantrips#bard"
+  - "ability:countersong#bard"
+  - "ability:distraction#bard"
+  - "ability:fascinate#bard"
+  - "ability:inspire_courage#bard"
+  spells_per_day:
+    1: 1
+  spells_known:
+    0: 4
+    1: 2
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:versatile_performance#bard"
+  - "ability:well_versed#bard"
+  spells_per_day:
+    1: 2
+  spells_known:
+    0: 5
+    1: 3
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_competence#bard"
+  spells_per_day:
+    1: 3
+  spells_known:
+    0: 6
+    1: 4
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  spells_per_day:
+    1: 3
+    2: 1
+  spells_known:
+    0: 6
+    1: 4
+    2: 2
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_courage#bard"
+  - "ability:lore_master#bard"
+  spells_per_day:
+    1: 4
+    2: 2
+  spells_known:
+    0: 6
+    1: 4
+    2: 3
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:suggestion#bard"
+  - "ability:versatile_performance#bard"
+  spells_per_day:
+    1: 4
+    2: 3
+  spells_known:
+    0: 6
+    1: 4
+    2: 4
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_competence#bard"
+  spells_per_day:
+    1: 4
+    2: 3
+    3: 1
+  spells_known:
+    0: 6
+    1: 5
+    2: 4
+    3: 2
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:dirge_of_doom#bard"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 2
+  spells_known:
+    0: 6
+    1: 5
+    2: 4
+    3: 3
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_greatness#bard"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 3
+  spells_known:
+    0: 6
+    1: 5
+    2: 4
+    3: 4
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:jack_of_all_trades#bard"
+  - "ability:versatile_performance#bard"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 3
+    4: 1
+  spells_known:
+    0: 6
+    1: 5
+    2: 5
+    3: 4
+    4: 2
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_competence#bard"
+  - "ability:inspire_courage#bard"
+  - "ability:lore_master#bard"
+  spells_per_day:
+    1: 5
+    2: 4
+    3: 4
+    4: 2
+  spells_known:
+    0: 6
+    1: 6
+    2: 5
+    3: 4
+    4: 3
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:soothing_performance#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+  spells_known:
+    0: 6
+    1: 6
+    2: 5
+    3: 4
+    4: 4
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 1
+  spells_known:
+    0: 6
+    1: 6
+    2: 5
+    3: 5
+    4: 4
+    5: 2
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:frightening_tune#bard"
+  - "ability:versatile_performance#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 2
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 5
+    4: 4
+    5: 3
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_competence#bard"
+  - "ability:inspire_heroics#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 3
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 5
+    4: 4
+    5: 4
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 3
+    6: 1
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 5
+    4: 5
+    5: 4
+    6: 2
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_courage#bard"
+  - "ability:lore_master#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 4
+    5: 4
+    6: 2
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 4
+    6: 3
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:mass_suggestion#bard"
+  - "ability:versatile_performance#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 4
+    6: 3
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 4
+    6: 4
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:inspire_competence#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 5
+    6: 4
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 5
+    5: 5
+    6: 4
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#bard"
+  - "trait:weapon_proficiency#bard"
+  - "ability:deadly_performance#bard"
+  spells_per_day:
+    1: 5
+    2: 5
+    3: 5
+    4: 5
+    5: 5
+    6: 5
+  spells_known:
+    0: 6
+    1: 6
+    2: 6
+    3: 6
+    4: 6
+    5: 5
+    6: 5
+  level: 20
+spell_caster_types:
+- "arcane"
+class_features:
+- id: "trait:weapon_proficiency#bard"
+  name: "Weapon Proficiency (Bard)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:brass_knife 1"
+  - "SET proficiency:hook_hand 1"
+  - "SET proficiency:dart 1"
+  - "SET proficiency:mere_club 1"
+  - "SET proficiency:stingchuck 1"
+  - "SET proficiency:handwraps 1"
+  - "SET proficiency:light_crossbow 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:blowgun 1"
+  - "SET proficiency:spiked_gauntlet 1"
+  - "SET proficiency:sap 1"
+  - "SET proficiency:heavy_crossbow 1"
+  - "SET proficiency:unarmed 1"
+  - "SET proficiency:bayonet 1"
+  - "SET proficiency:javelin 1"
+  - "SET proficiency:brass_knuckles 1"
+  - "SET proficiency:battle_aspergillum 1"
+  - "SET proficiency:heavy_mace 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:gauntlet 1"
+  - "SET proficiency:whip 1"
+  - "SET proficiency:boarding_pike 1"
+  - "SET proficiency:cestus 1"
+  - "SET proficiency:kumade 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:kunai 1"
+  - "SET proficiency:collapsible_kumade 1"
+  - "SET proficiency:lantern_staff 1"
+  - "SET proficiency:shortbow 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:wooden_stake 1"
+  - "SET proficiency:rapier 1"
+  - "SET proficiency:spring_blade 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:light_mace 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:punching_dagger 1"
+  - "SET proficiency:sickle 1"
+  - "SET proficiency:morningstar 1"
+  - "SET proficiency:traveling_kettle 1"
+  - "SET proficiency:longsword 1"
+  - "SET proficiency:stonebow 1"
+  - "SET proficiency:longspear 1"
+  prerequisites: null
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bardic_knowledge#bard"
+  name: "Bardic Knowledge"
+  label: null
+  type: "Ex"
+  description: "A bard adds half his class level (minimum 1) to all Knowledge skill\
+    \ checks and may make all Knowledge skill checks untrained."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:cantrips#bard"
+  name: "Cantrips"
+  label: null
+  type: "Sp"
+  description: "Bard's learn a number of cantrips, or 0-level spells, as noted on\
+    \ Table: Bard Spells Known under “Spells Known.\" These spells are cast like any\
+    \ other spell, but they do not consume any slots and may be used again."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:countersong#bard"
+  name: "Countersong"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:inspire_heroics#bard"
+  name: "Inspire Heroics"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:well_versed#bard"
+  name: "Well-versed"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, the bard becomes resistant to the bardic performance\
+    \ of others, and to sonic effects in general. The bard gains a +4 bonus on saving\
+    \ throws made against bardic performance, sonic, and language-dependent effects."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:inspire_greatness#bard"
+  name: "Inspire Greatness"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:fascinate#bard"
+  name: "Fascinate"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:lore_master#bard"
+  name: "Lore Master"
+  label: null
+  type: "Ex"
+  description: "At 5th level, the bard becomes a master of lore and can take 10 on\
+    \ any Knowledge skill check that he has ranks in. A bard can choose not to take\
+    \ 10 and can instead roll normally. In addition, once per day, the bard can take\
+    \ 20 on any Knowledge skill check as a standard action. He can use this ability\
+    \ one additional time per day for every six levels he possesses beyond 5th, to\
+    \ a maximum of three times per day at 17th level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:jack_of_all_trades#bard"
+  name: "Jack-of-all-trades"
+  label: null
+  type: "Ex"
+  description: "At 10th level, the bard can use any skill, even if the skill normally\
+    \ requires him to be trained. At 16th level, the bard considers all skills to\
+    \ be class skills. At 19th level, the bard can take 10 on any skill check, even\
+    \ if it is not normally allowed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:deadly_performance#bard"
+  name: "Deadly Performance"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:dirge_of_doom#bard"
+  name: "Dirge Of Doom"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:suggestion#bard"
+  name: "Suggestion"
+  label: null
+  type: "Sp"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:distraction#bard"
+  name: "Distraction"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bardic_performance#bard"
+  name: "Bardic Performance"
+  label: null
+  type: ""
+  description: "A bard is trained to use the Perform skill to create magical effects\
+    \ on those around him, including himself if desired. He can use this ability for\
+    \ a number of rounds per day equal to 4 + his Charisma modifier. At each level\
+    \ after 1st a bard can use bardic performance for 2 additional rounds per day.\
+    \ Each round, the bard can produce any one of the types of bardic performance\
+    \ that he has mastered, as indicated by his level.Starting a bardic performance\
+    \ is a standard action, but it can be maintained each round as a free action.\
+    \ Changing a bardic performance from one effect to another requires the bard to\
+    \ stop the previous performance and start a new one as a standard action. A bardic\
+    \ performance cannot be disrupted, but it ends immediately if the bard is killed,\
+    \ paralyzed, stunned, knocked unconscious, or otherwise prevented from taking\
+    \ a free action to maintain it each round. A bard cannot have more than one bardic\
+    \ performance in effect at one time.At 7th level, a bard can start a bardic performance\
+    \ as a move action instead of a standard action. At 13th level, a bard can start\
+    \ a bardic performance as a swift action.Each bardic performance has audible components,\
+    \ visual components, or both.If a bardic performance has audible components, the\
+    \ targets must be able to hear the bard for the performance to have any effect,\
+    \ and many such performances are language dependent (as noted in the description).\
+    \ A deaf bard has a 20% chance to fail when attempting to use a bardic performance\
+    \ with an audible component. If he fails this check, the attempt still counts\
+    \ against his daily limit. Deaf creatures are immune to bardic performances with\
+    \ audible components.If a bardic performance has a visual component, the targets\
+    \ must have line of sight to the bard for the performance to have any effect.\
+    \ A blind bard has a 50% chance to fail when attempting to use a bardic performance\
+    \ with a visual component. If he fails this check, the attempt still counts against\
+    \ his daily limit. Blind creatures are immune to bardic performances with visual\
+    \ components.List of Bardic Performances:"
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "trait:armor_proficiency#bard"
+  name: "Armor Proficiency (Bard)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:mass_suggestion#bard"
+  name: "Mass Suggestion"
+  label: null
+  type: "Sp"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:frightening_tune#bard"
+  name: "Frightening Tune"
+  label: null
+  type: "Sp"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:soothing_performance#bard"
+  name: "Soothing Performance"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:inspire_courage#bard"
+  name: "Inspire Courage"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:versatile_performance#bard"
+  name: "Versatile Performance"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, a bard can choose one type of Perform skill. He can\
+    \ use his bonus in that skill in place of his bonus in associated skills. When\
+    \ substituting in this way, the bard uses his total Perform skill bonus, including\
+    \ class skill bonus, in place of its associated skill's bonus, whether or not\
+    \ he has ranks in that skill or if it is a class skill. At 6th level, and every\
+    \ 4 levels thereafter, the bard can select an additional type of Perform to substitute.The\
+    \ types of Perform and their associated skills are: Act (Bluff, Disguise), Comedy\
+    \ (Bluff, Intimidate), Dance (Acrobatics, Fly), Keyboard Instruments (Diplomacy,\
+    \ Intimidate), Oratory (Diplomacy, Sense Motive), Percussion (Handle Animal, Intimidate),\
+    \ Sing (Bluff, Sense Motive), String (Bluff, Diplomacy), and Wind (Diplomacy,\
+    \ Handle Animal)."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:inspire_competence#bard"
+  name: "Inspire Competence"
+  label: null
+  type: "Su"
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"

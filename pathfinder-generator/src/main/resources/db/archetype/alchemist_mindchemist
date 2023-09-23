@@ -1,0 +1,37 @@
+id: "class:alchemist#mindchemist"
+name: "Mindchemist"
+description: "While most alchemists use mutagens to boost their physical ability at\
+  \ the cost of mental ability, some use alchemy for the opposite purpose--to boost\
+  \ the power of the mind and memory. A mindchemist can reach incredible levels of\
+  \ mental acuity, but suffers lingering debilitating effects to his physique."
+modifications:
+- add: "ability:cognatogen#alchemist_mindchemist"
+  remove:
+  - "ability:the_mutagen_class_ability_a_mindchemist_cannot_create_mutagens_unless_he_selects_mutagen_as_a_discovery#alchemist"
+- add: "ability:perfect_recall#alchemist_mindchemist"
+  remove:
+  - "ability:poison_use#alchemist"
+features:
+- id: "ability:cognatogen#alchemist_mindchemist"
+  name: "Cognatogen"
+  label: null
+  type: null
+  description: "At 1st level, a mindchemist learns how to create a cognatogen, as\
+    \ per the cognatogen discovery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:perfect_recall#alchemist_mindchemist"
+  name: "Perfect Recall"
+  label: null
+  type: null
+  description: "At 2nd level, a mindchemist has honed his memory. When making a Knowledge\
+    \ check, he may add his Intelligence bonus on the check a second time. Thus, a\
+    \ mindchemist with 5 ranks in Knowledge (history) and a +2 Intelligence bonus\
+    \ has a total skill bonus of +9 (5 + 2 + 2) using this ability. The mindchemist\
+    \ can also use this ability when making an Intelligence check to remember something.\n\
+    This ability replaces poison use."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

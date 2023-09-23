@@ -1,0 +1,27 @@
+casting_time: "1 round"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:make_lost"
+name: "Make Lost"
+description: "You strip the targets of their senses of direction and recent memories\
+  \ of travel. They immediately forget the route they took in the last hour (but not\
+  \ details of encounters along the way) and become lost (Pathfinder RPG Core Rulebook\
+  \ 424)."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature/level, no two of which can be more than 30 ft. apart"
+duration: "instantaneous"
+school: "enchantment (compulsion) [mind-affecting]"
+levels:
+- class_id: "class:bard"
+  level: 2
+- class_id: "class:druid"
+  level: 2
+- class_id: "class:hunter"
+  level: 1
+- class_id: "class:ranger"
+  level: 1
+- class_id: "class:skald"
+  level: 2
+source: "Inner Sea Monster Codex"

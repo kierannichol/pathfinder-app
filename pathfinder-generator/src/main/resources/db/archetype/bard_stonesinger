@@ -1,0 +1,72 @@
+id: "class:bard#stonesinger"
+name: "Stonesinger"
+description: ""
+modifications:
+- add: "ability:earth_magic#bard_stonesinger"
+  remove:
+  - "ability:spellcasting#bard"
+- add: "ability:stone_song#bard_stonesinger"
+  remove:
+  - "ability:bardic_performance#bard"
+- add: "ability:tremor#bard_stonesinger"
+  remove:
+  - "ability:countersong#bard"
+- add: "ability:quake#bard_stonesinger"
+  remove:
+  - "ability:dirge_of_doom#bard"
+features:
+- id: "ability:earth_magic#bard_stonesinger"
+  name: "Earth Magic"
+  label: null
+  type: null
+  description: "A stonesinger is treated as having the Eschew Materials feat so long\
+    \ as he is touching natural or manufactured stone. Additionally, a stonesinger\
+    \ adds the following spells to the bard spell list at the listed level: 1st--magic\
+    \ stone, 2nd--stone shield, 3rd--stone shape, 4th--earth glide, 5th--stoneskin,\
+    \ 6th--stone tell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:stone_song#bard_stonesinger"
+  name: "Stone Song"
+  label: null
+  type: null
+  description: "A stonesinger's bardic performance is a subsonic vibration that resonates\
+    \ from his body and travels through solid rock. This vibration is subtle enough\
+    \ to not be heard, though creatures with the tremorsense universal monster ability\
+    \ can distinctly hear the stone song out to a range of 100 feet per bard level.\
+    \ All allies within 30 feet of the stonesinger benefit from stone song, perceiving\
+    \ the effect due to proximity. An allied creature with tremorsense benefits from\
+    \ stone song as long as it's within the extended range, provided that there is\
+    \ an unobstructed path of solid earth between the creature and stonesinger. Natural\
+    \ and manufactured stone does not inhibit stone song's range. A stonesinger must\
+    \ use Perform (song) or Perform (oratory) for this bardic performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:tremor#bard_stonesinger"
+  name: "Tremor"
+  label: null
+  type: null
+  description: "As part of another bardic performance, a stonesinger can cause the\
+    \ ground within 30 feet to tremble, throwing enemies off balance and causing them\
+    \ to take a –1 circumstance penalty to AC as long as the stonesinger continues\
+    \ performing. This penalty increases by 1 at 5th level and every 6 levels thereafter.\
+    \ Creatures levitating or flying above the ground are unaffected by this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+- id: "ability:quake#bard_stonesinger"
+  name: "Quake"
+  label: null
+  type: null
+  description: "At 8th level, a stonesinger causes the ground to shudder and buckle\
+    \ with his song. All enemies within 30 feet of the stonesinger must succeed at\
+    \ a Reflex save (DC = 10 + half the stonesinger's level + his Charisma bonus)\
+    \ when he begins a bardic performance or be knocked prone. Prone and flying creatures,\
+    \ as well as creatures with the earth glide universal monster ability, are unaffected\
+    \ by this performance."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the Darklands"
+source: "Pathfinder Player Companion: Heroes of the Darklands"

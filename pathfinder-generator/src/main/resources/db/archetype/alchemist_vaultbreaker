@@ -1,0 +1,60 @@
+id: "class:alchemist#vaultbreaker"
+name: "Vaultbreaker"
+description: ""
+modifications:
+- add: "ability:breaking_and_entering#alchemist_vaultbreaker"
+  remove:
+  - "ability:the_brew_potion_bonus_feat#alchemist"
+- add: "ability:rogue_talents#alchemist_vaultbreaker"
+  remove:
+  - "ability:discoveries#alchemist"
+- add: "ability:safecracking#alchemist_vaultbreaker"
+  remove:
+  - "ability:bombs#alchemist"
+  - "ability:throw_anything_bonus_feat#alchemist"
+- add: "ability:enhanced_safecracking#alchemist_vaultbreaker"
+  remove:
+  - "ability:poison_use#alchemist"
+  - "ability:bombs#alchemist"
+features:
+- id: "ability:breaking_and_entering#alchemist_vaultbreaker"
+  name: "Breaking and Entering"
+  label: null
+  type: null
+  description: "A vaultbreaker gains Stealth as a class skill and can disarm magical\
+    \ traps as if he were a rogue with the trapfinding ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:rogue_talents#alchemist_vaultbreaker"
+  name: "Rogue Talents"
+  label: null
+  type: null
+  description: "A vaultbreaker can choose any of the following rogue talents in place\
+    \ of a discovery: expert leaper, fast stealth, ledge walker, nimble climber, or\
+    \ wall scramble."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:safecracking#alchemist_vaultbreaker"
+  name: "Safecracking"
+  label: null
+  type: null
+  description: "At 1st level, a vaultbreaker's bombs can help him disable locks. He\
+    \ gains penetrating charge as a bonus discovery. Because this ability replaces\
+    \ Throw Anything, the vaultbreaker's bombs do not add his Intelligence bonus to\
+    \ damage rolls."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:enhanced_safecracking#alchemist_vaultbreaker"
+  name: "Enhanced Safecracking"
+  label: null
+  type: null
+  description: "At 3rd level, a vaultbreaker gains incendiary charge as a bonus discovery,\
+    \ and his incendiary charges ignore 10 points of an object's hardness instead\
+    \ of 5."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+source: "Pathfinder Roleplaying Game Villain Codex"

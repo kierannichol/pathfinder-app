@@ -1,0 +1,40 @@
+id: "class:bard#wasteland_chronicler"
+name: "Wasteland Chronicler"
+description: "Some explore the farthest reaches of desolate wastelands, seeking to\
+  \ unlock the mysteries found there and meet the inhabitants of such regions, and\
+  \ chronicle their findings."
+modifications:
+- add: "ability:wasteland_knowledge#bard_wasteland_chronicler"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:wasteland_specialist#bard_wasteland_chronicler"
+  remove:
+  - "ability:inspire_competence#bard"
+features:
+- id: "ability:wasteland_knowledge#bard_wasteland_chronicler"
+  name: "Wasteland Knowledge"
+  label: null
+  type: null
+  description: "A wasteland chronicler adds half his level (minimum +1) as a bonus\
+    \ on Knowledge (geography), Knowledge (local), Knowledge (nature), Knowledge (planes),\
+    \ and Survival checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+- id: "ability:wasteland_specialist#bard_wasteland_chronicler"
+  name: "Wasteland Specialist"
+  label: null
+  type: null
+  description: "At 3rd level and every 5 levels thereafter, the wasteland chronicler\
+    \ gains the benefits of the favored terrain ranger class feature, but the wasteland\
+    \ chronicler can choose only cold, desert, mountain, or swamp from the ranger's\
+    \ favored terrain list. In addition, the wasteland chronicler adds half his level\
+    \ (minimum 1) as a bonus on Diplomacy checks to influence the attitude of wasteland\
+    \ dwellers.\nIf the wasteland chronicler has the favored terrain ability from\
+    \ any other classes, the levels from these different sources stack for the purposes\
+    \ of improving the bonuses of selected favored terrains and choosing new favored\
+    \ terrains."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the Wastes"
+source: "Pathfinder Player Companion: People of the Wastes"

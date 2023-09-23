@@ -1,0 +1,71 @@
+id: "class:monk#lifting_hand"
+name: "Lifting Hand"
+description: ""
+modifications:
+- add: "ability:savage_toss#monk_lifting_hand"
+  remove:
+  - "ability:stunning_fist#monk"
+- add: "ability:bonus_feats#monk_lifting_hand"
+  remove:
+  - "ability:the_monks_bonus_feats#monk"
+- add: "ability:joint_lock#monk_lifting_hand"
+  remove:
+  - "ability:the_bonus_feat_gained_at_10th_level#monk"
+- add: "ability:counter_throw#monk_lifting_hand"
+  remove:
+  - "ability:abundant_step#monk"
+features:
+- id: "ability:savage_toss#monk_lifting_hand"
+  name: "Savage Toss"
+  label: null
+  type: null
+  description: "A lifting hand gains Savage Slam as a bonus feat, even if she doesn't\
+    \ meet the prerequisites.\nAt 4th level, when the lifting hand succeeds at her\
+    \ grapple combat maneuver check while using the Savage Slam feat and her grapple\
+    \ combat maneuver check result exceeds the opponent's CMD by at least 5, she can\
+    \ throw the opponent into an non-adjacent square. The lifting hand can throw the\
+    \ opponent 10 feet, plus an additional 5 feet for every 5 by which her grapple\
+    \ check exceeds the opponent's CMD. For instance, if the lifting monk exceeds\
+    \ the target's CMD by 15, she can throw the target into a square 20 feet away.\n\
+    At 8th level, when using Savage Slam, the lifting hand's target no longer receives\
+    \ a bonus to its CMD when the lifting hand attempts to throw it into a dangerous\
+    \ area."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:bonus_feats#monk_lifting_hand"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "A lifting hand adds Whirling Hold* to her list of bonus feats at 1st\
+    \ level. At 6th level, she adds Dramatic Slam* and Overhead Flip*. At 10th level,\
+    \ she adds Savage Leap*."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:joint_lock#monk_lifting_hand"
+  name: "Joint Lock"
+  label: null
+  type: null
+  description: "At 10th level, when a lifting hand succeeds at a combat maneuver check\
+    \ to maintain a grapple, instead of choosing to damage, move, pin, or tie up the\
+    \ opponent, she can instead force one of the target's limbs into an agonizing\
+    \ position. The target becomes sickened as long as the lifting hand maintains\
+    \ the grapple. When the grapple is released or broken, the target is fatigued\
+    \ for a number of rounds equal to the lifting hand's level. This is a pain effect."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:counter_throw#monk_lifting_hand"
+  name: "Counter-Throw"
+  label: null
+  type: null
+  description: "At 12th level, a lifting hand can ready an action to trigger if a\
+    \ creature tries to attack her.\nWhen the readied action triggers, the lifting\
+    \ hand can attempt a grapple combat maneuver check with a +2 bonus. If she succeeds,\
+    \ she grapples the creature and negates the triggering attack, and she can spend\
+    \ an immediate action to use the Savage Slam feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+source: "Pathfinder Player Companion: Martial Arts Handbook"

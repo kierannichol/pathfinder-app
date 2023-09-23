@@ -1,0 +1,84 @@
+id: "class:investigator#tekritanin_arbiter"
+name: "Tekritanin Arbiter"
+description: ""
+modifications:
+- add: "ability:tekritanin#investigator_tekritanin_arbiter"
+  remove:
+  - "ability:trapfinding#investigator"
+- add: "ability:expert_mediator#investigator_tekritanin_arbiter"
+  remove:
+  - "ability:poison_lore#investigator"
+- add: "ability:hidden_meaning#investigator_tekritanin_arbiter"
+  remove:
+  - "ability:poison_resistance#investigator"
+- add: "ability:fluent_speaker#investigator_tekritanin_arbiter"
+  remove:
+  - "ability:trap_sense#investigator"
+features:
+- id: "ability:tekritanin#investigator_tekritanin_arbiter"
+  name: "Tekritanin"
+  label: null
+  type: null
+  description: "A Tekritanin arbiter gains Tekritanin as a bonus language. Tekritanin\
+    \ is a fluid and evolving hybrid tongue which shares roots with many modern languages.\
+    \ When the arbiter speaks Tekritanin, any creature that speaks a common human\
+    \ language will understand him well enough to allow the arbiter to use the Diplomacy\
+    \ skill or affect the creature with language-dependent effects. At the GM's discretion,\
+    \ some human languages might be too divergent or unrelated to Tekritanin to use\
+    \ this ability immediately. In this case, the arbiter must interact with creatures\
+    \ speaking the language for at least 1 hour to permanently apply this ability\
+    \ to the foreign language. A Tekritanin arbiter adds 1/2 his level (minimum 1)\
+    \ to Linguistics checks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:expert_mediator#investigator_tekritanin_arbiter"
+  name: "Expert Mediator"
+  label: null
+  type: null
+  description: "A Tekritanin arbiter learns to forge lasting harmony between enemies.\
+    \ At 2nd level, whenever the arbiter uses the Diplomacy skill to improve the starting\
+    \ attitude of a creature, that attitude shift lasts for 24 hours instead of 1d4\
+    \ hours, barring any circumstance or event that causes it to be decreased. If\
+    \ the arbiter spends 1 minute continuously interacting with a creature, he can\
+    \ attempt a Sense Motive check (DC = 10 + the creature's Bluff skill bonus) to\
+    \ identify the creature's starting attitude (per the Diplomacy skill) in regard\
+    \ to all other creatures present (including himself ). With this understanding,\
+    \ the arbiter can use the Diplomacy skill to improve a target's attitude toward\
+    \ any other creature present. This functions as if using the Diplomacy skill to\
+    \ improve the target's attitude toward the arbiter, but instead uses the Diplomacy\
+    \ DC determined by the target's starting attitude toward the creature of the arbiter's\
+    \ choosing."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:hidden_meaning#investigator_tekritanin_arbiter"
+  name: "Hidden Meaning"
+  label: null
+  type: null
+  description: "A Tekritanin arbiter's deep knowledge of language provides him protection\
+    \ from effects that require communication. At 2nd level, he gains a +2 bonus on\
+    \ all saving throws against language-dependent effects. This bonus increases to\
+    \ +4 at 5th level and to +6 at 8th level. At 11th level, he gains immunity to\
+    \ language-dependent effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:fluent_speaker#investigator_tekritanin_arbiter"
+  name: "Fluent Speaker"
+  label: null
+  type: null
+  description: "At 3rd level, a Tekritanin arbiter learns to speak one language with\
+    \ the skill of a native speaker. He chooses one language he knows and gains a\
+    \ +1 bonus on Disguise checks to appear as an individual native to any region\
+    \ where the language is primarily spoken. In addition, he gains a +1 bonus on\
+    \ both Diplomacy checks to change initial attitudes and Sense Motive checks to\
+    \ detect falsehoods when dealing with individuals with the selected language as\
+    \ their native language. At 6th level and every 3 levels thereafter, these bonuses\
+    \ increase by 1 and the Tekritanin arbiter can select one additional language\
+    \ that his bonuses apply to, up to a maximum of +6 each for six languages at 18th\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+source: "Pathfinder Player Companion: Blood of the Ancients"

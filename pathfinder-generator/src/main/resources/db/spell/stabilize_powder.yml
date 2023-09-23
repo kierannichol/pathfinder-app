@@ -1,0 +1,24 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates (harmless, object)"
+spell_resistance: "yes (harmless, object)"
+id: "spell:stabilize_powder"
+name: "Stabilize Powder"
+description: "Ammunition currently loaded in the target firearm is less prone to misfire.\
+  \ Decrease the misfire range by 1 + 1 per five caster levels (maximum +5, minimum\
+  \ misfire 0) for the ammunition currently loaded into that firearm."
+prerequisites: ""
+components: "V, S, M (a few drops of liquor)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "1 loaded firearm"
+duration: "instantaneous"
+school: "transmutation"
+levels:
+- class_id: "class:arcanist"
+  level: 2
+- class_id: "class:sorcerer"
+  level: 2
+- class_id: "class:witch"
+  level: 2
+- class_id: "class:wizard"
+  level: 2
+source: "Ultimate Combat"

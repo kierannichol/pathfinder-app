@@ -1,0 +1,121 @@
+id: "class:magus#iron_ring_striker_magus_archetype"
+name: "Iron-Ring Striker (Magus Archetype)"
+description: ""
+modifications:
+- add: "ability:weapon_proficiency#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:the_maguss_weapon_proficiency#magus"
+- add: "ability:diminished_spellcasting#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:the_maguss_spellcasting#magus"
+- add: "ability:arcane_pool#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:arcane_pool#magus"
+- add: "ability:unarmed_spellstrike#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:spellstrike#magus"
+- add: "ability:bonus_feat#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:the_bonus_feat_gained_at_5th_level#magus"
+- add: "ability:empower_combat#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:medium_armor#magus"
+  - "ability:heavy_armor#magus"
+- add: "ability:spell_maneuvers#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:knowledge_pool#magus"
+- add: "ability:reflexive_spell_maneuver#magus_iron_ring_striker_magus_archetype"
+  remove:
+  - "ability:counterstrike#magus"
+features:
+- id: "ability:weapon_proficiency#magus_iron_ring_striker_magus_archetype"
+  name: "Weapon Proficiency"
+  label: null
+  type: null
+  description: "An iron-ring striker is not proficient with martial weapons."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:diminished_spellcasting#magus_iron_ring_striker_magus_archetype"
+  name: "Diminished Spellcasting"
+  label: null
+  type: null
+  description: "An iron-ring striker has one fewer spell slot of each level than a\
+    \ regular magus. If this reduces his number of spell slots of a particular level\
+    \ to 0, he can cast spells of that level only if his Intelligence allows bonus\
+    \ spells of that level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:arcane_pool#magus_iron_ring_striker_magus_archetype"
+  name: "Arcane Pool"
+  label: null
+  type: null
+  description: "An iron-ring striker can use his arcane pool to enhance his unarmed\
+    \ strikes as if they were manufactured weapons. At 5th level, he can use these\
+    \ bonuses to add any of the following weapon special abilities to his weapons\
+    \ or unarmed strikes: advancing, cruel, defending, guardian, impact, invigorating,\
+    \ mimetic, negating, speed, and vicious."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:unarmed_spellstrike#magus_iron_ring_striker_magus_archetype"
+  name: "Unarmed Spellstrike"
+  label: null
+  type: null
+  description: "An iron-ring striker gains the magus spellstrike class feature. However,\
+    \ an iron-ring striker can deliver spells with spellstrike with only unarmed strikes."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:bonus_feat#magus_iron_ring_striker_magus_archetype"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 5th level, an iron-ring striker must select his bonus feat from\
+    \ this list: Improved Bull Rush, Improved Disarm, Improved Sunder, or Improved\
+    \ Trip. He doesn't need to meet the prerequisites normally required for these\
+    \ feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:empower_combat#magus_iron_ring_striker_magus_archetype"
+  name: "Empower Combat"
+  label: null
+  type: null
+  description: "At 7th level, an iron-ring striker learns to use magic to grant himself\
+    \ the power of a larger creature. As a standard action, he can expend one non-cantrip\
+    \ prepared magus spell to treat his size as if it were larger for the purposes\
+    \ of determining the size modifier to his CMB and CMD, as well as which creatures\
+    \ he can affect with combat maneuvers. For every level of the spell he sacrifices,\
+    \ his effective size increases by one step, up to a maximum of Colossal. For every\
+    \ two effective size increments he increases, he gains a +2 size bonus to Strength,\
+    \ to a maximum of +6.\nThis does not change the iron-ring striker's actual size.\
+    \ This effect lasts for 1 minute per level of the spell sacrificed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:spell_maneuvers#magus_iron_ring_striker_magus_archetype"
+  name: "Spell Maneuvers"
+  label: null
+  type: null
+  description: "At 7th level, as long as an iron-ring striker is wearing light armor\
+    \ or no armor, he can use his unarmed spellstrike ability as part of a combat\
+    \ maneuver check to bull rush, disarm, sunder, or trip an opponent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+- id: "ability:reflexive_spell_maneuver#magus_iron_ring_striker_magus_archetype"
+  name: "Reflexive Spell Maneuver"
+  label: null
+  type: null
+  description: "At 16th level, when an iron-ring striker is the target of a combat\
+    \ maneuver check to bull rush, disarm, sunder, or trip, as an immediate action\
+    \ he can target his attacker with a magus spell he has prepared with a range of\
+    \ touch. If the spell would normally require a touch attack, an iron-ring striker\
+    \ can attempt a combat maneuver check for this attack instead. The iron-ring striker\
+    \ must be wearing light armor or no armor to use reflexive spell maneuver."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Martial Arts Handbook"
+source: "Pathfinder Player Companion: Martial Arts Handbook"

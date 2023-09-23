@@ -1,0 +1,55 @@
+id: "class:rogue#escapologist"
+name: "Escapologist"
+description: ""
+modifications:
+- add: "ability:elusive#rogue_escapologist"
+  remove:
+  - "ability:trapfinding_but_counts_as_trapfinding_for_the_purposes_of_prerequisites#rogue"
+  - "ability:abilities_that_require_trapfinding#rogue"
+- add: "ability:unfettered_mind#rogue_escapologist"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:impossible_escape#rogue_escapologist"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:elusive#rogue_escapologist"
+  name: "Elusive"
+  label: null
+  type: null
+  description: "An escapologist adds 1/2 her rogue level (minimum +1) as a bonus on\
+    \ all Disable Device and Escape Artist checks. An escapologist can use Disable\
+    \ Device to disarm magical traps."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:unfettered_mind#rogue_escapologist"
+  name: "Unfettered Mind"
+  label: null
+  type: null
+  description: "At 3rd level, an escapologist can attempt an Escape Artist check as\
+    \ a full-round action to remove a mind-affecting effect currently affecting her.\n\
+    The DC of this check is equal to the effect's original save DC + 20. She cannot\
+    \ remove effects that do not allow a saving throw. She can attempt to escape even\
+    \ if paralyzed or restrained, as long as she can take purely mental actions. She\
+    \ can attempt this check against a particular effect once per round if the effect\
+    \ is measured in rounds, once per minute if the effect is measured in minutes,\
+    \ once per 10 minutes if the effect is measured in 10-minute intervals, and so\
+    \ on."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:impossible_escape#rogue_escapologist"
+  name: "Impossible Escape"
+  label: null
+  type: null
+  description: "At 8th level, as an immediate action, an escapologist can attempt\
+    \ an Escape Artist check at a –10 penalty and apply the result in place of either\
+    \ a failed Reflex save or her AC against an attack that would have hit her. If\
+    \ she succeeds, her contortions let her avoid the attack or effect entirely. Using\
+    \ this ability leaves the escapologist staggered until the end of her next turn.\
+    \ If the escapologist can't become staggered, she can't use impossible escape."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+source: "Pathfinder Roleplaying Game Occult Adventures"

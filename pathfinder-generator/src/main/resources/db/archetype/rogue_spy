@@ -1,0 +1,38 @@
+id: "class:rogue#spy"
+name: "Spy"
+description: "The best spies are like chameleons, but not only can they change their\
+  \ appearances to fit the situation, they can also change their personalities, allegiances,\
+  \ and even loves if that's what it takes to achieve their clandestine goals. Spies\
+  \ are the ultimate manipulators, and even those who commission their services sometimes\
+  \ find that they've merely served the spies' own interests."
+modifications:
+- add: "ability:skilled_liar#rogue_spy"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:poison_use#rogue_spy"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:skilled_liar#rogue_spy"
+  name: "Skilled Liar"
+  label: null
+  type: null
+  description: "Whenever a spy uses Bluff to attempt to deceive someone, she gains\
+    \ a bonus on the opposed roll equal to 1/2 her rogue level (minimum +1). This\
+    \ bonus does not apply to feint attempts or attempts to pass secret messages."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:poison_use#rogue_spy"
+  name: "Poison Use"
+  label: null
+  type: null
+  description: "A 3rd level, a spy is trained in the use of poison and cannot accidentally\
+    \ poison herself when applying poison to a blade.\nThis ability replaces trap\
+    \ sense.\nRogue Talents: The following rogue talents complement the spy archetype:\
+    \ canny observer, guileful polyglot, honeyed words, major magic*, minor magic*,\
+    \ and quick disguise."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

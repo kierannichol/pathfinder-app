@@ -1,0 +1,55 @@
+id: "class:bard#flamesinger"
+name: "Flamesinger"
+description: "Flamesingers find inspiration in the mesmerizing beauty of fire."
+modifications:
+- add: "ability:fire_music#bard_flamesinger"
+  remove:
+  - "ability:bardic_knowledge#bard"
+  - "ability:lore_master#bard"
+- add: "ability:bardic_performance#bard_flamesinger"
+  remove:
+  - "ability:inspire_courage#bard"
+- add: "ability:wildfire#bard_flamesinger"
+  remove:
+  - "ability:versatile_performance#bard"
+features:
+- id: "ability:fire_music#bard_flamesinger"
+  name: "Fire Music"
+  label: null
+  type: null
+  description: "A flamesinger gains Fire Music as a bonus feat at 1st level (without\
+    \ needing the meet the normal prerequisites). At 4th level (when she gains access\
+    \ to 2nd-level spells), she adds summon monster I and summon monster II to her\
+    \ bard spells known; every 3 levels thereafter she gains the next level of summon\
+    \ monster, until she adds summon monster VI to her spells known at 16th level.\
+    \ The flamesinger must apply the Fire Music feat's effect when casting these spells."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:bardic_performance#bard_flamesinger"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "A flamesinger gains the following bardic performance.\nBlazing Blades\
+    \ (Su) The flamesinger's song causes allies' weapons to burst into flames. To\
+    \ be affected, an ally must be able to hear the bard perform and be within 30\
+    \ feet. An affected creature's successful attacks with manufactured or natural\
+    \ weapons deal 1d4 additional points of fire damage.\nThese flames do not harm\
+    \ the weapon or its wielder. This damage stacks with other sources of fire damage,\
+    \ such as the flaming special weapon ability. At 5th level and every 6 bard levels\
+    \ thereafter, this bonus fire damage increases by 1d4 (to a maximum of 4d4 at\
+    \ 17th level). This is a fire effect that relies on audible components."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+- id: "ability:wildfire#bard_flamesinger"
+  name: "Wildfire"
+  label: null
+  type: null
+  description: "Like a raging wildfire, a flamesinger moves with blistering speed.\
+    \ At 2nd level and every 4 levels thereafter, the flamesinger gains a +5-foot\
+    \ enhancement bonus to her base speed (to a maximum of +25 feet at 18th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Elemental Master's Handbook"
+source: "Pathfinder Player Companion: Elemental Master's Handbook"

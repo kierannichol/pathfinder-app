@@ -1,0 +1,47 @@
+id: "class:fighter#tribal_fighter"
+name: "Tribal Fighter"
+description: "A tribal fighter knows that it is not the weapon that matters but the\
+  \ hand that wields it. Instead of encasing himself in metal armor like the soldiers\
+  \ fighting and dying for the so-called civilized lands do, he prefers to wear something\
+  \ he or his ancestors have killed. These relics and trophies help the tribal fighter\
+  \ attain a battle focus that allows him to perform incredible feats of violence\
+  \ with the simplest of weapons."
+modifications:
+- add: "ability:battle_focus#fighter_tribal_fighter"
+  remove:
+  - "ability:the_fighter_feat_gained_at_1st_level#fighter"
+- add: "ability:tribal_weapon_training#fighter_tribal_fighter"
+  remove:
+  - "ability:weapon_training#fighter"
+features:
+- id: "ability:battle_focus#fighter_tribal_fighter"
+  name: "Battle Focus"
+  label: null
+  type: null
+  description: "A tribal fighter learns to fight with his bare hands and wield traditional\
+    \ tribal weapons so effortlessly that they are almost extensions of his arms.\
+    \ He gains Improved Unarmed Strike as a bonus feat. For the purpose of meeting\
+    \ the prerequisites of style feats and feats that have style feats as prerequisites,\
+    \ the tribal fighter counts as having a number of skill ranks equal to his fighter\
+    \ level in all skills in which he is trained."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:tribal_weapon_training#fighter_tribal_fighter"
+  name: "Tribal Weapon Training"
+  label: null
+  type: null
+  description: "At 5th level, when a tribal fighter gains the weapon training ability,\
+    \ he must choose the tribal weapon group and doesn't later gain additional weapon\
+    \ groups, though the weapon training bonus for tribal weapons still improves at\
+    \ 9th level and every 4 levels thereafter. Additionally, if the tribal fighter\
+    \ has combat feats that apply to a specific weapon type (such as Improved Critical\
+    \ or Weapon Focus) and he has selected a weapon that belongs to the tribal weapon\
+    \ group, he can apply the benefits of that feat to all weapons that belong to\
+    \ the tribal weapon group that would legally apply (for instance, a feat that\
+    \ applies only to throwing weapons wouldn't apply to greatclubs). This benefit\
+    \ applies only to feats selected as fighter bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

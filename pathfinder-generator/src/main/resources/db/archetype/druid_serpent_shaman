@@ -1,0 +1,34 @@
+id: "class:druid#serpent_shaman"
+name: "Serpent Shaman"
+description: ""
+modifications:
+- add: "ability:totemic_summons#druid_serpent_shaman"
+  remove:
+  - "ability:a_thousand_faces#druid"
+- add: "ability:bonus_feat#druid_serpent_shaman"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:totemic_summons#druid_serpent_shaman"
+  name: "Totemic Summons"
+  label: null
+  type: null
+  description: "At 5th level, a serpent shaman may cast summon nature's ally as a\
+    \ standard action when summoning snakes, and these summoned creatures gain temporary\
+    \ hit points equal to her druid level. This ability otherwise functions as the\
+    \ bear shaman ability.\nThis ability replaces a thousand faces."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:bonus_feat#druid_serpent_shaman"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "At 9th level and every 4 levels thereafter, a serpent shaman gains\
+    \ one of the following bonus feats: Combat Expertise, Improved Feint, Skill Focus\
+    \ (Bluff ), Stealthy, or Strike Back. She must meet the prerequisites for these\
+    \ bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

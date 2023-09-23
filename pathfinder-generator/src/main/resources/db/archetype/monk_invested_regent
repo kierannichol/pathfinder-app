@@ -1,0 +1,40 @@
+id: "class:monk#invested_regent"
+name: "Invested Regent"
+description: ""
+modifications:
+- add: "ability:investiture#monk_invested_regent"
+  remove:
+  - "ability:bonus_feat#monk"
+- add: "ability:vested_power#monk_invested_regent"
+  remove: []
+features:
+- id: "ability:investiture#monk_invested_regent"
+  name: "Investiture"
+  label: null
+  type: null
+  description: "An invested regent gains a pool of investiture points, supernatural\
+    \ energy he can use to call upon amazing abilities and divine protection. The\
+    \ number of points in the invested regent's investiture pool is equal to 1/2 his\
+    \ monk level + his Charisma modifier. As long as he has at least 1 point in his\
+    \ investiture pool, the invested regent can select one of his saving throws as\
+    \ a swift action and gain a +1 sacred bonus on saving throws of that type for\
+    \ 1 round. If he spends 1 point from his investiture pool during this swift action,\
+    \ he instead gains a sacred bonus equal to his Charisma modifier on the saving\
+    \ throw selected.\nA character with this feature and the ki pool class feature\
+    \ tracks investiture points and ki points separately."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+- id: "ability:vested_power#monk_invested_regent"
+  name: "Vested Power"
+  label: null
+  type: null
+  description: "At 2nd level and every 4 monk levels thereafter, an invested regent\
+    \ can select a vested power (see the Vested Powers section below) for which he\
+    \ qualifies in place of selecting a monk bonus feat. The invested regent need\
+    \ not do so and can instead take the bonus feat, but once the decision to take\
+    \ a bonus feat or a vested power is made, he can't change it."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Heroes of the High Court"
+source: "Pathfinder Player Companion: Heroes of the High Court"

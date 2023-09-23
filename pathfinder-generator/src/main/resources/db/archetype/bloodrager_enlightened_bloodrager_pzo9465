@@ -1,0 +1,60 @@
+id: "class:bloodrager#enlightened_bloodrager_pzo9465"
+name: "Enlightened Bloodrager (PZO9465)"
+description: "Troubled by overwhelming rage and mystic forces beyond their comprehension,\
+  \ bloodragers seek peace and enlightenment. Many perish or succumb to their bloodlust\
+  \ well before reaching their goal, but those who survive eventually learn to control\
+  \ their anger and suppress the worst influences of their bloodlines."
+modifications:
+- add: "ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo9465"
+  remove:
+  - "ability:all_bonus_spells_gained_as_part_of_a_bloodline#bloodrager"
+  - "ability:spellcasting#bloodrager"
+  - "ability:bloodline_power_gained_at_1st_level#bloodrager"
+- add: "ability:enlightened_bloodrage#bloodrager_enlightened_bloodrager_pzo9465"
+  remove:
+  - "ability:bloodline_power_gained_at_1st_level#bloodrager"
+  - "ability:bloodrage#bloodrager"
+features:
+- id: "ability:enlightened_spellcasting#bloodrager_enlightened_bloodrager_pzo9465"
+  name: "Enlightened Spellcasting"
+  label: null
+  type: null
+  description: "An enlightened bloodrager's sophisticated outlook allows him to cast\
+    \ an expanded array of spells. Instead of his normal spells per day and spells\
+    \ known for his bloodrager level, an enlightened bloodrager uses the spells per\
+    \ day from the medium class. This grants him the ability to learn a number of\
+    \ 0-level spells, which are cast like any other spells, but don't consume spell\
+    \ slots and can be used again.\nThe enlightened bloodrager adds all 0-level spells\
+    \ from the sorcerer/wizard spell list to his bloodrager spell list. He also adds\
+    \ all druid spells of 4th level and lower (including 0-level spells). If a spell\
+    \ appears on both the bloodrager spell list and the druid spell list, the enlightened\
+    \ bloodrager uses the lower of the two spell levels listed for the spell. The\
+    \ bloodrager treats any druid spells he takes with this ability as bloodrager\
+    \ spells for the purposes of other abilities (such as greater bloodrage).\nAt\
+    \ 5th level and every 3 levels thereafter, the enlightened bloodrager can choose\
+    \ to learn a new spell in place of one he already knows. In effect, he loses the\
+    \ old spell in exchange for the new one. The new spell's level must be the same\
+    \ as that of the spell being exchanged, and it must be at least 1 level lower\
+    \ than the highest-level spell the enlightened bloodrager can cast. The enlightened\
+    \ bloodrager can swap only a single spell at any given level, and must choose\
+    \ whether or not to swap the spell at the same time that he gains new spells known\
+    \ for the level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+- id: "ability:enlightened_bloodrage#bloodrager_enlightened_bloodrager_pzo9465"
+  name: "Enlightened Bloodrage"
+  label: null
+  type: null
+  description: "At 4th level, while bloodraging an enlightened bloodrager takes no\
+    \ penalties to his AC, and can still use Intelligence-, Dexterity-, and Charisma-based\
+    \ skills. This ability alters bloodrage and replaces the bloodline power gained\
+    \ at 1st level. This replaces the bloodline power gained at 4th level.\nBloodline\
+    \ Feat: At 6th level, an enlightened bloodrager adds Expanded Arcana, Nameless\
+    \ One, and all feats that list Nameless One as a prerequisite to the list of feats\
+    \ he can select as a bloodline feat. This replaces the damage reduction the bloodrager\
+    \ gains at 7th, 10th, 13th, 16th, and 19th levels."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Arcane Anthology"
+source: "Pathfinder Player Companion: Arcane Anthology"

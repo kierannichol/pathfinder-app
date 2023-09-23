@@ -1,0 +1,55 @@
+{
+  "id": "class:slayer#bounty_hunter",
+  "name": "Bounty Hunter",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer AND !@modifies:ability:the_advanced_slayer_talent_gained_at_10th_level#slayer AND !@modifies:ability:the_slayers_weapon_and_armor_proficiencies#slayer AND !@modifies:ability:the_slayer_talent_gained_at_6th_level#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_advanced_slayer_talent_gained_at_10th_level#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_slayers_weapon_and_armor_proficiencies#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_slayer_talent_gained_at_6th_level#slayer",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:dirty_trick#slayer_bounty_hunter",
+          "conditionFormula": "@class:slayer\u003e\u003d2"
+        }, {
+          "featureId": "ability:submission_hold#slayer_bounty_hunter",
+          "conditionFormula": "@class:slayer\u003e\u003d6"
+        }, {
+          "featureId": "ability:incapacitate#slayer_bounty_hunter",
+          "conditionFormula": "@class:slayer\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_slayers_weapon_and_armor_proficiencies#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_6th_level#slayer"
+        }, {
+          "featureId": "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+        }]
+      }]
+    }
+  }
+}

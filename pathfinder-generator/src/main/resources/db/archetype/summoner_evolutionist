@@ -1,0 +1,51 @@
+id: "class:summoner#evolutionist"
+name: "Evolutionist"
+description: "Changing an eidolon's evolutions is normally a slow process. As a summoner\
+  \ progresses in levels, his control over his eidolon's abilities increases. But\
+  \ an evolutionist possesses greater power over his eidolon's form, and is able to\
+  \ evolve his eidolon and its abilities to meet any challenge or face any threat\
+  \ as it comes up, seemingly on a whim."
+modifications:
+- add: "ability:mutate_eidolon#summoner_evolutionist"
+  remove:
+  - "ability:makers_call#summoner"
+- add: "ability:evolve_base_form#summoner_evolutionist"
+  remove:
+  - "ability:transposition#summoner"
+- add: "ability:transmogrify#summoner_evolutionist"
+  remove:
+  - "ability:greater_shield_ally#summoner"
+features:
+- id: "ability:mutate_eidolon#summoner_evolutionist"
+  name: "Mutate Eidolon"
+  label: null
+  type: null
+  description: "At 6th level, an evolutionist can change his eidolon's evolutions\
+    \ as if he had gained a level. To mutate his eidolon, the evolutionist must perform\
+    \ an arcane ritual that requires 24 hours of uninterrupted concentration and costs\
+    \ 200 gp per summoner level in material components."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:evolve_base_form#summoner_evolutionist"
+  name: "Evolve Base Form"
+  label: null
+  type: null
+  description: "Starting at 8th level, whenever he gains a level, the evolutionist\
+    \ can change his eidolon's base form to a new base form. Once chosen, this base\
+    \ form is set until the evolutionist gains another summoner level.\nThis ability\
+    \ replaces transposition."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:transmogrify#summoner_evolutionist"
+  name: "Transmogrify"
+  label: null
+  type: null
+  description: "At 12th level, the evolutionist can cast transmogrify as a spell-like\
+    \ ability once per day without the need for a material component. This ability\
+    \ has a casting time of 1 minute."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

@@ -1,0 +1,75 @@
+id: "class:druid#arctic_druid"
+name: "Arctic Druid"
+description: ""
+modifications:
+- add: "ability:arctic_native#druid_arctic_druid"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:icewalking#druid_arctic_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:arctic_endurance#druid_arctic_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:snowcaster#druid_arctic_druid"
+  remove:
+  - "ability:venom_immunity#druid"
+- add: "ability:flurry_form#druid_arctic_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:arctic_native#druid_arctic_druid"
+  name: "Arctic Native"
+  label: null
+  type: null
+  description: "At 2nd level, an arctic druid gains a bonus on Initiative checks and\
+    \ Knowledge (geography), Perception, Stealth, and Survival checks equal to 1/2\
+    \ her druid level in cold or icy terrain, and she cannot be tracked in cold or\
+    \ icy terrain."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:icewalking#druid_arctic_druid"
+  name: "Icewalking"
+  label: null
+  type: null
+  description: "At 3rd level, an arctic druid suffers no penalty to speed or on Acrobatics,\
+    \ Climb, or Stealth checks in snowy or icy terrain or weather conditions and can\
+    \ walk across snow crusts or thin ice without breaking through.\nThis ability\
+    \ replaces trackless step."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:arctic_endurance#druid_arctic_druid"
+  name: "Arctic Endurance"
+  label: null
+  type: null
+  description: "At 4th level, an arctic druid ignores the effects of a cold climate\
+    \ as if using endure elements. She is also immune to being dazzled.\nThis ability\
+    \ replaces resist nature's lure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:snowcaster#druid_arctic_druid"
+  name: "Snowcaster"
+  label: null
+  type: null
+  description: "At 9th level, an arctic druid can see normally in ice storm, sleet\
+    \ storm, or similar natural snowstorms. In addition, she can prepare any druid\
+    \ spell with the fire subtype1 as a cold spell, with an identical effect but inflicting\
+    \ cold damage instead of fire damage.\nThis ability replaces venom immunity."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:flurry_form#druid_arctic_druid"
+  name: "Flurry Form"
+  label: null
+  type: null
+  description: "At 13th level, an arctic druid can assume the form of a swirling column\
+    \ of snow equivalent to gaseous form at will. While in this form, she gains a\
+    \ circumstance bonus on Stealth checks made in cold terrain equal to her druid\
+    \ level.\nThis ability replaces a thousand faces."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

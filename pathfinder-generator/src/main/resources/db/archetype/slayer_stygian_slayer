@@ -1,0 +1,67 @@
+id: "class:slayer#stygian_slayer"
+name: "Stygian Slayer"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#slayer_stygian_slayer"
+  remove:
+  - "ability:the_slayers_armor_proficiency#slayer"
+- add: "ability:invisibility#slayer_stygian_slayer"
+  remove:
+  - "ability:the_slayer_talent_gained_at_4th_level#slayer"
+- add: "ability:spell_use#slayer_stygian_slayer"
+  remove:
+  - "ability:stalker#slayer"
+- add: "ability:shadowy_mist_form#slayer_stygian_slayer"
+  remove:
+  - "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+features:
+- id: "ability:weapon_and_armor_proficiency#slayer_stygian_slayer"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A stygian slayer is proficient with light armor, but not with medium\
+    \ armor, heavy armor, or any kind of shield (including tower shields)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:invisibility#slayer_stygian_slayer"
+  name: "Invisibility"
+  label: null
+  type: null
+  description: "At 4th level, a stygian slayer can cast invisibility once per day,\
+    \ using his slayer level as his caster level. The slayer uses his Intelligence\
+    \ modifier for concentration checks when using this ability. The slayer can use\
+    \ this an additional time per day at 8th level and every 4 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spell_use#slayer_stygian_slayer"
+  name: "Spell Use"
+  label: null
+  type: null
+  description: "At 7th level, a stygian slayer is able to use spell completion and\
+    \ spell trigger items as if he were an arcane caster with these spells on his\
+    \ spell list: darkness, forced quiet, modify memory, nondetection, obscuring mist,\
+    \ phantom steed, shadow walk, and wizard spells of the illusion school of spell\
+    \ level 0 through 4th. The slayer's uses his class level as his caster level for\
+    \ this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:shadowy_mist_form#slayer_stygian_slayer"
+  name: "Shadowy Mist Form"
+  label: null
+  type: null
+  description: "At 10th level, a stygian slayer can transform into an inky black cloud\
+    \ of mist. This functions as gaseous form, except it also obscures vision as fog\
+    \ cloud. The slayer can use this ability for a number of minutes per day equal\
+    \ to his level. These minutes need not be consecutive, but must be used in 1-minute\
+    \ increments.\nThis ability replaces the advanced slayer talent gained at 10th\
+    \ level.\nSlayer Talents: The following slayer talents (and rogue talents) complement\
+    \ the stygian slayer archetype: bleeding attack, lasting poison, poison use*,\
+    \ powerful sneak, rogue crawl, slow reactions, surprise attack, and swift poison.\
+    \ (Those with asterisks [*] are detailed in the slayer class.)"
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

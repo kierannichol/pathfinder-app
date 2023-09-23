@@ -1,0 +1,85 @@
+id: "class:skald#battle_scion"
+name: "Battle Scion"
+description: ""
+modifications:
+- add: "ability:courtly_presence#skald_battle_scion"
+  remove:
+  - "ability:bardic_knowledge#skald"
+- add: "ability:battle_prowess#skald_battle_scion"
+  remove:
+  - "ability:the_rage_power_ability#skald"
+- add: "ability:raging_song#skald_battle_scion"
+  remove:
+  - "ability:dirge_of_doom#skald"
+  - "ability:song_of_the_fallen#skald"
+- add: "ability:once_and_future_scion#skald_battle_scion"
+  remove:
+  - "ability:master_skald#skald"
+features:
+- id: "ability:courtly_presence#skald_battle_scion"
+  name: "Courtly Presence"
+  label: null
+  type: null
+  description: "At 1st level, a battle scion's bearing radiates command and presence,\
+    \ allowing her to tower over her opponents in social situations. The battle scion\
+    \ adds 1/2 her character level to Intimidate checks, and she starts any verbal\
+    \ duel with an extra edge that she can use for the presence tactic so long as\
+    \ she is not at a significant or extreme disadvantage in the duel. However, her\
+    \ bardic knowledge ability applies to only Knowledge (geography), Knowledge (history),\
+    \ Knowledge (local), and Knowledge (nobility)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:battle_prowess#skald_battle_scion"
+  name: "Battle Prowess"
+  label: null
+  type: null
+  description: "Whenever a battle scion would gain a rage power from the skald's rage\
+    \ power ability (at 3rd level and every 3 skald levels thereafter), she can instead\
+    \ choose to gain a combat feat or teamwork feat for which she meets the prerequisites.\n\
+    Like rage powers she selects in this way, the battle scion can grant this feat\
+    \ to allies under the effect of inspired rage, as long as those allies also meet\
+    \ the prerequisites, but she must expend 2 rounds of raging song for each round\
+    \ in which she grants a combat feat or teamwork feat.\nIf the battle scion gains\
+    \ multiple feats from battle prowess, allies can use these feats to meet the prerequisites\
+    \ for other feats while they're affected by battle prowess (for example, a battle\
+    \ scion with Power Attack and Cleave from battle prowess could grant both, allowing\
+    \ allies with a +1 base attack bonus and a Strength score of 13 to gain both,\
+    \ since they can use Power Attack to qualify for Cleave)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:raging_song#skald_battle_scion"
+  name: "Raging Song"
+  label: null
+  type: null
+  description: "A battle scion gains the following raging song.\nSong of Questing\
+    \ (Su): At 10th level, the battle scion can spend 4 rounds of raging song to draw\
+    \ upon a target's honor, ambition, and sense of self in order to bind the target\
+    \ to an agreed-upon task, often a noble quest. This works like geas/quest, except\
+    \ it applies only if the target is truly willing (not magically compelled or tricked),\
+    \ and the target automatically understands the full terms of the agreement before\
+    \ deciding whether he is willing. The battle scion can offer a reward for the\
+    \ completion of the noble quest, but if she does so and fails to live up to her\
+    \ agreement, she becomes an ex-battle scion and loses all benefits gained from\
+    \ the archetype (she does not gain the abilities they replaced, either). At 14th\
+    \ level, she can offer the same quest to up to one willing creature per skald\
+    \ level. If she does so, the effect ends for all creatures as soon as anyone completes\
+    \ the quest, though only the creature who completes it earns any offered reward."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:once_and_future_scion#skald_battle_scion"
+  name: "Once and Future Scion"
+  label: null
+  type: null
+  description: "At 20th level, a battle scion becomes extremely difficult to kill.\
+    \ Whenever she is slain, as long as her body isn't destroyed, she enters a deathlike\
+    \ sleep for 3 days, after which she returns to life as per raise dead, except\
+    \ that it can restore her even if she was slain by a death effect. Spells that\
+    \ would restore her to life function as if she were dead during this time, allowing\
+    \ her to recover sooner."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

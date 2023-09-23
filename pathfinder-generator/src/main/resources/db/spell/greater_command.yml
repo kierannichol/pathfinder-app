@@ -1,0 +1,25 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:greater_command"
+name: "Greater Command"
+description: "This spell functions like command, except that up to one creature per\
+  \ level may be affected, and the activities continue beyond 1 round. At the start\
+  \ of each commanded creature's action after the first, it gets another Will save\
+  \ to attempt to break free from the spell. Each creature must receive the same command."
+prerequisites: ""
+components: "V"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: ""
+duration: "1 round/level"
+school: "enchantment (compulsion) [language-dependent, mind-affecting]"
+levels:
+- class_id: "class:cleric"
+  level: 5
+- class_id: "class:inquisitor"
+  level: 5
+- class_id: "class:oracle"
+  level: 5
+- class_id: "class:warpriest"
+  level: 5
+source: "PRPG Core Rulebook"

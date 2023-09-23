@@ -1,0 +1,468 @@
+id: "class:slayer"
+name: "Slayer"
+category: "HYBRID"
+description: "Skilled at tracking down targets, slayers are consummate hunters, living\
+  \ for the chase and the deadly stroke that brings it to a close. Slayers spend most\
+  \ of their time honing their weapon skills, studying the habits and anatomy of foes,\
+  \ and practicing combat maneuvers. Role: The slayer is elusive, and good at finding\
+  \ the opportune time and location to strike. Combining the deadliest talents of\
+  \ rangers and rogues, a slayer's abilities are all about getting into combat, dealing\
+  \ with a target, and then getting back out again. Alignment: Any. Hit Die: d10.\
+  \ Parent Classes: Ranger and rogue. Starting Wealth: 5d6 × 10 gp (average 175 gp.)\
+  \ In addition, each character begins play with an outfit worth 10 gp or less."
+source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+hit_die: "D10"
+alignment: "Any"
+class_skills:
+- "skill:swim"
+- "skill:bluff"
+- "skill:acrobatics"
+- "skill:profession"
+- "skill:climb"
+- "skill:ride"
+- "skill:heal"
+- "skill:perception"
+- "skill:craft"
+- "skill:survival"
+- "skill:intimidate"
+- "skill:stealth"
+- "skill:disguise"
+- "skill:knowledge"
+- "skill:sense_motive"
+skill_ranks_per_level: "6"
+bab: "A"
+fort: "A"
+ref: "A"
+will: "B"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:studied_target#slayer"
+  - "ability:track#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:sneak_attack#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:studied_target#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  - "ability:sneak_attack#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:stalker#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:sneak_attack#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:studied_target#slayer"
+  - "ability:advanced_talents#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:swift_tracker#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  - "ability:sneak_attack#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayers_advance#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:quarry#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:studied_target#slayer"
+  - "ability:sneak_attack#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayers_advance#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:slayer_talent#slayer"
+  - "ability:sneak_attack#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:improved_quarry#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "ability:studied_target#slayer"
+  - "ability:master_slayer#slayer"
+  - "ability:slayer_talent#slayer"
+  spells_per_day: {}
+  spells_known: {}
+  level: 20
+spell_caster_types: []
+class_features:
+- id: "ability:slayer_talent#slayer"
+  name: "Slayer Talent"
+  label: null
+  type: ""
+  description: "As a slayer gains experience, he learns a number of talents that aid\
+    \ him and confound his foes. Starting at 2nd level and every 2 levels thereafter,\
+    \ a slayer gains one slayer talent. Unless otherwise noted, a slayer cannot select\
+    \ an individual talent more than once.Talents marked with an asterisk (*) add\
+    \ effects to a slayer's sneak attack. Only one of these talents can be applied\
+    \ to an individual attack, and the decision of which to use must be made before\
+    \ the attack roll is made."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:slayers_advance#slayer"
+  name: "Slayer's Advance"
+  label: null
+  type: "Ex"
+  description: "At 13th level, a slayer can once per day move up to twice his base\
+    \ speed as a move action. He may use Stealth as part of this movement, but takes\
+    \ a –10 penalty to his check for doing so. At 17th level, he can do this twice\
+    \ per day."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:armor_proficiency#slayer"
+  name: "Armor Proficiency (Slayer)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:improved_quarry#slayer"
+  name: "Improved Quarry"
+  label: null
+  type: "Ex"
+  description: "At 19th level, the slayer's ability to hunt his quarry improves. He\
+    \ can now select a quarry as a free action, and can now take 20 while using Survival\
+    \ to track his quarry, while moving at normal speed without penalty. His insight\
+    \ bonus to attack his quarry increases to +4. If his quarry is killed or dismissed,\
+    \ he can select a new one after 10 minutes have passed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:stalker#slayer"
+  name: "Stalker"
+  label: null
+  type: "Ex"
+  description: "At 7th level, a slayer gains his studied target bonus on Disguise,\
+    \ Intimidate, and Stealth checks against his studied opponent."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:advanced_talents#slayer"
+  name: "Advanced Talents"
+  label: null
+  type: ""
+  description: "At 10th level and every 2 levels thereafter, a slayer can select one\
+    \ of the following advanced talents in place of a slayer talent."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:quarry#slayer"
+  name: "Quarry"
+  label: null
+  type: "Ex"
+  description: "At 14th level, a slayer can as a standard action denote one target\
+    \ within his line of sight as his quarry. Whenever he is following the tracks\
+    \ of his quarry, a slayer can take 10 on his Survival skill checks while moving\
+    \ at normal speed, without penalty. In addition, he gains a +2 insight bonus on\
+    \ attack rolls made against his quarry, and all critical threats against his quarry\
+    \ are automatically confirmed. A slayer can have no more than one quarry at a\
+    \ time, and the target must be selected as a studied target. He can dismiss this\
+    \ effect at any time as a free action, but he cannot select a new quarry target\
+    \ for 24 hours. If the slayer sees proof that his quarry is dead, he can select\
+    \ a new quarry target after 1 hour."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:track#slayer"
+  name: "Track"
+  label: null
+  type: "Ex"
+  description: "A slayer adds 1/2 his level (minimum 1) to Survival skill checks made\
+    \ to follow tracks."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:studied_target#slayer"
+  name: "Studied Target"
+  label: null
+  type: "Ex"
+  description: "[Errata] A slayer can study an opponent he can see as a move action.\
+    \ The slayer then gains a +1 bonus on Bluff, Knowledge, Perception, Sense Motive,\
+    \ and Survival checks attempted against that opponent, and a +1 bonus on weapon\
+    \ attack and damage rolls against it. The DCs of slayer class abilities against\
+    \ that opponent increase by 1. A slayer can only maintain these bonuses against\
+    \ one opponent at a time; these bonuses remain in effect until either the opponent\
+    \ is dead or the slayer studies a new target.If a slayer deals sneak attack damage\
+    \ to a target, he can study that target as an immediate action, allowing him to\
+    \ apply his studied target bonuses against that target (including to the normal\
+    \ weapon damage roll).At 5th, 10th, 15th, and 20th levels, the bonuses on weapon\
+    \ attack rolls, damage rolls, and skill checks and to slayer DCs against a studied\
+    \ target increase by 1. In addition, at each such interval, the slayer is able\
+    \ to maintain these bonuses against an additional studied target at the same time.\
+    \ The slayer may discard this connection to a studied target as a free action,\
+    \ allowing him to study another target in its place.At 7th level, a slayer can\
+    \ study an opponent as a move or swift action."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:swift_tracker#slayer"
+  name: "Swift Tracker"
+  label: null
+  type: "Ex"
+  description: "At 11th level, a slayer can move at his normal speed while using Survival\
+    \ to follow tracks without taking the normal –5 penalty. When moving at up to\
+    \ twice his normal speed while tracking, he takes only a –10 penalty instead of\
+    \ the normal –20."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:master_slayer#slayer"
+  name: "Master Slayer"
+  label: null
+  type: "Ex"
+  description: "At 20th level, the slayer becomes a master at capturing or killing\
+    \ his studied targets. As a standard action, he can make a single attack against\
+    \ a studied target at his full attack bonus, choosing one of the following effects:\
+    \ kill, knock unconscious for 1d4 hours, or paralyze for 2d6 rounds. If the attack\
+    \ succeeds, the target takes damage normally and must succeed at a Fortitude saving\
+    \ throw or suffer the additional effect. The DC for this save is 10 + 1/2 the\
+    \ slayer's level + the slayer's Intelligence modifier. Whether or not the target\
+    \ succeeds, it cannot be targeted by this ability again (by any slayer) for 24\
+    \ hours."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:sneak_attack#slayer"
+  name: "Sneak Attack"
+  label: null
+  type: ""
+  description: "At 3rd level, if a slayer catches an opponent unable to defend itself\
+    \ effectively from his attack, he can strike a vital spot for extra damage. The\
+    \ slayer's attack deals extra damage anytime his target would be denied a Dexterity\
+    \ bonus to AC (whether the target actually has a Dexterity bonus or not), or when\
+    \ the slayer flanks his target. This additional damage is 1d6 at 3rd level, and\
+    \ increases by 1d6 every 3 levels thereafter. Should the slayer score a critical\
+    \ hit with a sneak attack, this additional damage is not multiplied. Ranged attacks\
+    \ can count as sneak attacks only if the target is within 30 feet.With a weapon\
+    \ that deals nonlethal damage (like a sap, whip, or unarmed strike), a slayer\
+    \ can make a sneak attack that deals nonlethal damage instead of lethal damage.\
+    \ He cannot use a weapon that deals lethal damage to deal nonlethal damage in\
+    \ a sneak attack, not even with the usual –4 penalty.The slayer must be able to\
+    \ see the target well enough to pick out a vital spot and must be able to reach\
+    \ such a spot. A slayer cannot use sneak attack while striking a creature with\
+    \ concealment."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:weapon_proficiency#slayer"
+  name: "Weapon Proficiency (Slayer)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:mere_club 1"
+  - "SET proficiency:blade_boot 1"
+  - "SET proficiency:spiked_gauntlet 1"
+  - "SET proficiency:spiked_armor 1"
+  - "SET proficiency:heavy_crossbow 1"
+  - "SET proficiency:unarmed 1"
+  - "SET proficiency:dogslicer 1"
+  - "SET proficiency:ogre_hook 1"
+  - "SET proficiency:handaxe 1"
+  - "SET proficiency:light_flail 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:pickaxe 1"
+  - "SET proficiency:whip 1"
+  - "SET proficiency:guisarme 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:lantern_staff 1"
+  - "SET proficiency:gandasa 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:warhammer 1"
+  - "SET proficiency:jolting_dart 1"
+  - "SET proficiency:dart 1"
+  - "SET proficiency:chakram 1"
+  - "SET proficiency:light_pick 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:ammentum 1"
+  - "SET proficiency:heavy_shield 1"
+  - "SET proficiency:halberd 1"
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:brass_knuckles 1"
+  - "SET proficiency:battle_aspergillum 1"
+  - "SET proficiency:sword_cane 1"
+  - "SET proficiency:falchion 1"
+  - "SET proficiency:heavy_mace 1"
+  - "SET proficiency:gauntlet 1"
+  - "SET proficiency:cestus 1"
+  - "SET proficiency:kukri 1"
+  - "SET proficiency:greatsword 1"
+  - "SET proficiency:bardiche 1"
+  - "SET proficiency:wooden_stake 1"
+  - "SET proficiency:rapier 1"
+  - "SET proficiency:dueling_dagger 1"
+  - "SET proficiency:axe 1"
+  - "SET proficiency:sickle 1"
+  - "SET proficiency:horsechopper 1"
+  - "SET proficiency:traveling_kettle 1"
+  - "SET proficiency:hook_hand 1"
+  - "SET proficiency:brass_knife 1"
+  - "SET proficiency:light_spiked_shield 1"
+  - "SET proficiency:handwraps 1"
+  - "SET proficiency:greatclub 1"
+  - "SET proficiency:blowgun 1"
+  - "SET proficiency:ranseur 1"
+  - "SET proficiency:manople 1"
+  - "SET proficiency:battleaxe 1"
+  - "SET proficiency:gladius 1"
+  - "SET proficiency:combat_scabbard 1"
+  - "SET proficiency:greataxe 1"
+  - "SET proficiency:bayonet 1"
+  - "SET proficiency:pilum 1"
+  - "SET proficiency:klar 1"
+  - "SET proficiency:boarding_pike 1"
+  - "SET proficiency:planson 1"
+  - "SET proficiency:glaive 1"
+  - "SET proficiency:collapsible_kumade 1"
+  - "SET proficiency:hunga_munga 1"
+  - "SET proficiency:shortbow 1"
+  - "SET proficiency:scythe 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:spring_blade 1"
+  - "SET proficiency:light_hammer 1"
+  - "SET proficiency:light_mace 1"
+  - "SET proficiency:morningstar 1"
+  - "SET proficiency:longsword 1"
+  - "SET proficiency:scizore 1"
+  - "SET proficiency:terbutje 1"
+  - "SET proficiency:scimitar 1"
+  - "SET proficiency:earth_breaker 1"
+  - "SET proficiency:stingchuck 1"
+  - "SET proficiency:light_crossbow 1"
+  - "SET proficiency:hurlbat 1"
+  - "SET proficiency:sap 1"
+  - "SET proficiency:katar 1"
+  - "SET proficiency:machete 1"
+  - "SET proficiency:trident 1"
+  - "SET proficiency:ankus 1"
+  - "SET proficiency:starknife 1"
+  - "SET proficiency:javelin 1"
+  - "SET proficiency:heavy_spiked_shield 1"
+  - "SET proficiency:heavy_flail 1"
+  - "SET proficiency:war_razor 1"
+  - "SET proficiency:short_sword 1"
+  - "SET proficiency:kumade 1"
+  - "SET proficiency:longbow 1"
+  - "SET proficiency:lance 1"
+  - "SET proficiency:claw_blades 1"
+  - "SET proficiency:kunai 1"
+  - "SET proficiency:throwing_axe 1"
+  - "SET proficiency:bill 1"
+  - "SET proficiency:heavy_pick 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:cutlass 1"
+  - "SET proficiency:punching_dagger 1"
+  - "SET proficiency:syringe_spear 1"
+  - "SET proficiency:stonebow 1"
+  - "SET proficiency:longspear 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"

@@ -1,0 +1,61 @@
+id: "class:gunslinger#commando"
+name: "Commando"
+description: "Commandos are those rough and ready gunslingers who excel at hit-and-run\
+  \ tactics and leveraging their expertise in the wild against their enemies."
+modifications:
+- add: "ability:deeds#gunslinger_commando"
+  remove:
+  - "ability:utility_shot#gunslinger"
+- add: "ability:favored_terrain#gunslinger_commando"
+  remove:
+  - "ability:nimble#gunslinger"
+- add: "ability:track#gunslinger_commando"
+  remove:
+  - "ability:bonus_feat#gunslinger"
+- add: "ability:trapsmith#gunslinger_commando"
+  remove:
+  - "ability:gun_training#gunslinger"
+features:
+- id: "ability:deeds#gunslinger_commando"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A commando gains the following deeds; each of these deeds replaces\
+    \ an existing deed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:favored_terrain#gunslinger_commando"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "At 2nd level, a commando gains the favored terrain ranger class feature.\
+    \ At 6th level and every 4 levels thereafter, the commando can pick an additional\
+    \ favored terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:track#gunslinger_commando"
+  name: "Track"
+  label: null
+  type: null
+  description: "At 4th level, a commando adds half her level on Survival checks to\
+    \ follow tracks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:trapsmith#gunslinger_commando"
+  name: "Trapsmith"
+  label: null
+  type: null
+  description: "At 5th level, a commando can learn how to create one ranger trap in\
+    \ place of gaining the next level of gun training. A commando can use a known\
+    \ trap a number of times per day equal to her Wisdom bonus (minimum 1). The DC\
+    \ for a commando's trap is equal to 10 + half her commando level + her Wisdom\
+    \ bonus, and it lasts 1 day per 2 levels she has.\nA commando can set only extraordinary\
+    \ ranger traps with this ability; as with extraordinary ranger traps, the trap\
+    \ DC for these traps has a –2 penalty."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

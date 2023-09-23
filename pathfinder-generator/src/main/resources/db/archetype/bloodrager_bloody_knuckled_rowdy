@@ -1,0 +1,54 @@
+id: "class:bloodrager#bloody_knuckled_rowdy"
+name: "Bloody-Knuckled Rowdy"
+description: "Bloodragers are frequently rough-and-ready, untrained scrappers who\
+  \ learn to exploit any advantage to gain the upper hand in a fight. The bloody-knuckled\
+  \ rowdy focuses on tricks and maneuvers that are quick and effective, duplicating\
+  \ combat styles from professional brawlers, street thugs, and even trapped animals.\
+  \ Rather than focusing on a single style, most bloody-knuckled rowdies dabble in\
+  \ multiple techniques, mixing and matching their array of vicious maneuvers to suit\
+  \ the occasion."
+modifications:
+- add: "ability:reduced_spells_known#bloodrager_bloody_knuckled_rowdy"
+  remove:
+  - "ability:bloodrager_spellcasting#bloodrager"
+- add: "ability:pugilist#bloodrager_bloody_knuckled_rowdy"
+  remove:
+  - "ability:fast_movement#bloodrager"
+- add: "ability:combat_style_student#bloodrager_bloody_knuckled_rowdy"
+  remove:
+  - "ability:improved_uncanny_dodge#bloodrager"
+  - "ability:uncanny_dodge#bloodrager"
+features:
+- id: "ability:reduced_spells_known#bloodrager_bloody_knuckled_rowdy"
+  name: "Reduced Spells Known"
+  label: null
+  type: null
+  description: "The bloody-knuckled rowdy focuses more on fighting tactics and less\
+    \ on his natural arcane powers. He receives one fewer spell known at each spell\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:pugilist#bloodrager_bloody_knuckled_rowdy"
+  name: "Pugilist"
+  label: null
+  type: null
+  description: "At 1st level, a bloody-knuckled rowdy gains Improved Unarmed Strike\
+    \ as a bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+- id: "ability:combat_style_student#bloodrager_bloody_knuckled_rowdy"
+  name: "Combat Style Student"
+  label: null
+  type: null
+  description: "At 2nd level, a bloody-knuckled rowdy gains a bonus feat. This bonus\
+    \ feat must be a style feat or a feat with a style feat as a prerequisite. The\
+    \ bloody-knuckled rowdy treats his bloodrager levels as monk levels when qualifying\
+    \ for and calculating the effects of style feats and feats that have style feats\
+    \ as prerequisites.\nAt 5th level, the bloody-knuckled rowdy gains the Combat\
+    \ Style Master feat. He doesn't need to meet the prerequisites for this feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Melee Tactics Toolbox"
+source: "Pathfinder Player Companion: Melee Tactics Toolbox"

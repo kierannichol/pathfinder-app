@@ -1,0 +1,67 @@
+id: "class:alchemist#beastmorph"
+name: "Beastmorph"
+description: "Beastmorphs study the anatomy of monsters, learning how they achieve\
+  \ their strange powers. They use their knowledge to duplicate these abilities, but\
+  \ at the cost of taking on inhuman shapes when they use mutagens."
+modifications:
+- add: "ability:beastform_mutagen#alchemist_beastmorph"
+  remove:
+  - "ability:swift_alchemy#alchemist"
+- add: "ability:improved_beastform_mutagen#alchemist_beastmorph"
+  remove:
+  - "ability:swift_poisoning#alchemist"
+- add: "ability:greater_beastform_mutagen#alchemist_beastmorph"
+  remove:
+  - "ability:poison_resistance_"
+- add: "ability:grand_beastform_mutagen#alchemist_beastmorph"
+  remove:
+  - "ability:persistent_mutagen#alchemist"
+features:
+- id: "ability:beastform_mutagen#alchemist_beastmorph"
+  name: "Beastform Mutagen"
+  label: null
+  type: null
+  description: "At 3rd level, a beastmorph's mutagen causes him to take on animalistic\
+    \ features--whether those of an animal, a magical beast, an animal-like humanoid\
+    \ (such as a lizardfolk), or a monstrous humanoid. For example, when the beastmorph\
+    \ uses his mutagen, he may gain a furry muzzle and pointed ears like a werewolf,\
+    \ scaly skin like a lizardfolk or sahuagin, or compound eyes and mandibles like\
+    \ a giant insect. The beastmorph also gains his choice of one of the abilities\
+    \ listed in the alter self spell, which persists as long as the mutagen. He may\
+    \ select a different ability each time he creates a mutagen."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:improved_beastform_mutagen#alchemist_beastmorph"
+  name: "Improved Beastform Mutagen"
+  label: null
+  type: null
+  description: "At 6th level, a beastmorph's mutagen grants him additional abilities\
+    \ and options. The alchemist gains his choice of two of the abilities listed in\
+    \ the beast shape I spell, which persist as long as the mutagen. He may select\
+    \ two different abilities each time he creates a mutagen."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:greater_beastform_mutagen#alchemist_beastmorph"
+  name: "Greater Beastform Mutagen"
+  label: null
+  type: null
+  description: "At 10th level, a beastmorph's mutagen grants him three of the abilities\
+    \ listed in the beast shape II spell, which persist as long as the mutagen. He\
+    \ may select three different abilities each time he creates a mutagen."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:grand_beastform_mutagen#alchemist_beastmorph"
+  name: "Grand Beastform Mutagen"
+  label: null
+  type: null
+  description: "At 14th level, a beastmorph's mutagen grants him four of the abilities\
+    \ listed in the beast shape III spell, which persist as long as the mutagen. He\
+    \ may select four different abilities each time he creates a mutagen.\nThis ability\
+    \ replaces persistent mutagen."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

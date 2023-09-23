@@ -1,0 +1,58 @@
+{
+  "id": "class:druid#cave_druid",
+  "name": "Cave Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:cavesense#druid_cave_druid",
+          "conditionFormula": "@class:druid\u003e\u003d1"
+        }, {
+          "featureId": "ability:tunnelrunner#druid_cave_druid",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:lightfoot#druid_cave_druid",
+          "conditionFormula": "@class:druid\u003e\u003d3"
+        }, {
+          "featureId": "ability:resist_subterranean_corruption#druid_cave_druid",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }],
+        "unlinks": [{
+          "featureId": "ability:nature_sense#druid"
+        }, {
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:trackless_step#druid"
+        }, {
+          "featureId": "ability:resist_natures_lure#druid"
+        }]
+      }]
+    }
+  }
+}

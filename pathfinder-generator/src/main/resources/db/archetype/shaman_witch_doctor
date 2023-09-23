@@ -1,0 +1,60 @@
+id: "class:shaman#witch_doctor"
+name: "Witch Doctor"
+description: "The witch doctor is a healer who specializes in afflictions of the soul.\
+  \ Often misunderstood, she protects her tribe with healing powers, powerful defensive\
+  \ magic, and her own divine “witchcraft.\""
+modifications:
+- add: "ability:channel_energy#shaman_witch_doctor"
+  remove:
+  - "ability:the_hexes_gained_at_4th#shaman"
+  - "ability:12th_levels#shaman"
+- add: "ability:counter_curse#shaman_witch_doctor"
+  remove:
+  - "ability:the_hex_gained_at_8th_level#shaman"
+- add: "ability:countering_hex#shaman_witch_doctor"
+  remove:
+  - "ability:the_hex_gained_at_10th_level#shaman"
+features:
+- id: "ability:channel_energy#shaman_witch_doctor"
+  name: "Channel Energy"
+  label: null
+  type: null
+  description: "At 4th level, the witch doctor can draw transcendental energies to\
+    \ her location, flooding it with positive energy as the cleric class feature.\
+    \ The witch doctor uses her shaman level – 3 as her effective cleric level, and\
+    \ can channel energy a number of times per day equal to 3 + her Charisma modifier.\
+    \ This is a separate pool of channel energy that does not stack with the life\
+    \ spirit's channel spirit ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:counter_curse#shaman_witch_doctor"
+  name: "Counter Curse"
+  label: null
+  type: null
+  description: "At 8th level, the witch doctor can choose to lose any prepared spirit\
+    \ magic spell that is 3rd level or higher in order to spontaneously cast dispel\
+    \ magic or remove curse. This ability can only target a spell effect that is on\
+    \ an ally (including herself ). If she forfeits a spirit magic spell higher than\
+    \ 3rd level, she gains a +2 sacred bonus on her caster level check to dispel the\
+    \ spell or to remove the curse for every spell level higher than 3rd that she\
+    \ sacrifices."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:countering_hex#shaman_witch_doctor"
+  name: "Countering Hex"
+  label: null
+  type: null
+  description: "At 10th level, the witch doctor can use her hex magic to counterspell\
+    \ as a readied action as dispel magic instead. She must succeed at a dispel check\
+    \ (1d20 + her shaman level) with a DC equal to 11 + the spell's caster level.\
+    \ If countering hex succeeds, the spell fizzles away and is lost. Failure means\
+    \ the spell is not countered. In either case, the witch doctor cannot attempt\
+    \ to use this hex against any of that caster's spells again for 24 hours. The\
+    \ witch doctor cannot use countering hex on an ongoing effect, a magic item, or\
+    \ a hex."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

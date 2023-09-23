@@ -1,0 +1,47 @@
+id: "class:alchemist#deep_bomber_svirfneblin"
+name: "Deep Bomber (Svirfneblin)"
+description: ""
+modifications:
+- add: "ability:silent_bomb#alchemist_deep_bomber_svirfneblin"
+  remove:
+  - "ability:poison_use#alchemist"
+- add: "ability:targeting_bomb#alchemist_deep_bomber_svirfneblin"
+  remove:
+  - "ability:swift_alchemy_the_deep_bomber_gains_swift_alchemy_at_18th_level#alchemist"
+  - "ability:never_gains_instant_alchemy#alchemist"
+- add: "ability:stonekin#alchemist_deep_bomber_svirfneblin"
+  remove:
+  - "ability:swift_poisoning#alchemist"
+features:
+- id: "ability:silent_bomb#alchemist_deep_bomber_svirfneblin"
+  name: "Silent Bomb"
+  label: null
+  type: null
+  description: "At 2nd level, when the deep bomber creates a bomb, he can choose to\
+    \ have it explode without making any noise, although those damaged by it may cry\
+    \ out."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Advanced Race Guide"
+- id: "ability:targeting_bomb#alchemist_deep_bomber_svirfneblin"
+  name: "Targeting Bomb"
+  label: null
+  type: null
+  description: "At 3rd level, when the deep bomber creates a bomb, he can choose to\
+    \ have its detonation include a faerie fire effect that applies to all creatures\
+    \ within the splash radius (including the target, if any)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Advanced Race Guide"
+- id: "ability:stonekin#alchemist_deep_bomber_svirfneblin"
+  name: "Stonekin"
+  label: null
+  type: null
+  description: "At 6th level, the deep bomber automatically learns tree shape as a\
+    \ 2nd-level extract, except instead of a tree, he takes the form of a stalagmite\
+    \ that is the same size as his current size. At 7th level, he automatically learns\
+    \ meld into stone as a 3rd-level extract.\nThis ability replaces swift poisoning."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Advanced Race Guide"
+source: "Pathfinder Roleplaying Game Advanced Race Guide"

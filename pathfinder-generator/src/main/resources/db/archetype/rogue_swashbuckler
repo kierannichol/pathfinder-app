@@ -1,0 +1,36 @@
+id: "class:rogue#swashbuckler"
+name: "Swashbuckler"
+description: "A paragon of mobile swordplay, the swashbuckler is a rogue who focuses\
+  \ almost exclusively on honing her skill at arms and perfecting daring acrobatic\
+  \ moves and elaborate flourishes that border on performance."
+modifications:
+- add: "ability:martial_training#rogue_swashbuckler"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:daring#rogue_swashbuckler"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:martial_training#rogue_swashbuckler"
+  name: "Martial Training"
+  label: null
+  type: null
+  description: "At 1st level, the swashbuckler may select one martial weapon to add\
+    \ to her list of weapon proficiencies. In addition, she may take the combat trick\
+    \ rogue talent up to two times."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:daring#rogue_swashbuckler"
+  name: "Daring"
+  label: null
+  type: null
+  description: "At 3rd level, a swashbuckler gains a +1 morale bonus on Acrobatics\
+    \ checks and saving throws against fear. This bonus increases by +1 for every\
+    \ 3 levels beyond 3rd.\nThis ability replaces trap sense.\nRogue Talents: The\
+    \ following rogue talents complement the swashbuckler archetype: offensive defense,\
+    \ positioning attack, powerful sneak, and weapon training."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

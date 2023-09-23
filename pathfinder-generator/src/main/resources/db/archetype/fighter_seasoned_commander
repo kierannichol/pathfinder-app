@@ -1,0 +1,116 @@
+id: "class:fighter#seasoned_commander"
+name: "Seasoned Commander"
+description: ""
+modifications:
+- add: "ability:strategic_training#fighter_seasoned_commander"
+  remove:
+  - "ability:armor_proficiency#fighter"
+  - "ability:bonus_feat#fighter@1"
+- add: "ability:tactician#fighter_seasoned_commander"
+  remove:
+  - "ability:armor_training#fighter@3"
+- add: "ability:inspiring_speech#fighter_seasoned_commander"
+  remove:
+  - "ability:weapon_training#fighter@5"
+  - "ability:weapon_training#fighter@13"
+- add: "ability:inspire_greatness#fighter_seasoned_commander"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:greater_tactician#fighter_seasoned_commander"
+  remove:
+  - "ability:armor_training#fighter@11"
+- add: "ability:inspire_heroics#fighter_seasoned_commander"
+  remove:
+  - "ability:armor_training#fighter@15"
+- add: "ability:master_tactician#fighter_seasoned_commander"
+  remove:
+  - "ability:weapon_training#fighter@17"
+features:
+- id: "ability:strategic_training#fighter_seasoned_commander"
+  name: "Strategic Training"
+  label: null
+  type: null
+  description: "A seasoned commander gains 4 skill ranks + a number of skill ranks\
+    \ equal to his Intelligence modifier at each level instead of the normal 2 skill\
+    \ ranks + Intelligence modifier at each level. A seasoned commander adds Diplomacy,\
+    \ Knowledge (geography), Knowledge (nobility), Linguistics, and Sense Motive to\
+    \ his list of class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:tactician#fighter_seasoned_commander"
+  name: "Tactician"
+  label: null
+  type: null
+  description: "At 3rd level, a seasoned commander gains the cavalier's tactician\
+    \ class feature, treating his fighter level as his cavalier level for the purposes\
+    \ of this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:inspiring_speech#fighter_seasoned_commander"
+  name: "Inspiring Speech"
+  label: null
+  type: null
+  description: "At 5th level, a seasoned commander can give an inspiring speech as\
+    \ a standard action once per day. If he does, all allies who can hear his speech\
+    \ gain the benefits of inspire courage, granting bonuses 1 lower than those granted\
+    \ by a bard of the seasoned commander's fighter level, lasting 1 round per fighter\
+    \ level + his Charisma modifier (abilities that affect a bardic performance, such\
+    \ as Lingering Performance, have no effect on this ability). At 7th level, he\
+    \ can perform the speech as a move action, and at 13th level, he can perform the\
+    \ speech as a swift action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:inspire_greatness#fighter_seasoned_commander"
+  name: "Inspire Greatness"
+  label: null
+  type: null
+  description: "At 9th level, a seasoned commander gains an additional daily use of\
+    \ his inspiring speech ability, and he can also choose to use his inspiring speech\
+    \ to grant the effects of inspire greatness to one ally (instead of inspire courage).\
+    \ For every 2 levels a seasoned commander attains beyond 9th, he can target one\
+    \ additional ally while using this ability (up to a maximum of six at 19th level).\
+    \ This ability functions in all other respects like the seasoned commander's inspire\
+    \ courage ability. Whichever inspiring speech he chooses to use, if the seasoned\
+    \ commander uses an inspiring speech before the duration of his previous inspiring\
+    \ speech ends, the new inspiring speech replaces the old speech."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:greater_tactician#fighter_seasoned_commander"
+  name: "Greater Tactician"
+  label: null
+  type: null
+  description: "At 11th level, the seasoned commander gains the cavalier's greater\
+    \ tactician class feature, treating his fighter level as his cavalier level for\
+    \ the purposes of this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:inspire_heroics#fighter_seasoned_commander"
+  name: "Inspire Heroics"
+  label: null
+  type: null
+  description: "At 15th level, a seasoned commander gains an additional daily use\
+    \ of his inspiring speech, and he can also choose to use his inspiring speech\
+    \ to grant the effects of inspire heroics to one ally (instead of inspire courage\
+    \ or inspire greatness). For every 2 levels a seasoned commander attains beyond\
+    \ 15th, he can target one additional ally while using this ability. This ability\
+    \ functions in all other respects like the seasoned commander's inspire courage\
+    \ ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:master_tactician#fighter_seasoned_commander"
+  name: "Master Tactician"
+  label: null
+  type: null
+  description: "At 17th level, the seasoned commander gains the cavalier's master\
+    \ tactician class feature, treating his fighter level as his cavalier level for\
+    \ the purposes of this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+source: "Pathfinder Roleplaying Game Villain Codex"

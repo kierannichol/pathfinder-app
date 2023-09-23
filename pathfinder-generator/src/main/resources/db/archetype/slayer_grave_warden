@@ -1,0 +1,56 @@
+id: "class:slayer#grave_warden"
+name: "Grave Warden"
+description: ""
+modifications:
+- add: "ability:holy_water_sprinkler#slayer_grave_warden"
+  remove:
+  - "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+- add: "ability:death_ward#slayer_grave_warden"
+  remove:
+  - "ability:stalker#slayer"
+- add: "ability:dustbringer#slayer_grave_warden"
+  remove:
+  - "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+features:
+- id: "ability:holy_water_sprinkler#slayer_grave_warden"
+  name: "Holy Water Sprinkler"
+  label: null
+  type: null
+  description: "At 2nd level, a grave warden can draw a flask of holy water as if\
+    \ it were a weapon (and can thus the Quick Draw feat to draw flasks of holy water).\
+    \ As a swift action, he can open a flask of holy water and pour it onto a held\
+    \ or adjacent melee weapon. If the weapon successfully hits an undead creature\
+    \ before the end of the grave warden's next turn, the undead takes damage as if\
+    \ it took a direct hit from the holy water, in addition to the damage from the\
+    \ weapon, if any."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:death_ward#slayer_grave_warden"
+  name: "Death Ward"
+  label: null
+  type: null
+  description: "At 7th level, a grave warden learns to perform a short ritual that\
+    \ grants the benefits of death ward, using his slayer level as his caster level.\
+    \ Performing this ritual takes 1 minute and uses 4 flasks of holy water. The grave\
+    \ warden can protect only himself with this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:dustbringer#slayer_grave_warden"
+  name: "Dustbringer"
+  label: null
+  type: null
+  description: "At 10th level, a grave warden can slay a studied undead opponent.\
+    \ This functions as the assassinate slayer talent, except it requires a successful\
+    \ Will saving throw instead of a successful Fortitude save, affects only undead,\
+    \ and destroys the target instead of killing it. If the target succeeds at its\
+    \ saving throw, it becomes immune to that grave warden's dustbringer ability for\
+    \ 24 hours.\nThis ability replaces the advanced slayer talent gained at 10th level.\n\
+    Slayer Talents: The following slayer talents (and rogue talents) complement the\
+    \ deliverer archetype: fast stealth, finesse rogue, surprise attack, swift poison,\
+    \ terrain mastery, trap spotter, and unwitting ally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

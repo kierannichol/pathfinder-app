@@ -1,0 +1,70 @@
+id: "class:investigator#natural_philosopher"
+name: "Natural Philosopher"
+description: "Natural philosophers are scholars, explorers, and survivalists who feel\
+  \ at home in nature, seldom longing for the comforts of the city."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#investigator_natural_philosopher"
+  remove:
+  - "ability:armor_proficiency#investigator"
+  - "ability:the_investigators_weapon#investigator"
+- add: "ability:natural_philosophers_inspiration#investigator_natural_philosopher"
+  remove:
+  - "ability:inspiration#investigator"
+- add: "ability:track#investigator_natural_philosopher"
+  remove:
+  - "ability:trapfinding#investigator"
+- add: "ability:herbalism#investigator_natural_philosopher"
+  remove:
+  - "ability:the_investigator_talent_gained_at_3rd_level#investigator"
+  - "ability:alchemy#investigator"
+  - "ability:trap_sense#investigator"
+features:
+- id: "ability:weapon_and_armor_proficiency#investigator_natural_philosopher"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A natural philosopher is proficient with simple weapons, plus the\
+    \ handaxe, kukri, shortbow, throwing axe, and whip. A natural philosopher is proficient\
+    \ with light armor but not with shields.\nThis replaces the investigator's weapon\
+    \ and armor proficiency.\nClass Skills: A natural philosopher gains Survival as\
+    \ a class skill, but doesn't gain Perform as a class skill."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:natural_philosophers_inspiration#investigator_natural_philosopher"
+  name: "Natural Philosopher's Inspiration"
+  label: null
+  type: null
+  description: "Natural philosophers employ a skill set suited to studying the natural\
+    \ world. A natural philosopher can use inspiration on Heal and Survival checks\
+    \ without expending a use of inspiration, provided he is trained in the skill,\
+    \ but cannot do so for Linguistics or Spellcraft checks. He can later trade an\
+    \ investigator talent for the ability to use inspiration on Linguistics and Spellcraft\
+    \ checks without expending a use of inspiration, provided he is trained in the\
+    \ skill."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:track#investigator_natural_philosopher"
+  name: "Track"
+  label: null
+  type: null
+  description: "A natural philosopher adds half his level (minimum 1) on Survival\
+    \ checks to follow tracks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:herbalism#investigator_natural_philosopher"
+  name: "Herbalism"
+  label: null
+  type: null
+  description: "At 3rd level, a natural philosopher augments his knowledge of alchemy\
+    \ with herbal lore. He gains the infusion discovery and can use Knowledge (nature)\
+    \ in place of Craft (alchemy) and Profession (herbalist) checks. He also gains\
+    \ a competence bonus equal to his class level on Craft (alchemy) checks to create\
+    \ alchemical items, and he gains half that bonus on Profession (herbalist) checks\
+    \ to find herbs."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

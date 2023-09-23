@@ -1,0 +1,129 @@
+id: "class:investigator#gravedigger"
+name: "Gravedigger"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiencies#investigator_gravedigger"
+  remove:
+  - "ability:armor_proficiencies#investigator"
+  - "ability:the_investigators_weapon#investigator"
+- add: "ability:limited_alchemy#investigator_gravedigger"
+  remove:
+  - "ability:investigator_talents#investigator"
+  - "ability:alchemy#investigator"
+- add: "ability:relic_focus#investigator_gravedigger"
+  remove:
+  - "ability:trap_sense#investigator"
+  - "ability:trapfinding#investigator"
+- add: "ability:deny_death#investigator_gravedigger"
+  remove:
+  - "ability:the_investigators_poison_resistance#investigator"
+  - "ability:poison_immunity#investigator"
+- add: "ability:read_the_bones#investigator_gravedigger"
+  remove:
+  - "ability:poison_lore#investigator"
+- add: "ability:focus_talent#investigator_gravedigger"
+  remove:
+  - "ability:investigator_talents#investigator"
+- add: "ability:kill_the_dead#investigator_gravedigger"
+  remove:
+  - "ability:studied_strike#investigator"
+  - "ability:the_investigators_studied_combat#investigator"
+- add: "ability:grave_lamp#investigator_gravedigger"
+  remove:
+  - "ability:swift_alchemy#investigator"
+features:
+- id: "ability:weapon_and_armor_proficiencies#investigator_gravedigger"
+  name: "Weapon and Armor Proficiencies"
+  label: null
+  type: null
+  description: "A gravedigger is proficient with simple weapons and scythes, and can\
+    \ fight with gravediggers' tools such as a shovel or lantern as if she had the\
+    \ Catch Off-Guard feat.\nA gravedigger is proficient with light armor, but not\
+    \ with shields."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:limited_alchemy#investigator_gravedigger"
+  name: "Limited Alchemy"
+  label: null
+  type: null
+  description: "A gravedigger prepares and uses extracts as an investigator but gains\
+    \ no other benefits of the alchemy ability. This also means that a gravedigger\
+    \ can't take the alchemist discovery investigator talent or any discovery that\
+    \ affects or involves alchemy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:relic_focus#investigator_gravedigger"
+  name: "Relic Focus"
+  label: null
+  type: null
+  description: "A gravedigger can form a psychic bond with a skull or bone that she\
+    \ has personally exhumed or recovered from a burial site, using it as an occultist\
+    \ necromancy implement and gaining its base focus power. The gravedigger cannot\
+    \ invest mental focus into the implement and thus doesn't receive any resonant\
+    \ powers. However, once per day she can expend one use of inspiration to use any\
+    \ focus power she knows that has a cost of 1 point of mental focus. She can do\
+    \ this an additional time each day at 3rd level and every 3 investigator levels\
+    \ thereafter. To activate a focus power that costs more than 1 point of mental\
+    \ focus, the gravedigger can expend that number of daily uses of this ability\
+    \ (as well as uses of inspiration) at the same time. In addition, any number of\
+    \ times per day, she can expend 1 use of inspiration to use grave words as spell-like\
+    \ ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:deny_death#investigator_gravedigger"
+  name: "Deny Death"
+  label: null
+  type: null
+  description: "At 2nd level, a gravedigger gains a +2 bonus on all saving throws\
+    \ against death effects and energy drain. This increases to +4 at 5th level, to\
+    \ +6 at 8th level, and to +8 at 11th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:read_the_bones#investigator_gravedigger"
+  name: "Read the Bones"
+  label: null
+  type: null
+  description: "At 2nd level, a gravedigger can perform object reading as an occultist,\
+    \ but only on corpses, bones, and other physical remains."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:focus_talent#investigator_gravedigger"
+  name: "Focus Talent"
+  label: null
+  type: null
+  description: "A gravedigger can select a focus power for one of her implements as\
+    \ per an occultist of her investigator level in place of an investigator talent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:kill_the_dead#investigator_gravedigger"
+  name: "Kill the Dead"
+  label: null
+  type: null
+  description: "A gravedigger focuses on battling the undead, and her studied combat\
+    \ and studied strike function as if she were 2 levels lower against creatures\
+    \ other than undead (this means she can't use them at all against such creatures\
+    \ until 6th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:grave_lamp#investigator_gravedigger"
+  name: "Grave Lamp"
+  label: null
+  type: null
+  description: "At 4th level, a gravedigger can form a psychic bond with a lantern,\
+    \ using it as a conjuration implement in much the same way as she uses her relic\
+    \ focus as a necromancy implement. She can expend inspiration to fuel her grave\
+    \ lamp's focus powers the same number of times each day as she can for her relic\
+    \ focus (for example, a 6th-level gravedigger with 6 points of inspiration could\
+    \ expend up to three uses of inspiration as mental focus for her relic focus and\
+    \ up to three uses of inspiration as mental focus for her grave lamp)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+source: "Pathfinder Roleplaying Game Horror Adventures"

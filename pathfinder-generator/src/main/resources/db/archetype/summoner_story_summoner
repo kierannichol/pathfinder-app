@@ -1,0 +1,38 @@
+id: "class:summoner#story_summoner"
+name: "Story Summoner"
+description: ""
+modifications:
+- add: "ability:summon_arcana#summoner_story_summoner"
+  remove:
+  - "ability:bond_senses#summoner"
+- add: "ability:evolve_base_form#summoner_story_summoner"
+  remove:
+  - "ability:transposition#summoner"
+features:
+- id: "ability:summon_arcana#summoner_story_summoner"
+  name: "Summon Arcana"
+  label: null
+  type: null
+  description: "At 2nd level, a story summoner can use a complete harrow deck he owns\
+    \ as an additional focus component for his summon monster spell-like ability.\
+    \ When he does so, the summoner draws a random card from the deck and applies\
+    \ a simple template to the summoned monster based on the card's alignment: celestial\
+    \ (any good), fiendish (any evil), resolute (any lawful), or entropic (any chaotic).\
+    \ If a card has more than one alignment--such as a lawful evil or chaotic good\
+    \ card--the summoner can choose which template to apply to the summoned creature.\
+    \ This ability allows a story summoner to summon and command creatures normally\
+    \ prohibited by their alignment."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+- id: "ability:evolve_base_form#summoner_story_summoner"
+  name: "Evolve Base Form"
+  label: null
+  type: null
+  description: "Starting at 8th level, whenever he gains a level, the story summoner\
+    \ can change his eidolon's base form to a new base form. Once chosen, this base\
+    \ form is set until the story summoner gains another summoner level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+source: "Pathfinder Player Companion: The Harrow Handbook"

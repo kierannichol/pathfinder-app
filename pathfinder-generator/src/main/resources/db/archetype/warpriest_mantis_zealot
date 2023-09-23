@@ -1,0 +1,71 @@
+id: "class:warpriest#mantis_zealot"
+name: "Mantis Zealot"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#warpriest_mantis_zealot"
+  remove:
+  - "ability:the_warpriests_weapon#warpriest"
+  - "ability:armor_proficiencies#warpriest"
+- add: "ability:sneak_attack#warpriest_mantis_zealot"
+  remove:
+  - "ability:sacred_weapon#warpriest"
+- add: "ability:sacred_reflexes#warpriest_mantis_zealot"
+  remove:
+  - "ability:sacred_armor#warpriest"
+- add: "ability:aspect_of_the_mantis#warpriest_mantis_zealot"
+  remove:
+  - "ability:aspect_of_war#warpriest"
+features:
+- id: "ability:weapon_and_armor_proficiency#warpriest_mantis_zealot"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Mantis zealots are proficient with simple and martial weapons, as\
+    \ well as with the sawtooth sabre. They are proficient with light armor but not\
+    \ with shields."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:sneak_attack#warpriest_mantis_zealot"
+  name: "Sneak Attack"
+  label: null
+  type: null
+  description: "At 4th level, a mantis zealot can make a sneak attack. This ability\
+    \ functions as the rogue class feature of the same name. At 4th level, his sneak\
+    \ attack damage is +1d6. This damage increases by 1d6 at 8th level and every 4\
+    \ warpriest levels thereafter. If the zealot gets a sneak attack bonus from another\
+    \ source, the bonuses stack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:sacred_reflexes#warpriest_mantis_zealot"
+  name: "Sacred Reflexes"
+  label: null
+  type: null
+  description: "At 7th level, a mantis zealot can emulate the Mantis God's grace and\
+    \ move with a supernatural fluidity. As long as he is wearing light or no armor,\
+    \ as a swift action he can gain uncanny dodge as per the rogue class feature.\
+    \ He can use this ability for a number of minutes per day equal to his warpriest\
+    \ level. This duration does not need to be consecutive, but it must be spent in\
+    \ 1-minute increments. If he already has the uncanny dodge ability from another\
+    \ source, he instead gains improved uncanny dodge while this ability is active.\
+    \ At 10th level, when he uses this ability, he also gains evasion as per the monk\
+    \ class feature (or improved evasion if he already has evasion from another source).\
+    \ At 13th level, he gains improved uncanny dodge instead of uncanny dodge. At\
+    \ 16th level, he can activate this ability as part of making an initiative check,\
+    \ before rolling the die. At 19th level, he gains improved evasion instead of\
+    \ evasion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:aspect_of_the_mantis#warpriest_mantis_zealot"
+  name: "Aspect of the Mantis"
+  label: null
+  type: null
+  description: "At 20th level, when using aspect of war, instead of moving at full\
+    \ speed regardless of his armor or encumbrance, a mantis zealot deals a number\
+    \ of points of bleed damage equal to his Dexterity modifier with each attack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

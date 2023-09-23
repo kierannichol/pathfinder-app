@@ -1,0 +1,495 @@
+id: "class:arcanist"
+name: "Arcanist"
+category: "HYBRID"
+description: "Some spellcasters seek the secrets of magic, pursuing the power to make\
+  \ the impossible possible. Others are born with magic in their blood, commanding\
+  \ unbelievable forces as effortlessly as they breathe. Yet still others seek to\
+  \ meld the science of arcane scholars with the natural might of innate casters.\
+  \ These arcanists seek to discover the mysterious laws of magic and through will\
+  \ and expertise bend those forces to their whims. Arcanists are the shapers and\
+  \ tinkers of the arcane world, and no magic can resist their control. Role: Arcanists\
+  \ are scholars of all things magical. They constantly seek out new forms of magic\
+  \ to discover how they work, and in many cases, to collect the energy of such magic\
+  \ for their own uses. Many arcanists are seen as reckless, more concerned with the\
+  \ potency of magic than the ramifications of unleashing such power. Alignment: Any.\
+  \ Hit Die: d6. Parent Classes: Sorcerer and wizard. Starting Wealth: 2d6 × 10 gp\
+  \ (average 70 gp.) In addition, each character begins play with an outfit worth\
+  \ 10 gp or less."
+source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+hit_die: "D6"
+alignment: "Any"
+class_skills:
+- "skill:fly"
+- "skill:craft"
+- "skill:use_magic_device"
+- "skill:spellcraft"
+- "skill:profession"
+- "skill:knowledge"
+- "skill:appraise"
+- "skill:linguistics"
+skill_ranks_per_level: "2"
+bab: "C"
+fort: "B"
+ref: "B"
+will: "A"
+levels:
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcane_reservoir#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  - "ability:cantrips#arcanist"
+  - "ability:consume_spells#arcanist"
+  spells_per_day:
+    1: 2
+  spells_known:
+    0: 4
+    1: 2
+  level: 1
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 3
+  spells_known:
+    0: 5
+    1: 2
+  level: 2
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+  spells_known:
+    0: 5
+    1: 3
+  level: 3
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 2
+  spells_known:
+    0: 6
+    1: 3
+    2: 1
+  level: 4
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 3
+  spells_known:
+    0: 6
+    1: 4
+    2: 2
+  level: 5
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 2
+  spells_known:
+    0: 7
+    1: 4
+    2: 2
+    3: 1
+  level: 6
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 3
+  spells_known:
+    0: 7
+    1: 5
+    2: 3
+    3: 2
+  level: 7
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 2
+  spells_known:
+    0: 8
+    1: 5
+    2: 3
+    3: 2
+    4: 1
+  level: 8
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 3
+  spells_known:
+    0: 8
+    1: 5
+    2: 4
+    3: 3
+    4: 2
+  level: 9
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 2
+  spells_known:
+    0: 9
+    1: 5
+    2: 4
+    3: 3
+    4: 2
+    5: 1
+  level: 10
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  - "ability:greater_exploits#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 2
+  level: 11
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 2
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 3
+    5: 2
+    6: 1
+  level: 12
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 3
+    6: 2
+  level: 13
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 2
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 3
+    6: 2
+    7: 1
+  level: 14
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 2
+  level: 15
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 4
+    8: 2
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 2
+    8: 1
+  level: 16
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 4
+    8: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 2
+  level: 17
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 4
+    8: 4
+    9: 2
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 2
+    9: 1
+  level: 18
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:arcanist_exploit#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 4
+    8: 4
+    9: 3
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 3
+    9: 2
+  level: 19
+- class_feature_names:
+  - "trait:armor_proficiency#arcanist"
+  - "trait:weapon_proficiency#arcanist"
+  - "ability:magical_supremacy#arcanist"
+  spells_per_day:
+    1: 4
+    2: 4
+    3: 4
+    4: 4
+    5: 4
+    6: 4
+    7: 4
+    8: 4
+    9: 4
+  spells_known:
+    0: 9
+    1: 5
+    2: 5
+    3: 4
+    4: 4
+    5: 4
+    6: 3
+    7: 3
+    8: 3
+    9: 3
+  level: 20
+spell_caster_types: []
+class_features:
+- id: "ability:magical_supremacy#arcanist"
+  name: "Magical Supremacy"
+  label: null
+  type: "Su"
+  description: "At 20th level, the arcanist learns how to convert her arcane reservoir\
+    \ into spells and back again. She can cast any spell she has prepared by expending\
+    \ a number of points from her arcane reservoir equal to 1 + the level of the spell\
+    \ to be cast instead of expending a spell slot. When she casts a spell in this\
+    \ fashion, she treats her caster level as 2 higher than normal, and the DCs of\
+    \ any saving throws associated with the spell increase by 2. She cannot further\
+    \ expend points from her arcane reservoir to enhance a spell cast in this way."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:armor_proficiency#arcanist"
+  name: "Armor Proficiency (Arcanist)"
+  label: null
+  type: null
+  description: null
+  effects: []
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:consume_spells#arcanist"
+  name: "Consume Spells"
+  label: null
+  type: "Su"
+  description: "At 1st level, an arcanist can expend an available arcanist spell slot\
+    \ as a move action, making it unavailable for the rest of the day, just as if\
+    \ she had used it to cast a spell. She can use this ability a number of times\
+    \ per day equal to her Charisma modifier (minimum 1). Doing this adds a number\
+    \ of points to her arcane reservoir equal to the level of the spell slot consumed.\
+    \ She cannot consume cantrips (0 level spells) in this way. Points gained in excess\
+    \ of the reservoir's maximum are lost."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:arcanist_exploit#arcanist"
+  name: "Arcanist Exploit"
+  label: null
+  type: ""
+  description: "By bending and sometimes even breaking the rules of magic, the arcanist\
+    \ learns to exploit gaps and exceptions in the laws of magic. Some of these exploits\
+    \ allow her to break down various forms of magic, adding their essence to her\
+    \ arcane reservoir. At 1st level and every 2 levels thereafter, the arcanist learns\
+    \ a new arcane exploit selected from the following list. An arcanist exploit cannot\
+    \ be selected more than once. Once an arcanist exploit has been selected, it cannot\
+    \ be changed. Most arcanist exploits require the arcanist to expend points from\
+    \ her arcane reservoir to function. Unless otherwise noted, the saving throw DC\
+    \ for an arcanist exploit is equal to 10 + 1/2 the arcanist's level + the arcanist's\
+    \ Charisma modifier.For a complete list of Arcanist Exploits, see here"
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:cantrips#arcanist"
+  name: "Cantrips"
+  label: null
+  type: ""
+  description: "Arcanists can prepare a number of cantrips, or 0-level spells, each\
+    \ day as noted on Table: Arcanist Spells Prepared. These spells are cast like\
+    \ any other spell, but they do not consume spell slots. As with her other spells,\
+    \ these spells are not expended when cast."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:arcane_reservoir#arcanist"
+  name: "Arcane Reservoir"
+  label: null
+  type: "Su"
+  description: "An arcanist has an innate pool of magical energy that she can draw\
+    \ upon to fuel her arcanist exploits and enhance her spells. The arcanist's arcane\
+    \ reservoir can hold a maximum amount of magical energy equal to 3 + the arcanist's\
+    \ level. Each day, when preparing spells, the arcanist's arcane reservoir fills\
+    \ with raw magical energy, gaining a number of points equal to 3 + 1/2 her arcanist\
+    \ level. Any points she had from the previous day are lost. She can also regain\
+    \ these points through the consume spells class feature and some arcanist exploits.\
+    \ The arcane reservoir can never hold more points than the maximum amount noted\
+    \ above; points gained in excess of this total are lost.Points from the arcanist\
+    \ reservoir are used to fuel many of the arcanist's powers. In addition, the arcanist\
+    \ can expend 1 point from her arcane reservoir as a free action whenever she casts\
+    \ an arcanist spell. If she does, she can choose to increase the caster level\
+    \ by 1 or increase the spell's DC by 1. She can expend no more than 1 point from\
+    \ her reservoir on a given spell in this way."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:weapon_proficiency#arcanist"
+  name: "Weapon Proficiency (Arcanist)"
+  label: null
+  type: null
+  description: null
+  effects: []
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:greater_exploits#arcanist"
+  name: "Greater Exploits"
+  label: null
+  type: ""
+  description: "At 11th level and every 2 levels thereafter, an arcanist can choose\
+    \ one of the following greater exploits in place of an arcanist exploit.For a\
+    \ complete list of Greater Exploits, see here"
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"

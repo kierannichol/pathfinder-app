@@ -1,0 +1,110 @@
+id: "class:fighter#vengeful_hunter"
+name: "Vengeful Hunter"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#fighter_vengeful_hunter"
+  remove:
+  - "ability:weapon_proficiencies#fighter"
+  - "ability:the_normal_fighter_armor#fighter"
+- add: "ability:tenacious_tracker#fighter_vengeful_hunter"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:vengeance#fighter_vengeful_hunter"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:savor_the_sting#fighter_vengeful_hunter"
+  remove:
+  - "ability:weapon_training#fighter@9"
+- add: "ability:swift_revenge#fighter_vengeful_hunter"
+  remove:
+  - "ability:weapon_training#fighter@13"
+- add: "ability:perceived_wrongs#fighter_vengeful_hunter"
+  remove:
+  - "ability:weapon_training#fighter@17"
+- add: "ability:certain_revenge#fighter_vengeful_hunter"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:weapon_and_armor_proficiency#fighter_vengeful_hunter"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A vengeful hunter is proficient with all simple and martial weapons,\
+    \ plus the whip. In addition, the hunter is proficient with light and medium armor\
+    \ as well as shields (except tower shields).\nThis replaces the normal fighter\
+    \ armor and weapon proficiencies.\nClass Skills: A vengeful hunter gains Diplomacy,\
+    \ Knowledge (local), and Perception as class skills and loses Knowledge (dungeoneering)\
+    \ and Knowledge (engineering) as class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:tenacious_tracker#fighter_vengeful_hunter"
+  name: "Tenacious Tracker"
+  label: null
+  type: null
+  description: "At 2nd level, a vengeful hunter gains a +1 bonus on Diplomacy checks\
+    \ to gather information and on Survival checks made to identify or follow tracks.\
+    \ This bonus increases by 1 for every 4 levels the vengeful hunter possesses beyond\
+    \ 2nd."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:vengeance#fighter_vengeful_hunter"
+  name: "Vengeance"
+  label: null
+  type: null
+  description: "At 5th level, a vengeful hunter deals 1d4 points of bleed damage when\
+    \ he damages a creature that has damaged him since the beginning of his last turn.\
+    \ Whenever a creature takes bleed damage from this effect, it also takes a –1\
+    \ penalty on attack rolls, weapon damage rolls, saving throws, skill checks, and\
+    \ ability checks for 1 round. This penalty is a pain effect and does not stack\
+    \ with the effects of the sickened condition. This bleed damage increases to 1d6\
+    \ at 9th level, 1d8 at 13th level, and 2d6 at 17th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:savor_the_sting#fighter_vengeful_hunter"
+  name: "Savor the Sting"
+  label: null
+  type: null
+  description: "At 9th level, whenever a target takes bleed damage from a vengeful\
+    \ hunter's vengeance ability, the vengeful hunter gains an equal number of temporary\
+    \ hit points. These temporary hit points last for 1 minute and do not stack with\
+    \ each other."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:swift_revenge#fighter_vengeful_hunter"
+  name: "Swift Revenge"
+  label: null
+  type: null
+  description: "At 13th level, a vengeful hunter gains the quarry class feature; this\
+    \ functions like the ranger ability of the same name, but the target must be one\
+    \ that has damaged the vengeful hunter in the past hour."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:perceived_wrongs#fighter_vengeful_hunter"
+  name: "Perceived Wrongs"
+  label: null
+  type: null
+  description: "At 17th level, a vengeful hunter can, once per day, use his vengeance\
+    \ ability against any creature--even one that has not harmed him. If the target\
+    \ is also one that has damaged him since the beginning of his last turn, the bleed\
+    \ damage increases to 3d6 and the target is sickened for as long as the bleed\
+    \ effect continues."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+- id: "ability:certain_revenge#fighter_vengeful_hunter"
+  name: "Certain Revenge"
+  label: null
+  type: null
+  description: "At 20th level, a vengeful hunter gains the improved quarry class feature;\
+    \ this functions like the ranger ability of the same name, but the target must\
+    \ have attacked him in the past day. Whenever he uses his vengeance ability against\
+    \ his quarry, the bleed damage increases by 2 per bleed damage die."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Inner Sea Combat"
+source: "Pathfinder Campaign Setting: Inner Sea Combat"

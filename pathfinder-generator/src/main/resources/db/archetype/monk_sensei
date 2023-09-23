@@ -1,0 +1,63 @@
+id: "class:monk#sensei"
+name: "Sensei"
+description: "The sensei is a revered teacher who imparts lessons on the oneness of\
+  \ mind, body, and spirit, along with occasional correction that is subtle and swift.\
+  \ Rather than using wisdom for his own benefit alone, he uses it to better those\
+  \ around him."
+modifications:
+- add: "ability:advice#monk_sensei"
+  remove:
+  - "ability:flurry_of_blows_fast_movement#monk"
+  - "ability:improved_evasion#monk"
+- add: "ability:insightful_strike#monk_sensei"
+  remove:
+  - "ability:the_bonus_feat_gained_at_2nd_level#monk"
+  - "ability:evasion#monk"
+- add: "ability:mystic_wisdom#monk_sensei"
+  remove:
+  - "ability:14th_level#monk"
+  - "ability:the_bonus_feats_gained_at_6th_10th#monk"
+features:
+- id: "ability:advice#monk_sensei"
+  name: "Advice"
+  label: null
+  type: null
+  description: "A sensei's advice is identical to bardic performance (using oratory),\
+    \ allowing him to inspire courage at 1st level, inspire competence at 3rd level,\
+    \ and inspire greatness at 9th level, as a bard of the sensei's level, usable\
+    \ a total number of rounds per day equal to his level + his Wisdom modifier (minimum\
+    \ 1).\nThis ability replaces flurry of blows, fast movement, and improved evasion."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:insightful_strike#monk_sensei"
+  name: "Insightful Strike"
+  label: null
+  type: null
+  description: "At 2nd level, a sensei may use his Wisdom bonus in lieu of his Strength\
+    \ or Dexterity on attack rolls and combat maneuver checks with unarmed strikes\
+    \ or monk weapons.\nThis ability replaces evasion and the bonus feat gained at\
+    \ 2nd level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:mystic_wisdom#monk_sensei"
+  name: "Mystic Wisdom"
+  label: null
+  type: null
+  description: "At 6th level, a sensei may use his advice ability when spending points\
+    \ from his ki pool to activate a class ability (using the normal actions required\
+    \ for each) in order to have that ability affect one ally within 30 feet rather\
+    \ than the sensei himself.\nAt 10th level, a sensei may affect all allies within\
+    \ 30 feet rather than himself (spending points from his ki pool only once, not\
+    \ once for each target). At 10th level, a sensei may instead spend 1 point from\
+    \ his ki pool (as a swift action) while using advice to provide a single ally\
+    \ within 30 feet with evasion, fast movement, high jump, purity of body, or slow\
+    \ fall.\nAt 14th level, a sensei may spend 2 points to grant one of the abilities\
+    \ listed above to all allies within 30 feet, or diamond body, diamond soul, or\
+    \ improved evasion to a single ally within 30 feet. These abilities function at\
+    \ the sensei's level and last 1 round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

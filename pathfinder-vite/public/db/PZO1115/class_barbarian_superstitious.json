@@ -1,0 +1,39 @@
+{
+  "id": "class:barbarian#superstitious",
+  "name": "Superstitious",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:damage_reduction#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Many barbarians distrust magic. While most just shy away from magic, others focus their rage on users of such foul arts. These barbarians are naturally distrusting, and develop keen senses to protect them from harm."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sixth_sense#barbarian_superstitious",
+          "conditionFormula": "@class:barbarian\u003e\u003d3"
+        }, {
+          "featureId": "ability:keen_senses#barbarian_superstitious",
+          "conditionFormula": "@class:barbarian\u003e\u003d7"
+        }],
+        "unlinks": [{
+          "featureId": "ability:trap_sense#barbarian"
+        }, {
+          "featureId": "ability:damage_reduction#barbarian"
+        }]
+      }]
+    }
+  }
+}

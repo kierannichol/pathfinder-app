@@ -1,0 +1,85 @@
+id: "class:summoner#naturalist"
+name: "Naturalist"
+description: ""
+modifications:
+- add: "ability:natures_call#summoner_naturalist"
+  remove:
+  - "ability:summon_monster_i#summoner"
+- add: "ability:animal_focus#summoner_naturalist"
+  remove:
+  - "ability:greater_shield_ally#summoner"
+  - "ability:shield_ally#summoner"
+- add: "ability:second_animal_focus#summoner_naturalist"
+  remove:
+  - "ability:the_aspect_summoner_class_ability#summoner"
+- add: "ability:shared_focus#summoner_naturalist"
+  remove:
+  - "ability:life_bond#summoner"
+- add: "ability:third_animal_focus#summoner_naturalist"
+  remove:
+  - "ability:greater_aspect#summoner"
+features:
+- id: "ability:natures_call#summoner_naturalist"
+  name: "Nature's Call"
+  label: null
+  type: null
+  description: "Starting at 1st level, the naturalist can cast summon nature's ally\
+    \ I as a spell like ability a number of times per day equal to 3 + his Charisma\
+    \ modifier. He can only use this ability to summon creatures of the animal, magical\
+    \ beast, or vermin type. This ability otherwise functions as the summon monster\
+    \ I class feature (increasing in level as the naturalist goes up in level and\
+    \ with the same restrictions)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:animal_focus#summoner_naturalist"
+  name: "Animal Focus"
+  label: null
+  type: null
+  description: "At 4th level, as a swift action a naturalist can enhance his eidolon\
+    \ with the aspect of an animal. Each time he uses this ability, he can select\
+    \ a hunter's animal aspect and apply it to his eidolon. His hunter level for this\
+    \ ability is equal to his summoner level – 2. He does not gain the ability to\
+    \ add an animal aspect to himself (see Shared Focus, below). This effect lasts\
+    \ until the eidolon is dismissed or sent back to its home plane.\nWhen an animal\
+    \ aspect is applied to an eidolon, its form is altered by superficial physical\
+    \ changes appropriate to that aspect. For example, using aspect of the bat might\
+    \ give the eidolon larger ears and eyes and perhaps membranes of skin connecting\
+    \ its limbs to its body, while using aspect of the stag might give the eidolon\
+    \ antlers and hoof like nails on its feat. None of these changes interfere with\
+    \ any of the eidolon's natural or magical abilities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:second_animal_focus#summoner_naturalist"
+  name: "Second Animal Focus"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:shared_focus#summoner_naturalist"
+  name: "Shared Focus"
+  label: null
+  type: null
+  description: "At 14th level, the naturalist begins to take on some of the feral\
+    \ nature of his eidolon. Whenever the naturalist uses animal focus to grant an\
+    \ aspect to his eidolon, he also gains the effects of the chosen aspect. The naturalist\
+    \ keeps this aspect until his eidolon is dismissed or sent back to its home plane.\
+    \ The naturalist gains the effects of only one aspect, even if the eidolon gains\
+    \ more than one (naturalist's choice)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:third_animal_focus#summoner_naturalist"
+  name: "Third Animal Focus"
+  label: null
+  type: null
+  description: "At 18th level, whenever a naturalist uses his animal focus ability,\
+    \ he can apply three different animal aspects to his eidolon (one of which lasts\
+    \ until he decides to change it)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

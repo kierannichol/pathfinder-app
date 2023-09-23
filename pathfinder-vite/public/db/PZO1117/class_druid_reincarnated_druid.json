@@ -1,0 +1,58 @@
+{
+  "id": "class:druid#reincarnated_druid",
+  "name": "Reincarnated Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:woodland_stride#druid AND !@modifies:ability:timeless_body#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:mysterious_stranger#druid_reincarnated_druid",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:resist_deaths_touch#druid_reincarnated_druid",
+          "conditionFormula": "@class:druid\u003e\u003d4"
+        }, {
+          "featureId": "ability:cheat_death#druid_reincarnated_druid",
+          "conditionFormula": "@class:druid\u003e\u003d9"
+        }, {
+          "featureId": "ability:tongue_of_the_sun_and_moon#druid_reincarnated_druid",
+          "conditionFormula": "@class:druid\u003e\u003d15"
+        }],
+        "unlinks": [{
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:resist_natures_lure#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }, {
+          "featureId": "ability:timeless_body#druid"
+        }]
+      }]
+    }
+  }
+}

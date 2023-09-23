@@ -1,0 +1,67 @@
+{
+  "id": "class:paladin#holy_gun",
+  "name": "Holy Gun",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:the_standard_paladins_divine_bond#paladin AND !@modifies:ability:detect_evil#paladin AND !@modifies:ability:smite_evil#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "Not all paladins are knights in shining armor. Holy guns roam the world searching for evil. And where they find it, they put it down."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_standard_paladins_divine_bond#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:detect_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:have_gun#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d1"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d1"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d4"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d7"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d10"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d13"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d16"
+        }, {
+          "featureId": "ability:smiting_shot#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d19"
+        }, {
+          "featureId": "ability:divine_bond#paladin_holy_gun",
+          "conditionFormula": "@class:paladin\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:detect_evil#paladin"
+        }, {
+          "featureId": "ability:smite_evil#paladin"
+        }, {
+          "featureId": "ability:the_standard_paladins_divine_bond#paladin"
+        }]
+      }]
+    }
+  }
+}

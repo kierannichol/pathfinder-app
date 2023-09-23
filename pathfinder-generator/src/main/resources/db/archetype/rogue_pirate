@@ -1,0 +1,57 @@
+id: "class:rogue#pirate"
+name: "Pirate"
+description: "A pirate breaks from the confines of country and king to commit her\
+  \ crimes upon the high seas. She holds allegiance only to her ship and its captain\
+  \ (if even that much is true), and lives a lawless life upon the waves, plundering\
+  \ ships and shorelines as suits her whim."
+modifications:
+- add: "ability:sea_legs#rogue_pirate"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:swinging_reposition#rogue_pirate"
+  remove:
+  - "ability:the_2nd_level_rogue_talent#rogue"
+- add: "ability:unflinching#rogue_pirate"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:sea_legs#rogue_pirate"
+  name: "Sea Legs"
+  label: null
+  type: null
+  description: "At 1st level, a pirate becomes adept at moving on ships, boats, and\
+    \ similar vessels. She gains the Sea Legs feat as a bonus feat, even if she does\
+    \ not meet the prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:swinging_reposition#rogue_pirate"
+  name: "Swinging Reposition"
+  label: null
+  type: null
+  description: "At 2nd level, a pirate incorporates a ship's masts, rigging, ropes,\
+    \ sails, and other such structures into her combat style. Provided she is wearing\
+    \ light armor or no armor, when fighting in an environment where such structures\
+    \ exist, the rogue incorporates them into her movement, and does not have to move\
+    \ in a straight line when making either a charge attack or bull rush combat maneuver.\
+    \ Once she completes her attack or maneuver, she can reposition herself. Immediately\
+    \ after making the charge or bull rush, she can move 5 feet as a free action,\
+    \ even if the charge ends her turn. This movement does not provoke attacks of\
+    \ opportunity.\nThis ability replaces the 2nd-level rogue talent."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:unflinching#rogue_pirate"
+  name: "Unflinching"
+  label: null
+  type: null
+  description: "Pirates are a salty and steadfast lot. At 3rd level, a pirate gains\
+    \ a +1 bonus on saving throws against fear and mind-affecting effects. This bonus\
+    \ increases by +1 for every three levels, to a maximum of +6 at 18th level.\n\
+    This ability replaces trap sense.\nRogue Talents: The following rogue talents\
+    \ complement the pirate archetype: black market connections, combat trick, finesse\
+    \ rogue, firearm training, hold breath, rope master, and strong stroke."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

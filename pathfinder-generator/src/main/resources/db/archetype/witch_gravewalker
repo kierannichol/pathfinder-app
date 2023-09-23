@@ -1,0 +1,78 @@
+id: "class:witch#gravewalker"
+name: "Gravewalker"
+description: "Having much in common with necromancers, the gravewalker is obsessed\
+  \ with the occult manipulations of the dead, particularly mindless undead such as\
+  \ zombies. Unlike the creations of standard necromancers, a gravewalker's creations\
+  \ remain forever tied to her will, and she can produce vile apparitions of tremendous\
+  \ power."
+modifications:
+- add: "ability:spell_poppet#witch_gravewalker"
+  remove:
+  - "ability:familiar#witch"
+- add: "ability:aura_of_desecration#witch_gravewalker"
+  remove:
+  - "ability:the_witchs_1st_level_hex#witch"
+- add: "ability:bonethrall#witch_gravewalker"
+  remove:
+  - "ability:the_witchs_hex_gained_at_4th_level#witch"
+- add: "ability:possess_undead#witch_gravewalker"
+  remove:
+  - "ability:the_witchs_hex_gained_at_8th_level#witch"
+features:
+- id: "ability:spell_poppet#witch_gravewalker"
+  name: "Spell Poppet"
+  label: null
+  type: null
+  description: "Each gravewalker carries around a gristly, inanimate poppet stitched\
+    \ from human skin and stuffed with shards of bone, fingernails, and grave dirt.\
+    \ A gravewalker's spells come from the will of evil spirits residing in the poppet,\
+    \ and its ability to hold spells functions in a manner identical to the way a\
+    \ witch's spells are granted by her familiar. The gravewalker must commune with\
+    \ her poppet each day to prepare her spells and cannot prepare spells that are\
+    \ not stored in the poppet.\nThis ability replaces familiar."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:aura_of_desecration#witch_gravewalker"
+  name: "Aura of Desecration"
+  label: null
+  type: null
+  description: "At first level, a gravewalker can create a 20-foot-radius aura of\
+    \ evil power. This aura increases the DC of channeled negative energy by +1 and\
+    \ the turn resistance of undead by +1. At 3rd level and every 2 levels thereafter,\
+    \ the radius of the aura increases by 5 feet, to a maximum of 70 feet at 20th\
+    \ level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:bonethrall#witch_gravewalker"
+  name: "Bonethrall"
+  label: null
+  type: null
+  description: "At 1st level, a gravewalker can take control of an undead creature\
+    \ within her aura of desecration by forcing her will upon it (Will negates, using\
+    \ her hex DC.) If it fails the save, the creature falls under her control as if\
+    \ she had used command undead (once control is established, the undead remain\
+    \ controlled even if outside the witch's aura). Intelligent undead receive a new\
+    \ saving throw each day to resist her command. The witch can control up to 1 HD\
+    \ of undead creatures per caster level. If an undead creature is under the control\
+    \ of another creature, the witch must make an opposed Charisma check whenever\
+    \ her orders conflict with that creature's."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:possess_undead#witch_gravewalker"
+  name: "Possess Undead"
+  label: null
+  type: null
+  description: "A gravewalker may take direct control of one of her undead minions\
+    \ within her aura of desecration, as if using magic jar; the witch's poppet acts\
+    \ as the soul receptacle for this ability. The minion gets no saving throw against\
+    \ this ability.\nThis replaces the witch's hex gained at 8th level.\nHexes: The\
+    \ following witch hexes complement the gravewalker archetype: beast of ill-omen,\
+    \ evil eye, misfortune.\nMajor Hexes: The following major hexes complement the\
+    \ gravewalker archetype: ice tomb, infected wounds, waxen image."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

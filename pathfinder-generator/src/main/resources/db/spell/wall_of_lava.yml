@@ -1,0 +1,31 @@
+casting_time: "1 standard action"
+saving_throw: "see text"
+spell_resistance: "no"
+id: "spell:wall_of_lava"
+name: "Wall of Lava"
+description: "This spell creates a vertical wall of lavathat is 1 inch thick for every\
+  \ 4 caster levels and composed of up to one 5-foot square per level. A wall of lava'smaximum\
+  \ height cannot exceed half of its width (with a minimum height of 5 feet). The\
+  \ wall cannot be conjured so that it occupies the same space as a creature or object.\
+  \ A section of a wall of lavacan be destroyed by damage (hardness 4, hp 90), but\
+  \ if a section is destroyed, the remaining lava in the wall immediately fills in\
+  \ any such hole created, reducing the wall's overall size by one 5-foot square but\
+  \ remaining a contiguous barrier. Each time a weapon strikes a wall of lava, it\
+  \ takes 2d6 points of fire damage (or the creature who strikes the wall takes 2d6\
+  \ fire damage if the attack was via an unarmed strike or natural attack)."
+prerequisites: ""
+components: "V, S, M/DF (a chunk of dried lava)"
+range: "medium (100 ft. + 10 ft./level)"
+targets: "lava wall whose area is up to one 5-ft. square/level (S)"
+duration: "1 round/level (D)"
+school: "conjuration (creation) [earth, fire]"
+levels:
+- class_id: "class:arcanist"
+  level: 8
+- class_id: "class:druid"
+  level: 8
+- class_id: "class:sorcerer"
+  level: 8
+- class_id: "class:wizard"
+  level: 8
+source: "Advanced Player's Guide"

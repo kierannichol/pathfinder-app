@@ -1,0 +1,50 @@
+id: "class:druid#menhir_savant"
+name: "Menhir Savant"
+description: ""
+modifications:
+- add: "ability:spirit_sense#druid_menhir_savant"
+  remove:
+  - "ability:wild_empathy#druid"
+  - "ability:nature_sense#druid"
+- add: "ability:place_magic#druid_menhir_savant"
+  remove:
+  - "ability:trackless_step#druid"
+  - "ability:woodland_stride#druid"
+- add: "ability:empty_body#druid_menhir_savant"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:spirit_sense#druid_menhir_savant"
+  name: "Spirit Sense"
+  label: null
+  type: null
+  description: "At 1st level, a menhir savant can detect the presence of undead; fey;\
+    \ outsiders; and astral, ethereal, or incorporeal creatures. This ability functions\
+    \ like detect undead, and the druid detects all of these creatures rather than\
+    \ trying to detect one kind."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:place_magic#druid_menhir_savant"
+  name: "Place Magic"
+  label: null
+  type: null
+  description: "At 2nd level, a menhir savant learns to identify and tap into ley\
+    \ lines in different types of terrain. As a free action, she can tap into the\
+    \ magic of a nearby ley line and increase her caster level by +1 for 1 round.\
+    \ She can use this ability a number of times per day equal to 3 + her Wisdom bonus.\n\
+    This ability replaces woodland stride and trackless step."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:empty_body#druid_menhir_savant"
+  name: "Empty Body"
+  label: null
+  type: null
+  description: "At 13th level, a menhir savant can become ethereal as a standard action,\
+    \ as if using ethereal jaunt. She can remain ethereal for a number of rounds per\
+    \ day equal to her druid level. These rounds do not need to be consecutive."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

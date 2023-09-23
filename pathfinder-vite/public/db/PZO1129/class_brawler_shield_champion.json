@@ -1,0 +1,56 @@
+{
+  "id": "class:brawler#shield_champion",
+  "name": "Shield Champion",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:the_maneuver_training_gained_at_15th_and_19th_levels#brawler AND !@modifies:ability:maneuver_training_at_3rd_7th_and_11th_levels#brawler AND !@modifies:ability:the_brawlers_weapon_and_armor_proficiencies#brawler AND !@modifies:ability:brawlers_strike#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "Stalwart in battle, a shield champion has perfected an entire martial discipline relying on only her hand-to-hand fighting skills and her ever-present shield. What she forgoes in weapon versatility and improved combat maneuvering, she makes up for in her ability to turn her defense into a weapon."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_maneuver_training_gained_at_15th_and_19th_levels#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:maneuver_training_at_3rd_7th_and_11th_levels#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_brawlers_weapon_and_armor_proficiencies#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:brawlers_strike#brawler",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:throw_shield#brawler_shield_champion",
+          "conditionFormula": "@class:brawler\u003e\u003d3"
+        }, {
+          "featureId": "ability:champion_defense#brawler_shield_champion",
+          "conditionFormula": "@class:brawler\u003e\u003d15"
+        }, {
+          "featureId": "ability:returning_shield#brawler_shield_champion",
+          "conditionFormula": "@class:brawler\u003e\u003d5"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_brawlers_weapon_and_armor_proficiencies#brawler"
+        }, {
+          "featureId": "ability:maneuver_training_at_3rd_7th_and_11th_levels#brawler"
+        }, {
+          "featureId": "ability:the_maneuver_training_gained_at_15th_and_19th_levels#brawler"
+        }, {
+          "featureId": "ability:brawlers_strike#brawler"
+        }]
+      }]
+    }
+  }
+}

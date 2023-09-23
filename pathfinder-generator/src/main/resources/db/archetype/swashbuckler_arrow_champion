@@ -1,0 +1,64 @@
+id: "class:swashbuckler#arrow_champion"
+name: "Arrow Champion"
+description: "While the swashbuckler's agile style of combat is equally suited to\
+  \ urban settings and wilderness, the bow and arrow is an indispensable asset in\
+  \ open areas and harsh terrain where fancy footwork isn't enough to close the distance\
+  \ or dodge the enemy's arrows."
+modifications:
+- add: "ability:arrow_champions_panache#swashbuckler_arrow_champion"
+  remove:
+  - "ability:panache#swashbuckler"
+- add: "ability:deeds#swashbuckler_arrow_champion"
+  remove:
+  - "ability:opportune_parry#swashbuckler"
+  - "ability:riposte#swashbuckler"
+- add: "ability:weapon_versatility#swashbuckler_arrow_champion"
+  remove:
+  - "ability:swashbuckler_weapon_training#swashbuckler"
+- add: "ability:versatile_weapon_mastery#swashbuckler_arrow_champion"
+  remove:
+  - "ability:swashbuckler_weapon_mastery#swashbuckler"
+features:
+- id: "ability:arrow_champions_panache#swashbuckler_arrow_champion"
+  name: "Arrow Champion's Panache"
+  label: null
+  type: null
+  description: "An arrow champion regains panache when she makes a killing blow with\
+    \ a light or one-handed piercing melee weapon or a bow (a longbow, shortbow, composite\
+    \ longbow, or composite shortbow)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:deeds#swashbuckler_arrow_champion"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "An arrow champion gains the following deeds, each of which replaces\
+    \ an existing deed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:weapon_versatility#swashbuckler_arrow_champion"
+  name: "Weapon Versatility"
+  label: null
+  type: null
+  description: "At 5th level, an arrow champion learns to use precision-based tricks\
+    \ just as accurately with her bow as with her melee weapons. Provided that her\
+    \ swashbuckler level is high enough, she can use the bleeding wound, deadly stab,\
+    \ menacing swordplay, perfect thrust, stunning stab, and targeted strike deeds\
+    \ when attacking with a bow, so long as her target is within 30 feet. If she spends\
+    \ a panache point to increase the range of her precise aim ability, the increased\
+    \ range applies to this ability as well."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:versatile_weapon_mastery#swashbuckler_arrow_champion"
+  name: "Versatile Weapon Mastery"
+  label: null
+  type: null
+  description: "At 20th level, an arrow champion gains the benefits of swashbuckler\
+    \ weapon mastery when using a light or one-handed piercing melee weapon or a bow."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

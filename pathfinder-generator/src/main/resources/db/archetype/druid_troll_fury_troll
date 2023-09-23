@@ -1,0 +1,55 @@
+id: "class:druid#troll_fury_troll"
+name: "Troll Fury (Troll)"
+description: ""
+modifications:
+- add: "ability:inspire_fervor#druid_troll_fury_troll"
+  remove:
+  - "ability:wild_empathy#druid"
+- add: "ability:chosen_prey#druid_troll_fury_troll"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:troll_furys_mark#druid_troll_fury_troll"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:inspire_fervor#druid_troll_fury_troll"
+  name: "Inspire Fervor"
+  label: null
+  type: null
+  description: "At 1st level, once per day as a standard action, a troll fury can\
+    \ chant over another troll within 30 feet, bolstering it against fear and improving\
+    \ its combat abilities. This works like the inspire courage bard ability, but\
+    \ affects only one troll and lasts 1 minute. The troll fury uses her druid level\
+    \ as her bard level to determine the effects of this ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+- id: "ability:chosen_prey#druid_troll_fury_troll"
+  name: "Chosen Prey"
+  label: null
+  type: null
+  description: "At 4th level, a troll fury can select one creature type from the ranger's\
+    \ favored enemy list and gains a favored enemy bonus against that creature type\
+    \ with an effective ranger level equal to her druid level. This ability never\
+    \ grants the troll fury favored enemy bonuses against a second favored enemy creature\
+    \ type. A troll fury can change her favored enemy type once per week by performing\
+    \ a ritual that takes 1 hour to perform. If a troll fury already has a favored\
+    \ enemy from another class, the levels from the classes that grant favored enemies\
+    \ stack with this one to determine the favored enemy bonuses, and in this case\
+    \ she can gain other favored enemy creature types."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+- id: "ability:troll_furys_mark#druid_troll_fury_troll"
+  name: "Troll Fury's Mark"
+  label: null
+  type: null
+  description: "At 9th level, each time a troll fury or her animal companion damages\
+    \ a creature with a natural attack, the troll fury gains a +10 insight bonus on\
+    \ Survival checks to track that creature for 24 hours. The duration of this ability\
+    \ does not stack with itself. Each time the troll fury or her animal companion\
+    \ hits the target, this ability lasts for the next 24 hours."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Monster Codex"
+source: "Pathfinder Roleplaying Game Monster Codex"

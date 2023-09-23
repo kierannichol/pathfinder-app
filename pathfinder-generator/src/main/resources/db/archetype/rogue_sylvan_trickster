@@ -1,0 +1,68 @@
+id: "class:rogue#sylvan_trickster"
+name: "Sylvan Trickster"
+description: "Sylvan tricksters are rogues who model themselves after the mischievous\
+  \ fey of legend. Though not spellcasters, sylvan tricksters learn minor magical\
+  \ abilities reminiscent of those favored by fey creatures. The journey for many\
+  \ sylvan tricksters began in childhood, learning at an elder's knee the stories\
+  \ of the fey and the secrets of how to resist their tricks. Sylvan tricksters often\
+  \ live in areas where the boundary with the Fey World is thin, and a few have even\
+  \ been there-- voluntarily or not."
+modifications:
+- add: "ability:wild_empathy#rogue_sylvan_trickster"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:fey_tricks#rogue_sylvan_trickster"
+  remove:
+  - "ability:rogue_talents#rogue"
+- add: "ability:resist_natures_lure#rogue_sylvan_trickster"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:fey_resistance#rogue_sylvan_trickster"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:wild_empathy#rogue_sylvan_trickster"
+  name: "Wild Empathy"
+  label: null
+  type: null
+  description: "A sylvan trickster can improve an animal's attitude. This ability\
+    \ functions as the druid ability of the same name, using the sylvan trickster's\
+    \ rogue level as her effective druid level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:fey_tricks#rogue_sylvan_trickster"
+  name: "Fey Tricks"
+  label: null
+  type: null
+  description: "A sylvan trickster can select a witch hex in place of a rogue talent.\
+    \ At 10th level, the sylvan trickster can select a hex or major hex in place of\
+    \ a rogue talent. At 18th level, a sylvan trickster can select a hex, major hex,\
+    \ or grand hex in place of a rogue talent. She cannot select any hex more than\
+    \ once."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:resist_natures_lure#rogue_sylvan_trickster"
+  name: "Resist Nature's Lure"
+  label: null
+  type: null
+  description: "At 4th level, a sylvan trickster gains resist nature's lure as the\
+    \ druid ability of the same name."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:fey_resistance#rogue_sylvan_trickster"
+  name: "Fey Resistance"
+  label: null
+  type: null
+  description: "At 8th level, a sylvan trickster gains DR 2/cold iron. At 11th level\
+    \ and every 3 levels thereafter, this damage reduction increases by 2 (to a maximum\
+    \ of DR 10/cold iron at 20th level).\nThis replaces improved uncanny dodge.\n\
+    Rogue Talents: The following rogue talents complement the sylvan trickster archetype:\
+    \ camouflage, charmer, honeyed words, major magic, minor magic, survivalist, terrain\
+    \ mastery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

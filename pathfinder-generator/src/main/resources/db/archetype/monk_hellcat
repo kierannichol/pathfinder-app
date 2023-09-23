@@ -1,0 +1,113 @@
+id: "class:monk#hellcat"
+name: "Hellcat"
+description: ""
+modifications:
+- add: "ability:weapon_proficiencies#monk_hellcat"
+  remove:
+  - "ability:the_monks_weapon_proficiencies#monk"
+- add: "ability:bonus_feat#monk_hellcat"
+  remove:
+  - "ability:the_monks_bonus_feat_ability#monk"
+- add: "ability:hellcat_fury#monk_hellcat"
+  remove:
+  - "ability:stunning_fist#monk"
+  - "ability:fast_movement#monk"
+- add: "ability:torture_training#monk_hellcat"
+  remove:
+  - "ability:evasion_purity_of_body#monk"
+  - "ability:improved_evasion#monk"
+- add: "ability:crucible_of_pain#monk_hellcat"
+  remove:
+  - "ability:slow_fall#monk"
+  - "ability:still_mind#monk"
+- add: "ability:hellcat_ki#monk_hellcat"
+  remove:
+  - "ability:diamond_body#monk"
+  - "ability:ki_pool#monk"
+  - "ability:wholeness_of_body#monk"
+features:
+- id: "ability:weapon_proficiencies#monk_hellcat"
+  name: "Weapon Proficiencies"
+  label: null
+  type: null
+  description: "A hellcat is proficient with the club, crossbow (light or heavy),\
+    \ dagger, kama, light mace, nunchaku, quarterstaff, repeating crossbow (light\
+    \ or heavy), sai, shuriken, and siangham. In addition to monk weapons and unarmed\
+    \ strikes, a hellcat can use a light mace to perform a flurry of blows."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:bonus_feat#monk_hellcat"
+  name: "Bonus Feat"
+  label: null
+  type: null
+  description: "A hellcat selects bonus feats from the following list: Aspect of the\
+    \ Beast, Blind-Fight, Combat Reflexes, Dodge, Diehard, Improved Grapple, and Power\
+    \ Attack. At 6th level, the following feats are added to the list: Critical Focus,\
+    \ Greater Grapple, Improved Blind-Fight, Mobility, and Stalwart. At 10th level,\
+    \ the following feats are added to the list: Bleeding Critical, Greater Blind-Fight,\
+    \ Improved Critical, Improved Stalwart, and Spring Attack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:hellcat_fury#monk_hellcat"
+  name: "Hellcat Fury"
+  label: null
+  type: null
+  description: "At 1st level, a hellcat can deal slashing damage with his unarmed\
+    \ strikes. At 4th level, whenever a hellcat confirms a critical hit with his slashing\
+    \ unarmed strike, the target of that attack also takes 1d4 points of bleed damage.\
+    \ At 8th level, the bleed damage increases to 1d6 points; at 12th level, the bleed\
+    \ damage increases to 1d8 points; at 16th level, the bleed damage increases to\
+    \ 1d10 points; and at 20th level, the bleed damage increases to 1d12 points."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:torture_training#monk_hellcat"
+  name: "Torture Training"
+  label: null
+  type: null
+  description: "At 2nd level, a hellcat who fails a save against an effect that causes\
+    \ him to become fatigued, sickened, or staggered can attempt a second save against\
+    \ the effect at the end of his next turn. Only one additional save is allowed.\
+    \ At 5th level, he can also attempt this second save against effects that would\
+    \ cause him to become frightened or shaken. At 9th level, he can also attempt\
+    \ this second save against effects that would cause him to become exhausted, nauseated,\
+    \ or dazed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:crucible_of_pain#monk_hellcat"
+  name: "Crucible of Pain"
+  label: null
+  type: null
+  description: "At 3rd level, a hellcat gains an amount of DR/-- equal to half his\
+    \ monk level against nonlethal damage. In addition, a hellcat is inured to hot\
+    \ climate effects as if using endure elements."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+- id: "ability:hellcat_ki#monk_hellcat"
+  name: "Hellcat Ki"
+  label: null
+  type: null
+  description: "At 4th level, a hellcat gains a pool of ki points that he can use\
+    \ as per the monk class feature but with the following changes. In addition to\
+    \ spending ki to gain an additional attack, increased speed, or improved AC, a\
+    \ hellcat can spend 1 ki point as a swift action to enhance his sight (gaining\
+    \ 60-foot darkvision) or his sense of smell (gaining the scent ability) for 1\
+    \ minute per level.\nAt 7th level, a hellcat can spend 1 point of ki as a swift\
+    \ action to gain fire resistance 5 for 1 round per level. At 10th level, this\
+    \ fire resistance increases to 10, and at 14th level, it increases to 15.\nAt\
+    \ 11th level, a hellcat can spend 1 point of ki as a swift action to become silhouetted\
+    \ with a ghostly flame, which makes him harder to see in light but easier to see\
+    \ in darkness for 1 round per level. He becomes invisible in bright light, gains\
+    \ concealment (20% miss chance) in normal light, gains no benefit in dim light,\
+    \ and gives off light like a candle in darkness, allowing other creatures to see\
+    \ him even without darkvision. If he takes any action that would break invisibility\
+    \ while in bright light, his invisibility is reduced to concealment until the\
+    \ end of his next turn."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Villain Codex"
+source: "Pathfinder Roleplaying Game Villain Codex"

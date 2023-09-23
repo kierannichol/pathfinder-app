@@ -1,0 +1,48 @@
+id: "class:magus#card_caster"
+name: "Card Caster"
+description: ""
+modifications:
+- add: "ability:arcane_pool_focus#magus_card_caster"
+  remove:
+  - "ability:arcane_pool#magus"
+- add: "ability:harrowed_spellstrike#magus_card_caster"
+  remove:
+  - "ability:and_modifies_spellstrike#magus"
+- add: "ability:role_dealer#magus_card_caster"
+  remove:
+  - "ability:the_magus_arcana_gained_at_3rd_level#magus"
+features:
+- id: "ability:arcane_pool_focus#magus_card_caster"
+  name: "Arcane Pool Focus"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+- id: "ability:harrowed_spellstrike#magus_card_caster"
+  name: "Harrowed Spellstrike"
+  label: null
+  type: null
+  description: "Beginning at 2nd level, a card caster can invest a single thrown weapon\
+    \ with a single touch or ranged spell as part of the spell's normal casting time.\
+    \ The spell must target a single creature, and the spell's range changes to match\
+    \ the thrown weapon's range increment. This ability otherwise functions identically\
+    \ to spellstrike, except it can only be applied to thrown ranged weapons instead\
+    \ of melee attacks."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+- id: "ability:role_dealer#magus_card_caster"
+  name: "Role Dealer"
+  label: null
+  type: null
+  description: "Beginning at 3rd level, whenever the card caster randomly draws and\
+    \ throws a harrow card matching one axis of his alignment, the card's critical\
+    \ threat range increases to 19–20. If the card caster draws and throws a harrow\
+    \ card matching his alignment exactly, the attack's critical multiplier also increases\
+    \ to x3 and the magus gains a +4 bonus on his confirmation roll."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: The Harrow Handbook"
+source: "Pathfinder Player Companion: The Harrow Handbook"

@@ -1,0 +1,58 @@
+{
+  "id": "class:slayer#vanguard",
+  "name": "Vanguard",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer AND !@modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:lookout#slayer_vanguard",
+          "conditionFormula": "@class:slayer\u003e\u003d1"
+        }, {
+          "featureId": "ability:tactician#slayer_vanguard",
+          "conditionFormula": "@class:slayer\u003e\u003d2"
+        }, {
+          "featureId": "ability:vanguards_bond#slayer_vanguard",
+          "conditionFormula": "@class:slayer\u003e\u003d4"
+        }, {
+          "featureId": "ability:ever_ready#slayer_vanguard",
+          "conditionFormula": "@class:slayer\u003e\u003d7"
+        }],
+        "unlinks": [{
+          "featureId": "ability:track#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+        }, {
+          "featureId": "ability:the_slayer_talent_gained_at_4th_level#slayer"
+        }, {
+          "featureId": "ability:stalker#slayer"
+        }]
+      }]
+    }
+  }
+}

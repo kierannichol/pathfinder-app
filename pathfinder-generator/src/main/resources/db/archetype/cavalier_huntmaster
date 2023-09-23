@@ -1,0 +1,149 @@
+id: "class:cavalier#huntmaster"
+name: "Huntmaster"
+description: "Huntmasters train the beasts favored by lordly castes into swift and\
+  \ deadly trackers."
+modifications:
+- add: "ability:bestial_challenge#cavalier_huntmaster"
+  remove:
+  - "ability:the_challenge_ability#cavalier"
+- add: "ability:hunting_pack#cavalier_huntmaster"
+  remove:
+  - "ability:mount#cavalier"
+- add: "ability:tactician#cavalier_huntmaster"
+  remove:
+  - "ability:master_tactician_abilities#cavalier"
+  - "ability:the_tactician_greater_tactician#cavalier"
+- add: "ability:takedown#cavalier_huntmaster"
+  remove:
+  - "ability:cavaliers_charge#cavalier"
+- add: "ability:animal_trainer#cavalier_huntmaster"
+  remove:
+  - "ability:the_expert_trainer_ability#cavalier"
+- add: "ability:swift_tracker#cavalier_huntmaster"
+  remove:
+  - "ability:banner#cavalier"
+- add: "ability:bonus_feats#cavalier_huntmaster"
+  remove:
+  - "ability:a_cavaliers_standard_bonus_feats#cavalier"
+- add: "ability:pack_attack#cavalier_huntmaster"
+  remove:
+  - "ability:mighty_charge#cavalier"
+- add: "ability:quarry#cavalier_huntmaster"
+  remove:
+  - "ability:greater_banner#cavalier"
+- add: "ability:improved_quarry#cavalier_huntmaster"
+  remove:
+  - "ability:supreme_charge#cavalier"
+features:
+- id: "ability:bestial_challenge#cavalier_huntmaster"
+  name: "Bestial Challenge"
+  label: null
+  type: null
+  description: "Whenever a huntmaster issues a challenge, both he and his hunting\
+    \ pack gain the bonuses and penalties associated with his challenge."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:hunting_pack#cavalier_huntmaster"
+  name: "Hunting Pack"
+  label: null
+  type: null
+  description: "At 1st level, a huntmaster forms a close bond with an animal companion.\
+    \ This animal companion functions as a druid's animal companion, using the cavalier's\
+    \ level as his effective druid level. He can choose either a bird or a dog when\
+    \ selecting his animal companion.\nThe huntmaster can have more than one animal\
+    \ companion, but he must divide up his effective druid level between his companions\
+    \ to determine the abilities of each companion. Each time a huntmaster's effective\
+    \ druid level increases, he must decide how to allocate the increase among his\
+    \ animal companions (including the option of adding a new 1st-level companion).\
+    \ Once an effective druid level is allocated to a particular companion, it cannot\
+    \ be redistributed while that companion is in the huntmaster's service (he must\
+    \ release a companion or wait until a companion dies to allocate its levels to\
+    \ another companion). The share spells animal companion ability does not give\
+    \ the huntmaster the ability to cast a single spell so that it affects all of\
+    \ his animal companions.\nA huntmaster's animal companions gain a bonus on Survival\
+    \ checks to follow tracks equal to 1/2 the cavalier's class level (minimum 1)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:tactician#cavalier_huntmaster"
+  name: "Tactician"
+  label: null
+  type: null
+  description: "A huntmaster's tactician ability affects only his hunting pack, not\
+    \ other allies."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:takedown#cavalier_huntmaster"
+  name: "Takedown"
+  label: null
+  type: null
+  description: "At 3rd level, a huntmaster's dog can make a free trip or dirty trick\
+    \ (entangled) combat maneuver after a successful melee attack. A huntmaster's\
+    \ bird can make a free dirty trick (dazzled or deafened) combat maneuver after\
+    \ a successful melee attack; if the target is already dazzled, the bird can choose\
+    \ dirty trick (blinded) instead. These combat maneuvers do not provoke attacks\
+    \ of opportunity."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:animal_trainer#cavalier_huntmaster"
+  name: "Animal Trainer"
+  label: null
+  type: null
+  description: "At 4th level, a huntmaster's expert trainer ability applies to birds\
+    \ and dogs rather than mounts."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:swift_tracker#cavalier_huntmaster"
+  name: "Swift Tracker"
+  label: null
+  type: null
+  description: "At 5th level, a huntmaster gains the swift tracker ability, as the\
+    \ ranger ability of the same name."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:bonus_feats#cavalier_huntmaster"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "At 6th level, a huntmaster and all members of his hunting pack gain\
+    \ Step Up as a bonus feat. At 12th level, they gain Following Step and at 18th\
+    \ level, they gain Step Up and Strike."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:pack_attack#cavalier_huntmaster"
+  name: "Pack Attack"
+  label: null
+  type: null
+  description: "At 11th level, whenever a huntmaster and any of his hunting pack or\
+    \ multiple animals in his hunting pack are adjacent and attack the same target\
+    \ in melee, they are treated as flanking. In addition, they can flank a creature\
+    \ with improved uncanny dodge if the huntmaster has at least 4 more levels than\
+    \ the target."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:quarry#cavalier_huntmaster"
+  name: "Quarry"
+  label: null
+  type: null
+  description: "At 14th level, a huntmaster gains quarry, as the ranger ability of\
+    \ the same name. The benefits of this ability also apply to his hunting pack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+- id: "ability:improved_quarry#cavalier_huntmaster"
+  name: "Improved Quarry"
+  label: null
+  type: null
+  description: "At 20th level, a huntmaster gains improved quarry, as the ranger ability\
+    \ of the same name. The benefits of this ability also apply to his hunting pack."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Animal Archive"
+source: "Pathfinder Player Companion: Animal Archive"

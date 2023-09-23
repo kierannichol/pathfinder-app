@@ -1,0 +1,31 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude negates (harmless)"
+spell_resistance: "yes (harmless)"
+id: "spell:antitoxin_touch"
+name: "Antitoxin Touch"
+description: "The target's skin secretes a small amount of venom-resistant oils for\
+  \ the spell's duration. The target cannot accidentally poison itself while applying\
+  \ poison. Additionally, the target does not risk exposure to a creature's poison\
+  \ when attempting to milk venom (Ultimate Wilderness 142)."
+prerequisites: ""
+components: "V, S, M (a small drop of antitoxin)"
+range: "touch"
+targets: "creature touched"
+duration: "1 round/level"
+school: "abjuration"
+levels:
+- class_id: "class:alchemist"
+  level: 1
+- class_id: "class:druid"
+  level: 1
+- class_id: "class:hunter"
+  level: 1
+- class_id: "class:investigator"
+  level: 1
+- class_id: "class:ranger"
+  level: 1
+- class_id: "class:shaman"
+  level: 1
+- class_id: "class:witch"
+  level: 1
+source: "Potions and Poisons"

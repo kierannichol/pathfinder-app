@@ -1,0 +1,48 @@
+{
+  "id": "class:druid#menhir_savant",
+  "name": "Menhir Savant",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:woodland_stride_and_trackless_step#druid AND !@modifies:ability:nature_sense_and_wild_empathy#druid AND !@modifies:ability:a_thousand_faces#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride_and_trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense_and_wild_empathy#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:spirit_sense#druid_menhir_savant",
+          "conditionFormula": "@class:druid\u003e\u003d1"
+        }, {
+          "featureId": "ability:place_magic#druid_menhir_savant",
+          "conditionFormula": "@class:druid\u003e\u003d2"
+        }, {
+          "featureId": "ability:empty_body#druid_menhir_savant",
+          "conditionFormula": "@class:druid\u003e\u003d13"
+        }],
+        "unlinks": [{
+          "featureId": "ability:nature_sense_and_wild_empathy#druid"
+        }, {
+          "featureId": "ability:woodland_stride_and_trackless_step#druid"
+        }, {
+          "featureId": "ability:a_thousand_faces#druid"
+        }]
+      }]
+    }
+  }
+}

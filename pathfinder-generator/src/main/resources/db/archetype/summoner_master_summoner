@@ -1,0 +1,56 @@
+id: "class:summoner#master_summoner"
+name: "Master Summoner"
+description: "Most summoners forge a bond with a single, powerful eidolon, but some\
+  \ summoners seek to control a variety of creatures. The master summoner sacrifices\
+  \ the power of his eidolon in favor of summoning a plethora of otherworldly creatures\
+  \ to aid him."
+modifications:
+- add: "ability:lesser_eidolon#summoner_master_summoner"
+  remove:
+  - "ability:the_summoners_normal_eidolon_ability#summoner"
+- add: "ability:summoning_mastery#summoner_master_summoner"
+  remove:
+  - "ability:shield_ally#summoner"
+  - "ability:the_summoners_normal_summon_monster_i_ability#summoner"
+- add: "ability:augment_summoning#summoner_master_summoner"
+  remove:
+  - "ability:bond_senses#summoner"
+features:
+- id: "ability:lesser_eidolon#summoner_master_summoner"
+  name: "Lesser Eidolon"
+  label: null
+  type: null
+  description: "A master summoner's class level is halved (minimum 1) for the purposes\
+    \ of determining his eidolon's abilities, Hit Dice, evolution pool, and so on.\
+    \ The eidolon otherwise functions as normal."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:summoning_mastery#summoner_master_summoner"
+  name: "Summoning Mastery"
+  label: null
+  type: null
+  description: "Starting at 1st level, a master summoner can cast summon monster I\
+    \ as a spell-like ability a number of times per day equal to 5 + his Charisma\
+    \ modifier. The summoner can use this ability when his eidolon is summoned. Only\
+    \ one summon monster spell may be in effect while the eidolon is summoned. If\
+    \ the summoner's eidolon is not summoned, the number of creatures that can be\
+    \ summoned with this ability is only limited by its uses per day. This ability\
+    \ otherwise functions as the summoner's normal summon monster I ability. Other\
+    \ than these restrictions, there is no limit to how many summon monster or gate\
+    \ spells the summoner can have active at one time.\nThis ability replaces the\
+    \ summoner's normal summon monster I ability and shield ally."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:augment_summoning#summoner_master_summoner"
+  name: "Augment Summoning"
+  label: null
+  type: null
+  description: "At 2nd level, a master summoner gains Augment Summoning as a bonus\
+    \ feat. He does not have to meet any requirements for this feat.\nThis ability\
+    \ replaces bond senses."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Ultimate Magic"
+source: "Pathfinder Roleplaying Game: Ultimate Magic"

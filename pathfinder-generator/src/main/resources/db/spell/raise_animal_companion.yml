@@ -1,0 +1,23 @@
+casting_time: "1 minute"
+saving_throw: "none, see text"
+spell_resistance: "yes (harmless)"
+id: "spell:raise_animal_companion"
+name: "Raise Animal Companion"
+description: "This spell functions as raise dead, but it only affects an animal companion,\
+  \ familiar, or paladin's bonded mount."
+prerequisites: ""
+components: "V, S, M (a diamond worth 1,000 gp)"
+range: "touch"
+targets: "dead animal companion or bonded mount"
+duration: "instantaneous"
+school: "conjuration (healing)"
+levels:
+- class_id: "class:druid"
+  level: 5
+- class_id: "class:hunter"
+  level: 4
+- class_id: "class:paladin"
+  level: 4
+- class_id: "class:ranger"
+  level: 4
+source: "Ultimate Magic"

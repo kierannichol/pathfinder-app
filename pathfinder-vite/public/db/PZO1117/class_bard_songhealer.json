@@ -1,0 +1,60 @@
+{
+  "id": "class:bard#songhealer",
+  "name": "Songhealer",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:frightening_tune#bard AND !@modifies:ability:deadly_performance#bard AND !@modifies:ability:versatile_performance#bard",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:frightening_tune#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:deadly_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:enhance_healing#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:enhance_healing#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d6"
+        }, {
+          "featureId": "ability:enhance_healing#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }, {
+          "featureId": "ability:enhance_healing#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d14"
+        }, {
+          "featureId": "ability:enhance_healing#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d18"
+        }, {
+          "featureId": "ability:bardic_performance#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d14"
+        }, {
+          "featureId": "ability:funereal_ballad#bard_songhealer",
+          "conditionFormula": "@class:bard\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:versatile_performance#bard"
+        }, {
+          "featureId": "ability:frightening_tune#bard"
+        }, {
+          "featureId": "ability:deadly_performance#bard"
+        }]
+      }]
+    }
+  }
+}

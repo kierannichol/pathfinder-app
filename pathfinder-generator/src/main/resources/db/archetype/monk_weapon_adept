@@ -1,0 +1,73 @@
+id: "class:monk#weapon_adept"
+name: "Weapon Adept"
+description: ""
+modifications:
+- add: "ability:perfect_strike#monk_weapon_adept"
+  remove:
+  - "ability:stunning_fist#monk"
+- add: "ability:way_of_the_weapon_master#monk_weapon_adept"
+  remove:
+  - "ability:evasion#monk"
+- add: "ability:evasion#monk_weapon_adept"
+  remove:
+  - "ability:improved_evasion#monk"
+- add: "ability:uncanny_initiative#monk_weapon_adept"
+  remove:
+  - "ability:timeless_body#monk"
+- add: "ability:pure_power#monk_weapon_adept"
+  remove:
+  - "ability:perfect_self#monk"
+features:
+- id: "ability:perfect_strike#monk_weapon_adept"
+  name: "Perfect Strike"
+  label: null
+  type: null
+  description: "At 1st level, a weapon adept gains Perfect Strike as a bonus feat,\
+    \ even if he does not meet the prerequisites. At 10th level, the monk can roll\
+    \ his attack roll three times and take the higher result. If one of these rolls\
+    \ is a critical threat, he can choose which one of his other two rolls to use\
+    \ as his confirmation roll."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:way_of_the_weapon_master#monk_weapon_adept"
+  name: "Way of the Weapon Master"
+  label: null
+  type: null
+  description: "At 2nd level, a weapon adept gains Weapon Focus as a bonus feat with\
+    \ one of his monk weapons. At 6th level, the monk gains Weapon Specialization\
+    \ with the same weapon as a bonus feat, even if he does not meet the prerequisites.\n\
+    This ability replaces evasion."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:evasion#monk_weapon_adept"
+  name: "Evasion"
+  label: null
+  type: null
+  description: "At 9th level, the monk gains evasion.\nThis ability replaces improved\
+    \ evasion."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:uncanny_initiative#monk_weapon_adept"
+  name: "Uncanny Initiative"
+  label: null
+  type: null
+  description: "At 17th level, a weapon adept does not need to roll for initiative.\
+    \ He always treats his initiative roll as if it resulted in any number of his\
+    \ choosing (from 1 to 20).\nThis ability replaces timeless body."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:pure_power#monk_weapon_adept"
+  name: "Pure Power"
+  label: null
+  type: null
+  description: "At 20th level, a weapon adept forsakes the ideals of the perfect self\
+    \ to become a bastion of the physical and mental virtues monks hold dear. The\
+    \ monk gains a +2 bonus to Strength, Dexterity, and Wisdom."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

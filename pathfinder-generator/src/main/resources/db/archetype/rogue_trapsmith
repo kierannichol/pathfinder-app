@@ -1,0 +1,42 @@
+id: "class:rogue#trapsmith"
+name: "Trapsmith"
+description: "Some rogues are not content with just disabling traps--they love to\
+  \ build them, finding a captivating beauty in the turning of gears and the slither\
+  \ of ropes over pulleys. The trapsmith may have started out putting together traps\
+  \ in order to better understand how to disable them, but for most, it's long since\
+  \ gone beyond that--they now relish the challenge of creating the perfect combat\
+  \ machine."
+modifications:
+- add: "ability:careful_disarm#rogue_trapsmith"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:trap_master#rogue_trapsmith"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:careful_disarm#rogue_trapsmith"
+  name: "Careful Disarm"
+  label: null
+  type: null
+  description: "At 4th level, whenever a trapsmith attempts to disarm a trap using\
+    \ Disable Device, she does not spring the trap unless she fails by 10 or more.\
+    \ If she does set off a trap she was attempting to disarm, she adds double her\
+    \ trap sense bonus to avoid the trap."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:trap_master#rogue_trapsmith"
+  name: "Trap Master"
+  label: null
+  type: null
+  description: "At 8th level, whenever a trapsmith disarms a trap using Disable Device,\
+    \ she can bypass it even if her check did not exceed the DC by 10 or more. If\
+    \ it is a magic trap that allows specific creatures to pass it without danger,\
+    \ she can modify which creatures it allows to pass, adding her allies and restricting\
+    \ enemies if she desires.\nThis ability replaces improved uncanny dodge.\nRogue\
+    \ Talents: The following rogue talents complement the trapsmith archetype: befuddling\
+    \ strike, cunning trigger, quick disable, and quick trapsmith."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

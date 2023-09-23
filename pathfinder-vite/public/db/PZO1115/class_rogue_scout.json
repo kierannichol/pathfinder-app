@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#scout",
+  "name": "Scout",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Not all rogues live in the city. Scouts frequently roam the wilderness, often banding together as bandits, but sometimes serving as guides, as trailblazers, or as companions to a ranger or barbarian warrior. More comfortable with sneaking and hiding outdoors, the scout is still effective in the city and the dungeon."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:scouts_charge#rogue_scout",
+          "conditionFormula": "@class:rogue\u003e\u003d4"
+        }, {
+          "featureId": "ability:skirmisher#rogue_scout",
+          "conditionFormula": "@class:rogue\u003e\u003d8"
+        }],
+        "unlinks": [{
+          "featureId": "ability:uncanny_dodge#rogue"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#rogue"
+        }]
+      }]
+    }
+  }
+}

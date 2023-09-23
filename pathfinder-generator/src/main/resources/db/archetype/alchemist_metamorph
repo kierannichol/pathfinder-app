@@ -1,0 +1,56 @@
+id: "class:alchemist#metamorph"
+name: "Metamorph"
+description: ""
+modifications:
+- add: "ability:class_skills#alchemist_metamorph"
+  remove:
+  - "ability:the_alchemists_class_skills#alchemist"
+- add: "ability:shapechanger#alchemist_metamorph"
+  remove:
+  - "ability:throw_anything#alchemist"
+  - "ability:mutagen#alchemist"
+  - "ability:alchemy_which_also_includes_bombs_extracts#alchemist"
+- add: "ability:adaptive_physiology#alchemist_metamorph"
+  remove:
+  - "ability:instant_alchemy#alchemist"
+  - "ability:swift_alchemy_swift_poisoning#alchemist"
+features:
+- id: "ability:class_skills#alchemist_metamorph"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A metamorph adds Disguise to her list of class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:shapechanger#alchemist_metamorph"
+  name: "Shapechanger"
+  label: null
+  type: null
+  description: "At 1st level, a metamorph gains the ability to transform herself into\
+    \ another form. This ability functions like alter self, except as noted here.\
+    \ The effect lasts for 1 hour per metamorph's alchemist level, or until she changes\
+    \ back. Changing form (to another form or back) is a standard action that doesn't\
+    \ provoke attacks of opportunity. The metamorph is fatigued for 1 round each time\
+    \ she changes shape.\nA metamorph can use this ability once per day at 1st level,\
+    \ and an additional time per day at 4th level, and every 2 alchemist levels thereafter,\
+    \ for a total of nine times at 18th level. At 20th level, a metamorph can use\
+    \ shapechanger as a free action once per round, either before or after all her\
+    \ other actions, with no daily limit.\nThis ability can also function as monstrous\
+    \ physique I at 5th level, as monstrous physique II at 9th level, as monstrous\
+    \ physique III at 11th level, as monstrous physique IV or giant form I at 13th\
+    \ level, and as giant form II at 15th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:adaptive_physiology#alchemist_metamorph"
+  name: "Adaptive Physiology"
+  label: null
+  type: null
+  description: "At 3rd level, a metamorph gains a 25% chance to negate critical hits\
+    \ and precision damage, similar to the preserve organs discovery. This chance\
+    \ increases to 50% at 6th level, and to 75% at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

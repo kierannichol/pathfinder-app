@@ -1,0 +1,37 @@
+casting_time: "1 minute"
+saving_throw: "Fortitude negates (object), then Will negates (see text)"
+spell_resistance: "yes (object), then yes (see text)"
+id: "spell:cursed_treasure"
+name: "Cursed Treasure"
+description: "You touch a piece of treasure or container filled with treasure and\
+  \ place a terrible curse upon it, choosing from any option available with bestow\
+  \ curse. The next creature to take the treasure or remove items from the container\
+  \ is affected by the curse, unless it succeeds at a Will save (spell resistance\
+  \ applies). If you are the next creature to take the treasure or get objects from\
+  \ the container, though, the spell discharges harmlessly instead."
+prerequisites: ""
+components: "V, S, M (a platinum piece)"
+range: "touch"
+targets: "unattended object touched"
+duration: "permanent until discharged, then permanent (see text)"
+school: "necromancy [curse]"
+levels:
+- class_id: "class:arcanist"
+  level: 4
+- class_id: "class:bloodrager"
+  level: 4
+- class_id: "class:cleric"
+  level: 3
+- class_id: "class:oracle"
+  level: 3
+- class_id: "class:shaman"
+  level: 3
+- class_id: "class:sorcerer"
+  level: 4
+- class_id: "class:warpriest"
+  level: 3
+- class_id: "class:witch"
+  level: 3
+- class_id: "class:wizard"
+  level: 4
+source: "Villain Codex"

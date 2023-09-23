@@ -1,0 +1,74 @@
+id: "class:investigator#psychic_detective"
+name: "Psychic Detective"
+description: ""
+modifications:
+- add: "ability:spell_casting#investigator_psychic_detective"
+  remove:
+  - "ability:alchemy#investigator"
+- add: "ability:psychic_meddler#investigator_psychic_detective"
+  remove:
+  - "ability:poison_lore_poison_resistance_swift_alchemy#investigator"
+  - "ability:poison_immunity#investigator"
+- add: "ability:phrenic_dabbler#investigator_psychic_detective"
+  remove:
+  - "ability:the_investigator_talent_gained_at_3rd_level#investigator"
+features:
+- id: "ability:spell_casting#investigator_psychic_detective"
+  name: "Spell Casting"
+  label: null
+  type: null
+  description: "A psychic detective casts psychic spells drawn from the psychic class\
+    \ spell list and augmented by a select set of additional spells (see Psychic Detective\
+    \ Spells). Only spells from the psychic class spell list of 6th level or lower\
+    \ and psychic detective spells are considered to be part of the psychic detective's\
+    \ spell list. If a spell appears on both the psychic detective and psychic class\
+    \ spell lists, the psychic detective uses the spell level from the psychic detective\
+    \ spell list. She can cast any spell she knows without preparing it ahead of time.\
+    \ To learn or cast a spell, a psychic detective must have an Intelligence score\
+    \ equal to at least 10 + the spell's level. The saving throw DC against a psychic\
+    \ detective's spell is 10 + the spell's level + the psychic detective's Intelligence\
+    \ modifier.\nLike other spellcasters, a psychic detective can cast only a certain\
+    \ number of spells of each spell level per day. She knows the same number of spells\
+    \ and receives the same number of spells slots per day as a bard of her investigator\
+    \ level, and knows and uses 0-level knacks as a bard uses cantrips. In addition,\
+    \ she receives bonus spells per day if she has a high Intelligence score.\nAt\
+    \ 5th level and every 3 levels thereafter, a psychic detective can choose to learn\
+    \ a new spell in place of one she already knows, using the same rules as a bard.\n\
+    In effect, the psychic detective loses the old spell in exchange for the new one.\
+    \ The new spell's level must be the same as that of the spell being exchanged,\
+    \ and it must be at least 1 level lower than the highest-level spell the psychic\
+    \ detective can cast.\nA psychic detective need not prepare her spells in advance.\
+    \ She can cast any psychic detective spell she knows at any time, assuming she\
+    \ has not yet used up her allotment of spells per day for the spell's level.\n\
+    Psychic Detective Spells: A psychic detective has the following spells on her\
+    \ spell list, in addition to psychic spells of 6th level or lower.\n1st--Detect\
+    \ chaos, detect evil, detect good, detect law, find traps. 3rd--Calm spirit*,\
+    \ daylight. 4th--Modify memory. 6th--Banishment, moment of prescience, scrying\
+    \ (greater)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:psychic_meddler#investigator_psychic_detective"
+  name: "Psychic Meddler"
+  label: null
+  type: null
+  description: "At 2nd level, a psychic detective receives a +1 bonus on saves against\
+    \ psychic spells and spell-like abilities. This bonus increases by 1 at 5th level\
+    \ and every 3 levels thereafter, to a maximum of +6 at 17th level. Starting at\
+    \ 5th level, the psychic investigator adds half this bonus on caster level checks\
+    \ to dispel psychic effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+- id: "ability:phrenic_dabbler#investigator_psychic_detective"
+  name: "Phrenic Dabbler"
+  label: null
+  type: null
+  description: "At 3rd level, a psychic detective gains a small pool of phrenic points\
+    \ equal to 1/2 her psychic detective level, as well as one phrenic amplification,\
+    \ as the psychic class feature. This does not allow the psychic detective to qualify\
+    \ for the Extra Amplification feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Occult Adventures"
+source: "Pathfinder Roleplaying Game Occult Adventures"

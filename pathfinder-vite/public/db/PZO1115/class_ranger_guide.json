@@ -1,0 +1,76 @@
+{
+  "id": "class:ranger#guide",
+  "name": "Guide",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:quarry#ranger AND !@modifies:ability:favored_enemy#ranger AND !@modifies:ability:hunters_bond#ranger AND !@modifies:ability:improved_evasion#ranger AND !@modifies:ability:evasion#ranger AND !@modifies:ability:improved_quarry#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Many rangers are loners, but some choose to use their familiarity with the land to guide others safely through the wilderness."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quarry#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:favored_enemy#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_quarry#ranger",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:rangers_focus#ranger_guide",
+          "conditionFormula": "@class:ranger\u003e\u003d1"
+        }, {
+          "featureId": "ability:terrain_bond#ranger_guide",
+          "conditionFormula": "@class:ranger\u003e\u003d4"
+        }, {
+          "featureId": "ability:rangers_luck#ranger_guide",
+          "conditionFormula": "@class:ranger\u003e\u003d9"
+        }, {
+          "featureId": "ability:inspired_moment#ranger_guide",
+          "conditionFormula": "@class:ranger\u003e\u003d11"
+        }, {
+          "featureId": "ability:improved_rangers_luck#ranger_guide",
+          "conditionFormula": "@class:ranger\u003e\u003d16"
+        }],
+        "unlinks": [{
+          "featureId": "ability:favored_enemy#ranger"
+        }, {
+          "featureId": "ability:hunters_bond#ranger"
+        }, {
+          "featureId": "ability:evasion#ranger"
+        }, {
+          "featureId": "ability:improved_quarry#ranger"
+        }, {
+          "featureId": "ability:quarry#ranger"
+        }, {
+          "featureId": "ability:improved_evasion#ranger"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+casting_time: "1 standard action"
+saving_throw: "Fortitude partial"
+spell_resistance: "yes"
+id: "spell:destroy_robot"
+name: "Destroy Robot"
+description: "You attempt to destroy any one robot in range. When you cast this spell,\
+  \ your hand crackles with electricity. You must succeed at a ranged touch attack\
+  \ to affect the target. The target takes 12d6 points of damage + 1 point per caster\
+  \ level, or 3d6 points of damage + 1 point per caster level on a successful saving\
+  \ throw. A cyborg or android can be damaged by this spell, but takes half damage\
+  \ and gains a +4 bonus on the saving throw to resist the spell's effects."
+prerequisites: ""
+components: "V, S, F/DF"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one robot (see below)"
+duration: "instantaneous"
+school: "transmutation"
+levels:
+- class_id: "class:arcanist"
+  level: 6
+- class_id: "class:druid"
+  level: 5
+- class_id: "class:hunter"
+  level: 5
+- class_id: "class:sorcerer"
+  level: 6
+- class_id: "class:wizard"
+  level: 6
+source: "Technology Guide"

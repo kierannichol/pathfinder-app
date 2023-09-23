@@ -1,0 +1,13 @@
+{
+  "id": "feat:detect_expertise",
+  "name": "Detect Expertise",
+  "tags": ["feat", "general"],
+  "enabledFormula": "all(@int_score\u003e\u003d13,any(@spell:detect_chaos,@ability:detect_evil#paladin,@spell:detect_good,@spell:detect_law,@spell:detect_magic))",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

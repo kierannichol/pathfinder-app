@@ -1,0 +1,41 @@
+id: "class:rogue#poisoner"
+name: "Poisoner"
+description: "Some consider poisoning an evil act. The poisoner knows poison is just\
+  \ a tool toward an end, and is no different than any other weapon. Some poisoners\
+  \ see themselves as great equalizers, as they are able to craft weapons that the\
+  \ weakest of creatures can wield to devastating effect, but most have no lofty delusions\
+  \ about their work."
+modifications:
+- add: "ability:poison_use#rogue_poisoner"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:master_poisoner#rogue_poisoner"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:poison_use#rogue_poisoner"
+  name: "Poison Use"
+  label: null
+  type: null
+  description: "At 1st level, a poisoner is trained in the use of poison and cannot\
+    \ accidentally poison herself when applying poison to a blade."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:master_poisoner#rogue_poisoner"
+  name: "Master Poisoner"
+  label: null
+  type: null
+  description: "At 3rd level, a poisoner can use Craft (alchemy) to change the type\
+    \ of a poison. This requires 1 hour of work with an alchemist's lab and a Craft\
+    \ (alchemy) skill check with a DC equal to the poison's DC. If successful, the\
+    \ poison's type changes to contact, ingested, inhaled, or injury. If the check\
+    \ fails, the poison is ruined. The poisoner also receives a bonus on Craft (alchemy)\
+    \ skill checks when working with poison equal to 1/2 her rogue level.\nThis ability\
+    \ replaces trap sense.\nRogue Talents: The following rogue talents complement\
+    \ the poisoner archetype: distracting attack, lasting poison, surprise attack*,\
+    \ swift poison, and weapon training*."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

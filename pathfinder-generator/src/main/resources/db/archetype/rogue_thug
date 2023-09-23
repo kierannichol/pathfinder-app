@@ -1,0 +1,40 @@
+id: "class:rogue#thug"
+name: "Thug"
+description: "Some criminals steal with finesse, their victims only discovering the\
+  \ crime when the rogue is long gone and the coin already spent. A thug, on the other\
+  \ hand, cares nothing for finesse. Through both threat and violence, the thug gets\
+  \ what she wants by the promise of force, and has no problem making good on that\
+  \ promise as needed."
+modifications:
+- add: "ability:frightening#rogue_thug"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:brutal_beating#rogue_thug"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:frightening#rogue_thug"
+  name: "Frightening"
+  label: null
+  type: null
+  description: "Whenever a thug successfully uses Intimidate to demoralize a creature,\
+    \ the duration of the shaken condition is increased by 1 round. In addition, if\
+    \ the target is shaken for 4 or more rounds, the thug can instead decide to make\
+    \ the target frightened for 1 round."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:brutal_beating#rogue_thug"
+  name: "Brutal Beating"
+  label: null
+  type: null
+  description: "At 3rd level, whenever a thug deals sneak attack damage, she can choose\
+    \ to forgo 1d6 points of sneak attack damage to make the target sickened for a\
+    \ number of rounds equal to 1/2 her rogue level. This ability does not stack with\
+    \ itself--only the most recent duration applies.\nThis ability replaces trap sense.\n\
+    Rogue Talents: The following rogue talents complement the thug archetype: offensive\
+    \ defense, powerful sneak, strong impression, and weapon training."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

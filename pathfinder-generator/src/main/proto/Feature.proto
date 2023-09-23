@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+import "Description.proto";
+import "Effect.proto";
+import "Link.proto";
+import "Choice.proto";
+import "Stack.proto";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+package data;
+
+message FeatureSummaryDbo {
+  string id = 1;
+  string name = 2;
+  repeated string tags = 3;
+  string enabled_formula = 4;
+  optional uint32 max_stacks = 5;
+  optional string label = 6;
+}
+
+message FeatureDbo {
+  string id = 1;
+  string name = 2;
+  repeated string tags = 3;
+  string enabled_formula = 4;
+  optional uint32 max_stacks = 5;
+  optional string label = 6;
+
+  DescriptionDbo description = 100;
+  StacksDbo stacks = 101;
+}
+
+message StacksDbo {
+  oneof stackable {
+    FixedStackDbo fixed_stack = 1;
+    StackDbo repeating_stack = 2;
+  }
+}
+
+message FixedStackDbo {
+  repeated StackDbo stacks = 1;
+}

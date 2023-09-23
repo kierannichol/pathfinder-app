@@ -1,0 +1,87 @@
+id: "class:ranger#summit_sentinel"
+name: "Summit Sentinel"
+description: "Some rangers eschew the path of the swift skirmisher and embrace the\
+  \ implacable strength of the mountain."
+modifications:
+- add: "ability:roots_of_the_mountain#ranger_summit_sentinel"
+  remove:
+  - "ability:the_rangers_combat_style_feats#ranger"
+- add: "ability:mountain_mastery#ranger_summit_sentinel"
+  remove:
+  - "ability:favored_terrain#ranger"
+- add: "ability:spellcasting#ranger_summit_sentinel"
+  remove:
+  - "ability:the_rangers_spells#ranger"
+- add: "ability:rockslide#ranger_summit_sentinel"
+  remove:
+  - "ability:swift_tracker#ranger"
+- add: "ability:invincible#ranger_summit_sentinel"
+  remove:
+  - "ability:hide_in_plain_sight#ranger"
+features:
+- id: "ability:roots_of_the_mountain#ranger_summit_sentinel"
+  name: "Roots of the Mountain"
+  label: null
+  type: null
+  description: "At 2nd level, a summit sentinel gains Toughness as a bonus feat.\n\
+    Additionally, as a move action, she can enter a defensive stance for 1 minute.\
+    \ While in this stance, the summit sentinel's speed is reduced to 5 feet, she\
+    \ gains a +2 enhancement bonus to her natural armor, and she gains a +2 bonus\
+    \ to her CMD against maneuvers that would move her or knock her prone. If the\
+    \ ranger loses contact with the ground or other solid surface, the stance ends\
+    \ immediately. The ranger can enter this stance a number of times per day equal\
+    \ to 3 + her Constitution modifier.\nAt 6th level and every 4 levels thereafter,\
+    \ the enhancement bonus to natural armor increases by 1, and the bonus to CMD\
+    \ increases by 2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:mountain_mastery#ranger_summit_sentinel"
+  name: "Mountain Mastery"
+  label: null
+  type: null
+  description: "At 3rd level, a summit sentinel must select mountains as her favored\
+    \ terrain, and she does not gain additional favored terrains at higher levels.\
+    \ Every 5 levels beyond 5th, the bonus from this favored terrain increases by\
+    \ 2.\nAt 8th level, a summit sentinel draws strength from the earth. When she\
+    \ and her target are both in contact with the ground or an earthen floor, the\
+    \ summit sentinel gains a +1 bonus on attack and damage rolls against the target.\
+    \ At 18th level, the bonus on attack and damage rolls increases to +2."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:spellcasting#ranger_summit_sentinel"
+  name: "Spellcasting"
+  label: null
+  type: null
+  description: "A summit sentinel adds stoneskin to the ranger spell list as a 4th-level\
+    \ spell."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:rockslide#ranger_summit_sentinel"
+  name: "Rockslide"
+  label: null
+  type: null
+  description: "At 8th level, once per day as a standard action, a summit sentinel\
+    \ can create a rushing wave of earth and stone. The summit sentinel chooses a\
+    \ point on the ground or floor within 30 feet. Rippling waves of earth and stone\
+    \ emanate from the chosen point in a 25-foot cone in a direction of the summit\
+    \ sentinel's choice. Each creature in the area takes 4d6 points of bludgeoning\
+    \ damage and is pushed to the end of the cone. A target that succeeds at a Reflex\
+    \ save (DC = 10 + half the ranger's level + the ranger's Wisdom modifier) takes\
+    \ half damage and is not pushed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:invincible#ranger_summit_sentinel"
+  name: "Invincible"
+  label: null
+  type: null
+  description: "At 17th level, a summit sentinel takes on the unyielding hardness\
+    \ of the mountains. While in her roots of the mountain defensive stance, she is\
+    \ immune to critical hits and precision damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

@@ -1,0 +1,29 @@
+casting_time: "1 standard action"
+saving_throw: "Will negates"
+spell_resistance: "yes"
+id: "spell:righteous_condemnation"
+name: "Righteous Condemnation"
+description: "Any creature of chaotic, neutral, or evil alignment who targets you\
+  \ with a spell must succeed at a Will save or take a –4 penalty on Intelligence-,\
+  \ Wisdom-, and Charisma-based checks for the spell's duration. Creatures with only\
+  \ neutral alignment components receive a +4 bonus on their Will saves against this\
+  \ spell. The penalties for alignment components stack (therefore, a chaotic evil\
+  \ spellcaster would take a –8 penalty)."
+prerequisites: ""
+components: "V, S, DF"
+range: "personal"
+targets: "you"
+duration: "1 round/level (D)"
+school: "abjuration [good, lawful]"
+levels:
+- class_id: "class:cleric"
+  level: 3
+- class_id: "class:inquisitor"
+  level: 3
+- class_id: "class:oracle"
+  level: 3
+- class_id: "class:paladin"
+  level: 2
+- class_id: "class:warpriest"
+  level: 3
+source: "Plane-Hopper's Handbook"

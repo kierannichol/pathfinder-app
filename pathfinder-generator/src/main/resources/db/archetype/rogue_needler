@@ -1,0 +1,66 @@
+id: "class:rogue#needler"
+name: "Needler"
+description: ""
+modifications:
+- add: "ability:adroit_poisoner#rogue_needler"
+  remove:
+  - "ability:evasion#rogue"
+- add: "ability:subtle_poisoning#rogue_needler"
+  remove:
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:needle_poisoner#rogue_needler"
+  remove:
+  - "ability:the_rogue_talent_gained_at_6th_level#rogue"
+- add: "ability:concealed_delivery#rogue_needler"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+features:
+- id: "ability:adroit_poisoner#rogue_needler"
+  name: "Adroit Poisoner"
+  label: null
+  type: null
+  description: "At 2nd level, a needler gains a +2 bonus on Sleight of Hand checks.\
+    \ This bonus increases to +4 when the needler uses Sleight of Hand to draw a hidden\
+    \ weapon that is coated in poison. At 8th level, these bonuses increase to +4\
+    \ and +6, respectively."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:subtle_poisoning#rogue_needler"
+  name: "Subtle Poisoning"
+  label: null
+  type: null
+  description: "At 4th level, a needler can apply a contact or ingested poison to\
+    \ her weapon and deliver it as if it were an injury poison. The poison must be\
+    \ delivered within 1 minute of this application, or it is wasted. The DC of the\
+    \ saving throw to resist the poison decreases by 1 when the needler uses this\
+    \ ability to deliver a contact or ingested poison via injury."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:needle_poisoner#rogue_needler"
+  name: "Needle Poisoner"
+  label: null
+  type: null
+  description: "At 6th level, a needler can apply a dose of poison to a weapon as\
+    \ a swift action. This ability counts as swift poisoning for the purpose of meeting\
+    \ prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+- id: "ability:concealed_delivery#rogue_needler"
+  name: "Concealed Delivery"
+  label: null
+  type: null
+  description: "At 8th level, a needler learns how to deliver all types of poisons\
+    \ with subtlety. As a standard action, she can deliver an ingested or inhaled\
+    \ poison to a creature within reach by placing a dose of poison on the target's\
+    \ lips, on the target's neck, or through other similar contact with the target's\
+    \ skin as if the poison were a contact poison. Delivering poison in this way requires\
+    \ a successful Sleight of Hand check opposed by the target's Perception check.\
+    \ The poison is not lost on a failed check, but it must be successfully delivered\
+    \ within 1 minute of the first attempt, or it is wasted."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Potions & Poisons"
+source: "Pathfinder Player Companion: Potions & Poisons"

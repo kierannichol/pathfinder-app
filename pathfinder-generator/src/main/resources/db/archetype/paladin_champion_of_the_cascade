@@ -1,0 +1,58 @@
+id: "class:paladin#champion_of_the_cascade"
+name: "Champion of the Cascade"
+description: ""
+modifications:
+- add: "ability:swiftsurge#paladin_champion_of_the_cascade"
+  remove:
+  - "ability:divine_health#paladin"
+- add: "ability:flowing_stride#paladin_champion_of_the_cascade"
+  remove:
+  - "ability:mercy#paladin"
+- add: "ability:rising_tide#paladin_champion_of_the_cascade"
+  remove:
+  - "ability:divine_bond#paladin"
+features:
+- id: "ability:swiftsurge#paladin_champion_of_the_cascade"
+  name: "Swiftsurge"
+  label: null
+  type: null
+  description: "At 3rd level, a champion of the cascade does not take any penalty\
+    \ on Acrobatics or Swim checks due to her armor check penalty."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Wilderness Origins"
+- id: "ability:flowing_stride#paladin_champion_of_the_cascade"
+  name: "Flowing Stride"
+  label: null
+  type: null
+  description: "At 3rd level, whenever a champion of the cascade uses lay on hands\
+    \ to restore hit points to one target, she can grant a willing target the ability\
+    \ to walk on water as water walk for 1 minute. At 9th level, this extends to creatures\
+    \ healed by her channel positive energy. At 15th level, healed creatures can walk\
+    \ on water for 24 hours."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Wilderness Origins"
+- id: "ability:rising_tide#paladin_champion_of_the_cascade"
+  name: "Rising Tide"
+  label: null
+  type: null
+  description: "At 5th level, a champion of the cascade's connection to her deity\
+    \ allows her to summon rivers and alter her surroundings. As a standard action,\
+    \ she can change up to two 5-foot squares per paladin level within 100 feet to\
+    \ become freshwater pools with a depth of up to 5 feet per paladin level. The\
+    \ squares must be adjacent to each other.\nEach creature standing in the area\
+    \ where she first creates the water must attempt a Reflex save (DC = 10 + half\
+    \ the paladin's level + the paladin's Charisma modifier) to jump to the nearest\
+    \ unaffected space and avoid falling into the water. The champion of the cascade\
+    \ can use this ability for 1 minute per paladin level. These minutes do not need\
+    \ to be consecutive, but they must be spent in 1-minute increments.\nThe changed\
+    \ squares revert back to their original form after the duration ends, and any\
+    \ creatures in the water are shunted out to the nearest open space.\nAt 10th level,\
+    \ as a swift action, she may spend 1 minute of her rising tide's duration to create\
+    \ a geyser in any body of water she has created, lifting an allied creature in\
+    \ that square up to 10 feet per paladin level into the air for 1 round."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Wilderness Origins"
+source: "Pathfinder Player Companion: Wilderness Origins"

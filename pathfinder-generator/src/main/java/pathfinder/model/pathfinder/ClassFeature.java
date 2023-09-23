@@ -1,5 +1,6 @@
 package pathfinder.model.pathfinder;
 
+import java.util.List;
 import java.util.regex.Pattern;
 import lombok.Builder;
 import pathfinder.model.Description;
@@ -7,16 +8,18 @@ import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 
 @Builder
-public record ClassFeature(Id id, String name, String type, Id classId, Description description, String prerequisites, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
+public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, List<String> effects, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
 
     public static ClassFeature fromFeature(Feature feature, Id classId) {
         return new ClassFeature(
                 feature.id(),
                 feature.name(),
+                feature.label(),
                 feature.type(),
                 classId,
                 feature.description(),
                 feature.prerequisites(),
+                feature.effects(),
                 feature.source());
     }
 

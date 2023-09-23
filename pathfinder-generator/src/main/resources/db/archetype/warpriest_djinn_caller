@@ -1,0 +1,78 @@
+id: "class:warpriest#djinn_caller"
+name: "Djinn Caller"
+description: ""
+modifications:
+- add: "ability:class_skills#warpriest_djinn_caller"
+  remove:
+  - "ability:the_warpriests_class_skills#warpriest"
+- add: "ability:elemental_binder#warpriest_djinn_caller"
+  remove:
+  - "ability:the_warpriests_blessings#warpriest"
+- add: "ability:spontaneous_summons#warpriest_djinn_caller"
+  remove:
+  - "ability:spontaneous_casting#warpriest"
+- add: "ability:bonus_languages#warpriest_djinn_caller"
+  remove:
+  - "ability:the_warpriests_bonus_languages#warpriest"
+- add: "ability:channel_element#warpriest_djinn_caller"
+  remove:
+  - "ability:channel#warpriest"
+features:
+- id: "ability:class_skills#warpriest_djinn_caller"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A djinn caller gains Knowledge (planes) as a class skill. Survival\
+    \ is not a class skill for a djinn caller."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:elemental_binder#warpriest_djinn_caller"
+  name: "Elemental Binder"
+  label: null
+  type: null
+  description: "A djinn caller must worship a deity who grants the Air, Earth, Fire,\
+    \ or Water blessing, and he must select one of these blessings. He does not gain\
+    \ a second blessing."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:spontaneous_summons#warpriest_djinn_caller"
+  name: "Spontaneous Summons"
+  label: null
+  type: null
+  description: "A djinn caller is extremely flexible in channeling his stored spell\
+    \ energy. In addition to losing prepared spells to cast “cure\"or “inflict\" spells,\
+    \ he can also lose a prepared spell in order to cast any summon monster spell\
+    \ of the same level or lower. He can use this ability only to summon an elemental\
+    \ whose subtype matches his blessing. He can expend one use of his fervor ability\
+    \ to decrease the spell's casting time to 1 standard action and to increase the\
+    \ spell's duration to 1 minute per level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:bonus_languages#warpriest_djinn_caller"
+  name: "Bonus Languages"
+  label: null
+  type: null
+  description: "A djinn caller's bonus language options include Aquan, Auran, Ignan,\
+    \ and Terran instead of Abyssal, Celestial, and Infernal. These choices are in\
+    \ addition to the bonus languages available to the character because of his race."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+- id: "ability:channel_element#warpriest_djinn_caller"
+  name: "Channel Element"
+  label: null
+  type: null
+  description: "At 4th level, a djinn caller gains Elemental Channel as a bonus feat,\
+    \ choosing the elemental subtype that matches his blessing. He doesn't gain the\
+    \ ability to harm undead with channeled energy (if he channels positive energy)\
+    \ or heal undead (if he channels negative energy). Instead, he can channel a blast\
+    \ of elemental matter and energy that buffets his targets. The djinn caller's\
+    \ blessing determines the damage type of this attack, as indicated by the table\
+    \ below. A successful Reflex save halves the damage."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Blood of the Ancients"
+source: "Pathfinder Player Companion: Blood of the Ancients"

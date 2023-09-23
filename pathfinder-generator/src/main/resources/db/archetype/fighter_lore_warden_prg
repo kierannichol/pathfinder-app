@@ -1,0 +1,51 @@
+id: "class:fighter#lore_warden_prg"
+name: "Lore Warden (PRG:AG)"
+description: ""
+modifications:
+- add: "ability:scholastic#fighter_lore_warden_prg"
+  remove:
+  - "ability:armor_proficiency#fighter"
+- add: "ability:skill_over_strength#fighter_lore_warden_prg"
+  remove:
+  - "ability:bonus_feat#fighter@2"
+  - "ability:bravery#fighter"
+- add: "ability:swift_assessment#fighter_lore_warden_prg"
+  remove:
+  - "ability:armor_training#fighter"
+  - "ability:armor_mastery#fighter"
+features:
+- id: "ability:scholastic#fighter_lore_warden_prg"
+  name: "Scholastic"
+  label: null
+  type: null
+  description: "A lore warden gains 2 additional skill ranks each level. These ranks\
+    \ must be spent on Intelligence-based skills. All Craft and Knowledge skills are\
+    \ class skills for lore wardens, as are Linguistics and Spellcraft."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:skill_over_strength#fighter_lore_warden_prg"
+  name: "Skill Over Strength"
+  label: null
+  type: null
+  description: "At 2nd level, a lore warden qualifies for feats and other abilities\
+    \ as though she had the Combat Expertise feat.\nAt 6th level, she gains Combat\
+    \ Expertise as a bonus feat, even if she would not normally qualify for the feat.\
+    \ If she already has Combat Expertise, she instead gains any one combat feat that\
+    \ includes Combat Expertise as a prerequisite (and for which she otherwise qualifies).\n\
+    At 10th level, she can treat her base attack bonus as though it were 2 higher\
+    \ for the purpose of calculating the effects of Combat Expertise."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:swift_assessment#fighter_lore_warden_prg"
+  name: "Swift Assessment"
+  label: null
+  type: null
+  description: "The lore warden can now use her know thy enemy swords secret as a\
+    \ move action. At 15th level, she can use this ability as a swift action. She\
+    \ must have the know thy enemy swords secret before choosing this swords secret."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

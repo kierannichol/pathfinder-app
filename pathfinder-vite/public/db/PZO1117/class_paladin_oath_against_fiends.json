@@ -1,0 +1,38 @@
+{
+  "id": "class:paladin#oath_against_fiends",
+  "name": "Oath Against Fiends",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:the_mercy_gained_at_9th_level#paladin AND !@modifies:ability:aura_of_resolve#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_mercy_gained_at_9th_level#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:anchoring_aura#paladin_oath_against_fiends",
+          "conditionFormula": "@class:paladin\u003e\u003d8"
+        }, {
+          "featureId": "ability:holy_vessel#paladin_oath_against_fiends",
+          "conditionFormula": "@class:paladin\u003e\u003d9"
+        }],
+        "unlinks": [{
+          "featureId": "ability:aura_of_resolve#paladin"
+        }, {
+          "featureId": "ability:the_mercy_gained_at_9th_level#paladin"
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+id: "class:fighter#phalanx_soldier"
+name: "Phalanx Soldier"
+description: "The phalanx soldier specializes in defensive tactics, using his shield\
+  \ to guard himself and his allies and forming a shield wall like an unbreakable\
+  \ anvil against which his enemies break."
+modifications:
+- add: "ability:stand_firm#fighter_phalanx_soldier"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:phalanx_fighting#fighter_phalanx_soldier"
+  remove:
+  - "ability:armor_training#fighter@3"
+- add: "ability:ready_pike#fighter_phalanx_soldier"
+  remove:
+  - "ability:weapon_training#fighter@5"
+- add: "ability:deft_shield#fighter_phalanx_soldier"
+  remove:
+  - "ability:armor_training#fighter@11"
+  - "ability:armor_training#fighter@7"
+- add: "ability:shield_ally#fighter_phalanx_soldier"
+  remove:
+  - "ability:weapon_training#fighter"
+- add: "ability:irresistible_advance#fighter_phalanx_soldier"
+  remove:
+  - "ability:armor_training#fighter@15"
+- add: "ability:shielded_fortress#fighter_phalanx_soldier"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:stand_firm#fighter_phalanx_soldier"
+  name: "Stand Firm"
+  label: null
+  type: null
+  description: "At 2nd level, a phalanx soldier gains a +1 bonus to CMD against bull\
+    \ rush, drag, overrun, and trip attempts. This bonus also applies on saves against\
+    \ trample attacks. The bonus increases by +1 for every four levels beyond 2nd."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:phalanx_fighting#fighter_phalanx_soldier"
+  name: "Phalanx Fighting"
+  label: null
+  type: null
+  description: "At 3rd level, when a phalanx soldier wields a shield, he can use any\
+    \ polearm or spear of his size as a one-handed weapon."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:ready_pike#fighter_phalanx_soldier"
+  name: "Ready Pike"
+  label: null
+  type: null
+  description: "At 5th level, a phalanx soldier can, once per day, ready a weapon\
+    \ with the brace property as an immediate action, gaining a +1 bonus on attack\
+    \ and damage rolls. For every four levels beyond 5th, this bonus increases by\
+    \ +1, and he can use the ability one additional time per day. He cannot use this\
+    \ ability when flat-footed."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:deft_shield#fighter_phalanx_soldier"
+  name: "Deft Shield"
+  label: null
+  type: null
+  description: "At 7th level, the armor check penalty from a shield and the attack\
+    \ roll penalty are reduced by –1 for a phalanx soldier using a tower shield. At\
+    \ 11th level, these penalties are reduced by –2."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shield_ally#fighter_phalanx_soldier"
+  name: "Shield Ally"
+  label: null
+  type: null
+  description: "At 9th level, when a phalanx fighter is using a heavy or tower shield,\
+    \ he can, as a move action, provide partial cover (+2 cover bonus to AC, +1 bonus\
+    \ on Reflex saves) to himself and all adjacent allies until the beginning of his\
+    \ next turn.\nAt 13th level, he can instead provide cover (+4 cover bonus to AC,\
+    \ +2 bonus on Reflex saves) and evasion (as a rogue) to one adjacent ally until\
+    \ the beginning of his next turn. This cover does not allow Stealth checks.\n\
+    At 17th level, he can provide cover to himself and all adjacent allies, or he\
+    \ can provide improved cover (+8 cover bonus to AC, +4 bonus on Reflex saves,\
+    \ improved evasion)to a single adjacent ally."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:irresistible_advance#fighter_phalanx_soldier"
+  name: "Irresistible Advance"
+  label: null
+  type: null
+  description: "At 15th level, a phalanx fighter gains a bonus on bull rush and overrun\
+    \ CMB checks. This bonus depends on the type of shield used: +1 with a buckler,\
+    \ +2 with a light shield, +3 with a heavy shield, or +4 with a tower shield."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:shielded_fortress#fighter_phalanx_soldier"
+  name: "Shielded Fortress"
+  label: null
+  type: null
+  description: "At 20th level, a phalanx fighter's shield cannot be disarmed or sundered.\
+    \ He gains evasion (as a rogue) when using a shield (improved evasion when using\
+    \ a tower shield). As a move action, a phalanx fighter can provide evasion to\
+    \ all adjacent allies until the beginning of his next turn. As an immediate action,\
+    \ he can provide improved evasion to an adjacent ally against one attack."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

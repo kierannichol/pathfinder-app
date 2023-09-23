@@ -1,0 +1,66 @@
+id: "class:rogue#guild_agent"
+name: "Guild Agent"
+description: ""
+modifications:
+- add: "ability:guild_connections#rogue_guild_agent"
+  remove:
+  - "ability:evasion#rogue"
+  - "ability:uncanny_dodge#rogue"
+- add: "ability:pull_rank#rogue_guild_agent"
+  remove:
+  - "ability:improved_uncanny_dodge#rogue"
+- add: "ability:criminal_mastermind#rogue_guild_agent"
+  remove:
+  - "ability:master_strike#rogue"
+features:
+- id: "ability:guild_connections#rogue_guild_agent"
+  name: "Guild Connections"
+  label: null
+  type: null
+  description: "At 2nd level, a guild agent gains the black market connections rogue\
+    \ talent.\nFurthermore, he can ask his guild for tips about the local scene, granting\
+    \ him a bonus equal to half his rogue level on Knowledge (local) checks and Diplomacy\
+    \ checks to gather information, as long as the information in question pertains\
+    \ to the guild agent's base of operations.\nAt 4th level, the guild agent also\
+    \ gains the gossip collector vigilante social talent, and his base of operations\
+    \ counts as his area of renown for the purpose of determining the effects of gossip\
+    \ collector."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:pull_rank#rogue_guild_agent"
+  name: "Pull Rank"
+  label: null
+  type: null
+  description: "At 8th level, a guild agent has attained sufficient rank to call in\
+    \ lesser guild members to assist him with a job. He can call lesser members of\
+    \ a number and level equal to the number of followers he would have if he had\
+    \ the Leadership feat (including the +2 bonus for his guildhouse), to a maximum\
+    \ of a number of lesser members equal to his rogue level. If the guild agent possesses\
+    \ the Leadership feat, he gains twice as many followers as normal. If he spends\
+    \ a favor, he can combine this with the command team organizational influence\
+    \ benefit to gain even more lesser members for a particularly difficult job. Each\
+    \ time the guild agent uses the lesser members recklessly and gets them killed,\
+    \ he loses at least 1 influence with his guild."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:criminal_mastermind#rogue_guild_agent"
+  name: "Criminal Mastermind"
+  label: null
+  type: null
+  description: "At 20th level, except in an unusually powerful guild, a guild agent\
+    \ has become the true power behind the guild. The guild agent has built up a nearly\
+    \ worldwide reputation under a particular criminal epithet (such as “The Silver\
+    \ Shadow\"), known by criminals and law enforcement officers everywhere. This\
+    \ works like the renown vigilante social talent except as follows. It applies\
+    \ in all towns and cities on the same continent as the guild agent's base of operations,\
+    \ without requiring him to select a particular settlement.\nHe has only one identity,\
+    \ and only other criminals and members of the underworld treat their attitudes\
+    \ toward the guild agent as one step closer to helpful at all times (rather than\
+    \ while only in his social identity), while the bonus on Intimidate checks applies\
+    \ against everyone at all times (rather than while only in his vigilante identity)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Intrigue"
+source: "Pathfinder Roleplaying Game Ultimate Intrigue"

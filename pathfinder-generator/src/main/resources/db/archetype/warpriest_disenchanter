@@ -1,0 +1,57 @@
+id: "class:warpriest#disenchanter"
+name: "Disenchanter"
+description: "While many warpriests focus on threats to the body, the disenchanter\
+  \ focuses on dangers to the mind and the soul. Using the power of his patron, the\
+  \ disenchanter seeks to keep the powers of magic in check."
+modifications:
+- add: "ability:bonus_feats#warpriest_disenchanter"
+  remove:
+  - "ability:bonus_feats#warpriest"
+- add: "ability:mystic_interference#warpriest_disenchanter"
+  remove:
+  - "ability:channel_energy#warpriest"
+- add: "ability:banish_enchantment#warpriest_disenchanter"
+  remove:
+  - "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+features:
+- id: "ability:bonus_feats#warpriest_disenchanter"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "Whenever a disenchanter gains a bonus feat, he must choose from the\
+    \ following list: Great Fortitude, Improved Counterspell, Iron Will, Lightning\
+    \ Reflexes, Skill Focus (Spellcraft), or Spell Focus (abjuration). At 6th level,\
+    \ he adds the following feats to this list: Dispel Synergy, Improved Great Fortitude,\
+    \ Improved Iron Will, and Improved Lightning Reflexes. At 12th level, he adds\
+    \ the following feats to this list: Destructive Dispel, Dispelling Critical, Parry\
+    \ Spell, and Ray Shield. He need not meet the prerequisites for these feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:mystic_interference#warpriest_disenchanter"
+  name: "Mystic Interference"
+  label: null
+  type: null
+  description: "At 4th level, a disenchanter can channel a burst of pure abjuration\
+    \ magic to grant protection to himself and all allies with 30 feet. Affected creatures\
+    \ receive a +1 bonus on saving throws against spells and spell-like abilities\
+    \ for a number of rounds equal to his warpriest level. This is a sacred bonus\
+    \ if the warpriest is good-aligned or able to spontaneously cast cure spells,\
+    \ and a profane bonus if the warpriest is evil-aligned or able to spontaneously\
+    \ cast inflict spells. Using this ability consumes two uses of his fervor ability.\
+    \ At 8th level and every 4 levels thereafter, the bonus granted by mystic interference\
+    \ increases by 1 (to a maximum of +5 at 20th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:banish_enchantment#warpriest_disenchanter"
+  name: "Banish Enchantment"
+  label: null
+  type: null
+  description: "At 6th level, a disenchanter learns to focus his mystic interference.\
+    \ As a standard action, he can consume two uses of his fervor ability to target\
+    \ a single creature within 30 feet with a targeted dispel magic."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

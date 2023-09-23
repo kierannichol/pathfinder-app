@@ -1,0 +1,29 @@
+{
+  "id": "class:alchemist#vivisectionist",
+  "name": "Vivisectionist",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:bomb#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "A vivisectionist studies bodies to better understand their function. Unlike a chirurgeon, a vivisectionist\u0027s goals are not related to healing, but rather to experimentation and knowledge that most people would consider evil."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bomb#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:sneak_attack#alchemist_vivisectionist",
+          "conditionFormula": "@class:alchemist\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:bomb#alchemist"
+        }]
+      }]
+    }
+  }
+}

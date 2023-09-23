@@ -1,0 +1,59 @@
+{
+  "id": "class:shaman#unsworn_shaman",
+  "name": "Unsworn Shaman",
+  "tags": ["archetype", "shaman"],
+  "enabledFormula": "!@modifies:ability:spirit_animal#shaman AND !@modifies:ability:spirit_and_alters_hex#shaman AND !@modifies:ability:spirit_magic#shaman AND !@modifies:ability:wandering_spirit_and_replaces_wandering_hex#shaman",
+  "maxStacks": 1,
+  "description": {
+    "text": "An unsworn shaman never binds herself to one specific spirit, always making new deals as she deems necessary for the circumstances that she finds herself in. While this weakens the powers she can access from any one spirit, it gives her access to a broader overall range of abilities."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spirit_animal#shaman",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spirit_and_alters_hex#shaman",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spirit_magic#shaman",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wandering_spirit_and_replaces_wandering_hex#shaman",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:minor_spirit#shaman_unsworn_shaman",
+          "conditionFormula": "@class:shaman\u003e\u003d1"
+        }, {
+          "featureId": "ability:spirit_animal#shaman_unsworn_shaman",
+          "conditionFormula": "@class:shaman\u003e\u003d2"
+        }, {
+          "featureId": "ability:wandering_spirit#shaman_unsworn_shaman",
+          "conditionFormula": "@class:shaman\u003e\u003d2"
+        }, {
+          "featureId": "ability:spirit_magic#shaman_unsworn_shaman",
+          "conditionFormula": "@class:shaman\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:spirit_and_alters_hex#shaman"
+        }, {
+          "featureId": "ability:spirit_animal#shaman"
+        }, {
+          "featureId": "ability:wandering_spirit_and_replaces_wandering_hex#shaman"
+        }, {
+          "featureId": "ability:spirit_magic#shaman"
+        }]
+      }]
+    }
+  }
+}

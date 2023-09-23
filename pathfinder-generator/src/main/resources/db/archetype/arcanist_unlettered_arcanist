@@ -1,0 +1,35 @@
+id: "class:arcanist#unlettered_arcanist"
+name: "Unlettered Arcanist"
+description: "Some arcanists store their spells as whispered secrets within familiars\
+  \ instead of on paper."
+modifications:
+- add: "ability:familiar#arcanist_unlettered_arcanist"
+  remove:
+  - "ability:spellbooks#arcanist"
+- add: "ability:witch_spells#arcanist_unlettered_arcanist"
+  remove:
+  - "ability:the_spells_class_feature#arcanist"
+features:
+- id: "ability:familiar#arcanist_unlettered_arcanist"
+  name: "Familiar"
+  label: null
+  type: null
+  description: "An unlettered arcanist does not keep a spellbook. Instead, she gains\
+    \ a familiar in which she stores her spells as a witch does, though she does not\
+    \ gain a witch's patron. Treat her arcanist level as her witch level for determining\
+    \ the abilities and benefits granted by the familiar. Anything that would allow\
+    \ an unlettered arcanist to add spells to her spellbook allows her to add spells\
+    \ to her familiar instead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:witch_spells#arcanist_unlettered_arcanist"
+  name: "Witch Spells"
+  label: null
+  type: null
+  description: "An unlettered arcanist follows a different arcane tradition. She uses\
+    \ the witch spell list instead of the wizard/sorcerer spell list."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

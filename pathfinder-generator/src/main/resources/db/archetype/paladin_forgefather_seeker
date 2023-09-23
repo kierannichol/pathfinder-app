@@ -1,0 +1,84 @@
+id: "class:paladin#forgefather_seeker"
+name: "Forgefather Seeker"
+description: ""
+modifications:
+- add: "ability:detect_construct#paladin_forgefather_seeker"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:smite_construct#paladin_forgefather_seeker"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:aura_of_destruction#paladin_forgefather_seeker"
+  remove:
+  - "ability:aura_of_justice#paladin"
+- add: "ability:aura_of_unmaking#paladin_forgefather_seeker"
+  remove:
+  - "ability:aura_of_faith#paladin"
+- add: "ability:forgefathers_champion#paladin_forgefather_seeker"
+  remove:
+  - "ability:holy_champion#paladin"
+features:
+- id: "ability:detect_construct#paladin_forgefather_seeker"
+  name: "Detect Construct"
+  label: null
+  type: null
+  description: "A Forgefather seeker can detect the presence of constructs at will.\
+    \ This functions as the spell aura sight, except the duration is 1 round and a\
+    \ Forgefather seeker learns the locations and power of all auras of all constructs,\
+    \ similar to detect undead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:smite_construct#paladin_forgefather_seeker"
+  name: "Smite Construct"
+  label: null
+  type: null
+  description: "This ability functions as the paladin's smite evil ability, but it\
+    \ functions only against constructs. Smiting a construct automatically bypasses\
+    \ any DR or hardness a construct might have. A Forgefather seeker can still smite\
+    \ evil, but she adds only half her Charisma bonus on attack rolls, adds only half\
+    \ of her level on damage rolls, and doesn't increase her bonus damage against\
+    \ outsiders with the evil subtype, evil-aligned dragons, or undead. This otherwise\
+    \ functions as smite evil for the purposes of feats, prerequisites, and other\
+    \ effects."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:aura_of_destruction#paladin_forgefather_seeker"
+  name: "Aura of Destruction"
+  label: null
+  type: null
+  description: "At 11th level, a Forgefather seeker grants her allies smite construct\
+    \ with her aura of justice ability instead of smite evil."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:aura_of_unmaking#paladin_forgefather_seeker"
+  name: "Aura of Unmaking"
+  label: null
+  type: null
+  description: "At 14th level, a Forgefather seeker's weapons are treated as adamantine\
+    \ for the purpose of overcoming damage reduction. Any attack made against an enemy\
+    \ within 10 feet of her is treated as adamantine for the purpose of overcoming\
+    \ damage reduction. This ability functions only while a Forgefather seeker is\
+    \ conscious, not if she is unconscious or dead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+- id: "ability:forgefathers_champion#paladin_forgefather_seeker"
+  name: "Forgefather's Champion"
+  label: null
+  type: null
+  description: "At 20th level, a Forgefather seeker becomes capable of completely\
+    \ dismantling constructs. Her DR increases to 10/evil.\nWhenever she uses smite\
+    \ construct and hits a construct, she can immediately attempt to destroy the construct.\
+    \ The construct is reduced to 0 hit points and destroyed unless it succeeds at\
+    \ a Will save (DC = 10 + half the Forgefather seeker's level + the Forgefather\
+    \ seeker's Charisma modifier). After this destruction effect and the damage from\
+    \ the attack is resolved, the smite immediately ends.\nIn addition, whenever a\
+    \ Forgefather seeker channels positive energy or uses lay on hands to heal a creature,\
+    \ she heals the maximum possible amount."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Campaign Setting: Construct Handbook"
+source: "Pathfinder Campaign Setting: Construct Handbook"

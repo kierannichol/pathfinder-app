@@ -1,0 +1,45 @@
+id: "class:rogue#roof_runner"
+name: "Roof Runner"
+description: "A specialized urban acrobat, the roof runner makes her home high atop\
+  \ the spires and gables of great cities. She is skilled at traveling these uneven\
+  \ surfaces at full speed, performing daring leaps and deftly balancing upon narrow\
+  \ and precarious ledges."
+modifications:
+- add: "ability:roof_running#rogue_roof_runner"
+  remove:
+  - "ability:trapfinding#rogue"
+- add: "ability:tumbling_descent#rogue_roof_runner"
+  remove:
+  - "ability:trap_sense#rogue"
+features:
+- id: "ability:roof_running#rogue_roof_runner"
+  name: "Roof Running"
+  label: null
+  type: null
+  description: "At 1st level, a roof runner becomes entirely adept at moving across\
+    \ the tops of buildings, spires, and similar locations. Provided she is wearing\
+    \ light armor or no armor, the roof runner can move at full speed while traveling\
+    \ across the tops of buildings or similar structures, and takes no penalties on\
+    \ any Dexterity-based Skill checks or Reflex saves that might be incurred from\
+    \ moving about on a roof."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:tumbling_descent#rogue_roof_runner"
+  name: "Tumbling Descent"
+  label: null
+  type: null
+  description: "At 2nd level, a roof runner can use her Acrobatics skill to attempt\
+    \ a rapid descent from a rooftop or another surface, ricocheting against another\
+    \ surface and then diving through an opening (such as a balcony or window) directly\
+    \ below. So long as she has at least two surfaces no farther than 10 feet apart\
+    \ to bounce against, she can ricochet her body back from one to the next, descending\
+    \ great distances with a single check. The DC is 10 + 5 for every additional 10-foot\
+    \ increment descended beyond the initial 10 feet dropped. If she fails, she falls\
+    \ the full distance.\nThis ability replaces trap sense.\nRogue Talents: The following\
+    \ rogue talents complement the roof runner archetype: expert leaper, ledge walker,\
+    \ nimble climber, stand up, and terrain mastery."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

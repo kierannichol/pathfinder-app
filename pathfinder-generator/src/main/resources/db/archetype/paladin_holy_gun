@@ -1,0 +1,52 @@
+id: "class:paladin#holy_gun"
+name: "Holy Gun"
+description: "Not all paladins are knights in shining armor. Holy guns roam the world\
+  \ searching for evil. And where they find it, they put it down."
+modifications:
+- add: "ability:have_gun#paladin_holy_gun"
+  remove:
+  - "ability:detect_evil#paladin"
+- add: "ability:smiting_shot#paladin_holy_gun"
+  remove:
+  - "ability:smite_evil#paladin"
+- add: "ability:divine_bond#paladin_holy_gun"
+  remove:
+  - "ability:the_standard_paladins_divine_bond#paladin"
+features:
+- id: "ability:have_gun#paladin_holy_gun"
+  name: "Have Gun"
+  label: null
+  type: null
+  description: "At 1st level, the holy gun gains the Amateur Gunslinger feat and Gunsmithing\
+    \ as bonus feats. She also gains a battered gun identical to the one gained by\
+    \ the Gunslinger."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:smiting_shot#paladin_holy_gun"
+  name: "Smiting Shot"
+  label: null
+  type: null
+  description: "A holy gun can spend 1 grit point to make a smiting shot with a firearm\
+    \ attack as a standard action. If the target is evil, the holy gun adds her Charisma\
+    \ bonus and her paladin level to the damage of the firearm attack. If the target\
+    \ of the smiting shot is an outsider with the evil subtype, an evil-aligned dragon,\
+    \ or an undead creature, the bonus to damage increases to the Charisma modifier\
+    \ plus 2 points of damage per level the paladin possess. Regardless of the target,\
+    \ smiting shot automatically bypasses any DR the creature might have."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:divine_bond#paladin_holy_gun"
+  name: "Divine Bond"
+  label: null
+  type: null
+  description: "At 5th level, a holy gun forms a bond with her deity. This functions\
+    \ as the paladin's divine bond ability, except the bond must always take the form\
+    \ of a firearm. In addition to the listed abilities, a holy gun can add the distance,\
+    \ reliable, or seeking special abilities to her weapon, but she cannot add the\
+    \ defending or disruption special abilities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

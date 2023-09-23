@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "Effect.proto";
+import "Choice.proto";
+import "Link.proto";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+package data;
+
+message CharacterTemplateDbo {
+    repeated CharacterLevelTemplateDbo levels = 1;
+}
+
+message CharacterLevelTemplateDbo {
+    uint32 level_number = 1;
+
+    repeated EffectDbo effects = 101;
+    repeated LinkDbo links = 102;
+    repeated UnlinkDbo unlinks = 103;
+    repeated ChoiceDbo choices = 104;
+}

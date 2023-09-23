@@ -1,0 +1,112 @@
+id: "class:fighter#dragonheir_scion"
+name: "Dragonheir Scion"
+description: ""
+modifications:
+- add: "ability:class_skills#fighter_dragonheir_scion"
+  remove:
+  - "ability:the_fighters_class_skills#fighter"
+- add: "ability:eldritch_strikes#fighter_dragonheir_scion"
+  remove:
+  - "ability:the_bonus_feat_gained_at_1st_level#fighter"
+- add: "ability:fearful_might#fighter_dragonheir_scion"
+  remove:
+  - "ability:bravery#fighter"
+- add: "ability:draconic_defenses#fighter_dragonheir_scion"
+  remove:
+  - "ability:armor_training#fighter@3"
+  - "ability:armor_training#fighter@11"
+  - "ability:armor_training#fighter@7"
+- add: "ability:draconic_strike#fighter_dragonheir_scion"
+  remove:
+  - "ability:the_bonus_feat_gained_at_4th_level#fighter"
+- add: "ability:draconic_presence#fighter_dragonheir_scion"
+  remove:
+  - "ability:the_bonus_feat_gained_at_6th_level#fighter"
+- add: "ability:wings#fighter_dragonheir_scion"
+  remove:
+  - "ability:weapon_training#fighter@15"
+  - "ability:armor_mastery#fighter"
+- add: "ability:might_of_wyrms#fighter_dragonheir_scion"
+  remove:
+  - "ability:weapon_mastery#fighter"
+features:
+- id: "ability:class_skills#fighter_dragonheir_scion"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "The dragonheir scion adds Knowledge (arcana) and Use Magic Device\
+    \ to her list of class skills, instead of Handle Animal or Ride."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:eldritch_strikes#fighter_dragonheir_scion"
+  name: "Eldritch Strikes"
+  label: null
+  type: null
+  description: "At 1st level, a dragonheir scion gains Arcane Strike as a bonus feat.\
+    \ She does not need to meet its prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:fearful_might#fighter_dragonheir_scion"
+  name: "Fearful Might"
+  label: null
+  type: null
+  description: "At 2nd level, a dragonheir scion gains a +1 bonus on Intimidate checks\
+    \ to demoralize a foe. This bonus increases to +2 at 6th level and by an additional\
+    \ 1 every 4 fighter levels thereafter to a maximum of +5 at 18th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:draconic_defenses#fighter_dragonheir_scion"
+  name: "Draconic Defenses"
+  label: null
+  type: null
+  description: "At 3rd level, a dragonheir scion gains a +1 natural armor bonus and\
+    \ energy resistance 5 against her energy type. At 7th level, this increases to\
+    \ a +2 natural armor bonus and energy resistance 10; at 13th level, it increases\
+    \ to a +3 natural armor bonus and energy resistance 20."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:draconic_strike#fighter_dragonheir_scion"
+  name: "Draconic Strike"
+  label: null
+  type: null
+  description: "At 4th level, whenever the dragonheir scion damages a target with\
+    \ an attack augmented by Arcane Strike, the attack deals an additional 1d4 points\
+    \ of damage of the dragonheir scion's energy type."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:draconic_presence#fighter_dragonheir_scion"
+  name: "Draconic Presence"
+  label: null
+  type: null
+  description: "At 6th level, the dragonheir scion receives Dazzling Display as a\
+    \ bonus feat. She does not need a weapon in hand to use this ability, and can\
+    \ use it as a standard action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:wings#fighter_dragonheir_scion"
+  name: "Wings"
+  label: null
+  type: null
+  description: "At 15th level, a dragonheir scion can grow leathery dragon wings from\
+    \ her back as a standard action, granting her a fly speed of 60 feet with average\
+    \ maneuverability. She can dismiss the wings as a free action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+- id: "ability:might_of_wyrms#fighter_dragonheir_scion"
+  name: "Might of Wyrms"
+  label: null
+  type: null
+  description: "At 20th level, a dragonheir scion's draconic heritage becomes manifest.\
+    \ She gains immunity to paralysis, sleep, and damage of her energy type, as well\
+    \ as blindsense with a range of 60 feet."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Legacy of Dragons"
+source: "Pathfinder Player Companion: Legacy of Dragons"

@@ -1,0 +1,97 @@
+{
+  "id": "class:paladin#holy_tactician",
+  "name": "Holy Tactician",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:divine_health_and_divine_bond#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:holy_champion#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "The holy tactician inspires her allies on the field of battle. Her place is at their side against overwhelming odds, and her guidance brings out their true potential."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_courage#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_health_and_divine_bond#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:holy_champion#paladin",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d1"
+        }, {
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d4"
+        }, {
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d7"
+        }, {
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d10"
+        }, {
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d13"
+        }, {
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d16"
+        }, {
+          "featureId": "ability:weals_champion#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d19"
+        }, {
+          "featureId": "ability:tactical_acumen#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d3"
+        }, {
+          "featureId": "ability:battlefield_presence#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d3"
+        }, {
+          "featureId": "ability:guide_the_battle#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d8"
+        }, {
+          "featureId": "ability:weals_wrath#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d11"
+        }, {
+          "featureId": "ability:masterful_presence#paladin_holy_tactician",
+          "conditionFormula": "@class:paladin\u003e\u003d20"
+        }],
+        "unlinks": [{
+          "featureId": "ability:smite_evil#paladin"
+        }, {
+          "featureId": "ability:divine_health_and_divine_bond#paladin"
+        }, {
+          "featureId": "ability:aura_of_courage#paladin"
+        }, {
+          "featureId": "ability:aura_of_resolve#paladin"
+        }, {
+          "featureId": "ability:aura_of_justice#paladin"
+        }, {
+          "featureId": "ability:holy_champion#paladin"
+        }]
+      }]
+    }
+  }
+}

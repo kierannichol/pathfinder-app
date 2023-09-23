@@ -1,0 +1,35 @@
+{
+  "id": "class:alchemist#royal_alchemist",
+  "name": "Royal Alchemist",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:poison_use#alchemist AND !@modifies:ability:swift_poisoning#alchemist",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:poison_use#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_poisoning#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:alchemical_antidote#alchemist_royal_alchemist",
+          "conditionFormula": "@class:alchemist\u003e\u003d2"
+        }],
+        "unlinks": [{
+          "featureId": "ability:poison_use#alchemist"
+        }, {
+          "featureId": "ability:swift_poisoning#alchemist"
+        }]
+      }]
+    }
+  }
+}

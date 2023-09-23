@@ -1,0 +1,36 @@
+id: "class:witch#invoker"
+name: "Invoker"
+description: ""
+modifications:
+- add: "ability:invoke_patron#witch_invoker"
+  remove:
+  - "ability:16th_level_hexes#witch"
+  - "ability:the_witchs_1st__8th_#witch"
+- add: "ability:second_invocation#witch_invoker"
+  remove:
+  - "ability:the_witchs_10th_level_hex#witch"
+features:
+- id: "ability:invoke_patron#witch_invoker"
+  name: "Invoke Patron"
+  label: null
+  type: null
+  description: "At 1st level, an invoker can invite spirits associated with her patron's\
+    \ themes into her body and mind as a swift action. This functions like a hunter's\
+    \ animal focus, except she emulates facets of her patron, chosen from the list\
+    \ below. The invoker can use this ability for a number of minutes per day equal\
+    \ to her level; this duration need not be consecutive, but it must be spent in\
+    \ 1-minute increments."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Haunted Heroes Handbook"
+- id: "ability:second_invocation#witch_invoker"
+  name: "Second Invocation"
+  label: null
+  type: null
+  description: "At 10th level, whenever an invoker uses her invoke patron ability,\
+    \ she selects two different facets of her patron for herself instead of one.\n\
+    Otherwise, this functions like a hunter's second animal focus ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Haunted Heroes Handbook"
+source: "Pathfinder Player Companion: Haunted Heroes Handbook"

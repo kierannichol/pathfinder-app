@@ -1,0 +1,80 @@
+id: "class:ranger#divine_marksman"
+name: "Divine Marksman"
+description: "Divine marksmen are masters of archery and touched by the divine."
+modifications:
+- add: "ability:bullseye_shot#ranger_divine_marksman"
+  remove:
+  - "ability:track#ranger"
+  - "ability:wild_empathy#ranger"
+- add: "ability:archery_style#ranger_divine_marksman"
+  remove:
+  - "ability:the_rangers_combat_style_feat_class_feature#ranger"
+- add: "ability:vicious_aim#ranger_divine_marksman"
+  remove:
+  - "ability:all_spellcasting#ranger"
+  - "ability:the_marksman_is_not_considered_to_have_a_caster_level#ranger"
+- add: "ability:divine_influence#ranger_divine_marksman"
+  remove:
+  - "ability:swift_tracking#ranger"
+- add: "ability:pinpoint_targeting#ranger_divine_marksman"
+  remove:
+  - "ability:quarry#ranger"
+- add: "ability:quarry#ranger_divine_marksman"
+  remove:
+  - "ability:improved_quarry#ranger"
+features:
+- id: "ability:bullseye_shot#ranger_divine_marksman"
+  name: "Bullseye Shot"
+  label: null
+  type: null
+  description: "At 1st level, a divine marksman gains the Bullseye Shot feat as a\
+    \ bonus feat. He need not meet its prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:archery_style#ranger_divine_marksman"
+  name: "Archery Style"
+  label: null
+  type: null
+  description: "At 2nd level, a divine marksman must select the archery combat style."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:vicious_aim#ranger_divine_marksman"
+  name: "Vicious Aim"
+  label: null
+  type: null
+  description: "At 4th level, a divine marksman adds half his highest favored enemy\
+    \ bonus to all attack rolls and damage rolls for attacks made with ranged weapons.\
+    \ This does not stack with his normal favored enemy bonus when targeting a creature\
+    \ that qualifies as a favored enemy."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:divine_influence#ranger_divine_marksman"
+  name: "Divine Influence"
+  label: null
+  type: null
+  description: "At 8th level, a divine marksman gains Weapon Focus with the longsword\
+    \ as a bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:pinpoint_targeting#ranger_divine_marksman"
+  name: "Pinpoint Targeting"
+  label: null
+  type: null
+  description: "At 11th level, an marksman gains Pinpoint Targeting as a bonus feat,\
+    \ even if he does not meet its prerequisites."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+- id: "ability:quarry#ranger_divine_marksman"
+  name: "Quarry"
+  label: null
+  type: null
+  description: "At 19th level, a divine marksman gains the quarry class feature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Weapon Master's Handbook"
+source: "Pathfinder Player Companion: Weapon Master's Handbook"

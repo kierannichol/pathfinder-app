@@ -1,0 +1,93 @@
+id: "class:magus#armored_battlemage"
+name: "Armored Battlemage"
+description: ""
+modifications:
+- add: "ability:medium_armor#magus_armored_battlemage"
+  remove:
+  - "ability:alters_the_medium_armor_ability#magus"
+  - "ability:spell_combat#magus"
+- add: "ability:arcane_pool#magus_armored_battlemage"
+  remove:
+  - "ability:arcane_pool#magus"
+- add: "ability:armor_training#magus_armored_battlemage"
+  remove:
+  - "ability:improved_spell_combat#magus"
+  - "ability:18th_levels#magus"
+  - "ability:the_magus_arcana_gained_at_3rd#magus"
+- add: "ability:heavy_armor#magus_armored_battlemage"
+  remove:
+  - "ability:heavy_armor#magus"
+- add: "ability:expanded_arcane_pool#magus_armored_battlemage"
+  remove:
+  - "ability:greater_spell_combat#magus"
+features:
+- id: "ability:medium_armor#magus_armored_battlemage"
+  name: "Medium Armor"
+  label: null
+  type: null
+  description: "An armored battlemage gains this ability at 1st level instead of 7th.\
+    \ When wearing medium or armor, the armored battlemage gains a +4 bonus on concentration\
+    \ checks to cast defensively. This stacks with the bonus from the Combat Casting\
+    \ feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+- id: "ability:arcane_pool#magus_armored_battlemage"
+  name: "Arcane Pool"
+  label: null
+  type: null
+  description: "An armored battlemage cannot spend points from his arcane pool to\
+    \ enhance weapons. Instead, he can expend 1 point from his arcane pool as a swift\
+    \ action to grant armor he is wearing a +1 enhancement bonus for 1 minute. For\
+    \ every 4 magus levels he has beyond 1st, the armor gains another +1 enhancement\
+    \ bonus, to a maximum of +5 at 17th level. These bonuses stack with existing armor\
+    \ enhancement bonuses to a maximum of +5.\nMultiple uses of this ability do not\
+    \ stack with themselves.\nAt 5th level, these bonuses can be used to add any of\
+    \ the following armor special abilities: balanced, bitter, fortification (heavy,\
+    \ light, or medium), ghost touch, invulnerability, spell resistance (13, 15, 17,\
+    \ or 19), or spell storing.\nAdding these special abilities consumes an amount\
+    \ of bonus equal to the ability's base price modifier. In addition, the armored\
+    \ battlemage can grant his armor the energy resistance special ability at the\
+    \ cost of a +3 bonus or the improved energy resistance special ability at the\
+    \ cost of a +5 bonus. These special abilities are added to any the armor already\
+    \ has, but duplicates do not stack. If the armor is not magical, at least a +1\
+    \ enhancement bonus must be added before any other special abilities can be added.\
+    \ These bonuses and special abilities are decided when the arcane pool point is\
+    \ spent and cannot be changed until the next time the armored battlemage uses\
+    \ this ability. These bonuses do not function if the armor is worn by anyone other\
+    \ than the magus.\nAn armored battlemage can enhance only one suit of armor in\
+    \ this way at one time. If he uses this ability again, the first use immediately\
+    \ ends."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+- id: "ability:armor_training#magus_armored_battlemage"
+  name: "Armor Training"
+  label: null
+  type: null
+  description: "At 3rd level, an armored battlemage gains armor training, as per the\
+    \ fighter ability.\nAt 8th level, he gains armor training 2.\nAt 13th level, he\
+    \ gains armor training 3.\nAt 18th level, he gains armor training 4."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+- id: "ability:heavy_armor#magus_armored_battlemage"
+  name: "Heavy Armor"
+  label: null
+  type: null
+  description: "An armored battlemage gains this ability at 7th level instead of 13th."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+- id: "ability:expanded_arcane_pool#magus_armored_battlemage"
+  name: "Expanded Arcane Pool"
+  label: null
+  type: null
+  description: "At 14th level, the armored battlemage can grant his armor the glamered\
+    \ special ability at the cost of a +2 bonus, the slick or shadow special ability\
+    \ at the cost of a +3 bonus, and the greater slick or greater shadow special ability\
+    \ at the cost of a +5 bonus when using his arcane pool."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+source: "Pathfinder Player Companion: Armor Master's Handbook"

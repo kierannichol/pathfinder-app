@@ -1,0 +1,25 @@
+casting_time: "1 minute"
+saving_throw: "Will negates; see text"
+spell_resistance: "yes"
+id: "spell:binding"
+name: "Binding"
+description: "A binding spell creates a magical restraint to hold a creature. The\
+  \ target gets an initial saving throw only if its Hit Dice equal at least half your\
+  \ caster level."
+prerequisites: ""
+components: "V, S, M (opals worth 500 gp per HD of the target creature, plus other\
+  \ components as specified below)"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one living creature"
+duration: "see text (D)"
+school: "enchantment (compulsion) [mind-affecting]"
+levels:
+- class_id: "class:arcanist"
+  level: 8
+- class_id: "class:sorcerer"
+  level: 8
+- class_id: "class:summoner"
+  level: 6
+- class_id: "class:wizard"
+  level: 8
+source: "PRPG Core Rulebook"

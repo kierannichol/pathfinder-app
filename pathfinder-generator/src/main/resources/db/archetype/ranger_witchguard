@@ -1,0 +1,54 @@
+id: "class:ranger#witchguard"
+name: "Witchguard"
+description: "Witchguards are the sworn defenders of the witches of the north. Although\
+  \ the witches are spellcasters of immense power, even they cannot defend themselves\
+  \ against every attack. Witchguards dedicate their lives to protecting their charges,\
+  \ and they gain some arcane knowledge in return. They are trained to work closely\
+  \ with witches and defend their charges from harm. Witchguards learn magical abilities\
+  \ from the same patrons that grant witches their powers, though they can use their\
+  \ abilities to protect any kind of spellcaster, not just a witch. A witchguard is\
+  \ ready to face any foe that might threaten his charge, and he is ever prepared\
+  \ to lay down his life to protect the life of the person he is sworn to defend."
+modifications:
+- add: "ability:bodyguard#ranger_witchguard"
+  remove:
+  - "ability:endurance#ranger"
+- add: "ability:defend_charge#ranger_witchguard"
+  remove:
+  - "ability:hunters_bond#ranger"
+- add: "ability:sworn_defender#ranger_witchguard"
+  remove:
+  - "ability:woodland_stride#ranger"
+features:
+- id: "ability:bodyguard#ranger_witchguard"
+  name: "Bodyguard"
+  label: null
+  type: null
+  description: "At 3rd level, a witchguard gains Bodyguard as a bonus feat, even if\
+    \ he doesn't meet the prerequisite."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the North"
+- id: "ability:defend_charge#ranger_witchguard"
+  name: "Defend Charge"
+  label: null
+  type: null
+  description: "At 4th level, a witchguard forms a bond with a spellcaster he has\
+    \ sworn to defend. Once per day, this bond allows the witchguard to spend a move\
+    \ action to grant an adjacent spellcaster a +2 dodge bonus to AC and a +2 circumstance\
+    \ bonus on concentration checks.\nAt 5th level and every 5 levels thereafter,\
+    \ these bonuses increase by 2. The bonuses last for a number of rounds equal to\
+    \ the witchguard's Wisdom modifier (minimum 1).\nAt 4th level and every 3 levels\
+    \ thereafter, the witchguard can use this ability one additional time per day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the North"
+- id: "ability:sworn_defender#ranger_witchguard"
+  name: "Sworn Defender"
+  label: null
+  type: null
+  description: "At 7th level, a witchguard gains In Harm's Way as a bonus feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: People of the North"
+source: "Pathfinder Player Companion: People of the North"

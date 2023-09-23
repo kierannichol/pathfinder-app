@@ -1,0 +1,27 @@
+casting_time: "1 standard action"
+saving_throw: "Will half"
+spell_resistance: "yes"
+id: "spell:mass_inflict_moderate_wounds"
+name: "Mass Inflict Moderate Wounds"
+description: "This spell functions like mass inflict light wounds, except that it\
+  \ deals 2d8 points of damage + 1 point per caster level (maximum +30)."
+prerequisites: ""
+components: "V, S"
+range: "close (25 ft. + 5 ft./2 levels)"
+targets: "one creature/level, no two of which can be more than 30 ft. apart"
+duration: "instantaneous"
+school: "necromancy"
+levels:
+- class_id: "class:cleric"
+  level: 6
+- class_id: "class:inquisitor"
+  level: 6
+- class_id: "class:oracle"
+  level: 6
+- class_id: "class:shaman"
+  level: 6
+- class_id: "class:warpriest"
+  level: 6
+- class_id: "class:witch"
+  level: 7
+source: "PRPG Core Rulebook"

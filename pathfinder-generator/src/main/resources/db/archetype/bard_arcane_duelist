@@ -1,0 +1,95 @@
+id: "class:bard#arcane_duelist"
+name: "Arcane Duelist"
+description: "A master of the martial applications of steel and spell, the arcane\
+  \ duelist blends both into a lethal combination."
+modifications:
+- add: "ability:arcane_strike#bard_arcane_duelist"
+  remove:
+  - "ability:bardic_knowledge#bard"
+- add: "ability:bardic_performance#bard_arcane_duelist"
+  remove:
+  - "ability:countersong#bard"
+- add: "ability:bonus_feats#bard_arcane_duelist"
+  remove:
+  - "ability:well_versed#bard"
+  - "ability:versatile_performance#bard"
+- add: "ability:arcane_bond#bard_arcane_duelist"
+  remove:
+  - "ability:lore_master#bard"
+- add: "ability:arcane_armor#bard_arcane_duelist"
+  remove:
+  - "ability:jack_of_all_trades#bard"
+features:
+- id: "ability:arcane_strike#bard_arcane_duelist"
+  name: "Arcane Strike"
+  label: null
+  type: null
+  description: "Arcane duelists gain Arcane Strike as a bonus feat at 1st level."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:bardic_performance#bard_arcane_duelist"
+  name: "Bardic Performance"
+  label: null
+  type: null
+  description: "An arcane duelist gains the following types of bardic performance:\n\
+    Rallying Cry (Su): At 1st level, an arcane duelist can use performance to rally\
+    \ dispirited allies. Each round he makes an Intimidate check. Any ally (including\
+    \ the bard) within 30 feet may use this check in place of his own saving throw\
+    \ against fear and despair effects. Those already under a fear or despair effect\
+    \ can attempt a new save each round using the bard's Intimidate check. Rallying\
+    \ cry does not work on effects that don't allow saves. This is a mind-affecting\
+    \ ability that uses audible components.\nThis performance replaces countersong.\n\
+    Bladethirst (Su): An arcane duelist of 6th level or higher may use performance\
+    \ to grant one weapon, one natural weapon, one end of a double weapon, or 50 items\
+    \ of ammunition of the same type within 30 feet a +1 enhancement bonus. This enhancement\
+    \ bonus increases by +1 for every three levels after 6th (maximum +5 at 18th level).\
+    \ These bonuses stack with existing bonuses and may be used to increase the item's\
+    \ enhancement bonus up to +5 or to add any of the following weapon properties:\
+    \ defending, distance, ghost touch, keen, mighty cleaving, returning, shock, shocking\
+    \ burst, seeking, speed, or wounding. If the weapon is not magical, at least a\
+    \ +1 enhancement bonus must be added before adding special abilities.\nThis performance\
+    \ replaces suggestion.\nMass Bladethirst (Su): An arcane duelist of 18th level\
+    \ or higher can use his bladethirst performance to enhance the weapons of as many\
+    \ allies as desired within 30 feet. The bonus provided by this power is +4 if\
+    \ conferred on two allies, +3 for three allies, +2 for four allies, and +1 for\
+    \ five or more allies. The power granted to each weapon must be identical.\nThis\
+    \ ability replaces mass suggestion."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:bonus_feats#bard_arcane_duelist"
+  name: "Bonus Feats"
+  label: null
+  type: null
+  description: "An arcane duelist weaves might and magic in his combat style, gaining\
+    \ the following bonus feats at 2nd level and every four levels thereafter:\n2nd\
+    \ level--Combat Casting 6th level--Disruptive 10th level--Spellbreaker 14th level--Penetrating\
+    \ Strike 18th level--Greater Penetrating Strike.\nThis ability replaces versatile\
+    \ performance and well-versed."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:arcane_bond#bard_arcane_duelist"
+  name: "Arcane Bond"
+  label: null
+  type: null
+  description: "At 5th level, an arcane duelist gains the arcane bond ability as a\
+    \ wizard, using a weapon as his bonded item. He may not choose a familiar or other\
+    \ type of bonded item. He may use the hand holding his bonded weapon for somatic\
+    \ components.\nThis ability replaces lore master."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:arcane_armor#bard_arcane_duelist"
+  name: "Arcane Armor"
+  label: null
+  type: null
+  description: "At 10th level, an arcane duelist gains Medium Armor Proficiency and\
+    \ can cast bard spells in medium armor with no chance of arcane spell failure.\
+    \ At 16th level, he gains Heavy Armor Proficiency and can cast bard spells in\
+    \ heavy armor with no arcane spell failure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

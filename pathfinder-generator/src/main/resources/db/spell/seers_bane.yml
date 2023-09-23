@@ -1,0 +1,24 @@
+casting_time: "1 round"
+saving_throw: "Will negates (harmless, object)"
+spell_resistance: "yes (harmless, object)"
+id: "spell:seers_bane"
+name: "Seer's Bane"
+description: "This spell functions as nondetection, except that those who cast divination\
+  \ spells targeting the warded creature or item must succeed on a caster level check\
+  \ (DC = 15 + your caster level). If the caster of the divination fails, deadly magical\
+  \ feedback strikes at him, dealing 1d6 points of electricity damage per 2 caster\
+  \ levels you have (maximum 10d6 at 20th level)."
+prerequisites: ""
+components: "V, S"
+range: "touch"
+targets: "creature or object touched"
+duration: "1 hour/level"
+school: "abjuration"
+levels:
+- class_id: "class:cleric"
+  level: 6
+- class_id: "class:inquisitor"
+  level: 6
+- class_id: "class:oracle"
+  level: 6
+source: "Pathfinder #102: Breaking the Bones of Hell"

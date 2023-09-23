@@ -1,0 +1,91 @@
+id: "class:ranger#guide"
+name: "Guide"
+description: "Many rangers are loners, but some choose to use their familiarity with\
+  \ the land to guide others safely through the wilderness."
+modifications:
+- add: "ability:rangers_focus#ranger_guide"
+  remove:
+  - "ability:favored_enemy#ranger"
+- add: "ability:terrain_bond#ranger_guide"
+  remove:
+  - "ability:hunters_bond#ranger"
+- add: "ability:rangers_luck#ranger_guide"
+  remove:
+  - "ability:evasion#ranger"
+- add: "ability:inspired_moment#ranger_guide"
+  remove:
+  - "ability:quarry#ranger"
+  - "ability:improved_quarry#ranger"
+- add: "ability:improved_rangers_luck#ranger_guide"
+  remove:
+  - "ability:improved_evasion#ranger"
+features:
+- id: "ability:rangers_focus#ranger_guide"
+  name: "Ranger's Focus"
+  label: null
+  type: null
+  description: "At 1st level, once per day, the guide can focus on a single enemy\
+    \ within line of sight as a swift action. That creature remains the Ranger's focus\
+    \ until it is reduced to 0 or fewer hit points or surrenders, or until the Ranger\
+    \ designates a new focus, whichever occurs first. The Ranger gains a +2 bonus\
+    \ on attack and damage rolls against the target of his focus. At 5th level, and\
+    \ every five levels thereafter, this bonus increases by +2.\nAt 4th level, and\
+    \ every 3 levels thereafter, the Ranger can use this ability one additional time\
+    \ per day."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:terrain_bond#ranger_guide"
+  name: "Terrain Bond"
+  label: null
+  type: null
+  description: "At 4th level, the guide forms a bond with the land itself, enabling\
+    \ him to direct others in such terrain. When in his favored terrain, the Ranger\
+    \ grants all allies within line of sight and that can hear him a +2 bonus on initiative\
+    \ checks and Perception, Stealth, and Survival skill checks. Also, as long as\
+    \ they travel with him, the Ranger's allies leave no trail and can't be tracked.\
+    \ The Ranger can choose for the group to leave a trail, or even specific members\
+    \ of the group to leave a trail if he so desires.\nThis ability replaces hunter's\
+    \ bond."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:rangers_luck#ranger_guide"
+  name: "Ranger's Luck"
+  label: null
+  type: null
+  description: "Upon reaching 9th level, once per day the guide can either reroll\
+    \ one of his attack rolls or force an enemy who just hit him with an attack to\
+    \ reroll the attack roll. The Ranger must take the result of the second roll even\
+    \ if it is worse. A Ranger can use this ability once per day at 9th level, plus\
+    \ one additional time per day at 14th and 19th levels.\nThis ability replaces\
+    \ evasion."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:inspired_moment#ranger_guide"
+  name: "Inspired Moment"
+  label: null
+  type: null
+  description: "At 11th level, the guide can have an inspired moment once per day\
+    \ as a free action. The Ranger gains the following benefits until the end of his\
+    \ next turn. His speed increases by 10 feet. He can take an extra move or swift\
+    \ action on his turn. He gains a +4 bonus to AC and on attack rolls, skill checks,\
+    \ or ability checks. Finally, he automatically confirms any critical threat he\
+    \ scores. He can use this ability one additional time per day at 19th level.\n\
+    This ability replaces quarry and improved quarry."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:improved_rangers_luck#ranger_guide"
+  name: "Improved Ranger's Luck"
+  label: null
+  type: null
+  description: "Upon reaching 16th level, the Ranger's luck increases. He gains a\
+    \ +4 bonus on his rerolls made with the Ranger's luck ability, or if he forces\
+    \ an enemy to reroll an attack, that enemy takes a –4 penalty on the roll. This\
+    \ bonus or penalty is also applied on any roll to confirm critical hits."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

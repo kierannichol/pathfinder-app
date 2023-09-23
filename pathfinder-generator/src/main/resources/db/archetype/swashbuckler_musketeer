@@ -1,0 +1,46 @@
+id: "class:swashbuckler#musketeer"
+name: "Musketeer"
+description: "A number of organizations and kingdoms search for warriors who are brave\
+  \ (or foolish) enough to wield firearms on the battlefield. The daring nature of\
+  \ swashbucklers often makes them ideal candidates for such service."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#swashbuckler_musketeer"
+  remove:
+  - "ability:the_swashbucklers_weapon_proficiencies#swashbuckler"
+- add: "ability:musketeer_instruction#swashbuckler_musketeer"
+  remove:
+  - "ability:swashbuckler_finesse#swashbuckler"
+- add: "ability:deeds#swashbuckler_musketeer"
+  remove:
+  - "ability:dodging_panache#swashbuckler"
+features:
+- id: "ability:weapon_and_armor_proficiency#swashbuckler_musketeer"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A musketeer gains proficiency with all simple weapons and martial\
+    \ weapons, as well as one-handed and two-handed firearms."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:musketeer_instruction#swashbuckler_musketeer"
+  name: "Musketeer Instruction"
+  label: null
+  type: null
+  description: "At 1st level, a musketeer gains the benefits of the Weapon Finesse\
+    \ feature with the rapier (this counts as having the Weapon Finesse feat for purposes\
+    \ of meeting feat prerequisites), as well as both Rapid Reload (musket) and Gunsmithing\
+    \ feats as bonus feats."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:deeds#swashbuckler_musketeer"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "The musketeer gains the following deed, which replaces an existing\
+    \ deed."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game: Advanced Class Guide"
+source: "Pathfinder Roleplaying Game: Advanced Class Guide"

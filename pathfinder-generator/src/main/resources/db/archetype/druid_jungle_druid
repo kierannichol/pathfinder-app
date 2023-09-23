@@ -1,0 +1,57 @@
+id: "class:druid#jungle_druid"
+name: "Jungle Druid"
+description: ""
+modifications:
+- add: "ability:jungle_guardian#druid_jungle_druid"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:woodland_stride#druid_jungle_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:torrid_endurance#druid_jungle_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:verdant_sentinel#druid_jungle_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:jungle_guardian#druid_jungle_druid"
+  name: "Jungle Guardian"
+  label: null
+  type: null
+  description: "At 2nd level, a jungle druid gains a bonus on Initiative checks and\
+    \ Climb, Knowledge (geography), Perception, Stealth, and Survival checks equal\
+    \ to 1/2 her druid level in jungle terrain, and she cannot be tracked in such\
+    \ environments."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:woodland_stride#druid_jungle_druid"
+  name: "Woodland Stride"
+  label: null
+  type: null
+  description: "A jungle druid gains this ability at 3rd level.\nThis ability replaces\
+    \ trackless step."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:torrid_endurance#druid_jungle_druid"
+  name: "Torrid Endurance"
+  label: null
+  type: null
+  description: "At 4th level, a jungle druid ignores the effects of a hot climate\
+    \ as if under the effects of endure elements. She also gains a +4 bonus on saves\
+    \ against disease and the exceptional abilities of animals and magical beasts.\n\
+    This ability replaces resist nature's lure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:verdant_sentinel#druid_jungle_druid"
+  name: "Verdant Sentinel"
+  label: null
+  type: null
+  description: "At 13th level, a jungle druid can cast tree shape at will."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

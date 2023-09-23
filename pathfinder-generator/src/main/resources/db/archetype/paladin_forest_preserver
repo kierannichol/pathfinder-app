@@ -1,0 +1,108 @@
+id: "class:paladin#forest_preserver"
+name: "Forest Preserver"
+description: "Forest preservers are sacred defenders of the woodlands and of the wild\
+  \ creatures and natural beauty within them."
+modifications:
+- add: "ability:favored_terrain#paladin_forest_preserver"
+  remove:
+  - "ability:aura_of_courage#paladin"
+- add: "ability:woodland_stride#paladin_forest_preserver"
+  remove:
+  - "ability:divine_health#paladin"
+- add: "ability:sacred_botany#paladin_forest_preserver"
+  remove:
+  - "ability:channel_positive_energy#paladin"
+- add: "ability:fireproof_aura#paladin_forest_preserver"
+  remove:
+  - "ability:aura_of_resolve#paladin"
+- add: "ability:sacred_grove#paladin_forest_preserver"
+  remove:
+  - "ability:aura_of_justice#paladin"
+- add: "ability:aura_of_preservation#paladin_forest_preserver"
+  remove:
+  - "ability:aura_of_faith#paladin"
+features:
+- id: "ability:favored_terrain#paladin_forest_preserver"
+  name: "Favored Terrain"
+  label: null
+  type: null
+  description: "At 3rd level, a forest preserver gains the ranger's favored terrain\
+    \ ability but must select either forest or jungle as her favored terrain. The\
+    \ bonuses granted by this ability increase by 2 for every 5 levels after 3rd,\
+    \ but she does not gain additional favored terrains."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:woodland_stride#paladin_forest_preserver"
+  name: "Woodland Stride"
+  label: null
+  type: null
+  description: "At 3rd level, a forest preserver (as well as her divine bond creature,\
+    \ if she has one) gains woodland stride, as per the druid class feature."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:sacred_botany#paladin_forest_preserver"
+  name: "Sacred Botany"
+  label: null
+  type: null
+  description: "At 4th level, a forest preserver adds the following spells to her\
+    \ spell list: 1st--detect animals or plants, entangle, goodberry, shillelagh;\
+    \ 2nd--barkskin, eagle eye, tree shape, warp wood, wood shape ; 3rd--diminish\
+    \ plants, plant growth, snare, speak with plants, spike growth ; 4th--antiplant\
+    \ shell, awaken (trees only), blight, command plants, commune with nature, thorn\
+    \ body, tree stride, wall of thorns . In addition, she treats her caster level\
+    \ as 1 higher when casting these spells in her favored terrain."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:fireproof_aura#paladin_forest_preserver"
+  name: "Fireproof Aura"
+  label: null
+  type: null
+  description: "At 8th level, a forest preserver and creatures within 10 feet of her\
+    \ gain a +2 bonus on saving throws against fire effects and gain fire resistance\
+    \ 5; these are doubled for plant allies, which also gain evasion against fire\
+    \ effects only. Whenever a fire spell would affect a creature within the fireproof\
+    \ aura, the forest preserver can expend three uses of her lay on hands ability\
+    \ as an immediate action to attempt to counter the effect, as if she had readied\
+    \ a dispel magic spell (caster level = her paladin level) to counterspell. This\
+    \ ability functions only if the forest preserver is conscious."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:sacred_grove#paladin_forest_preserver"
+  name: "Sacred Grove"
+  label: null
+  type: null
+  description: "At 11th level, a forest preserver can expend two uses of her smite\
+    \ evil ability to consecrate a 20-foot-radius area that must contain a living\
+    \ tree. This fills the area with dense undergrowth, though it does not impede\
+    \ her allies' movement. In addition, animals, fey, and plants allied with the\
+    \ forest preserver gain a +1 sacred bonus on attack rolls, damage rolls, and saving\
+    \ throws, and animals, fey, and plants called or summoned within this area gain\
+    \ 1 hit point per Hit Die as long as the calling or summoning effect lasts or\
+    \ until the sacred grove effect ends (whichever comes first). If the area contains\
+    \ a shrine or hallowed area dedicated to a good-aligned deity (or at the GM's\
+    \ discretion, a place of natural magical power, such as a natural portal to the\
+    \ Fey World), these bonuses are doubled.\nWhen she uses this ability in her favored\
+    \ terrain, she can also imbue plants in the area with limited animation, allowing\
+    \ them to obscure vision and impede movement and attacks as if the area were affected\
+    \ by solid fog.\nA sacred grove remains enhanced in this way for a number of minutes\
+    \ equal to the paladin's level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:aura_of_preservation#paladin_forest_preserver"
+  name: "Aura of Preservation"
+  label: null
+  type: null
+  description: "At 14th level, a forest preserver grants animals and plants within\
+    \ 10 feet spell resistance equal to 11 + her paladin level. This spell resistance\
+    \ doesn't apply against harmless effects created by the forest preserver or allies\
+    \ within 10 feet of her. This ability functions only if the forest preserver is\
+    \ conscious."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

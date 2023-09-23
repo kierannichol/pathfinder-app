@@ -1,0 +1,46 @@
+{
+  "id": "class:magus#staff_magus",
+  "name": "Staff Magus",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:fighter_training#magus AND !@modifies:ability:the_normal_magus_weapon_and_armor_proficiency_feature#magus AND !@modifies:ability:the_medium_armor_and_heavy_armor_class_abilities#magus",
+  "maxStacks": 1,
+  "description": {
+    "text": "While most magi use a one-handed weapon as their melee implement of choice, one group of magi uses the quarterstaff instead. These lightly armored magi use staves for both defense and inflicting their spells upon enemies. Skilled in manipulating these weapons with one hand or two, they eventually learn how to use arcane staves as well, and are just as formidable in combat as their sword-swinging brethren."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:fighter_training#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_normal_magus_weapon_and_armor_proficiency_feature#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_medium_armor_and_heavy_armor_class_abilities#magus",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:quarterstaff_defense#magus_staff_magus",
+          "conditionFormula": "@class:magus\u003e\u003d7"
+        }, {
+          "featureId": "ability:staff_weapon#magus_staff_magus",
+          "conditionFormula": "@class:magus\u003e\u003d10"
+        }],
+        "unlinks": [{
+          "featureId": "ability:the_normal_magus_weapon_and_armor_proficiency_feature#magus"
+        }, {
+          "featureId": "ability:the_medium_armor_and_heavy_armor_class_abilities#magus"
+        }, {
+          "featureId": "ability:fighter_training#magus"
+        }]
+      }]
+    }
+  }
+}

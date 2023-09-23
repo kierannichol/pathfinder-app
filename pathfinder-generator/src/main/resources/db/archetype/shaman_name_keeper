@@ -1,0 +1,90 @@
+id: "class:shaman#name_keeper"
+name: "Name-Keeper"
+description: "Some study the names of fallen adventurers, correlating their names\
+  \ with the quests they were on when they perished or went missing, and then take\
+  \ it upon themselves to finish these incomplete missions. In delving into the storied\
+  \ histories of these fallen explorers, they have discovered how to commune with\
+  \ the departed spirits of those who have fallen. These mystical agents soon became\
+  \ known as name-keepers, and they pride themselves on helping their predecessors\
+  \ find peace while preventing other names from being added to the wall."
+modifications:
+- add: "ability:class_skills#shaman_name_keeper"
+  remove:
+  - "ability:the_shamans_class_skills#shaman"
+- add: "ability:inherited_wayfinder#shaman_name_keeper"
+  remove:
+  - "ability:spirit_animal#shaman"
+- add: "ability:pathfinders_past#shaman_name_keeper"
+  remove:
+  - "ability:wandering_spirit#shaman"
+- add: "ability:versatile_hex#shaman_name_keeper"
+  remove:
+  - "ability:wandering_hex#shaman"
+features:
+- id: "ability:class_skills#shaman_name_keeper"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A name-keeper gains Knowledge (engineering), Knowledge (history),\
+    \ and Linguistics as class skills, instead of Knowledge (nature), Knowledge (planes),\
+    \ and Survival."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:inherited_wayfinder#shaman_name_keeper"
+  name: "Inherited Wayfinder"
+  label: null
+  type: null
+  description: "A name-keeper forms a powerful bond with a damaged wayfinder inherited\
+    \ from another. It functions for her alone. This functions as a wizard's bonded\
+    \ object except it can be used to cast shaman spells (instead of wizard spells).\n\
+    This ability replaces spirit animal.\nKeeper Spirit Magic: The name-keeper adds\
+    \ the following spells to the list of spells she can cast using spirit magic:\
+    \ stone shield (1st), object reading (2nd), speak with dead (3rd), wall of stone\
+    \ (4th), breath of life (5th), stone tell (6th), vision (7th), word of recall\
+    \ (8th), and true resurrection (9th)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:pathfinders_past#shaman_name_keeper"
+  name: "Pathfinders Past"
+  label: null
+  type: null
+  description: "At 4th level, a name-keeper can form a temporary bond with a deceased\
+    \ person. The name-keeper must make this selection each day when preparing her\
+    \ spells. While this feature is active, she gains one or more benefits. Each allows\
+    \ her to select one or more options (such as a weapon or shaman spirit), and she\
+    \ can choose different options each time she forms this bond.\nScrolls: The name-keeper\
+    \ selects an oracle mystery. She can use any of the mystery's associated skills\
+    \ untrained, and she treats them as class skills. For any of those skills that\
+    \ were already class skills, she instead gains a +2 sacred bonus on those checks.\
+    \ At 12th level, she gains Skill Focus for one of the associated skills as a bonus\
+    \ feat. At 20th level, she gains Skill Focus a second time as a bonus feat, and\
+    \ she always counts as having at least 10 ranks in those skills for calculating\
+    \ these temporary feats' benefits.\nSpells: The name-keeper selects a second shaman\
+    \ spirit and adds the spells granted by that spirit to her list of spells that\
+    \ she can cast using spirit magic. She gains one additional spirit magic spell\
+    \ slot of her highest spell level. At 12th level, she selects two shaman spirits\
+    \ and adds both their granted spells to the list of spells she can cast using\
+    \ spirit magic. At 20th level, her number of spirit magic spell slots at each\
+    \ spell level increases to two.\nSwords: The name-keeper gains proficiency in\
+    \ all martial weapons and one exotic weapon of her choice. At 12th level, whenever\
+    \ she makes a full attack, she gains one additional attack at her highest base\
+    \ attack bonus; this ability stacks with the extra attack from haste, but it doesn't\
+    \ stack with other abilities that grant extra attacks. At 20th level, she gains\
+    \ two combat feats for which she qualifies."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:versatile_hex#shaman_name_keeper"
+  name: "Versatile Hex"
+  label: null
+  type: null
+  description: "At 6th level, a name-keeper can temporarily gain a shaman hex or one\
+    \ of the hexes that her spirit has when she prepares her spells, lasting until\
+    \ the next time she prepares spells. At 14th level, she can select two such hexes\
+    \ each day."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

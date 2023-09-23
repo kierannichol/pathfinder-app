@@ -1,0 +1,99 @@
+id: "class:wizard#hallowed_necromancer"
+name: "Hallowed Necromancer"
+description: ""
+modifications:
+- add: "ability:arcane_school#wizard_hallowed_necromancer"
+  remove:
+  - "ability:arcane_school#wizard"
+  - "ability:spells#wizard"
+- add: "ability:turn_undead#wizard_hallowed_necromancer"
+  remove:
+  - "ability:power_over_undead#wizard"
+- add: "ability:positive_touch#wizard_hallowed_necromancer"
+  remove:
+  - "ability:scribe_scroll#wizard"
+  - "ability:grave_touch#wizard"
+- add: "ability:deathbane#wizard_hallowed_necromancer"
+  remove:
+  - "ability:the_bonus_feat_gained_at_5th_level#wizard"
+- add: "ability:ghostbane#wizard_hallowed_necromancer"
+  remove:
+  - "ability:the_bonus_feat_gained_at_10th_level#wizard"
+- add: "ability:guarded_life#wizard_hallowed_necromancer"
+  remove:
+  - "ability:the_15th_level_bonus_feat#wizard"
+features:
+- id: "ability:arcane_school#wizard_hallowed_necromancer"
+  name: "Arcane School"
+  label: null
+  type: null
+  description: "A hallowed necromancer must specialize in the school of necromancy\
+    \ and swear never to create undead."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:turn_undead#wizard_hallowed_necromancer"
+  name: "Turn Undead"
+  label: null
+  type: null
+  description: "A hallowed necromancer must select Turn Undead as a bonus feat with\
+    \ her power over undead arcane school ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:positive_touch#wizard_hallowed_necromancer"
+  name: "Positive Touch"
+  label: null
+  type: null
+  description: "As a standard action, a hallowed necromancer can sacrifice a prepared\
+    \ spell of the necromancy school to spontaneously cast a cure spell of the same\
+    \ level or lower, counting the spell as a necromancy spell rather than a conjuration\
+    \ spell. This cure spell harms only undead; it doesn't heal the living. If the\
+    \ spell requires an attack roll, it as has a critical threat range of 19–20. A\
+    \ number of times per day equal to 3 + her Intelligence modifier, when she spontaneously\
+    \ casts a cure spell, she can either turn the effect into a ray and increase the\
+    \ range to close or remove the Will save for half damage[faq]."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:deathbane#wizard_hallowed_necromancer"
+  name: "Deathbane"
+  label: null
+  type: null
+  description: "At 5th level, a hallowed necromancer's cure spells are maximized when\
+    \ used to damage undead and the save DCs of her spells cast on undead creatures\
+    \ are 1 higher. She can expend 2 uses of positive touch as a swift action to imbue\
+    \ any weapon she wields with the undead–bane or ghost touch weapon special ability\
+    \ for 1 round per 5 wizard levels she has. These effects apply only against undead,\
+    \ and only while the hallowed necromancer wields the weapon. If the weapon is\
+    \ her arcane bond item, this ability costs only 1 use of positive touch."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:ghostbane#wizard_hallowed_necromancer"
+  name: "Ghostbane"
+  label: null
+  type: null
+  description: "At 10th level, a hallowed necromancer can expend 3 uses of her positive\
+    \ touch as a swift action while casting a spell to affect undead as if the spell\
+    \ were prepared with the Ectoplasmic Spell, Thanatopic Spell, or Threnodic Spell\
+    \ feat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+- id: "ability:guarded_life#wizard_hallowed_necromancer"
+  name: "Guarded Life"
+  label: null
+  type: null
+  description: "At 15th level, when a hallowed necrocer fails a saving throw against\
+    \ a death effect, energy drain, a necromantic effect, or a negative energy effect,\
+    \ she can expend 2 uses of positive touch as an immediate action to reroll it.\
+    \ She must accept the result of the reroll even if it's worse. If she would take\
+    \ hit point damage from such an effect, as an immediate action she can instead\
+    \ expend 1 use of positive touch and sacrifice a prepared necromancy spell of\
+    \ 4th level or higher to reduce the damage she takes by an amount equal to her\
+    \ wizard level + 10 times the spell level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Horror Adventures"
+source: "Pathfinder Roleplaying Game Horror Adventures"

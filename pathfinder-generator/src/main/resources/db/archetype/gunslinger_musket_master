@@ -1,0 +1,37 @@
+id: "class:gunslinger#musket_master"
+name: "Musket Master"
+description: "Pistols and other one-handed firearms are often easy to conceal and\
+  \ faster to load than other firearms, and do sufficient damage for most situations.\
+  \ But some gunslingers want a little more firepower and range. These are the musket\
+  \ masters; the best of these gunslingers can reload a musket with dazzling speed,\
+  \ potentially putting even their pistol-wielding brethren to shame."
+modifications:
+- add: "ability:deeds#gunslinger_musket_master"
+  remove:
+  - "ability:the_gunslingers_dodge_deed#gunslinger"
+- add: "ability:musket_training#gunslinger_musket_master"
+  remove:
+  - "ability:gun_training_1_2_3#gunslinger"
+  - "ability:4#gunslinger"
+features:
+- id: "ability:deeds#gunslinger_musket_master"
+  name: "Deeds"
+  label: null
+  type: null
+  description: "A musket master swaps a pair of deeds for the following."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:musket_training#gunslinger_musket_master"
+  name: "Musket Training"
+  label: null
+  type: null
+  description: "Starting at 5th level, a musket master increases her skill with two-handed\
+    \ firearms. She gains a bonus on damage rolls equal to her Dexterity modifier,\
+    \ and when she misfires with a two-handed firearm, the misfire value increases\
+    \ by 2 instead of 4. Every four levels thereafter (9th, 13th, and 17th), the bonus\
+    \ on damage rolls increases by +1."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

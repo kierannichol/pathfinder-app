@@ -1,0 +1,50 @@
+id: "class:warpriest#shieldbearer"
+name: "Shieldbearer"
+description: "Shieldbearers are divine warriors who stand on the front lines of battle,\
+  \ shoulder to shoulder with the soldiers of their people."
+modifications:
+- add: "ability:shield_adept#warpriest_shieldbearer"
+  remove:
+  - "ability:focus_weapon#warpriest"
+- add: "ability:sacred_weapon#warpriest_shieldbearer"
+  remove:
+  - "ability:also_sacred_armor#warpriest"
+  - "ability:sacred_weapon#warpriest"
+- add: "ability:channel_energy#warpriest_shieldbearer"
+  remove:
+  - "ability:channel_energy#warpriest"
+features:
+- id: "ability:shield_adept#warpriest_shieldbearer"
+  name: "Shield Adept"
+  label: null
+  type: null
+  description: "At 1st level, a shieldbearer receives Improved Shield Bash as a bonus\
+    \ feat. When carrying a shield, the shieldbearer adds his shield bonus on concentration\
+    \ checks to cast defensively."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+- id: "ability:sacred_weapon#warpriest_shieldbearer"
+  name: "Sacred Weapon"
+  label: null
+  type: null
+  description: "A shieldbearer treats shields as sacred weapons (instead of his god's\
+    \ favored weapon), though the shieldbearer can still designate additional weapons\
+    \ as sacred weapons by selecting them with the Weapon Focus feat. The shieldbearer's\
+    \ sacred weapon damage applies only to attacks made with shields.\nThe shieldbearer\
+    \ does not gain the ability to enhance sacred weapons until 7th level.\nFor every\
+    \ 3 warpriest levels beyond 7th, this bonus increases by 1 (to a maximum of +5\
+    \ at 19th level)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+- id: "ability:channel_energy#warpriest_shieldbearer"
+  name: "Channel Energy"
+  label: null
+  type: null
+  description: "The shieldbearer can channel energy only when carrying a shield, and\
+    \ the ability manifests as a 30-foot-cone burst, rather than as a radius."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Armor Master's Handbook"
+source: "Pathfinder Player Companion: Armor Master's Handbook"

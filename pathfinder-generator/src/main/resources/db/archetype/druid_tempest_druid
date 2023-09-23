@@ -1,0 +1,110 @@
+id: "class:druid#tempest_druid"
+name: "Tempest Druid"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#druid_tempest_druid"
+  remove:
+  - "ability:the_druids_armor#druid"
+  - "ability:weapon_proficiencies#druid"
+- add: "ability:spontaneous_domain_casting#druid_tempest_druid"
+  remove:
+  - "ability:the_druids_normal_ability_to_spontaneously_cast_summon_spells#druid"
+- add: "ability:nature_bond#druid_tempest_druid"
+  remove:
+  - "ability:nature_bond#druid"
+- add: "ability:sodden_shore_sense#druid_tempest_druid"
+  remove:
+  - "ability:nature_sense#druid"
+- add: "ability:electrical_resistance#druid_tempest_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:eyes_of_the_storm#druid_tempest_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:bend_bolt#druid_tempest_druid"
+  remove:
+  - "ability:venom_immunity#druid"
+features:
+- id: "ability:weapon_and_armor_proficiency#druid_tempest_druid"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A tempest druid is proficient with the trident, in addition to the\
+    \ druid's normal armor and weapon proficiencies."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:spontaneous_domain_casting#druid_tempest_druid"
+  name: "Spontaneous Domain Casting"
+  label: null
+  type: null
+  description: "A tempest druid can channel stored spell energy into domain spells\
+    \ that he has not prepared ahead of time. He can -lose- a prepared spell to cast\
+    \ any domain spell of the same level or lower."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:nature_bond#druid_tempest_druid"
+  name: "Nature Bond"
+  label: null
+  type: null
+  description: "As a result of his beliefs, a tempest druid has little connection\
+    \ to the spirituality of animals or plants. He can't choose an animal companion,\
+    \ and must instead select a domain or subdomain from the following list when he\
+    \ gains the nature bond ability: Air, Aquatic, Cloud, Storm, Swamp, Weather, or\
+    \ Wind."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:sodden_shore_sense#druid_tempest_druid"
+  name: "Sodden Shore Sense"
+  label: null
+  type: null
+  description: "A tempest druid gains a +4 bonus on Knowledge (nature) and Survival\
+    \ checks in coastal or marshy lands."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:electrical_resistance#druid_tempest_druid"
+  name: "Electrical Resistance"
+  label: null
+  type: null
+  description: "At 3rd level, a tempest druid gains electricity resistance 5. As a\
+    \ standard action, he can transfer this resistance to another creature for 1 hour,\
+    \ after which time it reverts to him."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:eyes_of_the_storm#druid_tempest_druid"
+  name: "Eyes of the Storm"
+  label: null
+  type: null
+  description: "At 4th level, a tempest druid can see through 10 feet of magical fog,\
+    \ mist, rain, wind, or similar inclement weather conditions, ignoring any concealment\
+    \ such conditions might grant. This distance increases by 5 feet for every 4 levels\
+    \ beyond 4th."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:bend_bolt#druid_tempest_druid"
+  name: "Bend Bolt"
+  label: null
+  type: null
+  description: "At 9th level, a tempest druid can redirect nearby electrical attacks.\
+    \ As an immediate action, the druid can shift the area or target of an electricity\
+    \ attack by 5 feet in any direction. If the electricity affects an area, the druid\
+    \ selects one square to be unaffected and an adjacent square to be affected. If\
+    \ the adjacent square is already in the area, this has no additional effect in\
+    \ that square. If the electricity affects a target, the druid selects an adjacent\
+    \ target. For example, if he were in the line of a wizard's lightning bolt, he\
+    \ could have the spell skip his square and instead affect an adjacent square,\
+    \ even if this meant the spell did not form a continuous line. If another druid\
+    \ attacked him with call lightning, he could shift the called bolt to an adjacent\
+    \ square, affecting a creature in that square (if any).\nHe can't redirect electricity\
+    \ damage conducted to him by physical contact with an object or creature (such\
+    \ as a shocking grasp or a shock weapon). He can use this ability a number of\
+    \ times per day equal to his Wisdom bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

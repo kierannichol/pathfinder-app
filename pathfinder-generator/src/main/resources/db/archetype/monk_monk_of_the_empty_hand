@@ -1,0 +1,58 @@
+id: "class:monk#monk_of_the_empty_hand"
+name: "Monk of the Empty Hand"
+description: ""
+modifications:
+- add: "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand"
+  remove:
+  - "trait:weapon_proficiency#monk"
+- add: "ability:versatile_improvisation#monk_monk_of_the_empty_hand"
+  remove:
+  - "ability:still_mind#monk"
+- add: "ability:ki_weapons#monk_monk_of_the_empty_hand"
+  remove:
+  - "ability:diamond_body#monk"
+  - "ability:purity_of_body#monk"
+features:
+- id: "ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "Monks of the empty hand are proficient with the shuriken only. A monk\
+    \ of the empty hand treats normal weapons as improvised weapons with the following\
+    \ equivalencies (substituting all of their statistics for the listed weapon):\
+    \ a light weapon functions as a light hammer, a one-handed weapon functions as\
+    \ a club, and a Two-handed weapon functions as a quarterstaff."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:versatile_improvisation#monk_monk_of_the_empty_hand"
+  name: "Versatile Improvisation"
+  label: null
+  type: null
+  description: "At 3rd level, as a swift action, a monk of the empty hand may use\
+    \ an improvised weapon to deal damage as if it were another type (bludgeoning,\
+    \ piercing, or slashing) for 1 round, regardless of the weapon's normal damage\
+    \ type.\nThis ability replaces still mind."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:ki_weapons#monk_monk_of_the_empty_hand"
+  name: "Ki Weapons"
+  label: null
+  type: null
+  description: "At 5th level, a monk of the empty hand may spend 1 point from his\
+    \ ki pool as a swift action to deal damage equal to his unarmed strike damage\
+    \ with an improvised weapon for 1 round. At 11th level, the monk may spend ki\
+    \ to grant an enhancement bonus or magical weapon abilities to an improvised weapon\
+    \ for 1 round, at the rate of 1 point of ki per +1 bonus or its equivalent. The\
+    \ monk may not spend more than 3 points of ki at one time for this purpose. For\
+    \ example, a monk can spend 2 points of ki to give his improvised weapon a +1\
+    \ enhancement bonus and the ki focus quality, or just the flaming burst quality.\
+    \ At 15th level, the limit increases to 5 ki per round. The monk may use this\
+    \ ability to add magical weapon qualities to improvised weapons that could not\
+    \ normally have such a quality, such as adding the disruption quality to a slashing\
+    \ weapon, or the vorpal quality to a bludgeoning weapon."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

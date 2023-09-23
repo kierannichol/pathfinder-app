@@ -1,0 +1,29 @@
+{
+  "id": "class:barbarian#hurler",
+  "name": "Hurler",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:fast_movement#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "A raging barbarian is frightening enough in melee, but some become skilled at throwing objects at their foes before closing in for the kill."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "links": [{
+          "featureId": "ability:skilled_thrower#barbarian_hurler",
+          "conditionFormula": "@class:barbarian\u003e\u003d1"
+        }],
+        "unlinks": [{
+          "featureId": "ability:fast_movement#barbarian"
+        }]
+      }]
+    }
+  }
+}

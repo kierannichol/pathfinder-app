@@ -1,0 +1,54 @@
+id: "class:bard#arbiter"
+name: "Arbiter"
+description: ""
+modifications:
+- add: "ability:inspire_teamwork#bard_arbiter"
+  remove:
+  - "ability:inspire_competence#bard"
+- add: "ability:ritual_of_reconciliation#bard_arbiter"
+  remove:
+  - "ability:dirge_of_doom#bard"
+- add: "ability:versatile_teamwork#bard_arbiter"
+  remove:
+  - "ability:versatile_performance#bard"
+  - "ability:well_versed#bard"
+features:
+- id: "ability:inspire_teamwork#bard_arbiter"
+  name: "Inspire Teamwork"
+  label: null
+  type: null
+  description: "A 3rd-level arbiter can use his performance to treat his allies as\
+    \ if they possessed the same teamwork feats as the bard for the purpose of determining\
+    \ whether the bard receives a bonus from his teamwork feats. His allies do not\
+    \ receive any bonuses from these feats unless they actually possess the feats\
+    \ themselves. The allies' positioning and actions must still meet the prerequisites\
+    \ listed in the teamwork feat for the bard to receive the listed bonus."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Bastards of Golarion"
+- id: "ability:ritual_of_reconciliation#bard_arbiter"
+  name: "Ritual of Reconciliation"
+  label: null
+  type: null
+  description: "An arbiter of 8th level or higher can use his performance to improve\
+    \ the attitudes of nearby creatures by two steps. To be affected, a creature must\
+    \ be within 30 feet and able to hear the bard. Creatures whose attitude toward\
+    \ the bard becomes indifferent or better immediately cease attacking the bard\
+    \ and his allies, but may otherwise act as they please.\nThe effect persists for\
+    \ as long as the creature is within 30 feet and the bard continues his performance.\
+    \ The effect ends if one of the bard's allies attacks the creature. A successful\
+    \ Will saving throw (DC 10 + 1/2 the bard's level + the bard's Charisma modifier)\
+    \ negates the effect. Ritual of reconciliation relies on audible components."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Bastards of Golarion"
+- id: "ability:versatile_teamwork#bard_arbiter"
+  name: "Versatile Teamwork"
+  label: null
+  type: null
+  description: "At 2nd level, an arbiter gains a bonus teamwork feat. He gains an\
+    \ additional bonus teamwork feat at 6th level and every 4 levels thereafter."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Bastards of Golarion"
+source: "Pathfinder Player Companion: Bastards of Golarion"

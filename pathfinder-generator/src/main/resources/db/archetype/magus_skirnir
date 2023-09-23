@@ -1,0 +1,83 @@
+id: "class:magus#skirnir"
+name: "Skirnir"
+description: "Sometimes called a shield-vassal or shieldmaiden, the skirnir has learned\
+  \ to infuse his power into his shield."
+modifications:
+- add: "ability:sorcerous_shield#magus_skirnir"
+  remove:
+  - "ability:spell_combat#magus"
+- add: "ability:shield_pool#magus_skirnir"
+  remove:
+  - "ability:spell_recall#magus"
+- add: "ability:spellshield#magus_skirnir"
+  remove:
+  - "ability:knowledge_pool#magus"
+- add: "ability:shielded_spell_combat#magus_skirnir"
+  remove:
+  - "ability:greater_spell_access#magus"
+  - "ability:improved_spell_combat_greater_spell_combat#magus"
+- add: "ability:greater_spellshield#magus_skirnir"
+  remove:
+  - "ability:counterstrike#magus"
+features:
+- id: "ability:sorcerous_shield#magus_skirnir"
+  name: "Sorcerous Shield"
+  label: null
+  type: null
+  description: "At 1st level, skirnirs are proficient with all types of shields, including\
+    \ tower shields, and do not suffer an arcane spell failure chance when casting\
+    \ magus spells while using a shield. They treat their magus levels as their fighter\
+    \ levels for the purpose of qualifying for shield-related feats.\nThis ability\
+    \ replaces spell combat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:shield_pool#magus_skirnir"
+  name: "Shield Pool"
+  label: null
+  type: null
+  description: "At 4th level, as a free action, a skirnir may spend 1 point from his\
+    \ arcane pool to add his shield bonus to AC (not including enhancement bonuses)\
+    \ on a concentration check to cast defensively. He may also use a touch attack\
+    \ or shield bash with his shield in conjunction with any pool strike magus arcana.\n\
+    This ability replaces spell recall."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:spellshield#magus_skirnir"
+  name: "Spellshield"
+  label: null
+  type: null
+  description: "At 7th level, as a standard action, a skirnir may store a magus spell\
+    \ in his shield by spending 1 point from his arcane pool per level of the spell.\
+    \ This functions as the spell storing weapon special ability, but activates only\
+    \ on a successful shield bash by the skirnir and is not limited to spells of 3rd\
+    \ level or less.\nThis ability replaces knowledge pool."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:shielded_spell_combat#magus_skirnir"
+  name: "Shielded Spell Combat"
+  label: null
+  type: null
+  description: "At 8th level, a skirnir gains the spell combat ability, but only when\
+    \ wielding his bonded shield. A skirnir may use his shield hand to perform somatic\
+    \ components for magus spells, forfeiting the shield's bonus to AC until the beginning\
+    \ of his next turn; if the bonded shield is a buckler, he retains its bonus to\
+    \ AC. At 14th level, he gains the benefits of improved spell combat.\nAt 19th\
+    \ level, he retains his shield's bonus to AC when using any type of shield with\
+    \ spell combat."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+- id: "ability:greater_spellshield#magus_skirnir"
+  name: "Greater Spellshield"
+  label: null
+  type: null
+  description: "At 16th level, a skirnir may activate a stored spell as an immediate\
+    \ action after being struck in combat. He may choose to have the spell affect\
+    \ himself or the creature that struck him.\nThis ability replaces counterstrike."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Combat"
+source: "Pathfinder Roleplaying Game Ultimate Combat"

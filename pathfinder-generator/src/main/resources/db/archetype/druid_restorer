@@ -1,0 +1,58 @@
+id: "class:druid#restorer"
+name: "Restorer"
+description: ""
+modifications:
+- add: "ability:healing_touch#druid_restorer"
+  remove:
+  - "ability:nature_sense#druid"
+- add: "ability:natural_medic#druid_restorer"
+  remove:
+  - "ability:spontaneous_casting#druid"
+- add: "ability:enemy_of_blight#druid_restorer"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:guide_across_lifetimes#druid_restorer"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:healing_touch#druid_restorer"
+  name: "Healing Touch"
+  label: null
+  type: null
+  description: "A restorer gains a +2 bonus on Heal checks. When a restorer uses Heal\
+    \ to provide first aid, the bonus increases to +3."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:natural_medic#druid_restorer"
+  name: "Natural Medic"
+  label: null
+  type: null
+  description: "A restorer can channel stored spell energy into healing spells that\
+    \ she did not prepare ahead of time. The restorer can “lose\"any prepared spell\
+    \ in order to cast any cure spell she can cast of the same spell level or lower\
+    \ (a cure spell is any spell with “cure\"in its name)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:enemy_of_blight#druid_restorer"
+  name: "Enemy of Blight"
+  label: null
+  type: null
+  description: "At 4th level, a restorer can ignore the effects of an overgrown area\
+    \ that has been magically manipulated to impede motion. She can ignore these effects\
+    \ for a number of rounds per day equal to double her Wisdom bonus. These rounds\
+    \ don't have to be used consecutively."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+- id: "ability:guide_across_lifetimes#druid_restorer"
+  name: "Guide across Lifetimes"
+  label: null
+  type: null
+  description: "At 13th level, once per day as a full-round action, a restorer can\
+    \ cast reincarnate without a material component."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Healer's Handbook"
+source: "Pathfinder Player Companion: Healer's Handbook"

@@ -1,0 +1,77 @@
+id: "class:druid#plains_druid"
+name: "Plains Druid"
+description: ""
+modifications:
+- add: "ability:plains_traveler#druid_plains_druid"
+  remove:
+  - "ability:woodland_stride#druid"
+- add: "ability:run_like_the_wind#druid_plains_druid"
+  remove:
+  - "ability:trackless_step#druid"
+- add: "ability:savanna_ambush#druid_plains_druid"
+  remove:
+  - "ability:resist_natures_lure#druid"
+- add: "ability:canny_charger#druid_plains_druid"
+  remove:
+  - "ability:venom_immunity#druid"
+- add: "ability:evasion#druid_plains_druid"
+  remove:
+  - "ability:a_thousand_faces#druid"
+features:
+- id: "ability:plains_traveler#druid_plains_druid"
+  name: "Plains Traveler"
+  label: null
+  type: null
+  description: "At 2nd level, a plains druid gains a bonus on initiative checks and\
+    \ Knowledge (geography), Perception, Stealth, and Survival checks equal to 1/2\
+    \ her druid level in plains terrain, and she cannot be tracked in such an environment."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:run_like_the_wind#druid_plains_druid"
+  name: "Run Like the Wind"
+  label: null
+  type: null
+  description: "At 3rd level, a plains druid gains +10 feet to her land speed when\
+    \ wearing light or no armor and carrying a light load, and once per hour, she\
+    \ may run or charge at double the normal speed for 1 round. If riding her animal\
+    \ companion, it gains this ability instead.\nThis ability replaces trackless step."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:savanna_ambush#druid_plains_druid"
+  name: "Savanna Ambush"
+  label: null
+  type: null
+  description: "At 4th level, a plains druid gains concealment whenever she is prone\
+    \ in natural surroundings, and can make Stealth checks at no penalty when prone\
+    \ and not moving or at –5 when crawling. A plains druid can stand up from prone\
+    \ as an immediate action during a surprise round.\nThis ability replaces resist\
+    \ nature's lure."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:canny_charger#druid_plains_druid"
+  name: "Canny Charger"
+  label: null
+  type: null
+  description: "At 9th level, a plains druid can charge through allies' squares without\
+    \ difficulty (whether mounted or afoot) and can turn up to 90 degrees once during\
+    \ a charge, provided the last 10 feet toward the target are in a straight line.\
+    \ She also gains a +4 dodge bonus to AC against enemy charge attacks and a +4\
+    \ bonus to damage with a readied action against a charging foe.\nThis ability\
+    \ replaces venom immunity."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+- id: "ability:evasion#druid_plains_druid"
+  name: "Evasion"
+  label: null
+  type: null
+  description: "At 13th level, a plains druid gains evasion when wearing light or\
+    \ no armor and carrying a light load. This functions as the rogue ability of the\
+    \ same name."
+  effects: null
+  prerequisites: null
+  source: "Advanced Player's Guide"
+source: "Advanced Player's Guide"

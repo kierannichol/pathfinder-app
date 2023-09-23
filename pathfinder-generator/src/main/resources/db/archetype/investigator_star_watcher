@@ -1,0 +1,68 @@
+id: "class:investigator#star_watcher"
+name: "Star Watcher"
+description: "Star watchers study the movements and positions of the sun, the moon,\
+  \ and the stars, searching for secrets written in the sky. They use a combination\
+  \ of scientific study and esoteric arts to measure, record, and predict astronomical\
+  \ cycles and their effects on nature, such as the moon's influence on tides and\
+  \ rivers. Some star watchers also use these observations to predict fate and significant\
+  \ events, such as natural disasters."
+modifications:
+- add: "ability:weapon_and_armor_proficiency#investigator_star_watcher"
+  remove:
+  - "ability:armor_proficiency#investigator"
+  - "ability:the_investigators_weapon#investigator"
+- add: "ability:astrology#investigator_star_watcher"
+  remove:
+  - "ability:alchemy#investigator"
+- add: "ability:starfinding#investigator_star_watcher"
+  remove:
+  - "ability:trap_sense#investigator"
+  - "ability:trapfinding#investigator"
+features:
+- id: "ability:weapon_and_armor_proficiency#investigator_star_watcher"
+  name: "Weapon and Armor Proficiency"
+  label: null
+  type: null
+  description: "A star watcher gains proficiency with the starknife, but not with\
+    \ the rapier."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:astrology#investigator_star_watcher"
+  name: "Astrology"
+  label: null
+  type: null
+  description: "A star watcher studies a symbolic language of the heavens known as\
+    \ astrology. Equal parts art form and science, astrology can be used to read the\
+    \ future and affect it in subtle ways. Much like an alchemist or investigator,\
+    \ a star watcher collects formulae in a formula book. However, the formulae resemble\
+    \ star charts, and unlike alchemists or normal investigators, he uses these formulae\
+    \ along with personal details and astronomical measurements to make horoscopes--magical\
+    \ calculations stored much like scrolls--in which he can store spells. In many\
+    \ ways, the star watcher's horoscopes function like extracts, with the following\
+    \ exceptions.\nA star watcher's horoscope is always keyed to a specific creature\
+    \ that must be willing and present when the star watcher prepares the horoscope.\
+    \ Only the creature to which a horoscope is keyed can activate it and be affected\
+    \ by it. A horoscope is “cast\"by reading it as a standard action, though a star\
+    \ watcher can draw and read a horoscope as a single standard action.\nA star watcher\
+    \ doesn't gain a competence bonus on Craft (alchemy) checks to create alchemical\
+    \ items, and he cannot identify potions with that skill. Furthermore, a star watcher\
+    \ cannot select alchemist discoveries as investigator talents. A star watcher\
+    \ can study a wizard's spellbook or alchemist's formula book to learn formulae,\
+    \ but a star watcher's formula book is too esoteric for anyone except another\
+    \ star watcher to learn spells from."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+- id: "ability:starfinding#investigator_star_watcher"
+  name: "Starfinding"
+  label: null
+  type: null
+  description: "A star watcher adds half his level (minimum 1) as a bonus on Knowledge\
+    \ (geography) checks. He can also use astrological methods to read people. By\
+    \ checking his star charts, he can use Knowledge (geography) in place of Sense\
+    \ Motive checks.\nThis replaces trapfinding and trap sense."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Ultimate Wilderness"
+source: "Pathfinder Roleplaying Game Ultimate Wilderness"

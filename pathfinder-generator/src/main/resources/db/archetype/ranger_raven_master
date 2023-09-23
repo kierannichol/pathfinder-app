@@ -1,0 +1,117 @@
+id: "class:ranger#raven_master"
+name: "Raven Master"
+description: "Raven masters serve as messengers and spies for the Silver Ravens, using\
+  \ their ravens to scout and report any suspicious troop movements. Raven companions\
+  \ alight on the rooftops and window ledges of palaces and keeps to eavesdrop on\
+  \ tyrants and dictators, feeding these precious secrets to the raven master so that\
+  \ she can more efficiently foment and organize rebellion."
+modifications:
+- add: "ability:class_skills#ranger_raven_master"
+  remove:
+  - "ability:the_rangers_class_skills#ranger"
+- add: "ability:avian_empathy#ranger_raven_master"
+  remove:
+  - "ability:wild_empathy#ranger"
+- add: "ability:raven_companion#ranger_raven_master"
+  remove:
+  - "ability:specific_ranger_abilities_as_indicated_below#ranger"
+  - "ability:hunters_bond#ranger"
+- add: "ability:silver_champion#ranger_raven_master"
+  remove:
+  - "ability:woodland_stride#ranger"
+- add: "ability:mimic_figurine#ranger_raven_master"
+  remove:
+  - "ability:swift_tracker#ranger"
+- add: "ability:cheat_death#ranger_raven_master"
+  remove:
+  - "ability:camouflage#ranger"
+- add: "ability:argent_magic#ranger_raven_master"
+  remove:
+  - "ability:the_rangers_spellcasting#ranger"
+features:
+- id: "ability:class_skills#ranger_raven_master"
+  name: "Class Skills"
+  label: null
+  type: null
+  description: "A raven master adds Bluff, Disguise, and Sleight of Hand to her list\
+    \ of class skills. She does not gain Climb, Heal, Intimidate, Ride, or Swim as\
+    \ class skills."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:avian_empathy#ranger_raven_master"
+  name: "Avian Empathy"
+  label: null
+  type: null
+  description: ""
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:raven_companion#ranger_raven_master"
+  name: "Raven Companion"
+  label: null
+  type: null
+  description: "At 4th level, a raven master earns the trust and companionship of\
+    \ a particularly large, powerful, and intelligent raven. This ability functions\
+    \ like the druid animal companion ability, except that the raven master's effective\
+    \ druid level is equal to her ranger level – 3. The raven master must select a\
+    \ bird as her animal companion. The raven companion starts with an Intelligence\
+    \ score of 3 and can speak one language known by the raven master. In addition\
+    \ to the normal abilities an animal companion gains as the raven master increases\
+    \ in level, the raven companion gains the following abilities."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:silver_champion#ranger_raven_master"
+  name: "Silver Champion"
+  label: null
+  type: null
+  description: "At 7th level, the raven companion takes on a silvery, metallic appearance.\
+    \ It treats all of its natural attacks as though they were magic and silver for\
+    \ the purpose of bypassing damage reduction."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:mimic_figurine#ranger_raven_master"
+  name: "Mimic Figurine"
+  label: null
+  type: null
+  description: "At 8th level, once per day as a standard action, the raven master\
+    \ can transform her raven companion into a token similar to a figurine of wondrous\
+    \ power . Any gear worn by the raven melds into its body as part of this transformation,\
+    \ but held items do not. The raven can remain in this form indefinitely, or until\
+    \ the raven master spends a standard action to activate the statuette as though\
+    \ it were a figurine of wondrous power."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:cheat_death#ranger_raven_master"
+  name: "Cheat Death"
+  label: null
+  type: null
+  description: "At 12th level, once per week, when a raven companion would otherwise\
+    \ be slain by an attack, spell, or effect, it can turn into a figurine of wondrous\
+    \ power as per its mimic figurine ability as an immediate action. Once transformed\
+    \ this way, the raven companion cannot transform back into a raven until the raven\
+    \ master next prepares spells."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+- id: "ability:argent_magic#ranger_raven_master"
+  name: "Argent Magic"
+  label: null
+  type: null
+  description: "A raven master casts spells as do most rangers, but her spell list\
+    \ is somewhat expanded from the normal options most rangers can choose from, for\
+    \ her association with the bards and other talented performers among the Silver\
+    \ Ravens allows her to add a limited number of bard spells to her spell list.\
+    \ These spells function as divine spells, and are cast and prepared in the same\
+    \ manner as her other ranger spells.\nAt 6th level, the raven master selects one\
+    \ 1st-level bard spell of her choice and adds it to her spell list as a 1st-level\
+    \ ranger spell. At 9th level she does the same but for a 2nd-level bard spell.\
+    \ She adds a 3rd-level bard spell at 12th level, and adds a 4th-level bard spell\
+    \ at 15th level."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Roleplaying Game Adventurer's Guide"
+source: "Pathfinder Roleplaying Game Adventurer's Guide"

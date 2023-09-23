@@ -1,0 +1,64 @@
+id: "class:warpriest#fist_of_the_gods"
+name: "Fist of the Gods"
+description: ""
+modifications:
+- add: "ability:blessings_of_the_fist#warpriest_fist_of_the_gods"
+  remove:
+  - "ability:blessings#warpriest"
+- add: "ability:detect_chaos#warpriest_fist_of_the_gods"
+  remove:
+  - "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+- add: "ability:alignment_channel#warpriest_fist_of_the_gods"
+  remove:
+  - "ability:12th_level#warpriest"
+  - "ability:the_bonus_feats_gained_at_6th_level#warpriest"
+- add: "ability:aspect_of_law#warpriest_fist_of_the_gods"
+  remove:
+  - "ability:aspect_of_war#warpriest"
+features:
+- id: "ability:blessings_of_the_fist#warpriest_fist_of_the_gods"
+  name: "Blessings of the Fist"
+  label: null
+  type: null
+  description: "A fist of the gods must select the Law blessing and the Godfist blessing\
+    \ (see below)."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:detect_chaos#warpriest_fist_of_the_gods"
+  name: "Detect Chaos"
+  label: null
+  type: null
+  description: "At 3rd level, a fist of the gods can cast detect chaos three times\
+    \ per day as a spell-like ability, using his warpriest level as his caster level.\
+    \ If the fist of the gods already has, or later gains, the ability to cast detect\
+    \ chaos, then he can cast detect chaos at will as a spell-like ability."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:alignment_channel#warpriest_fist_of_the_gods"
+  name: "Alignment Channel"
+  label: null
+  type: null
+  description: "At 6th level, a fist of the gods gains Alignment Channel as a bonus\
+    \ feat. When he uses this feat and spends fervor to channel energy, he can harm\
+    \ only outsiders with the chaotic subtype. Additionally, when using this feat,\
+    \ he expends only one use of his fervor to channel energy and deals 1d6 points\
+    \ of damage for every 2 warpriest levels he has. At 12th level, a fist of the\
+    \ gods can expend an additional use of fervor to channel energy as a move action."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+- id: "ability:aspect_of_law#warpriest_fist_of_the_gods"
+  name: "Aspect of Law"
+  label: null
+  type: null
+  description: "At 20th level, a fist of the gods can channel an aspect of law, growing\
+    \ even more inflexible.\nOnce per day as a swift action, a warpriest can treat\
+    \ his level as his base attack bonus, gains DR 20/chaotic, and becomes immune\
+    \ to mind-affecting effects. In addition, he can take the average result on any\
+    \ die roll instead of rolling normally. This ability lasts for 1 minute."
+  effects: null
+  prerequisites: null
+  source: "Pathfinder Player Companion: Disciple's Doctrine"
+source: "Pathfinder Player Companion: Disciple's Doctrine"
