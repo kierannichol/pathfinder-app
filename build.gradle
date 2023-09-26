@@ -13,7 +13,9 @@ allprojects {
     }
 }
 
-subprojects {
+configure(subprojects.findAll {project  ->
+    file('src/main/java').exists()
+}) {
     apply plugin: 'java'
 
     dependencies {

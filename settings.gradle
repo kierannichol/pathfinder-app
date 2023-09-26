@@ -1,7 +1,6 @@
 rootProject.name = 'pathfinder-app'
 include 'pathfinder-generator'
 include 'modules:common-logic'
-findProject(':modules:common-logic')?.name = 'common-logic'
-include 'modules:common-language'
-findProject(':modules:common-language')?.name = 'common-language'
+include 'pathfinder-editor'
+include 'pathfinder-vite'
 
