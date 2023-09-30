@@ -1,9 +1,11 @@
 import * as path from "path";
 import * as fs from "fs";
-import FeatureModel from "../preload/pathfinder";
-import YAML from 'yaml'
+import {data} from "../preload/compiled";
+import {Message} from "protobufjs";
+import FeatureDbo = data.FeatureDbo;
+import SourceModuleDbo = data.SourceModuleDbo;
 
-const DatabaseBasePath = path.join(__dirname, "..", "..", "..", "pathfinder-generator", "src", "main", "resources", "db");
+const DatabaseBasePath = path.join(__dirname, "..", "..", "..", "pathfinder-vite", "public", "db");
 
 function list_files(path: string): Promise<string[]> {
   return new Promise((resolve, reject) => {
@@ -18,7 +20,7 @@ function list_files(path: string): Promise<string[]> {
   });
 }
 
-function read_yaml<T>(path: string): Promise<T> {
+function read_proto<T>(path: string, decodeFn: (binary: Uint8Array) => T): Promise<T> {
   return new Promise((resolve, reject) => {
     fs.readFile(path, function (err, buffer) {
       if (err) {
@@ -26,26 +28,61 @@ function read_yaml<T>(path: string): Promise<T> {
         return;
       }
 
-      const yaml = YAML.parse(buffer.toString());//.parse(buffer.toString());
-
-      resolve(yaml);
+      const dbo = decodeFn(buffer);
+      resolve(dbo);
     });
+  });
+}
+
+function write_proto(path: string, message: {[p:string]:any}): Promise<void> {
+  return new Promise((resolve, reject) => {
+
+    try {
+      const json = JSON.stringify(message);
+      const binary = Message.encode(message).finish();
+
+      fs.writeFileSync(path + ".bin", binary);
+      fs.writeFileSync(path + ".json", json);
+      resolve();
+    } catch (e) {
+      reject(e);
+    }
   });
 }
 
 export const PathfinderProcess = {
 
-  load_feature(event: any, section: string, name: string): Promise<FeatureModel> {
-    const filePath = path.join(DatabaseBasePath, section, name + ".yml");
-    return read_yaml(filePath);
+  async save_feature(sourceKey: string, featureKey: string, model: FeatureDbo): Promise<void> {
+    const filePath = path.join(DatabaseBasePath, sourceKey, featureKey);
+    const summaryPath = path.join(DatabaseBasePath, sourceKey);
+    await write_proto(filePath, model.toJSON());
+
+    const sourceSummary = await read_proto(summaryPath + ".bin", SourceModuleDbo.decode);
+
+    const featureIndex = sourceSummary.features.findIndex(summary => summary.id === featureKey);
+
+    const modifiedSummary = new SourceModuleDbo({
+      sourceId: sourceSummary.sourceId,
+      features: sourceSummary.features.with(featureIndex, model)
+    })
+
+    await write_proto(summaryPath, modifiedSummary);
   },
 
-  async list_entries(event: any, section: string): Promise<string[]> {
-    const section_path = path.join(DatabaseBasePath, section);
-    return (await list_files(section_path)).map(file => file.replace(".yml", ""));
+  load_feature(event: any, sourceKey: string, featureKey: string): Promise<FeatureDbo> {
+    const filePath = path.join(DatabaseBasePath, sourceKey, featureKey + ".bin");
+    return read_proto(filePath, FeatureDbo.decode);
   },
 
-  list_sections(): Promise<string[]> {
-    return list_files(DatabaseBasePath);
+  async list_features(event: any, sourceKey: string): Promise<string[]> {
+    const section_path = path.join(DatabaseBasePath, sourceKey);
+    return (await list_files(section_path))
+      .filter(file => file.endsWith(".bin"))
+      .map(file => file.replace(".bin", ""));
+  },
+
+  async list_sources(): Promise<string[]> {
+    const files = await list_files(DatabaseBasePath);
+    return files.filter(file => fs.lstatSync(path.join(DatabaseBasePath, file)).isDirectory());
   }
 }

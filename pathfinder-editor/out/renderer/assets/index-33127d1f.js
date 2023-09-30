@@ -1,3 +1,4 @@
+var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x2) {
   return x2 && x2.__esModule && Object.prototype.hasOwnProperty.call(x2, "default") ? x2["default"] : x2;
 }
@@ -7544,17 +7545,17 @@ var m = reactDomExports;
   client.hydrateRoot = m.hydrateRoot;
 }
 const index = "";
-const bootstrap_min = "";
-const control = "_control_hfqc8_1";
-const item = "_item_hfqc8_6";
-const tab = "_tab_hfqc8_10";
-const label = "_label_hfqc8_14";
-const activeTab = "_activeTab_hfqc8_27";
-const inactiveTab = "_inactiveTab_hfqc8_35";
-const activeLabel = "_activeLabel_hfqc8_39";
-const inactiveLabel = "_inactiveLabel_hfqc8_44";
-const styles$1 = {
-  control,
+const bootstrap = "";
+const control$2 = "_control_s9vcd_1";
+const item = "_item_s9vcd_6";
+const tab = "_tab_s9vcd_10";
+const label = "_label_s9vcd_14";
+const activeTab = "_activeTab_s9vcd_27";
+const inactiveTab = "_inactiveTab_s9vcd_35";
+const activeLabel = "_activeLabel_s9vcd_39";
+const inactiveLabel = "_inactiveLabel_s9vcd_44";
+const styles$4 = {
+  control: control$2,
   item,
   tab,
   label,
@@ -7569,714 +7570,4479 @@ function EntryNav({ entries, onSelect }) {
     setSelectedKey(selected);
     onSelect?.(selected);
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$1.control, children: entries.map(
-    (entry) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "clickable " + styles$1.item, onClick: (event) => handleChange(entry), children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$1.label + " " + (selectedKey === entry ? styles$1.activeLabel : styles$1.inactiveLabel), children: entry }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$1.tab + " " + (selectedKey === entry ? styles$1.activeTab : styles$1.inactiveTab) })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$4.control, children: entries.map(
+    (entry) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "clickable " + styles$4.item, onClick: (event) => handleChange(entry), children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$4.label + " " + (selectedKey === entry ? styles$4.activeLabel : styles$4.inactiveLabel), children: entry }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$4.tab + " " + (selectedKey === entry ? styles$4.activeTab : styles$4.inactiveTab) })
     ] })
   ) });
 }
 const App$1 = "";
-var classnames = { exports: {} };
-/*!
-	Copyright (c) 2018 Jed Watson.
-	Licensed under the MIT License (MIT), see
-	http://jedwatson.github.io/classnames
-*/
-(function(module) {
-  (function() {
-    var hasOwn = {}.hasOwnProperty;
-    function classNames2() {
-      var classes = [];
-      for (var i = 0; i < arguments.length; i++) {
-        var arg = arguments[i];
-        if (!arg)
-          continue;
-        var argType = typeof arg;
-        if (argType === "string" || argType === "number") {
-          classes.push(arg);
-        } else if (Array.isArray(arg)) {
-          if (arg.length) {
-            var inner = classNames2.apply(null, arg);
-            if (inner) {
-              classes.push(inner);
-            }
-          }
-        } else if (argType === "object") {
-          if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) {
-            classes.push(arg.toString());
-            continue;
-          }
-          for (var key in arg) {
-            if (hasOwn.call(arg, key) && arg[key]) {
-              classes.push(key);
-            }
-          }
-        }
-      }
-      return classes.join(" ");
-    }
-    if (module.exports) {
-      classNames2.default = classNames2;
-      module.exports = classNames2;
-    } else {
-      window.classNames = classNames2;
-    }
-  })();
-})(classnames);
-var classnamesExports = classnames.exports;
-const classNames = /* @__PURE__ */ getDefaultExportFromCjs(classnamesExports);
-const DEFAULT_BREAKPOINTS = ["xxl", "xl", "lg", "md", "sm", "xs"];
-const DEFAULT_MIN_BREAKPOINT = "xs";
-const ThemeContext = /* @__PURE__ */ reactExports.createContext({
-  prefixes: {},
-  breakpoints: DEFAULT_BREAKPOINTS,
-  minBreakpoint: DEFAULT_MIN_BREAKPOINT
-});
-function useBootstrapPrefix(prefix, defaultPrefix) {
-  const {
-    prefixes
-  } = reactExports.useContext(ThemeContext);
-  return prefix || prefixes[defaultPrefix] || defaultPrefix;
-}
-function useBootstrapBreakpoints() {
-  const {
-    breakpoints
-  } = reactExports.useContext(ThemeContext);
-  return breakpoints;
-}
-function useBootstrapMinBreakpoint() {
-  const {
-    minBreakpoint
-  } = reactExports.useContext(ThemeContext);
-  return minBreakpoint;
-}
-var propTypes$2 = { exports: {} };
-var ReactPropTypesSecret$1 = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
-var ReactPropTypesSecret_1 = ReactPropTypesSecret$1;
-var ReactPropTypesSecret = ReactPropTypesSecret_1;
-function emptyFunction() {
-}
-function emptyFunctionWithReset() {
-}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
-var factoryWithThrowingShims = function() {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret) {
-      return;
-    }
-    var err = new Error(
-      "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types"
-    );
-    err.name = "Invariant Violation";
-    throw err;
-  }
-  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  }
-  var ReactPropTypes = {
-    array: shim,
-    bigint: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    elementType: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim,
-    checkPropTypes: emptyFunctionWithReset,
-    resetWarningCache: emptyFunction
-  };
-  ReactPropTypes.PropTypes = ReactPropTypes;
-  return ReactPropTypes;
-};
-{
-  propTypes$2.exports = factoryWithThrowingShims();
-}
-var propTypesExports = propTypes$2.exports;
-const PropTypes = /* @__PURE__ */ getDefaultExportFromCjs(propTypesExports);
-var rHyphen = /-(.)/g;
-function camelize(string) {
-  return string.replace(rHyphen, function(_, chr) {
-    return chr.toUpperCase();
-  });
-}
-const pascalCase = (str) => str[0].toUpperCase() + camelize(str).slice(1);
-function createWithBsPrefix(prefix, {
-  displayName = pascalCase(prefix),
-  Component,
-  defaultProps
-} = {}) {
-  const BsComponent = /* @__PURE__ */ reactExports.forwardRef(({
-    className,
-    bsPrefix,
-    as: Tag = Component || "div",
-    ...props
-  }, ref) => {
-    const componentProps = {
-      ...defaultProps,
-      ...props
-    };
-    const resolvedPrefix = useBootstrapPrefix(bsPrefix, prefix);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Tag, {
-      ref,
-      className: classNames(className, resolvedPrefix),
-      ...componentProps
-    });
-  });
-  BsComponent.displayName = displayName;
-  return BsComponent;
-}
-function hasChildOfType(children, type) {
-  return reactExports.Children.toArray(children).some((child) => /* @__PURE__ */ reactExports.isValidElement(child) && child.type === type);
-}
-function useCol({
-  as,
-  bsPrefix,
-  className,
-  ...props
-}) {
-  bsPrefix = useBootstrapPrefix(bsPrefix, "col");
-  const breakpoints = useBootstrapBreakpoints();
-  const minBreakpoint = useBootstrapMinBreakpoint();
-  const spans = [];
-  const classes = [];
-  breakpoints.forEach((brkPoint) => {
-    const propValue = props[brkPoint];
-    delete props[brkPoint];
-    let span;
-    let offset;
-    let order;
-    if (typeof propValue === "object" && propValue != null) {
-      ({
-        span,
-        offset,
-        order
-      } = propValue);
-    } else {
-      span = propValue;
-    }
-    const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
-    if (span)
-      spans.push(span === true ? `${bsPrefix}${infix}` : `${bsPrefix}${infix}-${span}`);
-    if (order != null)
-      classes.push(`order${infix}-${order}`);
-    if (offset != null)
-      classes.push(`offset${infix}-${offset}`);
-  });
-  return [{
-    ...props,
-    className: classNames(className, ...spans, ...classes)
-  }, {
-    as,
-    bsPrefix,
-    spans
-  }];
-}
-const Col = /* @__PURE__ */ reactExports.forwardRef(
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  (props, ref) => {
-    const [{
-      className,
-      ...colProps
-    }, {
-      as: Component = "div",
-      bsPrefix,
-      spans
-    }] = useCol(props);
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-      ...colProps,
-      ref,
-      className: classNames(className, !spans.length && bsPrefix)
-    });
-  }
-);
-Col.displayName = "Col";
-const Col$1 = Col;
-const propTypes$1 = {
-  /**
-   * Specify whether the feedback is for valid or invalid fields
-   *
-   * @type {('valid'|'invalid')}
-   */
-  type: PropTypes.string,
-  /** Display feedback as a tooltip. */
-  tooltip: PropTypes.bool,
-  as: PropTypes.elementType
-};
-const Feedback = /* @__PURE__ */ reactExports.forwardRef(
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  ({
-    as: Component = "div",
-    className,
-    type = "valid",
-    tooltip = false,
-    ...props
-  }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-    ...props,
-    ref,
-    className: classNames(className, `${type}-${tooltip ? "tooltip" : "feedback"}`)
-  })
-);
-Feedback.displayName = "Feedback";
-Feedback.propTypes = propTypes$1;
-const Feedback$1 = Feedback;
-const FormContext = /* @__PURE__ */ reactExports.createContext({});
-const FormContext$1 = FormContext;
-const FormCheckInput = /* @__PURE__ */ reactExports.forwardRef(({
-  id: id2,
-  bsPrefix,
-  className,
-  type = "checkbox",
-  isValid = false,
-  isInvalid = false,
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  as: Component = "input",
-  ...props
-}, ref) => {
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-check-input");
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-    ...props,
-    ref,
-    type,
-    id: id2 || controlId,
-    className: classNames(className, bsPrefix, isValid && "is-valid", isInvalid && "is-invalid")
-  });
-});
-FormCheckInput.displayName = "FormCheckInput";
-const FormCheckInput$1 = FormCheckInput;
-const FormCheckLabel = /* @__PURE__ */ reactExports.forwardRef(({
-  bsPrefix,
-  className,
-  htmlFor,
-  ...props
-}, ref) => {
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-check-label");
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("label", {
-    ...props,
-    ref,
-    htmlFor: htmlFor || controlId,
-    className: classNames(className, bsPrefix)
-  });
-});
-FormCheckLabel.displayName = "FormCheckLabel";
-const FormCheckLabel$1 = FormCheckLabel;
-const FormCheck = /* @__PURE__ */ reactExports.forwardRef(({
-  id: id2,
-  bsPrefix,
-  bsSwitchPrefix,
-  inline = false,
-  reverse = false,
-  disabled = false,
-  isValid = false,
-  isInvalid = false,
-  feedbackTooltip = false,
-  feedback,
-  feedbackType,
-  className,
-  style,
-  title = "",
-  type = "checkbox",
-  label: label2,
-  children,
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  as = "input",
-  ...props
-}, ref) => {
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-check");
-  bsSwitchPrefix = useBootstrapPrefix(bsSwitchPrefix, "form-switch");
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  const innerFormContext = reactExports.useMemo(() => ({
-    controlId: id2 || controlId
-  }), [controlId, id2]);
-  const hasLabel = !children && label2 != null && label2 !== false || hasChildOfType(children, FormCheckLabel$1);
-  const input = /* @__PURE__ */ jsxRuntimeExports.jsx(FormCheckInput$1, {
-    ...props,
-    type: type === "switch" ? "checkbox" : type,
-    ref,
-    isValid,
-    isInvalid,
-    disabled,
-    as
-  });
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(FormContext$1.Provider, {
-    value: innerFormContext,
-    children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", {
-      style,
-      className: classNames(className, hasLabel && bsPrefix, inline && `${bsPrefix}-inline`, reverse && `${bsPrefix}-reverse`, type === "switch" && bsSwitchPrefix),
-      children: children || /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
-        children: [input, hasLabel && /* @__PURE__ */ jsxRuntimeExports.jsx(FormCheckLabel$1, {
-          title,
-          children: label2
-        }), feedback && /* @__PURE__ */ jsxRuntimeExports.jsx(Feedback$1, {
-          type: feedbackType,
-          tooltip: feedbackTooltip,
-          children: feedback
-        })]
-      })
-    })
-  });
-});
-FormCheck.displayName = "FormCheck";
-const FormCheck$1 = Object.assign(FormCheck, {
-  Input: FormCheckInput$1,
-  Label: FormCheckLabel$1
-});
-const FormControl = /* @__PURE__ */ reactExports.forwardRef(({
-  bsPrefix,
-  type,
-  size,
-  htmlSize,
-  id: id2,
-  className,
-  isValid = false,
-  isInvalid = false,
-  plaintext,
-  readOnly,
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  as: Component = "input",
-  ...props
-}, ref) => {
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-control");
-  let classes;
-  if (plaintext) {
-    classes = {
-      [`${bsPrefix}-plaintext`]: true
-    };
-  } else {
-    classes = {
-      [bsPrefix]: true,
-      [`${bsPrefix}-${size}`]: size
-    };
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-    ...props,
-    type,
-    size: htmlSize,
-    ref,
-    readOnly,
-    id: id2 || controlId,
-    className: classNames(className, classes, isValid && `is-valid`, isInvalid && `is-invalid`, type === "color" && `${bsPrefix}-color`)
-  });
-});
-FormControl.displayName = "FormControl";
-const FormControl$1 = Object.assign(FormControl, {
-  Feedback: Feedback$1
-});
-const FormFloating = createWithBsPrefix("form-floating");
-const FormGroup = /* @__PURE__ */ reactExports.forwardRef(({
-  controlId,
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  as: Component = "div",
-  ...props
-}, ref) => {
-  const context = reactExports.useMemo(() => ({
-    controlId
-  }), [controlId]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(FormContext$1.Provider, {
-    value: context,
-    children: /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-      ...props,
-      ref
-    })
-  });
-});
-FormGroup.displayName = "FormGroup";
-const FormGroup$1 = FormGroup;
-const FormLabel = /* @__PURE__ */ reactExports.forwardRef(({
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  as: Component = "label",
-  bsPrefix,
-  column = false,
-  visuallyHidden = false,
-  className,
-  htmlFor,
-  ...props
-}, ref) => {
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-label");
-  let columnClass = "col-form-label";
-  if (typeof column === "string")
-    columnClass = `${columnClass} ${columnClass}-${column}`;
-  const classes = classNames(className, bsPrefix, visuallyHidden && "visually-hidden", column && columnClass);
-  htmlFor = htmlFor || controlId;
-  if (column)
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Col$1, {
-      ref,
-      as: "label",
-      className: classes,
-      htmlFor,
-      ...props
-    });
-  return (
-    // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-      ref,
-      className: classes,
-      htmlFor,
-      ...props
-    })
-  );
-});
-FormLabel.displayName = "FormLabel";
-const FormLabel$1 = FormLabel;
-const FormRange = /* @__PURE__ */ reactExports.forwardRef(({
-  bsPrefix,
-  className,
-  id: id2,
-  ...props
-}, ref) => {
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-range");
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("input", {
-    ...props,
-    type: "range",
-    ref,
-    className: classNames(className, bsPrefix),
-    id: id2 || controlId
-  });
-});
-FormRange.displayName = "FormRange";
-const FormRange$1 = FormRange;
-const FormSelect = /* @__PURE__ */ reactExports.forwardRef(({
-  bsPrefix,
-  size,
-  htmlSize,
-  className,
-  isValid = false,
-  isInvalid = false,
-  id: id2,
-  ...props
-}, ref) => {
-  const {
-    controlId
-  } = reactExports.useContext(FormContext$1);
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-select");
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("select", {
-    ...props,
-    size: htmlSize,
-    ref,
-    className: classNames(className, bsPrefix, size && `${bsPrefix}-${size}`, isValid && `is-valid`, isInvalid && `is-invalid`),
-    id: id2 || controlId
-  });
-});
-FormSelect.displayName = "FormSelect";
-const FormSelect$1 = FormSelect;
-const FormText = /* @__PURE__ */ reactExports.forwardRef(
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  ({
-    bsPrefix,
-    className,
-    as: Component = "small",
-    muted,
-    ...props
-  }, ref) => {
-    bsPrefix = useBootstrapPrefix(bsPrefix, "form-text");
-    return /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-      ...props,
-      ref,
-      className: classNames(className, bsPrefix, muted && "text-muted")
-    });
-  }
-);
-FormText.displayName = "FormText";
-const FormText$1 = FormText;
-const Switch = /* @__PURE__ */ reactExports.forwardRef((props, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(FormCheck$1, {
-  ...props,
-  ref,
-  type: "switch"
-}));
-Switch.displayName = "Switch";
-const Switch$1 = Object.assign(Switch, {
-  Input: FormCheck$1.Input,
-  Label: FormCheck$1.Label
-});
-const FloatingLabel = /* @__PURE__ */ reactExports.forwardRef(({
-  bsPrefix,
-  className,
-  children,
-  controlId,
-  label: label2,
-  ...props
-}, ref) => {
-  bsPrefix = useBootstrapPrefix(bsPrefix, "form-floating");
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(FormGroup$1, {
-    ref,
-    className: classNames(className, bsPrefix),
-    controlId,
-    ...props,
-    children: [children, /* @__PURE__ */ jsxRuntimeExports.jsx("label", {
-      htmlFor: controlId,
-      children: label2
-    })]
-  });
-});
-FloatingLabel.displayName = "FloatingLabel";
-const FloatingLabel$1 = FloatingLabel;
-const propTypes = {
-  /**
-   * The Form `ref` will be forwarded to the underlying element,
-   * which means, unless it's rendered `as` a composite component,
-   * it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */
-  _ref: PropTypes.any,
-  /**
-   * Mark a form as having been validated. Setting it to `true` will
-   * toggle any validation styles on the forms elements.
-   */
-  validated: PropTypes.bool,
-  as: PropTypes.elementType
-};
-const Form = /* @__PURE__ */ reactExports.forwardRef(({
-  className,
-  validated,
-  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-  as: Component = "form",
-  ...props
-}, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(Component, {
-  ...props,
-  ref,
-  className: classNames(className, validated && "was-validated")
-}));
-Form.displayName = "Form";
-Form.propTypes = propTypes;
-const Form$1 = Object.assign(Form, {
-  Group: FormGroup$1,
-  Control: FormControl$1,
-  Floating: FormFloating,
-  Check: FormCheck$1,
-  Switch: Switch$1,
-  Label: FormLabel$1,
-  Text: FormText$1,
-  Range: FormRange$1,
-  Select: FormSelect$1,
-  FloatingLabel: FloatingLabel$1
-});
 const loading = "_loading_1hi0d_1";
-const styles = {
+const styles$3 = {
   loading
 };
 function LoadingBlock() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles.loading, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$3.loading, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", {})
   ] });
 }
+var indexMinimal = {};
+var minimal$1 = {};
+var aspromise = asPromise;
+function asPromise(fn, ctx) {
+  var params = new Array(arguments.length - 1), offset = 0, index2 = 2, pending = true;
+  while (index2 < arguments.length)
+    params[offset++] = arguments[index2++];
+  return new Promise(function executor(resolve, reject) {
+    params[offset] = function callback(err) {
+      if (pending) {
+        pending = false;
+        if (err)
+          reject(err);
+        else {
+          var params2 = new Array(arguments.length - 1), offset2 = 0;
+          while (offset2 < params2.length)
+            params2[offset2++] = arguments[offset2];
+          resolve.apply(null, params2);
+        }
+      }
+    };
+    try {
+      fn.apply(ctx || null, params);
+    } catch (err) {
+      if (pending) {
+        pending = false;
+        reject(err);
+      }
+    }
+  });
+}
+var base64$1 = {};
+(function(exports) {
+  var base642 = exports;
+  base642.length = function length(string) {
+    var p2 = string.length;
+    if (!p2)
+      return 0;
+    var n2 = 0;
+    while (--p2 % 4 > 1 && string.charAt(p2) === "=")
+      ++n2;
+    return Math.ceil(string.length * 3) / 4 - n2;
+  };
+  var b64 = new Array(64);
+  var s64 = new Array(123);
+  for (var i = 0; i < 64; )
+    s64[b64[i] = i < 26 ? i + 65 : i < 52 ? i + 71 : i < 62 ? i - 4 : i - 59 | 43] = i++;
+  base642.encode = function encode(buffer, start, end2) {
+    var parts = null, chunk = [];
+    var i2 = 0, j = 0, t2;
+    while (start < end2) {
+      var b = buffer[start++];
+      switch (j) {
+        case 0:
+          chunk[i2++] = b64[b >> 2];
+          t2 = (b & 3) << 4;
+          j = 1;
+          break;
+        case 1:
+          chunk[i2++] = b64[t2 | b >> 4];
+          t2 = (b & 15) << 2;
+          j = 2;
+          break;
+        case 2:
+          chunk[i2++] = b64[t2 | b >> 6];
+          chunk[i2++] = b64[b & 63];
+          j = 0;
+          break;
+      }
+      if (i2 > 8191) {
+        (parts || (parts = [])).push(String.fromCharCode.apply(String, chunk));
+        i2 = 0;
+      }
+    }
+    if (j) {
+      chunk[i2++] = b64[t2];
+      chunk[i2++] = 61;
+      if (j === 1)
+        chunk[i2++] = 61;
+    }
+    if (parts) {
+      if (i2)
+        parts.push(String.fromCharCode.apply(String, chunk.slice(0, i2)));
+      return parts.join("");
+    }
+    return String.fromCharCode.apply(String, chunk.slice(0, i2));
+  };
+  var invalidEncoding = "invalid encoding";
+  base642.decode = function decode(string, buffer, offset) {
+    var start = offset;
+    var j = 0, t2;
+    for (var i2 = 0; i2 < string.length; ) {
+      var c = string.charCodeAt(i2++);
+      if (c === 61 && j > 1)
+        break;
+      if ((c = s64[c]) === void 0)
+        throw Error(invalidEncoding);
+      switch (j) {
+        case 0:
+          t2 = c;
+          j = 1;
+          break;
+        case 1:
+          buffer[offset++] = t2 << 2 | (c & 48) >> 4;
+          t2 = c;
+          j = 2;
+          break;
+        case 2:
+          buffer[offset++] = (t2 & 15) << 4 | (c & 60) >> 2;
+          t2 = c;
+          j = 3;
+          break;
+        case 3:
+          buffer[offset++] = (t2 & 3) << 6 | c;
+          j = 0;
+          break;
+      }
+    }
+    if (j === 1)
+      throw Error(invalidEncoding);
+    return offset - start;
+  };
+  base642.test = function test(string) {
+    return /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(string);
+  };
+})(base64$1);
+var eventemitter = EventEmitter;
+function EventEmitter() {
+  this._listeners = {};
+}
+EventEmitter.prototype.on = function on(evt, fn, ctx) {
+  (this._listeners[evt] || (this._listeners[evt] = [])).push({
+    fn,
+    ctx: ctx || this
+  });
+  return this;
+};
+EventEmitter.prototype.off = function off(evt, fn) {
+  if (evt === void 0)
+    this._listeners = {};
+  else {
+    if (fn === void 0)
+      this._listeners[evt] = [];
+    else {
+      var listeners = this._listeners[evt];
+      for (var i = 0; i < listeners.length; )
+        if (listeners[i].fn === fn)
+          listeners.splice(i, 1);
+        else
+          ++i;
+    }
+  }
+  return this;
+};
+EventEmitter.prototype.emit = function emit(evt) {
+  var listeners = this._listeners[evt];
+  if (listeners) {
+    var args = [], i = 1;
+    for (; i < arguments.length; )
+      args.push(arguments[i++]);
+    for (i = 0; i < listeners.length; )
+      listeners[i].fn.apply(listeners[i++].ctx, args);
+  }
+  return this;
+};
+var float = factory(factory);
+function factory(exports) {
+  if (typeof Float32Array !== "undefined")
+    (function() {
+      var f32 = new Float32Array([-0]), f8b = new Uint8Array(f32.buffer), le2 = f8b[3] === 128;
+      function writeFloat_f32_cpy(val, buf, pos) {
+        f32[0] = val;
+        buf[pos] = f8b[0];
+        buf[pos + 1] = f8b[1];
+        buf[pos + 2] = f8b[2];
+        buf[pos + 3] = f8b[3];
+      }
+      function writeFloat_f32_rev(val, buf, pos) {
+        f32[0] = val;
+        buf[pos] = f8b[3];
+        buf[pos + 1] = f8b[2];
+        buf[pos + 2] = f8b[1];
+        buf[pos + 3] = f8b[0];
+      }
+      exports.writeFloatLE = le2 ? writeFloat_f32_cpy : writeFloat_f32_rev;
+      exports.writeFloatBE = le2 ? writeFloat_f32_rev : writeFloat_f32_cpy;
+      function readFloat_f32_cpy(buf, pos) {
+        f8b[0] = buf[pos];
+        f8b[1] = buf[pos + 1];
+        f8b[2] = buf[pos + 2];
+        f8b[3] = buf[pos + 3];
+        return f32[0];
+      }
+      function readFloat_f32_rev(buf, pos) {
+        f8b[3] = buf[pos];
+        f8b[2] = buf[pos + 1];
+        f8b[1] = buf[pos + 2];
+        f8b[0] = buf[pos + 3];
+        return f32[0];
+      }
+      exports.readFloatLE = le2 ? readFloat_f32_cpy : readFloat_f32_rev;
+      exports.readFloatBE = le2 ? readFloat_f32_rev : readFloat_f32_cpy;
+    })();
+  else
+    (function() {
+      function writeFloat_ieee754(writeUint, val, buf, pos) {
+        var sign = val < 0 ? 1 : 0;
+        if (sign)
+          val = -val;
+        if (val === 0)
+          writeUint(1 / val > 0 ? (
+            /* positive */
+            0
+          ) : (
+            /* negative 0 */
+            2147483648
+          ), buf, pos);
+        else if (isNaN(val))
+          writeUint(2143289344, buf, pos);
+        else if (val > 34028234663852886e22)
+          writeUint((sign << 31 | 2139095040) >>> 0, buf, pos);
+        else if (val < 11754943508222875e-54)
+          writeUint((sign << 31 | Math.round(val / 1401298464324817e-60)) >>> 0, buf, pos);
+        else {
+          var exponent = Math.floor(Math.log(val) / Math.LN2), mantissa = Math.round(val * Math.pow(2, -exponent) * 8388608) & 8388607;
+          writeUint((sign << 31 | exponent + 127 << 23 | mantissa) >>> 0, buf, pos);
+        }
+      }
+      exports.writeFloatLE = writeFloat_ieee754.bind(null, writeUintLE);
+      exports.writeFloatBE = writeFloat_ieee754.bind(null, writeUintBE);
+      function readFloat_ieee754(readUint, buf, pos) {
+        var uint = readUint(buf, pos), sign = (uint >> 31) * 2 + 1, exponent = uint >>> 23 & 255, mantissa = uint & 8388607;
+        return exponent === 255 ? mantissa ? NaN : sign * Infinity : exponent === 0 ? sign * 1401298464324817e-60 * mantissa : sign * Math.pow(2, exponent - 150) * (mantissa + 8388608);
+      }
+      exports.readFloatLE = readFloat_ieee754.bind(null, readUintLE);
+      exports.readFloatBE = readFloat_ieee754.bind(null, readUintBE);
+    })();
+  if (typeof Float64Array !== "undefined")
+    (function() {
+      var f64 = new Float64Array([-0]), f8b = new Uint8Array(f64.buffer), le2 = f8b[7] === 128;
+      function writeDouble_f64_cpy(val, buf, pos) {
+        f64[0] = val;
+        buf[pos] = f8b[0];
+        buf[pos + 1] = f8b[1];
+        buf[pos + 2] = f8b[2];
+        buf[pos + 3] = f8b[3];
+        buf[pos + 4] = f8b[4];
+        buf[pos + 5] = f8b[5];
+        buf[pos + 6] = f8b[6];
+        buf[pos + 7] = f8b[7];
+      }
+      function writeDouble_f64_rev(val, buf, pos) {
+        f64[0] = val;
+        buf[pos] = f8b[7];
+        buf[pos + 1] = f8b[6];
+        buf[pos + 2] = f8b[5];
+        buf[pos + 3] = f8b[4];
+        buf[pos + 4] = f8b[3];
+        buf[pos + 5] = f8b[2];
+        buf[pos + 6] = f8b[1];
+        buf[pos + 7] = f8b[0];
+      }
+      exports.writeDoubleLE = le2 ? writeDouble_f64_cpy : writeDouble_f64_rev;
+      exports.writeDoubleBE = le2 ? writeDouble_f64_rev : writeDouble_f64_cpy;
+      function readDouble_f64_cpy(buf, pos) {
+        f8b[0] = buf[pos];
+        f8b[1] = buf[pos + 1];
+        f8b[2] = buf[pos + 2];
+        f8b[3] = buf[pos + 3];
+        f8b[4] = buf[pos + 4];
+        f8b[5] = buf[pos + 5];
+        f8b[6] = buf[pos + 6];
+        f8b[7] = buf[pos + 7];
+        return f64[0];
+      }
+      function readDouble_f64_rev(buf, pos) {
+        f8b[7] = buf[pos];
+        f8b[6] = buf[pos + 1];
+        f8b[5] = buf[pos + 2];
+        f8b[4] = buf[pos + 3];
+        f8b[3] = buf[pos + 4];
+        f8b[2] = buf[pos + 5];
+        f8b[1] = buf[pos + 6];
+        f8b[0] = buf[pos + 7];
+        return f64[0];
+      }
+      exports.readDoubleLE = le2 ? readDouble_f64_cpy : readDouble_f64_rev;
+      exports.readDoubleBE = le2 ? readDouble_f64_rev : readDouble_f64_cpy;
+    })();
+  else
+    (function() {
+      function writeDouble_ieee754(writeUint, off0, off1, val, buf, pos) {
+        var sign = val < 0 ? 1 : 0;
+        if (sign)
+          val = -val;
+        if (val === 0) {
+          writeUint(0, buf, pos + off0);
+          writeUint(1 / val > 0 ? (
+            /* positive */
+            0
+          ) : (
+            /* negative 0 */
+            2147483648
+          ), buf, pos + off1);
+        } else if (isNaN(val)) {
+          writeUint(0, buf, pos + off0);
+          writeUint(2146959360, buf, pos + off1);
+        } else if (val > 17976931348623157e292) {
+          writeUint(0, buf, pos + off0);
+          writeUint((sign << 31 | 2146435072) >>> 0, buf, pos + off1);
+        } else {
+          var mantissa;
+          if (val < 22250738585072014e-324) {
+            mantissa = val / 5e-324;
+            writeUint(mantissa >>> 0, buf, pos + off0);
+            writeUint((sign << 31 | mantissa / 4294967296) >>> 0, buf, pos + off1);
+          } else {
+            var exponent = Math.floor(Math.log(val) / Math.LN2);
+            if (exponent === 1024)
+              exponent = 1023;
+            mantissa = val * Math.pow(2, -exponent);
+            writeUint(mantissa * 4503599627370496 >>> 0, buf, pos + off0);
+            writeUint((sign << 31 | exponent + 1023 << 20 | mantissa * 1048576 & 1048575) >>> 0, buf, pos + off1);
+          }
+        }
+      }
+      exports.writeDoubleLE = writeDouble_ieee754.bind(null, writeUintLE, 0, 4);
+      exports.writeDoubleBE = writeDouble_ieee754.bind(null, writeUintBE, 4, 0);
+      function readDouble_ieee754(readUint, off0, off1, buf, pos) {
+        var lo = readUint(buf, pos + off0), hi2 = readUint(buf, pos + off1);
+        var sign = (hi2 >> 31) * 2 + 1, exponent = hi2 >>> 20 & 2047, mantissa = 4294967296 * (hi2 & 1048575) + lo;
+        return exponent === 2047 ? mantissa ? NaN : sign * Infinity : exponent === 0 ? sign * 5e-324 * mantissa : sign * Math.pow(2, exponent - 1075) * (mantissa + 4503599627370496);
+      }
+      exports.readDoubleLE = readDouble_ieee754.bind(null, readUintLE, 0, 4);
+      exports.readDoubleBE = readDouble_ieee754.bind(null, readUintBE, 4, 0);
+    })();
+  return exports;
+}
+function writeUintLE(val, buf, pos) {
+  buf[pos] = val & 255;
+  buf[pos + 1] = val >>> 8 & 255;
+  buf[pos + 2] = val >>> 16 & 255;
+  buf[pos + 3] = val >>> 24;
+}
+function writeUintBE(val, buf, pos) {
+  buf[pos] = val >>> 24;
+  buf[pos + 1] = val >>> 16 & 255;
+  buf[pos + 2] = val >>> 8 & 255;
+  buf[pos + 3] = val & 255;
+}
+function readUintLE(buf, pos) {
+  return (buf[pos] | buf[pos + 1] << 8 | buf[pos + 2] << 16 | buf[pos + 3] << 24) >>> 0;
+}
+function readUintBE(buf, pos) {
+  return (buf[pos] << 24 | buf[pos + 1] << 16 | buf[pos + 2] << 8 | buf[pos + 3]) >>> 0;
+}
+var inquire_1 = inquire;
+function inquire(moduleName) {
+  try {
+    var mod = eval("quire".replace(/^/, "re"))(moduleName);
+    if (mod && (mod.length || Object.keys(mod).length))
+      return mod;
+  } catch (e) {
+  }
+  return null;
+}
+var utf8$2 = {};
+(function(exports) {
+  var utf82 = exports;
+  utf82.length = function utf8_length(string) {
+    var len = 0, c = 0;
+    for (var i = 0; i < string.length; ++i) {
+      c = string.charCodeAt(i);
+      if (c < 128)
+        len += 1;
+      else if (c < 2048)
+        len += 2;
+      else if ((c & 64512) === 55296 && (string.charCodeAt(i + 1) & 64512) === 56320) {
+        ++i;
+        len += 4;
+      } else
+        len += 3;
+    }
+    return len;
+  };
+  utf82.read = function utf8_read(buffer, start, end2) {
+    var len = end2 - start;
+    if (len < 1)
+      return "";
+    var parts = null, chunk = [], i = 0, t2;
+    while (start < end2) {
+      t2 = buffer[start++];
+      if (t2 < 128)
+        chunk[i++] = t2;
+      else if (t2 > 191 && t2 < 224)
+        chunk[i++] = (t2 & 31) << 6 | buffer[start++] & 63;
+      else if (t2 > 239 && t2 < 365) {
+        t2 = ((t2 & 7) << 18 | (buffer[start++] & 63) << 12 | (buffer[start++] & 63) << 6 | buffer[start++] & 63) - 65536;
+        chunk[i++] = 55296 + (t2 >> 10);
+        chunk[i++] = 56320 + (t2 & 1023);
+      } else
+        chunk[i++] = (t2 & 15) << 12 | (buffer[start++] & 63) << 6 | buffer[start++] & 63;
+      if (i > 8191) {
+        (parts || (parts = [])).push(String.fromCharCode.apply(String, chunk));
+        i = 0;
+      }
+    }
+    if (parts) {
+      if (i)
+        parts.push(String.fromCharCode.apply(String, chunk.slice(0, i)));
+      return parts.join("");
+    }
+    return String.fromCharCode.apply(String, chunk.slice(0, i));
+  };
+  utf82.write = function utf8_write(string, buffer, offset) {
+    var start = offset, c1, c2;
+    for (var i = 0; i < string.length; ++i) {
+      c1 = string.charCodeAt(i);
+      if (c1 < 128) {
+        buffer[offset++] = c1;
+      } else if (c1 < 2048) {
+        buffer[offset++] = c1 >> 6 | 192;
+        buffer[offset++] = c1 & 63 | 128;
+      } else if ((c1 & 64512) === 55296 && ((c2 = string.charCodeAt(i + 1)) & 64512) === 56320) {
+        c1 = 65536 + ((c1 & 1023) << 10) + (c2 & 1023);
+        ++i;
+        buffer[offset++] = c1 >> 18 | 240;
+        buffer[offset++] = c1 >> 12 & 63 | 128;
+        buffer[offset++] = c1 >> 6 & 63 | 128;
+        buffer[offset++] = c1 & 63 | 128;
+      } else {
+        buffer[offset++] = c1 >> 12 | 224;
+        buffer[offset++] = c1 >> 6 & 63 | 128;
+        buffer[offset++] = c1 & 63 | 128;
+      }
+    }
+    return offset - start;
+  };
+})(utf8$2);
+var pool_1 = pool;
+function pool(alloc2, slice, size) {
+  var SIZE = size || 8192;
+  var MAX = SIZE >>> 1;
+  var slab = null;
+  var offset = SIZE;
+  return function pool_alloc(size2) {
+    if (size2 < 1 || size2 > MAX)
+      return alloc2(size2);
+    if (offset + size2 > SIZE) {
+      slab = alloc2(SIZE);
+      offset = 0;
+    }
+    var buf = slice.call(slab, offset, offset += size2);
+    if (offset & 7)
+      offset = (offset | 7) + 1;
+    return buf;
+  };
+}
+var longbits;
+var hasRequiredLongbits;
+function requireLongbits() {
+  if (hasRequiredLongbits)
+    return longbits;
+  hasRequiredLongbits = 1;
+  longbits = LongBits2;
+  var util2 = requireMinimal();
+  function LongBits2(lo, hi2) {
+    this.lo = lo >>> 0;
+    this.hi = hi2 >>> 0;
+  }
+  var zero = LongBits2.zero = new LongBits2(0, 0);
+  zero.toNumber = function() {
+    return 0;
+  };
+  zero.zzEncode = zero.zzDecode = function() {
+    return this;
+  };
+  zero.length = function() {
+    return 1;
+  };
+  var zeroHash = LongBits2.zeroHash = "\0\0\0\0\0\0\0\0";
+  LongBits2.fromNumber = function fromNumber(value) {
+    if (value === 0)
+      return zero;
+    var sign = value < 0;
+    if (sign)
+      value = -value;
+    var lo = value >>> 0, hi2 = (value - lo) / 4294967296 >>> 0;
+    if (sign) {
+      hi2 = ~hi2 >>> 0;
+      lo = ~lo >>> 0;
+      if (++lo > 4294967295) {
+        lo = 0;
+        if (++hi2 > 4294967295)
+          hi2 = 0;
+      }
+    }
+    return new LongBits2(lo, hi2);
+  };
+  LongBits2.from = function from(value) {
+    if (typeof value === "number")
+      return LongBits2.fromNumber(value);
+    if (util2.isString(value)) {
+      if (util2.Long)
+        value = util2.Long.fromString(value);
+      else
+        return LongBits2.fromNumber(parseInt(value, 10));
+    }
+    return value.low || value.high ? new LongBits2(value.low >>> 0, value.high >>> 0) : zero;
+  };
+  LongBits2.prototype.toNumber = function toNumber(unsigned) {
+    if (!unsigned && this.hi >>> 31) {
+      var lo = ~this.lo + 1 >>> 0, hi2 = ~this.hi >>> 0;
+      if (!lo)
+        hi2 = hi2 + 1 >>> 0;
+      return -(lo + hi2 * 4294967296);
+    }
+    return this.lo + this.hi * 4294967296;
+  };
+  LongBits2.prototype.toLong = function toLong(unsigned) {
+    return util2.Long ? new util2.Long(this.lo | 0, this.hi | 0, Boolean(unsigned)) : { low: this.lo | 0, high: this.hi | 0, unsigned: Boolean(unsigned) };
+  };
+  var charCodeAt = String.prototype.charCodeAt;
+  LongBits2.fromHash = function fromHash(hash) {
+    if (hash === zeroHash)
+      return zero;
+    return new LongBits2(
+      (charCodeAt.call(hash, 0) | charCodeAt.call(hash, 1) << 8 | charCodeAt.call(hash, 2) << 16 | charCodeAt.call(hash, 3) << 24) >>> 0,
+      (charCodeAt.call(hash, 4) | charCodeAt.call(hash, 5) << 8 | charCodeAt.call(hash, 6) << 16 | charCodeAt.call(hash, 7) << 24) >>> 0
+    );
+  };
+  LongBits2.prototype.toHash = function toHash() {
+    return String.fromCharCode(
+      this.lo & 255,
+      this.lo >>> 8 & 255,
+      this.lo >>> 16 & 255,
+      this.lo >>> 24,
+      this.hi & 255,
+      this.hi >>> 8 & 255,
+      this.hi >>> 16 & 255,
+      this.hi >>> 24
+    );
+  };
+  LongBits2.prototype.zzEncode = function zzEncode() {
+    var mask = this.hi >> 31;
+    this.hi = ((this.hi << 1 | this.lo >>> 31) ^ mask) >>> 0;
+    this.lo = (this.lo << 1 ^ mask) >>> 0;
+    return this;
+  };
+  LongBits2.prototype.zzDecode = function zzDecode() {
+    var mask = -(this.lo & 1);
+    this.lo = ((this.lo >>> 1 | this.hi << 31) ^ mask) >>> 0;
+    this.hi = (this.hi >>> 1 ^ mask) >>> 0;
+    return this;
+  };
+  LongBits2.prototype.length = function length() {
+    var part0 = this.lo, part1 = (this.lo >>> 28 | this.hi << 4) >>> 0, part2 = this.hi >>> 24;
+    return part2 === 0 ? part1 === 0 ? part0 < 16384 ? part0 < 128 ? 1 : 2 : part0 < 2097152 ? 3 : 4 : part1 < 16384 ? part1 < 128 ? 5 : 6 : part1 < 2097152 ? 7 : 8 : part2 < 128 ? 9 : 10;
+  };
+  return longbits;
+}
+var hasRequiredMinimal;
+function requireMinimal() {
+  if (hasRequiredMinimal)
+    return minimal$1;
+  hasRequiredMinimal = 1;
+  (function(exports) {
+    var util2 = exports;
+    util2.asPromise = aspromise;
+    util2.base64 = base64$1;
+    util2.EventEmitter = eventemitter;
+    util2.float = float;
+    util2.inquire = inquire_1;
+    util2.utf8 = utf8$2;
+    util2.pool = pool_1;
+    util2.LongBits = requireLongbits();
+    util2.isNode = Boolean(typeof commonjsGlobal !== "undefined" && commonjsGlobal && commonjsGlobal.process && commonjsGlobal.process.versions && commonjsGlobal.process.versions.node);
+    util2.global = util2.isNode && commonjsGlobal || typeof window !== "undefined" && window || typeof self !== "undefined" && self || commonjsGlobal;
+    util2.emptyArray = Object.freeze ? Object.freeze([]) : (
+      /* istanbul ignore next */
+      []
+    );
+    util2.emptyObject = Object.freeze ? Object.freeze({}) : (
+      /* istanbul ignore next */
+      {}
+    );
+    util2.isInteger = Number.isInteger || /* istanbul ignore next */
+    function isInteger(value) {
+      return typeof value === "number" && isFinite(value) && Math.floor(value) === value;
+    };
+    util2.isString = function isString(value) {
+      return typeof value === "string" || value instanceof String;
+    };
+    util2.isObject = function isObject(value) {
+      return value && typeof value === "object";
+    };
+    util2.isset = /**
+     * Checks if a property on a message is considered to be present.
+     * @param {Object} obj Plain object or message instance
+     * @param {string} prop Property name
+     * @returns {boolean} `true` if considered to be present, otherwise `false`
+     */
+    util2.isSet = function isSet(obj, prop) {
+      var value = obj[prop];
+      if (value != null && obj.hasOwnProperty(prop))
+        return typeof value !== "object" || (Array.isArray(value) ? value.length : Object.keys(value).length) > 0;
+      return false;
+    };
+    util2.Buffer = function() {
+      try {
+        var Buffer = util2.inquire("buffer").Buffer;
+        return Buffer.prototype.utf8Write ? Buffer : (
+          /* istanbul ignore next */
+          null
+        );
+      } catch (e) {
+        return null;
+      }
+    }();
+    util2._Buffer_from = null;
+    util2._Buffer_allocUnsafe = null;
+    util2.newBuffer = function newBuffer(sizeOrArray) {
+      return typeof sizeOrArray === "number" ? util2.Buffer ? util2._Buffer_allocUnsafe(sizeOrArray) : new util2.Array(sizeOrArray) : util2.Buffer ? util2._Buffer_from(sizeOrArray) : typeof Uint8Array === "undefined" ? sizeOrArray : new Uint8Array(sizeOrArray);
+    };
+    util2.Array = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
+    util2.Long = /* istanbul ignore next */
+    util2.global.dcodeIO && /* istanbul ignore next */
+    util2.global.dcodeIO.Long || /* istanbul ignore next */
+    util2.global.Long || util2.inquire("long");
+    util2.key2Re = /^true|false|0|1$/;
+    util2.key32Re = /^-?(?:0|[1-9][0-9]*)$/;
+    util2.key64Re = /^(?:[\\x00-\\xff]{8}|-?(?:0|[1-9][0-9]*))$/;
+    util2.longToHash = function longToHash(value) {
+      return value ? util2.LongBits.from(value).toHash() : util2.LongBits.zeroHash;
+    };
+    util2.longFromHash = function longFromHash(hash, unsigned) {
+      var bits = util2.LongBits.fromHash(hash);
+      if (util2.Long)
+        return util2.Long.fromBits(bits.lo, bits.hi, unsigned);
+      return bits.toNumber(Boolean(unsigned));
+    };
+    function merge(dst, src, ifNotSet) {
+      for (var keys = Object.keys(src), i = 0; i < keys.length; ++i)
+        if (dst[keys[i]] === void 0 || !ifNotSet)
+          dst[keys[i]] = src[keys[i]];
+      return dst;
+    }
+    util2.merge = merge;
+    util2.lcFirst = function lcFirst(str) {
+      return str.charAt(0).toLowerCase() + str.substring(1);
+    };
+    function newError(name) {
+      function CustomError(message, properties) {
+        if (!(this instanceof CustomError))
+          return new CustomError(message, properties);
+        Object.defineProperty(this, "message", { get: function() {
+          return message;
+        } });
+        if (Error.captureStackTrace)
+          Error.captureStackTrace(this, CustomError);
+        else
+          Object.defineProperty(this, "stack", { value: new Error().stack || "" });
+        if (properties)
+          merge(this, properties);
+      }
+      CustomError.prototype = Object.create(Error.prototype, {
+        constructor: {
+          value: CustomError,
+          writable: true,
+          enumerable: false,
+          configurable: true
+        },
+        name: {
+          get: function get() {
+            return name;
+          },
+          set: void 0,
+          enumerable: false,
+          // configurable: false would accurately preserve the behavior of
+          // the original, but I'm guessing that was not intentional.
+          // For an actual error subclass, this property would
+          // be configurable.
+          configurable: true
+        },
+        toString: {
+          value: function value() {
+            return this.name + ": " + this.message;
+          },
+          writable: true,
+          enumerable: false,
+          configurable: true
+        }
+      });
+      return CustomError;
+    }
+    util2.newError = newError;
+    util2.ProtocolError = newError("ProtocolError");
+    util2.oneOfGetter = function getOneOf(fieldNames) {
+      var fieldMap = {};
+      for (var i = 0; i < fieldNames.length; ++i)
+        fieldMap[fieldNames[i]] = 1;
+      return function() {
+        for (var keys = Object.keys(this), i2 = keys.length - 1; i2 > -1; --i2)
+          if (fieldMap[keys[i2]] === 1 && this[keys[i2]] !== void 0 && this[keys[i2]] !== null)
+            return keys[i2];
+      };
+    };
+    util2.oneOfSetter = function setOneOf(fieldNames) {
+      return function(name) {
+        for (var i = 0; i < fieldNames.length; ++i)
+          if (fieldNames[i] !== name)
+            delete this[fieldNames[i]];
+      };
+    };
+    util2.toJSONOptions = {
+      longs: String,
+      enums: String,
+      bytes: String,
+      json: true
+    };
+    util2._configure = function() {
+      var Buffer = util2.Buffer;
+      if (!Buffer) {
+        util2._Buffer_from = util2._Buffer_allocUnsafe = null;
+        return;
+      }
+      util2._Buffer_from = Buffer.from !== Uint8Array.from && Buffer.from || /* istanbul ignore next */
+      function Buffer_from(value, encoding) {
+        return new Buffer(value, encoding);
+      };
+      util2._Buffer_allocUnsafe = Buffer.allocUnsafe || /* istanbul ignore next */
+      function Buffer_allocUnsafe(size) {
+        return new Buffer(size);
+      };
+    };
+  })(minimal$1);
+  return minimal$1;
+}
+var writer = Writer$1;
+var util$4 = requireMinimal();
+var BufferWriter$1;
+var LongBits$1 = util$4.LongBits, base64 = util$4.base64, utf8$1 = util$4.utf8;
+function Op(fn, len, val) {
+  this.fn = fn;
+  this.len = len;
+  this.next = void 0;
+  this.val = val;
+}
+function noop() {
+}
+function State(writer2) {
+  this.head = writer2.head;
+  this.tail = writer2.tail;
+  this.len = writer2.len;
+  this.next = writer2.states;
+}
+function Writer$1() {
+  this.len = 0;
+  this.head = new Op(noop, 0, 0);
+  this.tail = this.head;
+  this.states = null;
+}
+var create$1 = function create2() {
+  return util$4.Buffer ? function create_buffer_setup() {
+    return (Writer$1.create = function create_buffer() {
+      return new BufferWriter$1();
+    })();
+  } : function create_array3() {
+    return new Writer$1();
+  };
+};
+Writer$1.create = create$1();
+Writer$1.alloc = function alloc(size) {
+  return new util$4.Array(size);
+};
+if (util$4.Array !== Array)
+  Writer$1.alloc = util$4.pool(Writer$1.alloc, util$4.Array.prototype.subarray);
+Writer$1.prototype._push = function push(fn, len, val) {
+  this.tail = this.tail.next = new Op(fn, len, val);
+  this.len += len;
+  return this;
+};
+function writeByte(val, buf, pos) {
+  buf[pos] = val & 255;
+}
+function writeVarint32(val, buf, pos) {
+  while (val > 127) {
+    buf[pos++] = val & 127 | 128;
+    val >>>= 7;
+  }
+  buf[pos] = val;
+}
+function VarintOp(len, val) {
+  this.len = len;
+  this.next = void 0;
+  this.val = val;
+}
+VarintOp.prototype = Object.create(Op.prototype);
+VarintOp.prototype.fn = writeVarint32;
+Writer$1.prototype.uint32 = function write_uint32(value) {
+  this.len += (this.tail = this.tail.next = new VarintOp(
+    (value = value >>> 0) < 128 ? 1 : value < 16384 ? 2 : value < 2097152 ? 3 : value < 268435456 ? 4 : 5,
+    value
+  )).len;
+  return this;
+};
+Writer$1.prototype.int32 = function write_int32(value) {
+  return value < 0 ? this._push(writeVarint64, 10, LongBits$1.fromNumber(value)) : this.uint32(value);
+};
+Writer$1.prototype.sint32 = function write_sint32(value) {
+  return this.uint32((value << 1 ^ value >> 31) >>> 0);
+};
+function writeVarint64(val, buf, pos) {
+  while (val.hi) {
+    buf[pos++] = val.lo & 127 | 128;
+    val.lo = (val.lo >>> 7 | val.hi << 25) >>> 0;
+    val.hi >>>= 7;
+  }
+  while (val.lo > 127) {
+    buf[pos++] = val.lo & 127 | 128;
+    val.lo = val.lo >>> 7;
+  }
+  buf[pos++] = val.lo;
+}
+Writer$1.prototype.uint64 = function write_uint64(value) {
+  var bits = LongBits$1.from(value);
+  return this._push(writeVarint64, bits.length(), bits);
+};
+Writer$1.prototype.int64 = Writer$1.prototype.uint64;
+Writer$1.prototype.sint64 = function write_sint64(value) {
+  var bits = LongBits$1.from(value).zzEncode();
+  return this._push(writeVarint64, bits.length(), bits);
+};
+Writer$1.prototype.bool = function write_bool(value) {
+  return this._push(writeByte, 1, value ? 1 : 0);
+};
+function writeFixed32(val, buf, pos) {
+  buf[pos] = val & 255;
+  buf[pos + 1] = val >>> 8 & 255;
+  buf[pos + 2] = val >>> 16 & 255;
+  buf[pos + 3] = val >>> 24;
+}
+Writer$1.prototype.fixed32 = function write_fixed32(value) {
+  return this._push(writeFixed32, 4, value >>> 0);
+};
+Writer$1.prototype.sfixed32 = Writer$1.prototype.fixed32;
+Writer$1.prototype.fixed64 = function write_fixed64(value) {
+  var bits = LongBits$1.from(value);
+  return this._push(writeFixed32, 4, bits.lo)._push(writeFixed32, 4, bits.hi);
+};
+Writer$1.prototype.sfixed64 = Writer$1.prototype.fixed64;
+Writer$1.prototype.float = function write_float(value) {
+  return this._push(util$4.float.writeFloatLE, 4, value);
+};
+Writer$1.prototype.double = function write_double(value) {
+  return this._push(util$4.float.writeDoubleLE, 8, value);
+};
+var writeBytes = util$4.Array.prototype.set ? function writeBytes_set(val, buf, pos) {
+  buf.set(val, pos);
+} : function writeBytes_for(val, buf, pos) {
+  for (var i = 0; i < val.length; ++i)
+    buf[pos + i] = val[i];
+};
+Writer$1.prototype.bytes = function write_bytes(value) {
+  var len = value.length >>> 0;
+  if (!len)
+    return this._push(writeByte, 1, 0);
+  if (util$4.isString(value)) {
+    var buf = Writer$1.alloc(len = base64.length(value));
+    base64.decode(value, buf, 0);
+    value = buf;
+  }
+  return this.uint32(len)._push(writeBytes, len, value);
+};
+Writer$1.prototype.string = function write_string(value) {
+  var len = utf8$1.length(value);
+  return len ? this.uint32(len)._push(utf8$1.write, len, value) : this._push(writeByte, 1, 0);
+};
+Writer$1.prototype.fork = function fork() {
+  this.states = new State(this);
+  this.head = this.tail = new Op(noop, 0, 0);
+  this.len = 0;
+  return this;
+};
+Writer$1.prototype.reset = function reset() {
+  if (this.states) {
+    this.head = this.states.head;
+    this.tail = this.states.tail;
+    this.len = this.states.len;
+    this.states = this.states.next;
+  } else {
+    this.head = this.tail = new Op(noop, 0, 0);
+    this.len = 0;
+  }
+  return this;
+};
+Writer$1.prototype.ldelim = function ldelim() {
+  var head = this.head, tail = this.tail, len = this.len;
+  this.reset().uint32(len);
+  if (len) {
+    this.tail.next = head.next;
+    this.tail = tail;
+    this.len += len;
+  }
+  return this;
+};
+Writer$1.prototype.finish = function finish() {
+  var head = this.head.next, buf = this.constructor.alloc(this.len), pos = 0;
+  while (head) {
+    head.fn(head.val, buf, pos);
+    pos += head.len;
+    head = head.next;
+  }
+  return buf;
+};
+Writer$1._configure = function(BufferWriter_) {
+  BufferWriter$1 = BufferWriter_;
+  Writer$1.create = create$1();
+  BufferWriter$1._configure();
+};
+var writer_buffer = BufferWriter;
+var Writer = writer;
+(BufferWriter.prototype = Object.create(Writer.prototype)).constructor = BufferWriter;
+var util$3 = requireMinimal();
+function BufferWriter() {
+  Writer.call(this);
+}
+BufferWriter._configure = function() {
+  BufferWriter.alloc = util$3._Buffer_allocUnsafe;
+  BufferWriter.writeBytesBuffer = util$3.Buffer && util$3.Buffer.prototype instanceof Uint8Array && util$3.Buffer.prototype.set.name === "set" ? function writeBytesBuffer_set(val, buf, pos) {
+    buf.set(val, pos);
+  } : function writeBytesBuffer_copy(val, buf, pos) {
+    if (val.copy)
+      val.copy(buf, pos, 0, val.length);
+    else
+      for (var i = 0; i < val.length; )
+        buf[pos++] = val[i++];
+  };
+};
+BufferWriter.prototype.bytes = function write_bytes_buffer(value) {
+  if (util$3.isString(value))
+    value = util$3._Buffer_from(value, "base64");
+  var len = value.length >>> 0;
+  this.uint32(len);
+  if (len)
+    this._push(BufferWriter.writeBytesBuffer, len, value);
+  return this;
+};
+function writeStringBuffer(val, buf, pos) {
+  if (val.length < 40)
+    util$3.utf8.write(val, buf, pos);
+  else if (buf.utf8Write)
+    buf.utf8Write(val, pos);
+  else
+    buf.write(val, pos);
+}
+BufferWriter.prototype.string = function write_string_buffer(value) {
+  var len = util$3.Buffer.byteLength(value);
+  this.uint32(len);
+  if (len)
+    this._push(writeStringBuffer, len, value);
+  return this;
+};
+BufferWriter._configure();
+var reader = Reader$1;
+var util$2 = requireMinimal();
+var BufferReader$1;
+var LongBits = util$2.LongBits, utf8 = util$2.utf8;
+function indexOutOfRange(reader2, writeLength) {
+  return RangeError("index out of range: " + reader2.pos + " + " + (writeLength || 1) + " > " + reader2.len);
+}
+function Reader$1(buffer) {
+  this.buf = buffer;
+  this.pos = 0;
+  this.len = buffer.length;
+}
+var create_array = typeof Uint8Array !== "undefined" ? function create_typed_array(buffer) {
+  if (buffer instanceof Uint8Array || Array.isArray(buffer))
+    return new Reader$1(buffer);
+  throw Error("illegal buffer");
+} : function create_array2(buffer) {
+  if (Array.isArray(buffer))
+    return new Reader$1(buffer);
+  throw Error("illegal buffer");
+};
+var create = function create3() {
+  return util$2.Buffer ? function create_buffer_setup(buffer) {
+    return (Reader$1.create = function create_buffer(buffer2) {
+      return util$2.Buffer.isBuffer(buffer2) ? new BufferReader$1(buffer2) : create_array(buffer2);
+    })(buffer);
+  } : create_array;
+};
+Reader$1.create = create();
+Reader$1.prototype._slice = util$2.Array.prototype.subarray || /* istanbul ignore next */
+util$2.Array.prototype.slice;
+Reader$1.prototype.uint32 = function read_uint32_setup() {
+  var value = 4294967295;
+  return function read_uint32() {
+    value = (this.buf[this.pos] & 127) >>> 0;
+    if (this.buf[this.pos++] < 128)
+      return value;
+    value = (value | (this.buf[this.pos] & 127) << 7) >>> 0;
+    if (this.buf[this.pos++] < 128)
+      return value;
+    value = (value | (this.buf[this.pos] & 127) << 14) >>> 0;
+    if (this.buf[this.pos++] < 128)
+      return value;
+    value = (value | (this.buf[this.pos] & 127) << 21) >>> 0;
+    if (this.buf[this.pos++] < 128)
+      return value;
+    value = (value | (this.buf[this.pos] & 15) << 28) >>> 0;
+    if (this.buf[this.pos++] < 128)
+      return value;
+    if ((this.pos += 5) > this.len) {
+      this.pos = this.len;
+      throw indexOutOfRange(this, 10);
+    }
+    return value;
+  };
+}();
+Reader$1.prototype.int32 = function read_int32() {
+  return this.uint32() | 0;
+};
+Reader$1.prototype.sint32 = function read_sint32() {
+  var value = this.uint32();
+  return value >>> 1 ^ -(value & 1) | 0;
+};
+function readLongVarint() {
+  var bits = new LongBits(0, 0);
+  var i = 0;
+  if (this.len - this.pos > 4) {
+    for (; i < 4; ++i) {
+      bits.lo = (bits.lo | (this.buf[this.pos] & 127) << i * 7) >>> 0;
+      if (this.buf[this.pos++] < 128)
+        return bits;
+    }
+    bits.lo = (bits.lo | (this.buf[this.pos] & 127) << 28) >>> 0;
+    bits.hi = (bits.hi | (this.buf[this.pos] & 127) >> 4) >>> 0;
+    if (this.buf[this.pos++] < 128)
+      return bits;
+    i = 0;
+  } else {
+    for (; i < 3; ++i) {
+      if (this.pos >= this.len)
+        throw indexOutOfRange(this);
+      bits.lo = (bits.lo | (this.buf[this.pos] & 127) << i * 7) >>> 0;
+      if (this.buf[this.pos++] < 128)
+        return bits;
+    }
+    bits.lo = (bits.lo | (this.buf[this.pos++] & 127) << i * 7) >>> 0;
+    return bits;
+  }
+  if (this.len - this.pos > 4) {
+    for (; i < 5; ++i) {
+      bits.hi = (bits.hi | (this.buf[this.pos] & 127) << i * 7 + 3) >>> 0;
+      if (this.buf[this.pos++] < 128)
+        return bits;
+    }
+  } else {
+    for (; i < 5; ++i) {
+      if (this.pos >= this.len)
+        throw indexOutOfRange(this);
+      bits.hi = (bits.hi | (this.buf[this.pos] & 127) << i * 7 + 3) >>> 0;
+      if (this.buf[this.pos++] < 128)
+        return bits;
+    }
+  }
+  throw Error("invalid varint encoding");
+}
+Reader$1.prototype.bool = function read_bool() {
+  return this.uint32() !== 0;
+};
+function readFixed32_end(buf, end2) {
+  return (buf[end2 - 4] | buf[end2 - 3] << 8 | buf[end2 - 2] << 16 | buf[end2 - 1] << 24) >>> 0;
+}
+Reader$1.prototype.fixed32 = function read_fixed32() {
+  if (this.pos + 4 > this.len)
+    throw indexOutOfRange(this, 4);
+  return readFixed32_end(this.buf, this.pos += 4);
+};
+Reader$1.prototype.sfixed32 = function read_sfixed32() {
+  if (this.pos + 4 > this.len)
+    throw indexOutOfRange(this, 4);
+  return readFixed32_end(this.buf, this.pos += 4) | 0;
+};
+function readFixed64() {
+  if (this.pos + 8 > this.len)
+    throw indexOutOfRange(this, 8);
+  return new LongBits(readFixed32_end(this.buf, this.pos += 4), readFixed32_end(this.buf, this.pos += 4));
+}
+Reader$1.prototype.float = function read_float() {
+  if (this.pos + 4 > this.len)
+    throw indexOutOfRange(this, 4);
+  var value = util$2.float.readFloatLE(this.buf, this.pos);
+  this.pos += 4;
+  return value;
+};
+Reader$1.prototype.double = function read_double() {
+  if (this.pos + 8 > this.len)
+    throw indexOutOfRange(this, 4);
+  var value = util$2.float.readDoubleLE(this.buf, this.pos);
+  this.pos += 8;
+  return value;
+};
+Reader$1.prototype.bytes = function read_bytes() {
+  var length = this.uint32(), start = this.pos, end2 = this.pos + length;
+  if (end2 > this.len)
+    throw indexOutOfRange(this, length);
+  this.pos += length;
+  if (Array.isArray(this.buf))
+    return this.buf.slice(start, end2);
+  if (start === end2) {
+    var nativeBuffer = util$2.Buffer;
+    return nativeBuffer ? nativeBuffer.alloc(0) : new this.buf.constructor(0);
+  }
+  return this._slice.call(this.buf, start, end2);
+};
+Reader$1.prototype.string = function read_string() {
+  var bytes = this.bytes();
+  return utf8.read(bytes, 0, bytes.length);
+};
+Reader$1.prototype.skip = function skip(length) {
+  if (typeof length === "number") {
+    if (this.pos + length > this.len)
+      throw indexOutOfRange(this, length);
+    this.pos += length;
+  } else {
+    do {
+      if (this.pos >= this.len)
+        throw indexOutOfRange(this);
+    } while (this.buf[this.pos++] & 128);
+  }
+  return this;
+};
+Reader$1.prototype.skipType = function(wireType) {
+  switch (wireType) {
+    case 0:
+      this.skip();
+      break;
+    case 1:
+      this.skip(8);
+      break;
+    case 2:
+      this.skip(this.uint32());
+      break;
+    case 3:
+      while ((wireType = this.uint32() & 7) !== 4) {
+        this.skipType(wireType);
+      }
+      break;
+    case 5:
+      this.skip(4);
+      break;
+    default:
+      throw Error("invalid wire type " + wireType + " at offset " + this.pos);
+  }
+  return this;
+};
+Reader$1._configure = function(BufferReader_) {
+  BufferReader$1 = BufferReader_;
+  Reader$1.create = create();
+  BufferReader$1._configure();
+  var fn = util$2.Long ? "toLong" : (
+    /* istanbul ignore next */
+    "toNumber"
+  );
+  util$2.merge(Reader$1.prototype, {
+    int64: function read_int64() {
+      return readLongVarint.call(this)[fn](false);
+    },
+    uint64: function read_uint64() {
+      return readLongVarint.call(this)[fn](true);
+    },
+    sint64: function read_sint64() {
+      return readLongVarint.call(this).zzDecode()[fn](false);
+    },
+    fixed64: function read_fixed64() {
+      return readFixed64.call(this)[fn](true);
+    },
+    sfixed64: function read_sfixed64() {
+      return readFixed64.call(this)[fn](false);
+    }
+  });
+};
+var reader_buffer = BufferReader;
+var Reader = reader;
+(BufferReader.prototype = Object.create(Reader.prototype)).constructor = BufferReader;
+var util$1 = requireMinimal();
+function BufferReader(buffer) {
+  Reader.call(this, buffer);
+}
+BufferReader._configure = function() {
+  if (util$1.Buffer)
+    BufferReader.prototype._slice = util$1.Buffer.prototype.slice;
+};
+BufferReader.prototype.string = function read_string_buffer() {
+  var len = this.uint32();
+  return this.buf.utf8Slice ? this.buf.utf8Slice(this.pos, this.pos = Math.min(this.pos + len, this.len)) : this.buf.toString("utf-8", this.pos, this.pos = Math.min(this.pos + len, this.len));
+};
+BufferReader._configure();
+var rpc = {};
+var service = Service;
+var util = requireMinimal();
+(Service.prototype = Object.create(util.EventEmitter.prototype)).constructor = Service;
+function Service(rpcImpl, requestDelimited, responseDelimited) {
+  if (typeof rpcImpl !== "function")
+    throw TypeError("rpcImpl must be a function");
+  util.EventEmitter.call(this);
+  this.rpcImpl = rpcImpl;
+  this.requestDelimited = Boolean(requestDelimited);
+  this.responseDelimited = Boolean(responseDelimited);
+}
+Service.prototype.rpcCall = function rpcCall(method, requestCtor, responseCtor, request, callback) {
+  if (!request)
+    throw TypeError("request must be specified");
+  var self2 = this;
+  if (!callback)
+    return util.asPromise(rpcCall, self2, method, requestCtor, responseCtor, request);
+  if (!self2.rpcImpl) {
+    setTimeout(function() {
+      callback(Error("already ended"));
+    }, 0);
+    return void 0;
+  }
+  try {
+    return self2.rpcImpl(
+      method,
+      requestCtor[self2.requestDelimited ? "encodeDelimited" : "encode"](request).finish(),
+      function rpcCallback(err, response) {
+        if (err) {
+          self2.emit("error", err, method);
+          return callback(err);
+        }
+        if (response === null) {
+          self2.end(
+            /* endedByRPC */
+            true
+          );
+          return void 0;
+        }
+        if (!(response instanceof responseCtor)) {
+          try {
+            response = responseCtor[self2.responseDelimited ? "decodeDelimited" : "decode"](response);
+          } catch (err2) {
+            self2.emit("error", err2, method);
+            return callback(err2);
+          }
+        }
+        self2.emit("data", response, method);
+        return callback(null, response);
+      }
+    );
+  } catch (err) {
+    self2.emit("error", err, method);
+    setTimeout(function() {
+      callback(err);
+    }, 0);
+    return void 0;
+  }
+};
+Service.prototype.end = function end(endedByRPC) {
+  if (this.rpcImpl) {
+    if (!endedByRPC)
+      this.rpcImpl(null, null, null);
+    this.rpcImpl = null;
+    this.emit("end").off();
+  }
+  return this;
+};
+(function(exports) {
+  var rpc2 = exports;
+  rpc2.Service = service;
+})(rpc);
+var roots = {};
+(function(exports) {
+  var protobuf = exports;
+  protobuf.build = "minimal";
+  protobuf.Writer = writer;
+  protobuf.BufferWriter = writer_buffer;
+  protobuf.Reader = reader;
+  protobuf.BufferReader = reader_buffer;
+  protobuf.util = requireMinimal();
+  protobuf.rpc = rpc;
+  protobuf.roots = roots;
+  protobuf.configure = configure;
+  function configure() {
+    protobuf.util._configure();
+    protobuf.Writer._configure(protobuf.BufferWriter);
+    protobuf.Reader._configure(protobuf.BufferReader);
+  }
+  configure();
+})(indexMinimal);
+var minimal = indexMinimal;
+const $Reader = minimal.Reader, $Writer = minimal.Writer, $util = minimal.util;
+const $root = minimal.roots["/Users/knichol/dev/personal/pathfinder-app/pathfinder-editor/../pathfinder-generator/src/main/proto"] || (minimal.roots["/Users/knichol/dev/personal/pathfinder-app/pathfinder-editor/../pathfinder-generator/src/main/proto"] = {});
+const data = $root.data = (() => {
+  const data2 = {};
+  data2.ChoiceDbo = function() {
+    function ChoiceDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    ChoiceDbo.prototype.choiceId = "";
+    ChoiceDbo.prototype.label = "";
+    ChoiceDbo.prototype.type = "";
+    ChoiceDbo.prototype.repeating = false;
+    ChoiceDbo.prototype.text = null;
+    ChoiceDbo.prototype.featureSelect = null;
+    let $oneOfFields;
+    Object.defineProperty(ChoiceDbo.prototype, "input", {
+      get: $util.oneOfGetter($oneOfFields = ["text", "featureSelect"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    ChoiceDbo.create = function create4(properties) {
+      return new ChoiceDbo(properties);
+    };
+    ChoiceDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.choiceId != null && Object.hasOwnProperty.call(message, "choiceId"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.choiceId);
+      if (message.label != null && Object.hasOwnProperty.call(message, "label"))
+        writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).string(message.label);
+      if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+        writer2.uint32(
+          /* id 3, wireType 2 =*/
+          26
+        ).string(message.type);
+      if (message.repeating != null && Object.hasOwnProperty.call(message, "repeating"))
+        writer2.uint32(
+          /* id 4, wireType 0 =*/
+          32
+        ).bool(message.repeating);
+      if (message.text != null && Object.hasOwnProperty.call(message, "text"))
+        $root.data.TextChoiceInputDbo.encode(message.text, writer2.uint32(
+          /* id 100, wireType 2 =*/
+          802
+        ).fork()).ldelim();
+      if (message.featureSelect != null && Object.hasOwnProperty.call(message, "featureSelect"))
+        $root.data.FeatureSelectChoiceInputDbo.encode(message.featureSelect, writer2.uint32(
+          /* id 101, wireType 2 =*/
+          810
+        ).fork()).ldelim();
+      return writer2;
+    };
+    ChoiceDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    ChoiceDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.ChoiceDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.choiceId = reader2.string();
+            break;
+          }
+          case 2: {
+            message.label = reader2.string();
+            break;
+          }
+          case 3: {
+            message.type = reader2.string();
+            break;
+          }
+          case 4: {
+            message.repeating = reader2.bool();
+            break;
+          }
+          case 100: {
+            message.text = $root.data.TextChoiceInputDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          case 101: {
+            message.featureSelect = $root.data.FeatureSelectChoiceInputDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    ChoiceDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    ChoiceDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      let properties = {};
+      if (message.choiceId != null && message.hasOwnProperty("choiceId")) {
+        if (!$util.isString(message.choiceId))
+          return "choiceId: string expected";
+      }
+      if (message.label != null && message.hasOwnProperty("label")) {
+        if (!$util.isString(message.label))
+          return "label: string expected";
+      }
+      if (message.type != null && message.hasOwnProperty("type")) {
+        if (!$util.isString(message.type))
+          return "type: string expected";
+      }
+      if (message.repeating != null && message.hasOwnProperty("repeating")) {
+        if (typeof message.repeating !== "boolean")
+          return "repeating: boolean expected";
+      }
+      if (message.text != null && message.hasOwnProperty("text")) {
+        properties.input = 1;
+        {
+          let error = $root.data.TextChoiceInputDbo.verify(message.text);
+          if (error)
+            return "text." + error;
+        }
+      }
+      if (message.featureSelect != null && message.hasOwnProperty("featureSelect")) {
+        if (properties.input === 1)
+          return "input: multiple values";
+        properties.input = 1;
+        {
+          let error = $root.data.FeatureSelectChoiceInputDbo.verify(message.featureSelect);
+          if (error)
+            return "featureSelect." + error;
+        }
+      }
+      return null;
+    };
+    ChoiceDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.ChoiceDbo)
+        return object;
+      let message = new $root.data.ChoiceDbo();
+      if (object.choiceId != null)
+        message.choiceId = String(object.choiceId);
+      if (object.label != null)
+        message.label = String(object.label);
+      if (object.type != null)
+        message.type = String(object.type);
+      if (object.repeating != null)
+        message.repeating = Boolean(object.repeating);
+      if (object.text != null) {
+        if (typeof object.text !== "object")
+          throw TypeError(".data.ChoiceDbo.text: object expected");
+        message.text = $root.data.TextChoiceInputDbo.fromObject(object.text);
+      }
+      if (object.featureSelect != null) {
+        if (typeof object.featureSelect !== "object")
+          throw TypeError(".data.ChoiceDbo.featureSelect: object expected");
+        message.featureSelect = $root.data.FeatureSelectChoiceInputDbo.fromObject(object.featureSelect);
+      }
+      return message;
+    };
+    ChoiceDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.defaults) {
+        object.choiceId = "";
+        object.label = "";
+        object.type = "";
+        object.repeating = false;
+      }
+      if (message.choiceId != null && message.hasOwnProperty("choiceId"))
+        object.choiceId = message.choiceId;
+      if (message.label != null && message.hasOwnProperty("label"))
+        object.label = message.label;
+      if (message.type != null && message.hasOwnProperty("type"))
+        object.type = message.type;
+      if (message.repeating != null && message.hasOwnProperty("repeating"))
+        object.repeating = message.repeating;
+      if (message.text != null && message.hasOwnProperty("text")) {
+        object.text = $root.data.TextChoiceInputDbo.toObject(message.text, options);
+        if (options.oneofs)
+          object.input = "text";
+      }
+      if (message.featureSelect != null && message.hasOwnProperty("featureSelect")) {
+        object.featureSelect = $root.data.FeatureSelectChoiceInputDbo.toObject(message.featureSelect, options);
+        if (options.oneofs)
+          object.input = "featureSelect";
+      }
+      return object;
+    };
+    ChoiceDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    ChoiceDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.ChoiceDbo";
+    };
+    return ChoiceDbo;
+  }();
+  data2.TextChoiceInputDbo = function() {
+    function TextChoiceInputDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    TextChoiceInputDbo.create = function create4(properties) {
+      return new TextChoiceInputDbo(properties);
+    };
+    TextChoiceInputDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      return writer2;
+    };
+    TextChoiceInputDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    TextChoiceInputDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.TextChoiceInputDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    TextChoiceInputDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    TextChoiceInputDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      return null;
+    };
+    TextChoiceInputDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.TextChoiceInputDbo)
+        return object;
+      return new $root.data.TextChoiceInputDbo();
+    };
+    TextChoiceInputDbo.toObject = function toObject() {
+      return {};
+    };
+    TextChoiceInputDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    TextChoiceInputDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.TextChoiceInputDbo";
+    };
+    return TextChoiceInputDbo;
+  }();
+  data2.FeatureSelectChoiceInputDbo = function() {
+    function FeatureSelectChoiceInputDbo(properties) {
+      this.optionTags = [];
+      this.featureIds = [];
+      this.categories = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    FeatureSelectChoiceInputDbo.prototype.optionTags = $util.emptyArray;
+    FeatureSelectChoiceInputDbo.prototype.featureIds = $util.emptyArray;
+    FeatureSelectChoiceInputDbo.prototype.categories = $util.emptyArray;
+    FeatureSelectChoiceInputDbo.prototype.sortBy = 0;
+    FeatureSelectChoiceInputDbo.create = function create4(properties) {
+      return new FeatureSelectChoiceInputDbo(properties);
+    };
+    FeatureSelectChoiceInputDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.optionTags != null && message.optionTags.length)
+        for (let i = 0; i < message.optionTags.length; ++i)
+          writer2.uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).string(message.optionTags[i]);
+      if (message.featureIds != null && message.featureIds.length)
+        for (let i = 0; i < message.featureIds.length; ++i)
+          writer2.uint32(
+            /* id 2, wireType 2 =*/
+            18
+          ).string(message.featureIds[i]);
+      if (message.categories != null && message.categories.length)
+        for (let i = 0; i < message.categories.length; ++i)
+          $root.data.FeatureSelectChoiceCategoryDbo.encode(message.categories[i], writer2.uint32(
+            /* id 3, wireType 2 =*/
+            26
+          ).fork()).ldelim();
+      if (message.sortBy != null && Object.hasOwnProperty.call(message, "sortBy"))
+        writer2.uint32(
+          /* id 4, wireType 0 =*/
+          32
+        ).int32(message.sortBy);
+      return writer2;
+    };
+    FeatureSelectChoiceInputDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    FeatureSelectChoiceInputDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.FeatureSelectChoiceInputDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            if (!(message.optionTags && message.optionTags.length))
+              message.optionTags = [];
+            message.optionTags.push(reader2.string());
+            break;
+          }
+          case 2: {
+            if (!(message.featureIds && message.featureIds.length))
+              message.featureIds = [];
+            message.featureIds.push(reader2.string());
+            break;
+          }
+          case 3: {
+            if (!(message.categories && message.categories.length))
+              message.categories = [];
+            message.categories.push($root.data.FeatureSelectChoiceCategoryDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 4: {
+            message.sortBy = reader2.int32();
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    FeatureSelectChoiceInputDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    FeatureSelectChoiceInputDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.optionTags != null && message.hasOwnProperty("optionTags")) {
+        if (!Array.isArray(message.optionTags))
+          return "optionTags: array expected";
+        for (let i = 0; i < message.optionTags.length; ++i)
+          if (!$util.isString(message.optionTags[i]))
+            return "optionTags: string[] expected";
+      }
+      if (message.featureIds != null && message.hasOwnProperty("featureIds")) {
+        if (!Array.isArray(message.featureIds))
+          return "featureIds: array expected";
+        for (let i = 0; i < message.featureIds.length; ++i)
+          if (!$util.isString(message.featureIds[i]))
+            return "featureIds: string[] expected";
+      }
+      if (message.categories != null && message.hasOwnProperty("categories")) {
+        if (!Array.isArray(message.categories))
+          return "categories: array expected";
+        for (let i = 0; i < message.categories.length; ++i) {
+          let error = $root.data.FeatureSelectChoiceCategoryDbo.verify(message.categories[i]);
+          if (error)
+            return "categories." + error;
+        }
+      }
+      if (message.sortBy != null && message.hasOwnProperty("sortBy"))
+        switch (message.sortBy) {
+          default:
+            return "sortBy: enum value expected";
+          case 0:
+          case 1:
+            break;
+        }
+      return null;
+    };
+    FeatureSelectChoiceInputDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.FeatureSelectChoiceInputDbo)
+        return object;
+      let message = new $root.data.FeatureSelectChoiceInputDbo();
+      if (object.optionTags) {
+        if (!Array.isArray(object.optionTags))
+          throw TypeError(".data.FeatureSelectChoiceInputDbo.optionTags: array expected");
+        message.optionTags = [];
+        for (let i = 0; i < object.optionTags.length; ++i)
+          message.optionTags[i] = String(object.optionTags[i]);
+      }
+      if (object.featureIds) {
+        if (!Array.isArray(object.featureIds))
+          throw TypeError(".data.FeatureSelectChoiceInputDbo.featureIds: array expected");
+        message.featureIds = [];
+        for (let i = 0; i < object.featureIds.length; ++i)
+          message.featureIds[i] = String(object.featureIds[i]);
+      }
+      if (object.categories) {
+        if (!Array.isArray(object.categories))
+          throw TypeError(".data.FeatureSelectChoiceInputDbo.categories: array expected");
+        message.categories = [];
+        for (let i = 0; i < object.categories.length; ++i) {
+          if (typeof object.categories[i] !== "object")
+            throw TypeError(".data.FeatureSelectChoiceInputDbo.categories: object expected");
+          message.categories[i] = $root.data.FeatureSelectChoiceCategoryDbo.fromObject(object.categories[i]);
+        }
+      }
+      switch (object.sortBy) {
+        default:
+          if (typeof object.sortBy === "number") {
+            message.sortBy = object.sortBy;
+            break;
+          }
+          break;
+        case "FEATURE_SELECT_CHOICE_SORTBY_NONE":
+        case 0:
+          message.sortBy = 0;
+          break;
+        case "FEATURE_SELECT_CHOICE_SORTBY_NAME":
+        case 1:
+          message.sortBy = 1;
+          break;
+      }
+      return message;
+    };
+    FeatureSelectChoiceInputDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults) {
+        object.optionTags = [];
+        object.featureIds = [];
+        object.categories = [];
+      }
+      if (options.defaults)
+        object.sortBy = options.enums === String ? "FEATURE_SELECT_CHOICE_SORTBY_NONE" : 0;
+      if (message.optionTags && message.optionTags.length) {
+        object.optionTags = [];
+        for (let j = 0; j < message.optionTags.length; ++j)
+          object.optionTags[j] = message.optionTags[j];
+      }
+      if (message.featureIds && message.featureIds.length) {
+        object.featureIds = [];
+        for (let j = 0; j < message.featureIds.length; ++j)
+          object.featureIds[j] = message.featureIds[j];
+      }
+      if (message.categories && message.categories.length) {
+        object.categories = [];
+        for (let j = 0; j < message.categories.length; ++j)
+          object.categories[j] = $root.data.FeatureSelectChoiceCategoryDbo.toObject(message.categories[j], options);
+      }
+      if (message.sortBy != null && message.hasOwnProperty("sortBy"))
+        object.sortBy = options.enums === String ? $root.data.FeatureSelectChoiceSortByDbo[message.sortBy] === void 0 ? message.sortBy : $root.data.FeatureSelectChoiceSortByDbo[message.sortBy] : message.sortBy;
+      return object;
+    };
+    FeatureSelectChoiceInputDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    FeatureSelectChoiceInputDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.FeatureSelectChoiceInputDbo";
+    };
+    return FeatureSelectChoiceInputDbo;
+  }();
+  data2.FeatureSelectChoiceCategoryDbo = function() {
+    function FeatureSelectChoiceCategoryDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    FeatureSelectChoiceCategoryDbo.prototype.label = "";
+    FeatureSelectChoiceCategoryDbo.prototype.tag = "";
+    FeatureSelectChoiceCategoryDbo.create = function create4(properties) {
+      return new FeatureSelectChoiceCategoryDbo(properties);
+    };
+    FeatureSelectChoiceCategoryDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.label != null && Object.hasOwnProperty.call(message, "label"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.label);
+      if (message.tag != null && Object.hasOwnProperty.call(message, "tag"))
+        writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).string(message.tag);
+      return writer2;
+    };
+    FeatureSelectChoiceCategoryDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    FeatureSelectChoiceCategoryDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.FeatureSelectChoiceCategoryDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.label = reader2.string();
+            break;
+          }
+          case 2: {
+            message.tag = reader2.string();
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    FeatureSelectChoiceCategoryDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    FeatureSelectChoiceCategoryDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.label != null && message.hasOwnProperty("label")) {
+        if (!$util.isString(message.label))
+          return "label: string expected";
+      }
+      if (message.tag != null && message.hasOwnProperty("tag")) {
+        if (!$util.isString(message.tag))
+          return "tag: string expected";
+      }
+      return null;
+    };
+    FeatureSelectChoiceCategoryDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.FeatureSelectChoiceCategoryDbo)
+        return object;
+      let message = new $root.data.FeatureSelectChoiceCategoryDbo();
+      if (object.label != null)
+        message.label = String(object.label);
+      if (object.tag != null)
+        message.tag = String(object.tag);
+      return message;
+    };
+    FeatureSelectChoiceCategoryDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.defaults) {
+        object.label = "";
+        object.tag = "";
+      }
+      if (message.label != null && message.hasOwnProperty("label"))
+        object.label = message.label;
+      if (message.tag != null && message.hasOwnProperty("tag"))
+        object.tag = message.tag;
+      return object;
+    };
+    FeatureSelectChoiceCategoryDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    FeatureSelectChoiceCategoryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.FeatureSelectChoiceCategoryDbo";
+    };
+    return FeatureSelectChoiceCategoryDbo;
+  }();
+  data2.FeatureSelectChoiceSortByDbo = function() {
+    const valuesById = {}, values = Object.create(valuesById);
+    values[valuesById[0] = "FEATURE_SELECT_CHOICE_SORTBY_NONE"] = 0;
+    values[valuesById[1] = "FEATURE_SELECT_CHOICE_SORTBY_NAME"] = 1;
+    return values;
+  }();
+  data2.DescriptionDbo = function() {
+    function DescriptionDbo2(properties) {
+      this.sections = {};
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    DescriptionDbo2.prototype.text = "";
+    DescriptionDbo2.prototype.sections = $util.emptyObject;
+    DescriptionDbo2.create = function create4(properties) {
+      return new DescriptionDbo2(properties);
+    };
+    DescriptionDbo2.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.text != null && Object.hasOwnProperty.call(message, "text"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.text);
+      if (message.sections != null && Object.hasOwnProperty.call(message, "sections"))
+        for (let keys = Object.keys(message.sections), i = 0; i < keys.length; ++i)
+          writer2.uint32(
+            /* id 2, wireType 2 =*/
+            18
+          ).fork().uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).string(keys[i]).uint32(
+            /* id 2, wireType 2 =*/
+            18
+          ).string(message.sections[keys[i]]).ldelim();
+      return writer2;
+    };
+    DescriptionDbo2.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    DescriptionDbo2.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.DescriptionDbo(), key, value;
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.text = reader2.string();
+            break;
+          }
+          case 2: {
+            if (message.sections === $util.emptyObject)
+              message.sections = {};
+            let end22 = reader2.uint32() + reader2.pos;
+            key = "";
+            value = "";
+            while (reader2.pos < end22) {
+              let tag2 = reader2.uint32();
+              switch (tag2 >>> 3) {
+                case 1:
+                  key = reader2.string();
+                  break;
+                case 2:
+                  value = reader2.string();
+                  break;
+                default:
+                  reader2.skipType(tag2 & 7);
+                  break;
+              }
+            }
+            message.sections[key] = value;
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    DescriptionDbo2.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    DescriptionDbo2.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.text != null && message.hasOwnProperty("text")) {
+        if (!$util.isString(message.text))
+          return "text: string expected";
+      }
+      if (message.sections != null && message.hasOwnProperty("sections")) {
+        if (!$util.isObject(message.sections))
+          return "sections: object expected";
+        let key = Object.keys(message.sections);
+        for (let i = 0; i < key.length; ++i)
+          if (!$util.isString(message.sections[key[i]]))
+            return "sections: string{k:string} expected";
+      }
+      return null;
+    };
+    DescriptionDbo2.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.DescriptionDbo)
+        return object;
+      let message = new $root.data.DescriptionDbo();
+      if (object.text != null)
+        message.text = String(object.text);
+      if (object.sections) {
+        if (typeof object.sections !== "object")
+          throw TypeError(".data.DescriptionDbo.sections: object expected");
+        message.sections = {};
+        for (let keys = Object.keys(object.sections), i = 0; i < keys.length; ++i)
+          message.sections[keys[i]] = String(object.sections[keys[i]]);
+      }
+      return message;
+    };
+    DescriptionDbo2.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.objects || options.defaults)
+        object.sections = {};
+      if (options.defaults)
+        object.text = "";
+      if (message.text != null && message.hasOwnProperty("text"))
+        object.text = message.text;
+      let keys2;
+      if (message.sections && (keys2 = Object.keys(message.sections)).length) {
+        object.sections = {};
+        for (let j = 0; j < keys2.length; ++j)
+          object.sections[keys2[j]] = message.sections[keys2[j]];
+      }
+      return object;
+    };
+    DescriptionDbo2.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    DescriptionDbo2.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.DescriptionDbo";
+    };
+    return DescriptionDbo2;
+  }();
+  data2.FeatureSummaryDbo = function() {
+    function FeatureSummaryDbo(properties) {
+      this.tags = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    FeatureSummaryDbo.prototype.id = "";
+    FeatureSummaryDbo.prototype.name = "";
+    FeatureSummaryDbo.prototype.tags = $util.emptyArray;
+    FeatureSummaryDbo.prototype.enabledFormula = "";
+    FeatureSummaryDbo.prototype.maxStacks = null;
+    FeatureSummaryDbo.prototype.label = null;
+    let $oneOfFields;
+    Object.defineProperty(FeatureSummaryDbo.prototype, "_maxStacks", {
+      get: $util.oneOfGetter($oneOfFields = ["maxStacks"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    Object.defineProperty(FeatureSummaryDbo.prototype, "_label", {
+      get: $util.oneOfGetter($oneOfFields = ["label"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    FeatureSummaryDbo.create = function create4(properties) {
+      return new FeatureSummaryDbo(properties);
+    };
+    FeatureSummaryDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.id);
+      if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+        writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).string(message.name);
+      if (message.tags != null && message.tags.length)
+        for (let i = 0; i < message.tags.length; ++i)
+          writer2.uint32(
+            /* id 3, wireType 2 =*/
+            26
+          ).string(message.tags[i]);
+      if (message.enabledFormula != null && Object.hasOwnProperty.call(message, "enabledFormula"))
+        writer2.uint32(
+          /* id 4, wireType 2 =*/
+          34
+        ).string(message.enabledFormula);
+      if (message.maxStacks != null && Object.hasOwnProperty.call(message, "maxStacks"))
+        writer2.uint32(
+          /* id 5, wireType 0 =*/
+          40
+        ).uint32(message.maxStacks);
+      if (message.label != null && Object.hasOwnProperty.call(message, "label"))
+        writer2.uint32(
+          /* id 6, wireType 2 =*/
+          50
+        ).string(message.label);
+      return writer2;
+    };
+    FeatureSummaryDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    FeatureSummaryDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.FeatureSummaryDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.id = reader2.string();
+            break;
+          }
+          case 2: {
+            message.name = reader2.string();
+            break;
+          }
+          case 3: {
+            if (!(message.tags && message.tags.length))
+              message.tags = [];
+            message.tags.push(reader2.string());
+            break;
+          }
+          case 4: {
+            message.enabledFormula = reader2.string();
+            break;
+          }
+          case 5: {
+            message.maxStacks = reader2.uint32();
+            break;
+          }
+          case 6: {
+            message.label = reader2.string();
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    FeatureSummaryDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    FeatureSummaryDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.id != null && message.hasOwnProperty("id")) {
+        if (!$util.isString(message.id))
+          return "id: string expected";
+      }
+      if (message.name != null && message.hasOwnProperty("name")) {
+        if (!$util.isString(message.name))
+          return "name: string expected";
+      }
+      if (message.tags != null && message.hasOwnProperty("tags")) {
+        if (!Array.isArray(message.tags))
+          return "tags: array expected";
+        for (let i = 0; i < message.tags.length; ++i)
+          if (!$util.isString(message.tags[i]))
+            return "tags: string[] expected";
+      }
+      if (message.enabledFormula != null && message.hasOwnProperty("enabledFormula")) {
+        if (!$util.isString(message.enabledFormula))
+          return "enabledFormula: string expected";
+      }
+      if (message.maxStacks != null && message.hasOwnProperty("maxStacks")) {
+        if (!$util.isInteger(message.maxStacks))
+          return "maxStacks: integer expected";
+      }
+      if (message.label != null && message.hasOwnProperty("label")) {
+        if (!$util.isString(message.label))
+          return "label: string expected";
+      }
+      return null;
+    };
+    FeatureSummaryDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.FeatureSummaryDbo)
+        return object;
+      let message = new $root.data.FeatureSummaryDbo();
+      if (object.id != null)
+        message.id = String(object.id);
+      if (object.name != null)
+        message.name = String(object.name);
+      if (object.tags) {
+        if (!Array.isArray(object.tags))
+          throw TypeError(".data.FeatureSummaryDbo.tags: array expected");
+        message.tags = [];
+        for (let i = 0; i < object.tags.length; ++i)
+          message.tags[i] = String(object.tags[i]);
+      }
+      if (object.enabledFormula != null)
+        message.enabledFormula = String(object.enabledFormula);
+      if (object.maxStacks != null)
+        message.maxStacks = object.maxStacks >>> 0;
+      if (object.label != null)
+        message.label = String(object.label);
+      return message;
+    };
+    FeatureSummaryDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults)
+        object.tags = [];
+      if (options.defaults) {
+        object.id = "";
+        object.name = "";
+        object.enabledFormula = "";
+      }
+      if (message.id != null && message.hasOwnProperty("id"))
+        object.id = message.id;
+      if (message.name != null && message.hasOwnProperty("name"))
+        object.name = message.name;
+      if (message.tags && message.tags.length) {
+        object.tags = [];
+        for (let j = 0; j < message.tags.length; ++j)
+          object.tags[j] = message.tags[j];
+      }
+      if (message.enabledFormula != null && message.hasOwnProperty("enabledFormula"))
+        object.enabledFormula = message.enabledFormula;
+      if (message.maxStacks != null && message.hasOwnProperty("maxStacks")) {
+        object.maxStacks = message.maxStacks;
+        if (options.oneofs)
+          object._maxStacks = "maxStacks";
+      }
+      if (message.label != null && message.hasOwnProperty("label")) {
+        object.label = message.label;
+        if (options.oneofs)
+          object._label = "label";
+      }
+      return object;
+    };
+    FeatureSummaryDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    FeatureSummaryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.FeatureSummaryDbo";
+    };
+    return FeatureSummaryDbo;
+  }();
+  data2.FeatureDbo = function() {
+    function FeatureDbo(properties) {
+      this.tags = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    FeatureDbo.prototype.id = "";
+    FeatureDbo.prototype.name = "";
+    FeatureDbo.prototype.tags = $util.emptyArray;
+    FeatureDbo.prototype.enabledFormula = "";
+    FeatureDbo.prototype.maxStacks = null;
+    FeatureDbo.prototype.label = null;
+    FeatureDbo.prototype.description = null;
+    FeatureDbo.prototype.stacks = null;
+    let $oneOfFields;
+    Object.defineProperty(FeatureDbo.prototype, "_maxStacks", {
+      get: $util.oneOfGetter($oneOfFields = ["maxStacks"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    Object.defineProperty(FeatureDbo.prototype, "_label", {
+      get: $util.oneOfGetter($oneOfFields = ["label"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    FeatureDbo.create = function create4(properties) {
+      return new FeatureDbo(properties);
+    };
+    FeatureDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.id);
+      if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+        writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).string(message.name);
+      if (message.tags != null && message.tags.length)
+        for (let i = 0; i < message.tags.length; ++i)
+          writer2.uint32(
+            /* id 3, wireType 2 =*/
+            26
+          ).string(message.tags[i]);
+      if (message.enabledFormula != null && Object.hasOwnProperty.call(message, "enabledFormula"))
+        writer2.uint32(
+          /* id 4, wireType 2 =*/
+          34
+        ).string(message.enabledFormula);
+      if (message.maxStacks != null && Object.hasOwnProperty.call(message, "maxStacks"))
+        writer2.uint32(
+          /* id 5, wireType 0 =*/
+          40
+        ).uint32(message.maxStacks);
+      if (message.label != null && Object.hasOwnProperty.call(message, "label"))
+        writer2.uint32(
+          /* id 6, wireType 2 =*/
+          50
+        ).string(message.label);
+      if (message.description != null && Object.hasOwnProperty.call(message, "description"))
+        $root.data.DescriptionDbo.encode(message.description, writer2.uint32(
+          /* id 100, wireType 2 =*/
+          802
+        ).fork()).ldelim();
+      if (message.stacks != null && Object.hasOwnProperty.call(message, "stacks"))
+        $root.data.StacksDbo.encode(message.stacks, writer2.uint32(
+          /* id 101, wireType 2 =*/
+          810
+        ).fork()).ldelim();
+      return writer2;
+    };
+    FeatureDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    FeatureDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.FeatureDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.id = reader2.string();
+            break;
+          }
+          case 2: {
+            message.name = reader2.string();
+            break;
+          }
+          case 3: {
+            if (!(message.tags && message.tags.length))
+              message.tags = [];
+            message.tags.push(reader2.string());
+            break;
+          }
+          case 4: {
+            message.enabledFormula = reader2.string();
+            break;
+          }
+          case 5: {
+            message.maxStacks = reader2.uint32();
+            break;
+          }
+          case 6: {
+            message.label = reader2.string();
+            break;
+          }
+          case 100: {
+            message.description = $root.data.DescriptionDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          case 101: {
+            message.stacks = $root.data.StacksDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    FeatureDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    FeatureDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.id != null && message.hasOwnProperty("id")) {
+        if (!$util.isString(message.id))
+          return "id: string expected";
+      }
+      if (message.name != null && message.hasOwnProperty("name")) {
+        if (!$util.isString(message.name))
+          return "name: string expected";
+      }
+      if (message.tags != null && message.hasOwnProperty("tags")) {
+        if (!Array.isArray(message.tags))
+          return "tags: array expected";
+        for (let i = 0; i < message.tags.length; ++i)
+          if (!$util.isString(message.tags[i]))
+            return "tags: string[] expected";
+      }
+      if (message.enabledFormula != null && message.hasOwnProperty("enabledFormula")) {
+        if (!$util.isString(message.enabledFormula))
+          return "enabledFormula: string expected";
+      }
+      if (message.maxStacks != null && message.hasOwnProperty("maxStacks")) {
+        if (!$util.isInteger(message.maxStacks))
+          return "maxStacks: integer expected";
+      }
+      if (message.label != null && message.hasOwnProperty("label")) {
+        if (!$util.isString(message.label))
+          return "label: string expected";
+      }
+      if (message.description != null && message.hasOwnProperty("description")) {
+        let error = $root.data.DescriptionDbo.verify(message.description);
+        if (error)
+          return "description." + error;
+      }
+      if (message.stacks != null && message.hasOwnProperty("stacks")) {
+        let error = $root.data.StacksDbo.verify(message.stacks);
+        if (error)
+          return "stacks." + error;
+      }
+      return null;
+    };
+    FeatureDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.FeatureDbo)
+        return object;
+      let message = new $root.data.FeatureDbo();
+      if (object.id != null)
+        message.id = String(object.id);
+      if (object.name != null)
+        message.name = String(object.name);
+      if (object.tags) {
+        if (!Array.isArray(object.tags))
+          throw TypeError(".data.FeatureDbo.tags: array expected");
+        message.tags = [];
+        for (let i = 0; i < object.tags.length; ++i)
+          message.tags[i] = String(object.tags[i]);
+      }
+      if (object.enabledFormula != null)
+        message.enabledFormula = String(object.enabledFormula);
+      if (object.maxStacks != null)
+        message.maxStacks = object.maxStacks >>> 0;
+      if (object.label != null)
+        message.label = String(object.label);
+      if (object.description != null) {
+        if (typeof object.description !== "object")
+          throw TypeError(".data.FeatureDbo.description: object expected");
+        message.description = $root.data.DescriptionDbo.fromObject(object.description);
+      }
+      if (object.stacks != null) {
+        if (typeof object.stacks !== "object")
+          throw TypeError(".data.FeatureDbo.stacks: object expected");
+        message.stacks = $root.data.StacksDbo.fromObject(object.stacks);
+      }
+      return message;
+    };
+    FeatureDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults)
+        object.tags = [];
+      if (options.defaults) {
+        object.id = "";
+        object.name = "";
+        object.enabledFormula = "";
+        object.description = null;
+        object.stacks = null;
+      }
+      if (message.id != null && message.hasOwnProperty("id"))
+        object.id = message.id;
+      if (message.name != null && message.hasOwnProperty("name"))
+        object.name = message.name;
+      if (message.tags && message.tags.length) {
+        object.tags = [];
+        for (let j = 0; j < message.tags.length; ++j)
+          object.tags[j] = message.tags[j];
+      }
+      if (message.enabledFormula != null && message.hasOwnProperty("enabledFormula"))
+        object.enabledFormula = message.enabledFormula;
+      if (message.maxStacks != null && message.hasOwnProperty("maxStacks")) {
+        object.maxStacks = message.maxStacks;
+        if (options.oneofs)
+          object._maxStacks = "maxStacks";
+      }
+      if (message.label != null && message.hasOwnProperty("label")) {
+        object.label = message.label;
+        if (options.oneofs)
+          object._label = "label";
+      }
+      if (message.description != null && message.hasOwnProperty("description"))
+        object.description = $root.data.DescriptionDbo.toObject(message.description, options);
+      if (message.stacks != null && message.hasOwnProperty("stacks"))
+        object.stacks = $root.data.StacksDbo.toObject(message.stacks, options);
+      return object;
+    };
+    FeatureDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    FeatureDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.FeatureDbo";
+    };
+    return FeatureDbo;
+  }();
+  data2.StacksDbo = function() {
+    function StacksDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    StacksDbo.prototype.fixedStack = null;
+    StacksDbo.prototype.repeatingStack = null;
+    let $oneOfFields;
+    Object.defineProperty(StacksDbo.prototype, "stackable", {
+      get: $util.oneOfGetter($oneOfFields = ["fixedStack", "repeatingStack"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    StacksDbo.create = function create4(properties) {
+      return new StacksDbo(properties);
+    };
+    StacksDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.fixedStack != null && Object.hasOwnProperty.call(message, "fixedStack"))
+        $root.data.FixedStackDbo.encode(message.fixedStack, writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).fork()).ldelim();
+      if (message.repeatingStack != null && Object.hasOwnProperty.call(message, "repeatingStack"))
+        $root.data.StackDbo.encode(message.repeatingStack, writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).fork()).ldelim();
+      return writer2;
+    };
+    StacksDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    StacksDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.StacksDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.fixedStack = $root.data.FixedStackDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          case 2: {
+            message.repeatingStack = $root.data.StackDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    StacksDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    StacksDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      let properties = {};
+      if (message.fixedStack != null && message.hasOwnProperty("fixedStack")) {
+        properties.stackable = 1;
+        {
+          let error = $root.data.FixedStackDbo.verify(message.fixedStack);
+          if (error)
+            return "fixedStack." + error;
+        }
+      }
+      if (message.repeatingStack != null && message.hasOwnProperty("repeatingStack")) {
+        if (properties.stackable === 1)
+          return "stackable: multiple values";
+        properties.stackable = 1;
+        {
+          let error = $root.data.StackDbo.verify(message.repeatingStack);
+          if (error)
+            return "repeatingStack." + error;
+        }
+      }
+      return null;
+    };
+    StacksDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.StacksDbo)
+        return object;
+      let message = new $root.data.StacksDbo();
+      if (object.fixedStack != null) {
+        if (typeof object.fixedStack !== "object")
+          throw TypeError(".data.StacksDbo.fixedStack: object expected");
+        message.fixedStack = $root.data.FixedStackDbo.fromObject(object.fixedStack);
+      }
+      if (object.repeatingStack != null) {
+        if (typeof object.repeatingStack !== "object")
+          throw TypeError(".data.StacksDbo.repeatingStack: object expected");
+        message.repeatingStack = $root.data.StackDbo.fromObject(object.repeatingStack);
+      }
+      return message;
+    };
+    StacksDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (message.fixedStack != null && message.hasOwnProperty("fixedStack")) {
+        object.fixedStack = $root.data.FixedStackDbo.toObject(message.fixedStack, options);
+        if (options.oneofs)
+          object.stackable = "fixedStack";
+      }
+      if (message.repeatingStack != null && message.hasOwnProperty("repeatingStack")) {
+        object.repeatingStack = $root.data.StackDbo.toObject(message.repeatingStack, options);
+        if (options.oneofs)
+          object.stackable = "repeatingStack";
+      }
+      return object;
+    };
+    StacksDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    StacksDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.StacksDbo";
+    };
+    return StacksDbo;
+  }();
+  data2.FixedStackDbo = function() {
+    function FixedStackDbo(properties) {
+      this.stacks = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    FixedStackDbo.prototype.stacks = $util.emptyArray;
+    FixedStackDbo.create = function create4(properties) {
+      return new FixedStackDbo(properties);
+    };
+    FixedStackDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.stacks != null && message.stacks.length)
+        for (let i = 0; i < message.stacks.length; ++i)
+          $root.data.StackDbo.encode(message.stacks[i], writer2.uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).fork()).ldelim();
+      return writer2;
+    };
+    FixedStackDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    FixedStackDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.FixedStackDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            if (!(message.stacks && message.stacks.length))
+              message.stacks = [];
+            message.stacks.push($root.data.StackDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    FixedStackDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    FixedStackDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.stacks != null && message.hasOwnProperty("stacks")) {
+        if (!Array.isArray(message.stacks))
+          return "stacks: array expected";
+        for (let i = 0; i < message.stacks.length; ++i) {
+          let error = $root.data.StackDbo.verify(message.stacks[i]);
+          if (error)
+            return "stacks." + error;
+        }
+      }
+      return null;
+    };
+    FixedStackDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.FixedStackDbo)
+        return object;
+      let message = new $root.data.FixedStackDbo();
+      if (object.stacks) {
+        if (!Array.isArray(object.stacks))
+          throw TypeError(".data.FixedStackDbo.stacks: array expected");
+        message.stacks = [];
+        for (let i = 0; i < object.stacks.length; ++i) {
+          if (typeof object.stacks[i] !== "object")
+            throw TypeError(".data.FixedStackDbo.stacks: object expected");
+          message.stacks[i] = $root.data.StackDbo.fromObject(object.stacks[i]);
+        }
+      }
+      return message;
+    };
+    FixedStackDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults)
+        object.stacks = [];
+      if (message.stacks && message.stacks.length) {
+        object.stacks = [];
+        for (let j = 0; j < message.stacks.length; ++j)
+          object.stacks[j] = $root.data.StackDbo.toObject(message.stacks[j], options);
+      }
+      return object;
+    };
+    FixedStackDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    FixedStackDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.FixedStackDbo";
+    };
+    return FixedStackDbo;
+  }();
+  data2.EffectDbo = function() {
+    function EffectDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    EffectDbo.prototype.setAction = null;
+    EffectDbo.prototype.addAction = null;
+    let $oneOfFields;
+    Object.defineProperty(EffectDbo.prototype, "action", {
+      get: $util.oneOfGetter($oneOfFields = ["setAction", "addAction"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    EffectDbo.create = function create4(properties) {
+      return new EffectDbo(properties);
+    };
+    EffectDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.setAction != null && Object.hasOwnProperty.call(message, "setAction"))
+        $root.data.EffectDbo.SetActionDbo.encode(message.setAction, writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).fork()).ldelim();
+      if (message.addAction != null && Object.hasOwnProperty.call(message, "addAction"))
+        $root.data.EffectDbo.AddActionDbo.encode(message.addAction, writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).fork()).ldelim();
+      return writer2;
+    };
+    EffectDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    EffectDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.EffectDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.setAction = $root.data.EffectDbo.SetActionDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          case 2: {
+            message.addAction = $root.data.EffectDbo.AddActionDbo.decode(reader2, reader2.uint32());
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    EffectDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    EffectDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      let properties = {};
+      if (message.setAction != null && message.hasOwnProperty("setAction")) {
+        properties.action = 1;
+        {
+          let error = $root.data.EffectDbo.SetActionDbo.verify(message.setAction);
+          if (error)
+            return "setAction." + error;
+        }
+      }
+      if (message.addAction != null && message.hasOwnProperty("addAction")) {
+        if (properties.action === 1)
+          return "action: multiple values";
+        properties.action = 1;
+        {
+          let error = $root.data.EffectDbo.AddActionDbo.verify(message.addAction);
+          if (error)
+            return "addAction." + error;
+        }
+      }
+      return null;
+    };
+    EffectDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.EffectDbo)
+        return object;
+      let message = new $root.data.EffectDbo();
+      if (object.setAction != null) {
+        if (typeof object.setAction !== "object")
+          throw TypeError(".data.EffectDbo.setAction: object expected");
+        message.setAction = $root.data.EffectDbo.SetActionDbo.fromObject(object.setAction);
+      }
+      if (object.addAction != null) {
+        if (typeof object.addAction !== "object")
+          throw TypeError(".data.EffectDbo.addAction: object expected");
+        message.addAction = $root.data.EffectDbo.AddActionDbo.fromObject(object.addAction);
+      }
+      return message;
+    };
+    EffectDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (message.setAction != null && message.hasOwnProperty("setAction")) {
+        object.setAction = $root.data.EffectDbo.SetActionDbo.toObject(message.setAction, options);
+        if (options.oneofs)
+          object.action = "setAction";
+      }
+      if (message.addAction != null && message.hasOwnProperty("addAction")) {
+        object.addAction = $root.data.EffectDbo.AddActionDbo.toObject(message.addAction, options);
+        if (options.oneofs)
+          object.action = "addAction";
+      }
+      return object;
+    };
+    EffectDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    EffectDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.EffectDbo";
+    };
+    EffectDbo.SetActionDbo = function() {
+      function SetActionDbo(properties) {
+        if (properties) {
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null)
+              this[keys[i]] = properties[keys[i]];
+        }
+      }
+      SetActionDbo.prototype.targetKey = "";
+      SetActionDbo.prototype.formula = null;
+      SetActionDbo.prototype.numberValue = null;
+      let $oneOfFields2;
+      Object.defineProperty(SetActionDbo.prototype, "value", {
+        get: $util.oneOfGetter($oneOfFields2 = ["formula", "numberValue"]),
+        set: $util.oneOfSetter($oneOfFields2)
+      });
+      SetActionDbo.create = function create4(properties) {
+        return new SetActionDbo(properties);
+      };
+      SetActionDbo.encode = function encode(message, writer2) {
+        if (!writer2)
+          writer2 = $Writer.create();
+        if (message.targetKey != null && Object.hasOwnProperty.call(message, "targetKey"))
+          writer2.uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).string(message.targetKey);
+        if (message.formula != null && Object.hasOwnProperty.call(message, "formula"))
+          writer2.uint32(
+            /* id 2, wireType 2 =*/
+            18
+          ).string(message.formula);
+        if (message.numberValue != null && Object.hasOwnProperty.call(message, "numberValue"))
+          writer2.uint32(
+            /* id 3, wireType 0 =*/
+            24
+          ).int32(message.numberValue);
+        return writer2;
+      };
+      SetActionDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+        return this.encode(message, writer2).ldelim();
+      };
+      SetActionDbo.decode = function decode(reader2, length) {
+        if (!(reader2 instanceof $Reader))
+          reader2 = $Reader.create(reader2);
+        let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.EffectDbo.SetActionDbo();
+        while (reader2.pos < end2) {
+          let tag = reader2.uint32();
+          switch (tag >>> 3) {
+            case 1: {
+              message.targetKey = reader2.string();
+              break;
+            }
+            case 2: {
+              message.formula = reader2.string();
+              break;
+            }
+            case 3: {
+              message.numberValue = reader2.int32();
+              break;
+            }
+            default:
+              reader2.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+      SetActionDbo.decodeDelimited = function decodeDelimited(reader2) {
+        if (!(reader2 instanceof $Reader))
+          reader2 = new $Reader(reader2);
+        return this.decode(reader2, reader2.uint32());
+      };
+      SetActionDbo.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+          return "object expected";
+        let properties = {};
+        if (message.targetKey != null && message.hasOwnProperty("targetKey")) {
+          if (!$util.isString(message.targetKey))
+            return "targetKey: string expected";
+        }
+        if (message.formula != null && message.hasOwnProperty("formula")) {
+          properties.value = 1;
+          if (!$util.isString(message.formula))
+            return "formula: string expected";
+        }
+        if (message.numberValue != null && message.hasOwnProperty("numberValue")) {
+          if (properties.value === 1)
+            return "value: multiple values";
+          properties.value = 1;
+          if (!$util.isInteger(message.numberValue))
+            return "numberValue: integer expected";
+        }
+        return null;
+      };
+      SetActionDbo.fromObject = function fromObject(object) {
+        if (object instanceof $root.data.EffectDbo.SetActionDbo)
+          return object;
+        let message = new $root.data.EffectDbo.SetActionDbo();
+        if (object.targetKey != null)
+          message.targetKey = String(object.targetKey);
+        if (object.formula != null)
+          message.formula = String(object.formula);
+        if (object.numberValue != null)
+          message.numberValue = object.numberValue | 0;
+        return message;
+      };
+      SetActionDbo.toObject = function toObject(message, options) {
+        if (!options)
+          options = {};
+        let object = {};
+        if (options.defaults)
+          object.targetKey = "";
+        if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+          object.targetKey = message.targetKey;
+        if (message.formula != null && message.hasOwnProperty("formula")) {
+          object.formula = message.formula;
+          if (options.oneofs)
+            object.value = "formula";
+        }
+        if (message.numberValue != null && message.hasOwnProperty("numberValue")) {
+          object.numberValue = message.numberValue;
+          if (options.oneofs)
+            object.value = "numberValue";
+        }
+        return object;
+      };
+      SetActionDbo.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, minimal.util.toJSONOptions);
+      };
+      SetActionDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === void 0) {
+          typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/data.EffectDbo.SetActionDbo";
+      };
+      return SetActionDbo;
+    }();
+    EffectDbo.AddActionDbo = function() {
+      function AddActionDbo(properties) {
+        if (properties) {
+          for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+            if (properties[keys[i]] != null)
+              this[keys[i]] = properties[keys[i]];
+        }
+      }
+      AddActionDbo.prototype.targetKey = "";
+      AddActionDbo.prototype.numberDelta = 0;
+      AddActionDbo.create = function create4(properties) {
+        return new AddActionDbo(properties);
+      };
+      AddActionDbo.encode = function encode(message, writer2) {
+        if (!writer2)
+          writer2 = $Writer.create();
+        if (message.targetKey != null && Object.hasOwnProperty.call(message, "targetKey"))
+          writer2.uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).string(message.targetKey);
+        if (message.numberDelta != null && Object.hasOwnProperty.call(message, "numberDelta"))
+          writer2.uint32(
+            /* id 2, wireType 0 =*/
+            16
+          ).int32(message.numberDelta);
+        return writer2;
+      };
+      AddActionDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+        return this.encode(message, writer2).ldelim();
+      };
+      AddActionDbo.decode = function decode(reader2, length) {
+        if (!(reader2 instanceof $Reader))
+          reader2 = $Reader.create(reader2);
+        let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.EffectDbo.AddActionDbo();
+        while (reader2.pos < end2) {
+          let tag = reader2.uint32();
+          switch (tag >>> 3) {
+            case 1: {
+              message.targetKey = reader2.string();
+              break;
+            }
+            case 2: {
+              message.numberDelta = reader2.int32();
+              break;
+            }
+            default:
+              reader2.skipType(tag & 7);
+              break;
+          }
+        }
+        return message;
+      };
+      AddActionDbo.decodeDelimited = function decodeDelimited(reader2) {
+        if (!(reader2 instanceof $Reader))
+          reader2 = new $Reader(reader2);
+        return this.decode(reader2, reader2.uint32());
+      };
+      AddActionDbo.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+          return "object expected";
+        if (message.targetKey != null && message.hasOwnProperty("targetKey")) {
+          if (!$util.isString(message.targetKey))
+            return "targetKey: string expected";
+        }
+        if (message.numberDelta != null && message.hasOwnProperty("numberDelta")) {
+          if (!$util.isInteger(message.numberDelta))
+            return "numberDelta: integer expected";
+        }
+        return null;
+      };
+      AddActionDbo.fromObject = function fromObject(object) {
+        if (object instanceof $root.data.EffectDbo.AddActionDbo)
+          return object;
+        let message = new $root.data.EffectDbo.AddActionDbo();
+        if (object.targetKey != null)
+          message.targetKey = String(object.targetKey);
+        if (object.numberDelta != null)
+          message.numberDelta = object.numberDelta | 0;
+        return message;
+      };
+      AddActionDbo.toObject = function toObject(message, options) {
+        if (!options)
+          options = {};
+        let object = {};
+        if (options.defaults) {
+          object.targetKey = "";
+          object.numberDelta = 0;
+        }
+        if (message.targetKey != null && message.hasOwnProperty("targetKey"))
+          object.targetKey = message.targetKey;
+        if (message.numberDelta != null && message.hasOwnProperty("numberDelta"))
+          object.numberDelta = message.numberDelta;
+        return object;
+      };
+      AddActionDbo.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, minimal.util.toJSONOptions);
+      };
+      AddActionDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === void 0) {
+          typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/data.EffectDbo.AddActionDbo";
+      };
+      return AddActionDbo;
+    }();
+    return EffectDbo;
+  }();
+  data2.LinkDbo = function() {
+    function LinkDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    LinkDbo.prototype.featureId = "";
+    LinkDbo.prototype.conditionFormula = null;
+    let $oneOfFields;
+    Object.defineProperty(LinkDbo.prototype, "_conditionFormula", {
+      get: $util.oneOfGetter($oneOfFields = ["conditionFormula"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    LinkDbo.create = function create4(properties) {
+      return new LinkDbo(properties);
+    };
+    LinkDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.featureId != null && Object.hasOwnProperty.call(message, "featureId"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.featureId);
+      if (message.conditionFormula != null && Object.hasOwnProperty.call(message, "conditionFormula"))
+        writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).string(message.conditionFormula);
+      return writer2;
+    };
+    LinkDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    LinkDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.LinkDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.featureId = reader2.string();
+            break;
+          }
+          case 2: {
+            message.conditionFormula = reader2.string();
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    LinkDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    LinkDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.featureId != null && message.hasOwnProperty("featureId")) {
+        if (!$util.isString(message.featureId))
+          return "featureId: string expected";
+      }
+      if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+        if (!$util.isString(message.conditionFormula))
+          return "conditionFormula: string expected";
+      }
+      return null;
+    };
+    LinkDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.LinkDbo)
+        return object;
+      let message = new $root.data.LinkDbo();
+      if (object.featureId != null)
+        message.featureId = String(object.featureId);
+      if (object.conditionFormula != null)
+        message.conditionFormula = String(object.conditionFormula);
+      return message;
+    };
+    LinkDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.defaults)
+        object.featureId = "";
+      if (message.featureId != null && message.hasOwnProperty("featureId"))
+        object.featureId = message.featureId;
+      if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+        object.conditionFormula = message.conditionFormula;
+        if (options.oneofs)
+          object._conditionFormula = "conditionFormula";
+      }
+      return object;
+    };
+    LinkDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    LinkDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.LinkDbo";
+    };
+    return LinkDbo;
+  }();
+  data2.UnlinkDbo = function() {
+    function UnlinkDbo(properties) {
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    UnlinkDbo.prototype.featureId = "";
+    UnlinkDbo.prototype.conditionFormula = null;
+    let $oneOfFields;
+    Object.defineProperty(UnlinkDbo.prototype, "_conditionFormula", {
+      get: $util.oneOfGetter($oneOfFields = ["conditionFormula"]),
+      set: $util.oneOfSetter($oneOfFields)
+    });
+    UnlinkDbo.create = function create4(properties) {
+      return new UnlinkDbo(properties);
+    };
+    UnlinkDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.featureId != null && Object.hasOwnProperty.call(message, "featureId"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.featureId);
+      if (message.conditionFormula != null && Object.hasOwnProperty.call(message, "conditionFormula"))
+        writer2.uint32(
+          /* id 2, wireType 2 =*/
+          18
+        ).string(message.conditionFormula);
+      return writer2;
+    };
+    UnlinkDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    UnlinkDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.UnlinkDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.featureId = reader2.string();
+            break;
+          }
+          case 2: {
+            message.conditionFormula = reader2.string();
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    UnlinkDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    UnlinkDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.featureId != null && message.hasOwnProperty("featureId")) {
+        if (!$util.isString(message.featureId))
+          return "featureId: string expected";
+      }
+      if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+        if (!$util.isString(message.conditionFormula))
+          return "conditionFormula: string expected";
+      }
+      return null;
+    };
+    UnlinkDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.UnlinkDbo)
+        return object;
+      let message = new $root.data.UnlinkDbo();
+      if (object.featureId != null)
+        message.featureId = String(object.featureId);
+      if (object.conditionFormula != null)
+        message.conditionFormula = String(object.conditionFormula);
+      return message;
+    };
+    UnlinkDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.defaults)
+        object.featureId = "";
+      if (message.featureId != null && message.hasOwnProperty("featureId"))
+        object.featureId = message.featureId;
+      if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+        object.conditionFormula = message.conditionFormula;
+        if (options.oneofs)
+          object._conditionFormula = "conditionFormula";
+      }
+      return object;
+    };
+    UnlinkDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    UnlinkDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.UnlinkDbo";
+    };
+    return UnlinkDbo;
+  }();
+  data2.StackDbo = function() {
+    function StackDbo(properties) {
+      this.conditionalComponents = [];
+      this.effects = [];
+      this.links = [];
+      this.unlinks = [];
+      this.choices = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    StackDbo.prototype.conditionalComponents = $util.emptyArray;
+    StackDbo.prototype.effects = $util.emptyArray;
+    StackDbo.prototype.links = $util.emptyArray;
+    StackDbo.prototype.unlinks = $util.emptyArray;
+    StackDbo.prototype.choices = $util.emptyArray;
+    StackDbo.create = function create4(properties) {
+      return new StackDbo(properties);
+    };
+    StackDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.conditionalComponents != null && message.conditionalComponents.length)
+        for (let i = 0; i < message.conditionalComponents.length; ++i)
+          $root.data.ConditionalStackComponentDbo.encode(message.conditionalComponents[i], writer2.uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).fork()).ldelim();
+      if (message.effects != null && message.effects.length)
+        for (let i = 0; i < message.effects.length; ++i)
+          $root.data.EffectDbo.encode(message.effects[i], writer2.uint32(
+            /* id 101, wireType 2 =*/
+            810
+          ).fork()).ldelim();
+      if (message.links != null && message.links.length)
+        for (let i = 0; i < message.links.length; ++i)
+          $root.data.LinkDbo.encode(message.links[i], writer2.uint32(
+            /* id 102, wireType 2 =*/
+            818
+          ).fork()).ldelim();
+      if (message.unlinks != null && message.unlinks.length)
+        for (let i = 0; i < message.unlinks.length; ++i)
+          $root.data.UnlinkDbo.encode(message.unlinks[i], writer2.uint32(
+            /* id 103, wireType 2 =*/
+            826
+          ).fork()).ldelim();
+      if (message.choices != null && message.choices.length)
+        for (let i = 0; i < message.choices.length; ++i)
+          $root.data.ChoiceDbo.encode(message.choices[i], writer2.uint32(
+            /* id 104, wireType 2 =*/
+            834
+          ).fork()).ldelim();
+      return writer2;
+    };
+    StackDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    StackDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.StackDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            if (!(message.conditionalComponents && message.conditionalComponents.length))
+              message.conditionalComponents = [];
+            message.conditionalComponents.push($root.data.ConditionalStackComponentDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 101: {
+            if (!(message.effects && message.effects.length))
+              message.effects = [];
+            message.effects.push($root.data.EffectDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 102: {
+            if (!(message.links && message.links.length))
+              message.links = [];
+            message.links.push($root.data.LinkDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 103: {
+            if (!(message.unlinks && message.unlinks.length))
+              message.unlinks = [];
+            message.unlinks.push($root.data.UnlinkDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 104: {
+            if (!(message.choices && message.choices.length))
+              message.choices = [];
+            message.choices.push($root.data.ChoiceDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    StackDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    StackDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.conditionalComponents != null && message.hasOwnProperty("conditionalComponents")) {
+        if (!Array.isArray(message.conditionalComponents))
+          return "conditionalComponents: array expected";
+        for (let i = 0; i < message.conditionalComponents.length; ++i) {
+          let error = $root.data.ConditionalStackComponentDbo.verify(message.conditionalComponents[i]);
+          if (error)
+            return "conditionalComponents." + error;
+        }
+      }
+      if (message.effects != null && message.hasOwnProperty("effects")) {
+        if (!Array.isArray(message.effects))
+          return "effects: array expected";
+        for (let i = 0; i < message.effects.length; ++i) {
+          let error = $root.data.EffectDbo.verify(message.effects[i]);
+          if (error)
+            return "effects." + error;
+        }
+      }
+      if (message.links != null && message.hasOwnProperty("links")) {
+        if (!Array.isArray(message.links))
+          return "links: array expected";
+        for (let i = 0; i < message.links.length; ++i) {
+          let error = $root.data.LinkDbo.verify(message.links[i]);
+          if (error)
+            return "links." + error;
+        }
+      }
+      if (message.unlinks != null && message.hasOwnProperty("unlinks")) {
+        if (!Array.isArray(message.unlinks))
+          return "unlinks: array expected";
+        for (let i = 0; i < message.unlinks.length; ++i) {
+          let error = $root.data.UnlinkDbo.verify(message.unlinks[i]);
+          if (error)
+            return "unlinks." + error;
+        }
+      }
+      if (message.choices != null && message.hasOwnProperty("choices")) {
+        if (!Array.isArray(message.choices))
+          return "choices: array expected";
+        for (let i = 0; i < message.choices.length; ++i) {
+          let error = $root.data.ChoiceDbo.verify(message.choices[i]);
+          if (error)
+            return "choices." + error;
+        }
+      }
+      return null;
+    };
+    StackDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.StackDbo)
+        return object;
+      let message = new $root.data.StackDbo();
+      if (object.conditionalComponents) {
+        if (!Array.isArray(object.conditionalComponents))
+          throw TypeError(".data.StackDbo.conditionalComponents: array expected");
+        message.conditionalComponents = [];
+        for (let i = 0; i < object.conditionalComponents.length; ++i) {
+          if (typeof object.conditionalComponents[i] !== "object")
+            throw TypeError(".data.StackDbo.conditionalComponents: object expected");
+          message.conditionalComponents[i] = $root.data.ConditionalStackComponentDbo.fromObject(object.conditionalComponents[i]);
+        }
+      }
+      if (object.effects) {
+        if (!Array.isArray(object.effects))
+          throw TypeError(".data.StackDbo.effects: array expected");
+        message.effects = [];
+        for (let i = 0; i < object.effects.length; ++i) {
+          if (typeof object.effects[i] !== "object")
+            throw TypeError(".data.StackDbo.effects: object expected");
+          message.effects[i] = $root.data.EffectDbo.fromObject(object.effects[i]);
+        }
+      }
+      if (object.links) {
+        if (!Array.isArray(object.links))
+          throw TypeError(".data.StackDbo.links: array expected");
+        message.links = [];
+        for (let i = 0; i < object.links.length; ++i) {
+          if (typeof object.links[i] !== "object")
+            throw TypeError(".data.StackDbo.links: object expected");
+          message.links[i] = $root.data.LinkDbo.fromObject(object.links[i]);
+        }
+      }
+      if (object.unlinks) {
+        if (!Array.isArray(object.unlinks))
+          throw TypeError(".data.StackDbo.unlinks: array expected");
+        message.unlinks = [];
+        for (let i = 0; i < object.unlinks.length; ++i) {
+          if (typeof object.unlinks[i] !== "object")
+            throw TypeError(".data.StackDbo.unlinks: object expected");
+          message.unlinks[i] = $root.data.UnlinkDbo.fromObject(object.unlinks[i]);
+        }
+      }
+      if (object.choices) {
+        if (!Array.isArray(object.choices))
+          throw TypeError(".data.StackDbo.choices: array expected");
+        message.choices = [];
+        for (let i = 0; i < object.choices.length; ++i) {
+          if (typeof object.choices[i] !== "object")
+            throw TypeError(".data.StackDbo.choices: object expected");
+          message.choices[i] = $root.data.ChoiceDbo.fromObject(object.choices[i]);
+        }
+      }
+      return message;
+    };
+    StackDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults) {
+        object.conditionalComponents = [];
+        object.effects = [];
+        object.links = [];
+        object.unlinks = [];
+        object.choices = [];
+      }
+      if (message.conditionalComponents && message.conditionalComponents.length) {
+        object.conditionalComponents = [];
+        for (let j = 0; j < message.conditionalComponents.length; ++j)
+          object.conditionalComponents[j] = $root.data.ConditionalStackComponentDbo.toObject(message.conditionalComponents[j], options);
+      }
+      if (message.effects && message.effects.length) {
+        object.effects = [];
+        for (let j = 0; j < message.effects.length; ++j)
+          object.effects[j] = $root.data.EffectDbo.toObject(message.effects[j], options);
+      }
+      if (message.links && message.links.length) {
+        object.links = [];
+        for (let j = 0; j < message.links.length; ++j)
+          object.links[j] = $root.data.LinkDbo.toObject(message.links[j], options);
+      }
+      if (message.unlinks && message.unlinks.length) {
+        object.unlinks = [];
+        for (let j = 0; j < message.unlinks.length; ++j)
+          object.unlinks[j] = $root.data.UnlinkDbo.toObject(message.unlinks[j], options);
+      }
+      if (message.choices && message.choices.length) {
+        object.choices = [];
+        for (let j = 0; j < message.choices.length; ++j)
+          object.choices[j] = $root.data.ChoiceDbo.toObject(message.choices[j], options);
+      }
+      return object;
+    };
+    StackDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    StackDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.StackDbo";
+    };
+    return StackDbo;
+  }();
+  data2.ConditionalStackComponentDbo = function() {
+    function ConditionalStackComponentDbo(properties) {
+      this.effects = [];
+      this.links = [];
+      this.unlinks = [];
+      this.choices = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    ConditionalStackComponentDbo.prototype.conditionFormula = "";
+    ConditionalStackComponentDbo.prototype.effects = $util.emptyArray;
+    ConditionalStackComponentDbo.prototype.links = $util.emptyArray;
+    ConditionalStackComponentDbo.prototype.unlinks = $util.emptyArray;
+    ConditionalStackComponentDbo.prototype.choices = $util.emptyArray;
+    ConditionalStackComponentDbo.create = function create4(properties) {
+      return new ConditionalStackComponentDbo(properties);
+    };
+    ConditionalStackComponentDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.conditionFormula != null && Object.hasOwnProperty.call(message, "conditionFormula"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.conditionFormula);
+      if (message.effects != null && message.effects.length)
+        for (let i = 0; i < message.effects.length; ++i)
+          $root.data.EffectDbo.encode(message.effects[i], writer2.uint32(
+            /* id 101, wireType 2 =*/
+            810
+          ).fork()).ldelim();
+      if (message.links != null && message.links.length)
+        for (let i = 0; i < message.links.length; ++i)
+          $root.data.LinkDbo.encode(message.links[i], writer2.uint32(
+            /* id 102, wireType 2 =*/
+            818
+          ).fork()).ldelim();
+      if (message.unlinks != null && message.unlinks.length)
+        for (let i = 0; i < message.unlinks.length; ++i)
+          $root.data.UnlinkDbo.encode(message.unlinks[i], writer2.uint32(
+            /* id 103, wireType 2 =*/
+            826
+          ).fork()).ldelim();
+      if (message.choices != null && message.choices.length)
+        for (let i = 0; i < message.choices.length; ++i)
+          $root.data.ChoiceDbo.encode(message.choices[i], writer2.uint32(
+            /* id 104, wireType 2 =*/
+            834
+          ).fork()).ldelim();
+      return writer2;
+    };
+    ConditionalStackComponentDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    ConditionalStackComponentDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.ConditionalStackComponentDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.conditionFormula = reader2.string();
+            break;
+          }
+          case 101: {
+            if (!(message.effects && message.effects.length))
+              message.effects = [];
+            message.effects.push($root.data.EffectDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 102: {
+            if (!(message.links && message.links.length))
+              message.links = [];
+            message.links.push($root.data.LinkDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 103: {
+            if (!(message.unlinks && message.unlinks.length))
+              message.unlinks = [];
+            message.unlinks.push($root.data.UnlinkDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 104: {
+            if (!(message.choices && message.choices.length))
+              message.choices = [];
+            message.choices.push($root.data.ChoiceDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    ConditionalStackComponentDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    ConditionalStackComponentDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+        if (!$util.isString(message.conditionFormula))
+          return "conditionFormula: string expected";
+      }
+      if (message.effects != null && message.hasOwnProperty("effects")) {
+        if (!Array.isArray(message.effects))
+          return "effects: array expected";
+        for (let i = 0; i < message.effects.length; ++i) {
+          let error = $root.data.EffectDbo.verify(message.effects[i]);
+          if (error)
+            return "effects." + error;
+        }
+      }
+      if (message.links != null && message.hasOwnProperty("links")) {
+        if (!Array.isArray(message.links))
+          return "links: array expected";
+        for (let i = 0; i < message.links.length; ++i) {
+          let error = $root.data.LinkDbo.verify(message.links[i]);
+          if (error)
+            return "links." + error;
+        }
+      }
+      if (message.unlinks != null && message.hasOwnProperty("unlinks")) {
+        if (!Array.isArray(message.unlinks))
+          return "unlinks: array expected";
+        for (let i = 0; i < message.unlinks.length; ++i) {
+          let error = $root.data.UnlinkDbo.verify(message.unlinks[i]);
+          if (error)
+            return "unlinks." + error;
+        }
+      }
+      if (message.choices != null && message.hasOwnProperty("choices")) {
+        if (!Array.isArray(message.choices))
+          return "choices: array expected";
+        for (let i = 0; i < message.choices.length; ++i) {
+          let error = $root.data.ChoiceDbo.verify(message.choices[i]);
+          if (error)
+            return "choices." + error;
+        }
+      }
+      return null;
+    };
+    ConditionalStackComponentDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.ConditionalStackComponentDbo)
+        return object;
+      let message = new $root.data.ConditionalStackComponentDbo();
+      if (object.conditionFormula != null)
+        message.conditionFormula = String(object.conditionFormula);
+      if (object.effects) {
+        if (!Array.isArray(object.effects))
+          throw TypeError(".data.ConditionalStackComponentDbo.effects: array expected");
+        message.effects = [];
+        for (let i = 0; i < object.effects.length; ++i) {
+          if (typeof object.effects[i] !== "object")
+            throw TypeError(".data.ConditionalStackComponentDbo.effects: object expected");
+          message.effects[i] = $root.data.EffectDbo.fromObject(object.effects[i]);
+        }
+      }
+      if (object.links) {
+        if (!Array.isArray(object.links))
+          throw TypeError(".data.ConditionalStackComponentDbo.links: array expected");
+        message.links = [];
+        for (let i = 0; i < object.links.length; ++i) {
+          if (typeof object.links[i] !== "object")
+            throw TypeError(".data.ConditionalStackComponentDbo.links: object expected");
+          message.links[i] = $root.data.LinkDbo.fromObject(object.links[i]);
+        }
+      }
+      if (object.unlinks) {
+        if (!Array.isArray(object.unlinks))
+          throw TypeError(".data.ConditionalStackComponentDbo.unlinks: array expected");
+        message.unlinks = [];
+        for (let i = 0; i < object.unlinks.length; ++i) {
+          if (typeof object.unlinks[i] !== "object")
+            throw TypeError(".data.ConditionalStackComponentDbo.unlinks: object expected");
+          message.unlinks[i] = $root.data.UnlinkDbo.fromObject(object.unlinks[i]);
+        }
+      }
+      if (object.choices) {
+        if (!Array.isArray(object.choices))
+          throw TypeError(".data.ConditionalStackComponentDbo.choices: array expected");
+        message.choices = [];
+        for (let i = 0; i < object.choices.length; ++i) {
+          if (typeof object.choices[i] !== "object")
+            throw TypeError(".data.ConditionalStackComponentDbo.choices: object expected");
+          message.choices[i] = $root.data.ChoiceDbo.fromObject(object.choices[i]);
+        }
+      }
+      return message;
+    };
+    ConditionalStackComponentDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults) {
+        object.effects = [];
+        object.links = [];
+        object.unlinks = [];
+        object.choices = [];
+      }
+      if (options.defaults)
+        object.conditionFormula = "";
+      if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula"))
+        object.conditionFormula = message.conditionFormula;
+      if (message.effects && message.effects.length) {
+        object.effects = [];
+        for (let j = 0; j < message.effects.length; ++j)
+          object.effects[j] = $root.data.EffectDbo.toObject(message.effects[j], options);
+      }
+      if (message.links && message.links.length) {
+        object.links = [];
+        for (let j = 0; j < message.links.length; ++j)
+          object.links[j] = $root.data.LinkDbo.toObject(message.links[j], options);
+      }
+      if (message.unlinks && message.unlinks.length) {
+        object.unlinks = [];
+        for (let j = 0; j < message.unlinks.length; ++j)
+          object.unlinks[j] = $root.data.UnlinkDbo.toObject(message.unlinks[j], options);
+      }
+      if (message.choices && message.choices.length) {
+        object.choices = [];
+        for (let j = 0; j < message.choices.length; ++j)
+          object.choices[j] = $root.data.ChoiceDbo.toObject(message.choices[j], options);
+      }
+      return object;
+    };
+    ConditionalStackComponentDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    ConditionalStackComponentDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.ConditionalStackComponentDbo";
+    };
+    return ConditionalStackComponentDbo;
+  }();
+  data2.CharacterTemplateDbo = function() {
+    function CharacterTemplateDbo(properties) {
+      this.levels = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    CharacterTemplateDbo.prototype.levels = $util.emptyArray;
+    CharacterTemplateDbo.create = function create4(properties) {
+      return new CharacterTemplateDbo(properties);
+    };
+    CharacterTemplateDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.levels != null && message.levels.length)
+        for (let i = 0; i < message.levels.length; ++i)
+          $root.data.CharacterLevelTemplateDbo.encode(message.levels[i], writer2.uint32(
+            /* id 1, wireType 2 =*/
+            10
+          ).fork()).ldelim();
+      return writer2;
+    };
+    CharacterTemplateDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    CharacterTemplateDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.CharacterTemplateDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            if (!(message.levels && message.levels.length))
+              message.levels = [];
+            message.levels.push($root.data.CharacterLevelTemplateDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    CharacterTemplateDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    CharacterTemplateDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.levels != null && message.hasOwnProperty("levels")) {
+        if (!Array.isArray(message.levels))
+          return "levels: array expected";
+        for (let i = 0; i < message.levels.length; ++i) {
+          let error = $root.data.CharacterLevelTemplateDbo.verify(message.levels[i]);
+          if (error)
+            return "levels." + error;
+        }
+      }
+      return null;
+    };
+    CharacterTemplateDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.CharacterTemplateDbo)
+        return object;
+      let message = new $root.data.CharacterTemplateDbo();
+      if (object.levels) {
+        if (!Array.isArray(object.levels))
+          throw TypeError(".data.CharacterTemplateDbo.levels: array expected");
+        message.levels = [];
+        for (let i = 0; i < object.levels.length; ++i) {
+          if (typeof object.levels[i] !== "object")
+            throw TypeError(".data.CharacterTemplateDbo.levels: object expected");
+          message.levels[i] = $root.data.CharacterLevelTemplateDbo.fromObject(object.levels[i]);
+        }
+      }
+      return message;
+    };
+    CharacterTemplateDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults)
+        object.levels = [];
+      if (message.levels && message.levels.length) {
+        object.levels = [];
+        for (let j = 0; j < message.levels.length; ++j)
+          object.levels[j] = $root.data.CharacterLevelTemplateDbo.toObject(message.levels[j], options);
+      }
+      return object;
+    };
+    CharacterTemplateDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    CharacterTemplateDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.CharacterTemplateDbo";
+    };
+    return CharacterTemplateDbo;
+  }();
+  data2.CharacterLevelTemplateDbo = function() {
+    function CharacterLevelTemplateDbo(properties) {
+      this.effects = [];
+      this.links = [];
+      this.unlinks = [];
+      this.choices = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    CharacterLevelTemplateDbo.prototype.levelNumber = 0;
+    CharacterLevelTemplateDbo.prototype.effects = $util.emptyArray;
+    CharacterLevelTemplateDbo.prototype.links = $util.emptyArray;
+    CharacterLevelTemplateDbo.prototype.unlinks = $util.emptyArray;
+    CharacterLevelTemplateDbo.prototype.choices = $util.emptyArray;
+    CharacterLevelTemplateDbo.create = function create4(properties) {
+      return new CharacterLevelTemplateDbo(properties);
+    };
+    CharacterLevelTemplateDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.levelNumber != null && Object.hasOwnProperty.call(message, "levelNumber"))
+        writer2.uint32(
+          /* id 1, wireType 0 =*/
+          8
+        ).uint32(message.levelNumber);
+      if (message.effects != null && message.effects.length)
+        for (let i = 0; i < message.effects.length; ++i)
+          $root.data.EffectDbo.encode(message.effects[i], writer2.uint32(
+            /* id 101, wireType 2 =*/
+            810
+          ).fork()).ldelim();
+      if (message.links != null && message.links.length)
+        for (let i = 0; i < message.links.length; ++i)
+          $root.data.LinkDbo.encode(message.links[i], writer2.uint32(
+            /* id 102, wireType 2 =*/
+            818
+          ).fork()).ldelim();
+      if (message.unlinks != null && message.unlinks.length)
+        for (let i = 0; i < message.unlinks.length; ++i)
+          $root.data.UnlinkDbo.encode(message.unlinks[i], writer2.uint32(
+            /* id 103, wireType 2 =*/
+            826
+          ).fork()).ldelim();
+      if (message.choices != null && message.choices.length)
+        for (let i = 0; i < message.choices.length; ++i)
+          $root.data.ChoiceDbo.encode(message.choices[i], writer2.uint32(
+            /* id 104, wireType 2 =*/
+            834
+          ).fork()).ldelim();
+      return writer2;
+    };
+    CharacterLevelTemplateDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    CharacterLevelTemplateDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.CharacterLevelTemplateDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.levelNumber = reader2.uint32();
+            break;
+          }
+          case 101: {
+            if (!(message.effects && message.effects.length))
+              message.effects = [];
+            message.effects.push($root.data.EffectDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 102: {
+            if (!(message.links && message.links.length))
+              message.links = [];
+            message.links.push($root.data.LinkDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 103: {
+            if (!(message.unlinks && message.unlinks.length))
+              message.unlinks = [];
+            message.unlinks.push($root.data.UnlinkDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          case 104: {
+            if (!(message.choices && message.choices.length))
+              message.choices = [];
+            message.choices.push($root.data.ChoiceDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    CharacterLevelTemplateDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    CharacterLevelTemplateDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.levelNumber != null && message.hasOwnProperty("levelNumber")) {
+        if (!$util.isInteger(message.levelNumber))
+          return "levelNumber: integer expected";
+      }
+      if (message.effects != null && message.hasOwnProperty("effects")) {
+        if (!Array.isArray(message.effects))
+          return "effects: array expected";
+        for (let i = 0; i < message.effects.length; ++i) {
+          let error = $root.data.EffectDbo.verify(message.effects[i]);
+          if (error)
+            return "effects." + error;
+        }
+      }
+      if (message.links != null && message.hasOwnProperty("links")) {
+        if (!Array.isArray(message.links))
+          return "links: array expected";
+        for (let i = 0; i < message.links.length; ++i) {
+          let error = $root.data.LinkDbo.verify(message.links[i]);
+          if (error)
+            return "links." + error;
+        }
+      }
+      if (message.unlinks != null && message.hasOwnProperty("unlinks")) {
+        if (!Array.isArray(message.unlinks))
+          return "unlinks: array expected";
+        for (let i = 0; i < message.unlinks.length; ++i) {
+          let error = $root.data.UnlinkDbo.verify(message.unlinks[i]);
+          if (error)
+            return "unlinks." + error;
+        }
+      }
+      if (message.choices != null && message.hasOwnProperty("choices")) {
+        if (!Array.isArray(message.choices))
+          return "choices: array expected";
+        for (let i = 0; i < message.choices.length; ++i) {
+          let error = $root.data.ChoiceDbo.verify(message.choices[i]);
+          if (error)
+            return "choices." + error;
+        }
+      }
+      return null;
+    };
+    CharacterLevelTemplateDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.CharacterLevelTemplateDbo)
+        return object;
+      let message = new $root.data.CharacterLevelTemplateDbo();
+      if (object.levelNumber != null)
+        message.levelNumber = object.levelNumber >>> 0;
+      if (object.effects) {
+        if (!Array.isArray(object.effects))
+          throw TypeError(".data.CharacterLevelTemplateDbo.effects: array expected");
+        message.effects = [];
+        for (let i = 0; i < object.effects.length; ++i) {
+          if (typeof object.effects[i] !== "object")
+            throw TypeError(".data.CharacterLevelTemplateDbo.effects: object expected");
+          message.effects[i] = $root.data.EffectDbo.fromObject(object.effects[i]);
+        }
+      }
+      if (object.links) {
+        if (!Array.isArray(object.links))
+          throw TypeError(".data.CharacterLevelTemplateDbo.links: array expected");
+        message.links = [];
+        for (let i = 0; i < object.links.length; ++i) {
+          if (typeof object.links[i] !== "object")
+            throw TypeError(".data.CharacterLevelTemplateDbo.links: object expected");
+          message.links[i] = $root.data.LinkDbo.fromObject(object.links[i]);
+        }
+      }
+      if (object.unlinks) {
+        if (!Array.isArray(object.unlinks))
+          throw TypeError(".data.CharacterLevelTemplateDbo.unlinks: array expected");
+        message.unlinks = [];
+        for (let i = 0; i < object.unlinks.length; ++i) {
+          if (typeof object.unlinks[i] !== "object")
+            throw TypeError(".data.CharacterLevelTemplateDbo.unlinks: object expected");
+          message.unlinks[i] = $root.data.UnlinkDbo.fromObject(object.unlinks[i]);
+        }
+      }
+      if (object.choices) {
+        if (!Array.isArray(object.choices))
+          throw TypeError(".data.CharacterLevelTemplateDbo.choices: array expected");
+        message.choices = [];
+        for (let i = 0; i < object.choices.length; ++i) {
+          if (typeof object.choices[i] !== "object")
+            throw TypeError(".data.CharacterLevelTemplateDbo.choices: object expected");
+          message.choices[i] = $root.data.ChoiceDbo.fromObject(object.choices[i]);
+        }
+      }
+      return message;
+    };
+    CharacterLevelTemplateDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults) {
+        object.effects = [];
+        object.links = [];
+        object.unlinks = [];
+        object.choices = [];
+      }
+      if (options.defaults)
+        object.levelNumber = 0;
+      if (message.levelNumber != null && message.hasOwnProperty("levelNumber"))
+        object.levelNumber = message.levelNumber;
+      if (message.effects && message.effects.length) {
+        object.effects = [];
+        for (let j = 0; j < message.effects.length; ++j)
+          object.effects[j] = $root.data.EffectDbo.toObject(message.effects[j], options);
+      }
+      if (message.links && message.links.length) {
+        object.links = [];
+        for (let j = 0; j < message.links.length; ++j)
+          object.links[j] = $root.data.LinkDbo.toObject(message.links[j], options);
+      }
+      if (message.unlinks && message.unlinks.length) {
+        object.unlinks = [];
+        for (let j = 0; j < message.unlinks.length; ++j)
+          object.unlinks[j] = $root.data.UnlinkDbo.toObject(message.unlinks[j], options);
+      }
+      if (message.choices && message.choices.length) {
+        object.choices = [];
+        for (let j = 0; j < message.choices.length; ++j)
+          object.choices[j] = $root.data.ChoiceDbo.toObject(message.choices[j], options);
+      }
+      return object;
+    };
+    CharacterLevelTemplateDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    CharacterLevelTemplateDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.CharacterLevelTemplateDbo";
+    };
+    return CharacterLevelTemplateDbo;
+  }();
+  data2.SourceModuleDbo = function() {
+    function SourceModuleDbo(properties) {
+      this.features = [];
+      if (properties) {
+        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+          if (properties[keys[i]] != null)
+            this[keys[i]] = properties[keys[i]];
+      }
+    }
+    SourceModuleDbo.prototype.sourceId = "";
+    SourceModuleDbo.prototype.features = $util.emptyArray;
+    SourceModuleDbo.create = function create4(properties) {
+      return new SourceModuleDbo(properties);
+    };
+    SourceModuleDbo.encode = function encode(message, writer2) {
+      if (!writer2)
+        writer2 = $Writer.create();
+      if (message.sourceId != null && Object.hasOwnProperty.call(message, "sourceId"))
+        writer2.uint32(
+          /* id 1, wireType 2 =*/
+          10
+        ).string(message.sourceId);
+      if (message.features != null && message.features.length)
+        for (let i = 0; i < message.features.length; ++i)
+          $root.data.FeatureSummaryDbo.encode(message.features[i], writer2.uint32(
+            /* id 2, wireType 2 =*/
+            18
+          ).fork()).ldelim();
+      return writer2;
+    };
+    SourceModuleDbo.encodeDelimited = function encodeDelimited(message, writer2) {
+      return this.encode(message, writer2).ldelim();
+    };
+    SourceModuleDbo.decode = function decode(reader2, length) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = $Reader.create(reader2);
+      let end2 = length === void 0 ? reader2.len : reader2.pos + length, message = new $root.data.SourceModuleDbo();
+      while (reader2.pos < end2) {
+        let tag = reader2.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            message.sourceId = reader2.string();
+            break;
+          }
+          case 2: {
+            if (!(message.features && message.features.length))
+              message.features = [];
+            message.features.push($root.data.FeatureSummaryDbo.decode(reader2, reader2.uint32()));
+            break;
+          }
+          default:
+            reader2.skipType(tag & 7);
+            break;
+        }
+      }
+      return message;
+    };
+    SourceModuleDbo.decodeDelimited = function decodeDelimited(reader2) {
+      if (!(reader2 instanceof $Reader))
+        reader2 = new $Reader(reader2);
+      return this.decode(reader2, reader2.uint32());
+    };
+    SourceModuleDbo.verify = function verify(message) {
+      if (typeof message !== "object" || message === null)
+        return "object expected";
+      if (message.sourceId != null && message.hasOwnProperty("sourceId")) {
+        if (!$util.isString(message.sourceId))
+          return "sourceId: string expected";
+      }
+      if (message.features != null && message.hasOwnProperty("features")) {
+        if (!Array.isArray(message.features))
+          return "features: array expected";
+        for (let i = 0; i < message.features.length; ++i) {
+          let error = $root.data.FeatureSummaryDbo.verify(message.features[i]);
+          if (error)
+            return "features." + error;
+        }
+      }
+      return null;
+    };
+    SourceModuleDbo.fromObject = function fromObject(object) {
+      if (object instanceof $root.data.SourceModuleDbo)
+        return object;
+      let message = new $root.data.SourceModuleDbo();
+      if (object.sourceId != null)
+        message.sourceId = String(object.sourceId);
+      if (object.features) {
+        if (!Array.isArray(object.features))
+          throw TypeError(".data.SourceModuleDbo.features: array expected");
+        message.features = [];
+        for (let i = 0; i < object.features.length; ++i) {
+          if (typeof object.features[i] !== "object")
+            throw TypeError(".data.SourceModuleDbo.features: object expected");
+          message.features[i] = $root.data.FeatureSummaryDbo.fromObject(object.features[i]);
+        }
+      }
+      return message;
+    };
+    SourceModuleDbo.toObject = function toObject(message, options) {
+      if (!options)
+        options = {};
+      let object = {};
+      if (options.arrays || options.defaults)
+        object.features = [];
+      if (options.defaults)
+        object.sourceId = "";
+      if (message.sourceId != null && message.hasOwnProperty("sourceId"))
+        object.sourceId = message.sourceId;
+      if (message.features && message.features.length) {
+        object.features = [];
+        for (let j = 0; j < message.features.length; ++j)
+          object.features[j] = $root.data.FeatureSummaryDbo.toObject(message.features[j], options);
+      }
+      return object;
+    };
+    SourceModuleDbo.prototype.toJSON = function toJSON() {
+      return this.constructor.toObject(this, minimal.util.toJSONOptions);
+    };
+    SourceModuleDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+      if (typeUrlPrefix === void 0) {
+        typeUrlPrefix = "type.googleapis.com";
+      }
+      return typeUrlPrefix + "/data.SourceModuleDbo";
+    };
+    return SourceModuleDbo;
+  }();
+  return data2;
+})();
+const control$1 = "_control_1konq_1";
+const styles$2 = {
+  control: control$1
+};
+function TagEditor({ value, onChange, onDelete }) {
+  const [isEditing, setIsEditing] = reactExports.useState(false);
+  const [workingValue, setWorkingValue] = reactExports.useState(value);
+  function handleEditorChange(event) {
+    setWorkingValue(event.target.value);
+  }
+  function handleEditStart() {
+    setIsEditing(true);
+  }
+  function handleEditStop() {
+    setIsEditing(false);
+    onChange?.(workingValue);
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$2.control, children: isEditing ? /* @__PURE__ */ jsxRuntimeExports.jsx("input", { autoFocus: true, value: workingValue, onChange: handleEditorChange, onBlur: handleEditStop }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { onClick: handleEditStart, children: value }) });
+}
+const list = "_list_g4a85_1";
+const styles$1 = {
+  list
+};
+function TagListEditor({ tags, onChange }) {
+  function handleChange(index2, value) {
+    onChange?.(tags.with(index2, value));
+  }
+  function handleRemoved(index2) {
+    onChange?.(tags.splice(index2, 1));
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$1.list, children: tags.map((tag, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+    TagEditor,
+    {
+      value: tag,
+      onChange: (value) => handleChange(index2, value),
+      onDelete: () => handleRemoved(index2)
+    },
+    index2
+  )) });
+}
+const control = "_control_1h2z4_1";
+const enabledFormulaEdit = "_enabledFormulaEdit_1h2z4_7";
+const styles = {
+  control,
+  enabledFormulaEdit
+};
+function DescriptionEditor({ value }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("textarea", { children: value.text }) });
+}
+const DescriptionDbo = data.DescriptionDbo;
 function FeatureEditor({ feature }) {
   const [id2, setId] = reactExports.useState(feature.id);
   const [name, setName] = reactExports.useState(feature.name);
-  const [label2, setLabel] = reactExports.useState(feature.label);
-  const [type, setType] = reactExports.useState(feature.type);
-  const [description, setDescription] = reactExports.useState(feature.description);
-  const [prerequisites, setPrerequisites] = reactExports.useState(feature.prerequisites);
-  reactExports.useState(feature.effects);
-  const [source, setSource] = reactExports.useState(feature.source);
+  const [label2, setLabel] = reactExports.useState(feature.label ?? "");
+  const [tags, setTags] = reactExports.useState(feature.tags);
+  const [description, setDescription] = reactExports.useState(feature.description ?? new DescriptionDbo());
+  const [enabledFormula, setEnabledFormula] = reactExports.useState(feature.enabledFormula);
   if (!feature) {
     return /* @__PURE__ */ jsxRuntimeExports.jsx(LoadingBlock, {});
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featureId", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "ID" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Control, { id: "featureId", value: id2, onChange: (event) => setId(event.target.value) })
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles.control, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "featureId", children: "ID" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { id: "featureId", value: id2, onChange: (event) => setId(event.target.value) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featureName", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "Name" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Control, { id: "featureName", value: name, onChange: (event) => setName(event.target.value) })
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "featureName", children: "Name" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { id: "featureName", value: name, onChange: (event) => setName(event.target.value) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featureLabel", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "Label" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Control, { id: "featureLabel", value: label2, onChange: (event) => setLabel(event.target.value) })
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "featureLabel", children: "Label" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { id: "featureLabel", value: label2, onChange: (event) => setLabel(event.target.value) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featureType", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "Type" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Control, { id: "featureType", value: type, onChange: (event) => setType(event.target.value) })
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { children: "Tags" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(TagListEditor, { tags, onChange: setTags })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featureDescription", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "Description" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { children: "Description" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(DescriptionEditor, { value: description })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "featureEnabledFormula", children: "Enabled Formula" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Form$1.Control,
+        "input",
         {
-          id: "featureDescription",
-          as: "textarea",
-          value: description,
-          onChange: (event) => setDescription(event.target.value)
+          id: "featureEnabledFormula",
+          value: enabledFormula,
+          className: styles.enabledFormulaEdit,
+          onChange: (event) => setEnabledFormula(event.target.value)
         }
       )
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featurePrerequisites", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "Prerequisites" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Control, { id: "featurePrerequisites", value: prerequisites, onChange: (event) => setPrerequisites(event.target.value) })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Form$1.Group, { controlId: "featureSource", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Label, { children: "Source" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Form$1.Control, { id: "featureSource", value: source, onChange: (event) => setSource(event.target.value) })
     ] })
   ] });
 }
 function App() {
-  const [sections, setSections] = reactExports.useState([]);
-  const [entries, setEntries] = reactExports.useState([]);
-  const [selectedSection, setSelectedSection] = reactExports.useState(null);
-  const [selectedEntry, setSelectedEntry] = reactExports.useState(null);
+  const [sourceKeys, setSourceKeys] = reactExports.useState([]);
+  const [featureKeys, setFeatureKeys] = reactExports.useState([]);
+  const [selectedSourceKey, setSelectedSourceKey] = reactExports.useState(null);
+  const [selectedFeatureKey, setSelectedFeatureKey] = reactExports.useState(null);
   const [feature, setFeature] = reactExports.useState(null);
   reactExports.useEffect(() => {
     (async function() {
-      const loaded = await window.api.list_sections();
-      setSections(loaded);
+      const loaded = await window.api.list_sources();
+      setSourceKeys(loaded);
     })();
   }, []);
   reactExports.useEffect(() => {
     (async function() {
-      const loaded = selectedSection ? await window.api.list_entries(selectedSection) : [];
-      setEntries(loaded);
+      const loaded = selectedSourceKey ? await window.api.list_features(selectedSourceKey) : [];
+      setFeatureKeys(loaded);
     })();
-  }, [selectedSection]);
-  function handleSelectSection(eventKey) {
-    setSelectedSection(eventKey);
+  }, [selectedSourceKey]);
+  function handleSelectSourceKey(eventKey) {
+    setSelectedSourceKey(eventKey);
   }
-  function handleSelectEntry(eventKey) {
-    setSelectedEntry(eventKey);
-    if (selectedSection && eventKey) {
+  function handleSelectFeatureKey(eventKey) {
+    setSelectedFeatureKey(eventKey);
+    if (selectedSourceKey && eventKey) {
       setFeature(null);
-      window.api.load_feature(selectedSection, eventKey).then((feature2) => setFeature(feature2));
+      window.api.load_feature(selectedSourceKey, eventKey).then((feature2) => setFeature(feature2));
     }
   }
-  if (!sections) {
+  if (!sourceKeys) {
     return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: "Loading..." });
   }
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "app-container", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "entry-nav", children: /* @__PURE__ */ jsxRuntimeExports.jsx(EntryNav, { entries: sections, onSelect: handleSelectSection }) }),
-    selectedSection && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "entry-nav entry-nav-item", children: /* @__PURE__ */ jsxRuntimeExports.jsx(EntryNav, { entries, onSelect: handleSelectEntry }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "entry-nav", children: /* @__PURE__ */ jsxRuntimeExports.jsx(EntryNav, { entries: sourceKeys, onSelect: handleSelectSourceKey }) }),
+    selectedSourceKey && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "entry-nav entry-nav-item", children: /* @__PURE__ */ jsxRuntimeExports.jsx(EntryNav, { entries: featureKeys, onSelect: handleSelectFeatureKey }) }),
     feature && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "entry-view", children: /* @__PURE__ */ jsxRuntimeExports.jsx("main", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("section", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(FeatureEditor, { feature }) }) }) })
   ] });
 }

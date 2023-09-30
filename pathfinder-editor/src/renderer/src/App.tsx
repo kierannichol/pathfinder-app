@@ -2,55 +2,56 @@ import {useEffect, useState} from "react";
 import EntryNav from "./components/EntryNav";
 import "./App.css";
 import FeatureEditor from "./components/editors/FeatureEditor";
-import FeatureModel from "../../preload/pathfinder";
+import {data} from "../../preload/compiled";
+import FeatureDbo = data.FeatureDbo;
 
 function App() {
-  const [ sections, setSections ] = useState<string[]>([]);
-  const [ entries, setEntries ] = useState<string[]>([]);
-  const [ selectedSection, setSelectedSection ] = useState<string|null>(null);
-  const [ selectedEntry, setSelectedEntry ] = useState<string|null>(null);
-  const [ feature, setFeature ] = useState<FeatureModel|null>(null);
+  const [ sourceKeys, setSourceKeys ] = useState<string[]>([]);
+  const [ featureKeys, setFeatureKeys ] = useState<string[]>([]);
+  const [ selectedSourceKey, setSelectedSourceKey ] = useState<string|null>(null);
+  const [ selectedFeatureKey, setSelectedFeatureKey ] = useState<string|null>(null);
+  const [ feature, setFeature ] = useState<FeatureDbo|null>(null);
 
   useEffect(() => {
     (async function () {
-      const loaded = await window.api.list_sections();
-      setSections(loaded);
+      const loaded = await window.api.list_sources();
+      setSourceKeys(loaded);
     })();
   }, []);
 
   useEffect(() => {
     (async function () {
-      const loaded = selectedSection
-          ? await window.api.list_entries(selectedSection)
+      const loaded = selectedSourceKey
+          ? await window.api.list_features(selectedSourceKey)
           : [];
-      setEntries(loaded);
+      setFeatureKeys(loaded);
     })();
-  }, [selectedSection]);
+  }, [selectedSourceKey]);
 
-  function handleSelectSection(eventKey: string|null) {
-    setSelectedSection(eventKey);
+  function handleSelectSourceKey(eventKey: string|null) {
+    setSelectedSourceKey(eventKey);
   }
 
-  function handleSelectEntry(eventKey: string|null) {
-    setSelectedEntry(eventKey);
-    if (selectedSection && eventKey) {
+  function handleSelectFeatureKey(eventKey: string|null) {
+    setSelectedFeatureKey(eventKey);
+    if (selectedSourceKey && eventKey) {
       setFeature(null);
-      window.api.load_feature(selectedSection, eventKey)
+      window.api.load_feature(selectedSourceKey, eventKey)
        .then(feature => setFeature(feature))
     }
   }
 
-  if (!sections) {
+  if (!sourceKeys) {
     return <div>Loading...</div>
   }
 
   return (
     <div className="app-container">
       <div className="entry-nav">
-        <EntryNav entries={sections} onSelect={handleSelectSection} />
+        <EntryNav entries={sourceKeys} onSelect={handleSelectSourceKey} />
       </div>
-      {selectedSection && <div className="entry-nav entry-nav-item">
-        <EntryNav entries={entries} onSelect={handleSelectEntry} />
+      {selectedSourceKey && <div className="entry-nav entry-nav-item">
+        <EntryNav entries={featureKeys} onSelect={handleSelectFeatureKey} />
       </div>}
       {feature && <div className="entry-view">
         <main>
