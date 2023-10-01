@@ -4,14 +4,16 @@ import {data} from "../../../../preload/compiled";
 import TagListEditor from "./TagListEditor";
 import styles from "./FeatureEditor.module.css";
 import DescriptionEditor from "./DescriptionEditor";
+import {Button} from "react-bootstrap";
 import FeatureDbo = data.FeatureDbo;
 import DescriptionDbo = data.DescriptionDbo;
 
 interface FeatureEditorProps {
   feature: FeatureDbo;
+  onChange?: (changed: FeatureDbo) => void;
 }
 
-export default function FeatureEditor({ feature }: FeatureEditorProps) {
+export default function FeatureEditor({ feature, onChange }: FeatureEditorProps) {
   const [ id, setId ] = useState(feature.id);
   const [ name, setName ] = useState(feature.name);
   const [ label, setLabel ] = useState(feature.label ?? '');
@@ -19,11 +21,27 @@ export default function FeatureEditor({ feature }: FeatureEditorProps) {
   const [ description, setDescription ] = useState(feature.description ?? new DescriptionDbo());
   const [ enabledFormula, setEnabledFormula ] = useState(feature.enabledFormula);
 
+  function handleSave() {
+    const modified = new FeatureDbo({
+      ...feature,
+      id: id,
+      name: name,
+      label: label === "" ? null : label,
+      tags: tags,
+      description: description,
+      enabledFormula: enabledFormula
+    });
+    onChange?.(modified);
+  }
+
   if (!feature) {
     return <LoadingBlock/>
   }
 
   return <div className={styles.control}>
+    <div>
+      <Button variant="primary" onClick={handleSave}>Save</Button>
+    </div>
     <div>
       <label htmlFor="featureId">ID</label>
       <input id="featureId" value={id} onChange={event => setId(event.target.value)} />

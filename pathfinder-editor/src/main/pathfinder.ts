@@ -1,7 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
 import {data} from "../preload/compiled";
-import {Message} from "protobufjs";
 import FeatureDbo = data.FeatureDbo;
 import SourceModuleDbo = data.SourceModuleDbo;
 
@@ -34,12 +33,12 @@ function read_proto<T>(path: string, decodeFn: (binary: Uint8Array) => T): Promi
   });
 }
 
-function write_proto(path: string, message: {[p:string]:any}): Promise<void> {
+function write_proto<T>(path: string, message: T, encodeBinaryFn: (t: T) => Uint8Array, encodeJsonFn: (t: T) => any): Promise<void> {
   return new Promise((resolve, reject) => {
 
     try {
-      const json = JSON.stringify(message);
-      const binary = Message.encode(message).finish();
+      const json = JSON.stringify(encodeJsonFn(message), null, 2);
+      const binary = encodeBinaryFn(message);
 
       fs.writeFileSync(path + ".bin", binary);
       fs.writeFileSync(path + ".json", json);
@@ -52,21 +51,29 @@ function write_proto(path: string, message: {[p:string]:any}): Promise<void> {
 
 export const PathfinderProcess = {
 
-  async save_feature(sourceKey: string, featureKey: string, model: FeatureDbo): Promise<void> {
+  async save_feature(event: any, sourceKey: string, featureKey: string, model: FeatureDbo): Promise<void> {
     const filePath = path.join(DatabaseBasePath, sourceKey, featureKey);
     const summaryPath = path.join(DatabaseBasePath, sourceKey);
-    await write_proto(filePath, model.toJSON());
+    await write_proto(filePath, model,
+        m => FeatureDbo.encode(m).finish(),
+        m => FeatureDbo.toObject(m));
 
     const sourceSummary = await read_proto(summaryPath + ".bin", SourceModuleDbo.decode);
 
-    const featureIndex = sourceSummary.features.findIndex(summary => summary.id === featureKey);
+    const featureIndex = sourceSummary.features.findIndex(summary => summary.id.replace(':', '_').replace('#', '_') === featureKey);
+
+    const modifiedFeatures = featureIndex > -1
+        ? sourceSummary.features.with(featureIndex, model)
+        : [ ...sourceSummary.features, model ];
 
     const modifiedSummary = new SourceModuleDbo({
       sourceId: sourceSummary.sourceId,
-      features: sourceSummary.features.with(featureIndex, model)
+      features: modifiedFeatures
     })
 
-    await write_proto(summaryPath, modifiedSummary);
+    await write_proto(summaryPath, modifiedSummary,
+            m => SourceModuleDbo.encode(m).finish(),
+        m => SourceModuleDbo.toObject(m));
   },
 
   load_feature(event: any, sourceKey: string, featureKey: string): Promise<FeatureDbo> {

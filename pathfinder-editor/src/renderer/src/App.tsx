@@ -41,6 +41,12 @@ function App() {
     }
   }
 
+  function handleChange(feature: FeatureDbo) {
+    if (selectedSourceKey && selectedFeatureKey) {
+      window.api.save_feature(selectedSourceKey, selectedFeatureKey, feature);
+    }
+  }
+
   if (!sourceKeys) {
     return <div>Loading...</div>
   }
@@ -56,7 +62,7 @@ function App() {
       {feature && <div className="entry-view">
         <main>
           <section>
-            <FeatureEditor feature={feature} />
+            <FeatureEditor feature={feature} onChange={handleChange} />
           </section>
         </main>
       </div>}

@@ -2929,7 +2929,7 @@ const data = $root.data = (() => {
     return CharacterLevelTemplateDbo;
   }();
   data2.SourceModuleDbo = function() {
-    function SourceModuleDbo(properties) {
+    function SourceModuleDbo2(properties) {
       this.features = [];
       if (properties) {
         for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -2937,12 +2937,12 @@ const data = $root.data = (() => {
             this[keys[i]] = properties[keys[i]];
       }
     }
-    SourceModuleDbo.prototype.sourceId = "";
-    SourceModuleDbo.prototype.features = $util.emptyArray;
-    SourceModuleDbo.create = function create(properties) {
-      return new SourceModuleDbo(properties);
+    SourceModuleDbo2.prototype.sourceId = "";
+    SourceModuleDbo2.prototype.features = $util.emptyArray;
+    SourceModuleDbo2.create = function create(properties) {
+      return new SourceModuleDbo2(properties);
     };
-    SourceModuleDbo.encode = function encode(message, writer) {
+    SourceModuleDbo2.encode = function encode(message, writer) {
       if (!writer)
         writer = $Writer.create();
       if (message.sourceId != null && Object.hasOwnProperty.call(message, "sourceId"))
@@ -2958,10 +2958,10 @@ const data = $root.data = (() => {
           ).fork()).ldelim();
       return writer;
     };
-    SourceModuleDbo.encodeDelimited = function encodeDelimited(message, writer) {
+    SourceModuleDbo2.encodeDelimited = function encodeDelimited(message, writer) {
       return this.encode(message, writer).ldelim();
     };
-    SourceModuleDbo.decode = function decode(reader, length) {
+    SourceModuleDbo2.decode = function decode(reader, length) {
       if (!(reader instanceof $Reader))
         reader = $Reader.create(reader);
       let end = length === void 0 ? reader.len : reader.pos + length, message = new $root.data.SourceModuleDbo();
@@ -2985,12 +2985,12 @@ const data = $root.data = (() => {
       }
       return message;
     };
-    SourceModuleDbo.decodeDelimited = function decodeDelimited(reader) {
+    SourceModuleDbo2.decodeDelimited = function decodeDelimited(reader) {
       if (!(reader instanceof $Reader))
         reader = new $Reader(reader);
       return this.decode(reader, reader.uint32());
     };
-    SourceModuleDbo.verify = function verify(message) {
+    SourceModuleDbo2.verify = function verify(message) {
       if (typeof message !== "object" || message === null)
         return "object expected";
       if (message.sourceId != null && message.hasOwnProperty("sourceId")) {
@@ -3008,7 +3008,7 @@ const data = $root.data = (() => {
       }
       return null;
     };
-    SourceModuleDbo.fromObject = function fromObject(object) {
+    SourceModuleDbo2.fromObject = function fromObject(object) {
       if (object instanceof $root.data.SourceModuleDbo)
         return object;
       let message = new $root.data.SourceModuleDbo();
@@ -3026,7 +3026,7 @@ const data = $root.data = (() => {
       }
       return message;
     };
-    SourceModuleDbo.toObject = function toObject(message, options) {
+    SourceModuleDbo2.toObject = function toObject(message, options) {
       if (!options)
         options = {};
       let object = {};
@@ -3043,20 +3043,21 @@ const data = $root.data = (() => {
       }
       return object;
     };
-    SourceModuleDbo.prototype.toJSON = function toJSON() {
+    SourceModuleDbo2.prototype.toJSON = function toJSON() {
       return this.constructor.toObject(this, $protobuf__namespace.util.toJSONOptions);
     };
-    SourceModuleDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+    SourceModuleDbo2.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
       if (typeUrlPrefix === void 0) {
         typeUrlPrefix = "type.googleapis.com";
       }
       return typeUrlPrefix + "/data.SourceModuleDbo";
     };
-    return SourceModuleDbo;
+    return SourceModuleDbo2;
   }();
   return data2;
 })();
 const FeatureDbo = data.FeatureDbo;
+const SourceModuleDbo = data.SourceModuleDbo;
 const DatabaseBasePath = path__namespace.join(__dirname, "..", "..", "..", "pathfinder-vite", "public", "db");
 function list_files(path2) {
   return new Promise((resolve, reject) => {
@@ -3081,7 +3082,43 @@ function read_proto(path2, decodeFn) {
     });
   });
 }
+function write_proto(path2, message, encodeBinaryFn, encodeJsonFn) {
+  return new Promise((resolve, reject) => {
+    try {
+      const json = JSON.stringify(encodeJsonFn(message), null, 2);
+      const binary = encodeBinaryFn(message);
+      fs__namespace.writeFileSync(path2 + ".bin", binary);
+      fs__namespace.writeFileSync(path2 + ".json", json);
+      resolve();
+    } catch (e) {
+      reject(e);
+    }
+  });
+}
 const PathfinderProcess = {
+  async save_feature(event, sourceKey, featureKey, model) {
+    const filePath = path__namespace.join(DatabaseBasePath, sourceKey, featureKey);
+    const summaryPath = path__namespace.join(DatabaseBasePath, sourceKey);
+    await write_proto(
+      filePath,
+      model,
+      (m) => FeatureDbo.encode(m).finish(),
+      (m) => FeatureDbo.toObject(m)
+    );
+    const sourceSummary = await read_proto(summaryPath + ".bin", SourceModuleDbo.decode);
+    const featureIndex = sourceSummary.features.findIndex((summary) => summary.id.replace(":", "_").replace("#", "_") === featureKey);
+    const modifiedFeatures = featureIndex > -1 ? sourceSummary.features.with(featureIndex, model) : [...sourceSummary.features, model];
+    const modifiedSummary = new SourceModuleDbo({
+      sourceId: sourceSummary.sourceId,
+      features: modifiedFeatures
+    });
+    await write_proto(
+      summaryPath,
+      modifiedSummary,
+      (m) => SourceModuleDbo.encode(m).finish(),
+      (m) => SourceModuleDbo.toObject(m)
+    );
+  },
   load_feature(event, sourceKey, featureKey) {
     const filePath = path__namespace.join(DatabaseBasePath, sourceKey, featureKey + ".bin");
     return read_proto(filePath, FeatureDbo.decode);

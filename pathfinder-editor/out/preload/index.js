@@ -3054,7 +3054,8 @@ $root.data = (() => {
 const api = {
   list_sources: () => electron.ipcRenderer.invoke("list_sources"),
   list_features: (sourceKey) => electron.ipcRenderer.invoke("list_features", sourceKey),
-  load_feature: (sourceKey, featureKey) => electron.ipcRenderer.invoke("load_feature", sourceKey, featureKey)
+  load_feature: (sourceKey, featureKey) => electron.ipcRenderer.invoke("load_feature", sourceKey, featureKey),
+  save_feature: (sourceKey, featureKey, model) => electron.ipcRenderer.invoke("save_feature", sourceKey, featureKey, model)
 };
 if (process.contextIsolated) {
   try {
