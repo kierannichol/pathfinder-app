@@ -19,22 +19,22 @@ hit_die: "?"
 alignment: "An inquisitor's alignment must be within one step of her deity's, along\
   \ either the law/chaos axis or the good/evil axis"
 class_skills:
-- "skill:swim"
-- "skill:diplomacy"
 - "skill:bluff"
-- "skill:spellcraft"
-- "skill:profession"
 - "skill:climb"
-- "skill:ride"
-- "skill:heal"
-- "skill:perception"
 - "skill:craft"
-- "skill:survival"
-- "skill:intimidate"
-- "skill:stealth"
+- "skill:diplomacy"
 - "skill:disguise"
+- "skill:heal"
+- "skill:intimidate"
 - "skill:knowledge"
+- "skill:perception"
+- "skill:profession"
+- "skill:ride"
 - "skill:sense_motive"
+- "skill:spellcraft"
+- "skill:stealth"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "6"
 bab: "B"
 fort: "A"
@@ -364,21 +364,40 @@ levels:
 spell_caster_types:
 - "divine"
 class_features:
-- id: "ability:greater_bane#inquisitor"
-  name: "Greater Bane"
-  label: null
-  type: "Su"
-  description: "At 12th level, whenever an inquisitor uses her bane ability, the amount\
-    \ of bonus damage dealt by the weapon against creatures of the selected type increases\
-    \ to 4d6."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
 - id: "ability:bane#inquisitor"
   name: "Bane"
   label: null
   type: "Su"
   description: ""
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:cunning_initiative#inquisitor"
+  name: "Cunning Initiative"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, an inquisitor adds her Wisdom modifier on initiative\
+    \ checks, in addition to her Dexterity modifier."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:detect_alignment#inquisitor"
+  name: "Detect Alignment"
+  label: null
+  type: "Sp"
+  description: "At 2nd level, at will, an inquisitor can use detect chaos, detect\
+    \ evil, detect good, or detect law. She can only use one of these at any given\
+    \ time."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:discern_lies#inquisitor"
+  name: "Discern Lies"
+  label: null
+  type: "Sp"
+  description: "At 5th level, an inquisitor can discern lies, as per the spell, for\
+    \ a number of rounds per day equal to her inquisitor level. These rounds do not\
+    \ need to be consecutive. Activating this ability is an immediate action."
   effects: []
   prerequisites: ""
   source: " Advanced Player's Guide"
@@ -405,6 +424,189 @@ class_features:
     \ Note: A complete listing of domains can be found here: Domains. Inquisitors\
     \ also have access to Inquisitions, which are similar to Domains but do not include\
     \ Domain spells. A complete listing of Inquisitions can be found here: Inquisitions.)"
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:exploit_weakness#inquisitor"
+  name: "Exploit Weakness"
+  label: null
+  type: "Ex"
+  description: "At 14th level, the inquisitor learns to take advantage of any opportunity\
+    \ that presents itself. Whenever the inquisitor scores a critical hit, she ignores\
+    \ any damage reduction the target might have. In addition, if the target has regeneration,\
+    \ the creature loses regeneration on the round following the critical hit and\
+    \ can die normally during that round. Creatures whose regeneration always functions\
+    \ are immune to this ability. Finally, if the inquisitor deals energy damage to\
+    \ a creature with vulnerability to that energy type, she deals +1 point of damage\
+    \ per die rolled."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:greater_bane#inquisitor"
+  name: "Greater Bane"
+  label: null
+  type: "Su"
+  description: "At 12th level, whenever an inquisitor uses her bane ability, the amount\
+    \ of bonus damage dealt by the weapon against creatures of the selected type increases\
+    \ to 4d6."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:judgment#inquisitor"
+  name: "Judgment"
+  label: null
+  type: "Su"
+  description: "Starting at 1st level, an inquisitor can pronounce judgment upon her\
+    \ foes as a swift action. Starting when the judgment is made, the inquisitor receives\
+    \ a bonus or special ability based on the type of judgment made.At 1st level,\
+    \ an inquisitor can use this ability once per day. At 4th level and every three\
+    \ levels thereafter, the inquisitor can use this ability one additional time per\
+    \ day. Once activated, this ability lasts until the combat ends, at which point\
+    \ all of the bonuses immediately end. The inquisitor must participate in the combat\
+    \ to gain these bonuses. If she is frightened, panicked, paralyzed, stunned, unconscious,\
+    \ or otherwise prevented from participating in the combat, the ability does not\
+    \ end, but the bonuses do not resume until she can participate in the combat again.When\
+    \ the inquisitor uses this ability, she must select one type of judgment to make.\
+    \ As a swift action, she can change this judgment to another type. If the inquisitor\
+    \ is evil, she receives profane bonuses instead of sacred, as appropriate. Neutral\
+    \ inquisitors must select profane or sacred bonuses. Once made, this choice cannot\
+    \ be changed."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:monster_lore#inquisitor"
+  name: "Monster Lore"
+  label: null
+  type: "Ex"
+  description: "The inquisitor adds her Wisdom modifier on Knowledge skill checks\
+    \ in addition to her Intelligence modifier, when making skill checks to identify\
+    \ the abilities and weaknesses of creatures."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:orisons#inquisitor"
+  name: "Orisons"
+  label: null
+  type: ""
+  description: "Inquisitors learn a number of orisons, or 0-level spells, as noted\
+    \ on Table: Inquisitor Spells Known. These spells are cast like any other spell,\
+    \ but they are not expended when cast and may be used again. Orisons prepared\
+    \ using other spell slots, such as those due to metamagic feats, are expended\
+    \ normally."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:second_judgment#inquisitor"
+  name: "Second Judgment"
+  label: null
+  type: "Ex"
+  description: "At 8th level, whenever an inquisitor uses her judgment ability, she\
+    \ selects two different judgments, instead of one. This only consumes one use\
+    \ of her judgment ability. As a swift action, she can change one of these judgments\
+    \ to another type."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:slayer#inquisitor"
+  name: "Slayer"
+  label: null
+  type: "Ex"
+  description: "At 17th level, an inquisitor learns to focus her judgment. Whenever\
+    \ an inquisitor uses her judgment ability, she must select one type of judgment.\
+    \ She is treated as if she were 5 levels higher for the purposes of determining\
+    \ the bonus granted by this judgment. Unlike other types of judgment, the one\
+    \ enhanced by this ability cannot be changed for the remainder of the judgment."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:solo_tactics#inquisitor"
+  name: "Solo Tactics"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, all of the inquisitor's allies are treated as if they\
+    \ possessed the same teamwork feats as the inquisitor for the purpose of determining\
+    \ whether the inquisitor receives a bonus from her teamwork feats. Her allies\
+    \ do not receive any bonuses from these feats unless they actually possess the\
+    \ feats themselves. The allies' positioning and actions must still meet the prerequisites\
+    \ listed in the teamwork feat for the inquisitor to receive the listed bonus."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:stalwart#inquisitor"
+  name: "Stalwart"
+  label: null
+  type: "Ex"
+  description: "At 11th level, an inquisitor can use mental and physical resiliency\
+    \ to avoid certain attacks. If she makes a Fortitude or Will saving throw against\
+    \ an attack that has a reduced effect on a successful save, she instead avoids\
+    \ the effect entirely. This ability can only be used if the inquisitor is wearing\
+    \ light armor, medium armor, or no armor. A helpless inquisitor does not gain\
+    \ the benefit of the stalwart ability."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:stern_gaze#inquisitor"
+  name: "Stern Gaze"
+  label: null
+  type: "Ex"
+  description: "Inquisitors are skilled at sensing deception and intimidating their\
+    \ foes. An inquisitor receives a morale bonus on all Intimidate and Sense Motive\
+    \ checks equal to 1/2 her inquisitor level (minimum +1)."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:teamwork_feat#inquisitor"
+  name: "Teamwork Feat"
+  label: null
+  type: ""
+  description: "At 3rd level, and every three levels thereafter, the inquisitor gains\
+    \ a bonus feat in addition to those gained from normal advancement. These bonus\
+    \ feats must be selected from those listed as teamwork feats. The inquisitor must\
+    \ meet the prerequisites of the selected bonus feat.As a standard action, the\
+    \ inquisitor can choose to learn a new bonus teamwork feat in place of the most\
+    \ recent bonus teamwork feat she has already learned. In effect, the inquisitor\
+    \ loses the bonus feat in exchange for the new one. She can only change the most\
+    \ recent teamwork feat gained. Whenever she gains a new teamwork feat, the previous\
+    \ teamwork feat becomes set and cannot be changed again. An inquisitor can change\
+    \ her most recent teamwork feat a number of times per day equal to her Wisdom\
+    \ modifier."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:third_judgment#inquisitor"
+  name: "Third Judgment"
+  label: null
+  type: "Ex"
+  description: "At 16th level, whenever an inquisitor uses her judgment ability, she\
+    \ selects three different judgments, instead of just two. This only consumes one\
+    \ use of her judgment ability. As a swift action, the inquisitor can change one\
+    \ of these judgments to another type."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:track#inquisitor"
+  name: "Track"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, an inquisitor adds half her level on Survival skill\
+    \ checks made to follow or identify tracks."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:true_judgment#inquisitor"
+  name: "True Judgment"
+  label: null
+  type: "Su"
+  description: "At 20th level, an inquisitor can call true judgment down upon a foe\
+    \ during combat. Whenever an inquisitor uses her judgment ability, the inquisitor\
+    \ can invoke true judgment on a foe as a swift action. Once declared, the inquisitor\
+    \ can make a single melee (or ranged attack, if the foe is within 30 feet) against\
+    \ the target. If the attack hits, it deals damage normally and the target must\
+    \ make a Fortitude save or die. The DC of this save is equal to 10 + 1/2 the inquisitor's\
+    \ level + the inquisitor's Wisdom modifier. Regardless of whether or not the save\
+    \ is made, the target creature is immune to the inquisitor's true judgment ability\
+    \ for 24 hours. Once this ability has been used, it cannot be used again for 1d4\
+    \ rounds."
   effects: []
   prerequisites: ""
   source: " Advanced Player's Guide"
@@ -469,206 +671,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Advanced Player's Guide"
-- id: "ability:second_judgment#inquisitor"
-  name: "Second Judgment"
-  label: null
-  type: "Ex"
-  description: "At 8th level, whenever an inquisitor uses her judgment ability, she\
-    \ selects two different judgments, instead of one. This only consumes one use\
-    \ of her judgment ability. As a swift action, she can change one of these judgments\
-    \ to another type."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:detect_alignment#inquisitor"
-  name: "Detect Alignment"
-  label: null
-  type: "Sp"
-  description: "At 2nd level, at will, an inquisitor can use detect chaos, detect\
-    \ evil, detect good, or detect law. She can only use one of these at any given\
-    \ time."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:exploit_weakness#inquisitor"
-  name: "Exploit Weakness"
-  label: null
-  type: "Ex"
-  description: "At 14th level, the inquisitor learns to take advantage of any opportunity\
-    \ that presents itself. Whenever the inquisitor scores a critical hit, she ignores\
-    \ any damage reduction the target might have. In addition, if the target has regeneration,\
-    \ the creature loses regeneration on the round following the critical hit and\
-    \ can die normally during that round. Creatures whose regeneration always functions\
-    \ are immune to this ability. Finally, if the inquisitor deals energy damage to\
-    \ a creature with vulnerability to that energy type, she deals +1 point of damage\
-    \ per die rolled."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:judgment#inquisitor"
-  name: "Judgment"
-  label: null
-  type: "Su"
-  description: "Starting at 1st level, an inquisitor can pronounce judgment upon her\
-    \ foes as a swift action. Starting when the judgment is made, the inquisitor receives\
-    \ a bonus or special ability based on the type of judgment made.At 1st level,\
-    \ an inquisitor can use this ability once per day. At 4th level and every three\
-    \ levels thereafter, the inquisitor can use this ability one additional time per\
-    \ day. Once activated, this ability lasts until the combat ends, at which point\
-    \ all of the bonuses immediately end. The inquisitor must participate in the combat\
-    \ to gain these bonuses. If she is frightened, panicked, paralyzed, stunned, unconscious,\
-    \ or otherwise prevented from participating in the combat, the ability does not\
-    \ end, but the bonuses do not resume until she can participate in the combat again.When\
-    \ the inquisitor uses this ability, she must select one type of judgment to make.\
-    \ As a swift action, she can change this judgment to another type. If the inquisitor\
-    \ is evil, she receives profane bonuses instead of sacred, as appropriate. Neutral\
-    \ inquisitors must select profane or sacred bonuses. Once made, this choice cannot\
-    \ be changed."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:track#inquisitor"
-  name: "Track"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, an inquisitor adds half her level on Survival skill\
-    \ checks made to follow or identify tracks."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:discern_lies#inquisitor"
-  name: "Discern Lies"
-  label: null
-  type: "Sp"
-  description: "At 5th level, an inquisitor can discern lies, as per the spell, for\
-    \ a number of rounds per day equal to her inquisitor level. These rounds do not\
-    \ need to be consecutive. Activating this ability is an immediate action."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:slayer#inquisitor"
-  name: "Slayer"
-  label: null
-  type: "Ex"
-  description: "At 17th level, an inquisitor learns to focus her judgment. Whenever\
-    \ an inquisitor uses her judgment ability, she must select one type of judgment.\
-    \ She is treated as if she were 5 levels higher for the purposes of determining\
-    \ the bonus granted by this judgment. Unlike other types of judgment, the one\
-    \ enhanced by this ability cannot be changed for the remainder of the judgment."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:monster_lore#inquisitor"
-  name: "Monster Lore"
-  label: null
-  type: "Ex"
-  description: "The inquisitor adds her Wisdom modifier on Knowledge skill checks\
-    \ in addition to her Intelligence modifier, when making skill checks to identify\
-    \ the abilities and weaknesses of creatures."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:third_judgment#inquisitor"
-  name: "Third Judgment"
-  label: null
-  type: "Ex"
-  description: "At 16th level, whenever an inquisitor uses her judgment ability, she\
-    \ selects three different judgments, instead of just two. This only consumes one\
-    \ use of her judgment ability. As a swift action, the inquisitor can change one\
-    \ of these judgments to another type."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:stern_gaze#inquisitor"
-  name: "Stern Gaze"
-  label: null
-  type: "Ex"
-  description: "Inquisitors are skilled at sensing deception and intimidating their\
-    \ foes. An inquisitor receives a morale bonus on all Intimidate and Sense Motive\
-    \ checks equal to 1/2 her inquisitor level (minimum +1)."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:true_judgment#inquisitor"
-  name: "True Judgment"
-  label: null
-  type: "Su"
-  description: "At 20th level, an inquisitor can call true judgment down upon a foe\
-    \ during combat. Whenever an inquisitor uses her judgment ability, the inquisitor\
-    \ can invoke true judgment on a foe as a swift action. Once declared, the inquisitor\
-    \ can make a single melee (or ranged attack, if the foe is within 30 feet) against\
-    \ the target. If the attack hits, it deals damage normally and the target must\
-    \ make a Fortitude save or die. The DC of this save is equal to 10 + 1/2 the inquisitor's\
-    \ level + the inquisitor's Wisdom modifier. Regardless of whether or not the save\
-    \ is made, the target creature is immune to the inquisitor's true judgment ability\
-    \ for 24 hours. Once this ability has been used, it cannot be used again for 1d4\
-    \ rounds."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:stalwart#inquisitor"
-  name: "Stalwart"
-  label: null
-  type: "Ex"
-  description: "At 11th level, an inquisitor can use mental and physical resiliency\
-    \ to avoid certain attacks. If she makes a Fortitude or Will saving throw against\
-    \ an attack that has a reduced effect on a successful save, she instead avoids\
-    \ the effect entirely. This ability can only be used if the inquisitor is wearing\
-    \ light armor, medium armor, or no armor. A helpless inquisitor does not gain\
-    \ the benefit of the stalwart ability."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:solo_tactics#inquisitor"
-  name: "Solo Tactics"
-  label: null
-  type: "Ex"
-  description: "At 3rd level, all of the inquisitor's allies are treated as if they\
-    \ possessed the same teamwork feats as the inquisitor for the purpose of determining\
-    \ whether the inquisitor receives a bonus from her teamwork feats. Her allies\
-    \ do not receive any bonuses from these feats unless they actually possess the\
-    \ feats themselves. The allies' positioning and actions must still meet the prerequisites\
-    \ listed in the teamwork feat for the inquisitor to receive the listed bonus."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:teamwork_feat#inquisitor"
-  name: "Teamwork Feat"
-  label: null
-  type: ""
-  description: "At 3rd level, and every three levels thereafter, the inquisitor gains\
-    \ a bonus feat in addition to those gained from normal advancement. These bonus\
-    \ feats must be selected from those listed as teamwork feats. The inquisitor must\
-    \ meet the prerequisites of the selected bonus feat.As a standard action, the\
-    \ inquisitor can choose to learn a new bonus teamwork feat in place of the most\
-    \ recent bonus teamwork feat she has already learned. In effect, the inquisitor\
-    \ loses the bonus feat in exchange for the new one. She can only change the most\
-    \ recent teamwork feat gained. Whenever she gains a new teamwork feat, the previous\
-    \ teamwork feat becomes set and cannot be changed again. An inquisitor can change\
-    \ her most recent teamwork feat a number of times per day equal to her Wisdom\
-    \ modifier."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:cunning_initiative#inquisitor"
-  name: "Cunning Initiative"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, an inquisitor adds her Wisdom modifier on initiative\
-    \ checks, in addition to her Dexterity modifier."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:orisons#inquisitor"
-  name: "Orisons"
-  label: null
-  type: ""
-  description: "Inquisitors learn a number of orisons, or 0-level spells, as noted\
-    \ on Table: Inquisitor Spells Known. These spells are cast like any other spell,\
-    \ but they are not expended when cast and may be used again. Orisons prepared\
-    \ using other spell slots, such as those due to metamagic feats, are expended\
-    \ normally."
-  effects: []
-  prerequisites: ""
   source: " Advanced Player's Guide"

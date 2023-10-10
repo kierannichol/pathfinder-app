@@ -22,11 +22,11 @@ alignment: "Any"
 class_skills:
 - "skill:craft"
 - "skill:diplomacy"
-- "skill:spellcraft"
-- "skill:profession"
-- "skill:knowledge"
 - "skill:heal"
+- "skill:knowledge"
+- "skill:profession"
 - "skill:sense_motive"
+- "skill:spellcraft"
 skill_ranks_per_level: "4"
 bab: "B"
 fort: "B"
@@ -395,35 +395,6 @@ levels:
 spell_caster_types:
 - "divine"
 class_features:
-- id: "trait:armor_proficiency#oracle"
-  name: "Armor Proficiency (Oracle)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Advanced Player's Guide"
-- id: "ability:revelation#oracle"
-  name: "Revelation"
-  label: null
-  type: ""
-  description: "At 1st level, 3rd level, and every four levels thereafter (7th, 11th,\
-    \ and so on), an oracle uncovers a new secret about her mystery that grants her\
-    \ powers and abilities. The oracle must select a revelation from the list of revelations\
-    \ available to her mystery (see FAQ at right). If a revelation is chosen at a\
-    \ later level, the oracle gains all of the abilities and bonuses granted by that\
-    \ revelation based on her current level. Unless otherwise noted, activating the\
-    \ power of a revelation is a standard action.Unless otherwise noted, the DC to\
-    \ save against these revelations is equal to 10 + 1/2 the oracle's level + the\
-    \ oracle's Charisma modifier."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
 - id: "ability:final_revelation#oracle"
   name: "Final Revelation"
   label: null
@@ -431,19 +402,6 @@ class_features:
   description: "At 20th level, an oracle learns the final revelation about her mystery,\
     \ granting her amazing powers and abilities. The nature of these bonuses depends\
     \ upon the oracle's mystery."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:oracles_curse#oracle"
-  name: "Oracle's Curse"
-  label: null
-  type: "Ex"
-  description: "Each oracle is cursed, but this curse comes with a benefit as well\
-    \ as a hindrance. This choice is made at 1st level, and once made, it cannot be\
-    \ changed. The oracle's curse cannot be removed or dispelled without the aid of\
-    \ a deity. An oracle's curse is based on her oracle level plus one for every two\
-    \ levels or Hit Dice other than oracle. Each oracle must choose one of the following\
-    \ curses."
   effects: []
   prerequisites: ""
   source: " Advanced Player's Guide"
@@ -487,6 +445,19 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Advanced Player's Guide"
+- id: "ability:oracles_curse#oracle"
+  name: "Oracle's Curse"
+  label: null
+  type: "Ex"
+  description: "Each oracle is cursed, but this curse comes with a benefit as well\
+    \ as a hindrance. This choice is made at 1st level, and once made, it cannot be\
+    \ changed. The oracle's curse cannot be removed or dispelled without the aid of\
+    \ a deity. An oracle's curse is based on her oracle level plus one for every two\
+    \ levels or Hit Dice other than oracle. Each oracle must choose one of the following\
+    \ curses."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
 - id: "ability:orisons#oracle"
   name: "Orisons"
   label: null
@@ -496,6 +467,35 @@ class_features:
     \ any other spell, but they do not consume any slots and may be used again."
   effects: []
   prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:revelation#oracle"
+  name: "Revelation"
+  label: null
+  type: ""
+  description: "At 1st level, 3rd level, and every four levels thereafter (7th, 11th,\
+    \ and so on), an oracle uncovers a new secret about her mystery that grants her\
+    \ powers and abilities. The oracle must select a revelation from the list of revelations\
+    \ available to her mystery (see FAQ at right). If a revelation is chosen at a\
+    \ later level, the oracle gains all of the abilities and bonuses granted by that\
+    \ revelation based on her current level. Unless otherwise noted, activating the\
+    \ power of a revelation is a standard action.Unless otherwise noted, the DC to\
+    \ save against these revelations is equal to 10 + 1/2 the oracle's level + the\
+    \ oracle's Charisma modifier."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "trait:armor_proficiency#oracle"
+  name: "Armor Proficiency (Oracle)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Advanced Player's Guide"
 - id: "trait:weapon_proficiency#oracle"
   name: "Weapon Proficiency (Oracle)"

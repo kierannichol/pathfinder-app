@@ -19,15 +19,15 @@ hit_die: "D8"
 alignment: "A cleric's alignment must be within one step of her deity's, along either\
   \ the law/chaos axis or the good/evil axis"
 class_skills:
+- "skill:appraise"
 - "skill:craft"
 - "skill:diplomacy"
-- "skill:spellcraft"
-- "skill:profession"
-- "skill:knowledge"
 - "skill:heal"
-- "skill:sense_motive"
-- "skill:appraise"
+- "skill:knowledge"
 - "skill:linguistics"
+- "skill:profession"
+- "skill:sense_motive"
+- "skill:spellcraft"
 skill_ranks_per_level: "2"
 bab: "B"
 fort: "A"
@@ -299,37 +299,6 @@ levels:
 spell_caster_types:
 - "divine"
 class_features:
-- id: "trait:armor_proficiency#cleric"
-  name: "Armor Proficiency (Cleric)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:spontaneous_casting#cleric"
-  name: "Spontaneous Casting"
-  label: null
-  type: ""
-  description: "A good cleric (or a neutral cleric of a good deity) can channel stored\
-    \ spell energy into healing spells that she did not prepare ahead of time. The\
-    \ cleric can “lose\" any prepared spell that is not an orison or domain spell\
-    \ in order to cast any cure spell of the same spell level or lower (a cure spell\
-    \ is any spell with “cure\" in its name).An evil cleric (or a neutral cleric of\
-    \ an evil deity) can't convert prepared spells to cure spells but can convert\
-    \ them to inflict spells (an inflict spell is one with “inflict\" in its name).A\
-    \ cleric who is neither good nor evil and whose deity is neither good nor evil\
-    \ can convert spells to either cure spells or inflict spells (player's choice).\
-    \ Once the player makes this choice, it cannot be reversed. This choice also determines\
-    \ whether the cleric channels positive or negative energy (see channel energy)."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
 - id: "ability:aura#cleric"
   name: "Aura"
   label: null
@@ -392,6 +361,47 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
+- id: "ability:orisons#cleric"
+  name: "Orisons"
+  label: null
+  type: ""
+  description: "Clerics can prepare a number of orisons, or 0-level spells, each day,\
+    \ as noted on Table: Cleric under “Spells per day.\" These spells are treated\
+    \ like any other spell, but they are not expended when cast and may be used again."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:spontaneous_casting#cleric"
+  name: "Spontaneous Casting"
+  label: null
+  type: ""
+  description: "A good cleric (or a neutral cleric of a good deity) can channel stored\
+    \ spell energy into healing spells that she did not prepare ahead of time. The\
+    \ cleric can “lose\" any prepared spell that is not an orison or domain spell\
+    \ in order to cast any cure spell of the same spell level or lower (a cure spell\
+    \ is any spell with “cure\" in its name).An evil cleric (or a neutral cleric of\
+    \ an evil deity) can't convert prepared spells to cure spells but can convert\
+    \ them to inflict spells (an inflict spell is one with “inflict\" in its name).A\
+    \ cleric who is neither good nor evil and whose deity is neither good nor evil\
+    \ can convert spells to either cure spells or inflict spells (player's choice).\
+    \ Once the player makes this choice, it cannot be reversed. This choice also determines\
+    \ whether the cleric channels positive or negative energy (see channel energy)."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "trait:armor_proficiency#cleric"
+  name: "Armor Proficiency (Cleric)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
+  source: " Pathfinder RPG Core Rulebook"
 - id: "trait:weapon_proficiency#cleric"
   name: "Weapon Proficiency (Cleric)"
   label: null
@@ -437,14 +447,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:orisons#cleric"
-  name: "Orisons"
-  label: null
-  type: ""
-  description: "Clerics can prepare a number of orisons, or 0-level spells, each day,\
-    \ as noted on Table: Cleric under “Spells per day.\" These spells are treated\
-    \ like any other spell, but they are not expended when cast and may be used again."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"

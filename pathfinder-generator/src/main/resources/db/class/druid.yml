@@ -23,18 +23,18 @@ source: " Pathfinder RPG Core Rulebook"
 hit_die: "D8"
 alignment: "Any neutral"
 class_skills:
-- "skill:fly"
-- "skill:perception"
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:swim"
-- "skill:survival"
-- "skill:spellcraft"
-- "skill:profession"
 - "skill:climb"
-- "skill:knowledge"
-- "skill:ride"
+- "skill:craft"
+- "skill:fly"
+- "skill:handle_animal"
 - "skill:heal"
+- "skill:knowledge"
+- "skill:perception"
+- "skill:profession"
+- "skill:ride"
+- "skill:spellcraft"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "B"
 fort: "A"
@@ -311,28 +311,77 @@ levels:
 spell_caster_types:
 - "divine"
 class_features:
-- id: "trait:armor_proficiency#druid"
-  name: "Armor Proficiency (Druid)"
+- id: "ability:a_thousand_faces#druid"
+  name: "A Thousand Faces"
   label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
+  type: "Su"
+  description: "At 13th level, a druid gains the ability to change her appearance\
+    \ at will, as if using the alter self spell, but only while in her normal form."
+  effects: []
+  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:woodland_stride#druid"
-  name: "Woodland Stride"
+- id: "ability:nature_bond#druid"
+  name: "Nature Bond"
   label: null
   type: "Ex"
-  description: "Starting at 2nd level, a druid may move through any sort of undergrowth\
-    \ (such as natural thorns, briars, overgrown areas, and similar terrain) at her\
-    \ normal speed and without taking damage or suffering any other impairment. Thorns,\
-    \ briars, and overgrown areas that have been magically manipulated to impede motion,\
-    \ however, still affect her."
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:nature_sense#druid"
+  name: "Nature Sense"
+  label: null
+  type: "Ex"
+  description: "A druid gains a +2 bonus on Knowledge (nature) and Survival checks."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:orisons#druid"
+  name: "Orisons"
+  label: null
+  type: "Sp"
+  description: "Druids can prepare a number of orisons, or 0-level spells, each day,\
+    \ as noted on Table: Druid under “Spells per Day.\" These spells are cast like\
+    \ any other spell, but they are not expended when cast and may be used again."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:resist_natures_lure#druid"
+  name: "Resist Nature's Lure"
+  label: null
+  type: "Ex"
+  description: "Starting at 4th level, a druid gains a +4 bonus on saving throws against\
+    \ the spell-like and supernatural abilities of fey. This bonus also applies to\
+    \ spells and effects that target plants, such as blight, entangle, spike growth,\
+    \ and warp wood."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:timeless_body#druid"
+  name: "Timeless Body"
+  label: null
+  type: "Ex"
+  description: "After attaining 15th level, a druid no longer takes ability score\
+    \ penalties for aging and cannot be magically aged. Any penalties she may have\
+    \ already incurred, however, remain in place. Bonuses still accrue, and the druid\
+    \ still dies of old age when her time is up."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:trackless_step#druid"
+  name: "Trackless Step"
+  label: null
+  type: "Ex"
+  description: "Starting at 3rd level, a druid leaves no trail in natural surroundings\
+    \ and cannot be tracked. She may choose to leave a trail if so desired."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:venom_immunity#druid"
+  name: "Venom Immunity"
+  label: null
+  type: "Ex"
+  description: "At 9th level, a druid gains immunity to all poisons."
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
@@ -394,43 +443,30 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:timeless_body#druid"
-  name: "Timeless Body"
+- id: "ability:woodland_stride#druid"
+  name: "Woodland Stride"
   label: null
   type: "Ex"
-  description: "After attaining 15th level, a druid no longer takes ability score\
-    \ penalties for aging and cannot be magically aged. Any penalties she may have\
-    \ already incurred, however, remain in place. Bonuses still accrue, and the druid\
-    \ still dies of old age when her time is up."
+  description: "Starting at 2nd level, a druid may move through any sort of undergrowth\
+    \ (such as natural thorns, briars, overgrown areas, and similar terrain) at her\
+    \ normal speed and without taking damage or suffering any other impairment. Thorns,\
+    \ briars, and overgrown areas that have been magically manipulated to impede motion,\
+    \ however, still affect her."
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:resist_natures_lure#druid"
-  name: "Resist Nature's Lure"
+- id: "trait:armor_proficiency#druid"
+  name: "Armor Proficiency (Druid)"
   label: null
-  type: "Ex"
-  description: "Starting at 4th level, a druid gains a +4 bonus on saving throws against\
-    \ the spell-like and supernatural abilities of fey. This bonus also applies to\
-    \ spells and effects that target plants, such as blight, entangle, spike growth,\
-    \ and warp wood."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:nature_sense#druid"
-  name: "Nature Sense"
-  label: null
-  type: "Ex"
-  description: "A druid gains a +2 bonus on Knowledge (nature) and Survival checks."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:nature_bond#druid"
-  name: "Nature Bond"
-  label: null
-  type: "Ex"
-  description: ""
-  effects: []
-  prerequisites: ""
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder RPG Core Rulebook"
 - id: "trait:weapon_proficiency#druid"
   name: "Weapon Proficiency (Druid)"
@@ -449,40 +485,4 @@ class_features:
   - "SET proficiency:sling 1"
   - "SET proficiency:scythe 1"
   prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:orisons#druid"
-  name: "Orisons"
-  label: null
-  type: "Sp"
-  description: "Druids can prepare a number of orisons, or 0-level spells, each day,\
-    \ as noted on Table: Druid under “Spells per Day.\" These spells are cast like\
-    \ any other spell, but they are not expended when cast and may be used again."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:a_thousand_faces#druid"
-  name: "A Thousand Faces"
-  label: null
-  type: "Su"
-  description: "At 13th level, a druid gains the ability to change her appearance\
-    \ at will, as if using the alter self spell, but only while in her normal form."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:trackless_step#druid"
-  name: "Trackless Step"
-  label: null
-  type: "Ex"
-  description: "Starting at 3rd level, a druid leaves no trail in natural surroundings\
-    \ and cannot be tracked. She may choose to leave a trail if so desired."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:venom_immunity#druid"
-  name: "Venom Immunity"
-  label: null
-  type: "Ex"
-  description: "At 9th level, a druid gains immunity to all poisons."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"

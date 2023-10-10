@@ -25,18 +25,18 @@ source: " Pathfinder Roleplaying Game: Niobe"
 hit_die: "D8"
 alignment: "An omdura's alignment must be within one step of her deity's"
 class_skills:
-- "skill:perception"
+- "skill:appraise"
+- "skill:bluff"
 - "skill:craft"
 - "skill:diplomacy"
-- "skill:bluff"
-- "skill:intimidate"
-- "skill:spellcraft"
-- "skill:profession"
-- "skill:knowledge"
 - "skill:heal"
-- "skill:sense_motive"
-- "skill:appraise"
+- "skill:intimidate"
+- "skill:knowledge"
 - "skill:linguistics"
+- "skill:perception"
+- "skill:profession"
+- "skill:sense_motive"
+- "skill:spellcraft"
 skill_ranks_per_level: "4"
 bab: "B"
 fort: "A"
@@ -336,6 +336,19 @@ levels:
 spell_caster_types:
 - "divine"
 class_features:
+- id: "trait:armor_proficiency#omdura"
+  name: "Armor Proficiency (Omdura)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game: Niobe"
 - id: "trait:weapon_proficiency#omdura"
   name: "Weapon Proficiency (Omdura)"
   label: null
@@ -380,18 +393,5 @@ class_features:
   - "SET proficiency:traveling_kettle 1"
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game: Niobe"
-- id: "trait:armor_proficiency#omdura"
-  name: "Armor Proficiency (Omdura)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
   prerequisites: null
   source: " Pathfinder Roleplaying Game: Niobe"

@@ -21,15 +21,15 @@ source: " Pathfinder RPG Core Rulebook"
 hit_die: "D10"
 alignment: "Any"
 class_skills:
+- "skill:climb"
 - "skill:craft"
 - "skill:handle_animal"
-- "skill:swim"
-- "skill:survival"
 - "skill:intimidate"
-- "skill:profession"
-- "skill:climb"
 - "skill:knowledge"
+- "skill:profession"
 - "skill:ride"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "2"
 bab: "A"
 fort: "A"
@@ -185,6 +185,74 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
+- id: "ability:advanced_weapon_training#fighter"
+  name: "Advanced Weapon Training"
+  label: null
+  type: ""
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:armor_mastery#fighter"
+  name: "Armor Mastery"
+  label: null
+  type: "Ex"
+  description: "At 19th level, a fighter gains damage reduction 5/-- whenever he is\
+    \ wearing armor or using a shield."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:armor_training#fighter"
+  name: "Armor Training"
+  label: null
+  type: "Ex"
+  description: "Starting at 3rd level, a fighter learns to be more maneuverable while\
+    \ wearing armor. Whenever he is wearing armor, he reduces the armor check penalty\
+    \ by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by\
+    \ his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses\
+    \ increase by +1 each time, to a maximum –4 reduction of the armor check penalty\
+    \ and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter\
+    \ can also move at his normal speed while wearing medium armor. At 7th level,\
+    \ a fighter can move at his normal speed while wearing heavy armor.Advanced Armor\
+    \ Training: Beginning at 7th level, instead of increasing the benefits provided\
+    \ by armor training (reducing his armor's check penalty by 1 and increasing its\
+    \ maximum Dexterity bonus by 1), a fighter can choose an advanced armor training\
+    \ option (see Advanced Armor Training below) . If the fighter does so, he still\
+    \ gains the ability to move at his normal speed while wearing medium armor at\
+    \ 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player\
+    \ Companion: Armor Master's Handbook"
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bonus_feat#fighter"
+  name: "Bonus Feat"
+  label: null
+  type: ""
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:bravery#fighter"
+  name: "Bravery"
+  label: null
+  type: "Ex"
+  description: "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against\
+    \ fear. This bonus increases by +1 for every four levels beyond 2nd."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:weapon_mastery#fighter"
+  name: "Weapon Mastery"
+  label: null
+  type: "Ex"
+  description: "At 20th level, a fighter chooses one weapon, such as the longsword,\
+    \ greataxe, or longbow. Any attacks made with that weapon automatically confirm\
+    \ all critical threats and have their damage multiplier increased by 1 (×2 becomes\
+    \ ×3, for example). In addition, he cannot be disarmed while wielding a weapon\
+    \ of this type."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
 - id: "ability:weapon_training#fighter"
   name: "Weapon Training"
   label: null
@@ -212,49 +280,6 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:armor_training#fighter"
-  name: "Armor Training"
-  label: null
-  type: "Ex"
-  description: "Starting at 3rd level, a fighter learns to be more maneuverable while\
-    \ wearing armor. Whenever he is wearing armor, he reduces the armor check penalty\
-    \ by 1 (to a minimum of 0) and increases the maximum Dexterity bonus allowed by\
-    \ his armor by 1. Every four levels thereafter (7th, 11th, and 15th), these bonuses\
-    \ increase by +1 each time, to a maximum –4 reduction of the armor check penalty\
-    \ and a +4 increase of the maximum Dexterity bonus allowed.In addition, a fighter\
-    \ can also move at his normal speed while wearing medium armor. At 7th level,\
-    \ a fighter can move at his normal speed while wearing heavy armor.Advanced Armor\
-    \ Training: Beginning at 7th level, instead of increasing the benefits provided\
-    \ by armor training (reducing his armor's check penalty by 1 and increasing its\
-    \ maximum Dexterity bonus by 1), a fighter can choose an advanced armor training\
-    \ option (see Advanced Armor Training below) . If the fighter does so, he still\
-    \ gains the ability to move at his normal speed while wearing medium armor at\
-    \ 3rd level, and while wearing heavy armor at 7th level. Source: Pathfinder Player\
-    \ Companion: Armor Master's Handbook"
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:weapon_mastery#fighter"
-  name: "Weapon Mastery"
-  label: null
-  type: "Ex"
-  description: "At 20th level, a fighter chooses one weapon, such as the longsword,\
-    \ greataxe, or longbow. Any attacks made with that weapon automatically confirm\
-    \ all critical threats and have their damage multiplier increased by 1 (×2 becomes\
-    \ ×3, for example). In addition, he cannot be disarmed while wielding a weapon\
-    \ of this type."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:bravery#fighter"
-  name: "Bravery"
-  label: null
-  type: "Ex"
-  description: "Starting at 2nd level, a fighter gains a +1 bonus on Will saves against\
-    \ fear. This bonus increases by +1 for every four levels beyond 2nd."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
 - id: "trait:armor_proficiency#fighter"
   name: "Armor Proficiency (Fighter)"
   label: null
@@ -269,22 +294,6 @@ class_features:
   - "SET proficiency:medium_armor 1"
   - "SET proficiency:heavy_shield 1"
   prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:bonus_feat#fighter"
-  name: "Bonus Feat"
-  label: null
-  type: ""
-  description: ""
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:advanced_weapon_training#fighter"
-  name: "Advanced Weapon Training"
-  label: null
-  type: ""
-  description: ""
-  effects: []
-  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "trait:weapon_proficiency#fighter"
   name: "Weapon Proficiency (Fighter)"
@@ -398,13 +407,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:armor_mastery#fighter"
-  name: "Armor Mastery"
-  label: null
-  type: "Ex"
-  description: "At 19th level, a fighter gains damage reduction 5/-- whenever he is\
-    \ wearing armor or using a shield."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"

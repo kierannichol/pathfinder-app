@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
-import pathfinder.util.NameToIdConverter;
 
 @RequiredArgsConstructor
 public enum ArmorProficiency implements NamedEntity {

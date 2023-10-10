@@ -44,27 +44,27 @@ source: " Pathfinder Roleplaying Game Ultimate Intrigue"
 hit_die: "D8"
 alignment: "Any"
 class_skills:
-- "skill:sleight_of_hand"
-- "skill:swim"
-- "skill:diplomacy"
-- "skill:bluff"
-- "skill:disable_device"
 - "skill:acrobatics"
-- "skill:profession"
-- "skill:climb"
-- "skill:ride"
-- "skill:perception"
-- "skill:craft"
-- "skill:use_magic_device"
-- "skill:escape_artist"
-- "skill:survival"
-- "skill:intimidate"
-- "skill:stealth"
-- "skill:disguise"
-- "skill:knowledge"
-- "skill:sense_motive"
 - "skill:appraise"
+- "skill:bluff"
+- "skill:climb"
+- "skill:craft"
+- "skill:diplomacy"
+- "skill:disable_device"
+- "skill:disguise"
+- "skill:escape_artist"
+- "skill:intimidate"
+- "skill:knowledge"
+- "skill:perception"
 - "skill:perform"
+- "skill:profession"
+- "skill:ride"
+- "skill:sense_motive"
+- "skill:sleight_of_hand"
+- "skill:stealth"
+- "skill:survival"
+- "skill:swim"
+- "skill:use_magic_device"
 skill_ranks_per_level: "6"
 bab: "B"
 fort: "B"
@@ -221,6 +221,47 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
+- id: "ability:dual_identity#vigilante"
+  name: "Dual Identity"
+  label: null
+  type: "Ex"
+  description: "A vigilante hides his true identity, allowing him to move about social\
+    \ circles and nobility without carrying the stigma of his ruthless actions. In\
+    \ effect, the vigilante has two identities: one is a polite member of society\
+    \ while the other is a skilled and cunning warrior. To keep up this charade, the\
+    \ vigilante usually has two names: his true name, used in polite company, and\
+    \ his vigilante name, used to strike fear in the hearts of those who oppose him.\
+    \ Knowledge checks about one do not reveal information about the other, unless\
+    \ the vigilante's true identity revealed to the world at large.The vigilante can\
+    \ start each day in either of his identities, referred to simply as social or\
+    \ vigilante. Changing from one identity to another takes 1 minute and must be\
+    \ done out of sight from other creatures to preserve the vigilante's secret.Changing\
+    \ identities is more than just changing outfits and clothing (although that is\
+    \ certainly a part of it); the process often also involves applying make-up, altering\
+    \ his hair, and adjusting other personal effects. Furthermore, the change is as\
+    \ much a state of mind as of body, so items such as a hat of disguise and similar\
+    \ spells and effects that change the user's appearance do not reduce the time\
+    \ required to change identities. Most social talents require the vigilante to\
+    \ be in his social identity, but a vigilante who uses vigilante talents in his\
+    \ social identity risks exposing his secret.Despite being a single person, a vigilante's\
+    \ dual nature allows him to have two alignments, one for each of his identities.\
+    \ When in an identity, he is treated as having that identity's alignment for all\
+    \ spells, magic items, and abilities that rely on alignment. For the purpose of\
+    \ meeting a qualification for a feat, class, or any ability, he is only eligible\
+    \ if both of his alignments meet the requirements.A vigilante's two alignments\
+    \ cannot be more than one step from each other on a single alignment axis. For\
+    \ example, a vigilante with a lawful neutral social identity could have a vigilante\
+    \ identity that is lawful good, lawful neutral, lawful evil, neutral, neutral\
+    \ good, or neutral evil. If a vigilante is the target of an effect that would\
+    \ change his alignment, it changes both of his alignments to the new alignment.Any\
+    \ attempts to scry or otherwise locate the vigilante work only if the vigilante\
+    \ is currently in the identity the creature is attempting to locate (or if the\
+    \ creature knows that the two identities are the same individual). Otherwise,\
+    \ the spell or effect has no effect, revealing nothing but darkness, as if the\
+    \ target were invalid or did not exist."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
 - id: "ability:frightening_appearance#vigilante"
   name: "Frightening Appearance"
   label: null
@@ -240,6 +281,18 @@ class_features:
     \ vigilante's frightening appearance for 24 hours. This effect is in addition\
     \ to the bonuses gained from the startling appearance ability. This is a mind-affecting\
     \ fear effect."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:seamless_guise#vigilante"
+  name: "Seamless Guise"
+  label: null
+  type: "Ex"
+  description: "A vigilante knows how to behave in a way that appears perfectly proper\
+    \ and normal for his current identity. Should anyone suspect him of being anything\
+    \ other than what he appears to be while either in his social or vigilante identity,\
+    \ he can attempt a Disguise check with a +20 circumstance bonus to appear as his\
+    \ current identity, and not as his other identity."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Ultimate Intrigue"
@@ -271,6 +324,56 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:stunning_appearance#vigilante"
+  name: "Stunning Appearance"
+  label: null
+  type: "Ex"
+  description: "At 17th level, a vigilante can leave his foes unable to respond when\
+    \ he appears. Whenever a vigilante with this ability makes a successful attack\
+    \ against a foe that is unaware of the vigilante's presence (see startling appearance),\
+    \ the foe must make a successful Will save (DC = 10 + 1/2 the vigilante's class\
+    \ level + his Charisma modifier) or be stunned until the end of the vigilante's\
+    \ next turn. If the creature has more HD than the vigilante's class level, it\
+    \ receives a +4 circumstance bonus on this save.This ability is in addition to\
+    \ the effects of startling appearance and frightening appearance. Once a creature\
+    \ has been the target of this ability (regardless of whether or not the saving\
+    \ throw is successful), it is immune to that vigilante's stunning appearance for\
+    \ 24 hours. This is a mind-affecting fear effect."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:unshakable#vigilante"
+  name: "Unshakable"
+  label: null
+  type: "Ex"
+  description: "Starting at 3rd level, a vigilante adds his class level to the DC\
+    \ of any attempts to Intimidate him."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "ability:vengeance_strike#vigilante"
+  name: "Vengeance Strike"
+  label: null
+  type: "Ex"
+  description: "At 20th level, a vigilante can study a target to strike more viciously.\
+    \ He can spend up to 5 standard actions, which all must be in consecutive rounds.\
+    \ On the following round, he can make a vengeance strike against the studied creature.\
+    \ The target must remain unaware of the vigilante's presence (or not see him as\
+    \ a threat) until the attack. For each round spent studying the target, the vigilante\
+    \ grants himself one of the following benefits on his vengeance strike: gain a\
+    \ +4 circumstance bonus on the attack roll, deal an additional 3d6 points of precision\
+    \ damage if he hits, or treat the attack roll as if it were 2 higher for the purposes\
+    \ of determining whether the attack hit or threatens a critical hit (to maximum\
+    \ effective roll of 20). Each round of study can be spent in a different way or\
+    \ the same way (they stack with each other), but each round of study must be allocated\
+    \ before the attack roll is made. If the vigilante is an avenger, he automatically\
+    \ confirms any critical hits threatened by his vengeance strike. If the vigilante\
+    \ is a stalker and would normally be able to add a special effect from a vigilante\
+    \ talent with an asterisk (*) to this attack, he can instead add two special effects\
+    \ to his vengeance strike."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
 - id: "ability:vigilante_specialization#vigilante"
   name: "Vigilante Specialization"
   label: null
@@ -296,17 +399,38 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "ability:seamless_guise#vigilante"
-  name: "Seamless Guise"
+- id: "ability:vigilante_talent#vigilante"
+  name: "Vigilante Talent"
   label: null
-  type: "Ex"
-  description: "A vigilante knows how to behave in a way that appears perfectly proper\
-    \ and normal for his current identity. Should anyone suspect him of being anything\
-    \ other than what he appears to be while either in his social or vigilante identity,\
-    \ he can attempt a Disguise check with a +20 circumstance bonus to appear as his\
-    \ current identity, and not as his other identity."
+  type: ""
+  description: "Starting at 2nd level and every 2 levels thereafter, a vigilante gains\
+    \ a vigilante talent. Unless otherwise noted, a talent can be selected only once.\
+    \ Some talents require the vigilante to meet prerequisites before they can be\
+    \ chosen, such as possessing another vigilante talent, possessing a particular\
+    \ specialization, or attaining a minimum level. Once a talent has been selected,\
+    \ it can't be changed.If the vigilante uses any of these talents while in his\
+    \ social identity, he must succeed at a Disguise check against the Perception\
+    \ checks of all onlookers (without the +20 circumstance bonus from seamless guise)\
+    \ or the onlookers will realize that he is more than his social identity appears\
+    \ to be and perhaps discover the social and vigilante identities are one and the\
+    \ same. If a talent calls for a saving throw, the DC for that save is equal to\
+    \ 10 + 1/2 the vigilante's level + the vigilante's Charisma modifier, unless stated\
+    \ otherwise."
   effects: []
   prerequisites: ""
+  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
+- id: "trait:armor_proficiency#vigilante"
+  name: "Armor Proficiency (Vigilante)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game Ultimate Intrigue"
 - id: "trait:weapon_proficiency#vigilante"
   name: "Weapon Proficiency (Vigilante)"
@@ -420,128 +544,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "ability:unshakable#vigilante"
-  name: "Unshakable"
-  label: null
-  type: "Ex"
-  description: "Starting at 3rd level, a vigilante adds his class level to the DC\
-    \ of any attempts to Intimidate him."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "ability:stunning_appearance#vigilante"
-  name: "Stunning Appearance"
-  label: null
-  type: "Ex"
-  description: "At 17th level, a vigilante can leave his foes unable to respond when\
-    \ he appears. Whenever a vigilante with this ability makes a successful attack\
-    \ against a foe that is unaware of the vigilante's presence (see startling appearance),\
-    \ the foe must make a successful Will save (DC = 10 + 1/2 the vigilante's class\
-    \ level + his Charisma modifier) or be stunned until the end of the vigilante's\
-    \ next turn. If the creature has more HD than the vigilante's class level, it\
-    \ receives a +4 circumstance bonus on this save.This ability is in addition to\
-    \ the effects of startling appearance and frightening appearance. Once a creature\
-    \ has been the target of this ability (regardless of whether or not the saving\
-    \ throw is successful), it is immune to that vigilante's stunning appearance for\
-    \ 24 hours. This is a mind-affecting fear effect."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "trait:armor_proficiency#vigilante"
-  name: "Armor Proficiency (Vigilante)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "ability:vigilante_talent#vigilante"
-  name: "Vigilante Talent"
-  label: null
-  type: ""
-  description: "Starting at 2nd level and every 2 levels thereafter, a vigilante gains\
-    \ a vigilante talent. Unless otherwise noted, a talent can be selected only once.\
-    \ Some talents require the vigilante to meet prerequisites before they can be\
-    \ chosen, such as possessing another vigilante talent, possessing a particular\
-    \ specialization, or attaining a minimum level. Once a talent has been selected,\
-    \ it can't be changed.If the vigilante uses any of these talents while in his\
-    \ social identity, he must succeed at a Disguise check against the Perception\
-    \ checks of all onlookers (without the +20 circumstance bonus from seamless guise)\
-    \ or the onlookers will realize that he is more than his social identity appears\
-    \ to be and perhaps discover the social and vigilante identities are one and the\
-    \ same. If a talent calls for a saving throw, the DC for that save is equal to\
-    \ 10 + 1/2 the vigilante's level + the vigilante's Charisma modifier, unless stated\
-    \ otherwise."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "ability:dual_identity#vigilante"
-  name: "Dual Identity"
-  label: null
-  type: "Ex"
-  description: "A vigilante hides his true identity, allowing him to move about social\
-    \ circles and nobility without carrying the stigma of his ruthless actions. In\
-    \ effect, the vigilante has two identities: one is a polite member of society\
-    \ while the other is a skilled and cunning warrior. To keep up this charade, the\
-    \ vigilante usually has two names: his true name, used in polite company, and\
-    \ his vigilante name, used to strike fear in the hearts of those who oppose him.\
-    \ Knowledge checks about one do not reveal information about the other, unless\
-    \ the vigilante's true identity revealed to the world at large.The vigilante can\
-    \ start each day in either of his identities, referred to simply as social or\
-    \ vigilante. Changing from one identity to another takes 1 minute and must be\
-    \ done out of sight from other creatures to preserve the vigilante's secret.Changing\
-    \ identities is more than just changing outfits and clothing (although that is\
-    \ certainly a part of it); the process often also involves applying make-up, altering\
-    \ his hair, and adjusting other personal effects. Furthermore, the change is as\
-    \ much a state of mind as of body, so items such as a hat of disguise and similar\
-    \ spells and effects that change the user's appearance do not reduce the time\
-    \ required to change identities. Most social talents require the vigilante to\
-    \ be in his social identity, but a vigilante who uses vigilante talents in his\
-    \ social identity risks exposing his secret.Despite being a single person, a vigilante's\
-    \ dual nature allows him to have two alignments, one for each of his identities.\
-    \ When in an identity, he is treated as having that identity's alignment for all\
-    \ spells, magic items, and abilities that rely on alignment. For the purpose of\
-    \ meeting a qualification for a feat, class, or any ability, he is only eligible\
-    \ if both of his alignments meet the requirements.A vigilante's two alignments\
-    \ cannot be more than one step from each other on a single alignment axis. For\
-    \ example, a vigilante with a lawful neutral social identity could have a vigilante\
-    \ identity that is lawful good, lawful neutral, lawful evil, neutral, neutral\
-    \ good, or neutral evil. If a vigilante is the target of an effect that would\
-    \ change his alignment, it changes both of his alignments to the new alignment.Any\
-    \ attempts to scry or otherwise locate the vigilante work only if the vigilante\
-    \ is currently in the identity the creature is attempting to locate (or if the\
-    \ creature knows that the two identities are the same individual). Otherwise,\
-    \ the spell or effect has no effect, revealing nothing but darkness, as if the\
-    \ target were invalid or did not exist."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Ultimate Intrigue"
-- id: "ability:vengeance_strike#vigilante"
-  name: "Vengeance Strike"
-  label: null
-  type: "Ex"
-  description: "At 20th level, a vigilante can study a target to strike more viciously.\
-    \ He can spend up to 5 standard actions, which all must be in consecutive rounds.\
-    \ On the following round, he can make a vengeance strike against the studied creature.\
-    \ The target must remain unaware of the vigilante's presence (or not see him as\
-    \ a threat) until the attack. For each round spent studying the target, the vigilante\
-    \ grants himself one of the following benefits on his vengeance strike: gain a\
-    \ +4 circumstance bonus on the attack roll, deal an additional 3d6 points of precision\
-    \ damage if he hits, or treat the attack roll as if it were 2 higher for the purposes\
-    \ of determining whether the attack hit or threatens a critical hit (to maximum\
-    \ effective roll of 20). Each round of study can be spent in a different way or\
-    \ the same way (they stack with each other), but each round of study must be allocated\
-    \ before the attack roll is made. If the vigilante is an avenger, he automatically\
-    \ confirms any critical hits threatened by his vengeance strike. If the vigilante\
-    \ is a stalker and would normally be able to add a special effect from a vigilante\
-    \ talent with an asterisk (*) to this attack, he can instead add two special effects\
-    \ to his vengeance strike."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder Roleplaying Game Ultimate Intrigue"

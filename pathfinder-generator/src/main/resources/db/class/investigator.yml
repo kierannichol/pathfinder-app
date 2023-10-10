@@ -21,27 +21,27 @@ source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 hit_die: "D8"
 alignment: "Any"
 class_skills:
-- "skill:sleight_of_hand"
-- "skill:diplomacy"
-- "skill:bluff"
-- "skill:disable_device"
-- "skill:spellcraft"
 - "skill:acrobatics"
-- "skill:profession"
-- "skill:climb"
-- "skill:heal"
-- "skill:perception"
-- "skill:craft"
-- "skill:use_magic_device"
-- "skill:escape_artist"
-- "skill:intimidate"
-- "skill:stealth"
-- "skill:disguise"
-- "skill:knowledge"
-- "skill:sense_motive"
 - "skill:appraise"
+- "skill:bluff"
+- "skill:climb"
+- "skill:craft"
+- "skill:diplomacy"
+- "skill:disable_device"
+- "skill:disguise"
+- "skill:escape_artist"
+- "skill:heal"
+- "skill:intimidate"
+- "skill:knowledge"
 - "skill:linguistics"
+- "skill:perception"
 - "skill:perform"
+- "skill:profession"
+- "skill:sense_motive"
+- "skill:sleight_of_hand"
+- "skill:spellcraft"
+- "skill:stealth"
+- "skill:use_magic_device"
 skill_ranks_per_level: "6"
 bab: "B"
 fort: "B"
@@ -281,97 +281,6 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
-- id: "ability:trap_sense#investigator"
-  name: "Trap Sense"
-  label: null
-  type: "Ex"
-  description: "At 3rd level, an investigator gains an intuitive sense that alerts\
-    \ him to danger from traps, granting him a +1 bonus on Reflex saving throws to\
-    \ avoid traps and a +1 dodge bonus to AC against attacks by traps. At 6th level\
-    \ and every 3 levels thereafter, these bonuses increase by 1 (to a maximum of\
-    \ +6 at 18th level)."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:studied_strike#investigator"
-  name: "Studied Strike"
-  label: null
-  type: "Ex"
-  description: "At 4th level, an investigator can choose to make a studied strike\
-    \ against the target of his studied combat as a free action, upon successfully\
-    \ hitting his studied target with a melee attack, to deal additional damage. The\
-    \ damage is 1d6 at 4th level, and increases by 1d6 for every 2 levels thereafter\
-    \ (to a maximum of 9d6 at 20th level). The damage of studied strike is precision\
-    \ damage and is not multiplied on a critical hit; creatures that are immune to\
-    \ sneak attacks are also immune to studied strike.If the investigator's attack\
-    \ used a weapon that deals nonlethal damage (like a sap, whip, or an unarmed strike),\
-    \ he may choose to have the additional damage from studied strike be nonlethal\
-    \ damage instead of lethal damage. If the investigator chose to make an attack\
-    \ with a lethal weapon instead deal nonlethal damage (with the usual –4 penalty),\
-    \ the studied strike damage may also deal nonlethal damage.The investigator must\
-    \ be able to see the target well enough to pick out a vital spot and must be able\
-    \ to reach such a spot. An investigator cannot use studied strike against a creature\
-    \ with concealment."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "trait:weapon_proficiency#investigator"
-  name: "Weapon Proficiency (Investigator)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:rapier 1"
-  - "SET proficiency:sap 1"
-  - "SET proficiency:sword_cane 1"
-  - "SET proficiency:hand_crossbow 1"
-  - "SET proficiency:shortbow 1"
-  - "SET proficiency:short_sword 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:keen_recollection#investigator"
-  name: "Keen Recollection"
-  label: null
-  type: ""
-  description: "At 3rd level, an investigator can attempt all Knowledge skill checks\
-    \ untrained."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:swift_alchemy#investigator"
-  name: "Swift Alchemy"
-  label: null
-  type: "Ex"
-  description: "At 4th level, an investigator can create alchemical items with astounding\
-    \ speed. It takes an investigator half the normal amount of time to create alchemical\
-    \ items. He can also apply poison to a weapon as a move action instead of a standard\
-    \ action."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:investigator_talent#investigator"
-  name: "Investigator Talent"
-  label: null
-  type: "Su"
-  description: "At 3rd level and every 2 levels thereafter, an investigator gains\
-    \ an investigator talent. Except where otherwise noted, each investigator talent\
-    \ can only be selected once.Investigator talents marked with an asterisk (*) add\
-    \ effects to an investigator's studied combat or studied strike. Only one of these\
-    \ talents can be applied to an individual attack, but the decision can be made\
-    \ when the damage is dealt.."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:poison_resistance#investigator"
-  name: "Poison Resistance"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, an investigator gains a +2 bonus on all saving throws\
-    \ against poison. This bonus increases to +4 at 5th level, and to +6 at 8th level.\
-    \ At 11th level, the investigator becomes completely immune to poison."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:alchemy#investigator"
   name: "Alchemy"
   label: null
@@ -424,43 +333,6 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:poison_lore#investigator"
-  name: "Poison Lore"
-  label: null
-  type: "Ex"
-  description: "An investigator has a deep understanding and appreciation for poisons.\
-    \ At 2nd level, he cannot accidentally poison himself when applying poison to\
-    \ a weapon. If the investigator spends 1 minute physically examining the poison,\
-    \ he can attempt a Knowledge (nature) check to identify any natural poison or\
-    \ Knowledge (arcana) check to identify any magical poison (DC = the poison's saving\
-    \ throw DC). Lastly, once a poison is identified, he can spend 1 minute and attempt\
-    \ a Craft (alchemy) check (DC = the poison's saving throw DC) to neutralize 1\
-    \ dose of the poison. Success renders the dose harmless. The investigator has\
-    \ no chance of accidentally poisoning himself when examining or attempting to\
-    \ neutralize a poison."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:studied_combat#investigator"
-  name: "Studied Combat"
-  label: null
-  type: "Ex"
-  description: "With a keen eye and calculating mind, an investigator can assess the\
-    \ mettle of his opponent to take advantage of gaps in talent and training. At\
-    \ 4th level, an investigator can use a move action to study a single enemy that\
-    \ he can see. Upon doing so, he adds 1/2 his investigator level as an insight\
-    \ bonus on melee attack rolls and as a bonus on damage rolls against the creature.\
-    \ This effect lasts for a number of rounds equal to his Intelligence modifier\
-    \ (minimum 1) or until he deals damage with a studied strike, whichever comes\
-    \ first. The bonus on damage rolls is precision damage, and is not multiplied\
-    \ on a critical hit.An investigator can only have one target of studied combat\
-    \ at a time, and once a creature has become the target of an investigator's studied\
-    \ combat, he cannot become the target of the same investigator's studied combat\
-    \ again for 24 hours unless the investigator expends one use of inspiration when\
-    \ taking the move action to use this ability."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:inspiration#investigator"
   name: "Inspiration"
   label: null
@@ -486,14 +358,139 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "trait:armor_proficiency#investigator"
-  name: "Armor Proficiency (Investigator)"
+- id: "ability:investigator_talent#investigator"
+  name: "Investigator Talent"
   label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_armor 1"
-  prerequisites: null
+  type: "Su"
+  description: "At 3rd level and every 2 levels thereafter, an investigator gains\
+    \ an investigator talent. Except where otherwise noted, each investigator talent\
+    \ can only be selected once.Investigator talents marked with an asterisk (*) add\
+    \ effects to an investigator's studied combat or studied strike. Only one of these\
+    \ talents can be applied to an individual attack, but the decision can be made\
+    \ when the damage is dealt.."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:keen_recollection#investigator"
+  name: "Keen Recollection"
+  label: null
+  type: ""
+  description: "At 3rd level, an investigator can attempt all Knowledge skill checks\
+    \ untrained."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:poison_immunity#investigator"
+  name: "Poison Immunity"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, an investigator gains a +2 bonus on all saving throws\
+    \ against poison. This bonus increases to +4 at 5th level, and to +6 at 8th level.\
+    \ At 11th level, the investigator becomes completely immune to poison."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:poison_lore#investigator"
+  name: "Poison Lore"
+  label: null
+  type: "Ex"
+  description: "An investigator has a deep understanding and appreciation for poisons.\
+    \ At 2nd level, he cannot accidentally poison himself when applying poison to\
+    \ a weapon. If the investigator spends 1 minute physically examining the poison,\
+    \ he can attempt a Knowledge (nature) check to identify any natural poison or\
+    \ Knowledge (arcana) check to identify any magical poison (DC = the poison's saving\
+    \ throw DC). Lastly, once a poison is identified, he can spend 1 minute and attempt\
+    \ a Craft (alchemy) check (DC = the poison's saving throw DC) to neutralize 1\
+    \ dose of the poison. Success renders the dose harmless. The investigator has\
+    \ no chance of accidentally poisoning himself when examining or attempting to\
+    \ neutralize a poison."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:poison_resistance#investigator"
+  name: "Poison Resistance"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, an investigator gains a +2 bonus on all saving throws\
+    \ against poison. This bonus increases to +4 at 5th level, and to +6 at 8th level.\
+    \ At 11th level, the investigator becomes completely immune to poison."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:studied_combat#investigator"
+  name: "Studied Combat"
+  label: null
+  type: "Ex"
+  description: "With a keen eye and calculating mind, an investigator can assess the\
+    \ mettle of his opponent to take advantage of gaps in talent and training. At\
+    \ 4th level, an investigator can use a move action to study a single enemy that\
+    \ he can see. Upon doing so, he adds 1/2 his investigator level as an insight\
+    \ bonus on melee attack rolls and as a bonus on damage rolls against the creature.\
+    \ This effect lasts for a number of rounds equal to his Intelligence modifier\
+    \ (minimum 1) or until he deals damage with a studied strike, whichever comes\
+    \ first. The bonus on damage rolls is precision damage, and is not multiplied\
+    \ on a critical hit.An investigator can only have one target of studied combat\
+    \ at a time, and once a creature has become the target of an investigator's studied\
+    \ combat, he cannot become the target of the same investigator's studied combat\
+    \ again for 24 hours unless the investigator expends one use of inspiration when\
+    \ taking the move action to use this ability."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:studied_strike#investigator"
+  name: "Studied Strike"
+  label: null
+  type: "Ex"
+  description: "At 4th level, an investigator can choose to make a studied strike\
+    \ against the target of his studied combat as a free action, upon successfully\
+    \ hitting his studied target with a melee attack, to deal additional damage. The\
+    \ damage is 1d6 at 4th level, and increases by 1d6 for every 2 levels thereafter\
+    \ (to a maximum of 9d6 at 20th level). The damage of studied strike is precision\
+    \ damage and is not multiplied on a critical hit; creatures that are immune to\
+    \ sneak attacks are also immune to studied strike.If the investigator's attack\
+    \ used a weapon that deals nonlethal damage (like a sap, whip, or an unarmed strike),\
+    \ he may choose to have the additional damage from studied strike be nonlethal\
+    \ damage instead of lethal damage. If the investigator chose to make an attack\
+    \ with a lethal weapon instead deal nonlethal damage (with the usual –4 penalty),\
+    \ the studied strike damage may also deal nonlethal damage.The investigator must\
+    \ be able to see the target well enough to pick out a vital spot and must be able\
+    \ to reach such a spot. An investigator cannot use studied strike against a creature\
+    \ with concealment."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:swift_alchemy#investigator"
+  name: "Swift Alchemy"
+  label: null
+  type: "Ex"
+  description: "At 4th level, an investigator can create alchemical items with astounding\
+    \ speed. It takes an investigator half the normal amount of time to create alchemical\
+    \ items. He can also apply poison to a weapon as a move action instead of a standard\
+    \ action."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:trap_sense#investigator"
+  name: "Trap Sense"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, an investigator gains an intuitive sense that alerts\
+    \ him to danger from traps, granting him a +1 bonus on Reflex saving throws to\
+    \ avoid traps and a +1 dodge bonus to AC against attacks by traps. At 6th level\
+    \ and every 3 levels thereafter, these bonuses increase by 1 (to a maximum of\
+    \ +6 at 18th level)."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:trapfinding#investigator"
+  name: "Trapfinding"
+  label: null
+  type: ""
+  description: "An investigator adds 1/2 his level to Perception skill checks made\
+    \ to locate traps and to Disable Device checks (minimum 1). An investigator can\
+    \ use Disable Device to disarm magical traps."
+  effects: []
+  prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:true_inspiration#investigator"
   name: "True Inspiration"
@@ -510,23 +507,26 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:trapfinding#investigator"
-  name: "Trapfinding"
+- id: "trait:armor_proficiency#investigator"
+  name: "Armor Proficiency (Investigator)"
   label: null
-  type: ""
-  description: "An investigator adds 1/2 his level to Perception skill checks made\
-    \ to locate traps and to Disable Device checks (minimum 1). An investigator can\
-    \ use Disable Device to disarm magical traps."
-  effects: []
-  prerequisites: ""
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_armor 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:poison_immunity#investigator"
-  name: "Poison Immunity"
+- id: "trait:weapon_proficiency#investigator"
+  name: "Weapon Proficiency (Investigator)"
   label: null
-  type: "Ex"
-  description: "At 2nd level, an investigator gains a +2 bonus on all saving throws\
-    \ against poison. This bonus increases to +4 at 5th level, and to +6 at 8th level.\
-    \ At 11th level, the investigator becomes completely immune to poison."
-  effects: []
-  prerequisites: ""
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:rapier 1"
+  - "SET proficiency:sap 1"
+  - "SET proficiency:sword_cane 1"
+  - "SET proficiency:hand_crossbow 1"
+  - "SET proficiency:shortbow 1"
+  - "SET proficiency:short_sword 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"

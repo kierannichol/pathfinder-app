@@ -14,18 +14,18 @@ source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 hit_die: "D10"
 alignment: "Any"
 class_skills:
-- "skill:perception"
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:swim"
-- "skill:escape_artist"
-- "skill:intimidate"
 - "skill:acrobatics"
-- "skill:profession"
 - "skill:climb"
+- "skill:craft"
+- "skill:escape_artist"
+- "skill:handle_animal"
+- "skill:intimidate"
 - "skill:knowledge"
+- "skill:perception"
+- "skill:profession"
 - "skill:ride"
 - "skill:sense_motive"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "A"
 fort: "A"
@@ -190,54 +190,15 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
-- id: "ability:improved_awesome_blow#brawler"
-  name: "Improved Awesome Blow"
+- id: "ability:ac_bonus#brawler"
+  name: "AC Bonus"
   label: null
   type: "Ex"
-  description: "At 20th level, the brawler can use her awesome blow ability as an\
-    \ attack rather than as a standard action. She may use it on creatures of any\
-    \ size. If the maneuver roll is a natural 20, the brawler can immediately attempt\
-    \ to confirm the critical by rolling another combat maneuver check with all the\
-    \ same modifiers as the one just rolled; if the confirmation roll is successful,\
-    \ the attack deals double damage, and the damage from hitting an obstacle (if\
-    \ any) is also doubled."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:brawlers_cunning#brawler"
-  name: "Brawler's Cunning"
-  label: null
-  type: "Ex"
-  description: "If the brawler's Intelligence score is less than 13, it counts as\
-    \ 13 for the purpose of meeting the prerequisites of combat feats."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:close_weapon_mastery#brawler"
-  name: "Close Weapon Mastery"
-  label: null
-  type: "Ex"
-  description: "At 5th level, a brawler's damage with close weapons increases. When\
-    \ wielding a close weapon, she uses the unarmed strike damage of a brawler 4 levels\
-    \ lower instead of the base damage for that weapon (for example, a 5th-level Medium\
-    \ brawler wielding a punching dagger deals 1d6 points of damage instead of the\
-    \ weapon's normal 1d4). If the weapon normally deals more damage than this, its\
-    \ damage is unchanged. This ability does not affect any other aspect of the weapon.\
-    \ The brawler can decide to use the weapon's base damage instead of her adjusted\
-    \ unarmed strike damage--this must be declared before the attack roll is made."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:martial_training#brawler"
-  name: "Martial Training"
-  label: null
-  type: "Ex"
-  description: "At 1st level, a brawler counts her total brawler levels as both fighter\
-    \ levels and monk levels for the purpose of qualifying for feats. She also counts\
-    \ as both a fighter and a monk for feats and magic items that have different effects\
-    \ based on whether the character has levels in those classes (such as Stunning\
-    \ Fist and a monk's robe). This ability does not automatically grant feats normally\
-    \ granted to fighters and monks based on class level, namely Stunning Fist."
+  description: "At 4th level, when a brawler wears light or no armor, she gains a\
+    \ +1 dodge bonus to AC and CMD. This bonus increases by 1 at 9th, 13th, and 18th\
+    \ levels.These bonuses to AC apply against touch attacks. She loses these bonuses\
+    \ while immobilized or helpless, wearing medium or heavy armor, or carrying a\
+    \ medium or heavy load."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
@@ -277,6 +238,116 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:brawlers_cunning#brawler"
+  name: "Brawler's Cunning"
+  label: null
+  type: "Ex"
+  description: "If the brawler's Intelligence score is less than 13, it counts as\
+    \ 13 for the purpose of meeting the prerequisites of combat feats."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:brawlers_flurry#brawler"
+  name: "Brawler's Flurry"
+  label: null
+  type: "Ex"
+  description: "Starting at 2nd level, a brawler can make a brawler's flurry as a\
+    \ full-attack action. When doing so, a brawler has the Two-Weapon Fighting feat\
+    \ when attacking with any combination of unarmed strikes, weapons from the close\
+    \ fighter weapon group, or weapons with the “monk\" special feature. She does\
+    \ not need to use two different weapons to use this ability.A brawler applies\
+    \ her full Strength modifier to her damage rolls for all attacks made with brawler's\
+    \ flurry, whether the attacks are made with an off-hand weapon or a weapon wielded\
+    \ in both hands. A brawler can substitute disarm, sunder, and trip combat maneuvers\
+    \ for unarmed attacks as part of brawler's flurry. A brawler with natural weapons\
+    \ can't use such weapons as part of brawler's flurry, nor can she make natural\
+    \ weapon attacks in addition to her brawler's flurry attacks.At 8th level, the\
+    \ brawler gains use of the Improved Two-Weapon Fighting feat when using brawler's\
+    \ flurry. At 15th level, she gains use of the Greater Two-Weapon Fighting feat\
+    \ when using brawler's flurry."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:brawlers_strike#brawler"
+  name: "Brawler's Strike"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a brawler's unarmed strikes are treated as magic weapons\
+    \ for the purpose of overcoming damage reduction. At 9th level, her unarmed attacks\
+    \ are also treated as cold iron and silver for the purpose of overcoming damage\
+    \ reduction. At 12th level, she chooses one alignment component: chaotic, evil,\
+    \ good, or lawful; her unarmed strikes also count as this alignment for the purpose\
+    \ of overcoming damage reduction. (This alignment component cannot be the opposite\
+    \ of the brawler's actual alignment, such as a good brawler choosing evil strikes.)\
+    \ At 17th level, her unarmed attacks are also treated as adamantine weapons for\
+    \ the purpose of overcoming damage reduction and bypassing hardness."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:close_weapon_mastery#brawler"
+  name: "Close Weapon Mastery"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a brawler's damage with close weapons increases. When\
+    \ wielding a close weapon, she uses the unarmed strike damage of a brawler 4 levels\
+    \ lower instead of the base damage for that weapon (for example, a 5th-level Medium\
+    \ brawler wielding a punching dagger deals 1d6 points of damage instead of the\
+    \ weapon's normal 1d4). If the weapon normally deals more damage than this, its\
+    \ damage is unchanged. This ability does not affect any other aspect of the weapon.\
+    \ The brawler can decide to use the weapon's base damage instead of her adjusted\
+    \ unarmed strike damage--this must be declared before the attack roll is made."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:improved_awesome_blow#brawler"
+  name: "Improved Awesome Blow"
+  label: null
+  type: "Ex"
+  description: "At 20th level, the brawler can use her awesome blow ability as an\
+    \ attack rather than as a standard action. She may use it on creatures of any\
+    \ size. If the maneuver roll is a natural 20, the brawler can immediately attempt\
+    \ to confirm the critical by rolling another combat maneuver check with all the\
+    \ same modifiers as the one just rolled; if the confirmation roll is successful,\
+    \ the attack deals double damage, and the damage from hitting an obstacle (if\
+    \ any) is also doubled."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:knockout#brawler"
+  name: "Knockout"
+  label: null
+  type: "Ex"
+  description: "At 4th level, once per day a brawler can unleash a devastating attack\
+    \ that can instantly knock a target unconscious. She must announce this intent\
+    \ before making her attack roll. If the brawler hits and the target takes damage\
+    \ from the blow, the target must succeed at a Fortitude saving throw (DC = 10\
+    \ + 1/2 the brawler's level + the higher of the brawler's Strength or Dexterity\
+    \ modifier) or fall unconscious for 1d6 rounds. Each round on its turn, the unconscious\
+    \ target may attempt a new saving throw to end the effect as a full-round action\
+    \ that does not provoke attacks of opportunity. Creatures immune to critical hits\
+    \ or nonlethal damage are immune to this ability. At 10th level, the brawler may\
+    \ use this ability twice per day; at 16th level, she may use it three times per\
+    \ day."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:maneuver_training#brawler"
+  name: "Maneuver Training"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, a brawler can select one combat maneuver to receive\
+    \ additional training. She gains a +1 bonus on combat maneuver checks when performing\
+    \ that combat maneuver and a +1 bonus to her CMD when defending against that maneuver.At\
+    \ 7th level and every 4 levels thereafter, the brawler becomes further trained\
+    \ in another combat maneuver, gaining the above +1 bonus combat maneuver checks\
+    \ and to CMD. In addition, the bonuses granted by all previous maneuver training\
+    \ increase by 1 each. (For example, if a brawler chooses grapple at 3rd level\
+    \ and sunder at 7th level, her bonuses to grapple are +2 and bonuses to sunder\
+    \ are +1. If she then chooses bull rush upon reaching 11th level, her bonuses\
+    \ to grapple are +3, to sunder are +2, and to bull rush are +1.)"
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:martial_flexibility#brawler"
   name: "Martial Flexibility"
   label: null
@@ -308,21 +379,51 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:brawlers_strike#brawler"
-  name: "Brawler's Strike"
+- id: "ability:martial_training#brawler"
+  name: "Martial Training"
   label: null
   type: "Ex"
-  description: "At 5th level, a brawler's unarmed strikes are treated as magic weapons\
-    \ for the purpose of overcoming damage reduction. At 9th level, her unarmed attacks\
-    \ are also treated as cold iron and silver for the purpose of overcoming damage\
-    \ reduction. At 12th level, she chooses one alignment component: chaotic, evil,\
-    \ good, or lawful; her unarmed strikes also count as this alignment for the purpose\
-    \ of overcoming damage reduction. (This alignment component cannot be the opposite\
-    \ of the brawler's actual alignment, such as a good brawler choosing evil strikes.)\
-    \ At 17th level, her unarmed attacks are also treated as adamantine weapons for\
-    \ the purpose of overcoming damage reduction and bypassing hardness."
+  description: "At 1st level, a brawler counts her total brawler levels as both fighter\
+    \ levels and monk levels for the purpose of qualifying for feats. She also counts\
+    \ as both a fighter and a monk for feats and magic items that have different effects\
+    \ based on whether the character has levels in those classes (such as Stunning\
+    \ Fist and a monk's robe). This ability does not automatically grant feats normally\
+    \ granted to fighters and monks based on class level, namely Stunning Fist."
   effects: []
   prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:unarmed_strike#brawler"
+  name: "Unarmed Strike"
+  label: null
+  type: null
+  description: "At 1st level, a brawler gains Improved Unarmed Strike as a bonus feat.\
+    \ A brawler may attack with fists, elbows, knees, and feet. This means that a\
+    \ brawler may make unarmed strikes with her hands full. A brawler applies her\
+    \ full Strength modifier (not half ) on damage rolls for all her unarmed strikes.\
+    \ Usually, a brawler’s unarmed strikes deal lethal damage, but she can choose\
+    \ to deal nonlethal damage instead with no penalty on her attack roll. She has\
+    \ the same choice to deal lethal or nonlethal damage while grappling. A brawler’\
+    s unarmed strike is treated as both a manufactured weapon and a natural weapon\
+    \ for the purpose of spells and effects that modify either manufactured weapons\
+    \ or natural weapons. A brawler also deals more damage with her unarmed strikes\
+    \ than others, as shown on Table: Brawler. The unarmed damage values listed on\
+    \ that table are for Medium brawlers. A Small brawler deals less damage than the\
+    \ amount given there with her unarmed attacks, while a Large brawler deals more\
+    \ damage; see the following table."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "trait:armor_proficiency#brawler"
+  name: "Armor Proficiency (Brawler)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "trait:weapon_proficiency#brawler"
   name: "Weapon Proficiency (Brawler)"
@@ -372,92 +473,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:ac_bonus#brawler"
-  name: "AC Bonus"
-  label: null
-  type: "Ex"
-  description: "At 4th level, when a brawler wears light or no armor, she gains a\
-    \ +1 dodge bonus to AC and CMD. This bonus increases by 1 at 9th, 13th, and 18th\
-    \ levels.These bonuses to AC apply against touch attacks. She loses these bonuses\
-    \ while immobilized or helpless, wearing medium or heavy armor, or carrying a\
-    \ medium or heavy load."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:maneuver_training#brawler"
-  name: "Maneuver Training"
-  label: null
-  type: "Ex"
-  description: "At 3rd level, a brawler can select one combat maneuver to receive\
-    \ additional training. She gains a +1 bonus on combat maneuver checks when performing\
-    \ that combat maneuver and a +1 bonus to her CMD when defending against that maneuver.At\
-    \ 7th level and every 4 levels thereafter, the brawler becomes further trained\
-    \ in another combat maneuver, gaining the above +1 bonus combat maneuver checks\
-    \ and to CMD. In addition, the bonuses granted by all previous maneuver training\
-    \ increase by 1 each. (For example, if a brawler chooses grapple at 3rd level\
-    \ and sunder at 7th level, her bonuses to grapple are +2 and bonuses to sunder\
-    \ are +1. If she then chooses bull rush upon reaching 11th level, her bonuses\
-    \ to grapple are +3, to sunder are +2, and to bull rush are +1.)"
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "trait:armor_proficiency#brawler"
-  name: "Armor Proficiency (Brawler)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:brawlers_flurry#brawler"
-  name: "Brawler's Flurry"
-  label: null
-  type: "Ex"
-  description: "Starting at 2nd level, a brawler can make a brawler's flurry as a\
-    \ full-attack action. When doing so, a brawler has the Two-Weapon Fighting feat\
-    \ when attacking with any combination of unarmed strikes, weapons from the close\
-    \ fighter weapon group, or weapons with the “monk\" special feature. She does\
-    \ not need to use two different weapons to use this ability.A brawler applies\
-    \ her full Strength modifier to her damage rolls for all attacks made with brawler's\
-    \ flurry, whether the attacks are made with an off-hand weapon or a weapon wielded\
-    \ in both hands. A brawler can substitute disarm, sunder, and trip combat maneuvers\
-    \ for unarmed attacks as part of brawler's flurry. A brawler with natural weapons\
-    \ can't use such weapons as part of brawler's flurry, nor can she make natural\
-    \ weapon attacks in addition to her brawler's flurry attacks.At 8th level, the\
-    \ brawler gains use of the Improved Two-Weapon Fighting feat when using brawler's\
-    \ flurry. At 15th level, she gains use of the Greater Two-Weapon Fighting feat\
-    \ when using brawler's flurry."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:knockout#brawler"
-  name: "Knockout"
-  label: null
-  type: "Ex"
-  description: "At 4th level, once per day a brawler can unleash a devastating attack\
-    \ that can instantly knock a target unconscious. She must announce this intent\
-    \ before making her attack roll. If the brawler hits and the target takes damage\
-    \ from the blow, the target must succeed at a Fortitude saving throw (DC = 10\
-    \ + 1/2 the brawler's level + the higher of the brawler's Strength or Dexterity\
-    \ modifier) or fall unconscious for 1d6 rounds. Each round on its turn, the unconscious\
-    \ target may attempt a new saving throw to end the effect as a full-round action\
-    \ that does not provoke attacks of opportunity. Creatures immune to critical hits\
-    \ or nonlethal damage are immune to this ability. At 10th level, the brawler may\
-    \ use this ability twice per day; at 16th level, she may use it three times per\
-    \ day."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:unarmed_strike#brawler"
-  name: "Unarmed Strike"
-  label: null
-  type: null
-  description: "At 1st level, a brawler gains Improved Unarmed Strike as a bonus feat. A brawler may attack with fists, elbows, knees, and feet. This means that a brawler may make unarmed strikes with her hands full. A brawler applies her full Strength modifier (not half ) on damage rolls for all her unarmed strikes. Usually, a brawler’s unarmed strikes deal lethal damage, but she can choose to deal nonlethal damage instead with no penalty on her attack roll. She has the same choice to deal lethal or nonlethal damage while grappling. A brawler’s unarmed strike is treated as both a manufactured weapon and a natural weapon for the purpose of spells and effects that modify either manufactured weapons or natural weapons. A brawler also deals more damage with her unarmed strikes than others, as shown on Table: Brawler. The unarmed damage values listed on that table are for Medium brawlers. A Small brawler deals less damage than the amount given there with her unarmed attacks, while a Large brawler deals more damage; see the following table."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"

@@ -23,16 +23,16 @@ source: " Pathfinder RPG Core Rulebook"
 hit_die: "D12"
 alignment: "Any non-lawful"
 class_skills:
-- "skill:perception"
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:swim"
-- "skill:survival"
-- "skill:intimidate"
 - "skill:acrobatics"
 - "skill:climb"
+- "skill:craft"
+- "skill:handle_animal"
+- "skill:intimidate"
 - "skill:knowledge"
+- "skill:perception"
 - "skill:ride"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "A"
 fort: "A"
@@ -190,6 +190,101 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
+- id: "ability:damage_reduction#barbarian"
+  name: "Damage Reduction"
+  label: null
+  type: "Ex"
+  description: "At 7th level, a barbarian gains damage reduction. Subtract 1 from\
+    \ the damage the barbarian takes each time she is dealt damage from a weapon or\
+    \ a natural attack. At 10th level, and every three barbarian levels thereafter\
+    \ (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage\
+    \ reduction can reduce damage to 0 but not below 0."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:fast_movement#barbarian"
+  name: "Fast Movement"
+  label: null
+  type: "Ex"
+  description: "A barbarian's land speed is faster than the norm for her race by +10\
+    \ feet. This benefit applies only when he is wearing no armor, light armor, or\
+    \ medium armor, and not carrying a heavy load. Apply this bonus before modifying\
+    \ the barbarian's speed because of any load carried or armor worn. This bonus\
+    \ stacks with any other bonuses to the barbarian's land speed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:greater_rage#barbarian"
+  name: "Greater Rage"
+  label: null
+  type: "Ex"
+  description: "At 11th level, when a barbarian enters rage, the morale bonus to her\
+    \ Strength and Constitution increases to +6 and the morale bonus on her Will saves\
+    \ increases to +3."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:improved_uncanny_dodge#barbarian"
+  name: "Improved Uncanny Dodge"
+  label: null
+  type: "Ex"
+  description: "At 5th level and higher, a barbarian can no longer be flanked. This\
+    \ defense denies a rogue the ability to sneak attack the barbarian by flanking\
+    \ her, unless the attacker has at least four more rogue levels than the target\
+    \ has barbarian levels.If a character already has uncanny dodge (see above) from\
+    \ another class, the levels from the classes that grant uncanny dodge stack to\
+    \ determine the minimum rogue level required to flank the character."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:indomitable_will#barbarian"
+  name: "Indomitable Will"
+  label: null
+  type: "Ex"
+  description: "While in rage, a barbarian of 14th level or higher gains a +4 bonus\
+    \ on Will saves to resist enchantment spells. This bonus stacks with all other\
+    \ modifiers, including the morale bonus on Will saves she also receives during\
+    \ her rage."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:mighty_rage#barbarian"
+  name: "Mighty Rage"
+  label: null
+  type: "Ex"
+  description: "At 20th level, when a barbarian enters rage, the morale bonus to her\
+    \ Strength and Constitution increases to +8 and the morale bonus on her Will saves\
+    \ increases to +4."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:rage#barbarian"
+  name: "Rage"
+  label: null
+  type: "Ex"
+  description: "A barbarian can call upon inner reserves of strength and ferocity,\
+    \ granting her additional combat prowess. Starting at 1st level, a barbarian can\
+    \ rage for a number of rounds per day equal to 4 + her Constitution modifier.\
+    \ At each level after 1st, she can rage for 2 additional rounds. Temporary increases\
+    \ to Constitution, such as those gained from rage and spells like bear's endurance,\
+    \ do not increase the total number of rounds that a barbarian can rage per day.\
+    \ A barbarian can enter rage as a free action. The total number of rounds of rage\
+    \ per day is renewed after resting for 8 hours, although these hours do not need\
+    \ to be consecutive.While in rage, a barbarian gains a +4 morale bonus to her\
+    \ Strength and Constitution, as well as a +2 morale bonus on Will saves. In addition,\
+    \ she takes a –2 penalty to Armor Class. The increase to Constitution grants the\
+    \ barbarian 2 hit points per Hit Dice, but these disappear when the rage ends\
+    \ and are not lost first like temporary hit points. While in rage, a barbarian\
+    \ cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics,\
+    \ Fly, Intimidate, and Ride) or any ability that requires patience or concentration.A\
+    \ barbarian can end her rage as a free action and is fatigued after rage for a\
+    \ number of rounds equal to 2 times the number of rounds spent in the rage. A\
+    \ barbarian cannot enter a new rage while fatigued or exhausted but can otherwise\
+    \ enter rage multiple times during a single encounter or combat. If a barbarian\
+    \ falls unconscious, her rage immediately ends, placing her in peril of death."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
 - id: "ability:rage_power#barbarian"
   name: "Rage Power"
   label: null
@@ -208,29 +303,54 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:indomitable_will#barbarian"
-  name: "Indomitable Will"
+- id: "ability:tireless_rage#barbarian"
+  name: "Tireless Rage"
   label: null
   type: "Ex"
-  description: "While in rage, a barbarian of 14th level or higher gains a +4 bonus\
-    \ on Will saves to resist enchantment spells. This bonus stacks with all other\
-    \ modifiers, including the morale bonus on Will saves she also receives during\
-    \ her rage."
+  description: "Starting at 17th level, a barbarian no longer becomes fatigued at\
+    \ the end of her rage."
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:improved_uncanny_dodge#barbarian"
-  name: "Improved Uncanny Dodge"
+- id: "ability:trap_sense#barbarian"
+  name: "Trap Sense"
   label: null
   type: "Ex"
-  description: "At 5th level and higher, a barbarian can no longer be flanked. This\
-    \ defense denies a rogue the ability to sneak attack the barbarian by flanking\
-    \ her, unless the attacker has at least four more rogue levels than the target\
-    \ has barbarian levels.If a character already has uncanny dodge (see above) from\
-    \ another class, the levels from the classes that grant uncanny dodge stack to\
-    \ determine the minimum rogue level required to flank the character."
+  description: "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to\
+    \ avoid traps and a +1 dodge bonus to armor class against attacks made by traps.\
+    \ These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th,\
+    \ 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes\
+    \ stack."
   effects: []
   prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:uncanny_dodge#barbarian"
+  name: "Uncanny Dodge"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, a barbarian gains the ability to react to danger before\
+    \ her senses would normally allow her to do so. She cannot be caught flat-footed,\
+    \ nor does she lose her Dex bonus to AC if the attacker is invisible. She still\
+    \ loses her Dexterity bonus to armor class if immobilized. A barbarian with this\
+    \ ability can still lose her Dexterity bonus to armor class if an opponent successfully\
+    \ uses the feint action against her.If a barbarian already has uncanny dodge from\
+    \ a different class, she automatically gains improved uncanny dodge (see below)\
+    \ instead."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "trait:armor_proficiency#barbarian"
+  name: "Armor Proficiency (Barbarian)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder RPG Core Rulebook"
 - id: "trait:weapon_proficiency#barbarian"
   name: "Weapon Proficiency (Barbarian)"
@@ -344,124 +464,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:uncanny_dodge#barbarian"
-  name: "Uncanny Dodge"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, a barbarian gains the ability to react to danger before\
-    \ her senses would normally allow her to do so. She cannot be caught flat-footed,\
-    \ nor does she lose her Dex bonus to AC if the attacker is invisible. She still\
-    \ loses her Dexterity bonus to armor class if immobilized. A barbarian with this\
-    \ ability can still lose her Dexterity bonus to armor class if an opponent successfully\
-    \ uses the feint action against her.If a barbarian already has uncanny dodge from\
-    \ a different class, she automatically gains improved uncanny dodge (see below)\
-    \ instead."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "trait:armor_proficiency#barbarian"
-  name: "Armor Proficiency (Barbarian)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:mighty_rage#barbarian"
-  name: "Mighty Rage"
-  label: null
-  type: "Ex"
-  description: "At 20th level, when a barbarian enters rage, the morale bonus to her\
-    \ Strength and Constitution increases to +8 and the morale bonus on her Will saves\
-    \ increases to +4."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:fast_movement#barbarian"
-  name: "Fast Movement"
-  label: null
-  type: "Ex"
-  description: "A barbarian's land speed is faster than the norm for her race by +10\
-    \ feet. This benefit applies only when he is wearing no armor, light armor, or\
-    \ medium armor, and not carrying a heavy load. Apply this bonus before modifying\
-    \ the barbarian's speed because of any load carried or armor worn. This bonus\
-    \ stacks with any other bonuses to the barbarian's land speed."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:tireless_rage#barbarian"
-  name: "Tireless Rage"
-  label: null
-  type: "Ex"
-  description: "Starting at 17th level, a barbarian no longer becomes fatigued at\
-    \ the end of her rage."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:trap_sense#barbarian"
-  name: "Trap Sense"
-  label: null
-  type: "Ex"
-  description: "At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to\
-    \ avoid traps and a +1 dodge bonus to armor class against attacks made by traps.\
-    \ These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th,\
-    \ 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes\
-    \ stack."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:greater_rage#barbarian"
-  name: "Greater Rage"
-  label: null
-  type: "Ex"
-  description: "At 11th level, when a barbarian enters rage, the morale bonus to her\
-    \ Strength and Constitution increases to +6 and the morale bonus on her Will saves\
-    \ increases to +3."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:rage#barbarian"
-  name: "Rage"
-  label: null
-  type: "Ex"
-  description: "A barbarian can call upon inner reserves of strength and ferocity,\
-    \ granting her additional combat prowess. Starting at 1st level, a barbarian can\
-    \ rage for a number of rounds per day equal to 4 + her Constitution modifier.\
-    \ At each level after 1st, she can rage for 2 additional rounds. Temporary increases\
-    \ to Constitution, such as those gained from rage and spells like bear's endurance,\
-    \ do not increase the total number of rounds that a barbarian can rage per day.\
-    \ A barbarian can enter rage as a free action. The total number of rounds of rage\
-    \ per day is renewed after resting for 8 hours, although these hours do not need\
-    \ to be consecutive.While in rage, a barbarian gains a +4 morale bonus to her\
-    \ Strength and Constitution, as well as a +2 morale bonus on Will saves. In addition,\
-    \ she takes a –2 penalty to Armor Class. The increase to Constitution grants the\
-    \ barbarian 2 hit points per Hit Dice, but these disappear when the rage ends\
-    \ and are not lost first like temporary hit points. While in rage, a barbarian\
-    \ cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics,\
-    \ Fly, Intimidate, and Ride) or any ability that requires patience or concentration.A\
-    \ barbarian can end her rage as a free action and is fatigued after rage for a\
-    \ number of rounds equal to 2 times the number of rounds spent in the rage. A\
-    \ barbarian cannot enter a new rage while fatigued or exhausted but can otherwise\
-    \ enter rage multiple times during a single encounter or combat. If a barbarian\
-    \ falls unconscious, her rage immediately ends, placing her in peril of death."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:damage_reduction#barbarian"
-  name: "Damage Reduction"
-  label: null
-  type: "Ex"
-  description: "At 7th level, a barbarian gains damage reduction. Subtract 1 from\
-    \ the damage the barbarian takes each time she is dealt damage from a weapon or\
-    \ a natural attack. At 10th level, and every three barbarian levels thereafter\
-    \ (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage\
-    \ reduction can reduce damage to 0 but not below 0."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"

@@ -19,17 +19,17 @@ source: " Pathfinder Roleplaying Game Advanced Class Guide"
 hit_die: "D10"
 alignment: "Any"
 class_skills:
-- "skill:perception"
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:swim"
-- "skill:survival"
-- "skill:intimidate"
-- "skill:spellcraft"
 - "skill:acrobatics"
 - "skill:climb"
+- "skill:craft"
+- "skill:handle_animal"
+- "skill:intimidate"
 - "skill:knowledge"
+- "skill:perception"
 - "skill:ride"
+- "skill:spellcraft"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "A"
 fort: "A"
@@ -291,15 +291,25 @@ levels:
 spell_caster_types:
 - "arcane"
 class_features:
-- id: "ability:mighty_bloodrage#bloodrager"
-  name: "Mighty Bloodrage"
+- id: "ability:blood_casting#bloodrager"
+  name: "Blood Casting"
   label: null
   type: "Su"
-  description: "At 20th level, when a bloodrager enters a bloodrage, the morale bonus\
-    \ to his Strength and Constitution increases to +8, and the morale bonus on his\
-    \ Will saves increases to +4. Furthermore, the spell he can apply to himself at\
-    \ the beginning of a bloodrage due to the greater bloodrage class feature is not\
-    \ limited to only spells of 2nd level or lower."
+  description: "At 4th level, the bloodrager gains the ability to cast spells even\
+    \ while bloodraging. He can also cast these spells defensively and can make concentration\
+    \ checks for these spells while bloodraging. While bloodraging, he can cast and\
+    \ concentrate on only his bloodrager spells (see below); spells from other classes\
+    \ cannot be cast during this state."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:blood_sanctuary#bloodrager"
+  name: "Blood Sanctuary"
+  label: null
+  type: "Su"
+  description: "At 3rd level, due to the power of his blood, a bloodrager can stand\
+    \ confidently amid the effects of spells cast by himself or his allies. He gains\
+    \ a +2 bonus on saving throws against spells that he or an ally casts."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Advanced Class Guide"
@@ -346,6 +356,120 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:bloodline_feat#bloodrager"
+  name: "Bloodline Feat"
+  label: null
+  type: ""
+  description: "At 6th level and every 3 levels thereafter, a bloodrager receives\
+    \ one bonus feat chosen from a list specific to each bloodline. The bloodrager\
+    \ must meet the prerequisites for these bonus feats."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:bloodline_power#bloodrager"
+  name: "Bloodline Power"
+  label: null
+  type: ""
+  description: "Each bloodrager has a source of magic somewhere in his heritage that\
+    \ empowers his bloodrages, bonus feats, and bonus spells. Sometimes this source\
+    \ reflects a distant blood relationship to a powerful being, or is due to an extreme\
+    \ event involving such a creature somewhere in his family's past. Regardless of\
+    \ the source, this influence manifests in a number of ways. A bloodrager must\
+    \ pick one bloodline upon taking his first level of bloodrager. Once made, this\
+    \ choice cannot be changed.When choosing a bloodline, the bloodrager's alignment\
+    \ doesn't restrict his choices. A good bloodrager could come from an abyssal bloodline,\
+    \ a celestial bloodline could beget an evil bloodrager generations later, a bloodrager\
+    \ from an infernal bloodline could be chaotic, and so on. Though his bloodline\
+    \ empowers him, it doesn't dictate or limit his thoughts and behavior.The bloodrager\
+    \ gains bloodline powers at 1st level, 4th level, and every 4 levels thereafter.\
+    \ The bloodline powers a bloodrager gains are described in his chosen bloodline.\
+    \ For all spell-like bloodline powers, treat the character's bloodrager level\
+    \ as the caster level.At 6th level and every 3 levels thereafter, a bloodrager\
+    \ receives one bonus feat chosen from a list specific to each bloodline. The bloodrager\
+    \ must meet the prerequisites for these bonus feats. At 7th, 10th, 13th, and 16th\
+    \ levels, a bloodrager learns an additional spell derived from his bloodline.\
+    \ These spells are in addition to the number of spells given on Table: Bloodrager.\
+    \ These spells cannot be exchanged for different spells at higher levels.If the\
+    \ bloodrager takes levels in another class that grants a bloodline, the bloodlines\
+    \ must be the same type, even if that means that the bloodline of one of the classes\
+    \ must change. Subject to GM discretion, the bloodrager can change his former\
+    \ bloodline to make them conform.Bloodline Mutations: Although heirs to similar\
+    \ arcane bloodlines may share commonalities, the unique circumstances in which\
+    \ a bloodline enters a bloodrager or sorcerer's lineage can result in the manifestation\
+    \ of particularly strange or unusual bloodline powers known as mutations. Whenever\
+    \ a bloodrager or a sorcerer gains a new bloodline power, she can swap her bloodline\
+    \ power for a bloodline mutation whose prerequisites she meets. Once this choice\
+    \ is made, it cannot be changed, and a bloodrager or sorcerer cannot swap a bloodline\
+    \ power that she has altered or replaced with an archetype for a bloodline mutation.\
+    \ A bloodrager need not be in a bloodrage to use her bloodline mutation powers.\
+    \ Alternatively, a bloodrager or sorcerer can select a bloodline mutation in place\
+    \ of a bloodline bonus feat, provided her class level is at least equal to the\
+    \ level of the bloodline ability the mutation normally replaces. The list of bloodline\
+    \ mutations can be found here. Source: PZO9468"
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:bloodline_spell#bloodrager"
+  name: "Bloodline Spell"
+  label: null
+  type: ""
+  description: "At 7th, 10th, 13th, and 16th levels, a bloodrager learns an additional\
+    \ spell derived from his bloodline. These spells are in addition to the number\
+    \ of spells given on Table: Bloodrager. These spells cannot be exchanged for different\
+    \ spells at higher levels."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:bloodrage#bloodrager"
+  name: "Bloodrage"
+  label: null
+  type: "Su"
+  description: "The bloodrager's source of internal power grants him the ability to\
+    \ bloodrage.At 1st level, a bloodrager can bloodrage for a number of rounds per\
+    \ day equal to 4 + his Constitution modifier. At each level after 1st, he can\
+    \ bloodrage for 2 additional rounds per day. Temporary increases to Constitution\
+    \ (such as those gained from bloodraging or spells like bear's endurance) don't\
+    \ increase the total number of rounds that a bloodrager can bloodrage per day.\
+    \ The total number of rounds of bloodrage per day is renewed after resting for\
+    \ 8 hours, although these hours need not be consecutive.A bloodrager can enter\
+    \ a bloodrage as a free action. While in a bloodrage, a bloodrager gains a +4\
+    \ morale bonus to his Strength and Constitution, as well as a +2 morale bonus\
+    \ on Will saves. In addition, he takes a –2 penalty to Armor Class. The increase\
+    \ to Constitution grants the bloodrager 2 hit points per Hit Die, but these disappear\
+    \ when the bloodrage ends and are not lost first like temporary hit points. While\
+    \ bloodraging, a bloodrager cannot use any Charisma-, Dexterity-, or Intelligence-based\
+    \ skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires\
+    \ patience or concentration.A bloodrager can end his bloodrage as a free action.\
+    \ When the bloodrage ends, he's fatigued for a number of rounds equal to twice\
+    \ the number of rounds spent in the bloodrage. A bloodrager cannot enter a new\
+    \ bloodrage while fatigued or exhausted, but can otherwise enter bloodrage multiple\
+    \ times during a single encounter or combat. If a bloodrager falls unconscious,\
+    \ his bloodrage immediately ends, placing him in peril of death.Bloodrage counts\
+    \ as the barbarian's rage class feature for the purpose of feat prerequisites,\
+    \ feat abilities, magic item abilities, and spell effects."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:damage_reduction#bloodrager"
+  name: "Damage Reduction"
+  label: null
+  type: "Ex"
+  description: "At 7th level, a bloodrager gains damage reduction. Subtract 1 from\
+    \ the damage the bloodrager takes each time he is dealt damage from a weapon or\
+    \ a natural attack. At 10th level, and every 3 levels thereafter, this damage\
+    \ reduction increases by 1 point. Damage Reduction can reduce damage to 0, but\
+    \ not below 0."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:eschew_materials#bloodrager"
+  name: "Eschew Materials"
+  label: null
+  type: ""
+  description: "At 4th level, the bloodrager gains Eschew Materials as a bonus feat."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
 - id: "ability:fast_movement#bloodrager"
   name: "Fast Movement"
   label: null
@@ -357,6 +481,95 @@ class_features:
     \ with any other bonuses to the bloodrager's land speed."
   effects: []
   prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:greater_bloodrage#bloodrager"
+  name: "Greater Bloodrage"
+  label: null
+  type: "Su"
+  description: "At 11th level, when a bloodrager enters a bloodrage, the morale bonus\
+    \ to his Strength and Constitution increases to +6 and the morale bonus on his\
+    \ Will saves increases to +3. In addition, upon entering a bloodrage, the bloodrager\
+    \ can apply the effects a bloodrager spell he knows of 2nd level or lower to himself.\
+    \ The spell must have a range of touch or personal. If the spell's duration is\
+    \ greater than 1 round, it instead lasts for the duration of the bloodrage. This\
+    \ use consumes a bloodrager spell slot, as if he had cast the spell; he must have\
+    \ the spell slot available to take advantage of this effect.Greater bloodrage\
+    \ counts as the barbarian's greater rage ability for the purposes of feat prerequisites,\
+    \ feat abilities, magic item abilities, and spell effects."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:improved_uncanny_dodge#bloodrager"
+  name: "Improved Uncanny Dodge"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a bloodrager can no longer be flanked. This defense\
+    \ denies rogues (or other classes with the sneak attack ability) the ability to\
+    \ sneak attack the bloodrager by flanking him, unless the attacker has at least\
+    \ four more rogue levels (or levels in the class granting sneak attack) than the\
+    \ target has bloodrager levels.If a character already has uncanny dodge from another\
+    \ class, the levels from the classes that grant uncanny dodge stack when determining\
+    \ the minimum rogue level required to flank the character."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:indomitable_will#bloodrager"
+  name: "Indomitable Will"
+  label: null
+  type: "Ex"
+  description: "At 14th level, a bloodrager gains a +4 bonus on Will saves to resist\
+    \ enchantment spells while bloodraging. This bonus stacks with all other modifiers,\
+    \ including the morale bonus on Will saves he also receives during his bloodrage."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:mighty_bloodrage#bloodrager"
+  name: "Mighty Bloodrage"
+  label: null
+  type: "Su"
+  description: "At 20th level, when a bloodrager enters a bloodrage, the morale bonus\
+    \ to his Strength and Constitution increases to +8, and the morale bonus on his\
+    \ Will saves increases to +4. Furthermore, the spell he can apply to himself at\
+    \ the beginning of a bloodrage due to the greater bloodrage class feature is not\
+    \ limited to only spells of 2nd level or lower."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:tireless_bloodrage#bloodrager"
+  name: "Tireless Bloodrage"
+  label: null
+  type: "Su"
+  description: "At 17th level, a bloodrager no longer becomes fatigued at the end\
+    \ of his bloodrage."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "ability:uncanny_dodge#bloodrager"
+  name: "Uncanny Dodge"
+  label: null
+  type: "Ex"
+  description: "At 2nd level, a bloodrager can react to danger before his senses would\
+    \ normally allow him to do so. He cannot be caught flat-footed, nor does he lose\
+    \ his Dexterity bonus to AC if the attacker is invisible. He still loses his Dexterity\
+    \ bonus to AC if immobilized. A bloodrager with this ability can still lose his\
+    \ Dexterity bonus to AC if an opponent successfully uses the feint action against\
+    \ him.If a bloodrager already possesses uncanny dodge from a different class,\
+    \ he automatically gains improved uncanny dodge (see below) instead."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Advanced Class Guide"
+- id: "trait:armor_proficiency#bloodrager"
+  name: "Armor Proficiency (Bloodrager)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game Advanced Class Guide"
 - id: "trait:weapon_proficiency#bloodrager"
   name: "Weapon Proficiency (Bloodrager)"
@@ -470,217 +683,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:bloodline_power#bloodrager"
-  name: "Bloodline Power"
-  label: null
-  type: ""
-  description: "Each bloodrager has a source of magic somewhere in his heritage that\
-    \ empowers his bloodrages, bonus feats, and bonus spells. Sometimes this source\
-    \ reflects a distant blood relationship to a powerful being, or is due to an extreme\
-    \ event involving such a creature somewhere in his family's past. Regardless of\
-    \ the source, this influence manifests in a number of ways. A bloodrager must\
-    \ pick one bloodline upon taking his first level of bloodrager. Once made, this\
-    \ choice cannot be changed.When choosing a bloodline, the bloodrager's alignment\
-    \ doesn't restrict his choices. A good bloodrager could come from an abyssal bloodline,\
-    \ a celestial bloodline could beget an evil bloodrager generations later, a bloodrager\
-    \ from an infernal bloodline could be chaotic, and so on. Though his bloodline\
-    \ empowers him, it doesn't dictate or limit his thoughts and behavior.The bloodrager\
-    \ gains bloodline powers at 1st level, 4th level, and every 4 levels thereafter.\
-    \ The bloodline powers a bloodrager gains are described in his chosen bloodline.\
-    \ For all spell-like bloodline powers, treat the character's bloodrager level\
-    \ as the caster level.At 6th level and every 3 levels thereafter, a bloodrager\
-    \ receives one bonus feat chosen from a list specific to each bloodline. The bloodrager\
-    \ must meet the prerequisites for these bonus feats. At 7th, 10th, 13th, and 16th\
-    \ levels, a bloodrager learns an additional spell derived from his bloodline.\
-    \ These spells are in addition to the number of spells given on Table: Bloodrager.\
-    \ These spells cannot be exchanged for different spells at higher levels.If the\
-    \ bloodrager takes levels in another class that grants a bloodline, the bloodlines\
-    \ must be the same type, even if that means that the bloodline of one of the classes\
-    \ must change. Subject to GM discretion, the bloodrager can change his former\
-    \ bloodline to make them conform.Bloodline Mutations: Although heirs to similar\
-    \ arcane bloodlines may share commonalities, the unique circumstances in which\
-    \ a bloodline enters a bloodrager or sorcerer's lineage can result in the manifestation\
-    \ of particularly strange or unusual bloodline powers known as mutations. Whenever\
-    \ a bloodrager or a sorcerer gains a new bloodline power, she can swap her bloodline\
-    \ power for a bloodline mutation whose prerequisites she meets. Once this choice\
-    \ is made, it cannot be changed, and a bloodrager or sorcerer cannot swap a bloodline\
-    \ power that she has altered or replaced with an archetype for a bloodline mutation.\
-    \ A bloodrager need not be in a bloodrage to use her bloodline mutation powers.\
-    \ Alternatively, a bloodrager or sorcerer can select a bloodline mutation in place\
-    \ of a bloodline bonus feat, provided her class level is at least equal to the\
-    \ level of the bloodline ability the mutation normally replaces. The list of bloodline\
-    \ mutations can be found here. Source: PZO9468"
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:damage_reduction#bloodrager"
-  name: "Damage Reduction"
-  label: null
-  type: "Ex"
-  description: "At 7th level, a bloodrager gains damage reduction. Subtract 1 from\
-    \ the damage the bloodrager takes each time he is dealt damage from a weapon or\
-    \ a natural attack. At 10th level, and every 3 levels thereafter, this damage\
-    \ reduction increases by 1 point. Damage Reduction can reduce damage to 0, but\
-    \ not below 0."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:eschew_materials#bloodrager"
-  name: "Eschew Materials"
-  label: null
-  type: ""
-  description: "At 4th level, the bloodrager gains Eschew Materials as a bonus feat."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:improved_uncanny_dodge#bloodrager"
-  name: "Improved Uncanny Dodge"
-  label: null
-  type: "Ex"
-  description: "At 5th level, a bloodrager can no longer be flanked. This defense\
-    \ denies rogues (or other classes with the sneak attack ability) the ability to\
-    \ sneak attack the bloodrager by flanking him, unless the attacker has at least\
-    \ four more rogue levels (or levels in the class granting sneak attack) than the\
-    \ target has bloodrager levels.If a character already has uncanny dodge from another\
-    \ class, the levels from the classes that grant uncanny dodge stack when determining\
-    \ the minimum rogue level required to flank the character."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:indomitable_will#bloodrager"
-  name: "Indomitable Will"
-  label: null
-  type: "Ex"
-  description: "At 14th level, a bloodrager gains a +4 bonus on Will saves to resist\
-    \ enchantment spells while bloodraging. This bonus stacks with all other modifiers,\
-    \ including the morale bonus on Will saves he also receives during his bloodrage."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:blood_casting#bloodrager"
-  name: "Blood Casting"
-  label: null
-  type: "Su"
-  description: "At 4th level, the bloodrager gains the ability to cast spells even\
-    \ while bloodraging. He can also cast these spells defensively and can make concentration\
-    \ checks for these spells while bloodraging. While bloodraging, he can cast and\
-    \ concentrate on only his bloodrager spells (see below); spells from other classes\
-    \ cannot be cast during this state."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:uncanny_dodge#bloodrager"
-  name: "Uncanny Dodge"
-  label: null
-  type: "Ex"
-  description: "At 2nd level, a bloodrager can react to danger before his senses would\
-    \ normally allow him to do so. He cannot be caught flat-footed, nor does he lose\
-    \ his Dexterity bonus to AC if the attacker is invisible. He still loses his Dexterity\
-    \ bonus to AC if immobilized. A bloodrager with this ability can still lose his\
-    \ Dexterity bonus to AC if an opponent successfully uses the feint action against\
-    \ him.If a bloodrager already possesses uncanny dodge from a different class,\
-    \ he automatically gains improved uncanny dodge (see below) instead."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:greater_bloodrage#bloodrager"
-  name: "Greater Bloodrage"
-  label: null
-  type: "Su"
-  description: "At 11th level, when a bloodrager enters a bloodrage, the morale bonus\
-    \ to his Strength and Constitution increases to +6 and the morale bonus on his\
-    \ Will saves increases to +3. In addition, upon entering a bloodrage, the bloodrager\
-    \ can apply the effects a bloodrager spell he knows of 2nd level or lower to himself.\
-    \ The spell must have a range of touch or personal. If the spell's duration is\
-    \ greater than 1 round, it instead lasts for the duration of the bloodrage. This\
-    \ use consumes a bloodrager spell slot, as if he had cast the spell; he must have\
-    \ the spell slot available to take advantage of this effect.Greater bloodrage\
-    \ counts as the barbarian's greater rage ability for the purposes of feat prerequisites,\
-    \ feat abilities, magic item abilities, and spell effects."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:blood_sanctuary#bloodrager"
-  name: "Blood Sanctuary"
-  label: null
-  type: "Su"
-  description: "At 3rd level, due to the power of his blood, a bloodrager can stand\
-    \ confidently amid the effects of spells cast by himself or his allies. He gains\
-    \ a +2 bonus on saving throws against spells that he or an ally casts."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:bloodline_spell#bloodrager"
-  name: "Bloodline Spell"
-  label: null
-  type: ""
-  description: "At 7th, 10th, 13th, and 16th levels, a bloodrager learns an additional\
-    \ spell derived from his bloodline. These spells are in addition to the number\
-    \ of spells given on Table: Bloodrager. These spells cannot be exchanged for different\
-    \ spells at higher levels."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:bloodrage#bloodrager"
-  name: "Bloodrage"
-  label: null
-  type: "Su"
-  description: "The bloodrager's source of internal power grants him the ability to\
-    \ bloodrage.At 1st level, a bloodrager can bloodrage for a number of rounds per\
-    \ day equal to 4 + his Constitution modifier. At each level after 1st, he can\
-    \ bloodrage for 2 additional rounds per day. Temporary increases to Constitution\
-    \ (such as those gained from bloodraging or spells like bear's endurance) don't\
-    \ increase the total number of rounds that a bloodrager can bloodrage per day.\
-    \ The total number of rounds of bloodrage per day is renewed after resting for\
-    \ 8 hours, although these hours need not be consecutive.A bloodrager can enter\
-    \ a bloodrage as a free action. While in a bloodrage, a bloodrager gains a +4\
-    \ morale bonus to his Strength and Constitution, as well as a +2 morale bonus\
-    \ on Will saves. In addition, he takes a –2 penalty to Armor Class. The increase\
-    \ to Constitution grants the bloodrager 2 hit points per Hit Die, but these disappear\
-    \ when the bloodrage ends and are not lost first like temporary hit points. While\
-    \ bloodraging, a bloodrager cannot use any Charisma-, Dexterity-, or Intelligence-based\
-    \ skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires\
-    \ patience or concentration.A bloodrager can end his bloodrage as a free action.\
-    \ When the bloodrage ends, he's fatigued for a number of rounds equal to twice\
-    \ the number of rounds spent in the bloodrage. A bloodrager cannot enter a new\
-    \ bloodrage while fatigued or exhausted, but can otherwise enter bloodrage multiple\
-    \ times during a single encounter or combat. If a bloodrager falls unconscious,\
-    \ his bloodrage immediately ends, placing him in peril of death.Bloodrage counts\
-    \ as the barbarian's rage class feature for the purpose of feat prerequisites,\
-    \ feat abilities, magic item abilities, and spell effects."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "trait:armor_proficiency#bloodrager"
-  name: "Armor Proficiency (Bloodrager)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:bloodline_feat#bloodrager"
-  name: "Bloodline Feat"
-  label: null
-  type: ""
-  description: "At 6th level and every 3 levels thereafter, a bloodrager receives\
-    \ one bonus feat chosen from a list specific to each bloodline. The bloodrager\
-    \ must meet the prerequisites for these bonus feats."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Advanced Class Guide"
-- id: "ability:tireless_bloodrage#bloodrager"
-  name: "Tireless Bloodrage"
-  label: null
-  type: "Su"
-  description: "At 17th level, a bloodrager no longer becomes fatigued at the end\
-    \ of his bloodrage."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder Roleplaying Game Advanced Class Guide"

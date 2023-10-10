@@ -14,21 +14,21 @@ source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 hit_die: "D10"
 alignment: "Any"
 class_skills:
-- "skill:swim"
-- "skill:bluff"
 - "skill:acrobatics"
-- "skill:profession"
+- "skill:bluff"
 - "skill:climb"
-- "skill:ride"
-- "skill:heal"
-- "skill:perception"
 - "skill:craft"
-- "skill:survival"
-- "skill:intimidate"
-- "skill:stealth"
 - "skill:disguise"
+- "skill:heal"
+- "skill:intimidate"
 - "skill:knowledge"
+- "skill:perception"
+- "skill:profession"
+- "skill:ride"
 - "skill:sense_motive"
+- "skill:stealth"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "6"
 bab: "A"
 fort: "A"
@@ -187,6 +187,60 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
+- id: "ability:advanced_slayer_talent#slayer"
+  name: "Advanced Slayer Talent"
+  label: null
+  type: ""
+  description: "At 10th level and every 2 levels thereafter, a slayer can select one\
+    \ of the following advanced talents in place of a slayer talent."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:improved_quarry#slayer"
+  name: "Improved Quarry"
+  label: null
+  type: "Ex"
+  description: "At 19th level, the slayer's ability to hunt his quarry improves. He\
+    \ can now select a quarry as a free action, and can now take 20 while using Survival\
+    \ to track his quarry, while moving at normal speed without penalty. His insight\
+    \ bonus to attack his quarry increases to +4. If his quarry is killed or dismissed,\
+    \ he can select a new one after 10 minutes have passed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:master_slayer#slayer"
+  name: "Master Slayer"
+  label: null
+  type: "Ex"
+  description: "At 20th level, the slayer becomes a master at capturing or killing\
+    \ his studied targets. As a standard action, he can make a single attack against\
+    \ a studied target at his full attack bonus, choosing one of the following effects:\
+    \ kill, knock unconscious for 1d4 hours, or paralyze for 2d6 rounds. If the attack\
+    \ succeeds, the target takes damage normally and must succeed at a Fortitude saving\
+    \ throw or suffer the additional effect. The DC for this save is 10 + 1/2 the\
+    \ slayer's level + the slayer's Intelligence modifier. Whether or not the target\
+    \ succeeds, it cannot be targeted by this ability again (by any slayer) for 24\
+    \ hours."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:quarry#slayer"
+  name: "Quarry"
+  label: null
+  type: "Ex"
+  description: "At 14th level, a slayer can as a standard action denote one target\
+    \ within his line of sight as his quarry. Whenever he is following the tracks\
+    \ of his quarry, a slayer can take 10 on his Survival skill checks while moving\
+    \ at normal speed, without penalty. In addition, he gains a +2 insight bonus on\
+    \ attack rolls made against his quarry, and all critical threats against his quarry\
+    \ are automatically confirmed. A slayer can have no more than one quarry at a\
+    \ time, and the target must be selected as a studied target. He can dismiss this\
+    \ effect at any time as a free action, but he cannot select a new quarry target\
+    \ for 24 hours. If the slayer sees proof that his quarry is dead, he can select\
+    \ a new quarry target after 1 hour."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:slayer_talent#slayer"
   name: "Slayer Talent"
   label: null
@@ -212,28 +266,25 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "trait:armor_proficiency#slayer"
-  name: "Armor Proficiency (Slayer)"
+- id: "ability:sneak_attack#slayer"
+  name: "Sneak Attack"
   label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:improved_quarry#slayer"
-  name: "Improved Quarry"
-  label: null
-  type: "Ex"
-  description: "At 19th level, the slayer's ability to hunt his quarry improves. He\
-    \ can now select a quarry as a free action, and can now take 20 while using Survival\
-    \ to track his quarry, while moving at normal speed without penalty. His insight\
-    \ bonus to attack his quarry increases to +4. If his quarry is killed or dismissed,\
-    \ he can select a new one after 10 minutes have passed."
+  type: ""
+  description: "At 3rd level, if a slayer catches an opponent unable to defend itself\
+    \ effectively from his attack, he can strike a vital spot for extra damage. The\
+    \ slayer's attack deals extra damage anytime his target would be denied a Dexterity\
+    \ bonus to AC (whether the target actually has a Dexterity bonus or not), or when\
+    \ the slayer flanks his target. This additional damage is 1d6 at 3rd level, and\
+    \ increases by 1d6 every 3 levels thereafter. Should the slayer score a critical\
+    \ hit with a sneak attack, this additional damage is not multiplied. Ranged attacks\
+    \ can count as sneak attacks only if the target is within 30 feet.With a weapon\
+    \ that deals nonlethal damage (like a sap, whip, or unarmed strike), a slayer\
+    \ can make a sneak attack that deals nonlethal damage instead of lethal damage.\
+    \ He cannot use a weapon that deals lethal damage to deal nonlethal damage in\
+    \ a sneak attack, not even with the usual –4 penalty.The slayer must be able to\
+    \ see the target well enough to pick out a vital spot and must be able to reach\
+    \ such a spot. A slayer cannot use sneak attack while striking a creature with\
+    \ concealment."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
@@ -243,41 +294,6 @@ class_features:
   type: "Ex"
   description: "At 7th level, a slayer gains his studied target bonus on Disguise,\
     \ Intimidate, and Stealth checks against his studied opponent."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:advanced_slayer_talent#slayer"
-  name: "Advanced Slayer Talent"
-  label: null
-  type: ""
-  description: "At 10th level and every 2 levels thereafter, a slayer can select one\
-    \ of the following advanced talents in place of a slayer talent."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:quarry#slayer"
-  name: "Quarry"
-  label: null
-  type: "Ex"
-  description: "At 14th level, a slayer can as a standard action denote one target\
-    \ within his line of sight as his quarry. Whenever he is following the tracks\
-    \ of his quarry, a slayer can take 10 on his Survival skill checks while moving\
-    \ at normal speed, without penalty. In addition, he gains a +2 insight bonus on\
-    \ attack rolls made against his quarry, and all critical threats against his quarry\
-    \ are automatically confirmed. A slayer can have no more than one quarry at a\
-    \ time, and the target must be selected as a studied target. He can dismiss this\
-    \ effect at any time as a free action, but he cannot select a new quarry target\
-    \ for 24 hours. If the slayer sees proof that his quarry is dead, he can select\
-    \ a new quarry target after 1 hour."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:track#slayer"
-  name: "Track"
-  label: null
-  type: "Ex"
-  description: "A slayer adds 1/2 his level (minimum 1) to Survival skill checks made\
-    \ to follow tracks."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
@@ -315,43 +331,27 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:master_slayer#slayer"
-  name: "Master Slayer"
+- id: "ability:track#slayer"
+  name: "Track"
   label: null
   type: "Ex"
-  description: "At 20th level, the slayer becomes a master at capturing or killing\
-    \ his studied targets. As a standard action, he can make a single attack against\
-    \ a studied target at his full attack bonus, choosing one of the following effects:\
-    \ kill, knock unconscious for 1d4 hours, or paralyze for 2d6 rounds. If the attack\
-    \ succeeds, the target takes damage normally and must succeed at a Fortitude saving\
-    \ throw or suffer the additional effect. The DC for this save is 10 + 1/2 the\
-    \ slayer's level + the slayer's Intelligence modifier. Whether or not the target\
-    \ succeeds, it cannot be targeted by this ability again (by any slayer) for 24\
-    \ hours."
+  description: "A slayer adds 1/2 his level (minimum 1) to Survival skill checks made\
+    \ to follow tracks."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:sneak_attack#slayer"
-  name: "Sneak Attack"
+- id: "trait:armor_proficiency#slayer"
+  name: "Armor Proficiency (Slayer)"
   label: null
-  type: ""
-  description: "At 3rd level, if a slayer catches an opponent unable to defend itself\
-    \ effectively from his attack, he can strike a vital spot for extra damage. The\
-    \ slayer's attack deals extra damage anytime his target would be denied a Dexterity\
-    \ bonus to AC (whether the target actually has a Dexterity bonus or not), or when\
-    \ the slayer flanks his target. This additional damage is 1d6 at 3rd level, and\
-    \ increases by 1d6 every 3 levels thereafter. Should the slayer score a critical\
-    \ hit with a sneak attack, this additional damage is not multiplied. Ranged attacks\
-    \ can count as sneak attacks only if the target is within 30 feet.With a weapon\
-    \ that deals nonlethal damage (like a sap, whip, or unarmed strike), a slayer\
-    \ can make a sneak attack that deals nonlethal damage instead of lethal damage.\
-    \ He cannot use a weapon that deals lethal damage to deal nonlethal damage in\
-    \ a sneak attack, not even with the usual –4 penalty.The slayer must be able to\
-    \ see the target well enough to pick out a vital spot and must be able to reach\
-    \ such a spot. A slayer cannot use sneak attack while striking a creature with\
-    \ concealment."
-  effects: []
-  prerequisites: ""
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "trait:weapon_proficiency#slayer"
   name: "Weapon Proficiency (Slayer)"

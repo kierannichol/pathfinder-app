@@ -26,19 +26,19 @@ source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 hit_die: "D10"
 alignment: "Any lawful"
 class_skills:
-- "skill:swim"
 - "skill:acrobatics"
-- "skill:profession"
 - "skill:climb"
-- "skill:ride"
-- "skill:perception"
 - "skill:craft"
 - "skill:escape_artist"
 - "skill:intimidate"
-- "skill:stealth"
 - "skill:knowledge"
-- "skill:sense_motive"
+- "skill:perception"
 - "skill:perform"
+- "skill:profession"
+- "skill:ride"
+- "skill:sense_motive"
+- "skill:stealth"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "A"
 fort: "A"
@@ -265,11 +265,52 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
-- id: "ability:unarmed_strike#unchained_monk"
-  name: "Unarmed Strike"
+- id: "ability:bonus_feat#unchained_monk"
+  name: "Bonus Feat"
   label: null
   type: ""
-  description: ""
+  description: "At 1st level, 2nd level, and every 4 levels thereafter, a monk can\
+    \ select a bonus feat. These feats must be taken from the following list:Catch\
+    \ Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, Improved Grapple, Scorpion\
+    \ Style, and Throw Anything.At 6th level, the following feats are added to the\
+    \ list:Gorgon's Fist, Improved Bull Rush, Improved Disarm, Improved Feint, Improved\
+    \ Trip, and Mobility.At 10th level, the following feats are added to the list:Improved\
+    \ Critical, Medusa's Wrath, Snatch Arrows, and Spring Attack.A monk need not have\
+    \ any of the prerequisites normally required for these feats to select them."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:evasion#unchained_monk"
+  name: "Evasion"
+  label: null
+  type: ""
+  description: "At 2nd level, a monk can avoid damage from many area-effect attacks.\
+    \ If a monk succeeds at a Reflex saving throw against an attack that normally\
+    \ deals half damage on a successful save, he instead takes no damage. Evasion\
+    \ can be used only if a monk is wearing light armor or no armor. A helpless monk\
+    \ does not gain the benefit of evasion."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:fast_movement#unchained_monk"
+  name: "Fast Movement"
+  label: null
+  type: ""
+  description: "At 3rd level, a monk gains an enhancement bonus to his land speed,\
+    \ as shown on Table: Monk Unchained. A monk in armor or carrying a medium or heavy\
+    \ load loses this extra speed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:flawless_mind#unchained_monk"
+  name: "Flawless Mind"
+  label: null
+  type: ""
+  description: "At 19th level, a monk gains total control over his mental faculties.\
+    \ Whenever he attempts a Will save, he can roll twice and take the better result.\
+    \ If he fails a Will saving throw against a spell or effect that has a duration\
+    \ longer than 1 hour, the monk can attempt a new saving throw at the end of each\
+    \ hour to end the effect."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
@@ -293,56 +334,6 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:purity_of_body#unchained_monk"
-  name: "Purity Of Body"
-  label: null
-  type: "Ex"
-  description: "At 5th level, a monk gains immunity to all diseases, including supernatural\
-    \ and magical diseases."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:still_mind#unchained_monk"
-  name: "Still Mind"
-  label: null
-  type: "Ex"
-  description: "At 4th level, a monk gains a +2 bonus on saving throws against enchantment\
-    \ spells and effects."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "trait:weapon_proficiency#unchained_monk"
-  name: "Weapon Proficiency (Unchained Monk)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:sai 1"
-  - "SET proficiency:shortspear 1"
-  - "SET proficiency:spear 1"
-  - "SET proficiency:siangham 1"
-  - "SET proficiency:shuriken_5 1"
-  - "SET proficiency:sling 1"
-  - "SET proficiency:nunchaku 1"
-  - "SET proficiency:club 1"
-  - "SET proficiency:quarterstaff 1"
-  - "SET proficiency:javelin 1"
-  - "SET proficiency:handaxe 1"
-  - "SET proficiency:axe 1"
-  - "SET proficiency:dagger 1"
-  - "SET proficiency:kama 1"
-  - "SET proficiency:short_sword 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:ki_strike#unchained_monk"
-  name: "Ki Strike"
-  label: null
-  type: ""
-  description: "At 3rd level, ki strike allows his unarmed attacks to be treated as\
-    \ magic weapons for the purpose of overcoming damage reduction."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 - id: "ability:improved_evasion#unchained_monk"
   name: "Improved Evasion"
   label: null
@@ -351,117 +342,6 @@ class_features:
     \ damage on successful Reflex saving throws against attacks, but henceforth he\
     \ takes only half damage on failed saves. A helpless monk does not gain the benefit\
     \ of improved evasion."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:timeless_body#unchained_monk"
-  name: "Timeless Body"
-  label: null
-  type: "Ex"
-  description: "At 17th level, a monk no longer takes penalties to his ability scores\
-    \ for aging and cannot be magically aged. Any such penalties that he has already\
-    \ taken, however, remain in place. Age bonuses still accrue, and the monk still\
-    \ dies of old age when his time is up."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:tongue_of_the_sun_and_moon#unchained_monk"
-  name: "Tongue Of The Sun And Moon"
-  label: null
-  type: "Ex"
-  description: "At 13th level, a monk can understand and speak with any living creature,\
-    \ as if under a permanent tongues effect."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:bonus_feat#unchained_monk"
-  name: "Bonus Feat"
-  label: null
-  type: ""
-  description: "At 1st level, 2nd level, and every 4 levels thereafter, a monk can\
-    \ select a bonus feat. These feats must be taken from the following list:Catch\
-    \ Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, Improved Grapple, Scorpion\
-    \ Style, and Throw Anything.At 6th level, the following feats are added to the\
-    \ list:Gorgon's Fist, Improved Bull Rush, Improved Disarm, Improved Feint, Improved\
-    \ Trip, and Mobility.At 10th level, the following feats are added to the list:Improved\
-    \ Critical, Medusa's Wrath, Snatch Arrows, and Spring Attack.A monk need not have\
-    \ any of the prerequisites normally required for these feats to select them."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "trait:armor_proficiency#unchained_monk"
-  name: "Armor Proficiency (Unchained Monk)"
-  label: null
-  type: null
-  description: null
-  effects: []
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:style_strike#unchained_monk"
-  name: "Style Strike"
-  label: null
-  type: "Ex"
-  description: "At 5th level, a monk can learn one type of style strike. Whenever\
-    \ he makes a flurry of blows, he can designate one of his unarmed strikes as a\
-    \ style strike. This attack is resolved as normal, but it has an additional effect\
-    \ depending on the type of strike chosen. At 9th level, and every 4 levels thereafter,\
-    \ a monk learns an additional style strike. He must choose which style strike\
-    \ to apply before the attack roll is made. At 15th level, he can designate up\
-    \ to two of his unarmed strikes each round as a style strike, and each one can\
-    \ be a different type. The monk can choose from any of the following strikes."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:evasion#unchained_monk"
-  name: "Evasion"
-  label: null
-  type: ""
-  description: "At 2nd level, a monk can avoid damage from many area-effect attacks.\
-    \ If a monk succeeds at a Reflex saving throw against an attack that normally\
-    \ deals half damage on a successful save, he instead takes no damage. Evasion\
-    \ can be used only if a monk is wearing light armor or no armor. A helpless monk\
-    \ does not gain the benefit of evasion."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:flawless_mind#unchained_monk"
-  name: "Flawless Mind"
-  label: null
-  type: ""
-  description: "At 19th level, a monk gains total control over his mental faculties.\
-    \ Whenever he attempts a Will save, he can roll twice and take the better result.\
-    \ If he fails a Will saving throw against a spell or effect that has a duration\
-    \ longer than 1 hour, the monk can attempt a new saving throw at the end of each\
-    \ hour to end the effect."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:fast_movement#unchained_monk"
-  name: "Fast Movement"
-  label: null
-  type: ""
-  description: "At 3rd level, a monk gains an enhancement bonus to his land speed,\
-    \ as shown on Table: Monk Unchained. A monk in armor or carrying a medium or heavy\
-    \ load loses this extra speed."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:stunning_fist#unchained_monk"
-  name: "Stunning Fist"
-  label: null
-  type: ""
-  description: "At 1st level, the monk gains Stunning Fist as a bonus feat, even if\
-    \ he does not meet the prerequisites.At 4th level, and every 4 levels thereafter,\
-    \ the monk gains the ability to apply a new condition to the target of his Stunning\
-    \ Fist. This condition replaces stunning the target for 1 round, and a successful\
-    \ saving throw still negates the effect.At 4th level, the monk can choose to make\
-    \ the target fatigued. At 8th level, he can make the target sickened for 1 minute.At\
-    \ 12th level, he can make the target staggered for 1d6+1 rounds.At 16th level,\
-    \ he can permanently blind or deafen the target.At 20th level, he can paralyze\
-    \ the target for 1d6+1 rounds. The monk must choose which condition will apply\
-    \ before the attack roll is made. These effects do not stack with themselves (a\
-    \ creature fatigued by Stunning Fist cannot become exhausted if hit by Stunning\
-    \ Fist again), but additional hits do increase the duration."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
@@ -502,6 +382,15 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:ki_strike#unchained_monk"
+  name: "Ki Strike"
+  label: null
+  type: ""
+  description: "At 3rd level, ki strike allows his unarmed attacks to be treated as\
+    \ magic weapons for the purpose of overcoming damage reduction."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 - id: "ability:perfect_self#unchained_monk"
   name: "Perfect Self"
   label: null
@@ -518,4 +407,115 @@ class_features:
     \ this ability to gain an amount of ki in excess of his maximum."
   effects: []
   prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:purity_of_body#unchained_monk"
+  name: "Purity Of Body"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a monk gains immunity to all diseases, including supernatural\
+    \ and magical diseases."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:still_mind#unchained_monk"
+  name: "Still Mind"
+  label: null
+  type: "Ex"
+  description: "At 4th level, a monk gains a +2 bonus on saving throws against enchantment\
+    \ spells and effects."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:stunning_fist#unchained_monk"
+  name: "Stunning Fist"
+  label: null
+  type: ""
+  description: "At 1st level, the monk gains Stunning Fist as a bonus feat, even if\
+    \ he does not meet the prerequisites.At 4th level, and every 4 levels thereafter,\
+    \ the monk gains the ability to apply a new condition to the target of his Stunning\
+    \ Fist. This condition replaces stunning the target for 1 round, and a successful\
+    \ saving throw still negates the effect.At 4th level, the monk can choose to make\
+    \ the target fatigued. At 8th level, he can make the target sickened for 1 minute.At\
+    \ 12th level, he can make the target staggered for 1d6+1 rounds.At 16th level,\
+    \ he can permanently blind or deafen the target.At 20th level, he can paralyze\
+    \ the target for 1d6+1 rounds. The monk must choose which condition will apply\
+    \ before the attack roll is made. These effects do not stack with themselves (a\
+    \ creature fatigued by Stunning Fist cannot become exhausted if hit by Stunning\
+    \ Fist again), but additional hits do increase the duration."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:style_strike#unchained_monk"
+  name: "Style Strike"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a monk can learn one type of style strike. Whenever\
+    \ he makes a flurry of blows, he can designate one of his unarmed strikes as a\
+    \ style strike. This attack is resolved as normal, but it has an additional effect\
+    \ depending on the type of strike chosen. At 9th level, and every 4 levels thereafter,\
+    \ a monk learns an additional style strike. He must choose which style strike\
+    \ to apply before the attack roll is made. At 15th level, he can designate up\
+    \ to two of his unarmed strikes each round as a style strike, and each one can\
+    \ be a different type. The monk can choose from any of the following strikes."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:timeless_body#unchained_monk"
+  name: "Timeless Body"
+  label: null
+  type: "Ex"
+  description: "At 17th level, a monk no longer takes penalties to his ability scores\
+    \ for aging and cannot be magically aged. Any such penalties that he has already\
+    \ taken, however, remain in place. Age bonuses still accrue, and the monk still\
+    \ dies of old age when his time is up."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:tongue_of_the_sun_and_moon#unchained_monk"
+  name: "Tongue Of The Sun And Moon"
+  label: null
+  type: "Ex"
+  description: "At 13th level, a monk can understand and speak with any living creature,\
+    \ as if under a permanent tongues effect."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:unarmed_strike#unchained_monk"
+  name: "Unarmed Strike"
+  label: null
+  type: ""
+  description: ""
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "trait:armor_proficiency#unchained_monk"
+  name: "Armor Proficiency (Unchained Monk)"
+  label: null
+  type: null
+  description: null
+  effects: []
+  prerequisites: null
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "trait:weapon_proficiency#unchained_monk"
+  name: "Weapon Proficiency (Unchained Monk)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:sai 1"
+  - "SET proficiency:shortspear 1"
+  - "SET proficiency:spear 1"
+  - "SET proficiency:siangham 1"
+  - "SET proficiency:shuriken_5 1"
+  - "SET proficiency:sling 1"
+  - "SET proficiency:nunchaku 1"
+  - "SET proficiency:club 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:javelin 1"
+  - "SET proficiency:handaxe 1"
+  - "SET proficiency:axe 1"
+  - "SET proficiency:dagger 1"
+  - "SET proficiency:kama 1"
+  - "SET proficiency:short_sword 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"

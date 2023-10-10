@@ -25,15 +25,15 @@ source: " Pathfinder RPG Core Rulebook"
 hit_die: "D6"
 alignment: "Any"
 class_skills:
-- "skill:fly"
-- "skill:craft"
-- "skill:use_magic_device"
-- "skill:bluff"
-- "skill:intimidate"
-- "skill:spellcraft"
-- "skill:profession"
-- "skill:knowledge"
 - "skill:appraise"
+- "skill:bluff"
+- "skill:craft"
+- "skill:fly"
+- "skill:intimidate"
+- "skill:knowledge"
+- "skill:profession"
+- "skill:spellcraft"
+- "skill:use_magic_device"
 skill_ranks_per_level: "2"
 bab: "C"
 fort: "B"
@@ -402,24 +402,6 @@ levels:
 spell_caster_types:
 - "arcane"
 class_features:
-- id: "ability:eschew_materials#sorcerer"
-  name: "Eschew Materials"
-  label: null
-  type: ""
-  description: "A sorcerer gains Eschew Materials as a bonus feat at 1st level."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:cantrips#sorcerer"
-  name: "Cantrips"
-  label: null
-  type: ""
-  description: "Sorcerers learn a number of cantrips, or 0-level spells, as noted\
-    \ on Table: Sorcerer Spells Known under “Spells Known.\" These spells are cast\
-    \ like any other spell, but they do not consume any slots and may be used again."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder RPG Core Rulebook"
 - id: "ability:bloodline_feat#sorcerer"
   name: "Bloodline Feat"
   label: null
@@ -435,13 +417,20 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "trait:armor_proficiency#sorcerer"
-  name: "Armor Proficiency (Sorcerer)"
+- id: "ability:bloodline_power#sorcerer"
+  name: "Bloodline Power"
   label: null
-  type: null
-  description: null
+  type: ""
+  description: "Each sorcerer has a source of magic somewhere in her heritage that\
+    \ grants her spells, bonus feats, an additional class skill, and other special\
+    \ abilities. This source can represent a blood relation or an extreme event involving\
+    \ a creature somewhere in the family's past. For example, a sorcerer might have\
+    \ a dragon as a distant relative or her grandfather might have signed a terrible\
+    \ contract with a devil. Regardless of the source, this influence manifests in\
+    \ a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline\
+    \ upon taking her first level of sorcerer. Once made, this choice cannot be changed."
   effects: []
-  prerequisites: null
+  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "ability:bloodline_spell#sorcerer"
   name: "Bloodline Spell"
@@ -457,6 +446,32 @@ class_features:
     \ upon taking her first level of sorcerer. Once made, this choice cannot be changed."
   effects: []
   prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:cantrips#sorcerer"
+  name: "Cantrips"
+  label: null
+  type: ""
+  description: "Sorcerers learn a number of cantrips, or 0-level spells, as noted\
+    \ on Table: Sorcerer Spells Known under “Spells Known.\" These spells are cast\
+    \ like any other spell, but they do not consume any slots and may be used again."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:eschew_materials#sorcerer"
+  name: "Eschew Materials"
+  label: null
+  type: ""
+  description: "A sorcerer gains Eschew Materials as a bonus feat at 1st level."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "trait:armor_proficiency#sorcerer"
+  name: "Armor Proficiency (Sorcerer)"
+  label: null
+  type: null
+  description: null
+  effects: []
+  prerequisites: null
   source: " Pathfinder RPG Core Rulebook"
 - id: "trait:weapon_proficiency#sorcerer"
   name: "Weapon Proficiency (Sorcerer)"
@@ -503,19 +518,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "ability:bloodline_power#sorcerer"
-  name: "Bloodline Power"
-  label: null
-  type: ""
-  description: "Each sorcerer has a source of magic somewhere in her heritage that\
-    \ grants her spells, bonus feats, an additional class skill, and other special\
-    \ abilities. This source can represent a blood relation or an extreme event involving\
-    \ a creature somewhere in the family's past. For example, a sorcerer might have\
-    \ a dragon as a distant relative or her grandfather might have signed a terrible\
-    \ contract with a devil. Regardless of the source, this influence manifests in\
-    \ a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline\
-    \ upon taking her first level of sorcerer. Once made, this choice cannot be changed."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"

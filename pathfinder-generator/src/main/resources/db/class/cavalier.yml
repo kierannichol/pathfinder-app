@@ -19,16 +19,16 @@ source: " Advanced Player's Guide"
 hit_die: "?"
 alignment: "Any"
 class_skills:
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:swim"
-- "skill:diplomacy"
 - "skill:bluff"
+- "skill:climb"
+- "skill:craft"
+- "skill:diplomacy"
+- "skill:handle_animal"
 - "skill:intimidate"
 - "skill:profession"
-- "skill:climb"
 - "skill:ride"
 - "skill:sense_motive"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "A"
 fort: "A"
@@ -182,6 +182,137 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
+- id: "ability:banner#cavalier"
+  name: "Banner"
+  label: null
+  type: "Ex"
+  description: "At 5th level, a cavalier's banner becomes a symbol of inspiration\
+    \ to his allies and companions. As long as the cavalier's banner is clearly visible,\
+    \ all allies within 60 feet receive a +2 morale bonus on saving throws against\
+    \ fear and a +1 morale bonus on attack rolls made as part of a charge. At 10th\
+    \ level, and every five levels thereafter, these bonuses increase by +1. The banner\
+    \ must be at least Small or larger and must be carried or displayed by the cavalier\
+    \ or his mount to function."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:bonus_feat#cavalier"
+  name: "Bonus Feat"
+  label: null
+  type: ""
+  description: "At 6th level, and at every six levels thereafter, a cavalier gains\
+    \ a bonus feat in addition to those gained from normal advancement. These bonus\
+    \ feats must be selected from those listed as combat feats. The cavalier must\
+    \ meet the prerequisites of these bonus feats."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:cavaliers_charge#cavalier"
+  name: "Cavalier's Charge"
+  label: null
+  type: "Ex"
+  description: "At 3rd level, a cavalier learns to make more accurate charge attacks\
+    \ while mounted. The cavalier receives a +4 bonus on melee attack rolls on a charge\
+    \ while mounted (instead of the normal +2). In addition, the cavalier does not\
+    \ suffer any penalty to his AC after making a charge attack while mounted."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:challenge#cavalier"
+  name: "Challenge"
+  label: null
+  type: "Ex"
+  description: "Once per day, a cavalier can challenge a foe to combat. As a swift\
+    \ action, the cavalier chooses one target within sight to challenge. The cavalier's\
+    \ melee attacks deal extra damage whenever the attacks are made against the target\
+    \ of his challenge. This extra damage is equal to the cavalier's level. The cavalier\
+    \ can use this ability once per day at 1st level, plus one additional time per\
+    \ day for every three levels beyond 1st, to a maximum of seven times per day at\
+    \ 19th level.Challenging a foe requires much of the cavalier's concentration.\
+    \ The cavalier takes a –2 penalty to his Armor Class, except against attacks made\
+    \ by the target of his challenge.The challenge remains in effect until the target\
+    \ is dead or unconscious or until the combat ends. Each cavalier's challenge also\
+    \ includes another effect which is listed in the section describing the cavalier's\
+    \ order."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:demanding_challenge#cavalier"
+  name: "Demanding Challenge"
+  label: null
+  type: "Ex"
+  description: "At 12th level, whenever a cavalier declares a challenge, his target\
+    \ must pay attention to the threat he poses. As long as the target is within the\
+    \ threatened area of the cavalier, it takes a –2 penalty to its AC from attacks\
+    \ made by anyone other than the cavalier."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:expert_trainer#cavalier"
+  name: "Expert Trainer"
+  label: null
+  type: "Ex"
+  description: "At 4th level, a cavalier learns to train mounts with speed and unsurpassed\
+    \ expertise. The cavalier receives a bonus equal to 1/2 his cavalier level whenever\
+    \ he uses Handle Animal on an animal that serves as a mount. In addition, he can\
+    \ reduce the time needed to teach a mount a new trick or train a mount for a general\
+    \ purpose to 1 day per 1 week required by increasing the DC by +5. He can also\
+    \ train more than one mount at once, although each mount after the first adds\
+    \ +2 to the DC."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:greater_banner#cavalier"
+  name: "Greater Banner"
+  label: null
+  type: "Ex"
+  description: "At 14th level, the cavalier's banner becomes a rallying call to his\
+    \ allies. All allies within 60 feet receive a +2 morale bonus on saving throws\
+    \ against charm and compulsion spells and effects. In addition, while his banner\
+    \ is displayed, the cavalier can spend a standard action to wave the banner through\
+    \ the air, granting all allies within 60 feet an additional saving throw against\
+    \ any one spell or effect that is targeting them. This save is made at the original\
+    \ DC. Spells and effects that do not allow saving throws are unaffected by this\
+    \ ability. An ally cannot benefit from this ability more than once per day."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:greater_tactician#cavalier"
+  name: "Greater Tactician"
+  label: null
+  type: "Ex"
+  description: "At 9th level, the cavalier receives an additional teamwork feat as\
+    \ a bonus feat. He must meet the prerequisites for this feat. The cavalier can\
+    \ grant this feat to his allies using the tactician ability. Using the tactician\
+    \ ability is a swift action."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:master_tactician#cavalier"
+  name: "Master Tactician"
+  label: null
+  type: "Ex"
+  description: "At 17th level, the cavalier receives an additional teamwork feat as\
+    \ a bonus feat. He must meet the prerequisites for this feat. The cavalier can\
+    \ grant this feat to his allies using the tactician ability. Whenever the cavalier\
+    \ uses the tactician ability, he grants any two teamwork feats that he knows.\
+    \ He can select from any of his teamwork feats, not just his bonus feats."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:mighty_charge#cavalier"
+  name: "Mighty Charge"
+  label: null
+  type: "Ex"
+  description: "At 11th level, a cavalier learns to make devastating charge attacks\
+    \ while mounted. Double the threat range of any weapons wielded during a charge\
+    \ while mounted. This increase does not stack with other effects that increase\
+    \ the threat range of the weapon. In addition, the cavalier can make a free bull\
+    \ rush, disarm, sunder, or trip combat maneuver if his charge attack is successful.\
+    \ This free combat maneuver does not provoke an attack of opportunity."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
 - id: "ability:mount#cavalier"
   name: "Mount"
   label: null
@@ -209,129 +340,6 @@ class_features:
     \ and samurai.Members of these orders are not necessarily bound together, but\
     \ some organizations do exist that are comprised of cavaliers that all belong\
     \ to one specific order."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:cavaliers_charge#cavalier"
-  name: "Cavalier's Charge"
-  label: null
-  type: "Ex"
-  description: "At 3rd level, a cavalier learns to make more accurate charge attacks\
-    \ while mounted. The cavalier receives a +4 bonus on melee attack rolls on a charge\
-    \ while mounted (instead of the normal +2). In addition, the cavalier does not\
-    \ suffer any penalty to his AC after making a charge attack while mounted."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:expert_trainer#cavalier"
-  name: "Expert Trainer"
-  label: null
-  type: "Ex"
-  description: "At 4th level, a cavalier learns to train mounts with speed and unsurpassed\
-    \ expertise. The cavalier receives a bonus equal to 1/2 his cavalier level whenever\
-    \ he uses Handle Animal on an animal that serves as a mount. In addition, he can\
-    \ reduce the time needed to teach a mount a new trick or train a mount for a general\
-    \ purpose to 1 day per 1 week required by increasing the DC by +5. He can also\
-    \ train more than one mount at once, although each mount after the first adds\
-    \ +2 to the DC."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:greater_tactician#cavalier"
-  name: "Greater Tactician"
-  label: null
-  type: "Ex"
-  description: "At 9th level, the cavalier receives an additional teamwork feat as\
-    \ a bonus feat. He must meet the prerequisites for this feat. The cavalier can\
-    \ grant this feat to his allies using the tactician ability. Using the tactician\
-    \ ability is a swift action."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:challenge#cavalier"
-  name: "Challenge"
-  label: null
-  type: "Ex"
-  description: "Once per day, a cavalier can challenge a foe to combat. As a swift\
-    \ action, the cavalier chooses one target within sight to challenge. The cavalier's\
-    \ melee attacks deal extra damage whenever the attacks are made against the target\
-    \ of his challenge. This extra damage is equal to the cavalier's level. The cavalier\
-    \ can use this ability once per day at 1st level, plus one additional time per\
-    \ day for every three levels beyond 1st, to a maximum of seven times per day at\
-    \ 19th level.Challenging a foe requires much of the cavalier's concentration.\
-    \ The cavalier takes a –2 penalty to his Armor Class, except against attacks made\
-    \ by the target of his challenge.The challenge remains in effect until the target\
-    \ is dead or unconscious or until the combat ends. Each cavalier's challenge also\
-    \ includes another effect which is listed in the section describing the cavalier's\
-    \ order."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:master_tactician#cavalier"
-  name: "Master Tactician"
-  label: null
-  type: "Ex"
-  description: "At 17th level, the cavalier receives an additional teamwork feat as\
-    \ a bonus feat. He must meet the prerequisites for this feat. The cavalier can\
-    \ grant this feat to his allies using the tactician ability. Whenever the cavalier\
-    \ uses the tactician ability, he grants any two teamwork feats that he knows.\
-    \ He can select from any of his teamwork feats, not just his bonus feats."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:banner#cavalier"
-  name: "Banner"
-  label: null
-  type: "Ex"
-  description: "At 5th level, a cavalier's banner becomes a symbol of inspiration\
-    \ to his allies and companions. As long as the cavalier's banner is clearly visible,\
-    \ all allies within 60 feet receive a +2 morale bonus on saving throws against\
-    \ fear and a +1 morale bonus on attack rolls made as part of a charge. At 10th\
-    \ level, and every five levels thereafter, these bonuses increase by +1. The banner\
-    \ must be at least Small or larger and must be carried or displayed by the cavalier\
-    \ or his mount to function."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:mighty_charge#cavalier"
-  name: "Mighty Charge"
-  label: null
-  type: "Ex"
-  description: "At 11th level, a cavalier learns to make devastating charge attacks\
-    \ while mounted. Double the threat range of any weapons wielded during a charge\
-    \ while mounted. This increase does not stack with other effects that increase\
-    \ the threat range of the weapon. In addition, the cavalier can make a free bull\
-    \ rush, disarm, sunder, or trip combat maneuver if his charge attack is successful.\
-    \ This free combat maneuver does not provoke an attack of opportunity."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:tactician#cavalier"
-  name: "Tactician"
-  label: null
-  type: "Ex"
-  description: "At 1st level, a cavalier receives a teamwork feat as a bonus feat.\
-    \ He must meet the prerequisites for this feat. As a standard action, the cavalier\
-    \ can grant this feat to all allies within 30 feet who can see and hear him. Allies\
-    \ retain the use of this bonus feat for 3 rounds plus 1 round for every two levels\
-    \ the cavalier possesses. Allies do not need to meet the prerequisites of these\
-    \ bonus feats. The cavalier can use this ability once per day at 1st level, plus\
-    \ one additional time per day at 5th level and for every 5 levels thereafter."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:greater_banner#cavalier"
-  name: "Greater Banner"
-  label: null
-  type: "Ex"
-  description: "At 14th level, the cavalier's banner becomes a rallying call to his\
-    \ allies. All allies within 60 feet receive a +2 morale bonus on saving throws\
-    \ against charm and compulsion spells and effects. In addition, while his banner\
-    \ is displayed, the cavalier can spend a standard action to wave the banner through\
-    \ the air, granting all allies within 60 feet an additional saving throw against\
-    \ any one spell or effect that is targeting them. This save is made at the original\
-    \ DC. Spells and effects that do not allow saving throws are unaffected by this\
-    \ ability. An ally cannot benefit from this ability more than once per day."
   effects: []
   prerequisites: ""
   source: " Advanced Player's Guide"
@@ -368,6 +376,34 @@ class_features:
     \ for 1d4 rounds. The DC is equal to 10 + the cavalier's base attack bonus."
   effects: []
   prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:tactician#cavalier"
+  name: "Tactician"
+  label: null
+  type: "Ex"
+  description: "At 1st level, a cavalier receives a teamwork feat as a bonus feat.\
+    \ He must meet the prerequisites for this feat. As a standard action, the cavalier\
+    \ can grant this feat to all allies within 30 feet who can see and hear him. Allies\
+    \ retain the use of this bonus feat for 3 rounds plus 1 round for every two levels\
+    \ the cavalier possesses. Allies do not need to meet the prerequisites of these\
+    \ bonus feats. The cavalier can use this ability once per day at 1st level, plus\
+    \ one additional time per day at 5th level and for every 5 levels thereafter."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "trait:armor_proficiency#cavalier"
+  name: "Armor Proficiency (Cavalier)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:heavy_armor 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Advanced Player's Guide"
 - id: "trait:weapon_proficiency#cavalier"
   name: "Weapon Proficiency (Cavalier)"
@@ -481,40 +517,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Advanced Player's Guide"
-- id: "ability:bonus_feat#cavalier"
-  name: "Bonus Feat"
-  label: null
-  type: ""
-  description: "At 6th level, and at every six levels thereafter, a cavalier gains\
-    \ a bonus feat in addition to those gained from normal advancement. These bonus\
-    \ feats must be selected from those listed as combat feats. The cavalier must\
-    \ meet the prerequisites of these bonus feats."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "trait:armor_proficiency#cavalier"
-  name: "Armor Proficiency (Cavalier)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:heavy_armor 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Advanced Player's Guide"
-- id: "ability:demanding_challenge#cavalier"
-  name: "Demanding Challenge"
-  label: null
-  type: "Ex"
-  description: "At 12th level, whenever a cavalier declares a challenge, his target\
-    \ must pay attention to the threat he poses. As long as the target is within the\
-    \ threatened area of the cavalier, it takes a –2 penalty to its AC from attacks\
-    \ made by anyone other than the cavalier."
-  effects: []
-  prerequisites: ""
   source: " Advanced Player's Guide"

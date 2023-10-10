@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 @JsonFormat()
-public class Id {
+public class Id implements Comparable<Id> {
 
     public static final Id EMPTY = new Id(null, null, null);
     private static final Pattern ID_PATTERN = Pattern.compile("(?:(?<type>[\\w_]+):)?(?<key>[\\w_]+)(?:#(?<option>[\\w_]+))?");
@@ -95,6 +95,11 @@ public class Id {
     @Override
     public int hashCode() {
         return Objects.hash(type, key, option);
+    }
+
+    @Override
+    public int compareTo(Id o) {
+        return this.string().compareTo(o.string());
     }
 
     @RequiredArgsConstructor(access = AccessLevel.PRIVATE)

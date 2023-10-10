@@ -22,13 +22,13 @@ source: " Pathfinder RPG Core Rulebook"
 hit_die: "D6"
 alignment: "Any"
 class_skills:
-- "skill:fly"
-- "skill:craft"
-- "skill:spellcraft"
-- "skill:profession"
-- "skill:knowledge"
 - "skill:appraise"
+- "skill:craft"
+- "skill:fly"
+- "skill:knowledge"
 - "skill:linguistics"
+- "skill:profession"
+- "skill:spellcraft"
 skill_ranks_per_level: "2"
 bab: "C"
 fort: "B"
@@ -293,26 +293,21 @@ levels:
 spell_caster_types:
 - "arcane"
 class_features:
-- id: "trait:weapon_proficiency#wizard"
-  name: "Weapon Proficiency (Wizard)"
+- id: "ability:arcane_bond#wizard"
+  name: "Arcane Bond"
   label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:club 1"
-  - "SET proficiency:quarterstaff 1"
-  - "SET proficiency:light_crossbow 1"
-  - "SET proficiency:heavy_crossbow 1"
-  - "SET proficiency:dagger 1"
-  prerequisites: null
-  source: " Pathfinder RPG Core Rulebook"
-- id: "trait:armor_proficiency#wizard"
-  name: "Armor Proficiency (Wizard)"
-  label: null
-  type: null
-  description: null
+  type: ""
+  description: ""
   effects: []
-  prerequisites: null
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:arcane_school#wizard"
+  name: "Arcane School"
+  label: null
+  type: ""
+  description: ""
+  effects: []
+  prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "ability:bonus_feat#wizard"
   name: "Bonus Feat"
@@ -341,19 +336,24 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:arcane_school#wizard"
-  name: "Arcane School"
+- id: "trait:armor_proficiency#wizard"
+  name: "Armor Proficiency (Wizard)"
   label: null
-  type: ""
-  description: ""
+  type: null
+  description: null
   effects: []
-  prerequisites: ""
+  prerequisites: null
   source: " Pathfinder RPG Core Rulebook"
-- id: "ability:arcane_bond#wizard"
-  name: "Arcane Bond"
+- id: "trait:weapon_proficiency#wizard"
+  name: "Weapon Proficiency (Wizard)"
   label: null
-  type: ""
-  description: ""
-  effects: []
-  prerequisites: ""
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:club 1"
+  - "SET proficiency:quarterstaff 1"
+  - "SET proficiency:light_crossbow 1"
+  - "SET proficiency:heavy_crossbow 1"
+  - "SET proficiency:dagger 1"
+  prerequisites: null
   source: " Pathfinder RPG Core Rulebook"

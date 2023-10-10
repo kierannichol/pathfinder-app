@@ -30,16 +30,16 @@ source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 hit_die: "D12"
 alignment: "Any non-lawful"
 class_skills:
-- "skill:perception"
-- "skill:craft"
-- "skill:handle_animal"
-- "skill:swim"
-- "skill:survival"
-- "skill:intimidate"
 - "skill:acrobatics"
 - "skill:climb"
+- "skill:craft"
+- "skill:handle_animal"
+- "skill:intimidate"
 - "skill:knowledge"
+- "skill:perception"
 - "skill:ride"
+- "skill:survival"
+- "skill:swim"
 skill_ranks_per_level: "4"
 bab: "A"
 fort: "A"
@@ -197,16 +197,6 @@ levels:
   level: 20
 spell_caster_types: []
 class_features:
-- id: "ability:tireless_rage#unchained_barbarian"
-  name: "Tireless Rage"
-  label: null
-  type: ""
-  description: "At 17th level, a barbarian is no longer fatigued at the end of her\
-    \ rage. If she enters a rage again within 1 minute of ending a rage, she doesn't\
-    \ gain any temporary hit points from her rage."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 - id: "ability:damage_reduction#unchained_barbarian"
   name: "Damage Reduction"
   label: null
@@ -216,103 +206,6 @@ class_features:
     \ At 10th level and every 3 levels thereafter, this damage reduction rises by\
     \ 1 point (up to 5 points at 19th level). Damage Reduction can reduce damage to\
     \ 0, but not below 0."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:uncanny_dodge#unchained_barbarian"
-  name: "Uncanny Dodge"
-  label: null
-  type: ""
-  description: "At 2nd level, a barbarian gains the ability to react to danger before\
-    \ her senses would normally allow her to do so. She cannot be caught flat-footed,\
-    \ nor does she lose her Dexterity bonus to AC if immobilized. A barbarian with\
-    \ this ability can still lose her Dexterity bonus to AC if an opponent successfully\
-    \ uses the feint action against her.If a barbarian already has uncanny dodge from\
-    \ a different class, she automatically gains improved uncanny dodge (see below)\
-    \ instead."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:fast_movement#unchained_barbarian"
-  name: "Fast Movement"
-  label: null
-  type: "Ex"
-  description: "A barbarian's base speed is faster than the norm for her race by 10\
-    \ feet. This benefit applies only when she is wearing no armor, light armor, or\
-    \ medium armor, and not carrying a heavy load. Apply this bonus before modifying\
-    \ the barbarian's speed because of any load carried or armor worn. This bonus\
-    \ stacks with any other bonuses to the barbarian's base speed."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:improved_uncanny_dodge#unchained_barbarian"
-  name: "Improved Uncanny Dodge"
-  label: null
-  type: ""
-  description: "At 5th level, a barbarian can no longer be flanked. This defense denies\
-    \ enemies the ability to sneak attack the barbarian by flanking her, unless the\
-    \ attacker has at least 4 more levels in a class that provides sneak attack than\
-    \ the barbarian has barbarian levels.If the barbarian also has uncanny dodge from\
-    \ another class, levels from the classes that grant uncanny dodge stack to determine\
-    \ the minimum level required to flank the barbarian."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:rage_power#unchained_barbarian"
-  name: "Rage Power"
-  label: null
-  type: ""
-  description: "As a barbarian gains levels, she learns to use her rage in new ways.\
-    \ At 2nd level and every 2 levels thereafter, the barbarian gains a rage power.\
-    \ A barbarian gains the benefits of rage powers only while raging. Some of these\
-    \ powers are always active during a rage, and others require the barbarian to\
-    \ take an action to use them. Unless otherwise noted, a barbarian cannot select\
-    \ an individual power more than once."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "trait:armor_proficiency#unchained_barbarian"
-  name: "Armor Proficiency (Unchained Barbarian)"
-  label: null
-  type: null
-  description: null
-  effects:
-  - "SET proficiency:light_shield 1"
-  - "SET proficiency:light_armor 1"
-  - "SET proficiency:buckler 1"
-  - "SET proficiency:medium_armor 1"
-  - "SET proficiency:heavy_shield 1"
-  prerequisites: null
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:indomitable_will#unchained_barbarian"
-  name: "Indomitable Will"
-  label: null
-  type: ""
-  description: "At 14th level, the barbarian gains a +4 bonus on Will saves to resist\
-    \ enchantment spells while raging. This bonus stacks with all other modifiers,\
-    \ including the morale bonus on Will saves she gains during her rage."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:greater_rage#unchained_barbarian"
-  name: "Greater Rage"
-  label: null
-  type: ""
-  description: "At 11th level, a barbarian's bonus on melee attack rolls, melee damage\
-    \ rolls, thrown weapon damage rolls, and Will saves while raging increases to\
-    \ +3. In addition, the amount of temporary hit points gained when entering a rage\
-    \ increases to 3 per Hit Die."
-  effects: []
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:mighty_rage#unchained_barbarian"
-  name: "Mighty Rage"
-  label: null
-  type: ""
-  description: "At 20th level, a barbarian's bonus on melee attack rolls, melee damage\
-    \ rolls, thrown weapon damage rolls, and Will saves while raging increases to\
-    \ +4. In addition, the amount of temporary hit points gained when entering a rage\
-    \ increases to 4 per Hit Die."
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
@@ -330,6 +223,141 @@ class_features:
     \ (if the barbarian has trap sense from another class)."
   effects: []
   prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:fast_movement#unchained_barbarian"
+  name: "Fast Movement"
+  label: null
+  type: "Ex"
+  description: "A barbarian's base speed is faster than the norm for her race by 10\
+    \ feet. This benefit applies only when she is wearing no armor, light armor, or\
+    \ medium armor, and not carrying a heavy load. Apply this bonus before modifying\
+    \ the barbarian's speed because of any load carried or armor worn. This bonus\
+    \ stacks with any other bonuses to the barbarian's base speed."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:greater_rage#unchained_barbarian"
+  name: "Greater Rage"
+  label: null
+  type: ""
+  description: "At 11th level, a barbarian's bonus on melee attack rolls, melee damage\
+    \ rolls, thrown weapon damage rolls, and Will saves while raging increases to\
+    \ +3. In addition, the amount of temporary hit points gained when entering a rage\
+    \ increases to 3 per Hit Die."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:improved_uncanny_dodge#unchained_barbarian"
+  name: "Improved Uncanny Dodge"
+  label: null
+  type: ""
+  description: "At 5th level, a barbarian can no longer be flanked. This defense denies\
+    \ enemies the ability to sneak attack the barbarian by flanking her, unless the\
+    \ attacker has at least 4 more levels in a class that provides sneak attack than\
+    \ the barbarian has barbarian levels.If the barbarian also has uncanny dodge from\
+    \ another class, levels from the classes that grant uncanny dodge stack to determine\
+    \ the minimum level required to flank the barbarian."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:indomitable_will#unchained_barbarian"
+  name: "Indomitable Will"
+  label: null
+  type: ""
+  description: "At 14th level, the barbarian gains a +4 bonus on Will saves to resist\
+    \ enchantment spells while raging. This bonus stacks with all other modifiers,\
+    \ including the morale bonus on Will saves she gains during her rage."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:mighty_rage#unchained_barbarian"
+  name: "Mighty Rage"
+  label: null
+  type: ""
+  description: "At 20th level, a barbarian's bonus on melee attack rolls, melee damage\
+    \ rolls, thrown weapon damage rolls, and Will saves while raging increases to\
+    \ +4. In addition, the amount of temporary hit points gained when entering a rage\
+    \ increases to 4 per Hit Die."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:rage#unchained_barbarian"
+  name: "Rage"
+  label: null
+  type: "Ex"
+  description: "A barbarian can call upon inner reserves of strength and ferocity,\
+    \ granting her additional combat prowess. At 1st level, a barbarian can rage for\
+    \ a number of rounds per day equal to 4 + her Constitution modifier. For each\
+    \ level after 1st she possesses, the barbarian can rage for 2 additional rounds\
+    \ per day. Temporary increases to Constitution, such as that gained from bear's\
+    \ endurance, do not increase the total number of rounds that a barbarian can rage\
+    \ per day. A barbarian can enter a rage as a free action. The total number of\
+    \ rounds of rage per day is renewed after resting for 8 hours, although these\
+    \ hours need not be consecutive.While in a rage, a barbarian gains a +2 bonus\
+    \ on melee attack rolls, melee damage rolls, thrown weapon damage rolls, and Will\
+    \ saving throws. In addition, she takes a –2 penalty to Armor Class. She also\
+    \ gains 2 temporary hit points per Hit Die. These temporary hit points are lost\
+    \ first when a character takes damage, disappear when the rage ends, and are not\
+    \ replenished if the barbarian enters a rage again within 1 minute of her previous\
+    \ rage. While in a rage, a barbarian cannot use any Charisma-, Dexterity-, or\
+    \ Intelligence-based skill (except Acrobatics, Fly, Intimidate, and Ride) or any\
+    \ ability that requires patience or concentration (such as spellcasting).A barbarian\
+    \ can end her rage as a free action, and is fatigued for 1 minute after a rage\
+    \ ends. A barbarian can't enter a new rage while fatigued or exhausted, but can\
+    \ otherwise enter a rage multiple times per day. If a barbarian falls unconscious,\
+    \ her rage immediately ends."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:rage_power#unchained_barbarian"
+  name: "Rage Power"
+  label: null
+  type: ""
+  description: "As a barbarian gains levels, she learns to use her rage in new ways.\
+    \ At 2nd level and every 2 levels thereafter, the barbarian gains a rage power.\
+    \ A barbarian gains the benefits of rage powers only while raging. Some of these\
+    \ powers are always active during a rage, and others require the barbarian to\
+    \ take an action to use them. Unless otherwise noted, a barbarian cannot select\
+    \ an individual power more than once."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:tireless_rage#unchained_barbarian"
+  name: "Tireless Rage"
+  label: null
+  type: ""
+  description: "At 17th level, a barbarian is no longer fatigued at the end of her\
+    \ rage. If she enters a rage again within 1 minute of ending a rage, she doesn't\
+    \ gain any temporary hit points from her rage."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "ability:uncanny_dodge#unchained_barbarian"
+  name: "Uncanny Dodge"
+  label: null
+  type: ""
+  description: "At 2nd level, a barbarian gains the ability to react to danger before\
+    \ her senses would normally allow her to do so. She cannot be caught flat-footed,\
+    \ nor does she lose her Dexterity bonus to AC if immobilized. A barbarian with\
+    \ this ability can still lose her Dexterity bonus to AC if an opponent successfully\
+    \ uses the feint action against her.If a barbarian already has uncanny dodge from\
+    \ a different class, she automatically gains improved uncanny dodge (see below)\
+    \ instead."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
+- id: "trait:armor_proficiency#unchained_barbarian"
+  name: "Armor Proficiency (Unchained Barbarian)"
+  label: null
+  type: null
+  description: null
+  effects:
+  - "SET proficiency:light_shield 1"
+  - "SET proficiency:light_armor 1"
+  - "SET proficiency:buckler 1"
+  - "SET proficiency:medium_armor 1"
+  - "SET proficiency:heavy_shield 1"
+  prerequisites: null
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"
 - id: "trait:weapon_proficiency#unchained_barbarian"
   name: "Weapon Proficiency (Unchained Barbarian)"
@@ -443,32 +471,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Pathfinder Roleplaying Game Pathfinder Unchained"
-- id: "ability:rage#unchained_barbarian"
-  name: "Rage"
-  label: null
-  type: "Ex"
-  description: "A barbarian can call upon inner reserves of strength and ferocity,\
-    \ granting her additional combat prowess. At 1st level, a barbarian can rage for\
-    \ a number of rounds per day equal to 4 + her Constitution modifier. For each\
-    \ level after 1st she possesses, the barbarian can rage for 2 additional rounds\
-    \ per day. Temporary increases to Constitution, such as that gained from bear's\
-    \ endurance, do not increase the total number of rounds that a barbarian can rage\
-    \ per day. A barbarian can enter a rage as a free action. The total number of\
-    \ rounds of rage per day is renewed after resting for 8 hours, although these\
-    \ hours need not be consecutive.While in a rage, a barbarian gains a +2 bonus\
-    \ on melee attack rolls, melee damage rolls, thrown weapon damage rolls, and Will\
-    \ saving throws. In addition, she takes a –2 penalty to Armor Class. She also\
-    \ gains 2 temporary hit points per Hit Die. These temporary hit points are lost\
-    \ first when a character takes damage, disappear when the rage ends, and are not\
-    \ replenished if the barbarian enters a rage again within 1 minute of her previous\
-    \ rage. While in a rage, a barbarian cannot use any Charisma-, Dexterity-, or\
-    \ Intelligence-based skill (except Acrobatics, Fly, Intimidate, and Ride) or any\
-    \ ability that requires patience or concentration (such as spellcasting).A barbarian\
-    \ can end her rage as a free action, and is fatigued for 1 minute after a rage\
-    \ ends. A barbarian can't enter a new rage while fatigued or exhausted, but can\
-    \ otherwise enter a rage multiple times per day. If a barbarian falls unconscious,\
-    \ her rage immediately ends."
-  effects: []
-  prerequisites: ""
   source: " Pathfinder Roleplaying Game Pathfinder Unchained"

@@ -20,14 +20,14 @@ source: " Advanced Player's Guide"
 hit_die: "D6"
 alignment: "Any"
 class_skills:
-- "skill:fly"
 - "skill:craft"
-- "skill:use_magic_device"
-- "skill:intimidate"
-- "skill:spellcraft"
-- "skill:profession"
-- "skill:knowledge"
+- "skill:fly"
 - "skill:heal"
+- "skill:intimidate"
+- "skill:knowledge"
+- "skill:profession"
+- "skill:spellcraft"
+- "skill:use_magic_device"
 skill_ranks_per_level: "2"
 bab: "C"
 fort: "B"
@@ -299,6 +299,54 @@ levels:
 spell_caster_types:
 - "arcane"
 class_features:
+- id: "ability:grand_hex#witch"
+  name: "Grand Hex"
+  label: null
+  type: ""
+  description: "Starting at 18th level, and every two levels thereafter, a witch can\
+    \ choose one of the following grand hexes whenever she could select a new hex."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:hex#witch"
+  name: "Hex"
+  label: null
+  type: ""
+  description: "Witches learn a number of magic tricks, called hexes, that grant them\
+    \ powers or weaken foes. At 1st level, a witch gains one hex of her choice. She\
+    \ gains an additional hex at 2nd level and for every 2 levels attained after 2nd\
+    \ level, as noted on Table: Witch. A witch cannot select an individual hex more\
+    \ than once.Unless otherwise noted, using a hex is a standard action that does\
+    \ not provoke an attack of opportunity. The save to resist a hex is equal to 10\
+    \ + 1/2 the witch's level + the witch's Intelligence modifier."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:major_hex#witch"
+  name: "Major Hex"
+  label: null
+  type: ""
+  description: "Starting at 10th level, and every two levels thereafter, a witch can\
+    \ choose one of the following major hexes whenever she could select a new hex."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
+- id: "ability:patron_spells#witch"
+  name: "Patron Spells"
+  label: null
+  type: ""
+  description: "At 1st level, when a witch gains her familiar, she must also select\
+    \ a patron. This patron is a vague and mysterious force, granting the witch power\
+    \ for reasons that she might not entirely understand. While these forces need\
+    \ not be named, they typically hold influence over one of the following forces.At\
+    \ 2nd level, and every two levels thereafter, a witch's patron adds new spells\
+    \ to a witch's list of spells known. These spells are also automatically added\
+    \ to the list of spells stored by the familiar. The spells gained depend upon\
+    \ the patron chosen. Each patron is listed by its theme. Its actual name is up\
+    \ to the GM and the witch to decide.See a complete list of witch patrons here."
+  effects: []
+  prerequisites: ""
+  source: " Advanced Player's Guide"
 - id: "trait:armor_proficiency#witch"
   name: "Armor Proficiency (Witch)"
   label: null
@@ -352,52 +400,4 @@ class_features:
   - "SET proficiency:stonebow 1"
   - "SET proficiency:longspear 1"
   prerequisites: null
-  source: " Advanced Player's Guide"
-- id: "ability:major_hex#witch"
-  name: "Major Hex"
-  label: null
-  type: ""
-  description: "Starting at 10th level, and every two levels thereafter, a witch can\
-    \ choose one of the following major hexes whenever she could select a new hex."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:hex#witch"
-  name: "Hex"
-  label: null
-  type: ""
-  description: "Witches learn a number of magic tricks, called hexes, that grant them\
-    \ powers or weaken foes. At 1st level, a witch gains one hex of her choice. She\
-    \ gains an additional hex at 2nd level and for every 2 levels attained after 2nd\
-    \ level, as noted on Table: Witch. A witch cannot select an individual hex more\
-    \ than once.Unless otherwise noted, using a hex is a standard action that does\
-    \ not provoke an attack of opportunity. The save to resist a hex is equal to 10\
-    \ + 1/2 the witch's level + the witch's Intelligence modifier."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:grand_hex#witch"
-  name: "Grand Hex"
-  label: null
-  type: ""
-  description: "Starting at 18th level, and every two levels thereafter, a witch can\
-    \ choose one of the following grand hexes whenever she could select a new hex."
-  effects: []
-  prerequisites: ""
-  source: " Advanced Player's Guide"
-- id: "ability:patron_spells#witch"
-  name: "Patron Spells"
-  label: null
-  type: ""
-  description: "At 1st level, when a witch gains her familiar, she must also select\
-    \ a patron. This patron is a vague and mysterious force, granting the witch power\
-    \ for reasons that she might not entirely understand. While these forces need\
-    \ not be named, they typically hold influence over one of the following forces.At\
-    \ 2nd level, and every two levels thereafter, a witch's patron adds new spells\
-    \ to a witch's list of spells known. These spells are also automatically added\
-    \ to the list of spells stored by the familiar. The spells gained depend upon\
-    \ the patron chosen. Each patron is listed by its theme. Its actual name is up\
-    \ to the GM and the witch to decide.See a complete list of witch patrons here."
-  effects: []
-  prerequisites: ""
   source: " Advanced Player's Guide"
