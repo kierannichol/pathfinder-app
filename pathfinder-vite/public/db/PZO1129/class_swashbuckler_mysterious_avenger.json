@@ -2,7 +2,7 @@
   "id": "class:swashbuckler#mysterious_avenger",
   "name": "Mysterious Avenger",
   "tags": ["archetype", "swashbuckler"],
-  "enabledFormula": "!@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:ability:the_swashbucklers_weapon_and_armor_proficiency#swashbuckler AND !@modifies:ability:nimble#swashbuckler AND !@modifies:ability:the_bonus_feat_gained_at_4th_level#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler",
+  "enabledFormula": "!@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:ability:nimble#swashbuckler AND !@modifies:trait:armor_proficiency#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler AND !@modifies:trait:weapon_proficiency#swashbuckler AND !@modifies:ability:bonus_feat#swashbuckler",
   "maxStacks": 1,
   "description": {
     "text": "While some swashbucklers fight for queen and country, and others for coin, glory, or just the enhancement of their own reputations, the mysterious avenger fights directly for a cause. Instead of gaining personal glory for her heroic deeds, she keeps her identity hidden in order to fight for those who cannot fight for themselves."
@@ -17,17 +17,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_swashbucklers_weapon_and_armor_proficiency#swashbuckler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:nimble#swashbuckler",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_4th_level#swashbuckler",
+            "targetKey": "modifies:trait:armor_proficiency#swashbuckler",
             "numberValue": 1
           }
         }, {
@@ -35,8 +30,138 @@
             "targetKey": "modifies:ability:swashbuckler_weapon_training#swashbuckler",
             "numberValue": 1
           }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#swashbuckler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#swashbuckler",
+            "numberValue": 1
+          }
         }],
         "links": [{
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d20"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger",
+          "conditionFormula": "@class:swashbuckler\u003e\u003d20"
+        }, {
           "featureId": "ability:avenger_finesse#swashbuckler_mysterious_avenger",
           "conditionFormula": "@class:swashbuckler\u003e\u003d1"
         }, {
@@ -50,13 +175,15 @@
           "conditionFormula": "@class:swashbuckler\u003e\u003d5"
         }],
         "unlinks": [{
-          "featureId": "ability:the_swashbucklers_weapon_and_armor_proficiency#swashbuckler"
+          "featureId": "trait:weapon_proficiency#swashbuckler"
+        }, {
+          "featureId": "trait:armor_proficiency#swashbuckler"
         }, {
           "featureId": "ability:swashbuckler_finesse#swashbuckler"
         }, {
           "featureId": "ability:nimble#swashbuckler"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_4th_level#swashbuckler"
+          "featureId": "ability:bonus_feat#swashbuckler"
         }, {
           "featureId": "ability:swashbuckler_weapon_training#swashbuckler"
         }]

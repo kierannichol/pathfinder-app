@@ -1,50 +1,17 @@
 .control {
   background-color: white;
   min-height: 100vh;
+  min-width: 100%;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  color: dimgray;
+  cursor: pointer;
 }
 
-.item {
+.control option {
   display: flex;
-}
-
-.tab {
-  width: 20px;
-}
-
-.label {
-  --pf-editor-tab-background-color: white;
-  --pf-editor-tab-text-color: inherit;
-
-  flex-grow: 1;
-  background-color: var(--pf-editor-tab-background-color);
-  padding: 2px;
-  color: var(--pf-editor-tab-text-color);
-
-  display: flex;
+  height: 2rem;
   align-items: center;
-}
-
-.activeTab {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid var(--bs-primary);
-}
-
-.inactiveTab {
-
-}
-
-.activeLabel {
-  --pf-editor-tab-background-color: var(--bs-primary);
-  --pf-editor-tab-text-color: white;
-}
-
-.inactiveLabel {
-
-}
-
-.item {
-
 }

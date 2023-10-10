@@ -2,7 +2,7 @@
   "id": "class:warpriest#divine_commander",
   "name": "Divine Commander",
   "tags": ["archetype", "warpriest"],
-  "enabledFormula": "!@modifies:ability:the_bonus_feat_gained_at_12th_level#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_15th_level#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_3rd_level#warpriest AND !@modifies:ability:blessings#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_6th_level#warpriest",
+  "enabledFormula": "!@modifies:ability:blessings#warpriest AND !@modifies:ability:bonus_feat#warpriest",
   "maxStacks": 1,
   "description": {
     "text": "Some warpriests are called to lead great armies and face legions of foes. These divine commanders live for war and fight for glory. Their hearts quicken at battle cries, and they charge forth with their deity\u0027s symbol held high. These leaders of armies do so to promote the agenda of their faith, and lead armies of devoted followers willing to give their lives for the cause."
@@ -12,27 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_12th_level#warpriest",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_15th_level#warpriest",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_3rd_level#warpriest",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:blessings#warpriest",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_6th_level#warpriest",
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
             "numberValue": 1
           }
         }],
@@ -55,13 +40,13 @@
         "unlinks": [{
           "featureId": "ability:blessings#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_12th_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_15th_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }]
       }]
     }

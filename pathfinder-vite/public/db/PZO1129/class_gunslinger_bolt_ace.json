@@ -2,7 +2,7 @@
   "id": "class:gunslinger#bolt_ace",
   "name": "Bolt Ace",
   "tags": ["archetype", "gunslinger"],
-  "enabledFormula": "!@modifies:ability:gun_training#gunslinger AND !@modifies:ability:the_grit_class_feature#gunslinger AND !@modifies:ability:the_gunslingers_weapon_proficiencies_and_replaces_gunsmith#gunslinger",
+  "enabledFormula": "!@modifies:ability:gunsmith#gunslinger AND !@modifies:ability:gun_training#gunslinger AND !@modifies:trait:weapon_proficiency#gunslinger AND !@modifies:ability:grit#gunslinger",
   "maxStacks": 1,
   "description": {
   },
@@ -11,21 +11,92 @@
       "stacks": [{
         "effects": [{
           "setAction": {
+            "targetKey": "modifies:ability:gunsmith#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:gun_training#gunslinger",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_grit_class_feature#gunslinger",
+            "targetKey": "modifies:trait:weapon_proficiency#gunslinger",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_gunslingers_weapon_proficiencies_and_replaces_gunsmith#gunslinger",
+            "targetKey": "modifies:ability:grit#gunslinger",
             "numberValue": 1
           }
         }],
         "links": [{
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d1"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d1"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d2"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d3"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d4"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d5"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d6"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d7"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d8"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d9"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d10"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d11"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d12"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d13"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d14"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d15"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d16"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d17"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d18"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d19"
+        }, {
+          "featureId": "ability:crossbow_maven#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d20"
+        }, {
+          "featureId": "ability:grit#gunslinger_bolt_ace",
+          "conditionFormula": "@class:gunslinger\u003e\u003d1"
+        }, {
           "featureId": "ability:crossbow_training#gunslinger_bolt_ace",
           "conditionFormula": "@class:gunslinger\u003e\u003d5"
         }, {
@@ -39,9 +110,11 @@
           "conditionFormula": "@class:gunslinger\u003e\u003d17"
         }],
         "unlinks": [{
-          "featureId": "ability:the_gunslingers_weapon_proficiencies_and_replaces_gunsmith#gunslinger"
+          "featureId": "trait:weapon_proficiency#gunslinger"
         }, {
-          "featureId": "ability:the_grit_class_feature#gunslinger"
+          "featureId": "ability:gunsmith#gunslinger"
+        }, {
+          "featureId": "ability:grit#gunslinger"
         }, {
           "featureId": "ability:gun_training#gunslinger"
         }]

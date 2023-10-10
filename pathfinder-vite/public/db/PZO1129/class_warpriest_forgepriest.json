@@ -2,7 +2,7 @@
   "id": "class:warpriest#forgepriest",
   "name": "Forgepriest",
   "tags": ["archetype", "warpriest"],
-  "enabledFormula": "!@modifies:ability:bonus_feats#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_3rd_level#warpriest AND !@modifies:ability:the_blessings_class_feature#warpriest AND !@modifies:ability:channel_energy#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_6th_level#warpriest",
+  "enabledFormula": "!@modifies:ability:blessings#warpriest AND !@modifies:ability:bonus_feat#warpriest AND !@modifies:ability:channel_energy#warpriest",
   "maxStacks": 1,
   "description": {
     "text": "Armorers of exquisite skill, forgepriests take inspiration from their deity to produce the most perfect weapons and armor they can, the better to equip the armies of the faithful."
@@ -12,17 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:bonus_feats#warpriest",
+            "targetKey": "modifies:ability:blessings#warpriest",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_3rd_level#warpriest",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_blessings_class_feature#warpriest",
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
             "numberValue": 1
           }
         }, {
@@ -30,13 +25,29 @@
             "targetKey": "modifies:ability:channel_energy#warpriest",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_6th_level#warpriest",
-            "numberValue": 1
-          }
         }],
         "links": [{
+          "featureId": "ability:blessings#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d1"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d3"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d6"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d9"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d12"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d15"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_forgepriest",
+          "conditionFormula": "@class:warpriest\u003e\u003d18"
+        }, {
           "featureId": "ability:craft_magic_arms_and_armor#warpriest_forgepriest",
           "conditionFormula": "@class:warpriest\u003e\u003d3"
         }, {
@@ -47,15 +58,15 @@
           "conditionFormula": "@class:warpriest\u003e\u003d6"
         }],
         "unlinks": [{
-          "featureId": "ability:the_blessings_class_feature#warpriest"
+          "featureId": "ability:blessings#warpriest"
         }, {
-          "featureId": "ability:bonus_feats#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
           "featureId": "ability:channel_energy#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }]
       }]
     }

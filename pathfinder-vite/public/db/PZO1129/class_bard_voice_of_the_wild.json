@@ -2,7 +2,7 @@
   "id": "class:bard#voice_of_the_wild",
   "name": "Voice of the Wild",
   "tags": ["archetype", "bard"],
-  "enabledFormula": "!@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:all_increments_of_inspire_competence_dirge_of_doom_and_inspire_heroics#bard AND !@modifies:ability:countersong_all_instances_of_versatile_performance_and_jack_of_all_trades#bard",
+  "enabledFormula": "!@modifies:ability:inspire_heroics#bard AND !@modifies:ability:countersong#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:jack_of_all_trades#bard AND !@modifies:ability:dirge_of_doom#bard AND !@modifies:ability:inspire_competence#bard",
   "maxStacks": 1,
   "description": {
     "text": "Most bards are inspired by the art of civilization, yet the voice of the wild\u0027s muse is the grandeur and beauty of nature. The voice of the wild has discovered some of nature\u0027s magical secrets, and can use his performance to bring out the bestial side in his allies."
@@ -12,17 +12,37 @@
       "stacks": [{
         "effects": [{
           "setAction": {
+            "targetKey": "modifies:ability:inspire_heroics#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:bardic_knowledge#bard",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:all_increments_of_inspire_competence_dirge_of_doom_and_inspire_heroics#bard",
+            "targetKey": "modifies:ability:versatile_performance#bard",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:countersong_all_instances_of_versatile_performance_and_jack_of_all_trades#bard",
+            "targetKey": "modifies:ability:jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:dirge_of_doom#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:inspire_competence#bard",
             "numberValue": 1
           }
         }],
@@ -32,13 +52,42 @@
         }, {
           "featureId": "ability:nature_magic#bard_voice_of_the_wild",
           "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d3"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d7"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d8"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d15"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d15"
+        }, {
+          "featureId": "ability:bardic_performance#bard_voice_of_the_wild",
+          "conditionFormula": "@class:bard\u003e\u003d19"
         }],
         "unlinks": [{
           "featureId": "ability:bardic_knowledge#bard"
         }, {
-          "featureId": "ability:countersong_all_instances_of_versatile_performance_and_jack_of_all_trades#bard"
+          "featureId": "ability:jack_of_all_trades#bard"
         }, {
-          "featureId": "ability:all_increments_of_inspire_competence_dirge_of_doom_and_inspire_heroics#bard"
+          "featureId": "ability:countersong#bard"
+        }, {
+          "featureId": "ability:versatile_performance#bard"
+        }, {
+          "featureId": "ability:inspire_heroics#bard"
+        }, {
+          "featureId": "ability:inspire_competence#bard"
+        }, {
+          "featureId": "ability:dirge_of_doom#bard"
         }]
       }]
     }

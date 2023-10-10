@@ -17,6 +17,8 @@ public class CharacterClassMigrator extends AbstractMigrator {
     }
 
     private CharacterClass migrateCharacterClass(CharacterClassLegacy original) {
+        
+
         return new CharacterClass(
                 original.id(),
                 original.name(),

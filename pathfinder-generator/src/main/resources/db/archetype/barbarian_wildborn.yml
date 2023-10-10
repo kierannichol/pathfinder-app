@@ -6,12 +6,12 @@ description: "Some barbarians are born or bred outside the reach of civilization
 modifications:
 - add: "ability:weapon_and_armor_proficiency#barbarian_wildborn"
   remove:
-  - "ability:the_barbarians_normal_weapon#barbarian"
-  - "ability:armor_proficiencies#barbarian"
+  - "trait:weapon_proficiency#barbarian"
+  - "trait:armor_proficiency#barbarian"
 - add: "ability:live_off_the_land#barbarian_wildborn"
   remove:
   - "ability:trap_sense#barbarian"
-- add: "ability:bonus_feats#barbarian_wildborn"
+- add: "ability:bonus_feat#barbarian_wildborn"
   remove:
   - "ability:rage_powers#barbarian"
 - add: "ability:inexhaustible#barbarian_wildborn"
@@ -43,7 +43,7 @@ features:
   effects: null
   prerequisites: null
   source: "Pathfinder Roleplaying Game Ultimate Wilderness"
-- id: "ability:bonus_feats#barbarian_wildborn"
+- id: "ability:bonus_feat#barbarian_wildborn"
   name: "Bonus Feats"
   label: null
   type: null

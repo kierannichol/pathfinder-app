@@ -5,7 +5,7 @@ description: "Pack hunter barbarians team up to hunt dangerous prey to feed, to 
   \ a specific species of animal (such as wolves) who themselves hunt in packs, and\
   \ view these animals as sacred manifestations of their people's traditions and values."
 modifications:
-- add: "ability:bonus_feats#barbarian_pack_hunter"
+- add: "ability:bonus_feat#barbarian_pack_hunter"
   remove:
   - "ability:rage_power#barbarian"
 - add: "ability:in_and_out#barbarian_pack_hunter"
@@ -13,9 +13,9 @@ modifications:
   - "ability:trap_sense#barbarian"
 - add: "ability:sympathetic_rage#barbarian_pack_hunter"
   remove:
-  - "ability:the_rage_power_normally_gained_at_6th_level#barbarian"
+  - "ability:rage_power_normally#barbarian@6"
 features:
-- id: "ability:bonus_feats#barbarian_pack_hunter"
+- id: "ability:bonus_feat#barbarian_pack_hunter"
   name: "Bonus Feats"
   label: null
   type: null

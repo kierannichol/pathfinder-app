@@ -6,19 +6,19 @@ description: "Armorers of exquisite skill, forgepriests take inspiration from th
 modifications:
 - add: "ability:blessings#warpriest_forgepriest"
   remove:
-  - "ability:the_blessings_class_feature#warpriest"
-- add: "ability:bonus_feats#warpriest_forgepriest"
+  - "ability:blessings#warpriest"
+- add: "ability:bonus_feat#warpriest_forgepriest"
   remove:
-  - "ability:bonus_feats#warpriest"
+  - "ability:bonus_feat#warpriest"
 - add: "ability:craft_magic_arms_and_armor#warpriest_forgepriest"
   remove:
-  - "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+  - "ability:bonus_feat#warpriest@3"
 - add: "ability:creators_bond#warpriest_forgepriest"
   remove:
   - "ability:channel_energy#warpriest"
 - add: "ability:heat_of_the_forge#warpriest_forgepriest"
   remove:
-  - "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+  - "ability:bonus_feat#warpriest@6"
 features:
 - id: "ability:blessings#warpriest_forgepriest"
   name: "Blessings"
@@ -28,7 +28,7 @@ features:
   effects: null
   prerequisites: null
   source: "Pathfinder Roleplaying Game: Advanced Class Guide"
-- id: "ability:bonus_feats#warpriest_forgepriest"
+- id: "ability:bonus_feat#warpriest_forgepriest"
   name: "Bonus Feats"
   label: null
   type: null

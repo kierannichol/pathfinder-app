@@ -2,7 +2,7 @@
   "id": "class:brawler#wild_child",
   "name": "Wild Child",
   "tags": ["archetype", "brawler"],
-  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:close_weapon_mastery#brawler AND !@modifies:ability:the_bonus_combat_feats_gained_at_5th_11th_and_17th_levels#brawler AND !@modifies:ability:the_bonus_combat_feats_gained_at_2nd_8th_14th_and_20th_levels#brawler",
+  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:bonus_combat_feat#brawler AND !@modifies:ability:close_weapon_mastery#brawler",
   "maxStacks": 1,
   "description": {
     "text": "The wild child works with his sworn animal friend to conquer the challenges that lay before them. This kinship could come from being lost in the wilderness and raised by animals or growing up with an exotic pet."
@@ -17,17 +17,12 @@
           }
         }, {
           "setAction": {
+            "targetKey": "modifies:ability:bonus_combat_feat#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:close_weapon_mastery#brawler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_combat_feats_gained_at_5th_11th_and_17th_levels#brawler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_combat_feats_gained_at_2nd_8th_14th_and_20th_levels#brawler",
             "numberValue": 1
           }
         }],
@@ -52,15 +47,34 @@
         }, {
           "featureId": "ability:maneuver_training#brawler_wild_child",
           "conditionFormula": "@class:brawler\u003e\u003d19"
+        }, {
+          "featureId": "ability:wild_tricks#brawler_wild_child",
+          "conditionFormula": "@class:brawler\u003e\u003d5"
+        }, {
+          "featureId": "ability:wild_tricks#brawler_wild_child",
+          "conditionFormula": "@class:brawler\u003e\u003d11"
+        }, {
+          "featureId": "ability:wild_tricks#brawler_wild_child",
+          "conditionFormula": "@class:brawler\u003e\u003d17"
         }],
         "unlinks": [{
-          "featureId": "ability:the_bonus_combat_feats_gained_at_2nd_8th_14th_and_20th_levels#brawler"
+          "featureId": "ability:bonus_combat_feat#brawler"
+        }, {
+          "featureId": "ability:bonus_combat_feat#brawler"
+        }, {
+          "featureId": "ability:bonus_combat_feat#brawler"
+        }, {
+          "featureId": "ability:bonus_combat_feat#brawler"
         }, {
           "featureId": "ability:close_weapon_mastery#brawler"
         }, {
           "featureId": "ability:maneuver_training#brawler"
         }, {
-          "featureId": "ability:the_bonus_combat_feats_gained_at_5th_11th_and_17th_levels#brawler"
+          "featureId": "ability:bonus_combat_feat#brawler"
+        }, {
+          "featureId": "ability:bonus_combat_feat#brawler"
+        }, {
+          "featureId": "ability:bonus_combat_feat#brawler"
         }]
       }]
     }

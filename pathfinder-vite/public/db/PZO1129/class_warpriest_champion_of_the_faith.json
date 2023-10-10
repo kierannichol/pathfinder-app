@@ -2,7 +2,7 @@
   "id": "class:warpriest#champion_of_the_faith",
   "name": "Champion of The Faith",
   "tags": ["archetype", "warpriest"],
-  "enabledFormula": "!@modifies:ability:sacred_weapon#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_3rd_level#warpriest AND !@modifies:ability:channel_energy#warpriest",
+  "enabledFormula": "!@modifies:ability:sacred_weapon#warpriest AND !@modifies:ability:bonus_feat#warpriest AND !@modifies:ability:channel_energy#warpriest",
   "maxStacks": 1,
   "description": {
     "text": "Champions of the faith are crusaders who use the power of their divine patron to annihilate the faith\u0027s enemies."
@@ -17,7 +17,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_3rd_level#warpriest",
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
             "numberValue": 1
           }
         }, {
@@ -39,7 +39,7 @@
         "unlinks": [{
           "featureId": "ability:sacred_weapon#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
           "featureId": "ability:channel_energy#warpriest"
         }]

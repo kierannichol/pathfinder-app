@@ -5,8 +5,8 @@ description: "Unlike many warpriests, sacred fists leave behind armor and shield
 modifications:
 - add: "ability:weapon_and_armor_proficiency#warpriest_sacred_fist"
   remove:
-  - "ability:armor_proficiency#warpriest"
-  - "ability:the_warpriests_weapon#warpriest"
+  - "trait:armor_proficiency#warpriest"
+  - "trait:weapon_proficiency#warpriest"
 - add: "ability:flurry_of_blows#warpriest_sacred_fist"
   remove:
   - "ability:sacred_weapon#warpriest"
@@ -15,17 +15,18 @@ modifications:
   - "ability:focus_weapon#warpriest"
 - add: "ability:blessed_fortitude#warpriest_sacred_fist"
   remove:
-  - "ability:the_bonus_feat_gained_at_3rd_level#warpriest"
+  - "ability:bonus_feat#warpriest@3"
 - add: "ability:bonus_style_feat#warpriest_sacred_fist"
   remove:
-  - "ability:18th_levels#warpriest"
-  - "ability:the_bonus_feats_gained_at_6th_12th#warpriest"
+  - "ability:bonus_feat#warpriest@6"
+  - "ability:bonus_feat#warpriest@12"
+  - "ability:bonus_feat#warpriest@18"
 - add: "ability:ki_pool#warpriest_sacred_fist"
   remove:
   - "ability:sacred_armor#warpriest"
 - add: "ability:miraculous_fortitude#warpriest_sacred_fist"
   remove:
-  - "ability:the_bonus_feat_gained_at_9th_level#warpriest"
+  - "ability:bonus_feat#warpriest@9"
 features:
 - id: "ability:weapon_and_armor_proficiency#warpriest_sacred_fist"
   name: "Weapon and Armor Proficiency"

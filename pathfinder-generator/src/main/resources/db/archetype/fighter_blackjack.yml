@@ -2,7 +2,7 @@ id: "class:fighter#blackjack"
 name: "Blackjack"
 description: ""
 modifications:
-- add: "ability:bonus_feats#fighter_blackjack"
+- add: "ability:bonus_feat#fighter_blackjack"
   remove:
   - "ability:bravery#fighter"
 - add: "ability:well_paid_loyalty#fighter_blackjack"
@@ -10,18 +10,18 @@ modifications:
   - "ability:bravery#fighter"
 - add: "ability:blackjack_tactics#fighter_blackjack"
   remove:
-  - "ability:the_bonus_feat_gained_at_4th_level#fighter"
+  - "ability:bonus_feat#fighter@4"
 - add: "ability:amateurs#fighter_blackjack"
   remove:
-  - "ability:the_bonus_feat_gained_at_8th_level#fighter"
+  - "ability:bonus_feat#fighter@8"
 - add: "ability:superior_tactics#fighter_blackjack"
   remove:
-  - "ability:the_bonus_feat_gained_at_12th_level#fighter"
+  - "ability:bonus_feat#fighter@12"
 - add: "ability:esprit_de_corps#fighter_blackjack"
   remove:
-  - "ability:the_bonus_feat_gained_at_16th_level#fighter"
+  - "ability:bonus_feat#fighter@16"
 features:
-- id: "ability:bonus_feats#fighter_blackjack"
+- id: "ability:bonus_feat#fighter_blackjack"
   name: "Bonus Feats"
   label: null
   type: null

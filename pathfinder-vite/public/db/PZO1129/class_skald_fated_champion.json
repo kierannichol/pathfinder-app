@@ -2,7 +2,7 @@
   "id": "class:skald#fated_champion",
   "name": "Fated Champion",
   "tags": ["archetype", "skald"],
-  "enabledFormula": "!@modifies:ability:the_spell_kenning_class_feature#skald AND !@modifies:ability:the_dirge_of_doom_raging_song#skald AND !@modifies:ability:well_versed#skald AND !@modifies:ability:master_skald#skald",
+  "enabledFormula": "!@modifies:ability:the_dirge_of_doom_raging_song#skald AND !@modifies:ability:well_versed#skald AND !@modifies:ability:spell_kenning#skald AND !@modifies:ability:master_skald#skald",
   "maxStacks": 1,
   "description": {
   },
@@ -11,17 +11,17 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_spell_kenning_class_feature#skald",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:the_dirge_of_doom_raging_song#skald",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:well_versed#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spell_kenning#skald",
             "numberValue": 1
           }
         }, {
@@ -46,7 +46,7 @@
         "unlinks": [{
           "featureId": "ability:well_versed#skald"
         }, {
-          "featureId": "ability:the_spell_kenning_class_feature#skald"
+          "featureId": "ability:spell_kenning#skald"
         }, {
           "featureId": "ability:the_dirge_of_doom_raging_song#skald"
         }, {

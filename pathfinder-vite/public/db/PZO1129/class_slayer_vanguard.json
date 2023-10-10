@@ -2,7 +2,7 @@
   "id": "class:slayer#vanguard",
   "name": "Vanguard",
   "tags": ["archetype", "slayer"],
-  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer AND !@modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:slayer_talent#slayer",
   "maxStacks": 1,
   "description": {
   },
@@ -21,12 +21,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+            "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
         }],
@@ -46,9 +41,9 @@
         "unlinks": [{
           "featureId": "ability:track#slayer"
         }, {
-          "featureId": "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+          "featureId": "ability:slayer_talent#slayer"
         }, {
-          "featureId": "ability:the_slayer_talent_gained_at_4th_level#slayer"
+          "featureId": "ability:slayer_talent#slayer"
         }, {
           "featureId": "ability:stalker#slayer"
         }]

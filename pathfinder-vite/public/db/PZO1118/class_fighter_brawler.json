@@ -2,7 +2,7 @@
   "id": "class:fighter#brawler",
   "name": "Brawler",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:weapon_training_3_and_4#fighter AND !@modifies:ability:armor_training_2_3_and_4_and_armor_mastery#fighter AND !@modifies:ability:weapon_training_1_and_2#fighter AND !@modifies:ability:armor_training_1#fighter",
+  "enabledFormula": "!@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "All melee is up close and personal, but some warriors bring it as close as they can get. Brawlers can be found anywhere, among all races and societies. A brawler could be hired muscle in a tavern, a local crime syndicate enforcer, or a hotheaded recruit among the ranks of a baron\u0027s guard. Often brawlers\u0027 in-your-face attitudes are as powerful as their tactics."
@@ -12,22 +12,17 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_3_and_4#fighter",
+            "targetKey": "modifies:ability:armor_training#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:armor_training_2_3_and_4_and_armor_mastery#fighter",
+            "targetKey": "modifies:ability:armor_mastery#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_1_and_2#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_1#fighter",
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -45,13 +40,23 @@
           "conditionFormula": "@class:fighter\u003e\u003d9"
         }],
         "unlinks": [{
-          "featureId": "ability:armor_training_1#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_1_and_2#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_2_3_and_4_and_armor_mastery#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_3_and_4#fighter"
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_mastery#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
         }]
       }]
     }

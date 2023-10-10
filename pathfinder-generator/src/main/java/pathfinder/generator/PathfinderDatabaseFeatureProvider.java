@@ -42,7 +42,7 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
                         classToFeature.map(characterClass),
                         favoredClass.map(characterClass)
                 )),
-                queryClassAbilitiesAsFeatures(),
+                queryClassAbilitiesAsFeatures(sourceId),
                 database.query(Query.classFeatures().source(sourceId)).map(classFeature::map),
                 database.query(Query.feats().source(sourceId)).flatMap(feat::flatMap),
                 database.query(Query.spells().source(sourceId)).map(spell::map),
@@ -52,8 +52,8 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
         ));
     }
 
-    private Stream<Feature> queryClassAbilitiesAsFeatures() {
-        return database.query(Query.characterClasses())
+    private Stream<Feature> queryClassAbilitiesAsFeatures(SourceId sourceId) {
+        return database.query(Query.characterClasses().source(sourceId))
                 .flatMap(characterClass -> characterClass.class_features().stream()
                         .map(classFeature -> ClassFeature.fromFeature(classFeature, characterClass.id()))
                         .map(classFeature::map));

@@ -2,7 +2,7 @@
   "id": "class:paladin#empyreal_knight",
   "name": "Empyreal Knight",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:lay_on_hands_and_channel_positive_energy#paladin AND !@modifies:ability:divine_grace#paladin AND !@modifies:ability:holy_champion#paladin",
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:lay_on_hands#paladin AND !@modifies:ability:divine_grace#paladin AND !@modifies:ability:holy_champion#paladin",
   "maxStacks": 1,
   "description": {
     "text": "The empyreal knight dedicates her life to serving the celestial beings that guide mortals in their struggle toward the light."
@@ -12,7 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:lay_on_hands_and_channel_positive_energy#paladin",
+            "targetKey": "modifies:ability:channel_positive_energy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:lay_on_hands#paladin",
             "numberValue": 1
           }
         }, {
@@ -39,7 +44,9 @@
         "unlinks": [{
           "featureId": "ability:divine_grace#paladin"
         }, {
-          "featureId": "ability:lay_on_hands_and_channel_positive_energy#paladin"
+          "featureId": "ability:lay_on_hands#paladin"
+        }, {
+          "featureId": "ability:channel_positive_energy#paladin"
         }, {
           "featureId": "ability:holy_champion#paladin"
         }]

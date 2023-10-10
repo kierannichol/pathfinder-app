@@ -2,7 +2,7 @@
   "id": "class:bloodrager#blood_conduit",
   "name": "Blood Conduit",
   "tags": ["archetype", "bloodrager"],
-  "enabledFormula": "!@modifies:ability:uncanny_dodge_and_improved_uncanny_dodge#bloodrager AND !@modifies:ability:fast_movement_and_alters_bloodline_feats#bloodrager AND !@modifies:ability:indomitable_will#bloodrager",
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#bloodrager AND !@modifies:ability:fast_movement#bloodrager AND !@modifies:ability:uncanny_dodge#bloodrager AND !@modifies:ability:bloodline_feat#bloodrager AND !@modifies:ability:indomitable_will#bloodrager",
   "maxStacks": 1,
   "description": {
     "text": "Blood conduits learn to channel their arcane might directly through their flesh, without the need for mystical words or gestures."
@@ -12,12 +12,22 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:uncanny_dodge_and_improved_uncanny_dodge#bloodrager",
+            "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:fast_movement_and_alters_bloodline_feats#bloodrager",
+            "targetKey": "modifies:ability:fast_movement#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bloodline_feat#bloodrager",
             "numberValue": 1
           }
         }, {
@@ -37,9 +47,13 @@
           "conditionFormula": "@class:bloodrager\u003e\u003d14"
         }],
         "unlinks": [{
-          "featureId": "ability:fast_movement_and_alters_bloodline_feats#bloodrager"
+          "featureId": "ability:fast_movement#bloodrager"
         }, {
-          "featureId": "ability:uncanny_dodge_and_improved_uncanny_dodge#bloodrager"
+          "featureId": "ability:bloodline_feat#bloodrager"
+        }, {
+          "featureId": "ability:improved_uncanny_dodge#bloodrager"
+        }, {
+          "featureId": "ability:uncanny_dodge#bloodrager"
         }, {
           "featureId": "ability:indomitable_will#bloodrager"
         }]

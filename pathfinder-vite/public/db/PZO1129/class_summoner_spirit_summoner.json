@@ -2,7 +2,7 @@
   "id": "class:summoner#spirit_summoner",
   "name": "Spirit Summoner",
   "tags": ["archetype", "summoner"],
-  "enabledFormula": "!@modifies:ability:aspect_makers_call_merge_forms_and_transposition#summoner AND !@modifies:ability:summon_monster#summoner AND !@modifies:ability:the_eidolon_class_feature#summoner",
+  "enabledFormula": "!@modifies:ability:summon_monster_i#summoner AND !@modifies:ability:eidolon#summoner AND !@modifies:ability:transposition#summoner AND !@modifies:ability:aspect_makers_call_merge_forms#summoner",
   "maxStacks": 1,
   "description": {
   },
@@ -11,17 +11,22 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:aspect_makers_call_merge_forms_and_transposition#summoner",
+            "targetKey": "modifies:ability:summon_monster_i#summoner",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:summon_monster#summoner",
+            "targetKey": "modifies:ability:eidolon#summoner",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_eidolon_class_feature#summoner",
+            "targetKey": "modifies:ability:transposition#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aspect_makers_call_merge_forms#summoner",
             "numberValue": 1
           }
         }],
@@ -36,11 +41,13 @@
           "conditionFormula": "@class:summoner\u003e\u003d6"
         }],
         "unlinks": [{
-          "featureId": "ability:summon_monster#summoner"
+          "featureId": "ability:summon_monster_i#summoner"
         }, {
-          "featureId": "ability:the_eidolon_class_feature#summoner"
+          "featureId": "ability:eidolon#summoner"
         }, {
-          "featureId": "ability:aspect_makers_call_merge_forms_and_transposition#summoner"
+          "featureId": "ability:transposition#summoner"
+        }, {
+          "featureId": "ability:aspect_makers_call_merge_forms#summoner"
         }]
       }]
     }

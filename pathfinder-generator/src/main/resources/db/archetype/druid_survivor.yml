@@ -2,9 +2,9 @@ id: "class:druid#survivor"
 name: "Survivor"
 description: ""
 modifications:
-- add: "ability:weapon_proficiencies#druid_survivor"
+- add: "trait:weapon_proficiency#druid_survivor"
   remove:
-  - "ability:the_druids_weapon_proficiency#druid"
+  - "trait:weapon_proficiency#druid"
 - add: "ability:diminished_spellcasting#druid_survivor"
   remove:
   - "ability:the_druids_spells#druid"
@@ -21,7 +21,7 @@ modifications:
   remove:
   - "ability:venom_immunity#druid"
 features:
-- id: "ability:weapon_proficiencies#druid_survivor"
+- id: "trait:weapon_proficiency#druid_survivor"
   name: "Weapon Proficiencies"
   label: null
   type: null

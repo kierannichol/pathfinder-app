@@ -2,7 +2,7 @@
   "id": "class:monk#martial_artist",
   "name": "Martial Artist",
   "tags": ["archetype", "monk"],
-  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:purity_of_body_diamond_body_and_perfect_self#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:wholeness_of_body_timeless_body_and_tongue_of_sun_and_moon#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk",
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:purity_of_body_diamond_body#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:wholeness_of_body_timeless_body#monk AND !@modifies:ability:tongue_of_sun_and_moon#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk",
   "maxStacks": 1,
   "description": {
     "text": "The martial artist pursues a mastery of pure martial arts without the monastic traditions. He is a master of form, but lacks the ability to harness his ki."
@@ -17,12 +17,27 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:slow_fall#monk",
+            "targetKey": "modifies:ability:purity_of_body_diamond_body#monk",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:purity_of_body_diamond_body_and_perfect_self#monk",
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wholeness_of_body_timeless_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tongue_of_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
             "numberValue": 1
           }
         }, {
@@ -33,11 +48,6 @@
         }, {
           "setAction": {
             "targetKey": "modifies:ability:ki_pool#monk",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:wholeness_of_body_timeless_body_and_tongue_of_sun_and_moon#monk",
             "numberValue": 1
           }
         }, {
@@ -83,9 +93,13 @@
         }, {
           "featureId": "ability:ki_pool#monk"
         }, {
-          "featureId": "ability:purity_of_body_diamond_body_and_perfect_self#monk"
+          "featureId": "ability:perfect_self#monk"
         }, {
-          "featureId": "ability:wholeness_of_body_timeless_body_and_tongue_of_sun_and_moon#monk"
+          "featureId": "ability:purity_of_body_diamond_body#monk"
+        }, {
+          "featureId": "ability:tongue_of_sun_and_moon#monk"
+        }, {
+          "featureId": "ability:wholeness_of_body_timeless_body#monk"
         }, {
           "featureId": "ability:abundant_step#monk"
         }, {

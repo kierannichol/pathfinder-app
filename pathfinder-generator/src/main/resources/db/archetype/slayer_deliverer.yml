@@ -4,17 +4,17 @@ description: ""
 modifications:
 - add: "ability:weapon_and_armor_proficiency#slayer_deliverer"
   remove:
-  - "ability:the_slayers_weapon#slayer"
-  - "ability:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
+  - "trait:armor_proficiency#slayer"
 - add: "ability:determined_zeal#slayer_deliverer"
   remove:
-  - "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+  - "ability:slayer_talent#slayer@2"
 - add: "ability:true_believer#slayer_deliverer"
   remove:
-  - "ability:the_slayer_talent_gained_at_6th_level#slayer"
+  - "ability:slayer_talent#slayer@6"
 - add: "ability:divine_anathema#slayer_deliverer"
   remove:
-  - "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+  - "ability:advanced_slayer_talent#slayer@10"
 features:
 - id: "ability:weapon_and_armor_proficiency#slayer_deliverer"
   name: "Weapon and Armor Proficiency"

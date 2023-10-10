@@ -2,7 +2,7 @@
   "id": "class:witch#sea_witch",
   "name": "Sea Witch",
   "tags": ["archetype", "witch"],
-  "enabledFormula": "!@modifies:ability:the_witchs_1st_level_hex#witch",
+  "enabledFormula": "!@modifies:ability:hex#witch",
   "maxStacks": 1,
   "description": {
     "text": "A sea witch\u0027s affinities are tied to the vast oceans and the rolling waves. Her magic concerns the moon, tides, water, and winds, and she is most at peace when she is upon or near the sea."
@@ -12,12 +12,16 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_witchs_1st_level_hex#witch",
+            "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
         }],
+        "links": [{
+          "featureId": "ability:sea_creature_empathy#witch_sea_witch",
+          "conditionFormula": "@class:witch\u003e\u003d1"
+        }],
         "unlinks": [{
-          "featureId": "ability:the_witchs_1st_level_hex#witch"
+          "featureId": "ability:hex#witch"
         }]
       }]
     }

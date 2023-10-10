@@ -2,7 +2,7 @@
   "id": "class:bard#geisha",
   "name": "Geisha",
   "tags": ["archetype", "bard"],
-  "enabledFormula": "!@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:the_normal_bard_armor_and_weapon_proficiencies#bard",
+  "enabledFormula": "!@modifies:trait:armor_proficiency#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:trait:weapon_proficiency#bard",
   "maxStacks": 1,
   "description": {
   },
@@ -11,21 +11,148 @@
       "stacks": [{
         "effects": [{
           "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:bardic_knowledge#bard",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_normal_bard_armor_and_weapon_proficiencies#bard",
+            "targetKey": "modifies:trait:weapon_proficiency#bard",
             "numberValue": 1
           }
         }],
         "links": [{
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d20"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#bard_geisha",
+          "conditionFormula": "@class:bard\u003e\u003d20"
+        }, {
           "featureId": "ability:geisha_knowledge#bard_geisha",
           "conditionFormula": "@class:bard\u003e\u003d1"
         }],
         "unlinks": [{
-          "featureId": "ability:the_normal_bard_armor_and_weapon_proficiencies#bard"
+          "featureId": "trait:weapon_proficiency#bard"
+        }, {
+          "featureId": "trait:armor_proficiency#bard"
         }, {
           "featureId": "ability:bardic_knowledge#bard"
         }]

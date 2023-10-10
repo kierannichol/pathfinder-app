@@ -2,7 +2,7 @@
   "id": "class:paladin#divine_hunter",
   "name": "Divine Hunter",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:her_heavy_armor_proficiency#paladin AND !@modifies:ability:the_standard_paladins_divine_bond#paladin AND !@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:aura_of_faith#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:the_paladins_6th_level_mercy#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "enabledFormula": "!@modifies:ability:her_heavy_armor_proficiency#paladin AND !@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:aura_of_faith#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:the_paladins_6th_level_mercy#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:bond#paladin",
   "maxStacks": 1,
   "description": {
     "text": "Most paladins rush into battle, meeting evil toe-to-toe. The divine hunter prefers to engage evil from afar, striking down her foes before they can threaten her allies."
@@ -13,11 +13,6 @@
         "effects": [{
           "setAction": {
             "targetKey": "modifies:ability:her_heavy_armor_proficiency#paladin",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_standard_paladins_divine_bond#paladin",
             "numberValue": 1
           }
         }, {
@@ -45,6 +40,11 @@
             "targetKey": "modifies:ability:aura_of_justice#paladin",
             "numberValue": 1
           }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bond#paladin",
+            "numberValue": 1
+          }
         }],
         "links": [{
           "featureId": "ability:shared_precision#paladin_divine_hunter",
@@ -70,7 +70,7 @@
         }, {
           "featureId": "ability:aura_of_courage#paladin"
         }, {
-          "featureId": "ability:the_standard_paladins_divine_bond#paladin"
+          "featureId": "ability:bond#paladin"
         }, {
           "featureId": "ability:the_paladins_6th_level_mercy#paladin"
         }, {

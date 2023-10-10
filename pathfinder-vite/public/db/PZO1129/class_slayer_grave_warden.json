@@ -2,7 +2,7 @@
   "id": "class:slayer#grave_warden",
   "name": "Grave Warden",
   "tags": ["archetype", "slayer"],
-  "enabledFormula": "!@modifies:ability:stalker#slayer AND !@modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer AND !@modifies:ability:the_advanced_slayer_talent_gained_at_10th_level#slayer",
+  "enabledFormula": "!@modifies:ability:stalker#slayer AND !@modifies:ability:advanced_slayer_talent#slayer AND !@modifies:ability:slayer_talent#slayer",
   "maxStacks": 1,
   "description": {
   },
@@ -16,12 +16,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_slayer_talent_gained_at_2nd_level#slayer",
+            "targetKey": "modifies:ability:advanced_slayer_talent#slayer",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_advanced_slayer_talent_gained_at_10th_level#slayer",
+            "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
         }],
@@ -36,11 +36,11 @@
           "conditionFormula": "@class:slayer\u003e\u003d10"
         }],
         "unlinks": [{
-          "featureId": "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+          "featureId": "ability:slayer_talent#slayer"
         }, {
           "featureId": "ability:stalker#slayer"
         }, {
-          "featureId": "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+          "featureId": "ability:advanced_slayer_talent#slayer"
         }]
       }]
     }

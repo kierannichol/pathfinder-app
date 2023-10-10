@@ -2,7 +2,7 @@
   "id": "class:arcanist#elemental_master",
   "name": "Elemental Master",
   "tags": ["archetype", "arcanist"],
-  "enabledFormula": "!@modifies:ability:the_arcanist_exploit_gained_at_9th_level#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_11th_level#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_1st_level#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_3rd_level#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_15th_level#arcanist",
+  "enabledFormula": "!@modifies:ability:arcanist_exploit#arcanist",
   "maxStacks": 1,
   "description": {
     "text": "Arcanists with an affinity for elemental forces sometimes focus on one and display its power in everything they do."
@@ -12,27 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_9th_level#arcanist",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_11th_level#arcanist",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_1st_level#arcanist",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_3rd_level#arcanist",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_15th_level#arcanist",
+            "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
         }],
@@ -53,15 +33,15 @@
           "conditionFormula": "@class:arcanist\u003e\u003d15"
         }],
         "unlinks": [{
-          "featureId": "ability:the_arcanist_exploit_gained_at_1st_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
-          "featureId": "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
-          "featureId": "ability:the_arcanist_exploit_gained_at_9th_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
-          "featureId": "ability:the_arcanist_exploit_gained_at_11th_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
-          "featureId": "ability:the_arcanist_exploit_gained_at_15th_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }]
       }]
     }

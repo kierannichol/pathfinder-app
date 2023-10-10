@@ -3,9 +3,9 @@ name: "Arrowsong Minstrel"
 description: "Arrowsong minstrels combine the elven traditions of archery, song, and\
   \ spellcasting into a seamless harmony of dazzling magical effects."
 modifications:
-- add: "ability:weapon_proficiency#bard_arrowsong_minstrel"
+- add: "trait:weapon_proficiency#bard_arrowsong_minstrel"
   remove:
-  - "ability:the_bards_weapon_proficiencies#bard"
+  - "trait:weapon_proficiency#bard"
 - add: "ability:diminished_spellcasting#bard_arrowsong_minstrel"
   remove:
   - "ability:the_bards_spellcasting#bard"
@@ -15,14 +15,14 @@ modifications:
   - "ability:bardic_knowledge_dirge_of_doom_distraction_fascinate_inspire_competence_lore_master#bard"
 - add: "ability:precise_minstrel#bard_arrowsong_minstrel"
   remove:
-  - "ability:the_versatile_performance_gained_at_2nd_level#bard"
+  - "ability:versatile_performance#bard@2"
   - "ability:well_versed#bard"
 - add: "ability:arrowsong_strike#bard_arrowsong_minstrel"
   remove:
   - "ability:suggestion#bard"
   - "ability:mass_suggestion#bard"
 features:
-- id: "ability:weapon_proficiency#bard_arrowsong_minstrel"
+- id: "trait:weapon_proficiency#bard_arrowsong_minstrel"
   name: "Weapon Proficiency"
   label: null
   type: null

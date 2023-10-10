@@ -98,10 +98,17 @@ public class ArchetypeMapper {
         replacesIds.forEach(id -> archetypeStack.addEffect(Effect.setNumber("modifies:" + id, 1)));
         String enabledFormula = replacesIds.stream().map(id -> "!@modifies:" + id).collect(Collectors.joining(" AND "));
 
-        replacesIds.forEach(id -> features.add(Feature.builder("modifies:" + id)
+        replacesIds.forEach(id -> {
+            try {
+                features.add(Feature.builder("modifies:" + id)
                         .setName("Archetype that modifies " + database.query(Query.namedEntity(id)).findFirst().map(
-                                NamedEntity::name).orElseThrow(() -> new NoSuchElementException("Named Entity not found: " + id)))
-                .build()));
+                                        NamedEntity::name)
+                                .orElseThrow(() -> new NoSuchElementException("Named Entity not found: " + id)))
+                        .build());
+            } catch (NoSuchElementException e) {
+                log.warn(e.getMessage());
+            }
+        });
 
         builder.addFixedStack(archetypeStack.build());
         builder.setEnabledCondition(enabledFormula);

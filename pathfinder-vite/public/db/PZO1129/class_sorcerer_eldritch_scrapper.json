@@ -2,7 +2,7 @@
   "id": "class:sorcerer#eldritch_scrapper",
   "name": "Eldritch Scrapper",
   "tags": ["archetype", "sorcerer"],
-  "enabledFormula": "!@modifies:ability:the_sorcerers_bloodline_powers_gained_1st_9th_and_15th_levels#sorcerer",
+  "enabledFormula": "!@modifies:ability:sorcerers_bloodline_powers#sorcerer",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_sorcerers_bloodline_powers_gained_1st_9th_and_15th_levels#sorcerer",
+            "targetKey": "modifies:ability:sorcerers_bloodline_powers#sorcerer",
             "numberValue": 1
           }
         }],
@@ -20,7 +20,11 @@
           "conditionFormula": "@class:sorcerer\u003e\u003d1"
         }],
         "unlinks": [{
-          "featureId": "ability:the_sorcerers_bloodline_powers_gained_1st_9th_and_15th_levels#sorcerer"
+          "featureId": "ability:sorcerers_bloodline_powers#sorcerer"
+        }, {
+          "featureId": "ability:sorcerers_bloodline_powers#sorcerer"
+        }, {
+          "featureId": "ability:sorcerers_bloodline_powers#sorcerer"
         }]
       }]
     }

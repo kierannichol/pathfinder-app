@@ -4,7 +4,7 @@ description: ""
 modifications:
 - add: "ability:feral_focus#hunter_feral_hunter"
   remove:
-  - "ability:speak_with_master_class_abilities#hunter"
+  - "ability:speak_with_master#hunter"
   - "ability:animal_focus#hunter"
   - "ability:hunter_tactics#hunter"
 - add: "ability:precise_summoned_animal#hunter_feral_hunter"
@@ -12,12 +12,17 @@ modifications:
   - "ability:precise_companion#hunter"
 - add: "ability:wild_shape#hunter_feral_hunter"
   remove:
-  - "ability:raise_animal_companion_class_abilities#hunter"
-  - "ability:the_bonus_tricks_improved_empathic_link_greater_empathic_link#hunter"
+  - "ability:raise_animal_companion#hunter"
+  - "ability:bonus_trick#hunter"
+  - "ability:improved_empathic_link#hunter"
+  - "ability:greater_empathic_link#hunter"
 - add: "ability:summon_pack#hunter_feral_hunter"
   remove:
-  - "ability:18th_levels#hunter"
-  - "ability:the_teamwork_feats_gained_at_6th_9th_12th_15th#hunter"
+  - "ability:teamwork_feat#hunter@6"
+  - "ability:teamwork_feat#hunter@9"
+  - "ability:teamwork_feat#hunter@12"
+  - "ability:teamwork_feat#hunter@15"
+  - "ability:teamwork_feat#hunter@18"
 features:
 - id: "ability:feral_focus#hunter_feral_hunter"
   name: "Feral Focus"

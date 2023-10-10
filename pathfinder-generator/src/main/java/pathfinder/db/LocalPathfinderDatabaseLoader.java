@@ -59,7 +59,7 @@ public class LocalPathfinderDatabaseLoader {
                 });
 
         loadClasses().forEach(classData -> {
-            SourceId sourceId = Sources.findSourceByNameOrCode(classData.source());
+            SourceId sourceId = Sources.findSourceByNameOrCode(classData.source().trim());
             if (sourceId != null) {
                 sourceSet.add(sourceId);
                 classesBySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(classData);
@@ -88,6 +88,12 @@ public class LocalPathfinderDatabaseLoader {
                 bloodline -> bloodline.withClassId(Id.of("class:sorcerer")));
         loadAllBySourceThenMap("db/bloodrager_bloodline", BloodlineWithoutClassId.class, bloodlinesBySource,
                 bloodline -> bloodline.withClassId(Id.of("class:bloodrager")));
+
+        sourceSet.addAll(archetypesBySource.keySet());
+        sourceSet.addAll(spellsBySource.keySet());
+        sourceSet.addAll(racesBySource.keySet());
+        sourceSet.addAll(classFeaturesBySource.keySet());
+        sourceSet.addAll(bloodlinesBySource.keySet());
 
         List<Source> sources = new ArrayList<>();
         sourceSet.forEach(sourceId -> sources.add(new Source(

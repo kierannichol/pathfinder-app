@@ -2,7 +2,7 @@
   "id": "class:magus#kensai",
   "name": "Kensai",
   "tags": ["archetype", "magus"],
-  "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:the_magus_arcana_normally_gained_at_9th_level#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:improved_spell_recall#magus AND !@modifies:ability:heavy_armor#magus AND !@modifies:ability:knowledge_pool#magus AND !@modifies:ability:true_magus#magus AND !@modifies:ability:the_medium_armor_ability#magus",
+  "enabledFormula": "!@modifies:ability:magus_arcana_normally#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:improved_spell_recall#magus AND !@modifies:ability:heavy_armor#magus AND !@modifies:ability:knowledge_pool#magus AND !@modifies:ability:true_magus#magus AND !@modifies:ability:the_medium_armor_ability#magus",
   "maxStacks": 1,
   "description": {
     "text": "A kensai spends his life focusing his training and meditation into a rapturous perfection of the use of a single weapon, which is usually but not always a sword, channeling his arcane might through it in a dizzying and deadly dance beyond the abilities of even the greatest of mundane warriors."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:spell_recall#magus",
+            "targetKey": "modifies:ability:magus_arcana_normally#magus",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_magus_arcana_normally_gained_at_9th_level#magus",
+            "targetKey": "modifies:ability:spell_recall#magus",
             "numberValue": 1
           }
         }, {
@@ -83,7 +83,7 @@
         }, {
           "featureId": "ability:the_medium_armor_ability#magus"
         }, {
-          "featureId": "ability:the_magus_arcana_normally_gained_at_9th_level#magus"
+          "featureId": "ability:magus_arcana_normally#magus"
         }, {
           "featureId": "ability:improved_spell_recall#magus"
         }, {

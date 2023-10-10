@@ -2,7 +2,7 @@
   "id": "class:paladin#holy_gun",
   "name": "Holy Gun",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:the_standard_paladins_divine_bond#paladin AND !@modifies:ability:detect_evil#paladin AND !@modifies:ability:smite_evil#paladin",
+  "enabledFormula": "!@modifies:ability:detect_evil#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:bond#paladin",
   "maxStacks": 1,
   "description": {
     "text": "Not all paladins are knights in shining armor. Holy guns roam the world searching for evil. And where they find it, they put it down."
@@ -12,17 +12,17 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_standard_paladins_divine_bond#paladin",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:detect_evil#paladin",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bond#paladin",
             "numberValue": 1
           }
         }],
@@ -59,7 +59,7 @@
         }, {
           "featureId": "ability:smite_evil#paladin"
         }, {
-          "featureId": "ability:the_standard_paladins_divine_bond#paladin"
+          "featureId": "ability:bond#paladin"
         }]
       }]
     }

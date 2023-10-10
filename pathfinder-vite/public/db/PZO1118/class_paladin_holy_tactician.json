@@ -2,7 +2,7 @@
   "id": "class:paladin#holy_tactician",
   "name": "Holy Tactician",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:divine_health_and_divine_bond#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:holy_champion#paladin",
+  "enabledFormula": "!@modifies:ability:divine_health#paladin AND !@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:smite_evil#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:divine_bond#paladin AND !@modifies:ability:holy_champion#paladin",
   "maxStacks": 1,
   "description": {
     "text": "The holy tactician inspires her allies on the field of battle. Her place is at their side against overwhelming odds, and her guidance brings out their true potential."
@@ -11,6 +11,11 @@
     "fixedStack": {
       "stacks": [{
         "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:divine_health#paladin",
+            "numberValue": 1
+          }
+        }, {
           "setAction": {
             "targetKey": "modifies:ability:aura_of_courage#paladin",
             "numberValue": 1
@@ -22,17 +27,17 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:divine_health_and_divine_bond#paladin",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:aura_of_resolve#paladin",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
         }, {
@@ -81,7 +86,9 @@
         "unlinks": [{
           "featureId": "ability:smite_evil#paladin"
         }, {
-          "featureId": "ability:divine_health_and_divine_bond#paladin"
+          "featureId": "ability:divine_health#paladin"
+        }, {
+          "featureId": "ability:divine_bond#paladin"
         }, {
           "featureId": "ability:aura_of_courage#paladin"
         }, {

@@ -2,7 +2,7 @@
   "id": "class:fighter#unarmed_fighter",
   "name": "Unarmed Fighter",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:the_12th_level_bonus_feat#fighter AND !@modifies:ability:weapon_training_1_2_3_and_4#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_training_3#fighter AND !@modifies:ability:armor_training_4#fighter AND !@modifies:ability:armor_training_1#fighter AND !@modifies:ability:armor_training_2#fighter AND !@modifies:ability:the_8th_level_bonus_feat#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:the_bonus_feat_at_1st_level#fighter",
+  "enabledFormula": "!@modifies:ability:the_12th_level_bonus_feat#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:the_8th_level_bonus_feat#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:bonus_feat#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "Not all fighters need weapons to make their mark on the world. The unarmed fighter picks up a weapon only rarely, and when he does, he prefers the weapons of the monk. There are even those who mistake them for monks, but these fighters enter the fight without ki, and instead have a tough perseverance that few can rival."
@@ -17,32 +17,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_1_2_3_and_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:bravery#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_3#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_1#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_2#fighter",
+            "targetKey": "modifies:ability:armor_training#fighter",
             "numberValue": 1
           }
         }, {
@@ -57,7 +37,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_at_1st_level#fighter",
+            "targetKey": "modifies:ability:bonus_feat#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -93,23 +78,23 @@
           "conditionFormula": "@class:fighter\u003e\u003d19"
         }],
         "unlinks": [{
-          "featureId": "ability:the_bonus_feat_at_1st_level#fighter"
+          "featureId": "ability:bonus_feat#fighter"
         }, {
           "featureId": "ability:bravery#fighter"
         }, {
-          "featureId": "ability:armor_training_1#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_1_2_3_and_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_2#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
           "featureId": "ability:the_8th_level_bonus_feat#fighter"
         }, {
           "featureId": "ability:the_12th_level_bonus_feat#fighter"
         }, {
-          "featureId": "ability:weapon_training_3#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_4#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
           "featureId": "ability:armor_mastery#fighter"
         }]

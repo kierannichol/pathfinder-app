@@ -2,7 +2,7 @@
   "id": "class:hunter#packmaster",
   "name": "Packmaster",
   "tags": ["archetype", "hunter"],
-  "enabledFormula": "!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_companion#hunter AND !@modifies:ability:teamwork_feats#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:second_animal_focus#hunter",
+  "enabledFormula": "!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_companion#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:second_animal_focus#hunter",
   "maxStacks": 1,
   "description": {
   },
@@ -21,7 +21,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:teamwork_feats#hunter",
+            "targetKey": "modifies:ability:teamwork_feat#hunter",
             "numberValue": 1
           }
         }, {
@@ -56,7 +56,7 @@
         }, {
           "featureId": "ability:animal_focus#hunter"
         }, {
-          "featureId": "ability:teamwork_feats#hunter"
+          "featureId": "ability:teamwork_feat#hunter"
         }, {
           "featureId": "ability:second_animal_focus#hunter"
         }, {

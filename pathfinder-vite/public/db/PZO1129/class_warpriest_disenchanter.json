@@ -2,7 +2,7 @@
   "id": "class:warpriest#disenchanter",
   "name": "Disenchanter",
   "tags": ["archetype", "warpriest"],
-  "enabledFormula": "!@modifies:ability:bonus_feats#warpriest AND !@modifies:ability:channel_energy#warpriest AND !@modifies:ability:the_bonus_feat_gained_at_6th_level#warpriest",
+  "enabledFormula": "!@modifies:ability:bonus_feat#warpriest AND !@modifies:ability:channel_energy#warpriest",
   "maxStacks": 1,
   "description": {
     "text": "While many warpriests focus on threats to the body, the disenchanter focuses on dangers to the mind and the soul. Using the power of his patron, the disenchanter seeks to keep the powers of magic in check."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:bonus_feats#warpriest",
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
             "numberValue": 1
           }
         }, {
@@ -20,13 +20,26 @@
             "targetKey": "modifies:ability:channel_energy#warpriest",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feat_gained_at_6th_level#warpriest",
-            "numberValue": 1
-          }
         }],
         "links": [{
+          "featureId": "ability:bonus_feat#warpriest_disenchanter",
+          "conditionFormula": "@class:warpriest\u003e\u003d3"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_disenchanter",
+          "conditionFormula": "@class:warpriest\u003e\u003d6"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_disenchanter",
+          "conditionFormula": "@class:warpriest\u003e\u003d9"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_disenchanter",
+          "conditionFormula": "@class:warpriest\u003e\u003d12"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_disenchanter",
+          "conditionFormula": "@class:warpriest\u003e\u003d15"
+        }, {
+          "featureId": "ability:bonus_feat#warpriest_disenchanter",
+          "conditionFormula": "@class:warpriest\u003e\u003d18"
+        }, {
           "featureId": "ability:mystic_interference#warpriest_disenchanter",
           "conditionFormula": "@class:warpriest\u003e\u003d4"
         }, {
@@ -34,11 +47,11 @@
           "conditionFormula": "@class:warpriest\u003e\u003d6"
         }],
         "unlinks": [{
-          "featureId": "ability:bonus_feats#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }, {
           "featureId": "ability:channel_energy#warpriest"
         }, {
-          "featureId": "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+          "featureId": "ability:bonus_feat#warpriest"
         }]
       }]
     }

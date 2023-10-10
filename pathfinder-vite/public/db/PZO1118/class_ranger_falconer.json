@@ -2,7 +2,7 @@
   "id": "class:ranger#falconer",
   "name": "Falconer",
   "tags": ["archetype", "ranger"],
-  "enabledFormula": "!@modifies:ability:the_combat_style_feat_the_ranger_gains_at_6th_level#ranger AND !@modifies:ability:wild_empathy#ranger",
+  "enabledFormula": "!@modifies:ability:wild_empathy#ranger AND !@modifies:ability:combat_style_feat_the_ranger_gains#ranger",
   "maxStacks": 1,
   "description": {
     "text": "Rangers have always enjoyed a special bond with a specific animal, but the falconer takes this bond to a deeper level. Falconers begin with their companion earlier than other rangers, and have the ability to teach their companions special tricks."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_combat_style_feat_the_ranger_gains_at_6th_level#ranger",
+            "targetKey": "modifies:ability:wild_empathy#ranger",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:wild_empathy#ranger",
+            "targetKey": "modifies:ability:combat_style_feat_the_ranger_gains#ranger",
             "numberValue": 1
           }
         }],
@@ -31,7 +31,7 @@
         "unlinks": [{
           "featureId": "ability:wild_empathy#ranger"
         }, {
-          "featureId": "ability:the_combat_style_feat_the_ranger_gains_at_6th_level#ranger"
+          "featureId": "ability:combat_style_feat_the_ranger_gains#ranger"
         }]
       }]
     }

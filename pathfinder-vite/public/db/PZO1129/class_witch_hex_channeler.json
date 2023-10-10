@@ -2,7 +2,7 @@
   "id": "class:witch#hex_channeler",
   "name": "Hex Channeler",
   "tags": ["archetype", "witch"],
-  "enabledFormula": "!@modifies:ability:the_hex_gained_at_2nd_level#witch",
+  "enabledFormula": "!@modifies:ability:hex#witch",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_hex_gained_at_2nd_level#witch",
+            "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
         }],
@@ -20,7 +20,7 @@
           "conditionFormula": "@class:witch\u003e\u003d2"
         }],
         "unlinks": [{
-          "featureId": "ability:the_hex_gained_at_2nd_level#witch"
+          "featureId": "ability:hex#witch"
         }]
       }]
     }

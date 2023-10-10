@@ -2,7 +2,7 @@
   "id": "class:wizard#spirit_whisperer",
   "name": "Spirit Whisperer",
   "tags": ["archetype", "wizard"],
-  "enabledFormula": "!@modifies:ability:arcane_bond_and_replaces_the_spellbooks_class_feature#wizard AND !@modifies:ability:arcane_school_and_the_bonus_feat_gained_at_20th_level#wizard AND !@modifies:ability:bonus_feats#wizard",
+  "enabledFormula": "!@modifies:ability:spellbooks#wizard AND !@modifies:ability:bonus_feat#wizard AND !@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard",
   "maxStacks": 1,
   "description": {
   },
@@ -11,21 +11,29 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:arcane_bond_and_replaces_the_spellbooks_class_feature#wizard",
+            "targetKey": "modifies:ability:spellbooks#wizard",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:arcane_school_and_the_bonus_feat_gained_at_20th_level#wizard",
+            "targetKey": "modifies:ability:bonus_feat#wizard",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:bonus_feats#wizard",
+            "targetKey": "modifies:ability:arcane_school#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_bond#wizard",
             "numberValue": 1
           }
         }],
         "links": [{
+          "featureId": "ability:arcane_bond#wizard_spirit_whisperer",
+          "conditionFormula": "@class:wizard\u003e\u003d1"
+        }, {
           "featureId": "ability:spirit_link#wizard_spirit_whisperer",
           "conditionFormula": "@class:wizard\u003e\u003d1"
         }, {
@@ -33,11 +41,15 @@
           "conditionFormula": "@class:wizard\u003e\u003d5"
         }],
         "unlinks": [{
-          "featureId": "ability:arcane_bond_and_replaces_the_spellbooks_class_feature#wizard"
+          "featureId": "ability:spellbooks#wizard"
         }, {
-          "featureId": "ability:arcane_school_and_the_bonus_feat_gained_at_20th_level#wizard"
+          "featureId": "ability:arcane_bond#wizard"
         }, {
-          "featureId": "ability:bonus_feats#wizard"
+          "featureId": "ability:arcane_school#wizard"
+        }, {
+          "featureId": "ability:bonus_feat#wizard"
+        }, {
+          "featureId": "ability:bonus_feat#wizard"
         }]
       }]
     }

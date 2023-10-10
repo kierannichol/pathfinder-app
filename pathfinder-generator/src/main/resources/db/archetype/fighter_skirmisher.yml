@@ -11,16 +11,16 @@ description: "Not all battles are fought between armies; sometimes, a settlement
   \ they cannot field a large army, or simply because they refuse to fight on the\
   \ enemy's terms."
 modifications:
-- add: "ability:armor_proficiency#fighter_skirmisher"
+- add: "trait:armor_proficiency#fighter_skirmisher"
   remove:
-  - "ability:the_fighters_armor_proficiency#fighter"
+  - "trait:armor_proficiency#fighter"
 - add: "ability:wilderness_training#fighter_skirmisher"
   remove:
   - "ability:the_fighters_class_skills#fighter"
   - "ability:skill_ranks_per_level#fighter"
 - add: "ability:conditioning#fighter_skirmisher"
   remove:
-  - "ability:the_bonus_feat_the_fighter_normally_receives_at_2nd_level#fighter"
+  - "ability:bonus_feat_the_fighter_normally_receives#fighter@2"
 - add: "ability:reconnaissance_training#fighter_skirmisher"
   remove:
   - "ability:bravery#fighter"
@@ -31,7 +31,7 @@ modifications:
   remove:
   - "ability:armor_mastery#fighter"
 features:
-- id: "ability:armor_proficiency#fighter_skirmisher"
+- id: "trait:armor_proficiency#fighter_skirmisher"
   name: "Armor Proficiency"
   label: null
   type: null

@@ -2,7 +2,7 @@
   "id": "class:bard#dervish_dancer",
   "name": "Dervish Dancer",
   "tags": ["archetype", "bard"],
-  "enabledFormula": "!@modifies:ability:suggestion_and_mass_suggestion#bard AND !@modifies:ability:soothing_performance#bard AND !@modifies:ability:frightening_tune#bard AND !@modifies:ability:bardic_knowledge_and_lore_master#bard AND !@modifies:ability:deadly_performance#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:their_proficiency_with_the_rapier_and_whip#bard AND !@modifies:ability:dirge_of_doom#bard",
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:soothing_performance#bard AND !@modifies:ability:frightening_tune#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:whip#bard AND !@modifies:ability:deadly_performance#bard AND !@modifies:ability:their_proficiency_with_the_rapier#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:suggestion#bard AND !@modifies:ability:dirge_of_doom#bard AND !@modifies:ability:mass_suggestion#bard",
   "maxStacks": 1,
   "description": {
     "text": "Not all bards inspire others with their performances. Dervish dancers enter a near-mystical trance that allows them to push their bodies beyond normal limits."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:suggestion_and_mass_suggestion#bard",
+            "targetKey": "modifies:ability:lore_master#bard",
             "numberValue": 1
           }
         }, {
@@ -27,7 +27,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:bardic_knowledge_and_lore_master#bard",
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:whip#bard",
             "numberValue": 1
           }
         }, {
@@ -37,17 +42,27 @@
           }
         }, {
           "setAction": {
+            "targetKey": "modifies:ability:their_proficiency_with_the_rapier#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:versatile_performance#bard",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:their_proficiency_with_the_rapier_and_whip#bard",
+            "targetKey": "modifies:ability:suggestion#bard",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:dirge_of_doom#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mass_suggestion#bard",
             "numberValue": 1
           }
         }],
@@ -61,6 +76,18 @@
           "featureId": "ability:leaf_on_the_wind#bard_dervish_dancer",
           "conditionFormula": "@class:bard\u003e\u003d14"
         }, {
+          "featureId": "ability:fleet#bard_dervish_dancer",
+          "conditionFormula": "@class:bard\u003e\u003d1"
+        }, {
+          "featureId": "ability:fleet#bard_dervish_dancer",
+          "conditionFormula": "@class:bard\u003e\u003d5"
+        }, {
+          "featureId": "ability:fleet#bard_dervish_dancer",
+          "conditionFormula": "@class:bard\u003e\u003d11"
+        }, {
+          "featureId": "ability:fleet#bard_dervish_dancer",
+          "conditionFormula": "@class:bard\u003e\u003d17"
+        }, {
           "featureId": "ability:versatile_dance#bard_dervish_dancer",
           "conditionFormula": "@class:bard\u003e\u003d2"
         }, {
@@ -71,15 +98,21 @@
           "conditionFormula": "@class:bard\u003e\u003d20"
         }],
         "unlinks": [{
-          "featureId": "ability:their_proficiency_with_the_rapier_and_whip#bard"
+          "featureId": "ability:whip#bard"
         }, {
-          "featureId": "ability:suggestion_and_mass_suggestion#bard"
+          "featureId": "ability:their_proficiency_with_the_rapier#bard"
+        }, {
+          "featureId": "ability:mass_suggestion#bard"
+        }, {
+          "featureId": "ability:suggestion#bard"
         }, {
           "featureId": "ability:dirge_of_doom#bard"
         }, {
           "featureId": "ability:frightening_tune#bard"
         }, {
-          "featureId": "ability:bardic_knowledge_and_lore_master#bard"
+          "featureId": "ability:bardic_knowledge#bard"
+        }, {
+          "featureId": "ability:lore_master#bard"
         }, {
           "featureId": "ability:versatile_performance#bard"
         }, {

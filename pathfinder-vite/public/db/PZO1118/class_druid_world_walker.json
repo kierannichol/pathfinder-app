@@ -2,7 +2,7 @@
   "id": "class:druid#world_walker",
   "name": "World Walker",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:trackless_step_and_resist_natures_lure#druid AND !@modifies:ability:both_venom_immunity_and_timeless_body#druid",
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:both_venom_immunity#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:timeless_body#druid",
   "maxStacks": 1,
   "description": {
     "text": "While all druids traverse the wilderness with ease, the world walkers take it upon themselves to travel the entire world. Some act as messengers and scouts for druidic circles, while others have a seemingly unquenchable wanderlust; each new land provides new mysteries to discover and new wisdom to be gained from mastering those mysteries."
@@ -12,12 +12,22 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:trackless_step_and_resist_natures_lure#druid",
+            "targetKey": "modifies:ability:trackless_step#druid",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:both_venom_immunity_and_timeless_body#druid",
+            "targetKey": "modifies:ability:both_venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#druid",
             "numberValue": 1
           }
         }],
@@ -29,9 +39,13 @@
           "conditionFormula": "@class:druid\u003e\u003d9"
         }],
         "unlinks": [{
-          "featureId": "ability:trackless_step_and_resist_natures_lure#druid"
+          "featureId": "ability:trackless_step#druid"
         }, {
-          "featureId": "ability:both_venom_immunity_and_timeless_body#druid"
+          "featureId": "ability:resist_natures_lure#druid"
+        }, {
+          "featureId": "ability:timeless_body#druid"
+        }, {
+          "featureId": "ability:both_venom_immunity#druid"
         }]
       }]
     }

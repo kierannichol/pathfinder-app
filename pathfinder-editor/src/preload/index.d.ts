@@ -1,5 +1,5 @@
 import {ElectronAPI} from '@electron-toolkit/preload'
-import {PathfinderAPI} from "./pathfinder";
+import {PathfinderAPI} from "../shared/pathfinder";
 
 declare global {
   interface Window {

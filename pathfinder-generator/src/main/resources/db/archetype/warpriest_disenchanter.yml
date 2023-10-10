@@ -4,17 +4,17 @@ description: "While many warpriests focus on threats to the body, the disenchant
   \ focuses on dangers to the mind and the soul. Using the power of his patron, the\
   \ disenchanter seeks to keep the powers of magic in check."
 modifications:
-- add: "ability:bonus_feats#warpriest_disenchanter"
+- add: "ability:bonus_feat#warpriest_disenchanter"
   remove:
-  - "ability:bonus_feats#warpriest"
+  - "ability:bonus_feat#warpriest"
 - add: "ability:mystic_interference#warpriest_disenchanter"
   remove:
   - "ability:channel_energy#warpriest"
 - add: "ability:banish_enchantment#warpriest_disenchanter"
   remove:
-  - "ability:the_bonus_feat_gained_at_6th_level#warpriest"
+  - "ability:bonus_feat#warpriest@6"
 features:
-- id: "ability:bonus_feats#warpriest_disenchanter"
+- id: "ability:bonus_feat#warpriest_disenchanter"
   name: "Bonus Feats"
   label: null
   type: null

@@ -3056,6 +3056,9 @@ const data = $root.data = (() => {
   }();
   return data2;
 })();
+function idToKey(id) {
+  return id.replace(":", "_").replace("#", "_");
+}
 const FeatureDbo = data.FeatureDbo;
 const SourceModuleDbo = data.SourceModuleDbo;
 const DatabaseBasePath = path__namespace.join(__dirname, "..", "..", "..", "pathfinder-vite", "public", "db");
@@ -3096,9 +3099,9 @@ function write_proto(path2, message, encodeBinaryFn, encodeJsonFn) {
   });
 }
 const PathfinderProcess = {
-  async save_feature(event, sourceKey, featureKey, model) {
-    const filePath = path__namespace.join(DatabaseBasePath, sourceKey, featureKey);
-    const summaryPath = path__namespace.join(DatabaseBasePath, sourceKey);
+  async save_feature(event, model) {
+    const filePath = path__namespace.join(DatabaseBasePath, model.sourceKey, model.featureKey);
+    const summaryPath = path__namespace.join(DatabaseBasePath, model.sourceKey);
     await write_proto(
       filePath,
       model,
@@ -3106,7 +3109,7 @@ const PathfinderProcess = {
       (m) => FeatureDbo.toObject(m)
     );
     const sourceSummary = await read_proto(summaryPath + ".bin", SourceModuleDbo.decode);
-    const featureIndex = sourceSummary.features.findIndex((summary) => summary.id.replace(":", "_").replace("#", "_") === featureKey);
+    const featureIndex = sourceSummary.features.findIndex((summary) => idToKey(summary.id) === model.featureKey);
     const modifiedFeatures = featureIndex > -1 ? sourceSummary.features.with(featureIndex, model) : [...sourceSummary.features, model];
     const modifiedSummary = new SourceModuleDbo({
       sourceId: sourceSummary.sourceId,
@@ -3119,13 +3122,21 @@ const PathfinderProcess = {
       (m) => SourceModuleDbo.toObject(m)
     );
   },
-  load_feature(event, sourceKey, featureKey) {
-    const filePath = path__namespace.join(DatabaseBasePath, sourceKey, featureKey + ".bin");
-    return read_proto(filePath, FeatureDbo.decode);
+  async load_feature(event, featureKey) {
+    const filePath = path__namespace.join(DatabaseBasePath, featureKey.sourceKey, featureKey.featureKey + ".bin");
+    const dbo = await read_proto(filePath, FeatureDbo.decode);
+    dbo.sourceKey = featureKey.sourceKey;
+    dbo.featureKey = featureKey.featureKey;
+    return dbo;
   },
   async list_features(event, sourceKey) {
     const section_path = path__namespace.join(DatabaseBasePath, sourceKey);
-    return (await list_files(section_path)).filter((file) => file.endsWith(".bin")).map((file) => file.replace(".bin", ""));
+    return (await list_files(section_path)).filter((file) => file.endsWith(".bin")).map((file) => file.replace(".bin", "")).map((featureKey) => {
+      return {
+        sourceKey,
+        featureKey
+      };
+    });
   },
   async list_sources() {
     const files = await list_files(DatabaseBasePath);

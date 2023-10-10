@@ -2,7 +2,7 @@
   "id": "class:arcanist#white_mage",
   "name": "White Mage",
   "tags": ["archetype", "arcanist"],
-  "enabledFormula": "!@modifies:ability:the_arcanist_exploits_gained_at_1st_and_9th_levels#arcanist",
+  "enabledFormula": "!@modifies:ability:arcanist_exploit#arcanist",
   "maxStacks": 1,
   "description": {
     "text": "A white mage is an arcanist touched by a divine power and gifted with the ability to heal others."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploits_gained_at_1st_and_9th_levels#arcanist",
+            "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
         }],
@@ -21,7 +21,9 @@
           "conditionFormula": "@class:arcanist\u003e\u003d1"
         }],
         "unlinks": [{
-          "featureId": "ability:the_arcanist_exploits_gained_at_1st_and_9th_levels#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
+        }, {
+          "featureId": "ability:arcanist_exploit#arcanist"
         }]
       }]
     }

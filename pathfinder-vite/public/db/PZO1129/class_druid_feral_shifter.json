@@ -2,7 +2,7 @@
   "id": "class:druid#feral_shifter",
   "name": "Feral Shifter",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:nature_bond#druid AND !@modifies:ability:venom_immunity_a_thousand_faces_and_timeless_body#druid",
+  "enabledFormula": "!@modifies:ability:venom_immunity#druid AND !@modifies:ability:nature_bond#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:timeless_body#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -11,12 +11,22 @@
       "stacks": [{
         "effects": [{
           "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:nature_bond#druid",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:venom_immunity_a_thousand_faces_and_timeless_body#druid",
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#druid",
             "numberValue": 1
           }
         }],
@@ -30,7 +40,11 @@
         "unlinks": [{
           "featureId": "ability:nature_bond#druid"
         }, {
-          "featureId": "ability:venom_immunity_a_thousand_faces_and_timeless_body#druid"
+          "featureId": "ability:a_thousand_faces#druid"
+        }, {
+          "featureId": "ability:venom_immunity#druid"
+        }, {
+          "featureId": "ability:timeless_body#druid"
         }]
       }]
     }

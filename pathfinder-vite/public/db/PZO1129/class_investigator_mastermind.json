@@ -2,7 +2,7 @@
   "id": "class:investigator#mastermind",
   "name": "Mastermind",
   "tags": ["archetype", "investigator"],
-  "enabledFormula": "!@modifies:ability:the_investigator_talent_gained_at_9th_level#investigator AND !@modifies:ability:trapfinding_and_trap_sense#investigator AND !@modifies:ability:inspiration#investigator AND !@modifies:ability:swift_alchemy#investigator",
+  "enabledFormula": "!@modifies:ability:trapfinding#investigator AND !@modifies:ability:inspiration#investigator AND !@modifies:ability:trap_sense#investigator AND !@modifies:ability:investigator_talent#investigator AND !@modifies:ability:swift_alchemy#investigator",
   "maxStacks": 1,
   "description": {
   },
@@ -11,17 +11,22 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_investigator_talent_gained_at_9th_level#investigator",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:trapfinding_and_trap_sense#investigator",
+            "targetKey": "modifies:ability:trapfinding#investigator",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:inspiration#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:investigator_talent#investigator",
             "numberValue": 1
           }
         }, {
@@ -34,6 +39,27 @@
           "featureId": "ability:masterminds_inspiration#investigator_mastermind",
           "conditionFormula": "@class:investigator\u003e\u003d1"
         }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d1"
+        }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d3"
+        }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d6"
+        }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d9"
+        }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d12"
+        }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d15"
+        }, {
+          "featureId": "ability:a_quiet_word#investigator_mastermind",
+          "conditionFormula": "@class:investigator\u003e\u003d18"
+        }, {
           "featureId": "ability:mastermind_defense#investigator_mastermind",
           "conditionFormula": "@class:investigator\u003e\u003d4"
         }, {
@@ -43,11 +69,13 @@
         "unlinks": [{
           "featureId": "ability:inspiration#investigator"
         }, {
-          "featureId": "ability:trapfinding_and_trap_sense#investigator"
+          "featureId": "ability:trapfinding#investigator"
+        }, {
+          "featureId": "ability:trap_sense#investigator"
         }, {
           "featureId": "ability:swift_alchemy#investigator"
         }, {
-          "featureId": "ability:the_investigator_talent_gained_at_9th_level#investigator"
+          "featureId": "ability:investigator_talent#investigator"
         }]
       }]
     }

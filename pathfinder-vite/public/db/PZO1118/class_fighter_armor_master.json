@@ -2,7 +2,7 @@
   "id": "class:fighter#armor_master",
   "name": "Armor Master",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:weapon_training_1_and_3_and_armor_mastery#fighter AND !@modifies:ability:weapon_training_2_and_4#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_mastery#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "All fighters have two main tools of their trade--weapons and armor. While many fighters hone their weapon skills to a point of inescapable grace and lethality, there are those who live under the maxim that a good offense can be accomplished though an impenetrable defense. To these fighters, proper use of armor and shields ensures that they can fight another day, and that the frustration of enemies who can\u0027t seem to crack an armor master\u0027s superior defenses is just the first symptom of his foes\u0027 eventual defeat."
@@ -12,22 +12,22 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_1_and_3_and_armor_mastery#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:weapon_training_2_and_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:bravery#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:weapon_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -47,9 +47,15 @@
         "unlinks": [{
           "featureId": "ability:bravery#fighter"
         }, {
-          "featureId": "ability:weapon_training_1_and_3_and_armor_mastery#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_2_and_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_mastery#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
         }, {
           "featureId": "ability:weapon_mastery#fighter"
         }]

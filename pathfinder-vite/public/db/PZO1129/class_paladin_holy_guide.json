@@ -2,7 +2,7 @@
   "id": "class:paladin#holy_guide",
   "name": "Holy Guide",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:the_mercy_gained_at_6th_level#paladin AND !@modifies:ability:the_mercy_gained_at_3rd_level#paladin",
+  "enabledFormula": "!@modifies:ability:mercy#paladin",
   "maxStacks": 1,
   "description": {
   },
@@ -11,12 +11,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_mercy_gained_at_6th_level#paladin",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_mercy_gained_at_3rd_level#paladin",
+            "targetKey": "modifies:ability:mercy#paladin",
             "numberValue": 1
           }
         }],
@@ -28,9 +23,9 @@
           "conditionFormula": "@class:paladin\u003e\u003d6"
         }],
         "unlinks": [{
-          "featureId": "ability:the_mercy_gained_at_3rd_level#paladin"
+          "featureId": "ability:mercy#paladin"
         }, {
-          "featureId": "ability:the_mercy_gained_at_6th_level#paladin"
+          "featureId": "ability:mercy#paladin"
         }]
       }]
     }

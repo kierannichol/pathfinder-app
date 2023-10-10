@@ -2,18 +2,18 @@ id: "class:witch#tatterdemalion"
 name: "Tatterdemalion"
 description: ""
 modifications:
-- add: "ability:weapon_proficiency#witch_tatterdemalion"
+- add: "trait:weapon_proficiency#witch_tatterdemalion"
   remove:
-  - "ability:the_witchs_weapon_proficiencies#witch"
+  - "trait:weapon_proficiency#witch"
 - add: "ability:cantrips#witch_tatterdemalion"
   remove:
   - "ability:the_witchs_cantrips#witch"
 - add: "ability:dancing_strings#witch_tatterdemalion"
   remove:
-  - "ability:hex_gained_at_1st_level#witch"
+  - "ability:hex_gained#witch@1"
   - "ability:spells#witch"
 features:
-- id: "ability:weapon_proficiency#witch_tatterdemalion"
+- id: "trait:weapon_proficiency#witch_tatterdemalion"
   name: "Weapon Proficiency"
   label: null
   type: null

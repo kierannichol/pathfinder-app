@@ -5,12 +5,12 @@ modifications:
 - add: "ability:savage_toss#monk_lifting_hand"
   remove:
   - "ability:stunning_fist#monk"
-- add: "ability:bonus_feats#monk_lifting_hand"
+- add: "ability:bonus_feat#monk_lifting_hand"
   remove:
-  - "ability:the_monks_bonus_feats#monk"
+  - "ability:the_monks_bonus_feat#monk"
 - add: "ability:joint_lock#monk_lifting_hand"
   remove:
-  - "ability:the_bonus_feat_gained_at_10th_level#monk"
+  - "ability:bonus_feat#monk@10"
 - add: "ability:counter_throw#monk_lifting_hand"
   remove:
   - "ability:abundant_step#monk"
@@ -33,7 +33,7 @@ features:
   effects: null
   prerequisites: null
   source: "Pathfinder Player Companion: Martial Arts Handbook"
-- id: "ability:bonus_feats#monk_lifting_hand"
+- id: "ability:bonus_feat#monk_lifting_hand"
   name: "Bonus Feats"
   label: null
   type: null

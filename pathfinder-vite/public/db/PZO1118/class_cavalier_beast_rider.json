@@ -2,7 +2,7 @@
   "id": "class:cavalier#beast_rider",
   "name": "Beast Rider",
   "tags": ["archetype", "cavalier"],
-  "enabledFormula": "!@modifies:ability:the_standard_cavaliers_mount_and_expert_trainer_abilities#cavalier",
+  "enabledFormula": "!@modifies:ability:mount#cavalier AND !@modifies:ability:expert_trainer_abilities#cavalier",
   "maxStacks": 1,
   "description": {
     "text": "The cavalier is defined not only by his dedication to his order or his skill on the battlefield, but also by the special relationship he maintains with his mount. Where some cavaliers are simply skilled with horses or well-trained knights, the beast rider spends his life in constant pursuit of the most perfect mount, forming bonds with greater, more powerful, and more exotic creatures."
@@ -12,7 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_standard_cavaliers_mount_and_expert_trainer_abilities#cavalier",
+            "targetKey": "modifies:ability:mount#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:expert_trainer_abilities#cavalier",
             "numberValue": 1
           }
         }],
@@ -21,7 +26,9 @@
           "conditionFormula": "@class:cavalier\u003e\u003d1"
         }],
         "unlinks": [{
-          "featureId": "ability:the_standard_cavaliers_mount_and_expert_trainer_abilities#cavalier"
+          "featureId": "ability:expert_trainer_abilities#cavalier"
+        }, {
+          "featureId": "ability:mount#cavalier"
         }]
       }]
     }

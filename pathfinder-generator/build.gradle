@@ -3,6 +3,8 @@ plugins {
     id 'java'
 }
 
+apply from: "$rootDir/gradle/lombok.gradle"
+
 ext {
     protobufVersion = "3.24.0"
 }
@@ -18,7 +20,7 @@ configurations {
 }
 
 dependencies {
-    implementation project(':modules:common-logic')
+    implementation "org.formula:formula-java:1.4.0"
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '3.1.2'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '3.1.2'
@@ -33,4 +35,8 @@ dependencies {
     implementation group: 'org.jsoup', name: 'jsoup', version: '1.15.3'
 
     implementation 'org.apache.opennlp:opennlp-tools:2.1.1'
+}
+
+test {
+    useJUnitPlatform()
 }

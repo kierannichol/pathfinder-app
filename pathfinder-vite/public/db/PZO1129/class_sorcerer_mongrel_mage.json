@@ -2,7 +2,7 @@
   "id": "class:sorcerer#mongrel_mage",
   "name": "Mongrel Mage",
   "tags": ["archetype", "sorcerer"],
-  "enabledFormula": "!@modifies:ability:the_bloodline_class_feature_bloodline_powers_and_bloodline_spells#sorcerer",
+  "enabledFormula": "!@modifies:ability:the_bloodline_bloodline_powers#sorcerer AND !@modifies:ability:bloodline_spells#sorcerer",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_bloodline_class_feature_bloodline_powers_and_bloodline_spells#sorcerer",
+            "targetKey": "modifies:ability:the_bloodline_bloodline_powers#sorcerer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bloodline_spells#sorcerer",
             "numberValue": 1
           }
         }],
@@ -20,7 +25,9 @@
           "conditionFormula": "@class:sorcerer\u003e\u003d1"
         }],
         "unlinks": [{
-          "featureId": "ability:the_bloodline_class_feature_bloodline_powers_and_bloodline_spells#sorcerer"
+          "featureId": "ability:bloodline_spells#sorcerer"
+        }, {
+          "featureId": "ability:the_bloodline_bloodline_powers#sorcerer"
         }]
       }]
     }

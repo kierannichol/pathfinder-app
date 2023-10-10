@@ -2,7 +2,7 @@
   "id": "class:arcanist#eldritch_font",
   "name": "Eldritch Font",
   "tags": ["archetype", "arcanist"],
-  "enabledFormula": "!@modifies:ability:magical_supremacy#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_7th_level#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_13th_level#arcanist AND !@modifies:ability:the_arcanist_exploit_gained_at_3rd_level#arcanist",
+  "enabledFormula": "!@modifies:ability:magical_supremacy#arcanist AND !@modifies:ability:arcanist_exploit#arcanist",
   "maxStacks": 1,
   "description": {
     "text": "For some arcanists, the power bubbling up from within is nearly too much to contain. They become adept at shaping this magical energy without needing to bind it up in spells."
@@ -17,17 +17,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_7th_level#arcanist",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_13th_level#arcanist",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploit_gained_at_3rd_level#arcanist",
+            "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
         }],
@@ -45,11 +35,11 @@
           "conditionFormula": "@class:arcanist\u003e\u003d20"
         }],
         "unlinks": [{
-          "featureId": "ability:the_arcanist_exploit_gained_at_3rd_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
-          "featureId": "ability:the_arcanist_exploit_gained_at_7th_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
-          "featureId": "ability:the_arcanist_exploit_gained_at_13th_level#arcanist"
+          "featureId": "ability:arcanist_exploit#arcanist"
         }, {
           "featureId": "ability:magical_supremacy#arcanist"
         }]

@@ -2,7 +2,7 @@
   "id": "class:fighter#dragoon",
   "name": "Dragoon",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:the_1st_level_fighter_bonus_combat_feat#fighter AND !@modifies:ability:armor_training_4#fighter AND !@modifies:ability:weapon_training_2_3_and_4#fighter AND !@modifies:ability:armor_training_2#fighter AND !@modifies:ability:armor_training_3#fighter",
+  "enabledFormula": "!@modifies:ability:the_1st_level_fighter_bonus_combat_feat#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "These gallant lancers serve in the vanguard of many armies or as knights-errant. They are born leaders and masters of the mounted charge."
@@ -17,22 +17,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:armor_training_4#fighter",
+            "targetKey": "modifies:ability:armor_training#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_2_3_and_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_2#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_3#fighter",
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -55,13 +45,17 @@
         "unlinks": [{
           "featureId": "ability:the_1st_level_fighter_bonus_combat_feat#fighter"
         }, {
-          "featureId": "ability:armor_training_2#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_2_3_and_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_3#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
         }]
       }]
     }

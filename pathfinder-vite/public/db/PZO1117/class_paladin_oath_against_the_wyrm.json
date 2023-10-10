@@ -2,7 +2,7 @@
   "id": "class:paladin#oath_against_the_wyrm",
   "name": "Oath Against the Wyrm",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:the_standard_divine_bond_ability#paladin AND !@modifies:ability:holy_champion#paladin",
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:bond#paladin AND !@modifies:ability:holy_champion#paladin",
   "maxStacks": 1,
   "description": {
   },
@@ -16,7 +16,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_standard_divine_bond_ability#paladin",
+            "targetKey": "modifies:ability:bond#paladin",
             "numberValue": 1
           }
         }, {
@@ -35,7 +35,7 @@
         "unlinks": [{
           "featureId": "ability:channel_positive_energy#paladin"
         }, {
-          "featureId": "ability:the_standard_divine_bond_ability#paladin"
+          "featureId": "ability:bond#paladin"
         }, {
           "featureId": "ability:holy_champion#paladin"
         }]

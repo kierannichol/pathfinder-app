@@ -2,9 +2,9 @@ id: "class:magus#iron_ring_striker_magus_archetype"
 name: "Iron-Ring Striker (Magus Archetype)"
 description: ""
 modifications:
-- add: "ability:weapon_proficiency#magus_iron_ring_striker_magus_archetype"
+- add: "trait:weapon_proficiency#magus_iron_ring_striker_magus_archetype"
   remove:
-  - "ability:the_maguss_weapon_proficiency#magus"
+  - "trait:weapon_proficiency#magus"
 - add: "ability:diminished_spellcasting#magus_iron_ring_striker_magus_archetype"
   remove:
   - "ability:the_maguss_spellcasting#magus"
@@ -16,7 +16,7 @@ modifications:
   - "ability:spellstrike#magus"
 - add: "ability:bonus_feat#magus_iron_ring_striker_magus_archetype"
   remove:
-  - "ability:the_bonus_feat_gained_at_5th_level#magus"
+  - "ability:bonus_feat#magus@5"
 - add: "ability:empower_combat#magus_iron_ring_striker_magus_archetype"
   remove:
   - "ability:medium_armor#magus"
@@ -28,7 +28,7 @@ modifications:
   remove:
   - "ability:counterstrike#magus"
 features:
-- id: "ability:weapon_proficiency#magus_iron_ring_striker_magus_archetype"
+- id: "trait:weapon_proficiency#magus_iron_ring_striker_magus_archetype"
   name: "Weapon Proficiency"
   label: null
   type: null

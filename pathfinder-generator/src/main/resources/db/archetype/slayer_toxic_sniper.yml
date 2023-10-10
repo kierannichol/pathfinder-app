@@ -5,8 +5,8 @@ description: "With significant firepower in hand, the toxic snipers bring poison
 modifications:
 - add: "ability:weapon_and_armor_proficiencies#slayer_toxic_sniper"
   remove:
-  - "ability:armor_proficiency#slayer"
-  - "ability:the_toxic_snipers_weapon#slayer"
+  - "trait:armor_proficiency#slayer"
+  - "trait:weapon_proficiency#slayer"
 - add: "ability:scrappers_gun#slayer_toxic_sniper"
   remove:
   - "ability:track#slayer"
@@ -15,17 +15,17 @@ modifications:
   - "ability:studied_target#slayer"
 - add: "ability:toxic_grit#slayer_toxic_sniper"
   remove:
-  - "ability:the_slayer_talent_gained_at_2nd_level#slayer"
+  - "ability:slayer_talent#slayer@2"
 - add: "ability:toxic_shots#slayer_toxic_sniper"
   remove:
-  - "ability:the_slayer_talent_gained_at_4th_level#slayer"
+  - "ability:slayer_talent#slayer@4"
 - add: "ability:marksman#slayer_toxic_sniper"
   remove:
   - "ability:slayer_talents_gained_at_6th_8th_12th_14th_16th_18th#slayer"
   - "ability:20th_levels#slayer"
 - add: "ability:precise_toxin#slayer_toxic_sniper"
   remove:
-  - "ability:the_slayer_talent_gained_at_10th_level#slayer"
+  - "ability:slayer_talent#slayer@10"
 features:
 - id: "ability:weapon_and_armor_proficiencies#slayer_toxic_sniper"
   name: "Weapon and Armor Proficiencies"

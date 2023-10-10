@@ -2,7 +2,7 @@
   "id": "class:rogue#underground_chemist",
   "name": "Underground Chemist",
   "tags": ["archetype", "rogue"],
-  "enabledFormula": "!@modifies:ability:advanced_talents#rogue AND !@modifies:ability:evasion#rogue AND !@modifies:ability:the_rogue_talent_gained_at_4th_level#rogue",
+  "enabledFormula": "!@modifies:ability:rogue_talent#rogue AND !@modifies:ability:advanced_talents#rogue AND !@modifies:ability:evasion#rogue",
   "maxStacks": 1,
   "description": {
     "text": "Underground chemists are part of the rotting, fetid underbelly of the alchemical world. While underground chemists can\u0027t hold a candle to dedicated alchemists, they\u0027re tricky and dangerous with alchemical substances and potions."
@@ -12,17 +12,17 @@
       "stacks": [{
         "effects": [{
           "setAction": {
+            "targetKey": "modifies:ability:rogue_talent#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
             "targetKey": "modifies:ability:advanced_talents#rogue",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:evasion#rogue",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rogue_talent_gained_at_4th_level#rogue",
             "numberValue": 1
           }
         }],
@@ -39,7 +39,7 @@
         "unlinks": [{
           "featureId": "ability:evasion#rogue"
         }, {
-          "featureId": "ability:the_rogue_talent_gained_at_4th_level#rogue"
+          "featureId": "ability:rogue_talent#rogue"
         }, {
           "featureId": "ability:advanced_talents#rogue"
         }]

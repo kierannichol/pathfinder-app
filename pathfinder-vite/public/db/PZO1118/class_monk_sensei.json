@@ -2,7 +2,7 @@
   "id": "class:monk#sensei",
   "name": "Sensei",
   "tags": ["archetype", "monk"],
-  "enabledFormula": "!@modifies:ability:flurry_of_blows_fast_movement_and_improved_evasion#monk AND !@modifies:ability:the_bonus_feats_gained_at_6th_10th_and_14th_level#monk AND !@modifies:ability:evasion_and_the_bonus_feat_gained_at_2nd_level#monk",
+  "enabledFormula": "!@modifies:ability:14th_level#monk AND !@modifies:ability:flurry_of_blows_fast_movement#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:the_bonus_feats_gained_at_6th_10th#monk AND !@modifies:ability:evasion#monk AND !@modifies:ability:bonus_feat#monk",
   "maxStacks": 1,
   "description": {
     "text": "The sensei is a revered teacher who imparts lessons on the oneness of mind, body, and spirit, along with occasional correction that is subtle and swift. Rather than using wisdom for his own benefit alone, he uses it to better those around him."
@@ -12,21 +12,39 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:flurry_of_blows_fast_movement_and_improved_evasion#monk",
+            "targetKey": "modifies:ability:14th_level#monk",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feats_gained_at_6th_10th_and_14th_level#monk",
+            "targetKey": "modifies:ability:flurry_of_blows_fast_movement#monk",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:evasion_and_the_bonus_feat_gained_at_2nd_level#monk",
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_bonus_feats_gained_at_6th_10th#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#monk",
             "numberValue": 1
           }
         }],
         "links": [{
+          "featureId": "ability:advice#monk_sensei",
+          "conditionFormula": "@class:monk\u003e\u003d9"
+        }, {
           "featureId": "ability:insightful_strike#monk_sensei",
           "conditionFormula": "@class:monk\u003e\u003d2"
         }, {
@@ -34,11 +52,17 @@
           "conditionFormula": "@class:monk\u003e\u003d6"
         }],
         "unlinks": [{
-          "featureId": "ability:flurry_of_blows_fast_movement_and_improved_evasion#monk"
+          "featureId": "ability:flurry_of_blows_fast_movement#monk"
         }, {
-          "featureId": "ability:evasion_and_the_bonus_feat_gained_at_2nd_level#monk"
+          "featureId": "ability:improved_evasion#monk"
         }, {
-          "featureId": "ability:the_bonus_feats_gained_at_6th_10th_and_14th_level#monk"
+          "featureId": "ability:bonus_feat#monk"
+        }, {
+          "featureId": "ability:evasion#monk"
+        }, {
+          "featureId": "ability:the_bonus_feats_gained_at_6th_10th#monk"
+        }, {
+          "featureId": "ability:14th_level#monk"
         }]
       }]
     }

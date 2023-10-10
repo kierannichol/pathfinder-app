@@ -2,7 +2,7 @@
   "id": "class:shaman#possessed_shaman",
   "name": "Possessed Shaman",
   "tags": ["archetype", "shaman"],
-  "enabledFormula": "!@modifies:ability:the_wandering_hex_gained_at_6th_level#shaman AND !@modifies:ability:the_hex_gained_at_2nd_level#shaman AND !@modifies:ability:spirit_magic#shaman",
+  "enabledFormula": "!@modifies:ability:hex#shaman AND !@modifies:ability:wandering_hex#shaman AND !@modifies:ability:spirit_magic#shaman",
   "maxStacks": 1,
   "description": {
     "text": "For a possessed shaman, merely communing with the spirit world is insufficient. Instead, she invites the spirits to share her body, granting them the chance to experience corporeal existence. In return, they grant her their skills and protect her from otherworldly influence."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_wandering_hex_gained_at_6th_level#shaman",
+            "targetKey": "modifies:ability:hex#shaman",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_hex_gained_at_2nd_level#shaman",
+            "targetKey": "modifies:ability:wandering_hex#shaman",
             "numberValue": 1
           }
         }, {
@@ -39,9 +39,9 @@
         "unlinks": [{
           "featureId": "ability:spirit_magic#shaman"
         }, {
-          "featureId": "ability:the_hex_gained_at_2nd_level#shaman"
+          "featureId": "ability:hex#shaman"
         }, {
-          "featureId": "ability:the_wandering_hex_gained_at_6th_level#shaman"
+          "featureId": "ability:wandering_hex#shaman"
         }]
       }]
     }

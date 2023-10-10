@@ -2,7 +2,7 @@
   "id": "class:cleric#ecclesitheurge",
   "name": "Ecclesitheurge",
   "tags": ["archetype", "cleric"],
-  "enabledFormula": "!@modifies:ability:the_increase_to_channel_energy_gained_at_3rd_level#cleric AND !@modifies:ability:the_clerics_weapon_and_armor_proficiencies#cleric AND !@modifies:ability:the_normal_domain_ability#cleric",
+  "enabledFormula": "!@modifies:ability:channel_energy#cleric AND !@modifies:ability:domains#cleric AND !@modifies:trait:armor_proficiency#cleric AND !@modifies:trait:weapon_proficiency#cleric",
   "maxStacks": 1,
   "description": {
   },
@@ -11,21 +11,146 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_increase_to_channel_energy_gained_at_3rd_level#cleric",
+            "targetKey": "modifies:ability:channel_energy#cleric",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_clerics_weapon_and_armor_proficiencies#cleric",
+            "targetKey": "modifies:ability:domains#cleric",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_normal_domain_ability#cleric",
+            "targetKey": "modifies:trait:armor_proficiency#cleric",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#cleric",
             "numberValue": 1
           }
         }],
         "links": [{
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d20"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge",
+          "conditionFormula": "@class:cleric\u003e\u003d20"
+        }, {
           "featureId": "ability:domain_mastery#cleric_ecclesitheurge",
           "conditionFormula": "@class:cleric\u003e\u003d1"
         }, {
@@ -33,11 +158,13 @@
           "conditionFormula": "@class:cleric\u003e\u003d3"
         }],
         "unlinks": [{
-          "featureId": "ability:the_clerics_weapon_and_armor_proficiencies#cleric"
+          "featureId": "trait:armor_proficiency#cleric"
         }, {
-          "featureId": "ability:the_normal_domain_ability#cleric"
+          "featureId": "trait:weapon_proficiency#cleric"
         }, {
-          "featureId": "ability:the_increase_to_channel_energy_gained_at_3rd_level#cleric"
+          "featureId": "ability:domains#cleric"
+        }, {
+          "featureId": "ability:channel_energy#cleric"
         }]
       }]
     }

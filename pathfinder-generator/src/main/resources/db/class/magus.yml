@@ -49,8 +49,6 @@ levels:
   spells_known: {}
   level: 1
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:spellstrike#magus"
   spells_per_day:
     1: 4
@@ -58,8 +56,6 @@ levels:
   spells_known: {}
   level: 2
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:magus_arcana#magus"
   spells_per_day:
     1: 4
@@ -67,8 +63,6 @@ levels:
   spells_known: {}
   level: 3
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:spell_recall#magus"
   spells_per_day:
     1: 4
@@ -77,8 +71,6 @@ levels:
   spells_known: {}
   level: 4
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:bonus_feat#magus"
   spells_per_day:
     1: 4
@@ -87,8 +79,6 @@ levels:
   spells_known: {}
   level: 5
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:magus_arcana#magus"
   spells_per_day:
     1: 5
@@ -97,8 +87,6 @@ levels:
   spells_known: {}
   level: 6
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:knowledge_pool#magus"
   - "ability:medium_armor#magus"
   spells_per_day:
@@ -109,8 +97,6 @@ levels:
   spells_known: {}
   level: 7
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:improved_spell_combat#magus"
   spells_per_day:
     1: 5
@@ -120,8 +106,6 @@ levels:
   spells_known: {}
   level: 8
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:magus_arcana#magus"
   spells_per_day:
     1: 5
@@ -131,8 +115,6 @@ levels:
   spells_known: {}
   level: 9
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:fighter_training#magus"
   spells_per_day:
     1: 5
@@ -143,8 +125,6 @@ levels:
   spells_known: {}
   level: 10
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:bonus_feat#magus"
   - "ability:improved_spell_recall#magus"
   spells_per_day:
@@ -156,8 +136,6 @@ levels:
   spells_known: {}
   level: 11
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:magus_arcana#magus"
   spells_per_day:
     1: 5
@@ -168,8 +146,6 @@ levels:
   spells_known: {}
   level: 12
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:heavy_armor#magus"
   spells_per_day:
     1: 5
@@ -181,8 +157,6 @@ levels:
   spells_known: {}
   level: 13
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:greater_spell_combat#magus"
   spells_per_day:
     1: 5
@@ -194,8 +168,6 @@ levels:
   spells_known: {}
   level: 14
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:magus_arcana#magus"
   spells_per_day:
     1: 5
@@ -207,8 +179,6 @@ levels:
   spells_known: {}
   level: 15
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:counterstrike#magus"
   spells_per_day:
     1: 5
@@ -221,8 +191,6 @@ levels:
   spells_known: {}
   level: 16
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:bonus_feat#magus"
   spells_per_day:
     1: 5
@@ -235,8 +203,6 @@ levels:
   spells_known: {}
   level: 17
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:magus_arcana#magus"
   spells_per_day:
     1: 5
@@ -249,8 +215,6 @@ levels:
   spells_known: {}
   level: 18
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:greater_spell_access#magus"
   spells_per_day:
     1: 5
@@ -263,8 +227,6 @@ levels:
   spells_known: {}
   level: 19
 - class_feature_names:
-  - "trait:armor_proficiency#magus"
-  - "trait:weapon_proficiency#magus"
   - "ability:true_magus#magus"
   spells_per_day:
     1: 5
@@ -279,6 +241,14 @@ levels:
 spell_caster_types:
 - "arcane"
 class_features:
+- id: "ability:spell_casting#magus"
+  name: "Spell Casting"
+  label: null
+  type: null
+  description: "A magus casts arcane spells drawn from the magus spell list. A magus must choose and prepare his spells ahead of time."
+  effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:true_magus#magus"
   name: "True Magus"
   label: null

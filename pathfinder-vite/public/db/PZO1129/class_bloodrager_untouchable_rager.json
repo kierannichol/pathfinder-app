@@ -2,7 +2,7 @@
   "id": "class:bloodrager#untouchable_rager",
   "name": "Untouchable Rager",
   "tags": ["archetype", "bloodrager"],
-  "enabledFormula": "!@modifies:ability:the_spells_blood_casting_eschew_materials_and_bloodline_spells_class_features#bloodrager",
+  "enabledFormula": "!@modifies:ability:the_spells_blood_casting_eschew_materials#bloodrager AND !@modifies:ability:bloodline_spells#bloodrager",
   "maxStacks": 1,
   "description": {
     "text": "While most bloodragers are known for their inexplicable ability to focus their bloodline into a horrifying mix of martial terror and spellcasting fury, from time to time a bloodrager\u0027s bloodline acts differently. Instead of empowering the bloodrager, it shields the bloodrager from magic of all types, often keeping the bloodrager untouched within the midst of magical effects."
@@ -12,7 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_spells_blood_casting_eschew_materials_and_bloodline_spells_class_features#bloodrager",
+            "targetKey": "modifies:ability:the_spells_blood_casting_eschew_materials#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bloodline_spells#bloodrager",
             "numberValue": 1
           }
         }],
@@ -21,7 +26,9 @@
           "conditionFormula": "@class:bloodrager\u003e\u003d4"
         }],
         "unlinks": [{
-          "featureId": "ability:the_spells_blood_casting_eschew_materials_and_bloodline_spells_class_features#bloodrager"
+          "featureId": "ability:the_spells_blood_casting_eschew_materials#bloodrager"
+        }, {
+          "featureId": "ability:bloodline_spells#bloodrager"
         }]
       }]
     }

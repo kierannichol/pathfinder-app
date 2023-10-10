@@ -2,9 +2,9 @@ id: "class:cavalier#hussar"
 name: "Hussar"
 description: ""
 modifications:
-- add: "ability:armor_proficiency#cavalier_hussar"
+- add: "trait:armor_proficiency#cavalier_hussar"
   remove:
-  - "ability:the_cavaliers_normal_armor_proficiencies#cavalier"
+  - "trait:armor_proficiency#cavalier"
 - add: "ability:agile_warrior#cavalier_hussar"
   remove:
   - "ability:the_cavaliers_class_skills#cavalier"
@@ -14,8 +14,9 @@ modifications:
   - "ability:tactician_banner#cavalier"
 - add: "ability:skillful_rider#cavalier_hussar"
   remove:
-  - "ability:the_bonus_feats_gained_at_6th_12th#cavalier"
-  - "ability:18th_levels#cavalier"
+  - "ability:bonus_feat#cavalier@6"
+  - "ability:bonus_feat#cavalier@12"
+  - "ability:bonus_feat#cavalier@18"
 - add: "ability:maneuverable_mount#cavalier_hussar"
   remove:
   - "ability:greater_tactician#cavalier"
@@ -23,7 +24,7 @@ modifications:
   remove:
   - "ability:master_tactician#cavalier"
 features:
-- id: "ability:armor_proficiency#cavalier_hussar"
+- id: "trait:armor_proficiency#cavalier_hussar"
   name: "Armor Proficiency"
   label: null
   type: null

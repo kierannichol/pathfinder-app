@@ -2,7 +2,7 @@
   "id": "class:fighter#tactician",
   "name": "Tactician",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training_4#fighter AND !@modifies:ability:weapon_training_1#fighter AND !@modifies:ability:the_bonus_fighter_combat_feat_gained_at_1st_level#fighter AND !@modifies:ability:armor_training_3#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:bonus_fighter_combat_feat#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "While many fighters focus on the fundamentals of melee and ranged combat, there are those who are trained to view the bigger picture on the battlefield. These fighters use their training and tactical acumen to overcome challenges that would overwhelm mere brute strength and skill at arms."
@@ -17,22 +17,17 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:armor_training_4#fighter",
+            "targetKey": "modifies:ability:armor_training#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_1#fighter",
+            "targetKey": "modifies:ability:bonus_fighter_combat_feat#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_fighter_combat_feat_gained_at_1st_level#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_3#fighter",
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -50,15 +45,15 @@
           "conditionFormula": "@class:fighter\u003e\u003d15"
         }],
         "unlinks": [{
-          "featureId": "ability:the_bonus_fighter_combat_feat_gained_at_1st_level#fighter"
+          "featureId": "ability:bonus_fighter_combat_feat#fighter"
         }, {
           "featureId": "ability:bravery#fighter"
         }, {
-          "featureId": "ability:weapon_training_1#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_3#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:armor_training_4#fighter"
+          "featureId": "ability:armor_training#fighter"
         }]
       }]
     }

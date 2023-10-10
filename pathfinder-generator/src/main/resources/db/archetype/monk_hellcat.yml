@@ -2,9 +2,9 @@ id: "class:monk#hellcat"
 name: "Hellcat"
 description: ""
 modifications:
-- add: "ability:weapon_proficiencies#monk_hellcat"
+- add: "trait:weapon_proficiency#monk_hellcat"
   remove:
-  - "ability:the_monks_weapon_proficiencies#monk"
+  - "trait:weapon_proficiency#monk"
 - add: "ability:bonus_feat#monk_hellcat"
   remove:
   - "ability:the_monks_bonus_feat_ability#monk"
@@ -26,7 +26,7 @@ modifications:
   - "ability:ki_pool#monk"
   - "ability:wholeness_of_body#monk"
 features:
-- id: "ability:weapon_proficiencies#monk_hellcat"
+- id: "trait:weapon_proficiency#monk_hellcat"
   name: "Weapon Proficiencies"
   label: null
   type: null

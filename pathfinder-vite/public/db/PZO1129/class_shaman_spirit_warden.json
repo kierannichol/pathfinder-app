@@ -2,7 +2,7 @@
   "id": "class:shaman#spirit_warden",
   "name": "Spirit Warden",
   "tags": ["archetype", "shaman"],
-  "enabledFormula": "!@modifies:ability:the_hex_gained_at_10th_level#shaman AND !@modifies:ability:the_spirit_magic_spells_gained_from_the_shamans_spirit#shaman AND !@modifies:ability:the_hex_gained_at_2nd_level#shaman",
+  "enabledFormula": "!@modifies:ability:hex#shaman",
   "maxStacks": 1,
   "description": {
     "text": "Not all spirits deserve reverence and respect. Some are twisted and despicable. It\u0027s a spirit warden\u0027s duty to end these spirits\u0027 existence."
@@ -12,17 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_hex_gained_at_10th_level#shaman",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_spirit_magic_spells_gained_from_the_shamans_spirit#shaman",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_hex_gained_at_2nd_level#shaman",
+            "targetKey": "modifies:ability:hex#shaman",
             "numberValue": 1
           }
         }],
@@ -34,11 +24,9 @@
           "conditionFormula": "@class:shaman\u003e\u003d10"
         }],
         "unlinks": [{
-          "featureId": "ability:the_spirit_magic_spells_gained_from_the_shamans_spirit#shaman"
+          "featureId": "ability:hex#shaman"
         }, {
-          "featureId": "ability:the_hex_gained_at_2nd_level#shaman"
-        }, {
-          "featureId": "ability:the_hex_gained_at_10th_level#shaman"
+          "featureId": "ability:hex#shaman"
         }]
       }]
     }

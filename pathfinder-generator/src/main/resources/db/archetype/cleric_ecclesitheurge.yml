@@ -4,14 +4,14 @@ description: ""
 modifications:
 - add: "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge"
   remove:
-  - "ability:the_clerics_weapon#cleric"
-  - "ability:armor_proficiencies#cleric"
+  - "trait:weapon_proficiency#cleric"
+  - "trait:armor_proficiency#cleric"
 - add: "ability:domain_mastery#cleric_ecclesitheurge"
   remove:
-  - "ability:the_normal_domain_ability#cleric"
+  - "ability:domains#cleric"
 - add: "ability:bonded_holy_symbol#cleric_ecclesitheurge"
   remove:
-  - "ability:the_increase_to_channel_energy_gained_at_3rd_level#cleric"
+  - "ability:channel_energy#cleric@3"
 features:
 - id: "ability:weapon_and_armor_proficiency#cleric_ecclesitheurge"
   name: "Weapon and Armor Proficiency"

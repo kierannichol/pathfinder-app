@@ -2,7 +2,7 @@
   "id": "class:gunslinger#gun_tank",
   "name": "Gun Tank",
   "tags": ["archetype", "gunslinger"],
-  "enabledFormula": "!@modifies:ability:the_bonus_feats_the_gunslinger_gains_at_4th_level_and_every_four_levels_thereafter#gunslinger AND !@modifies:ability:the_evasive_deed#gunslinger AND !@modifies:ability:the_gunslingers_dodge_deed#gunslinger AND !@modifies:ability:nimble#gunslinger",
+  "enabledFormula": "!@modifies:ability:bonus_feats_the_gunslinger_gains#gunslinger AND !@modifies:ability:the_evasive_deed#gunslinger AND !@modifies:ability:the_gunslingers_dodge_deed#gunslinger AND !@modifies:ability:every_four_levels_thereafter#gunslinger AND !@modifies:ability:nimble#gunslinger",
   "maxStacks": 1,
   "description": {
     "text": "Gunslingers usually don\u0027t use heavy armor, but there are a few who use and modify their armor to protect themselves from both traditional weapons and gunfire. These gun tanks trundle into battle with barrels blazing, dealing out punishment with their firearms while knowing few can penetrate their hard protective shells."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feats_the_gunslinger_gains_at_4th_level_and_every_four_levels_thereafter#gunslinger",
+            "targetKey": "modifies:ability:bonus_feats_the_gunslinger_gains#gunslinger",
             "numberValue": 1
           }
         }, {
@@ -23,6 +23,11 @@
         }, {
           "setAction": {
             "targetKey": "modifies:ability:the_gunslingers_dodge_deed#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:every_four_levels_thereafter#gunslinger",
             "numberValue": 1
           }
         }, {
@@ -63,7 +68,9 @@
         }, {
           "featureId": "ability:nimble#gunslinger"
         }, {
-          "featureId": "ability:the_bonus_feats_the_gunslinger_gains_at_4th_level_and_every_four_levels_thereafter#gunslinger"
+          "featureId": "ability:every_four_levels_thereafter#gunslinger"
+        }, {
+          "featureId": "ability:bonus_feats_the_gunslinger_gains#gunslinger"
         }]
       }]
     }

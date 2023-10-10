@@ -2,7 +2,7 @@
   "id": "class:arcanist#school_savant",
   "name": "School Savant",
   "tags": ["archetype", "arcanist"],
-  "enabledFormula": "!@modifies:ability:the_arcanist_exploits_gained_at_1st_3rd_and_7th_levels#arcanist",
+  "enabledFormula": "!@modifies:ability:arcanist_exploits#arcanist",
   "maxStacks": 1,
   "description": {
     "text": "Some arcanists specialize in a school of magic and trade flexibility for focus. School savants are able to prepare more spells per day than typical arcanists, but their selection is more limited."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_arcanist_exploits_gained_at_1st_3rd_and_7th_levels#arcanist",
+            "targetKey": "modifies:ability:arcanist_exploits#arcanist",
             "numberValue": 1
           }
         }],
@@ -21,7 +21,11 @@
           "conditionFormula": "@class:arcanist\u003e\u003d1"
         }],
         "unlinks": [{
-          "featureId": "ability:the_arcanist_exploits_gained_at_1st_3rd_and_7th_levels#arcanist"
+          "featureId": "ability:arcanist_exploits#arcanist"
+        }, {
+          "featureId": "ability:arcanist_exploits#arcanist"
+        }, {
+          "featureId": "ability:arcanist_exploits#arcanist"
         }]
       }]
     }

@@ -2,7 +2,7 @@
   "id": "class:fighter#cad",
   "name": "Cad",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_training_3_and_4#fighter AND !@modifies:ability:armor_training_4#fighter AND !@modifies:ability:weapon_training_1_3_and_4#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training_2#fighter AND !@modifies:ability:armor_training_1#fighter AND !@modifies:ability:armor_training_2#fighter AND !@modifies:ability:armor_training_3#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "In combat, most fighters have some sort of code of honor. Some believe that one should not kick enemies when they are down, or should limit use of other such dirty tricks to the most dire of circumstances. The cad places no such limitations on himself. Battles are for winning, and anything that gives the cad the upper hand against his enemies is a legitimate tactic. No trick is too treacherous if it leads to victory."
@@ -17,17 +17,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_3_and_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:weapon_training_1_3_and_4#fighter",
+            "targetKey": "modifies:ability:armor_training#fighter",
             "numberValue": 1
           }
         }, {
@@ -37,22 +27,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_2#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_1#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_2#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_3#fighter",
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -87,19 +62,25 @@
         "unlinks": [{
           "featureId": "ability:bravery#fighter"
         }, {
-          "featureId": "ability:armor_training_1#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_1_3_and_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_2#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_2#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_3#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_3_and_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_4#fighter"
+          "featureId": "ability:armor_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:weapon_training#fighter"
+        }, {
+          "featureId": "ability:armor_training#fighter"
         }, {
           "featureId": "ability:weapon_mastery#fighter"
         }]

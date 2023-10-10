@@ -2,7 +2,7 @@
   "id": "class:druid#nature_fang",
   "name": "Nature Fang",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:nature_sense_wild_empathy_and_woodland_stride#druid",
+  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:woodland_stride#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -26,7 +26,17 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:nature_sense_wild_empathy_and_woodland_stride#druid",
+            "targetKey": "modifies:ability:wild_empathy#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
         }],
@@ -44,7 +54,11 @@
           "conditionFormula": "@class:druid\u003e\u003d9"
         }],
         "unlinks": [{
-          "featureId": "ability:nature_sense_wild_empathy_and_woodland_stride#druid"
+          "featureId": "ability:wild_empathy#druid"
+        }, {
+          "featureId": "ability:woodland_stride#druid"
+        }, {
+          "featureId": "ability:nature_sense#druid"
         }, {
           "featureId": "ability:wild_shape#druid"
         }, {

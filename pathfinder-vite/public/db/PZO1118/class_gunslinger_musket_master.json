@@ -2,7 +2,7 @@
   "id": "class:gunslinger#musket_master",
   "name": "Musket Master",
   "tags": ["archetype", "gunslinger"],
-  "enabledFormula": "!@modifies:ability:the_gunslingers_dodge_deed#gunslinger AND !@modifies:ability:gun_training_1_2_3_and_4#gunslinger",
+  "enabledFormula": "!@modifies:ability:the_gunslingers_dodge_deed#gunslinger AND !@modifies:ability:4#gunslinger AND !@modifies:ability:gun_training_1_2_3#gunslinger",
   "maxStacks": 1,
   "description": {
     "text": "Pistols and other one-handed firearms are often easy to conceal and faster to load than other firearms, and do sufficient damage for most situations. But some gunslingers want a little more firepower and range. These are the musket masters; the best of these gunslingers can reload a musket with dazzling speed, potentially putting even their pistol-wielding brethren to shame."
@@ -17,14 +17,21 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:gun_training_1_2_3_and_4#gunslinger",
+            "targetKey": "modifies:ability:4#gunslinger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:gun_training_1_2_3#gunslinger",
             "numberValue": 1
           }
         }],
         "unlinks": [{
           "featureId": "ability:the_gunslingers_dodge_deed#gunslinger"
         }, {
-          "featureId": "ability:gun_training_1_2_3_and_4#gunslinger"
+          "featureId": "ability:gun_training_1_2_3#gunslinger"
+        }, {
+          "featureId": "ability:4#gunslinger"
         }]
       }]
     }

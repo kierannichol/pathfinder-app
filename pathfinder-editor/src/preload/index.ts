@@ -1,15 +1,15 @@
 import {contextBridge, ipcRenderer} from 'electron'
 import {electronAPI} from '@electron-toolkit/preload'
-import {PathfinderAPI} from "./pathfinder";
-import {data} from "./compiled";
+import {FeatureKey, FeatureRef, PathfinderAPI} from "../shared/pathfinder";
+import {data} from "../shared/compiled";
 import FeatureDbo = data.FeatureDbo;
 
 // Custom APIs for renderer
 const api: PathfinderAPI = {
-  list_sources: () => ipcRenderer.invoke('list_sources'),
-  list_features: (sourceKey: string) => ipcRenderer.invoke('list_features', sourceKey),
-  load_feature: (sourceKey: string, featureKey: string): Promise<FeatureDbo> => ipcRenderer.invoke('load_feature', sourceKey, featureKey),
-  save_feature: (sourceKey: string, featureKey: string, model: FeatureDbo): Promise<void> => ipcRenderer.invoke('save_feature', sourceKey, featureKey, model)
+  list_sources: (): Promise<string[]> => ipcRenderer.invoke('list_sources'),
+  list_features: (sourceKey: string): Promise<FeatureKey[]> => ipcRenderer.invoke('list_features', sourceKey),
+  load_feature: (featureKey: FeatureKey): Promise<FeatureRef> => ipcRenderer.invoke('load_feature', featureKey),
+  save_feature: (model: FeatureDbo): Promise<void> => ipcRenderer.invoke('save_feature', model)
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

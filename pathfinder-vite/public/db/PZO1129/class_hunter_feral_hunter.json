@@ -2,7 +2,7 @@
   "id": "class:hunter#feral_hunter",
   "name": "Feral Hunter",
   "tags": ["archetype", "hunter"],
-  "enabledFormula": "!@modifies:ability:the_bonus_tricks_improved_empathic_link_greater_empathic_link_and_raise_animal_companion_class_abilities#hunter AND !@modifies:ability:animal_focus_and_replaces_the_hunter_tactics_and_speak_with_master_class_abilities#hunter AND !@modifies:ability:the_teamwork_feats_gained_at_6th_9th_12th_15th_and_18th_levels#hunter AND !@modifies:ability:precise_companion#hunter",
+  "enabledFormula": "!@modifies:ability:greater_empathic_link#hunter AND !@modifies:ability:bonus_trick#hunter AND !@modifies:ability:improved_empathic_link#hunter AND !@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:speak_with_master#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:precise_companion#hunter AND !@modifies:ability:raise_animal_companion#hunter",
   "maxStacks": 1,
   "description": {
   },
@@ -11,22 +11,47 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_bonus_tricks_improved_empathic_link_greater_empathic_link_and_raise_animal_companion_class_abilities#hunter",
+            "targetKey": "modifies:ability:greater_empathic_link#hunter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:animal_focus_and_replaces_the_hunter_tactics_and_speak_with_master_class_abilities#hunter",
+            "targetKey": "modifies:ability:bonus_trick#hunter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_teamwork_feats_gained_at_6th_9th_12th_15th_and_18th_levels#hunter",
+            "targetKey": "modifies:ability:improved_empathic_link#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hunter_tactics#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:speak_with_master#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:teamwork_feat#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_focus#hunter",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:precise_companion#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:raise_animal_companion#hunter",
             "numberValue": 1
           }
         }],
@@ -39,15 +64,48 @@
         }, {
           "featureId": "ability:wild_shape#hunter_feral_hunter",
           "conditionFormula": "@class:hunter\u003e\u003d4"
+        }, {
+          "featureId": "ability:summon_pack#hunter_feral_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d6"
+        }, {
+          "featureId": "ability:summon_pack#hunter_feral_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d9"
+        }, {
+          "featureId": "ability:summon_pack#hunter_feral_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d12"
+        }, {
+          "featureId": "ability:summon_pack#hunter_feral_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d15"
+        }, {
+          "featureId": "ability:summon_pack#hunter_feral_hunter",
+          "conditionFormula": "@class:hunter\u003e\u003d18"
         }],
         "unlinks": [{
-          "featureId": "ability:animal_focus_and_replaces_the_hunter_tactics_and_speak_with_master_class_abilities#hunter"
+          "featureId": "ability:animal_focus#hunter"
+        }, {
+          "featureId": "ability:hunter_tactics#hunter"
+        }, {
+          "featureId": "ability:speak_with_master#hunter"
         }, {
           "featureId": "ability:precise_companion#hunter"
         }, {
-          "featureId": "ability:the_bonus_tricks_improved_empathic_link_greater_empathic_link_and_raise_animal_companion_class_abilities#hunter"
+          "featureId": "ability:raise_animal_companion#hunter"
         }, {
-          "featureId": "ability:the_teamwork_feats_gained_at_6th_9th_12th_15th_and_18th_levels#hunter"
+          "featureId": "ability:greater_empathic_link#hunter"
+        }, {
+          "featureId": "ability:bonus_trick#hunter"
+        }, {
+          "featureId": "ability:improved_empathic_link#hunter"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter"
+        }, {
+          "featureId": "ability:teamwork_feat#hunter"
         }]
       }]
     }

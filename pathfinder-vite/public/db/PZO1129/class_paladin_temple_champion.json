@@ -2,7 +2,7 @@
   "id": "class:paladin#temple_champion",
   "name": "Temple Champion",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:divine_bond_and_aura_of_justice#paladin",
+  "enabledFormula": "!@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:divine_bond#paladin",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:divine_bond_and_aura_of_justice#paladin",
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
         }],
@@ -20,7 +25,9 @@
           "conditionFormula": "@class:paladin\u003e\u003d5"
         }],
         "unlinks": [{
-          "featureId": "ability:divine_bond_and_aura_of_justice#paladin"
+          "featureId": "ability:divine_bond#paladin"
+        }, {
+          "featureId": "ability:aura_of_justice#paladin"
         }]
       }]
     }

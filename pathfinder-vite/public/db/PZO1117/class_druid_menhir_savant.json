@@ -2,7 +2,7 @@
   "id": "class:druid#menhir_savant",
   "name": "Menhir Savant",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:woodland_stride_and_trackless_step#druid AND !@modifies:ability:nature_sense_and_wild_empathy#druid AND !@modifies:ability:a_thousand_faces#druid",
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -11,17 +11,27 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:woodland_stride_and_trackless_step#druid",
+            "targetKey": "modifies:ability:trackless_step#druid",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:nature_sense_and_wild_empathy#druid",
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#druid",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
         }],
@@ -36,9 +46,13 @@
           "conditionFormula": "@class:druid\u003e\u003d13"
         }],
         "unlinks": [{
-          "featureId": "ability:nature_sense_and_wild_empathy#druid"
+          "featureId": "ability:nature_sense#druid"
         }, {
-          "featureId": "ability:woodland_stride_and_trackless_step#druid"
+          "featureId": "ability:wild_empathy#druid"
+        }, {
+          "featureId": "ability:trackless_step#druid"
+        }, {
+          "featureId": "ability:woodland_stride#druid"
         }, {
           "featureId": "ability:a_thousand_faces#druid"
         }]

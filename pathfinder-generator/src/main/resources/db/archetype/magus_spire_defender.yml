@@ -6,17 +6,17 @@ description: "Spire defenders are magi who train themselves to accompany sages a
   \ flooded dungeons, and tight corridors in ancient ruins--spire defenders place\
   \ mobility and agility at a premium. As a result, they eschew armor entirely."
 modifications:
-- add: "ability:weapon_proficiency#magus_spire_defender"
+- add: "trait:weapon_proficiency#magus_spire_defender"
   remove:
-  - "ability:the_maguss_normal_weapon_proficiencies#magus"
-- add: "ability:bonus_feats#magus_spire_defender"
+  - "trait:weapon_proficiency#magus"
+- add: "ability:bonus_feat#magus_spire_defender"
   remove:
-  - "ability:the_maguss_normal_armor_proficiencies#magus"
+  - "trait:armor_proficiency#magus"
 - add: "ability:arcane_augmentation#magus_spire_defender"
   remove:
   - "ability:the_spell_recall_ability#magus"
 features:
-- id: "ability:weapon_proficiency#magus_spire_defender"
+- id: "trait:weapon_proficiency#magus_spire_defender"
   name: "Weapon Proficiency"
   label: null
   type: null
@@ -26,7 +26,7 @@ features:
   effects: null
   prerequisites: null
   source: "Pathfinder Campaign Setting: Inner Sea Magic"
-- id: "ability:bonus_feats#magus_spire_defender"
+- id: "ability:bonus_feat#magus_spire_defender"
   name: "Bonus Feats"
   label: null
   type: null

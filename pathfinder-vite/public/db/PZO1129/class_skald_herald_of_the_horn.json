@@ -2,7 +2,7 @@
   "id": "class:skald#herald_of_the_horn",
   "name": "Herald of the Horn",
   "tags": ["archetype", "skald"],
-  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:the_second_and_third_daily_uses_of_spell_kenning_gained_at_11th_and_17th_levels#skald AND !@modifies:ability:lore_master#skald AND !@modifies:ability:the_first_daily_use_of_spell_kenning_gained_at_5th_level#skald",
+  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:first_daily_use_of_spell_kenning#skald AND !@modifies:ability:spell_kenning#skald AND !@modifies:ability:lore_master#skald AND !@modifies:ability:the_second#skald",
   "maxStacks": 1,
   "description": {
   },
@@ -16,7 +16,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_second_and_third_daily_uses_of_spell_kenning_gained_at_11th_and_17th_levels#skald",
+            "targetKey": "modifies:ability:first_daily_use_of_spell_kenning#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spell_kenning#skald",
             "numberValue": 1
           }
         }, {
@@ -26,7 +31,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_first_daily_use_of_spell_kenning_gained_at_5th_level#skald",
+            "targetKey": "modifies:ability:the_second#skald",
             "numberValue": 1
           }
         }],
@@ -46,11 +51,15 @@
         "unlinks": [{
           "featureId": "ability:scribe_scroll#skald"
         }, {
-          "featureId": "ability:the_first_daily_use_of_spell_kenning_gained_at_5th_level#skald"
+          "featureId": "ability:first_daily_use_of_spell_kenning#skald"
         }, {
           "featureId": "ability:lore_master#skald"
         }, {
-          "featureId": "ability:the_second_and_third_daily_uses_of_spell_kenning_gained_at_11th_and_17th_levels#skald"
+          "featureId": "ability:spell_kenning#skald"
+        }, {
+          "featureId": "ability:the_second#skald"
+        }, {
+          "featureId": "ability:spell_kenning#skald"
         }]
       }]
     }

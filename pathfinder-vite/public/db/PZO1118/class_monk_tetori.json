@@ -2,7 +2,7 @@
   "id": "class:monk#tetori",
   "name": "Tetori",
   "tags": ["archetype", "monk"],
-  "enabledFormula": "!@modifies:ability:high_jump#monk AND !@modifies:ability:flurry_of_blows#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:abundant_step_improved_evasion_timeless_body_and_tongue_of_the_sun_and_moon#monk AND !@modifies:ability:diamond_soul#monk",
+  "enabledFormula": "!@modifies:ability:high_jump#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:flurry_of_blows#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk AND !@modifies:ability:abundant_step_improved_evasion_timeless_body#monk",
   "maxStacks": 1,
   "description": {
     "text": "The style of the tetori is that of the majestic wrestler--a warrior with a dizzying array of grabs, holds, and locks with which to bewilder and incapacitate his foes."
@@ -13,6 +13,11 @@
         "effects": [{
           "setAction": {
             "targetKey": "modifies:ability:high_jump#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tongue_of_the_sun_and_moon#monk",
             "numberValue": 1
           }
         }, {
@@ -32,12 +37,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:abundant_step_improved_evasion_timeless_body_and_tongue_of_the_sun_and_moon#monk",
+            "targetKey": "modifies:ability:diamond_soul#monk",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:diamond_soul#monk",
+            "targetKey": "modifies:ability:abundant_step_improved_evasion_timeless_body#monk",
             "numberValue": 1
           }
         }],
@@ -67,7 +72,9 @@
         }, {
           "featureId": "ability:high_jump#monk"
         }, {
-          "featureId": "ability:abundant_step_improved_evasion_timeless_body_and_tongue_of_the_sun_and_moon#monk"
+          "featureId": "ability:abundant_step_improved_evasion_timeless_body#monk"
+        }, {
+          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
         }, {
           "featureId": "ability:diamond_soul#monk"
         }, {

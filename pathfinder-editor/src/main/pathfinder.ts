@@ -1,6 +1,7 @@
 import * as path from "path";
 import * as fs from "fs";
-import {data} from "../preload/compiled";
+import {data} from "@shared/compiled";
+import {FeatureKey, FeatureRef, idToKey} from "@shared/pathfinder";
 import FeatureDbo = data.FeatureDbo;
 import SourceModuleDbo = data.SourceModuleDbo;
 
@@ -51,16 +52,17 @@ function write_proto<T>(path: string, message: T, encodeBinaryFn: (t: T) => Uint
 
 export const PathfinderProcess = {
 
-  async save_feature(event: any, sourceKey: string, featureKey: string, model: FeatureDbo): Promise<void> {
-    const filePath = path.join(DatabaseBasePath, sourceKey, featureKey);
-    const summaryPath = path.join(DatabaseBasePath, sourceKey);
+  async save_feature(event: any, model: FeatureRef): Promise<void> {
+    const filePath = path.join(DatabaseBasePath, model.sourceKey, model.featureKey);
+    const summaryPath = path.join(DatabaseBasePath, model.sourceKey);
     await write_proto(filePath, model,
         m => FeatureDbo.encode(m).finish(),
         m => FeatureDbo.toObject(m));
 
     const sourceSummary = await read_proto(summaryPath + ".bin", SourceModuleDbo.decode);
 
-    const featureIndex = sourceSummary.features.findIndex(summary => summary.id.replace(':', '_').replace('#', '_') === featureKey);
+    const featureIndex = sourceSummary.features.findIndex(summary =>
+      idToKey(summary.id) === model.featureKey);
 
     const modifiedFeatures = featureIndex > -1
         ? sourceSummary.features.with(featureIndex, model)
@@ -76,16 +78,25 @@ export const PathfinderProcess = {
         m => SourceModuleDbo.toObject(m));
   },
 
-  load_feature(event: any, sourceKey: string, featureKey: string): Promise<FeatureDbo> {
-    const filePath = path.join(DatabaseBasePath, sourceKey, featureKey + ".bin");
-    return read_proto(filePath, FeatureDbo.decode);
+  async load_feature(event: any, featureKey: FeatureKey): Promise<FeatureRef> {
+    const filePath = path.join(DatabaseBasePath, featureKey.sourceKey, featureKey.featureKey + ".bin");
+    const dbo = await read_proto(filePath, FeatureDbo.decode) as FeatureRef;
+    dbo.sourceKey = featureKey.sourceKey;
+    dbo.featureKey = featureKey.featureKey;
+    return dbo;
   },
 
-  async list_features(event: any, sourceKey: string): Promise<string[]> {
+  async list_features(event: any, sourceKey: string): Promise<FeatureKey[]> {
     const section_path = path.join(DatabaseBasePath, sourceKey);
     return (await list_files(section_path))
-      .filter(file => file.endsWith(".bin"))
-      .map(file => file.replace(".bin", ""));
+        .filter(file => file.endsWith(".bin"))
+        .map(file => file.replace(".bin", ""))
+        .map(featureKey => {
+          return {
+            sourceKey: sourceKey,
+            featureKey: featureKey
+          };
+        });
   },
 
   async list_sources(): Promise<string[]> {

@@ -10,13 +10,15 @@ import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import logic.parse.Formula;
-import logic.parse.FormulaOptimizer;
-import logic.parse.tree.ParseException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.formula.Formula;
+import org.formula.parse.tree.ParseException;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+import pathfinder.db.PathfinderDatabase;
+import pathfinder.db.query.NamedEntityQuery;
+import pathfinder.db.query.Query;
 import pathfinder.model.Id;
 import pathfinder.model.Identity;
 import pathfinder.model.NamedEntity;
@@ -30,9 +32,6 @@ import pathfinder.model.pathfinder.Skill;
 import pathfinder.model.pathfinder.Skills;
 import pathfinder.model.pathfinder.Weapons;
 import pathfinder.util.PatternMapper;
-import pathfinder.db.PathfinderDatabase;
-import pathfinder.db.query.NamedEntityQuery;
-import pathfinder.db.query.Query;
 
 @Component("Prerequisite Parser")
 @Lazy
@@ -459,7 +458,7 @@ public class PrerequisiteParser {
                 log.warn("Was just \"@ability\":\n%s\n%s".formatted(prerequisites, parsed));
             }
 
-            return FormulaOptimizer.optimize(parsed);
+            return Formula.optimize(parsed);
         } catch (ParseException e) {
             log.error("Failed to parse: \"" + prerequisites + "\" for " + id);
             throw e;

@@ -2,7 +2,7 @@
   "id": "class:fighter#unbreakable",
   "name": "Unbreakable",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_training_3#fighter AND !@modifies:ability:armor_training_4#fighter AND !@modifies:ability:weapon_training_4#fighter AND !@modifies:ability:weapon_training_1#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training_2#fighter AND !@modifies:ability:the_fighters_1st_level_bonus_feat#fighter AND !@modifies:ability:armor_training_3#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:the_fighters_1st_level_bonus_feat#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "The unbreakable is a warrior of indomitable will, unstoppable and implacable once he has set his mind upon a course of action. The unbreakable endures any trial to do what must be done, and when his mind is set toward a goal, nothing can stop him from achieving it, though many may try. He is a juggernaut and a zealot, supremely confident in his own abilities."
@@ -17,22 +17,7 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_3#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:armor_training_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:weapon_training_4#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:weapon_training_1#fighter",
+            "targetKey": "modifies:ability:armor_training#fighter",
             "numberValue": 1
           }
         }, {
@@ -42,17 +27,12 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:weapon_training_2#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:the_fighters_1st_level_bonus_feat#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:armor_training_3#fighter",
+            "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
         }],
@@ -86,17 +66,17 @@
         }, {
           "featureId": "ability:bravery#fighter"
         }, {
-          "featureId": "ability:weapon_training_1#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_2#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_3#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_3#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
-          "featureId": "ability:armor_training_4#fighter"
+          "featureId": "ability:armor_training#fighter"
         }, {
-          "featureId": "ability:weapon_training_4#fighter"
+          "featureId": "ability:weapon_training#fighter"
         }, {
           "featureId": "ability:weapon_mastery#fighter"
         }]

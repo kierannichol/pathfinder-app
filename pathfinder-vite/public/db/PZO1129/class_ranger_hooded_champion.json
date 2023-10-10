@@ -2,7 +2,7 @@
   "id": "class:ranger#hooded_champion",
   "name": "Hooded Champion",
   "tags": ["archetype", "ranger"],
-  "enabledFormula": "!@modifies:ability:wild_empathy_endurance_evasion_and_improved_evasion#ranger AND !@modifies:ability:favored_enemy_at_1st_level#ranger",
+  "enabledFormula": "!@modifies:ability:favored_enemy#ranger AND !@modifies:ability:improved_evasion#ranger AND !@modifies:ability:evasion#ranger AND !@modifies:ability:endurance#ranger AND !@modifies:ability:wild_empathy#ranger",
   "maxStacks": 1,
   "description": {
     "text": "The hooded champion lives on the periphery of civilized lands, and is often at odds with the forces of law and order. He is frequently a hero of oppressed peoples, lurking in the woods near their homes and trying to right the injustices inflicted upon them by the wealthy and powerful."
@@ -12,12 +12,27 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:wild_empathy_endurance_evasion_and_improved_evasion#ranger",
+            "targetKey": "modifies:ability:favored_enemy#ranger",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:favored_enemy_at_1st_level#ranger",
+            "targetKey": "modifies:ability:improved_evasion#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:endurance#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#ranger",
             "numberValue": 1
           }
         }],
@@ -29,9 +44,15 @@
           "conditionFormula": "@class:ranger\u003e\u003d2"
         }],
         "unlinks": [{
-          "featureId": "ability:favored_enemy_at_1st_level#ranger"
+          "featureId": "ability:favored_enemy#ranger"
         }, {
-          "featureId": "ability:wild_empathy_endurance_evasion_and_improved_evasion#ranger"
+          "featureId": "ability:evasion#ranger"
+        }, {
+          "featureId": "ability:improved_evasion#ranger"
+        }, {
+          "featureId": "ability:wild_empathy#ranger"
+        }, {
+          "featureId": "ability:endurance#ranger"
         }]
       }]
     }

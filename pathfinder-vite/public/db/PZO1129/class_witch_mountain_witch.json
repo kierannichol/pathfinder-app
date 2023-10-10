@@ -2,7 +2,7 @@
   "id": "class:witch#mountain_witch",
   "name": "Mountain Witch",
   "tags": ["archetype", "witch"],
-  "enabledFormula": "!@modifies:ability:the_hex_gained_at_2nd_level#witch AND !@modifies:ability:hex#witch",
+  "enabledFormula": "!@modifies:ability:hex#witch",
   "maxStacks": 1,
   "description": {
   },
@@ -10,11 +10,6 @@
     "fixedStack": {
       "stacks": [{
         "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:the_hex_gained_at_2nd_level#witch",
-            "numberValue": 1
-          }
-        }, {
           "setAction": {
             "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
@@ -60,7 +55,7 @@
         "unlinks": [{
           "featureId": "ability:hex#witch"
         }, {
-          "featureId": "ability:the_hex_gained_at_2nd_level#witch"
+          "featureId": "ability:hex#witch"
         }]
       }]
     }

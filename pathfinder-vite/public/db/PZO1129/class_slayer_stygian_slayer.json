@@ -2,7 +2,7 @@
   "id": "class:slayer#stygian_slayer",
   "name": "Stygian Slayer",
   "tags": ["archetype", "slayer"],
-  "enabledFormula": "!@modifies:ability:the_slayers_armor_proficiency#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:the_advanced_slayer_talent_gained_at_10th_level#slayer AND !@modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+  "enabledFormula": "!@modifies:ability:stalker#slayer AND !@modifies:trait:armor_proficiency#slayer AND !@modifies:ability:advanced_slayer_talent#slayer AND !@modifies:ability:slayer_talent#slayer",
   "maxStacks": 1,
   "description": {
   },
@@ -11,26 +11,86 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_slayers_armor_proficiency#slayer",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:stalker#slayer",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_advanced_slayer_talent_gained_at_10th_level#slayer",
+            "targetKey": "modifies:trait:armor_proficiency#slayer",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_slayer_talent_gained_at_4th_level#slayer",
+            "targetKey": "modifies:ability:advanced_slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
         }],
         "links": [{
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d1"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d2"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d3"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d4"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d5"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d6"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d7"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d8"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d9"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d10"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d11"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d12"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d13"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d14"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d15"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d16"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d17"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d18"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d19"
+        }, {
+          "featureId": "ability:weapon_and_armor_proficiency#slayer_stygian_slayer",
+          "conditionFormula": "@class:slayer\u003e\u003d20"
+        }, {
           "featureId": "ability:invisibility#slayer_stygian_slayer",
           "conditionFormula": "@class:slayer\u003e\u003d4"
         }, {
@@ -41,13 +101,13 @@
           "conditionFormula": "@class:slayer\u003e\u003d10"
         }],
         "unlinks": [{
-          "featureId": "ability:the_slayers_armor_proficiency#slayer"
+          "featureId": "trait:armor_proficiency#slayer"
         }, {
-          "featureId": "ability:the_slayer_talent_gained_at_4th_level#slayer"
+          "featureId": "ability:slayer_talent#slayer"
         }, {
           "featureId": "ability:stalker#slayer"
         }, {
-          "featureId": "ability:the_advanced_slayer_talent_gained_at_10th_level#slayer"
+          "featureId": "ability:advanced_slayer_talent#slayer"
         }]
       }]
     }
