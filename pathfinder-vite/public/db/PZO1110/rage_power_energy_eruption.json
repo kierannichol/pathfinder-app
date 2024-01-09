@@ -3,14 +3,11 @@
   "name": "Energy Eruption",
   "tags": ["class_feature", "barbarian", "rage_power"],
   "enabledFormula": "all(@class:barbarian\u003e\u003d16,@rage_power:energy_absorption)",
-  "maxStacks": 1,
   "description": {
     "text": "Store absorbed energy and release it as a breath weapon attack"
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-      }]
+    "repeatingStack": {
     }
   }
 }

@@ -34,35 +34,27 @@
             "targetKey": "modifies:ability:evasion#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:iron_monk#monk_monk_of_the_iron_mountain",
-          "conditionFormula": "@class:monk\u003e\u003d2"
-        }, {
-          "featureId": "ability:bastion_stance#monk_monk_of_the_iron_mountain",
-          "conditionFormula": "@class:monk\u003e\u003d4"
-        }, {
-          "featureId": "ability:iron_limb_defense#monk_monk_of_the_iron_mountain",
-          "conditionFormula": "@class:monk\u003e\u003d5"
-        }, {
-          "featureId": "ability:adamantine_monk#monk_monk_of_the_iron_mountain",
-          "conditionFormula": "@class:monk\u003e\u003d9"
-        }, {
-          "featureId": "ability:vow_of_silence#monk_monk_of_the_iron_mountain",
-          "conditionFormula": "@class:monk\u003e\u003d17"
-        }],
-        "unlinks": [{
-          "featureId": "ability:evasion#monk"
-        }, {
-          "featureId": "ability:slow_fall#monk"
-        }, {
-          "featureId": "ability:high_jump#monk"
-        }, {
-          "featureId": "ability:improved_evasion#monk"
-        }, {
-          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:vow_of_silence#monk_monk_of_the_iron_mountain"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:iron_monk#monk_monk_of_the_iron_mountain"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:bastion_stance#monk_monk_of_the_iron_mountain"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:iron_limb_defense#monk_monk_of_the_iron_mountain"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:adamantine_monk#monk_monk_of_the_iron_mountain"]
+    }]
+  }]
 }

@@ -24,25 +24,21 @@
             "targetKey": "modifies:ability:second_animal_focus#hunter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:primal_transformation#hunter_primal_companion",
-          "conditionFormula": "@class:hunter\u003e\u003d1"
-        }, {
-          "featureId": "ability:primal_surge#hunter_primal_companion",
-          "conditionFormula": "@class:hunter\u003e\u003d8"
-        }, {
-          "featureId": "ability:primal_master#hunter_primal_companion",
-          "conditionFormula": "@class:hunter\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:animal_focus#hunter"
-        }, {
-          "featureId": "ability:second_animal_focus#hunter"
-        }, {
-          "featureId": "ability:master_hunter#hunter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:hunter",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:primal_transformation#hunter_primal_companion"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:primal_master#hunter_primal_companion"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:primal_surge#hunter_primal_companion"]
+    }]
+  }]
 }

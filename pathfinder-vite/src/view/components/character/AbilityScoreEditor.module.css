@@ -5,6 +5,24 @@
   grid-template-rows: 2rem 4rem 0.5fr 0.5fr;
 }
 
+.bonus {
+  color: var(--bs-success);
+  border-color: var(--bs-success);
+}
+
+.bonus .header {
+  background-color: var(--bs-success);
+}
+
+.penalty {
+  color: var(--bs-danger);
+  border-color: var(--bs-danger);
+}
+
+.penalty .header {
+  background-color: var(--bs-danger);
+}
+
 .border {
   grid-column: 1 / span 3;
   grid-row: 1 / span 3;

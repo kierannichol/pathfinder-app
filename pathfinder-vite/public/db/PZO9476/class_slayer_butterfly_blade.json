@@ -44,66 +44,48 @@
             "targetKey": "modifies:ability:sneak_attack#slayer",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d1"
-        }, {
-          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d1"
-        }, {
-          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d5"
-        }, {
-          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d10"
-        }, {
-          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d15"
-        }, {
-          "featureId": "ability:studied_stalker#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d20"
-        }, {
-          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d3"
-        }, {
-          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d6"
-        }, {
-          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d9"
-        }, {
-          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d12"
-        }, {
-          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d15"
-        }, {
-          "featureId": "ability:butterflys_kiss#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d18"
-        }, {
-          "featureId": "ability:innocent_butterfly#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d7"
-        }, {
-          "featureId": "ability:deadly_butterfly#slayer_butterfly_blade",
-          "conditionFormula": "@class:slayer\u003e\u003d19"
-        }],
-        "unlinks": [{
-          "featureId": "ability:studied_target#slayer"
-        }, {
-          "featureId": "ability:track#slayer"
-        }, {
-          "featureId": "ability:sneak_attack#slayer"
-        }, {
-          "featureId": "ability:quarry#slayer"
-        }, {
-          "featureId": "ability:swift_tracker#slayer"
-        }, {
-          "featureId": "ability:stalker#slayer"
-        }, {
-          "featureId": "ability:improved_quarry#slayer"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:slayer",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:studied_stalker#slayer_butterfly_blade", "ability:studied_stalker#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:butterflys_kiss#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:deadly_butterfly#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:butterflys_kiss#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:studied_stalker#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:studied_stalker#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:butterflys_kiss#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:innocent_butterfly#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:butterflys_kiss#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:studied_stalker#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:butterflys_kiss#slayer_butterfly_blade"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:studied_stalker#slayer_butterfly_blade", "ability:butterflys_kiss#slayer_butterfly_blade"]
+    }]
+  }]
 }

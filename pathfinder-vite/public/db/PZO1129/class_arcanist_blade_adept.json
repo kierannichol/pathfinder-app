@@ -15,22 +15,23 @@
             "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:sword_bond#arcanist_blade_adept",
-          "conditionFormula": "@class:arcanist\u003e\u003d1"
-        }, {
-          "featureId": "ability:sentient_sword#arcanist_blade_adept",
-          "conditionFormula": "@class:arcanist\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:sword_bond#arcanist_blade_adept"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:sentient_sword#arcanist_blade_adept"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 9,
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }]
+  }]
 }

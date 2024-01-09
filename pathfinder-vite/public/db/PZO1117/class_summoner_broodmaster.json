@@ -25,25 +25,18 @@
             "targetKey": "modifies:ability:life_bond#summoner",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:eidolon_brood#summoner_broodmaster",
-          "conditionFormula": "@class:summoner\u003e\u003d2"
-        }, {
-          "featureId": "ability:brood_link#summoner_broodmaster",
-          "conditionFormula": "@class:summoner\u003e\u003d2"
-        }, {
-          "featureId": "ability:brood_bond#summoner_broodmaster",
-          "conditionFormula": "@class:summoner\u003e\u003d14"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_summoners_normal_eidolon_ability#summoner"
-        }, {
-          "featureId": "ability:life_link#summoner"
-        }, {
-          "featureId": "ability:life_bond#summoner"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:summoner",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:eidolon_brood#summoner_broodmaster", "ability:brood_link#summoner_broodmaster"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:brood_bond#summoner_broodmaster"]
+    }]
+  }]
 }

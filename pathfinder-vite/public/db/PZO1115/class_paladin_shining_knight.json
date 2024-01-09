@@ -19,20 +19,18 @@
             "targetKey": "modifies:ability:aura_of_justice#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:skilled_rider#paladin_shining_knight",
-          "conditionFormula": "@class:paladin\u003e\u003d3"
-        }, {
-          "featureId": "ability:knights_charge#paladin_shining_knight",
-          "conditionFormula": "@class:paladin\u003e\u003d11"
-        }],
-        "unlinks": [{
-          "featureId": "ability:divine_health#paladin"
-        }, {
-          "featureId": "ability:aura_of_justice#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:skilled_rider#paladin_shining_knight"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:knights_charge#paladin_shining_knight"]
+    }]
+  }]
 }

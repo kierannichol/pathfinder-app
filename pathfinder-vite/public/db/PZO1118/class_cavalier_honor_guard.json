@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:demanding_challenge#cavalier",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:sworn_defense#cavalier_honor_guard",
-          "conditionFormula": "@class:cavalier\u003e\u003d1"
-        }, {
-          "featureId": "ability:intercept#cavalier_honor_guard",
-          "conditionFormula": "@class:cavalier\u003e\u003d3"
-        }, {
-          "featureId": "ability:warding_charge#cavalier_honor_guard",
-          "conditionFormula": "@class:cavalier\u003e\u003d11"
-        }, {
-          "featureId": "ability:defensive_challenge#cavalier_honor_guard",
-          "conditionFormula": "@class:cavalier\u003e\u003d12"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_challenge_ability#cavalier"
-        }, {
-          "featureId": "ability:cavaliers_charge#cavalier"
-        }, {
-          "featureId": "ability:mighty_charge#cavalier"
-        }, {
-          "featureId": "ability:demanding_challenge#cavalier"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:sworn_defense#cavalier_honor_guard"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:intercept#cavalier_honor_guard"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:warding_charge#cavalier_honor_guard"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:defensive_challenge#cavalier_honor_guard"]
+    }]
+  }]
 }

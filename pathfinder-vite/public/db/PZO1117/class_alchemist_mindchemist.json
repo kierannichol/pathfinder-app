@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:the_mutagen_class_ability_a_mindchemist_cannot_create_mutagens_unless_he_selects_mutagen_as_a_discovery#alchemist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:cognatogen#alchemist_mindchemist",
-          "conditionFormula": "@class:alchemist\u003e\u003d1"
-        }, {
-          "featureId": "ability:perfect_recall#alchemist_mindchemist",
-          "conditionFormula": "@class:alchemist\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_mutagen_class_ability_a_mindchemist_cannot_create_mutagens_unless_he_selects_mutagen_as_a_discovery#alchemist"
-        }, {
-          "featureId": "ability:poison_use#alchemist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:alchemist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:cognatogen#alchemist_mindchemist"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:perfect_recall#alchemist_mindchemist"]
+    }]
+  }]
 }

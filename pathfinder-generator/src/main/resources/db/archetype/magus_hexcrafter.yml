@@ -4,9 +4,24 @@ description: "A hexcrafter magus has uncovered the secret of using his arcane po
   \ to recreate witch hexes. These magi can hex friend and foe, curse those they strike,\
   \ and expand their spell selection to include many curses and harmful spells."
 modifications:
-- add: "ability:hex_magus#magus_hexcrafter"
+- add:
+  - "ability:hex_arcana#magus_hexcrafter@3"
+  - "ability:hex_magus#magus_hexcrafter@4"
+  - "ability:hex_arcana#magus_hexcrafter@6"
+  - "ability:hex_arcana#magus_hexcrafter@9"
+  - "ability:spell_recall#magus@11"
+  - "ability:hex_arcana#magus_hexcrafter@12"
+  - "ability:hex_arcana#magus_hexcrafter@15"
+  - "ability:hex_arcana#magus_hexcrafter@18"
   remove:
-  - "ability:spell_recall#magus"
+  - "ability:spell_recall#magus@4"
+  - "ability:magus_arcana#magus@3"
+  - "ability:magus_arcana#magus@6"
+  - "ability:magus_arcana#magus@9"
+  - "ability:improved_spell_recall#magus@11"
+  - "ability:magus_arcana#magus@12"
+  - "ability:magus_arcana#magus@15"
+  - "ability:magus_arcana#magus@18"
 features:
 - id: "ability:hex_magus#magus_hexcrafter"
   name: "Hex Magus"
@@ -19,4 +34,11 @@ features:
   effects: null
   prerequisites: null
   source: "Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:hex_arcana#magus_hexcrafter"
+  name: "Hex Arcana"
+  description: "A hexcrafter gains access to the following magus arcana, or may select\
+   \ any witch hex in place of a magus arcana. At 12th level, the hexcrafter may select\
+   \ a hex or major hex in place of a magus arcana. At 18th level, a hexcrafter can select\
+   \ a hex, major hex, or grand hex in place of a magus arcana. He cannot select any hex or\
+   \ arcana more than once."
 source: "Pathfinder Roleplaying Game: Ultimate Magic"

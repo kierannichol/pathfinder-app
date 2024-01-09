@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:the_rangers_fourth_favored_enemy#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:advantageous_terrain#ranger_battle_scout",
-          "conditionFormula": "@class:ranger\u003e\u003d5"
-        }, {
-          "featureId": "ability:infiltration#ranger_battle_scout",
-          "conditionFormula": "@class:ranger\u003e\u003d10"
-        }, {
-          "featureId": "ability:superior_tactics#ranger_battle_scout",
-          "conditionFormula": "@class:ranger\u003e\u003d15"
-        }, {
-          "featureId": "ability:perfect_advantage#ranger_battle_scout",
-          "conditionFormula": "@class:ranger\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_rangers_second_favored_enemy#ranger"
-        }, {
-          "featureId": "ability:the_rangers_third_favored_enemy#ranger"
-        }, {
-          "featureId": "ability:the_rangers_fourth_favored_enemy#ranger"
-        }, {
-          "featureId": "ability:master_hunter#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:perfect_advantage#ranger_battle_scout"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:advantageous_terrain#ranger_battle_scout"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:infiltration#ranger_battle_scout"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:superior_tactics#ranger_battle_scout"]
+    }]
+  }]
 }

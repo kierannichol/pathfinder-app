@@ -50,45 +50,37 @@
             "targetKey": "modifies:ability:greater_spell_combat#magus",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:ranged_spellstrike#magus_myrmidarch",
-          "conditionFormula": "@class:magus\u003e\u003d4"
-        }, {
-          "featureId": "ability:weapon_training#magus_myrmidarch",
-          "conditionFormula": "@class:magus\u003e\u003d6"
-        }, {
-          "featureId": "ability:fighter_training#magus_myrmidarch",
-          "conditionFormula": "@class:magus\u003e\u003d7"
-        }, {
-          "featureId": "ability:armor_training#magus_myrmidarch",
-          "conditionFormula": "@class:magus\u003e\u003d8"
-        }, {
-          "featureId": "ability:armor_mastery#magus_myrmidarch",
-          "conditionFormula": "@class:magus\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:spell_recall#magus"
-        }, {
-          "featureId": "ability:improved_spell_recall#magus"
-        }, {
-          "featureId": "ability:magus_arcana_normally#magus"
-        }, {
-          "featureId": "ability:magus_arcana_normally#magus"
-        }, {
-          "featureId": "ability:magus_arcana_normally#magus"
-        }, {
-          "featureId": "ability:fighter_training_the_magus_gains#magus"
-        }, {
-          "featureId": "ability:both_knowledge_pool#magus"
-        }, {
-          "featureId": "ability:improved_spell_combat#magus"
-        }, {
-          "featureId": "ability:greater_spell_combat#magus"
-        }, {
-          "featureId": "ability:true_magus#magus"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:magus",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToRemove": ["ability:magus_arcana_normally#magus"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:armor_mastery#magus_myrmidarch"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:ranged_spellstrike#magus_myrmidarch"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:weapon_training#magus_myrmidarch"],
+      "linksToRemove": ["ability:magus_arcana_normally#magus"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:fighter_training#magus_myrmidarch"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:armor_training#magus_myrmidarch"]
+    }, {
+      "targetStackCount": 10,
+      "linksToRemove": ["ability:fighter_training_the_magus_gains#magus"]
+    }, {
+      "targetStackCount": 12,
+      "linksToRemove": ["ability:magus_arcana_normally#magus"]
+    }]
+  }]
 }

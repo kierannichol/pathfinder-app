@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import styles from "./PathfinderButton.module.scss";
+import styles from "./ButtonBlock.module.scss";
 
 interface PathfinderButtonGroupProps {
   children?: ReactNode

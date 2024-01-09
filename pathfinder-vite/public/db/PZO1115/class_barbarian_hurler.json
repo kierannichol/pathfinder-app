@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:fast_movement#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:skilled_thrower#barbarian_hurler",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:skilled_thrower#barbarian_hurler"]
+    }]
+  }]
 }

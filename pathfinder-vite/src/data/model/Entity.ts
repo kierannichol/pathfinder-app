@@ -31,7 +31,15 @@ export class EntityLevel implements FeatureResolvable {
   }
 }
 
-export function combinePath(base: string, key: string|number): string {
+export function combinePath(base: string, ...keys: (string|number)[]): string {
+  let path = base;
+  for (let key of keys) {
+    path = appendPath(path, key);
+  }
+  return path;
+}
+
+function appendPath(base: string, key: string|number): string {
   if (base === '') {
     return formatPathPart(key);
   }

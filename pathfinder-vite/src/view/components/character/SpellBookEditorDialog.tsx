@@ -3,13 +3,13 @@ import {Modal} from "react-bootstrap";
 import styles from "../Dialog.module.scss";
 import SpellBookEditor from "./SpellBookEditor.tsx";
 import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import ChoiceRef from "../../../data/model/ChoiceRef.ts";
+import {ChoiceSelectedHandler} from "../../../data/model/ChoiceRef.ts";
 
 interface SpellBookEditorDialogProps {
   characterAtLevel: CharacterAtLevel;
   show: boolean;
   onCancel: () => void;
-  onChange: (choice: ChoiceRef, value: string) => void;
+  onChange: ChoiceSelectedHandler;
 }
 
 export default function SpellBookEditorDialog({ characterAtLevel, show, onCancel, onChange }: SpellBookEditorDialogProps) {

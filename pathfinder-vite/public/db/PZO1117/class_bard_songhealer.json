@@ -24,37 +24,30 @@
             "targetKey": "modifies:ability:versatile_performance#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:enhance_healing#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:enhance_healing#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d6"
-        }, {
-          "featureId": "ability:enhance_healing#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d10"
-        }, {
-          "featureId": "ability:enhance_healing#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d14"
-        }, {
-          "featureId": "ability:enhance_healing#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d18"
-        }, {
-          "featureId": "ability:bardic_performance#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d14"
-        }, {
-          "featureId": "ability:funereal_ballad#bard_songhealer",
-          "conditionFormula": "@class:bard\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:versatile_performance#bard"
-        }, {
-          "featureId": "ability:frightening_tune#bard"
-        }, {
-          "featureId": "ability:deadly_performance#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:enhance_healing#bard_songhealer"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:enhance_healing#bard_songhealer"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:funereal_ballad#bard_songhealer"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:enhance_healing#bard_songhealer"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:enhance_healing#bard_songhealer"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:enhance_healing#bard_songhealer", "ability:bardic_performance#bard_songhealer"]
+    }]
+  }]
 }

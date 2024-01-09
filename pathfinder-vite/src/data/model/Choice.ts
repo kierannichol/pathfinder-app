@@ -22,12 +22,14 @@ export abstract class Choice implements FeatureResolvable {
 }
 
 export class TextChoice extends Choice {
+  public key: string;
 
-  constructor(public readonly key: string,
+  constructor(private readonly baseKey: string,
               public readonly label: string,
               public readonly type: string,
               public readonly repeatingIndex: number) {
     super();
+    this.key = baseKey + (this.repeatingIndex > 0 ? this.repeatingIndex : '');
   }
 
   async resolve(): Promise<void> {
@@ -38,7 +40,7 @@ export class TextChoice extends Choice {
   }
 
   repeat(): Choice {
-    return new TextChoice(this.key,
+    return new TextChoice(this.baseKey,
         this.label,
         this.type,
         this.repeatingIndex + 1);
@@ -46,8 +48,9 @@ export class TextChoice extends Choice {
 }
 
 export class FeatureSelectChoice extends Choice {
+  public key: string;
 
-  constructor(public readonly key: string,
+  constructor(private readonly baseKey: string,
               public readonly label: string,
               public readonly type: string,
               public readonly optionTags: string[],
@@ -56,16 +59,20 @@ export class FeatureSelectChoice extends Choice {
               public readonly sortBy: ("none"|"name"),
               public readonly repeatingIndex: number) {
     super();
+    this.key = baseKey + (this.repeatingIndex > 0 ? this.repeatingIndex : '');
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<void> {
-    const choiceId = combinePath(basePath, this.key + (this.repeatingIndex > 0 ? this.repeatingIndex : ''));
+    const choiceId = combinePath(basePath, this.key);
     const selected = context.selected(choiceId);
     if (!selected) {
       return;
     }
     await context.addFeature(choiceId, selected);
-    this.repeat().resolve(basePath, context);
+    if (this.repeatingIndex > 0) {
+      const next = this.repeat();
+      await next.resolve(basePath, context);
+    }
   }
 
   options(database: Database, query: string|undefined, filterTag: string|undefined): FeatureSummary[] {
@@ -95,7 +102,7 @@ export class FeatureSelectChoice extends Choice {
 
   repeat(): Choice {
     return new FeatureSelectChoice(
-        this.key,
+        this.baseKey,
         this.label,
         this.type,
         this.optionTags,

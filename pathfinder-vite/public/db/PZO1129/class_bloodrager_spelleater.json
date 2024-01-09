@@ -25,37 +25,33 @@
             "targetKey": "modifies:ability:damage_reduction#bloodrager",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:blood_of_life#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d2"
-        }, {
-          "featureId": "ability:blood_of_life#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d7"
-        }, {
-          "featureId": "ability:blood_of_life#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d10"
-        }, {
-          "featureId": "ability:blood_of_life#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d13"
-        }, {
-          "featureId": "ability:blood_of_life#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d16"
-        }, {
-          "featureId": "ability:blood_of_life#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d19"
-        }, {
-          "featureId": "ability:spell_eating#bloodrager_spelleater",
-          "conditionFormula": "@class:bloodrager\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:damage_reduction#bloodrager"
-        }, {
-          "featureId": "ability:uncanny_dodge#bloodrager"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#bloodrager"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bloodrager",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:blood_of_life#bloodrager_spelleater"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:blood_of_life#bloodrager_spelleater"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:blood_of_life#bloodrager_spelleater"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:spell_eating#bloodrager_spelleater"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:blood_of_life#bloodrager_spelleater"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:blood_of_life#bloodrager_spelleater"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:blood_of_life#bloodrager_spelleater"]
+    }]
+  }]
 }

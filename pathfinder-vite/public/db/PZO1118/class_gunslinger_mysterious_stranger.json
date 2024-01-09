@@ -25,31 +25,27 @@
             "targetKey": "modifies:ability:nimble#gunslinger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:lucky#gunslinger_mysterious_stranger",
-          "conditionFormula": "@class:gunslinger\u003e\u003d2"
-        }, {
-          "featureId": "ability:lucky#gunslinger_mysterious_stranger",
-          "conditionFormula": "@class:gunslinger\u003e\u003d6"
-        }, {
-          "featureId": "ability:lucky#gunslinger_mysterious_stranger",
-          "conditionFormula": "@class:gunslinger\u003e\u003d10"
-        }, {
-          "featureId": "ability:lucky#gunslinger_mysterious_stranger",
-          "conditionFormula": "@class:gunslinger\u003e\u003d14"
-        }, {
-          "featureId": "ability:lucky#gunslinger_mysterious_stranger",
-          "conditionFormula": "@class:gunslinger\u003e\u003d18"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_quick_clear_deed#gunslinger"
-        }, {
-          "featureId": "ability:nimble#gunslinger"
-        }, {
-          "featureId": "ability:gun_training_1#gunslinger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:gunslinger",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"]
+    }]
+  }]
 }

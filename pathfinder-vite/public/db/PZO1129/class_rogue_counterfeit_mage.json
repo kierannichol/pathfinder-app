@@ -20,20 +20,19 @@
             "targetKey": "modifies:ability:trapfinding#rogue",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:magical_expertise#rogue_counterfeit_mage",
-          "conditionFormula": "@class:rogue\u003e\u003d1"
-        }, {
-          "featureId": "ability:signature_wand#rogue_counterfeit_mage",
-          "conditionFormula": "@class:rogue\u003e\u003d4"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trapfinding#rogue"
-        }, {
-          "featureId": "ability:rogue_talent#rogue"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:rogue",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:magical_expertise#rogue_counterfeit_mage"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:signature_wand#rogue_counterfeit_mage"],
+      "linksToRemove": ["ability:rogue_talent#rogue"]
+    }]
+  }]
 }

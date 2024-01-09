@@ -20,29 +20,29 @@
             "targetKey": "modifies:ability:martial_flexibility#brawler",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:sneak_attack#brawler_snakebite_striker",
-          "conditionFormula": "@class:brawler\u003e\u003d1"
-        }, {
-          "featureId": "ability:snake_feint#brawler_snakebite_striker",
-          "conditionFormula": "@class:brawler\u003e\u003d3"
-        }, {
-          "featureId": "ability:opportunist#brawler_snakebite_striker",
-          "conditionFormula": "@class:brawler\u003e\u003d11"
-        }],
-        "unlinks": [{
-          "featureId": "ability:martial_flexibility#brawler"
-        }, {
-          "featureId": "ability:maneuver_training#brawler"
-        }, {
-          "featureId": "ability:maneuver_training#brawler"
-        }, {
-          "featureId": "ability:maneuver_training#brawler"
-        }, {
-          "featureId": "ability:maneuver_training#brawler"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:brawler",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:sneak_attack#brawler_snakebite_striker"]
+    }, {
+      "targetStackCount": 19,
+      "linksToRemove": ["ability:maneuver_training#brawler"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:snake_feint#brawler_snakebite_striker"],
+      "linksToRemove": ["ability:maneuver_training#brawler"]
+    }, {
+      "targetStackCount": 7,
+      "linksToRemove": ["ability:maneuver_training#brawler"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:opportunist#brawler_snakebite_striker"],
+      "linksToRemove": ["ability:maneuver_training#brawler"]
+    }]
+  }]
 }

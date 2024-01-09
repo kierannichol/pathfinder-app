@@ -1,0 +1,15 @@
+
+ability:spellcasting#witchSpell Casting (Witch)class_featurewitchability¢
+Witch can cast spells.ª«
+¨
+ª@>
+"trait:level_0_spells_per_day#witch3+if(@class:witch>1,1,0)ªnl
+"trait:level_1_spells_per_day#witchF1+if(@class:witch>1,1,0)+if(@class:witch>3,1,0)+if(@class:witch>6,1,0)ªˆ…
+"trait:level_2_spells_per_day#witch_if(@class:witch>=3,1+if(@class:witch>3,1,0)+if(@class:witch>5,1,0)+if(@class:witch>8,1,0),null)ª‰†
+"trait:level_3_spells_per_day#witch`if(@class:witch>=5,1+if(@class:witch>5,1,0)+if(@class:witch>7,1,0)+if(@class:witch>10,1,0),null)ª‰†
+"trait:level_4_spells_per_day#witch`if(@class:witch>=7,1+if(@class:witch>7,1,0)+if(@class:witch>9,1,0)+if(@class:witch>12,1,0),null)ªŠ‡
+"trait:level_5_spells_per_day#witchaif(@class:witch>=9,1+if(@class:witch>9,1,0)+if(@class:witch>11,1,0)+if(@class:witch>14,1,0),null)ªŒ‰
+"trait:level_6_spells_per_day#witchcif(@class:witch>=11,1+if(@class:witch>11,1,0)+if(@class:witch>13,1,0)+if(@class:witch>16,1,0),null)ªŒ‰
+"trait:level_7_spells_per_day#witchcif(@class:witch>=13,1+if(@class:witch>13,1,0)+if(@class:witch>15,1,0)+if(@class:witch>18,1,0),null)ªŒ‰
+"trait:level_8_spells_per_day#witchcif(@class:witch>=15,1+if(@class:witch>15,1,0)+if(@class:witch>17,1,0)+if(@class:witch>19,1,0),null)ªŒ‰
+"trait:level_9_spells_per_day#witchcif(@class:witch>=17,1+if(@class:witch>17,1,0)+if(@class:witch>18,1,0)+if(@class:witch>19,1,0),null)

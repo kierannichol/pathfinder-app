@@ -34,35 +34,27 @@
             "targetKey": "modifies:ability:evasion#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:perfect_strike#monk_weapon_adept",
-          "conditionFormula": "@class:monk\u003e\u003d1"
-        }, {
-          "featureId": "ability:way_of_the_weapon_master#monk_weapon_adept",
-          "conditionFormula": "@class:monk\u003e\u003d2"
-        }, {
-          "featureId": "ability:evasion#monk_weapon_adept",
-          "conditionFormula": "@class:monk\u003e\u003d9"
-        }, {
-          "featureId": "ability:uncanny_initiative#monk_weapon_adept",
-          "conditionFormula": "@class:monk\u003e\u003d17"
-        }, {
-          "featureId": "ability:pure_power#monk_weapon_adept",
-          "conditionFormula": "@class:monk\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:stunning_fist#monk"
-        }, {
-          "featureId": "ability:evasion#monk"
-        }, {
-          "featureId": "ability:improved_evasion#monk"
-        }, {
-          "featureId": "ability:timeless_body#monk"
-        }, {
-          "featureId": "ability:perfect_self#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:uncanny_initiative#monk_weapon_adept"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:perfect_strike#monk_weapon_adept"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:way_of_the_weapon_master#monk_weapon_adept"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:pure_power#monk_weapon_adept"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:evasion#monk_weapon_adept"]
+    }]
+  }]
 }

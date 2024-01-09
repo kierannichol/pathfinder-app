@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.underlined {
+  composes: underlined from "../CharacterSheet.module.css";
+}
+
+.label {
+  composes: label from "../CharacterSheet.module.css";
+  font-size: 0.75em;
+  color: dimgray;
+}

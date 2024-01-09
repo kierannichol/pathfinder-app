@@ -2,7 +2,7 @@
   "id": "class:arcanist#unlettered_arcanist",
   "name": "Unlettered Arcanist",
   "tags": ["archetype", "arcanist"],
-  "enabledFormula": "!@modifies:ability:spell_casting#arcanist",
+  "enabledFormula": "!@modifies:ability:spellcasting#arcanist",
   "maxStacks": 1,
   "description": {
     "text": "Some arcanists store their spells as whispered secrets within familiars instead of on paper."
@@ -12,14 +12,18 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:spell_casting#arcanist",
+            "targetKey": "modifies:ability:spellcasting#arcanist",
             "numberValue": 1
           }
-        }],
-        "unlinks": [{
-          "featureId": "ability:spell_casting#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:witch_spells#arcanist_unlettered_arcanist"]
+    }]
+  }]
 }

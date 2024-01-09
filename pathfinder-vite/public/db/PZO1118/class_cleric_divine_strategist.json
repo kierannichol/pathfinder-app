@@ -15,42 +15,42 @@
             "targetKey": "modifies:ability:channel_energy#cleric",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d1"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d3"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d5"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d7"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d9"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d11"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d13"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d15"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d17"
-        }, {
-          "featureId": "ability:master_tactician#cleric_divine_strategist",
-          "conditionFormula": "@class:cleric\u003e\u003d19"
-        }],
-        "unlinks": [{
-          "featureId": "ability:channel_energy#cleric"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cleric",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"]
+    }]
+  }]
 }

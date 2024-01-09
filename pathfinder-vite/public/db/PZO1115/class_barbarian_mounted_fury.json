@@ -25,22 +25,18 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:fast_rider#barbarian_mounted_fury",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }, {
-          "featureId": "ability:bestial_mount#barbarian_mounted_fury",
-          "conditionFormula": "@class:barbarian\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#barbarian"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:uncanny_dodge#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:fast_rider#barbarian_mounted_fury"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:bestial_mount#barbarian_mounted_fury"]
+    }]
+  }]
 }

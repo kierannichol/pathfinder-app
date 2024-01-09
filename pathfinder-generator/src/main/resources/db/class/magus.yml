@@ -43,203 +43,67 @@ levels:
   - "ability:arcane_pool#magus"
   - "ability:cantrips#magus"
   - "ability:spell_combat#magus"
-  spells_per_day:
-    1: 3
-    2: 1
-  spells_known: {}
+  - "ability:spellcasting#magus"
   level: 1
 - class_feature_names:
   - "ability:spellstrike#magus"
-  spells_per_day:
-    1: 4
-    2: 2
-  spells_known: {}
   level: 2
 - class_feature_names:
   - "ability:magus_arcana#magus"
-  spells_per_day:
-    1: 4
-    2: 3
-  spells_known: {}
   level: 3
 - class_feature_names:
   - "ability:spell_recall#magus"
-  spells_per_day:
-    1: 4
-    2: 3
-    3: 1
-  spells_known: {}
   level: 4
 - class_feature_names:
   - "ability:bonus_feat#magus"
-  spells_per_day:
-    1: 4
-    2: 4
-    3: 2
-  spells_known: {}
   level: 5
 - class_feature_names:
   - "ability:magus_arcana#magus"
-  spells_per_day:
-    1: 5
-    2: 4
-    3: 3
-  spells_known: {}
   level: 6
 - class_feature_names:
   - "ability:knowledge_pool#magus"
   - "ability:medium_armor#magus"
-  spells_per_day:
-    1: 5
-    2: 4
-    3: 3
-    4: 1
-  spells_known: {}
   level: 7
 - class_feature_names:
   - "ability:improved_spell_combat#magus"
-  spells_per_day:
-    1: 5
-    2: 4
-    3: 4
-    4: 2
-  spells_known: {}
   level: 8
 - class_feature_names:
   - "ability:magus_arcana#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 4
-    4: 3
-  spells_known: {}
   level: 9
 - class_feature_names:
   - "ability:fighter_training#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 4
-    4: 3
-    5: 1
-  spells_known: {}
   level: 10
 - class_feature_names:
   - "ability:bonus_feat#magus"
   - "ability:improved_spell_recall#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 4
-    4: 4
-    5: 2
-  spells_known: {}
   level: 11
 - class_feature_names:
   - "ability:magus_arcana#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 4
-    5: 3
-  spells_known: {}
   level: 12
 - class_feature_names:
   - "ability:heavy_armor#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 4
-    5: 3
-    6: 1
-  spells_known: {}
   level: 13
 - class_feature_names:
   - "ability:greater_spell_combat#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 4
-    5: 4
-    6: 2
-  spells_known: {}
   level: 14
 - class_feature_names:
   - "ability:magus_arcana#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 5
-    5: 4
-    6: 3
-  spells_known: {}
   level: 15
 - class_feature_names:
   - "ability:counterstrike#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 5
-    5: 4
-    6: 3
-    7: 1
-  spells_known: {}
   level: 16
 - class_feature_names:
   - "ability:bonus_feat#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 5
-    5: 4
-    6: 4
-    7: 2
-  spells_known: {}
   level: 17
 - class_feature_names:
   - "ability:magus_arcana#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 5
-    5: 5
-    6: 4
-    7: 3
-  spells_known: {}
   level: 18
 - class_feature_names:
   - "ability:greater_spell_access#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 5
-    5: 5
-    6: 5
-    7: 4
-  spells_known: {}
   level: 19
 - class_feature_names:
   - "ability:true_magus#magus"
-  spells_per_day:
-    1: 5
-    2: 5
-    3: 5
-    4: 5
-    5: 5
-    6: 5
-    7: 5
-  spells_known: {}
   level: 20
-spell_caster_types:
-- "arcane"
 class_features:
 - id: "ability:arcane_pool#magus"
   name: "Arcane Pool"
@@ -412,13 +276,19 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
-- id: "ability:spell_casting#magus"
-  name: "Spell Casting"
+- id: "ability:spellcasting#magus"
+  name: "Spell Casting (Magus)"
   label: null
   type: null
-  description: "A magus casts arcane spells drawn from the magus spell list. A magus\
-    \ must choose and prepare his spells ahead of time."
-  effects: []
+  description: "Magus can cast spells."
+  effects:
+  - "SET trait:level_0_spells_per_day#magus 3+if(@class:magus>1,1,0)+if(@class:magus>5,1,0)"
+  - "SET trait:level_1_spells_per_day#magus 1+if(@class:magus>1,1,0)+if(@class:magus>2,1,0)+if(@class:magus>4,1,0)+if(@class:magus>8,1,0)"
+  - "SET trait:level_2_spells_per_day#magus if(@class:magus>=4,1+if(@class:magus>4,1,0)+if(@class:magus>5,1,0)+if(@class:magus>7,1,0)+if(@class:magus>11,1,0),null)"
+  - "SET trait:level_3_spells_per_day#magus if(@class:magus>=7,1+if(@class:magus>7,1,0)+if(@class:magus>8,1,0)+if(@class:magus>10,1,0)+if(@class:magus>14,1,0),null)"
+  - "SET trait:level_4_spells_per_day#magus if(@class:magus>=10,1+if(@class:magus>10,1,0)+if(@class:magus>11,1,0)+if(@class:magus>13,1,0)+if(@class:magus>17,1,0),null)"
+  - "SET trait:level_5_spells_per_day#magus if(@class:magus>=13,1+if(@class:magus>13,1,0)+if(@class:magus>14,1,0)+if(@class:magus>16,1,0)+if(@class:magus>18,1,0),null)"
+  - "SET trait:level_6_spells_per_day#magus if(@class:magus>=16,1+if(@class:magus>16,1,0)+if(@class:magus>17,1,0)+if(@class:magus>18,1,0)+if(@class:magus>19,1,0),null)"
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:spell_combat#magus"

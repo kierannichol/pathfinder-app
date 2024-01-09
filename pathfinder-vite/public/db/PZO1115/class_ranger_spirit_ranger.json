@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:camouflage#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:spirit_bond#ranger_spirit_ranger",
-          "conditionFormula": "@class:ranger\u003e\u003d4"
-        }, {
-          "featureId": "ability:wisdom_of_the_spirits#ranger_spirit_ranger",
-          "conditionFormula": "@class:ranger\u003e\u003d12"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hunters_bond#ranger"
-        }, {
-          "featureId": "ability:camouflage#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:spirit_bond#ranger_spirit_ranger"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:wisdom_of_the_spirits#ranger_spirit_ranger"]
+    }]
+  }]
 }

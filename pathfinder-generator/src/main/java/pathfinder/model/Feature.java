@@ -1,5 +1,7 @@
 package pathfinder.model;
 
+import static pathfinder.util.ListUtils.mapList;
+
 import java.util.ArrayList;
 import java.util.List;
 import pathfinder.data.FeatureDbo;
@@ -12,7 +14,8 @@ public record Feature(Id id,
                       Condition enabledCondition,
                       List<String> tags,
                       Integer maxStacks,
-                      Stacks stacks) implements NamedEntity {
+                      Stacks stacks,
+                      List<FeatureModification> featureModifications) implements NamedEntity {
 
     public static Feature simple(Id id, String name) {
         return builder(id)
@@ -44,6 +47,10 @@ public record Feature(Id id,
 
         if (feature.maxStacks != null) {
             builder.setMaxStacks(feature.maxStacks);
+        }
+
+        if (feature.featureModifications != null) {
+            feature.featureModifications.forEach(builder::addFeatureModification);
         }
 
         return builder;
@@ -83,7 +90,8 @@ public record Feature(Id id,
                 .setEnabledFormula(enabledCondition.formula())
                 .addAllTags(tags)
                 .setDescription(description.toDbo())
-                .setStacks(stacks.toDbo());
+                .setStacks(stacks.toDbo())
+                .addAllFeatureModifications(mapList(featureModifications, FeatureModification::toDbo));
         if (label != null) {
             feature.setLabel(label);
         }
@@ -104,6 +112,7 @@ public record Feature(Id id,
         private final List<Stack> fixedStack = new ArrayList<>();
         private Stack repeatingStack = null;
         private Integer maxStacks = null;
+        private final List<FeatureModification> featureModifications = new ArrayList<>();
 
         public FeatureBuilder(Id id) {
             this.id = id;
@@ -164,6 +173,11 @@ public record Feature(Id id,
             return this;
         }
 
+        public FeatureBuilder addFeatureModification(FeatureModification featureModification) {
+            this.featureModifications.add(featureModification);
+            return this;
+        }
+
         public FeatureBuilder setMaxStacks(Integer num) {
             this.maxStacks = num;
             return this;
@@ -188,7 +202,8 @@ public record Feature(Id id,
                     enabledCondition,
                     tags,
                     calcMaxStacks,
-                    stacks);
+                    stacks,
+                    featureModifications);
         }
     }
 

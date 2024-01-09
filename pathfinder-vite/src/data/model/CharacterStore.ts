@@ -7,6 +7,7 @@ import Database from "./Database.ts";
 import {timedAsync} from "../../app/pfutils.ts";
 import CharacterSummary from "./CharacterSummary.ts";
 import {v4 as uuidv4} from 'uuid';
+import * as console from "console";
 
 export default abstract class CharacterStore {
 
@@ -33,10 +34,14 @@ export default abstract class CharacterStore {
 
   async create(selections: PackedSelections): Promise<Character> {
     const id = uuidv4();
-    const newCharacter = Character.create(id, this.template, this.database);
-    await newCharacter.selectAll(selections);
+    let newCharacter = Character.create(id, this.template, this.database);
+    newCharacter = await newCharacter.selectAll(selections);
     await this.save(newCharacter);
     return newCharacter;
+  }
+
+  async delete(id: string): Promise<void> {
+    await this.deletePacked(id);
   }
 
   private async unpack(packed: PackedCharacter): Promise<Character> {
@@ -47,6 +52,7 @@ export default abstract class CharacterStore {
   protected abstract loadAllPacked(): Promise<PackedCharacter[]>;
   protected abstract loadPacked(id: string): Promise<PackedCharacter|undefined>;
   protected abstract savePacked(packed: PackedCharacter): Promise<void>;
+  protected abstract deletePacked(id: string): Promise<void>;
 }
 
 export class FirebaseCharacterStore extends CharacterStore {
@@ -101,6 +107,18 @@ export class FirebaseCharacterStore extends CharacterStore {
 
     await FirebaseRepository.save(user.id, 'character', packed.id, packed);
   }
+
+  protected async deletePacked(id: string): Promise<void> {
+    const user = getActiveUser();
+    if (!user) {
+      console.warn("Unable to access Firebase: no user logged in");
+      return;
+    }
+
+    await FirebaseRepository.delete(user.id, 'character', id);
+  }
+
+
 }
 
 

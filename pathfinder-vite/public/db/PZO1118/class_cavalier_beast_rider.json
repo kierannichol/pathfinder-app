@@ -20,17 +20,15 @@
             "targetKey": "modifies:ability:expert_trainer_abilities#cavalier",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:exotic_mount#cavalier_beast_rider",
-          "conditionFormula": "@class:cavalier\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:expert_trainer_abilities#cavalier"
-        }, {
-          "featureId": "ability:mount#cavalier"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:exotic_mount#cavalier_beast_rider"]
+    }]
+  }]
 }

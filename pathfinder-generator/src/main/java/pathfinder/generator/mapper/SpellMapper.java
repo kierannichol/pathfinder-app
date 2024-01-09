@@ -19,6 +19,7 @@ public class SpellMapper {
         builder.setName(spell.name());
         builder.setDescription(spell.description());
         builder.addTag("spell");
+        builder.addTag(spell.id().type);
         spell.levels().forEach(sl -> builder.addTag("%s%d".formatted(
                 sl.classId().key,
                 sl.level()

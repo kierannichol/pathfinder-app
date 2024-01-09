@@ -65,62 +65,42 @@
             "targetKey": "modifies:ability:mass_suggestion#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:rain_of_blows#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d6"
-        }, {
-          "featureId": "ability:razors_kiss#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d8"
-        }, {
-          "featureId": "ability:leaf_on_the_wind#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d14"
-        }, {
-          "featureId": "ability:fleet#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:fleet#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }, {
-          "featureId": "ability:fleet#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d11"
-        }, {
-          "featureId": "ability:fleet#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d17"
-        }, {
-          "featureId": "ability:versatile_dance#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:dance_of_fury#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d12"
-        }, {
-          "featureId": "ability:battle_fury#bard_dervish_dancer",
-          "conditionFormula": "@class:bard\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:whip#bard"
-        }, {
-          "featureId": "ability:their_proficiency_with_the_rapier#bard"
-        }, {
-          "featureId": "ability:mass_suggestion#bard"
-        }, {
-          "featureId": "ability:suggestion#bard"
-        }, {
-          "featureId": "ability:dirge_of_doom#bard"
-        }, {
-          "featureId": "ability:frightening_tune#bard"
-        }, {
-          "featureId": "ability:bardic_knowledge#bard"
-        }, {
-          "featureId": "ability:lore_master#bard"
-        }, {
-          "featureId": "ability:versatile_performance#bard"
-        }, {
-          "featureId": "ability:soothing_performance#bard"
-        }, {
-          "featureId": "ability:deadly_performance#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:fleet#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:fleet#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:versatile_dance#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:battle_fury#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:fleet#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:rain_of_blows#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:razors_kiss#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:fleet#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:dance_of_fury#bard_dervish_dancer"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:leaf_on_the_wind#bard_dervish_dancer"]
+    }]
+  }]
 }

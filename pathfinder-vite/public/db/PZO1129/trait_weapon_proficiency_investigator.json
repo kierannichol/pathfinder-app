@@ -2,43 +2,40 @@
   "id": "trait:weapon_proficiency#investigator",
   "name": "Weapon Proficiency (Investigator)",
   "tags": ["class_feature", "investigator", "trait"],
-  "maxStacks": 1,
   "description": {
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "proficiency:rapier",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:sap",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:sword_cane",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:hand_crossbow",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:shortbow",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:short_sword",
-            "numberValue": 1
-          }
-        }]
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:rapier",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:sap",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:sword_cane",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:hand_crossbow",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:shortbow",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:short_sword",
+          "numberValue": 1
+        }
       }]
     }
   }

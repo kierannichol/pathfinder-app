@@ -24,25 +24,23 @@
             "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:holy_water_sprinkler#slayer_grave_warden",
-          "conditionFormula": "@class:slayer\u003e\u003d2"
-        }, {
-          "featureId": "ability:death_ward#slayer_grave_warden",
-          "conditionFormula": "@class:slayer\u003e\u003d7"
-        }, {
-          "featureId": "ability:dustbringer#slayer_grave_warden",
-          "conditionFormula": "@class:slayer\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "ability:slayer_talent#slayer"
-        }, {
-          "featureId": "ability:stalker#slayer"
-        }, {
-          "featureId": "ability:advanced_slayer_talent#slayer"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:slayer",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:holy_water_sprinkler#slayer_grave_warden"],
+      "linksToRemove": ["ability:slayer_talent#slayer"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:death_ward#slayer_grave_warden"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:dustbringer#slayer_grave_warden"],
+      "linksToRemove": ["ability:advanced_slayer_talent#slayer"]
+    }]
+  }]
 }

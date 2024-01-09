@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:uncanny_dodge#rogue",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:divine_purpose#rogue_sanctified_rogue",
-          "conditionFormula": "@class:rogue\u003e\u003d4"
-        }, {
-          "featureId": "ability:divine_epiphany#rogue_sanctified_rogue",
-          "conditionFormula": "@class:rogue\u003e\u003d8"
-        }],
-        "unlinks": [{
-          "featureId": "ability:uncanny_dodge#rogue"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#rogue"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:rogue",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:divine_purpose#rogue_sanctified_rogue"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:divine_epiphany#rogue_sanctified_rogue"]
+    }]
+  }]
 }

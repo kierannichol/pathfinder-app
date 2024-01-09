@@ -20,29 +20,27 @@
             "targetKey": "modifies:ability:ac_bonus#brawler",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:mutagen#brawler_mutagenic_mauler",
-          "conditionFormula": "@class:brawler\u003e\u003d1"
-        }, {
-          "featureId": "ability:beastmorph#brawler_mutagenic_mauler",
-          "conditionFormula": "@class:brawler\u003e\u003d4"
-        }, {
-          "featureId": "ability:beastmorph#brawler_mutagenic_mauler",
-          "conditionFormula": "@class:brawler\u003e\u003d9"
-        }, {
-          "featureId": "ability:beastmorph#brawler_mutagenic_mauler",
-          "conditionFormula": "@class:brawler\u003e\u003d13"
-        }, {
-          "featureId": "ability:beastmorph#brawler_mutagenic_mauler",
-          "conditionFormula": "@class:brawler\u003e\u003d18"
-        }],
-        "unlinks": [{
-          "featureId": "ability:martial_flexibility#brawler"
-        }, {
-          "featureId": "ability:ac_bonus#brawler"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:brawler",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:mutagen#brawler_mutagenic_mauler"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:beastmorph#brawler_mutagenic_mauler"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:beastmorph#brawler_mutagenic_mauler"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:beastmorph#brawler_mutagenic_mauler"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:beastmorph#brawler_mutagenic_mauler"]
+    }]
+  }]
 }

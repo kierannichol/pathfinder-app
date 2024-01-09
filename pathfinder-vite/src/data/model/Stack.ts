@@ -6,6 +6,7 @@ import {FeatureResolvable} from "./FeatureResolvable.ts";
 import Link from "./Link.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import Unlink from "./Unlink.ts";
+import StackModification from "./StackModification.ts";
 
 export class Stack implements FeatureResolvable {
   static readonly Empty: Stack = new Stack([], [], [], [], []);
@@ -22,6 +23,32 @@ export class Stack implements FeatureResolvable {
     await this.choices.resolveAll(basePath, context);
   }
 
+  modify(modification: StackModification): Stack {
+    let links = [
+        ...this.links.filter(link =>
+            !modification.linksToRemove.find(value => value === link.featureId)),
+        ...this.toLinks(modification.linksToAdd)
+    ];
+
+    return new Stack(
+        [ ...this.effects ],
+        links,
+        [ ...this.unlinks ],
+        [ ...this.choices ],
+        [ ...this.conditionalComponents ]
+    );
+  }
+
+  copy(): Stack {
+    return new Stack(
+        [ ...this.effects ],
+        [ ...this.links ],
+        [ ...this.unlinks ],
+        [ ...this.choices ],
+        [ ...this.conditionalComponents ]
+    );
+  }
+
   isEmpty() {
     return (this.effects.length
         + this.unlinks.length
@@ -29,9 +56,17 @@ export class Stack implements FeatureResolvable {
         + this.choices.length
         + this.conditionalComponents.length) === 0;
   }
+
+  private toLinks(featureIds: string[]): Link[] {
+    return featureIds.map(fid => new Link(fid));
+  }
+
+  private toUnlinks(featureIds: string[]): Unlink[] {
+    return featureIds.map(fid => new Unlink(fid));
+  }
 }
 
-export interface Stacks extends FeatureResolvable {
+export interface Stacks {
 
   next(count: number): Stack;
 }
@@ -39,16 +74,6 @@ export interface Stacks extends FeatureResolvable {
 export class FixedStack implements Stacks {
 
   constructor(private readonly stacks: Stack[]) {
-  }
-
-  async resolve(basePath: string, context: ResolvedEntityContext): Promise<void> {
-    let i = 1;
-    const promises: Promise<void>[] = [];
-    for (const stack of this.stacks) {
-      const path = combinePath(basePath, i++);
-      promises.push(stack.resolve(path, context));
-    }
-    await Promise.all(promises);
   }
 
   next(count: number): Stack {
@@ -63,7 +88,12 @@ export class RepeatingStack implements Stacks {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<void> {
-    await this.stack.resolve(basePath, context);
+    const promises: Promise<void>[] = [];
+    for (let i = 1; i <= 100; i++) {
+      const path = combinePath(basePath, i++);
+      promises.push(this.stack.resolve(path, context));
+    }
+    await Promise.all(promises);
   }
 
   next(count: number): Stack {

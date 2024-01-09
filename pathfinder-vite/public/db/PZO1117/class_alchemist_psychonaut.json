@@ -25,35 +25,27 @@
             "targetKey": "modifies:ability:the_increase_to_bomb_damage_at_this_level#alchemist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:precognition#alchemist_psychonaut",
-          "conditionFormula": "@class:alchemist\u003e\u003d5"
-        }, {
-          "featureId": "ability:psychic_senses#alchemist_psychonaut",
-          "conditionFormula": "@class:alchemist\u003e\u003d8"
-        }, {
-          "featureId": "ability:remote_consciousness#alchemist_psychonaut",
-          "conditionFormula": "@class:alchemist\u003e\u003d10"
-        }, {
-          "featureId": "ability:greater_precognition#alchemist_psychonaut",
-          "conditionFormula": "@class:alchemist\u003e\u003d15"
-        }, {
-          "featureId": "ability:master_precognition#alchemist_psychonaut",
-          "conditionFormula": "@class:alchemist\u003e\u003d17"
-        }],
-        "unlinks": [{
-          "featureId": "ability:poison_resistance_"
-        }, {
-          "featureId": "ability:poison_resistance_"
-        }, {
-          "featureId": "ability:poison_immunity#alchemist"
-        }, {
-          "featureId": "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
-        }, {
-          "featureId": "ability:the_increase_to_bomb_damage_at_this_level#alchemist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:alchemist",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:master_precognition#alchemist_psychonaut"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:precognition#alchemist_psychonaut"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:psychic_senses#alchemist_psychonaut"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:remote_consciousness#alchemist_psychonaut"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:greater_precognition#alchemist_psychonaut"]
+    }]
+  }]
 }

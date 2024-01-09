@@ -25,25 +25,21 @@
             "targetKey": "modifies:ability:poison_use#alchemist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:infused_curative#alchemist_chirurgeon",
-          "conditionFormula": "@class:alchemist\u003e\u003d2"
-        }, {
-          "featureId": "ability:anaesthetic#alchemist_chirurgeon",
-          "conditionFormula": "@class:alchemist\u003e\u003d5"
-        }, {
-          "featureId": "ability:power_over_death#alchemist_chirurgeon",
-          "conditionFormula": "@class:alchemist\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "ability:poison_use#alchemist"
-        }, {
-          "featureId": "ability:poison_resistance_"
-        }, {
-          "featureId": "ability:poison_immunity#alchemist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:alchemist",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:infused_curative#alchemist_chirurgeon"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:anaesthetic#alchemist_chirurgeon"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:power_over_death#alchemist_chirurgeon"]
+    }]
+  }]
 }

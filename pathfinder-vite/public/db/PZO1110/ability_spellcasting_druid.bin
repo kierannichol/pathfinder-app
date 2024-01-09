@@ -1,0 +1,15 @@
+
+ability:spellcasting#druidSpell Casting (Druid)class_featuredruidability¢
+Druid can cast spells.ª«
+¨
+ª@>
+"trait:level_0_spells_per_day#druid3+if(@class:druid>1,1,0)ªnl
+"trait:level_1_spells_per_day#druidF1+if(@class:druid>1,1,0)+if(@class:druid>3,1,0)+if(@class:druid>6,1,0)ªˆ…
+"trait:level_2_spells_per_day#druid_if(@class:druid>=3,1+if(@class:druid>3,1,0)+if(@class:druid>5,1,0)+if(@class:druid>8,1,0),null)ª‰†
+"trait:level_3_spells_per_day#druid`if(@class:druid>=5,1+if(@class:druid>5,1,0)+if(@class:druid>7,1,0)+if(@class:druid>10,1,0),null)ª‰†
+"trait:level_4_spells_per_day#druid`if(@class:druid>=7,1+if(@class:druid>7,1,0)+if(@class:druid>9,1,0)+if(@class:druid>12,1,0),null)ªŠ‡
+"trait:level_5_spells_per_day#druidaif(@class:druid>=9,1+if(@class:druid>9,1,0)+if(@class:druid>11,1,0)+if(@class:druid>14,1,0),null)ªŒ‰
+"trait:level_6_spells_per_day#druidcif(@class:druid>=11,1+if(@class:druid>11,1,0)+if(@class:druid>13,1,0)+if(@class:druid>16,1,0),null)ªŒ‰
+"trait:level_7_spells_per_day#druidcif(@class:druid>=13,1+if(@class:druid>13,1,0)+if(@class:druid>15,1,0)+if(@class:druid>18,1,0),null)ªŒ‰
+"trait:level_8_spells_per_day#druidcif(@class:druid>=15,1+if(@class:druid>15,1,0)+if(@class:druid>17,1,0)+if(@class:druid>19,1,0),null)ªŒ‰
+"trait:level_9_spells_per_day#druidcif(@class:druid>=17,1+if(@class:druid>17,1,0)+if(@class:druid>18,1,0)+if(@class:druid>19,1,0),null)

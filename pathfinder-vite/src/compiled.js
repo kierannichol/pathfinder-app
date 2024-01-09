@@ -1780,6 +1780,7 @@ export const data = $root.data = (() => {
          * @property {string|null} [label] FeatureDbo label
          * @property {data.DescriptionDbo|null} [description] FeatureDbo description
          * @property {data.StacksDbo|null} [stacks] FeatureDbo stacks
+         * @property {Array.<data.FeatureModificationDbo>|null} [featureModifications] FeatureDbo featureModifications
          */
 
         /**
@@ -1792,6 +1793,7 @@ export const data = $root.data = (() => {
          */
         function FeatureDbo(properties) {
             this.tags = [];
+            this.featureModifications = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -1862,6 +1864,14 @@ export const data = $root.data = (() => {
          */
         FeatureDbo.prototype.stacks = null;
 
+        /**
+         * FeatureDbo featureModifications.
+         * @member {Array.<data.FeatureModificationDbo>} featureModifications
+         * @memberof data.FeatureDbo
+         * @instance
+         */
+        FeatureDbo.prototype.featureModifications = $util.emptyArray;
+
         // OneOf field names bound to virtual getters and setters
         let $oneOfFields;
 
@@ -1928,6 +1938,9 @@ export const data = $root.data = (() => {
                 $root.data.DescriptionDbo.encode(message.description, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
             if (message.stacks != null && Object.hasOwnProperty.call(message, "stacks"))
                 $root.data.StacksDbo.encode(message.stacks, writer.uint32(/* id 101, wireType 2 =*/810).fork()).ldelim();
+            if (message.featureModifications != null && message.featureModifications.length)
+                for (let i = 0; i < message.featureModifications.length; ++i)
+                    $root.data.FeatureModificationDbo.encode(message.featureModifications[i], writer.uint32(/* id 102, wireType 2 =*/818).fork()).ldelim();
             return writer;
         };
 
@@ -1994,6 +2007,12 @@ export const data = $root.data = (() => {
                     }
                 case 101: {
                         message.stacks = $root.data.StacksDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 102: {
+                        if (!(message.featureModifications && message.featureModifications.length))
+                            message.featureModifications = [];
+                        message.featureModifications.push($root.data.FeatureModificationDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -2068,6 +2087,15 @@ export const data = $root.data = (() => {
                 if (error)
                     return "stacks." + error;
             }
+            if (message.featureModifications != null && message.hasOwnProperty("featureModifications")) {
+                if (!Array.isArray(message.featureModifications))
+                    return "featureModifications: array expected";
+                for (let i = 0; i < message.featureModifications.length; ++i) {
+                    let error = $root.data.FeatureModificationDbo.verify(message.featureModifications[i]);
+                    if (error)
+                        return "featureModifications." + error;
+                }
+            }
             return null;
         };
 
@@ -2110,6 +2138,16 @@ export const data = $root.data = (() => {
                     throw TypeError(".data.FeatureDbo.stacks: object expected");
                 message.stacks = $root.data.StacksDbo.fromObject(object.stacks);
             }
+            if (object.featureModifications) {
+                if (!Array.isArray(object.featureModifications))
+                    throw TypeError(".data.FeatureDbo.featureModifications: array expected");
+                message.featureModifications = [];
+                for (let i = 0; i < object.featureModifications.length; ++i) {
+                    if (typeof object.featureModifications[i] !== "object")
+                        throw TypeError(".data.FeatureDbo.featureModifications: object expected");
+                    message.featureModifications[i] = $root.data.FeatureModificationDbo.fromObject(object.featureModifications[i]);
+                }
+            }
             return message;
         };
 
@@ -2126,8 +2164,10 @@ export const data = $root.data = (() => {
             if (!options)
                 options = {};
             let object = {};
-            if (options.arrays || options.defaults)
+            if (options.arrays || options.defaults) {
                 object.tags = [];
+                object.featureModifications = [];
+            }
             if (options.defaults) {
                 object.id = "";
                 object.name = "";
@@ -2160,6 +2200,11 @@ export const data = $root.data = (() => {
                 object.description = $root.data.DescriptionDbo.toObject(message.description, options);
             if (message.stacks != null && message.hasOwnProperty("stacks"))
                 object.stacks = $root.data.StacksDbo.toObject(message.stacks, options);
+            if (message.featureModifications && message.featureModifications.length) {
+                object.featureModifications = [];
+                for (let j = 0; j < message.featureModifications.length; ++j)
+                    object.featureModifications[j] = $root.data.FeatureModificationDbo.toObject(message.featureModifications[j], options);
+            }
             return object;
         };
 
@@ -2678,12 +2723,544 @@ export const data = $root.data = (() => {
         return FixedStackDbo;
     })();
 
+    data.FeatureModificationDbo = (function() {
+
+        /**
+         * Properties of a FeatureModificationDbo.
+         * @memberof data
+         * @interface IFeatureModificationDbo
+         * @property {string|null} [targetFeatureId] FeatureModificationDbo targetFeatureId
+         * @property {Array.<data.StackModificationDbo>|null} [stackModifications] FeatureModificationDbo stackModifications
+         */
+
+        /**
+         * Constructs a new FeatureModificationDbo.
+         * @memberof data
+         * @classdesc Represents a FeatureModificationDbo.
+         * @implements IFeatureModificationDbo
+         * @constructor
+         * @param {data.IFeatureModificationDbo=} [properties] Properties to set
+         */
+        function FeatureModificationDbo(properties) {
+            this.stackModifications = [];
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * FeatureModificationDbo targetFeatureId.
+         * @member {string} targetFeatureId
+         * @memberof data.FeatureModificationDbo
+         * @instance
+         */
+        FeatureModificationDbo.prototype.targetFeatureId = "";
+
+        /**
+         * FeatureModificationDbo stackModifications.
+         * @member {Array.<data.StackModificationDbo>} stackModifications
+         * @memberof data.FeatureModificationDbo
+         * @instance
+         */
+        FeatureModificationDbo.prototype.stackModifications = $util.emptyArray;
+
+        /**
+         * Creates a new FeatureModificationDbo instance using the specified properties.
+         * @function create
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {data.IFeatureModificationDbo=} [properties] Properties to set
+         * @returns {data.FeatureModificationDbo} FeatureModificationDbo instance
+         */
+        FeatureModificationDbo.create = function create(properties) {
+            return new FeatureModificationDbo(properties);
+        };
+
+        /**
+         * Encodes the specified FeatureModificationDbo message. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {data.FeatureModificationDbo} message FeatureModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        FeatureModificationDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.targetFeatureId != null && Object.hasOwnProperty.call(message, "targetFeatureId"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.targetFeatureId);
+            if (message.stackModifications != null && message.stackModifications.length)
+                for (let i = 0; i < message.stackModifications.length; ++i)
+                    $root.data.StackModificationDbo.encode(message.stackModifications[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified FeatureModificationDbo message, length delimited. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {data.FeatureModificationDbo} message FeatureModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        FeatureModificationDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a FeatureModificationDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.FeatureModificationDbo} FeatureModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        FeatureModificationDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.FeatureModificationDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.targetFeatureId = reader.string();
+                        break;
+                    }
+                case 2: {
+                        if (!(message.stackModifications && message.stackModifications.length))
+                            message.stackModifications = [];
+                        message.stackModifications.push($root.data.StackModificationDbo.decode(reader, reader.uint32()));
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a FeatureModificationDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.FeatureModificationDbo} FeatureModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        FeatureModificationDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a FeatureModificationDbo message.
+         * @function verify
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        FeatureModificationDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.targetFeatureId != null && message.hasOwnProperty("targetFeatureId"))
+                if (!$util.isString(message.targetFeatureId))
+                    return "targetFeatureId: string expected";
+            if (message.stackModifications != null && message.hasOwnProperty("stackModifications")) {
+                if (!Array.isArray(message.stackModifications))
+                    return "stackModifications: array expected";
+                for (let i = 0; i < message.stackModifications.length; ++i) {
+                    let error = $root.data.StackModificationDbo.verify(message.stackModifications[i]);
+                    if (error)
+                        return "stackModifications." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a FeatureModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.FeatureModificationDbo} FeatureModificationDbo
+         */
+        FeatureModificationDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.FeatureModificationDbo)
+                return object;
+            let message = new $root.data.FeatureModificationDbo();
+            if (object.targetFeatureId != null)
+                message.targetFeatureId = String(object.targetFeatureId);
+            if (object.stackModifications) {
+                if (!Array.isArray(object.stackModifications))
+                    throw TypeError(".data.FeatureModificationDbo.stackModifications: array expected");
+                message.stackModifications = [];
+                for (let i = 0; i < object.stackModifications.length; ++i) {
+                    if (typeof object.stackModifications[i] !== "object")
+                        throw TypeError(".data.FeatureModificationDbo.stackModifications: object expected");
+                    message.stackModifications[i] = $root.data.StackModificationDbo.fromObject(object.stackModifications[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a FeatureModificationDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {data.FeatureModificationDbo} message FeatureModificationDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        FeatureModificationDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.arrays || options.defaults)
+                object.stackModifications = [];
+            if (options.defaults)
+                object.targetFeatureId = "";
+            if (message.targetFeatureId != null && message.hasOwnProperty("targetFeatureId"))
+                object.targetFeatureId = message.targetFeatureId;
+            if (message.stackModifications && message.stackModifications.length) {
+                object.stackModifications = [];
+                for (let j = 0; j < message.stackModifications.length; ++j)
+                    object.stackModifications[j] = $root.data.StackModificationDbo.toObject(message.stackModifications[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this FeatureModificationDbo to JSON.
+         * @function toJSON
+         * @memberof data.FeatureModificationDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        FeatureModificationDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for FeatureModificationDbo
+         * @function getTypeUrl
+         * @memberof data.FeatureModificationDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        FeatureModificationDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.FeatureModificationDbo";
+        };
+
+        return FeatureModificationDbo;
+    })();
+
+    data.StackModificationDbo = (function() {
+
+        /**
+         * Properties of a StackModificationDbo.
+         * @memberof data
+         * @interface IStackModificationDbo
+         * @property {number|null} [targetStackCount] StackModificationDbo targetStackCount
+         * @property {Array.<string>|null} [linksToAdd] StackModificationDbo linksToAdd
+         * @property {Array.<string>|null} [linksToRemove] StackModificationDbo linksToRemove
+         */
+
+        /**
+         * Constructs a new StackModificationDbo.
+         * @memberof data
+         * @classdesc Represents a StackModificationDbo.
+         * @implements IStackModificationDbo
+         * @constructor
+         * @param {data.IStackModificationDbo=} [properties] Properties to set
+         */
+        function StackModificationDbo(properties) {
+            this.linksToAdd = [];
+            this.linksToRemove = [];
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * StackModificationDbo targetStackCount.
+         * @member {number} targetStackCount
+         * @memberof data.StackModificationDbo
+         * @instance
+         */
+        StackModificationDbo.prototype.targetStackCount = 0;
+
+        /**
+         * StackModificationDbo linksToAdd.
+         * @member {Array.<string>} linksToAdd
+         * @memberof data.StackModificationDbo
+         * @instance
+         */
+        StackModificationDbo.prototype.linksToAdd = $util.emptyArray;
+
+        /**
+         * StackModificationDbo linksToRemove.
+         * @member {Array.<string>} linksToRemove
+         * @memberof data.StackModificationDbo
+         * @instance
+         */
+        StackModificationDbo.prototype.linksToRemove = $util.emptyArray;
+
+        /**
+         * Creates a new StackModificationDbo instance using the specified properties.
+         * @function create
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {data.IStackModificationDbo=} [properties] Properties to set
+         * @returns {data.StackModificationDbo} StackModificationDbo instance
+         */
+        StackModificationDbo.create = function create(properties) {
+            return new StackModificationDbo(properties);
+        };
+
+        /**
+         * Encodes the specified StackModificationDbo message. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {data.StackModificationDbo} message StackModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        StackModificationDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.targetStackCount != null && Object.hasOwnProperty.call(message, "targetStackCount"))
+                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.targetStackCount);
+            if (message.linksToAdd != null && message.linksToAdd.length)
+                for (let i = 0; i < message.linksToAdd.length; ++i)
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.linksToAdd[i]);
+            if (message.linksToRemove != null && message.linksToRemove.length)
+                for (let i = 0; i < message.linksToRemove.length; ++i)
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.linksToRemove[i]);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified StackModificationDbo message, length delimited. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {data.StackModificationDbo} message StackModificationDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        StackModificationDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a StackModificationDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.StackModificationDbo} StackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        StackModificationDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.StackModificationDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.targetStackCount = reader.int32();
+                        break;
+                    }
+                case 2: {
+                        if (!(message.linksToAdd && message.linksToAdd.length))
+                            message.linksToAdd = [];
+                        message.linksToAdd.push(reader.string());
+                        break;
+                    }
+                case 3: {
+                        if (!(message.linksToRemove && message.linksToRemove.length))
+                            message.linksToRemove = [];
+                        message.linksToRemove.push(reader.string());
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a StackModificationDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.StackModificationDbo} StackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        StackModificationDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a StackModificationDbo message.
+         * @function verify
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        StackModificationDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.targetStackCount != null && message.hasOwnProperty("targetStackCount"))
+                if (!$util.isInteger(message.targetStackCount))
+                    return "targetStackCount: integer expected";
+            if (message.linksToAdd != null && message.hasOwnProperty("linksToAdd")) {
+                if (!Array.isArray(message.linksToAdd))
+                    return "linksToAdd: array expected";
+                for (let i = 0; i < message.linksToAdd.length; ++i)
+                    if (!$util.isString(message.linksToAdd[i]))
+                        return "linksToAdd: string[] expected";
+            }
+            if (message.linksToRemove != null && message.hasOwnProperty("linksToRemove")) {
+                if (!Array.isArray(message.linksToRemove))
+                    return "linksToRemove: array expected";
+                for (let i = 0; i < message.linksToRemove.length; ++i)
+                    if (!$util.isString(message.linksToRemove[i]))
+                        return "linksToRemove: string[] expected";
+            }
+            return null;
+        };
+
+        /**
+         * Creates a StackModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.StackModificationDbo} StackModificationDbo
+         */
+        StackModificationDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.StackModificationDbo)
+                return object;
+            let message = new $root.data.StackModificationDbo();
+            if (object.targetStackCount != null)
+                message.targetStackCount = object.targetStackCount | 0;
+            if (object.linksToAdd) {
+                if (!Array.isArray(object.linksToAdd))
+                    throw TypeError(".data.StackModificationDbo.linksToAdd: array expected");
+                message.linksToAdd = [];
+                for (let i = 0; i < object.linksToAdd.length; ++i)
+                    message.linksToAdd[i] = String(object.linksToAdd[i]);
+            }
+            if (object.linksToRemove) {
+                if (!Array.isArray(object.linksToRemove))
+                    throw TypeError(".data.StackModificationDbo.linksToRemove: array expected");
+                message.linksToRemove = [];
+                for (let i = 0; i < object.linksToRemove.length; ++i)
+                    message.linksToRemove[i] = String(object.linksToRemove[i]);
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a StackModificationDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {data.StackModificationDbo} message StackModificationDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        StackModificationDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.arrays || options.defaults) {
+                object.linksToAdd = [];
+                object.linksToRemove = [];
+            }
+            if (options.defaults)
+                object.targetStackCount = 0;
+            if (message.targetStackCount != null && message.hasOwnProperty("targetStackCount"))
+                object.targetStackCount = message.targetStackCount;
+            if (message.linksToAdd && message.linksToAdd.length) {
+                object.linksToAdd = [];
+                for (let j = 0; j < message.linksToAdd.length; ++j)
+                    object.linksToAdd[j] = message.linksToAdd[j];
+            }
+            if (message.linksToRemove && message.linksToRemove.length) {
+                object.linksToRemove = [];
+                for (let j = 0; j < message.linksToRemove.length; ++j)
+                    object.linksToRemove[j] = message.linksToRemove[j];
+            }
+            return object;
+        };
+
+        /**
+         * Converts this StackModificationDbo to JSON.
+         * @function toJSON
+         * @memberof data.StackModificationDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        StackModificationDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for StackModificationDbo
+         * @function getTypeUrl
+         * @memberof data.StackModificationDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        StackModificationDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.StackModificationDbo";
+        };
+
+        return StackModificationDbo;
+    })();
+
     data.EffectDbo = (function() {
 
         /**
          * Properties of an EffectDbo.
          * @memberof data
          * @interface IEffectDbo
+         * @property {string|null} [conditionFormula] EffectDbo conditionFormula
          * @property {data.EffectDbo.SetActionDbo|null} [setAction] EffectDbo setAction
          * @property {data.EffectDbo.AddActionDbo|null} [addAction] EffectDbo addAction
          */
@@ -2704,6 +3281,14 @@ export const data = $root.data = (() => {
         }
 
         /**
+         * EffectDbo conditionFormula.
+         * @member {string|null|undefined} conditionFormula
+         * @memberof data.EffectDbo
+         * @instance
+         */
+        EffectDbo.prototype.conditionFormula = null;
+
+        /**
          * EffectDbo setAction.
          * @member {data.EffectDbo.SetActionDbo|null|undefined} setAction
          * @memberof data.EffectDbo
@@ -2721,6 +3306,17 @@ export const data = $root.data = (() => {
 
         // OneOf field names bound to virtual getters and setters
         let $oneOfFields;
+
+        /**
+         * EffectDbo _conditionFormula.
+         * @member {"conditionFormula"|undefined} _conditionFormula
+         * @memberof data.EffectDbo
+         * @instance
+         */
+        Object.defineProperty(EffectDbo.prototype, "_conditionFormula", {
+            get: $util.oneOfGetter($oneOfFields = ["conditionFormula"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * EffectDbo action.
@@ -2757,10 +3353,12 @@ export const data = $root.data = (() => {
         EffectDbo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
+            if (message.conditionFormula != null && Object.hasOwnProperty.call(message, "conditionFormula"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.conditionFormula);
             if (message.setAction != null && Object.hasOwnProperty.call(message, "setAction"))
-                $root.data.EffectDbo.SetActionDbo.encode(message.setAction, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                $root.data.EffectDbo.SetActionDbo.encode(message.setAction, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             if (message.addAction != null && Object.hasOwnProperty.call(message, "addAction"))
-                $root.data.EffectDbo.AddActionDbo.encode(message.addAction, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                $root.data.EffectDbo.AddActionDbo.encode(message.addAction, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
 
@@ -2796,10 +3394,14 @@ export const data = $root.data = (() => {
                 let tag = reader.uint32();
                 switch (tag >>> 3) {
                 case 1: {
-                        message.setAction = $root.data.EffectDbo.SetActionDbo.decode(reader, reader.uint32());
+                        message.conditionFormula = reader.string();
                         break;
                     }
                 case 2: {
+                        message.setAction = $root.data.EffectDbo.SetActionDbo.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 3: {
                         message.addAction = $root.data.EffectDbo.AddActionDbo.decode(reader, reader.uint32());
                         break;
                     }
@@ -2839,6 +3441,11 @@ export const data = $root.data = (() => {
             if (typeof message !== "object" || message === null)
                 return "object expected";
             let properties = {};
+            if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+                properties._conditionFormula = 1;
+                if (!$util.isString(message.conditionFormula))
+                    return "conditionFormula: string expected";
+            }
             if (message.setAction != null && message.hasOwnProperty("setAction")) {
                 properties.action = 1;
                 {
@@ -2872,6 +3479,8 @@ export const data = $root.data = (() => {
             if (object instanceof $root.data.EffectDbo)
                 return object;
             let message = new $root.data.EffectDbo();
+            if (object.conditionFormula != null)
+                message.conditionFormula = String(object.conditionFormula);
             if (object.setAction != null) {
                 if (typeof object.setAction !== "object")
                     throw TypeError(".data.EffectDbo.setAction: object expected");
@@ -2898,6 +3507,11 @@ export const data = $root.data = (() => {
             if (!options)
                 options = {};
             let object = {};
+            if (message.conditionFormula != null && message.hasOwnProperty("conditionFormula")) {
+                object.conditionFormula = message.conditionFormula;
+                if (options.oneofs)
+                    object._conditionFormula = "conditionFormula";
+            }
             if (message.setAction != null && message.hasOwnProperty("setAction")) {
                 object.setAction = $root.data.EffectDbo.SetActionDbo.toObject(message.setAction, options);
                 if (options.oneofs)

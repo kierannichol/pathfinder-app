@@ -29,30 +29,24 @@
             "targetKey": "modifies:ability:abundant_step#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:touch_of_serenity#monk_monk_of_the_lotus",
-          "conditionFormula": "@class:monk\u003e\u003d1"
-        }, {
-          "featureId": "ability:touch_of_surrender#monk_monk_of_the_lotus",
-          "conditionFormula": "@class:monk\u003e\u003d12"
-        }, {
-          "featureId": "ability:touch_of_peace#monk_monk_of_the_lotus",
-          "conditionFormula": "@class:monk\u003e\u003d15"
-        }, {
-          "featureId": "ability:learned_master#monk_monk_of_the_lotus",
-          "conditionFormula": "@class:monk\u003e\u003d17"
-        }],
-        "unlinks": [{
-          "featureId": "ability:stunning_fist#monk"
-        }, {
-          "featureId": "ability:abundant_step#monk"
-        }, {
-          "featureId": "ability:quivering_palm#monk"
-        }, {
-          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:learned_master#monk_monk_of_the_lotus"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:touch_of_serenity#monk_monk_of_the_lotus"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:touch_of_surrender#monk_monk_of_the_lotus"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:touch_of_peace#monk_monk_of_the_lotus"]
+    }]
+  }]
 }

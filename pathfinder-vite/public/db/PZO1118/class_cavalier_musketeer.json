@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:expert_trainer#cavalier",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:gifted_firearm#cavalier_musketeer",
-          "conditionFormula": "@class:cavalier\u003e\u003d1"
-        }, {
-          "featureId": "ability:swift_powder#cavalier_musketeer",
-          "conditionFormula": "@class:cavalier\u003e\u003d4"
-        }],
-        "unlinks": [{
-          "featureId": "ability:mount#cavalier"
-        }, {
-          "featureId": "ability:expert_trainer#cavalier"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:gifted_firearm#cavalier_musketeer"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:swift_powder#cavalier_musketeer"]
+    }]
+  }]
 }

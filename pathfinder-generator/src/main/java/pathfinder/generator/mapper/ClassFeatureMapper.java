@@ -10,7 +10,7 @@ import pathfinder.model.Choice;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.FeatureSelectByTagChoice;
-import pathfinder.model.FeatureSelectCategory;
+import pathfinder.model.FeatureSelectByTagChoice.Builder;
 import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.ClassFeature;
@@ -41,12 +41,9 @@ public class ClassFeatureMapper {
 
         tryCreateFeatureChoice(feature)
                 .or(() -> tryCreateClassSpecificFeatureChoice(feature))
-                .ifPresent(choice ->
-                    builder.setRepeatingStack(new StackBuilder()
-                            .addChoice(choice)
-                            .build()));
+                .ifPresent(stack::addChoice);
 
-        builder.addFixedStack(stack.build());
+        builder.setRepeatingStack(stack.build());
         return builder.build();
     }
 
@@ -65,42 +62,51 @@ public class ClassFeatureMapper {
             case "rogue_talent" -> byTagChoice("rogue_talent", "Rogue Talent");
             case "slayer_talent" -> byTagChoice("slayer_talent", "Slayer Talent");
             case "magus_arcana" -> byTagChoice("magus_arcana", "Magus Arcana");
+            case "hex_arcana" -> byTagChoice("hex_arcana", "Hex Arcana", List.of("magus_arcana", "witch_hex"))
+                    .category("All", "")
+                    .category("Magus Arcana", "magus_arcana")
+                    .category("Hex", "witch_hex");
+            case "hex_magus" -> byTagChoice("hex_magus", "Hex Magus", List.of("witch_hex"));
             case "alchemist_discovery" -> byTagChoice("alchemist_discovery", "Alchemist Discovery");
             case "arcanist_exploits" -> byTagChoice("arcanist_exploits", "Arcanist Exploits");
             case "bardic_masterpiece" -> byTagChoice("bardic_masterpiece", "Bardic Masterpiece");
             case "rage_power" -> byTagChoice("rage_power", "Rage Power");
             case "warpriest_blessing" -> byTagChoice("warpriest_blessing", "Warpriest Blessing");
             default -> null;
-        });
+        }).map(Builder::build);
     }
 
     private Optional<Choice> tryCreateClassSpecificFeatureChoice(ClassFeature feature) {
         return Optional.ofNullable(switch (feature.id().key + "#" + feature.id().option) {
-            case "bonus_feat#magus" -> new FeatureSelectByTagChoice("magus_bonus_feat",
+            case "bonus_feat#magus" -> FeatureSelectByTagChoice.builder(
+                    "magus_bonus_feat",
                     "Magus Bonus Feat",
-                    "bonus_feat",
-                    List.of("feat+combat", "feat+item_creation", "feat+metamagic"),
-                    List.of(),
-                    List.of(
-                            new FeatureSelectCategory("Combat", "combat"),
-                            new FeatureSelectCategory("Metamagic", "metamagic"),
-                            new FeatureSelectCategory("Item Creation", "item_creation")),
-                    FeatureSelectSortBy.NAME);
+                    "bonus_feat")
+                    .optionTag("feat+combat")
+                    .optionTag("feat+item_creation")
+                    .optionTag("feat+metamagic")
+                    .category("Combat", "combat")
+                    .category("Metamagic", "metamagic")
+                    .category("Item Creation", "item_creation")
+                    .sortBy(FeatureSelectSortBy.NAME);
+            case "bonus_feat#fighter" -> FeatureSelectByTagChoice.builder(
+                    "fighter_bonus_feat",
+                    "Fighter Bonus Feat",
+                    "bonus_feat")
+                    .optionTag("feat+combat")
+                    .category("Combat", "feat+combat")
+                    .sortBy(FeatureSelectSortBy.NAME);
             default -> null;
-        });
+        }).map(Builder::build);
     }
 
-    private FeatureSelectByTagChoice byTagChoice(String choiceId, String label) {
+    private FeatureSelectByTagChoice.Builder byTagChoice(String choiceId, String label) {
         return byTagChoice(choiceId, label, List.of(choiceId));
     }
 
-    private FeatureSelectByTagChoice byTagChoice(String choiceId, String label, List<String> optionTags) {
-        return new FeatureSelectByTagChoice(choiceId,
-                label,
-                choiceId,
-                optionTags,
-                List.of(),
-                List.of(),
-                FeatureSelectSortBy.NAME);
+    private FeatureSelectByTagChoice.Builder byTagChoice(String choiceId, String label, List<String> optionTags) {
+        return FeatureSelectByTagChoice.builder(choiceId, label, choiceId)
+                .optionTags(optionTags)
+                .sortBy(FeatureSelectSortBy.NAME);
     }
 }

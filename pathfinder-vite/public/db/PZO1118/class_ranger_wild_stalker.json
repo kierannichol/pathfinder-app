@@ -45,39 +45,27 @@
             "targetKey": "modifies:ability:the_rangers_6th__10th__14th_#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:strong_senses#ranger_wild_stalker",
-          "conditionFormula": "@class:ranger\u003e\u003d1"
-        }, {
-          "featureId": "ability:uncanny_dodge#ranger_wild_stalker",
-          "conditionFormula": "@class:ranger\u003e\u003d2"
-        }, {
-          "featureId": "ability:rage_of_the_wild#ranger_wild_stalker",
-          "conditionFormula": "@class:ranger\u003e\u003d4"
-        }, {
-          "featureId": "ability:rage_powers#ranger_wild_stalker",
-          "conditionFormula": "@class:ranger\u003e\u003d5"
-        }, {
-          "featureId": "ability:wild_talents#ranger_wild_stalker",
-          "conditionFormula": "@class:ranger\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_rangers_first_favored_enemy_ability#ranger"
-        }, {
-          "featureId": "ability:the_rangers_2nd_level_combat_style_feat#ranger"
-        }, {
-          "featureId": "ability:hunters_bond#ranger"
-        }, {
-          "featureId": "ability:the_rangers_second_third_fourth#ranger"
-        }, {
-          "featureId": "ability:fifth_favored_enemy_abilities#ranger"
-        }, {
-          "featureId": "ability:18th_level_combat_style_feat_abilities#ranger"
-        }, {
-          "featureId": "ability:the_rangers_6th__10th__14th_#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:strong_senses#ranger_wild_stalker"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:uncanny_dodge#ranger_wild_stalker"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:rage_of_the_wild#ranger_wild_stalker"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:rage_powers#ranger_wild_stalker"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:wild_talents#ranger_wild_stalker"]
+    }]
+  }]
 }

@@ -34,44 +34,30 @@
             "targetKey": "modifies:ability:inspire_competence#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bardic_performance#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:bardic_performance#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }, {
-          "featureId": "ability:bardic_performance#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d11"
-        }, {
-          "featureId": "ability:bardic_performance#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d17"
-        }, {
-          "featureId": "ability:master_of_deception#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:sneakspell#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:trap_sense#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d3"
-        }, {
-          "featureId": "ability:sneak_attack#bard_sandman",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:inspire_courage#bard"
-        }, {
-          "featureId": "ability:bardic_knowledge#bard"
-        }, {
-          "featureId": "ability:versatile_performance#bard"
-        }, {
-          "featureId": "ability:inspire_competence#bard"
-        }, {
-          "featureId": "ability:lore_master#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:bardic_performance#bard_sandman"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:bardic_performance#bard_sandman", "ability:master_of_deception#bard_sandman"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:sneakspell#bard_sandman"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:trap_sense#bard_sandman"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:bardic_performance#bard_sandman", "ability:sneak_attack#bard_sandman"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:bardic_performance#bard_sandman"]
+    }]
+  }]
 }

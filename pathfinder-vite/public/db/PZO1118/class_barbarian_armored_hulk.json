@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:indomitable_stance#barbarian_armored_hulk",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }, {
-          "featureId": "ability:armored_swiftness#barbarian_armored_hulk",
-          "conditionFormula": "@class:barbarian\u003e\u003d2"
-        }, {
-          "featureId": "ability:resilience_of_steel#barbarian_armored_hulk",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }, {
-          "featureId": "ability:improved_armored_swiftness#barbarian_armored_hulk",
-          "conditionFormula": "@class:barbarian\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#barbarian"
-        }, {
-          "featureId": "ability:uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:trap_sense#barbarian"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:indomitable_stance#barbarian_armored_hulk"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:armored_swiftness#barbarian_armored_hulk"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:resilience_of_steel#barbarian_armored_hulk"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:improved_armored_swiftness#barbarian_armored_hulk"]
+    }]
+  }]
 }

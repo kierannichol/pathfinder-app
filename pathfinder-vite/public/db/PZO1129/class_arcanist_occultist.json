@@ -20,25 +20,23 @@
             "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:conjurers_focus#arcanist_occultist",
-          "conditionFormula": "@class:arcanist\u003e\u003d1"
-        }, {
-          "featureId": "ability:planar_contact#arcanist_occultist",
-          "conditionFormula": "@class:arcanist\u003e\u003d7"
-        }, {
-          "featureId": "ability:perfect_summoner#arcanist_occultist",
-          "conditionFormula": "@class:arcanist\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:magical_supremacy#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:conjurers_focus#arcanist_occultist"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:perfect_summoner#arcanist_occultist"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:planar_contact#arcanist_occultist"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }]
+  }]
 }

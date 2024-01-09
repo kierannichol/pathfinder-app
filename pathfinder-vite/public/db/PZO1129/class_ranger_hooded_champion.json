@@ -35,26 +35,19 @@
             "targetKey": "modifies:ability:wild_empathy#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:panache#ranger_hooded_champion",
-          "conditionFormula": "@class:ranger\u003e\u003d1"
-        }, {
-          "featureId": "ability:combat_style#ranger_hooded_champion",
-          "conditionFormula": "@class:ranger\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:favored_enemy#ranger"
-        }, {
-          "featureId": "ability:evasion#ranger"
-        }, {
-          "featureId": "ability:improved_evasion#ranger"
-        }, {
-          "featureId": "ability:wild_empathy#ranger"
-        }, {
-          "featureId": "ability:endurance#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:panache#ranger_hooded_champion"],
+      "linksToRemove": ["ability:favored_enemy#ranger"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:combat_style#ranger_hooded_champion"]
+    }]
+  }]
 }

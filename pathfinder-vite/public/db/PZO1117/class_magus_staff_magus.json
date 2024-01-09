@@ -35,32 +35,21 @@
             "targetKey": "modifies:trait:weapon_proficiency#magus",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:weapon_and_armor_proficiency#magus_staff_magus",
-          "conditionFormula": "@class:magus\u003e\u003d1"
-        }, {
-          "featureId": "ability:weapon_and_armor_proficiency#magus_staff_magus",
-          "conditionFormula": "@class:magus\u003e\u003d1"
-        }, {
-          "featureId": "ability:quarterstaff_defense#magus_staff_magus",
-          "conditionFormula": "@class:magus\u003e\u003d7"
-        }, {
-          "featureId": "ability:staff_weapon#magus_staff_magus",
-          "conditionFormula": "@class:magus\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "trait:armor_proficiency#magus"
-        }, {
-          "featureId": "trait:weapon_proficiency#magus"
-        }, {
-          "featureId": "ability:the_medium_armor#magus"
-        }, {
-          "featureId": "ability:heavy_armor#magus"
-        }, {
-          "featureId": "ability:fighter_training#magus"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:magus",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:weapon_and_armor_proficiency#magus_staff_magus", "ability:weapon_and_armor_proficiency#magus_staff_magus"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:quarterstaff_defense#magus_staff_magus"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:staff_weapon#magus_staff_magus"]
+    }]
+  }]
 }

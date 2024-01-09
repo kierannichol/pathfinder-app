@@ -20,27 +20,23 @@
             "targetKey": "modifies:ability:familiar#witch",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:aura_of_desecration#witch_gravewalker",
-          "conditionFormula": "@class:witch\u003e\u003d1"
-        }, {
-          "featureId": "ability:bonethrall#witch_gravewalker",
-          "conditionFormula": "@class:witch\u003e\u003d1"
-        }, {
-          "featureId": "ability:possess_undead#witch_gravewalker",
-          "conditionFormula": "@class:witch\u003e\u003d8"
-        }],
-        "unlinks": [{
-          "featureId": "ability:familiar#witch"
-        }, {
-          "featureId": "ability:hex#witch"
-        }, {
-          "featureId": "ability:hex#witch"
-        }, {
-          "featureId": "ability:hex#witch"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:witch",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:aura_of_desecration#witch_gravewalker", "ability:bonethrall#witch_gravewalker"],
+      "linksToRemove": ["ability:hex#witch"]
+    }, {
+      "targetStackCount": 4,
+      "linksToRemove": ["ability:hex#witch"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:possess_undead#witch_gravewalker"],
+      "linksToRemove": ["ability:hex#witch"]
+    }]
+  }]
 }

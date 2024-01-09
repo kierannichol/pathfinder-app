@@ -28,6 +28,7 @@ public enum AbilityScore {
         return Arrays.stream(values())
                 .map(abilityScore -> Feature.builder(abilityScore.scoreKey())
                         .setName(abilityScore.longName)
+                        .addTag("ability_score")
                         .build());
     }
 }

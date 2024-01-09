@@ -20,30 +20,27 @@
             "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:eldritch_surge#arcanist_eldritch_font",
-          "conditionFormula": "@class:arcanist\u003e\u003d3"
-        }, {
-          "featureId": "ability:improved_surge#arcanist_eldritch_font",
-          "conditionFormula": "@class:arcanist\u003e\u003d7"
-        }, {
-          "featureId": "ability:greater_surge#arcanist_eldritch_font",
-          "conditionFormula": "@class:arcanist\u003e\u003d13"
-        }, {
-          "featureId": "ability:bottomless_well#arcanist_eldritch_font",
-          "conditionFormula": "@class:arcanist\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:magical_supremacy#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:eldritch_surge#arcanist_eldritch_font"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:bottomless_well#arcanist_eldritch_font"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:improved_surge#arcanist_eldritch_font"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:greater_surge#arcanist_eldritch_font"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }]
+  }]
 }

@@ -2,15 +2,15 @@ import CharacterEdit from "../views/CharacterEdit.tsx";
 import {CharacterStoreContext, withGlobalCharacterStore} from "../../data/model/Character.react.tsx";
 import {useLoaderData} from "react-router-dom";
 import {PathfinderDatabaseContext, withGlobalPathfinderDatabase} from "../../data/model/PathfinderDatabase.tsx";
-import ICharacter from "../model/ICharacter.tsx";
-import ICharacterStore from "../model/ICharacterStore.tsx";
-import IDatabase from "../model/IDatabase.tsx";
 import {timedAsync} from "../../app/pfutils.ts";
+import Database from "../../data/model/Database.ts";
+import CharacterStore from "../../data/model/CharacterStore.ts";
+import Character from "../../data/model/Character.ts";
 
 interface CharacterEditLoaderData {
-  character: ICharacter;
-  characterStore: ICharacterStore;
-  database: IDatabase;
+  character: Character;
+  characterStore: CharacterStore;
+  database: Database;
 }
 
 export async function characterEditLoader({ params }: any): Promise<CharacterEditLoaderData> {

@@ -56,6 +56,18 @@ public class CharacterTemplateGenerator {
                         abilityScore.longName(),
                         "ability_score"));
             }
+
+            level.addEffect(Effect.setFormula("ac", "10+@ac:armor+@ac:shield+@dex_mod+@size_mod+@ac:natural+@ac:deflection+@ac:misc"));
+            level.addEffect(Effect.setFormula("ac:touch", "10+@dex_mod+@size_mod+@ac:deflection+@ac:misc"));
+            level.addEffect(Effect.setFormula("ac:flat", "10+@ac:armor+@ac:shield+@size_mod+@ac:natural+@ac:deflection+@ac:misc"));
+
+            level.addEffect(Effect.setFormula("fort_save", "@fort:base+@con_mod+@fort:magic+@fort:misc+@fort:temp"));
+            level.addEffect(Effect.setFormula("will_save", "@will:base+@wis_mod+@will:magic+@will:misc+@will:temp"));
+            level.addEffect(Effect.setFormula("ref_save", "@ref:base+@dex_mod+@ref:magic+@ref:misc+@ref:temp"));
+
+            level.addEffect(Effect.setFormula("cmb", "@bab+@str_mod+@size_mod"));
+            level.addEffect(Effect.setFormula("cmd", "10+@bab+@str_mod+@dex_mod+@size_mod"));
+            level.addEffect(Effect.setFormula("initiative", "@dex_mod+@initiative:misc"));
         });
 
         for (int levelNumber = 1; levelNumber <= 20; levelNumber++) {

@@ -19,26 +19,26 @@
             "targetKey": "modifies:ability:armor_mastery#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:mutagen#fighter_mutation_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d3"
-        }, {
-          "featureId": "ability:mutagen_discovery#fighter_mutation_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d7"
-        }],
-        "unlinks": [{
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_mastery#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:mutagen#fighter_mutation_warrior"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:mutagen_discovery#fighter_mutation_warrior"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 11,
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }]
+  }]
 }

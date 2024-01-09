@@ -20,25 +20,23 @@
             "targetKey": "modifies:ability:bloodline_feat#bloodrager",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:unfettered_fury#bloodrager_greenrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d3"
-        }, {
-          "featureId": "ability:summoning_rager#bloodrager_greenrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d6"
-        }, {
-          "featureId": "ability:furious_summoning#bloodrager_greenrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:blood_sanctuary#bloodrager"
-        }, {
-          "featureId": "ability:bloodline_feat#bloodrager"
-        }, {
-          "featureId": "ability:bloodline_feat#bloodrager"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bloodrager",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:unfettered_fury#bloodrager_greenrager"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:summoning_rager#bloodrager_greenrager"],
+      "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:furious_summoning#bloodrager_greenrager"],
+      "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+    }]
+  }]
 }

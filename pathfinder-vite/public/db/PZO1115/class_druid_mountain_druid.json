@@ -34,35 +34,27 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:mountaineer#druid_mountain_druid",
-          "conditionFormula": "@class:druid\u003e\u003d2"
-        }, {
-          "featureId": "ability:sure_footed#druid_mountain_druid",
-          "conditionFormula": "@class:druid\u003e\u003d3"
-        }, {
-          "featureId": "ability:spire_walker#druid_mountain_druid",
-          "conditionFormula": "@class:druid\u003e\u003d4"
-        }, {
-          "featureId": "ability:mountain_stance#druid_mountain_druid",
-          "conditionFormula": "@class:druid\u003e\u003d9"
-        }, {
-          "featureId": "ability:mountain_stone#druid_mountain_druid",
-          "conditionFormula": "@class:druid\u003e\u003d13"
-        }],
-        "unlinks": [{
-          "featureId": "ability:woodland_stride#druid"
-        }, {
-          "featureId": "ability:trackless_step#druid"
-        }, {
-          "featureId": "ability:resist_natures_lure#druid"
-        }, {
-          "featureId": "ability:venom_immunity#druid"
-        }, {
-          "featureId": "ability:a_thousand_faces#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:mountaineer#druid_mountain_druid"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:sure_footed#druid_mountain_druid"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:spire_walker#druid_mountain_druid"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:mountain_stance#druid_mountain_druid"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:mountain_stone#druid_mountain_druid"]
+    }]
+  }]
 }

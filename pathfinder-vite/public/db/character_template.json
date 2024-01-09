@@ -125,6 +125,51 @@
         "targetKey": "ability_point_cost",
         "formula": "sum(@ability_point_cost:*)"
       }
+    }, {
+      "setAction": {
+        "targetKey": "ac",
+        "formula": "10+@ac:armor+@ac:shield+@dex_mod+@size_mod+@ac:natural+@ac:deflection+@ac:misc"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ac:touch",
+        "formula": "10+@dex_mod+@size_mod+@ac:deflection+@ac:misc"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ac:flat",
+        "formula": "10+@ac:armor+@ac:shield+@size_mod+@ac:natural+@ac:deflection+@ac:misc"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "fort_save",
+        "formula": "@fort:base+@con_mod+@fort:magic+@fort:misc+@fort:temp"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "will_save",
+        "formula": "@will:base+@wis_mod+@will:magic+@will:misc+@will:temp"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "ref_save",
+        "formula": "@ref:base+@dex_mod+@ref:magic+@ref:misc+@ref:temp"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cmb",
+        "formula": "@bab+@str_mod+@size_mod"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "cmd",
+        "formula": "10+@bab+@str_mod+@dex_mod+@size_mod"
+      }
+    }, {
+      "setAction": {
+        "targetKey": "initiative",
+        "formula": "@dex_mod+@initiative:misc"
+      }
     }],
     "choices": [{
       "choiceId": "character_name",

@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:trap_sense#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:elemental_fury#barbarian_elemental_kin",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trap_sense#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:elemental_fury#barbarian_elemental_kin"]
+    }]
+  }]
 }

@@ -24,22 +24,18 @@
             "targetKey": "modifies:ability:holy_champion#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:breath_evasion#paladin_oath_against_the_wyrm",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:dragon_slaying_strike#paladin_oath_against_the_wyrm",
-          "conditionFormula": "@class:paladin\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:channel_positive_energy#paladin"
-        }, {
-          "featureId": "ability:bond#paladin"
-        }, {
-          "featureId": "ability:holy_champion#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:dragon_slaying_strike#paladin_oath_against_the_wyrm"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:breath_evasion#paladin_oath_against_the_wyrm"]
+    }]
+  }]
 }

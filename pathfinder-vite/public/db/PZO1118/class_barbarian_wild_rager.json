@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:wild_fighting#barbarian_wild_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d2"
-        }, {
-          "featureId": "ability:rage_conversion#barbarian_wild_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:wild_fighting#barbarian_wild_rager"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:rage_conversion#barbarian_wild_rager"]
+    }]
+  }]
 }

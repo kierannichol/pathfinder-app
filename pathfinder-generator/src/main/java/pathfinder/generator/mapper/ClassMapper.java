@@ -1,17 +1,12 @@
 package pathfinder.generator.mapper;
 
-import java.util.List;
-import java.util.OptionalInt;
 import org.springframework.stereotype.Component;
 import pathfinder.model.Effect;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
-import pathfinder.model.FeatureSelectByTagChoice;
-import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.core.BaseAttackBonus;
 import pathfinder.model.core.SaveBonus;
 import pathfinder.model.pathfinder.CharacterClass;
-import pathfinder.model.pathfinder.ClassLevel;
 import pathfinder.model.wrapper.ClassLevelEditor;
 
 @Component
@@ -34,8 +29,10 @@ public class ClassMapper {
 
         levelEditor.level(1).addRepeatingFeatureSelectByTagChoice("archetype", "Archetype", "archetype", "archetype+" + characterClass.id().key);
 
-        addCasterLevels(characterClass, levelEditor);
-        addSpellChoices(characterClass, levelEditor);
+        characterClass.class_skills().forEach(skill -> levelEditor.level(1).addEffect(Effect.setNumber("trained:" + skill, 1)));
+
+//        addCasterLevels(characterClass, levelEditor);
+//        addSpellChoices(characterClass, levelEditor);
 
         addSpecialClassChoicesToClass(characterClass, levelEditor);
 
@@ -64,47 +61,47 @@ public class ClassMapper {
         }
     }
 
-    private void addCasterLevels(CharacterClass characterClass, ClassLevelEditor levelEditor) {
-        OptionalInt maybeMinimumCasterLevel = characterClass.levels().stream()
-                .filter(level -> !level.spellsKnown().isEmpty() || !level.spellsPerDay().isEmpty())
-                .mapToInt(ClassLevel::level)
-                .min();
-
-        if (maybeMinimumCasterLevel.isEmpty()) {
-            return;
-        }
-
-        int minimumCasterLevel = maybeMinimumCasterLevel.getAsInt();
-
-        for (int level = minimumCasterLevel; level <= 20; level++) {
-            levelEditor.level(level).addEffect(Effect.addNumber("caster_level", 1));
-            levelEditor.level(level).addEffect(Effect.addNumber("caster_level#" + characterClass.id().key, 1));
-        }
-
-        if (!characterClass.spell_caster_types().isEmpty()) {
-            levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:spellcaster", 1));
-        }
-        characterClass.spell_caster_types().forEach(casterType ->
-                levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:" + casterType + "_spellcaster", 1)));
-    }
-
-    private void addSpellChoices(CharacterClass characterClass, ClassLevelEditor levelEditor) {
-        for (var level : characterClass.levels()) {
-            level.spellsPerDay().forEach((spellLevel, knownCount) -> {
-                spellLevel = spellLevel - 1; // bad data
-                for (int i = 0; i < knownCount; i++) {
-                    levelEditor.level(level.level()).addChoice(
-                            new FeatureSelectByTagChoice(
-                                    "spell%d_%d".formatted(spellLevel, i+1),
-                                    "Level %d Spell".formatted(spellLevel),
-                                    "spell",
-                                    List.of("spell+%s%d".formatted(characterClass.id().key, spellLevel)),
-                                    List.of(),
-                                    List.of(),
-                                    FeatureSelectSortBy.NAME
-                            ));
-                }
-            });
-        }
-    }
+//    private void addCasterLevels(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+//        OptionalInt maybeMinimumCasterLevel = characterClass.levels().stream()
+//                .filter(level -> !level.spellsKnown().isEmpty() || !level.spellsPerDay().isEmpty())
+//                .mapToInt(ClassLevel::level)
+//                .min();
+//
+//        if (maybeMinimumCasterLevel.isEmpty()) {
+//            return;
+//        }
+//
+//        int minimumCasterLevel = maybeMinimumCasterLevel.getAsInt();
+//
+//        for (int level = minimumCasterLevel; level <= 20; level++) {
+//            levelEditor.level(level).addEffect(Effect.addNumber("caster_level", 1));
+//            levelEditor.level(level).addEffect(Effect.addNumber("caster_level#" + characterClass.id().key, 1));
+//        }
+//
+//        if (!characterClass.spell_caster_types().isEmpty()) {
+//            levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:spellcaster", 1));
+//        }
+//        characterClass.spell_caster_types().forEach(casterType ->
+//                levelEditor.level(minimumCasterLevel).addEffect(Effect.setNumber("trait:" + casterType + "_spellcaster", 1)));
+//    }
+//
+//    private void addSpellChoices(CharacterClass characterClass, ClassLevelEditor levelEditor) {
+//        for (var level : characterClass.levels()) {
+//            level.spellsPerDay().forEach((spellLevel, knownCount) -> {
+//                spellLevel = spellLevel - 1; // bad data
+//                for (int i = 0; i < knownCount; i++) {
+//                    levelEditor.level(level.level()).addChoice(
+//                            new FeatureSelectByTagChoice(
+//                                    "spell%d_%d".formatted(spellLevel, i+1),
+//                                    "Level %d Spell".formatted(spellLevel),
+//                                    "spell",
+//                                    List.of("spell+%s%d".formatted(characterClass.id().key, spellLevel)),
+//                                    List.of(),
+//                                    List.of(),
+//                                    FeatureSelectSortBy.NAME
+//                            ));
+//                }
+//            });
+//        }
+//    }
 }

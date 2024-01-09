@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:the_final_revelation_of_the_oracles_mystery#oracle",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:final_revelation#oracle_planar_oracle",
-          "conditionFormula": "@class:oracle\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_final_revelation_of_the_oracles_mystery#oracle"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:oracle",
+    "stackModifications": [{
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:final_revelation#oracle_planar_oracle"]
+    }]
+  }]
 }

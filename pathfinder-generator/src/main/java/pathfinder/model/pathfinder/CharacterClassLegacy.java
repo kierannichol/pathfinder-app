@@ -21,7 +21,6 @@ public record CharacterClassLegacy(
         String ref,
         String will,
         List<ClassLevel> levels,
-        List<String> spell_caster_types,
         Set<Feature> class_features) implements NamedEntity {
 
     public Optional<ClassLevel> level(int num) {

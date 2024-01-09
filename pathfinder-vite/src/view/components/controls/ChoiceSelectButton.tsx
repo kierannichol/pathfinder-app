@@ -3,7 +3,7 @@ import {CloseButton} from "react-bootstrap";
 import styles from "./ChoiceSelectButton.module.scss";
 import ChoiceSelectorDialog from "./ChoiceSelectorDialog";
 import {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorList";
-import PathfinderButton from "./PathfinderButton.tsx";
+import ButtonBlock from "./ButtonBlock.tsx";
 import {array} from "../../../app/pfutils.ts";
 import EditIcon from "../icons/EditIcon.tsx";
 
@@ -65,7 +65,7 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
       : <></>;
 
   return (<>
-        <PathfinderButton id={id} variant={variant} onClick={_ => handleShow()}>{actualButtonLabel} {removeButton}</PathfinderButton>
+        <ButtonBlock id={id} variant={variant} onClick={_ => handleShow()}>{actualButtonLabel} {removeButton}</ButtonBlock>
         {show && <ChoiceSelectorDialog
             choiceName={choiceName}
             variant={dialogVariant}

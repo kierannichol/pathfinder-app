@@ -45,39 +45,27 @@
             "targetKey": "modifies:ability:the_rangers_second_third#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:master_of_terrain#ranger_warden",
-          "conditionFormula": "@class:ranger\u003e\u003d1"
-        }, {
-          "featureId": "ability:live_in_comfort#ranger_warden",
-          "conditionFormula": "@class:ranger\u003e\u003d2"
-        }, {
-          "featureId": "ability:terrain_bond#ranger_warden",
-          "conditionFormula": "@class:ranger\u003e\u003d4"
-        }, {
-          "featureId": "ability:able_explorer#ranger_warden",
-          "conditionFormula": "@class:ranger\u003e\u003d5"
-        }, {
-          "featureId": "ability:wilderness_whispers#ranger_warden",
-          "conditionFormula": "@class:ranger\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_rangers_first_favored_enemy_ability#ranger"
-        }, {
-          "featureId": "ability:all_combat_style_feat#ranger"
-        }, {
-          "featureId": "ability:hunters_bond#ranger"
-        }, {
-          "featureId": "ability:fourth_favored_enemies#ranger"
-        }, {
-          "featureId": "ability:the_rangers_second_third#ranger"
-        }, {
-          "featureId": "ability:master_hunter#ranger"
-        }, {
-          "featureId": "ability:the_rangers_fifth_favored_enemy#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:master_of_terrain#ranger_warden"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:live_in_comfort#ranger_warden"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:wilderness_whispers#ranger_warden"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:terrain_bond#ranger_warden"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:able_explorer#ranger_warden"]
+    }]
+  }]
 }

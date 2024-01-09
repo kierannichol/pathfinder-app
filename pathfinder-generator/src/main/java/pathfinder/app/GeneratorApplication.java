@@ -7,22 +7,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import pathfinder.db.LocalPathfinderDatabaseLoader;
+import pathfinder.db.PathfinderDatabase;
 import pathfinder.generator.CharacterTemplateGenerator;
 import pathfinder.generator.DatabaseWriter;
+import pathfinder.generator.SourceModuleDatabaseGenerator;
 import pathfinder.model.CharacterTemplate;
-import pathfinder.model.CharacterTemplate.Builder;
-import pathfinder.model.Choice;
-import pathfinder.model.Effect;
-import pathfinder.model.FeatureSelectByTagChoice;
-import pathfinder.model.FeatureSelectCategory;
-import pathfinder.model.FeatureSelectSortBy;
-import pathfinder.model.TextChoice;
-import pathfinder.model.pathfinder.AbilityScore;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
-import pathfinder.db.PathfinderDatabase;
-import pathfinder.generator.SourceModuleDatabaseGenerator;
-import pathfinder.db.LocalPathfinderDatabaseLoader;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
@@ -62,7 +54,8 @@ public class GeneratorApplication {
                     Sources.ULTIMATE_COMBAT,
                     Sources.ULTIMATE_MAGIC,
                     Sources.ULTIMATE_EQUIPMENT,
-                    Sources.UNCHAINED
+                    Sources.UNCHAINED,
+                    Sources.OCCULT_ADVENTURES
             );
 
             for (SourceId sourceId : sources) {

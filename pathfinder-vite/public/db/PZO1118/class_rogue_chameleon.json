@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:trap_sense#rogue",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:misdirection#rogue_chameleon",
-          "conditionFormula": "@class:rogue\u003e\u003d1"
-        }, {
-          "featureId": "ability:effortless_sneak#rogue_chameleon",
-          "conditionFormula": "@class:rogue\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trapfinding#rogue"
-        }, {
-          "featureId": "ability:trap_sense#rogue"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:rogue",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:misdirection#rogue_chameleon"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:effortless_sneak#rogue_chameleon"]
+    }]
+  }]
 }

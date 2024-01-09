@@ -8,6 +8,7 @@ import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
 import {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
 import {FeatureSummary} from "../../../data/model/Feature.ts";
 import Database from "../../../data/model/Database.ts";
+import {FeatureSelectCategory} from "../../../data/model/Choice.ts";
 
 interface DataChoiceSelectButtonProps {
   choiceRef: FeatureSelectChoiceRef;
@@ -41,7 +42,7 @@ export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id
       search={search}
       optionsFn={(query: string|undefined, category: ChoiceSelectorCategory|undefined) => choiceRef.options(query, category?.tag).map((option: FeatureSummary) =>
           featureToChoiceSelectorOption(option, database, characterWithoutCurrent, descriptionFn))}
-      categoriesFn={() => choiceRef.categories.map((category: ChoiceSelectorCategory) => new ChoiceSelectorCategory(category.label, category.tag))}
+      categoriesFn={() => choiceRef.categories.map((category: FeatureSelectCategory) => new ChoiceSelectorCategory(category.label, category.tag))}
       children={children}
       actionVerb={choiceRef.repeatingIndex === 0 ? 'Select' : 'Add'}
       removable={choiceRef.repeatingIndex > 0 && characterAtLevel.selected(choiceRef) !== ''}

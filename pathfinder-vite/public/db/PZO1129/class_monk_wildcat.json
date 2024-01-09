@@ -49,68 +49,48 @@
             "targetKey": "modifies:ability:diamond_soul#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:ready_for_anything#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d3"
-        }, {
-          "featureId": "ability:brawler_maneuver_training#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d4"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d4"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d6"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d8"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d10"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d12"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d14"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d16"
-        }, {
-          "featureId": "ability:improvised_weapon_mastery#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d18"
-        }, {
-          "featureId": "ability:knockout#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d9"
-        }, {
-          "featureId": "ability:knockout#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d12"
-        }, {
-          "featureId": "ability:turn_the_tables#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d13"
-        }, {
-          "featureId": "ability:dirty_blow#monk_wildcat",
-          "conditionFormula": "@class:monk\u003e\u003d19"
-        }],
-        "unlinks": [{
-          "featureId": "ability:still_mind#monk"
-        }, {
-          "featureId": "ability:ki_pool#monk"
-        }, {
-          "featureId": "ability:high_jump#monk"
-        }, {
-          "featureId": "ability:slow_fall#monk"
-        }, {
-          "featureId": "ability:abundant_step#monk"
-        }, {
-          "featureId": "ability:improved_evasion#monk"
-        }, {
-          "featureId": "ability:diamond_soul#monk"
-        }, {
-          "featureId": "ability:empty_body#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:dirty_blow#monk_wildcat"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:ready_for_anything#monk_wildcat"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:brawler_maneuver_training#monk_wildcat", "ability:improvised_weapon_mastery#monk_wildcat"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:knockout#monk_wildcat"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat", "ability:knockout#monk_wildcat"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:turn_the_tables#monk_wildcat"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"]
+    }]
+  }]
 }

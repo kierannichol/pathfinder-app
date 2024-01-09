@@ -21,6 +21,13 @@ public class Description {
         return new Description(text, new HashMap<>());
     }
 
+    public static Description copy(Description template) {
+        if (template == null) {
+            return null;
+        }
+        return new Description(template.text(), new HashMap<>(template.sections));
+    }
+
     public void text(String text) {
         this.text = text;
     }

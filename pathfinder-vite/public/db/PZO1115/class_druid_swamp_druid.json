@@ -29,30 +29,24 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:marshwight#druid_swamp_druid",
-          "conditionFormula": "@class:druid\u003e\u003d2"
-        }, {
-          "featureId": "ability:swamp_strider#druid_swamp_druid",
-          "conditionFormula": "@class:druid\u003e\u003d3"
-        }, {
-          "featureId": "ability:pond_scum#druid_swamp_druid",
-          "conditionFormula": "@class:druid\u003e\u003d4"
-        }, {
-          "featureId": "ability:slippery#druid_swamp_druid",
-          "conditionFormula": "@class:druid\u003e\u003d13"
-        }],
-        "unlinks": [{
-          "featureId": "ability:woodland_stride#druid"
-        }, {
-          "featureId": "ability:trackless_step#druid"
-        }, {
-          "featureId": "ability:resist_natures_lure#druid"
-        }, {
-          "featureId": "ability:a_thousand_faces#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:marshwight#druid_swamp_druid"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:swamp_strider#druid_swamp_druid"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:pond_scum#druid_swamp_druid"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:slippery#druid_swamp_druid"]
+    }]
+  }]
 }

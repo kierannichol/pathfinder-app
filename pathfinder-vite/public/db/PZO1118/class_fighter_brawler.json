@@ -25,40 +25,42 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:close_control#fighter_brawler",
-          "conditionFormula": "@class:fighter\u003e\u003d2"
-        }, {
-          "featureId": "ability:close_combatant#fighter_brawler",
-          "conditionFormula": "@class:fighter\u003e\u003d3"
-        }, {
-          "featureId": "ability:menacing_stance#fighter_brawler",
-          "conditionFormula": "@class:fighter\u003e\u003d7"
-        }, {
-          "featureId": "ability:no_escape#fighter_brawler",
-          "conditionFormula": "@class:fighter\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_mastery#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:close_control#fighter_brawler"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:close_combatant#fighter_brawler"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 5,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:menacing_stance#fighter_brawler"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:no_escape#fighter_brawler"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 11,
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 13,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }]
+  }]
 }

@@ -25,19 +25,15 @@
             "targetKey": "modifies:ability:supreme_charge#cavalier",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:transfixing_charge#cavalier_gendarme",
-          "conditionFormula": "@class:cavalier\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:feat#cavalier"
-        }, {
-          "featureId": "ability:tactician_greater_tactician_master_tactician#cavalier"
-        }, {
-          "featureId": "ability:supreme_charge#cavalier"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:transfixing_charge#cavalier_gendarme"]
+    }]
+  }]
 }

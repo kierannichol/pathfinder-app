@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:the_sacred_shields_holy_champion_ability#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bastion_of_good#paladin_sacred_shield",
-          "conditionFormula": "@class:paladin\u003e\u003d1"
-        }, {
-          "featureId": "ability:holy_shield#paladin_sacred_shield",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:improved_bastion#paladin_sacred_shield",
-          "conditionFormula": "@class:paladin\u003e\u003d11"
-        }, {
-          "featureId": "ability:perfect_bastion#paladin_sacred_shield",
-          "conditionFormula": "@class:paladin\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:smite_evil#paladin"
-        }, {
-          "featureId": "ability:channel_positive_energy#paladin"
-        }, {
-          "featureId": "ability:the_paladins_aura_of_justice#paladin"
-        }, {
-          "featureId": "ability:the_sacred_shields_holy_champion_ability#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:bastion_of_good#paladin_sacred_shield"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:perfect_bastion#paladin_sacred_shield"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:holy_shield#paladin_sacred_shield"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:improved_bastion#paladin_sacred_shield"]
+    }]
+  }]
 }

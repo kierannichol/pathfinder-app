@@ -40,52 +40,33 @@
             "targetKey": "modifies:ability:well_versed#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:arcane_strike#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:bardic_performance#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:bonus_feat#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:bonus_feat#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:bonus_feat#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d6"
-        }, {
-          "featureId": "ability:bonus_feat#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d10"
-        }, {
-          "featureId": "ability:bonus_feat#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d14"
-        }, {
-          "featureId": "ability:bonus_feat#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d18"
-        }, {
-          "featureId": "ability:arcane_bond#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }, {
-          "featureId": "ability:arcane_armor#bard_arcane_duelist",
-          "conditionFormula": "@class:bard\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bardic_knowledge#bard"
-        }, {
-          "featureId": "ability:countersong#bard"
-        }, {
-          "featureId": "ability:well_versed#bard"
-        }, {
-          "featureId": "ability:versatile_performance#bard"
-        }, {
-          "featureId": "ability:lore_master#bard"
-        }, {
-          "featureId": "ability:jack_of_all_trades#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:arcane_strike#bard_arcane_duelist", "ability:bardic_performance#bard_arcane_duelist"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:bonus_feat#bard_arcane_duelist"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:bonus_feat#bard_arcane_duelist", "ability:bonus_feat#bard_arcane_duelist"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:arcane_bond#bard_arcane_duelist"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:bonus_feat#bard_arcane_duelist"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:bonus_feat#bard_arcane_duelist", "ability:arcane_armor#bard_arcane_duelist"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:bonus_feat#bard_arcane_duelist"]
+    }]
+  }]
 }

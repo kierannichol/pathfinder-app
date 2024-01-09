@@ -2,7 +2,7 @@
   "id": "class:brawler#strangler",
   "name": "Strangler",
   "tags": ["archetype", "brawler"],
-  "enabledFormula": "!@modifies:ability:improved_awesome_blow#brawler AND !@modifies:ability:awesome_blow#brawler AND !@modifies:ability:knockout#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:unarmed_strike#brawler AND !@modifies:ability:brawlers_flurry#brawler",
+  "enabledFormula": "!@modifies:ability:awesome_blow#brawler AND !@modifies:ability:improved_awesome_blow#brawler AND !@modifies:ability:knockout#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:unarmed_strike#brawler AND !@modifies:ability:brawlers_flurry#brawler",
   "maxStacks": 1,
   "description": {
     "text": "A strangler is trained to choke the life out of her victims with her vise-like grip. Some stranglers are self-taught and are little more than brutish murderers, unhinged sociopaths, or opportunistic alley-bashers. Others are members of murder cults or specialized schools of assassination, trained since the cradle to kill with their bare hands."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:improved_awesome_blow#brawler",
+            "targetKey": "modifies:ability:awesome_blow#brawler",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:awesome_blow#brawler",
+            "targetKey": "modifies:ability:improved_awesome_blow#brawler",
             "numberValue": 1
           }
         }, {
@@ -40,40 +40,27 @@
             "targetKey": "modifies:ability:brawlers_flurry#brawler",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:strangle#brawler_strangler",
-          "conditionFormula": "@class:brawler\u003e\u003d1"
-        }, {
-          "featureId": "ability:practiced_strangler#brawler_strangler",
-          "conditionFormula": "@class:brawler\u003e\u003d2"
-        }, {
-          "featureId": "ability:sleeper_hold#brawler_strangler",
-          "conditionFormula": "@class:brawler\u003e\u003d4"
-        }, {
-          "featureId": "ability:sleeper_hold#brawler_strangler",
-          "conditionFormula": "@class:brawler\u003e\u003d10"
-        }, {
-          "featureId": "ability:sleeper_hold#brawler_strangler",
-          "conditionFormula": "@class:brawler\u003e\u003d16"
-        }, {
-          "featureId": "ability:neckbreaker#brawler_strangler",
-          "conditionFormula": "@class:brawler\u003e\u003d16"
-        }],
-        "unlinks": [{
-          "featureId": "ability:unarmed_strike#brawler"
-        }, {
-          "featureId": "ability:brawlers_flurry#brawler"
-        }, {
-          "featureId": "ability:ac_bonus#brawler"
-        }, {
-          "featureId": "ability:knockout#brawler"
-        }, {
-          "featureId": "ability:improved_awesome_blow#brawler"
-        }, {
-          "featureId": "ability:awesome_blow#brawler"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:brawler",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:sleeper_hold#brawler_strangler", "ability:neckbreaker#brawler_strangler"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:strangle#brawler_strangler"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:practiced_strangler#brawler_strangler"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:sleeper_hold#brawler_strangler"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:sleeper_hold#brawler_strangler"]
+    }]
+  }]
 }

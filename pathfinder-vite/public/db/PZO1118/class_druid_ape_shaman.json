@@ -25,25 +25,21 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:totem_transformation#druid_ape_shaman",
-          "conditionFormula": "@class:druid\u003e\u003d2"
-        }, {
-          "featureId": "ability:totemic_summons#druid_ape_shaman",
-          "conditionFormula": "@class:druid\u003e\u003d5"
-        }, {
-          "featureId": "ability:bonus_feat#druid_ape_shaman",
-          "conditionFormula": "@class:druid\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:woodland_stride#druid"
-        }, {
-          "featureId": "ability:a_thousand_faces#druid"
-        }, {
-          "featureId": "ability:venom_immunity#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:totem_transformation#druid_ape_shaman"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:totemic_summons#druid_ape_shaman"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:bonus_feat#druid_ape_shaman"]
+    }]
+  }]
 }

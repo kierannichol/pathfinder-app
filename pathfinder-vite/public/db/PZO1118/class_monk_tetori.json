@@ -45,42 +45,30 @@
             "targetKey": "modifies:ability:abundant_step_improved_evasion_timeless_body#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:graceful_grappler#monk_tetori",
-          "conditionFormula": "@class:monk\u003e\u003d1"
-        }, {
-          "featureId": "ability:counter_grapple#monk_tetori",
-          "conditionFormula": "@class:monk\u003e\u003d4"
-        }, {
-          "featureId": "ability:break_free#monk_tetori",
-          "conditionFormula": "@class:monk\u003e\u003d5"
-        }, {
-          "featureId": "ability:inescapable_grasp#monk_tetori",
-          "conditionFormula": "@class:monk\u003e\u003d9"
-        }, {
-          "featureId": "ability:form_lock#monk_tetori",
-          "conditionFormula": "@class:monk\u003e\u003d13"
-        }, {
-          "featureId": "ability:iron_body#monk_tetori",
-          "conditionFormula": "@class:monk\u003e\u003d19"
-        }],
-        "unlinks": [{
-          "featureId": "ability:flurry_of_blows#monk"
-        }, {
-          "featureId": "ability:slow_fall#monk"
-        }, {
-          "featureId": "ability:high_jump#monk"
-        }, {
-          "featureId": "ability:abundant_step_improved_evasion_timeless_body#monk"
-        }, {
-          "featureId": "ability:tongue_of_the_sun_and_moon#monk"
-        }, {
-          "featureId": "ability:diamond_soul#monk"
-        }, {
-          "featureId": "ability:empty_body#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:graceful_grappler#monk_tetori"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:iron_body#monk_tetori"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:counter_grapple#monk_tetori"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:break_free#monk_tetori"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:inescapable_grasp#monk_tetori"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:form_lock#monk_tetori"]
+    }]
+  }]
 }

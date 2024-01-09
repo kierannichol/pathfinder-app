@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:rangers_spells#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:trap#ranger_trapper",
-          "conditionFormula": "@class:ranger\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:rangers_spells#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:trap#ranger_trapper"]
+    }]
+  }]
 }

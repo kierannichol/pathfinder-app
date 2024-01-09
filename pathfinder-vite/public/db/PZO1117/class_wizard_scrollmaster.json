@@ -20,17 +20,15 @@
             "targetKey": "modifies:ability:the_10th_level_wizard_bonus_feat#wizard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:improved_scroll_casting#wizard_scrollmaster",
-          "conditionFormula": "@class:wizard\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_wizards_arcane_bond#wizard"
-        }, {
-          "featureId": "ability:the_10th_level_wizard_bonus_feat#wizard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:wizard",
+    "stackModifications": [{
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:improved_scroll_casting#wizard_scrollmaster"]
+    }]
+  }]
 }

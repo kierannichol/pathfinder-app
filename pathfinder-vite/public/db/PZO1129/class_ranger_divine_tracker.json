@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:hunters_bond#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:blessings#ranger_divine_tracker",
-          "conditionFormula": "@class:ranger\u003e\u003d4"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hunters_bond#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:blessings#ranger_divine_tracker"]
+    }]
+  }]
 }

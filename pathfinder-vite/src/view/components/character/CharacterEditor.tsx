@@ -9,6 +9,8 @@ import SelectClassButton from "./SelectClassButton.tsx";
 import Character from "../../../data/model/Character.ts";
 import ChoiceRef, {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
 import {ChoiceInputType} from "../../../data/model/Choice.ts";
+import {Link} from "react-router-dom";
+import {FaFileLines} from "react-icons/fa6";
 
 interface CharacterEditorProps {
   loaded: Character;
@@ -65,7 +67,7 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
     <header>Character Information</header>
     <section>
       {characterLevel0.choices
-      .filter(choice => choice.type !== 'ability_score')
+      .filter(choice => choice.type !== 'ability_score' && choice.type !== 'asi')
       .map(choice => <div key={choice.path}>
         <label htmlFor={choice.path}>{choice.label}</label>
         {choice.inputType === ChoiceInputType.Text &&
@@ -97,7 +99,13 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
       <header>
         <div>Level {characterAtLevel.level}</div>
         <div> - </div>
-        <SelectClassButton characterAtLevel={characterAtLevel}/></header>
+        <SelectClassButton characterAtLevel={characterAtLevel}/>
+        <div className={'character-sheet-button'}>
+          <Link to={`/character/sheet/${character.id}/${characterAtLevel.level}`} target={'_blank'} rel='noopener noreferrer'>
+            <FaFileLines />
+          </Link>
+        </div>
+      </header>
       <section>
         <CharacterLevelEditor characterAtLevel={characterAtLevel}
                               characterAtPreviousLevel={characterAtLevels[characterAtLevel.level - 1]}

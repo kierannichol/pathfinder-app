@@ -1,0 +1,62 @@
+{
+  "id": "class:alchemist#ectochymist",
+  "name": "Ectochymist",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:the_8th_level_alchemist_discovery#alchemist AND !@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:poison_use#alchemist AND !@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:poison_resistance#alchemist AND !@modifies:ability:bombs#alchemist",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:the_8th_level_alchemist_discovery#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_use#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swift_poisoning#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_resistance#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bombs#alchemist",
+            "numberValue": 1
+          }
+        }]
+      }]
+    }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:alchemist",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:cool_headed#alchemist_ectochymist", "ability:advanced_ectochymistry#alchemist_ectochymist"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:swift_ectochymistry#alchemist_ectochymist"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:ghost_trap#alchemist_ectochymist"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:ectochymical_analysis#alchemist_ectochymist"]
+    }]
+  }]
+}

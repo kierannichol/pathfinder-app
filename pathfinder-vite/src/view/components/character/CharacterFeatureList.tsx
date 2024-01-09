@@ -1,8 +1,8 @@
 import React, {useMemo} from "react";
 import "./CharacterFeatureList.scss";
 import FeatureDescription from "./FeatureDescription";
-import PathfinderSelect from "../controls/PathfinderSelect.tsx";
-import variants from "../controls/PathfinderButtonVariants.module.scss";
+import PathfinderSelect from "../controls/SelectBlock.tsx";
+import variants from "../controls/ButtonVariants.module.scss";
 import Expression from "../../../utils/logic/Expression.ts";
 import Feature from "../../../data/model/Feature.ts";
 import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";

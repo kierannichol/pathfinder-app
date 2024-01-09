@@ -13,7 +13,8 @@ export class ResolvedEntityContext {
   public constructor(public readonly baseEntity: Entity,
                      private readonly database: Database,
                      private readonly selections: PackedSelections,
-                     private readonly cache: {[id: string]: Feature} = {}) {
+                     private readonly cache: {[id: string]: Feature} = {},
+                     private readonly featureCounts: {[id: string]: number} = {}) {
   }
 
   cleanup() {
@@ -28,6 +29,10 @@ export class ResolvedEntityContext {
 
   feature(featureId: string): Feature|undefined {
     return this.found[featureId];
+  }
+
+  featureCount(featureId: string): number {
+    return this.featureCounts[featureId] ?? 0;
   }
 
   async addFeature(basePath: string, featureId: string): Promise<void> {
@@ -51,6 +56,7 @@ export class ResolvedEntityContext {
       this.found[featureId] = loaded;
     }
 
+    this.featureCounts[featureId] = (this.featureCounts[featureId] ?? 0) + 1;
     await feature.resolve(basePath, this);
   }
 }

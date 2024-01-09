@@ -25,6 +25,8 @@ public class Sources {
             "Pathfinder Roleplaying Game: Ultimate Magic", "PRG:UM");
 
     public static final SourceId COMPANION_HEROES_OF_THE_HIGH_COURT = new SourceId("PZO9476", "Pathfinder Player Companion: Heroes of the High Court");
+    public static final SourceId OCCULT_ADVENTURES = new SourceId("PZO1132", "Occult Adventures",
+            "Pathfinder Roleplaying Game: Occult Adventures", "OGL");
 
     public static SourceId findSourceByNameOrCode(String search) {
         if (search == null) {
@@ -78,7 +80,7 @@ public class Sources {
             new SourceId("PZO1133", "Bestiary 5"),
             new SourceId("PZO1137", "Bestiary 6"),
             new SourceId("PZO1128", "Strategy Guide"),
-//            new SourceId("PZO1132", "Occult Adventures"),
+            OCCULT_ADVENTURES,
             UNCHAINED,
 //            new Source("PZO1136", "Villain Codex"),
 //            new Source("PZO1130", "Monster Codex"),

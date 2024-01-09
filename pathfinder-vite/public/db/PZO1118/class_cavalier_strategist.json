@@ -25,25 +25,21 @@
             "targetKey": "modifies:ability:the_cavaliers_18th_level_bonus_feat#cavalier",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:drill_instructor#cavalier_strategist",
-          "conditionFormula": "@class:cavalier\u003e\u003d4"
-        }, {
-          "featureId": "ability:tactical_advantage#cavalier_strategist",
-          "conditionFormula": "@class:cavalier\u003e\u003d14"
-        }, {
-          "featureId": "ability:strategic_supremacy#cavalier_strategist",
-          "conditionFormula": "@class:cavalier\u003e\u003d18"
-        }],
-        "unlinks": [{
-          "featureId": "ability:expert_trainer#cavalier"
-        }, {
-          "featureId": "ability:greater_banner#cavalier"
-        }, {
-          "featureId": "ability:the_cavaliers_18th_level_bonus_feat#cavalier"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:strategic_supremacy#cavalier_strategist"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:drill_instructor#cavalier_strategist"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:tactical_advantage#cavalier_strategist"]
+    }]
+  }]
 }

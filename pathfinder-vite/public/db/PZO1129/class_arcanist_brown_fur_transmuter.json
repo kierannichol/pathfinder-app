@@ -20,25 +20,23 @@
             "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:powerful_change#arcanist_brown_fur_transmuter",
-          "conditionFormula": "@class:arcanist\u003e\u003d3"
-        }, {
-          "featureId": "ability:share_transmutation#arcanist_brown_fur_transmuter",
-          "conditionFormula": "@class:arcanist\u003e\u003d9"
-        }, {
-          "featureId": "ability:transmutation_supremacy#arcanist_brown_fur_transmuter",
-          "conditionFormula": "@class:arcanist\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:magical_supremacy#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:powerful_change#arcanist_brown_fur_transmuter"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:transmutation_supremacy#arcanist_brown_fur_transmuter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:share_transmutation#arcanist_brown_fur_transmuter"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }]
+  }]
 }

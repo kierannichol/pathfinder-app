@@ -15,19 +15,22 @@
             "targetKey": "modifies:ability:revelation#oracle",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bonded_spirit#oracle_spirit_guide",
-          "conditionFormula": "@class:oracle\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:revelation#oracle"
-        }, {
-          "featureId": "ability:revelation#oracle"
-        }, {
-          "featureId": "ability:revelation#oracle"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:oracle",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:bonded_spirit#oracle_spirit_guide"],
+      "linksToRemove": ["ability:revelation#oracle"]
+    }, {
+      "targetStackCount": 7,
+      "linksToRemove": ["ability:revelation#oracle"]
+    }, {
+      "targetStackCount": 15,
+      "linksToRemove": ["ability:revelation#oracle"]
+    }]
+  }]
 }

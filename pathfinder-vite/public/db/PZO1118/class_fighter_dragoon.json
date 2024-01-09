@@ -25,39 +25,37 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:skilled_rider#fighter_dragoon",
-          "conditionFormula": "@class:fighter\u003e\u003d1"
-        }, {
-          "featureId": "ability:spinning_lance#fighter_dragoon",
-          "conditionFormula": "@class:fighter\u003e\u003d7"
-        }, {
-          "featureId": "ability:banner#fighter_dragoon",
-          "conditionFormula": "@class:fighter\u003e\u003d9"
-        }, {
-          "featureId": "ability:piercing_lance#fighter_dragoon",
-          "conditionFormula": "@class:fighter\u003e\u003d11"
-        }, {
-          "featureId": "ability:leaping_lance#fighter_dragoon",
-          "conditionFormula": "@class:fighter\u003e\u003d15"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_1st_level_fighter_bonus_combat_feat#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:skilled_rider#fighter_dragoon"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:spinning_lance#fighter_dragoon"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:banner#fighter_dragoon"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:piercing_lance#fighter_dragoon"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 13,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:leaping_lance#fighter_dragoon"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }]
+  }]
 }

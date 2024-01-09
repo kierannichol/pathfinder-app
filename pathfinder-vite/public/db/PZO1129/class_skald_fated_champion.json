@@ -29,30 +29,24 @@
             "targetKey": "modifies:ability:master_skald#skald",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:watcher_of_the_weave#skald_fated_champion",
-          "conditionFormula": "@class:skald\u003e\u003d2"
-        }, {
-          "featureId": "ability:far_seer#skald_fated_champion",
-          "conditionFormula": "@class:skald\u003e\u003d5"
-        }, {
-          "featureId": "ability:shield_of_foresight#skald_fated_champion",
-          "conditionFormula": "@class:skald\u003e\u003d10"
-        }, {
-          "featureId": "ability:not_this_day#skald_fated_champion",
-          "conditionFormula": "@class:skald\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:well_versed#skald"
-        }, {
-          "featureId": "ability:spell_kenning#skald"
-        }, {
-          "featureId": "ability:the_dirge_of_doom_raging_song#skald"
-        }, {
-          "featureId": "ability:master_skald#skald"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:skald",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:watcher_of_the_weave#skald_fated_champion"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:not_this_day#skald_fated_champion"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:far_seer#skald_fated_champion"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:shield_of_foresight#skald_fated_champion"]
+    }]
+  }]
 }

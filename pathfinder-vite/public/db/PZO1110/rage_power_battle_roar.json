@@ -3,14 +3,11 @@
   "name": "Battle Roar",
   "tags": ["class_feature", "barbarian", "rage_power"],
   "enabledFormula": "all(@class:barbarian\u003e\u003d6,@rage_power:intimidating_glare)",
-  "maxStacks": 1,
   "description": {
     "text": "You deal an additional 1d6 points of sonic damage to an opponent you successfully demoralized using intimidating glare."
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-      }]
+    "repeatingStack": {
     }
   }
 }

@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:damage_reduction#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:sixth_sense#barbarian_superstitious",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }, {
-          "featureId": "ability:keen_senses#barbarian_superstitious",
-          "conditionFormula": "@class:barbarian\u003e\u003d7"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trap_sense#barbarian"
-        }, {
-          "featureId": "ability:damage_reduction#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:sixth_sense#barbarian_superstitious"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:keen_senses#barbarian_superstitious"]
+    }]
+  }]
 }

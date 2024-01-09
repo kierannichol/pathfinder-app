@@ -29,29 +29,21 @@
             "targetKey": "modifies:ability:arcane_bond#wizard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:arcane_bond#wizard_spirit_whisperer",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:spirit_link#wizard_spirit_whisperer",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:spirit_hex#wizard_spirit_whisperer",
-          "conditionFormula": "@class:wizard\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:spellbooks#wizard"
-        }, {
-          "featureId": "ability:arcane_bond#wizard"
-        }, {
-          "featureId": "ability:arcane_school#wizard"
-        }, {
-          "featureId": "ability:bonus_feat#wizard"
-        }, {
-          "featureId": "ability:bonus_feat#wizard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:wizard",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:arcane_bond#wizard_spirit_whisperer", "ability:spirit_link#wizard_spirit_whisperer"]
+    }, {
+      "targetStackCount": 20,
+      "linksToRemove": ["ability:bonus_feat#wizard"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:spirit_hex#wizard_spirit_whisperer"]
+    }]
+  }]
 }

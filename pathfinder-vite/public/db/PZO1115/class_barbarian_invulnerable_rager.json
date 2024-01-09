@@ -30,24 +30,18 @@
             "targetKey": "modifies:ability:damage_reduction#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:invulnerability#barbarian_invulnerable_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d2"
-        }, {
-          "featureId": "ability:extreme_endurance#barbarian_invulnerable_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:damage_reduction#barbarian"
-        }, {
-          "featureId": "ability:trap_sense#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:invulnerability#barbarian_invulnerable_rager"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:extreme_endurance#barbarian_invulnerable_rager"]
+    }]
+  }]
 }

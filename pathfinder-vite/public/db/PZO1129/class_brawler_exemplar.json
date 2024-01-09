@@ -35,29 +35,21 @@
             "targetKey": "modifies:ability:brawlers_strike#brawler",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:call_to_arms#brawler_exemplar",
-          "conditionFormula": "@class:brawler\u003e\u003d1"
-        }, {
-          "featureId": "ability:inspiring_prowess#brawler_exemplar",
-          "conditionFormula": "@class:brawler\u003e\u003d3"
-        }, {
-          "featureId": "ability:field_instruction#brawler_exemplar",
-          "conditionFormula": "@class:brawler\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:unarmed_strike#brawler"
-        }, {
-          "featureId": "ability:close_weapon_mastery#brawler"
-        }, {
-          "featureId": "ability:maneuver_training#brawler"
-        }, {
-          "featureId": "ability:ac_bonus#brawler"
-        }, {
-          "featureId": "ability:brawlers_strike#brawler"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:brawler",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:call_to_arms#brawler_exemplar"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:inspiring_prowess#brawler_exemplar"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:field_instruction#brawler_exemplar"]
+    }]
+  }]
 }

@@ -4,6 +4,7 @@ import {combinePath} from "./Entity.ts";
 import {FeatureResolvable} from "./FeatureResolvable.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {FixedStack, RepeatingStack, Stack, Stacks} from "./Stack.ts";
+import FeatureModification from "./FeatureModification.ts";
 
 export default class Feature implements FeatureResolvable {
 
@@ -14,7 +15,8 @@ export default class Feature implements FeatureResolvable {
               public readonly enabledFormula: string,
               public readonly maxStacks: number|null,
               public readonly description: Description,
-              public readonly stacks: Stacks) {
+              public readonly stacks: Stacks,
+              public readonly featureModifications: FeatureModification[]) {
   }
 
   isEnabled(context: DataContext): boolean {
@@ -29,8 +31,13 @@ export default class Feature implements FeatureResolvable {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<void> {
-    const path = combinePath(basePath, this.id);
-    return this.stacks.resolve(path, context);
+    const count = context.featureCount(this.id);
+    const path = combinePath(basePath, this.id, count);
+
+    await this.stacks.next(count).resolve(path, context);
+    for (let featureModification of this.featureModifications) {
+      await featureModification.resolve(path, context);
+    }
   }
 }
 
@@ -68,6 +75,7 @@ export class FeatureBuilder {
   private _description: Description = Description.empty();
   private _fixedStack: Stack[] = [];
   private _repeatingStack: Stack|undefined = undefined;
+  private _featureModifications: FeatureModification[] = [];
 
   public constructor(public readonly id: string) {
   }
@@ -135,6 +143,7 @@ export class FeatureBuilder {
         this._description,
         this._repeatingStack !== undefined
           ? new RepeatingStack(this._repeatingStack)
-          : new FixedStack(this._fixedStack));
+          : new FixedStack(this._fixedStack),
+        this._featureModifications);
   }
 }

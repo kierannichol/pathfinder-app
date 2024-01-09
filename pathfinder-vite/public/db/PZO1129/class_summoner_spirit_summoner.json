@@ -29,27 +29,18 @@
             "targetKey": "modifies:ability:aspect_makers_call_merge_forms#summoner",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:spirit#summoner_spirit_summoner",
-          "conditionFormula": "@class:summoner\u003e\u003d1"
-        }, {
-          "featureId": "ability:eidolon#summoner_spirit_summoner",
-          "conditionFormula": "@class:summoner\u003e\u003d1"
-        }, {
-          "featureId": "ability:hex#summoner_spirit_summoner",
-          "conditionFormula": "@class:summoner\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:summon_monster_i#summoner"
-        }, {
-          "featureId": "ability:eidolon#summoner"
-        }, {
-          "featureId": "ability:transposition#summoner"
-        }, {
-          "featureId": "ability:aspect_makers_call_merge_forms#summoner"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:summoner",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:spirit#summoner_spirit_summoner", "ability:eidolon#summoner_spirit_summoner"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:hex#summoner_spirit_summoner"]
+    }]
+  }]
 }

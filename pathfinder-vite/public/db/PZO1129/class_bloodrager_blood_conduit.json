@@ -35,29 +35,21 @@
             "targetKey": "modifies:ability:indomitable_will#bloodrager",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:contact_specialist#bloodrager_blood_conduit",
-          "conditionFormula": "@class:bloodrager\u003e\u003d1"
-        }, {
-          "featureId": "ability:spell_conduit#bloodrager_blood_conduit",
-          "conditionFormula": "@class:bloodrager\u003e\u003d5"
-        }, {
-          "featureId": "ability:reflexive_conduit#bloodrager_blood_conduit",
-          "conditionFormula": "@class:bloodrager\u003e\u003d14"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#bloodrager"
-        }, {
-          "featureId": "ability:bloodline_feat#bloodrager"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#bloodrager"
-        }, {
-          "featureId": "ability:uncanny_dodge#bloodrager"
-        }, {
-          "featureId": "ability:indomitable_will#bloodrager"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bloodrager",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:contact_specialist#bloodrager_blood_conduit"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:spell_conduit#bloodrager_blood_conduit"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:reflexive_conduit#bloodrager_blood_conduit"]
+    }]
+  }]
 }

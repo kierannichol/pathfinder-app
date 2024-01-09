@@ -39,37 +39,27 @@
             "targetKey": "modifies:ability:life_bond#summoner",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:natures_call#summoner_naturalist",
-          "conditionFormula": "@class:summoner\u003e\u003d1"
-        }, {
-          "featureId": "ability:animal_focus#summoner_naturalist",
-          "conditionFormula": "@class:summoner\u003e\u003d4"
-        }, {
-          "featureId": "ability:second_animal_focus#summoner_naturalist",
-          "conditionFormula": "@class:summoner\u003e\u003d10"
-        }, {
-          "featureId": "ability:shared_focus#summoner_naturalist",
-          "conditionFormula": "@class:summoner\u003e\u003d14"
-        }, {
-          "featureId": "ability:third_animal_focus#summoner_naturalist",
-          "conditionFormula": "@class:summoner\u003e\u003d18"
-        }],
-        "unlinks": [{
-          "featureId": "ability:summon_monster_i#summoner"
-        }, {
-          "featureId": "ability:greater_shield_ally#summoner"
-        }, {
-          "featureId": "ability:shield_ally#summoner"
-        }, {
-          "featureId": "ability:aspect#summoner"
-        }, {
-          "featureId": "ability:life_bond#summoner"
-        }, {
-          "featureId": "ability:greater_aspect#summoner"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:summoner",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:natures_call#summoner_naturalist"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:third_animal_focus#summoner_naturalist"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:animal_focus#summoner_naturalist"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:second_animal_focus#summoner_naturalist"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:shared_focus#summoner_naturalist"]
+    }]
+  }]
 }

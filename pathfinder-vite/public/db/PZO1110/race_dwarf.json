@@ -4,9 +4,27 @@
   "tags": ["race", "humanoid (dwarf)"],
   "maxStacks": 1,
   "description": {
+    "text": "These short and stocky defenders of mountain fortresses are often seen as stern and humorless. Known for mining the earth’s treasures and crafting magnificent items from ore and gemstones, they have an unrivaled affinity for the bounties of the deep earth. Dwarves also have a tendency toward traditionalism and isolation that sometimes manifests as xenophobia."
   },
   "stacks": {
     "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "speed:base",
+            "numberValue": 20
+          }
+        }],
+        "links": [{
+          "featureId": "size:m"
+        }, {
+          "featureId": "asi:con_p2"
+        }, {
+          "featureId": "asi:wis_p2"
+        }, {
+          "featureId": "asi:cha_m2"
+        }]
+      }]
     }
   }
 }

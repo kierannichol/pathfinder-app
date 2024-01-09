@@ -14,20 +14,20 @@
             "targetKey": "modifies:ability:mercy#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:favored_terrain#paladin_holy_guide",
-          "conditionFormula": "@class:paladin\u003e\u003d3"
-        }, {
-          "featureId": "ability:teamwork_feat#paladin_holy_guide",
-          "conditionFormula": "@class:paladin\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:mercy#paladin"
-        }, {
-          "featureId": "ability:mercy#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:favored_terrain#paladin_holy_guide"],
+      "linksToRemove": ["ability:mercy#paladin"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:teamwork_feat#paladin_holy_guide"],
+      "linksToRemove": ["ability:mercy#paladin"]
+    }]
+  }]
 }

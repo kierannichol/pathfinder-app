@@ -2,43 +2,40 @@
   "id": "trait:armor_proficiency#paladin",
   "name": "Armor Proficiency (Paladin)",
   "tags": ["class_feature", "paladin", "trait"],
-  "maxStacks": 1,
   "description": {
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "proficiency:light_shield",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:heavy_armor",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:light_armor",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:buckler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:medium_armor",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "proficiency:heavy_shield",
-            "numberValue": 1
-          }
-        }]
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_shield",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:buckler",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:medium_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_shield",
+          "numberValue": 1
+        }
       }]
     }
   }

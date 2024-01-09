@@ -34,35 +34,27 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:aquatic_adaptation#druid_aquatic_druid",
-          "conditionFormula": "@class:druid\u003e\u003d2"
-        }, {
-          "featureId": "ability:natural_swimmer#druid_aquatic_druid",
-          "conditionFormula": "@class:druid\u003e\u003d3"
-        }, {
-          "featureId": "ability:resist_oceans_fury#druid_aquatic_druid",
-          "conditionFormula": "@class:druid\u003e\u003d4"
-        }, {
-          "featureId": "ability:seaborn#druid_aquatic_druid",
-          "conditionFormula": "@class:druid\u003e\u003d9"
-        }, {
-          "featureId": "ability:deep_diver#druid_aquatic_druid",
-          "conditionFormula": "@class:druid\u003e\u003d13"
-        }],
-        "unlinks": [{
-          "featureId": "ability:woodland_stride#druid"
-        }, {
-          "featureId": "ability:trackless_step#druid"
-        }, {
-          "featureId": "ability:resist_natures_lure#druid"
-        }, {
-          "featureId": "ability:venom_immunity#druid"
-        }, {
-          "featureId": "ability:a_thousand_faces#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:aquatic_adaptation#druid_aquatic_druid"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:natural_swimmer#druid_aquatic_druid"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:resist_oceans_fury#druid_aquatic_druid"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:seaborn#druid_aquatic_druid"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:deep_diver#druid_aquatic_druid"]
+    }]
+  }]
 }

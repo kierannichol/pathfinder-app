@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
+import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import EditorLayoutRoute from "./view/routes/EditorLayoutRoute.tsx";
 import CharacterListRoute, {characterListLoader} from "./view/routes/CharacterListRoute.tsx";
 import CharacterEditRoute, {characterEditLoader} from "./view/routes/CharacterEditRoute.tsx";
 import {loginLoader, LoginRoute} from "./view/routes/LoginRoute.tsx";
+import CharacterSheetRoute, {characterSheetLoader} from "./view/routes/CharacterSheetRoute.tsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +30,11 @@ const router = createBrowserRouter([
         loader: characterEditLoader
       }
     ]
+  },
+  {
+    path: "character/sheet/:id/:level",
+    element: <CharacterSheetRoute />,
+    loader: characterSheetLoader
   },
 ]);
 

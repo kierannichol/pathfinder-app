@@ -1,0 +1,15 @@
+
+ability:spellcasting#wizardSpell Casting (Wizard)class_featurewizardability¢
+Wizard can cast spells.ªÙ
+Ö
+ªB@
+#trait:level_0_spells_per_day#wizard3+if(@class:wizard>1,1,0)ªrp
+#trait:level_1_spells_per_day#wizardI1+if(@class:wizard>1,1,0)+if(@class:wizard>3,1,0)+if(@class:wizard>6,1,0)ªŠ
+#trait:level_2_spells_per_day#wizardcif(@class:wizard>=3,1+if(@class:wizard>3,1,0)+if(@class:wizard>5,1,0)+if(@class:wizard>8,1,0),null)ªŽ‹
+#trait:level_3_spells_per_day#wizarddif(@class:wizard>=5,1+if(@class:wizard>5,1,0)+if(@class:wizard>7,1,0)+if(@class:wizard>10,1,0),null)ªŽ‹
+#trait:level_4_spells_per_day#wizarddif(@class:wizard>=7,1+if(@class:wizard>7,1,0)+if(@class:wizard>9,1,0)+if(@class:wizard>12,1,0),null)ªŒ
+#trait:level_5_spells_per_day#wizardeif(@class:wizard>=9,1+if(@class:wizard>9,1,0)+if(@class:wizard>11,1,0)+if(@class:wizard>14,1,0),null)ª‘Ž
+#trait:level_6_spells_per_day#wizardgif(@class:wizard>=11,1+if(@class:wizard>11,1,0)+if(@class:wizard>13,1,0)+if(@class:wizard>16,1,0),null)ª‘Ž
+#trait:level_7_spells_per_day#wizardgif(@class:wizard>=13,1+if(@class:wizard>13,1,0)+if(@class:wizard>15,1,0)+if(@class:wizard>18,1,0),null)ª‘Ž
+#trait:level_8_spells_per_day#wizardgif(@class:wizard>=15,1+if(@class:wizard>15,1,0)+if(@class:wizard>17,1,0)+if(@class:wizard>19,1,0),null)ª‘Ž
+#trait:level_9_spells_per_day#wizardgif(@class:wizard>=17,1+if(@class:wizard>17,1,0)+if(@class:wizard>18,1,0)+if(@class:wizard>19,1,0),null)

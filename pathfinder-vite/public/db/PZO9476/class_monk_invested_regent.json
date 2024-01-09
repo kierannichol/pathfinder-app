@@ -14,33 +14,30 @@
             "targetKey": "modifies:ability:bonus_feat#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:investiture#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d1"
-        }, {
-          "featureId": "ability:investiture#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d2"
-        }, {
-          "featureId": "ability:investiture#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d6"
-        }, {
-          "featureId": "ability:investiture#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d10"
-        }, {
-          "featureId": "ability:investiture#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d14"
-        }, {
-          "featureId": "ability:investiture#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d18"
-        }, {
-          "featureId": "ability:vested_power#monk_invested_regent",
-          "conditionFormula": "@class:monk\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bonus_feat#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:investiture#monk_invested_regent"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:investiture#monk_invested_regent"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:investiture#monk_invested_regent", "ability:vested_power#monk_invested_regent"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:investiture#monk_invested_regent"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:investiture#monk_invested_regent"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:investiture#monk_invested_regent"]
+    }]
+  }]
 }

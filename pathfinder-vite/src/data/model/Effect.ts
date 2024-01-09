@@ -1,9 +1,24 @@
-import {Formula} from "@kierannichol/formula-js";
+import {DataContext, Formula, Resolvable} from "@kierannichol/formula-js";
 import {CharacterState} from "./CharacterState.ts";
 
 export interface Effect {
 
   applyTo(state: CharacterState): void;
+}
+
+export class ConditionalEffect implements Effect {
+
+  constructor(private readonly effect: Effect,
+              private readonly conditionFormula: string) {
+  }
+
+  applyTo(state: CharacterState): void {
+    const dataContext: DataContext = DataContext.of(state);
+    let condition: Resolvable = Formula.parse(this.conditionFormula);
+    if (condition.resolve(dataContext)?.asBoolean() ?? false) {
+      this.effect.applyTo(state);
+    }
+  }
 }
 
 export class SetFormulaEffect implements Effect {
@@ -13,7 +28,12 @@ export class SetFormulaEffect implements Effect {
   }
 
   applyTo(state: CharacterState): void {
-    state[this.targetKey] = Formula.parse(this.formula);
+    try {
+      state[this.targetKey] = Formula.parse(this.formula);
+    } catch (e) {
+      console.error("Unable to parse: " + this.formula);
+      throw e;
+    }
   }
 }
 

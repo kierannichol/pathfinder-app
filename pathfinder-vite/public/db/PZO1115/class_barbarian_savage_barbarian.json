@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:damage_reduction#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:naked_courage#barbarian_savage_barbarian",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }, {
-          "featureId": "ability:natural_toughness#barbarian_savage_barbarian",
-          "conditionFormula": "@class:barbarian\u003e\u003d7"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trap_sense#barbarian"
-        }, {
-          "featureId": "ability:damage_reduction#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:naked_courage#barbarian_savage_barbarian"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:natural_toughness#barbarian_savage_barbarian"]
+    }]
+  }]
 }

@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:brawlers_strike#brawler",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:exploit_weakness#brawler_steel_breaker",
-          "conditionFormula": "@class:brawler\u003e\u003d5"
-        }, {
-          "featureId": "ability:sunder_training#brawler_steel_breaker",
-          "conditionFormula": "@class:brawler\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:brawlers_strike#brawler"
-        }, {
-          "featureId": "ability:maneuver_training#brawler"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:brawler",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:sunder_training#brawler_steel_breaker"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:exploit_weakness#brawler_steel_breaker"]
+    }]
+  }]
 }

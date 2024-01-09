@@ -30,61 +30,49 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:dirty_maneuvers#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d2"
-        }, {
-          "featureId": "ability:catch_off_guard#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d3"
-        }, {
-          "featureId": "ability:payback#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d5"
-        }, {
-          "featureId": "ability:deadly_surprise#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d7"
-        }, {
-          "featureId": "ability:razor_sharp_chair_leg#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d9"
-        }, {
-          "featureId": "ability:craven_combatant#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d11"
-        }, {
-          "featureId": "ability:sweeping_prank#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d13"
-        }, {
-          "featureId": "ability:treacherous_blow#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d15"
-        }, {
-          "featureId": "ability:ultimate_payback#fighter_cad",
-          "conditionFormula": "@class:fighter\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bravery#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_mastery#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:dirty_maneuvers#fighter_cad"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:catch_off_guard#fighter_cad"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:ultimate_payback#fighter_cad"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:payback#fighter_cad"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:deadly_surprise#fighter_cad"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:razor_sharp_chair_leg#fighter_cad"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:craven_combatant#fighter_cad"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:sweeping_prank#fighter_cad"],
+      "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:treacherous_blow#fighter_cad"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }]
+  }]
 }

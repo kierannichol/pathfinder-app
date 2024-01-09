@@ -1,0 +1,60 @@
+:global(:root) {
+  --col-height: 24px;
+  --col-gap: 0.5rem;
+  --row-gap: 0.5rem;
+
+  --pfcs-base-font-size: 10pt;
+  --pfcs-header-font-size: 5pt;
+}
+
+:global(.box) {
+  display: flex;
+  height: var(--col-height);
+}
+
+:global(.title) {
+  font-size: 0.8em;
+  font-weight: 700;
+  font-variant-caps: small-caps;
+}
+
+.sheet {
+  padding: 0.5em;
+}
+
+.leftColumn {
+  align-self: flex-start;
+  width: 55%;
+}
+
+.rightColumn {
+  flex-grow: 1;
+  margin-top: 0.8rem;
+}
+
+.underlined {
+  border-bottom: 2px solid dimgray;
+  line-height: var(--pfcs-base-font-size);
+}
+
+.label {
+  font-size: small;
+  font-weight: 700;
+  font-variant-caps: small-caps;
+}
+
+.characterInfo {
+  flex: 1;
+}
+
+.abilityScores {
+}
+
+.health {
+  margin-top: 0.8rem;
+  flex: 1;
+}
+
+.initiative {
+
+}

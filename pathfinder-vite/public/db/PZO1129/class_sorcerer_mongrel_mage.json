@@ -19,17 +19,15 @@
             "targetKey": "modifies:ability:bloodline_spells#sorcerer",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:mongrel_reservoir#sorcerer_mongrel_mage",
-          "conditionFormula": "@class:sorcerer\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bloodline_spells#sorcerer"
-        }, {
-          "featureId": "ability:the_bloodline_bloodline_powers#sorcerer"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:sorcerer",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:mongrel_reservoir#sorcerer_mongrel_mage"]
+    }]
+  }]
 }

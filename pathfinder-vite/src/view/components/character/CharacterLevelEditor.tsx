@@ -26,11 +26,14 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
 
     <LevelStatsDisplay characterAtLevel={characterAtLevel} />
 
-    <div>
+    {characterAtLevel.search("ability:spellcasting#*")
+      .filter(f => f.id.startsWith("ability:spellcasting#"))
+      .map(spellcastingFeature =>
+    <div key={spellcastingFeature.id}>
       <SpellBookEditorButton
-          characterAtLevel={characterChanges}
+          characterAtLevel={characterAtLevel}
           onChange={onChange} />
-    </div>
+    </div>)}
 
     {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice instanceof FeatureSelectChoiceRef).map(choice => <div key={choice.path}>
       <label>{choice.label}</label>

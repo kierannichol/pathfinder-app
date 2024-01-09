@@ -15,15 +15,16 @@
             "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:sea_creature_empathy#witch_sea_witch",
-          "conditionFormula": "@class:witch\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hex#witch"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:witch",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:sea_creature_empathy#witch_sea_witch"],
+      "linksToRemove": ["ability:hex#witch"]
+    }]
+  }]
 }

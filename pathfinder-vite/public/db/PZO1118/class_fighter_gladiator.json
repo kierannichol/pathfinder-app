@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:bravery#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:fame#fighter_gladiator",
-          "conditionFormula": "@class:fighter\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bravery#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:fame#fighter_gladiator"]
+    }]
+  }]
 }

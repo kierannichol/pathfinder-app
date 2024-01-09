@@ -20,35 +20,31 @@
             "targetKey": "modifies:ability:bonus_feat#warpriest",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:mount#warpriest_divine_commander",
-          "conditionFormula": "@class:warpriest\u003e\u003d1"
-        }, {
-          "featureId": "ability:battle_tactician#warpriest_divine_commander",
-          "conditionFormula": "@class:warpriest\u003e\u003d3"
-        }, {
-          "featureId": "ability:blessed_mount#warpriest_divine_commander",
-          "conditionFormula": "@class:warpriest\u003e\u003d6"
-        }, {
-          "featureId": "ability:greater_battle_tactician#warpriest_divine_commander",
-          "conditionFormula": "@class:warpriest\u003e\u003d12"
-        }, {
-          "featureId": "ability:bless_army#warpriest_divine_commander",
-          "conditionFormula": "@class:warpriest\u003e\u003d15"
-        }],
-        "unlinks": [{
-          "featureId": "ability:blessings#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:warpriest",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:mount#warpriest_divine_commander"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:battle_tactician#warpriest_divine_commander"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:blessed_mount#warpriest_divine_commander"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:greater_battle_tactician#warpriest_divine_commander"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:bless_army#warpriest_divine_commander"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }]
+  }]
 }

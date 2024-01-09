@@ -19,17 +19,15 @@
             "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:blessing#paladin_temple_champion",
-          "conditionFormula": "@class:paladin\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:divine_bond#paladin"
-        }, {
-          "featureId": "ability:aura_of_justice#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:blessing#paladin_temple_champion"]
+    }]
+  }]
 }

@@ -14,15 +14,15 @@
             "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:charitable_mercy#paladin_oath_of_charity",
-          "conditionFormula": "@class:paladin\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:divine_bond#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:charitable_mercy#paladin_oath_of_charity"]
+    }]
+  }]
 }

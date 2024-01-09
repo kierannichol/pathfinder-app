@@ -24,6 +24,8 @@ interface ChoiceSelectorDialogProps {
   variant?: string|string[];
 }
 
+const SearchCategory = new ChoiceSelectorCategory(<FaMagnifyingGlass />, '', '_search');
+
 export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect, onCancel, optionsFn, categories = [], search = false, variant = 'special'}: ChoiceSelectorDialogProps) {
   const [selected, setSelected] = useState<string|undefined>(value);
   const [query, setQuery] = useState('');
@@ -42,12 +44,12 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
 
   useEffect(() => {
     if (hasQuery) {
-      setCategory(undefined);
+      setCategory(SearchCategory);
     }
   }, [hasQuery]);
 
   useEffect(() => {
-    if (category) {
+    if (category !== SearchCategory) {
       setQuery('');
     }
   }, [show, category]);
@@ -82,8 +84,10 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     setSelected(optionId);
   }
 
-  const handleChangeCategory = (categoryTag: string|undefined) => {
-    const category = categories?.find(category => category.tag === categoryTag);
+  const handleChangeCategory = (categoryKey: string|undefined) => {
+    const category =
+        [ SearchCategory, ...categories ]
+          .find(category => category.key === (categoryKey !== '' ? categoryKey : 'all'));
     startLoading(() => setCategory(category));
   }
 
@@ -112,13 +116,14 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
     {(categories?.length > 0 || includeSearch) &&
     <Modal.Header className={styles.header}>
       {categories.length > 0 &&
-          <ToggleButtonGroup className={styles.categories} value={category?.tag ?? ''} onChange={handleChangeCategory} name={'category'} type={'radio'}>
-            {search && <ToggleButton disabled={!hasQuery} id={'cat-search'} value={''}>
-              {/*<FontAwesomeIcon icon={faMagnifyingGlass}/>*/}
-              <FaMagnifyingGlass />
+          <ToggleButtonGroup className={styles.categories} value={category?.key ?? ''} onChange={handleChangeCategory} name={'category'} type={'radio'}>
+            {search && <ToggleButton disabled={!hasQuery} id={SearchCategory.key} value={SearchCategory.key}>
+              {SearchCategory.label}
             </ToggleButton>}
-            {categories.map(category =>
-                <ToggleButton key={category.tag} id={category.tag} value={category.tag}>{category.label}</ToggleButton>)}
+            {categories.map(category => {
+              const key = category.key !== '' ? category.key : '_blank';
+              return <ToggleButton key={key} id={key} value={category.key}>{category.label}</ToggleButton>
+            })}
           </ToggleButtonGroup>}
 
       {includeSearch && <SearchBar query={query} onSearch={handleSearch} />}

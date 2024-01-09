@@ -29,32 +29,26 @@
             "targetKey": "modifies:ability:woodland_stride_trackless_step#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:inspiration#druid_wild_whisperer",
-          "conditionFormula": "@class:druid\u003e\u003d2"
-        }, {
-          "featureId": "ability:wild_shape#druid_wild_whisperer",
-          "conditionFormula": "@class:druid\u003e\u003d4"
-        }, {
-          "featureId": "ability:natural_expertise#druid_wild_whisperer",
-          "conditionFormula": "@class:druid\u003e\u003d6"
-        }, {
-          "featureId": "ability:investigator_talent#druid_wild_whisperer",
-          "conditionFormula": "@class:druid\u003e\u003d8"
-        }],
-        "unlinks": [{
-          "featureId": "ability:resist_natures_lure#druid"
-        }, {
-          "featureId": "ability:woodland_stride_trackless_step#druid"
-        }, {
-          "featureId": "ability:wild_shape#druid"
-        }, {
-          "featureId": "ability:additional_use_of_wild_shape#druid"
-        }, {
-          "featureId": "ability:additional_use_of_wild_shape#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:inspiration#druid_wild_whisperer"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:wild_shape#druid_wild_whisperer"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:natural_expertise#druid_wild_whisperer"],
+      "linksToRemove": ["ability:additional_use_of_wild_shape#druid"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:investigator_talent#druid_wild_whisperer"],
+      "linksToRemove": ["ability:additional_use_of_wild_shape#druid"]
+    }]
+  }]
 }

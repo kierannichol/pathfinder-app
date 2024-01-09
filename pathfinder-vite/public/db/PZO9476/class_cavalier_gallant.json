@@ -24,25 +24,21 @@
             "targetKey": "modifies:ability:banner#cavalier",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:code_of_gallantry#cavalier_gallant",
-          "conditionFormula": "@class:cavalier\u003e\u003d1"
-        }, {
-          "featureId": "ability:symbol_of_inspiration#cavalier_gallant",
-          "conditionFormula": "@class:cavalier\u003e\u003d5"
-        }, {
-          "featureId": "ability:symbol_of_resilience#cavalier_gallant",
-          "conditionFormula": "@class:cavalier\u003e\u003d14"
-        }],
-        "unlinks": [{
-          "featureId": "ability:order#cavalier"
-        }, {
-          "featureId": "ability:banner#cavalier"
-        }, {
-          "featureId": "ability:greater_banner#cavalier"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:code_of_gallantry#cavalier_gallant"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:symbol_of_inspiration#cavalier_gallant"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:symbol_of_resilience#cavalier_gallant"]
+    }]
+  }]
 }

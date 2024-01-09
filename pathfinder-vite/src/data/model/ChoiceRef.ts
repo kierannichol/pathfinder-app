@@ -4,6 +4,8 @@ import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {types} from "sass";
 import Error = types.Error;
 
+export type ChoiceSelectedHandler = (choice: ChoiceRef, value: string) => void;
+
 export default class ChoiceRef {
 
   static create(path: string, choice: Choice, database: Database): ChoiceRef {

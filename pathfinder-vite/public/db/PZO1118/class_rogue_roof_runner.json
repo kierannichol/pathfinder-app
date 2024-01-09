@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:trap_sense#rogue",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:roof_running#rogue_roof_runner",
-          "conditionFormula": "@class:rogue\u003e\u003d1"
-        }, {
-          "featureId": "ability:tumbling_descent#rogue_roof_runner",
-          "conditionFormula": "@class:rogue\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trapfinding#rogue"
-        }, {
-          "featureId": "ability:trap_sense#rogue"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:rogue",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:roof_running#rogue_roof_runner"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:tumbling_descent#rogue_roof_runner"]
+    }]
+  }]
 }

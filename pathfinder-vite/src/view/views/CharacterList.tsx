@@ -1,20 +1,28 @@
 import {useCharacterStore} from "../../data/model/Character.react.tsx";
 import useAsyncMemo from "../../utils/useAsyncMemo.tsx";
 import Panel from "../components/Panel.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Button} from "react-bootstrap";
 import NewCharacterDialog from "../components/character/NewCharacterDialog.tsx";
 import styles from "./CharacterList.module.scss";
 import {useNavigate} from "react-router-dom";
 import LoadingBlock from "../components/LoadingBlock.tsx";
 import CharacterSummary from "../../data/model/CharacterSummary";
+import DeleteIcon from "../components/icons/DeleteIcon.tsx";
+import {classNames} from "../../utils/classNames.ts";
 
 export default function CharacterList() {
   const characterStore = useCharacterStore();
   const navigate = useNavigate();
 
-  const [ characters, isLoading,  ] = useAsyncMemo(() => characterStore.list(),
+  const [ characters, setCharacters ] = useState<CharacterSummary[]>([]);
+
+  const [ loadedCharacters, isLoading ] = useAsyncMemo(() => characterStore.list(),
       [characterStore]);
+
+  useEffect(() => {
+    setCharacters(loadedCharacters);
+  }, [ loadedCharacters ]);
 
   const handleCreate = async (characterName: string) => {
     const created = await characterStore.create({
@@ -23,16 +31,22 @@ export default function CharacterList() {
     navigate(`/character/edit/${created.id}`)
   };
 
+  const handleDelete = async (characterId: string) => {
+    setCharacters(characters.filter(character => character.id !== characterId))
+    await characterStore.delete(characterId);
+  };
+
   return <main>
     <header>Characters</header>
     <section>
       {isLoading ? <LoadingBlock/> : <div className={styles.characters}>
       {characters?.map(character => <CharacterListEntry
           key={character.id}
-          character={character} />)}
+          character={character}
+          onDelete={handleDelete} />)}
       </div>}
       <div className={styles.controls}>
-        <AddCharacterButton disabled={isLoading} onCreate={handleCreate}/>
+        <AddCharacterButton disabled={isLoading} onCreate={handleCreate} />
       </div>
     </section>
   </main>
@@ -40,16 +54,24 @@ export default function CharacterList() {
 
 interface CharacterListEntryProps {
   character: CharacterSummary;
+  onDelete: (id: string) => void;
 }
 
-function CharacterListEntry({ character }: CharacterListEntryProps) {
+function CharacterListEntry({ character, onDelete }: CharacterListEntryProps) {
   const navigate = useNavigate();
   return <Panel
-      className={styles.character}
-      onClick={() => {
-        navigate(`/character/edit/${character.id}`)
-      }}>
-    {character.name}
+      className={styles.character}>
+
+    <div className={classNames([styles.nameContainer, 'clickable'])} onClick={() => {
+      navigate(`/character/edit/${character.id}`)
+    }}>
+      {character.name}
+    </div>
+    <div className={classNames([styles.deleteButtonContainer, 'clickable'])} onClick={() => {
+      onDelete(character.id);
+    }}>
+      <DeleteIcon />
+    </div>
   </Panel>
 }
 

@@ -23,13 +23,17 @@ public class ArchetypeModificationJsonDeserializer extends StdDeserializer<Arche
             throws IOException {
         var tree = p.getCodec().readTree(p);
 
-        IdAndLevel toAdd = null;
+        Set<IdAndLevel> toAdd = new HashSet<>();
         Set<IdAndLevel> toRemove = new HashSet<>();
 
         TreeNode add = tree.get("add");
         if (add != null) {
-             if (add.isValueNode()) {
-                toAdd = toId(add);
+            if (add.isArray()) {
+                for (int i = 0; i < add.size(); i++) {
+                    toAdd.add(toId(add.get(i)));
+                }
+            } else if (add.isValueNode()) {
+                toAdd.add(toId(add));
             }
         }
 

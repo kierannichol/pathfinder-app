@@ -2,18 +2,15 @@
   "id": "trait:armor_proficiency#investigator",
   "name": "Armor Proficiency (Investigator)",
   "tags": ["class_feature", "investigator", "trait"],
-  "maxStacks": 1,
   "description": {
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "proficiency:light_armor",
-            "numberValue": 1
-          }
-        }]
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
       }]
     }
   }

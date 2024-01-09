@@ -1,0 +1,78 @@
+{
+  "id": "class:monk#karmic_monk",
+  "name": "Karmic Monk",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:slow_fall_80_feet#monk AND !@modifies:ability:10th_level_ki_pool_abilities#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:alters_slow_fall_at_19th_level_to_become_slow_fall_80_feet#monk AND !@modifies:ability:the_7th_#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall_80_feet#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:10th_level_ki_pool_abilities#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:alters_slow_fall_at_19th_level_to_become_slow_fall_80_feet#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_7th_#monk",
+            "numberValue": 1
+          }
+        }]
+      }]
+    }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:karmic_disruption#monk_karmic_monk"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:karmic_strike#monk_karmic_monk"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:balanced_mind#monk_karmic_monk"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:harmonic_self#monk_karmic_monk"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:ki_pool#monk_karmic_monk"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:harmony#monk_karmic_monk"]
+    }]
+  }]
+}

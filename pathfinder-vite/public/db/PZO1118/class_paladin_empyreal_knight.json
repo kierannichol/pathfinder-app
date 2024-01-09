@@ -30,27 +30,21 @@
             "targetKey": "modifies:ability:holy_champion#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:voices_of_the_spheres#paladin_empyreal_knight",
-          "conditionFormula": "@class:paladin\u003e\u003d2"
-        }, {
-          "featureId": "ability:celestial_ally#paladin_empyreal_knight",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:empyreal_champion#paladin_empyreal_knight",
-          "conditionFormula": "@class:paladin\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:divine_grace#paladin"
-        }, {
-          "featureId": "ability:lay_on_hands#paladin"
-        }, {
-          "featureId": "ability:channel_positive_energy#paladin"
-        }, {
-          "featureId": "ability:holy_champion#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:voices_of_the_spheres#paladin_empyreal_knight"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:empyreal_champion#paladin_empyreal_knight"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:celestial_ally#paladin_empyreal_knight"]
+    }]
+  }]
 }

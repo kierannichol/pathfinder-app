@@ -20,20 +20,15 @@
             "targetKey": "modifies:ability:rage#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:crowd_control#barbarian_urban_barbarian",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }, {
-          "featureId": "ability:controlled_rage#barbarian_urban_barbarian",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#barbarian"
-        }, {
-          "featureId": "ability:rage#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:crowd_control#barbarian_urban_barbarian", "ability:controlled_rage#barbarian_urban_barbarian"]
+    }]
+  }]
 }

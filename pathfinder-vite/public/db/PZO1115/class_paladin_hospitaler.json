@@ -19,20 +19,18 @@
             "targetKey": "modifies:ability:aura_of_justice#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:channel_positive_energy#paladin_hospitaler",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:aura_of_healing#paladin_hospitaler",
-          "conditionFormula": "@class:paladin\u003e\u003d11"
-        }],
-        "unlinks": [{
-          "featureId": "ability:channel_positive_energy#paladin"
-        }, {
-          "featureId": "ability:aura_of_justice#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:channel_positive_energy#paladin_hospitaler"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:aura_of_healing#paladin_hospitaler"]
+    }]
+  }]
 }

@@ -8,12 +8,15 @@ import org.springframework.stereotype.Component;
 import pathfinder.model.Effect;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
+import pathfinder.model.FeatureSelectByTagChoice;
+import pathfinder.model.FeatureSelectSortBy;
 import pathfinder.model.Id;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.core.AbilityScore;
 import pathfinder.model.core.BaseAttackBonus;
 import pathfinder.model.pathfinder.Alignment;
 import pathfinder.model.pathfinder.ArmorProficiency;
+import pathfinder.model.pathfinder.Size;
 import pathfinder.model.pathfinder.Skills;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
@@ -37,7 +40,9 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                 weaponProficiencies(),
                 armorProficiencies(),
                 alignments(),
-                skills()
+                skills(),
+                sizes(),
+                asi()
         ));
     }
 
@@ -92,9 +97,9 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                         .setDescription(alignment.description())
                         .setMaxStacks(1)
                         .addTag("alignment")
-//                        .addFixedStack(new StackBuilder()
-//                                .addEffect(Effect.setNumber(alignment.id(), 1))
-//                                .build())
+                        .addFixedStack(new StackBuilder()
+                                .addEffect(Effect.setText("alignment", alignment.id().string()))
+                                .build())
                         .build());
     }
 
@@ -104,5 +109,53 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                         .setName(skill.name())
                         .addTag("skill")
                         .build());
+    }
+
+    private Stream<Feature> sizes() {
+        return Arrays.stream(Size.values())
+                .map(size -> Feature.builder(size.id())
+                        .setName(size.longName())
+                        .addFixedStack(new StackBuilder()
+                                .addEffect(Effect.setNumber("size", size.number()))
+                                .addEffect(Effect.setNumber("size_mod", size.sizeMod()))
+                                .build())
+                        .build());
+    }
+
+    private Stream<Feature> asi() {
+        Stream<Feature> asiChoices = Stream.of(
+                Feature.builder("asi:any_p2")
+                        .setName("Ability Score Increase")
+                        .addFixedStack(new StackBuilder()
+                                .addChoice(new FeatureSelectByTagChoice("race_asi_plus_2_any",
+                                        "Ability Score Increase",
+                                        "asi",
+                                        List.of("asi_p2"),
+                                        List.of(),
+                                        List.of(),
+                                        FeatureSelectSortBy.NONE))
+                                .build())
+                        .build()
+        );
+
+        Stream<Feature> asip2 = Arrays.stream(AbilityScore.values())
+                .map(abilityScore -> Feature.builder("asi:" + abilityScore.shortName + "_p2")
+                        .setName(abilityScore.longName)
+                        .addTag("asi_p2")
+                        .setRepeatingStack(new StackBuilder()
+                                .addEffect(Effect.addNumber(abilityScore.shortName + ":asi", 2))
+                                .build())
+                        .build());
+
+        Stream<Feature> asim2 = Arrays.stream(AbilityScore.values())
+                .map(abilityScore -> Feature.builder("asi:" + abilityScore.shortName + "_m2")
+                        .setName(abilityScore.longName)
+                        .addTag("asi_m2")
+                        .setRepeatingStack(new StackBuilder()
+                                .addEffect(Effect.addNumber(abilityScore.shortName + ":asi", -2))
+                                .build())
+                        .build());
+
+        return StreamUtils.concat(List.of(asiChoices, asip2, asim2));
     }
 }

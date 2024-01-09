@@ -20,20 +20,20 @@
             "targetKey": "modifies:ability:revelation#oracle",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:inspiration#oracle_psychic_searcher",
-          "conditionFormula": "@class:oracle\u003e\u003d2"
-        }, {
-          "featureId": "ability:psychic_talent#oracle_psychic_searcher",
-          "conditionFormula": "@class:oracle\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }, {
-          "featureId": "ability:revelation#oracle"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:oracle",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:inspiration#oracle_psychic_searcher"],
+      "linksToRemove": ["ability:mystery_spell#oracle"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:psychic_talent#oracle_psychic_searcher"],
+      "linksToRemove": ["ability:revelation#oracle"]
+    }]
+  }]
 }

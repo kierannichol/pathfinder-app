@@ -4,7 +4,8 @@ import styles from "./AbilityScoresEditor.module.css";
 import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
 import {ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
 import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import ChoiceRef from "../../../data/model/ChoiceRef.ts";
+import ChoiceRef, {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
+import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 
 const AbilityScoreOptions = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 .map(score => new ChoiceSelectorOption(
@@ -31,6 +32,13 @@ export default function AbilityScoresEditor({ characterAtLevel, onChange }: Abil
                           onChange={onChange} />
       )}
     </div>
+    <div>
+      {characterAtLevel.choicesOfType("asi").map(choice => <DataChoiceSelectButton
+          key={choice.key}
+          choiceRef={choice as FeatureSelectChoiceRef}
+          characterAtLevel={characterAtLevel}
+          onSelect={selected => onChange?.(choice, selected)}/>)}
+    </div>
   </div>
 }
 
@@ -44,7 +52,10 @@ function AbilityScoreItem({ ability, characterAtLevel, onChange }: AbilityScoreI
 
   const [ editing, setEditing ] = useState(false);
 
-  const current = useMemo(() => characterAtLevel.resolve(`${ability}:base`)?.asNumber() ?? 0,
+  const current = useMemo(() => characterAtLevel.resolve(`${ability}_score`)?.asNumber() ?? 0,
+      [ability, characterAtLevel]);
+
+  const base = useMemo(() => characterAtLevel.resolve(`${ability}:base`)?.asNumber() ?? 0,
       [ability, characterAtLevel]);
 
   const choice = useMemo(() => characterAtLevel.choice(ability + "_base"),
@@ -67,10 +78,11 @@ function AbilityScoreItem({ ability, characterAtLevel, onChange }: AbilityScoreI
     <AbilityScoreEditor
         label={ability.toUpperCase()}
         score={current}
+        base={base}
         onClick={() => setEditing(true)} />
     <ChoiceSelectorDialog choiceName={choice.label}
                           show={editing}
-                          value={current.toString()}
+                          value={base.toString()}
                           optionsFn={() => AbilityScoreOptions}
                           onSelect={handleSelect}
                           search={false}

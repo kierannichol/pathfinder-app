@@ -19,17 +19,15 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:martial_flexibility#fighter_martial_master",
-          "conditionFormula": "@class:fighter\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:weapon_mastery#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:martial_flexibility#fighter_martial_master"]
+    }]
+  }]
 }

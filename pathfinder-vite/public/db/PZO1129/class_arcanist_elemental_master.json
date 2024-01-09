@@ -15,35 +15,32 @@
             "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:elemental_focus#arcanist_elemental_master",
-          "conditionFormula": "@class:arcanist\u003e\u003d1"
-        }, {
-          "featureId": "ability:elemental_attack#arcanist_elemental_master",
-          "conditionFormula": "@class:arcanist\u003e\u003d3"
-        }, {
-          "featureId": "ability:powerful_exploit#arcanist_elemental_master",
-          "conditionFormula": "@class:arcanist\u003e\u003d9"
-        }, {
-          "featureId": "ability:greater_elemental_attack#arcanist_elemental_master",
-          "conditionFormula": "@class:arcanist\u003e\u003d11"
-        }, {
-          "featureId": "ability:elemental_movement#arcanist_elemental_master",
-          "conditionFormula": "@class:arcanist\u003e\u003d15"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploit#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:elemental_focus#arcanist_elemental_master"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:elemental_attack#arcanist_elemental_master"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:powerful_exploit#arcanist_elemental_master"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:greater_elemental_attack#arcanist_elemental_master"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:elemental_movement#arcanist_elemental_master"],
+      "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+    }]
+  }]
 }

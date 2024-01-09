@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:marine_terror#barbarian_sea_reaver",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }, {
-          "featureId": "ability:eyes_of_the_storm#barbarian_sea_reaver",
-          "conditionFormula": "@class:barbarian\u003e\u003d2"
-        }, {
-          "featureId": "ability:savage_sailor#barbarian_sea_reaver",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }, {
-          "featureId": "ability:sure_footed#barbarian_sea_reaver",
-          "conditionFormula": "@class:barbarian\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#barbarian"
-        }, {
-          "featureId": "ability:uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:trap_sense#barbarian"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:marine_terror#barbarian_sea_reaver"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:eyes_of_the_storm#barbarian_sea_reaver"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:savage_sailor#barbarian_sea_reaver"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:sure_footed#barbarian_sea_reaver"]
+    }]
+  }]
 }

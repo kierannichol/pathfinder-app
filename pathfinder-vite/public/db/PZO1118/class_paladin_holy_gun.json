@@ -25,43 +25,36 @@
             "targetKey": "modifies:ability:bond#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:have_gun#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d1"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d1"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d7"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d10"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d13"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d16"
-        }, {
-          "featureId": "ability:smiting_shot#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d19"
-        }, {
-          "featureId": "ability:divine_bond#paladin_holy_gun",
-          "conditionFormula": "@class:paladin\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:detect_evil#paladin"
-        }, {
-          "featureId": "ability:smite_evil#paladin"
-        }, {
-          "featureId": "ability:bond#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:smiting_shot#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:have_gun#paladin_holy_gun", "ability:smiting_shot#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:smiting_shot#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:smiting_shot#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:divine_bond#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:smiting_shot#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:smiting_shot#paladin_holy_gun"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:smiting_shot#paladin_holy_gun"]
+    }]
+  }]
 }

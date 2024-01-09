@@ -19,38 +19,36 @@
             "targetKey": "modifies:ability:aura_of_resolve#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d1"
-        }, {
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d7"
-        }, {
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d10"
-        }, {
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d13"
-        }, {
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d16"
-        }, {
-          "featureId": "ability:smite_evil#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d19"
-        }, {
-          "featureId": "ability:call_celestial_ally#paladin_sacred_servant",
-          "conditionFormula": "@class:paladin\u003e\u003d8"
-        }],
-        "unlinks": [{
-          "featureId": "ability:smite_evil#paladin"
-        }, {
-          "featureId": "ability:aura_of_resolve#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:call_celestial_ally#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"]
+    }]
+  }]
 }

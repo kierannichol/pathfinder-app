@@ -30,24 +30,18 @@
             "targetKey": "modifies:ability:timeless_body#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:favored_terrain#druid_world_walker",
-          "conditionFormula": "@class:druid\u003e\u003d3"
-        }, {
-          "featureId": "ability:path_of_trees#druid_world_walker",
-          "conditionFormula": "@class:druid\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trackless_step#druid"
-        }, {
-          "featureId": "ability:resist_natures_lure#druid"
-        }, {
-          "featureId": "ability:timeless_body#druid"
-        }, {
-          "featureId": "ability:both_venom_immunity#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:favored_terrain#druid_world_walker"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:path_of_trees#druid_world_walker"]
+    }]
+  }]
 }

@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:spellstrike#magus",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:force_athame#magus_spellblade",
-          "conditionFormula": "@class:magus\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:spellstrike#magus"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:magus",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:force_athame#magus_spellblade"]
+    }]
+  }]
 }

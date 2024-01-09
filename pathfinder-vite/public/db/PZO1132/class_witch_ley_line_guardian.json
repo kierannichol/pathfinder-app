@@ -1,0 +1,42 @@
+{
+  "id": "class:witch#ley_line_guardian",
+  "name": "Ley Line Guardian",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:hexes#witch AND !@modifies:ability:the_witchs_spellcasting#witch AND !@modifies:ability:familiar#witch",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hexes#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_witchs_spellcasting#witch",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:familiar#witch",
+            "numberValue": 1
+          }
+        }]
+      }]
+    }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:witch",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:conduit_surge#witch_ley_line_guardian"],
+      "linksToRemove": ["ability:hexes#witch"]
+    }, {
+      "targetStackCount": 8,
+      "linksToRemove": ["ability:hexes#witch"]
+    }]
+  }]
+}

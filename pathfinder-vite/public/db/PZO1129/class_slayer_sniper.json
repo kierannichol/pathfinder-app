@@ -14,15 +14,15 @@
             "targetKey": "modifies:ability:track#slayer",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:accuracy#slayer_sniper",
-          "conditionFormula": "@class:slayer\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:track#slayer"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:slayer",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:accuracy#slayer_sniper"]
+    }]
+  }]
 }

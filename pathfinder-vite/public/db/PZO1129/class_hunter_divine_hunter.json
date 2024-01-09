@@ -20,20 +20,15 @@
             "targetKey": "modifies:ability:teamwork_feat#hunter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:domain#hunter_divine_hunter",
-          "conditionFormula": "@class:hunter\u003e\u003d3"
-        }, {
-          "featureId": "ability:otherworldly_companion#hunter_divine_hunter",
-          "conditionFormula": "@class:hunter\u003e\u003d3"
-        }],
-        "unlinks": [{
-          "featureId": "ability:teamwork_feat#hunter"
-        }, {
-          "featureId": "ability:hunter_tactics#hunter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:hunter",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:domain#hunter_divine_hunter", "ability:otherworldly_companion#hunter_divine_hunter"]
+    }]
+  }]
 }

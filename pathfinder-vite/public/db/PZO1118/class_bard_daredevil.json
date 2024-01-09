@@ -35,44 +35,27 @@
             "targetKey": "modifies:ability:well_versed#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:agile#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:derring_do#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:derring_do#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }, {
-          "featureId": "ability:derring_do#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d11"
-        }, {
-          "featureId": "ability:derring_do#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d17"
-        }, {
-          "featureId": "ability:canny_foe#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:dauntless#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d2"
-        }, {
-          "featureId": "ability:scoundrels_fortune#bard_daredevil",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bardic_knowledge#bard"
-        }, {
-          "featureId": "ability:inspire_courage#bard"
-        }, {
-          "featureId": "ability:versatile_performance#bard"
-        }, {
-          "featureId": "ability:well_versed#bard"
-        }, {
-          "featureId": "ability:lore_master#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:derring_do#bard_daredevil"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:agile#bard_daredevil", "ability:derring_do#bard_daredevil"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:canny_foe#bard_daredevil", "ability:dauntless#bard_daredevil"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:derring_do#bard_daredevil", "ability:scoundrels_fortune#bard_daredevil"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:derring_do#bard_daredevil"]
+    }]
+  }]
 }

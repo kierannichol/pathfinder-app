@@ -1,0 +1,14 @@
+
+ability:spellcasting#oracleSpell Casting (Oracle)class_featureoracleability¢
+Oracle can cast spells.ª•
+’
+ªrp
+#trait:level_1_spells_per_day#oracleI3+if(@class:oracle>1,1,0)+if(@class:oracle>2,1,0)+if(@class:oracle>3,1,0)ªŠ
+#trait:level_2_spells_per_day#oraclecif(@class:oracle>=4,3+if(@class:oracle>4,1,0)+if(@class:oracle>5,1,0)+if(@class:oracle>6,1,0),null)ªŠ
+#trait:level_3_spells_per_day#oraclecif(@class:oracle>=6,3+if(@class:oracle>6,1,0)+if(@class:oracle>7,1,0)+if(@class:oracle>8,1,0),null)ªŽ‹
+#trait:level_4_spells_per_day#oracledif(@class:oracle>=8,3+if(@class:oracle>8,1,0)+if(@class:oracle>9,1,0)+if(@class:oracle>10,1,0),null)ª‘Ž
+#trait:level_5_spells_per_day#oraclegif(@class:oracle>=10,3+if(@class:oracle>10,1,0)+if(@class:oracle>11,1,0)+if(@class:oracle>12,1,0),null)ª‘Ž
+#trait:level_6_spells_per_day#oraclegif(@class:oracle>=12,3+if(@class:oracle>12,1,0)+if(@class:oracle>13,1,0)+if(@class:oracle>14,1,0),null)ª‘Ž
+#trait:level_7_spells_per_day#oraclegif(@class:oracle>=14,3+if(@class:oracle>14,1,0)+if(@class:oracle>15,1,0)+if(@class:oracle>16,1,0),null)ª‘Ž
+#trait:level_8_spells_per_day#oraclegif(@class:oracle>=16,3+if(@class:oracle>16,1,0)+if(@class:oracle>17,1,0)+if(@class:oracle>18,1,0),null)ª‘Ž
+#trait:level_9_spells_per_day#oraclegif(@class:oracle>=18,3+if(@class:oracle>18,1,0)+if(@class:oracle>19,1,0)+if(@class:oracle>19,1,0),null)

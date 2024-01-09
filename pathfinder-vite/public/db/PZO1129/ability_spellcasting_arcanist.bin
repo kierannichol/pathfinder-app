@@ -1,0 +1,12 @@
+
+ability:spellcasting#arcanistSpell Casting (Arcanist)class_featurearcanistability¢
+Arcanist can cast spells.ªíêª`^
+%trait:level_1_spells_per_day#arcanist52+if(@class:arcanist>1,1,0)+if(@class:arcanist>2,1,0)ª|z
+%trait:level_2_spells_per_day#arcanistQif(@class:arcanist>=4,2+if(@class:arcanist>4,1,0)+if(@class:arcanist>5,1,0),null)ª|z
+%trait:level_3_spells_per_day#arcanistQif(@class:arcanist>=6,2+if(@class:arcanist>6,1,0)+if(@class:arcanist>7,1,0),null)ª|z
+%trait:level_4_spells_per_day#arcanistQif(@class:arcanist>=8,2+if(@class:arcanist>8,1,0)+if(@class:arcanist>9,1,0),null)ª}
+%trait:level_5_spells_per_day#arcanistTif(@class:arcanist>=10,2+if(@class:arcanist>10,1,0)+if(@class:arcanist>11,1,0),null)ª}
+%trait:level_6_spells_per_day#arcanistTif(@class:arcanist>=12,2+if(@class:arcanist>12,1,0)+if(@class:arcanist>13,1,0),null)ª}
+%trait:level_7_spells_per_day#arcanistTif(@class:arcanist>=14,2+if(@class:arcanist>14,1,0)+if(@class:arcanist>15,1,0),null)ª}
+%trait:level_8_spells_per_day#arcanistTif(@class:arcanist>=16,2+if(@class:arcanist>16,1,0)+if(@class:arcanist>17,1,0),null)ª}
+%trait:level_9_spells_per_day#arcanistTif(@class:arcanist>=18,2+if(@class:arcanist>18,1,0)+if(@class:arcanist>19,1,0),null)

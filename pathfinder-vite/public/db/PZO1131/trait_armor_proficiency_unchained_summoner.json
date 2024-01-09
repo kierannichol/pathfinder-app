@@ -2,18 +2,15 @@
   "id": "trait:armor_proficiency#unchained_summoner",
   "name": "Armor Proficiency (Unchained Summoner)",
   "tags": ["class_feature", "unchained_summoner", "trait"],
-  "maxStacks": 1,
   "description": {
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "proficiency:light_armor",
-            "numberValue": 1
-          }
-        }]
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
       }]
     }
   }

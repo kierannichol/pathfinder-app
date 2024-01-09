@@ -25,25 +25,18 @@
             "targetKey": "modifies:ability:flurry_of_blows#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bonus_feat#monk_master_of_many_styles",
-          "conditionFormula": "@class:monk\u003e\u003d1"
-        }, {
-          "featureId": "ability:fuse_style#monk_master_of_many_styles",
-          "conditionFormula": "@class:monk\u003e\u003d1"
-        }, {
-          "featureId": "ability:perfect_style#monk_master_of_many_styles",
-          "conditionFormula": "@class:monk\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:a_monks_standard_bonus_feat#monk"
-        }, {
-          "featureId": "ability:flurry_of_blows#monk"
-        }, {
-          "featureId": "ability:perfect_self#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:bonus_feat#monk_master_of_many_styles", "ability:fuse_style#monk_master_of_many_styles"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:perfect_style#monk_master_of_many_styles"]
+    }]
+  }]
 }

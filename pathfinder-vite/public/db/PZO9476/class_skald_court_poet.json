@@ -24,25 +24,21 @@
             "targetKey": "modifies:ability:well_versed#skald",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:insightful_contemplation#skald_court_poet",
-          "conditionFormula": "@class:skald\u003e\u003d1"
-        }, {
-          "featureId": "ability:song_of_inspiration#skald_court_poet",
-          "conditionFormula": "@class:skald\u003e\u003d6"
-        }, {
-          "featureId": "ability:handling_the_crowd#skald_court_poet",
-          "conditionFormula": "@class:skald\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:inspired_rage#skald"
-        }, {
-          "featureId": "ability:song_of_strength#skald"
-        }, {
-          "featureId": "ability:well_versed#skald"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:skald",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:insightful_contemplation#skald_court_poet"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:handling_the_crowd#skald_court_poet"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:song_of_inspiration#skald_court_poet"]
+    }]
+  }]
 }

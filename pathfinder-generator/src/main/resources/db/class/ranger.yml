@@ -44,199 +44,70 @@ levels:
   - "ability:track#ranger"
   - "ability:wild_empathy#ranger"
   - "ability:spellcasting#ranger"
-  spells_per_day: {}
-  spells_known: {}
   level: 1
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:combat_style_feat#ranger"
-  spells_per_day: {}
-  spells_known: {}
   level: 2
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:endurance#ranger"
   - "ability:favored_terrain#ranger"
-  spells_per_day: {}
-  spells_known: {}
   level: 3
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:hunters_bond#ranger"
-  spells_per_day:
-    1: 0
-  spells_known: {}
+  - "ability:spellcasting#ranger"
   level: 4
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:favored_enemy#ranger"
-  spells_per_day:
-    1: 1
-  spells_known: {}
   level: 5
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:combat_style_feat#ranger"
-  spells_per_day:
-    1: 1
-  spells_known: {}
   level: 6
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:woodland_stride#ranger"
-  spells_per_day:
-    1: 1
-    2: 0
-  spells_known: {}
   level: 7
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:swift_tracker#ranger"
   - "ability:favored_terrain#ranger"
-  spells_per_day:
-    1: 1
-    2: 1
-  spells_known: {}
   level: 8
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:evasion#ranger"
-  spells_per_day:
-    1: 2
-    2: 1
-  spells_known: {}
   level: 9
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:favored_enemy#ranger"
   - "ability:combat_style_feat#ranger"
-  spells_per_day:
-    1: 2
-    2: 1
-    3: 0
-  spells_known: {}
   level: 10
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:quarry#ranger"
-  spells_per_day:
-    1: 2
-    2: 1
-    3: 1
-  spells_known: {}
   level: 11
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:camouflage#ranger"
-  spells_per_day:
-    1: 2
-    2: 2
-    3: 1
-  spells_known: {}
   level: 12
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:favored_terrain#ranger"
-  spells_per_day:
-    1: 3
-    2: 2
-    3: 1
-    4: 0
-  spells_known: {}
   level: 13
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:combat_style_feat#ranger"
-  spells_per_day:
-    1: 3
-    2: 2
-    3: 1
-    4: 1
-  spells_known: {}
   level: 14
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:favored_enemy#ranger"
-  spells_per_day:
-    1: 3
-    2: 2
-    3: 2
-    4: 1
-  spells_known: {}
   level: 15
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:improved_evasion#ranger"
-  spells_per_day:
-    1: 3
-    2: 3
-    3: 2
-    4: 1
-  spells_known: {}
   level: 16
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:hide_in_plain_sight#ranger"
-  spells_per_day:
-    1: 4
-    2: 3
-    3: 2
-    4: 1
-  spells_known: {}
   level: 17
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:favored_terrain#ranger"
   - "ability:combat_style_feat#ranger"
-  spells_per_day:
-    1: 4
-    2: 3
-    3: 2
-    4: 2
-  spells_known: {}
   level: 18
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:improved_quarry#ranger"
-  spells_per_day:
-    1: 4
-    2: 3
-    3: 3
-    4: 2
-  spells_known: {}
   level: 19
 - class_feature_names:
-  - "trait:armor_proficiency#ranger"
-  - "trait:weapon_proficiency#ranger"
   - "ability:favored_enemy#ranger"
   - "ability:master_hunter#ranger"
-  spells_per_day:
-    1: 4
-    2: 4
-    3: 3
-    4: 3
-  spells_known: {}
   level: 20
-spell_caster_types:
-- "divine"
 class_features:
 - id: "ability:camouflage#ranger"
   name: "Camouflage"
@@ -418,6 +289,18 @@ class_features:
     \ hours. If the ranger sees proof that his quarry is dead, he can select a new\
     \ quarry after waiting 1 hour."
   effects: []
+  prerequisites: ""
+  source: " Pathfinder RPG Core Rulebook"
+- id: "ability:spellcasting#ranger"
+  name: "Spell Casting (Ranger)"
+  label: null
+  type: null
+  description: "Ranger can cast spells."
+  effects:
+  - "SET trait:level_1_spells_per_day#ranger if(@class:ranger>=4,0+if(@class:ranger>4,1,0)+if(@class:ranger>8,1,0)+if(@class:ranger>12,1,0)+if(@class:ranger>16,1,0),null)"
+  - "SET trait:level_2_spells_per_day#ranger if(@class:ranger>=7,0+if(@class:ranger>7,1,0)+if(@class:ranger>11,1,0)+if(@class:ranger>15,1,0)+if(@class:ranger>19,1,0),null)"
+  - "SET trait:level_3_spells_per_day#ranger if(@class:ranger>=10,0+if(@class:ranger>10,1,0)+if(@class:ranger>14,1,0)+if(@class:ranger>18,1,0),null)"
+  - "SET trait:level_4_spells_per_day#ranger if(@class:ranger>=13,0+if(@class:ranger>13,1,0)+if(@class:ranger>17,1,0)+if(@class:ranger>19,1,0),null)"
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
 - id: "ability:spellcasting#ranger"

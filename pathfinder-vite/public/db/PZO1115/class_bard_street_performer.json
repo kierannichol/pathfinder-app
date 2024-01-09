@@ -29,39 +29,24 @@
             "targetKey": "modifies:ability:inspire_courage#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bardic_performance#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:bardic_performance#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }, {
-          "featureId": "ability:bardic_performance#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d11"
-        }, {
-          "featureId": "ability:bardic_performance#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d17"
-        }, {
-          "featureId": "ability:gladhanding#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:streetwise#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:quick_change#bard_street_performer",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:inspire_courage#bard"
-        }, {
-          "featureId": "ability:countersong#bard"
-        }, {
-          "featureId": "ability:bardic_knowledge#bard"
-        }, {
-          "featureId": "ability:lore_master#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:bardic_performance#bard_street_performer"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:bardic_performance#bard_street_performer", "ability:gladhanding#bard_street_performer", "ability:streetwise#bard_street_performer"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:bardic_performance#bard_street_performer", "ability:quick_change#bard_street_performer"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:bardic_performance#bard_street_performer"]
+    }]
+  }]
 }

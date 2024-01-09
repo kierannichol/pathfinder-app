@@ -710,6 +710,9 @@ export namespace data {
 
         /** FeatureDbo stacks */
         stacks?: (data.StacksDbo|null);
+
+        /** FeatureDbo featureModifications */
+        featureModifications?: (data.FeatureModificationDbo[]|null);
     }
 
     /** Represents a FeatureDbo. */
@@ -744,6 +747,9 @@ export namespace data {
 
         /** FeatureDbo stacks. */
         public stacks?: (data.StacksDbo|null);
+
+        /** FeatureDbo featureModifications. */
+        public featureModifications: data.FeatureModificationDbo[];
 
         /** FeatureDbo _maxStacks. */
         public _maxStacks?: "maxStacks";
@@ -1032,8 +1038,223 @@ export namespace data {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    /** Properties of a FeatureModificationDbo. */
+    interface IFeatureModificationDbo {
+
+        /** FeatureModificationDbo targetFeatureId */
+        targetFeatureId?: (string|null);
+
+        /** FeatureModificationDbo stackModifications */
+        stackModifications?: (data.StackModificationDbo[]|null);
+    }
+
+    /** Represents a FeatureModificationDbo. */
+    class FeatureModificationDbo implements IFeatureModificationDbo {
+
+        /**
+         * Constructs a new FeatureModificationDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IFeatureModificationDbo);
+
+        /** FeatureModificationDbo targetFeatureId. */
+        public targetFeatureId: string;
+
+        /** FeatureModificationDbo stackModifications. */
+        public stackModifications: data.StackModificationDbo[];
+
+        /**
+         * Creates a new FeatureModificationDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns FeatureModificationDbo instance
+         */
+        public static create(properties?: data.IFeatureModificationDbo): data.FeatureModificationDbo;
+
+        /**
+         * Encodes the specified FeatureModificationDbo message. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
+         * @param message FeatureModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.FeatureModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified FeatureModificationDbo message, length delimited. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
+         * @param message FeatureModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.FeatureModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a FeatureModificationDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns FeatureModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureModificationDbo;
+
+        /**
+         * Decodes a FeatureModificationDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns FeatureModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureModificationDbo;
+
+        /**
+         * Verifies a FeatureModificationDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a FeatureModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns FeatureModificationDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.FeatureModificationDbo;
+
+        /**
+         * Creates a plain object from a FeatureModificationDbo message. Also converts values to other types if specified.
+         * @param message FeatureModificationDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.FeatureModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this FeatureModificationDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for FeatureModificationDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a StackModificationDbo. */
+    interface IStackModificationDbo {
+
+        /** StackModificationDbo targetStackCount */
+        targetStackCount?: (number|null);
+
+        /** StackModificationDbo linksToAdd */
+        linksToAdd?: (string[]|null);
+
+        /** StackModificationDbo linksToRemove */
+        linksToRemove?: (string[]|null);
+    }
+
+    /** Represents a StackModificationDbo. */
+    class StackModificationDbo implements IStackModificationDbo {
+
+        /**
+         * Constructs a new StackModificationDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IStackModificationDbo);
+
+        /** StackModificationDbo targetStackCount. */
+        public targetStackCount: number;
+
+        /** StackModificationDbo linksToAdd. */
+        public linksToAdd: string[];
+
+        /** StackModificationDbo linksToRemove. */
+        public linksToRemove: string[];
+
+        /**
+         * Creates a new StackModificationDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns StackModificationDbo instance
+         */
+        public static create(properties?: data.IStackModificationDbo): data.StackModificationDbo;
+
+        /**
+         * Encodes the specified StackModificationDbo message. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
+         * @param message StackModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.StackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified StackModificationDbo message, length delimited. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
+         * @param message StackModificationDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.StackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a StackModificationDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns StackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.StackModificationDbo;
+
+        /**
+         * Decodes a StackModificationDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns StackModificationDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.StackModificationDbo;
+
+        /**
+         * Verifies a StackModificationDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a StackModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns StackModificationDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.StackModificationDbo;
+
+        /**
+         * Creates a plain object from a StackModificationDbo message. Also converts values to other types if specified.
+         * @param message StackModificationDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.StackModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this StackModificationDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for StackModificationDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of an EffectDbo. */
     interface IEffectDbo {
+
+        /** EffectDbo conditionFormula */
+        conditionFormula?: (string|null);
 
         /** EffectDbo setAction */
         setAction?: (data.EffectDbo.SetActionDbo|null);
@@ -1051,11 +1272,17 @@ export namespace data {
          */
         constructor(properties?: data.IEffectDbo);
 
+        /** EffectDbo conditionFormula. */
+        public conditionFormula?: (string|null);
+
         /** EffectDbo setAction. */
         public setAction?: (data.EffectDbo.SetActionDbo|null);
 
         /** EffectDbo addAction. */
         public addAction?: (data.EffectDbo.AddActionDbo|null);
+
+        /** EffectDbo _conditionFormula. */
+        public _conditionFormula?: "conditionFormula";
 
         /** EffectDbo action. */
         public action?: ("setAction"|"addAction");

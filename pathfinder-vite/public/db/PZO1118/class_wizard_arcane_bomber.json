@@ -35,29 +35,15 @@
             "targetKey": "modifies:ability:read_magic_cantrips#wizard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bomb#wizard_arcane_bomber",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:spellblast_bombs#wizard_arcane_bomber",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:school_of_the_bomb#wizard_arcane_bomber",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcane_bond#wizard"
-        }, {
-          "featureId": "ability:places_them_in_his_spellbook#wizard"
-        }, {
-          "featureId": "ability:cantrips_but_the_arcana_bomber_gains_the_detect_magic#wizard"
-        }, {
-          "featureId": "ability:read_magic_cantrips#wizard"
-        }, {
-          "featureId": "ability:arcane_school#wizard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:wizard",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:bomb#wizard_arcane_bomber", "ability:spellblast_bombs#wizard_arcane_bomber", "ability:school_of_the_bomb#wizard_arcane_bomber"]
+    }]
+  }]
 }

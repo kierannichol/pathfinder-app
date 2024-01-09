@@ -25,31 +25,27 @@
             "targetKey": "modifies:ability:dirge_of_doom#bard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:famous#bard_celebrity",
-          "conditionFormula": "@class:bard\u003e\u003d1"
-        }, {
-          "featureId": "ability:bardic_performance#bard_celebrity",
-          "conditionFormula": "@class:bard\u003e\u003d5"
-        }, {
-          "featureId": "ability:bardic_performance#bard_celebrity",
-          "conditionFormula": "@class:bard\u003e\u003d11"
-        }, {
-          "featureId": "ability:bardic_performance#bard_celebrity",
-          "conditionFormula": "@class:bard\u003e\u003d17"
-        }, {
-          "featureId": "ability:shining_star#bard_celebrity",
-          "conditionFormula": "@class:bard\u003e\u003d8"
-        }],
-        "unlinks": [{
-          "featureId": "ability:inspire_courage#bard"
-        }, {
-          "featureId": "ability:lore_master#bard"
-        }, {
-          "featureId": "ability:dirge_of_doom#bard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bard",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:bardic_performance#bard_celebrity"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:famous#bard_celebrity"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:bardic_performance#bard_celebrity"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:shining_star#bard_celebrity"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:bardic_performance#bard_celebrity"]
+    }]
+  }]
 }

@@ -24,25 +24,21 @@
             "targetKey": "modifies:ability:holy_champion#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:aura_of_purity#paladin_oath_against_corruption",
-          "conditionFormula": "@class:paladin\u003e\u003d3"
-        }, {
-          "featureId": "ability:cleansing_flame#paladin_oath_against_corruption",
-          "conditionFormula": "@class:paladin\u003e\u003d11"
-        }, {
-          "featureId": "ability:cast_into_the_void#paladin_oath_against_corruption",
-          "conditionFormula": "@class:paladin\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:aura_of_courage#paladin"
-        }, {
-          "featureId": "ability:aura_of_justice#paladin"
-        }, {
-          "featureId": "ability:holy_champion#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:aura_of_purity#paladin_oath_against_corruption"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:cast_into_the_void#paladin_oath_against_corruption"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:cleansing_flame#paladin_oath_against_corruption"]
+    }]
+  }]
 }

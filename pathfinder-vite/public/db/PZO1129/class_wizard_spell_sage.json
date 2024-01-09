@@ -19,20 +19,18 @@
             "targetKey": "modifies:ability:arcane_bond#wizard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:focused_spells#wizard_spell_sage",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:spell_study#wizard_spell_sage",
-          "conditionFormula": "@class:wizard\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcane_bond#wizard"
-        }, {
-          "featureId": "ability:arcane_school#wizard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:wizard",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:focused_spells#wizard_spell_sage"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:spell_study#wizard_spell_sage"]
+    }]
+  }]
 }

@@ -25,50 +25,38 @@
             "targetKey": "modifies:ability:channel_energy#warpriest",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:blessings#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d1"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d3"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d6"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d9"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d12"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d15"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d18"
-        }, {
-          "featureId": "ability:craft_magic_arms_and_armor#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d3"
-        }, {
-          "featureId": "ability:creators_bond#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d4"
-        }, {
-          "featureId": "ability:heat_of_the_forge#warpriest_forgepriest",
-          "conditionFormula": "@class:warpriest\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:blessings#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
-        }, {
-          "featureId": "ability:channel_energy#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:warpriest",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:blessings#warpriest_forgepriest"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest", "ability:craft_magic_arms_and_armor#warpriest_forgepriest"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:creators_bond#warpriest_forgepriest"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest", "ability:heat_of_the_forge#warpriest_forgepriest"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"]
+    }]
+  }]
 }

@@ -29,24 +29,18 @@
             "targetKey": "modifies:ability:timeless_body#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:animal_focus#druid_feral_shifter",
-          "conditionFormula": "@class:druid\u003e\u003d1"
-        }, {
-          "featureId": "ability:second_animal_focus#druid_feral_shifter",
-          "conditionFormula": "@class:druid\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:nature_bond#druid"
-        }, {
-          "featureId": "ability:a_thousand_faces#druid"
-        }, {
-          "featureId": "ability:venom_immunity#druid"
-        }, {
-          "featureId": "ability:timeless_body#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:animal_focus#druid_feral_shifter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:second_animal_focus#druid_feral_shifter"]
+    }]
+  }]
 }

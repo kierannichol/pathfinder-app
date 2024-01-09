@@ -30,36 +30,32 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:deflective_shield#fighter_armor_master",
-          "conditionFormula": "@class:fighter\u003e\u003d2"
-        }, {
-          "featureId": "ability:armored_defense#fighter_armor_master",
-          "conditionFormula": "@class:fighter\u003e\u003d5"
-        }, {
-          "featureId": "ability:fortification#fighter_armor_master",
-          "conditionFormula": "@class:fighter\u003e\u003d9"
-        }, {
-          "featureId": "ability:indestructible#fighter_armor_master",
-          "conditionFormula": "@class:fighter\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bravery#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_mastery#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_mastery#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:deflective_shield#fighter_armor_master"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:indestructible#fighter_armor_master"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:armored_defense#fighter_armor_master"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:fortification#fighter_armor_master"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 13,
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }]
+  }]
 }

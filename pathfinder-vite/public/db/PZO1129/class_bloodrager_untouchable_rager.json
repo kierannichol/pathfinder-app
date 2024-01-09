@@ -20,17 +20,15 @@
             "targetKey": "modifies:ability:bloodline_spells#bloodrager",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:raging_resistance#bloodrager_untouchable_rager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d4"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_spells_blood_casting_eschew_materials#bloodrager"
-        }, {
-          "featureId": "ability:bloodline_spells#bloodrager"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bloodrager",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:raging_resistance#bloodrager_untouchable_rager"]
+    }]
+  }]
 }

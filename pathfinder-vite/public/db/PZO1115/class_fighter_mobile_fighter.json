@@ -30,35 +30,29 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:agility#fighter_mobile_fighter",
-          "conditionFormula": "@class:fighter\u003e\u003d2"
-        }, {
-          "featureId": "ability:leaping_attack#fighter_mobile_fighter",
-          "conditionFormula": "@class:fighter\u003e\u003d5"
-        }, {
-          "featureId": "ability:rapid_attack#fighter_mobile_fighter",
-          "conditionFormula": "@class:fighter\u003e\u003d11"
-        }, {
-          "featureId": "ability:fleet_footed#fighter_mobile_fighter",
-          "conditionFormula": "@class:fighter\u003e\u003d15"
-        }, {
-          "featureId": "ability:whirlwind_blitz#fighter_mobile_fighter",
-          "conditionFormula": "@class:fighter\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bravery#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_mastery#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:agility#fighter_mobile_fighter"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:whirlwind_blitz#fighter_mobile_fighter"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:leaping_attack#fighter_mobile_fighter"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:rapid_attack#fighter_mobile_fighter"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:fleet_footed#fighter_mobile_fighter"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }]
+  }]
 }

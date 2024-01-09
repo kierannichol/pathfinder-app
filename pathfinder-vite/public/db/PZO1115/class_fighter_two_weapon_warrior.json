@@ -25,52 +25,46 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:defensive_flurry#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d3"
-        }, {
-          "featureId": "ability:twin_blades#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d5"
-        }, {
-          "featureId": "ability:doublestrike#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d9"
-        }, {
-          "featureId": "ability:improved_balance#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d11"
-        }, {
-          "featureId": "ability:equal_opportunity#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d13"
-        }, {
-          "featureId": "ability:perfect_balance#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d15"
-        }, {
-          "featureId": "ability:deft_doublestrike#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d17"
-        }, {
-          "featureId": "ability:deadly_defense#fighter_two_weapon_warrior",
-          "conditionFormula": "@class:fighter\u003e\u003d19"
-        }],
-        "unlinks": [{
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_mastery#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:deft_doublestrike#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:deadly_defense#fighter_two_weapon_warrior"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:defensive_flurry#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:twin_blades#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 7,
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:doublestrike#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:improved_balance#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:equal_opportunity#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:perfect_balance#fighter_two_weapon_warrior"],
+      "linksToRemove": ["ability:armor_training#fighter"]
+    }]
+  }]
 }

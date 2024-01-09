@@ -14,15 +14,15 @@
             "targetKey": "modifies:ability:aura_of_faith#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:shining_light#paladin_warrior_of_the_holy_light",
-          "conditionFormula": "@class:paladin\u003e\u003d14"
-        }],
-        "unlinks": [{
-          "featureId": "ability:aura_of_faith#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:shining_light#paladin_warrior_of_the_holy_light"]
+    }]
+  }]
 }

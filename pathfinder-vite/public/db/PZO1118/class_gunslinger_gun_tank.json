@@ -35,44 +35,37 @@
             "targetKey": "modifies:ability:nimble#gunslinger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:gun_tanks_resolve#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d1"
-        }, {
-          "featureId": "ability:gun_tanks_resilience#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d15"
-        }, {
-          "featureId": "ability:bullet_deflection#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d2"
-        }, {
-          "featureId": "ability:bullet_deflection#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d6"
-        }, {
-          "featureId": "ability:bullet_deflection#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d10"
-        }, {
-          "featureId": "ability:bullet_deflection#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d14"
-        }, {
-          "featureId": "ability:bullet_deflection#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d18"
-        }, {
-          "featureId": "ability:armor_training#gunslinger_gun_tank",
-          "conditionFormula": "@class:gunslinger\u003e\u003d4"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_gunslingers_dodge_deed#gunslinger"
-        }, {
-          "featureId": "ability:the_evasive_deed#gunslinger"
-        }, {
-          "featureId": "ability:nimble#gunslinger"
-        }, {
-          "featureId": "ability:every_four_levels_thereafter#gunslinger"
-        }, {
-          "featureId": "ability:bonus_feats_the_gunslinger_gains#gunslinger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:gunslinger",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:gun_tanks_resolve#gunslinger_gun_tank"]
+    }, {
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:armor_training#gunslinger_gun_tank"],
+      "linksToRemove": ["ability:bonus_feats_the_gunslinger_gains#gunslinger"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:bullet_deflection#gunslinger_gun_tank"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:gun_tanks_resilience#gunslinger_gun_tank"]
+    }]
+  }]
 }

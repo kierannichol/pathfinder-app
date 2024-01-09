@@ -20,23 +20,27 @@
             "targetKey": "modifies:ability:arcanist_exploits#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bloodline#arcanist_blood_arcanist",
-          "conditionFormula": "@class:arcanist\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:magical_supremacy#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploits#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploits#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploits#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploits#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }, {
+      "targetStackCount": 3,
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:bloodline#arcanist_blood_arcanist"]
+    }, {
+      "targetStackCount": 9,
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }, {
+      "targetStackCount": 15,
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }]
+  }]
 }

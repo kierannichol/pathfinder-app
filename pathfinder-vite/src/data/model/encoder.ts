@@ -1,13 +1,15 @@
 import Description from "./Description.ts";
 import {Choice, FeatureSelectCategory, FeatureSelectChoice, TextChoice} from "./Choice.ts";
 import ConditionalComponent from "./ConditionalComponent.ts";
-import {AddEffect, Effect, SetFormulaEffect, SetNumberEffect} from "./Effect.ts";
+import {AddEffect, ConditionalEffect, Effect, SetFormulaEffect, SetNumberEffect} from "./Effect.ts";
 import Feature, {FeatureSummary} from "./Feature.ts";
 import Link from "./Link.ts";
 import {FixedStack, RepeatingStack, Stack, Stacks} from "./Stack.ts";
 import Unlink from "./Unlink.ts";
 import CharacterTemplate, {CharacterLevelTemplate} from "./CharacterTemplate.ts";
 import {data} from "../../compiled";
+import StackModification from "./StackModification.ts";
+import FeatureModification from "./FeatureModification.ts";
 import FeatureSummaryDbo = data.FeatureSummaryDbo;
 import FeatureDbo = data.FeatureDbo;
 import StacksDbo = data.StacksDbo;
@@ -21,6 +23,8 @@ import CharacterLevelTemplateDbo = data.CharacterLevelTemplateDbo;
 import EffectDbo = data.EffectDbo;
 import FeatureSelectChoiceCategoryDbo = data.FeatureSelectChoiceCategoryDbo;
 import FeatureSelectChoiceSortByDbo = data.FeatureSelectChoiceSortByDbo;
+import StackModificationDbo = data.StackModificationDbo;
+import FeatureModificationDbo = data.FeatureModificationDbo;
 
 export function decodeFeatureSummary(dbo: FeatureSummaryDbo): FeatureSummary {
   return new FeatureSummary(dbo.id,
@@ -39,23 +43,31 @@ export function decodeFeature(dbo: FeatureDbo): Feature {
       dbo.enabledFormula,
       dbo.maxStacks ?? null,
       new Description(dbo.description?.text ?? "", dbo.description?.sections ?? {}),
-      decodeStacks(dbo.stacks ?? new StacksDbo()));
+      decodeStacks(dbo.stacks ?? new StacksDbo()),
+      dbo.featureModifications.map(decodeFeatureModification));
 }
 
 function decodeEffect(dbo: EffectDbo): Effect {
+  let effect: Effect|undefined = undefined;
+
   if (dbo.addAction) {
-    return new AddEffect(dbo.addAction.targetKey, dbo.addAction.numberDelta);
+    effect = new AddEffect(dbo.addAction.targetKey, dbo.addAction.numberDelta);
+  }
+  else if (dbo.setAction && dbo.setAction.formula !== undefined && dbo.setAction.formula !== null) {
+    effect = new SetFormulaEffect(dbo.setAction.targetKey, dbo.setAction.formula);
+  }
+  else if (dbo.setAction && dbo.setAction.numberValue !== undefined && dbo.setAction.numberValue !== null) {
+    effect = new SetNumberEffect(dbo.setAction.targetKey, dbo.setAction.numberValue);
+  }
+  else {
+    throw new Error("Unknown effect: " + JSON.stringify(dbo));
   }
 
-  if (dbo.setAction && dbo.setAction.formula) {
-    return new SetFormulaEffect(dbo.setAction.targetKey, dbo.setAction.formula);
+  if (dbo.conditionFormula) {
+    effect = new ConditionalEffect(effect, dbo.conditionFormula);
   }
 
-  if (dbo.setAction && dbo.setAction.numberValue) {
-    return new SetNumberEffect(dbo.setAction.targetKey, dbo.setAction.numberValue);
-  }
-
-  throw new Error("Unknown effect: " + dbo.action);
+  return effect;
 }
 
 function decodeLink(dbo: LinkDbo): Link {
@@ -117,6 +129,17 @@ function decodeConditionalComponent(dbo: ConditionalStackComponentDbo): Conditio
       dbo.effects.map(decodeEffect),
       dbo.links.map(decodeLink),
       dbo.choices.map(decodeChoice));
+}
+
+function decodeFeatureModification(dbo: FeatureModificationDbo): FeatureModification {
+  return new FeatureModification(dbo.targetFeatureId,
+      dbo.stackModifications.map(decodeStackModification));
+}
+
+function decodeStackModification(dbo: StackModificationDbo): StackModification {
+  return new StackModification(dbo.targetStackCount,
+      dbo.linksToAdd,
+      dbo.linksToRemove);
 }
 
 export function decodeCharacterTemplate(dbo: CharacterTemplateDbo): CharacterTemplate {

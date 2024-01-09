@@ -25,25 +25,22 @@
             "targetKey": "modifies:ability:combat_style_feat#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:animal_companion#ranger_beastmaster",
-          "conditionFormula": "@class:ranger\u003e\u003d4"
-        }, {
-          "featureId": "ability:improved_empathic_link#ranger_beastmaster",
-          "conditionFormula": "@class:ranger\u003e\u003d6"
-        }, {
-          "featureId": "ability:strong_bond#ranger_beastmaster",
-          "conditionFormula": "@class:ranger\u003e\u003d12"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hunters_bond#ranger"
-        }, {
-          "featureId": "ability:combat_style_feat#ranger"
-        }, {
-          "featureId": "ability:camouflage#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:animal_companion#ranger_beastmaster"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:improved_empathic_link#ranger_beastmaster"],
+      "linksToRemove": ["ability:combat_style_feat#ranger"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:strong_bond#ranger_beastmaster"]
+    }]
+  }]
 }

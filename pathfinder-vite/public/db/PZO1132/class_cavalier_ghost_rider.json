@@ -1,0 +1,72 @@
+{
+  "id": "class:cavalier#ghost_rider",
+  "name": "Ghost Rider",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:mount#cavalier AND !@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:greater_banner#cavalier AND !@modifies:ability:tactician_greater_tactician#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:expert_trainer#cavalier AND !@modifies:ability:master_tactician#cavalier AND !@modifies:ability:banner#cavalier",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mount#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mighty_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tactician_greater_tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cavaliers_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:expert_trainer#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:master_tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:banner#cavalier",
+            "numberValue": 1
+          }
+        }]
+      }]
+    }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:cavalier",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:ghost_mount#cavalier_ghost_rider", "ability:frightful_gaze#cavalier_ghost_rider"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:fearless#cavalier_ghost_rider"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:spirited_mount#cavalier_ghost_rider"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:ghost_wind#cavalier_ghost_rider"]
+    }]
+  }]
+}

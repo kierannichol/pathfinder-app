@@ -509,7 +509,7 @@ public class PrerequisiteParser {
 //        specialNameToId.put("Aasimar", "race:aasimar");
 //        specialNameToId.put("goblin", "race:goblin");
 
-        Arrays.stream(Size.values()).forEach(size -> addNameMapping(size.longName(), Id.partial(Integer.toString(size.id()))));
+        Arrays.stream(Size.values()).forEach(size -> addNameMapping(size.longName(), size.id()));
 
         List<String> abilityScores = List.of("strength", "dexterity", "constitution", "wisdom", "intelligence", "charisma");
         for (String abilityScore : abilityScores) {

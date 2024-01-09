@@ -15,20 +15,20 @@
             "targetKey": "modifies:ability:hex#shaman",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:rebuke_spirits#shaman_spirit_warden",
-          "conditionFormula": "@class:shaman\u003e\u003d2"
-        }, {
-          "featureId": "ability:laugh_at_death#shaman_spirit_warden",
-          "conditionFormula": "@class:shaman\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hex#shaman"
-        }, {
-          "featureId": "ability:hex#shaman"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:shaman",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:rebuke_spirits#shaman_spirit_warden"],
+      "linksToRemove": ["ability:hex#shaman"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:laugh_at_death#shaman_spirit_warden"],
+      "linksToRemove": ["ability:hex#shaman"]
+    }]
+  }]
 }

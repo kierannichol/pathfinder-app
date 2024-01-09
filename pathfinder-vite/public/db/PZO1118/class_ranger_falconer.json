@@ -20,20 +20,19 @@
             "targetKey": "modifies:ability:combat_style_feat_the_ranger_gains#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:feathered_companion#ranger_falconer",
-          "conditionFormula": "@class:ranger\u003e\u003d1"
-        }, {
-          "featureId": "ability:swoop_for_the_kill#ranger_falconer",
-          "conditionFormula": "@class:ranger\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:wild_empathy#ranger"
-        }, {
-          "featureId": "ability:combat_style_feat_the_ranger_gains#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:feathered_companion#ranger_falconer"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:swoop_for_the_kill#ranger_falconer"],
+      "linksToRemove": ["ability:combat_style_feat_the_ranger_gains#ranger"]
+    }]
+  }]
 }

@@ -19,8 +19,9 @@ message EffectDbo {
     int32 number_delta = 2;
   }
 
+  optional string condition_formula = 1;
   oneof action {
-    SetActionDbo set_action = 1;
-    AddActionDbo add_action = 2;
+    SetActionDbo set_action = 2;
+    AddActionDbo add_action = 3;
   }
 }

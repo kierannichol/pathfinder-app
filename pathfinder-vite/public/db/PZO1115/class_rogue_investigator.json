@@ -15,15 +15,15 @@
             "targetKey": "modifies:ability:trapfinding#rogue",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:follow_up#rogue_investigator",
-          "conditionFormula": "@class:rogue\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:trapfinding#rogue"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:rogue",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:follow_up#rogue_investigator"]
+    }]
+  }]
 }

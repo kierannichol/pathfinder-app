@@ -73,7 +73,6 @@ public class LocalPathfinderDatabaseCleaner {
                 original.ref(),
                 original.will(),
                 original.levels(),
-                original.spell_caster_types(),
                 cleanedFeatures
         );
     }

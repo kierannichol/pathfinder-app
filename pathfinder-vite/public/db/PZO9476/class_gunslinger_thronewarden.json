@@ -24,34 +24,30 @@
             "targetKey": "modifies:ability:nimble#gunslinger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
-          "conditionFormula": "@class:gunslinger\u003e\u003d2"
-        }, {
-          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
-          "conditionFormula": "@class:gunslinger\u003e\u003d6"
-        }, {
-          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
-          "conditionFormula": "@class:gunslinger\u003e\u003d10"
-        }, {
-          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
-          "conditionFormula": "@class:gunslinger\u003e\u003d14"
-        }, {
-          "featureId": "ability:hair_trigger_reflexes#gunslinger_thronewarden",
-          "conditionFormula": "@class:gunslinger\u003e\u003d18"
-        }, {
-          "featureId": "ability:eye_for_trouble#gunslinger_thronewarden",
-          "conditionFormula": "@class:gunslinger\u003e\u003d4"
-        }],
-        "unlinks": [{
-          "featureId": "ability:nimble#gunslinger"
-        }, {
-          "featureId": "ability:bonus_feat#gunslinger"
-        }, {
-          "featureId": "ability:startling_shot#gunslinger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:gunslinger",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:hair_trigger_reflexes#gunslinger_thronewarden"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:hair_trigger_reflexes#gunslinger_thronewarden"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:eye_for_trouble#gunslinger_thronewarden"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:hair_trigger_reflexes#gunslinger_thronewarden"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:hair_trigger_reflexes#gunslinger_thronewarden"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:hair_trigger_reflexes#gunslinger_thronewarden"]
+    }]
+  }]
 }

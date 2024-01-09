@@ -20,40 +20,34 @@
             "targetKey": "modifies:ability:channel_energy#warpriest",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bonus_feat#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d3"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d6"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d9"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d12"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d15"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d18"
-        }, {
-          "featureId": "ability:mystic_interference#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d4"
-        }, {
-          "featureId": "ability:banish_enchantment#warpriest_disenchanter",
-          "conditionFormula": "@class:warpriest\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bonus_feat#warpriest"
-        }, {
-          "featureId": "ability:channel_energy#warpriest"
-        }, {
-          "featureId": "ability:bonus_feat#warpriest"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:warpriest",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:bonus_feat#warpriest_disenchanter"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:bonus_feat#warpriest_disenchanter"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:mystic_interference#warpriest_disenchanter"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:bonus_feat#warpriest_disenchanter", "ability:banish_enchantment#warpriest_disenchanter"],
+      "linksToRemove": ["ability:bonus_feat#warpriest"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:bonus_feat#warpriest_disenchanter"]
+    }, {
+      "targetStackCount": 12,
+      "linksToAdd": ["ability:bonus_feat#warpriest_disenchanter"]
+    }, {
+      "targetStackCount": 15,
+      "linksToAdd": ["ability:bonus_feat#warpriest_disenchanter"]
+    }]
+  }]
 }

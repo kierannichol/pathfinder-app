@@ -15,19 +15,22 @@
             "targetKey": "modifies:ability:arcanist_exploits#arcanist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:school_focus#arcanist_school_savant",
-          "conditionFormula": "@class:arcanist\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:arcanist_exploits#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploits#arcanist"
-        }, {
-          "featureId": "ability:arcanist_exploits#arcanist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:arcanist",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:school_focus#arcanist_school_savant"],
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }, {
+      "targetStackCount": 3,
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }, {
+      "targetStackCount": 7,
+      "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+    }]
+  }]
 }

@@ -40,31 +40,15 @@
             "targetKey": "modifies:ability:read_magic_cantrips#wizard",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:siege_engineer#wizard_siege_mage",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:siege_engine_bond#wizard_siege_mage",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }, {
-          "featureId": "ability:siege_school#wizard_siege_mage",
-          "conditionFormula": "@class:wizard\u003e\u003d1"
-        }],
-        "unlinks": [{
-          "featureId": "ability:scribe_scroll#wizard"
-        }, {
-          "featureId": "ability:arcane_bond#wizard"
-        }, {
-          "featureId": "ability:cantrips_but_the_siege_mage_gains_the_detect_magic#wizard"
-        }, {
-          "featureId": "ability:read_magic_cantrips#wizard"
-        }, {
-          "featureId": "ability:places_them_in_his_spellbook#wizard"
-        }, {
-          "featureId": "ability:arcane_school#wizard"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:wizard",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:siege_engineer#wizard_siege_mage", "ability:siege_engine_bond#wizard_siege_mage", "ability:siege_school#wizard_siege_mage"]
+    }]
+  }]
 }

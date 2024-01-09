@@ -2,11 +2,11 @@ import {GiBookmark} from "react-icons/gi";
 import SpellBookEditorDialog from "./SpellBookEditorDialog.tsx";
 import {useState} from "react";
 import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import ChoiceRef from "../../../data/model/ChoiceRef.ts";
+import {ChoiceSelectedHandler} from "../../../data/model/ChoiceRef.ts";
 
 interface SpellBookEditorButtonProps {
   characterAtLevel: CharacterAtLevel;
-  onChange: (choice: ChoiceRef, value: string) => void;
+  onChange: ChoiceSelectedHandler;
 }
 
 export default function SpellBookEditorButton({ characterAtLevel, onChange }: SpellBookEditorButtonProps) {

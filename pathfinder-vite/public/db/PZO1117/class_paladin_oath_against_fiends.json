@@ -19,20 +19,19 @@
             "targetKey": "modifies:ability:aura_of_resolve#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:anchoring_aura#paladin_oath_against_fiends",
-          "conditionFormula": "@class:paladin\u003e\u003d8"
-        }, {
-          "featureId": "ability:holy_vessel#paladin_oath_against_fiends",
-          "conditionFormula": "@class:paladin\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:aura_of_resolve#paladin"
-        }, {
-          "featureId": "ability:mercy#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:anchoring_aura#paladin_oath_against_fiends"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:holy_vessel#paladin_oath_against_fiends"],
+      "linksToRemove": ["ability:mercy#paladin"]
+    }]
+  }]
 }

@@ -24,23 +24,98 @@
             "numberDelta": 2
           }
         }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
-        }, {
           "setAction": {
-            "targetKey": "trait:spellcaster",
+            "targetKey": "trained:skill:sleight_of_hand",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "trait:arcane_spellcaster",
+            "targetKey": "trained:skill:diplomacy",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:bluff",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:spellcraft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:acrobatics",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:profession",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:climb",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perception",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:craft",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:use_magic_device",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:escape_artist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:intimidate",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:stealth",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:disguise",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:knowledge",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:sense_motive",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:appraise",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:linguistics",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "trained:skill:perform",
             "numberValue": 1
           }
         }],
@@ -62,6 +137,8 @@
           "featureId": "ability:fascinate#bard"
         }, {
           "featureId": "ability:inspire_courage#bard"
+        }, {
+          "featureId": "ability:spellcasting#bard"
         }],
         "choices": [{
           "choiceId": "archetype",
@@ -72,14 +149,6 @@
             "optionTags": ["archetype+bard"],
             "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
           }
-        }, {
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -97,42 +166,11 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:versatile_performance#bard"
         }, {
           "featureId": "ability:well_versed#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -145,48 +183,9 @@
             "targetKey": "fort:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_competence#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -204,124 +203,12 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
-        }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_courage#bard"
         }, {
           "featureId": "ability:lore_master#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -344,82 +231,11 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:suggestion#bard"
         }, {
           "featureId": "ability:versatile_performance#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -427,88 +243,9 @@
             "targetKey": "bab",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_competence#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -526,104 +263,9 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:dirge_of_doom#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -631,120 +273,9 @@
             "targetKey": "fort:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_greatness#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -762,130 +293,11 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:jack_of_all_trades#bard"
         }, {
           "featureId": "ability:versatile_performance#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -893,148 +305,13 @@
             "targetKey": "bab",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_competence#bard"
         }, {
           "featureId": "ability:inspire_courage#bard"
         }, {
           "featureId": "ability:lore_master#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -1057,323 +334,11 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:soothing_performance#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }]
       }, {
         "effects": [{
           "addAction": {
@@ -1390,186 +355,11 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:frightening_tune#bard"
         }, {
           "featureId": "ability:versatile_performance#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -1582,202 +372,11 @@
             "targetKey": "fort:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_competence#bard"
         }, {
           "featureId": "ability:inspire_heroics#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_5",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_3",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -1795,428 +394,12 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_5",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_3",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_1",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
-        }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_courage#bard"
         }, {
           "featureId": "ability:lore_master#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_5",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_3",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_4",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_1",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_2",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -2239,242 +422,11 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:mass_suggestion#bard"
         }, {
           "featureId": "ability:versatile_performance#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_5",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_5",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_3",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_4",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_1",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_2",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_3",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -2482,256 +434,9 @@
             "targetKey": "bab",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:inspire_competence#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_5",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_5",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_3",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_4",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_5",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_1",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_2",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_3",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_4",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }, {
         "effects": [{
@@ -2749,264 +454,9 @@
             "targetKey": "ref:base",
             "numberDelta": 1
           }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "caster_level#bard",
-            "numberDelta": 1
-          }
         }],
         "links": [{
-          "featureId": "trait:armor_proficiency#bard"
-        }, {
-          "featureId": "trait:weapon_proficiency#bard"
-        }, {
           "featureId": "ability:deadly_performance#bard"
-        }],
-        "choices": [{
-          "choiceId": "spell0_1",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_2",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_3",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_4",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell0_5",
-          "label": "Level 0 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard0"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_1",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_2",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_3",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_4",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell1_5",
-          "label": "Level 1 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard1"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_1",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_2",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_3",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_4",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell2_5",
-          "label": "Level 2 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard2"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_1",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_2",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_3",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_4",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell3_5",
-          "label": "Level 3 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard3"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_1",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_2",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_3",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_4",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell4_5",
-          "label": "Level 4 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard4"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_1",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_2",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_3",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_4",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
-        }, {
-          "choiceId": "spell5_5",
-          "label": "Level 5 Spell",
-          "type": "spell",
-          "featureSelect": {
-            "optionTags": ["spell+bard5"],
-            "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-          }
         }]
       }]
     }

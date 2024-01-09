@@ -24,6 +24,10 @@ public abstract class Effect {
         return new SetFormulaEffect(targetKey, formula);
     }
 
+    public static Effect setText(String targetKey, String text) {
+        return setFormula(targetKey, "\"" + text + "\"");
+    }
+
     public static Effect setNumber(String targetKey, int value) {
         return new SetNumberEffect(targetKey, value);
     }

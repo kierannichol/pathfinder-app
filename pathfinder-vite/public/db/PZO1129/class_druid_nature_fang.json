@@ -39,34 +39,21 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:studied_target#druid_nature_fang",
-          "conditionFormula": "@class:druid\u003e\u003d1"
-        }, {
-          "featureId": "ability:slayer_talent#druid_nature_fang",
-          "conditionFormula": "@class:druid\u003e\u003d4"
-        }, {
-          "featureId": "ability:sneak_attack#druid_nature_fang",
-          "conditionFormula": "@class:druid\u003e\u003d4"
-        }, {
-          "featureId": "ability:swift_studied_target#druid_nature_fang",
-          "conditionFormula": "@class:druid\u003e\u003d9"
-        }],
-        "unlinks": [{
-          "featureId": "ability:wild_empathy#druid"
-        }, {
-          "featureId": "ability:woodland_stride#druid"
-        }, {
-          "featureId": "ability:nature_sense#druid"
-        }, {
-          "featureId": "ability:wild_shape#druid"
-        }, {
-          "featureId": "ability:resist_natures_lure#druid"
-        }, {
-          "featureId": "ability:venom_immunity#druid"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:druid",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:studied_target#druid_nature_fang"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:slayer_talent#druid_nature_fang", "ability:sneak_attack#druid_nature_fang"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:swift_studied_target#druid_nature_fang"]
+    }]
+  }]
 }

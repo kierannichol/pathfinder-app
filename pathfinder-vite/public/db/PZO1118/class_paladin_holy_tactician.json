@@ -45,60 +45,45 @@
             "targetKey": "modifies:ability:holy_champion#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d1"
-        }, {
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d4"
-        }, {
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d7"
-        }, {
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d10"
-        }, {
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d13"
-        }, {
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d16"
-        }, {
-          "featureId": "ability:weals_champion#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d19"
-        }, {
-          "featureId": "ability:tactical_acumen#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d3"
-        }, {
-          "featureId": "ability:battlefield_presence#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d3"
-        }, {
-          "featureId": "ability:guide_the_battle#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d8"
-        }, {
-          "featureId": "ability:weals_wrath#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d11"
-        }, {
-          "featureId": "ability:masterful_presence#paladin_holy_tactician",
-          "conditionFormula": "@class:paladin\u003e\u003d20"
-        }],
-        "unlinks": [{
-          "featureId": "ability:smite_evil#paladin"
-        }, {
-          "featureId": "ability:divine_health#paladin"
-        }, {
-          "featureId": "ability:divine_bond#paladin"
-        }, {
-          "featureId": "ability:aura_of_courage#paladin"
-        }, {
-          "featureId": "ability:aura_of_resolve#paladin"
-        }, {
-          "featureId": "ability:aura_of_justice#paladin"
-        }, {
-          "featureId": "ability:holy_champion#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 16,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:tactical_acumen#paladin_holy_tactician", "ability:battlefield_presence#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:masterful_presence#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:guide_the_battle#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:weals_wrath#paladin_holy_tactician"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:weals_champion#paladin_holy_tactician"]
+    }]
+  }]
 }

@@ -25,22 +25,18 @@
             "targetKey": "modifies:ability:woodland_stride#ranger",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:animal_focus#ranger_wild_hunter",
-          "conditionFormula": "@class:ranger\u003e\u003d1"
-        }, {
-          "featureId": "ability:shared_focus#ranger_wild_hunter",
-          "conditionFormula": "@class:ranger\u003e\u003d7"
-        }],
-        "unlinks": [{
-          "featureId": "ability:favored_enemy#ranger"
-        }, {
-          "featureId": "ability:woodland_stride#ranger"
-        }, {
-          "featureId": "ability:swift_tracker#ranger"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:ranger",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:animal_focus#ranger_wild_hunter"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:shared_focus#ranger_wild_hunter"]
+    }]
+  }]
 }

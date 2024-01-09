@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:uncanny_dodge#rogue",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:careful_disarm#rogue_trapsmith",
-          "conditionFormula": "@class:rogue\u003e\u003d4"
-        }, {
-          "featureId": "ability:trap_master#rogue_trapsmith",
-          "conditionFormula": "@class:rogue\u003e\u003d8"
-        }],
-        "unlinks": [{
-          "featureId": "ability:uncanny_dodge#rogue"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#rogue"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:rogue",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:careful_disarm#rogue_trapsmith"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:trap_master#rogue_trapsmith"]
+    }]
+  }]
 }

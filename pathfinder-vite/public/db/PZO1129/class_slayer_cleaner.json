@@ -24,25 +24,22 @@
             "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:deceitful#slayer_cleaner",
-          "conditionFormula": "@class:slayer\u003e\u003d1"
-        }, {
-          "featureId": "ability:without_a_trace#slayer_cleaner",
-          "conditionFormula": "@class:slayer\u003e\u003d4"
-        }, {
-          "featureId": "ability:mislead#slayer_cleaner",
-          "conditionFormula": "@class:slayer\u003e\u003d7"
-        }],
-        "unlinks": [{
-          "featureId": "ability:track#slayer"
-        }, {
-          "featureId": "ability:slayer_talent#slayer"
-        }, {
-          "featureId": "ability:stalker#slayer"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:slayer",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:deceitful#slayer_cleaner"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:without_a_trace#slayer_cleaner"],
+      "linksToRemove": ["ability:slayer_talent#slayer"]
+    }, {
+      "targetStackCount": 7,
+      "linksToAdd": ["ability:mislead#slayer_cleaner"]
+    }]
+  }]
 }

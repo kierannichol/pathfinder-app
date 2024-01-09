@@ -1,5 +1,5 @@
 import React, {ReactNode} from "react";
-import PathfinderSelect from "./PathfinderSelect.tsx";
+import PathfinderSelect from "./SelectBlock.tsx";
 
 export class ChoiceSelectorOption {
   private cachedIsValid: boolean|undefined;
@@ -26,7 +26,8 @@ export type ChoiceSelectorOptions = ChoiceSelectorOption
 export class ChoiceSelectorCategory {
 
   constructor(public readonly label: ReactNode,
-              public readonly tag: string) {
+              public readonly tag: string,
+              public readonly key: string = tag) {
   }
 }
 

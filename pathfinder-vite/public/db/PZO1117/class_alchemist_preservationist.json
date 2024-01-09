@@ -34,40 +34,30 @@
             "targetKey": "modifies:ability:persistent_mutagen#alchemist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bottled_ally_i#alchemist_preservationist",
-          "conditionFormula": "@class:alchemist\u003e\u003d2"
-        }, {
-          "featureId": "ability:bottled_ally_ii#alchemist_preservationist",
-          "conditionFormula": "@class:alchemist\u003e\u003d5"
-        }, {
-          "featureId": "ability:bottled_ally_iii#alchemist_preservationist",
-          "conditionFormula": "@class:alchemist\u003e\u003d8"
-        }, {
-          "featureId": "ability:bottled_ally_iv#alchemist_preservationist",
-          "conditionFormula": "@class:alchemist\u003e\u003d10"
-        }, {
-          "featureId": "ability:bottled_ally_v#alchemist_preservationist",
-          "conditionFormula": "@class:alchemist\u003e\u003d14"
-        }, {
-          "featureId": "ability:bottled_ally_vi#alchemist_preservationist",
-          "conditionFormula": "@class:alchemist\u003e\u003d18"
-        }],
-        "unlinks": [{
-          "featureId": "ability:poison_use#alchemist"
-        }, {
-          "featureId": "ability:poison_resistance_"
-        }, {
-          "featureId": "ability:poison_resistance_"
-        }, {
-          "featureId": "ability:poison_immunity#alchemist"
-        }, {
-          "featureId": "ability:persistent_mutagen#alchemist"
-        }, {
-          "featureId": "ability:his_18th_level_discovery#alchemist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:alchemist",
+    "stackModifications": [{
+      "targetStackCount": 18,
+      "linksToAdd": ["ability:bottled_ally_vi#alchemist_preservationist"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:bottled_ally_i#alchemist_preservationist"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:bottled_ally_ii#alchemist_preservationist"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:bottled_ally_iii#alchemist_preservationist"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:bottled_ally_iv#alchemist_preservationist"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:bottled_ally_v#alchemist_preservationist"]
+    }]
+  }]
 }

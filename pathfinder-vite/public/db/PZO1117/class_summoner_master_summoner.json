@@ -30,24 +30,18 @@
             "targetKey": "modifies:ability:shield_ally#summoner",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:summoning_mastery#summoner_master_summoner",
-          "conditionFormula": "@class:summoner\u003e\u003d4"
-        }, {
-          "featureId": "ability:augment_summoning#summoner_master_summoner",
-          "conditionFormula": "@class:summoner\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:the_summoners_normal_eidolon_ability#summoner"
-        }, {
-          "featureId": "ability:the_summoners_normal_summon_monster_i_ability#summoner"
-        }, {
-          "featureId": "ability:shield_ally#summoner"
-        }, {
-          "featureId": "ability:bond_senses#summoner"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:summoner",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:augment_summoning#summoner_master_summoner"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:summoning_mastery#summoner_master_summoner"]
+    }]
+  }]
 }

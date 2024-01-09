@@ -19,20 +19,18 @@
             "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:shared_defense#paladin_divine_defender",
-          "conditionFormula": "@class:paladin\u003e\u003d3"
-        }, {
-          "featureId": "ability:divine_bond#paladin_divine_defender",
-          "conditionFormula": "@class:paladin\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:mercy#paladin"
-        }, {
-          "featureId": "ability:divine_bond#paladin"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:paladin",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:shared_defense#paladin_divine_defender"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:divine_bond#paladin_divine_defender"]
+    }]
+  }]
 }

@@ -20,20 +20,18 @@
             "targetKey": "modifies:ability:blood_sanctuary#bloodrager",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:bestial_aspect#bloodrager_rageshaper",
-          "conditionFormula": "@class:bloodrager\u003e\u003d4"
-        }, {
-          "featureId": "ability:furious_transformation#bloodrager_rageshaper",
-          "conditionFormula": "@class:bloodrager\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:blood_sanctuary#bloodrager"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#bloodrager"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:bloodrager",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:bestial_aspect#bloodrager_rageshaper"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:furious_transformation#bloodrager_rageshaper"]
+    }]
+  }]
 }

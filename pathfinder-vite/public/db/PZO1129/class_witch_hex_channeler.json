@@ -14,15 +14,16 @@
             "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:channel_energy#witch_hex_channeler",
-          "conditionFormula": "@class:witch\u003e\u003d2"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hex#witch"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:witch",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:channel_energy#witch_hex_channeler"],
+      "linksToRemove": ["ability:hex#witch"]
+    }]
+  }]
 }

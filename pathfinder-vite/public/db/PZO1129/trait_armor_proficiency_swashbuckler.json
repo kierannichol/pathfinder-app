@@ -2,18 +2,15 @@
   "id": "trait:armor_proficiency#swashbuckler",
   "name": "Armor Proficiency (Swashbuckler)",
   "tags": ["class_feature", "swashbuckler", "trait"],
-  "maxStacks": 1,
   "description": {
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "proficiency:light_armor",
-            "numberValue": 1
-          }
-        }]
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
       }]
     }
   }

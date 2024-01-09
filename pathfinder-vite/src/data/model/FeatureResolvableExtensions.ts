@@ -7,7 +7,7 @@ declare global {
 }
 
 if (!Array.prototype.resolveAll) {
-  Array.prototype.resolveAll = async function (basePath: string, context: ResolvedEntityContext) {
+  Array.prototype.resolveAll = async function (basePath: string, context: ResolvedEntityContext): Promise<void> {
     // await Promise.all(this.map(element => element.resolve(basePath, context)));
 
     for (const element of this) {

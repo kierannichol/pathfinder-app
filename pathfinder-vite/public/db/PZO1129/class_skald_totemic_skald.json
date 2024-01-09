@@ -29,27 +29,22 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#skald",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:totem#skald_totemic_skald",
-          "conditionFormula": "@class:skald\u003e\u003d3"
-        }, {
-          "featureId": "ability:totem_empathy#skald_totemic_skald",
-          "conditionFormula": "@class:skald\u003e\u003d4"
-        }, {
-          "featureId": "ability:wild_shape#skald_totemic_skald",
-          "conditionFormula": "@class:skald\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:rage_power#skald"
-        }, {
-          "featureId": "ability:uncanny_dodge#skald"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#skald"
-        }, {
-          "featureId": "ability:spell_kenning#skald"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:skald",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:totem#skald_totemic_skald"],
+      "linksToRemove": ["ability:rage_power#skald"]
+    }, {
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:totem_empathy#skald_totemic_skald"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:wild_shape#skald_totemic_skald"]
+    }]
+  }]
 }

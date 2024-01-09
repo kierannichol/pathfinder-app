@@ -2,18 +2,15 @@
   "id": "trait:armor_proficiency#rogue",
   "name": "Armor Proficiency (Rogue)",
   "tags": ["class_feature", "rogue", "trait"],
-  "maxStacks": 1,
   "description": {
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "proficiency:light_armor",
-            "numberValue": 1
-          }
-        }]
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
       }]
     }
   }

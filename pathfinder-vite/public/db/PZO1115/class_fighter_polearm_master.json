@@ -30,45 +30,37 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:pole_fighting#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d2"
-        }, {
-          "featureId": "ability:steadfast_pike#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d3"
-        }, {
-          "featureId": "ability:polearm_training#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d5"
-        }, {
-          "featureId": "ability:flexible_flanker#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d9"
-        }, {
-          "featureId": "ability:sweeping_fend#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d13"
-        }, {
-          "featureId": "ability:step_aside#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d17"
-        }, {
-          "featureId": "ability:polearm_parry#fighter_polearm_master",
-          "conditionFormula": "@class:fighter\u003e\u003d19"
-        }],
-        "unlinks": [{
-          "featureId": "ability:bravery#fighter"
-        }, {
-          "featureId": "ability:armor_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:weapon_training#fighter"
-        }, {
-          "featureId": "ability:armor_mastery#fighter"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:fighter",
+    "stackModifications": [{
+      "targetStackCount": 17,
+      "linksToAdd": ["ability:step_aside#fighter_polearm_master"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:pole_fighting#fighter_polearm_master"]
+    }, {
+      "targetStackCount": 19,
+      "linksToAdd": ["ability:polearm_parry#fighter_polearm_master"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:steadfast_pike#fighter_polearm_master"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:polearm_training#fighter_polearm_master"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:flexible_flanker#fighter_polearm_master"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }, {
+      "targetStackCount": 13,
+      "linksToAdd": ["ability:sweeping_fend#fighter_polearm_master"],
+      "linksToRemove": ["ability:weapon_training#fighter"]
+    }]
+  }]
 }

@@ -15,27 +15,27 @@
             "targetKey": "modifies:ability:hex#shaman",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:channel_energy#shaman_witch_doctor",
-          "conditionFormula": "@class:shaman\u003e\u003d4"
-        }, {
-          "featureId": "ability:counter_curse#shaman_witch_doctor",
-          "conditionFormula": "@class:shaman\u003e\u003d8"
-        }, {
-          "featureId": "ability:countering_hex#shaman_witch_doctor",
-          "conditionFormula": "@class:shaman\u003e\u003d10"
-        }],
-        "unlinks": [{
-          "featureId": "ability:hex#shaman"
-        }, {
-          "featureId": "ability:hex#shaman"
-        }, {
-          "featureId": "ability:hex#shaman"
-        }, {
-          "featureId": "ability:hex#shaman"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:shaman",
+    "stackModifications": [{
+      "targetStackCount": 4,
+      "linksToAdd": ["ability:channel_energy#shaman_witch_doctor"],
+      "linksToRemove": ["ability:hex#shaman"]
+    }, {
+      "targetStackCount": 8,
+      "linksToAdd": ["ability:counter_curse#shaman_witch_doctor"],
+      "linksToRemove": ["ability:hex#shaman"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:countering_hex#shaman_witch_doctor"],
+      "linksToRemove": ["ability:hex#shaman"]
+    }, {
+      "targetStackCount": 12,
+      "linksToRemove": ["ability:hex#shaman"]
+    }]
+  }]
 }

@@ -40,31 +40,22 @@
             "targetKey": "modifies:ability:bonus_feat#monk",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:advice#monk_sensei",
-          "conditionFormula": "@class:monk\u003e\u003d9"
-        }, {
-          "featureId": "ability:insightful_strike#monk_sensei",
-          "conditionFormula": "@class:monk\u003e\u003d2"
-        }, {
-          "featureId": "ability:mystic_wisdom#monk_sensei",
-          "conditionFormula": "@class:monk\u003e\u003d6"
-        }],
-        "unlinks": [{
-          "featureId": "ability:flurry_of_blows_fast_movement#monk"
-        }, {
-          "featureId": "ability:improved_evasion#monk"
-        }, {
-          "featureId": "ability:bonus_feat#monk"
-        }, {
-          "featureId": "ability:evasion#monk"
-        }, {
-          "featureId": "ability:the_bonus_feats_gained_at_6th_10th#monk"
-        }, {
-          "featureId": "ability:14th_level#monk"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:monk",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:insightful_strike#monk_sensei"],
+      "linksToRemove": ["ability:bonus_feat#monk"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:mystic_wisdom#monk_sensei"]
+    }, {
+      "targetStackCount": 9,
+      "linksToAdd": ["ability:advice#monk_sensei"]
+    }]
+  }]
 }

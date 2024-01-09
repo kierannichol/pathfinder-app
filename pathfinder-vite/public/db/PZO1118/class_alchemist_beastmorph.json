@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:persistent_mutagen#alchemist",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:beastform_mutagen#alchemist_beastmorph",
-          "conditionFormula": "@class:alchemist\u003e\u003d3"
-        }, {
-          "featureId": "ability:improved_beastform_mutagen#alchemist_beastmorph",
-          "conditionFormula": "@class:alchemist\u003e\u003d6"
-        }, {
-          "featureId": "ability:greater_beastform_mutagen#alchemist_beastmorph",
-          "conditionFormula": "@class:alchemist\u003e\u003d10"
-        }, {
-          "featureId": "ability:grand_beastform_mutagen#alchemist_beastmorph",
-          "conditionFormula": "@class:alchemist\u003e\u003d14"
-        }],
-        "unlinks": [{
-          "featureId": "ability:swift_alchemy#alchemist"
-        }, {
-          "featureId": "ability:swift_poisoning#alchemist"
-        }, {
-          "featureId": "ability:poison_resistance_"
-        }, {
-          "featureId": "ability:persistent_mutagen#alchemist"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:alchemist",
+    "stackModifications": [{
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:beastform_mutagen#alchemist_beastmorph"]
+    }, {
+      "targetStackCount": 6,
+      "linksToAdd": ["ability:improved_beastform_mutagen#alchemist_beastmorph"]
+    }, {
+      "targetStackCount": 10,
+      "linksToAdd": ["ability:greater_beastform_mutagen#alchemist_beastmorph"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:grand_beastform_mutagen#alchemist_beastmorph"]
+    }]
+  }]
 }

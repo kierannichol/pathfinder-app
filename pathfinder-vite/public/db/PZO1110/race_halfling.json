@@ -4,9 +4,27 @@
   "tags": ["race", "humanoid (halfling)"],
   "maxStacks": 1,
   "description": {
+    "text": "Members of this diminutive race find strength in family, community, and their own innate and seemingly inexhaustible luck. While their fierce curiosity is sometimes at odds with their intrinsic common sense, half lings are eternal optimists and cunning opportunists with an incredible knack for getting out the worst situations."
   },
   "stacks": {
     "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "speed:base",
+            "numberValue": 20
+          }
+        }],
+        "links": [{
+          "featureId": "size:s"
+        }, {
+          "featureId": "asi:dex_p2"
+        }, {
+          "featureId": "asi:cha_p2"
+        }, {
+          "featureId": "asi:str_m2"
+        }]
+      }]
     }
   }
 }

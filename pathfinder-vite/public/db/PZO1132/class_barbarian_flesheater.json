@@ -1,0 +1,67 @@
+{
+  "id": "class:barbarian#flesheater",
+  "name": "Flesheater",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:greater_rage#barbarian AND !@modifies:ability:the_2nd_#barbarian AND !@modifies:ability:mighty_rage#barbarian AND !@modifies:ability:uncanny_dodge_improved_uncanny_dodge#barbarian AND !@modifies:ability:the_14th_level_rage_power#barbarian AND !@modifies:ability:the_rage_ability#barbarian AND !@modifies:ability:8th_level_rage_powers#barbarian",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:greater_rage#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_2nd_#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mighty_rage#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge_improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_14th_level_rage_power#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:the_rage_ability#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:8th_level_rage_powers#barbarian",
+            "numberValue": 1
+          }
+        }]
+      }]
+    }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:one_flesh#barbarian_flesheater"]
+    }, {
+      "targetStackCount": 20,
+      "linksToAdd": ["ability:unbound_form#barbarian_flesheater"]
+    }, {
+      "targetStackCount": 11,
+      "linksToAdd": ["ability:unbound_rage#barbarian_flesheater"]
+    }, {
+      "targetStackCount": 14,
+      "linksToAdd": ["ability:feast#barbarian_flesheater"]
+    }]
+  }]
+}

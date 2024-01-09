@@ -30,30 +30,24 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
             "numberValue": 1
           }
-        }],
-        "links": [{
-          "featureId": "ability:terrifying_visage#barbarian_scarred_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d1"
-        }, {
-          "featureId": "ability:tolerance#barbarian_scarred_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d2"
-        }, {
-          "featureId": "ability:scarification#barbarian_scarred_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d3"
-        }, {
-          "featureId": "ability:improved_tolerance#barbarian_scarred_rager",
-          "conditionFormula": "@class:barbarian\u003e\u003d5"
-        }],
-        "unlinks": [{
-          "featureId": "ability:fast_movement#barbarian"
-        }, {
-          "featureId": "ability:uncanny_dodge#barbarian"
-        }, {
-          "featureId": "ability:trap_sense#barbarian"
-        }, {
-          "featureId": "ability:improved_uncanny_dodge#barbarian"
         }]
       }]
     }
-  }
+  },
+  "featureModifications": [{
+    "targetFeatureId": "class:barbarian",
+    "stackModifications": [{
+      "targetStackCount": 1,
+      "linksToAdd": ["ability:terrifying_visage#barbarian_scarred_rager"]
+    }, {
+      "targetStackCount": 2,
+      "linksToAdd": ["ability:tolerance#barbarian_scarred_rager"]
+    }, {
+      "targetStackCount": 3,
+      "linksToAdd": ["ability:scarification#barbarian_scarred_rager"]
+    }, {
+      "targetStackCount": 5,
+      "linksToAdd": ["ability:improved_tolerance#barbarian_scarred_rager"]
+    }]
+  }]
 }

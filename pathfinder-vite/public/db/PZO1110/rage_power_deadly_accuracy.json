@@ -3,14 +3,11 @@
   "name": "Deadly Accuracy",
   "tags": ["class_feature", "barbarian", "rage_power"],
   "enabledFormula": "all(@class:barbarian\u003e\u003d4,@rage_power:surprise_accuracy)",
-  "maxStacks": 1,
   "description": {
     "text": "On critical threat when using surprise accuracy, double surprise accuracy bonus on roll to confirm critical hit."
   },
   "stacks": {
-    "fixedStack": {
-      "stacks": [{
-      }]
+    "repeatingStack": {
     }
   }
 }
