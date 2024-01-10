@@ -3,25 +3,25 @@
 class:gunslinger
 Gunslingerclassbase(=
 favored_class:gunslinger
-Gunslingerfavored_classbase(f
-"trait:armor_proficiency#gunslingerArmor Proficiency (Gunslinger)class_feature
-gunslingertraitE
+Gunslingerfavored_classbase(K
+ability:gunsmith#gunslingerGunsmithclass_feature
+gunslingerabilityE
 ability:deeds#gunslingerDeedsclass_feature
+gunslingerabilityW
+!ability:startling_shot#gunslingerStartling Shotclass_feature
+gunslingerabilityh
+#trait:weapon_proficiency#gunslingerWeapon Proficiency (Gunslinger)class_feature
+gunslingertraitf
+"trait:armor_proficiency#gunslingerArmor Proficiency (Gunslinger)class_feature
+gunslingertraitS
+ability:gun_training#gunslingerGun Trainingclass_feature
+gunslingerabilityC
+ability:grit#gunslingerGritclass_feature
 gunslingerabilityO
 ability:bonus_feat#gunslinger
 Bonus Featclass_feature
-gunslingerabilityW
-!ability:startling_shot#gunslingerStartling Shotclass_feature
-gunslingerabilityC
-ability:grit#gunslingerGritclass_feature
 gunslingerabilityG
 ability:nimble#gunslingerNimbleclass_feature
-gunslingerabilityh
-#trait:weapon_proficiency#gunslingerWeapon Proficiency (Gunslinger)class_feature
-gunslingertraitS
-ability:gun_training#gunslingerGun Trainingclass_feature
-gunslingerabilityK
-ability:gunsmith#gunslingerGunsmithclass_feature
 gunslingerabilityM
 ability:true_grit#gunslinger	True Gritclass_feature
 gunslingerabilityQ
@@ -51,7 +51,7 @@ Bane Bladeclass_featuremagusmagus_arcana"@class:magus>=15Ž
 feat:final_embraceFinal Embracefeatcombat"^all(@str_score>=13,@int_score>=3,any(@race:naga,@race:serpentfolk,@ability:constrict),@bab>=3)(|
 feat:boar_ferocityBoar Ferocityfeatstyle"Hall(@feat:improved_unarmed_strike,@feat:boar_style,@skill:intimidate>=6)(
 feat:combat_style_masterCombat Style Masterfeatcombat"Í
-any(@feat:improved_unarmed_strike,(@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style)[style feat(s)]>=2,@bab>=6,@class:monk>=5)(±
+any(@feat:improved_unarmed_strike,(@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint)[style feat(s)]>=2,@bab>=6,@class:monk>=5)(±
 feat:marid_spiritMarid Spiritfeatstyle"any(@con_score>=15,@wis_score>=15,@feat:elemental_fist,@feat:marid_style,@feat:improved_unarmed_strike,@bab>=11,@class:monk>=9)(M
 feat:rending_furyRending Furyfeatcombat"all(@bab>=6,@ability:rend)(”
 feat:master_siege_engineerMaster Siege Engineerfeatcombat"Oall(@ability:siege_engineer#wizard_siege_mage,@skill:knowledge_engineering>=10)(—
@@ -227,8 +227,8 @@ $feat:impaling_critical#orc_skull_ram Impaling Critical: Orc Skull Ramfeatc
 feat:felling_smashFelling Smashfeatcombat"hall(@int_score>=13,@str_score>=13,@feat:combat_expertise,@feat:improved_trip,@feat:power_attack,@bab>=6)(¯
 feat:improved_cleaving_finishImproved Cleaving Finishfeatcombat"dall(@str_score>=13,@feat:cleave,@feat:cleaving_finish,@feat:great_cleave,@feat:power_attack,@bab>=6)(|
 feat:improved_whip_masteryImproved Whip Masteryfeatcombat"7all(@feat:weapon_focus#whip,@feat:whip_mastery,@bab>=5)(
-feat:greater_rending_furyGreater Rending Furyfeatcombat"Jall(@feat:improved_rending_fury,@feat:rending_fury,@bab>=12,@ability:rend)(‰
-feat:mantis_styleMantis Stylefeatstyle"Wall(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:heal>=3)(ˆ
+feat:greater_rending_furyGreater Rending Furyfeatcombat"Jall(@feat:improved_rending_fury,@feat:rending_fury,@bab>=12,@ability:rend)(
+feat:mantis_styleMantis Stylefeatstyle"Mall(@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:heal>=3)(ˆ
 feat:greater_channel_smiteGreater Channel Smitefeatgeneral"Ball(@ability:channel_energy#warpriest,@feat:channel_smite,@bab>=8)(m
 feat:vicious_stompVicious Stompfeatcombat"8all(@feat:combat_reflexes,@feat:improved_unarmed_strike)(ª
 feat:greater_snap_shotGreater Snap Shotfeatcombat"mall(@dex_score>=17,@feat:improved_snap_shot,@feat:point_blank_shot,@feat:rapid_shot,@feat:snap_shot,@bab>=12)(¶
@@ -455,8 +455,8 @@ $feat:twin_thunders_flurry#shuriken_5"Twin Thunders Flurry: Shuriken (5)feat
 feat:body_shieldBody Shieldfeatcombat"Pall(@dex_score>=13,@feat:improved_grapple,@feat:improved_unarmed_strike,@bab>=6)(
 feat:deceptive_exchangeDeceptive Exchangefeatgeneral"?all(@int_score>=13,@feat:combat_expertise,@feat:improved_feint)(—
 feat:nightmare_weaverNightmare Weaverfeatcombat"\all(@feat:improved_unarmed_strike,@feat:nightmare_fist,@skill:intimidate>=2,@spell:darkness)(x
-feat:quick_stealQuick Stealfeatcombat"Gall(@int_score>=13,@feat:combat_expertise,@feat:improved_steal,@bab>=6)(¼
-feat:earth_child_binderEarth Child Binderfeatstyle"ýall(@wis_score>=13,any(@race:dwarf,@race:gnome),@ability:defensive_training,@feat:earth_child_style,@feat:earth_child_topple,@feat:greater_trip,@feat:improved_trip,@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:acrobatics>=9)(S
+feat:quick_stealQuick Stealfeatcombat"Gall(@int_score>=13,@feat:combat_expertise,@feat:improved_steal,@bab>=6)(²
+feat:earth_child_binderEarth Child Binderfeatstyle"óall(@wis_score>=13,any(@race:dwarf,@race:gnome),@ability:defensive_training,@feat:earth_child_style,@feat:earth_child_topple,@feat:greater_trip,@feat:improved_trip,@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:acrobatics>=9)(S
 feat:cavalry_formationCavalry Formationfeatteamwork"@feat:mounted_combat(•
 feat:janni_tempestJanni Tempestfeatstyle"aall(@feat:improved_unarmed_strike,@feat:janni_style,@skill:acrobatics>=5,@skill:perform#dance>=5)(Š
 feat:dispelling_fistDispelling Fistfeatgeneral"Pall(@feat:improved_unarmed_strike,@bab>=11,@spell:dispel_magic,@caster_level>=7)(|
@@ -687,8 +687,8 @@ $feat:twin_thunders#gnome_piston_maul Twin Thunders: Gnome Piston Maulfeatc
 !feat:twin_thunders#wrist_launcherTwin Thunders: Wrist Launcherfeatcombat"­all(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(@feat:two_weapon_fighting,@ability:flurry_of_blows#warpriest_sacred_fist),@feat:weapon_focus#wrist_launcher)(”
 'feat:twin_thunders#heavy_wrist_launcher#Twin Thunders: Heavy Wrist Launcherfeatcombat"³all(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(@feat:two_weapon_fighting,@ability:flurry_of_blows#warpriest_sacred_fist),@feat:weapon_focus#heavy_wrist_launcher)(V
 feat:sling_flailSling Flailfeatcombat"%all(@feat:weapon_focus#sling,@bab>=1)(y
-feat:net_maneuveringNet Maneuveringfeatcombat"@all(@feat:exotic_weapon_proficiency#net,@feat:net_adept,@bab>=3)(¯
-feat:dragon_roarDragon Roarfeatstyle"all(@str_score>=15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#unchained_monk,@skill:acrobatics>=8)(s
+feat:net_maneuveringNet Maneuveringfeatcombat"@all(@feat:exotic_weapon_proficiency#net,@feat:net_adept,@bab>=3)(¥
+feat:dragon_roarDragon Roarfeatstyle"uall(@str_score>=15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#monk,@skill:acrobatics>=8)(s
 feat:improved_back_to_backImproved Back to Backfeatteamwork",all(@feat:back_to_back,@skill:perception>=5)(Z
 feat:betrayerBetrayerfeatgeneral".all(@feat:quick_draw,@feat:persuasive,@bab>=3)(_
 feat:gory_finishGory Finishfeatcombat".all(@feat:dazzling_display,@feat:weapon_focus)(_
@@ -937,14 +937,14 @@ Spell Banefeatgeneral"@ability:bane#bloodrager(h
 feat:destructive_dispelDestructive Dispelfeatgeneral"Kall(any(@spell:dispel_magic,@spell:greater_dispel_magic),@caster_level>=11)(š
 feat:net_and_tridentNet and Tridentfeatcombat"aall(@dex_score>=15,@feat:exotic_weapon_proficiency#net,@feat:net_adept,@feat:two_weapon_fighting)(x
 feat:haunted_gnomeHaunted Gnomefeatcombat"Call(@cha_score>=13,@ability:gnome_magic,@skill:knowledge_arcana>=1)(}
-feat:moonlight_stalker_masterMoonlight Stalker Masterfeatcombat"2any(@ability:darkvision,@ability:low_light_vision)(’
-feat:stunning_pinStunning Pinfeatcombat"_all(@feat:improved_grapple,@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk)(¨
+feat:moonlight_stalker_masterMoonlight Stalker Masterfeatcombat"2any(@ability:darkvision,@ability:low_light_vision)(ˆ
+feat:stunning_pinStunning Pinfeatcombat"Uall(@feat:improved_grapple,@feat:improved_unarmed_strike,@ability:stunning_fist#monk)(¨
 feat:pinning_rendPinning Rendfeatcombat"uany(@dex_score>=13,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,@bab>=9,@class:monk>=9)(¢
 feat:crusaders_fistCrusader's Fistfeatcombat"jall(any(@ability:lay_on_hands#paladin,@ability:touch_of_corruption),@feat:improved_unarmed_strike,@bab>=6)(k
 feat:disorienting_maneuverDisorienting Maneuverfeatgeneral"%all(@feat:dodge,@skill:acrobatics>=5)(ã
 feat:improved_two_weapon_feintImproved Two-Weapon Feintfeatcombat"•all(@dex_score>=17,@int_score>=13,@feat:combat_expertise,@feat:improved_two_weapon_fighting,@feat:two_weapon_feint,@feat:two_weapon_fighting,@bab>=6)(ª
-feat:raging_throwRaging Throwfeatgeneral"vall(@str_score>=13,@con_score>=13,@trait:rage[Rage class feature],@feat:improved_bull_rush,@feat:power_attack,@bab>=6)(
-feat:cartwheel_dodgeCartwheel Dodgefeatgeneral"call(@ability:evasion#unchained_monk,@ability:improved_evasion#unchained_monk,@skill:acrobatics>=12)(y
+feat:raging_throwRaging Throwfeatgeneral"vall(@str_score>=13,@con_score>=13,@trait:rage[Rage class feature],@feat:improved_bull_rush,@feat:power_attack,@bab>=6)(‰
+feat:cartwheel_dodgeCartwheel Dodgefeatgeneral"Oall(@ability:evasion#monk,@ability:improved_evasion#monk,@skill:acrobatics>=12)(y
 feat:rebounding_leapRebounding Leapfeatcombat"@all(@ability:leaping_lance,@skill:acrobatics>=5,@skill:ride>=11)(ž
 feat:djinni_styleDjinni Stylefeatstyle"lany(@con_score>=13,@wis_score>=15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab>=9,@class:monk>=5)(^
 feat:devastating_strikeDevastating Strikefeatcombat"all(@feat:vital_strike,@bab>=9)(:
@@ -1338,16 +1338,16 @@ Sap Masterfeatcombat"4all(@ability:sneak_attack#slayer>=3,@feat:sap_adept)(
 feat:master_combat_performerMaster Combat Performerfeatcombat"Fall(any(@feat:performing_combatant,0[performance feat(s)]>=3),@bab>=6)(R
 feat:arc_slingerArc Slingerfeatcombat"!any(@sling,@proficiency:halfling)(u
 feat:wave_strikeWave Strikefeatcombat"Dall(any(@ability:weapon_expertise,@feat:quick_draw),@skill:bluff>=1)(¥
-feat:improved_snap_shotImproved Snap Shotfeatcombat"fall(@dex_score>=15,@feat:point_blank_shot,@feat:rapid_shot,@feat:snap_shot,@feat:weapon_focus,@bab>=9)(Ú
-feat:neckbreakerNeckbreakerfeatcombat"¨all(@feat:bonebreaker,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#unchained_monk,@skill:heal>=12)(j
+feat:improved_snap_shotImproved Snap Shotfeatcombat"fall(@dex_score>=15,@feat:point_blank_shot,@feat:rapid_shot,@feat:snap_shot,@feat:weapon_focus,@bab>=9)(Ð
+feat:neckbreakerNeckbreakerfeatcombat"žall(@feat:bonebreaker,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#monk,@skill:heal>=12)(j
 feat:target_of_opportunityTarget of Opportunityfeatteamwork"#all(@feat:point_blank_shot,@bab>=6)(`
 feat:stalwartStalwartfeatgeneral"4all(@feat:diehard,@ability:endurance#ranger,@bab>=4)(¹
 feat:dimensional_dervishDimensional Dervishfeatgeneral"wall(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility,@feat:dimensional_assault,@bab>=6)(L
 feat:dispel_synergyDispel Synergyfeatgeneral"@skill:spellcraft>=5(µ
 feat:djinni_spiritDjinni Spiritfeatstyle"€any(@con_score>=15,@wis_score>=15,@feat:djinni_style,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab>=11,@class:monk>=9)(—
 feat:dimensional_assaultDimensional Assaultfeatgeneral"Uall(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility)(3
-feat:flanking_foilFlanking Foilfeatcombat(´
-feat:mantis_tormentMantis Tormentfeatstyle"~all(@skill:heal>=9,@feat:improved_unarmed_strike,@feat:mantis_style,@feat:mantis_wisdom,@ability:stunning_fist#unchained_monk)(8
+feat:flanking_foilFlanking Foilfeatcombat(ª
+feat:mantis_tormentMantis Tormentfeatstyle"tall(@skill:heal>=9,@feat:improved_unarmed_strike,@feat:mantis_style,@feat:mantis_wisdom,@ability:stunning_fist#monk)(8
 feat:strong_comebackStrong Comebackfeatgeneral(x
 feat:dragon_styleDragon Stylefeatstyle"Fall(@str_score>=15,@feat:improved_unarmed_strike,@skill:acrobatics>=3)(û
 feat:coordinated_chargeCoordinated Chargefeatteamwork"¹all((@feat:improved_duck_and_cover+@feat:improved_spell_sharing+@feat:wounded_paw_gambit+@feat:improved_swap_places+@feat:pack_flanking+@feat:share_healing+@feat:intercept_charge+@feat:coordinated_shot+@feat:distracting_charge+@feat:ensemble+@feat:cavalry_formation+@feat:seize_the_moment+@feat:feint_partner+@feat:improved_back_to_back+@feat:stealth_synergy+@feat:pack_attack+@feat:tandem_trip+@feat:target_of_opportunity+@feat:coordinated_charge+@feat:back_to_back+@feat:escape_route+@feat:broken_wing_gambit+@feat:combat_medic+@feat:improved_feint_partner+@feat:team_pickpocketing+@feat:enfilading_fire+@feat:coordinated_defense+@feat:swap_places+@feat:coordinated_maneuvers+@feat:duck_and_cover+@feat:shield_wall+@feat:paired_opportunists+@feat:lookout+@feat:outflank+@feat:shielded_caster)[teamwork feat(s)]>=2,@bab>=10)(›
@@ -1355,13 +1355,13 @@ Sap Masterfeatcombat"4all(@ability:sneak_attack#slayer>=3,@feat:sap_adept)(
 feat:bludgeoner
 Bludgeonerfeatcombat(¨
 feat:sword_and_pistolSword and Pistolfeatcombat"mall(@dex_score>=13,@feat:point_blank_shot,@feat:rapid_shot,@feat:snap_shot,@feat:two_weapon_fighting,@bab>=6)({
-feat:tiger_clawsTiger Clawsfeatstyle"Kany(@feat:improved_unarmed_strike,@feat:tiger_style,@bab>=6,@class:monk>=5)(×
-feat:monkey_shineMonkey Shinefeatstyle"¤all(@wis_score>=13,@feat:improved_unarmed_strike,@feat:monkey_moves,@feat:monkey_style,@ability:stunning_fist#unchained_monk,@skill:acrobatics>=11,@skill:climb>=11)(h
+feat:tiger_clawsTiger Clawsfeatstyle"Kany(@feat:improved_unarmed_strike,@feat:tiger_style,@bab>=6,@class:monk>=5)(Í
+feat:monkey_shineMonkey Shinefeatstyle"šall(@wis_score>=13,@feat:improved_unarmed_strike,@feat:monkey_moves,@feat:monkey_style,@ability:stunning_fist#monk,@skill:acrobatics>=11,@skill:climb>=11)(h
 feat:domain_strikeDomain Strikefeatcombat"3all(@ability:domains,@feat:improved_unarmed_strike)(?
 feat:sure_grasp
 Sure Graspfeatgeneral"@skill:climb>=1(­
-feat:disengaging_shotDisengaging Shotfeatcombat"rall(@int_score>=13,@feat:combat_expertise,@feat:disengaging_feint,@feat:dodge,@feat:improved_feint,@feat:mobility)(~
-feat:monastic_legacyMonastic Legacyfeatcombat"Eall(@ability:still_mind#unchained_monk,@feat:improved_unarmed_strike)(K
+feat:disengaging_shotDisengaging Shotfeatcombat"rall(@int_score>=13,@feat:combat_expertise,@feat:disengaging_feint,@feat:dodge,@feat:improved_feint,@feat:mobility)(t
+feat:monastic_legacyMonastic Legacyfeatcombat";all(@ability:still_mind#monk,@feat:improved_unarmed_strike)(K
 feat:amateur_gunslingerAmateur Gunslingerfeatcombat"!@trait:grit(X
 feat:pin_downPin Downfeatcombat"-all(@feat:combat_reflexes,@class:fighter>=11)(š
 feat:break_guardBreak Guardfeatcombat"iall(@dex_score>=15,@int_score>=13,@feat:combat_expertise,@feat:improved_disarm,@feat:two_weapon_fighting)(f
@@ -1371,9 +1371,9 @@ Sure Graspfeatgeneral"@skill:climb>=1(­
 feat:deft_shootist_deedDeft Shootist Deedfeatgrit"Vall(any(@ability:grit#gunslinger,@feat:amateur_gunslinger),@feat:dodge,@feat:mobility)(´
 feat:shaitan_skinShaitan Skinfeatstyle"any(@con_score>=15,@wis_score>=15,@feat:elemental_fist,@feat:improved_unarmed_strike,@feat:shaitan_style,@bab>=11,@class:monk>=9)(z
 feat:contingent_channelingContingent Channelingfeatgeneral"4all(@ability:true_healer,@feat:selective_channeling)(3
-feat:prone_slingerProne Slingerfeatcombat(†
+feat:prone_slingerProne Slingerfeatcombat(|
 feat:jawbreaker
-Jawbreakerfeatcombat"Wall(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:heal>=6)(Š
+Jawbreakerfeatcombat"Mall(@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:heal>=6)(Š
 feat:ricochet_shot_deedRicochet Shot Deedfeatgrit"Mall(any(@ability:grit#gunslinger,@feat:amateur_gunslinger),@feat:blind_fight)(|
 feat:improved_charging_hurlerImproved Charging Hurlerfeatcombat"1all(@feat:charging_hurler,@feat:point_blank_shot)(Ô
 feat:deathless_masterDeathless Masterfeatcombat"˜all(@str_score>=13,@con_score>=15,any(@race:orc,@race:half_orc),@feat:deathless_initiate,@feat:diehard,@ability:endurance#ranger,@feat:ironhide,@bab>=9)(¬
@@ -1618,8 +1618,8 @@ $feat:twin_thunders_master#shuriken_5"Twin Thunders Master: Shuriken (5)feat
 (feat:twin_thunders_master#stitched_sling$Twin Thunders Master: Stitched Slingfeatcombat"Œall(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(all(@feat:improved_two_weapon_fighting,@feat:two_weapon_fighting),@ability:flurry_of_blows#warpriest_sacred_fist),@feat:twin_thunders,@feat:twin_thunders_flurry,@feat:weapon_focus#stitched_sling,@bab>=9)(ï
 (feat:twin_thunders_master#wrist_launcher$Twin Thunders Master: Wrist Launcherfeatcombat"Œall(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(all(@feat:improved_two_weapon_fighting,@feat:two_weapon_fighting),@ability:flurry_of_blows#warpriest_sacred_fist),@feat:twin_thunders,@feat:twin_thunders_flurry,@feat:weapon_focus#wrist_launcher,@bab>=9)(
 .feat:twin_thunders_master#heavy_wrist_launcher*Twin Thunders Master: Heavy Wrist Launcherfeatcombat"’all(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(all(@feat:improved_two_weapon_fighting,@feat:two_weapon_fighting),@ability:flurry_of_blows#warpriest_sacred_fist),@feat:twin_thunders,@feat:twin_thunders_flurry,@feat:weapon_focus#heavy_wrist_launcher,@bab>=9)(a
-feat:landing_rollLanding Rollfeatcombat".all(@dex_score>=13,@feat:dodge,@feat:mobility)(·
-feat:dragon_ferocityDragon Ferocityfeatstyle"all(@str_score>=15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#unchained_monk,@skill:acrobatics>=5)(î
+feat:landing_rollLanding Rollfeatcombat".all(@dex_score>=13,@feat:dodge,@feat:mobility)(­
+feat:dragon_ferocityDragon Ferocityfeatstyle"uall(@str_score>=15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#monk,@skill:acrobatics>=5)(î
 feat:pinpoint_poisonerPinpoint Poisonerfeatcombat"°any(@slayer_talent:poison_use,@skill:craft#alchemy>=6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,@ability:flurry_of_blows#warpriest_sacred_fist)(ì
 feat:deathless_zealotDeathless Zealotfeatcombat"°all(@str_score>=13,@con_score>=17,any(@race:orc,@race:half_orc),@feat:deathless_initiate,@feat:deathless_master,@feat:diehard,@ability:endurance#ranger,@feat:ironhide,@bab>=12)(¯
 feat:deathless_initiateDeathless Initiatefeatcombat"pall(@str_score>=13,@con_score>=13,any(@race:orc,@race:half_orc),@feat:diehard,@ability:endurance#ranger,@bab>=6)(£
@@ -1631,8 +1631,8 @@ Janni Rushfeatstyle"uall(@feat:improved_unarmed_strike,@feat:janni_style,@fe
 feat:strangler	Stranglerfeatcombat"hall(@dex_score>=13,@ability:sneak_attack#slayer>=1,@feat:improved_grapple,@feat:improved_unarmed_strike)(
 feat:panther_clawPanther Clawfeatstyle"[all(@wis_score>=15,@feat:combat_reflexes,@feat:improved_unarmed_strike,@feat:panther_style)(a
 feat:channeled_revivalChanneled Revivalfeatgeneral"#@ability:channel_positive_energy>=6( 
-feat:efreeti_styleEfreeti Stylefeatstyle"lany(@con_score>=13,@wis_score>=15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab>=9,@class:monk>=5)(e
-feat:raging_deathblowRaging Deathblowfeatgeneral")@ability:greater_rage#unchained_barbarian(s
+feat:efreeti_styleEfreeti Stylefeatstyle"lany(@con_score>=13,@wis_score>=15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab>=9,@class:monk>=5)([
+feat:raging_deathblowRaging Deathblowfeatgeneral"@ability:greater_rage#barbarian(s
 feat:disposable_weapon#gauntletDisposable Weapon: Gauntletfeatgeneral""all(@bab>=1,@proficiency:gauntlet)(p
 feat:disposable_weapon#unarmedDisposable Weapon: Unarmedfeatgeneral"!all(@bab>=1,@proficiency:unarmed)(‘
 )feat:disposable_weapon#battle_aspergillum%Disposable Weapon: Battle Aspergillumfeatgeneral",all(@bab>=1,@proficiency:battle_aspergillum)(|
@@ -1844,11 +1844,11 @@ $feat:disposable_weapon#flask_thrower Disposable Weapon: Flask Throwerfeatg
 +feat:disposable_weapon#halfling_sling_staff'Disposable Weapon: Halfling Sling Stafffeatgeneral".all(@bab>=1,@proficiency:halfling_sling_staff)(…
 %feat:disposable_weapon#stitched_sling!Disposable Weapon: Stitched Slingfeatgeneral"(all(@bab>=1,@proficiency:stitched_sling)(…
 %feat:disposable_weapon#wrist_launcher!Disposable Weapon: Wrist Launcherfeatgeneral"(all(@bab>=1,@proficiency:wrist_launcher)(—
-+feat:disposable_weapon#heavy_wrist_launcher'Disposable Weapon: Heavy Wrist Launcherfeatgeneral".all(@bab>=1,@proficiency:heavy_wrist_launcher)(À
-feat:bonebreakerBonebreakerfeatcombat"Žall(@dex_score>=13,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#unchained_monk,@skill:heal>=9)(k
++feat:disposable_weapon#heavy_wrist_launcher'Disposable Weapon: Heavy Wrist Launcherfeatgeneral".all(@bab>=1,@proficiency:heavy_wrist_launcher)(¶
+feat:bonebreakerBonebreakerfeatcombat"„all(@dex_score>=13,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#monk,@skill:heal>=9)(k
 feat:fortified_armor_trainingFortified Armor Trainingfeatcombat" any(@proficiency:,@spell:shield)(š
-feat:disengaging_flourishDisengaging Flourishfeatcombat"Wall(@int_score>=13,@feat:combat_expertise,@feat:disengaging_feint,@feat:improved_feint)(ž
-feat:mantis_wisdomMantis Wisdomfeatstyle"jall(@feat:improved_unarmed_strike,@feat:mantis_style,@ability:stunning_fist#unchained_monk,@skill:heal>=6)(•
+feat:disengaging_flourishDisengaging Flourishfeatcombat"Wall(@int_score>=13,@feat:combat_expertise,@feat:disengaging_feint,@feat:improved_feint)(”
+feat:mantis_wisdomMantis Wisdomfeatstyle"`all(@feat:improved_unarmed_strike,@feat:mantis_style,@ability:stunning_fist#monk,@skill:heal>=6)(•
 $feat:close_quarters_thrower#gauntlet Close-Quarters Thrower: Gauntletfeatcombat";all(@dex_score>=13,@feat:dodge,@feat:weapon_focus#gauntlet)(’
 #feat:close_quarters_thrower#unarmedClose-Quarters Thrower: Unarmedfeatcombat":all(@dex_score>=13,@feat:dodge,@feat:weapon_focus#unarmed)(³
 .feat:close_quarters_thrower#battle_aspergillum*Close-Quarters Thrower: Battle Aspergillumfeatcombat"Eall(@dex_score>=13,@feat:dodge,@feat:weapon_focus#battle_aspergillum)(ž
@@ -2291,8 +2291,8 @@ $feat:splintering_weapon#double_sling Splintering Weapon: Double Slingfeatg
 feat:marid_styleMarid Stylefeatstyle"lany(@con_score>=13,@wis_score>=15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab>=9,@class:monk>=5)(a
 feat:slayers_knackSlayer's Knackfeatgeneral"*all(@ability:favored_enemy#ranger,@bab>=6)(™
 feat:intimidating_baneIntimidating Banefeatgeneral"[all(@ability:bane#bloodrager,@feat:dazzling_display,@feat:weapon_focus,@character_level>=8)(e
-feat:death_or_gloryDeath or Gloryfeatcombat".all(@str_score>=13,@feat:power_attack,@bab>=6)(Ô
-feat:nightmare_strikerNightmare Strikerfeatcombat"–all(@feat:improved_unarmed_strike,@feat:nightmare_fist,@feat:nightmare_weaver,@ability:stunning_fist#unchained_monk,@skill:heal>=5,@spell:faerie_fire)(i
+feat:death_or_gloryDeath or Gloryfeatcombat".all(@str_score>=13,@feat:power_attack,@bab>=6)(Ê
+feat:nightmare_strikerNightmare Strikerfeatcombat"Œall(@feat:improved_unarmed_strike,@feat:nightmare_fist,@feat:nightmare_weaver,@ability:stunning_fist#monk,@skill:heal>=5,@spell:faerie_fire)(i
 feat:double_baneDouble Banefeatgeneral"7all(@ability:bane#bloodrager,@feat:two_weapon_fighting)(P
 feat:broken_wing_gambitBroken Wing Gambitfeatteamwork"@skill:bluff>=5(i
 feat:tiger_styleTiger Stylefeatstyle"9any(@feat:improved_unarmed_strike,@bab>=3,@class:monk>=3)(b
@@ -2317,8 +2317,8 @@ Boar Stylefeatstyle"7all(@feat:improved_unarmed_strike,@skill:intimidate>=3)
 feat:combat_medicCombat Medicfeatteamwork"@skill:heal>=5(
 feat:improved_feint_partnerImproved Feint Partnerfeatteamwork"Fall(@skill:bluff>=1,@feat:combat_reflexes,@feat:feint_partner,@bab>=6)(r
 feat:improved_rending_furyImproved Rending Furyfeatcombat"-all(@feat:rending_fury,@bab>=9,@ability:rend)(o
-feat:team_pickpocketingTeam Pickpocketingfeatteamwork".all(@skill:bluff>=1,@skill:sleight_of_hand>=1)(}
-feat:crushing_blowCrushing Blowfeatcombat"Hall(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk)(–
+feat:team_pickpocketingTeam Pickpocketingfeatteamwork".all(@skill:bluff>=1,@skill:sleight_of_hand>=1)(s
+feat:crushing_blowCrushing Blowfeatcombat">all(@feat:improved_unarmed_strike,@ability:stunning_fist#monk)(–
 feat:greater_whip_masteryGreater Whip Masteryfeatcombat"Sall(@feat:improved_whip_mastery,@feat:weapon_focus#whip,@feat:whip_mastery,@bab>=8)(¸
 feat:efreeti_stanceEfreeti Stancefeatstyle"any(@con_score>=15,@wis_score>=15,@feat:efreeti_style,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab>=11,@class:monk>=9)(o
 feat:raging_hurlerRaging Hurlerfeatgeneral"9all(@trait:rage[Rage class feature],@feat:throw_anything)(¬
@@ -2679,7 +2679,7 @@ $ability:fearsome_strike#rogue_banditFearsome Strikeclass_featurerogueab
 'ability:hidden_blade#rogue_knife_masterHidden Bladeclass_featurerogueabilityT
 &ability:blade_sense#rogue_knife_masterBlade Senseclass_featurerogueabilityD
 modifies:trait0Archetype that modifies Armor Proficiency (Monk)(è
-class:monk#soheiSohei	archetypemonk"¹!@modifies:ability:increased_unarmed_damage#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:trait:armor_proficiency#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:purity_of_body_diamond_body_quivering_palm_timeless_body#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:trait:weapon_proficiency#monk(m
+class:monk#soheiSohei	archetypemonk"¹!@modifies:ability:increased_unarmed_damage#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:trait:armor_proficiency#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:purity_of_body_diamond_body_quivering_palm_timeless_body#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:trait:weapon_proficiency#monk(m
 /ability:weapon_and_armor_proficiency#monk_soheiWeapon and Armor Proficiencyclass_featuremonkabilityU
 #ability:devoted_guardian#monk_soheiDevoted Guardianclass_featuremonkabilityQ
 !ability:monastic_mount#monk_soheiMonastic Mountclass_featuremonkabilityG

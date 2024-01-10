@@ -5,17 +5,22 @@ import PrerequisiteList from "./PrerequisiteList.tsx";
 import Description from "../../../data/model/Description.ts";
 import Feature, {FeatureSummary} from "../../../data/model/Feature.ts";
 import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
+import FeatureModification from "../../../data/model/FeatureModification.ts";
+import FeatureModificationInfo from "./FeatureModificationInfo.tsx";
 
 interface FeatureDescriptionProps {
   feature: Feature|FeatureSummary;
   description?: Description;
+  featureModifications?: FeatureModification[];
   characterAtLevel?: CharacterAtLevel;
 }
 
-export default function FeatureDescription({ feature, description, characterAtLevel}: FeatureDescriptionProps) {
+export default function FeatureDescription({ feature, description, featureModifications, characterAtLevel}: FeatureDescriptionProps) {
 
   description ??= 'description' in feature ? feature.description : undefined;
   description ??= Description.empty();
+
+  featureModifications ??= 'featureModifications' in feature ? feature.featureModifications : [];
 
   const isValid = useMemo(() => (feature && characterAtLevel && feature.isEnabled(characterAtLevel)),
       [feature, characterAtLevel]);
@@ -44,6 +49,8 @@ export default function FeatureDescription({ feature, description, characterAtLe
         <span className={styles.p}>{descriptionTextElement}</span>
         {Object.keys(description.sections).map(sectionLabel =>
             <p key={sectionLabel}><span className={styles.sectionLabel}>{sectionLabel}:</span> <span className={styles.p}>{description?.sections[sectionLabel]}</span></p>)}
+        {featureModifications.map(featureModification =>
+            <FeatureModificationInfo key={`mods-${featureModification.targetFeatureId}`} featureModification={featureModification}/>)}
       </div>);
 }
 

@@ -276,21 +276,6 @@ class_features:
   effects: []
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
-- id: "ability:spellcasting#magus"
-  name: "Spell Casting (Magus)"
-  label: null
-  type: null
-  description: "Magus can cast spells."
-  effects:
-  - "SET trait:level_0_spells_per_day#magus 3+if(@class:magus>1,1,0)+if(@class:magus>5,1,0)"
-  - "SET trait:level_1_spells_per_day#magus 1+if(@class:magus>1,1,0)+if(@class:magus>2,1,0)+if(@class:magus>4,1,0)+if(@class:magus>8,1,0)"
-  - "SET trait:level_2_spells_per_day#magus if(@class:magus>=4,1+if(@class:magus>4,1,0)+if(@class:magus>5,1,0)+if(@class:magus>7,1,0)+if(@class:magus>11,1,0),null)"
-  - "SET trait:level_3_spells_per_day#magus if(@class:magus>=7,1+if(@class:magus>7,1,0)+if(@class:magus>8,1,0)+if(@class:magus>10,1,0)+if(@class:magus>14,1,0),null)"
-  - "SET trait:level_4_spells_per_day#magus if(@class:magus>=10,1+if(@class:magus>10,1,0)+if(@class:magus>11,1,0)+if(@class:magus>13,1,0)+if(@class:magus>17,1,0),null)"
-  - "SET trait:level_5_spells_per_day#magus if(@class:magus>=13,1+if(@class:magus>13,1,0)+if(@class:magus>14,1,0)+if(@class:magus>16,1,0)+if(@class:magus>18,1,0),null)"
-  - "SET trait:level_6_spells_per_day#magus if(@class:magus>=16,1+if(@class:magus>16,1,0)+if(@class:magus>17,1,0)+if(@class:magus>18,1,0)+if(@class:magus>19,1,0),null)"
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:spell_combat#magus"
   name: "Spell Combat"
   label: null
@@ -322,6 +307,21 @@ class_features:
     \ from his arcane pool equal to the spell's level (minimum 1). The spell is prepared\
     \ again, just as if it had not been cast."
   effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Ultimate Magic"
+- id: "ability:spellcasting#magus"
+  name: "Spell Casting (Magus)"
+  label: null
+  type: null
+  description: "Magus can cast spells."
+  effects:
+  - "SET trait:level_0_spells_per_day#magus 3+if(@class:magus>1,1,0)+if(@class:magus>5,1,0)"
+  - "SET trait:level_1_spells_per_day#magus 1+if(@class:magus>1,1,0)+if(@class:magus>2,1,0)+if(@class:magus>4,1,0)+if(@class:magus>8,1,0)"
+  - "SET trait:level_2_spells_per_day#magus if(@class:magus>=4,1+if(@class:magus>4,1,0)+if(@class:magus>5,1,0)+if(@class:magus>7,1,0)+if(@class:magus>11,1,0),null)"
+  - "SET trait:level_3_spells_per_day#magus if(@class:magus>=7,1+if(@class:magus>7,1,0)+if(@class:magus>8,1,0)+if(@class:magus>10,1,0)+if(@class:magus>14,1,0),null)"
+  - "SET trait:level_4_spells_per_day#magus if(@class:magus>=10,1+if(@class:magus>10,1,0)+if(@class:magus>11,1,0)+if(@class:magus>13,1,0)+if(@class:magus>17,1,0),null)"
+  - "SET trait:level_5_spells_per_day#magus if(@class:magus>=13,1+if(@class:magus>13,1,0)+if(@class:magus>14,1,0)+if(@class:magus>16,1,0)+if(@class:magus>18,1,0),null)"
+  - "SET trait:level_6_spells_per_day#magus if(@class:magus>=16,1+if(@class:magus>16,1,0)+if(@class:magus>17,1,0)+if(@class:magus>18,1,0)+if(@class:magus>19,1,0),null)"
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Ultimate Magic"
 - id: "ability:spellstrike#magus"
@@ -361,7 +361,7 @@ class_features:
   name: "Armor Proficiency (Magus)"
   label: null
   type: null
-  description: null
+  description: "A Magus is proficient with light and medium armor."
   effects:
   - "SET proficiency:light_armor 1"
   - "SET proficiency:medium_armor 1"
@@ -371,7 +371,7 @@ class_features:
   name: "Weapon Proficiency (Magus)"
   label: null
   type: null
-  description: null
+  description: "A Magus is proficient with all simple and martial weapons."
   effects:
   - "SET proficiency:mere_club 1"
   - "SET proficiency:blade_boot 1"

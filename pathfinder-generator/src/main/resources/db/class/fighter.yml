@@ -149,7 +149,17 @@ class_features:
   name: "Bonus Feat"
   label: null
   type: ""
-  description: "At 1st level, and at every even level thereafter, a fighter gains a bonus feat in addition to those gained from normal advancement (meaning that the fighter gains a feat at every level). These bonus feats must be selected from those listed as Combat Feats, sometimes also called \"fighter bonus feats.\" Upon reaching 4th level, and every four levels thereafter (8th, 12th, and so on), a fighter can choose to learn a new bonus feat in place of a bonus feat he has already learned. In effect, the fighter loses the bonus feat in exchange for the new one. The old feat cannot be one that was used as a prerequisite for another feat, prestige class, or other ability. A fighter can only change one feat at any given level and must choose whether or not to swap the feat at the time he gains a new bonus feat for the level."
+  description: "At 1st level, and at every even level thereafter, a fighter gains\
+    \ a bonus feat in addition to those gained from normal advancement (meaning that\
+    \ the fighter gains a feat at every level). These bonus feats must be selected\
+    \ from those listed as Combat Feats, sometimes also called \"fighter bonus feats.\"\
+    \ Upon reaching 4th level, and every four levels thereafter (8th, 12th, and so\
+    \ on), a fighter can choose to learn a new bonus feat in place of a bonus feat\
+    \ he has already learned. In effect, the fighter loses the bonus feat in exchange\
+    \ for the new one. The old feat cannot be one that was used as a prerequisite\
+    \ for another feat, prestige class, or other ability. A fighter can only change\
+    \ one feat at any given level and must choose whether or not to swap the feat\
+    \ at the time he gains a new bonus feat for the level."
   effects: []
   prerequisites: ""
   source: " Pathfinder RPG Core Rulebook"
@@ -205,7 +215,8 @@ class_features:
   name: "Armor Proficiency (Fighter)"
   label: null
   type: null
-  description: null
+  description: "A Fighter is proficient with all types of armor (light, medium, and\
+    \ heavy), plus all shields."
   effects:
   - "SET proficiency:light_shield 1"
   - "SET proficiency:heavy_armor 1"
@@ -220,7 +231,7 @@ class_features:
   name: "Weapon Proficiency (Fighter)"
   label: null
   type: null
-  description: null
+  description: "A Fighter is proficient with all simple and martial weapons."
   effects:
   - "SET proficiency:mere_club 1"
   - "SET proficiency:blade_boot 1"

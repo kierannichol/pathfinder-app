@@ -11,40 +11,40 @@
     "tags": ["favored_class", "base"],
     "maxStacks": 1
   }, {
-    "id": "trait:armor_proficiency#gunslinger",
-    "name": "Armor Proficiency (Gunslinger)",
-    "tags": ["class_feature", "gunslinger", "trait"]
+    "id": "ability:gunsmith#gunslinger",
+    "name": "Gunsmith",
+    "tags": ["class_feature", "gunslinger", "ability"]
   }, {
     "id": "ability:deeds#gunslinger",
     "name": "Deeds",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:bonus_feat#gunslinger",
-    "name": "Bonus Feat",
     "tags": ["class_feature", "gunslinger", "ability"]
   }, {
     "id": "ability:startling_shot#gunslinger",
     "name": "Startling Shot",
     "tags": ["class_feature", "gunslinger", "ability"]
   }, {
-    "id": "ability:grit#gunslinger",
-    "name": "Grit",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:nimble#gunslinger",
-    "name": "Nimble",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
     "id": "trait:weapon_proficiency#gunslinger",
     "name": "Weapon Proficiency (Gunslinger)",
+    "tags": ["class_feature", "gunslinger", "trait"]
+  }, {
+    "id": "trait:armor_proficiency#gunslinger",
+    "name": "Armor Proficiency (Gunslinger)",
     "tags": ["class_feature", "gunslinger", "trait"]
   }, {
     "id": "ability:gun_training#gunslinger",
     "name": "Gun Training",
     "tags": ["class_feature", "gunslinger", "ability"]
   }, {
-    "id": "ability:gunsmith#gunslinger",
-    "name": "Gunsmith",
+    "id": "ability:grit#gunslinger",
+    "name": "Grit",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:bonus_feat#gunslinger",
+    "name": "Bonus Feat",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:nimble#gunslinger",
+    "name": "Nimble",
     "tags": ["class_feature", "gunslinger", "ability"]
   }, {
     "id": "ability:true_grit#gunslinger",
@@ -168,7 +168,7 @@
     "id": "feat:combat_style_master",
     "name": "Combat Style Master",
     "tags": ["feat", "combat"],
-    "enabledFormula": "any(@feat:improved_unarmed_strike,(@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style)[style feat(s)]\u003e\u003d2,@bab\u003e\u003d6,@class:monk\u003e\u003d5)",
+    "enabledFormula": "any(@feat:improved_unarmed_strike,(@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint)[style feat(s)]\u003e\u003d2,@bab\u003e\u003d6,@class:monk\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:marid_spirit",
@@ -1230,7 +1230,7 @@
     "id": "feat:mantis_style",
     "name": "Mantis Style",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d3)",
+    "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:heal\u003e\u003d3)",
     "maxStacks": 1
   }, {
     "id": "feat:greater_channel_smite",
@@ -2597,7 +2597,7 @@
     "id": "feat:earth_child_binder",
     "name": "Earth Child Binder",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@wis_score\u003e\u003d13,any(@race:dwarf,@race:gnome),@ability:defensive_training,@feat:earth_child_style,@feat:earth_child_topple,@feat:greater_trip,@feat:improved_trip,@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:acrobatics\u003e\u003d9)",
+    "enabledFormula": "all(@wis_score\u003e\u003d13,any(@race:dwarf,@race:gnome),@ability:defensive_training,@feat:earth_child_style,@feat:earth_child_topple,@feat:greater_trip,@feat:improved_trip,@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:acrobatics\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:cavalry_formation",
@@ -3983,7 +3983,7 @@
     "id": "feat:dragon_roar",
     "name": "Dragon Roar",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@str_score\u003e\u003d15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#unchained_monk,@skill:acrobatics\u003e\u003d8)",
+    "enabledFormula": "all(@str_score\u003e\u003d15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#monk,@skill:acrobatics\u003e\u003d8)",
     "maxStacks": 1
   }, {
     "id": "feat:improved_back_to_back",
@@ -5464,7 +5464,7 @@
     "id": "feat:stunning_pin",
     "name": "Stunning Pin",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@feat:improved_grapple,@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk)",
+    "enabledFormula": "all(@feat:improved_grapple,@feat:improved_unarmed_strike,@ability:stunning_fist#monk)",
     "maxStacks": 1
   }, {
     "id": "feat:pinning_rend",
@@ -5500,7 +5500,7 @@
     "id": "feat:cartwheel_dodge",
     "name": "Cartwheel Dodge",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:evasion#unchained_monk,@ability:improved_evasion#unchained_monk,@skill:acrobatics\u003e\u003d12)",
+    "enabledFormula": "all(@ability:evasion#monk,@ability:improved_evasion#monk,@skill:acrobatics\u003e\u003d12)",
     "maxStacks": 1
   }, {
     "id": "feat:rebounding_leap",
@@ -7863,7 +7863,7 @@
     "id": "feat:neckbreaker",
     "name": "Neckbreaker",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@feat:bonebreaker,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d12)",
+    "enabledFormula": "all(@feat:bonebreaker,@feat:greater_grapple,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#monk,@skill:heal\u003e\u003d12)",
     "maxStacks": 1
   }, {
     "id": "feat:target_of_opportunity",
@@ -7910,7 +7910,7 @@
     "id": "feat:mantis_torment",
     "name": "Mantis Torment",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@skill:heal\u003e\u003d9,@feat:improved_unarmed_strike,@feat:mantis_style,@feat:mantis_wisdom,@ability:stunning_fist#unchained_monk)",
+    "enabledFormula": "all(@skill:heal\u003e\u003d9,@feat:improved_unarmed_strike,@feat:mantis_style,@feat:mantis_wisdom,@ability:stunning_fist#monk)",
     "maxStacks": 1
   }, {
     "id": "feat:strong_comeback",
@@ -7956,7 +7956,7 @@
     "id": "feat:monkey_shine",
     "name": "Monkey Shine",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@wis_score\u003e\u003d13,@feat:improved_unarmed_strike,@feat:monkey_moves,@feat:monkey_style,@ability:stunning_fist#unchained_monk,@skill:acrobatics\u003e\u003d11,@skill:climb\u003e\u003d11)",
+    "enabledFormula": "all(@wis_score\u003e\u003d13,@feat:improved_unarmed_strike,@feat:monkey_moves,@feat:monkey_style,@ability:stunning_fist#monk,@skill:acrobatics\u003e\u003d11,@skill:climb\u003e\u003d11)",
     "maxStacks": 1
   }, {
     "id": "feat:domain_strike",
@@ -7980,7 +7980,7 @@
     "id": "feat:monastic_legacy",
     "name": "Monastic Legacy",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@ability:still_mind#unchained_monk,@feat:improved_unarmed_strike)",
+    "enabledFormula": "all(@ability:still_mind#monk,@feat:improved_unarmed_strike)",
     "maxStacks": 1
   }, {
     "id": "feat:amateur_gunslinger",
@@ -8044,7 +8044,7 @@
     "id": "feat:jawbreaker",
     "name": "Jawbreaker",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d6)",
+    "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:heal\u003e\u003d6)",
     "maxStacks": 1
   }, {
     "id": "feat:ricochet_shot_deed",
@@ -9502,7 +9502,7 @@
     "id": "feat:dragon_ferocity",
     "name": "Dragon Ferocity",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@str_score\u003e\u003d15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#unchained_monk,@skill:acrobatics\u003e\u003d5)",
+    "enabledFormula": "all(@str_score\u003e\u003d15,@feat:improved_unarmed_strike,@feat:dragon_style,@ability:stunning_fist#monk,@skill:acrobatics\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:pinpoint_poisoner",
@@ -9574,7 +9574,7 @@
     "id": "feat:raging_deathblow",
     "name": "Raging Deathblow",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:greater_rage#unchained_barbarian",
+    "enabledFormula": "@ability:greater_rage#barbarian",
     "maxStacks": 1
   }, {
     "id": "feat:disposable_weapon#gauntlet",
@@ -10852,7 +10852,7 @@
     "id": "feat:bonebreaker",
     "name": "Bonebreaker",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d9)",
+    "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#monk,@skill:heal\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:fortified_armor_training",
@@ -10870,7 +10870,7 @@
     "id": "feat:mantis_wisdom",
     "name": "Mantis Wisdom",
     "tags": ["feat", "style"],
-    "enabledFormula": "all(@feat:improved_unarmed_strike,@feat:mantis_style,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d6)",
+    "enabledFormula": "all(@feat:improved_unarmed_strike,@feat:mantis_style,@ability:stunning_fist#monk,@skill:heal\u003e\u003d6)",
     "maxStacks": 1
   }, {
     "id": "feat:close_quarters_thrower#gauntlet",
@@ -13527,7 +13527,7 @@
     "id": "feat:nightmare_striker",
     "name": "Nightmare Striker",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@feat:improved_unarmed_strike,@feat:nightmare_fist,@feat:nightmare_weaver,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d5,@spell:faerie_fire)",
+    "enabledFormula": "all(@feat:improved_unarmed_strike,@feat:nightmare_fist,@feat:nightmare_weaver,@ability:stunning_fist#monk,@skill:heal\u003e\u003d5,@spell:faerie_fire)",
     "maxStacks": 1
   }, {
     "id": "feat:double_bane",
@@ -13670,7 +13670,7 @@
     "id": "feat:crushing_blow",
     "name": "Crushing Blow",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk)",
+    "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#monk)",
     "maxStacks": 1
   }, {
     "id": "feat:greater_whip_mastery",
@@ -14853,7 +14853,7 @@
     "id": "class:monk#sohei",
     "name": "Sohei",
     "tags": ["archetype", "monk"],
-    "enabledFormula": "!@modifies:ability:increased_unarmed_damage#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:trait:armor_proficiency#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:purity_of_body_diamond_body_quivering_palm_timeless_body#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:trait:weapon_proficiency#monk",
+    "enabledFormula": "!@modifies:ability:increased_unarmed_damage#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:trait:armor_proficiency#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:purity_of_body_diamond_body_quivering_palm_timeless_body#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:trait:weapon_proficiency#monk",
     "maxStacks": 1
   }, {
     "id": "ability:weapon_and_armor_proficiency#monk_sohei",

@@ -251,7 +251,7 @@ public record CharacterClass(
 
             target.ifPresent(feature -> {
                 modifyFn.accept(feature);
-                removeClassFeatureIf(f -> f.id().equals(id));
+                removeClassFeatureIf(f -> f.id().equals(feature.id()));
                 addClassFeature(feature);
             });
             return this;

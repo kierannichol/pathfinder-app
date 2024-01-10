@@ -341,20 +341,6 @@ class_features:
   effects: []
   prerequisites: null
   source: null
-- id: "ability:spellcasting#skald"
-  name: "Spell Casting (Skald)"
-  label: null
-  type: null
-  description: "Skald can cast spells."
-  effects:
-  - "SET trait:level_1_spells_per_day#skald 1+if(@class:skald>1,1,0)+if(@class:skald>2,1,0)+if(@class:skald>4,1,0)+if(@class:skald>8,1,0)"
-  - "SET trait:level_2_spells_per_day#skald if(@class:skald>=4,1+if(@class:skald>4,1,0)+if(@class:skald>5,1,0)+if(@class:skald>7,1,0)+if(@class:skald>11,1,0),null)"
-  - "SET trait:level_3_spells_per_day#skald if(@class:skald>=7,1+if(@class:skald>7,1,0)+if(@class:skald>8,1,0)+if(@class:skald>10,1,0)+if(@class:skald>14,1,0),null)"
-  - "SET trait:level_4_spells_per_day#skald if(@class:skald>=10,1+if(@class:skald>10,1,0)+if(@class:skald>11,1,0)+if(@class:skald>13,1,0)+if(@class:skald>17,1,0),null)"
-  - "SET trait:level_5_spells_per_day#skald if(@class:skald>=13,1+if(@class:skald>13,1,0)+if(@class:skald>14,1,0)+if(@class:skald>16,1,0)+if(@class:skald>18,1,0),null)"
-  - "SET trait:level_6_spells_per_day#skald if(@class:skald>=16,1+if(@class:skald>16,1,0)+if(@class:skald>17,1,0)+if(@class:skald>18,1,0)+if(@class:skald>19,1,0),null)"
-  prerequisites: ""
-  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:spell_kenning#skald"
   name: "Spell Kenning"
   label: null
@@ -368,6 +354,20 @@ class_features:
     \ time of the spell.At 11th level, a skald can use this ability twice per day.\
     \ At 17th level, he can use this ability three times per day."
   effects: []
+  prerequisites: ""
+  source: " Pathfinder Roleplaying Game: Advanced Class Guide"
+- id: "ability:spellcasting#skald"
+  name: "Spell Casting (Skald)"
+  label: null
+  type: null
+  description: "Skald can cast spells."
+  effects:
+  - "SET trait:level_1_spells_per_day#skald 1+if(@class:skald>1,1,0)+if(@class:skald>2,1,0)+if(@class:skald>4,1,0)+if(@class:skald>8,1,0)"
+  - "SET trait:level_2_spells_per_day#skald if(@class:skald>=4,1+if(@class:skald>4,1,0)+if(@class:skald>5,1,0)+if(@class:skald>7,1,0)+if(@class:skald>11,1,0),null)"
+  - "SET trait:level_3_spells_per_day#skald if(@class:skald>=7,1+if(@class:skald>7,1,0)+if(@class:skald>8,1,0)+if(@class:skald>10,1,0)+if(@class:skald>14,1,0),null)"
+  - "SET trait:level_4_spells_per_day#skald if(@class:skald>=10,1+if(@class:skald>10,1,0)+if(@class:skald>11,1,0)+if(@class:skald>13,1,0)+if(@class:skald>17,1,0),null)"
+  - "SET trait:level_5_spells_per_day#skald if(@class:skald>=13,1+if(@class:skald>13,1,0)+if(@class:skald>14,1,0)+if(@class:skald>16,1,0)+if(@class:skald>18,1,0),null)"
+  - "SET trait:level_6_spells_per_day#skald if(@class:skald>=16,1+if(@class:skald>16,1,0)+if(@class:skald>17,1,0)+if(@class:skald>18,1,0)+if(@class:skald>19,1,0),null)"
   prerequisites: ""
   source: " Pathfinder Roleplaying Game: Advanced Class Guide"
 - id: "ability:uncanny_dodge#skald"
@@ -406,7 +406,8 @@ class_features:
   name: "Armor Proficiency (Skald)"
   label: null
   type: null
-  description: null
+  description: "A Skald is proficient with light and medium armor, plus all shields\
+    \ (except tower shields)."
   effects:
   - "SET proficiency:light_shield 1"
   - "SET proficiency:light_armor 1"
@@ -419,7 +420,7 @@ class_features:
   name: "Weapon Proficiency (Skald)"
   label: null
   type: null
-  description: null
+  description: "A Skald is proficient with all simple and martial weapons."
   effects:
   - "SET proficiency:mere_club 1"
   - "SET proficiency:blade_boot 1"

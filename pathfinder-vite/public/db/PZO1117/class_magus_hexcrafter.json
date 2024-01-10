@@ -2,7 +2,7 @@
   "id": "class:magus#hexcrafter",
   "name": "Hexcrafter",
   "tags": ["archetype", "magus"],
-  "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:magus_arcana#magus AND !@modifies:ability:improved_spell_recall#magus",
+  "enabledFormula": "!@modifies:ability:magus_arcana#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:improved_spell_recall#magus",
   "maxStacks": 1,
   "description": {
     "text": "A hexcrafter magus has uncovered the secret of using his arcane pool to recreate witch hexes. These magi can hex friend and foe, curse those they strike, and expand their spell selection to include many curses and harmful spells."
@@ -12,12 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:spell_recall#magus",
+            "targetKey": "modifies:ability:magus_arcana#magus",
             "numberValue": 1
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:magus_arcana#magus",
+            "targetKey": "modifies:ability:spell_recall#magus",
             "numberValue": 1
           }
         }, {

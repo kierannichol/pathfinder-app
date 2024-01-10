@@ -39,16 +39,16 @@
     "tags": ["ability_score"],
     "maxStacks": 1
   }, {
+    "id": "proficiency:martial",
+    "name": "Proficiency: Martial Weapons",
+    "maxStacks": 1
+  }, {
     "id": "proficiency:simple",
     "name": "Proficiency: Simple Weapons",
     "maxStacks": 1
   }, {
     "id": "proficiency:exotic",
     "name": "Proficiency: Exotic Weapons",
-    "maxStacks": 1
-  }, {
-    "id": "proficiency:martial",
-    "name": "Proficiency: Martial Weapons",
     "maxStacks": 1
   }, {
     "id": "proficiency:gauntlet",
@@ -1341,13 +1341,37 @@
     "tags": ["favored_class", "core"],
     "maxStacks": 1
   }, {
+    "id": "ability:damage_reduction#barbarian",
+    "name": "Damage Reduction",
+    "tags": ["class_feature", "barbarian", "ability"]
+  }, {
+    "id": "trait:weapon_proficiency#barbarian",
+    "name": "Weapon Proficiency (Barbarian)",
+    "tags": ["class_feature", "barbarian", "trait"]
+  }, {
     "id": "ability:tireless_rage#barbarian",
     "name": "Tireless Rage",
+    "tags": ["class_feature", "barbarian", "ability"]
+  }, {
+    "id": "ability:mighty_rage#barbarian",
+    "name": "Mighty Rage",
+    "tags": ["class_feature", "barbarian", "ability"]
+  }, {
+    "id": "ability:trap_sense#barbarian",
+    "name": "Trap Sense",
+    "tags": ["class_feature", "barbarian", "ability"]
+  }, {
+    "id": "ability:greater_rage#barbarian",
+    "name": "Greater Rage",
     "tags": ["class_feature", "barbarian", "ability"]
   }, {
     "id": "ability:fast_movement#barbarian",
     "name": "Fast Movement",
     "tags": ["class_feature", "barbarian", "ability"]
+  }, {
+    "id": "trait:armor_proficiency#barbarian",
+    "name": "Armor Proficiency (Barbarian)",
+    "tags": ["class_feature", "barbarian", "trait"]
   }, {
     "id": "ability:rage#barbarian",
     "name": "Rage",
@@ -1357,60 +1381,28 @@
     "name": "Uncanny Dodge",
     "tags": ["class_feature", "barbarian", "ability"]
   }, {
-    "id": "ability:greater_rage#barbarian",
-    "name": "Greater Rage",
-    "tags": ["class_feature", "barbarian", "ability"]
-  }, {
-    "id": "trait:weapon_proficiency#barbarian",
-    "name": "Weapon Proficiency (Barbarian)",
-    "tags": ["class_feature", "barbarian", "trait"]
-  }, {
-    "id": "ability:mighty_rage#barbarian",
-    "name": "Mighty Rage",
-    "tags": ["class_feature", "barbarian", "ability"]
-  }, {
-    "id": "trait:armor_proficiency#barbarian",
-    "name": "Armor Proficiency (Barbarian)",
-    "tags": ["class_feature", "barbarian", "trait"]
-  }, {
-    "id": "ability:damage_reduction#barbarian",
-    "name": "Damage Reduction",
-    "tags": ["class_feature", "barbarian", "ability"]
-  }, {
-    "id": "ability:trap_sense#barbarian",
-    "name": "Trap Sense",
+    "id": "ability:improved_uncanny_dodge#barbarian",
+    "name": "Improved Uncanny Dodge",
     "tags": ["class_feature", "barbarian", "ability"]
   }, {
     "id": "ability:indomitable_will#barbarian",
     "name": "Indomitable Will",
     "tags": ["class_feature", "barbarian", "ability"]
   }, {
-    "id": "ability:improved_uncanny_dodge#barbarian",
-    "name": "Improved Uncanny Dodge",
-    "tags": ["class_feature", "barbarian", "ability"]
-  }, {
     "id": "ability:rage_power#barbarian",
     "name": "Rage Power",
     "tags": ["class_feature", "barbarian", "ability"]
-  }, {
-    "id": "ability:bloodline_feat#sorcerer",
-    "name": "Bloodline Feat",
-    "tags": ["class_feature", "sorcerer", "ability"]
-  }, {
-    "id": "ability:spellcasting#sorcerer",
-    "name": "Spell Casting (Sorcerer)",
-    "tags": ["class_feature", "sorcerer", "ability"]
   }, {
     "id": "ability:bloodline_power#sorcerer",
     "name": "Bloodline Power",
     "tags": ["class_feature", "sorcerer", "ability"]
   }, {
-    "id": "ability:eschew_materials#sorcerer",
-    "name": "Eschew Materials",
+    "id": "ability:bloodline_spell#sorcerer",
+    "name": "Bloodline Spell",
     "tags": ["class_feature", "sorcerer", "ability"]
   }, {
-    "id": "ability:cantrips#sorcerer",
-    "name": "Cantrips",
+    "id": "ability:eschew_materials#sorcerer",
+    "name": "Eschew Materials",
     "tags": ["class_feature", "sorcerer", "ability"]
   }, {
     "id": "trait:armor_proficiency#sorcerer",
@@ -1421,80 +1413,124 @@
     "name": "Weapon Proficiency (Sorcerer)",
     "tags": ["class_feature", "sorcerer", "trait"]
   }, {
-    "id": "ability:bloodline_spell#sorcerer",
-    "name": "Bloodline Spell",
+    "id": "ability:bloodline_feat#sorcerer",
+    "name": "Bloodline Feat",
     "tags": ["class_feature", "sorcerer", "ability"]
   }, {
-    "id": "ability:woodland_stride#druid",
-    "name": "Woodland Stride",
-    "tags": ["class_feature", "druid", "ability"]
+    "id": "ability:cantrips#sorcerer",
+    "name": "Cantrips",
+    "tags": ["class_feature", "sorcerer", "ability"]
   }, {
-    "id": "trait:armor_proficiency#druid",
-    "name": "Armor Proficiency (Druid)",
-    "tags": ["class_feature", "druid", "trait"]
+    "id": "ability:spellcasting#sorcerer",
+    "name": "Spell Casting (Sorcerer)",
+    "tags": ["class_feature", "sorcerer", "ability"]
   }, {
-    "id": "ability:wild_empathy#druid",
-    "name": "Wild Empathy",
-    "tags": ["class_feature", "druid", "ability"]
-  }, {
-    "id": "ability:venom_immunity#druid",
-    "name": "Venom Immunity",
-    "tags": ["class_feature", "druid", "ability"]
-  }, {
-    "id": "trait:weapon_proficiency#druid",
-    "name": "Weapon Proficiency (Druid)",
-    "tags": ["class_feature", "druid", "trait"]
-  }, {
-    "id": "ability:orisons#druid",
-    "name": "Orisons",
+    "id": "ability:wild_shape#druid",
+    "name": "Wild Shape",
     "tags": ["class_feature", "druid", "ability"]
   }, {
     "id": "ability:resist_natures_lure#druid",
     "name": "Resist Nature\u0027s Lure",
     "tags": ["class_feature", "druid", "ability"]
   }, {
-    "id": "ability:nature_sense#druid",
-    "name": "Nature Sense",
-    "tags": ["class_feature", "druid", "ability"]
-  }, {
-    "id": "ability:wild_shape#druid",
-    "name": "Wild Shape",
-    "tags": ["class_feature", "druid", "ability"]
-  }, {
-    "id": "ability:trackless_step#druid",
-    "name": "Trackless Step",
-    "tags": ["class_feature", "druid", "ability"]
-  }, {
-    "id": "ability:timeless_body#druid",
-    "name": "Timeless Body",
+    "id": "ability:wild_empathy#druid",
+    "name": "Wild Empathy",
     "tags": ["class_feature", "druid", "ability"]
   }, {
     "id": "ability:spellcasting#druid",
     "name": "Spell Casting (Druid)",
     "tags": ["class_feature", "druid", "ability"]
   }, {
-    "id": "ability:a_thousand_faces#druid",
-    "name": "A Thousand Faces",
+    "id": "ability:woodland_stride#druid",
+    "name": "Woodland Stride",
+    "tags": ["class_feature", "druid", "ability"]
+  }, {
+    "id": "ability:orisons#druid",
+    "name": "Orisons",
+    "tags": ["class_feature", "druid", "ability"]
+  }, {
+    "id": "ability:venom_immunity#druid",
+    "name": "Venom Immunity",
+    "tags": ["class_feature", "druid", "ability"]
+  }, {
+    "id": "ability:timeless_body#druid",
+    "name": "Timeless Body",
     "tags": ["class_feature", "druid", "ability"]
   }, {
     "id": "ability:nature_bond#druid",
     "name": "Nature Bond",
     "tags": ["class_feature", "druid", "ability"]
   }, {
+    "id": "ability:trackless_step#druid",
+    "name": "Trackless Step",
+    "tags": ["class_feature", "druid", "ability"]
+  }, {
+    "id": "ability:nature_sense#druid",
+    "name": "Nature Sense",
+    "tags": ["class_feature", "druid", "ability"]
+  }, {
+    "id": "trait:weapon_proficiency#druid",
+    "name": "Weapon Proficiency (Druid)",
+    "tags": ["class_feature", "druid", "trait"]
+  }, {
+    "id": "ability:a_thousand_faces#druid",
+    "name": "A Thousand Faces",
+    "tags": ["class_feature", "druid", "ability"]
+  }, {
+    "id": "trait:armor_proficiency#druid",
+    "name": "Armor Proficiency (Druid)",
+    "tags": ["class_feature", "druid", "trait"]
+  }, {
+    "id": "trait:weapon_proficiency#monk",
+    "name": "Weapon Proficiency (Monk)",
+    "tags": ["class_feature", "monk", "trait"]
+  }, {
+    "id": "ability:maneuver_training#monk",
+    "name": "Maneuver Training",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:empty_body#monk",
+    "name": "Empty Body",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:still_mind#monk",
+    "name": "Still Mind",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:fast_movement#monk",
+    "name": "Fast Movement",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
     "id": "ability:perfect_self#monk",
     "name": "Perfect Self",
     "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "trait:armor_proficiency#monk",
-    "name": "Armor Proficiency (Monk)",
-    "tags": ["class_feature", "monk", "trait"]
-  }, {
-    "id": "ability:slow_fall_any_distance#monk",
-    "name": "Slow Fall Any Distance",
+    "id": "ability:abundant_step#monk",
+    "name": "Abundant Step",
     "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "trait:weapon_proficiency#monk",
-    "name": "Weapon Proficiency (Monk)",
+    "id": "ability:tongue_of_the_sun_and_moon#monk",
+    "name": "Tongue Of The Sun And Moon",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:wholeness_of_body#monk",
+    "name": "Wholeness Of Body",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:timeless_body#monk",
+    "name": "Timeless Body",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:evasion#monk",
+    "name": "Evasion",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "ability:slow_fall#monk",
+    "name": "Slow Fall",
+    "tags": ["class_feature", "monk", "ability"]
+  }, {
+    "id": "trait:armor_proficiency#monk",
+    "name": "Armor Proficiency (Monk)",
     "tags": ["class_feature", "monk", "trait"]
   }, {
     "id": "ability:diamond_soul#monk",
@@ -1505,212 +1541,168 @@
     "name": "Flurry Of Blows",
     "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:tongue_of_the_sun_and_moon#monk",
-    "name": "Tongue Of The Sun And Moon",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:evasion#monk",
-    "name": "Evasion",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:quivering_palm#monk",
-    "name": "Quivering Palm",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:purity_of_body#monk",
-    "name": "Purity Of Body",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:wholeness_of_body#monk",
-    "name": "Wholeness Of Body",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:bonus_feat#monk",
-    "name": "Bonus Feat",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:improved_evasion#monk",
-    "name": "Improved Evasion",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:timeless_body#monk",
-    "name": "Timeless Body",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:empty_body#monk",
-    "name": "Empty Body",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:slow_fall#monk",
-    "name": "Slow Fall",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:maneuver_training#monk",
-    "name": "Maneuver Training",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:still_mind#monk",
-    "name": "Still Mind",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
     "id": "ability:stunning_fist#monk",
     "name": "Stunning Fist",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:diamond_body#monk",
-    "name": "Diamond Body",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:fast_movement#monk",
-    "name": "Fast Movement",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:abundant_step#monk",
-    "name": "Abundant Step",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:unarmed_strike#monk",
-    "name": "Unarmed Strike",
-    "tags": ["class_feature", "monk", "ability"]
-  }, {
-    "id": "ability:ki_pool#monk",
-    "name": "Ki Pool",
     "tags": ["class_feature", "monk", "ability"]
   }, {
     "id": "ability:high_jump#monk",
     "name": "High Jump",
     "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:suggestion#bard",
-    "name": "Suggestion",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:bonus_feat#monk",
+    "name": "Bonus Feat",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "trait:weapon_proficiency#bard",
-    "name": "Weapon Proficiency (Bard)",
-    "tags": ["class_feature", "bard", "trait"]
+    "id": "ability:diamond_body#monk",
+    "name": "Diamond Body",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:deadly_performance#bard",
-    "name": "Deadly Performance",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:purity_of_body#monk",
+    "name": "Purity Of Body",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:inspire_courage#bard",
-    "name": "Inspire Courage",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:slow_fall_any_distance#monk",
+    "name": "Slow Fall Any Distance",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:cantrips#bard",
-    "name": "Cantrips",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:quivering_palm#monk",
+    "name": "Quivering Palm",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:distraction#bard",
-    "name": "Distraction",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:improved_evasion#monk",
+    "name": "Improved Evasion",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:well_versed#bard",
-    "name": "Well-versed",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:ki_pool#monk",
+    "name": "Ki Pool",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
-    "id": "ability:inspire_heroics#bard",
-    "name": "Inspire Heroics",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:countersong#bard",
-    "name": "Countersong",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:dirge_of_doom#bard",
-    "name": "Dirge Of Doom",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:inspire_greatness#bard",
-    "name": "Inspire Greatness",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:spellcasting#bard",
-    "name": "Spell Casting (Bard)",
-    "tags": ["class_feature", "bard", "ability"]
+    "id": "ability:unarmed_strike#monk",
+    "name": "Unarmed Strike",
+    "tags": ["class_feature", "monk", "ability"]
   }, {
     "id": "ability:versatile_performance#bard",
     "name": "Versatile Performance",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:bardic_knowledge#bard",
-    "name": "Bardic Knowledge",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:bardic_performance#bard",
-    "name": "Bardic Performance",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:inspire_competence#bard",
-    "name": "Inspire Competence",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:lore_master#bard",
-    "name": "Lore Master",
-    "tags": ["class_feature", "bard", "ability"]
-  }, {
-    "id": "ability:fascinate#bard",
-    "name": "Fascinate",
     "tags": ["class_feature", "bard", "ability"]
   }, {
     "id": "trait:armor_proficiency#bard",
     "name": "Armor Proficiency (Bard)",
     "tags": ["class_feature", "bard", "trait"]
   }, {
-    "id": "ability:frightening_tune#bard",
-    "name": "Frightening Tune",
+    "id": "ability:inspire_heroics#bard",
+    "name": "Inspire Heroics",
     "tags": ["class_feature", "bard", "ability"]
   }, {
-    "id": "ability:jack_of_all_trades#bard",
-    "name": "Jack-of-all-trades",
+    "id": "ability:bardic_knowledge#bard",
+    "name": "Bardic Knowledge",
     "tags": ["class_feature", "bard", "ability"]
   }, {
-    "id": "ability:mass_suggestion#bard",
-    "name": "Mass Suggestion",
+    "id": "ability:dirge_of_doom#bard",
+    "name": "Dirge Of Doom",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:inspire_competence#bard",
+    "name": "Inspire Competence",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:bardic_performance#bard",
+    "name": "Bardic Performance",
     "tags": ["class_feature", "bard", "ability"]
   }, {
     "id": "ability:soothing_performance#bard",
     "name": "Soothing Performance",
     "tags": ["class_feature", "bard", "ability"]
   }, {
-    "id": "ability:aura_of_good#paladin",
-    "name": "Aura Of Good",
+    "id": "ability:distraction#bard",
+    "name": "Distraction",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:inspire_courage#bard",
+    "name": "Inspire Courage",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:fascinate#bard",
+    "name": "Fascinate",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:deadly_performance#bard",
+    "name": "Deadly Performance",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:inspire_greatness#bard",
+    "name": "Inspire Greatness",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:well_versed#bard",
+    "name": "Well-versed",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:countersong#bard",
+    "name": "Countersong",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:mass_suggestion#bard",
+    "name": "Mass Suggestion",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:lore_master#bard",
+    "name": "Lore Master",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:spellcasting#bard",
+    "name": "Spell Casting (Bard)",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:frightening_tune#bard",
+    "name": "Frightening Tune",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "trait:weapon_proficiency#bard",
+    "name": "Weapon Proficiency (Bard)",
+    "tags": ["class_feature", "bard", "trait"]
+  }, {
+    "id": "ability:cantrips#bard",
+    "name": "Cantrips",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:jack_of_all_trades#bard",
+    "name": "Jack-of-all-trades",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "ability:suggestion#bard",
+    "name": "Suggestion",
+    "tags": ["class_feature", "bard", "ability"]
+  }, {
+    "id": "trait:armor_proficiency#paladin",
+    "name": "Armor Proficiency (Paladin)",
+    "tags": ["class_feature", "paladin", "trait"]
+  }, {
+    "id": "ability:aura_of_righteousness#paladin",
+    "name": "Aura Of Righteousness",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "ability:divine_health#paladin",
-    "name": "Divine Health",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:aura_of_courage#paladin",
-    "name": "Aura Of Courage",
+    "id": "ability:detect_evil#paladin",
+    "name": "Detect Evil",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
     "id": "ability:holy_champion#paladin",
     "name": "Holy Champion",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "ability:aura_of_justice#paladin",
-    "name": "Aura Of Justice",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "trait:weapon_proficiency#paladin",
-    "name": "Weapon Proficiency (Paladin)",
-    "tags": ["class_feature", "paladin", "trait"]
-  }, {
-    "id": "ability:spellcasting#paladin",
-    "name": "Spell Casting (Paladin)",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:divine_grace#paladin",
-    "name": "Divine Grace",
+    "id": "ability:divine_health#paladin",
+    "name": "Divine Health",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
     "id": "ability:lay_on_hands#paladin",
     "name": "Lay On Hands",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "ability:aura_of_faith#paladin",
-    "name": "Aura Of Faith",
+    "id": "ability:divine_grace#paladin",
+    "name": "Divine Grace",
+    "tags": ["class_feature", "paladin", "ability"]
+  }, {
+    "id": "ability:divine_bond#paladin",
+    "name": "Divine Bond",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
     "id": "ability:aura_of_resolve#paladin",
@@ -1721,49 +1713,37 @@
     "name": "Mercy",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "trait:armor_proficiency#paladin",
-    "name": "Armor Proficiency (Paladin)",
-    "tags": ["class_feature", "paladin", "trait"]
+    "id": "ability:smite_evil#paladin",
+    "name": "Smite Evil",
+    "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "ability:divine_bond#paladin",
-    "name": "Divine Bond",
+    "id": "ability:aura_of_good#paladin",
+    "name": "Aura Of Good",
+    "tags": ["class_feature", "paladin", "ability"]
+  }, {
+    "id": "ability:spellcasting#paladin",
+    "name": "Spell Casting (Paladin)",
+    "tags": ["class_feature", "paladin", "ability"]
+  }, {
+    "id": "ability:aura_of_justice#paladin",
+    "name": "Aura Of Justice",
+    "tags": ["class_feature", "paladin", "ability"]
+  }, {
+    "id": "ability:aura_of_faith#paladin",
+    "name": "Aura Of Faith",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
     "id": "ability:channel_positive_energy#paladin",
     "name": "Channel Positive Energy",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "ability:aura_of_righteousness#paladin",
-    "name": "Aura Of Righteousness",
+    "id": "ability:aura_of_courage#paladin",
+    "name": "Aura Of Courage",
     "tags": ["class_feature", "paladin", "ability"]
   }, {
-    "id": "ability:smite_evil#paladin",
-    "name": "Smite Evil",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "ability:detect_evil#paladin",
-    "name": "Detect Evil",
-    "tags": ["class_feature", "paladin", "ability"]
-  }, {
-    "id": "trait:weapon_proficiency#wizard",
-    "name": "Weapon Proficiency (Wizard)",
-    "tags": ["class_feature", "wizard", "trait"]
-  }, {
-    "id": "ability:spellcasting#wizard",
-    "name": "Spell Casting (Wizard)",
-    "tags": ["class_feature", "wizard", "ability"]
-  }, {
-    "id": "trait:armor_proficiency#wizard",
-    "name": "Armor Proficiency (Wizard)",
-    "tags": ["class_feature", "wizard", "trait"]
-  }, {
-    "id": "ability:cantrips#wizard",
-    "name": "Cantrips",
-    "tags": ["class_feature", "wizard", "ability"]
-  }, {
-    "id": "ability:bonus_feat#wizard",
-    "name": "Bonus Feat",
-    "tags": ["class_feature", "wizard", "ability"]
+    "id": "trait:weapon_proficiency#paladin",
+    "name": "Weapon Proficiency (Paladin)",
+    "tags": ["class_feature", "paladin", "trait"]
   }, {
     "id": "ability:arcane_bond#wizard",
     "name": "Arcane Bond",
@@ -1773,68 +1753,64 @@
     "name": "Arcane School",
     "tags": ["class_feature", "wizard", "ability"]
   }, {
-    "id": "ability:camouflage#ranger",
-    "name": "Camouflage",
-    "tags": ["class_feature", "ranger", "ability"]
+    "id": "trait:armor_proficiency#wizard",
+    "name": "Armor Proficiency (Wizard)",
+    "tags": ["class_feature", "wizard", "trait"]
   }, {
-    "id": "ability:woodland_stride#ranger",
-    "name": "Woodland Stride",
-    "tags": ["class_feature", "ranger", "ability"]
+    "id": "ability:bonus_feat#wizard",
+    "name": "Bonus Feat",
+    "tags": ["class_feature", "wizard", "ability"]
+  }, {
+    "id": "ability:cantrips#wizard",
+    "name": "Cantrips",
+    "tags": ["class_feature", "wizard", "ability"]
+  }, {
+    "id": "trait:weapon_proficiency#wizard",
+    "name": "Weapon Proficiency (Wizard)",
+    "tags": ["class_feature", "wizard", "trait"]
+  }, {
+    "id": "ability:spellcasting#wizard",
+    "name": "Spell Casting (Wizard)",
+    "tags": ["class_feature", "wizard", "ability"]
   }, {
     "id": "ability:hunters_bond#ranger",
     "name": "Hunter\u0027s Bond",
-    "tags": ["class_feature", "ranger", "ability"]
-  }, {
-    "id": "trait:weapon_proficiency#ranger",
-    "name": "Weapon Proficiency (Ranger)",
-    "tags": ["class_feature", "ranger", "trait"]
-  }, {
-    "id": "ability:swift_tracker#ranger",
-    "name": "Swift Tracker",
-    "tags": ["class_feature", "ranger", "ability"]
-  }, {
-    "id": "ability:master_hunter#ranger",
-    "name": "Master Hunter",
-    "tags": ["class_feature", "ranger", "ability"]
-  }, {
-    "id": "ability:track#ranger",
-    "name": "Track",
-    "tags": ["class_feature", "ranger", "ability"]
-  }, {
-    "id": "ability:spellcasting#ranger",
-    "name": "Spell Casting (Ranger)",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
     "id": "ability:improved_quarry#ranger",
     "name": "Improved Quarry",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:improved_evasion#ranger",
-    "name": "Improved Evasion",
+    "id": "ability:quarry#ranger",
+    "name": "Quarry",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:endurance#ranger",
-    "name": "Endurance",
+    "id": "trait:weapon_proficiency#ranger",
+    "name": "Weapon Proficiency (Ranger)",
+    "tags": ["class_feature", "ranger", "trait"]
+  }, {
+    "id": "ability:wild_empathy#ranger",
+    "name": "Wild Empathy",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:evasion#ranger",
-    "name": "Evasion",
+    "id": "ability:woodland_stride#ranger",
+    "name": "Woodland Stride",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:favored_terrain#ranger",
-    "name": "Favored Terrain",
+    "id": "ability:spellcasting#ranger",
+    "name": "Spells (Ranger)",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:hide_in_plain_sight#ranger",
-    "name": "Hide In Plain Sight",
+    "id": "ability:track#ranger",
+    "name": "Track",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
     "id": "ability:favored_enemy#ranger",
     "name": "Favored Enemy",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:wild_empathy#ranger",
-    "name": "Wild Empathy",
+    "id": "ability:swift_tracker#ranger",
+    "name": "Swift Tracker",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
     "id": "trait:armor_proficiency#ranger",
@@ -1845,8 +1821,32 @@
     "name": "Combat Style Feat",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
-    "id": "ability:quarry#ranger",
-    "name": "Quarry",
+    "id": "ability:improved_evasion#ranger",
+    "name": "Improved Evasion",
+    "tags": ["class_feature", "ranger", "ability"]
+  }, {
+    "id": "ability:evasion#ranger",
+    "name": "Evasion",
+    "tags": ["class_feature", "ranger", "ability"]
+  }, {
+    "id": "ability:endurance#ranger",
+    "name": "Endurance",
+    "tags": ["class_feature", "ranger", "ability"]
+  }, {
+    "id": "ability:favored_terrain#ranger",
+    "name": "Favored Terrain",
+    "tags": ["class_feature", "ranger", "ability"]
+  }, {
+    "id": "ability:master_hunter#ranger",
+    "name": "Master Hunter",
+    "tags": ["class_feature", "ranger", "ability"]
+  }, {
+    "id": "ability:camouflage#ranger",
+    "name": "Camouflage",
+    "tags": ["class_feature", "ranger", "ability"]
+  }, {
+    "id": "ability:hide_in_plain_sight#ranger",
+    "name": "Hide In Plain Sight",
     "tags": ["class_feature", "ranger", "ability"]
   }, {
     "id": "ability:channel_energy#cleric",
@@ -1854,16 +1854,12 @@
     "tags": ["class_feature", "cleric", "ability"],
     "label": "Channel Energy ({@ability:channel_energy#cleric}d6)"
   }, {
-    "id": "trait:armor_proficiency#cleric",
-    "name": "Armor Proficiency (Cleric)",
+    "id": "trait:weapon_proficiency#cleric",
+    "name": "Weapon Proficiency (Cleric)",
     "tags": ["class_feature", "cleric", "trait"]
   }, {
-    "id": "ability:domains#cleric",
-    "name": "Domains",
-    "tags": ["class_feature", "cleric", "ability"]
-  }, {
-    "id": "ability:spontaneous_casting#cleric",
-    "name": "Spontaneous Casting",
+    "id": "ability:spellcasting#cleric",
+    "name": "Spell Casting (Cleric)",
     "tags": ["class_feature", "cleric", "ability"]
   }, {
     "id": "ability:aura#cleric",
@@ -1874,26 +1870,37 @@
     "name": "Orisons",
     "tags": ["class_feature", "cleric", "ability"]
   }, {
-    "id": "ability:spellcasting#cleric",
-    "name": "Spell Casting (Cleric)",
+    "id": "ability:spontaneous_casting#cleric",
+    "name": "Spontaneous Casting",
     "tags": ["class_feature", "cleric", "ability"]
   }, {
-    "id": "trait:weapon_proficiency#cleric",
-    "name": "Weapon Proficiency (Cleric)",
-    "tags": ["class_feature", "cleric", "trait"]
+    "id": "ability:domains#cleric",
+    "name": "Domains",
+    "tags": ["class_feature", "cleric", "ability"]
   }, {
-    "id": "ability:trapfinding#rogue",
-    "name": "Trapfinding",
-    "tags": ["class_feature", "rogue", "ability"]
+    "id": "trait:armor_proficiency#cleric",
+    "name": "Armor Proficiency (Cleric)",
+    "tags": ["class_feature", "cleric", "trait"]
   }, {
     "id": "trait:armor_proficiency#rogue",
     "name": "Armor Proficiency (Rogue)",
     "tags": ["class_feature", "rogue", "trait"]
   }, {
-    "id": "ability:sneak_attack#rogue",
-    "name": "Sneak Attack",
-    "tags": ["class_feature", "rogue", "ability"],
-    "label": "Sneak Attack ({@ability:sneak_attack#rogue}d6)"
+    "id": "ability:improved_uncanny_dodge#rogue",
+    "name": "Improved Uncanny Dodge",
+    "tags": ["class_feature", "rogue", "ability"]
+  }, {
+    "id": "ability:trapfinding#rogue",
+    "name": "Trapfinding",
+    "tags": ["class_feature", "rogue", "ability"]
+  }, {
+    "id": "ability:evasion#rogue",
+    "name": "Evasion",
+    "tags": ["class_feature", "rogue", "ability"]
+  }, {
+    "id": "ability:rogue_talent#rogue",
+    "name": "Rogue Talent",
+    "tags": ["class_feature", "rogue", "ability"]
   }, {
     "id": "ability:advanced_talents#rogue",
     "name": "Advanced Talents",
@@ -1903,61 +1910,54 @@
     "name": "Uncanny Dodge",
     "tags": ["class_feature", "rogue", "ability"]
   }, {
+    "id": "ability:sneak_attack#rogue",
+    "name": "Sneak Attack",
+    "tags": ["class_feature", "rogue", "ability"],
+    "label": "Sneak Attack ({@ability:sneak_attack#rogue}d6)"
+  }, {
     "id": "trait:weapon_proficiency#rogue",
     "name": "Weapon Proficiency (Rogue)",
     "tags": ["class_feature", "rogue", "trait"]
   }, {
-    "id": "ability:evasion#rogue",
-    "name": "Evasion",
+    "id": "ability:master_strike#rogue",
+    "name": "Master Strike",
     "tags": ["class_feature", "rogue", "ability"]
   }, {
     "id": "ability:trap_sense#rogue",
     "name": "Trap Sense",
     "tags": ["class_feature", "rogue", "ability"]
   }, {
-    "id": "ability:master_strike#rogue",
-    "name": "Master Strike",
-    "tags": ["class_feature", "rogue", "ability"]
+    "id": "ability:bravery#fighter",
+    "name": "Bravery",
+    "tags": ["class_feature", "fighter", "ability"]
   }, {
-    "id": "ability:rogue_talent#rogue",
-    "name": "Rogue Talent",
-    "tags": ["class_feature", "rogue", "ability"]
+    "id": "trait:weapon_proficiency#fighter",
+    "name": "Weapon Proficiency (Fighter)",
+    "tags": ["class_feature", "fighter", "trait"]
   }, {
-    "id": "ability:improved_uncanny_dodge#rogue",
-    "name": "Improved Uncanny Dodge",
-    "tags": ["class_feature", "rogue", "ability"]
-  }, {
-    "id": "ability:bonus_feat#fighter",
-    "name": "Bonus Feat",
+    "id": "ability:weapon_mastery#fighter",
+    "name": "Weapon Mastery",
     "tags": ["class_feature", "fighter", "ability"]
   }, {
     "id": "ability:armor_training#fighter",
     "name": "Armor Training",
     "tags": ["class_feature", "fighter", "ability"]
   }, {
-    "id": "ability:armor_mastery#fighter",
-    "name": "Armor Mastery",
-    "tags": ["class_feature", "fighter", "ability"]
-  }, {
-    "id": "ability:bravery#fighter",
-    "name": "Bravery",
-    "tags": ["class_feature", "fighter", "ability"]
-  }, {
     "id": "trait:armor_proficiency#fighter",
     "name": "Armor Proficiency (Fighter)",
     "tags": ["class_feature", "fighter", "trait"]
+  }, {
+    "id": "ability:armor_mastery#fighter",
+    "name": "Armor Mastery",
+    "tags": ["class_feature", "fighter", "ability"]
   }, {
     "id": "ability:advanced_weapon_training#fighter",
     "name": "Advanced Weapon Training",
     "tags": ["class_feature", "fighter", "ability"]
   }, {
-    "id": "ability:weapon_mastery#fighter",
-    "name": "Weapon Mastery",
+    "id": "ability:bonus_feat#fighter",
+    "name": "Bonus Feat",
     "tags": ["class_feature", "fighter", "ability"]
-  }, {
-    "id": "trait:weapon_proficiency#fighter",
-    "name": "Weapon Proficiency (Fighter)",
-    "tags": ["class_feature", "fighter", "trait"]
   }, {
     "id": "ability:weapon_training#fighter",
     "name": "Weapon Training",

@@ -1,10 +1,10 @@
 import {ReactNode} from "react";
 import styles from "./ButtonBlock.module.scss";
 
-interface PathfinderButtonGroupProps {
+interface ButtonBlockGroupProps {
   children?: ReactNode
 }
 
-export function PathfinderButtonGroup({ children }: PathfinderButtonGroupProps) {
+export function ButtonBlockGroup({ children }: ButtonBlockGroupProps) {
   return <div className={styles.group}>{children}</div>
 }

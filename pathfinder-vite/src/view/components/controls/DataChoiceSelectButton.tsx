@@ -56,16 +56,20 @@ function featureToChoiceSelectorOption(feature: FeatureSummary, database: Databa
       feature.name,
       () => feature.isEnabled(characterAtLevel),
       async () => {
-        const description = await database.description(feature.id);
-        if (!description) {
+        const loaded = await database.load(feature.id);
+        if (!loaded) {
           return '';
         }
+
+        const description = loaded.description;
+
         if (descriptionFn !== undefined) {
           return descriptionFn(description);
         }
         return <FeatureDescription
             feature={feature}
             description={description}
+            featureModifications={loaded.featureModifications}
             characterAtLevel={characterAtLevel} />
       }
   )
