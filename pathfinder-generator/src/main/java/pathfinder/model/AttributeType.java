@@ -34,6 +34,7 @@ public enum AttributeType {
     UNCHAINED_ROGUE_TALENT("unchained_rogue_talent"),
     SORCERER_BLOODLINE("sorcerer_bloodline"),
     BLOODRAGER_BLOODLINE("bloodrager_bloodline"),
+    WILD_TALENT("wild_talent"),
 
     SPELL("spell"),
     ;

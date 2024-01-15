@@ -21,6 +21,7 @@ export class Stack implements FeatureResolvable {
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<void> {
     await this.links.resolveAll(basePath, context);
     await this.choices.resolveAll(basePath, context);
+    await this.conditionalComponents.resolveAll(basePath, context);
   }
 
   modify(modification: StackModification): Stack {

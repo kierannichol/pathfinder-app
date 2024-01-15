@@ -19,12 +19,15 @@ public class CharacterTemplateGenerator {
             new FeatureSelectCategory("Core", "core"),
             new FeatureSelectCategory("Base", "base"),
             new FeatureSelectCategory("Hybrid", "hybrid"),
+            new FeatureSelectCategory("Occult", "occult"),
             new FeatureSelectCategory("Unchained", "unchained")
     );
 
     private static final List<FeatureSelectCategory> FEAT_CATEGORIES = List.of(
             new FeatureSelectCategory("General", "general"),
-            new FeatureSelectCategory("Combat", "combat")
+            new FeatureSelectCategory("Combat", "combat"),
+            new FeatureSelectCategory("Item Creation", "item_creation"),
+            new FeatureSelectCategory("Metamagic", "metamagic")
     );
 
     public CharacterTemplate generate() {

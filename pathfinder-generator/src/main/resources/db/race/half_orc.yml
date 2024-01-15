@@ -1,9 +1,19 @@
 id: "race:half_orc"
 name: "Half-orc"
-description: Often fierce and savage, sometimes noble and resolute, half-orcs can manifest the best and worst qualities of their parent races. Many half-orcs struggle to keep their more bestial natures in check in order to epitomize the most heroic values of humanity. Unfortunately, many outsiders see half-orcs as hopeless abominations devoid of civility, if not monsters unworthy of pity or parley.
-size: "Medium"
-speed: 30
 type: "Humanoid (human, orc)"
+description: "Often fierce and savage, sometimes noble and resolute, half-orcs can\
+  \ manifest the best and worst qualities of their parent races. Many half-orcs struggle\
+  \ to keep their more bestial natures in check in order to epitomize the most heroic\
+  \ values of humanity. Unfortunately, many outsiders see half-orcs as hopeless abominations\
+  \ devoid of civility, if not monsters unworthy of pity or parley."
+fixed_stacks:
+- effects:
+  - "SET speed:base 30"
+  links:
+  - "size:m"
+  - "asi:any_p2"
+metadata:
+  size: "Medium"
+  type: "Humanoid (human, orc)"
+  speed: "30"
 source: "PZO1110"
-features:
-  - asi:any_p2

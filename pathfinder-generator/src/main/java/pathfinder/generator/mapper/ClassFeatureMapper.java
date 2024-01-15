@@ -72,6 +72,7 @@ public class ClassFeatureMapper {
             case "bardic_masterpiece" -> byTagChoice("bardic_masterpiece", "Bardic Masterpiece");
             case "rage_power" -> byTagChoice("rage_power", "Rage Power");
             case "warpriest_blessing" -> byTagChoice("warpriest_blessing", "Warpriest Blessing");
+            case "elemental_focus", "expanded_element" -> byTagChoice("kineticist_element", "Kineticist Element", List.of("kineticist_element"));
             default -> null;
         }).map(Builder::build);
     }

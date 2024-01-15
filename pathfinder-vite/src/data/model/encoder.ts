@@ -10,6 +10,8 @@ import CharacterTemplate, {CharacterLevelTemplate} from "./CharacterTemplate.ts"
 import {data} from "../../compiled";
 import StackModification from "./StackModification.ts";
 import FeatureModification from "./FeatureModification.ts";
+import ConditionalStack from "./ConditionalStack.ts";
+import FeatureOptionsTemplate from "./FeatureOptionsTemplate.ts";
 import FeatureSummaryDbo = data.FeatureSummaryDbo;
 import FeatureDbo = data.FeatureDbo;
 import StacksDbo = data.StacksDbo;
@@ -25,12 +27,15 @@ import FeatureSelectChoiceCategoryDbo = data.FeatureSelectChoiceCategoryDbo;
 import FeatureSelectChoiceSortByDbo = data.FeatureSelectChoiceSortByDbo;
 import StackModificationDbo = data.StackModificationDbo;
 import FeatureModificationDbo = data.FeatureModificationDbo;
+import ConditionalStackDbo = data.ConditionalStackDbo;
+import FeatureOptionsDbo = data.FeatureOptionsDbo;
 
 export function decodeFeatureSummary(dbo: FeatureSummaryDbo): FeatureSummary {
   return new FeatureSummary(dbo.id,
       dbo.name,
       dbo.label ?? undefined,
       dbo.tags,
+      decodeFeatureOptionsTemplate(dbo.options),
       dbo.enabledFormula,
       dbo.maxStacks ?? null);
 }
@@ -40,11 +45,21 @@ export function decodeFeature(dbo: FeatureDbo): Feature {
       dbo.name,
       dbo.label ?? undefined,
       dbo.tags,
+      decodeFeatureOptionsTemplate(dbo.options),
       dbo.enabledFormula,
       dbo.maxStacks ?? null,
       new Description(dbo.description?.text ?? "", dbo.description?.sections ?? {}),
       decodeStacks(dbo.stacks ?? new StacksDbo()),
+      dbo.conditionalStacks.map(decodeConditionalStack),
       dbo.featureModifications.map(decodeFeatureModification));
+}
+
+function decodeFeatureOptionsTemplate(dbo: FeatureOptionsDbo|undefined|null): FeatureOptionsTemplate|undefined {
+  if (!dbo) {
+    return undefined;
+  }
+
+  return new FeatureOptionsTemplate(dbo.optionTag, dbo.idTemplate, dbo.prerequisitesTemplate);
 }
 
 function decodeEffect(dbo: EffectDbo): Effect {
@@ -122,6 +137,17 @@ function decodeStacks(dbo: StacksDbo): Stacks {
     case "repeatingStack": return new RepeatingStack(decodeStack(dbo.repeatingStack ?? new StackDbo()));
     default: return new RepeatingStack(Stack.Empty);
   }
+}
+
+function decodeConditionalStack(dbo: ConditionalStackDbo): ConditionalStack {
+  return new ConditionalStack(dbo.conditionFormula,
+      new Stack(
+          dbo.effects.map(decodeEffect),
+          dbo.links.map(decodeLink),
+          dbo.unlinks.map(decodeUnlink),
+          dbo.choices.map(decodeChoice),
+          []
+      ));
 }
 
 function decodeConditionalComponent(dbo: ConditionalStackComponentDbo): ConditionalComponent {

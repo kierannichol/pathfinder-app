@@ -13,7 +13,6 @@ export default class CharacterAtLevel extends BaseDataContext {
               private readonly state: CharacterState = {},
               public readonly choices: ChoiceRef[] = []) {
     super();
-    this.state['character_level'] = level;
   }
 
   selected(choice: ChoiceRef|string): string {

@@ -1,6 +1,8 @@
 import {CharacterState} from "./CharacterState.ts";
 import {Effect} from "./Effect.ts";
 import FeatureModification from "./FeatureModification.ts";
+import {ConditionalStackAppliedFeature} from "./AppliedEntityContext.ts";
+import {DataContext, Formula} from "@kierannichol/formula-js";
 
 export class FeatureStack {
   private readonly stack: AppliedFeature[] = [];
@@ -18,16 +20,15 @@ export class FeatureStack {
     });
   }
 
-  traverse(peekFn: (appliedFeature: AppliedFeature) => void) {
+  traverse(peekFn: (appliedFeature: AppliedFeature) => void, state: CharacterState) {
     this.stack.forEach((feature, i) => {
-        feature.traverse(peekFn, id => this.isRemoved(id, i+1));
+        feature.traverse(peekFn, id => this.isRemoved(id, i+1), state);
     });
   }
 
   private isRemoved(id: string, stackCount: number): boolean {
     const removedAt = this.getRemovedAt(id, stackCount);
     const unRemovedAt = this.getUnRemovedAt(id, stackCount);
-    if (removedAt !== undefined) console.log(id + " removed at " + removedAt + " and unremoved at " + unRemovedAt);
     return removedAt !== undefined
         && stackCount >= removedAt
         && (unRemovedAt === undefined || stackCount <= unRemovedAt);
@@ -64,6 +65,7 @@ export class AppliedFeature {
   public readonly removedAt: {[id:string]:number} = {};
   public readonly unRemovedAt: {[id:string]:number} = {};
   private readonly featureModifications: {[id:string]:FeatureModification[]} = {};
+  private readonly conditionalStacks: ConditionalStackAppliedFeature[] = [];
 
   constructor(public readonly id: string) {
   }
@@ -102,6 +104,10 @@ export class AppliedFeature {
   }
 
   addsFeature(feature: AppliedFeature): AppliedFeature {
+    if (feature instanceof ConditionalStackAppliedFeature) {
+      this.conditionalStacks.push(feature);
+      return this;
+    }
     this.features.push(feature);
     return this;
   }
@@ -140,15 +146,35 @@ export class AppliedFeature {
     if (!isRemovedFn(this.id)) {
       this.effects.forEach(effect => effect.applyTo(state));
       this.features.forEach(feature => feature.applyTo(state, isRemovedFn));
+      this.applyConditionalStacks(state, isRemovedFn);
     }
   }
 
-  traverse(peekFn: (appliedFeature: AppliedFeature) => void, isRemovedFn: (id: string) => boolean) {
+  private applyConditionalStacks(state: CharacterState, isRemovedFn: (id: string) => boolean) {
+    const dataContext = DataContext.of(state);
+    for (let i = 0; i < this.conditionalStacks.length; i++) {
+      const stack = this.conditionalStacks[i];
+      const formula = Formula.parse(stack.formula);
+      console.log("Trying " + stack.formula + " = " + formula.resolve(dataContext))
+      if (formula.resolve(dataContext)?.asBoolean() ?? false) {
+        stack.applyTo(state, isRemovedFn);
+        delete this.conditionalStacks[i];
+      }
+    }
+  }
+
+  traverse(peekFn: (appliedFeature: AppliedFeature) => void, isRemovedFn: (id: string) => boolean, state: CharacterState) {
     this.features.forEach(entry => {
       if (!isRemovedFn(this.id)) {
         peekFn(entry);
-        entry.traverse(peekFn, isRemovedFn);
+        entry.traverse(peekFn, isRemovedFn, state);
       }
     });
+    this.conditionalStacks.forEach(entry => {
+      if (!isRemovedFn(this.id)) {
+        peekFn(entry);
+        entry.traverse(peekFn, isRemovedFn, state);
+      }
+    })
   }
 }

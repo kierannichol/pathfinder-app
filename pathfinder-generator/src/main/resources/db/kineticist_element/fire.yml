@@ -1,0 +1,28 @@
+id: "kineticist_element:fire"
+name: "Fire"
+description: "Kineticists who focus on the element of fire are called pyrokineticists. Pyrokineticists wield elemental fire as a potent weapon, and they possess a powerful offense."
+fixed_stacks:
+  - links:
+      - "ability:basic_pyrokinesis#kineticist"
+      - "ability:fire_blast#kineticist"
+
+conditional_stacks:
+    - when: "@ability:elemental_defense#kineticist"
+      links:
+        - "ability:searing_flesh#kineticist"
+features:
+  - id: "ability:basic_pyrokinesis#kineticist"
+    name: "Basic Pyrokinesis"
+    type: "Sp"
+    description: "You can use your inner flame to reproduce the effects of a flare, light, or spark cantrip, except that the light you create with light produces heat like a normal flame; using any of the three abilities ends any previous light effect from this wild talent."
+    source: "PZO1132"
+  - id: "ability:fire_blast#kineticist"
+    name: "Fire Blast"
+    type: "Sp"
+    description: "You unleash a gout of flickering fire to burn a single foe."
+    source: "PZO1132"
+  - id: "ability:searing_flesh#kineticist"
+    name: "Searing Flesh"
+    type: "Su"
+    description: "Your body becomes painfully hot. Whenever a creature hits you with a natural attack or an unarmed strike, that creature takes 1 point of fire damage per 4 kineticist levels you possess (minimum 1 point of fire damage). A creature in a grapple with you takes double this amount of damage at the end of each of its turns.\nWeapons that strike you also take this damage, though the damage is unlikely to penetrate the weapon’s hardness. By accepting 1 point of burn, you can increase this damage by 1 point per 4 kineticist levels you possess until the next time your burn is removed. You can increase the damage in this way up to seven times.\nWhenever you accept burn while using a fire wild talent, the surging flame causes your searing flesh to deal double its current amount of damage for 1 round (a creature in a grapple with you takes a total of four times as much damage as normal). You can dismiss or restore this effect as an immediate action."
+source: "PZO1132"

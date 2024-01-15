@@ -6,9 +6,10 @@ import lombok.Builder;
 import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
+import pathfinder.model.Stacks;
 
 @Builder
-public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, List<String> effects, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
+public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, List<String> effects, Stacks stacks, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
 
     public static ClassFeature fromFeature(Feature feature, Id classId) {
         return new ClassFeature(
@@ -20,6 +21,7 @@ public record ClassFeature(Id id, String name, String label, String type, Id cla
                 feature.description(),
                 feature.prerequisites(),
                 feature.effects(),
+                feature.stacks(),
                 feature.source());
     }
 

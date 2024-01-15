@@ -1,8 +1,8 @@
 package pathfinder.db.query;
 
-import pathfinder.model.pathfinder.Race;
-import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.Source;
+import pathfinder.model.pathfinder.ComplexFeature;
+import pathfinder.model.pathfinder.SourceId;
 
 public class RaceQuery implements SourceSpecificQuery<RaceQuery> {
     private final String name;
@@ -19,7 +19,7 @@ public class RaceQuery implements SourceSpecificQuery<RaceQuery> {
         return source.sourceId().equals(sourceId);
     }
 
-    public boolean matches(Race race) {
+    public boolean matches(ComplexFeature race) {
         return this.name == null || race.name().equalsIgnoreCase(this.name);
     }
 

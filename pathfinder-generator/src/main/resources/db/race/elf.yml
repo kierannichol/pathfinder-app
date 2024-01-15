@@ -1,11 +1,21 @@
 id: "race:elf"
 name: "Elf"
-description: Tall, noble, and often haughty, elves are long-lived and subtle masters of the wilderness. Elves excel in the arcane arts. Often they use their intrinsic link to nature to forge new spells and create wondrous items that, like their creators, seem nearly impervious to the ravages of time. A private and often introverted race, elves can give the impression they are indifferent to the plights of others.
-size: "Medium"
-speed: 30
 type: "Humanoid (elf)"
+description: "Tall, noble, and often haughty, elves are long-lived and subtle masters\
+  \ of the wilderness. Elves excel in the arcane arts. Often they use their intrinsic\
+  \ link to nature to forge new spells and create wondrous items that, like their\
+  \ creators, seem nearly impervious to the ravages of time. A private and often introverted\
+  \ race, elves can give the impression they are indifferent to the plights of others."
+fixed_stacks:
+- effects:
+  - "SET speed:base 30"
+  links:
+  - "size:m"
+  - "asi:dex_p2"
+  - "asi:int_p2"
+  - "asi:con_m2"
+metadata:
+  size: "Medium"
+  type: "Humanoid (elf)"
+  speed: "30"
 source: "PZO1110"
-features:
-  - asi:dex_p2
-  - asi:int_p2
-  - asi:con_m2

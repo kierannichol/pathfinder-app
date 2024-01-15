@@ -3,6 +3,7 @@ package pathfinder.model;
 import static pathfinder.util.ListUtils.mapList;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import pathfinder.data.FeatureDbo;
 import pathfinder.data.FeatureSummaryDbo;
@@ -13,8 +14,10 @@ public record Feature(Id id,
                       Description description,
                       Condition enabledCondition,
                       List<String> tags,
+                      FeatureOptions options,
                       Integer maxStacks,
                       Stacks stacks,
+                      List<ConditionalStack> conditionalStacks,
                       List<FeatureModification> featureModifications) implements NamedEntity {
 
     public static Feature simple(Id id, String name) {
@@ -44,6 +47,7 @@ public record Feature(Id id,
         if (feature.stacks instanceof FixedStacks fixedStacks) {
             fixedStacks.stacks().forEach(builder::addFixedStack);
         }
+        builder.addConditionalStacks(feature.conditionalStacks());
 
         if (feature.maxStacks != null) {
             builder.setMaxStacks(feature.maxStacks);
@@ -51,6 +55,10 @@ public record Feature(Id id,
 
         if (feature.featureModifications != null) {
             feature.featureModifications.forEach(builder::addFeatureModification);
+        }
+
+        if (feature.options != null) {
+            builder.addOptions(feature.options);
         }
 
         return builder;
@@ -76,6 +84,9 @@ public record Feature(Id id,
         if (maxStacks != null) {
             summary.setMaxStacks(maxStacks);
         }
+        if (options != null) {
+            summary.setOptions(options.toDbo());
+        }
         return summary.build();
     }
 
@@ -91,12 +102,16 @@ public record Feature(Id id,
                 .addAllTags(tags)
                 .setDescription(description.toDbo())
                 .setStacks(stacks.toDbo())
+                .addAllConditionalStacks(mapList(conditionalStacks, ConditionalStack::toDbo))
                 .addAllFeatureModifications(mapList(featureModifications, FeatureModification::toDbo));
         if (label != null) {
             feature.setLabel(label);
         }
         if (maxStacks != null) {
             feature.setMaxStacks(maxStacks);
+        }
+        if (options != null) {
+            feature.setOptions(options.toDbo());
         }
         return feature.build();
     }
@@ -109,10 +124,12 @@ public record Feature(Id id,
         private Description description = Description.empty();
         private Condition enabledCondition = new Condition("");
         private final List<String> tags = new ArrayList<>();
+        private FeatureOptions options = null;
         private final List<Stack> fixedStack = new ArrayList<>();
         private Stack repeatingStack = null;
         private Integer maxStacks = null;
         private final List<FeatureModification> featureModifications = new ArrayList<>();
+        private final List<ConditionalStack> conditionalStacks = new ArrayList<>();
 
         public FeatureBuilder(Id id) {
             this.id = id;
@@ -173,6 +190,16 @@ public record Feature(Id id,
             return this;
         }
 
+        public FeatureBuilder addConditionalStack(ConditionalStack stack) {
+            this.conditionalStacks.add(stack);
+            return this;
+        }
+
+        public FeatureBuilder addConditionalStacks(Collection<ConditionalStack> stacks) {
+            this.conditionalStacks.addAll(stacks);
+            return this;
+        }
+
         public FeatureBuilder addFeatureModification(FeatureModification featureModification) {
             this.featureModifications.add(featureModification);
             return this;
@@ -180,6 +207,11 @@ public record Feature(Id id,
 
         public FeatureBuilder setMaxStacks(Integer num) {
             this.maxStacks = num;
+            return this;
+        }
+
+        public FeatureBuilder addOptions(FeatureOptions options) {
+            this.options = options;
             return this;
         }
 
@@ -201,8 +233,10 @@ public record Feature(Id id,
                     description,
                     enabledCondition,
                     tags,
+                    options,
                     calcMaxStacks,
                     stacks,
+                    conditionalStacks,
                     featureModifications);
         }
     }

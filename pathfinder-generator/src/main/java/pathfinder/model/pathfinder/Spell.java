@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import pathfinder.model.Description;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
@@ -34,6 +35,7 @@ public record Spell(Id id,
     }
 
     @NoArgsConstructor(access = AccessLevel.PRIVATE)
+    @ToString
     public static class SpellBuilder {
         private Id id;
         private String name;

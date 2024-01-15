@@ -41,7 +41,7 @@ export default function FeatureDescription({ feature, description, featureModifi
 
   return (
       <div>
-        {/*<code>{feature.id}</code>*/}
+        <code>{feature.id}</code>
         {showPrerequisiteList && characterAtLevel !== undefined && !isValid && <div className={isValid ? styles.prerequisitesValid : styles.prerequisitesInvalid}>
           <div className={styles.prerequisiteHeader}>Prerequisites</div>
           <PrerequisiteList featureId={feature.id} formula={Formula.parse(feature.enabledFormula) ?? Resolvable.just(true)} maxStacks={feature.maxStacks} characterAtLevel={characterAtLevel} />

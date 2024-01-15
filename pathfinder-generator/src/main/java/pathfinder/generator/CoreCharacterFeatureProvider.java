@@ -38,9 +38,11 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                 BaseAttackBonus.generateBaseAttackBonusFeatures(),
                 AbilityScore.abilityScoreFeatures(),
                 weaponProficiencies(),
+                weaponSelectOptions(),
                 armorProficiencies(),
                 alignments(),
                 skills(),
+                classSkills(),
                 sizes(),
                 asi()
         ));
@@ -50,6 +52,15 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
         return Stream.of(
                 Feature.simple(Id.of("caster_level"), "Caster Level")
         );
+    }
+
+    private Stream<Feature> weaponSelectOptions() {
+        return Weapons.ALL_WEAPONS.stream()
+                .map(weapon -> Feature.builder(Id.of("weapon", weapon.id()))
+                        .setName(weapon.name())
+                        .addTag("weapon")
+                        .setMaxStacks(1))
+                .map(FeatureBuilder::build);
     }
 
     private Stream<Feature> weaponProficiencies() {
@@ -108,6 +119,17 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                 .map(skill -> Feature.builder(skill.id())
                         .setName(skill.name())
                         .addTag("skill")
+                        .build());
+    }
+
+    private Stream<Feature> classSkills() {
+        return Skills.ALL.stream()
+                .map(skill -> Feature.builder(skill.id().changeType("class_skill"))
+                        .setName(skill.name())
+                        .addTag("class_skill")
+                        .addFixedStack(new StackBuilder()
+                                .addEffect(Effect.setNumber("trained:" + skill.id().string(), 1))
+                                .build())
                         .build());
     }
 

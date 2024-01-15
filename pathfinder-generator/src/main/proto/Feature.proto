@@ -18,6 +18,7 @@ message FeatureSummaryDbo {
   string enabled_formula = 4;
   optional uint32 max_stacks = 5;
   optional string label = 6;
+  FeatureOptionsDbo options = 7;
 }
 
 message FeatureDbo {
@@ -27,10 +28,18 @@ message FeatureDbo {
   string enabled_formula = 4;
   optional uint32 max_stacks = 5;
   optional string label = 6;
+  FeatureOptionsDbo options = 7;
 
   DescriptionDbo description = 100;
   StacksDbo stacks = 101;
   repeated FeatureModificationDbo feature_modifications = 102;
+  repeated ConditionalStackDbo conditional_stacks = 103;
+}
+
+message FeatureOptionsDbo {
+  string option_tag = 1;
+  string id_template = 2;
+  string prerequisites_template = 3;
 }
 
 message StacksDbo {

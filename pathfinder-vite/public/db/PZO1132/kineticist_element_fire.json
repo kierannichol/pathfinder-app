@@ -1,0 +1,26 @@
+{
+  "id": "kineticist_element:fire",
+  "name": "Fire",
+  "tags": ["kineticist_element"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Kineticists who focus on the element of fire are called pyrokineticists. Pyrokineticists wield elemental fire as a potent weapon, and they possess a powerful offense."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "links": [{
+          "featureId": "ability:basic_pyrokinesis#kineticist"
+        }, {
+          "featureId": "ability:fire_blast#kineticist"
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@ability:elemental_defense#kineticist",
+    "links": [{
+      "featureId": "ability:searing_flesh#kineticist"
+    }]
+  }]
+}

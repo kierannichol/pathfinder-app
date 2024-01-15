@@ -1,15 +1,22 @@
 package pathfinder.model.pathfinder;
 
+import static pathfinder.util.ListUtils.mapList;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import pathfinder.model.Description;
+import pathfinder.model.FixedStacks;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
+import pathfinder.model.RepeatingStack;
+import pathfinder.model.Stack;
+import pathfinder.model.StackBuilder;
+import pathfinder.model.Stacks;
 
-public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, String prerequisites, String source) implements NamedEntity, FromSourceBook {
+public record Feature(Id id, String name, String label, String type, Description description, List<String> effects, Stacks stacks, String prerequisites, String source) implements NamedEntity, FromSourceBook {
 
     public static FeatureBuilder builder() {
         return new FeatureBuilder();
@@ -26,6 +33,9 @@ public record Feature(Id id, String name, String label, String type, Description
         private String type;
         private Description description = Description.empty();
         private final List<String> effects = new ArrayList<>();
+        private final List<StackBuilder> fixedStacks = new ArrayList<>();
+        private StackBuilder repeatingStack = new StackBuilder();
+        private boolean useRepeatingStack = false;
         private String prerequisites = "";
         private String source;
 
@@ -87,8 +97,41 @@ public record Feature(Id id, String name, String label, String type, Description
             return this;
         }
 
+        public StackBuilder fixedStack() {
+            var stack = new StackBuilder();
+            this.fixedStacks.add(stack);
+            this.useRepeatingStack = false;
+            return stack;
+        }
+
+        public FeatureBuilder addFixedStack(Stack stack) {
+            this.fixedStacks.add(StackBuilder.copy(stack));
+            this.useRepeatingStack = false;
+            return this;
+        }
+
+        public FeatureBuilder addFixedStacks(Collection<Stack> stacks) {
+            this.fixedStacks.addAll(mapList(stacks, StackBuilder::copy));
+            this.useRepeatingStack = false;
+            return this;
+        }
+
+        public StackBuilder repeatingStack() {
+            this.useRepeatingStack = true;
+            return this.repeatingStack;
+        }
+
+        public FeatureBuilder setRepeatingStack(Stack stack) {
+            this.repeatingStack = StackBuilder.copy(stack);
+            this.useRepeatingStack = true;
+            return this;
+        }
+
         public Feature build() {
-            return new Feature(id, name, label, type, description, effects, prerequisites, source);
+            Stacks stacks = useRepeatingStack
+                            ? new RepeatingStack(repeatingStack.build())
+                            : new FixedStacks(mapList(fixedStacks, StackBuilder::build));
+            return new Feature(id, name, label, type, description, effects, stacks, prerequisites, source);
         }
 
         private FeatureBuilder() {
@@ -111,7 +154,7 @@ public record Feature(Id id, String name, String label, String type, Description
     }
 
     public static class Type {
-        private static final Pattern FEATURE_NAME_PATTERN = Pattern.compile("^(?<name>.*?)(?: \\((?<type>Su|Sp|Ex)\\))?$");
+        private static final Pattern FEATURE_NAME_PATTERN = Pattern.compile("^(?<name>.*?)(?: \\((?<type>Su|Sp|Ex(?: or Su|Sp|Ex)?)\\))?$");
 
         public static String fromFeatureName(String featureName) {
             var matcher = FEATURE_NAME_PATTERN.matcher(featureName);

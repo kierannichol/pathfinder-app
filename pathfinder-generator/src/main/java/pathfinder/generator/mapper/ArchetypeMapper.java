@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -66,13 +67,11 @@ public class ArchetypeMapper {
             Set<IdAndLevel> toRemoveSet = defaultIfNull(modification.remove(), Set.of());
 
             toAddSet.forEach(toAdd -> {
-                    pathfinder.model.pathfinder.Feature featureToAdd = Stream.concat(
+                    Optional<pathfinder.model.pathfinder.Feature> maybeFeatureToAdd = Stream.concat(
                             archetype.features().stream(),
                             baseClass.class_features().stream())
                             .filter(feature -> feature.id().equals(toAdd.id()))
-                            .findFirst()
-                            .orElseThrow(() -> new NoSuchElementException("Feature not found: " + toAdd));
-
+                            .findFirst();
 
                     var levels = new ArrayList<Integer>();
 
@@ -80,23 +79,25 @@ public class ArchetypeMapper {
                         levels.add(toAdd.level().getAsInt());
                     }
 
-                    if (levels.isEmpty()) {
-                        levels.addAll(tryParseLevelsFromDescription(featureToAdd.description().text()));
-                    }
+                    maybeFeatureToAdd.ifPresent(featureToAdd -> {
+                        if (levels.isEmpty()) {
+                            levels.addAll(tryParseLevelsFromDescription(featureToAdd.description().text()));
+                        }
 
-                    if (levels.isEmpty()) {
-                        for (var classLevel : baseClass.levels()) {
-                            for (IdAndLevel toRemove : toRemoveSet) {
-                                boolean levelMatches =
-                                        toRemove.level().isEmpty() || toRemove.level().getAsInt() == classLevel.level();
-                                boolean idMatches = classLevel.classFeatureIds().contains(toRemove.id());
+                        if (levels.isEmpty()) {
+                            for (var classLevel : baseClass.levels()) {
+                                for (IdAndLevel toRemove : toRemoveSet) {
+                                    boolean levelMatches =
+                                            toRemove.level().isEmpty() || toRemove.level().getAsInt() == classLevel.level();
+                                    boolean idMatches = classLevel.classFeatureIds().contains(toRemove.id());
 
-                                if (levelMatches && idMatches) {
-                                    levels.add(classLevel.level());
+                                    if (levelMatches && idMatches) {
+                                        levels.add(classLevel.level());
+                                    }
                                 }
                             }
                         }
-                    }
+                    });
 
 //                levels.forEach(level -> archetypeStack.addLink(toAdd.id(), "@%s>=%d".formatted(baseClassId, level)));
                 levels.forEach(level -> archetypeClassModification.stack(level).addsFeature(toAdd.id()));

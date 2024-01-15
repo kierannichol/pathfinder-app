@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 import pathfinder.generator.PrerequisiteParser;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
+import pathfinder.model.FixedStacks;
+import pathfinder.model.RepeatingStack;
 
 @RequiredArgsConstructor
 @Component
@@ -20,6 +22,13 @@ public class FeatureMapper {
                 .setName(model.name())
                 .setDescription(model.description())
                 .addTag(model.id().type);
+
+        if (model.stacks() instanceof FixedStacks fixedStacks) {
+            fixedStacks.stacks().forEach(builder::addFixedStack);
+        }
+        else if (model.stacks() instanceof RepeatingStack repeatingStack) {
+            builder.setRepeatingStack(repeatingStack.stack());
+        }
 
         String prerequisiteFormula = prerequisiteParser.prerequisites(model);
         builder.setEnabledCondition(prerequisiteFormula);

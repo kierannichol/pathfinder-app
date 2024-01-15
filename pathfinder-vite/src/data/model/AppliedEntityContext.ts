@@ -10,6 +10,8 @@ import {CharacterState} from "./CharacterState.ts";
 import {AppliedFeature, FeatureStack} from "./FeatureStack.ts";
 import {SetNumberEffect, SetTextEffect} from "./Effect.ts";
 import ApplyingEntityContext from "./ApplyingEntityContext.ts";
+import ConditionalComponent from "./ConditionalComponent.ts";
+import ConditionalStack from "./ConditionalStack.ts";
 
 class EntityAppliedFeature extends AppliedFeature {
 
@@ -93,6 +95,9 @@ class FeatureAppliedFeature extends AppliedFeature {
     let nextStack = feature.stacks.next(count);
     nextStack = applyingContext.applyModificationToStack(feature.id, count, nextStack);
 
+    feature.conditionalStacks.forEach(stack =>
+        appliedFeature.addsFeature(ConditionalStackAppliedFeature.create(stack, path, context, applyingContext)));
+
     appliedFeature.addsEffect(new SetNumberEffect(feature.id, count));
     appliedFeature.addsFeature(StackAppliedFeature.create(nextStack, path, context, applyingContext));
 
@@ -118,8 +123,63 @@ class StackAppliedFeature extends AppliedFeature {
         appliedFeature.addsFeature(linkedAppliedFeature);
       }
     });
-
     stack.unlinks.forEach(unlink => appliedFeature.removesFeatureAt(unlink.featureId, 0));
+    stack.conditionalComponents.forEach(component =>
+        appliedFeature.addsFeature(ComponentAppliedFeature.create(component, path, context, applyingContext)));
+
+    return appliedFeature;
+  }
+}
+
+export class ConditionalStackAppliedFeature extends AppliedFeature {
+  constructor(id: string, public readonly formula: string) {
+    super(id);
+  }
+
+  static create(stack: ConditionalStack, basePath: string, context: ResolvedEntityContext, applyingContext: ApplyingEntityContext): StackAppliedFeature {
+    const path = basePath;
+    const appliedFeature = new ConditionalStackAppliedFeature(path, stack.conditionFormula);
+
+    stack.stack.effects.forEach(effect => appliedFeature.addsEffect(effect));
+    stack.stack.choices.forEach(choice => appliedFeature.addsFeature(ChoiceAppliedFeature.create(choice, path, context, applyingContext)));
+    stack.stack.links.forEach(link => {
+      const linkedFeature = context.feature(link.featureId);
+      if (linkedFeature) {
+        let linkedAppliedFeature: AppliedFeature = FeatureAppliedFeature.create(linkedFeature, path, context, applyingContext);
+        if (link.conditionFormula) {
+          linkedAppliedFeature = ConditionalAppliedFeature.create(link.conditionFormula, linkedAppliedFeature);
+        }
+        appliedFeature.addsFeature(linkedAppliedFeature);
+      }
+    });
+    stack.stack.unlinks.forEach(unlink => appliedFeature.removesFeatureAt(unlink.featureId, 0));
+    stack.stack.conditionalComponents.forEach(component =>
+        appliedFeature.addsFeature(ComponentAppliedFeature.create(component, path, context, applyingContext)));
+
+    return appliedFeature;
+  }
+}
+
+class ComponentAppliedFeature extends AppliedFeature {
+
+  static create(component: ConditionalComponent, basePath: string, context: ResolvedEntityContext, applyingContext: ApplyingEntityContext): StackAppliedFeature {
+    const path = basePath;
+    let appliedFeature = new ComponentAppliedFeature(path);
+
+    component.effects.forEach(effect => appliedFeature.addsEffect(effect));
+    component.choices.forEach(choice => appliedFeature.addsFeature(ChoiceAppliedFeature.create(choice, path, context, applyingContext)));
+    component.links.forEach(link => {
+      const linkedFeature = context.feature(link.featureId);
+      if (linkedFeature) {
+        let linkedAppliedFeature: AppliedFeature = FeatureAppliedFeature.create(linkedFeature, path, context, applyingContext);
+        if (link.conditionFormula) {
+          linkedAppliedFeature = ConditionalAppliedFeature.create(link.conditionFormula, linkedAppliedFeature);
+        }
+        appliedFeature.addsFeature(linkedAppliedFeature);
+      }
+    });
+
+    appliedFeature = ConditionalAppliedFeature.create(component.conditionFormula, appliedFeature);
 
     return appliedFeature;
   }
@@ -142,13 +202,17 @@ class ConditionalAppliedFeature extends AppliedFeature {
   applyTo(state: CharacterState, isRemovedFn: (id: string) => boolean) {
     const dataContext = DataContext.of(state);
     const formula = Formula.parse(this.conditionFormula);
-    if (formula.resolve(dataContext)?.asBoolean() ?? true) {
+    if (formula.resolve(dataContext)?.asBoolean() ?? false) {
       super.applyTo(state, isRemovedFn);
     }
   }
 
-  traverse(peekFn: (appliedFeature: AppliedFeature) => void, isRemovedFn: (id: string) => boolean) {
-    super.traverse(peekFn, isRemovedFn);
+  traverse(peekFn: (appliedFeature: AppliedFeature) => void, isRemovedFn: (id: string) => boolean, state: CharacterState) {
+    const dataContext = DataContext.of(state);
+    const formula = Formula.parse(this.conditionFormula);
+    if (formula.resolve(dataContext)?.asBoolean() ?? false) {
+      super.traverse(peekFn, isRemovedFn, state);
+    }
   }
 }
 
@@ -168,24 +232,25 @@ export default class AppliedEntityContext extends BaseDataContext {
                       private readonly context: ResolvedEntityContext,
                       private readonly database: Database) {
     super();
+    this.state['character_level'] = level;
   }
 
   private applyEntity(entity: Entity): void {
     this.featureStack.add(EntityAppliedFeature.create(entity, this.level, this.context));
 
+    this.featureStack.applyTo(this.state);
+
     const featureMap: {[id:string]:Feature} = {};
     this.featureStack.traverse(appliedFeature => {
-      if (appliedFeature instanceof ChoiceAppliedFeature) {
-        this.choices.push(ChoiceRef.create(appliedFeature.path, appliedFeature.choice, this.database));
-      }
       if (appliedFeature instanceof FeatureAppliedFeature) {
         featureMap[appliedFeature.id] = appliedFeature.feature;
       }
-    });
+      if (appliedFeature instanceof ChoiceAppliedFeature) {
+        this.choices.push(ChoiceRef.create(appliedFeature.path, appliedFeature.choice, this.database));
+      }
+    }, this.state);
 
     this.features.push(...Object.values(featureMap));
-
-    this.featureStack.applyTo(this.state);
   }
 
   get(key: string): Resolvable | undefined {

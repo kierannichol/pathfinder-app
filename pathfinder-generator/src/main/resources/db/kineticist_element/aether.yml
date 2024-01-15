@@ -1,0 +1,20 @@
+id: "kineticist_element:aether"
+target_id: "class:kineticist"
+name: "Aether"
+description: "Kineticists who focus on the element of aether—a rare substance formed when elemental energy affects the Ethereal Plane—are called telekineticists. Telekineticists use strands of aether to move objects with their minds."
+fixed_stacks:
+  - links:
+    - "class_skill:knowledge_engineering"
+    - "class_skill:sleight_of_hand"
+    - "ability:basic_telekinesis#kineticist"
+    - "ability:telekinetic_blast#kineticist"
+features:
+  - id: "ability:basic_telekinesis#kineticist"
+    name: "Basic Telekinesis"
+    type: "Sp"
+    description: "This ability is similar to mage hand, except you can move an object that weighs up to 5 pounds per 2 kineticist levels you possess (minimum 5 pounds), and you can move magical objects. Additionally, you can create a container of entwined strands of aether in order to hold liquids or piles of small objects of the same weight. You can dip the container to pick up or drop a liquid as a move action. If you possess the extended range wild talent, you can increase the range of basic telekinesis to medium range and increase the rate of movement to 30 feet per round, and if you possess the extreme range wild talent, You can increase the range of basic telekinesis to long range and increase the rate of movement to 60 feet per round. You can also use your basic telekinesis to duplicate the effects of the open/close cantrip."
+  - id: "ability:telekinetic_blast#kineticist"
+    name: "Telekinetic Blast"
+    type: "Sp"
+    description: "You throw a nearby unattended object at a single foe as a ranged attack. The object must weigh no more than 5 pounds per kineticist level you possess. If the attack hits, the target and the thrown object each take the blast’s damage. Since the object is enfolded in strands of aether, even if you use this power on a magic weapon or other unusual object, the attack doesn’t use any of the magic weapon’s bonuses or effects; it simply deals your blast damage. Alternatively, you can loosen the strands of aether in order to deal damage to both the object and the target as though you had thrown the object yourself (instead of dealing your normal blast damage).\nYou substitute your Constitution modifier for your Strength modifier if throwing the object would have added your Strength modifier on the damage roll, and you don’t take the –4 penalty on the attack roll for throwing an object that wasn’t designed to be thrown. In this case, the object’s special effects apply (including effects from its materials), and if the object is a weapon, you must be proficient with it and able to wield it with one hand; otherwise, the item deals damage as a one-handed improvised weapon for a creature of your size."
+source: "PZO1132"

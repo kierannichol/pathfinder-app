@@ -23,6 +23,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 import java.util.stream.Stream.Builder;
 import org.springframework.stereotype.Component;
+import pathfinder.model.BasicSource;
 import pathfinder.model.Id;
 import pathfinder.model.Source;
 import pathfinder.model.json.PathfinderJsonModule;
@@ -31,10 +32,11 @@ import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.BloodlineWithoutClassId;
 import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.ClassFeature;
+import pathfinder.model.pathfinder.ClassModificationFeature;
+import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.FromSourceBook;
-import pathfinder.model.pathfinder.Race;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Spell;
@@ -49,6 +51,8 @@ public class LocalPathfinderDatabaseLoader {
         Map<SourceId, List<CharacterClass>> classesBySource = new HashMap<>();
         Map<SourceId, List<Feat>> featsBySource = new HashMap<>();
         Map<SourceId, List<Bloodline>> bloodlinesBySource = new HashMap<>();
+        Map<SourceId, List<ClassModificationFeature>> classModificationFeaturesBySource = new HashMap<>();
+        Map<SourceId, List<ComplexFeature>> complexFeaturesBySource = new HashMap<>();
 
         loadFeats().forEach(featData -> {
                     SourceId sourceId = Sources.findSourceByNameOrCode(featData.source());
@@ -68,13 +72,15 @@ public class LocalPathfinderDatabaseLoader {
 
         Map<SourceId, List<Archetype>> archetypesBySource = new HashMap<>();
         Map<SourceId, List<Spell>> spellsBySource = new HashMap<>();
-        Map<SourceId, List<Race>> racesBySource = new HashMap<>();
+        Map<SourceId, List<ComplexFeature>> racesBySource = new HashMap<>();
         Map<SourceId, List<ClassFeature>> classFeaturesBySource = new HashMap<>();
 
         loadAllBySource("db/archetype", Archetype.class, archetypesBySource);
+        loadAllBySource("db/kineticist_element", ComplexFeature.class, complexFeaturesBySource);
         loadAllBySource("db/spell", Spell.class, spellsBySource);
         loadAllBySource("db/witch_hex", Spell.class, spellsBySource);
-        loadAllBySource("db/race", Race.class, racesBySource);
+        loadAllBySource("db/wild_talent", Spell.class, spellsBySource);
+        loadAllBySource("db/race", ComplexFeature.class, racesBySource);
 
         loadAllClassFeaturesBySource("db/discovery", Id.of("class:alchemist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
         loadAllClassFeaturesBySource("db/arcanist_exploit", Id.of("class:arcanist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
@@ -96,7 +102,7 @@ public class LocalPathfinderDatabaseLoader {
         sourceSet.addAll(bloodlinesBySource.keySet());
 
         List<Source> sources = new ArrayList<>();
-        sourceSet.forEach(sourceId -> sources.add(new Source(
+        sourceSet.forEach(sourceId -> sources.add(new BasicSource(
                 sourceId,
                 classesBySource.getOrDefault(sourceId, List.of()),
                 classFeaturesBySource.getOrDefault(sourceId, List.of()),
@@ -104,7 +110,9 @@ public class LocalPathfinderDatabaseLoader {
                 spellsBySource.getOrDefault(sourceId, List.of()),
                 featsBySource.getOrDefault(sourceId, List.of()),
                 racesBySource.getOrDefault(sourceId, List.of()),
-                bloodlinesBySource.getOrDefault(sourceId, List.of())
+                bloodlinesBySource.getOrDefault(sourceId, List.of()),
+                classModificationFeaturesBySource.getOrDefault(sourceId, List.of()),
+                complexFeaturesBySource.getOrDefault(sourceId, List.of())
         )));
 
         return new PathfinderDatabase(sources);
@@ -146,6 +154,7 @@ public class LocalPathfinderDatabaseLoader {
                         data.description(),
                         data.prerequisites(),
                         data.effects(),
+                        data.stacks(),
                         actualSourceId.code()
                 );
                 bySource.computeIfAbsent(actualSourceId, key -> new ArrayList<>()).add(classFeature);
@@ -170,6 +179,7 @@ public class LocalPathfinderDatabaseLoader {
                         data.description(),
                         data.prerequisites(),
                         data.effects(),
+                        data.stacks(),
                         actualSourceId.code()
                 );
                 bySource.computeIfAbsent(actualSourceId, key -> new ArrayList<>()).add(classFeature);

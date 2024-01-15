@@ -1,11 +1,20 @@
 id: "race:gnome"
 name: "Gnome"
-description: Expatriates of the strange land of fey, these small folk have a reputation for flighty and eccentric behavior. Many gnomes are whimsical artisans and tinkers, creating strange devices powered by magic, alchemy, and their quirky imagination. Gnomes have an insatiable need for new experiences that often gets them in trouble.
-size: "Small"
-speed: 20
 type: "Humanoid (gnome)"
+description: "Expatriates of the strange land of fey, these small folk have a reputation\
+  \ for flighty and eccentric behavior. Many gnomes are whimsical artisans and tinkers,\
+  \ creating strange devices powered by magic, alchemy, and their quirky imagination.\
+  \ Gnomes have an insatiable need for new experiences that often gets them in trouble."
+fixed_stacks:
+- effects:
+  - "SET speed:base 20"
+  links:
+  - "size:s"
+  - "asi:con_p2"
+  - "asi:cha_p2"
+  - "asi:str_m2"
+metadata:
+  size: "Small"
+  type: "Humanoid (gnome)"
+  speed: "20"
 source: "PZO1110"
-features:
-  - asi:con_p2
-  - asi:cha_p2
-  - asi:str_m2

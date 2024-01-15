@@ -9,7 +9,7 @@ import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import pathfinder.model.pathfinder.Archetype;
-import pathfinder.model.pathfinder.ArchetypeModification;
+import pathfinder.model.pathfinder.ClassModification;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.IdAndLevel;
 
@@ -73,7 +73,7 @@ public class ArchetypeMigrator extends AbstractMigrator {
 
         Set<String> missed = new HashSet<>();
 
-        List<ArchetypeModification> modifiedModifications = new ArrayList<>();
+        List<ClassModification> modifiedModifications = new ArrayList<>();
         List<Feature> modifiedFeatures = new ArrayList<>();
         for (var modification : original.modifications()) {
             Set<IdAndLevel> modifiedRemoves = new HashSet<>();
@@ -95,7 +95,7 @@ public class ArchetypeMigrator extends AbstractMigrator {
                 modifiedRemoves.add(toRemove);
             }
 
-            modifiedModifications.add(new ArchetypeModification(
+            modifiedModifications.add(new ClassModification(
                     modification.add(),
                     modifiedRemoves
             ));

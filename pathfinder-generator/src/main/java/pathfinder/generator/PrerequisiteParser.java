@@ -306,6 +306,9 @@ public class PrerequisiteParser {
             .addReplacement("Air, Earth, Fire, or Water domain or blessing", "\"Air, Earth, Fire, or Water domain or blessing\"")
             .addReplacement("spellbook", "max(@spellbook:*)")
 
+            // Ability Aliases
+            .addReplacement("{NAME} simple blast", "@ability:{0}_blast#kineticist")
+
             // Misspelled Names
             .addReplacement("Close Quarters Thrower", "@feat:close_quarters_thrower")
             .addReplacement("Point-Blank Master", "@feat:point_blank_master")

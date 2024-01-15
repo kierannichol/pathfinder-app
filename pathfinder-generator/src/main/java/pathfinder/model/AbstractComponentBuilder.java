@@ -1,6 +1,7 @@
 package pathfinder.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF>> {
@@ -23,12 +24,26 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
     }
 
     public SELF addLink(String featureId, String conditionFormula) {
-        links.add(new Link(featureId, conditionFormula));
+        return addLink(new Link(featureId, conditionFormula));
+    }
+
+    public SELF addLink(Link link) {
+        this.links.add(link);
+        return self();
+    }
+
+    public SELF addLinks(Collection<Link> links) {
+        this.links.addAll(links);
         return self();
     }
 
     public SELF addEffect(Effect effect) {
         this.effects.add(effect);
+        return self();
+    }
+
+    public SELF addEffects(Collection<Effect> effects) {
+        this.effects.addAll(effects);
         return self();
     }
 
@@ -54,8 +69,18 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
         return self();
     }
 
+    public SELF removeLinks(Collection<Unlink> unlinks) {
+        this.unlinks.addAll(unlinks);
+        return self();
+    }
+
     public SELF addChoice(Choice choice) {
         this.choices.add(choice);
+        return self();
+    }
+
+    public SELF addChoices(Collection<Choice> choices) {
+        this.choices.addAll(choices);
         return self();
     }
 

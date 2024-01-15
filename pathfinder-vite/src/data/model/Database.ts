@@ -1,6 +1,7 @@
 import Description from "./Description.ts";
 import Feature, {FeatureSummary} from "./Feature.ts";
 import SourceModule from "./SourceModule.ts";
+import Id from "./Id.ts";
 
 export default class Database {
 
@@ -16,6 +17,28 @@ export default class Database {
       const found = module.feature(id);
       if (found) return found;
     }
+
+    const optionPart = Id.justOption(id);
+    if (optionPart) {
+      const parentId = id.substring(0, id.lastIndexOf('#'));
+      const parentSummary = this.feature(parentId);
+      if (parentSummary !== undefined) {
+        const option = parentSummary?.optionsTemplate?.queryOptions(this)
+        .find(maybe => maybe.id === id);
+        if (option !== undefined) {
+          return new FeatureSummary(
+              option.id,
+              parentSummary.name + ": " + option.name,
+              undefined,
+              [],
+              undefined,
+              option.enabledFormula,
+              parentSummary.maxStacks,
+              parentSummary);
+        }
+      }
+    }
+
     return undefined;
   }
 
@@ -34,6 +57,32 @@ export default class Database {
         return await module.load(id);
       }
     }
+
+    const optionPart = Id.justOption(id);
+    if (optionPart) {
+      const parentId = id.substring(0, id.lastIndexOf('#'));
+      const parentFeature = await this.load(parentId);
+      if (parentFeature !== undefined) {
+        const option = parentFeature.optionsTemplate?.queryOptions(this)
+          .find(maybe => maybe.id === id);
+        if (option !== undefined) {
+          return new Feature(
+              option.id,
+              parentFeature.name + ": " + option.name,
+              undefined,
+              [],
+              undefined,
+              option.enabledFormula,
+              parentFeature.maxStacks ?? null,
+              parentFeature.description,
+              parentFeature.stacks,
+              parentFeature.conditionalStacks,
+              parentFeature.featureModifications,
+              parentFeature);
+        }
+      }
+    }
+
     return undefined;
   }
 

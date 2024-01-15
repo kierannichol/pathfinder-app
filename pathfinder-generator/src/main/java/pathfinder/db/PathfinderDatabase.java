@@ -1,27 +1,12 @@
 package pathfinder.db;
 
+import static pathfinder.model.pathfinder.Sources.CORE;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
-import pathfinder.db.query.SkillQuery;
-import pathfinder.db.query.SpellQuery;
-import pathfinder.model.Id;
-import pathfinder.model.NamedEntity;
-import pathfinder.model.pathfinder.Armor;
-import pathfinder.model.pathfinder.ArmorProficiency;
-import pathfinder.model.pathfinder.Bloodline;
-import pathfinder.model.pathfinder.CharacterClass;
-import pathfinder.model.pathfinder.ClassFeature;
-import pathfinder.model.pathfinder.Feat;
-import pathfinder.model.pathfinder.Race;
-import pathfinder.model.pathfinder.Skill;
-import pathfinder.model.pathfinder.Skills;
-import pathfinder.model.pathfinder.Spell;
-import pathfinder.model.pathfinder.WeaponType;
-import pathfinder.model.pathfinder.Weapons;
-import pathfinder.model.Source;
 import pathfinder.db.query.ArmorProficiencyQuery;
 import pathfinder.db.query.BloodlineQuery;
 import pathfinder.db.query.ClassFeatureQuery;
@@ -29,12 +14,31 @@ import pathfinder.db.query.ClassQuery;
 import pathfinder.db.query.FeatQuery;
 import pathfinder.db.query.NamedEntityQuery;
 import pathfinder.db.query.RaceQuery;
+import pathfinder.db.query.SkillQuery;
+import pathfinder.db.query.SpellQuery;
 import pathfinder.db.query.WeaponProficiencyQuery;
+import pathfinder.generator.CoreCharacterFeatureProvider;
+import pathfinder.model.Id;
+import pathfinder.model.NamedEntity;
+import pathfinder.model.Source;
+import pathfinder.model.pathfinder.Armor;
+import pathfinder.model.pathfinder.ArmorProficiency;
+import pathfinder.model.pathfinder.Bloodline;
+import pathfinder.model.pathfinder.CharacterClass;
+import pathfinder.model.pathfinder.ClassFeature;
+import pathfinder.model.pathfinder.ComplexFeature;
+import pathfinder.model.pathfinder.Feat;
+import pathfinder.model.pathfinder.Skill;
+import pathfinder.model.pathfinder.Skills;
+import pathfinder.model.pathfinder.Spell;
+import pathfinder.model.pathfinder.WeaponType;
+import pathfinder.model.pathfinder.Weapons;
 
 @RequiredArgsConstructor
 @ToString
 public class PathfinderDatabase {
     private final List<Source> sources;
+    private final CoreCharacterFeatureProvider coreCharacterFeatureProvider = new CoreCharacterFeatureProvider();
 
     public Stream<Feat> query(FeatQuery query) {
         return sources.stream()
@@ -50,7 +54,7 @@ public class PathfinderDatabase {
                 .findFirst();
     }
 
-    public Stream<Race> query(RaceQuery query) {
+    public Stream<ComplexFeature> query(RaceQuery query) {
         return sources.stream()
                 .filter(query::matches)
                 .flatMap(content -> content.races().stream())
@@ -73,9 +77,9 @@ public class PathfinderDatabase {
 
     @SuppressWarnings("unchecked")
     public <T extends NamedEntity> Stream<T> query(NamedEntityQuery<T> query) {
-        return sources.stream()
+        return Stream.concat(sources.stream()
                 .filter(query::matches)
-                .flatMap(Source::namedEntities)
+                .flatMap(Source::namedEntities), coreCharacterFeatureProvider.features(CORE))
                 .filter(query::matches)
                 .map(entity -> (T) entity);
     }

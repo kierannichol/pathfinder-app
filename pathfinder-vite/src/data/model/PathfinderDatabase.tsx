@@ -11,15 +11,16 @@ import SourceModuleDbo = data.SourceModuleDbo;
 let globalPathfinderDatabase: Promise<Database> | undefined = undefined;
 
 const Modules: (SourceModule|Promise<SourceModule>)[] = [
-    loadModule('PZO1110'),
-    loadModule('PZO1114'),
-    loadModule('PZO1115'),
-    loadModule('PZO1117'),
-    loadModule('PZO1118'),
-    loadModule('PZO1123'),
-    loadModule('PZO1129'),
-    loadModule('PZO1131'),
-    loadModule('PZO9476'),
+  loadModule('PZO1110'),
+  loadModule('PZO1114'),
+  loadModule('PZO1115'),
+  loadModule('PZO1117'),
+  loadModule('PZO1118'),
+  loadModule('PZO1123'),
+  loadModule('PZO1129'),
+  loadModule('PZO1131'),
+  loadModule('PZO1132'),
+  loadModule('PZO9476'),
 ];
 
 export async function loadBaseCharacterTemplate(): Promise<CharacterTemplate> {

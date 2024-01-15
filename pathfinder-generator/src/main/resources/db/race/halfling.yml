@@ -1,11 +1,21 @@
 id: "race:halfling"
 name: "Halfling"
-description: Members of this diminutive race find strength in family, community, and their own innate and seemingly inexhaustible luck. While their fierce curiosity is sometimes at odds with their intrinsic common sense, half lings are eternal optimists and cunning opportunists with an incredible knack for getting out the worst situations.
-size: "Small"
-speed: 20
 type: "Humanoid (halfling)"
+description: "Members of this diminutive race find strength in family, community,\
+  \ and their own innate and seemingly inexhaustible luck. While their fierce curiosity\
+  \ is sometimes at odds with their intrinsic common sense, half lings are eternal\
+  \ optimists and cunning opportunists with an incredible knack for getting out the\
+  \ worst situations."
+fixed_stacks:
+- effects:
+  - "SET speed:base 20"
+  links:
+  - "size:s"
+  - "asi:dex_p2"
+  - "asi:cha_p2"
+  - "asi:str_m2"
+metadata:
+  size: "Small"
+  type: "Humanoid (halfling)"
+  speed: "20"
 source: "PZO1110"
-features:
-  - asi:dex_p2
-  - asi:cha_p2
-  - asi:str_m2

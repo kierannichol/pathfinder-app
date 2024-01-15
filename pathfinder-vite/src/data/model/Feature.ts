@@ -5,6 +5,8 @@ import {FeatureResolvable} from "./FeatureResolvable.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {FixedStack, RepeatingStack, Stack, Stacks} from "./Stack.ts";
 import FeatureModification from "./FeatureModification.ts";
+import ConditionalStack from "./ConditionalStack.ts";
+import FeatureOptionsTemplate from "./FeatureOptionsTemplate.ts";
 
 export default class Feature implements FeatureResolvable {
 
@@ -12,11 +14,14 @@ export default class Feature implements FeatureResolvable {
               public readonly name: string,
               public readonly label: string|undefined,
               public readonly tags: string[],
+              public readonly optionsTemplate: FeatureOptionsTemplate|undefined,
               public readonly enabledFormula: string,
               public readonly maxStacks: number|null,
               public readonly description: Description,
               public readonly stacks: Stacks,
-              public readonly featureModifications: FeatureModification[]) {
+              public readonly conditionalStacks: ConditionalStack[],
+              public readonly featureModifications: FeatureModification[],
+              public readonly parent?: Feature) {
   }
 
   isEnabled(context: DataContext): boolean {
@@ -35,6 +40,9 @@ export default class Feature implements FeatureResolvable {
     const path = combinePath(basePath, this.id, count);
 
     await this.stacks.next(count).resolve(path, context);
+    for (let conditionalStack of this.conditionalStacks) {
+      await conditionalStack.resolve(path, context);
+    }
     for (let featureModification of this.featureModifications) {
       await featureModification.resolve(path, context);
     }
@@ -47,8 +55,10 @@ export class FeatureSummary {
               public readonly name: string,
               public readonly label: string|undefined,
               public readonly tags: string[],
+              public readonly optionsTemplate: FeatureOptionsTemplate|undefined,
               public readonly enabledFormula: string,
-              public readonly maxStacks: number|null) {
+              public readonly maxStacks: number|null,
+              public readonly parent?: FeatureSummary) {
   }
 
   isEnabled(context: DataContext): boolean {
@@ -75,7 +85,9 @@ export class FeatureBuilder {
   private _description: Description = Description.empty();
   private _fixedStack: Stack[] = [];
   private _repeatingStack: Stack|undefined = undefined;
+  private _conditionalStacks: ConditionalStack[] = [];
   private _featureModifications: FeatureModification[] = [];
+  private _optionsTemplate: FeatureOptionsTemplate|undefined = undefined;
 
   public constructor(public readonly id: string) {
   }
@@ -121,8 +133,18 @@ export class FeatureBuilder {
     return this;
   }
 
+  addConditionalStack(...stack: ConditionalStack[]): FeatureBuilder {
+    this._conditionalStacks.push(...stack);
+    return this;
+  }
+
   maxStacks(num: number|null): FeatureBuilder {
     this._maxStacks = num;
+    return this;
+  }
+
+  setOptionsTemplate(optionsTemplate: FeatureOptionsTemplate): FeatureBuilder {
+    this._optionsTemplate = optionsTemplate;
     return this;
   }
 
@@ -138,12 +160,15 @@ export class FeatureBuilder {
         this._name,
         this._label,
         Array.from(this._tags),
+        this._optionsTemplate,
         this._enabledFormula,
         calcMaxStacks,
         this._description,
         this._repeatingStack !== undefined
           ? new RepeatingStack(this._repeatingStack)
           : new FixedStack(this._fixedStack),
-        this._featureModifications);
+        this._conditionalStacks,
+        this._featureModifications,
+        undefined);
   }
 }

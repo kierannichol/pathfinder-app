@@ -19,6 +19,15 @@ message StackDbo {
   repeated ChoiceDbo choices = 104;
 }
 
+message ConditionalStackDbo {
+  string condition_formula = 1;
+
+  repeated EffectDbo effects = 101;
+  repeated LinkDbo links = 102;
+  repeated UnlinkDbo unlinks = 103;
+  repeated ChoiceDbo choices = 104;
+}
+
 message ConditionalStackComponentDbo {
   string condition_formula = 1;
 

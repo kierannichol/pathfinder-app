@@ -8,7 +8,7 @@ import pathfinder.model.NamedEntity;
 public record Archetype(Id id,
                         String name,
                         Description description,
-                        List<ArchetypeModification> modifications,
+                        List<ClassModification> modifications,
                         List<Feature> features,
                         String source) implements NamedEntity, FromSourceBook {
 

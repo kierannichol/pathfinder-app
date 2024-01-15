@@ -40,7 +40,13 @@ public class FeatMapper {
         String prerequisiteFormula = tryParsePrerequisites(feat);
         builder.setEnabledCondition(prerequisiteFormula);
 
-        return trySplitOptions(builder, feat.id().withoutOption(), prerequisiteFormula);
+        if (feat.options() != null) {
+            builder.addOptions(feat.options());
+        }
+
+        return Stream.of(builder.build());
+
+//        return trySplitOptions(builder, feat.id().withoutOption(), prerequisiteFormula);
     }
 
     private Stream<Feature> trySplitOptions(FeatureBuilder builder, Id featId, String prerequisiteFormula) {
