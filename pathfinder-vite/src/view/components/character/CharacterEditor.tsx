@@ -1,28 +1,27 @@
 import {useMemo, useState} from "react";
-import {useCharacterStore} from "../../../data/model/Character.react.tsx";
 import TextInput from "../controls/TextInput.tsx";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 import PromptDialog from "../PromptDialog.tsx";
 import AbilityScoresEditor from "./AbilityScoresEditor.tsx";
 import CharacterLevelEditor from "./CharacterLevelEditor.tsx";
 import SelectClassButton from "./SelectClassButton.tsx";
-import Character from "../../../data/model/Character.ts";
-import ChoiceRef, {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
-import {ChoiceInputType} from "../../../data/model/Choice.ts";
 import {Link} from "react-router-dom";
 import {FaFileLines} from "react-icons/fa6";
+import {CharacterModel} from "../../model/CharacterModel.ts";
+import {ChoiceInputType, ChoiceModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
+import {useCharacterStoreModel} from "../../model/ModelContext.tsx";
 
 interface CharacterEditorProps {
-  loaded: Character;
+  loaded: CharacterModel;
 }
 
-export type CharacterChoiceSelectHandler = (choice: ChoiceRef, value: string) => void;
+export type CharacterChoiceSelectHandler = (choice: ChoiceModel, value: string) => void;
 
 export default function CharacterEditor({ loaded }: CharacterEditorProps) {
   const [ character, setCharacter ] = useState(loaded);
   const [ showFavoredClassPrompt, setShowFavoredClassPrompt ] = useState(false);
 
-  const characterStore = useCharacterStore();
+  const characterStore = useCharacterStoreModel();
   const characterAtLevels = useMemo(() => {
     const levels = [];
     for (let i = 0; i <= 20; i++) {
@@ -33,13 +32,13 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
 
   const characterLevel0 = characterAtLevels[0];
 
-  async function updateCharacter(mappingFunction: (character: Character) => Promise<Character>) {
+  async function updateCharacter(mappingFunction: (character: CharacterModel) => Promise<CharacterModel>) {
     const updated = await mappingFunction(character);
     setCharacter(updated);
     await characterStore.save(updated);
   }
 
-  function handleChange(choice: ChoiceRef, value: string) {
+  function handleChange(choice: ChoiceModel, value: string) {
     if (character.selected(choice.path) === value) {
       return;
     }
@@ -74,10 +73,10 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
             <TextInput id={choice.path}
                        value={characterLevel0.selected(choice) ?? ''}
                        onChange={value => handleChange(choice, value)} />}
-        {choice.inputType === ChoiceInputType.FeatureSelect &&
+        {choice.inputType === ChoiceInputType.Select &&
             <DataChoiceSelectButton
                 id={choice.path}
-                choiceRef={choice as FeatureSelectChoiceRef}
+                choiceRef={choice as SelectChoiceModel}
                 characterAtLevel={characterLevel0.without(characterLevel0.selected(choice) ?? '')}
                 onSelect={value => handleChange(choice, value)} />}
       </div>)}

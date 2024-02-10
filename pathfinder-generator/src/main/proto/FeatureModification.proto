@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+package data;
+
+message FeatureModificationDbo {
+    string target_feature_id = 1;
+    repeated StackModificationDbo stack_modifications = 2;
+}
+
+message StackModificationDbo {
+    int32 target_stack_count = 1;
+    repeated string links_to_add = 2;
+    repeated string links_to_remove = 3;
+}

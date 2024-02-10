@@ -9,7 +9,6 @@ import pathfinder.data.CharacterLevelTemplateDbo;
 public record CharacterLevelTemplate(int levelNumber,
                                      List<Effect> effects,
                                      List<Link> links,
-                                     List<Unlink> unlinks,
                                      List<Choice> choices) {
 
     @RequiredArgsConstructor
@@ -21,7 +20,7 @@ public record CharacterLevelTemplate(int levelNumber,
         }
 
         public CharacterLevelTemplate build() {
-            return new CharacterLevelTemplate(levelNumber, effects, links, unlinks, choices);
+            return new CharacterLevelTemplate(levelNumber, effects, links, choices);
         }
     }
 
@@ -30,7 +29,6 @@ public record CharacterLevelTemplate(int levelNumber,
                 .setLevelNumber(levelNumber)
                 .addAllEffects(mapList(effects, Effect::toDbo))
                 .addAllLinks(mapList(links, Link::toDbo))
-                .addAllUnlinks(mapList(unlinks, Unlink::toDbo))
                 .addAllChoices(mapList(choices, Choice::toDbo))
                 .build();
     }

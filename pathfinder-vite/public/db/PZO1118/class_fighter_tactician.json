@@ -33,27 +33,5 @@
         }]
       }]
     }
-  },
-  "featureModifications": [{
-    "targetFeatureId": "class:fighter",
-    "stackModifications": [{
-      "targetStackCount": 1,
-      "linksToRemove": ["ability:bonus_fighter_combat_feat#fighter"]
-    }, {
-      "targetStackCount": 2,
-      "linksToAdd": ["ability:tactical_awareness#fighter_tactician"]
-    }, {
-      "targetStackCount": 5,
-      "linksToAdd": ["ability:tactician#fighter_tactician"],
-      "linksToRemove": ["ability:weapon_training#fighter"]
-    }, {
-      "targetStackCount": 11,
-      "linksToAdd": ["ability:cooperative_combatant#fighter_tactician"],
-      "linksToRemove": ["ability:armor_training#fighter"]
-    }, {
-      "targetStackCount": 15,
-      "linksToAdd": ["ability:battle_insight#fighter_tactician"],
-      "linksToRemove": ["ability:armor_training#fighter"]
-    }]
-  }]
+  }
 }

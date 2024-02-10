@@ -1,8 +1,8 @@
 import CharacterEditor from "../components/character/CharacterEditor.tsx";
-import Character from "../../data/model/Character.ts";
+import {CharacterModel} from "../model/CharacterModel.ts";
 
 interface CharacterEditProps {
-  loaded: Character;
+  loaded: CharacterModel;
 }
 
 export default function CharacterEdit({ loaded }: CharacterEditProps) {

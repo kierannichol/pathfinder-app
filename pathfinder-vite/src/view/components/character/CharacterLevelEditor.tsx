@@ -2,16 +2,16 @@ import LevelStatsDisplay from "./LevelStatsDisplay.tsx";
 import {useMemo} from "react";
 import CharacterFeatureList from "./CharacterFeatureList.tsx";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import ChoiceRef, {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
 import SpellBookEditorButton from "./SpellBookEditorButton.tsx";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import Feature from "../../../data/model/Feature.ts";
 import ArchetypeEditor from "./ArchetypeEditor.tsx";
 import {CharacterChoiceSelectHandler} from "./CharacterEditor.tsx";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {ChoiceModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
+import {FeatureModel} from "../../model/FeatureModel.ts";
 
 interface CharacterLevelEditorProps {
-  characterAtLevel: CharacterAtLevel;
-  characterAtPreviousLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
+  characterAtPreviousLevel: CharacterAtLevelModel;
   onChange: CharacterChoiceSelectHandler;
 }
 
@@ -35,10 +35,10 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
           onChange={onChange} />
     </div>)}
 
-    {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice instanceof FeatureSelectChoiceRef).map(choice => <div key={choice.path}>
+    {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice instanceof SelectChoiceModel).map(choice => <div key={choice.path}>
       <label>{choice.label}</label>
       <DataChoiceSelectButton
-          choiceRef={choice as FeatureSelectChoiceRef}
+          choiceRef={choice as SelectChoiceModel}
           search={"auto"}
           characterAtLevel={characterAtLevel}
           onSelect={selected => onChange(choice, selected)} />
@@ -49,15 +49,15 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
   </div>
 }
 
-function showChoice(choice: ChoiceRef): boolean {
+function showChoice(choice: ChoiceModel): boolean {
   return !(choice.type === 'class'
     || choice.type === 'spell'
     || choice.type === 'archetype');
 }
 
-function showFeature(feature: Feature): boolean {
+function showFeature(feature: FeatureModel): boolean {
   return !(feature.tags.includes('archetype')
     || feature.tags.includes('class')
-    || feature.id.startsWith('proficiency:')
+    || feature.key.startsWith('proficiency:')
     || feature.tags.includes('spell'));
 }

@@ -1,6 +1,6 @@
 import ButtonBlock from "../controls/ButtonBlock.tsx";
-import {usePathfinderDatabase} from "../../../data/model/PathfinderDatabase.tsx";
 import {useMemo} from "react";
+import {useDatabaseModel} from "../../model/DatabaseModel.ts";
 
 interface FeatureBlockProps {
   featureId: string;
@@ -8,7 +8,7 @@ interface FeatureBlockProps {
 }
 
 export default function FeatureBlock({ featureId, variant }: FeatureBlockProps) {
-  const database = usePathfinderDatabase();
+  const database = useDatabaseModel();
   const feature = useMemo(() => database.feature(featureId),
   [featureId]);
 

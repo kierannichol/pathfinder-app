@@ -6,16 +6,16 @@ import FormulaTreeFormatter, {
   TreeNodeOperator,
   TreeNodeValue
 } from "../../../utils/logic/FormulaTreeFormatter.ts";
-import {usePathfinderDatabase} from "../../../data/model/PathfinderDatabase.tsx";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import Database from "../../../data/model/Database.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {DatabaseModel} from "../../model/DatabaseModel.ts";
+import {useDatabaseModel} from "../../model/ModelContext.tsx";
 
 interface PrerequisiteListProps {
   featureId: string,
   formula: Resolvable;
   maxStacks: number|null,
-  characterAtLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
 }
 
 function UnknownMark() {
@@ -23,7 +23,7 @@ function UnknownMark() {
 }
 
 export default function PrerequisiteList({ featureId, formula, maxStacks, characterAtLevel } : PrerequisiteListProps) {
-  const pathfinderDb = usePathfinderDatabase();
+  const pathfinderDb = useDatabaseModel();
 
   const block = useMemo(() => {
     const blocks = [];
@@ -56,7 +56,7 @@ export default function PrerequisiteList({ featureId, formula, maxStacks, charac
   </OverlayTrigger>);
 }
 
-function formatFormula(featureId: string, formula: Resolvable, maxStacks: number|null, characterAtLevel: CharacterAtLevel, pathfinderDb: Database): ReactNode {
+function formatFormula(featureId: string, formula: Resolvable, maxStacks: number|null, characterAtLevel: CharacterAtLevelModel, pathfinderDb: DatabaseModel): ReactNode {
   const formatter = new FormulaTreeFormatter(variable => {
     let name = pathfinderDb.name(variable);
     return name !== undefined && name !== '' ? name : variable;

@@ -1,14 +1,13 @@
-import {withGlobalCharacterStore} from "../../data/model/Character.react.tsx";
 import {useLoaderData} from "react-router-dom";
-import {PathfinderDatabaseContext, withGlobalPathfinderDatabase} from "../../data/model/PathfinderDatabase.tsx";
 import {timedAsync} from "../../app/pfutils.ts";
-import Database from "../../data/model/Database.ts";
 import CharacterSheet from "../components/character/sheet/CharacterSheet.tsx";
-import CharacterAtLevel from "../../data/model/CharacterAtLevel.ts";
+import {CharacterAtLevelModel} from "../model/CharacterAtLevelModel.ts";
+import {DatabaseModel} from "../model/DatabaseModel.ts";
+import {DatabaseModelContext, withGlobalCharacterStoreModel, withGlobalDatabaseModel} from "../model/ModelContext.tsx";
 
 interface CharacterSheetLoaderData {
-  characterAtLevel: CharacterAtLevel;
-  database: Database;
+  characterAtLevel: CharacterAtLevelModel;
+  database: DatabaseModel;
 }
 
 export async function characterSheetLoader({ params }: any): Promise<CharacterSheetLoaderData> {
@@ -23,14 +22,14 @@ export async function characterSheetLoader({ params }: any): Promise<CharacterSh
     throw new Response("Character level required", { status: 400 });
   }
 
-  const characterStore = await withGlobalCharacterStore();
+  const characterStore = await withGlobalCharacterStoreModel();
   const character = await timedAsync(() => characterStore.load(id), 'Loading character');
 
   if (character === undefined) {
     throw new Response("Character not found", { status: 404 });
   }
 
-  const database = await withGlobalPathfinderDatabase();
+  const database = await withGlobalDatabaseModel();
   if (!database) throw new Error("Unable to initialize database");
 
   const characterAtLevel = character.atLevel(level);
@@ -46,7 +45,7 @@ export async function characterSheetLoader({ params }: any): Promise<CharacterSh
 
 export default function CharacterSheetRoute() {
   const { characterAtLevel, database } = useLoaderData() as CharacterSheetLoaderData;
-  return <PathfinderDatabaseContext.Provider value={database}>
+  return <DatabaseModelContext.Provider value={database}>
       <CharacterSheet characterAtLevel={characterAtLevel} database={database} />
-  </PathfinderDatabaseContext.Provider>
+  </DatabaseModelContext.Provider>
 }

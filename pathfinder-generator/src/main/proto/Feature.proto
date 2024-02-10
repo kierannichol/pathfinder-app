@@ -2,9 +2,10 @@ syntax = "proto3";
 
 import "Description.proto";
 import "Effect.proto";
-import "Link.proto";
 import "Choice.proto";
 import "Stack.proto";
+import "Stacks.proto";
+import "FeatureModification.proto";
 
 option java_multiple_files = true;
 option java_package = "pathfinder.data";
@@ -32,7 +33,6 @@ message FeatureDbo {
 
   DescriptionDbo description = 100;
   StacksDbo stacks = 101;
-  repeated FeatureModificationDbo feature_modifications = 102;
   repeated ConditionalStackDbo conditional_stacks = 103;
 }
 
@@ -40,26 +40,4 @@ message FeatureOptionsDbo {
   string option_tag = 1;
   string id_template = 2;
   string prerequisites_template = 3;
-}
-
-message StacksDbo {
-  oneof stackable {
-    FixedStackDbo fixed_stack = 1;
-    StackDbo repeating_stack = 2;
-  }
-}
-
-message FixedStackDbo {
-  repeated StackDbo stacks = 1;
-}
-
-message FeatureModificationDbo {
-  string target_feature_id = 1;
-  repeated StackModificationDbo stack_modifications = 2;
-}
-
-message StackModificationDbo {
-  int32 target_stack_count = 1;
-  repeated string links_to_add = 2;
-  repeated string links_to_remove = 3;
 }

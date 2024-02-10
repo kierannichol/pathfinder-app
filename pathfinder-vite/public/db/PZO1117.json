@@ -15,80 +15,80 @@
     "name": "Counterstrike",
     "tags": ["class_feature", "magus", "ability"]
   }, {
-    "id": "ability:cantrips#magus",
-    "name": "Cantrips",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:greater_spell_access#magus",
-    "name": "Greater Spell Access",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:spell_combat#magus",
-    "name": "Spell Combat",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:spell_recall#magus",
-    "name": "Spell Recall",
+    "id": "ability:spellcasting#magus",
+    "name": "Spell Casting (Magus)",
     "tags": ["class_feature", "magus", "ability"]
   }, {
     "id": "ability:greater_spell_combat#magus",
     "name": "Greater Spell Combat",
     "tags": ["class_feature", "magus", "ability"]
   }, {
-    "id": "ability:improved_spell_recall#magus",
-    "name": "Improved Spell Recall",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:magus_arcana#magus",
-    "name": "Magus Arcana",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:bonus_feat#magus",
-    "name": "Bonus Feat",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:spellcasting#magus",
-    "name": "Spell Casting (Magus)",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "trait:armor_proficiency#magus",
-    "name": "Armor Proficiency (Magus)",
-    "tags": ["class_feature", "magus", "trait"]
-  }, {
     "id": "ability:fighter_training#magus",
     "name": "Fighter Training",
     "tags": ["class_feature", "magus", "ability"]
   }, {
-    "id": "trait:weapon_proficiency#magus",
-    "name": "Weapon Proficiency (Magus)",
-    "tags": ["class_feature", "magus", "trait"]
-  }, {
-    "id": "ability:improved_spell_combat#magus",
-    "name": "Improved Spell Combat",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:knowledge_pool#magus",
-    "name": "Knowledge Pool",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
-    "id": "ability:spellstrike#magus",
-    "name": "Spellstrike",
+    "id": "ability:heavy_armor#magus",
+    "name": "Heavy Armor",
     "tags": ["class_feature", "magus", "ability"]
   }, {
     "id": "ability:arcane_pool#magus",
     "name": "Arcane Pool",
     "tags": ["class_feature", "magus", "ability"]
   }, {
-    "id": "ability:medium_armor#magus",
-    "name": "Medium Armor",
-    "tags": ["class_feature", "magus", "ability"]
-  }, {
     "id": "ability:true_magus#magus",
     "name": "True Magus",
     "tags": ["class_feature", "magus", "ability"]
   }, {
-    "id": "ability:heavy_armor#magus",
-    "name": "Heavy Armor",
+    "id": "ability:greater_spell_access#magus",
+    "name": "Greater Spell Access",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:improved_spell_recall#magus",
+    "name": "Improved Spell Recall",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:medium_armor#magus",
+    "name": "Medium Armor",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:bonus_feat#magus",
+    "name": "Bonus Feat",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:cantrips#magus",
+    "name": "Cantrips",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:spell_recall#magus",
+    "name": "Spell Recall",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:improved_spell_combat#magus",
+    "name": "Improved Spell Combat",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "trait:weapon_proficiency#magus",
+    "name": "Weapon Proficiency (Magus)",
+    "tags": ["class_feature", "magus", "trait"]
+  }, {
+    "id": "ability:knowledge_pool#magus",
+    "name": "Knowledge Pool",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:magus_arcana#magus",
+    "name": "Magus Arcana",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "ability:spellstrike#magus",
+    "name": "Spellstrike",
+    "tags": ["class_feature", "magus", "ability"]
+  }, {
+    "id": "trait:armor_proficiency#magus",
+    "name": "Armor Proficiency (Magus)",
+    "tags": ["class_feature", "magus", "trait"]
+  }, {
+    "id": "ability:spell_combat#magus",
+    "name": "Spell Combat",
     "tags": ["class_feature", "magus", "ability"]
   }, {
     "id": "magus_arcana:arcane_accuracy",
@@ -253,13 +253,13 @@
     "id": "feat:vigilant_eidolon",
     "name": "Vigilant Eidolon",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:eidolon#unchained_summoner",
+    "enabledFormula": "@ability:eidolon#summoner",
     "maxStacks": 1
   }, {
     "id": "feat:sense_link",
     "name": "Sense Link",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:bond_senses#unchained_summoner",
+    "enabledFormula": "@ability:bond_senses#summoner",
     "maxStacks": 1
   }, {
     "id": "feat:implant_bomb",
@@ -343,13 +343,13 @@
     "id": "feat:extra_summons",
     "name": "Extra Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_v#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster],@class:summoner\u003e\u003d1)",
+    "enabledFormula": "all(@ability:summon_monster_i#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_iii#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_vii#unchained_summoner[Summon monster],@class:summoner\u003e\u003d1)",
     "maxStacks": 1
   }, {
     "id": "feat:focused_eidolon",
     "name": "Focused Eidolon",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:shield_ally#unchained_summoner",
+    "enabledFormula": "@ability:shield_ally#summoner",
     "maxStacks": 1
   }, {
     "id": "feat:mystic_stride",
@@ -373,7 +373,7 @@
     "id": "feat:ki_stand",
     "name": "Ki Stand",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:ki_pool#unchained_monk",
+    "enabledFormula": "@ability:ki_pool#monk",
     "maxStacks": 1
   }, {
     "id": "feat:fire_music",
@@ -385,7 +385,7 @@
     "id": "feat:sacred_summons",
     "name": "Sacred Summons",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_v#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])",
+    "enabledFormula": "all(@any,@ability:summon_monster_i#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_iii#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_vii#unchained_summoner[Summon monster])",
     "maxStacks": 1
   }, {
     "id": "feat:greater_wild_empathy",
@@ -474,7 +474,7 @@
     "id": "feat:extra_evolution",
     "name": "Extra Evolution",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:eidolon#unchained_summoner",
+    "enabledFormula": "@ability:eidolon#summoner",
     "maxStacks": 1
   }, {
     "id": "feat:improved_eldritch_heritage",
@@ -503,7 +503,7 @@
     "id": "feat:gliding_steps",
     "name": "Gliding Steps",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@feat:dodge,@feat:mobility,@feat:nimble_moves,@ability:ki_pool#unchained_monk)",
+    "enabledFormula": "all(@feat:dodge,@feat:mobility,@feat:nimble_moves,@ability:ki_pool#monk)",
     "maxStacks": 1
   }, {
     "id": "feat:spellsong",
@@ -616,7 +616,7 @@
     "id": "feat:resilient_eidolon",
     "name": "Resilient Eidolon",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:eidolon#unchained_summoner",
+    "enabledFormula": "@ability:eidolon#summoner",
     "maxStacks": 1
   }, {
     "id": "feat:superior_summoning",
@@ -664,7 +664,7 @@
     "id": "feat:deny_death",
     "name": "Deny Death",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:ki_pool#unchained_monk,@ability:endurance#ranger)",
+    "enabledFormula": "all(@ability:ki_pool#monk,@ability:endurance#ranger)",
     "maxStacks": 1
   }, {
     "id": "feat:rime_spell",
@@ -738,7 +738,7 @@
     "id": "feat:skeleton_summoner",
     "name": "Skeleton Summoner",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@any,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_v#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])",
+    "enabledFormula": "all(@any,@ability:summon_monster_i#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_iv#summoner,@ability:summon_monster_iii#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_vii#unchained_summoner[Summon monster])",
     "maxStacks": 1
   }, {
     "id": "feat:ultimate_mercy",
@@ -2269,7 +2269,7 @@
     "id": "class:summoner#master_summoner",
     "name": "Master Summoner",
     "tags": ["archetype", "summoner"],
-    "enabledFormula": "!@modifies:ability:the_summoners_normal_eidolon_ability#summoner AND !@modifies:ability:bond_senses#summoner AND !@modifies:ability:shield_ally#summoner AND !@modifies:ability:the_summoners_normal_summon_monster_i_ability#summoner",
+    "enabledFormula": "!@modifies:ability:the_summoners_normal_eidolon_ability#summoner AND !@modifies:ability:bond_senses#summoner AND !@modifies:ability:the_summoners_normal_summon_monster_i_ability#summoner AND !@modifies:ability:shield_ally#summoner",
     "maxStacks": 1
   }, {
     "id": "ability:lesser_eidolon#summoner_master_summoner",
@@ -2669,7 +2669,7 @@
     "id": "class:druid#menhir_savant",
     "name": "Menhir Savant",
     "tags": ["archetype", "druid"],
-    "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+    "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
     "maxStacks": 1
   }, {
     "id": "ability:spirit_sense#druid_menhir_savant",

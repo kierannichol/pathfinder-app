@@ -9,22 +9,14 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
     protected final List<Link> links = new ArrayList<>();
     protected final List<Effect> effects = new ArrayList<>();
     protected final List<Choice> choices = new ArrayList<>();
-    protected final List<Unlink> unlinks = new ArrayList<>();
+    protected final List<FeatureModification> featureModifications = new ArrayList<>();
     
     public SELF addLink(Id featureId) {
         return addLink(featureId.string());
     }
 
     public SELF addLink(String featureId) {
-        return addLink(featureId, "");
-    }
-
-    public SELF addLink(Id featureId, String conditionFormula) {
-        return addLink(featureId.string(), conditionFormula);
-    }
-
-    public SELF addLink(String featureId, String conditionFormula) {
-        return addLink(new Link(featureId, conditionFormula));
+        return addLink(new Link(featureId));
     }
 
     public SELF addLink(Link link) {
@@ -59,21 +51,6 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
         return addChoice(new FeatureSelectByTagChoice(id, label, type, List.of(optionTags), List.of(), List.of(), FeatureSelectSortBy.NAME, true));
     }
 
-    public SELF removeLink(Id remove) {
-        this.unlinks.add(new Unlink(remove, ""));
-        return self();
-    }
-
-    public SELF removeLink(Id remove, String conditionFormula) {
-        this.unlinks.add(new Unlink(remove, conditionFormula));
-        return self();
-    }
-
-    public SELF removeLinks(Collection<Unlink> unlinks) {
-        this.unlinks.addAll(unlinks);
-        return self();
-    }
-
     public SELF addChoice(Choice choice) {
         this.choices.add(choice);
         return self();
@@ -81,6 +58,16 @@ public class AbstractComponentBuilder<SELF extends AbstractComponentBuilder<SELF
 
     public SELF addChoices(Collection<Choice> choices) {
         this.choices.addAll(choices);
+        return self();
+    }
+
+    public SELF addFeatureModification(FeatureModification featureModification) {
+        this.featureModifications.add(featureModification);
+        return self();
+    }
+
+    public SELF addFeatureModifications(Collection<FeatureModification> featureModifications) {
+        this.featureModifications.addAll(featureModifications);
         return self();
     }
 

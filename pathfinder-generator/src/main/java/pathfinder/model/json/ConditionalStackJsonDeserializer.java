@@ -9,12 +9,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import pathfinder.model.Choice;
-import pathfinder.model.ConditionalComponent;
 import pathfinder.model.ConditionalStack;
 import pathfinder.model.Effect;
+import pathfinder.model.FeatureModification;
 import pathfinder.model.Link;
 import pathfinder.model.Stack;
-import pathfinder.model.Unlink;
 
 public class ConditionalStackJsonDeserializer extends StdDeserializer<ConditionalStack> {
 
@@ -28,9 +27,8 @@ public class ConditionalStackJsonDeserializer extends StdDeserializer<Conditiona
 
         List<Effect> effects = new ArrayList<>();
         List<Link> links = new ArrayList<>();
-        List<Unlink> unlinks = new ArrayList<>();
         List<Choice> choices = new ArrayList<>();
-        List<ConditionalComponent> conditionalComponents = new ArrayList<>();
+        List<FeatureModification> featureModifications = new ArrayList<>();
         String when = "";
 
         if (node.has("when")) {
@@ -51,13 +49,6 @@ public class ConditionalStackJsonDeserializer extends StdDeserializer<Conditiona
             }
         }
 
-        if (node.get("unlinks") != null) {
-            for (JsonNode child : node.get("unlinks")) {
-                Unlink unlink = p.getCodec().treeToValue(child, Unlink.class);
-                unlinks.add(unlink);
-            }
-        }
-
         if (node.get("choices") != null) {
             for (JsonNode child : node.get("choices")) {
                 Choice choice = p.getCodec().treeToValue(child, Choice.class);
@@ -65,14 +56,14 @@ public class ConditionalStackJsonDeserializer extends StdDeserializer<Conditiona
             }
         }
 
-        if (node.get("conditional_components") != null) {
-            for (JsonNode child : node.get("choices")) {
-                ConditionalComponent component = p.getCodec().treeToValue(child, ConditionalComponent.class);
-                conditionalComponents.add(component);
+        if (node.get("feature_modifications") != null) {
+            for (JsonNode child : node.get("feature_modifications")) {
+                FeatureModification featureModification = p.getCodec().treeToValue(child, FeatureModification.class);
+                featureModifications.add(featureModification);
             }
         }
 
         return new ConditionalStack(when,
-                new Stack(effects, links, unlinks, choices, conditionalComponents));
+                new Stack(effects, links, choices, featureModifications));
     }
 }

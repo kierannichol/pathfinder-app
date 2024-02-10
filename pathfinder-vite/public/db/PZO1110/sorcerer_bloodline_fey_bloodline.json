@@ -9,57 +9,60 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "conditionalComponents": [{
-          "conditionFormula": "@class:sorcerer\u003e\u003d7",
-          "choices": [{
-            "choiceId": "sorcerer7:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:laughing_touch#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:woodland_stride#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:soul_of_the_fey#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:fleeting_glance#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:fey_magic#sorcerer"]
           }]
-        }, {
-          "conditionFormula": "@class:sorcerer\u003e\u003d13",
-          "choices": [{
-            "choiceId": "sorcerer13:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }, {
-          "conditionFormula": "@class:sorcerer\u003e\u003d19",
-          "choices": [{
-            "choiceId": "sorcerer19:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }],
-        "links": [{
-          "featureId": "ability:laughing_touch#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d1"
-        }, {
-          "featureId": "ability:woodland_stride#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d3"
-        }, {
-          "featureId": "ability:fleeting_glance#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d9"
-        }, {
-          "featureId": "ability:fey_magic#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d15"
-        }, {
-          "featureId": "ability:soul_of_the_fey#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d20"
         }]
       }]
     }
-  }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:dodge", "feat:improved_initiative", "feat:lightning_reflexes", "feat:mobility", "feat:point_blank_shot", "feat:precise_shot", "feat:quicken_spell", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
 }

@@ -1,19 +1,18 @@
 import React, {ReactNode, useMemo} from "react";
-import Description from "../../../data/model/Description.ts";
-import {usePathfinderDatabase} from "../../../data/model/PathfinderDatabase.tsx";
 import FeatureDescription from "../character/FeatureDescription.tsx";
 import ChoiceSelectButton from "./ChoiceSelectButton.tsx";
-import ChoiceSelectorList, {ChoiceSelectorCategory, ChoiceSelectorOption} from "./ChoiceSelectorList.tsx";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
-import {FeatureSummary} from "../../../data/model/Feature.ts";
-import Database from "../../../data/model/Database.ts";
-import {FeatureSelectCategory} from "../../../data/model/Choice.ts";
-import Id from "../../../data/model/Id.ts";
+import {ChoiceSelectorCategory, ChoiceSelectorOption} from "./ChoiceSelectorList.tsx";
+import Id from "../../../utils/Id.ts";
+import {ChoiceCategoryModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {FeatureSummaryModel} from "../../model/FeatureModel.ts";
+import {DatabaseModel} from "../../model/DatabaseModel.ts";
+import Description from "../../../data/Description.ts";
+import {useDatabaseModel} from "../../model/ModelContext.tsx";
 
 interface DataChoiceSelectButtonProps {
-  choiceRef: FeatureSelectChoiceRef;
-  characterAtLevel: CharacterAtLevel;
+  choiceRef: SelectChoiceModel;
+  characterAtLevel: CharacterAtLevelModel;
   id?: string;
   onSelect?: (id: string) => void;
   label?: string;
@@ -26,7 +25,7 @@ interface DataChoiceSelectButtonProps {
 }
 
 export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
-  const database = usePathfinderDatabase();
+  const database = useDatabaseModel();
   const characterWithoutCurrent = useMemo(() => {
     const selected = characterAtLevel.selected(choiceRef);
     return selected !== undefined ? characterAtLevel.without(selected) : characterAtLevel;
@@ -35,10 +34,11 @@ export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id
   function handleSelect(id: string|undefined) {
     console.log("Selecting: " + id)
     if (id) {
-      const summary = database.feature(id);
-      if (summary?.optionsTemplate !== undefined) {
-        onSelect?.(id);
-      }
+      // const summary = database.feature(id);
+      // if (summary?.optionsTemplate !== undefined) {
+      //   onSelect?.(id);
+      // }
+      onSelect?.(id);
     }
   }
 
@@ -52,21 +52,21 @@ export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id
       onSelect={handleSelect}
       search={search}
       optionsFn={(query: string|undefined, category: ChoiceSelectorCategory|undefined) => {
-          return queryOptions(choiceRef, query, category)
+          return queryOptions(database, choiceRef, query, category)
             .map(summary => featureToChoiceSelectorOption(summary, database, characterWithoutCurrent, descriptionFn, handleSelect))
       }}
-      categoriesFn={() => choiceRef.categories.map((category: FeatureSelectCategory) => new ChoiceSelectorCategory(category.label, category.tag))}
+      categoriesFn={() => choiceRef.categories.map((category: ChoiceCategoryModel) => new ChoiceSelectorCategory(category.label, category.tag))}
       children={children}
       actionVerb={choiceRef.repeatingIndex === 0 ? 'Select' : 'Add'}
       removable={choiceRef.repeatingIndex > 0 && characterAtLevel.selected(choiceRef) !== ''}
   />
 }
 
-function queryOptions(choiceRef: FeatureSelectChoiceRef, query: string|undefined, category: ChoiceSelectorCategory|undefined): FeatureSummary[] {
-  return choiceRef.options(query, category?.tag);
+function queryOptions(database: DatabaseModel, choiceRef: SelectChoiceModel, query: string|undefined, category: ChoiceSelectorCategory|undefined): FeatureSummaryModel[] {
+  return choiceRef.options(database, query, category?.tag);
 }
 
-function featureToChoiceSelectorOption(feature: FeatureSummary, database: Database, characterAtLevel: CharacterAtLevel, descriptionFn?: (description: Description) => ReactNode, onSelect?: (id: string|undefined) => void): ChoiceSelectorOption {
+function featureToChoiceSelectorOption(feature: FeatureSummaryModel, database: DatabaseModel, characterAtLevel: CharacterAtLevelModel, descriptionFn?: (description: Description) => ReactNode, onSelect?: (id: string|undefined) => void): ChoiceSelectorOption {
 
   const descriptionFunction = async (id: string): Promise<ReactNode> => {
     const loaded = await database.load(id);
@@ -82,24 +82,24 @@ function featureToChoiceSelectorOption(feature: FeatureSummary, database: Databa
     return <FeatureDescription
         feature={loaded}
         description={description}
-        featureModifications={loaded.featureModifications}
+        // featureModifications={loaded.featureModifications}
         characterAtLevel={characterAtLevel} />
   };
 
-  if (feature.optionsTemplate) {
-    const featureOptions = feature.optionsTemplate.queryOptions(database);
-    const selectOptions = featureOptions.map(option => new FeatureSummary(option.id, option.name, undefined, [], undefined, option.enabledFormula, feature.maxStacks))
-      .map(summary => {
-        return featureToChoiceSelectorOption(summary, database, characterAtLevel, descriptionFn, onSelect)
-      });
-
-    descriptionFn = desc => <ChoiceSelectorList options={selectOptions} onSelect={onSelect} />
-  }
+  // if (feature.optionsTemplate) {
+  //   const featureOptions = feature.optionsTemplate.queryOptions(database);
+  //   const selectOptions = featureOptions.map(option => new FeatureSummary(option.id, option.name, undefined, [], undefined, option.enabledFormula, feature.maxStacks))
+  //     .map(summary => {
+  //       return featureToChoiceSelectorOption(summary, database, characterAtLevel, descriptionFn, onSelect)
+  //     });
+  //
+  //   descriptionFn = desc => <ChoiceSelectorList options={selectOptions} onSelect={onSelect} />
+  // }
 
   return new ChoiceSelectorOption(
-      feature.id,
+      feature.key,
       feature.name,
       () => feature.isEnabled(characterAtLevel),
-      async () => descriptionFunction(feature.id)
+      async () => descriptionFunction(feature.key)
   )
 }

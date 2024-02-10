@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import {GiBookmark} from "react-icons/gi";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import {ChoiceSelectedHandler} from "../../../data/model/ChoiceRef.ts";
 import {Modal} from "react-bootstrap";
 import styles from "../Dialog.module.scss";
 import SpellBookEditor from "../character/SpellBookEditor.tsx";
+import {ChoiceSelectedHandler} from "../../model/ChoiceModel.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
 
 interface DialogButtonProps {
-  characterAtLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
   onChange: ChoiceSelectedHandler;
 }
 
@@ -33,7 +33,7 @@ export default function DialogButton({ characterAtLevel, onChange }: DialogButto
 }
 
 interface DialogProps {
-  characterAtLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
   show: boolean;
   onCancel: () => void;
   onChange: ChoiceSelectedHandler;

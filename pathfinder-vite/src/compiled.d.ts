@@ -448,520 +448,6 @@ export namespace data {
         FEATURE_SELECT_CHOICE_SORTBY_NAME = 1
     }
 
-    /** Properties of a DescriptionDbo. */
-    interface IDescriptionDbo {
-
-        /** DescriptionDbo text */
-        text?: (string|null);
-
-        /** DescriptionDbo sections */
-        sections?: ({ [k: string]: string }|null);
-    }
-
-    /** Represents a DescriptionDbo. */
-    class DescriptionDbo implements IDescriptionDbo {
-
-        /**
-         * Constructs a new DescriptionDbo.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: data.IDescriptionDbo);
-
-        /** DescriptionDbo text. */
-        public text: string;
-
-        /** DescriptionDbo sections. */
-        public sections: { [k: string]: string };
-
-        /**
-         * Creates a new DescriptionDbo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns DescriptionDbo instance
-         */
-        public static create(properties?: data.IDescriptionDbo): data.DescriptionDbo;
-
-        /**
-         * Encodes the specified DescriptionDbo message. Does not implicitly {@link data.DescriptionDbo.verify|verify} messages.
-         * @param message DescriptionDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: data.DescriptionDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified DescriptionDbo message, length delimited. Does not implicitly {@link data.DescriptionDbo.verify|verify} messages.
-         * @param message DescriptionDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: data.DescriptionDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a DescriptionDbo message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns DescriptionDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.DescriptionDbo;
-
-        /**
-         * Decodes a DescriptionDbo message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns DescriptionDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.DescriptionDbo;
-
-        /**
-         * Verifies a DescriptionDbo message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a DescriptionDbo message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns DescriptionDbo
-         */
-        public static fromObject(object: { [k: string]: any }): data.DescriptionDbo;
-
-        /**
-         * Creates a plain object from a DescriptionDbo message. Also converts values to other types if specified.
-         * @param message DescriptionDbo
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: data.DescriptionDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this DescriptionDbo to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for DescriptionDbo
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    /** Properties of a FeatureSummaryDbo. */
-    interface IFeatureSummaryDbo {
-
-        /** FeatureSummaryDbo id */
-        id?: (string|null);
-
-        /** FeatureSummaryDbo name */
-        name?: (string|null);
-
-        /** FeatureSummaryDbo tags */
-        tags?: (string[]|null);
-
-        /** FeatureSummaryDbo enabledFormula */
-        enabledFormula?: (string|null);
-
-        /** FeatureSummaryDbo maxStacks */
-        maxStacks?: (number|null);
-
-        /** FeatureSummaryDbo label */
-        label?: (string|null);
-
-        /** FeatureSummaryDbo options */
-        options?: (data.FeatureOptionsDbo|null);
-    }
-
-    /** Represents a FeatureSummaryDbo. */
-    class FeatureSummaryDbo implements IFeatureSummaryDbo {
-
-        /**
-         * Constructs a new FeatureSummaryDbo.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: data.IFeatureSummaryDbo);
-
-        /** FeatureSummaryDbo id. */
-        public id: string;
-
-        /** FeatureSummaryDbo name. */
-        public name: string;
-
-        /** FeatureSummaryDbo tags. */
-        public tags: string[];
-
-        /** FeatureSummaryDbo enabledFormula. */
-        public enabledFormula: string;
-
-        /** FeatureSummaryDbo maxStacks. */
-        public maxStacks?: (number|null);
-
-        /** FeatureSummaryDbo label. */
-        public label?: (string|null);
-
-        /** FeatureSummaryDbo options. */
-        public options?: (data.FeatureOptionsDbo|null);
-
-        /** FeatureSummaryDbo _maxStacks. */
-        public _maxStacks?: "maxStacks";
-
-        /** FeatureSummaryDbo _label. */
-        public _label?: "label";
-
-        /**
-         * Creates a new FeatureSummaryDbo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns FeatureSummaryDbo instance
-         */
-        public static create(properties?: data.IFeatureSummaryDbo): data.FeatureSummaryDbo;
-
-        /**
-         * Encodes the specified FeatureSummaryDbo message. Does not implicitly {@link data.FeatureSummaryDbo.verify|verify} messages.
-         * @param message FeatureSummaryDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: data.FeatureSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified FeatureSummaryDbo message, length delimited. Does not implicitly {@link data.FeatureSummaryDbo.verify|verify} messages.
-         * @param message FeatureSummaryDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: data.FeatureSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a FeatureSummaryDbo message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns FeatureSummaryDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureSummaryDbo;
-
-        /**
-         * Decodes a FeatureSummaryDbo message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns FeatureSummaryDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureSummaryDbo;
-
-        /**
-         * Verifies a FeatureSummaryDbo message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a FeatureSummaryDbo message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns FeatureSummaryDbo
-         */
-        public static fromObject(object: { [k: string]: any }): data.FeatureSummaryDbo;
-
-        /**
-         * Creates a plain object from a FeatureSummaryDbo message. Also converts values to other types if specified.
-         * @param message FeatureSummaryDbo
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: data.FeatureSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this FeatureSummaryDbo to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for FeatureSummaryDbo
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    /** Properties of a FeatureDbo. */
-    interface IFeatureDbo {
-
-        /** FeatureDbo id */
-        id?: (string|null);
-
-        /** FeatureDbo name */
-        name?: (string|null);
-
-        /** FeatureDbo tags */
-        tags?: (string[]|null);
-
-        /** FeatureDbo enabledFormula */
-        enabledFormula?: (string|null);
-
-        /** FeatureDbo maxStacks */
-        maxStacks?: (number|null);
-
-        /** FeatureDbo label */
-        label?: (string|null);
-
-        /** FeatureDbo options */
-        options?: (data.FeatureOptionsDbo|null);
-
-        /** FeatureDbo description */
-        description?: (data.DescriptionDbo|null);
-
-        /** FeatureDbo stacks */
-        stacks?: (data.StacksDbo|null);
-
-        /** FeatureDbo featureModifications */
-        featureModifications?: (data.FeatureModificationDbo[]|null);
-
-        /** FeatureDbo conditionalStacks */
-        conditionalStacks?: (data.ConditionalStackDbo[]|null);
-    }
-
-    /** Represents a FeatureDbo. */
-    class FeatureDbo implements IFeatureDbo {
-
-        /**
-         * Constructs a new FeatureDbo.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: data.IFeatureDbo);
-
-        /** FeatureDbo id. */
-        public id: string;
-
-        /** FeatureDbo name. */
-        public name: string;
-
-        /** FeatureDbo tags. */
-        public tags: string[];
-
-        /** FeatureDbo enabledFormula. */
-        public enabledFormula: string;
-
-        /** FeatureDbo maxStacks. */
-        public maxStacks?: (number|null);
-
-        /** FeatureDbo label. */
-        public label?: (string|null);
-
-        /** FeatureDbo options. */
-        public options?: (data.FeatureOptionsDbo|null);
-
-        /** FeatureDbo description. */
-        public description?: (data.DescriptionDbo|null);
-
-        /** FeatureDbo stacks. */
-        public stacks?: (data.StacksDbo|null);
-
-        /** FeatureDbo featureModifications. */
-        public featureModifications: data.FeatureModificationDbo[];
-
-        /** FeatureDbo conditionalStacks. */
-        public conditionalStacks: data.ConditionalStackDbo[];
-
-        /** FeatureDbo _maxStacks. */
-        public _maxStacks?: "maxStacks";
-
-        /** FeatureDbo _label. */
-        public _label?: "label";
-
-        /**
-         * Creates a new FeatureDbo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns FeatureDbo instance
-         */
-        public static create(properties?: data.IFeatureDbo): data.FeatureDbo;
-
-        /**
-         * Encodes the specified FeatureDbo message. Does not implicitly {@link data.FeatureDbo.verify|verify} messages.
-         * @param message FeatureDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: data.FeatureDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified FeatureDbo message, length delimited. Does not implicitly {@link data.FeatureDbo.verify|verify} messages.
-         * @param message FeatureDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: data.FeatureDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a FeatureDbo message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns FeatureDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureDbo;
-
-        /**
-         * Decodes a FeatureDbo message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns FeatureDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureDbo;
-
-        /**
-         * Verifies a FeatureDbo message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a FeatureDbo message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns FeatureDbo
-         */
-        public static fromObject(object: { [k: string]: any }): data.FeatureDbo;
-
-        /**
-         * Creates a plain object from a FeatureDbo message. Also converts values to other types if specified.
-         * @param message FeatureDbo
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: data.FeatureDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this FeatureDbo to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for FeatureDbo
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
-    /** Properties of a FeatureOptionsDbo. */
-    interface IFeatureOptionsDbo {
-
-        /** FeatureOptionsDbo optionTag */
-        optionTag?: (string|null);
-
-        /** FeatureOptionsDbo idTemplate */
-        idTemplate?: (string|null);
-
-        /** FeatureOptionsDbo prerequisitesTemplate */
-        prerequisitesTemplate?: (string|null);
-    }
-
-    /** Represents a FeatureOptionsDbo. */
-    class FeatureOptionsDbo implements IFeatureOptionsDbo {
-
-        /**
-         * Constructs a new FeatureOptionsDbo.
-         * @param [properties] Properties to set
-         */
-        constructor(properties?: data.IFeatureOptionsDbo);
-
-        /** FeatureOptionsDbo optionTag. */
-        public optionTag: string;
-
-        /** FeatureOptionsDbo idTemplate. */
-        public idTemplate: string;
-
-        /** FeatureOptionsDbo prerequisitesTemplate. */
-        public prerequisitesTemplate: string;
-
-        /**
-         * Creates a new FeatureOptionsDbo instance using the specified properties.
-         * @param [properties] Properties to set
-         * @returns FeatureOptionsDbo instance
-         */
-        public static create(properties?: data.IFeatureOptionsDbo): data.FeatureOptionsDbo;
-
-        /**
-         * Encodes the specified FeatureOptionsDbo message. Does not implicitly {@link data.FeatureOptionsDbo.verify|verify} messages.
-         * @param message FeatureOptionsDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encode(message: data.FeatureOptionsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Encodes the specified FeatureOptionsDbo message, length delimited. Does not implicitly {@link data.FeatureOptionsDbo.verify|verify} messages.
-         * @param message FeatureOptionsDbo message or plain object to encode
-         * @param [writer] Writer to encode to
-         * @returns Writer
-         */
-        public static encodeDelimited(message: data.FeatureOptionsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
-
-        /**
-         * Decodes a FeatureOptionsDbo message from the specified reader or buffer.
-         * @param reader Reader or buffer to decode from
-         * @param [length] Message length if known beforehand
-         * @returns FeatureOptionsDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureOptionsDbo;
-
-        /**
-         * Decodes a FeatureOptionsDbo message from the specified reader or buffer, length delimited.
-         * @param reader Reader or buffer to decode from
-         * @returns FeatureOptionsDbo
-         * @throws {Error} If the payload is not a reader or valid buffer
-         * @throws {$protobuf.util.ProtocolError} If required fields are missing
-         */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureOptionsDbo;
-
-        /**
-         * Verifies a FeatureOptionsDbo message.
-         * @param message Plain object to verify
-         * @returns `null` if valid, otherwise the reason why it is not
-         */
-        public static verify(message: { [k: string]: any }): (string|null);
-
-        /**
-         * Creates a FeatureOptionsDbo message from a plain object. Also converts values to their respective internal types.
-         * @param object Plain object
-         * @returns FeatureOptionsDbo
-         */
-        public static fromObject(object: { [k: string]: any }): data.FeatureOptionsDbo;
-
-        /**
-         * Creates a plain object from a FeatureOptionsDbo message. Also converts values to other types if specified.
-         * @param message FeatureOptionsDbo
-         * @param [options] Conversion options
-         * @returns Plain object
-         */
-        public static toObject(message: data.FeatureOptionsDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-        /**
-         * Converts this FeatureOptionsDbo to JSON.
-         * @returns JSON object
-         */
-        public toJSON(): { [k: string]: any };
-
-        /**
-         * Gets the default type url for FeatureOptionsDbo
-         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
-         * @returns The default type url
-         */
-        public static getTypeUrl(typeUrlPrefix?: string): string;
-    }
-
     /** Properties of a StacksDbo. */
     interface IStacksDbo {
 
@@ -1165,212 +651,236 @@ export namespace data {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a FeatureModificationDbo. */
-    interface IFeatureModificationDbo {
+    /** Properties of a StackDbo. */
+    interface IStackDbo {
 
-        /** FeatureModificationDbo targetFeatureId */
-        targetFeatureId?: (string|null);
+        /** StackDbo effects */
+        effects?: (data.EffectDbo[]|null);
 
-        /** FeatureModificationDbo stackModifications */
-        stackModifications?: (data.StackModificationDbo[]|null);
+        /** StackDbo links */
+        links?: (string[]|null);
+
+        /** StackDbo choices */
+        choices?: (data.ChoiceDbo[]|null);
+
+        /** StackDbo featureModifications */
+        featureModifications?: (data.FeatureModificationDbo[]|null);
     }
 
-    /** Represents a FeatureModificationDbo. */
-    class FeatureModificationDbo implements IFeatureModificationDbo {
+    /** Represents a StackDbo. */
+    class StackDbo implements IStackDbo {
 
         /**
-         * Constructs a new FeatureModificationDbo.
+         * Constructs a new StackDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.IFeatureModificationDbo);
+        constructor(properties?: data.IStackDbo);
 
-        /** FeatureModificationDbo targetFeatureId. */
-        public targetFeatureId: string;
+        /** StackDbo effects. */
+        public effects: data.EffectDbo[];
 
-        /** FeatureModificationDbo stackModifications. */
-        public stackModifications: data.StackModificationDbo[];
+        /** StackDbo links. */
+        public links: string[];
+
+        /** StackDbo choices. */
+        public choices: data.ChoiceDbo[];
+
+        /** StackDbo featureModifications. */
+        public featureModifications: data.FeatureModificationDbo[];
 
         /**
-         * Creates a new FeatureModificationDbo instance using the specified properties.
+         * Creates a new StackDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns FeatureModificationDbo instance
+         * @returns StackDbo instance
          */
-        public static create(properties?: data.IFeatureModificationDbo): data.FeatureModificationDbo;
+        public static create(properties?: data.IStackDbo): data.StackDbo;
 
         /**
-         * Encodes the specified FeatureModificationDbo message. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
-         * @param message FeatureModificationDbo message or plain object to encode
+         * Encodes the specified StackDbo message. Does not implicitly {@link data.StackDbo.verify|verify} messages.
+         * @param message StackDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.FeatureModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.StackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified FeatureModificationDbo message, length delimited. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
-         * @param message FeatureModificationDbo message or plain object to encode
+         * Encodes the specified StackDbo message, length delimited. Does not implicitly {@link data.StackDbo.verify|verify} messages.
+         * @param message StackDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.FeatureModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.StackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a FeatureModificationDbo message from the specified reader or buffer.
+         * Decodes a StackDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns FeatureModificationDbo
+         * @returns StackDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureModificationDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.StackDbo;
 
         /**
-         * Decodes a FeatureModificationDbo message from the specified reader or buffer, length delimited.
+         * Decodes a StackDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns FeatureModificationDbo
+         * @returns StackDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureModificationDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.StackDbo;
 
         /**
-         * Verifies a FeatureModificationDbo message.
+         * Verifies a StackDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a FeatureModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a StackDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns FeatureModificationDbo
+         * @returns StackDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.FeatureModificationDbo;
+        public static fromObject(object: { [k: string]: any }): data.StackDbo;
 
         /**
-         * Creates a plain object from a FeatureModificationDbo message. Also converts values to other types if specified.
-         * @param message FeatureModificationDbo
+         * Creates a plain object from a StackDbo message. Also converts values to other types if specified.
+         * @param message StackDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.FeatureModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.StackDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this FeatureModificationDbo to JSON.
+         * Converts this StackDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for FeatureModificationDbo
+         * Gets the default type url for StackDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a StackModificationDbo. */
-    interface IStackModificationDbo {
+    /** Properties of a ConditionalStackDbo. */
+    interface IConditionalStackDbo {
 
-        /** StackModificationDbo targetStackCount */
-        targetStackCount?: (number|null);
+        /** ConditionalStackDbo conditionFormula */
+        conditionFormula?: (string|null);
 
-        /** StackModificationDbo linksToAdd */
-        linksToAdd?: (string[]|null);
+        /** ConditionalStackDbo effects */
+        effects?: (data.EffectDbo[]|null);
 
-        /** StackModificationDbo linksToRemove */
-        linksToRemove?: (string[]|null);
+        /** ConditionalStackDbo links */
+        links?: (string[]|null);
+
+        /** ConditionalStackDbo choices */
+        choices?: (data.ChoiceDbo[]|null);
+
+        /** ConditionalStackDbo featureModifications */
+        featureModifications?: (data.FeatureModificationDbo[]|null);
     }
 
-    /** Represents a StackModificationDbo. */
-    class StackModificationDbo implements IStackModificationDbo {
+    /** Represents a ConditionalStackDbo. */
+    class ConditionalStackDbo implements IConditionalStackDbo {
 
         /**
-         * Constructs a new StackModificationDbo.
+         * Constructs a new ConditionalStackDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.IStackModificationDbo);
+        constructor(properties?: data.IConditionalStackDbo);
 
-        /** StackModificationDbo targetStackCount. */
-        public targetStackCount: number;
+        /** ConditionalStackDbo conditionFormula. */
+        public conditionFormula: string;
 
-        /** StackModificationDbo linksToAdd. */
-        public linksToAdd: string[];
+        /** ConditionalStackDbo effects. */
+        public effects: data.EffectDbo[];
 
-        /** StackModificationDbo linksToRemove. */
-        public linksToRemove: string[];
+        /** ConditionalStackDbo links. */
+        public links: string[];
+
+        /** ConditionalStackDbo choices. */
+        public choices: data.ChoiceDbo[];
+
+        /** ConditionalStackDbo featureModifications. */
+        public featureModifications: data.FeatureModificationDbo[];
 
         /**
-         * Creates a new StackModificationDbo instance using the specified properties.
+         * Creates a new ConditionalStackDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns StackModificationDbo instance
+         * @returns ConditionalStackDbo instance
          */
-        public static create(properties?: data.IStackModificationDbo): data.StackModificationDbo;
+        public static create(properties?: data.IConditionalStackDbo): data.ConditionalStackDbo;
 
         /**
-         * Encodes the specified StackModificationDbo message. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
-         * @param message StackModificationDbo message or plain object to encode
+         * Encodes the specified ConditionalStackDbo message. Does not implicitly {@link data.ConditionalStackDbo.verify|verify} messages.
+         * @param message ConditionalStackDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.StackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.ConditionalStackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified StackModificationDbo message, length delimited. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
-         * @param message StackModificationDbo message or plain object to encode
+         * Encodes the specified ConditionalStackDbo message, length delimited. Does not implicitly {@link data.ConditionalStackDbo.verify|verify} messages.
+         * @param message ConditionalStackDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.StackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.ConditionalStackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a StackModificationDbo message from the specified reader or buffer.
+         * Decodes a ConditionalStackDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns StackModificationDbo
+         * @returns ConditionalStackDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.StackModificationDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ConditionalStackDbo;
 
         /**
-         * Decodes a StackModificationDbo message from the specified reader or buffer, length delimited.
+         * Decodes a ConditionalStackDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns StackModificationDbo
+         * @returns ConditionalStackDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.StackModificationDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ConditionalStackDbo;
 
         /**
-         * Verifies a StackModificationDbo message.
+         * Verifies a ConditionalStackDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a StackModificationDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a ConditionalStackDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns StackModificationDbo
+         * @returns ConditionalStackDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.StackModificationDbo;
+        public static fromObject(object: { [k: string]: any }): data.ConditionalStackDbo;
 
         /**
-         * Creates a plain object from a StackModificationDbo message. Also converts values to other types if specified.
-         * @param message StackModificationDbo
+         * Creates a plain object from a ConditionalStackDbo message. Also converts values to other types if specified.
+         * @param message ConditionalStackDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.StackModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.ConditionalStackDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this StackModificationDbo to JSON.
+         * Converts this ConditionalStackDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for StackModificationDbo
+         * Gets the default type url for ConditionalStackDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
@@ -1710,575 +1220,720 @@ export namespace data {
         }
     }
 
-    /** Properties of a LinkDbo. */
-    interface ILinkDbo {
+    /** Properties of a FeatureModificationDbo. */
+    interface IFeatureModificationDbo {
 
-        /** LinkDbo featureId */
-        featureId?: (string|null);
+        /** FeatureModificationDbo targetFeatureId */
+        targetFeatureId?: (string|null);
 
-        /** LinkDbo conditionFormula */
-        conditionFormula?: (string|null);
+        /** FeatureModificationDbo stackModifications */
+        stackModifications?: (data.StackModificationDbo[]|null);
     }
 
-    /** Represents a LinkDbo. */
-    class LinkDbo implements ILinkDbo {
+    /** Represents a FeatureModificationDbo. */
+    class FeatureModificationDbo implements IFeatureModificationDbo {
 
         /**
-         * Constructs a new LinkDbo.
+         * Constructs a new FeatureModificationDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.ILinkDbo);
+        constructor(properties?: data.IFeatureModificationDbo);
 
-        /** LinkDbo featureId. */
-        public featureId: string;
+        /** FeatureModificationDbo targetFeatureId. */
+        public targetFeatureId: string;
 
-        /** LinkDbo conditionFormula. */
-        public conditionFormula?: (string|null);
-
-        /** LinkDbo _conditionFormula. */
-        public _conditionFormula?: "conditionFormula";
+        /** FeatureModificationDbo stackModifications. */
+        public stackModifications: data.StackModificationDbo[];
 
         /**
-         * Creates a new LinkDbo instance using the specified properties.
+         * Creates a new FeatureModificationDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns LinkDbo instance
+         * @returns FeatureModificationDbo instance
          */
-        public static create(properties?: data.ILinkDbo): data.LinkDbo;
+        public static create(properties?: data.IFeatureModificationDbo): data.FeatureModificationDbo;
 
         /**
-         * Encodes the specified LinkDbo message. Does not implicitly {@link data.LinkDbo.verify|verify} messages.
-         * @param message LinkDbo message or plain object to encode
+         * Encodes the specified FeatureModificationDbo message. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
+         * @param message FeatureModificationDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.LinkDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.FeatureModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified LinkDbo message, length delimited. Does not implicitly {@link data.LinkDbo.verify|verify} messages.
-         * @param message LinkDbo message or plain object to encode
+         * Encodes the specified FeatureModificationDbo message, length delimited. Does not implicitly {@link data.FeatureModificationDbo.verify|verify} messages.
+         * @param message FeatureModificationDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.LinkDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.FeatureModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a LinkDbo message from the specified reader or buffer.
+         * Decodes a FeatureModificationDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns LinkDbo
+         * @returns FeatureModificationDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.LinkDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureModificationDbo;
 
         /**
-         * Decodes a LinkDbo message from the specified reader or buffer, length delimited.
+         * Decodes a FeatureModificationDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns LinkDbo
+         * @returns FeatureModificationDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.LinkDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureModificationDbo;
 
         /**
-         * Verifies a LinkDbo message.
+         * Verifies a FeatureModificationDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a LinkDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a FeatureModificationDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns LinkDbo
+         * @returns FeatureModificationDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.LinkDbo;
+        public static fromObject(object: { [k: string]: any }): data.FeatureModificationDbo;
 
         /**
-         * Creates a plain object from a LinkDbo message. Also converts values to other types if specified.
-         * @param message LinkDbo
+         * Creates a plain object from a FeatureModificationDbo message. Also converts values to other types if specified.
+         * @param message FeatureModificationDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.LinkDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.FeatureModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this LinkDbo to JSON.
+         * Converts this FeatureModificationDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for LinkDbo
+         * Gets the default type url for FeatureModificationDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of an UnlinkDbo. */
-    interface IUnlinkDbo {
+    /** Properties of a StackModificationDbo. */
+    interface IStackModificationDbo {
 
-        /** UnlinkDbo featureId */
-        featureId?: (string|null);
+        /** StackModificationDbo targetStackCount */
+        targetStackCount?: (number|null);
 
-        /** UnlinkDbo conditionFormula */
-        conditionFormula?: (string|null);
+        /** StackModificationDbo linksToAdd */
+        linksToAdd?: (string[]|null);
+
+        /** StackModificationDbo linksToRemove */
+        linksToRemove?: (string[]|null);
     }
 
-    /** Represents an UnlinkDbo. */
-    class UnlinkDbo implements IUnlinkDbo {
+    /** Represents a StackModificationDbo. */
+    class StackModificationDbo implements IStackModificationDbo {
 
         /**
-         * Constructs a new UnlinkDbo.
+         * Constructs a new StackModificationDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.IUnlinkDbo);
+        constructor(properties?: data.IStackModificationDbo);
 
-        /** UnlinkDbo featureId. */
-        public featureId: string;
+        /** StackModificationDbo targetStackCount. */
+        public targetStackCount: number;
 
-        /** UnlinkDbo conditionFormula. */
-        public conditionFormula?: (string|null);
+        /** StackModificationDbo linksToAdd. */
+        public linksToAdd: string[];
 
-        /** UnlinkDbo _conditionFormula. */
-        public _conditionFormula?: "conditionFormula";
+        /** StackModificationDbo linksToRemove. */
+        public linksToRemove: string[];
 
         /**
-         * Creates a new UnlinkDbo instance using the specified properties.
+         * Creates a new StackModificationDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns UnlinkDbo instance
+         * @returns StackModificationDbo instance
          */
-        public static create(properties?: data.IUnlinkDbo): data.UnlinkDbo;
+        public static create(properties?: data.IStackModificationDbo): data.StackModificationDbo;
 
         /**
-         * Encodes the specified UnlinkDbo message. Does not implicitly {@link data.UnlinkDbo.verify|verify} messages.
-         * @param message UnlinkDbo message or plain object to encode
+         * Encodes the specified StackModificationDbo message. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
+         * @param message StackModificationDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.UnlinkDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.StackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified UnlinkDbo message, length delimited. Does not implicitly {@link data.UnlinkDbo.verify|verify} messages.
-         * @param message UnlinkDbo message or plain object to encode
+         * Encodes the specified StackModificationDbo message, length delimited. Does not implicitly {@link data.StackModificationDbo.verify|verify} messages.
+         * @param message StackModificationDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.UnlinkDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.StackModificationDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes an UnlinkDbo message from the specified reader or buffer.
+         * Decodes a StackModificationDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns UnlinkDbo
+         * @returns StackModificationDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.UnlinkDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.StackModificationDbo;
 
         /**
-         * Decodes an UnlinkDbo message from the specified reader or buffer, length delimited.
+         * Decodes a StackModificationDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns UnlinkDbo
+         * @returns StackModificationDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.UnlinkDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.StackModificationDbo;
 
         /**
-         * Verifies an UnlinkDbo message.
+         * Verifies a StackModificationDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates an UnlinkDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a StackModificationDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns UnlinkDbo
+         * @returns StackModificationDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.UnlinkDbo;
+        public static fromObject(object: { [k: string]: any }): data.StackModificationDbo;
 
         /**
-         * Creates a plain object from an UnlinkDbo message. Also converts values to other types if specified.
-         * @param message UnlinkDbo
+         * Creates a plain object from a StackModificationDbo message. Also converts values to other types if specified.
+         * @param message StackModificationDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.UnlinkDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.StackModificationDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this UnlinkDbo to JSON.
+         * Converts this StackModificationDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for UnlinkDbo
+         * Gets the default type url for StackModificationDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a StackDbo. */
-    interface IStackDbo {
+    /** Properties of a DescriptionDbo. */
+    interface IDescriptionDbo {
 
-        /** StackDbo conditionalComponents */
-        conditionalComponents?: (data.ConditionalStackComponentDbo[]|null);
+        /** DescriptionDbo text */
+        text?: (string|null);
 
-        /** StackDbo effects */
-        effects?: (data.EffectDbo[]|null);
-
-        /** StackDbo links */
-        links?: (data.LinkDbo[]|null);
-
-        /** StackDbo unlinks */
-        unlinks?: (data.UnlinkDbo[]|null);
-
-        /** StackDbo choices */
-        choices?: (data.ChoiceDbo[]|null);
+        /** DescriptionDbo sections */
+        sections?: ({ [k: string]: string }|null);
     }
 
-    /** Represents a StackDbo. */
-    class StackDbo implements IStackDbo {
+    /** Represents a DescriptionDbo. */
+    class DescriptionDbo implements IDescriptionDbo {
 
         /**
-         * Constructs a new StackDbo.
+         * Constructs a new DescriptionDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.IStackDbo);
+        constructor(properties?: data.IDescriptionDbo);
 
-        /** StackDbo conditionalComponents. */
-        public conditionalComponents: data.ConditionalStackComponentDbo[];
+        /** DescriptionDbo text. */
+        public text: string;
 
-        /** StackDbo effects. */
-        public effects: data.EffectDbo[];
-
-        /** StackDbo links. */
-        public links: data.LinkDbo[];
-
-        /** StackDbo unlinks. */
-        public unlinks: data.UnlinkDbo[];
-
-        /** StackDbo choices. */
-        public choices: data.ChoiceDbo[];
+        /** DescriptionDbo sections. */
+        public sections: { [k: string]: string };
 
         /**
-         * Creates a new StackDbo instance using the specified properties.
+         * Creates a new DescriptionDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns StackDbo instance
+         * @returns DescriptionDbo instance
          */
-        public static create(properties?: data.IStackDbo): data.StackDbo;
+        public static create(properties?: data.IDescriptionDbo): data.DescriptionDbo;
 
         /**
-         * Encodes the specified StackDbo message. Does not implicitly {@link data.StackDbo.verify|verify} messages.
-         * @param message StackDbo message or plain object to encode
+         * Encodes the specified DescriptionDbo message. Does not implicitly {@link data.DescriptionDbo.verify|verify} messages.
+         * @param message DescriptionDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.StackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.DescriptionDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified StackDbo message, length delimited. Does not implicitly {@link data.StackDbo.verify|verify} messages.
-         * @param message StackDbo message or plain object to encode
+         * Encodes the specified DescriptionDbo message, length delimited. Does not implicitly {@link data.DescriptionDbo.verify|verify} messages.
+         * @param message DescriptionDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.StackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.DescriptionDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a StackDbo message from the specified reader or buffer.
+         * Decodes a DescriptionDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns StackDbo
+         * @returns DescriptionDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.StackDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.DescriptionDbo;
 
         /**
-         * Decodes a StackDbo message from the specified reader or buffer, length delimited.
+         * Decodes a DescriptionDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns StackDbo
+         * @returns DescriptionDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.StackDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.DescriptionDbo;
 
         /**
-         * Verifies a StackDbo message.
+         * Verifies a DescriptionDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a StackDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a DescriptionDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns StackDbo
+         * @returns DescriptionDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.StackDbo;
+        public static fromObject(object: { [k: string]: any }): data.DescriptionDbo;
 
         /**
-         * Creates a plain object from a StackDbo message. Also converts values to other types if specified.
-         * @param message StackDbo
+         * Creates a plain object from a DescriptionDbo message. Also converts values to other types if specified.
+         * @param message DescriptionDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.StackDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.DescriptionDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this StackDbo to JSON.
+         * Converts this DescriptionDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for StackDbo
+         * Gets the default type url for DescriptionDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a ConditionalStackDbo. */
-    interface IConditionalStackDbo {
+    /** Properties of a FeatureSummaryDbo. */
+    interface IFeatureSummaryDbo {
 
-        /** ConditionalStackDbo conditionFormula */
-        conditionFormula?: (string|null);
+        /** FeatureSummaryDbo id */
+        id?: (string|null);
 
-        /** ConditionalStackDbo effects */
-        effects?: (data.EffectDbo[]|null);
+        /** FeatureSummaryDbo name */
+        name?: (string|null);
 
-        /** ConditionalStackDbo links */
-        links?: (data.LinkDbo[]|null);
+        /** FeatureSummaryDbo tags */
+        tags?: (string[]|null);
 
-        /** ConditionalStackDbo unlinks */
-        unlinks?: (data.UnlinkDbo[]|null);
+        /** FeatureSummaryDbo enabledFormula */
+        enabledFormula?: (string|null);
 
-        /** ConditionalStackDbo choices */
-        choices?: (data.ChoiceDbo[]|null);
+        /** FeatureSummaryDbo maxStacks */
+        maxStacks?: (number|null);
+
+        /** FeatureSummaryDbo label */
+        label?: (string|null);
+
+        /** FeatureSummaryDbo options */
+        options?: (data.FeatureOptionsDbo|null);
     }
 
-    /** Represents a ConditionalStackDbo. */
-    class ConditionalStackDbo implements IConditionalStackDbo {
+    /** Represents a FeatureSummaryDbo. */
+    class FeatureSummaryDbo implements IFeatureSummaryDbo {
 
         /**
-         * Constructs a new ConditionalStackDbo.
+         * Constructs a new FeatureSummaryDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.IConditionalStackDbo);
+        constructor(properties?: data.IFeatureSummaryDbo);
 
-        /** ConditionalStackDbo conditionFormula. */
-        public conditionFormula: string;
+        /** FeatureSummaryDbo id. */
+        public id: string;
 
-        /** ConditionalStackDbo effects. */
-        public effects: data.EffectDbo[];
+        /** FeatureSummaryDbo name. */
+        public name: string;
 
-        /** ConditionalStackDbo links. */
-        public links: data.LinkDbo[];
+        /** FeatureSummaryDbo tags. */
+        public tags: string[];
 
-        /** ConditionalStackDbo unlinks. */
-        public unlinks: data.UnlinkDbo[];
+        /** FeatureSummaryDbo enabledFormula. */
+        public enabledFormula: string;
 
-        /** ConditionalStackDbo choices. */
-        public choices: data.ChoiceDbo[];
+        /** FeatureSummaryDbo maxStacks. */
+        public maxStacks?: (number|null);
+
+        /** FeatureSummaryDbo label. */
+        public label?: (string|null);
+
+        /** FeatureSummaryDbo options. */
+        public options?: (data.FeatureOptionsDbo|null);
+
+        /** FeatureSummaryDbo _maxStacks. */
+        public _maxStacks?: "maxStacks";
+
+        /** FeatureSummaryDbo _label. */
+        public _label?: "label";
 
         /**
-         * Creates a new ConditionalStackDbo instance using the specified properties.
+         * Creates a new FeatureSummaryDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns ConditionalStackDbo instance
+         * @returns FeatureSummaryDbo instance
          */
-        public static create(properties?: data.IConditionalStackDbo): data.ConditionalStackDbo;
+        public static create(properties?: data.IFeatureSummaryDbo): data.FeatureSummaryDbo;
 
         /**
-         * Encodes the specified ConditionalStackDbo message. Does not implicitly {@link data.ConditionalStackDbo.verify|verify} messages.
-         * @param message ConditionalStackDbo message or plain object to encode
+         * Encodes the specified FeatureSummaryDbo message. Does not implicitly {@link data.FeatureSummaryDbo.verify|verify} messages.
+         * @param message FeatureSummaryDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.ConditionalStackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.FeatureSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ConditionalStackDbo message, length delimited. Does not implicitly {@link data.ConditionalStackDbo.verify|verify} messages.
-         * @param message ConditionalStackDbo message or plain object to encode
+         * Encodes the specified FeatureSummaryDbo message, length delimited. Does not implicitly {@link data.FeatureSummaryDbo.verify|verify} messages.
+         * @param message FeatureSummaryDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.ConditionalStackDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.FeatureSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a ConditionalStackDbo message from the specified reader or buffer.
+         * Decodes a FeatureSummaryDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns ConditionalStackDbo
+         * @returns FeatureSummaryDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ConditionalStackDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureSummaryDbo;
 
         /**
-         * Decodes a ConditionalStackDbo message from the specified reader or buffer, length delimited.
+         * Decodes a FeatureSummaryDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns ConditionalStackDbo
+         * @returns FeatureSummaryDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ConditionalStackDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureSummaryDbo;
 
         /**
-         * Verifies a ConditionalStackDbo message.
+         * Verifies a FeatureSummaryDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a ConditionalStackDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a FeatureSummaryDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns ConditionalStackDbo
+         * @returns FeatureSummaryDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.ConditionalStackDbo;
+        public static fromObject(object: { [k: string]: any }): data.FeatureSummaryDbo;
 
         /**
-         * Creates a plain object from a ConditionalStackDbo message. Also converts values to other types if specified.
-         * @param message ConditionalStackDbo
+         * Creates a plain object from a FeatureSummaryDbo message. Also converts values to other types if specified.
+         * @param message FeatureSummaryDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.ConditionalStackDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.FeatureSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this ConditionalStackDbo to JSON.
+         * Converts this FeatureSummaryDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for ConditionalStackDbo
+         * Gets the default type url for FeatureSummaryDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
-    /** Properties of a ConditionalStackComponentDbo. */
-    interface IConditionalStackComponentDbo {
+    /** Properties of a FeatureDbo. */
+    interface IFeatureDbo {
 
-        /** ConditionalStackComponentDbo conditionFormula */
-        conditionFormula?: (string|null);
+        /** FeatureDbo id */
+        id?: (string|null);
 
-        /** ConditionalStackComponentDbo effects */
-        effects?: (data.EffectDbo[]|null);
+        /** FeatureDbo name */
+        name?: (string|null);
 
-        /** ConditionalStackComponentDbo links */
-        links?: (data.LinkDbo[]|null);
+        /** FeatureDbo tags */
+        tags?: (string[]|null);
 
-        /** ConditionalStackComponentDbo unlinks */
-        unlinks?: (data.UnlinkDbo[]|null);
+        /** FeatureDbo enabledFormula */
+        enabledFormula?: (string|null);
 
-        /** ConditionalStackComponentDbo choices */
-        choices?: (data.ChoiceDbo[]|null);
+        /** FeatureDbo maxStacks */
+        maxStacks?: (number|null);
+
+        /** FeatureDbo label */
+        label?: (string|null);
+
+        /** FeatureDbo options */
+        options?: (data.FeatureOptionsDbo|null);
+
+        /** FeatureDbo description */
+        description?: (data.DescriptionDbo|null);
+
+        /** FeatureDbo stacks */
+        stacks?: (data.StacksDbo|null);
+
+        /** FeatureDbo conditionalStacks */
+        conditionalStacks?: (data.ConditionalStackDbo[]|null);
     }
 
-    /** Represents a ConditionalStackComponentDbo. */
-    class ConditionalStackComponentDbo implements IConditionalStackComponentDbo {
+    /** Represents a FeatureDbo. */
+    class FeatureDbo implements IFeatureDbo {
 
         /**
-         * Constructs a new ConditionalStackComponentDbo.
+         * Constructs a new FeatureDbo.
          * @param [properties] Properties to set
          */
-        constructor(properties?: data.IConditionalStackComponentDbo);
+        constructor(properties?: data.IFeatureDbo);
 
-        /** ConditionalStackComponentDbo conditionFormula. */
-        public conditionFormula: string;
+        /** FeatureDbo id. */
+        public id: string;
 
-        /** ConditionalStackComponentDbo effects. */
-        public effects: data.EffectDbo[];
+        /** FeatureDbo name. */
+        public name: string;
 
-        /** ConditionalStackComponentDbo links. */
-        public links: data.LinkDbo[];
+        /** FeatureDbo tags. */
+        public tags: string[];
 
-        /** ConditionalStackComponentDbo unlinks. */
-        public unlinks: data.UnlinkDbo[];
+        /** FeatureDbo enabledFormula. */
+        public enabledFormula: string;
 
-        /** ConditionalStackComponentDbo choices. */
-        public choices: data.ChoiceDbo[];
+        /** FeatureDbo maxStacks. */
+        public maxStacks?: (number|null);
+
+        /** FeatureDbo label. */
+        public label?: (string|null);
+
+        /** FeatureDbo options. */
+        public options?: (data.FeatureOptionsDbo|null);
+
+        /** FeatureDbo description. */
+        public description?: (data.DescriptionDbo|null);
+
+        /** FeatureDbo stacks. */
+        public stacks?: (data.StacksDbo|null);
+
+        /** FeatureDbo conditionalStacks. */
+        public conditionalStacks: data.ConditionalStackDbo[];
+
+        /** FeatureDbo _maxStacks. */
+        public _maxStacks?: "maxStacks";
+
+        /** FeatureDbo _label. */
+        public _label?: "label";
 
         /**
-         * Creates a new ConditionalStackComponentDbo instance using the specified properties.
+         * Creates a new FeatureDbo instance using the specified properties.
          * @param [properties] Properties to set
-         * @returns ConditionalStackComponentDbo instance
+         * @returns FeatureDbo instance
          */
-        public static create(properties?: data.IConditionalStackComponentDbo): data.ConditionalStackComponentDbo;
+        public static create(properties?: data.IFeatureDbo): data.FeatureDbo;
 
         /**
-         * Encodes the specified ConditionalStackComponentDbo message. Does not implicitly {@link data.ConditionalStackComponentDbo.verify|verify} messages.
-         * @param message ConditionalStackComponentDbo message or plain object to encode
+         * Encodes the specified FeatureDbo message. Does not implicitly {@link data.FeatureDbo.verify|verify} messages.
+         * @param message FeatureDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: data.ConditionalStackComponentDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: data.FeatureDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ConditionalStackComponentDbo message, length delimited. Does not implicitly {@link data.ConditionalStackComponentDbo.verify|verify} messages.
-         * @param message ConditionalStackComponentDbo message or plain object to encode
+         * Encodes the specified FeatureDbo message, length delimited. Does not implicitly {@link data.FeatureDbo.verify|verify} messages.
+         * @param message FeatureDbo message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: data.ConditionalStackComponentDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: data.FeatureDbo, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Decodes a ConditionalStackComponentDbo message from the specified reader or buffer.
+         * Decodes a FeatureDbo message from the specified reader or buffer.
          * @param reader Reader or buffer to decode from
          * @param [length] Message length if known beforehand
-         * @returns ConditionalStackComponentDbo
+         * @returns FeatureDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ConditionalStackComponentDbo;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureDbo;
 
         /**
-         * Decodes a ConditionalStackComponentDbo message from the specified reader or buffer, length delimited.
+         * Decodes a FeatureDbo message from the specified reader or buffer, length delimited.
          * @param reader Reader or buffer to decode from
-         * @returns ConditionalStackComponentDbo
+         * @returns FeatureDbo
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ConditionalStackComponentDbo;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureDbo;
 
         /**
-         * Verifies a ConditionalStackComponentDbo message.
+         * Verifies a FeatureDbo message.
          * @param message Plain object to verify
          * @returns `null` if valid, otherwise the reason why it is not
          */
         public static verify(message: { [k: string]: any }): (string|null);
 
         /**
-         * Creates a ConditionalStackComponentDbo message from a plain object. Also converts values to their respective internal types.
+         * Creates a FeatureDbo message from a plain object. Also converts values to their respective internal types.
          * @param object Plain object
-         * @returns ConditionalStackComponentDbo
+         * @returns FeatureDbo
          */
-        public static fromObject(object: { [k: string]: any }): data.ConditionalStackComponentDbo;
+        public static fromObject(object: { [k: string]: any }): data.FeatureDbo;
 
         /**
-         * Creates a plain object from a ConditionalStackComponentDbo message. Also converts values to other types if specified.
-         * @param message ConditionalStackComponentDbo
+         * Creates a plain object from a FeatureDbo message. Also converts values to other types if specified.
+         * @param message FeatureDbo
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: data.ConditionalStackComponentDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: data.FeatureDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
-         * Converts this ConditionalStackComponentDbo to JSON.
+         * Converts this FeatureDbo to JSON.
          * @returns JSON object
          */
         public toJSON(): { [k: string]: any };
 
         /**
-         * Gets the default type url for ConditionalStackComponentDbo
+         * Gets the default type url for FeatureDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a FeatureOptionsDbo. */
+    interface IFeatureOptionsDbo {
+
+        /** FeatureOptionsDbo optionTag */
+        optionTag?: (string|null);
+
+        /** FeatureOptionsDbo idTemplate */
+        idTemplate?: (string|null);
+
+        /** FeatureOptionsDbo prerequisitesTemplate */
+        prerequisitesTemplate?: (string|null);
+    }
+
+    /** Represents a FeatureOptionsDbo. */
+    class FeatureOptionsDbo implements IFeatureOptionsDbo {
+
+        /**
+         * Constructs a new FeatureOptionsDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IFeatureOptionsDbo);
+
+        /** FeatureOptionsDbo optionTag. */
+        public optionTag: string;
+
+        /** FeatureOptionsDbo idTemplate. */
+        public idTemplate: string;
+
+        /** FeatureOptionsDbo prerequisitesTemplate. */
+        public prerequisitesTemplate: string;
+
+        /**
+         * Creates a new FeatureOptionsDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns FeatureOptionsDbo instance
+         */
+        public static create(properties?: data.IFeatureOptionsDbo): data.FeatureOptionsDbo;
+
+        /**
+         * Encodes the specified FeatureOptionsDbo message. Does not implicitly {@link data.FeatureOptionsDbo.verify|verify} messages.
+         * @param message FeatureOptionsDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.FeatureOptionsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified FeatureOptionsDbo message, length delimited. Does not implicitly {@link data.FeatureOptionsDbo.verify|verify} messages.
+         * @param message FeatureOptionsDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.FeatureOptionsDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a FeatureOptionsDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns FeatureOptionsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureOptionsDbo;
+
+        /**
+         * Decodes a FeatureOptionsDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns FeatureOptionsDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureOptionsDbo;
+
+        /**
+         * Verifies a FeatureOptionsDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a FeatureOptionsDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns FeatureOptionsDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.FeatureOptionsDbo;
+
+        /**
+         * Creates a plain object from a FeatureOptionsDbo message. Also converts values to other types if specified.
+         * @param message FeatureOptionsDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.FeatureOptionsDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this FeatureOptionsDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for FeatureOptionsDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */
@@ -2392,10 +2047,7 @@ export namespace data {
         effects?: (data.EffectDbo[]|null);
 
         /** CharacterLevelTemplateDbo links */
-        links?: (data.LinkDbo[]|null);
-
-        /** CharacterLevelTemplateDbo unlinks */
-        unlinks?: (data.UnlinkDbo[]|null);
+        links?: (string[]|null);
 
         /** CharacterLevelTemplateDbo choices */
         choices?: (data.ChoiceDbo[]|null);
@@ -2417,10 +2069,7 @@ export namespace data {
         public effects: data.EffectDbo[];
 
         /** CharacterLevelTemplateDbo links. */
-        public links: data.LinkDbo[];
-
-        /** CharacterLevelTemplateDbo unlinks. */
-        public unlinks: data.UnlinkDbo[];
+        public links: string[];
 
         /** CharacterLevelTemplateDbo choices. */
         public choices: data.ChoiceDbo[];

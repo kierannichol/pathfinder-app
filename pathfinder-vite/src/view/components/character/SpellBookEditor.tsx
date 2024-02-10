@@ -1,11 +1,11 @@
-import {ChoiceSelectedHandler, FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 import {useMemo} from "react";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
 import {ResolvedValue} from "@kierannichol/formula-js";
+import {ChoiceSelectedHandler, SelectChoiceModel} from "../../model/ChoiceModel.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
 
 interface SpellBookEditorProps {
-  characterAtLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
   onChange: ChoiceSelectedHandler;
 }
 
@@ -42,7 +42,7 @@ export default function SpellBookEditor({ characterAtLevel, onChange }: SpellBoo
   </table>
 }
 
-function spellsKnown(characterAtLevel: CharacterAtLevel, spellLv: number) {
+function spellsKnown(characterAtLevel: CharacterAtLevelModel, spellLv: number) {
   const resolved = characterAtLevel.resolve(
       // `sum(@trait:level_${spellLv}_spells_per_day#*)`
       `{sum(@trait:level_${spellLv}_spells_per_day#*)}`
@@ -56,13 +56,13 @@ function spellsKnown(characterAtLevel: CharacterAtLevel, spellLv: number) {
 
 export function SpellBookEditor2({ characterAtLevel, onChange }: SpellBookEditorProps) {
   const spellChoicesByLevel = useMemo(() => {
-        const byLevel: { [label: string]: FeatureSelectChoiceRef[] } = {};
+        const byLevel: { [label: string]: SelectChoiceModel[] } = {};
 
         characterAtLevel.choices
             .filter(choice => choice.type === 'spell')
-            .filter(choice => choice instanceof FeatureSelectChoiceRef)
+            .filter(choice => choice instanceof SelectChoiceModel)
             .forEach(choice => {
-              const featureSelectChoice = choice as FeatureSelectChoiceRef;
+              const featureSelectChoice = choice as SelectChoiceModel;
               byLevel[choice.label] ??= [];
               byLevel[choice.label].push(featureSelectChoice);
             });
@@ -77,7 +77,7 @@ export function SpellBookEditor2({ characterAtLevel, onChange }: SpellBookEditor
       {choices.map(choice =>
       <DataChoiceSelectButton
           key={choice.path}
-          choiceRef={choice as FeatureSelectChoiceRef}
+          choiceRef={choice as SelectChoiceModel}
           variant={['default', 'list-item']}
           search={"auto"}
           characterAtLevel={characterAtLevel}

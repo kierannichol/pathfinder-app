@@ -10,7 +10,6 @@ public record ConditionalStack(String conditionFormula, Stack stack) {
                 .setConditionFormula(conditionFormula)
                 .addAllEffects(stackDbo.getEffectsList())
                 .addAllLinks(stackDbo.getLinksList())
-                .addAllUnlinks(stackDbo.getUnlinksList())
                 .addAllChoices(stackDbo.getChoicesList())
                 .build();
     }

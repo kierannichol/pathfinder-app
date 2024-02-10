@@ -9,60 +9,63 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "conditionalComponents": [{
-          "conditionFormula": "@class:bloodrager\u003e\u003d7",
-          "choices": [{
-            "choiceId": "bloodrager7:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:true_arcane_bloodrage#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:disruptive_bloodrage#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:casters_bane#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:arcane_bloodrage#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:greater_arcane_bloodrage#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:casters_scourge#bloodrager"]
           }]
-        }, {
-          "conditionFormula": "@class:bloodrager\u003e\u003d13",
-          "choices": [{
-            "choiceId": "bloodrager13:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }, {
-          "conditionFormula": "@class:bloodrager\u003e\u003d19",
-          "choices": [{
-            "choiceId": "bloodrager19:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }],
-        "links": [{
-          "featureId": "ability:disruptive_bloodrage#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d1"
-        }, {
-          "featureId": "ability:arcane_bloodrage#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d4"
-        }, {
-          "featureId": "ability:greater_arcane_bloodrage#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d8"
-        }, {
-          "featureId": "ability:casters_scourge#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d12"
-        }, {
-          "featureId": "ability:true_arcane_bloodrage#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d16"
-        }, {
-          "featureId": "ability:casters_bane#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d20"
         }]
       }]
     }
-  }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:bloodrager\u003e\u003d7",
+    "choices": [{
+      "choiceId": "bloodrager7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:bloodrager\u003e\u003d13",
+    "choices": [{
+      "choiceId": "bloodrager13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:bloodrager\u003e\u003d19",
+    "choices": [{
+      "choiceId": "bloodrager19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_reflexes", "feat:disruptive", "feat:improved_initiative", "feat:iron_will", "feat:power_attack", "feat:quick_draw", "feat:spellbreaker"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
 }

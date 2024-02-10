@@ -1,4 +1,3 @@
-import {useCharacterStore} from "../../data/model/Character.react.tsx";
 import useAsyncMemo from "../../utils/useAsyncMemo.tsx";
 import Panel from "../components/Panel.tsx";
 import {useEffect, useState} from "react";
@@ -7,15 +6,16 @@ import NewCharacterDialog from "../components/character/NewCharacterDialog.tsx";
 import styles from "./CharacterList.module.scss";
 import {useNavigate} from "react-router-dom";
 import LoadingBlock from "../components/LoadingBlock.tsx";
-import CharacterSummary from "../../data/model/CharacterSummary";
 import DeleteIcon from "../components/icons/DeleteIcon.tsx";
 import {classNames} from "../../utils/classNames.ts";
+import {CharacterSummaryModel} from "../model/CharacterSummaryModel.ts";
+import {useCharacterStoreModel} from "../model/ModelContext.tsx";
 
 export default function CharacterList() {
-  const characterStore = useCharacterStore();
+  const characterStore = useCharacterStoreModel();
   const navigate = useNavigate();
 
-  const [ characters, setCharacters ] = useState<CharacterSummary[]>([]);
+  const [ characters, setCharacters ] = useState<CharacterSummaryModel[]>([]);
 
   const [ loadedCharacters, isLoading ] = useAsyncMemo(() => characterStore.list(),
       [characterStore]);
@@ -53,7 +53,7 @@ export default function CharacterList() {
 }
 
 interface CharacterListEntryProps {
-  character: CharacterSummary;
+  character: CharacterSummaryModel;
   onDelete: (id: string) => void;
 }
 

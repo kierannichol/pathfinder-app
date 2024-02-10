@@ -1,26 +1,30 @@
 import CharacterEdit from "../views/CharacterEdit.tsx";
-import {CharacterStoreContext, withGlobalCharacterStore} from "../../data/model/Character.react.tsx";
 import {useLoaderData} from "react-router-dom";
-import {PathfinderDatabaseContext, withGlobalPathfinderDatabase} from "../../data/model/PathfinderDatabase.tsx";
 import {timedAsync} from "../../app/pfutils.ts";
-import Database from "../../data/model/Database.ts";
-import CharacterStore from "../../data/model/CharacterStore.ts";
-import Character from "../../data/model/Character.ts";
+import {CharacterStoreModel} from "../model/CharacterStoreModel.tsx";
+import {CharacterModel} from "../model/CharacterModel.ts";
+import {DatabaseModel} from "../model/DatabaseModel.ts";
+import {
+  CharacterStoreModelContext,
+  DatabaseModelContext,
+  withGlobalCharacterStoreModel,
+  withGlobalDatabaseModel
+} from "../model/ModelContext.tsx";
 
 interface CharacterEditLoaderData {
-  character: Character;
-  characterStore: CharacterStore;
-  database: Database;
+  character: CharacterModel;
+  characterStore: CharacterStoreModel;
+  database: DatabaseModel;
 }
 
 export async function characterEditLoader({ params }: any): Promise<CharacterEditLoaderData> {
   const id = params.id as string;
   if (!id) throw new Error("No character ID specified");
-  const characterStore = await withGlobalCharacterStore();
+  const characterStore = await withGlobalCharacterStoreModel();
   const character = await timedAsync(() => characterStore.load(id), 'Loading character');
   if (!character) throw new Error("Character not found");
 
-  const database = await withGlobalPathfinderDatabase();
+  const database = await withGlobalDatabaseModel();
   if (!database) throw new Error("Unable to initialize database");
 
   return {
@@ -32,9 +36,9 @@ export async function characterEditLoader({ params }: any): Promise<CharacterEdi
 
 export default function CharacterEditRoute() {
   const { character, characterStore, database } = useLoaderData() as CharacterEditLoaderData;
-  return <PathfinderDatabaseContext.Provider value={database}>
-      <CharacterStoreContext.Provider value={characterStore}>
+  return <DatabaseModelContext.Provider value={database}>
+      <CharacterStoreModelContext.Provider value={characterStore}>
         <CharacterEdit loaded={character} />
-      </CharacterStoreContext.Provider>
-    </PathfinderDatabaseContext.Provider>
+      </CharacterStoreModelContext.Provider>
+    </DatabaseModelContext.Provider>
 }

@@ -14,14 +14,14 @@ import SkillsSection from "./sections/SkillsSection";
 import SpeedSection from "./sections/SpeedSection";
 import SpellResistanceSection from "./sections/SpellResistanceSection";
 import WeaponSection from "./sections/WeaponSection";
-import CharacterAtLevel from "../../../../data/model/CharacterAtLevel";
-import Database from "../../../../data/model/Database";
 import PrintablePage from "../../PrintablePage";
 import styles from "./CharacterSheet.module.css";
+import {DatabaseModel} from "../../../model/DatabaseModel.ts";
+import {CharacterAtLevelModel} from "../../../model/CharacterAtLevelModel.ts";
 
 type CharacterSheetContextValues = {
-  characterAtLevel: CharacterAtLevel;
-  database: Database;
+  characterAtLevel: CharacterAtLevelModel;
+  database: DatabaseModel;
 }
 
 const CharacterSheetContext = createContext<CharacterSheetContextValues|undefined>(undefined);
@@ -34,7 +34,7 @@ function useCharacterSheetContext(): CharacterSheetContextValues {
   return context;
 }
 
-export function useCharacterAtLevel(): CharacterAtLevel {
+export function useCharacterAtLevel(): CharacterAtLevelModel {
   return useCharacterSheetContext().characterAtLevel;
 }
 

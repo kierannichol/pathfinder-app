@@ -58,21 +58,7 @@
             "numberValue": 1
           }
         }],
-        "links": [{
-          "featureId": "trait:armor_proficiency#oracle"
-        }, {
-          "featureId": "trait:weapon_proficiency#oracle"
-        }, {
-          "featureId": "ability:mystery#oracle"
-        }, {
-          "featureId": "ability:oracles_curse#oracle"
-        }, {
-          "featureId": "ability:orisons#oracle"
-        }, {
-          "featureId": "ability:revelation#oracle"
-        }, {
-          "featureId": "ability:spellcasting#oracle"
-        }],
+        "links": ["trait:armor_proficiency#oracle", "trait:weapon_proficiency#oracle", "ability:mystery#oracle", "ability:oracles_curse#oracle", "ability:orisons#oracle", "ability:revelation#oracle", "ability:spellcasting#oracle"],
         "choices": [{
           "choiceId": "archetype",
           "label": "Archetype",
@@ -95,9 +81,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -115,9 +99,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:revelation#oracle"
-        }]
+        "links": ["ability:revelation#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -130,9 +112,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
       }, {
       }, {
         "effects": [{
@@ -156,9 +136,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -166,9 +144,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:revelation#oracle"
-        }]
+        "links": ["ability:revelation#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -181,9 +157,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -208,9 +182,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -218,86 +190,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:revelation#oracle"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
-      }, {
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:revelation#oracle"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
-      }, {
+        "links": ["ability:revelation#oracle"]
       }, {
         "effects": [{
           "addAction": {
@@ -320,19 +213,8 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:mystery_spell#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
       }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:revelation#oracle"
-        }]
       }, {
         "effects": [{
           "addAction": {
@@ -345,9 +227,83 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:final_revelation#oracle"
-        }]
+        "links": ["ability:mystery_spell#oracle"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:revelation#oracle"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:mystery_spell#oracle"]
+      }, {
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:mystery_spell#oracle"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:revelation#oracle"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:final_revelation#oracle"]
       }]
     }
   }

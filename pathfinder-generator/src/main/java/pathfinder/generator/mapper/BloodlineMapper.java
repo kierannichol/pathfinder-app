@@ -13,9 +13,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import pathfinder.db.PathfinderDatabase;
 import pathfinder.db.query.Query;
+import pathfinder.model.ConditionalStack;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
+import pathfinder.model.FeatureModification;
 import pathfinder.model.Id;
+import pathfinder.model.Stack;
 import pathfinder.model.StackBuilder;
 import pathfinder.model.pathfinder.Bloodline;
 import pathfinder.model.pathfinder.Feat;
@@ -36,6 +39,7 @@ public class BloodlineMapper {
                 .addTag(bloodlineModel.id().type);
 
         var bloodlineStack = new StackBuilder();
+        var bloodlineModification = FeatureModification.builder(bloodlineModel.classId());
 
         List<Feature> featureList = new ArrayList<>();
 
@@ -47,13 +51,13 @@ public class BloodlineMapper {
                 Feature powerFeature = powerBuilder.build();
                 featureList.add(powerFeature);
 
-                bloodlineStack.addLink(powerFeature.id(),
-                        "@%s>=%d".formatted(bloodlineModel.classId(), level));
+                bloodlineModification.stack(level).addsFeature(powerFeature.id());
             });
         });
 
-        addBloodlineFeatChoices(bloodlineModel, bloodlineStack);
+        addBloodlineFeatChoices(bloodlineModel, bloodline);
 
+        bloodlineStack.addFeatureModification(bloodlineModification.build());
         bloodline.addFixedStack(bloodlineStack.build());
         featureList.add(bloodline.build());
 
@@ -68,14 +72,17 @@ public class BloodlineMapper {
         return Optional.of(Integer.parseInt(matches.group(1)));
     }
 
-    private void addBloodlineFeatChoices(Bloodline bloodline, StackBuilder stack) {
+    private void addBloodlineFeatChoices(Bloodline bloodline, FeatureBuilder feature) {
         List<Integer> levels = List.of(7, 13, 19);
         for (int level : levels) {
-            stack.addConditionalComponent("@%s>=%d".formatted(bloodline.classId(), level), component ->
-                    component.addFeatureSelectByIdsChoice("%s%d:bloodline_feat".formatted(bloodline.classId().key, level),
+            String conditionFormula = "@%s>=%d".formatted(bloodline.classId(), level);
+            Stack stack = new StackBuilder()
+                    .addFeatureSelectByIdsChoice("%s%d:bloodline_feat".formatted(bloodline.classId().key, level),
                             "Bloodline Feat",
                             "bonus_feat",
-                            mapList(bloodline.bonusFeats(), this::findFeatId)));
+                            mapList(bloodline.bonusFeats(), this::findFeatId))
+                    .build();
+            feature.addConditionalStack(new ConditionalStack(conditionFormula, stack));
         }
     }
 

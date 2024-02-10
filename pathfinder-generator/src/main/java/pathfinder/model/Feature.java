@@ -102,8 +102,7 @@ public record Feature(Id id,
                 .addAllTags(tags)
                 .setDescription(description.toDbo())
                 .setStacks(stacks.toDbo())
-                .addAllConditionalStacks(mapList(conditionalStacks, ConditionalStack::toDbo))
-                .addAllFeatureModifications(mapList(featureModifications, FeatureModification::toDbo));
+                .addAllConditionalStacks(mapList(conditionalStacks, ConditionalStack::toDbo));
         if (label != null) {
             feature.setLabel(label);
         }

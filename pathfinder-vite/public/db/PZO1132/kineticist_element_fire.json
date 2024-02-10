@@ -9,18 +9,12 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "links": [{
-          "featureId": "ability:basic_pyrokinesis#kineticist"
-        }, {
-          "featureId": "ability:fire_blast#kineticist"
-        }]
+        "links": ["ability:basic_pyrokinesis#kineticist", "ability:fire_blast#kineticist"]
       }]
     }
   },
   "conditionalStacks": [{
     "conditionFormula": "@ability:elemental_defense#kineticist",
-    "links": [{
-      "featureId": "ability:searing_flesh#kineticist"
-    }]
+    "links": ["ability:searing_flesh#kineticist"]
   }]
 }

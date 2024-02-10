@@ -3,9 +3,9 @@ import AbilityScoreEditor from "./AbilityScoreEditor.tsx";
 import styles from "./AbilityScoresEditor.module.css";
 import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
 import {ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import ChoiceRef, {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {ChoiceModel, ChoiceSelectedHandler, SelectChoiceModel} from "../../model/ChoiceModel.ts";
 
 const AbilityScoreOptions = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 .map(score => new ChoiceSelectorOption(
@@ -15,8 +15,8 @@ const AbilityScoreOptions = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 ));
 
 interface AbilityScoresEditorProps {
-  characterAtLevel: CharacterAtLevel;
-  onChange?: (choice: ChoiceRef, value: string) => void;
+  characterAtLevel: CharacterAtLevelModel;
+  onChange?: (choice: ChoiceModel, value: string) => void;
 }
 
 export default function AbilityScoresEditor({ characterAtLevel, onChange }: AbilityScoresEditorProps) {
@@ -35,7 +35,7 @@ export default function AbilityScoresEditor({ characterAtLevel, onChange }: Abil
     <div>
       {characterAtLevel.choicesOfType("asi").map(choice => <DataChoiceSelectButton
           key={choice.key}
-          choiceRef={choice as FeatureSelectChoiceRef}
+          choiceRef={choice as SelectChoiceModel}
           characterAtLevel={characterAtLevel}
           onSelect={selected => onChange?.(choice, selected)}/>)}
     </div>
@@ -44,8 +44,8 @@ export default function AbilityScoresEditor({ characterAtLevel, onChange }: Abil
 
 interface AbilityScoreItemProps {
   ability: string;
-  characterAtLevel: CharacterAtLevel;
-  onChange?: (choice: ChoiceRef, value: string) => void;
+  characterAtLevel: CharacterAtLevelModel;
+  onChange?: ChoiceSelectedHandler;
 }
 
 function AbilityScoreItem({ ability, characterAtLevel, onChange }: AbilityScoreItemProps) {
@@ -58,7 +58,7 @@ function AbilityScoreItem({ ability, characterAtLevel, onChange }: AbilityScoreI
   const base = useMemo(() => characterAtLevel.resolve(`${ability}:base`)?.asNumber() ?? 0,
       [ability, characterAtLevel]);
 
-  const choice = useMemo(() => characterAtLevel.choice(ability + "_base"),
+  const choice = useMemo(() => characterAtLevel.choice(ability + ":base"),
       [ability, characterAtLevel]);
 
   function handleSelect(selected: string) {

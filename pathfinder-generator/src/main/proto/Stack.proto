@@ -1,9 +1,8 @@
 syntax = "proto3";
 
-import "Description.proto";
 import "Effect.proto";
-import "Link.proto";
 import "Choice.proto";
+import "FeatureModification.proto";
 
 option java_multiple_files = true;
 option java_package = "pathfinder.data";
@@ -11,28 +10,17 @@ option java_package = "pathfinder.data";
 package data;
 
 message StackDbo {
-  repeated ConditionalStackComponentDbo conditional_components = 1;
-
   repeated EffectDbo effects = 101;
-  repeated LinkDbo links = 102;
-  repeated UnlinkDbo unlinks = 103;
-  repeated ChoiceDbo choices = 104;
+  repeated string links = 102;
+  repeated ChoiceDbo choices = 103;
+  repeated FeatureModificationDbo feature_modifications = 104;
 }
 
 message ConditionalStackDbo {
   string condition_formula = 1;
 
   repeated EffectDbo effects = 101;
-  repeated LinkDbo links = 102;
-  repeated UnlinkDbo unlinks = 103;
-  repeated ChoiceDbo choices = 104;
-}
-
-message ConditionalStackComponentDbo {
-  string condition_formula = 1;
-
-  repeated EffectDbo effects = 101;
-  repeated LinkDbo links = 102;
-  repeated UnlinkDbo unlinks = 103;
-  repeated ChoiceDbo choices = 104;
+  repeated string links = 102;
+  repeated ChoiceDbo choices = 103;
+  repeated FeatureModificationDbo feature_modifications = 104;
 }

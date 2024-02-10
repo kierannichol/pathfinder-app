@@ -4,18 +4,18 @@ import FeatureDescription from "./FeatureDescription";
 import PathfinderSelect from "../controls/SelectBlock.tsx";
 import variants from "../controls/ButtonVariants.module.scss";
 import Expression from "../../../utils/logic/Expression.ts";
-import Feature from "../../../data/model/Feature.ts";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {FeatureModel} from "../../model/FeatureModel.ts";
 
 interface CharacterFeatureListProps {
-  characterAtLevel: CharacterAtLevel;
-  features: Feature[];
+  characterAtLevel: CharacterAtLevelModel;
+  features: FeatureModel[];
 }
 
 export default function CharacterFeatureList({ characterAtLevel, features }: CharacterFeatureListProps) {
   return <PathfinderSelect>
-    {features.map(feature => <PathfinderSelect.Item key={feature.id}
-                                                             itemKey={feature.id}
+    {features.map(feature => <PathfinderSelect.Item key={feature.key}
+                                                             itemKey={feature.key}
                                                              label={<FeatureButtonLabel characterAtLevel={characterAtLevel} feature={feature} />}
                                                              variant={determineVariant(feature)}
                                                              bodyFn={async () => <FeatureDescription
@@ -25,8 +25,8 @@ export default function CharacterFeatureList({ characterAtLevel, features }: Cha
 }
 
 interface FeatureButtonLabelProps {
-  characterAtLevel: CharacterAtLevel;
-  feature: Feature;
+  characterAtLevel: CharacterAtLevelModel;
+  feature: FeatureModel;
 }
 
 function FeatureButtonLabel({ characterAtLevel, feature }: FeatureButtonLabelProps) {
@@ -37,7 +37,7 @@ function FeatureButtonLabel({ characterAtLevel, feature }: FeatureButtonLabelPro
   </div>;
 }
 
-function determineVariant(feature: Feature) {
+function determineVariant(feature: FeatureModel) {
   for (let tag of feature.tags) {
     if (tag in variants) {
       return tag;

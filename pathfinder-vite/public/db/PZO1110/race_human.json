@@ -9,42 +9,13 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "conditionalComponents": [{
-          "conditionFormula": "@character_level\u003e\u003d1",
-          "choices": [{
-            "choiceId": "bonus_feat_human",
-            "label": "Bonus Feat (Human)",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "optionTags": ["feat"],
-              "categories": [{
-                "label": "General",
-                "tag": "general"
-              }, {
-                "label": "Combat",
-                "tag": "combat"
-              }, {
-                "label": "Item Creation",
-                "tag": "item_creation"
-              }, {
-                "label": "Metamagic",
-                "tag": "metamagic"
-              }],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }],
         "effects": [{
           "setAction": {
             "targetKey": "speed:base",
             "numberValue": 30
           }
         }],
-        "links": [{
-          "featureId": "size:m"
-        }, {
-          "featureId": "asi:any_p2"
-        }]
+        "links": ["size:m", "asi:any_p2"]
       }]
     }
   }

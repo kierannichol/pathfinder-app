@@ -69,23 +69,7 @@
             "numberValue": 1
           }
         }],
-        "links": [{
-          "featureId": "trait:armor_proficiency#cleric"
-        }, {
-          "featureId": "trait:weapon_proficiency#cleric"
-        }, {
-          "featureId": "ability:aura#cleric"
-        }, {
-          "featureId": "ability:channel_energy#cleric"
-        }, {
-          "featureId": "ability:domains#cleric"
-        }, {
-          "featureId": "ability:orisons#cleric"
-        }, {
-          "featureId": "ability:spontaneous_casting#cleric"
-        }, {
-          "featureId": "ability:spellcasting#cleric"
-        }],
+        "links": ["trait:armor_proficiency#cleric", "trait:weapon_proficiency#cleric", "ability:aura#cleric", "ability:channel_energy#cleric", "ability:domains#cleric", "ability:orisons#cleric", "ability:spontaneous_casting#cleric", "ability:spellcasting#cleric"],
         "choices": [{
           "choiceId": "archetype",
           "label": "Archetype",
@@ -125,9 +109,7 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
+        "links": ["ability:channel_energy#cleric"]
       }, {
         "effects": [{
           "addAction": {
@@ -146,174 +128,7 @@
           }
         }]
       }, {
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "ref:base",
-            "numberDelta": 1
-          }
-        }],
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
-      }, {
-        "effects": [{
-          "addAction": {
-            "targetKey": "bab",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "fort:base",
-            "numberDelta": 1
-          }
-        }, {
-          "addAction": {
-            "targetKey": "will:base",
-            "numberDelta": 1
-          }
-        }]
-      }, {
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
-        }]
+        "links": ["ability:channel_energy#cleric"]
       }, {
         "effects": [{
           "addAction": {
@@ -343,9 +158,160 @@
             "numberDelta": 1
           }
         }],
-        "links": [{
-          "featureId": "ability:channel_energy#cleric"
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
         }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "links": ["ability:channel_energy#cleric"]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "fort:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "will:base",
+            "numberDelta": 1
+          }
+        }, {
+          "addAction": {
+            "targetKey": "ref:base",
+            "numberDelta": 1
+          }
+        }]
+      }, {
+        "effects": [{
+          "addAction": {
+            "targetKey": "bab",
+            "numberDelta": 1
+          }
+        }],
+        "links": ["ability:channel_energy#cleric"]
       }, {
         "effects": [{
           "addAction": {

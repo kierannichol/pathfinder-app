@@ -1,17 +1,17 @@
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
 import {CharacterChoiceSelectHandler} from "./CharacterEditor.tsx";
 import React, {useMemo} from "react";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {SelectChoiceModel} from "../../model/ChoiceModel.ts";
 
 interface ArchetypeEditorProps {
-  characterAtLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
   onChange: CharacterChoiceSelectHandler;
 }
 
 export default function ArchetypeEditor({ characterAtLevel, onChange }: ArchetypeEditorProps) {
-  const choiceRefs = useMemo(() => characterAtLevel.choicesOfType('archetype').filter(choiceRef => characterAtLevel.hasSelection(choiceRef)) as FeatureSelectChoiceRef[], [characterAtLevel]);
-  const addChoiceRefs = useMemo(() => characterAtLevel.choicesOfType('archetype').filter(choiceRef => !characterAtLevel.hasSelection(choiceRef)) as FeatureSelectChoiceRef[], [characterAtLevel]);
+  const choiceRefs = useMemo(() => characterAtLevel.choicesOfType('archetype').filter(choiceRef => characterAtLevel.hasSelection(choiceRef)) as SelectChoiceModel[], [characterAtLevel]);
+  const addChoiceRefs = useMemo(() => characterAtLevel.choicesOfType('archetype').filter(choiceRef => !characterAtLevel.hasSelection(choiceRef)) as SelectChoiceModel[], [characterAtLevel]);
 
   if (choiceRefs.length + addChoiceRefs.length === 0) {
     return <></>;
@@ -36,8 +36,8 @@ export default function ArchetypeEditor({ characterAtLevel, onChange }: Archetyp
 }
 
 interface ArchetypeButtonProps {
-  choiceRef: FeatureSelectChoiceRef;
-  characterAtLevel: CharacterAtLevel;
+  choiceRef: SelectChoiceModel;
+  characterAtLevel: CharacterAtLevelModel;
   onChange: CharacterChoiceSelectHandler;
 }
 

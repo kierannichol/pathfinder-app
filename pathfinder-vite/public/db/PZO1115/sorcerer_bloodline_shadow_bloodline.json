@@ -9,60 +9,60 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "conditionalComponents": [{
-          "conditionFormula": "@class:sorcerer\u003e\u003d7",
-          "choices": [{
-            "choiceId": "sorcerer7:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus", "feat:stealthy", "feat:weapon_finesse"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:shadowstrike#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:nighteye#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:shadow_master#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:shadow_well#sorcerer", "ability:dimension_door#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:enveloping_darkness#sorcerer"]
           }]
-        }, {
-          "conditionFormula": "@class:sorcerer\u003e\u003d13",
-          "choices": [{
-            "choiceId": "sorcerer13:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus", "feat:stealthy", "feat:weapon_finesse"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }, {
-          "conditionFormula": "@class:sorcerer\u003e\u003d19",
-          "choices": [{
-            "choiceId": "sorcerer19:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus", "feat:stealthy", "feat:weapon_finesse"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }],
-        "links": [{
-          "featureId": "ability:shadowstrike#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d1"
-        }, {
-          "featureId": "ability:nighteye#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d3"
-        }, {
-          "featureId": "ability:shadow_well#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d9"
-        }, {
-          "featureId": "ability:dimension_door#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d9"
-        }, {
-          "featureId": "ability:enveloping_darkness#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d15"
-        }, {
-          "featureId": "ability:shadow_master#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d20"
         }]
       }]
     }
-  }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus", "feat:stealthy", "feat:weapon_finesse"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus", "feat:stealthy", "feat:weapon_finesse"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:acrobatic", "feat:blind_fight", "feat:dodge", "feat:quick_draw", "feat:silent_spell", "feat:skill_focus", "feat:stealthy", "feat:weapon_finesse"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
 }

@@ -9,60 +9,63 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "conditionalComponents": [{
-          "conditionFormula": "@class:sorcerer\u003e\u003d7",
-          "choices": [{
-            "choiceId": "sorcerer7:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:serpents_fang#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:serpentfriend#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:scaled_soul#sorcerer"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:cure#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:snakeskin#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:den_of_vipers#sorcerer"]
           }]
-        }, {
-          "conditionFormula": "@class:sorcerer\u003e\u003d13",
-          "choices": [{
-            "choiceId": "sorcerer13:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }, {
-          "conditionFormula": "@class:sorcerer\u003e\u003d19",
-          "choices": [{
-            "choiceId": "sorcerer19:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }],
-        "links": [{
-          "featureId": "ability:serpents_fang#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d1"
-        }, {
-          "featureId": "ability:cure#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d5"
-        }, {
-          "featureId": "ability:serpentfriend#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d3"
-        }, {
-          "featureId": "ability:snakeskin#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d9"
-        }, {
-          "featureId": "ability:den_of_vipers#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d15"
-        }, {
-          "featureId": "ability:scaled_soul#sorcerer",
-          "conditionFormula": "@class:sorcerer\u003e\u003d20"
         }]
       }]
     }
-  }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:combat_reflexes", "feat:deceitful", "feat:deft_hands", "feat:persuasive", "feat:silent_spell", "feat:skill_focus", "feat:stealthy"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
 }

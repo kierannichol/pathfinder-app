@@ -1,16 +1,16 @@
 import {useMemo} from "react";
-import {usePathfinderDatabase} from "../../../data/model/PathfinderDatabase.tsx";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import CharacterAtLevel from "../../../data/model/CharacterAtLevel.ts";
-import {FeatureSelectChoiceRef} from "../../../data/model/ChoiceRef.ts";
+import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {SelectChoiceModel} from "../../model/ChoiceModel.ts";
+import {useDatabaseModel} from "../../model/ModelContext.tsx";
 
 interface SelectClassButtonProps {
-  characterAtLevel: CharacterAtLevel;
+  characterAtLevel: CharacterAtLevelModel;
 }
 
 export default function SelectClassButton({ characterAtLevel }: SelectClassButtonProps) {
-  const database = usePathfinderDatabase();
-  const classChoice = useMemo(() => characterAtLevel.choices.find(choice => choice.type === 'class') as FeatureSelectChoiceRef,
+  const database = useDatabaseModel();
+  const classChoice = useMemo(() => characterAtLevel.choices.find(choice => choice.type === 'class') as SelectChoiceModel,
       [characterAtLevel]);
 
   const selectedId = useMemo(() => classChoice !== undefined ? characterAtLevel.selected(classChoice) : undefined, [classChoice, characterAtLevel]);

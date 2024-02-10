@@ -9,60 +9,63 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "conditionalComponents": [{
-          "conditionFormula": "@class:bloodrager\u003e\u003d7",
-          "choices": [{
-            "choiceId": "bloodrager7:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:elemental_form#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:elemental_strikes#bloodrager"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:elemental_body#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:elemental_resistance#bloodrager"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:elemental_movement#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:power_of_the_elements#bloodrager"]
           }]
-        }, {
-          "conditionFormula": "@class:bloodrager\u003e\u003d13",
-          "choices": [{
-            "choiceId": "bloodrager13:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }, {
-          "conditionFormula": "@class:bloodrager\u003e\u003d19",
-          "choices": [{
-            "choiceId": "bloodrager19:bloodline_feat",
-            "label": "Bloodline Feat",
-            "type": "bonus_feat",
-            "featureSelect": {
-              "featureIds": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"],
-              "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
-            }
-          }]
-        }],
-        "links": [{
-          "featureId": "ability:elemental_strikes#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d1"
-        }, {
-          "featureId": "ability:elemental_resistance#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d4"
-        }, {
-          "featureId": "ability:elemental_movement#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d8"
-        }, {
-          "featureId": "ability:power_of_the_elements#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d12"
-        }, {
-          "featureId": "ability:elemental_form#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d16"
-        }, {
-          "featureId": "ability:elemental_body#bloodrager",
-          "conditionFormula": "@class:bloodrager\u003e\u003d20"
         }]
       }]
     }
-  }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:bloodrager\u003e\u003d7",
+    "choices": [{
+      "choiceId": "bloodrager7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:bloodrager\u003e\u003d13",
+    "choices": [{
+      "choiceId": "bloodrager13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:bloodrager\u003e\u003d19",
+    "choices": [{
+      "choiceId": "bloodrager19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:cleave", "feat:dodge", "feat:great_fortitude", "feat:improved_initiative", "feat:lightning_reflexes", "feat:power_attack", "feat:weapon_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
 }

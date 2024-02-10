@@ -23,6 +23,6 @@ public class LinkJsonDeserializer extends StdScalarDeserializer<Link> {
         if (p.getCurrentToken() != JsonToken.VALUE_STRING) {
             ctxt.reportWrongTokenException(Id.class, JsonToken.VALUE_STRING, "Expected string value");
         }
-        return new Link(p.getValueAsString(), null);
+        return new Link(p.getValueAsString());
     }
 }
