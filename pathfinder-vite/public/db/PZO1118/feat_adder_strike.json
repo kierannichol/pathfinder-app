@@ -2,10 +2,14 @@
   "id": "feat:adder_strike",
   "name": "Adder Strike",
   "tags": ["feat", "combat"],
-  "enabledFormula": "all(@ability:poison_use#alchemist,@skill:craft#alchemy,@feat:improved_unarmed_strike)",
+  "enabledFormula": "all(@slayer_talent:poison_use,@skill:craft#alchemy,@feat:improved_unarmed_strike)",
   "maxStacks": 1,
   "description": {
-    "text": "You can quickly apply poison to gloved hands, protected feet, or other protected body parts, delivering the poison with your unarmed strikes."
+    "text": "You can quickly apply poison to gloved hands, protected feet, or other protected body parts, delivering the poison with your unarmed strikes.",
+    "sections": {
+      "Benefit": "As a swift action, you can apply one dose of contact or injury poison to two body parts that you use for unarmed strikes. You must still protect yourself against exposure to contact poisons you apply in this way.",
+      "Normal": "Applying poison to a weapon or single piece of ammunition is a standard action."
+    }
   },
   "stacks": {
     "fixedStack": {

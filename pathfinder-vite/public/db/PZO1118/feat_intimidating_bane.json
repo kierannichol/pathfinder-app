@@ -2,10 +2,13 @@
   "id": "feat:intimidating_bane",
   "name": "Intimidating Bane",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:bane#inquisitor,@feat:dazzling_display,@feat:weapon_focus,@character_level\u003e\u003d8)",
+  "enabledFormula": "all(@ability:bane#bloodrager,@feat:dazzling_display,@feat:weapon_focus,@character_level\u003e\u003d8)",
   "maxStacks": 1,
   "description": {
-    "text": "Your bane weapon strikes fear into your enemies."
+    "text": "Your bane weapon strikes fear into your enemies.",
+    "sections": {
+      "Benefit": "Whenever you use Dazzling Display while your bane feature is active, you gain a +2 bonus on the Intimidate check that Dazzling Display allows against creatures of the type your bane weapon currently affects. Such creatures remain shaken while your bane feature is still active and effective against their creature type."
+    }
   },
   "stacks": {
     "fixedStack": {

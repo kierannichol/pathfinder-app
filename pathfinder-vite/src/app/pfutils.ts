@@ -2,8 +2,28 @@ export function array<T>(t: T|T[]) {
   return t instanceof Array ? t : [t];
 }
 
+export function onlyDefined<T>(ta: (T|undefined|null)[]): T[] {
+  return ta.filter(t => t !== undefined && t !== null) as T[];
+}
+
 export function uniq<T>(t: T[]): T[] {
   return Array.from(new Set(t));
+}
+
+export function uniqById<T>(t: T[],
+                              idFn: (t: T) => number|string,
+                              whichFn: (a: T, b: T) => T = (a,b) => b): T[] {
+  const itemById: {[id:(number|string)]: T} = {};
+  t.forEach(item => {
+    const id = idFn(item);
+    const existing = itemById[id];
+    itemById[id] = (existing === undefined ? item : whichFn(existing, item));
+  });
+  return Object.values(itemById);
+}
+
+export function isString(obj: any): boolean {
+  return typeof obj === 'string';
 }
 
 export function uniqBy<T>(t: T[], byFn: (t:T) => string|number): T[] {

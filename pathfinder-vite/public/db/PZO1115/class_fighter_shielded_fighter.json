@@ -30,6 +30,46 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:shield_guard#fighter_shielded_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:shield_mastery#fighter_shielded_fighter"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:active_defense#fighter_shielded_fighter"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:shield_ward#fighter_shielded_fighter"],
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:shield_fighter#fighter_shielded_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:shield_buffet#fighter_shielded_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
         }]
       }]
     }

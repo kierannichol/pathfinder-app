@@ -2,7 +2,7 @@
   "id": "class:swashbuckler#musketeer",
   "name": "Musketeer",
   "tags": ["archetype", "swashbuckler"],
-  "enabledFormula": "!@modifies:ability:dodging_panache#swashbuckler AND !@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:trait:weapon_proficiency#swashbuckler",
+  "enabledFormula": "!@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:trait:weapon_proficiency#swashbuckler",
   "maxStacks": 1,
   "description": {
     "text": "A number of organizations and kingdoms search for warriors who are brave (or foolish) enough to wield firearms on the battlefield. The daring nature of swashbucklers often makes them ideal candidates for such service."
@@ -12,11 +12,6 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:dodging_panache#swashbuckler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:swashbuckler_finesse#swashbuckler",
             "numberValue": 1
           }
@@ -25,6 +20,14 @@
             "targetKey": "modifies:trait:weapon_proficiency#swashbuckler",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#swashbuckler_musketeer", "ability:musketeer_instruction#swashbuckler_musketeer"],
+            "linksToRemove": ["trait:weapon_proficiency#swashbuckler", "ability:swashbuckler_finesse#swashbuckler"]
+          }]
         }]
       }]
     }

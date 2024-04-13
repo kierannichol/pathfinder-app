@@ -44,6 +44,67 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#fighter_sensate", "ability:weapon_and_armor_proficiency#fighter_sensate"],
+            "linksToRemove": ["trait:weapon_proficiency#fighter", "trait:armor_proficiency#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:guarded_senses#fighter_sensate"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:uncanny_dodge#fighter_sensate"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:centered_senses#fighter_sensate"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:improved_uncanny_dodge#fighter_sensate"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:evasion#fighter_sensate"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:steady#fighter_sensate"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:perfect_senses#fighter_sensate"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:precision#fighter_sensate"],
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }]
         }]
       }]
     }

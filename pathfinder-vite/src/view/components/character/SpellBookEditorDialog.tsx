@@ -25,7 +25,7 @@ export default function SpellBookEditorDialog({ characterAtLevel, show, onCancel
       className={styles.dialog}
   >
     <Modal.Header className={styles.title} closeButton={true} closeVariant={'white'}>
-      <Modal.Title>Spell Book</Modal.Title>
+      <Modal.Title>Level {characterAtLevel.level} Spell Book</Modal.Title>
     </Modal.Header>
 
     <Modal.Body className={styles.body}>

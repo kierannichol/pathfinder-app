@@ -2,7 +2,7 @@
   "id": "class:bard#demagogue",
   "name": "Demagogue",
   "tags": ["archetype", "bard"],
-  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:inspire_courage_",
+  "enabledFormula": "!@modifies:ability:lore_master#bard",
   "maxStacks": 1,
   "description": {
     "text": "Not content with providing amusing and occasionally instructive performances, the demagogue seeks to inflame and ignite his audience, driving them toward a specific purpose with carefully chosen words and tones that may spark momentous change."
@@ -15,11 +15,25 @@
             "targetKey": "modifies:ability:lore_master#bard",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:inspire_courage_",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:bardic_performance#bard_demagogue"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:famous#bard_demagogue"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bardic_performance#bard_demagogue"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:bardic_performance#bard_demagogue"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }]
         }]
       }]
     }

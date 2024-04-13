@@ -35,6 +35,32 @@
             "targetKey": "modifies:trait:armor_proficiency#warpriest",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#warpriest_cult_leader", "ability:weapon_and_armor_proficiency#warpriest_cult_leader", "ability:well_hidden#warpriest_cult_leader"],
+            "linksToRemove": ["trait:weapon_proficiency#warpriest", "trait:armor_proficiency#warpriest", "ability:focus_weapon#warpriest"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:sneak_attack#warpriest_cult_leader"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:enthrall#warpriest_cult_leader"],
+            "linksToRemove": ["ability:channel_energy#warpriest"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:hide_in_plain_sight#warpriest_cult_leader"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }]
         }]
       }]
     }

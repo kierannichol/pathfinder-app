@@ -2,7 +2,7 @@
   "id": "class:magus#mindblade",
   "name": "Mindblade",
   "tags": ["archetype", "magus"],
-  "enabledFormula": "!@modifies:ability:arcane_pool#magus AND !@modifies:ability:counts_as_arcane_pool_for_the_purpose_of_feats_abilities#magus AND !@modifies:ability:the_maguss_spellcasting#magus AND !@modifies:ability:class_features#magus AND !@modifies:ability:medium_armor#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:improved_spell_combat#magus AND !@modifies:ability:heavy_armor#magus AND !@modifies:ability:spell_recall_knowledge_pool_improved_spell_recall_greater_spell_combat#magus",
+  "enabledFormula": "!@modifies:ability:arcane_pool#magus AND !@modifies:ability:medium_armor#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:improved_spell_combat#magus AND !@modifies:ability:heavy_armor#magus",
   "maxStacks": 1,
   "description": {
   },
@@ -12,21 +12,6 @@
         "effects": [{
           "setAction": {
             "targetKey": "modifies:ability:arcane_pool#magus",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:counts_as_arcane_pool_for_the_purpose_of_feats_abilities#magus",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_maguss_spellcasting#magus",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:class_features#magus",
             "numberValue": 1
           }
         }, {
@@ -49,11 +34,32 @@
             "targetKey": "modifies:ability:heavy_armor#magus",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:spell_recall_knowledge_pool_improved_spell_recall_greater_spell_combat#magus",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:psychic_pool#magus_mindblade"],
+            "linksToRemove": ["ability:arcane_pool#magus"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:greater_spell_access#magus"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:psychic_access#magus_mindblade"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:dual_weapons#magus_mindblade"],
+            "linksToRemove": ["ability:medium_armor#magus"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:rapid_manifest#magus_mindblade"],
+            "linksToRemove": ["ability:improved_spell_combat#magus"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:dual_manifest#magus_mindblade"],
+            "linksToRemove": ["ability:heavy_armor#magus"]
+          }]
         }]
       }]
     }

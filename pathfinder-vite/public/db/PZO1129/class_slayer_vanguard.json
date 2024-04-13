@@ -24,6 +24,26 @@
             "targetKey": "modifies:ability:slayer_talent#slayer",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:lookout#slayer_vanguard"],
+            "linksToRemove": ["ability:track#slayer"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:tactician#slayer_vanguard"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:vanguards_bond#slayer_vanguard"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:ever_ready#slayer_vanguard"],
+            "linksToRemove": ["ability:stalker#slayer"]
+          }]
         }]
       }]
     }

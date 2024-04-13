@@ -14,6 +14,14 @@
             "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:charitable_mercy#paladin_oath_of_charity"],
+            "linksToRemove": ["ability:divine_bond#paladin"]
+          }]
         }]
       }]
     }

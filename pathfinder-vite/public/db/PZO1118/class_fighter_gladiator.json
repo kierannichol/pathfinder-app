@@ -15,6 +15,26 @@
             "targetKey": "modifies:ability:bravery#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:fame#fighter_gladiator"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }]
         }]
       }]
     }

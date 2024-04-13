@@ -29,6 +29,11 @@ public record Spell(Id id,
         return new SpellBuilder();
     }
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
+
     public record Level(@JsonProperty("class_id") Id classId,
                         int level) {
 

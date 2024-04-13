@@ -4,7 +4,13 @@ export class Path {
     return a.toString().replace('#', '_');
   }
 
-  static combine(a: string|number, b: string|number): string {
+  static combine(...parts: (string|number)[]): string {
+    return parts
+      .map(a => a.toString())
+      .reduce(Path.combineTwo);
+  }
+
+  private static combineTwo(a: string|number, b: string|number): string {
     a = Path.of(a);
     b = Path.of(b);
     if (a === '') return b.toString();

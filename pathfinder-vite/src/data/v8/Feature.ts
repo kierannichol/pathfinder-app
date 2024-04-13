@@ -1,9 +1,8 @@
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
-import {EntityState} from "./Entity.ts";
 import {Path} from "../../utils/Path.ts";
 import Description from "../Description.ts";
-import {DataContext} from "@kierannichol/formula-js";
+import AppliedState from "./AppliedState.ts";
 
 export class Feature implements Trait {
   featureModifications: any;
@@ -33,9 +32,8 @@ export class ResolvedFeature implements ResolvedTrait {
               public readonly children: ResolvedTrait[]) {
   }
 
-  applyTo(state: EntityState): void {
-    const context = DataContext.of(state);
-    context.set(this.origin.key, context.resolve(this.origin.key)?.asNumber() ?? + 1);
+  applyTo(state: AppliedState): void {
+    state.increment(this.origin.key);
     this.children.forEach(trait => trait.applyTo(state));
   }
 

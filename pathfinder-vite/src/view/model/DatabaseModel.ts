@@ -1,7 +1,19 @@
 import Description from "../../data/Description.ts";
 import {FeatureModel, FeatureSummaryModel} from "./FeatureModel.ts";
+import {ItemModel, ItemOptionModel, ItemOptionSetModel, ItemSummaryModel} from "./ItemModel.ts";
+
+export abstract class ItemDatabaseModel {
+  abstract items(): ItemSummaryModel[];
+  abstract item(id: number): ItemSummaryModel|undefined;
+  abstract load(id: number): Promise<ItemModel|undefined>;
+
+  abstract option(id: number): ItemOptionModel|undefined;
+  abstract options(): ItemOptionModel[];
+  abstract optionSet(id: number): ItemOptionSetModel|undefined;
+}
 
 export abstract class DatabaseModel {
+  abstract itemDatabase(): Promise<ItemDatabaseModel>;
   abstract features(): FeatureSummaryModel[];
   abstract feature(id: string): FeatureSummaryModel|undefined;
   abstract load(id: string): Promise<FeatureModel|undefined>;

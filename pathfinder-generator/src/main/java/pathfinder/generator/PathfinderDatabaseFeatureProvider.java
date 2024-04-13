@@ -15,6 +15,7 @@ import pathfinder.generator.mapper.ClassModificationFeatureMapper;
 import pathfinder.generator.mapper.ComplexFeatureMapper;
 import pathfinder.generator.mapper.FavoredClassMapper;
 import pathfinder.generator.mapper.FeatMapper;
+import pathfinder.generator.mapper.ItemMapper;
 import pathfinder.generator.mapper.RaceMapper;
 import pathfinder.generator.mapper.SpellMapper;
 import pathfinder.model.Feature;
@@ -38,6 +39,7 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
     private final FeatMapper feat;
     private final SpellMapper spell;
     private final RaceMapper race;
+    private final ItemMapper item;
     private final ClassModificationFeatureMapper classModificationFeature;
     private final ComplexFeatureMapper complexFeature;
 
@@ -49,7 +51,7 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
                         favoredClass.map(characterClass)
                 )),
                 queryClassAbilitiesAsFeatures(sourceId),
-                database.query(Query.classFeatures().source(sourceId)).map(classFeature::map),
+                database.query(Query.classFeatures().source(sourceId)).flatMap(classFeature::map),
                 database.query(Query.feats().source(sourceId)).flatMap(feat::flatMap),
                 database.query(Query.spells().source(sourceId)).map(spell::map),
                 database.query(Query.races().source(sourceId)).flatMap(race::flatMap),
@@ -64,6 +66,6 @@ public class PathfinderDatabaseFeatureProvider implements FeatureProvider {
         return database.query(Query.characterClasses().source(sourceId))
                 .flatMap(characterClass -> characterClass.class_features().stream()
                         .map(classFeature -> ClassFeature.fromFeature(classFeature, characterClass.id()))
-                        .map(classFeature::map));
+                        .flatMap(classFeature::map));
     }
 }

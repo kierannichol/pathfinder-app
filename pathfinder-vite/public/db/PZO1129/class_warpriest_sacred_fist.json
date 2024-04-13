@@ -40,6 +40,57 @@
             "targetKey": "modifies:trait:armor_proficiency#warpriest",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#warpriest_sacred_fist", "ability:weapon_and_armor_proficiency#warpriest_sacred_fist", "ability:flurry_of_blows#warpriest_sacred_fist", "ability:unarmed_strike#warpriest_sacred_fist"],
+            "linksToRemove": ["trait:weapon_proficiency#warpriest", "trait:armor_proficiency#warpriest", "ability:sacred_weapon#warpriest", "ability:focus_weapon#warpriest"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:blessed_fortitude#warpriest_sacred_fist"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:bonus_style_feat#warpriest_sacred_fist"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:ki_pool#warpriest_sacred_fist"],
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:miraculous_fortitude#warpriest_sacred_fist"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:sacred_weapon#warpriest", "ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:sacred_weapon#warpriest", "ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:sacred_armor#warpriest"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }]
         }]
       }]
     }

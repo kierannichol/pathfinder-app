@@ -2,10 +2,13 @@
   "id": "feat:ki_stand",
   "name": "Ki Stand",
   "tags": ["feat", "general"],
-  "enabledFormula": "@ability:ki_pool#monk",
+  "enabledFormula": "@ability:ki_pool#unchained_monk",
   "maxStacks": 1,
   "description": {
-    "text": "If an opponent knocks you down, you swiftly rebound with an attack."
+    "text": "If an opponent knocks you down, you swiftly rebound with an attack.",
+    "sections": {
+      "Benefit": "While you have at least 1 ki point in your ki pool, you can stand up as a swift action that provokes attacks of opportunity."
+    }
   },
   "stacks": {
     "fixedStack": {

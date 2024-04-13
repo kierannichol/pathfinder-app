@@ -34,6 +34,41 @@
             "targetKey": "modifies:ability:second_animal_focus#hunter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:pack_bond#hunter_packmaster", "ability:pack_focus#hunter_packmaster"],
+            "linksToRemove": ["ability:animal_companion#hunter", "ability:animal_focus#hunter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:teamwork_feat#hunter_packmaster"],
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:master_of_the_pack#hunter_packmaster"],
+            "linksToRemove": ["ability:master_hunter#hunter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:second_pack_focus#hunter_packmaster"],
+            "linksToRemove": ["ability:second_animal_focus#hunter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }]
         }]
       }]
     }

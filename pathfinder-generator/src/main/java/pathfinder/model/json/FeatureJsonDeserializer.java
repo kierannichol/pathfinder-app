@@ -1,6 +1,5 @@
 package pathfinder.model.json;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -21,7 +20,7 @@ public class FeatureJsonDeserializer extends StdDeserializer<Feature> {
     }
 
     @Override
-    public Feature deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public Feature deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
         ObjectCodec codec = p.getCodec();
         JsonNode node = codec.readTree(p);
 

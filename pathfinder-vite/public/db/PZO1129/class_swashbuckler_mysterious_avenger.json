@@ -40,6 +40,47 @@
             "targetKey": "modifies:ability:bonus_feat#swashbuckler",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger", "ability:weapon_and_armor_proficiency#swashbuckler_mysterious_avenger", "ability:avenger_finesse#swashbuckler_mysterious_avenger"],
+            "linksToRemove": ["trait:weapon_proficiency#swashbuckler", "trait:armor_proficiency#swashbuckler", "ability:swashbuckler_finesse#swashbuckler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:nimble#swashbuckler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:secret_identity#swashbuckler_mysterious_avenger"],
+            "linksToRemove": ["ability:nimble#swashbuckler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:greater_charmed_life#swashbuckler_mysterious_avenger"],
+            "linksToRemove": ["ability:bonus_feat#swashbuckler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:avengers_target#swashbuckler_mysterious_avenger"],
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:nimble#swashbuckler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:nimble#swashbuckler"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:nimble#swashbuckler"]
+          }]
         }]
       }]
     }

@@ -25,6 +25,38 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:balanced_bashing#fighter_thunderstriker"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:improved_buckler_defense#fighter_thunderstriker"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:strapped_shield#fighter_thunderstriker"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:hardbuckler#fighter_thunderstriker"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:knockback_smash#fighter_thunderstriker"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:hammer_and_anvil#fighter_thunderstriker"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:buckler_defense#fighter_thunderstriker"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
         }]
       }]
     }

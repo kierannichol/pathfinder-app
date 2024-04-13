@@ -1,6 +1,6 @@
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
-import {EntityState} from "./Entity.ts";
+import AppliedState from "./AppliedState.ts";
 
 export class Link implements Trait {
 
@@ -27,7 +27,7 @@ export class ResolvedLink implements ResolvedTrait {
     return [ this.feature ];
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
     this.feature.applyTo(state);
   }
 }

@@ -2,10 +2,13 @@
   "id": "feat:strangler",
   "name": "Strangler",
   "tags": ["feat", "combat"],
-  "enabledFormula": "all(@dex_score\u003e\u003d13,@ability:sneak_attack#bard_sandman\u003e\u003d1,@feat:improved_grapple,@feat:improved_unarmed_strike)",
+  "enabledFormula": "all(@dex_score\u003e\u003d13,@ability:sneak_attack#unchained_rogue\u003e\u003d1,@feat:improved_grapple,@feat:improved_unarmed_strike)",
   "maxStacks": 1,
   "description": {
-    "text": "Throttling the life out of enemies is second nature to you."
+    "text": "Throttling the life out of enemies is second nature to you.",
+    "sections": {
+      "Benefit": "Whenever you successfully maintain a grapple and choose to deal damage, you can spend a swift action to deal your sneak attack damage to the creature you are grappling."
+    }
   },
   "stacks": {
     "fixedStack": {

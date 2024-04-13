@@ -13,7 +13,7 @@ export abstract class CharacterAtLevelModel extends BaseDataContext {
   abstract keys(): string[];
   abstract choicesOfType(type: string): ChoiceModel[];
   abstract hasSelection(choice: ChoiceModel): boolean;
-  abstract selected(choice: ChoiceModel): string;
-  abstract without(key: string): CharacterAtLevelModel;
+  abstract selected(choice: ChoiceModel, index?: number): string|string[];
+  abstract withoutChoice(choice: ChoiceModel): CharacterAtLevelModel;
   abstract choice(path: string): ChoiceModel|undefined;
 }

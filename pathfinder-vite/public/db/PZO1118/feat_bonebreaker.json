@@ -2,10 +2,13 @@
   "id": "feat:bonebreaker",
   "name": "Bonebreaker",
   "tags": ["feat", "combat"],
-  "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#monk,@skill:heal\u003e\u003d9)",
+  "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:improved_grapple,@feat:improved_unarmed_strike,@feat:jawbreaker,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d9)",
   "maxStacks": 1,
   "description": {
-    "text": "When your opponent is unable to adequately defend against them, your precise unarmed strikes break bone and tear tissue."
+    "text": "When your opponent is unable to adequately defend against them, your precise unarmed strikes break bone and tear tissue.",
+    "sections": {
+      "Benefit": "When you make a successful Stunning Fist attempt against an opponent that is grappled, helpless, or stunned, you can forgo any other Stunning Fist effect to deal 1d6 Strengthor Dexterity damage to that opponent."
+    }
   },
   "stacks": {
     "fixedStack": {

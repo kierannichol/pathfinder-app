@@ -25,6 +25,30 @@
             "targetKey": "modifies:ability:dirge_of_doom#bard",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:bardic_performance#bard_celebrity"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:famous#bard_celebrity"],
+            "linksToRemove": ["ability:inspire_courage#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bardic_performance#bard_celebrity"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:shining_star#bard_celebrity"],
+            "linksToRemove": ["ability:dirge_of_doom#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:bardic_performance#bard_celebrity"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }]
         }]
       }]
     }

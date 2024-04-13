@@ -29,6 +29,26 @@
             "targetKey": "modifies:ability:abundant_step#monk",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:learned_master#monk_monk_of_the_lotus"],
+            "linksToRemove": ["ability:tongue_of_the_sun_and_moon#monk"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:touch_of_serenity#monk_monk_of_the_lotus"],
+            "linksToRemove": ["ability:stunning_fist#monk"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:touch_of_surrender#monk_monk_of_the_lotus"],
+            "linksToRemove": ["ability:abundant_step#monk"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:touch_of_peace#monk_monk_of_the_lotus"],
+            "linksToRemove": ["ability:quivering_palm#monk"]
+          }]
         }]
       }]
     }

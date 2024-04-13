@@ -1,9 +1,10 @@
-import {BaseDataContext, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
+import {BaseDataContext, DataContext, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
 import Character from "./Character.ts";
 import Expression from "../../utils/logic/Expression.ts";
 import {ResolvedChoice} from "./Choice.ts";
 import {Feature} from "./Feature.ts";
 import {EntityState} from "./Entity.ts";
+import {array} from "../../app/pfutils.ts";
 
 export default class CharacterAtLevel extends BaseDataContext {
 
@@ -15,11 +16,15 @@ export default class CharacterAtLevel extends BaseDataContext {
     super();
   }
 
-  selected(choice: ResolvedChoice|string): string {
+  selected(choice: ResolvedChoice|string, index?: number): string|string[] {
     if (!(typeof choice === 'string')) {
       choice = choice.path;
     }
-    return this.character.selected(choice) ?? '';
+    const value = this.character.selected(choice) ?? '';
+    if (index === undefined) {
+      return value;
+    }
+    return array(value)[index];
   }
 
   hasSelection(choice: ResolvedChoice|string): boolean {
@@ -95,7 +100,18 @@ export default class CharacterAtLevel extends BaseDataContext {
 
   without(key: string): CharacterAtLevel {
     const modifiedState = { ...this.state };
-    delete modifiedState[key];
+    const dataContext = DataContext.of(modifiedState);
+    const resolved = dataContext.resolve(key);
+    const numberValueOfKey = resolved?.asNumber() ?? 0;
+    if (numberValueOfKey === 0 || numberValueOfKey === 1) {
+      dataContext.remove(key);
+    } else {
+      dataContext.set(key, numberValueOfKey - 1);
+    }
     return new CharacterAtLevel(this.level, this.character, this.features, modifiedState, this.choices);
+  }
+
+  withoutChoice(path: string): CharacterAtLevel {
+    return this.character.atLevel(this.level, path);
   }
 }

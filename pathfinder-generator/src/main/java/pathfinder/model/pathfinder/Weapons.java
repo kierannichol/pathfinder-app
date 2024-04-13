@@ -492,4 +492,5 @@ public class Weapons {
 
     public static List<WeaponType> ALL_PIERCING = Weapons.ALL_WEAPONS;
     public static List<WeaponType> ALL_THROWN = Weapons.ALL_RANGED;
+    public static List<WeaponType> ALL_DOUBLE_WEAPONS = List.of(QUARTERSTAFF, AXE_ORC_DOUBLE, FLAIL_DIRE, HAMMER_GNOME_HOOKED, SWORD_TWO_BLADED, URGROSH_DWARVEN, DOUBLE_SPEAR, WARAXE_DWARVEN_DOUBLE, SLING_DOUBLE, CURVE_BLADE_ELVEN);
 }

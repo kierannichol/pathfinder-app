@@ -30,6 +30,41 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToRemove": ["ability:bonus_fighter_combat_feat#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:tactical_awareness#fighter_tactician"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:tactician#fighter_tactician"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:cooperative_combatant#fighter_tactician"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:battle_insight#fighter_tactician"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
         }]
       }]
     }

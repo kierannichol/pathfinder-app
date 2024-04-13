@@ -19,6 +19,33 @@
             "targetKey": "modifies:ability:divine_bond#paladin",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:mercy#paladin"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:shared_defense#paladin_divine_defender"],
+            "linksToRemove": ["ability:mercy#paladin"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:divine_bond#paladin_divine_defender"],
+            "linksToRemove": ["ability:divine_bond#paladin"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:mercy#paladin"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:mercy#paladin"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:mercy#paladin"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:mercy#paladin"]
+          }]
         }]
       }]
     }

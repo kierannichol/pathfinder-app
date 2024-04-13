@@ -35,6 +35,30 @@
             "targetKey": "modifies:ability:knowledge_pool#magus",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:destructive_counterstrike#magus_soul_forger"],
+            "linksToRemove": ["ability:counterstrike#magus"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:instantaneous_reconstruction#magus_soul_forger"],
+            "linksToRemove": ["ability:greater_spell_access#magus"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:fortify_bond#magus_soul_forger"],
+            "linksToRemove": ["ability:spell_recall#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:master_smith#magus_soul_forger"],
+            "linksToRemove": ["ability:knowledge_pool#magus"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:reforge#magus_soul_forger"],
+            "linksToRemove": ["ability:improved_spell_recall#magus"]
+          }]
         }]
       }]
     }

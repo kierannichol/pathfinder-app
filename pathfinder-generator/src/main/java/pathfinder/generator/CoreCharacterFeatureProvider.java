@@ -37,6 +37,7 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
                 generalConcepts(),
                 BaseAttackBonus.generateBaseAttackBonusFeatures(),
                 AbilityScore.abilityScoreFeatures(),
+                AbilityScore.asiFeatures(),
                 weaponProficiencies(),
                 weaponSelectOptions(),
                 armorProficiencies(),
@@ -50,7 +51,8 @@ public class CoreCharacterFeatureProvider implements FeatureProvider {
 
     private Stream<Feature> generalConcepts() {
         return Stream.of(
-                Feature.simple(Id.of("caster_level"), "Caster Level")
+                Feature.simple(Id.of("caster_level"), "Caster Level"),
+                Feature.simple(Id.of("size"), "Character size")
         );
     }
 

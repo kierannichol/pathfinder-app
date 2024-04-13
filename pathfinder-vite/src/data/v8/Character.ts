@@ -2,17 +2,17 @@ import CharacterAtLevel from "./CharacterAtLevel.ts";
 import Database from "./Database.ts";
 import {timedAsync} from "../../app/pfutils.ts";
 import {CharacterTemplate, ResolvedCharacterTemplate} from "./CharacterTemplate.ts";
-import {EntityState} from "./Entity.ts";
 import PackedCharacter, {PackedSelections} from "../PackedCharacter.ts";
 import {Feature, ResolvedFeature} from "./Feature.ts";
 import {ResolvedChoice} from "./Choice.ts";
 import {ResolvedTrait} from "./Trait.ts";
+import AppliedState from "./AppliedState.ts";
 
 export default class Character {
   private resolvedTemplate: ResolvedCharacterTemplate|undefined;
 
   get name(): string {
-    return this.selected('character_name') ?? '';
+    return (this.selected('character_name') as string) ?? '';
   }
 
   static create(id: string, template: CharacterTemplate, database: Database) {
@@ -27,10 +27,9 @@ export default class Character {
     this.resolvedTemplate = resolvedEntity;
   }
 
-  atLevel(level: number): CharacterAtLevel {
+  atLevel(level: number, withoutChoicePath: string | undefined = undefined): CharacterAtLevel {
 
-    const state: EntityState = {};
-    // this.resolvedEntity?.applyTo(state);
+    const state: AppliedState = new AppliedState(withoutChoicePath);
 
     const templateAtLevel = this.resolvedTemplate?.atLevel(level);
 
@@ -42,12 +41,21 @@ export default class Character {
     templateAtLevel?.traverse((descendant: ResolvedTrait) => {
       if (descendant instanceof ResolvedFeature) {
         const feature = descendant.origin;
+        if (state.getAsNumber(feature.key) <= 0) {
+          return false;
+        }
+
         featuresByKey[feature.key] = feature;
       }
 
       if (descendant instanceof ResolvedChoice) {
         choices.push(descendant);
+        if (descendant.path === withoutChoicePath) {
+          return false;
+        }
       }
+
+      return true;
     });
 
     const features = Object.values(featuresByKey);
@@ -55,10 +63,10 @@ export default class Character {
     const characterAtLevel = new CharacterAtLevel(level,
         this,
         features,
-        state,
+        state.rawState,
         choices);
 
-    console.log(characterAtLevel);
+    // console.log(characterAtLevel);
 
     return characterAtLevel;
   }
@@ -70,7 +78,7 @@ export default class Character {
     }
   }
 
-  selected(choiceId: string): string|undefined {
+  selected(choiceId: string): string|string[]|undefined {
     return this.selections[choiceId];
   }
 

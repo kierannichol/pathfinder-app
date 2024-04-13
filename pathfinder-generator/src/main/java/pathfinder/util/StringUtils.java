@@ -1,16 +1,20 @@
 package pathfinder.util;
 
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtils {
-    private static final Pattern LEVEL_PATTERN = Pattern.compile("(\\d+)(?:th|st|rd|nd)?");
+    private static final String COMMA_NOT_IN_BRACKETS = ",(?![^(]*\\))";
 
-    public static String toCamelCase(String s) {
+    private static final Pattern LEVEL_PATTERN = Pattern.compile("(\\d+)(?:th|st|rd|nd)?");
+    private static final Set<Character> WORD_BREAKS = Set.of(' ', '\t', '\n', '(', '-', '/', '[', '<');
+
+    public static String capitalize(String s) {
         StringBuilder builder = new StringBuilder(s.length());
         for (int i = 0; i < s.length(); i++) {
             char current = s.charAt(i);
-            if (i == 0 || s.charAt(i - 1) == ' ') {
+            if (i == 0 || WORD_BREAKS.contains(s.charAt(i - 1))) {
                 current = Character.toUpperCase(current);
             }
             builder.append(current);
@@ -21,7 +25,7 @@ public class StringUtils {
     public static String toSimpleName(String formalName) {
         StringBuilder builder = new StringBuilder(formalName.length());
 
-        String[] parts = formalName.split(",", 2);
+        String[] parts = formalName.split(COMMA_NOT_IN_BRACKETS, 2);
         if (parts.length > 1) {
             builder.append(parts[1].trim());
             builder.append(' ');
@@ -52,4 +56,7 @@ public class StringUtils {
     }
 
 
+    public static boolean notEmpty(String str) {
+        return str != null && !str.isBlank();
+    }
 }

@@ -5,8 +5,8 @@ import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 
 public class PrerequisiteContext {
-    private SourceId sourceId;
-    private Id classId;
+    private final SourceId sourceId;
+    private final Id classId;
 
     public static PrerequisiteContext create() {
         return new PrerequisiteContext(null, null);

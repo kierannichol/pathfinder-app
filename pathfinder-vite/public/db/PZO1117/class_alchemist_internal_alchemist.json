@@ -25,6 +25,22 @@
             "targetKey": "modifies:ability:throw_anything#alchemist",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:breath_mastery#alchemist_internal_alchemist"],
+            "linksToRemove": ["ability:throw_anything#alchemist"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:disease_resistance#alchemist_internal_alchemist"],
+            "linksToRemove": ["ability:swift_alchemy#alchemist"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:uncanny_dodge#alchemist_internal_alchemist"],
+            "linksToRemove": ["ability:swift_poisoning#alchemist"]
+          }]
         }]
       }]
     }

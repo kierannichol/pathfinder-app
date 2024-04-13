@@ -24,6 +24,22 @@
             "targetKey": "modifies:ability:banner#cavalier",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:code_of_gallantry#cavalier_gallant"],
+            "linksToRemove": ["ability:order#cavalier"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:symbol_of_inspiration#cavalier_gallant"],
+            "linksToRemove": ["ability:banner#cavalier"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:symbol_of_resilience#cavalier_gallant"],
+            "linksToRemove": ["ability:greater_banner#cavalier"]
+          }]
         }]
       }]
     }

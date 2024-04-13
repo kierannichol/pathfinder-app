@@ -2,7 +2,7 @@
   "id": "class:cavalier#honor_guard",
   "name": "Honor Guard",
   "tags": ["archetype", "cavalier"],
-  "enabledFormula": "!@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:the_challenge_ability#cavalier AND !@modifies:ability:demanding_challenge#cavalier",
+  "enabledFormula": "!@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:ability:demanding_challenge#cavalier",
   "maxStacks": 1,
   "description": {
     "text": "Certain cavaliers are trained not as advance combatants, but as loyal guards, standing as firm defenders in the face of threats to their chosen charge. These honor guards are sometimes merely ornamental, performing their functions on a ceremonial basis, but a surprising number are capable, deadly opponents, able to take down a threat long before their liege knows of the danger. To be an honor guard is to constantly place one\u0027s self in harm\u0027s way, and to always be willing to lay down one\u0027s life at a moment\u0027s notice."
@@ -22,14 +22,28 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_challenge_ability#cavalier",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:demanding_challenge#cavalier",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:sworn_defense#cavalier_honor_guard"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:intercept#cavalier_honor_guard"],
+            "linksToRemove": ["ability:cavaliers_charge#cavalier"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:warding_charge#cavalier_honor_guard"],
+            "linksToRemove": ["ability:mighty_charge#cavalier"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:defensive_challenge#cavalier_honor_guard"],
+            "linksToRemove": ["ability:demanding_challenge#cavalier"]
+          }]
         }]
       }]
     }

@@ -2,10 +2,13 @@
   "id": "feat:sap_adept",
   "name": "Sap Adept",
   "tags": ["feat", "combat"],
-  "enabledFormula": "@ability:sneak_attack#bard_sandman\u003e\u003d1",
+  "enabledFormula": "@ability:sneak_attack#unchained_rogue\u003e\u003d1",
   "maxStacks": 1,
   "description": {
-    "text": "You know just where to hit to knock the sense out of your foe."
+    "text": "You know just where to hit to knock the sense out of your foe.",
+    "sections": {
+      "Benefit": "Whenever you use a bludgeoning weapon to deal nonlethal sneak attack damage, you gain a bonus on your damage roll equal to the number of sneak attack damage dice you rolled."
+    }
   },
   "stacks": {
     "fixedStack": {

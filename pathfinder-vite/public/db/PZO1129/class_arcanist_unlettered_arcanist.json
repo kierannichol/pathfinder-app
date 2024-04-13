@@ -15,6 +15,14 @@
             "targetKey": "modifies:ability:spellcasting#arcanist",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:arcanist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:witch_spells#arcanist_unlettered_arcanist"],
+            "linksToRemove": ["ability:spellcasting#arcanist"]
+          }]
         }]
       }]
     }

@@ -2,7 +2,7 @@
   "id": "class:cavalier#strategist",
   "name": "Strategist",
   "tags": ["archetype", "cavalier"],
-  "enabledFormula": "!@modifies:ability:greater_banner#cavalier AND !@modifies:ability:expert_trainer#cavalier AND !@modifies:ability:the_cavaliers_18th_level_bonus_feat#cavalier",
+  "enabledFormula": "!@modifies:ability:greater_banner#cavalier AND !@modifies:ability:expert_trainer#cavalier",
   "maxStacks": 1,
   "description": {
     "text": "Some cavaliers make a lifelong mission out of their exceptional ability to direct troops on the battlefield, combining tactical insight with a preternatural skill at improving the teamwork of their allies in order to win the day. Such strategists are masters at learning the strengths and weaknesses of those they fight alongside, and at employing those observations at the most opportune moments. The best of them are also skilled at determining the strengths and weaknesses of their enemies, as well as at countering some of those strengths with their own formidable abilities."
@@ -20,11 +20,21 @@
             "targetKey": "modifies:ability:expert_trainer#cavalier",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_cavaliers_18th_level_bonus_feat#cavalier",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:strategic_supremacy#cavalier_strategist"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:drill_instructor#cavalier_strategist"],
+            "linksToRemove": ["ability:expert_trainer#cavalier"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:tactical_advantage#cavalier_strategist"],
+            "linksToRemove": ["ability:greater_banner#cavalier"]
+          }]
         }]
       }]
     }

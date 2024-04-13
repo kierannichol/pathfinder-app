@@ -19,6 +19,18 @@
             "targetKey": "modifies:ability:aura_of_resolve#paladin",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:anchoring_aura#paladin_oath_against_fiends"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:holy_vessel#paladin_oath_against_fiends"],
+            "linksToRemove": ["ability:mercy#paladin"]
+          }]
         }]
       }]
     }

@@ -30,6 +30,18 @@
             "targetKey": "modifies:ability:animal_focus#hunter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:vermin_companion#hunter_verminous_hunter", "ability:vermin_empathy#hunter_verminous_hunter", "ability:vermin_focus#hunter_verminous_hunter"],
+            "linksToRemove": ["ability:animal_companion#hunter", "ability:wild_empathy#hunter", "ability:animal_focus#hunter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:swarm_stride#hunter_verminous_hunter"],
+            "linksToRemove": ["ability:woodland_stride#hunter"]
+          }]
         }]
       }]
     }

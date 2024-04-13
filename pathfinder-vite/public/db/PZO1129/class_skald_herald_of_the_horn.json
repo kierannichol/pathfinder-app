@@ -2,7 +2,7 @@
   "id": "class:skald#herald_of_the_horn",
   "name": "Herald of the Horn",
   "tags": ["archetype", "skald"],
-  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:first_daily_use_of_spell_kenning#skald AND !@modifies:ability:spell_kenning#skald AND !@modifies:ability:lore_master#skald AND !@modifies:ability:the_second#skald",
+  "enabledFormula": "!@modifies:ability:scribe_scroll#skald AND !@modifies:ability:first_daily_use_of_spell_kenning#skald AND !@modifies:ability:spell_kenning#skald AND !@modifies:ability:lore_master#skald",
   "maxStacks": 1,
   "description": {
   },
@@ -29,11 +29,35 @@
             "targetKey": "modifies:ability:lore_master#skald",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_second#skald",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:skald",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:spell_kenning#skald"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:arcane_bond#skald_herald_of_the_horn"],
+            "linksToRemove": ["ability:scribe_scroll#skald"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:lore_master#skald"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:rousing_retort#skald_herald_of_the_horn"],
+            "linksToRemove": ["ability:first_daily_use_of_spell_kenning#skald"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:horn_call#skald_herald_of_the_horn"],
+            "linksToRemove": ["ability:lore_master#skald"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:crumbling_blast#skald_herald_of_the_horn"],
+            "linksToRemove": ["ability:spell_kenning#skald"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:lore_master#skald"]
+          }]
         }]
       }]
     }

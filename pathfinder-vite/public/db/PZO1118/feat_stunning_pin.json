@@ -2,10 +2,13 @@
   "id": "feat:stunning_pin",
   "name": "Stunning Pin",
   "tags": ["feat", "combat"],
-  "enabledFormula": "all(@feat:improved_grapple,@feat:improved_unarmed_strike,@ability:stunning_fist#monk)",
+  "enabledFormula": "all(@feat:improved_grapple,@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk)",
   "maxStacks": 1,
   "description": {
-    "text": "You can render a pinned foe temporarily incapacitated."
+    "text": "You can render a pinned foe temporarily incapacitated.",
+    "sections": {
+      "Benefit": "Whenever you pin an opponent, you can spend a swift action to make a Stunning Fist attempt against that opponent."
+    }
   },
   "stacks": {
     "fixedStack": {

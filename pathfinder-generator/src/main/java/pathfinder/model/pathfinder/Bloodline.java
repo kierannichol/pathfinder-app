@@ -14,4 +14,9 @@ public record Bloodline(Id id,
                         @JsonProperty("bonus_spells") List<String> bonusSpells,
                         @JsonProperty("bloodline_powers") List<Feature> bloodlinePowers,
                         String source) implements NamedEntity, FromSourceBook, ClassSpecific {
+
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
 }

@@ -2,6 +2,7 @@ package pathfinder.generator.mapper;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -22,7 +23,7 @@ import pathfinder.util.EffectParser;
 public class ClassFeatureMapper {
     private final PrerequisiteParser prerequisiteParser;
 
-    public Feature map(ClassFeature feature) {
+    public Stream<Feature> map(ClassFeature feature) {
         StackBuilder stack = new StackBuilder();
         FeatureBuilder builder = new FeatureBuilder(feature.id())
                 .setName(feature.name())
@@ -44,7 +45,14 @@ public class ClassFeatureMapper {
                 .ifPresent(stack::addChoice);
 
         builder.setRepeatingStack(stack.build());
-        return builder.build();
+        return Stream.of(builder.build(),
+                makeGeneric(builder));
+    }
+
+    private Feature makeGeneric(FeatureBuilder builder) {
+        Feature source = builder.build();
+        return Feature.simple(source.id().withoutOption(),
+                source.name());
     }
 
     private String tryParsePrerequisites(ClassFeature feature) {

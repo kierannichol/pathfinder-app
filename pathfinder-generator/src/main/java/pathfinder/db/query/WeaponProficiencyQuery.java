@@ -14,7 +14,7 @@ public class WeaponProficiencyQuery {
     private Boolean isMelee;
     private Boolean isRanged;
     private Boolean isNatural;
-    private Set<WeaponType> isInSet = new HashSet<>();
+    private final Set<WeaponType> isInSet = new HashSet<>();
 
     public WeaponProficiencyQuery proficiency(WeaponProficiency proficiency) {
         this.proficiency = proficiency;
@@ -63,11 +63,7 @@ public class WeaponProficiencyQuery {
             return false;
         }
 
-        if (isNatural != null && !Weapons.ALL_NATURAL.contains(weapon)) {
-            return false;
-        }
-
-        return true;
+        return isNatural == null || Weapons.ALL_NATURAL.contains(weapon);
     }
 
     WeaponProficiencyQuery() {

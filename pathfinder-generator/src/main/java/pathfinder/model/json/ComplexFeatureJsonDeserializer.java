@@ -1,6 +1,5 @@
 package pathfinder.model.json;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -21,7 +20,7 @@ public class ComplexFeatureJsonDeserializer extends StdDeserializer<ComplexFeatu
     }
 
     @Override
-    public ComplexFeature deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public ComplexFeature deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
         ComplexFeatureBuilder builder = ComplexFeature.builder();
 
         JsonNode node = p.getCodec().readTree(p);

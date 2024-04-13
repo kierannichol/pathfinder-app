@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+import "Description.proto";
+
+option java_multiple_files = true;
+option java_package = "pathfinder.data";
+
+package data;
+
+message ItemSummaryDbo {
+    uint32 id = 1;
+    string name = 2;
+    repeated string tags = 3;
+    double cost = 4;
+    repeated uint32 option_sets = 5;
+    double weight = 6;
+}
+
+message ItemDbo {
+    uint32 id = 1;
+    string name = 2;
+    repeated string tags = 3;
+    double cost = 4;
+    repeated uint32 option_sets = 5;
+    double weight = 6;
+
+    DescriptionDbo description = 100;
+}
+
+message ItemOptionSetDbo {
+    uint32 id = 1;
+    bool has_points = 2;
+    bool has_max_points = 3;
+    uint32 max_points = 4;
+    map<uint32, double> point_currency_cost = 5;
+    repeated int32 option_tags = 6;
+}
+
+message ItemOptionDbo {
+    uint32 id = 1;
+    string name = 2;
+    string base_name_prefix = 3;
+    string base_name_postfix = 4;
+    uint32 point_cost = 5;
+    double currency_cost = 6;
+    repeated uint32 tags = 7;
+    uint32 uniqueness_tag = 8;
+    double currency_cost_by_weight = 9;
+}

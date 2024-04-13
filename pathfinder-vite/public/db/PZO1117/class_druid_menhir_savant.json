@@ -34,6 +34,25 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spirit_sense#druid_menhir_savant"],
+            "linksToRemove": ["ability:wild_empathy#druid", "ability:nature_sense#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:place_magic#druid_menhir_savant"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:empty_body#druid_menhir_savant"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
         }]
       }]
     }

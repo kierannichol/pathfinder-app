@@ -1,5 +1,5 @@
 import React, {MouseEvent, ReactNode, useMemo, useState} from "react";
-import {CloseButton} from "react-bootstrap";
+import {CloseButton, Collapse} from "react-bootstrap";
 import styles from "./ChoiceSelectButton.module.scss";
 import ChoiceSelectorDialog from "./ChoiceSelectorDialog";
 import {ChoiceSelectorCategory, ChoiceSelectorOptions} from "./ChoiceSelectorList";
@@ -25,6 +25,8 @@ interface ChoiceSelectButtonProps {
 }
 
 export default function ChoiceSelectButton({ choiceName, value, id, onSelect, optionsFn, categoriesFn, buttonLabel, children, actionVerb = 'Select', removable = false, variant = 'white', dialogVariant = variant, search = false, sortBy = "none" }: ChoiceSelectButtonProps) {
+  const [removing, setRemoving] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [show, setShow] = useState(false);
   const [categories, setCategories] = useState<ChoiceSelectorCategory[]>();
 
@@ -45,18 +47,28 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
   };
 
   const handleRemove = (event: MouseEvent) => {
-    onSelect?.('');
+    setRemoving(true);
     event.stopPropagation();
+  };
+
+  const finishRemove = () => {
+    setHidden(true);
+    onSelect?.('');
   };
 
   const selectedName = useMemo(() => value !== '' && value !== undefined
           ? array(optionsFn(undefined, undefined))
               .filter(option => option.id === value)
               .map(option => option.label)
+              .at(0)
           : undefined,
       [value]);
 
-  const actualButtonLabel = children ?? <div className={styles.label}><EditIcon/> {buttonLabel ?? selectedName ?? <i>{actionVerb} {choiceName}</i>}</div>;
+  const actualButtonLabel = children
+      ?? <div className={styles.label}><EditIcon/> {buttonLabel
+          ?? selectedName
+          ?? <i>{actionVerb} {choiceName}</i>}
+        </div>;
 
   const removeButton = removable
       ? <CloseButton
@@ -64,18 +76,28 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
           onClick={handleRemove} />
       : <></>;
 
-  return (<>
-        <ButtonBlock id={id} variant={variant} onClick={_ => handleShow()}>{actualButtonLabel} {removeButton}</ButtonBlock>
-        {show && <ChoiceSelectorDialog
-            choiceName={choiceName}
-            variant={dialogVariant}
-            value={value}
-            show={show}
-            onSelect={handleSelect}
-            onCancel={handleCancel}
-            optionsFn={optionsFn}
-            categories={categories}
-            search={search}
-            sortBy={sortBy} />}
-    </>);
+  if (hidden) {
+    return <></>
+  }
+
+  return <>
+    <Collapse in={!removing} onExited={finishRemove}>
+      <div>
+        <ButtonBlock id={id} variant={variant} onClick={_ => handleShow()}>
+            {actualButtonLabel} {removeButton}
+        </ButtonBlock>
+      </div>
+    </Collapse>
+    {show && <ChoiceSelectorDialog
+        choiceName={choiceName}
+        variant={dialogVariant}
+        value={value}
+        show={show}
+        onSelect={handleSelect}
+        onCancel={handleCancel}
+        optionsFn={optionsFn}
+        categories={categories}
+        search={search}
+        sortBy={sortBy} />}
+  </>
 }

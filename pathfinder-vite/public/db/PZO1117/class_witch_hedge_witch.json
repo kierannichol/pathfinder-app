@@ -15,6 +15,18 @@
             "targetKey": "modifies:ability:hex#witch",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:witch",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:spontaneous_healing#witch_hedge_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:empathic_healing#witch_hedge_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }]
         }]
       }]
     }

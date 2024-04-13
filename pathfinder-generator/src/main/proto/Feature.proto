@@ -20,6 +20,7 @@ message FeatureSummaryDbo {
   optional uint32 max_stacks = 5;
   optional string label = 6;
   FeatureOptionsDbo options = 7;
+  string type_alias = 8;
 }
 
 message FeatureDbo {
@@ -30,6 +31,7 @@ message FeatureDbo {
   optional uint32 max_stacks = 5;
   optional string label = 6;
   FeatureOptionsDbo options = 7;
+  string type_alias = 8;
 
   DescriptionDbo description = 100;
   StacksDbo stacks = 101;
@@ -37,7 +39,13 @@ message FeatureDbo {
 }
 
 message FeatureOptionsDbo {
-  string option_tag = 1;
-  string id_template = 2;
-  string prerequisites_template = 3;
+  message Select {
+    string option_tag = 1;
+    string id_template = 2;
+    string prerequisites_template = 3;
+  }
+
+  oneof option {
+    Select select = 1;
+  }
 }

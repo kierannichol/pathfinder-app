@@ -30,6 +30,59 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:stand_firm#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:phalanx_fighting#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:ready_pike#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:deft_shield#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:shield_ally#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:irresistible_advance#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:shielded_fortress#fighter_phalanx_soldier"],
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }]
         }]
       }]
     }

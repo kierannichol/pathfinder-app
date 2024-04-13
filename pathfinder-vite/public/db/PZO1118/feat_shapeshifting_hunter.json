@@ -2,10 +2,13 @@
   "id": "feat:shapeshifting_hunter",
   "name": "Shapeshifting Hunter",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:favored_enemy#ranger,@ability:wild_shape#druid)",
+  "enabledFormula": "all(@ability:favored_enemy#ranger,@ability:wild_shape#skald_totemic_skald)",
   "maxStacks": 1,
   "description": {
-    "text": "You blend your knowledge of foes and your shapeshifting abilities together."
+    "text": "You blend your knowledge of foes and your shapeshifting abilities together.",
+    "sections": {
+      "Benefit": "Your levels of druid stack with your ranger levels for determining when you select your next favored enemy. Also, your ranger levels stack with your druid levels in determining the number of times per day you can use your wild shape class feature, up to a maximum of eight times per day."
+    }
   },
   "stacks": {
     "fixedStack": {

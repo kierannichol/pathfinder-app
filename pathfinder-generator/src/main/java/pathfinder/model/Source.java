@@ -7,6 +7,7 @@ import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
+import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 
@@ -20,5 +21,6 @@ public interface Source {
     List<ClassFeature> classFeatures();
     List<Bloodline> bloodlines();
     List<Spell> spells();
+    List<ItemData> items();
 }
 

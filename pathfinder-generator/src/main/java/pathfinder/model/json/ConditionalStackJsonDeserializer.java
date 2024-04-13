@@ -1,6 +1,5 @@
 package pathfinder.model.json;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -22,7 +21,7 @@ public class ConditionalStackJsonDeserializer extends StdDeserializer<Conditiona
     }
 
     @Override
-    public ConditionalStack deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public ConditionalStack deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
         JsonNode node = p.getCodec().readTree(p);
 
         List<Effect> effects = new ArrayList<>();

@@ -22,7 +22,7 @@ public class WeaponType implements NamedEntity {
 
     private static String formatName(String originalName) {
         String simpleName = StringUtils.toSimpleName(originalName);
-        simpleName = StringUtils.toCamelCase(simpleName);
+        simpleName = StringUtils.capitalize(simpleName);
         return simpleName;
     }
 }

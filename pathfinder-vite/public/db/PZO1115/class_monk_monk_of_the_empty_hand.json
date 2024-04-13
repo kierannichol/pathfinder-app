@@ -29,6 +29,25 @@
             "targetKey": "modifies:ability:diamond_body#monk",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#monk_monk_of_the_empty_hand"],
+            "linksToRemove": ["trait:weapon_proficiency#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:versatile_improvisation#monk_monk_of_the_empty_hand"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:ki_weapons#monk_monk_of_the_empty_hand"],
+            "linksToRemove": ["ability:purity_of_body#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }]
         }]
       }]
     }

@@ -34,6 +34,30 @@
             "targetKey": "modifies:ability:diamond_body#monk",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:firewater_breath#monk_drunken_master"],
+            "linksToRemove": ["ability:empty_body#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:drunken_ki#monk_drunken_master"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:drunken_strength#monk_drunken_master"],
+            "linksToRemove": ["ability:purity_of_body#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:drunken_courage#monk_drunken_master"],
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:drunken_resilience#monk_drunken_master"],
+            "linksToRemove": ["ability:diamond_soul#monk"]
+          }]
         }]
       }]
     }

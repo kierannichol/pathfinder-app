@@ -34,6 +34,30 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:mountaineer#druid_mountain_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:sure_footed#druid_mountain_druid"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:spire_walker#druid_mountain_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:mountain_stance#druid_mountain_druid"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:mountain_stone#druid_mountain_druid"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
         }]
       }]
     }

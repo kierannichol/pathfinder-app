@@ -15,6 +15,14 @@
             "targetKey": "modifies:ability:trapfinding#rogue",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:natural_born_liar#rogue_charlatan"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }]
         }]
       }]
     }

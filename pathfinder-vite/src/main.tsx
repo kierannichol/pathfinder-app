@@ -8,6 +8,8 @@ import CharacterListRoute, {characterListLoader} from "./view/routes/CharacterLi
 import CharacterEditRoute, {characterEditLoader} from "./view/routes/CharacterEditRoute.tsx";
 import {loginLoader, LoginRoute} from "./view/routes/LoginRoute.tsx";
 import CharacterSheetRoute, {characterSheetLoader} from "./view/routes/CharacterSheetRoute.tsx";
+import EquipmentSetListRoute, {equipmentSetListLoader} from "./view/routes/EquipmentSetListRoute.tsx";
+import EquipmentSetEditRoute, {equipmentSetEditLoader} from "./view/routes/EquipmentSetEditRoute.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,16 @@ const router = createBrowserRouter([
         path: "/character/edit/:id",
         element: <CharacterEditRoute />,
         loader: characterEditLoader
+      },
+      {
+        path: "/equipment",
+        element: <EquipmentSetListRoute />,
+        loader: equipmentSetListLoader
+      },
+      {
+        path: "/equipment/edit/:id",
+        element: <EquipmentSetEditRoute />,
+        loader: equipmentSetEditLoader
       }
     ]
   },
@@ -39,7 +51,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )

@@ -20,6 +20,18 @@
             "targetKey": "modifies:ability:uncanny_dodge#rogue",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:careful_disarm#rogue_burglar"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:distraction#rogue_burglar"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }]
         }]
       }]
     }

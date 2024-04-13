@@ -1558,6 +1558,9 @@ export namespace data {
 
         /** FeatureSummaryDbo options */
         options?: (data.FeatureOptionsDbo|null);
+
+        /** FeatureSummaryDbo typeAlias */
+        typeAlias?: (string|null);
     }
 
     /** Represents a FeatureSummaryDbo. */
@@ -1589,6 +1592,9 @@ export namespace data {
 
         /** FeatureSummaryDbo options. */
         public options?: (data.FeatureOptionsDbo|null);
+
+        /** FeatureSummaryDbo typeAlias. */
+        public typeAlias: string;
 
         /** FeatureSummaryDbo _maxStacks. */
         public _maxStacks?: "maxStacks";
@@ -1698,6 +1704,9 @@ export namespace data {
         /** FeatureDbo options */
         options?: (data.FeatureOptionsDbo|null);
 
+        /** FeatureDbo typeAlias */
+        typeAlias?: (string|null);
+
         /** FeatureDbo description */
         description?: (data.DescriptionDbo|null);
 
@@ -1737,6 +1746,9 @@ export namespace data {
 
         /** FeatureDbo options. */
         public options?: (data.FeatureOptionsDbo|null);
+
+        /** FeatureDbo typeAlias. */
+        public typeAlias: string;
 
         /** FeatureDbo description. */
         public description?: (data.DescriptionDbo|null);
@@ -1834,14 +1846,8 @@ export namespace data {
     /** Properties of a FeatureOptionsDbo. */
     interface IFeatureOptionsDbo {
 
-        /** FeatureOptionsDbo optionTag */
-        optionTag?: (string|null);
-
-        /** FeatureOptionsDbo idTemplate */
-        idTemplate?: (string|null);
-
-        /** FeatureOptionsDbo prerequisitesTemplate */
-        prerequisitesTemplate?: (string|null);
+        /** FeatureOptionsDbo select */
+        select?: (data.FeatureOptionsDbo.Select|null);
     }
 
     /** Represents a FeatureOptionsDbo. */
@@ -1853,14 +1859,11 @@ export namespace data {
          */
         constructor(properties?: data.IFeatureOptionsDbo);
 
-        /** FeatureOptionsDbo optionTag. */
-        public optionTag: string;
+        /** FeatureOptionsDbo select. */
+        public select?: (data.FeatureOptionsDbo.Select|null);
 
-        /** FeatureOptionsDbo idTemplate. */
-        public idTemplate: string;
-
-        /** FeatureOptionsDbo prerequisitesTemplate. */
-        public prerequisitesTemplate: string;
+        /** FeatureOptionsDbo option. */
+        public option?: "select";
 
         /**
          * Creates a new FeatureOptionsDbo instance using the specified properties.
@@ -1938,6 +1941,118 @@ export namespace data {
          * @returns The default type url
          */
         public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    namespace FeatureOptionsDbo {
+
+        /** Properties of a Select. */
+        interface ISelect {
+
+            /** Select optionTag */
+            optionTag?: (string|null);
+
+            /** Select idTemplate */
+            idTemplate?: (string|null);
+
+            /** Select prerequisitesTemplate */
+            prerequisitesTemplate?: (string|null);
+        }
+
+        /** Represents a Select. */
+        class Select implements ISelect {
+
+            /**
+             * Constructs a new Select.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: data.FeatureOptionsDbo.ISelect);
+
+            /** Select optionTag. */
+            public optionTag: string;
+
+            /** Select idTemplate. */
+            public idTemplate: string;
+
+            /** Select prerequisitesTemplate. */
+            public prerequisitesTemplate: string;
+
+            /**
+             * Creates a new Select instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns Select instance
+             */
+            public static create(properties?: data.FeatureOptionsDbo.ISelect): data.FeatureOptionsDbo.Select;
+
+            /**
+             * Encodes the specified Select message. Does not implicitly {@link data.FeatureOptionsDbo.Select.verify|verify} messages.
+             * @param message Select message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: data.FeatureOptionsDbo.Select, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified Select message, length delimited. Does not implicitly {@link data.FeatureOptionsDbo.Select.verify|verify} messages.
+             * @param message Select message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: data.FeatureOptionsDbo.Select, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a Select message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns Select
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.FeatureOptionsDbo.Select;
+
+            /**
+             * Decodes a Select message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns Select
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.FeatureOptionsDbo.Select;
+
+            /**
+             * Verifies a Select message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a Select message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns Select
+             */
+            public static fromObject(object: { [k: string]: any }): data.FeatureOptionsDbo.Select;
+
+            /**
+             * Creates a plain object from a Select message. Also converts values to other types if specified.
+             * @param message Select
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: data.FeatureOptionsDbo.Select, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this Select to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for Select
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
     }
 
     /** Properties of a CharacterTemplateDbo. */
@@ -2249,6 +2364,756 @@ export namespace data {
 
         /**
          * Gets the default type url for SourceModuleDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of a SourceModuleItemDatabaseDbo. */
+    interface ISourceModuleItemDatabaseDbo {
+
+        /** SourceModuleItemDatabaseDbo sourceId */
+        sourceId?: (number|null);
+
+        /** SourceModuleItemDatabaseDbo sourceCode */
+        sourceCode?: (string|null);
+
+        /** SourceModuleItemDatabaseDbo items */
+        items?: (data.ItemSummaryDbo[]|null);
+
+        /** SourceModuleItemDatabaseDbo optionSets */
+        optionSets?: (data.ItemOptionSetDbo[]|null);
+
+        /** SourceModuleItemDatabaseDbo options */
+        options?: (data.ItemOptionDbo[]|null);
+    }
+
+    /** Represents a SourceModuleItemDatabaseDbo. */
+    class SourceModuleItemDatabaseDbo implements ISourceModuleItemDatabaseDbo {
+
+        /**
+         * Constructs a new SourceModuleItemDatabaseDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.ISourceModuleItemDatabaseDbo);
+
+        /** SourceModuleItemDatabaseDbo sourceId. */
+        public sourceId: number;
+
+        /** SourceModuleItemDatabaseDbo sourceCode. */
+        public sourceCode: string;
+
+        /** SourceModuleItemDatabaseDbo items. */
+        public items: data.ItemSummaryDbo[];
+
+        /** SourceModuleItemDatabaseDbo optionSets. */
+        public optionSets: data.ItemOptionSetDbo[];
+
+        /** SourceModuleItemDatabaseDbo options. */
+        public options: data.ItemOptionDbo[];
+
+        /**
+         * Creates a new SourceModuleItemDatabaseDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns SourceModuleItemDatabaseDbo instance
+         */
+        public static create(properties?: data.ISourceModuleItemDatabaseDbo): data.SourceModuleItemDatabaseDbo;
+
+        /**
+         * Encodes the specified SourceModuleItemDatabaseDbo message. Does not implicitly {@link data.SourceModuleItemDatabaseDbo.verify|verify} messages.
+         * @param message SourceModuleItemDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.SourceModuleItemDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified SourceModuleItemDatabaseDbo message, length delimited. Does not implicitly {@link data.SourceModuleItemDatabaseDbo.verify|verify} messages.
+         * @param message SourceModuleItemDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.SourceModuleItemDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a SourceModuleItemDatabaseDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns SourceModuleItemDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.SourceModuleItemDatabaseDbo;
+
+        /**
+         * Decodes a SourceModuleItemDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns SourceModuleItemDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.SourceModuleItemDatabaseDbo;
+
+        /**
+         * Verifies a SourceModuleItemDatabaseDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a SourceModuleItemDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns SourceModuleItemDatabaseDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.SourceModuleItemDatabaseDbo;
+
+        /**
+         * Creates a plain object from a SourceModuleItemDatabaseDbo message. Also converts values to other types if specified.
+         * @param message SourceModuleItemDatabaseDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.SourceModuleItemDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this SourceModuleItemDatabaseDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for SourceModuleItemDatabaseDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an ItemSummaryDbo. */
+    interface IItemSummaryDbo {
+
+        /** ItemSummaryDbo id */
+        id?: (number|null);
+
+        /** ItemSummaryDbo name */
+        name?: (string|null);
+
+        /** ItemSummaryDbo tags */
+        tags?: (string[]|null);
+
+        /** ItemSummaryDbo cost */
+        cost?: (number|null);
+
+        /** ItemSummaryDbo optionSets */
+        optionSets?: (number[]|null);
+
+        /** ItemSummaryDbo weight */
+        weight?: (number|null);
+    }
+
+    /** Represents an ItemSummaryDbo. */
+    class ItemSummaryDbo implements IItemSummaryDbo {
+
+        /**
+         * Constructs a new ItemSummaryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IItemSummaryDbo);
+
+        /** ItemSummaryDbo id. */
+        public id: number;
+
+        /** ItemSummaryDbo name. */
+        public name: string;
+
+        /** ItemSummaryDbo tags. */
+        public tags: string[];
+
+        /** ItemSummaryDbo cost. */
+        public cost: number;
+
+        /** ItemSummaryDbo optionSets. */
+        public optionSets: number[];
+
+        /** ItemSummaryDbo weight. */
+        public weight: number;
+
+        /**
+         * Creates a new ItemSummaryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ItemSummaryDbo instance
+         */
+        public static create(properties?: data.IItemSummaryDbo): data.ItemSummaryDbo;
+
+        /**
+         * Encodes the specified ItemSummaryDbo message. Does not implicitly {@link data.ItemSummaryDbo.verify|verify} messages.
+         * @param message ItemSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ItemSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ItemSummaryDbo message, length delimited. Does not implicitly {@link data.ItemSummaryDbo.verify|verify} messages.
+         * @param message ItemSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ItemSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an ItemSummaryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ItemSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ItemSummaryDbo;
+
+        /**
+         * Decodes an ItemSummaryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ItemSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ItemSummaryDbo;
+
+        /**
+         * Verifies an ItemSummaryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an ItemSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ItemSummaryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ItemSummaryDbo;
+
+        /**
+         * Creates a plain object from an ItemSummaryDbo message. Also converts values to other types if specified.
+         * @param message ItemSummaryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ItemSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ItemSummaryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ItemSummaryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an ItemDbo. */
+    interface IItemDbo {
+
+        /** ItemDbo id */
+        id?: (number|null);
+
+        /** ItemDbo name */
+        name?: (string|null);
+
+        /** ItemDbo tags */
+        tags?: (string[]|null);
+
+        /** ItemDbo cost */
+        cost?: (number|null);
+
+        /** ItemDbo optionSets */
+        optionSets?: (number[]|null);
+
+        /** ItemDbo weight */
+        weight?: (number|null);
+
+        /** ItemDbo description */
+        description?: (data.DescriptionDbo|null);
+    }
+
+    /** Represents an ItemDbo. */
+    class ItemDbo implements IItemDbo {
+
+        /**
+         * Constructs a new ItemDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IItemDbo);
+
+        /** ItemDbo id. */
+        public id: number;
+
+        /** ItemDbo name. */
+        public name: string;
+
+        /** ItemDbo tags. */
+        public tags: string[];
+
+        /** ItemDbo cost. */
+        public cost: number;
+
+        /** ItemDbo optionSets. */
+        public optionSets: number[];
+
+        /** ItemDbo weight. */
+        public weight: number;
+
+        /** ItemDbo description. */
+        public description?: (data.DescriptionDbo|null);
+
+        /**
+         * Creates a new ItemDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ItemDbo instance
+         */
+        public static create(properties?: data.IItemDbo): data.ItemDbo;
+
+        /**
+         * Encodes the specified ItemDbo message. Does not implicitly {@link data.ItemDbo.verify|verify} messages.
+         * @param message ItemDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ItemDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ItemDbo message, length delimited. Does not implicitly {@link data.ItemDbo.verify|verify} messages.
+         * @param message ItemDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ItemDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an ItemDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ItemDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ItemDbo;
+
+        /**
+         * Decodes an ItemDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ItemDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ItemDbo;
+
+        /**
+         * Verifies an ItemDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an ItemDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ItemDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ItemDbo;
+
+        /**
+         * Creates a plain object from an ItemDbo message. Also converts values to other types if specified.
+         * @param message ItemDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ItemDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ItemDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ItemDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an ItemOptionSetDbo. */
+    interface IItemOptionSetDbo {
+
+        /** ItemOptionSetDbo id */
+        id?: (number|null);
+
+        /** ItemOptionSetDbo hasPoints */
+        hasPoints?: (boolean|null);
+
+        /** ItemOptionSetDbo hasMaxPoints */
+        hasMaxPoints?: (boolean|null);
+
+        /** ItemOptionSetDbo maxPoints */
+        maxPoints?: (number|null);
+
+        /** ItemOptionSetDbo pointCurrencyCost */
+        pointCurrencyCost?: ({ [k: string]: number }|null);
+
+        /** ItemOptionSetDbo optionTags */
+        optionTags?: (number[]|null);
+    }
+
+    /** Represents an ItemOptionSetDbo. */
+    class ItemOptionSetDbo implements IItemOptionSetDbo {
+
+        /**
+         * Constructs a new ItemOptionSetDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IItemOptionSetDbo);
+
+        /** ItemOptionSetDbo id. */
+        public id: number;
+
+        /** ItemOptionSetDbo hasPoints. */
+        public hasPoints: boolean;
+
+        /** ItemOptionSetDbo hasMaxPoints. */
+        public hasMaxPoints: boolean;
+
+        /** ItemOptionSetDbo maxPoints. */
+        public maxPoints: number;
+
+        /** ItemOptionSetDbo pointCurrencyCost. */
+        public pointCurrencyCost: { [k: string]: number };
+
+        /** ItemOptionSetDbo optionTags. */
+        public optionTags: number[];
+
+        /**
+         * Creates a new ItemOptionSetDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ItemOptionSetDbo instance
+         */
+        public static create(properties?: data.IItemOptionSetDbo): data.ItemOptionSetDbo;
+
+        /**
+         * Encodes the specified ItemOptionSetDbo message. Does not implicitly {@link data.ItemOptionSetDbo.verify|verify} messages.
+         * @param message ItemOptionSetDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ItemOptionSetDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ItemOptionSetDbo message, length delimited. Does not implicitly {@link data.ItemOptionSetDbo.verify|verify} messages.
+         * @param message ItemOptionSetDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ItemOptionSetDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an ItemOptionSetDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ItemOptionSetDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ItemOptionSetDbo;
+
+        /**
+         * Decodes an ItemOptionSetDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ItemOptionSetDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ItemOptionSetDbo;
+
+        /**
+         * Verifies an ItemOptionSetDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an ItemOptionSetDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ItemOptionSetDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ItemOptionSetDbo;
+
+        /**
+         * Creates a plain object from an ItemOptionSetDbo message. Also converts values to other types if specified.
+         * @param message ItemOptionSetDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ItemOptionSetDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ItemOptionSetDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ItemOptionSetDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an ItemOptionDbo. */
+    interface IItemOptionDbo {
+
+        /** ItemOptionDbo id */
+        id?: (number|null);
+
+        /** ItemOptionDbo name */
+        name?: (string|null);
+
+        /** ItemOptionDbo baseNamePrefix */
+        baseNamePrefix?: (string|null);
+
+        /** ItemOptionDbo baseNamePostfix */
+        baseNamePostfix?: (string|null);
+
+        /** ItemOptionDbo pointCost */
+        pointCost?: (number|null);
+
+        /** ItemOptionDbo currencyCost */
+        currencyCost?: (number|null);
+
+        /** ItemOptionDbo tags */
+        tags?: (number[]|null);
+
+        /** ItemOptionDbo uniquenessTag */
+        uniquenessTag?: (number|null);
+
+        /** ItemOptionDbo currencyCostByWeight */
+        currencyCostByWeight?: (number|null);
+    }
+
+    /** Represents an ItemOptionDbo. */
+    class ItemOptionDbo implements IItemOptionDbo {
+
+        /**
+         * Constructs a new ItemOptionDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IItemOptionDbo);
+
+        /** ItemOptionDbo id. */
+        public id: number;
+
+        /** ItemOptionDbo name. */
+        public name: string;
+
+        /** ItemOptionDbo baseNamePrefix. */
+        public baseNamePrefix: string;
+
+        /** ItemOptionDbo baseNamePostfix. */
+        public baseNamePostfix: string;
+
+        /** ItemOptionDbo pointCost. */
+        public pointCost: number;
+
+        /** ItemOptionDbo currencyCost. */
+        public currencyCost: number;
+
+        /** ItemOptionDbo tags. */
+        public tags: number[];
+
+        /** ItemOptionDbo uniquenessTag. */
+        public uniquenessTag: number;
+
+        /** ItemOptionDbo currencyCostByWeight. */
+        public currencyCostByWeight: number;
+
+        /**
+         * Creates a new ItemOptionDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ItemOptionDbo instance
+         */
+        public static create(properties?: data.IItemOptionDbo): data.ItemOptionDbo;
+
+        /**
+         * Encodes the specified ItemOptionDbo message. Does not implicitly {@link data.ItemOptionDbo.verify|verify} messages.
+         * @param message ItemOptionDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ItemOptionDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ItemOptionDbo message, length delimited. Does not implicitly {@link data.ItemOptionDbo.verify|verify} messages.
+         * @param message ItemOptionDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ItemOptionDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an ItemOptionDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ItemOptionDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ItemOptionDbo;
+
+        /**
+         * Decodes an ItemOptionDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ItemOptionDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ItemOptionDbo;
+
+        /**
+         * Verifies an ItemOptionDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an ItemOptionDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ItemOptionDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ItemOptionDbo;
+
+        /**
+         * Creates a plain object from an ItemOptionDbo message. Also converts values to other types if specified.
+         * @param message ItemOptionDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ItemOptionDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ItemOptionDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ItemOptionDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an IdDatabaseDbo. */
+    interface IIdDatabaseDbo {
+
+        /** IdDatabaseDbo codeToId */
+        codeToId?: ({ [k: string]: number }|null);
+    }
+
+    /** Represents an IdDatabaseDbo. */
+    class IdDatabaseDbo implements IIdDatabaseDbo {
+
+        /**
+         * Constructs a new IdDatabaseDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IIdDatabaseDbo);
+
+        /** IdDatabaseDbo codeToId. */
+        public codeToId: { [k: string]: number };
+
+        /**
+         * Creates a new IdDatabaseDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns IdDatabaseDbo instance
+         */
+        public static create(properties?: data.IIdDatabaseDbo): data.IdDatabaseDbo;
+
+        /**
+         * Encodes the specified IdDatabaseDbo message. Does not implicitly {@link data.IdDatabaseDbo.verify|verify} messages.
+         * @param message IdDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.IdDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified IdDatabaseDbo message, length delimited. Does not implicitly {@link data.IdDatabaseDbo.verify|verify} messages.
+         * @param message IdDatabaseDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.IdDatabaseDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an IdDatabaseDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns IdDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.IdDatabaseDbo;
+
+        /**
+         * Decodes an IdDatabaseDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns IdDatabaseDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.IdDatabaseDbo;
+
+        /**
+         * Verifies an IdDatabaseDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an IdDatabaseDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns IdDatabaseDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.IdDatabaseDbo;
+
+        /**
+         * Creates a plain object from an IdDatabaseDbo message. Also converts values to other types if specified.
+         * @param message IdDatabaseDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.IdDatabaseDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this IdDatabaseDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for IdDatabaseDbo
          * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
          * @returns The default type url
          */

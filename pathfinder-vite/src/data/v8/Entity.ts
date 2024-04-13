@@ -2,11 +2,12 @@ import {DataContextState} from "@kierannichol/formula-js";
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {FeatureLoader, ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {ResolvedChoice} from "./Choice.ts";
+import AppliedState from "./AppliedState.ts";
 
 export type EntityState = DataContextState;
 
 export class EntityChoiceSelections {
-  [path: string]: string;
+  [path: string]: string|string[];
 }
 
 export class Entity {
@@ -40,7 +41,7 @@ export class ResolvedEntity {
     return this.traits.flatMap(choices);
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
     this.traits.forEach(trait => trait.applyTo(state));
   }
 }

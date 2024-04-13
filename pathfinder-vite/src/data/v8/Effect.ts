@@ -1,6 +1,6 @@
 import {Formula} from "@kierannichol/formula-js";
 import {ResolvedTrait, Trait} from "./Trait.ts";
-import {EntityState} from "./Entity.ts";
+import AppliedState from "./AppliedState.ts";
 
 export class SetFormulaEffect implements Trait, ResolvedTrait {
   children: ResolvedTrait[] = [];
@@ -9,9 +9,9 @@ export class SetFormulaEffect implements Trait, ResolvedTrait {
               public readonly formula: string) {
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
     try {
-      state[this.targetKey] = Formula.parse(this.formula);
+      state.set(this.targetKey, Formula.parse(this.formula));
     } catch (e) {
       console.error("Unable to parse: " + this.formula);
       throw e;
@@ -30,8 +30,8 @@ export class SetTextEffect implements Trait, ResolvedTrait {
               public readonly value: string) {
   }
 
-  applyTo(state: EntityState): void {
-    state[this.targetKey] = this.value;
+  applyTo(state: AppliedState): void {
+    state.set(this.targetKey, this.value);
   }
 
   async resolve(): Promise<ResolvedTrait> {
@@ -46,8 +46,8 @@ export class SetNumberEffect implements Trait, ResolvedTrait {
               public readonly value: number) {
   }
 
-  applyTo(state: EntityState): void {
-    state[this.targetKey] = this.value;
+  applyTo(state: AppliedState): void {
+    state.set(this.targetKey, this.value);
   }
 
   async resolve(): Promise<ResolvedTrait> {
@@ -62,8 +62,8 @@ export class AddEffect implements Trait, ResolvedTrait {
               public readonly delta: number) {
   }
 
-  applyTo(state: EntityState): void {
-    state[this.targetKey] = (state[this.targetKey] as number ?? 0) + this.delta;
+  applyTo(state: AppliedState): void {
+    state.increment(this.targetKey, this.delta);
   }
 
   async resolve(): Promise<ResolvedTrait> {

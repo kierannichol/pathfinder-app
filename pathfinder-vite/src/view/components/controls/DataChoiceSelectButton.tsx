@@ -1,8 +1,7 @@
 import React, {ReactNode, useMemo} from "react";
-import FeatureDescription from "../character/FeatureDescription.tsx";
+import SelectionFeatureDescription from "../character/SelectionFeatureDescription.tsx";
 import ChoiceSelectButton from "./ChoiceSelectButton.tsx";
 import {ChoiceSelectorCategory, ChoiceSelectorOption} from "./ChoiceSelectorList.tsx";
-import Id from "../../../utils/Id.ts";
 import {ChoiceCategoryModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
 import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
 import {FeatureSummaryModel} from "../../model/FeatureModel.ts";
@@ -13,6 +12,7 @@ import {useDatabaseModel} from "../../model/ModelContext.tsx";
 interface DataChoiceSelectButtonProps {
   choiceRef: SelectChoiceModel;
   characterAtLevel: CharacterAtLevelModel;
+  choiceIndex?: number;
   id?: string;
   onSelect?: (id: string) => void;
   label?: string;
@@ -24,22 +24,15 @@ interface DataChoiceSelectButtonProps {
   children?: ReactNode;
 }
 
-export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
+export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
   const database = useDatabaseModel();
   const characterWithoutCurrent = useMemo(() => {
     const selected = characterAtLevel.selected(choiceRef);
-    return selected !== undefined ? characterAtLevel.without(selected) : characterAtLevel;
+    return selected !== undefined ? characterAtLevel.withoutChoice(choiceRef) : characterAtLevel;
   }, [characterAtLevel, choiceRef]);
 
   function handleSelect(id: string|undefined) {
-    console.log("Selecting: " + id)
-    if (id) {
-      // const summary = database.feature(id);
-      // if (summary?.optionsTemplate !== undefined) {
-      //   onSelect?.(id);
-      // }
-      onSelect?.(id);
-    }
+    onSelect?.(id ?? '');
   }
 
   return <ChoiceSelectButton
@@ -47,7 +40,7 @@ export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id
       choiceName={label ?? choiceRef.label}
       variant={variant ?? "default"}
       dialogVariant={dialogVariant ?? variant ?? "default"}
-      value={Id.withoutOption(characterAtLevel.selected(choiceRef))}
+      value={characterAtLevel.selected(choiceRef, choiceIndex) as string}
       buttonLabel={buttonLabel}
       onSelect={handleSelect}
       search={search}
@@ -58,7 +51,7 @@ export default function DataChoiceSelectButton({ choiceRef, characterAtLevel, id
       categoriesFn={() => choiceRef.categories.map((category: ChoiceCategoryModel) => new ChoiceSelectorCategory(category.label, category.tag))}
       children={children}
       actionVerb={choiceRef.repeatingIndex === 0 ? 'Select' : 'Add'}
-      removable={choiceRef.repeatingIndex > 0 && characterAtLevel.selected(choiceRef) !== ''}
+      removable={choiceRef.repeatingIndex > 0 && characterAtLevel.selected(choiceRef, choiceIndex) !== undefined}
   />
 }
 
@@ -79,7 +72,7 @@ function featureToChoiceSelectorOption(feature: FeatureSummaryModel, database: D
     if (descriptionFn !== undefined) {
       return descriptionFn(description);
     }
-    return <FeatureDescription
+    return <SelectionFeatureDescription
         feature={loaded}
         description={description}
         // featureModifications={loaded.featureModifications}

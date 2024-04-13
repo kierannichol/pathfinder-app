@@ -29,6 +29,26 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:cavesense#druid_cave_druid"],
+            "linksToRemove": ["ability:nature_sense#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:tunnelrunner#druid_cave_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:lightfoot#druid_cave_druid"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:resist_subterranean_corruption#druid_cave_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }]
         }]
       }]
     }

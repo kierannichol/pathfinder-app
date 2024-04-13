@@ -23,8 +23,21 @@ export class ResolvedEntityContext {
     return loaded;
   }
 
-  selection(path: string): string|undefined {
+  selection(path: string): string|string[]|undefined {
     return this.selections[path];
+  }
+
+  swapSelections(path1: string, path2: string) {
+    const temp = this.selections[path1];
+    this.selections[path1] = this.selections[path2];
+    this.selections[path2] = temp;
+
+    if (this.selections[path1] === undefined || this.selections[path1] === '') {
+      delete this.selections[path1];
+    }
+    if (this.selections[path2] === undefined || this.selections[path2] === '') {
+      delete this.selections[path2];
+    }
   }
 
   register(id: string | undefined, count: number = 1) {

@@ -1,0 +1,33 @@
+.label {
+  display: flex;
+  flex-grow: 1;
+  align-self: stretch;
+  gap: 0.5em;
+}
+
+.labelSegment {
+  align-self: center;
+  align-content: center;
+  display: flex;
+  justify-content: stretch;
+}
+
+.label > *:first-child {
+  flex-grow: 1;
+}
+
+.deleteButton:hover {
+  color: red;
+}
+
+.editButton {
+  margin-left: 0.5em;
+}
+
+.editButton:hover {
+  color: forestgreen;
+}
+
+.control {
+
+}

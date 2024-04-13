@@ -35,6 +35,38 @@
             "targetKey": "modifies:trait:armor_proficiency#bloodrager",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#bloodrager_steelblood", "ability:indomitable_stance#bloodrager_steelblood"],
+            "linksToRemove": ["trait:armor_proficiency#bloodrager", "ability:fast_movement#bloodrager"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:armored_swiftness#bloodrager_steelblood"],
+            "linksToRemove": ["ability:uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:armor_training#bloodrager_steelblood"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:blood_deflection#bloodrager_steelblood"],
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }]
         }]
       }]
     }

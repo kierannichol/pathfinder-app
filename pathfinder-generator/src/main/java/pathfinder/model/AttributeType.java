@@ -35,8 +35,8 @@ public enum AttributeType {
     SORCERER_BLOODLINE("sorcerer_bloodline"),
     BLOODRAGER_BLOODLINE("bloodrager_bloodline"),
     WILD_TALENT("wild_talent"),
-
     SPELL("spell"),
+    ITEM("item"),
     ;
 
     private final String key;

@@ -25,6 +25,22 @@
             "targetKey": "modifies:ability:transposition#summoner",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:summoner",
+          "stackModifications": [{
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:mutate_eidolon#summoner_evolutionist"],
+            "linksToRemove": ["ability:makers_call#summoner"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:evolve_base_form#summoner_evolutionist"],
+            "linksToRemove": ["ability:transposition#summoner"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:transmogrify#summoner_evolutionist"],
+            "linksToRemove": ["ability:greater_shield_ally#summoner"]
+          }]
         }]
       }]
     }

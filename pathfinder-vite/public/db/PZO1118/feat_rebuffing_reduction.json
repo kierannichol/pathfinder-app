@@ -2,10 +2,14 @@
   "id": "feat:rebuffing_reduction",
   "name": "Rebuffing Reduction",
   "tags": ["feat", "combat"],
-  "enabledFormula": "all(@str_score\u003e\u003d13,@ability:damage_reduction#barbarian,@feat:improved_bull_rush,@feat:power_attack,@bab\u003e\u003d1)",
+  "enabledFormula": "all(@str_score\u003e\u003d13,@ability:damage_reduction#unchained_barbarian,@feat:improved_bull_rush,@feat:power_attack,@bab\u003e\u003d1)",
   "maxStacks": 1,
   "description": {
-    "text": "Your damage reduction can turn the force of blows back on your enemies."
+    "text": "Your damage reduction can turn the force of blows back on your enemies.",
+    "sections": {
+      "Benefit": "Whenever an opponent that is adjacent to you fails to penetrate your DR with a melee attack, you can spend an immediate action to attempt a bull rush combat maneuver against that opponent. If you succeed, you cannot move with the opponent.",
+      "Normal": "A bull rush combat maneuver is a standard action."
+    }
   },
   "stacks": {
     "fixedStack": {

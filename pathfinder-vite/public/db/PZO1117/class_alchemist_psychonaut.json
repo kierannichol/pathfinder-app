@@ -2,7 +2,7 @@
   "id": "class:alchemist#psychonaut",
   "name": "Psychonaut",
   "tags": ["archetype", "alchemist"],
-  "enabledFormula": "!@modifies:ability:poison_resistance_ AND !@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:the_increase_to_bomb_damage_at_this_level#alchemist",
+  "enabledFormula": "!@modifies:ability:poison_immunity#alchemist",
   "maxStacks": 1,
   "description": {
     "text": "A psychonaut uses his knowledge to explore altered states of consciousness and even other planes of existence."
@@ -12,19 +12,29 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:poison_resistance_",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:poison_immunity#alchemist",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_increase_to_bomb_damage_at_this_level#alchemist",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:master_precognition#alchemist_psychonaut"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:precognition#alchemist_psychonaut"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:psychic_senses#alchemist_psychonaut"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:remote_consciousness#alchemist_psychonaut"],
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:greater_precognition#alchemist_psychonaut"]
+          }]
         }]
       }]
     }

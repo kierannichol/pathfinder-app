@@ -27,7 +27,8 @@ export async function loadBaseCharacterTemplate(): Promise<CharacterTemplate> {
 
 async function loadModule(id: string): Promise<SourceModule> {
   const dbo = await fetchProto(`db/${id}.bin`, SourceModuleDbo.decode);
-  return ExternalSourceModule.create(dbo.sourceId, dbo.features.map(decodeFeatureSummary));
+  return ExternalSourceModule.create(dbo.sourceId,
+      dbo.features.map(decodeFeatureSummary));
 }
 
 export async function initializePathfinderDatabase(): Promise<Database> {

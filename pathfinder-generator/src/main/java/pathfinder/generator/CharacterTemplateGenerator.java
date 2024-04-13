@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 import pathfinder.model.CharacterTemplate;
 import pathfinder.model.CharacterTemplate.Builder;
+import pathfinder.model.Choice;
 import pathfinder.model.Effect;
 import pathfinder.model.FeatureSelectByTagChoice;
 import pathfinder.model.FeatureSelectCategory;
@@ -29,6 +30,19 @@ public class CharacterTemplateGenerator {
             new FeatureSelectCategory("Item Creation", "item_creation"),
             new FeatureSelectCategory("Metamagic", "metamagic")
     );
+
+    private static final Choice CLASS_CHOICE = new FeatureSelectByTagChoice("class", "Class", "class", List.of("class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME);
+    private static final Choice FEAT_CHOICE = new FeatureSelectByTagChoice("feat", "Feat", "feat", List.of("feat"), List.of(), FEAT_CATEGORIES, FeatureSelectSortBy.NAME);
+    private static final Choice ASI_CHOICE_1 = new FeatureSelectByTagChoice("asi1", "Ability Score Increase", "asi", List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
+    private static final Choice ASI_CHOICE_2 = new FeatureSelectByTagChoice("asi2", "Ability Score Increase", "asi", List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
+    private static final Choice EQUIPMENT_CHOICE = new FeatureSelectByTagChoice.Builder("equipment", "Equipment", "equipment")
+            .optionTag("item")
+            .category("All", "")
+            .category("Weapons", "weapon")
+            .category("Armor", "armor")
+            .sortBy(FeatureSelectSortBy.NAME)
+            .repeating()
+            .build();
 
     public CharacterTemplate generate() {
         Builder builder = new Builder();
@@ -75,9 +89,16 @@ public class CharacterTemplateGenerator {
 
         for (int levelNumber = 1; levelNumber <= 20; levelNumber++) {
             builder.level(levelNumber, level -> {
-                level.addChoice(new FeatureSelectByTagChoice("class", "Class", "class", List.of("class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME));
+                level.addChoice(CLASS_CHOICE);
+                level.addChoice(EQUIPMENT_CHOICE);
+
                 if (level.levelNumber() % 2 == 1) {
-                    level.addChoice(new FeatureSelectByTagChoice("feat", "Feat", "feat", List.of("feat"), List.of(), FEAT_CATEGORIES, FeatureSelectSortBy.NAME));
+                    level.addChoice(FEAT_CHOICE);
+                }
+
+                if (level.levelNumber() % 4 == 0) {
+                    level.addChoice(ASI_CHOICE_1);
+                    level.addChoice(ASI_CHOICE_2);
                 }
             });
         }

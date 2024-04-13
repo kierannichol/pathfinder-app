@@ -30,6 +30,26 @@
             "targetKey": "modifies:ability:demanding_challenge#cavalier",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:careful_aim#cavalier_luring_cavalier"],
+            "linksToRemove": ["ability:cavaliers_charge#cavalier"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:supreme_aim#cavalier_luring_cavalier"],
+            "linksToRemove": ["ability:supreme_charge#cavalier"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:infuriating_aim#cavalier_luring_cavalier"],
+            "linksToRemove": ["ability:mighty_charge#cavalier"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:versatile_challenge#cavalier_luring_cavalier"],
+            "linksToRemove": ["ability:demanding_challenge#cavalier"]
+          }]
         }]
       }]
     }

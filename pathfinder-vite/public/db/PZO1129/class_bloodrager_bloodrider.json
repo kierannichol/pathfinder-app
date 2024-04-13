@@ -30,6 +30,25 @@
             "targetKey": "modifies:ability:bloodline_feat#bloodrager",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:fast_rider#bloodrager_bloodrider"],
+            "linksToRemove": ["ability:fast_movement#bloodrager"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:feral_mount#bloodrager_bloodrider"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:blood_bond#bloodrager_bloodrider"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
         }]
       }]
     }

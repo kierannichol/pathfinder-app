@@ -20,6 +20,30 @@
             "targetKey": "modifies:ability:bonus_feat#warpriest",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:mount#warpriest_divine_commander"],
+            "linksToRemove": ["ability:blessings#warpriest"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:battle_tactician#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:blessed_mount#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:greater_battle_tactician#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:bless_army#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }]
         }]
       }]
     }

@@ -29,6 +29,26 @@
             "targetKey": "modifies:ability:inspire_courage#bard",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:bardic_performance#bard_street_performer"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bardic_performance#bard_street_performer", "ability:gladhanding#bard_street_performer", "ability:streetwise#bard_street_performer"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:countersong#bard", "ability:bardic_knowledge#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bardic_performance#bard_street_performer", "ability:quick_change#bard_street_performer"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:bardic_performance#bard_street_performer"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }]
         }]
       }]
     }

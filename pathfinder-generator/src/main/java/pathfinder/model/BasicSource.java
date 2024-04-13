@@ -9,6 +9,7 @@ import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.ClassModificationFeature;
 import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
+import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 import pathfinder.util.StreamUtils;
@@ -21,6 +22,7 @@ public record BasicSource(SourceId sourceId,
                           List<Feat> feats,
                           List<ComplexFeature> races,
                           List<Bloodline> bloodlines,
+                          List<ItemData> items,
                           List<ClassModificationFeature> classModificationFeatures,
                           List<ComplexFeature> complexFeatures) implements Source {
 

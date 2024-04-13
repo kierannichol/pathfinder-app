@@ -20,6 +20,18 @@
             "targetKey": "modifies:ability:uncanny_dodge#rogue",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:scouts_charge#rogue_scout"],
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:skirmisher#rogue_scout"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }]
         }]
       }]
     }

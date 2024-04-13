@@ -6,4 +6,8 @@ import pathfinder.model.NamedEntity;
 
 public record Race(Id id, String name, String description, String size, int speed, String type, List<String> features, String source) implements NamedEntity, FromSourceBook {
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
 }

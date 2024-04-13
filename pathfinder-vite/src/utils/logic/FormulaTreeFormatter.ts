@@ -5,34 +5,6 @@ export enum TreeNodeOperator {
   ANY,
 }
 
-export class TreeNodeValue extends ResolvedValue {
-  constructor(private readonly actual: ResolvedValue,
-              public readonly operator: TreeNodeOperator,
-              private readonly children: ResolvedValue[]) {
-    super();
-  }
-
-  asBoolean(): boolean {
-    return this.actual.asBoolean();
-  }
-
-  asNumber(): number {
-    return this.actual.asNumber();
-  }
-
-  asText(): string {
-    return this.actual.asText();
-  }
-
-  mapChildren<T>(mapFn: (r: ResolvedValue) => T): T[] {
-    return this.children.map(mapFn);
-  }
-
-  equals(other: ResolvedValue): boolean {
-    return false;
-  }
-}
-
 export class FormattedValue extends ResolvedValue {
   constructor(private readonly actual: ResolvedValue,
               private readonly formatted: string) {
@@ -53,6 +25,36 @@ export class FormattedValue extends ResolvedValue {
 
   asFormatted(): string {
     return this.formatted;
+  }
+
+  equals(other: ResolvedValue): boolean {
+    return false;
+  }
+}
+
+export class TreeNodeValue extends FormattedValue {
+  constructor(actual: ResolvedValue,
+              public readonly operator: TreeNodeOperator,
+              private readonly children: ResolvedValue[]) {
+
+    const parts = children.map(child => {
+      return child instanceof FormattedValue
+          ? child.asFormatted()
+          : child.asText()
+    }).reverse();
+
+    const operatorText = operator === TreeNodeOperator.ALL ? '; and ' : ', or ';
+    const separatorText = operator === TreeNodeOperator.ANY ? ', ' : '; ';
+
+    let formatted = parts.length > 1 ? (parts.slice(0, -1).join(separatorText) + operatorText) : '';
+    formatted = formatted + parts[parts.length-1];
+
+    super(actual, formatted);
+  }
+
+  mapChildren<T>(mapFn: (r: ResolvedValue) => T): T[] {
+    return this.children
+      .map(mapFn);
   }
 
   equals(other: ResolvedValue): boolean {
@@ -129,7 +131,7 @@ export default class FormulaFormatter {
         .varargsFunction('all', (args: ResolvedValue[]) => createTreeNode(TreeNodeOperator.ALL, ...args))
         .variable('@', '', (state, key) => {
           const actual = state.resolve(key);
-          return actual ? new FormattedValue(actual, lookup(key)) : ResolvedValue.None;
+          return actual ? new FormattedValue(actual, this.lookup(key)) : new FormattedValue(ResolvedValue.None, '???');
         })
         .variable('min(@', ')', (state, key) => {
           const actual = FormulaFormatter.noneIfEmpty(state.search(key))

@@ -20,6 +20,33 @@
             "targetKey": "modifies:ability:trap_sense#rogue",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:measure_the_mark#rogue_cutpurse"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:stab_and_grab#rogue_cutpurse"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }]
         }]
       }]
     }

@@ -188,7 +188,7 @@ public class OccultAdventuresScraper extends D20pfsrdBaseScraper {
 
             String featureName = Type.removeTypeFromName(featureNameFull);
             String type = Type.fromFeatureName(featureNameFull);
-            String description = descriptionElements.stream().map(element -> element.text()).collect(Collectors.joining("\n")).toString();
+            String description = descriptionElements.stream().map(element -> element.text()).collect(Collectors.joining("\n"));
 
             Feature feature = Feature.builder()
                     .id(NameToIdConverter.abilityId(featureName))

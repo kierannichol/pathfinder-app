@@ -30,6 +30,29 @@
             "targetKey": "modifies:ability:jack_of_all_trades#bard",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:bardic_performance#bard_court_bard"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bardic_performance#bard_court_bard", "ability:heraldic_expertise#bard_court_bard"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:bardic_knowledge#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bardic_performance#bard_court_bard", "ability:wide_audience#bard_court_bard"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:jack_of_all_trades#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:bardic_performance#bard_court_bard"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }]
         }]
       }]
     }

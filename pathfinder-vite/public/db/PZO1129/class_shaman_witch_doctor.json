@@ -15,6 +15,25 @@
             "targetKey": "modifies:ability:hex#shaman",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:shaman",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:channel_energy#shaman_witch_doctor"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:counter_curse#shaman_witch_doctor"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:countering_hex#shaman_witch_doctor"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:hex#shaman"]
+          }]
         }]
       }]
     }

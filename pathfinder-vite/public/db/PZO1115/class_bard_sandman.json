@@ -34,6 +34,55 @@
             "targetKey": "modifies:ability:inspire_competence#bard",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bardic_performance#bard_sandman", "ability:master_of_deception#bard_sandman"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:bardic_knowledge#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:sneakspell#bard_sandman"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:trap_sense#bard_sandman"],
+            "linksToRemove": ["ability:inspire_competence#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bardic_performance#bard_sandman", "ability:sneak_attack#bard_sandman"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:inspire_competence#bard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:bardic_performance#bard_sandman"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:inspire_competence#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:inspire_competence#bard"]
+          }, {
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:bardic_performance#bard_sandman"],
+            "linksToRemove": ["ability:inspire_courage#bard", "ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:inspire_competence#bard"]
+          }]
         }]
       }]
     }

@@ -20,6 +20,29 @@
             "targetKey": "modifies:ability:teamwork_feat#hunter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:domain#hunter_divine_hunter", "ability:otherworldly_companion#hunter_divine_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter", "ability:hunter_tactics#hunter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }]
         }]
       }]
     }

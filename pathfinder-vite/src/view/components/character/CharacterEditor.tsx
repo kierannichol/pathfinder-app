@@ -1,5 +1,4 @@
-import {useMemo, useState} from "react";
-import TextInput from "../controls/TextInput.tsx";
+import React, {useMemo, useState} from "react";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 import PromptDialog from "../PromptDialog.tsx";
 import AbilityScoresEditor from "./AbilityScoresEditor.tsx";
@@ -10,12 +9,14 @@ import {FaFileLines} from "react-icons/fa6";
 import {CharacterModel} from "../../model/CharacterModel.ts";
 import {ChoiceInputType, ChoiceModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
 import {useCharacterStoreModel} from "../../model/ModelContext.tsx";
+import DataChoiceTextInput from "../controls/DataChoiceTextInput.tsx";
+import {isString} from "../../../app/pfutils.ts";
 
 interface CharacterEditorProps {
   loaded: CharacterModel;
 }
 
-export type CharacterChoiceSelectHandler = (choice: ChoiceModel, value: string) => void;
+export type CharacterChoiceSelectHandler = (choice: ChoiceModel, value: string|string[]) => void;
 
 export default function CharacterEditor({ loaded }: CharacterEditorProps) {
   const [ character, setCharacter ] = useState(loaded);
@@ -38,8 +39,8 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
     await characterStore.save(updated);
   }
 
-  function handleChange(choice: ChoiceModel, value: string) {
-    if (character.selected(choice.path) === value) {
+  function handleChange(choice: ChoiceModel, value: string|string[]) {
+    if (isString(value) && character.selected(choice.path) === value) {
       return;
     }
 
@@ -52,7 +53,7 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
 
   function applyFavoredClassToAllLevels() {
     const selected: {[key:string]:string} = {};
-    const favoredClass = character.selected('favored_class')?.replace("favored_class", "class");
+    const favoredClass = (character.selected('favored_class') as string)?.replace("favored_class", "class");
     if (!favoredClass) {
       return;
     }
@@ -65,21 +66,23 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
   return <main>
     <header>Character Information</header>
     <section>
-      {characterLevel0.choices
-      .filter(choice => choice.type !== 'ability_score' && choice.type !== 'asi')
-      .map(choice => <div key={choice.path}>
-        <label htmlFor={choice.path}>{choice.label}</label>
-        {choice.inputType === ChoiceInputType.Text &&
-            <TextInput id={choice.path}
-                       value={characterLevel0.selected(choice) ?? ''}
-                       onChange={value => handleChange(choice, value)} />}
-        {choice.inputType === ChoiceInputType.Select &&
-            <DataChoiceSelectButton
-                id={choice.path}
-                choiceRef={choice as SelectChoiceModel}
-                characterAtLevel={characterLevel0.without(characterLevel0.selected(choice) ?? '')}
-                onSelect={value => handleChange(choice, value)} />}
-      </div>)}
+        {characterLevel0.choices
+        .filter(choice => choice.type !== 'ability_score' && choice.type !== 'asi')
+        .map(choice => <div key={choice.path}>
+          <label htmlFor={choice.path}>{choice.label}</label>
+          {choice.inputType === ChoiceInputType.Text &&
+              <DataChoiceTextInput
+                  id={choice.path}
+                  choiceRef={choice as SelectChoiceModel}
+                  characterAtLevel={characterLevel0.withoutChoice(choice)}
+                  onSelect={value => handleChange(choice, value)} />}
+          {choice.inputType === ChoiceInputType.Select &&
+              <DataChoiceSelectButton
+                  id={choice.path}
+                  choiceRef={choice as SelectChoiceModel}
+                  characterAtLevel={characterLevel0.withoutChoice(choice)}
+                  onSelect={value => handleChange(choice, value)} />}
+        </div>)}
       <PromptDialog show={showFavoredClassPrompt}
                     prompt="Change all class levels to favored class?"
                     onCancel={() => setShowFavoredClassPrompt(false)}

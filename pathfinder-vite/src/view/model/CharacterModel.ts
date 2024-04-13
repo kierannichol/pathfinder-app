@@ -6,6 +6,6 @@ export type CharacterChoiceSelections = { [path: string]: string };
 export abstract class CharacterModel {
   abstract id: string;
   abstract atLevel(levelNumber: number): CharacterAtLevelModel;
-  abstract selected(path: string): string|undefined;
+  abstract selected(path: string): string|string[]|undefined;
   abstract selectAll(selections: PackedSelections): Promise<CharacterModel>;
 }

@@ -2,7 +2,7 @@
   "id": "class:swashbuckler#inspired_blade",
   "name": "Inspired Blade",
   "tags": ["archetype", "swashbuckler"],
-  "enabledFormula": "!@modifies:ability:panache#swashbuckler AND !@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:ability:bleeding_wound#swashbuckler AND !@modifies:ability:swashbuckler_weapon_mastery#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler",
+  "enabledFormula": "!@modifies:ability:panache#swashbuckler AND !@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:ability:swashbuckler_weapon_mastery#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler",
   "maxStacks": 1,
   "description": {
     "text": "An inspired blade is both a force of personality and a sage of swordplay dedicated to the perfection of combat with the rapier. They use the science and geometry with swordplay to beautiful and deadly effect."
@@ -22,11 +22,6 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:bleeding_wound#swashbuckler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:swashbuckler_weapon_mastery#swashbuckler",
             "numberValue": 1
           }
@@ -35,6 +30,31 @@
             "targetKey": "modifies:ability:swashbuckler_weapon_training#swashbuckler",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:inspired_panache#swashbuckler_inspired_blade", "ability:inspired_finesse#swashbuckler_inspired_blade"],
+            "linksToRemove": ["ability:panache#swashbuckler", "ability:swashbuckler_finesse#swashbuckler"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:rapier_weapon_mastery#swashbuckler_inspired_blade"],
+            "linksToRemove": ["ability:swashbuckler_weapon_mastery#swashbuckler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:rapier_training#swashbuckler_inspired_blade"],
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }]
         }]
       }]
     }

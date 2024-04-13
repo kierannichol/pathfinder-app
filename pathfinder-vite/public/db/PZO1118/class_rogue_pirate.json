@@ -2,7 +2,7 @@
   "id": "class:rogue#pirate",
   "name": "Pirate",
   "tags": ["archetype", "rogue"],
-  "enabledFormula": "!@modifies:ability:the_2nd_level_rogue_talent#rogue AND !@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
+  "enabledFormula": "!@modifies:ability:trapfinding#rogue AND !@modifies:ability:trap_sense#rogue",
   "maxStacks": 1,
   "description": {
     "text": "A pirate breaks from the confines of country and king to commit her crimes upon the high seas. She holds allegiance only to her ship and its captain (if even that much is true), and lives a lawless life upon the waves, plundering ships and shorelines as suits her whim."
@@ -12,11 +12,6 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_2nd_level_rogue_talent#rogue",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:trapfinding#rogue",
             "numberValue": 1
           }
@@ -25,6 +20,41 @@
             "targetKey": "modifies:ability:trap_sense#rogue",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:sea_legs#rogue_pirate"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:unflinching#rogue_pirate"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:swinging_reposition#rogue_pirate"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:unflinching#rogue_pirate"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:unflinching#rogue_pirate"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:unflinching#rogue_pirate"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:unflinching#rogue_pirate"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:unflinching#rogue_pirate"],
+            "linksToRemove": ["ability:trap_sense#rogue"]
+          }]
         }]
       }]
     }

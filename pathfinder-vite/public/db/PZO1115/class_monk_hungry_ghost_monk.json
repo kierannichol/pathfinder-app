@@ -29,6 +29,26 @@
             "targetKey": "modifies:ability:diamond_body#monk",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:punishing_kick#monk_hungry_ghost_monk"],
+            "linksToRemove": ["ability:stunning_fist#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:steal_ki#monk_hungry_ghost_monk"],
+            "linksToRemove": ["ability:purity_of_body#monk"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:life_funnel#monk_hungry_ghost_monk"],
+            "linksToRemove": ["ability:wholeness_of_body#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:life_from_a_stone#monk_hungry_ghost_monk"],
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }]
         }]
       }]
     }

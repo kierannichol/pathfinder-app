@@ -2,7 +2,7 @@
   "id": "class:druid#storm_druid",
   "name": "Storm Druid",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:spontaneous_casting#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -12,11 +12,6 @@
         "effects": [{
           "setAction": {
             "targetKey": "modifies:ability:trackless_step#druid",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:spontaneous_casting#druid",
             "numberValue": 1
           }
         }, {
@@ -39,6 +34,30 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:windwalker#druid_storm_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:stormvoice#druid_storm_druid"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:eyes_of_the_storm#druid_storm_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:windlord#druid_storm_druid"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:storm_lord#druid_storm_druid"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
         }]
       }]
     }

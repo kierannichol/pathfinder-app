@@ -17,7 +17,7 @@ export default abstract class CharacterStore {
   async list(): Promise<CharacterSummary[]> {
     const packedList = await this.loadAllPacked();
     return await Promise.all(packedList.map(packed =>
-        new CharacterSummary(packed.id, packed.selections['character_name'])));
+        new CharacterSummary(packed.id, packed.selections['character_name'] as string)));
   }
 
   async load(id: string): Promise<Character|undefined> {

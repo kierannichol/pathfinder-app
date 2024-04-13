@@ -25,6 +25,22 @@
             "targetKey": "modifies:ability:evasion#rogue",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:chemical_weapons#rogue_underground_chemist"],
+            "linksToRemove": ["ability:evasion#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:precise_splash_weapons#rogue_underground_chemist"],
+            "linksToRemove": ["ability:rogue_talent#rogue"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:discovery#rogue_underground_chemist"],
+            "linksToRemove": ["ability:advanced_talents#rogue"]
+          }]
         }]
       }]
     }

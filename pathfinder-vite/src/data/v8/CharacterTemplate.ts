@@ -1,8 +1,9 @@
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {ResolvedTrait, Trait, traverseTrait} from "./Trait.ts";
 import {Path} from "../../utils/Path.ts";
-import {EntityChoiceSelections, EntityState} from "./Entity.ts";
+import {EntityChoiceSelections} from "./Entity.ts";
 import Database from "./Database.ts";
+import AppliedState from "./AppliedState.ts";
 
 export class CharacterTemplate {
 
@@ -36,11 +37,11 @@ export class ResolvedCharacterTemplateAtLevel {
               private readonly resolvedLevelTemplates: ResolvedCharacterLevelTemplate[]) {
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
     this.resolvedLevelTemplates.forEach(levelTemplate => levelTemplate.applyTo(state));
   }
 
-  traverse(actionFn: (descendant: ResolvedTrait, depth: number) => void) {
+  traverse(actionFn: (descendant: ResolvedTrait, depth: number) => boolean) {
     this.resolvedLevelTemplates.forEach(level =>
         level.traverse(actionFn));
   }
@@ -68,11 +69,11 @@ export class ResolvedCharacterLevelTemplate {
               private readonly traits: ResolvedTrait[]) {
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
     this.traits.forEach(trait => trait.applyTo(state));
   }
 
-  traverse(actionFn: (descendant: ResolvedTrait, depth: number) => void) {
+  traverse(actionFn: (descendant: ResolvedTrait, depth: number) => boolean) {
     this.traits.forEach(descendant => traverseTrait(descendant, actionFn));
   }
 }

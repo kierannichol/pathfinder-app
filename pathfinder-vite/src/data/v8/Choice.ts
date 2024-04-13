@@ -1,7 +1,8 @@
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {Path} from "../../utils/Path.ts";
-import {EntityState} from "./Entity.ts";
+import AppliedState from "./AppliedState.ts";
+import {array} from "../../app/pfutils.ts";
 
 export interface ChoiceRef {
   path: string;
@@ -14,7 +15,68 @@ export abstract class ResolvedChoice implements ChoiceRef, ResolvedTrait {
   abstract type: string;
   abstract label: string;
   abstract children: ResolvedTrait[];
-  abstract applyTo(state: EntityState): void;
+  abstract applyTo(state: AppliedState): void;
+}
+
+export class MultiSelectChoice implements Trait {
+  constructor(public readonly key: string,
+              public readonly label: string,
+              public readonly type: string,
+              public readonly optionTags: string[],
+              public readonly featureIds: string[],
+              public readonly categories: FeatureSelectCategory[],
+              public readonly sortBy: "name" | "none",
+              public readonly repeatingIndex: number) {
+  }
+
+  async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
+    const path = Path.combine(basePath, this.key);
+    let selectedKeys = array(context.selection(path)) as string[];
+    let selected: Trait[] = (selectedKeys?.length ?? []) > 0
+        ? (await Promise.all(selectedKeys.map(selectedKey => context.feature(selectedKey))))
+          .filter(s => s !== undefined) as Trait[]
+        : [];
+
+    selectedKeys.forEach(selectedKey => context.register(selectedKey));
+
+    return new ResolvedMultiSelectChoice(path,
+        this.key,
+        this.label,
+        this.type,
+        this.optionTags,
+        this.featureIds,
+        this.categories,
+        this.sortBy,
+        this.repeatingIndex,
+        await Promise.all(selected.map(s => s.resolve(basePath, context))));
+  }
+}
+
+export class ResolvedMultiSelectChoice extends ResolvedChoice {
+
+  constructor(public readonly path: string,
+              public readonly key: string,
+              public readonly label: string,
+              public readonly type: string,
+              public readonly optionTags: string[],
+              public readonly featureIds: string[],
+              public readonly categories: FeatureSelectCategory[],
+              public readonly sortBy: "name" | "none",
+              public readonly repeatingIndex: number,
+              private readonly selected: ResolvedTrait[]) {
+    super();
+  }
+
+  applyTo(state: AppliedState): void {
+    if (state.withoutChoicePath === this.path) {
+      return;
+    }
+    return this.selected.forEach(s => s.applyTo(state));
+  }
+
+  get children(): ResolvedTrait[] {
+    return this.selected;
+  }
 }
 
 export class SelectChoice implements Trait {
@@ -30,13 +92,37 @@ export class SelectChoice implements Trait {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
-    const path = Path.combine(basePath, this.key);
-    const selectedKey = context.selection(path);
-    const selected = selectedKey !== undefined
+    const path = this.repeatingIndex === 0
+        ? Path.combine(basePath, this.key)
+        : Path.combine(basePath, this.key, this.repeatingIndex);
+    let selectedKey = context.selection(path) as string;
+    let selected = selectedKey !== undefined
         ? await context.feature(selectedKey)
         : undefined;
 
+    if (this.repeatingIndex > 0 && selected === undefined) {
+      const nextPath = Path.combine(basePath, this.key, this.repeatingIndex + 1);
+      context.swapSelections(path, nextPath);
+
+      selectedKey = context.selection(path) as string;
+      selected = selectedKey !== undefined
+        ? await context.feature(selectedKey)
+        : undefined;
+    }
+
     context.register(selectedKey);
+
+    let repeatedChoice: ResolvedTrait | undefined = undefined;
+    if (this.repeatingIndex > 0 && selected !== undefined) {
+      repeatedChoice = await new SelectChoice(this.key,
+          this.label,
+          this.type,
+          this.optionTags,
+          this.featureIds,
+          this.categories,
+          this.sortBy,
+          this.repeatingIndex + 1).resolve(basePath, context);
+    }
 
     return new ResolvedSelectChoice(path,
         this.key,
@@ -47,9 +133,9 @@ export class SelectChoice implements Trait {
         this.categories,
         this.sortBy,
         this.repeatingIndex,
-        await selected?.resolve(basePath, context));
+        await selected?.resolve(basePath, context),
+        repeatedChoice);
   }
-
 }
 
 export class ResolvedSelectChoice extends ResolvedChoice {
@@ -63,17 +149,22 @@ export class ResolvedSelectChoice extends ResolvedChoice {
               public readonly categories: FeatureSelectCategory[],
               public readonly sortBy: "name" | "none",
               public readonly repeatingIndex: number,
-              private readonly selected?: ResolvedTrait) {
+              private readonly selected?: ResolvedTrait,
+              private readonly repeatedChoice?: ResolvedTrait) {
     super();
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
+    if (state.withoutChoicePath === this.path) {
+      return;
+    }
     return this.selected?.applyTo(state);
   }
 
   get children(): ResolvedTrait[] {
     return this.selected !== undefined
-        ? [ this.selected ]
+        ? (this.repeatedChoice !== undefined
+            ? [ this.selected, this.repeatedChoice ] : [ this.selected ])
         : [];
   }
 }
@@ -88,7 +179,7 @@ export class TextChoice implements Trait {
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
     const path = Path.combine(basePath, this.key);
-    const selectedValue = context.selection(path);
+    const selectedValue = context.selection(path) as string;
     return new ResolvedTextChoice(path, this.key, this.label, this.type, this.repeatingIndex, selectedValue);
   }
 
@@ -106,9 +197,9 @@ export class ResolvedTextChoice extends ResolvedChoice {
     super();
   }
 
-  applyTo(state: EntityState): void {
+  applyTo(state: AppliedState): void {
     if (this.value !== undefined) {
-      state[this.path] = this.value;
+      state.set(this.path, this.value);
     }
   }
 

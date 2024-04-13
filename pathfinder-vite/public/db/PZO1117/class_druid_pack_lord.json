@@ -2,7 +2,7 @@
   "id": "class:druid#pack_lord",
   "name": "Pack Lord",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:the_6th_level_additional_use_of_wild_shape#druid AND !@modifies:ability:nature_bond#druid",
+  "enabledFormula": "!@modifies:ability:nature_bond#druid",
   "maxStacks": 1,
   "description": {
   },
@@ -11,14 +11,17 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_6th_level_additional_use_of_wild_shape#druid",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:nature_bond#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:pack_bond#druid_pack_lord"],
+            "linksToRemove": ["ability:nature_bond#druid"]
+          }]
         }]
       }]
     }

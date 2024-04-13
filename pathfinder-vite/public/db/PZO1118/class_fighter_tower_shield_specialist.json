@@ -2,7 +2,7 @@
   "id": "class:fighter#tower_shield_specialist",
   "name": "Tower Shield Specialist",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:both_weapon_training_4#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "Many fighters believe the tower shield is a tool suitable only for troops on the battlefield, claiming it is too large and bulky to use in skirmishes or within dungeon corridors. tower shield specialists defy those notions, using their massive shields with startling skill and incredible effect. They use these seemingly clumsy shields to perform deft maneuvers that confound their enemies."
@@ -11,11 +11,6 @@
     "fixedStack": {
       "stacks": [{
         "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:both_weapon_training_4#fighter",
-            "numberValue": 1
-          }
-        }, {
           "setAction": {
             "targetKey": "modifies:ability:bravery#fighter",
             "numberValue": 1
@@ -30,6 +25,44 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:tower_shield_evasion#fighter_tower_shield_specialist"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:burst_barrier#fighter_tower_shield_specialist"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:tower_shield_specialist#fighter_tower_shield_specialist"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:tower_shield_defense#fighter_tower_shield_specialist"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:immediate_repositioning#fighter_tower_shield_specialist"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }]
         }]
       }]
     }

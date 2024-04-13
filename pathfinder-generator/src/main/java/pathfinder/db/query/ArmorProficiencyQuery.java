@@ -22,11 +22,7 @@ public class ArmorProficiencyQuery {
             return false;
         }
 
-        if (isShield != null && !armor.isShield()) {
-            return false;
-        }
-
-        return true;
+        return isShield == null || armor.isShield();
     }
 
     ArmorProficiencyQuery() {

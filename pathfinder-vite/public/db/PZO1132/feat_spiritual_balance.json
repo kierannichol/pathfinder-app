@@ -2,10 +2,14 @@
   "id": "feat:spiritual_balance",
   "name": "Spiritual Balance",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:ki_pool#monk_karmic_monk,@ability:still_mind#monk)",
+  "enabledFormula": "all(@ability:ki_pool#monk_karmic_monk,@ability:still_mind#unchained_monk)",
   "maxStacks": 1,
   "description": {
-    "text": "You focus your ki in order to quell the influence of outside spirits on you."
+    "text": "You focus your ki in order to quell the influence of outside spirits on you.",
+    "sections": {
+      "Benefit": "The saving throw bonus from your still mind class feature applies against possession effects, and as an immediate action you can spend 1 point from your ki pool to double the saving throw bonus provided by still mind.",
+      "Normal": "Your still mind class feature applies only against enchantment spells and effects."
+    }
   },
   "stacks": {
     "fixedStack": {

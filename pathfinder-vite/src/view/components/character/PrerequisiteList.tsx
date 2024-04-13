@@ -1,59 +1,66 @@
 import styles from "./PrerequisiteList.module.scss";
 import {Resolvable, ResolvedValue} from "@kierannichol/formula-js";
-import {ReactNode, useMemo} from "react";
+import React, {ReactNode} from "react";
 import FormulaTreeFormatter, {
   FormattedValue,
   TreeNodeOperator,
   TreeNodeValue
 } from "../../../utils/logic/FormulaTreeFormatter.ts";
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
 import {DatabaseModel} from "../../model/DatabaseModel.ts";
-import {useDatabaseModel} from "../../model/ModelContext.tsx";
+import {
+  PrerequisiteValidationEntryModel,
+  PrerequisiteValidationModel
+} from "../../model/PrerequisiteValidationModel.ts";
+import {classNames} from "../../../utils/classNames.ts";
+import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
 interface PrerequisiteListProps {
-  featureId: string,
-  formula: Resolvable;
-  maxStacks: number|null,
-  characterAtLevel: CharacterAtLevelModel;
+  formula: string;
+  validation: PrerequisiteValidationModel;
 }
 
 function UnknownMark() {
   return <span>?</span>
 }
 
-export default function PrerequisiteList({ featureId, formula, maxStacks, characterAtLevel } : PrerequisiteListProps) {
-  const pathfinderDb = useDatabaseModel();
-
-  const block = useMemo(() => {
-    const blocks = [];
-
-    const alreadyHasBlock = genAlreadyHasBlock(
-        (characterAtLevel.resolve(featureId)?.asNumber() ?? 0),
-        maxStacks);
-    if (alreadyHasBlock) {
-      blocks.push(alreadyHasBlock);
-    }
-
-    if (formula !== undefined) {
-      blocks.push(formatFormula(featureId, formula, maxStacks, characterAtLevel, pathfinderDb));
-    }
-
-    return blocks;
-  }, [featureId, maxStacks, formula, characterAtLevel, pathfinderDb]);
-
+export default function PrerequisiteList({ formula, validation } : PrerequisiteListProps) {
   const renderTooltip =
       <Tooltip className={styles.tooltip}>
-        {formula.asFormula()}
+        {formula}
       </Tooltip>;
 
   return (<OverlayTrigger placement="bottom"
                           trigger={["hover", "focus"]}
                           overlay={renderTooltip}>
     <div>
-      {block.map((b, i) => <div key={i}>{b}</div>)}
+      {validation.entries.map((entry, index) =>
+          <div key={index}>
+            <PrerequisiteValidationEntryBlock entry={entry} />
+          </div>)}
     </div>
   </OverlayTrigger>);
+
+  // const renderTooltip =
+  //     <Tooltip className={styles.tooltip}>
+  //       {formula.asFormula()}
+  //     </Tooltip>;
+  //
+  // return (<OverlayTrigger placement="bottom"
+  //                         trigger={["hover", "focus"]}
+  //                         overlay={renderTooltip}>
+  //   <div>
+  //     {block.map((b, i) => <div key={i}>{b}</div>)}
+  //   </div>
+  // </OverlayTrigger>);
+}
+
+interface PrerequisiteValidationEntryBlockProps {
+  entry: PrerequisiteValidationEntryModel;
+}
+
+function PrerequisiteValidationEntryBlock({ entry }: PrerequisiteValidationEntryBlockProps) {
+  return <span className={classNames([ entry.valid ? styles.element : styles.elementInvalid ])}>{entry.description}</span>
 }
 
 function formatFormula(featureId: string, formula: Resolvable, maxStacks: number|null, characterAtLevel: CharacterAtLevelModel, pathfinderDb: DatabaseModel): ReactNode {

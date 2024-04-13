@@ -2,7 +2,7 @@
   "id": "class:alchemist#beastmorph",
   "name": "Beastmorph",
   "tags": ["archetype", "alchemist"],
-  "enabledFormula": "!@modifies:ability:swift_alchemy#alchemist AND !@modifies:ability:poison_resistance_ AND !@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:persistent_mutagen#alchemist",
+  "enabledFormula": "!@modifies:ability:swift_alchemy#alchemist AND !@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:persistent_mutagen#alchemist",
   "maxStacks": 1,
   "description": {
     "text": "Beastmorphs study the anatomy of monsters, learning how they achieve their strange powers. They use their knowledge to duplicate these abilities, but at the cost of taking on inhuman shapes when they use mutagens."
@@ -17,11 +17,6 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:poison_resistance_",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:swift_poisoning#alchemist",
             "numberValue": 1
           }
@@ -30,6 +25,25 @@
             "targetKey": "modifies:ability:persistent_mutagen#alchemist",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:beastform_mutagen#alchemist_beastmorph"],
+            "linksToRemove": ["ability:swift_alchemy#alchemist"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:improved_beastform_mutagen#alchemist_beastmorph"],
+            "linksToRemove": ["ability:swift_poisoning#alchemist"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:greater_beastform_mutagen#alchemist_beastmorph"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:grand_beastform_mutagen#alchemist_beastmorph"],
+            "linksToRemove": ["ability:persistent_mutagen#alchemist"]
+          }]
         }]
       }]
     }

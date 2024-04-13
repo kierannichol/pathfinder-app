@@ -19,9 +19,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.function.Function;
+import java.util.function.BiFunction;
 import java.util.stream.Stream;
 import java.util.stream.Stream.Builder;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import pathfinder.model.BasicSource;
 import pathfinder.model.Id;
@@ -37,11 +38,13 @@ import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Feature;
 import pathfinder.model.pathfinder.FromSourceBook;
+import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 import pathfinder.model.pathfinder.Spell;
 
 @Component
+@Slf4j
 public class LocalPathfinderDatabaseLoader {
 
     private final ObjectMapper objectMapper;
@@ -53,6 +56,7 @@ public class LocalPathfinderDatabaseLoader {
         Map<SourceId, List<Bloodline>> bloodlinesBySource = new HashMap<>();
         Map<SourceId, List<ClassModificationFeature>> classModificationFeaturesBySource = new HashMap<>();
         Map<SourceId, List<ComplexFeature>> complexFeaturesBySource = new HashMap<>();
+        Map<SourceId, List<ItemData>> itemsBySource = new HashMap<>();
 
         loadFeats().forEach(featData -> {
                     SourceId sourceId = Sources.findSourceByNameOrCode(featData.source());
@@ -81,6 +85,35 @@ public class LocalPathfinderDatabaseLoader {
         loadAllBySource("db/witch_hex", Spell.class, spellsBySource);
         loadAllBySource("db/wild_talent", Spell.class, spellsBySource);
         loadAllBySource("db/race", ComplexFeature.class, racesBySource);
+        loadAllBySourceThenMap("db/item", ItemData.class, itemsBySource, (sourceId, i) ->
+                new ItemData(i.id(),
+                        i.name(),
+                        i.description(),
+                        i.item_type(),
+                        i.price(),
+                        i.weight(),
+                        i.slot(),
+                        i.armor_bonus(),
+                        i.armor_type(),
+                        i.armor_max_dex(),
+                        i.armor_check_penalty(),
+                        i.arcane_spell_failure_chance(),
+                        i.armor_enhancement_bonus(),
+                        i.caster_level(),
+                        i.magic_aura(),
+                        i.weapon_proficiency_group(),
+                        i.weapon_type(),
+                        i.weapon_damage(),
+                        i.weapon_crit_range(),
+                        i.weapon_damage_type(),
+                        i.weapon_enhancement_bonus(),
+                        i.weapon_range(),
+                        i.weapon_groups(),
+                        List.of(sourceId.code()),
+                        i.destruction(),
+                        i.weapon_special(),
+                        i.armor_special_material(),
+                        i.weapon_special_material()));
 
         loadAllClassFeaturesBySource("db/discovery", Id.of("class:alchemist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
         loadAllClassFeaturesBySource("db/arcanist_exploit", Id.of("class:arcanist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
@@ -91,15 +124,17 @@ public class LocalPathfinderDatabaseLoader {
         loadAllClassFeaturesBySource("db/slayer_talent", Id.of("class:slayer"), classFeaturesBySource, Sources.ADVANCED_CLASS_GUIDE);
 
         loadAllBySourceThenMap("db/sorcerer_bloodline", BloodlineWithoutClassId.class, bloodlinesBySource,
-                bloodline -> bloodline.withClassId(Id.of("class:sorcerer")));
+                (sid, bloodline) -> bloodline.withClassId(Id.of("class:sorcerer")));
         loadAllBySourceThenMap("db/bloodrager_bloodline", BloodlineWithoutClassId.class, bloodlinesBySource,
-                bloodline -> bloodline.withClassId(Id.of("class:bloodrager")));
+                (sid, bloodline) -> bloodline.withClassId(Id.of("class:bloodrager")));
 
         sourceSet.addAll(archetypesBySource.keySet());
         sourceSet.addAll(spellsBySource.keySet());
         sourceSet.addAll(racesBySource.keySet());
         sourceSet.addAll(classFeaturesBySource.keySet());
         sourceSet.addAll(bloodlinesBySource.keySet());
+        sourceSet.addAll(itemsBySource.keySet());
+        sourceSet.addAll(complexFeaturesBySource.keySet());
 
         List<Source> sources = new ArrayList<>();
         sourceSet.forEach(sourceId -> sources.add(new BasicSource(
@@ -111,6 +146,7 @@ public class LocalPathfinderDatabaseLoader {
                 featsBySource.getOrDefault(sourceId, List.of()),
                 racesBySource.getOrDefault(sourceId, List.of()),
                 bloodlinesBySource.getOrDefault(sourceId, List.of()),
+                itemsBySource.getOrDefault(sourceId, List.of()),
                 classModificationFeaturesBySource.getOrDefault(sourceId, List.of()),
                 complexFeaturesBySource.getOrDefault(sourceId, List.of())
         )));
@@ -189,36 +225,44 @@ public class LocalPathfinderDatabaseLoader {
 
     private <T extends FromSourceBook> void loadBySource(String path, Class<T[]> type, Map<SourceId, List<T>> bySource) {
         load(path, type).forEach(classData -> {
-            SourceId sourceId = Sources.findSourceByNameOrCode(classData.source());
-            if (sourceId != null) {
-                bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(classData);
+            for (String source : classData.sources()) {
+                SourceId sourceId = Sources.findSourceByNameOrCode(source);
+                if (sourceId != null) {
+                    bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(classData);
+                }
             }
         });
     }
 
     private <T extends FromSourceBook> void loadAllBySource(String path, Class<T> type, Map<SourceId, List<T>> bySource) {
         loadAll(path, type).forEach(classData -> {
-            SourceId sourceId = Sources.findSourceByNameOrCode(classData.source());
-            if (sourceId != null) {
-                bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(classData);
+            for (String source : classData.sources()) {
+                SourceId sourceId = Sources.findSourceByNameOrCode(source);
+                if (sourceId != null) {
+                    bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(classData);
+                }
             }
         });
     }
 
-    private <T extends FromSourceBook, U> void loadBySourceThenMap(String path, Class<T[]> type, Map<SourceId, List<U>> bySource, Function<T,U> mapper) {
+    private <T extends FromSourceBook, U> void loadBySourceThenMap(String path, Class<T[]> type, Map<SourceId, List<U>> bySource, BiFunction<SourceId, T,U> mapper) {
         load(path, type).forEach(classData -> {
-            SourceId sourceId = Sources.findSourceByNameOrCode(classData.source());
-            if (sourceId != null) {
-                bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(mapper.apply(classData));
+            for (String source : classData.sources()) {
+                SourceId sourceId = Sources.findSourceByNameOrCode(source);
+                if (sourceId != null) {
+                    bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(mapper.apply(sourceId, classData));
+                }
             }
         });
     }
 
-    private <T extends FromSourceBook, U> void loadAllBySourceThenMap(String path, Class<T> type, Map<SourceId, List<U>> bySource, Function<T,U> mapper) {
+    private <T extends FromSourceBook, U> void loadAllBySourceThenMap(String path, Class<T> type, Map<SourceId, List<U>> bySource, BiFunction<SourceId,T,U> mapper) {
         loadAll(path, type).forEach(classData -> {
-            SourceId sourceId = Sources.findSourceByNameOrCode(classData.source());
-            if (sourceId != null) {
-                bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(mapper.apply(classData));
+            for (String source : classData.sources()) {
+                SourceId sourceId = Sources.findSourceByNameOrCode(source);
+                if (sourceId != null) {
+                    bySource.computeIfAbsent(sourceId, key -> new ArrayList<>()).add(mapper.apply(sourceId, classData));
+                }
             }
         });
     }

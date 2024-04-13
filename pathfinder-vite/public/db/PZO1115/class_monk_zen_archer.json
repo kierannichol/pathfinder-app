@@ -49,6 +49,38 @@
             "targetKey": "modifies:ability:maneuver_training#monk",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:ki_focus_bow#monk_zen_archer"],
+            "linksToRemove": ["ability:tongue_of_the_sun_and_moon#monk"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:perfect_strike#monk_zen_archer"],
+            "linksToRemove": ["ability:stunning_fist#monk"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:way_of_the_bow#monk_zen_archer"],
+            "linksToRemove": ["ability:evasion#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:zen_archery#monk_zen_archer", "ability:point_blank_master#monk_zen_archer"],
+            "linksToRemove": ["ability:maneuver_training#monk", "ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:ki_arrows#monk_zen_archer"],
+            "linksToRemove": ["ability:purity_of_body#monk"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:reflexive_shot#monk_zen_archer"],
+            "linksToRemove": ["ability:improved_evasion#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:trick_shot#monk_zen_archer"],
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }]
         }]
       }]
     }

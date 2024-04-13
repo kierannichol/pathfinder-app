@@ -24,6 +24,22 @@
             "targetKey": "modifies:ability:swift_poisoning#alchemist",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:rage_mutagen#alchemist_ragechemist"],
+            "linksToRemove": ["ability:poison_use#alchemist"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:sturdy_rage#alchemist_ragechemist"],
+            "linksToRemove": ["ability:swift_poisoning#alchemist"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:lumbering_rage#alchemist_ragechemist"],
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }]
         }]
       }]
     }

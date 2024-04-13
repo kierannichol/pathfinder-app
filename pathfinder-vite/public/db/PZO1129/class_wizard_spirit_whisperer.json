@@ -2,7 +2,7 @@
   "id": "class:wizard#spirit_whisperer",
   "name": "Spirit Whisperer",
   "tags": ["archetype", "wizard"],
-  "enabledFormula": "!@modifies:ability:spellbooks#wizard AND !@modifies:ability:bonus_feat#wizard AND !@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard",
+  "enabledFormula": "!@modifies:ability:bonus_feat#wizard AND !@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard",
   "maxStacks": 1,
   "description": {
   },
@@ -10,11 +10,6 @@
     "fixedStack": {
       "stacks": [{
         "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:spellbooks#wizard",
-            "numberValue": 1
-          }
-        }, {
           "setAction": {
             "targetKey": "modifies:ability:bonus_feat#wizard",
             "numberValue": 1
@@ -29,6 +24,27 @@
             "targetKey": "modifies:ability:arcane_bond#wizard",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:wizard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:arcane_bond#wizard_spirit_whisperer", "ability:spirit_link#wizard_spirit_whisperer"],
+            "linksToRemove": ["ability:arcane_bond#wizard", "ability:arcane_school#wizard"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:bonus_feat#wizard", "ability:bonus_feat#wizard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:spirit_hex#wizard_spirit_whisperer"],
+            "linksToRemove": ["ability:bonus_feat#wizard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bonus_feat#wizard"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:bonus_feat#wizard"]
+          }]
         }]
       }]
     }

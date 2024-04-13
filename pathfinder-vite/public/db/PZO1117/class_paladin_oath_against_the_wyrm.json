@@ -2,7 +2,7 @@
   "id": "class:paladin#oath_against_the_wyrm",
   "name": "Oath Against the Wyrm",
   "tags": ["archetype", "paladin"],
-  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:bond#paladin AND !@modifies:ability:holy_champion#paladin",
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:holy_champion#paladin",
   "maxStacks": 1,
   "description": {
   },
@@ -16,14 +16,21 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:bond#paladin",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:holy_champion#paladin",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:dragon_slaying_strike#paladin_oath_against_the_wyrm"],
+            "linksToRemove": ["ability:holy_champion#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:breath_evasion#paladin_oath_against_the_wyrm"],
+            "linksToRemove": ["ability:channel_positive_energy#paladin"]
+          }]
         }]
       }]
     }

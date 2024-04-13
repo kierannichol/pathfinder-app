@@ -48,7 +48,7 @@ export function CharacterLevel() {
   const classLevelText = useMemo(() => {
     const classesSelected = uniq(characterAtLevel.choices
         .filter(choice => choice.type === 'class')
-        .map(choice => characterAtLevel.selected(choice))
+        .map(choice => characterAtLevel.selected(choice) as string)
         .filter(selected => selected !== ''));
 
     return classesSelected.map(classId => {
@@ -72,7 +72,7 @@ export function Race() {
         .find(option => option.type === 'race');
 
     const selected = raceChoice !== undefined
-        ? characterAtLevel.selected(raceChoice)
+        ? characterAtLevel.selected(raceChoice) as string
         : undefined;
 
     return database.name(selected) ?? "Unknown";

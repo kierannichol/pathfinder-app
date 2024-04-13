@@ -2,6 +2,7 @@ package pathfinder.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import pathfinder.data.FeatureOptionsDbo;
+import pathfinder.data.FeatureOptionsDbo.Select;
 
 public record FeatureOptions(@JsonProperty("option_tag") String optionTag,
                              @JsonProperty("id_template") String idTemplate,
@@ -9,9 +10,11 @@ public record FeatureOptions(@JsonProperty("option_tag") String optionTag,
 
     public FeatureOptionsDbo toDbo() {
         return FeatureOptionsDbo.newBuilder()
-                .setOptionTag(optionTag)
-                .setIdTemplate(idTemplate)
-                .setPrerequisitesTemplate(prerequisitesTemplate)
+                .setSelect(Select.newBuilder()
+                        .setOptionTag(optionTag)
+                        .setIdTemplate(idTemplate)
+                        .setPrerequisitesTemplate(prerequisitesTemplate)
+                        .build())
                 .build();
     }
 }

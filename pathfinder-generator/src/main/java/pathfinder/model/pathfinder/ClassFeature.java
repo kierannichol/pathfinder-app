@@ -11,6 +11,11 @@ import pathfinder.model.Stacks;
 @Builder
 public record ClassFeature(Id id, String name, String label, String type, Id classId, Description description, String prerequisites, List<String> effects, Stacks stacks, String source) implements NamedEntity, FromSourceBook, ClassSpecific {
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
+
     public static ClassFeature fromFeature(Feature feature, Id classId) {
         return new ClassFeature(
                 feature.id(),

@@ -2,7 +2,7 @@
   "id": "class:monk#sensei",
   "name": "Sensei",
   "tags": ["archetype", "monk"],
-  "enabledFormula": "!@modifies:ability:14th_level#monk AND !@modifies:ability:flurry_of_blows_fast_movement#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:the_bonus_feats_gained_at_6th_10th#monk AND !@modifies:ability:evasion#monk AND !@modifies:ability:bonus_feat#monk",
+  "enabledFormula": "!@modifies:ability:improved_evasion#monk AND !@modifies:ability:evasion#monk AND !@modifies:ability:bonus_feat#monk",
   "maxStacks": 1,
   "description": {
     "text": "The sensei is a revered teacher who imparts lessons on the oneness of mind, body, and spirit, along with occasional correction that is subtle and swift. Rather than using wisdom for his own benefit alone, he uses it to better those around him."
@@ -12,22 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:14th_level#monk",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:flurry_of_blows_fast_movement#monk",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:improved_evasion#monk",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_bonus_feats_gained_at_6th_10th#monk",
             "numberValue": 1
           }
         }, {
@@ -40,6 +25,21 @@
             "targetKey": "modifies:ability:bonus_feat#monk",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:insightful_strike#monk_sensei"],
+            "linksToRemove": ["ability:bonus_feat#monk", "ability:evasion#monk"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:mystic_wisdom#monk_sensei"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:advice#monk_sensei"],
+            "linksToRemove": ["ability:improved_evasion#monk"]
+          }]
         }]
       }]
     }

@@ -4,17 +4,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchClientAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import pathfinder.db.LocalPathfinderDatabaseLoader;
 import pathfinder.db.PathfinderDatabase;
-import pathfinder.scraper.Scraper;
-import pathfinder.scraper.UtilityWildTalentScraper;
+import pathfinder.scraper.PotionItemDataGenerator;
+import pathfinder.scraper.ScrollItemDataGenerator;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
         "pathfinder.scraper"
-})
+}, exclude = ElasticsearchClientAutoConfiguration.class)
 @Slf4j
 public class ScraperApplication {
 
@@ -32,8 +33,11 @@ public class ScraperApplication {
         return args -> {
             log.info("Scraping data...");
 
-            Scraper scraper = ctx.getBean(UtilityWildTalentScraper.class);
-            scraper.scrape();
+//            SortekaninItemScraper search = ctx.getBean(SortekaninItemScraper.class);
+            ctx.getBean(ScrollItemDataGenerator.class).scrape();
+            ctx.getBean(PotionItemDataGenerator.class).scrape();
+
+            System.exit(0);
         };
     }
 }

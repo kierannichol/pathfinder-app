@@ -15,6 +15,14 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:meta_rage#bloodrager_metamagic_rager"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }]
         }]
       }]
     }

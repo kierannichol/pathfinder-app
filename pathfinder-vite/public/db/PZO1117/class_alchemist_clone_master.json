@@ -2,7 +2,6 @@
   "id": "class:alchemist#clone_master",
   "name": "Clone Master",
   "tags": ["archetype", "alchemist"],
-  "enabledFormula": "!@modifies:ability:poison_resistance_",
   "maxStacks": 1,
   "description": {
     "text": "Clone masters practice duplicating existing creatures in order to better understand how to create new life."
@@ -10,11 +9,12 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:poison_resistance_",
-            "numberValue": 1
-          }
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:rebirth#alchemist_clone_master"]
+          }]
         }]
       }]
     }

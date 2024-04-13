@@ -15,6 +15,17 @@
             "targetKey": "modifies:ability:arcanist_exploit#arcanist",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:arcanist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spontaneous_healing#arcanist_white_mage"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }]
         }]
       }]
     }

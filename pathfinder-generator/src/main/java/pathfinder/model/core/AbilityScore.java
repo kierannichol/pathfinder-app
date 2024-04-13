@@ -2,7 +2,10 @@ package pathfinder.model.core;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
+import pathfinder.model.Effect;
 import pathfinder.model.Feature;
+import pathfinder.model.Id;
+import pathfinder.model.StackBuilder;
 
 public enum AbilityScore {
     STR("str", "Strength"),
@@ -29,6 +32,17 @@ public enum AbilityScore {
                 .map(abilityScore -> Feature.builder(abilityScore.scoreKey())
                         .setName(abilityScore.longName)
                         .addTag("ability_score")
+                        .build());
+    }
+
+    public static Stream<Feature> asiFeatures() {
+        return Arrays.stream(values())
+                .map(abilityScore -> Feature.builder(Id.of("asi", abilityScore.scoreKey()))
+                        .setName(abilityScore.longName)
+                        .addTag("asi")
+                        .setRepeatingStack(new StackBuilder()
+                                .addEffect(Effect.addNumber("%s:asi".formatted(abilityScore.shortName), 1))
+                                .build())
                         .build());
     }
 }

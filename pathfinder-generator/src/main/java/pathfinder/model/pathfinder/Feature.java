@@ -26,6 +26,11 @@ public record Feature(Id id, String name, String label, String type, Description
         return new FeatureBuilder(copy);
     }
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
+
     public static class FeatureBuilder {
         private Id id;
         private String name;

@@ -10,6 +10,7 @@ import pathfinder.model.pathfinder.CharacterClass;
 import pathfinder.model.pathfinder.ClassFeature;
 import pathfinder.model.pathfinder.ComplexFeature;
 import pathfinder.model.pathfinder.Feat;
+import pathfinder.model.pathfinder.ItemData;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Spell;
 
@@ -53,6 +54,11 @@ public class CoreCharacterSource implements Source {
 
     @Override
     public List<Spell> spells() {
+        return null;
+    }
+
+    @Override
+    public List<ItemData> items() {
         return null;
     }
 }

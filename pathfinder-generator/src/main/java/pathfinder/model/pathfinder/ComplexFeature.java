@@ -20,6 +20,11 @@ import pathfinder.model.pathfinder.Feature.FeatureBuilder;
 
 public record ComplexFeature(Id id, String name, List<String> tags, String type, Description description, Stacks stacks, List<ConditionalStack> conditionalStacks, List<Feature> features, String source, Map<String, String> metadata) implements NamedEntity, FromSourceBook {
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
+
     public static ComplexFeatureBuilder builder() {
         return new ComplexFeatureBuilder();
     }

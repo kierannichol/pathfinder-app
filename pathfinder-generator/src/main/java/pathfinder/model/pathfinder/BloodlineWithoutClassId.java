@@ -25,6 +25,11 @@ public record BloodlineWithoutClassId(Id id,
                 source);
     }
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
+
 //    public Entity toBloodlineEntity() {
 //        var entity = Entity.builder()
 //                .id(id())

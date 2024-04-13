@@ -2,7 +2,7 @@
   "id": "class:ranger#battle_scout",
   "name": "Battle Scout",
   "tags": ["archetype", "ranger"],
-  "enabledFormula": "!@modifies:ability:master_hunter#ranger AND !@modifies:ability:the_rangers_second_favored_enemy#ranger AND !@modifies:ability:the_rangers_third_favored_enemy#ranger AND !@modifies:ability:the_rangers_fourth_favored_enemy#ranger",
+  "enabledFormula": "!@modifies:ability:master_hunter#ranger",
   "maxStacks": 1,
   "description": {
     "text": "Armies need clean water, safe routes, and intelligence about their enemies. Though regular outdoorsmen might suffice in many cases, some large forces look to battle scouts to keep the body of their troops safe and prepared for the terrain and whatever dangers that terrain hides."
@@ -15,21 +15,23 @@
             "targetKey": "modifies:ability:master_hunter#ranger",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_second_favored_enemy#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_third_favored_enemy#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_fourth_favored_enemy#ranger",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:perfect_advantage#ranger_battle_scout"],
+            "linksToRemove": ["ability:master_hunter#ranger"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:advantageous_terrain#ranger_battle_scout"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:infiltration#ranger_battle_scout"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:superior_tactics#ranger_battle_scout"]
+          }]
         }]
       }]
     }

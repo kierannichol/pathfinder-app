@@ -2,7 +2,6 @@
   "id": "class:ranger#trapper",
   "name": "Trapper",
   "tags": ["archetype", "ranger"],
-  "enabledFormula": "!@modifies:ability:rangers_spells#ranger",
   "maxStacks": 1,
   "description": {
     "text": "A trapper is a ranger who focuses exclusively on traps, rather than learning conventional magic."
@@ -10,11 +9,12 @@
   "stacks": {
     "fixedStack": {
       "stacks": [{
-        "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:rangers_spells#ranger",
-            "numberValue": 1
-          }
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:trap#ranger_trapper"]
+          }]
         }]
       }]
     }

@@ -35,6 +35,40 @@
             "targetKey": "modifies:ability:indomitable_will#bloodrager",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:contact_specialist#bloodrager_blood_conduit"],
+            "linksToRemove": ["ability:fast_movement#bloodrager"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:spell_conduit#bloodrager_blood_conduit"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:reflexive_conduit#bloodrager_blood_conduit"],
+            "linksToRemove": ["ability:indomitable_will#bloodrager"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
         }]
       }]
     }

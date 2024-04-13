@@ -2,7 +2,7 @@
   "id": "class:swashbuckler#flying_blade",
   "name": "Flying Blade",
   "tags": ["archetype", "swashbuckler"],
-  "enabledFormula": "!@modifies:ability:panache#swashbuckler AND !@modifies:ability:dodging_panache#swashbuckler AND !@modifies:ability:swashbuckler_weapon_mastery#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler",
+  "enabledFormula": "!@modifies:ability:panache#swashbuckler AND !@modifies:ability:swashbuckler_weapon_mastery#swashbuckler AND !@modifies:ability:swashbuckler_weapon_training#swashbuckler",
   "maxStacks": 1,
   "description": {
     "text": "While most swashbucklers prefer their battles up close, others prefer dealing death from a distance."
@@ -17,11 +17,6 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:dodging_panache#swashbuckler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:swashbuckler_weapon_mastery#swashbuckler",
             "numberValue": 1
           }
@@ -30,6 +25,31 @@
             "targetKey": "modifies:ability:swashbuckler_weapon_training#swashbuckler",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:panache#swashbuckler_flying_blade"],
+            "linksToRemove": ["ability:panache#swashbuckler"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:flying_blade_mastery#swashbuckler_flying_blade"],
+            "linksToRemove": ["ability:swashbuckler_weapon_mastery#swashbuckler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:flying_blade_training#swashbuckler_flying_blade"],
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:swashbuckler_weapon_training#swashbuckler"]
+          }]
         }]
       }]
     }

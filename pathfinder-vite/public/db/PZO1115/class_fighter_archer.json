@@ -29,6 +29,59 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:hawkeye#fighter_archer"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:trick_shot#fighter_archer"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:expert_archer#fighter_archer"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:safe_shot#fighter_archer"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:evasive_archer#fighter_archer"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:volley#fighter_archer"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:ranged_defense#fighter_archer"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }]
         }]
       }]
     }

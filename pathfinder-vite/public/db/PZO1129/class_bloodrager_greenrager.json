@@ -20,6 +20,22 @@
             "targetKey": "modifies:ability:bloodline_feat#bloodrager",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:unfettered_fury#bloodrager_greenrager"],
+            "linksToRemove": ["ability:blood_sanctuary#bloodrager"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:summoning_rager#bloodrager_greenrager"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:furious_summoning#bloodrager_greenrager"],
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
         }]
       }]
     }

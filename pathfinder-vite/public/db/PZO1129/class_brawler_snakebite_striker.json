@@ -20,6 +20,40 @@
             "targetKey": "modifies:ability:martial_flexibility#brawler",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:sneak_attack#brawler_snakebite_striker"],
+            "linksToRemove": ["ability:martial_flexibility#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:snake_feint#brawler_snakebite_striker"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:martial_flexibility#brawler"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:martial_flexibility#brawler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:martial_flexibility#brawler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:opportunist#brawler_snakebite_striker"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:martial_flexibility#brawler"]
+          }]
         }]
       }]
     }

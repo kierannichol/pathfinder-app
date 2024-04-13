@@ -34,6 +34,30 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:arctic_native#druid_arctic_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:icewalking#druid_arctic_druid"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:arctic_endurance#druid_arctic_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:snowcaster#druid_arctic_druid"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:flurry_form#druid_arctic_druid"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
         }]
       }]
     }

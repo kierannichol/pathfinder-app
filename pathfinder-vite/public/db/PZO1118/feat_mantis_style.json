@@ -2,10 +2,13 @@
   "id": "feat:mantis_style",
   "name": "Mantis Style",
   "tags": ["feat", "style"],
-  "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#monk,@skill:heal\u003e\u003d3)",
+  "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk,@skill:heal\u003e\u003d3)",
   "maxStacks": 1,
   "description": {
-    "text": "You have learned to target vital areas with crippling accuracy."
+    "text": "You have learned to target vital areas with crippling accuracy.",
+    "sections": {
+      "Benefit": "You gain one additional Stunning Fist attempt per day. While using this style, you gain a +2 bonus to the DC of effects you deliver with your Stunning Fist."
+    }
   },
   "stacks": {
     "fixedStack": {

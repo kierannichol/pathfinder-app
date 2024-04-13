@@ -29,9 +29,17 @@ public class NameToIdConverter {
         return generateId(AttributeType.SKILL, name);
     }
 
+    public static Id itemId(String name) {
+        return generateId(AttributeType.ITEM, name);
+    }
+
     public static Id.Key weaponId(String name) {
         return partialId(name);
 //        return generateId(AttributeType.WEAPON, name);
+    }
+
+    public static Id.Key armorId(String name) {
+        return partialId(name);
     }
 
     public static Id.Key partialId(String name) {
@@ -41,11 +49,13 @@ public class NameToIdConverter {
                 .replaceAll(" \\(Sp\\)", "")
                 .replaceAll(" \\(Ex\\)", "")
                 .replaceAll("/[$a-z0-9]/", "")
-                .replaceAll("\'", "")
+                .replaceAll("'", "")
                 .replace(' ', '_')
                 .replaceAll(",", "")
                 .replace("’", "")
                 .replace('/', '_')
+                .replace("+", "")
+                .replace(".", "")
                 .replaceAll("\\(", "")
                 .replaceAll("\\)", "")
                 .replaceAll("\\[", "")

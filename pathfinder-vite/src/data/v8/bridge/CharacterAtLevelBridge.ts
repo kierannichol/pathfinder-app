@@ -54,12 +54,11 @@ export class CharacterAtLevelBridge extends CharacterAtLevelModel {
     return this.data.keys();
   }
 
-  selected(choice: ChoiceModel): string {
-    return this.data.selected(choice.path);
+  selected(choice: ChoiceModel, index?: number): string|string[] {
+    return this.data.selected(choice.path, index);
   }
 
-  without(key: string): CharacterAtLevelModel {
-    return new CharacterAtLevelBridge(this.data.without(key));
+  withoutChoice(choice: ChoiceModel): CharacterAtLevelModel {
+    return new CharacterAtLevelBridge(this.data.withoutChoice(choice.path));
   }
-
 }

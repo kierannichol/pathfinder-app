@@ -17,6 +17,7 @@ interface ChoiceSelectorDialogProps {
   value: string|undefined;
   onSelect?: (optionId: string) => void;
   onCancel?: () => void;
+  onChangeSelection?: (optionId: string|undefined) => void;
   optionsFn: (query: string|undefined, category: ChoiceSelectorCategory|undefined) => ChoiceSelectorOptions;
   categories?: ChoiceSelectorCategory[];
   search?: boolean|"auto";
@@ -26,7 +27,7 @@ interface ChoiceSelectorDialogProps {
 
 const SearchCategory = new ChoiceSelectorCategory(<FaMagnifyingGlass />, '', '_search');
 
-export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect, onCancel, optionsFn, categories = [], search = false, variant = 'special'}: ChoiceSelectorDialogProps) {
+export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect, onCancel, onChangeSelection, optionsFn, categories = [], search = false, variant = 'special'}: ChoiceSelectorDialogProps) {
   const [selected, setSelected] = useState<string|undefined>(value);
   const [query, setQuery] = useState('');
 
@@ -42,6 +43,23 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
 
   const [ isLoading, startLoading ] = useTransition();
 
+  function highlight(target: string|undefined) {
+    setSelected(value);
+
+    if (target === undefined || !category) return;
+    for (let category of categories) {
+      const categoryOptions = array(optionsFn(undefined, category));
+      for (let option of categoryOptions) {
+        if (option.id !== target) {
+          continue;
+        }
+
+        setCategory(category);
+        return;
+      }
+    }
+  }
+
   useEffect(() => {
     if (hasQuery) {
       setCategory(SearchCategory);
@@ -55,7 +73,7 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
   }, [show, category]);
 
   useEffect(() => {
-    setSelected(value);
+    highlight(value);
   }, [value]);
 
   const availableOptions: Array<ChoiceSelectorOption> = useMemo(() => {
@@ -82,6 +100,7 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
 
   const handleChangeSelection = (optionId: string|undefined) => {
     setSelected(optionId);
+    onChangeSelection?.(optionId);
   }
 
   const handleChangeCategory = (categoryKey: string|undefined) => {

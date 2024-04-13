@@ -76,4 +76,8 @@ public class Query {
     public static SpellQuery spell(String name) {
         return new SpellQuery(name);
     }
+
+    public static ItemQuery items() {
+        return new ItemQuery(null);
+    }
 }

@@ -5,7 +5,10 @@
   "enabledFormula": "all(@skill:disable_device\u003e\u003d5,@skill:use_magic_device\u003e\u003d5,@ability:trapfinding#investigator)",
   "maxStacks": 1,
   "description": {
-    "text": "You can disable a magic item, suppressing it for a short time."
+    "text": "You can disable a magic item, suppressing it for a short time.",
+    "sections": {
+      "Benefit": "You can use Disable Device to suppress the magic of a non-artifact magic item for 1d4 rounds, after which the item recovers its magical properties. A suppressed item becomes non-magical for the duration of the suppression. Using Disable Device in this way takes 2d4 rounds, with a DC of 15 + the item\u0027s caster level."
+    }
   },
   "stacks": {
     "fixedStack": {

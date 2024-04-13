@@ -1,0 +1,49 @@
+.card {
+  --pf-card-background-color: white;
+  --pf-card-text-color: dimgray;
+  --pf-card-portrait-background-color: darkgrey;
+  --pf-card-selected-background-color: var(--pf-card-background-color);
+  --pf-card-selected-text-color: var(--pf-card-text-color);
+  --pf-card-border-width: 2px;
+
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: center;
+  align-items: center;
+  justify-content: start;
+  min-height: 56px;
+  padding: 5px 10px;
+
+  background-color: var(--pf-card-background-color);
+  //border: var(--pf-card-border-width) solid var(--pf-card-text-color);
+  color: var(--pf-card-text-color);
+}
+
+.dragging {
+  border: var(--pf-card-border-width) solid var(--pf-card-text-color);
+}
+
+// Button Colors
+
+.active {
+  background-color: var(--pf-card-selected-background-color);
+  color: var(--pf-card-selected-text-color);
+}
+
+.disabled {
+  --pf-card-background-color: #E8E4E0;
+  --pf-card-text-color: dimgray;
+  --pf-card-selected-background-color: #E8E4E0;
+  --pf-card-selected-text-color: dimgray;
+}

@@ -25,6 +25,31 @@
             "targetKey": "modifies:ability:favored_terrain#ranger",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:shifters_blessing#ranger_shapeshifter"],
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:master_shifter#ranger_shapeshifter"],
+            "linksToRemove": ["ability:master_hunter#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:dual_form_shifter#ranger_shapeshifter"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }]
         }]
       }]
     }

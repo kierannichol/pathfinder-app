@@ -30,6 +30,51 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:agility#fighter_mobile_fighter"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:whirlwind_blitz#fighter_mobile_fighter"],
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:leaping_attack#fighter_mobile_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:rapid_attack#fighter_mobile_fighter"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:fleet_footed#fighter_mobile_fighter"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
         }]
       }]
     }

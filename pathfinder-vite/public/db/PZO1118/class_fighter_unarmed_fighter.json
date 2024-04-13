@@ -2,7 +2,7 @@
   "id": "class:fighter#unarmed_fighter",
   "name": "Unarmed Fighter",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:the_12th_level_bonus_feat#fighter AND !@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:the_8th_level_bonus_feat#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:bonus_feat#fighter AND !@modifies:ability:weapon_training#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:bonus_feat#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "Not all fighters need weapons to make their mark on the world. The unarmed fighter picks up a weapon only rarely, and when he does, he prefers the weapons of the monk. There are even those who mistake them for monks, but these fighters enter the fight without ki, and instead have a tough perseverance that few can rival."
@@ -12,22 +12,12 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:the_12th_level_bonus_feat#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:bravery#fighter",
             "numberValue": 1
           }
         }, {
           "setAction": {
             "targetKey": "modifies:ability:armor_training#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_8th_level_bonus_feat#fighter",
             "numberValue": 1
           }
         }, {
@@ -45,6 +35,66 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:unarmed_style#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:bonus_feat#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:harsh_training#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:tough_guy#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:weapon_training#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:clever_wrestler#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:trick_throw#fighter_unarmed_fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:takedown#fighter_unarmed_fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:eye_gouge#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:sucker_punch#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:sheer_toughness#fighter_unarmed_fighter"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }]
         }]
       }]
     }

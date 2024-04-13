@@ -64,7 +64,22 @@ public class ArchetypeMapper {
 
         archetype.modifications().forEach(modification -> {
             Set<IdAndLevel> toAddSet = defaultIfNull(modification.add(), Set.of());
-            Set<IdAndLevel> toRemoveSet = defaultIfNull(modification.remove(), Set.of());
+            Set<IdAndLevel> toRemoveSet = ArchetypeMapper.<Set<IdAndLevel>>defaultIfNull(modification.remove(), Set.of())
+                    .stream().flatMap(toRemove -> {
+                        if (toRemove.level().isPresent()) {
+                            return Stream.of(toRemove);
+                        }
+
+                        List<IdAndLevel> found = new ArrayList<>();
+
+                        baseClass.levels().forEach(level -> {
+                            if (level.classFeatureIds().contains(toRemove.id())) {
+                                found.add(IdAndLevel.of(toRemove.id(), level.level()));
+                            }
+                        });
+
+                        return found.stream();
+                    }).collect(Collectors.toSet());
 
             toAddSet.forEach(toAdd -> {
                     Optional<pathfinder.model.pathfinder.Feature> maybeFeatureToAdd = Stream.concat(
@@ -99,11 +114,9 @@ public class ArchetypeMapper {
                         }
                     });
 
-//                levels.forEach(level -> archetypeStack.addLink(toAdd.id(), "@%s>=%d".formatted(baseClassId, level)));
                 levels.forEach(level -> archetypeClassModification.stack(level).addsFeature(toAdd.id()));
             });
 
-//            toRemoveSet.forEach(idAndLevel -> archetypeStack.removeLink(idAndLevel.id()));
             toRemoveSet.forEach(idAndLevel ->
                     idAndLevel.level().ifPresent(level -> archetypeClassModification.stack(level).removesFeature(idAndLevel.id())));
             replacesIds.addAll(toRemoveSet.stream().map(IdAndLevel::id).toList());
@@ -125,9 +138,9 @@ public class ArchetypeMapper {
                 log.warn(e.getMessage());
             }
         });
+        archetypeStack.addFeatureModification(archetypeClassModification.build());
 
         builder.addFixedStack(archetypeStack.build());
-        builder.addFeatureModification(archetypeClassModification.build());
         builder.setEnabledCondition(enabledFormula);
 
         features.add(builder.build());
@@ -139,7 +152,7 @@ public class ArchetypeMapper {
     private Stream<Feature> flatMapArchetypeFeatures(Archetype archetype) {
         return archetype.features().stream()
                 .map(feature -> ClassFeature.fromFeature(feature, archetype.id()))
-                .map(featureMapper::map);
+                .flatMap(featureMapper::map);
     }
 
     private List<Integer> tryParseLevelsFromDescription(String description) {

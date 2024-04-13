@@ -25,6 +25,22 @@
             "targetKey": "modifies:ability:spirit_magic#shaman",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:shaman",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:shared_skill#shaman_possessed_shaman"],
+            "linksToRemove": ["ability:spirit_magic#shaman"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:crowded_vessel#shaman_possessed_shaman"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:wandering_skills#shaman_possessed_shaman"],
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }]
         }]
       }]
     }

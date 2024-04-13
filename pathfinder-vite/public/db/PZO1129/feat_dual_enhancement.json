@@ -2,10 +2,13 @@
   "id": "feat:dual_enhancement",
   "name": "Dual Enhancement",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@feat:two_weapon_fighting,any(@ability:divine_bond#paladin_divine_defender#weapon,@ability:sacred_weapon#warpriest))",
+  "enabledFormula": "all(@feat:two_weapon_fighting,any(@ability:divine_bond#paladin_oath_against_the_wyrm#weapon,@ability:sacred_weapon#warpriest))",
   "maxStacks": 1,
   "description": {
-    "text": "You can enhance two weapons, or both ends of a double weapon, with a single act."
+    "text": "You can enhance two weapons, or both ends of a double weapon, with a single act.",
+    "sections": {
+      "Benefit": "When you use divine bond or sacred weapon to improve your weapon, you can choose to enhance two weapons or both ends of a double weapon. All weapons affected must be in hand or otherwise wielded. Any enhancement bonus you add to one of your weapons gets added to both automatically, but weapon special abilities must be accounted for separately. For example, if you can enhance up to the equivalent of a +2 bonus, you could give both your weapons an additional +1 bonus and apply the keen special weapon ability to one of those weapons."
+    }
   },
   "stacks": {
     "fixedStack": {

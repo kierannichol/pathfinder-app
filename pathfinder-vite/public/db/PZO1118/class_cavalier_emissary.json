@@ -35,6 +35,30 @@
             "targetKey": "modifies:ability:greater_tactician#cavalier",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:in_or_out_of_the_saddle#cavalier_emissary"],
+            "linksToRemove": ["ability:tactician#cavalier"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:erratic_charge#cavalier_emissary"],
+            "linksToRemove": ["ability:supreme_charge#cavalier"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:battlefield_agility#cavalier_emissary"],
+            "linksToRemove": ["ability:banner#cavalier"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:mounted_acrobatics#cavalier_emissary"],
+            "linksToRemove": ["ability:greater_tactician#cavalier"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:mounted_dervish#cavalier_emissary"],
+            "linksToRemove": ["ability:greater_banner#cavalier"]
+          }]
         }]
       }]
     }

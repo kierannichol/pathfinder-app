@@ -40,6 +40,45 @@
             "targetKey": "modifies:ability:improved_quarry#ranger",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:improved_rangers_luck#ranger_guide"],
+            "linksToRemove": ["ability:improved_evasion#ranger"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:rangers_focus#ranger_guide"],
+            "linksToRemove": ["ability:favored_enemy#ranger"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:improved_quarry#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:terrain_bond#ranger_guide"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:favored_enemy#ranger"]
+          }, {
+            "targetStackCount": 5,
+            "linksToRemove": ["ability:favored_enemy#ranger"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:rangers_luck#ranger_guide"],
+            "linksToRemove": ["ability:evasion#ranger"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:favored_enemy#ranger"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:inspired_moment#ranger_guide"],
+            "linksToRemove": ["ability:quarry#ranger"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:favored_enemy#ranger"]
+          }]
         }]
       }]
     }

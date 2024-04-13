@@ -4,5 +4,5 @@ export default interface PackedCharacter {
 }
 
 export class PackedSelections {
-  [key: string]: string;
+  [key: string]: string|string[];
 }

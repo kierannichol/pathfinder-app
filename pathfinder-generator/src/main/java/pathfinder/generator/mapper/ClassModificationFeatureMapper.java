@@ -75,11 +75,11 @@ public class ClassModificationFeatureMapper {
             toRemoveSet.forEach(idAndLevel ->
                     idAndLevel.level().ifPresent(level -> featureModification.stack(level).removesFeature(idAndLevel.id())));
         });
+        featureStack.addFeatureModification(featureModification.build());
 
         builder.setMaxStacks(1);
 
         builder.addFixedStack(featureStack.build());
-        builder.addFeatureModification(featureModification.build());
 
         features.add(builder.build());
         return features.stream();
@@ -88,7 +88,7 @@ public class ClassModificationFeatureMapper {
     private Stream<Feature> flatMapClassModificationFeatures(ClassModificationFeature classModificationFeature) {
         return classModificationFeature.features().stream()
                 .map(feature -> ClassFeature.fromFeature(feature, classModificationFeature.id()))
-                .map(featureMapper::map);
+                .flatMap(featureMapper::map);
     }
 
     private static <T> T defaultIfNull(T t, T orThis) {

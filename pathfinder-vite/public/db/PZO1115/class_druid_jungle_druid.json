@@ -29,6 +29,26 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:jungle_guardian#druid_jungle_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:woodland_stride#druid_jungle_druid"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:torrid_endurance#druid_jungle_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:verdant_sentinel#druid_jungle_druid"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
         }]
       }]
     }

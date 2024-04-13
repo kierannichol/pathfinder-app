@@ -2,7 +2,7 @@
   "id": "class:magus#skirnir",
   "name": "Skirnir",
   "tags": ["archetype", "magus"],
-  "enabledFormula": "!@modifies:ability:improved_spell_combat_greater_spell_combat#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:counterstrike#magus AND !@modifies:ability:knowledge_pool#magus AND !@modifies:ability:spell_combat#magus",
+  "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:counterstrike#magus AND !@modifies:ability:knowledge_pool#magus AND !@modifies:ability:spell_combat#magus",
   "maxStacks": 1,
   "description": {
     "text": "Sometimes called a shield-vassal or shieldmaiden, the skirnir has learned to infuse his power into his shield."
@@ -11,11 +11,6 @@
     "fixedStack": {
       "stacks": [{
         "effects": [{
-          "setAction": {
-            "targetKey": "modifies:ability:improved_spell_combat_greater_spell_combat#magus",
-            "numberValue": 1
-          }
-        }, {
           "setAction": {
             "targetKey": "modifies:ability:spell_recall#magus",
             "numberValue": 1
@@ -40,6 +35,32 @@
             "targetKey": "modifies:ability:spell_combat#magus",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:greater_spellshield#magus_skirnir"],
+            "linksToRemove": ["ability:counterstrike#magus"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:sorcerous_shield#magus_skirnir"],
+            "linksToRemove": ["ability:spell_combat#magus"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:greater_spell_access#magus"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:shield_pool#magus_skirnir"],
+            "linksToRemove": ["ability:spell_recall#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:spellshield#magus_skirnir"],
+            "linksToRemove": ["ability:knowledge_pool#magus"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:shielded_spell_combat#magus_skirnir"]
+          }]
         }]
       }]
     }

@@ -25,6 +25,22 @@
             "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:spiritual_bond#ranger_horse_lord"],
+            "linksToRemove": ["ability:hide_in_plain_sight#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:mounted_bond#ranger_horse_lord"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:strong_bond#ranger_horse_lord"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }]
         }]
       }]
     }

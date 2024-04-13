@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchClientAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import pathfinder.db.LocalPathfinderDatabaseLoader;
@@ -12,16 +13,15 @@ import pathfinder.db.PathfinderDatabase;
 import pathfinder.generator.CharacterTemplateGenerator;
 import pathfinder.generator.DatabaseWriter;
 import pathfinder.generator.SourceModuleDatabaseGenerator;
+import pathfinder.generator.SourceModuleItemDatabaseGenerator;
 import pathfinder.model.CharacterTemplate;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
-//        "pathfinder.generator",
-//        "pathfinder.db"
         "pathfinder.generator"
-})
+}, exclude = ElasticsearchClientAutoConfiguration.class)
 @Slf4j
 public class GeneratorApplication {
 
@@ -55,13 +55,17 @@ public class GeneratorApplication {
                     Sources.ULTIMATE_MAGIC,
                     Sources.ULTIMATE_EQUIPMENT,
                     Sources.UNCHAINED,
-                    Sources.OCCULT_ADVENTURES
+                    Sources.OCCULT_ADVENTURES,
+                    Sources.ADVANCED_RACE_GUIDE
             );
 
             for (SourceId sourceId : sources) {
                 log.info("Generating module \"%s\"...".formatted(sourceId.name()));
                 ctx.getBean(SourceModuleDatabaseGenerator.class, sourceId).generate();
+                ctx.getBean(SourceModuleItemDatabaseGenerator.class, sourceId).generate();
             }
+
+            System.exit(0);
         };
     }
 }

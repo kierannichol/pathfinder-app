@@ -29,6 +29,25 @@
             "targetKey": "modifies:ability:woodland_stride#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:lorekeeper#druid_urban_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:resist_temptation#druid_urban_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:mental_strength#druid_urban_druid"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }]
         }]
       }]
     }

@@ -19,6 +19,18 @@
             "targetKey": "modifies:ability:aura_of_justice#paladin",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:aura_of_life#paladin_undead_scourge"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:undead_annihilation#paladin_undead_scourge"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }]
         }]
       }]
     }

@@ -2,9 +2,13 @@
   "id": "feat:shaping_focus",
   "name": "Shaping Focus",
   "tags": ["feat", "general"],
-  "enabledFormula": "all(@ability:wild_shape#druid,@skill:knowledge_nature\u003e\u003d5)",
+  "enabledFormula": "all(@ability:wild_shape#skald_totemic_skald,@skill:knowledge_nature\u003e\u003d5)",
   "maxStacks": 1,
   "description": {
+    "sections": {
+      "Benefit": "If you are a multiclassed druid, your wild shape ability is calculated as though your druid level were four higher, to a maximum level equal to your character level.",
+      "Special": "This feat has no effect if you are not a multiclassed druid."
+    }
   },
   "stacks": {
     "fixedStack": {

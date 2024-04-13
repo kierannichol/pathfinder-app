@@ -20,6 +20,34 @@
             "targetKey": "modifies:ability:manifestation#shaman",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:shaman",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:etherealness#shaman_animist"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:wrangle_condition#shaman_animist"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:spirit_shaman#shaman_animist"],
+            "linksToRemove": ["ability:manifestation#shaman"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:exorcism#shaman_animist"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:dominate_spirit#shaman_animist"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:contact_with_the_spirit_world#shaman_animist"],
+            "linksToRemove": ["ability:hex#shaman"]
+          }]
         }]
       }]
     }

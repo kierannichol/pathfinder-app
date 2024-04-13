@@ -14,6 +14,18 @@
             "targetKey": "modifies:ability:mercy#paladin",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:favored_terrain#paladin_holy_guide"],
+            "linksToRemove": ["ability:mercy#paladin"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:teamwork_feat#paladin_holy_guide"],
+            "linksToRemove": ["ability:mercy#paladin"]
+          }]
         }]
       }]
     }

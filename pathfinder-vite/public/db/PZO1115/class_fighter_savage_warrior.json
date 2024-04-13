@@ -24,6 +24,46 @@
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:greater_savage_charge#fighter_savage_warrior"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:spark_of_life#fighter_savage_warrior"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:natural_weapon_mastery#fighter_savage_warrior"],
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:natural_savagery#fighter_savage_warrior"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:savage_charge#fighter_savage_warrior"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:careful_claw#fighter_savage_warrior"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }]
         }]
       }]
     }

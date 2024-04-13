@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "Feature.proto";
+import "Item.proto";
 
 option java_multiple_files = true;
 option java_package = "pathfinder.data";
@@ -10,4 +11,12 @@ package data;
 message SourceModuleDbo {
   string source_id = 1;
   repeated FeatureSummaryDbo features = 2;
+}
+
+message SourceModuleItemDatabaseDbo {
+  uint32 source_id = 1;
+  string source_code = 2;
+  repeated ItemSummaryDbo items = 3;
+  repeated ItemOptionSetDbo option_sets = 4;
+  repeated ItemOptionDbo options = 5;
 }

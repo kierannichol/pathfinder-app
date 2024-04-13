@@ -6,5 +6,8 @@ interface CharacterEditProps {
 }
 
 export default function CharacterEdit({ loaded }: CharacterEditProps) {
-  return <CharacterEditor loaded={loaded} />
+  return <div>
+    <CharacterEditor loaded={loaded} />
+    <div className="spacer"/>
+  </div>
 }

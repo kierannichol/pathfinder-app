@@ -14,6 +14,14 @@
             "targetKey": "modifies:ability:fascinate#bard",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bardic_performance#bard_savage_skald"],
+            "linksToRemove": ["ability:fascinate#bard"]
+          }]
         }]
       }]
     }

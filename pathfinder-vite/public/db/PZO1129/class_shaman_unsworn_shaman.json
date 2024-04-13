@@ -35,6 +35,32 @@
             "targetKey": "modifies:ability:spirit_magic#shaman",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:shaman",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:spirit#shaman"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:minor_spirit#shaman_unsworn_shaman", "ability:spirit_magic#shaman_unsworn_shaman"],
+            "linksToRemove": ["ability:spirit#shaman", "ability:spirit_animal#shaman", "ability:spirit_magic#shaman"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:spirit_animal#shaman_unsworn_shaman", "ability:wandering_spirit#shaman_unsworn_shaman"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:wandering_spirit#shaman"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:wandering_spirit#shaman"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }]
         }]
       }]
     }

@@ -11,14 +11,14 @@ import pathfinder.data.FeatureSummaryDbo;
 public record Feature(Id id,
                       String name,
                       String label,
+                      String typeAlias,
                       Description description,
                       Condition enabledCondition,
                       List<String> tags,
                       FeatureOptions options,
                       Integer maxStacks,
                       Stacks stacks,
-                      List<ConditionalStack> conditionalStacks,
-                      List<FeatureModification> featureModifications) implements NamedEntity {
+                      List<ConditionalStack> conditionalStacks) implements NamedEntity {
 
     public static Feature simple(Id id, String name) {
         return builder(id)
@@ -51,10 +51,6 @@ public record Feature(Id id,
 
         if (feature.maxStacks != null) {
             builder.setMaxStacks(feature.maxStacks);
-        }
-
-        if (feature.featureModifications != null) {
-            feature.featureModifications.forEach(builder::addFeatureModification);
         }
 
         if (feature.options != null) {
@@ -120,14 +116,14 @@ public record Feature(Id id,
         private Id id;
         private String name = "";
         private String label = null;
-        private Description description = Description.empty();
+        private String typeAlias = "";
+        private Description description = pathfinder.model.Description.empty();
         private Condition enabledCondition = new Condition("");
         private final List<String> tags = new ArrayList<>();
         private FeatureOptions options = null;
         private final List<Stack> fixedStack = new ArrayList<>();
         private Stack repeatingStack = null;
         private Integer maxStacks = null;
-        private final List<FeatureModification> featureModifications = new ArrayList<>();
         private final List<ConditionalStack> conditionalStacks = new ArrayList<>();
 
         public FeatureBuilder(Id id) {
@@ -149,8 +145,13 @@ public record Feature(Id id,
             return this;
         }
 
+        public FeatureBuilder setTypeAlias(String typeAlias) {
+            this.typeAlias = typeAlias;
+            return this;
+        }
+
         public FeatureBuilder setDescription(String text) {
-            return setDescription(Description.create(text));
+            return setDescription(pathfinder.model.Description.create(text));
         }
 
         public FeatureBuilder setDescription(Description description) {
@@ -199,8 +200,10 @@ public record Feature(Id id,
             return this;
         }
 
-        public FeatureBuilder addFeatureModification(FeatureModification featureModification) {
-            this.featureModifications.add(featureModification);
+        public FeatureBuilder clearStacks() {
+            fixedStack.clear();
+            conditionalStacks.clear();
+            repeatingStack = null;
             return this;
         }
 
@@ -229,14 +232,14 @@ public record Feature(Id id,
             return new Feature(id,
                     name,
                     label,
+                    typeAlias,
                     description,
                     enabledCondition,
                     tags,
                     options,
                     calcMaxStacks,
                     stacks,
-                    conditionalStacks,
-                    featureModifications);
+                    conditionalStacks);
         }
     }
 

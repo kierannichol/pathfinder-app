@@ -1,6 +1,5 @@
 package pathfinder.model.json;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -20,7 +19,7 @@ public class EffectJsonDeserializer extends StdScalarDeserializer<Effect> {
     }
 
     @Override
-    public Effect deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public Effect deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
         if (p.getCurrentToken() == JsonToken.VALUE_NULL) {
             return null;
         }

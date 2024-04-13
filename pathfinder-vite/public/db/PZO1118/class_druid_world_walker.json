@@ -2,7 +2,7 @@
   "id": "class:druid#world_walker",
   "name": "World Walker",
   "tags": ["archetype", "druid"],
-  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:both_venom_immunity#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:timeless_body#druid",
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:timeless_body#druid",
   "maxStacks": 1,
   "description": {
     "text": "While all druids traverse the wilderness with ease, the world walkers take it upon themselves to travel the entire world. Some act as messengers and scouts for druidic circles, while others have a seemingly unquenchable wanderlust; each new land provides new mysteries to discover and new wisdom to be gained from mastering those mysteries."
@@ -17,11 +17,6 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:both_venom_immunity#druid",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:resist_natures_lure#druid",
             "numberValue": 1
           }
@@ -30,6 +25,23 @@
             "targetKey": "modifies:ability:timeless_body#druid",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:favored_terrain#druid_world_walker"],
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:path_of_trees#druid_world_walker"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:timeless_body#druid"]
+          }]
         }]
       }]
     }

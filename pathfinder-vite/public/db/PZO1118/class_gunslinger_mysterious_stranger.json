@@ -2,7 +2,7 @@
   "id": "class:gunslinger#mysterious_stranger",
   "name": "Mysterious Stranger",
   "tags": ["archetype", "gunslinger"],
-  "enabledFormula": "!@modifies:ability:gun_training_1#gunslinger AND !@modifies:ability:the_quick_clear_deed#gunslinger AND !@modifies:ability:nimble#gunslinger",
+  "enabledFormula": "!@modifies:ability:nimble#gunslinger",
   "maxStacks": 1,
   "description": {
     "text": "Gunslingers use a potent mixture of common sense and manual dexterity in order to control the fickle power of their weapons. But a few rare gunslingers seem to accomplish their chosen tasks purely through willpower and an unwillingness to ever give up. These mysterious strangers use their force of personality to keep going when the chips are down, often moving on from a region as soon as they accomplish their goals--hence the name."
@@ -12,19 +12,33 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:gun_training_1#gunslinger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_quick_clear_deed#gunslinger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:nimble#gunslinger",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:gunslinger",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"],
+            "linksToRemove": ["ability:nimble#gunslinger"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"],
+            "linksToRemove": ["ability:nimble#gunslinger"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"],
+            "linksToRemove": ["ability:nimble#gunslinger"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"],
+            "linksToRemove": ["ability:nimble#gunslinger"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:lucky#gunslinger_mysterious_stranger"],
+            "linksToRemove": ["ability:nimble#gunslinger"]
+          }]
         }]
       }]
     }

@@ -20,6 +20,18 @@
             "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:wild_fighting#barbarian_wild_rager"],
+            "linksToRemove": ["ability:uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:rage_conversion#barbarian_wild_rager"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#barbarian"]
+          }]
         }]
       }]
     }

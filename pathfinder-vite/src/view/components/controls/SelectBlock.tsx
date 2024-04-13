@@ -32,22 +32,24 @@ const SelectBlock = ({ activeKey, onChange, children }: SelectBlockProps) => {
 interface SelectBlockItemProps {
   itemKey: string;
   label: ReactNode;
+  scrollTo?: boolean;
   bodyFn?: () => Promise<ReactNode>;
   disabled?: boolean;
   variant?: string|string[];
   children?: ReactNode;
+  style?: React.CSSProperties;
 }
 
-function SelectBlockItem({ itemKey, label, bodyFn, disabled = false, variant = 'special', children = undefined }: SelectBlockItemProps) {
+function SelectBlockItem({ itemKey, label, bodyFn, style = undefined, scrollTo = false, disabled = false, variant = 'special', children = undefined }: SelectBlockItemProps) {
   const hasBody = bodyFn !== undefined || children !== undefined;
   return hasBody
-      ? <SelectBlockItemWithBody itemKey={itemKey} label={label} bodyFn={bodyFn} disabled={disabled} variant={variant}>
+      ? <SelectBlockItemWithBody itemKey={itemKey} label={label} bodyFn={bodyFn} scrollTo={scrollTo} disabled={disabled} style={style} variant={variant}>
         {children}
       </SelectBlockItemWithBody>
-      : <SelectBlockItemWithoutBody itemKey={itemKey} label={label} disabled={disabled} variant={variant} />
+      : <SelectBlockItemWithoutBody itemKey={itemKey} label={label} scrollTo={scrollTo} disabled={disabled} style={style} variant={variant} />
 }
 
-function SelectBlockItemWithoutBody({ itemKey, label, disabled, variant }: SelectBlockItemProps) {
+function SelectBlockItemWithoutBody({ itemKey, label, scrollTo, disabled, variant }: SelectBlockItemProps) {
   const { activeEventKey } = useContext(AccordionContext);
   const isActive = itemKey === activeEventKey;
   const selectOptionButton = useAccordionButton(itemKey);
@@ -67,7 +69,7 @@ function SelectBlockItemWithoutBody({ itemKey, label, disabled, variant }: Selec
       </div>);
 }
 
-function SelectBlockItemWithBody({ itemKey, label, bodyFn, disabled, variant, children }: SelectBlockItemProps) {
+function SelectBlockItemWithBody({ itemKey, label, scrollTo, bodyFn, disabled, variant, children }: SelectBlockItemProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(elementRef);
   const { activeEventKey } = useContext(AccordionContext);
@@ -80,8 +82,13 @@ function SelectBlockItemWithBody({ itemKey, label, bodyFn, disabled, variant, ch
 
   const [ bodyState, setBodyState ] = useState<ReactNode>();
   useEffect(() => {
-    setBodyState(children);
-    if (!onScreen || bodyFn === undefined) {
+    if (!onScreen) {
+      setBodyState(undefined);
+      return;
+    }
+
+    if (bodyFn === undefined) {
+      setBodyState(children);
       return;
     }
 
@@ -100,6 +107,14 @@ function SelectBlockItemWithBody({ itemKey, label, bodyFn, disabled, variant, ch
       }
     }
   }, [itemKey, onScreen, bodyFn])
+
+  useEffect(() => {
+    if (!scrollTo || !elementRef.current) return;
+    elementRef.current.scrollIntoView({
+      behavior: "instant",
+      block: "start"
+    });
+  }, [elementRef]);
 
   const selectOptionButton = useAccordionButton(itemKey);
 
@@ -149,6 +164,7 @@ function SelectBlockItemWithBody({ itemKey, label, bodyFn, disabled, variant, ch
 
   return (
       <div className={classNames(itemClassNames)} ref={elementRef}>
+        {onScreen ? (<>
         <ButtonBlock variant={variant} disabled={disabled} className={classNames(buttonClassNames)} onClick={selectOptionButton}>{label}</ButtonBlock>
         <Accordion.Collapse eventKey={itemKey}
                             appear={isActive}
@@ -159,7 +175,8 @@ function SelectBlockItemWithBody({ itemKey, label, bodyFn, disabled, variant, ch
           <div className={styles.body}>
             {bodyState}
           </div>
-        </Accordion.Collapse>
+        </Accordion.Collapse></>) : <ButtonBlock variant={variant} className={classNames(buttonClassNames)}>
+        </ButtonBlock>}
       </div>);
 }
 

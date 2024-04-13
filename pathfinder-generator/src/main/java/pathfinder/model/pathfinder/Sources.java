@@ -7,25 +7,39 @@ import pathfinder.util.StringUtils;
 
 @Slf4j
 public class Sources {
-    public static final SourceId CORE = new SourceId("PZO1110", "Core Rulebook", "PFRPG Core", "PRPG Core Rulebook", "Pathfinder RPG Core Rulebook");
-    public static final SourceId ADVANCED_PLAYERS_GUIDE = new SourceId("PZO1115", "Advanced Player's Guide", "APG", "Pathfinder Roleplaying Game: Advanced Player's Guide");
-    public static final SourceId ADVANCED_CLASS_GUIDE = new SourceId("PZO1129", "Advanced Class Guide", "ACG",
+    public static final SourceId CORE = new SourceId(generate("PZO1110"),
+            "PZO1110", "Core Rulebook", "PFRPG Core", "PRPG Core Rulebook", "Pathfinder RPG Core Rulebook");
+
+    public static final SourceId ADVANCED_PLAYERS_GUIDE = new SourceId(generate("PZO1115"),
+            "PZO1115", "Advanced Player's Guide", "APG", "Pathfinder Roleplaying Game: Advanced Player's Guide");
+    public static final SourceId ADVANCED_CLASS_GUIDE = new SourceId(generate("PZO1129"),
+            "PZO1129", "Advanced Class Guide", "ACG",
             "Pathfinder Roleplaying Game: Advanced Class Guide");
-    public static final SourceId ADVANCED_RACE_GUIDE = new SourceId("PZO1121", "Advanced Race Guide", "ARG",
+    public static final SourceId ADVANCED_RACE_GUIDE = new SourceId(generate("PZO1121"),
+            "PZO1121", "Advanced Race Guide", "ARG",
             "Pathfinder Roleplaying Game: Advanced Race Guide");
-    public static final SourceId ADVENTURERS_GUIDE = new SourceId("PZO1138", "Adventurer's Guide",
+    public static final SourceId ADVENTURERS_GUIDE = new SourceId(generate("PZO1138"),
+            "PZO1138", "Adventurer's Guide",
             "Pathfinder Roleplaying Game: Adventurer's Guide");
-    public static final SourceId GAMEMASTERY_GUIDE = new SourceId("PZO1114", "GameMastery Guide");
-    public static final SourceId UNCHAINED = new SourceId("PZO1131", "Pathfinder Unchained");
-    public static final SourceId ULTIMATE_COMBAT = new SourceId("PZO1118", "Ultimate Combat",
+    public static final SourceId GAMEMASTERY_GUIDE = new SourceId(generate("PZO1114"),
+            "PZO1114", "GameMastery Guide");
+    public static final SourceId UNCHAINED = new SourceId(generate("PZO1131"),
+            "PZO1131", "Pathfinder Unchained");
+    public static final SourceId ULTIMATE_COMBAT = new SourceId(generate("PZO1118"),
+            "PZO1118", "Ultimate Combat",
             "Pathfinder Roleplaying Game: Ultimate Combat");
-    public static final SourceId ULTIMATE_EQUIPMENT = new SourceId("PZO1123", "Ultimate Equipment",
+    public static final SourceId ULTIMATE_EQUIPMENT = new SourceId(generate("PZO1123"),
+            "PZO1123", "Ultimate Equipment",
             "Pathfinder Roleplaying Game: Ultimate Equipment");
-    public static final SourceId ULTIMATE_MAGIC = new SourceId("PZO1117", "Ultimate Magic",
+    public static final SourceId ULTIMATE_MAGIC = new SourceId(generate("PZO1117"),
+            "PZO1117", "Ultimate Magic",
             "Pathfinder Roleplaying Game: Ultimate Magic", "PRG:UM");
 
-    public static final SourceId COMPANION_HEROES_OF_THE_HIGH_COURT = new SourceId("PZO9476", "Pathfinder Player Companion: Heroes of the High Court");
-    public static final SourceId OCCULT_ADVENTURES = new SourceId("PZO1132", "Occult Adventures",
+    public static final SourceId COMPANION_HEROES_OF_THE_HIGH_COURT = new SourceId(
+            generate("PZO9476"),
+            "PZO9476", "Pathfinder Player Companion: Heroes of the High Court");
+    public static final SourceId OCCULT_ADVENTURES = new SourceId(generate("PZO1132"),
+            "PZO1132", "Occult Adventures",
             "Pathfinder Roleplaying Game: Occult Adventures", "OGL");
 
     public static SourceId findSourceByNameOrCode(String search) {
@@ -66,6 +80,10 @@ public class Sources {
                 .orElse(null);
     }
 
+    private static int generate(String sourceCode) {
+        return Integer.parseInt(sourceCode.substring(3));
+    }
+
     public static final List<SourceId> SOURCES_LIST = List.of(
             CORE,
             ADVANCED_PLAYERS_GUIDE,
@@ -73,13 +91,13 @@ public class Sources {
 //            ADVANCED_RACE_GUIDE,
             ADVENTURERS_GUIDE,
             GAMEMASTERY_GUIDE,
-            new SourceId("PZO1112", "Bestiary", "Pathfinder RPG Bestiary"),
-            new SourceId("PZO1116", "Bestiary 2"),
-            new SourceId("PZO1120", "Bestiary 3"),
-            new SourceId("PZO1127", "Bestiary 4"),
-            new SourceId("PZO1133", "Bestiary 5"),
-            new SourceId("PZO1137", "Bestiary 6"),
-            new SourceId("PZO1128", "Strategy Guide"),
+            new SourceId(generate("PZO1112"), "PZO1112", "Bestiary", "Pathfinder RPG Bestiary"),
+            new SourceId(generate("PZO1116"), "PZO1116", "Bestiary 2"),
+            new SourceId(generate("PZO1120"), "PZO1120", "Bestiary 3"),
+            new SourceId(generate("PZO1127"), "PZO1127", "Bestiary 4"),
+            new SourceId(generate("PZO1133"), "PZO1133", "Bestiary 5"),
+            new SourceId(generate("PZO1137"), "PZO1137", "Bestiary 6"),
+            new SourceId(generate("PZO1128"), "PZO1128", "Strategy Guide"),
             OCCULT_ADVENTURES,
             UNCHAINED,
 //            new Source("PZO1136", "Villain Codex"),

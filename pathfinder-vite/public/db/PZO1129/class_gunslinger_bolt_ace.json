@@ -29,6 +29,30 @@
             "targetKey": "modifies:ability:grit#gunslinger",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:gunslinger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:crossbow_maven#gunslinger_bolt_ace", "ability:crossbow_maven#gunslinger_bolt_ace", "ability:grit#gunslinger_bolt_ace"],
+            "linksToRemove": ["trait:weapon_proficiency#gunslinger", "ability:gunsmith#gunslinger", "ability:grit#gunslinger"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:crossbow_training#gunslinger_bolt_ace"],
+            "linksToRemove": ["ability:gun_training#gunslinger"]
+          }]
         }]
       }]
     }

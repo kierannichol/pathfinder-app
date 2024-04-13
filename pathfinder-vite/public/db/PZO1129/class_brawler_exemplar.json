@@ -2,7 +2,7 @@
   "id": "class:brawler#exemplar",
   "name": "Exemplar",
   "tags": ["archetype", "brawler"],
-  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:close_weapon_mastery#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:unarmed_strike#brawler AND !@modifies:ability:brawlers_strike#brawler",
+  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:close_weapon_mastery#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:brawlers_strike#brawler",
   "maxStacks": 1,
   "description": {
     "text": "A versatile soldier who inspires her companions with her fighting prowess, an exemplar is at home on the front lines of battles anywhere."
@@ -27,14 +27,54 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:unarmed_strike#brawler",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:brawlers_strike#brawler",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:call_to_arms#brawler_exemplar"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:inspiring_prowess#brawler_exemplar"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:field_instruction#brawler_exemplar"],
+            "linksToRemove": ["ability:close_weapon_mastery#brawler", "ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:ac_bonus#brawler", "ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }]
         }]
       }]
     }

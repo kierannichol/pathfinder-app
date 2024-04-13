@@ -2,7 +2,7 @@
   "id": "class:rogue#escapologist",
   "name": "Escapologist",
   "tags": ["archetype", "rogue"],
-  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue AND !@modifies:ability:abilities_that_require_trapfinding#rogue AND !@modifies:ability:trapfinding_but_counts_as_trapfinding_for_the_purposes_of_prerequisites#rogue",
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue",
   "maxStacks": 1,
   "description": {
   },
@@ -19,16 +19,20 @@
             "targetKey": "modifies:ability:uncanny_dodge#rogue",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:abilities_that_require_trapfinding#rogue",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:trapfinding_but_counts_as_trapfinding_for_the_purposes_of_prerequisites#rogue",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:unfettered_mind#rogue_escapologist"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:impossible_escape#rogue_escapologist"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }]
         }]
       }]
     }

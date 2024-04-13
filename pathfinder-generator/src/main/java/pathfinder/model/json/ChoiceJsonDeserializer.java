@@ -1,6 +1,5 @@
 package pathfinder.model.json;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -22,15 +21,13 @@ public class ChoiceJsonDeserializer extends StdDeserializer<Choice> {
     }
 
     @Override
-    public Choice deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public Choice deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
         JsonNode node = p.getCodec().readTree(p);
 
         String choiceId = node.get("choice_id").asText();
         String label = node.get("label").asText("");
         String type = node.get("type").asText("");
-        boolean repeating = node.has("repeating")
-                            ? node.get("repeating").asBoolean()
-                            : false;
+        boolean repeating = node.has("repeating") && node.get("repeating").asBoolean();
         String sortBy = node.get("sort_by").asText("none");
 
         boolean isSelect = false;

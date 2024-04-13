@@ -2,7 +2,7 @@
   "id": "class:fighter#unbreakable",
   "name": "Unbreakable",
   "tags": ["archetype", "fighter"],
-  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:the_fighters_1st_level_bonus_feat#fighter AND !@modifies:ability:weapon_training#fighter",
+  "enabledFormula": "!@modifies:ability:bravery#fighter AND !@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
   "maxStacks": 1,
   "description": {
     "text": "The unbreakable is a warrior of indomitable will, unstoppable and implacable once he has set his mind upon a course of action. The unbreakable endures any trial to do what must be done, and when his mind is set toward a goal, nothing can stop him from achieving it, though many may try. He is a juggernaut and a zealot, supremely confident in his own abilities."
@@ -27,14 +27,57 @@
           }
         }, {
           "setAction": {
-            "targetKey": "modifies:ability:the_fighters_1st_level_bonus_feat#fighter",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:weapon_training#fighter",
             "numberValue": 1
           }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:miraculous_recovery#fighter_unbreakable"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:unflinching#fighter_unbreakable"],
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:unbreakable_mind#fighter_unbreakable"],
+            "linksToRemove": ["ability:weapon_mastery#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:heroic_recovery#fighter_unbreakable"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:heroic_defiance#fighter_unbreakable"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:quick_recovery#fighter_unbreakable"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:stalwart#fighter_unbreakable"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bravery#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:unlimited_endurance#fighter_unbreakable"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
         }]
       }]
     }

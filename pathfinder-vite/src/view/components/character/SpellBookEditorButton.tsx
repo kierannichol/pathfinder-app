@@ -3,6 +3,7 @@ import SpellBookEditorDialog from "./SpellBookEditorDialog.tsx";
 import {useState} from "react";
 import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
 import {ChoiceSelectedHandler} from "../../model/ChoiceModel.ts";
+import styles from "./SpellBookEditorButton.module.css";
 
 interface SpellBookEditorButtonProps {
   characterAtLevel: CharacterAtLevelModel;
@@ -21,7 +22,9 @@ export default function SpellBookEditorButton({ characterAtLevel, onChange }: Sp
   }
 
   return <>
-    <GiBookmark size={64} className="clickable" onClick={_ => handleShow()} />
+    <div className={styles.button}>
+      <GiBookmark size={64} className="clickable" onClick={_ => handleShow()} />
+    </div>
     <SpellBookEditorDialog
         characterAtLevel={characterAtLevel}
         show={show}

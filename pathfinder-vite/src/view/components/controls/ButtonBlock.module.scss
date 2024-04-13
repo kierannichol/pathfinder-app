@@ -1,6 +1,7 @@
-.button {
+.button, .buttonDragging {
   --pf-button-background-color: white;
   --pf-button-text-color: dimgray;
+  --pf-button-portrait-background-color: darkgrey;
   --pf-button-selected-background-color: var(--pf-button-background-color);
   --pf-button-selected-text-color: var(--pf-button-text-color);
   --pf-button-border-width: 2px;
@@ -10,11 +11,9 @@
   display: flex;
   font-size: 18px;
   font-weight: 700;
-  justify-content: left;
   letter-spacing: .04em;
   line-height: 16px;
   margin: 0;
-  padding: 5px 10px;
   text-align: left;
   text-decoration: none;
   user-select: none;
@@ -22,14 +21,16 @@
   touch-action: manipulation;
   vertical-align: center;
   align-items: center;
+  justify-content: start;
   min-height: 56px;
+  padding: 5px 10px;
 
   background-color: var(--pf-button-background-color);
   border: var(--pf-button-border-width) solid var(--pf-button-text-color);
   color: var(--pf-button-text-color);
 }
 
-.group .button:not(:last-child) {
+.group > *:not(:last-child) .button, .group > .button:not(:last-child) {
   border-bottom: 0;
 }
 

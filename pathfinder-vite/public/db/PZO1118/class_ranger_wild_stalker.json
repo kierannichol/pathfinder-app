@@ -2,7 +2,7 @@
   "id": "class:ranger#wild_stalker",
   "name": "Wild Stalker",
   "tags": ["archetype", "ranger"],
-  "enabledFormula": "!@modifies:ability:18th_level_combat_style_feat_abilities#ranger AND !@modifies:ability:the_rangers_2nd_level_combat_style_feat#ranger AND !@modifies:ability:hunters_bond#ranger AND !@modifies:ability:fifth_favored_enemy_abilities#ranger AND !@modifies:ability:the_rangers_second_third_fourth#ranger AND !@modifies:ability:the_rangers_first_favored_enemy_ability#ranger AND !@modifies:ability:the_rangers_6th__10th__14th_#ranger",
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger",
   "maxStacks": 1,
   "description": {
     "text": "Civilization grows stronger and more decadent with each passing year. It tears into unclaimed wilderness and destroys the fragile ecology in its constant push for expansion and exploitation. The wild stalker forsakes the bonds of community and lives in the trackless wilds far from others of his kind, or perhaps grew up there, never knowing of civilization as anything more than his enemy. He drives pioneers back to civilization and strives to keep the land unspoiled."
@@ -12,39 +12,29 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:18th_level_combat_style_feat_abilities#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_2nd_level_combat_style_feat#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
             "targetKey": "modifies:ability:hunters_bond#ranger",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:fifth_favored_enemy_abilities#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_second_third_fourth#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_first_favored_enemy_ability#ranger",
-            "numberValue": 1
-          }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_rangers_6th__10th__14th_#ranger",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:strong_senses#ranger_wild_stalker"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:uncanny_dodge#ranger_wild_stalker"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:rage_of_the_wild#ranger_wild_stalker"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:rage_powers#ranger_wild_stalker"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:wild_talents#ranger_wild_stalker"]
+          }]
         }]
       }]
     }

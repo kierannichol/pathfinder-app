@@ -21,7 +21,7 @@ public class NameUtils {
     public static String enumToName(Enum<?> e) {
         String name = e.name().toLowerCase()
                 .replace("_", " ");
-        return StringUtils.toCamelCase(name);
+        return StringUtils.capitalize(name);
     }
 
     public static List<String> extractNameAndParentheses(String text) {
@@ -78,10 +78,10 @@ public class NameUtils {
     public static String idToName(String idString) {
         Id id = Id.of(idString);
         StringBuilder name = new StringBuilder();
-        name.append(StringUtils.toCamelCase(id.key.replace("_", " ")));
+        name.append(StringUtils.capitalize(id.key.replace("_", " ")));
         if (id.option != null) {
             name.append(" (");
-            name.append(StringUtils.toCamelCase(id.option.replace("_", " ")));
+            name.append(StringUtils.capitalize(id.option.replace("_", " ")));
             name.append(")");
         }
         return name.toString();

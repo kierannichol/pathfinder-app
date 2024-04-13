@@ -1,5 +1,5 @@
-import {EntityState} from "./Entity.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
+import AppliedState from "./AppliedState.ts";
 
 export interface Trait {
   resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait>;
@@ -7,18 +7,20 @@ export interface Trait {
 
 export interface ResolvedTrait {
   children: ResolvedTrait[];
-  applyTo(state: EntityState): void;
+  applyTo(state: AppliedState): void;
 }
 
 export function traverseTrait(trait: ResolvedTrait,
-                              actionFn: (descendant: ResolvedTrait, depth: number) => void): void {
+                              actionFn: (descendant: ResolvedTrait, depth: number) => boolean): void {
   traverseTraitWithDepth(trait, 0, actionFn);
 }
 
 function traverseTraitWithDepth(trait: ResolvedTrait,
                               depth: number,
-                              actionFn: (descendant: ResolvedTrait, depth: number) => void): void {
-  actionFn(trait, depth);
+                              actionFn: (descendant: ResolvedTrait, depth: number) => boolean): void {
+  if (!actionFn(trait, depth)) {
+    return;
+  }
   trait.children.forEach(child => {
     traverseTraitWithDepth(child, depth + 1, actionFn);
   });

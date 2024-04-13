@@ -14,4 +14,8 @@ public record ClassModificationFeature(Id id,
                                        List<Feature> features,
                                        String source) implements NamedEntity, FromSourceBook {
 
+    @Override
+    public List<String> sources() {
+        return List.of(source);
+    }
 }

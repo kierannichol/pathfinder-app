@@ -12,12 +12,14 @@ import pathfinder.db.query.Query;
 import pathfinder.db.query.SkillQuery;
 import pathfinder.db.query.WeaponProficiencyQuery;
 import pathfinder.generator.PrerequisiteParser;
+import pathfinder.model.Description;
 import pathfinder.model.Feature;
 import pathfinder.model.Feature.FeatureBuilder;
 import pathfinder.model.Id;
 import pathfinder.model.NamedEntity;
 import pathfinder.model.pathfinder.Feat;
 import pathfinder.model.pathfinder.Weapons;
+import pathfinder.util.StringUtils;
 
 @RequiredArgsConstructor
 @Component
@@ -27,9 +29,30 @@ public class FeatMapper {
     private final PrerequisiteParser prerequisiteParser;
 
     public Stream<Feature> flatMap(Feat feat) {
+
+        Description description = Description.create(feat.description());
+        if (StringUtils.notEmpty(feat.benefit())) {
+            description.addSection("Benefit", feat.benefit());
+        }
+        if (StringUtils.notEmpty(feat.normal())) {
+            description.addSection("Normal", feat.normal());
+        }
+        if (StringUtils.notEmpty(feat.special())) {
+            description.addSection("Special", feat.special());
+        }
+        if (StringUtils.notEmpty(feat.completionBenefit())) {
+            description.addSection("Completion Benefit", feat.completionBenefit());
+        }
+        if (StringUtils.notEmpty(feat.goal())) {
+            description.addSection("Goal", feat.goal());
+        }
+        if (StringUtils.notEmpty(feat.note())) {
+            description.addSection("Note", feat.note());
+        }
+
         FeatureBuilder builder = new FeatureBuilder(feat.id())
                 .setName(feat.name())
-                .setDescription(feat.description())
+                .setDescription(description)
                 .addTag("feat")
                 .addTag(feat.type().toLowerCase());
 
@@ -44,9 +67,16 @@ public class FeatMapper {
             builder.addOptions(feat.options());
         }
 
-        return Stream.of(builder.build());
+        return Stream.of(builder.build(),
+                makeGeneric(builder));
 
 //        return trySplitOptions(builder, feat.id().withoutOption(), prerequisiteFormula);
+    }
+
+    private Feature makeGeneric(FeatureBuilder builder) {
+        Feature source = builder.build();
+        return Feature.simple(source.id().withoutOption(),
+                source.name());
     }
 
     private Stream<Feature> trySplitOptions(FeatureBuilder builder, Id featId, String prerequisiteFormula) {

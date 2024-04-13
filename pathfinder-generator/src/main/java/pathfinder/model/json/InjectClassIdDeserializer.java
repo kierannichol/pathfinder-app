@@ -1,6 +1,5 @@
 package pathfinder.model.json;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdScalarDeserializer;
@@ -23,7 +22,7 @@ public class InjectClassIdDeserializer extends StdScalarDeserializer<Id> {
     }
 
     @Override
-    public Id deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public Id deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
         return classId;
     }
 }

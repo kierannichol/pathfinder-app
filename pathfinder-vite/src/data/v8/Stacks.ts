@@ -1,4 +1,4 @@
-import {Stack} from "./Stack.ts";
+import {FeatureStack, Stack} from "./Stack.ts";
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 
@@ -12,8 +12,8 @@ export class FixedStack implements Stacks {
               private readonly stacks: Stack[]) {
   }
 
-  next(count: number): Stack {
-    return this.stacks[count-1] ?? Stack.Empty;
+  next(count: number): FeatureStack {
+    return (this.stacks[count-1] ?? Stack.Empty).instance(this.featureId, count+1);
   }
 
   resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
@@ -24,11 +24,15 @@ export class FixedStack implements Stacks {
 }
 export class RepeatingStack implements Stacks {
 
-  constructor(private readonly stack: Stack) {
+  constructor(private readonly featureId: string,
+              private readonly stack: Stack) {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
-    return this.stack.resolve(basePath, context);
+    const count = context.count(this.featureId);
+    return this.stack
+      .instance(this.featureId, count+1)
+      .resolve(basePath, context);
   }
 
 }

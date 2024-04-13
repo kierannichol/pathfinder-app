@@ -2,7 +2,7 @@
   "id": "class:shaman#speaker_for_the_past",
   "name": "Speaker For The Past",
   "tags": ["archetype", "shaman"],
-  "enabledFormula": "!@modifies:ability:wandering_spirit#shaman AND !@modifies:ability:wandering_hex#shaman AND !@modifies:ability:the_shamans_familiar#shaman",
+  "enabledFormula": "!@modifies:ability:wandering_spirit#shaman AND !@modifies:ability:wandering_hex#shaman",
   "maxStacks": 1,
   "description": {
     "text": "A speaker for the past is a shaman who specifically serves as the voice for spirits from her people\u0027s history. A speaker for the past is often an advocate of the ancestors of a specific group, the voice of experience, and a powerful resource that allows the past to aid the present."
@@ -20,11 +20,26 @@
             "targetKey": "modifies:ability:wandering_hex#shaman",
             "numberValue": 1
           }
-        }, {
-          "setAction": {
-            "targetKey": "modifies:ability:the_shamans_familiar#shaman",
-            "numberValue": 1
-          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:shaman",
+          "stackModifications": [{
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:revelations_of_the_past#shaman_speaker_for_the_past"],
+            "linksToRemove": ["ability:wandering_spirit#shaman"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:revelations_of_the_past#shaman_speaker_for_the_past"],
+            "linksToRemove": ["ability:wandering_spirit#shaman"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:revelations_of_the_past#shaman_speaker_for_the_past"],
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:revelations_of_the_past#shaman_speaker_for_the_past"],
+            "linksToRemove": ["ability:wandering_hex#shaman"]
+          }]
         }]
       }]
     }
