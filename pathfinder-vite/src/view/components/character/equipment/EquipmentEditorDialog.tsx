@@ -2,11 +2,11 @@ import React from "react";
 import {Modal} from "react-bootstrap";
 import styles from "../../Dialog.module.scss";
 import EquipmentEditor from "./EquipmentEditor.tsx";
-import {CharacterAtLevelModel} from "../../../model/CharacterAtLevelModel.ts";
-import {ChoiceSelectedHandler} from "../../../model/ChoiceModel.ts";
+import {CharacterAtLevel} from "../../..//CharacterAtLevel.ts";
+import {ChoiceSelectedHandler} from "../../..//Choice.ts";
 
 interface EquipmentEditorDialogProps {
-  characterAtLevel: CharacterAtLevelModel;
+  characterAtLevel: CharacterAtLevel;
   show: boolean;
   onCancel: () => void;
   onChange: ChoiceSelectedHandler;

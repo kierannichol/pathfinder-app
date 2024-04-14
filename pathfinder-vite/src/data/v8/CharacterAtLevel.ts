@@ -1,7 +1,7 @@
 import {BaseDataContext, DataContext, Resolvable, ResolvedValue} from "@kierannichol/formula-js";
 import Character from "./Character.ts";
 import Expression from "../../utils/logic/Expression.ts";
-import {ResolvedChoice} from "./Choice.ts";
+import {ChoiceRef} from "./Choice.ts";
 import {Feature} from "./Feature.ts";
 import {EntityState} from "./Entity.ts";
 import {array} from "../../app/pfutils.ts";
@@ -12,11 +12,11 @@ export default class CharacterAtLevel extends BaseDataContext {
               private readonly character: Character,
               public readonly features: Feature[] = [],
               private readonly state: EntityState = {},
-              public readonly choices: ResolvedChoice[] = []) {
+              public readonly choices: ChoiceRef[] = []) {
     super();
   }
 
-  selected(choice: ResolvedChoice|string, index?: number): string|string[] {
+  selected(choice: ChoiceRef|string, index?: number): string|string[] {
     if (!(typeof choice === 'string')) {
       choice = choice.path;
     }
@@ -27,16 +27,16 @@ export default class CharacterAtLevel extends BaseDataContext {
     return array(value)[index];
   }
 
-  hasSelection(choice: ResolvedChoice|string): boolean {
+  hasSelection(choice: ChoiceRef|string): boolean {
     return this.selected(choice) !== '';
   }
 
-  public choice(id: string): ResolvedChoice|undefined {
+  public choice(id: string): ChoiceRef|undefined {
     return this.choices
       .find(choice => choice.path === id);
   }
 
-  public choicesOfType(type: string): ResolvedChoice[] {
+  public choicesOfType(type: string): ChoiceRef[] {
     return this.choices
         .filter(choice => choice.type === type);
   }
@@ -91,7 +91,7 @@ export default class CharacterAtLevel extends BaseDataContext {
     })
 
     const otherLevelChoiceIds = new Set(otherLevel.choices.map(choice => choice.path));
-    const intersectedChoices: ResolvedChoice[] = this.choices.filter(choice => {
+    const intersectedChoices: ChoiceRef[] = this.choices.filter(choice => {
       return !otherLevelChoiceIds.has(choice.path);
     });
 

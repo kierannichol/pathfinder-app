@@ -1,12 +1,12 @@
 import {GiLockedChest} from "react-icons/gi";
 import EquipmentEditorDialog from "./EquipmentEditorDialog.tsx";
 import {useState} from "react";
-import {CharacterAtLevelModel} from "../../../model/CharacterAtLevelModel.ts";
-import {ChoiceSelectedHandler} from "../../../model/ChoiceModel.ts";
+import {CharacterAtLevel} from "../../..//CharacterAtLevel.ts";
+import {ChoiceSelectedHandler} from "../../..//Choice.ts";
 import styles from "./EquipmentEditorButton.module.css";
 
 interface EquipmentEditorButtonProps {
-  characterAtLevel: CharacterAtLevelModel;
+  characterAtLevel: CharacterAtLevel;
   onChange: ChoiceSelectedHandler;
 }
 

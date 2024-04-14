@@ -1,40 +1,39 @@
 import React, {ReactNode, useMemo} from "react";
-import {ChoiceSelectedHandler, MultiSelectChoiceModel, SelectChoiceModel} from "../../../model/ChoiceModel.ts";
-import {CharacterAtLevelModel} from "../../../model/CharacterAtLevelModel.ts";
-import {useDatabaseModel} from "../../../model/ModelContext.tsx";
 import useAsyncMemo from "../../../../utils/useAsyncMemo.tsx";
 import LoadingBlock from "../../LoadingBlock.tsx";
-import {ItemSummaryModel} from "../../../model/ItemModel.ts";
-import {CharacterChoiceSelectHandler} from "../CharacterEditor.tsx";
 import {array} from "../../../../app/pfutils.ts";
 import ChoiceSelectButton from "../../controls/ChoiceSelectButton.tsx";
-import {ItemDatabaseModel} from "../../../model/DatabaseModel.ts";
 import {ChoiceSelectorOption, ChoiceSelectorOptions} from "../../controls/ChoiceSelectorList.tsx";
 import {ItemDescription} from "./ItemDescription.tsx";
 import {ButtonBlockGroup} from "../../controls/ButtonBlockGroup.tsx";
 import {Currency} from "../Currency.tsx";
+import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
+import {useDatabase} from "../../../../data/context.tsx";
+import {ChoiceSelectedHandler, ResolvedMultiSelectChoice, SelectChoiceRef} from "../../../../data/v8/Choice.ts";
+import {ItemSummary} from "../../../../data/v8/ItemSummary.ts";
+import {ItemDatabase} from "../../../../data/v8/Database.ts";
 
 interface EquipmentEditorProps {
-  characterAtLevel: CharacterAtLevelModel;
+  characterAtLevel: CharacterAtLevel;
   onChange: ChoiceSelectedHandler;
 }
 
 export default function EquipmentEditor({characterAtLevel, onChange}: EquipmentEditorProps) {
-  const database = useDatabaseModel();
+  const database = useDatabase();
 
   const [itemDb] = useAsyncMemo(() => database.itemDatabase(),
       [database]);
 
   const equipmentChoiceRef = useMemo(() => characterAtLevel.choicesOfType('equipment')[0],
-      [characterAtLevel]) as MultiSelectChoiceModel;
+      [characterAtLevel]) as ResolvedMultiSelectChoice;
 
   const equipmentList = useMemo(() => {
     if (itemDb === undefined || equipmentChoiceRef === undefined) {
       return [];
     }
     const keys = array(characterAtLevel.selected(equipmentChoiceRef)) ?? [];
-    return keys.map(key => itemDb.item(parseInt(key)))
-    .filter(i => i !== undefined) as ItemSummaryModel[];
+    return keys.map(key => itemDb.summary(parseInt(key)))
+    .filter(i => i !== undefined) as ItemSummary[];
   }, [characterAtLevel, itemDb, equipmentChoiceRef]);
 
   const totalCost = useMemo(() =>
@@ -70,11 +69,11 @@ export default function EquipmentEditor({characterAtLevel, onChange}: EquipmentE
 }
 
 interface ItemButtonProps {
-  choiceRef: SelectChoiceModel;
+  choiceRef: SelectChoiceRef;
   selectedIndex?: number;
-  characterAtLevel: CharacterAtLevelModel;
-  onChange: CharacterChoiceSelectHandler;
-  itemDatabase: ItemDatabaseModel;
+  characterAtLevel: CharacterAtLevel;
+  onChange: ChoiceSelectedHandler;
+  itemDatabase: ItemDatabase;
 }
 
 export function EditItemButton({
@@ -119,10 +118,10 @@ export function AddItemButton({choiceRef, characterAtLevel, itemDatabase, onChan
 }
 
 interface ItemChoiceSelectButtonProps {
-  choiceRef: MultiSelectChoiceModel;
-  characterAtLevel: CharacterAtLevelModel;
+  choiceRef: SelectChoiceRef;
+  characterAtLevel: CharacterAtLevel;
   choiceIndex?: number;
-  itemDatabase: ItemDatabaseModel;
+  itemDatabase: ItemDatabase;
   onSelect?: (id: string) => void;
   children?: ReactNode;
   variant?: string | string[];
@@ -155,7 +154,7 @@ function ItemChoiceSelectButton({
 }
 
 interface ItemLabelProps {
-  item: ItemSummaryModel;
+  item: ItemSummary;
 }
 
 function ItemLabel({ item }: ItemLabelProps) {
@@ -165,8 +164,8 @@ function ItemLabel({ item }: ItemLabelProps) {
   </div>
 }
 
-function itemOptions(query: string | undefined, itemDatabase: ItemDatabaseModel): ChoiceSelectorOptions {
-  return itemDatabase.items()
+function itemOptions(query: string | undefined, itemDatabase: ItemDatabase): ChoiceSelectorOptions {
+  return itemDatabase.summaries()
   .filter(item => !query || item.name.toLowerCase().includes(query.toLowerCase()))
   .map(item => new ChoiceSelectorOption(
       item.itemId.toString(),

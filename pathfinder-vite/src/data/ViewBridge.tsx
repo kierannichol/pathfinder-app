@@ -1,1 +1,1 @@
-export * as ViewBridge from "./v8/bridge.tsx";
+export * as ViewBridge from "./init.tsx";

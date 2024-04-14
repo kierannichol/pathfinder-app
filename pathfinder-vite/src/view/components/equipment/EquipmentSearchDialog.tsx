@@ -1,28 +1,29 @@
-import {useItemDatabaseModel} from "../../model/ModelContext.tsx";
 import React, {useEffect, useMemo, useState} from "react";
 import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
 import {ChoiceSelectorCategory, ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
 import {EquipmentDescription} from "./EquipmentDescription.tsx";
-import {ItemOptionModel, ItemSummaryModel} from "../../model/ItemModel.ts";
-import {EquipmentModel} from "../../model/EquipmentModel.ts";
+import {Equipment} from "../../../data/v8/Equipment.ts";
+import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
+import {useItemDatabase} from "../../../data/context.tsx";
+import {ItemOption} from "../../../data/v8/Item.ts";
 
 interface EquipmentSearchDialogProps {
   show: boolean;
-  value?: EquipmentModel|undefined;
-  onSelect?: (item: ItemSummaryModel|undefined, options: ItemOptionModel[]) => void;
+  value?: Equipment|undefined;
+  onSelect?: (item: ItemSummary|undefined, options: ItemOption[]) => void;
   onCancel?: () => void;
 }
 
 export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: EquipmentSearchDialogProps) {
-  const database = useItemDatabaseModel();
+  const database = useItemDatabase();
 
-  const [ selectedOptions, setSelectedOptions ] = useState<ItemOptionModel[]>(value?.options ?? []);
+  const [ selectedOptions, setSelectedOptions ] = useState<ItemOption[]>(value?.options ?? []);
 
   function handleChangeSelection() {
     setSelectedOptions([]);
   }
 
-  function handleOptionsChanged(options: ItemOptionModel[]) {
+  function handleOptionsChanged(options: ItemOption[]) {
     setSelectedOptions(options);
   }
 
@@ -32,7 +33,7 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: Equip
 
   function handleSelect(itemIdAsText: string) {
     const itemId = parseInt(itemIdAsText);
-    const item = database.item(itemId);
+    const item = database.summary(itemId);
     onSelect?.(item, selectedOptions);
   }
 
@@ -63,7 +64,7 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: Equip
                                onCancel={onCancel}
                                categories={categories}
                                optionsFn={(query, category) => {
-                                 let options = database.items()
+                                 let options = database.summaries()
                                    .filter(item => !query || item.name.toLowerCase().includes(query.toLowerCase()))
                                    .filter(item => !category?.tag || item.tags.includes(category.tag))
                                    .sort((a, b) => a.name.localeCompare(b.name));

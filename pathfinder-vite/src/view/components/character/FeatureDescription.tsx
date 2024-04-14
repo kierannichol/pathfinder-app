@@ -1,13 +1,13 @@
 import React, {ReactNode, useMemo} from "react";
 import styles from "./EntityDescription.module.scss";
-import {FeatureModel, FeatureSummaryModel} from "../../model/FeatureModel.ts";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {Feature, FeatureSummary} from "../..//Feature.ts";
+import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
 import Description from "../../../data/Description.ts";
 
 interface FeatureDescriptionProps {
-  feature: FeatureModel|FeatureSummaryModel;
+  feature: Feature|FeatureSummary;
   description?: Description;
-  characterAtLevel?: CharacterAtLevelModel;
+  characterAtLevel?: CharacterAtLevel;
 }
 
 export default function FeatureDescription({ feature, description}: FeatureDescriptionProps) {

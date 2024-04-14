@@ -1,18 +1,18 @@
-import {ItemModel, ItemOptionModel} from "../../model/ItemModel.ts";
-import {useItemDatabaseModel} from "../../model/ModelContext.tsx";
 import {useMemo} from "react";
 import styles from "./EquipmentDescription.module.css";
 import {onlyDefined} from "../../../app/pfutils.ts";
 import {ItemOptionSetSelector} from "./ItemOptionSetSelector.tsx";
+import {Item, ItemOption} from "../../../data/v8/Item.ts";
+import {useItemDatabase} from "../../../data/context.tsx";
 
 interface EquipmentDescriptionProps {
-  item: ItemModel;
-  selectedOptions: ItemOptionModel[];
-  onChangeOptions: (options: ItemOptionModel[]) => void;
+  item: Item;
+  selectedOptions: ItemOption[];
+  onChangeOptions: (options: ItemOption[]) => void;
 }
 
 export function EquipmentDescription({ item, selectedOptions, onChangeOptions }: EquipmentDescriptionProps) {
-  const database = useItemDatabaseModel();
+  const database = useItemDatabase();
 
   const optionSets = useMemo(() => {
     return onlyDefined(item.optionSetIds.map(optionSetId =>

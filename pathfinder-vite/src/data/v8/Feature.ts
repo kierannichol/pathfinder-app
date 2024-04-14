@@ -3,18 +3,20 @@ import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {Path} from "../../utils/Path.ts";
 import Description from "../Description.ts";
 import AppliedState from "./AppliedState.ts";
+import {FeatureSummary} from "./FeatureSummary.ts";
 
-export class Feature implements Trait {
+export class Feature extends FeatureSummary implements Trait {
   featureModifications: any;
 
-  constructor(public readonly key: string,
-              public readonly name: string,
-              public readonly label: string|undefined,
-              public readonly tags: string[],
-              public readonly enabledFormula: string,
-              public readonly maxStacks: number|null,
+  constructor(key: string,
+              name: string,
+              label: string|undefined,
+              tags: string[],
+              enabledFormula: string,
+              maxStacks: number|null,
               public readonly description: Description,
               private readonly traits: Trait[]) {
+    super(key, name, label, tags, enabledFormula, maxStacks);
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {

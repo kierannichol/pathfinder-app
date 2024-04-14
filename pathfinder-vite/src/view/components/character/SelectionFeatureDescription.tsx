@@ -1,24 +1,25 @@
 import React, {useMemo} from "react";
 import styles from "./EntityDescription.module.scss";
 import PrerequisiteList from "./PrerequisiteList.tsx";
-import {FeatureModel, FeatureSummaryModel} from "../../model/FeatureModel.ts";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
 import Description from "../../../data/Description.ts";
-import {PrerequisiteValidationModel} from "../../model/PrerequisiteValidationModel.ts";
-import {useDatabaseModel} from "../../model/ModelContext.tsx";
 import FeatureDescription from "./FeatureDescription.tsx";
+import {useDatabase} from "../../../data/context.tsx";
+import {Feature} from "../../../data/v8/Feature.ts";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {FeatureSummary} from "../../../data/v8/FeatureSummary.ts";
+import {PrerequisiteValidation} from "../../../data/v8/PrerequisiteValidation.ts";
 
 interface SelectionFeatureDescriptionProps {
-  feature: FeatureModel|FeatureSummaryModel;
+  feature: Feature|FeatureSummary;
   description?: Description;
-  characterAtLevel?: CharacterAtLevelModel;
+  characterAtLevel?: CharacterAtLevel;
 }
 
 export default function SelectionFeatureDescription({ feature, description, characterAtLevel}: SelectionFeatureDescriptionProps) {
-  const database = useDatabaseModel();
+  const database = useDatabase();
 
   const validation = useMemo(() => {
-    if (!feature || !characterAtLevel) return PrerequisiteValidationModel.Empty;
+    if (!feature || !characterAtLevel) return PrerequisiteValidation.Empty;
     return feature.checkPrerequisites(characterAtLevel, database);
   }, [feature, characterAtLevel]);
 

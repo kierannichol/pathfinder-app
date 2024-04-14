@@ -1,7 +1,7 @@
 import {DropResult} from "react-beautiful-dnd";
 import React, {useState} from "react";
-import {EquipmentModel} from "../../model/EquipmentModel.ts";
-import {ItemOptionModel, ItemSummaryModel} from "../../model/ItemModel.ts";
+import {Equipment} from "../..//Equipment.ts";
+import {ItemOption, ItemSummary} from "../..//Item.ts";
 import {Droppable} from "../cards/Droppable.tsx";
 import {CardBlockList} from "../cards/CardBlockList.tsx";
 import {Draggable} from "../cards/Draggable.tsx";
@@ -9,16 +9,16 @@ import {EquipmentCard} from "./EquipmentCard.tsx";
 import {EquipmentEditDialog} from "./EquipmentEditDialog.tsx";
 
 interface EquipmentListProps {
-  equipment: EquipmentModel[];
+  equipment: Equipment[];
   onDeleteItem?: (uid: string) => void;
   onClickItem?: (uid: string) => void;
   onDuplicateItem?: (uid: string) => void;
-  onUpdateItem?: (uid: string, updatedItem: ItemSummaryModel|undefined, updatedOptions: ItemOptionModel[]) => void;
+  onUpdateItem?: (uid: string, updatedItem: ItemSummary|undefined, updatedOptions: ItemOption[]) => void;
   onMoveItem?: (sourceIndex: number, destinationIndex: number) => void;
 }
 
 export function EquipmentList({ equipment, onDeleteItem, onClickItem, onUpdateItem, onDuplicateItem, onMoveItem }: EquipmentListProps) {
-  const [ equipmentToEdit, setEquipmentToEdit ] = useState<EquipmentModel>();
+  const [ equipmentToEdit, setEquipmentToEdit ] = useState<Equipment>();
 
   function handleDelete(uid: string) {
     onDeleteItem?.(uid);
@@ -36,11 +36,11 @@ export function EquipmentList({ equipment, onDeleteItem, onClickItem, onUpdateIt
     onMoveItem?.(result.source.index, result.destination.index);
   }
 
-  function handleEditItem(equipment: EquipmentModel) {
+  function handleEditItem(equipment: Equipment) {
     setEquipmentToEdit(equipment);
   }
 
-  function handleFinishEdit(item: ItemSummaryModel, options: ItemOptionModel[]) {
+  function handleFinishEdit(item: ItemSummary, options: ItemOption[]) {
     if (equipmentToEdit) {
       onUpdateItem?.(equipmentToEdit.uid, item, options);
     }

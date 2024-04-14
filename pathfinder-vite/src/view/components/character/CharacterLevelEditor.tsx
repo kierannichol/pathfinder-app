@@ -5,14 +5,14 @@ import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 import SpellBookEditorButton from "./SpellBookEditorButton.tsx";
 import ArchetypeEditor from "./ArchetypeEditor.tsx";
 import {CharacterChoiceSelectHandler} from "./CharacterEditor.tsx";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
-import {ChoiceModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
-import {FeatureModel} from "../../model/FeatureModel.ts";
 import EquipmentEditorButton from "./equipment/EquipmentEditorButton.tsx";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import {Feature} from "../../../data/v8/Feature.ts";
 
 interface CharacterLevelEditorProps {
-  characterAtLevel: CharacterAtLevelModel;
-  characterAtPreviousLevel: CharacterAtLevelModel;
+  characterAtLevel: CharacterAtLevel;
+  characterAtPreviousLevel: CharacterAtLevel;
   onChange: CharacterChoiceSelectHandler;
 }
 
@@ -45,12 +45,12 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
           onChange={onChange} />
     </div>
 
-    {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice instanceof SelectChoiceModel).map(choice =>
+    {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice.inputType === ChoiceInputType.Select).map(choice =>
         <>
           <label>{choice.label}</label>
           <DataChoiceSelectButton
               key={choice.path}
-              choiceRef={choice as SelectChoiceModel}
+              choiceRef={choice as SelectChoiceRef}
               search={"auto"}
               characterAtLevel={characterAtLevel}
               onSelect={selected => onChange(choice, selected)} />
@@ -61,19 +61,19 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
   </div>
 }
 
-function notFromChoice(feature: FeatureModel, characterAtLevel: CharacterAtLevelModel) {
+function notFromChoice(feature: Feature, characterAtLevel: CharacterAtLevel) {
   return !characterAtLevel.choices
       .find(choice => characterAtLevel.selected(choice) === feature.key);
 }
 
-function showChoice(choice: ChoiceModel): boolean {
+function showChoice(choice: ChoiceRef): boolean {
   return !(choice.type === 'class'
     || choice.type === 'spell'
     || choice.type === 'archetype'
     || choice.type === 'equipment');
 }
 
-function showFeature(feature: FeatureModel): boolean {
+function showFeature(feature: Feature): boolean {
   return !(feature.tags.includes('archetype')
     || feature.tags.includes('class')
     || feature.key.startsWith('proficiency:')

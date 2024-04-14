@@ -1,13 +1,14 @@
 import {useLoaderData} from "react-router-dom";
 import {timedAsync} from "../../app/pfutils.ts";
 import CharacterSheet from "../components/character/sheet/CharacterSheet.tsx";
-import {CharacterAtLevelModel} from "../model/CharacterAtLevelModel.ts";
-import {DatabaseModel} from "../model/DatabaseModel.ts";
-import {DatabaseModelContext, withGlobalCharacterStoreModel, withGlobalDatabaseModel} from "../model/ModelContext.tsx";
+import CharacterAtLevel from "../../data/v8/CharacterAtLevel.ts";
+import Database from "../../data/v8/Database.ts";
+import {withGlobalCharacterStore, withGlobalDatabase} from "../../data/init.tsx";
+import {DatabaseContext} from "../../data/context.tsx";
 
 interface CharacterSheetLoaderData {
-  characterAtLevel: CharacterAtLevelModel;
-  database: DatabaseModel;
+  characterAtLevel: CharacterAtLevel;
+  database: Database;
 }
 
 export async function characterSheetLoader({ params }: any): Promise<CharacterSheetLoaderData> {
@@ -22,14 +23,14 @@ export async function characterSheetLoader({ params }: any): Promise<CharacterSh
     throw new Response("Character level required", { status: 400 });
   }
 
-  const characterStore = await withGlobalCharacterStoreModel();
+  const characterStore = await withGlobalCharacterStore();
   const character = await timedAsync(() => characterStore.load(id), 'Loading character');
 
   if (character === undefined) {
     throw new Response("Character not found", { status: 404 });
   }
 
-  const database = await withGlobalDatabaseModel();
+  const database = await withGlobalDatabase();
   if (!database) throw new Error("Unable to initialize database");
 
   const characterAtLevel = character.atLevel(level);
@@ -45,7 +46,7 @@ export async function characterSheetLoader({ params }: any): Promise<CharacterSh
 
 export default function CharacterSheetRoute() {
   const { characterAtLevel, database } = useLoaderData() as CharacterSheetLoaderData;
-  return <DatabaseModelContext.Provider value={database}>
+  return <DatabaseContext.Provider value={database}>
       <CharacterSheet characterAtLevel={characterAtLevel} database={database} />
-  </DatabaseModelContext.Provider>
+  </DatabaseContext.Provider>
 }

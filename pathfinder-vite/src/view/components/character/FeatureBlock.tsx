@@ -1,6 +1,6 @@
 import ButtonBlock from "../controls/ButtonBlock.tsx";
 import {useMemo} from "react";
-import {useDatabaseModel} from "../../model/DatabaseModel.ts";
+import {useDatabase} from "../..//Database.ts";
 
 interface FeatureBlockProps {
   featureId: string;
@@ -8,7 +8,7 @@ interface FeatureBlockProps {
 }
 
 export default function FeatureBlock({ featureId, variant }: FeatureBlockProps) {
-  const database = useDatabaseModel();
+  const database = useDatabase();
   const feature = useMemo(() => database.feature(featureId),
   [featureId]);
 

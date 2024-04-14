@@ -1,10 +1,10 @@
-import {TextChoiceModel} from "../../model/ChoiceModel.ts";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {TextChoice} from "../..//Choice.ts";
+import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
 import TextInput from "./TextInput.tsx";
 
 interface DataChoiceTextInputProps {
-  choiceRef: TextChoiceModel;
-  characterAtLevel: CharacterAtLevelModel;
+  choiceRef: TextChoice;
+  characterAtLevel: CharacterAtLevel;
   id?: string;
   onSelect?: (id: string) => void;
 }

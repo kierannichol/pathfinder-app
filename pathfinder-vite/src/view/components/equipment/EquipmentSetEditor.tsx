@@ -1,24 +1,27 @@
-import {EquipmentSetModel} from "../../model/EquipmentSetModel.ts";
 import React, {useMemo, useState} from "react";
-import {useEquipmentSetStoreModel} from "../../model/ModelContext.tsx";
 import TextInput from "../controls/TextInput.tsx";
 import ButtonBlock from "../controls/ButtonBlock.tsx";
 import {EquipmentSearchDialog} from "./EquipmentSearchDialog.tsx";
 import {Currency} from "../character/Currency.tsx";
 import {EquipmentList} from "./EquipmentList.tsx";
-import {ItemOptionModel, ItemSummaryModel} from "../../model/ItemModel.ts";
 import styles from "./EquipmentSetEditor.module.css";
+import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
+import {ItemOption} from "../../../data/v8/Item.ts";
+import {Equipment, EquipmentSet} from "../../../data/v8/Equipment.ts";
+import {useEquipmentSetStore, useItemDatabase} from "../../../data/context.tsx";
 
 interface EquipmentSetEditorProps {
-  loaded: EquipmentSetModel;
+  loaded: EquipmentSet;
 }
 
 export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
+  const database = useItemDatabase();
+
   const [ equipmentSet, setEquipmentSet ] = useState(loaded);
 
   const [ showAddItemDialog, setShowAddItemDialog ] = useState(false);
 
-  const equipmentSetStore = useEquipmentSetStoreModel();
+  const equipmentSetStore = useEquipmentSetStore();
 
   const totalCost = useMemo(() => {
     return equipmentSet.equipment
@@ -34,7 +37,7 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
     .reduce((a, b) => a + b, 0);
   }, [equipmentSet]);
 
-  async function updateEquipmentSet(mappingFunction: (equipmentSet: EquipmentSetModel) => Promise<EquipmentSetModel>) {
+  async function updateEquipmentSet(mappingFunction: (equipmentSet: EquipmentSet) => Promise<EquipmentSet>) {
     const updated = await mappingFunction(equipmentSet);
     setEquipmentSet(updated);
     await equipmentSetStore.save(updated);
@@ -65,10 +68,14 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
     })
   }
 
-  function handleUpdateItem(uid: string, updatedItem: ItemSummaryModel|undefined, updatedOptions: ItemOptionModel[]) {
+  function handleUpdateItem(uid: string, updatedItem: ItemSummary|undefined, updatedOptions: ItemOption[]) {
     if (!updatedItem) return;
     updateEquipmentSet(async updating => {
-      return updating.replace(uid, updatedItem, updatedOptions);
+      return updating.modify(uid, eq => Equipment.create(
+          updatedItem,
+          eq.included,
+          updatedOptions,
+          database));
     })
   }
 
@@ -78,7 +85,7 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
     const toCopy = equipmentSet.equipment[toCopyIndex];
 
     updateEquipmentSet(async updating => {
-      return updating.add(toCopy.item, toCopy.options, toCopyIndex+1);
+      return updating.add(toCopy.item.itemId, toCopy.options.map(o => o.id), toCopyIndex+1);
     });
   }
 

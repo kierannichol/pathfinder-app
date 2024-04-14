@@ -4,12 +4,12 @@ import styles from "./EquipmentCard.module.css";
 import {Currency} from "../character/Currency.tsx";
 import DeleteIcon from "../icons/DeleteIcon.tsx";
 import React, {MouseEvent, useMemo, useState} from "react";
-import {EquipmentModel} from "../../model/EquipmentModel.ts";
+import {Equipment} from "../..//Equipment.ts";
 import {CardBlock} from "../cards/CardBlock.tsx";
 import EditIcon from "../icons/EditIcon.tsx";
 
 interface EquipmentCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  equipment: EquipmentModel;
+  equipment: Equipment;
   disabled?: boolean;
   onClick?: () => void;
   onEdit?: () => void;

@@ -2,16 +2,16 @@ import React, {ReactNode, useMemo} from "react";
 import SelectionFeatureDescription from "../character/SelectionFeatureDescription.tsx";
 import ChoiceSelectButton from "./ChoiceSelectButton.tsx";
 import {ChoiceSelectorCategory, ChoiceSelectorOption} from "./ChoiceSelectorList.tsx";
-import {ChoiceCategoryModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
-import {FeatureSummaryModel} from "../../model/FeatureModel.ts";
-import {DatabaseModel} from "../../model/DatabaseModel.ts";
 import Description from "../../../data/Description.ts";
-import {useDatabaseModel} from "../../model/ModelContext.tsx";
+import {useDatabase} from "../../../data/context.tsx";
+import {ChoiceCategory, SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import Database from "../../../data/v8/Database.ts";
+import {FeatureSummary} from "../../../data/v8/FeatureSummary.ts";
 
 interface DataChoiceSelectButtonProps {
-  choiceRef: SelectChoiceModel;
-  characterAtLevel: CharacterAtLevelModel;
+  choiceRef: SelectChoiceRef;
+  characterAtLevel: CharacterAtLevel;
   choiceIndex?: number;
   id?: string;
   onSelect?: (id: string) => void;
@@ -25,10 +25,10 @@ interface DataChoiceSelectButtonProps {
 }
 
 export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
-  const database = useDatabaseModel();
+  const database = useDatabase();
   const characterWithoutCurrent = useMemo(() => {
     const selected = characterAtLevel.selected(choiceRef);
-    return selected !== undefined ? characterAtLevel.withoutChoice(choiceRef) : characterAtLevel;
+    return selected !== undefined ? characterAtLevel.withoutChoice(choiceRef.path) : characterAtLevel;
   }, [characterAtLevel, choiceRef]);
 
   function handleSelect(id: string|undefined) {
@@ -48,18 +48,18 @@ export default function DataChoiceSelectButton({ choiceRef, choiceIndex, charact
           return queryOptions(database, choiceRef, query, category)
             .map(summary => featureToChoiceSelectorOption(summary, database, characterWithoutCurrent, descriptionFn, handleSelect))
       }}
-      categoriesFn={() => choiceRef.categories.map((category: ChoiceCategoryModel) => new ChoiceSelectorCategory(category.label, category.tag))}
+      categoriesFn={() => choiceRef.categories.map((category: ChoiceCategory) => new ChoiceSelectorCategory(category.label, category.tag))}
       children={children}
       actionVerb={choiceRef.repeatingIndex === 0 ? 'Select' : 'Add'}
       removable={choiceRef.repeatingIndex > 0 && characterAtLevel.selected(choiceRef, choiceIndex) !== undefined}
   />
 }
 
-function queryOptions(database: DatabaseModel, choiceRef: SelectChoiceModel, query: string|undefined, category: ChoiceSelectorCategory|undefined): FeatureSummaryModel[] {
+function queryOptions(database: Database, choiceRef: SelectChoiceRef, query: string|undefined, category: ChoiceSelectorCategory|undefined): FeatureSummary[] {
   return choiceRef.options(database, query, category?.tag);
 }
 
-function featureToChoiceSelectorOption(feature: FeatureSummaryModel, database: DatabaseModel, characterAtLevel: CharacterAtLevelModel, descriptionFn?: (description: Description) => ReactNode, onSelect?: (id: string|undefined) => void): ChoiceSelectorOption {
+function featureToChoiceSelectorOption(feature: FeatureSummary, database: Database, characterAtLevel: CharacterAtLevel, descriptionFn?: (description: Description) => ReactNode, onSelect?: (id: string|undefined) => void): ChoiceSelectorOption {
 
   const descriptionFunction = async (id: string): Promise<ReactNode> => {
     const loaded = await database.load(id);

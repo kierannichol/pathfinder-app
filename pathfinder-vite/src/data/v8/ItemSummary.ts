@@ -8,4 +8,8 @@ export class ItemSummary {
               public readonly tags: string[],
               public readonly optionSetIds: number[]) {
   }
+
+  get uid(): string {
+    return this.itemId.toString();
+  }
 }

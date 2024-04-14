@@ -1,20 +1,20 @@
 import styles from "./EquipmentDescription.module.css";
 import ButtonBlock from "../controls/ButtonBlock.tsx";
-import {useItemDatabaseModel} from "../../model/ModelContext.tsx";
 import {useMemo, useState} from "react";
-import {ItemOptionModel, ItemOptionSetModel} from "../../model/ItemModel.ts";
 import {matchTags} from "../../../utils/tags.ts";
+import {ItemOption, ItemOptionSet} from "../../../data/v8/Item.ts";
+import {useItemDatabase} from "../../../data/context.tsx";
 
 interface ItemOptionSetSelectorProps {
-  optionSet: ItemOptionSetModel;
-  selectedOptions: ItemOptionModel[];
-  onChangeOptions: (options: ItemOptionModel[]) => void;
+  optionSet: ItemOptionSet;
+  selectedOptions: ItemOption[];
+  onChangeOptions: (options: ItemOption[]) => void;
 }
 
 export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOptions }: ItemOptionSetSelectorProps) {
-  const database = useItemDatabaseModel();
+  const database = useItemDatabase();
 
-  const [ workingSelectedOptions, setWorkingSelectedOptions ] = useState<ItemOptionModel[]>(selectedOptions);
+  const [ workingSelectedOptions, setWorkingSelectedOptions ] = useState<ItemOption[]>(selectedOptions);
 
   const availableOptions = useMemo(() => {
     if (!optionSet) return [];
@@ -22,7 +22,7 @@ export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOpti
     return database.options().filter(option => matchTags(option.tags, optionSet.optionTags));
   }, [database, optionSet]);
 
-  function handleSelectOption(option: ItemOptionModel) {
+  function handleSelectOption(option: ItemOption) {
     const alreadySelected = workingSelectedOptions.find(opt => opt.id === option.id) !== undefined;
     if (alreadySelected) {
       const updated = workingSelectedOptions.filter(oid => oid.id !== option.id);
@@ -38,7 +38,7 @@ export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOpti
     onChangeOptions?.(updated);
   }
 
-  function isOptionSelected(option: ItemOptionModel): boolean {
+  function isOptionSelected(option: ItemOption): boolean {
     return workingSelectedOptions?.map(o => o.id).includes(option.id) ?? false;
   }
 

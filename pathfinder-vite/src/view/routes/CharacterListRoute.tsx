@@ -1,15 +1,16 @@
 import CharacterList from "../views/CharacterList.tsx";
 import {RequiresAuth} from "../../app/auth.tsx";
 import {useLoaderData} from "react-router-dom";
-import {CharacterStoreModel} from "../model/CharacterStoreModel.tsx";
-import {CharacterStoreModelContext, withGlobalCharacterStoreModel} from "../model/ModelContext.tsx";
+import CharacterStore from "../../data/v8/CharacterStore.ts";
+import {withGlobalCharacterStore} from "../../data/init.tsx";
+import {CharacterStoreContext} from "../../data/context.tsx";
 
 interface CharacterListLoaderData {
-  characterStore: CharacterStoreModel;
+  characterStore: CharacterStore;
 }
 
 export async function characterListLoader(): Promise<CharacterListLoaderData> {
-  const characterStore = await withGlobalCharacterStoreModel();
+  const characterStore = await withGlobalCharacterStore();
   return {
     characterStore: characterStore
   };
@@ -18,8 +19,8 @@ export async function characterListLoader(): Promise<CharacterListLoaderData> {
 export default function CharacterListRoute() {
   const { characterStore } = useLoaderData() as CharacterListLoaderData;
   return <RequiresAuth>
-    <CharacterStoreModelContext.Provider value={characterStore}>
+    <CharacterStoreContext.Provider value={characterStore}>
       <CharacterList />
-    </CharacterStoreModelContext.Provider>
+    </CharacterStoreContext.Provider>
   </RequiresAuth>
 }

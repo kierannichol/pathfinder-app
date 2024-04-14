@@ -16,12 +16,12 @@ import SpellResistanceSection from "./sections/SpellResistanceSection";
 import WeaponSection from "./sections/WeaponSection";
 import PrintablePage from "../../PrintablePage";
 import styles from "./CharacterSheet.module.css";
-import {DatabaseModel} from "../../../model/DatabaseModel.ts";
-import {CharacterAtLevelModel} from "../../../model/CharacterAtLevelModel.ts";
+import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
+import Database from "../../../../data/v8/Database.ts";
 
 type CharacterSheetContextValues = {
-  characterAtLevel: CharacterAtLevelModel;
-  database: DatabaseModel;
+  characterAtLevel: CharacterAtLevel;
+  database: Database;
 }
 
 const CharacterSheetContext = createContext<CharacterSheetContextValues|undefined>(undefined);
@@ -34,7 +34,7 @@ function useCharacterSheetContext(): CharacterSheetContextValues {
   return context;
 }
 
-export function useCharacterAtLevel(): CharacterAtLevelModel {
+export function useCharacterAtLevel(): CharacterAtLevel {
   return useCharacterSheetContext().characterAtLevel;
 }
 

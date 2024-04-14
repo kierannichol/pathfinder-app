@@ -6,23 +6,23 @@ import CharacterLevelEditor from "./CharacterLevelEditor.tsx";
 import SelectClassButton from "./SelectClassButton.tsx";
 import {Link} from "react-router-dom";
 import {FaFileLines} from "react-icons/fa6";
-import {CharacterModel} from "../../model/CharacterModel.ts";
-import {ChoiceInputType, ChoiceModel, SelectChoiceModel} from "../../model/ChoiceModel.ts";
-import {useCharacterStoreModel} from "../../model/ModelContext.tsx";
 import DataChoiceTextInput from "../controls/DataChoiceTextInput.tsx";
 import {isString} from "../../../app/pfutils.ts";
+import {useCharacterStore} from "../../../data/context.tsx";
+import Character from "../../../data/v8/Character.ts";
+import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "../../../data/v8/Choice.ts";
 
 interface CharacterEditorProps {
-  loaded: CharacterModel;
+  loaded: Character;
 }
 
-export type CharacterChoiceSelectHandler = (choice: ChoiceModel, value: string|string[]) => void;
+export type CharacterChoiceSelectHandler = (choice: ChoiceRef, value: string|string[]) => void;
 
 export default function CharacterEditor({ loaded }: CharacterEditorProps) {
   const [ character, setCharacter ] = useState(loaded);
   const [ showFavoredClassPrompt, setShowFavoredClassPrompt ] = useState(false);
 
-  const characterStore = useCharacterStoreModel();
+  const characterStore = useCharacterStore();
   const characterAtLevels = useMemo(() => {
     const levels = [];
     for (let i = 0; i <= 20; i++) {
@@ -33,13 +33,13 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
 
   const characterLevel0 = characterAtLevels[0];
 
-  async function updateCharacter(mappingFunction: (character: CharacterModel) => Promise<CharacterModel>) {
+  async function updateCharacter(mappingFunction: (character: Character) => Promise<Character>) {
     const updated = await mappingFunction(character);
     setCharacter(updated);
     await characterStore.save(updated);
   }
 
-  function handleChange(choice: ChoiceModel, value: string|string[]) {
+  function handleChange(choice: ChoiceRef, value: string|string[]) {
     if (isString(value) && character.selected(choice.path) === value) {
       return;
     }
@@ -73,14 +73,14 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
           {choice.inputType === ChoiceInputType.Text &&
               <DataChoiceTextInput
                   id={choice.path}
-                  choiceRef={choice as SelectChoiceModel}
-                  characterAtLevel={characterLevel0.withoutChoice(choice)}
+                  choiceRef={choice as SelectChoiceRef}
+                  characterAtLevel={characterLevel0.withoutChoice(choice.path)}
                   onSelect={value => handleChange(choice, value)} />}
           {choice.inputType === ChoiceInputType.Select &&
               <DataChoiceSelectButton
                   id={choice.path}
-                  choiceRef={choice as SelectChoiceModel}
-                  characterAtLevel={characterLevel0.withoutChoice(choice)}
+                  choiceRef={choice as SelectChoiceRef}
+                  characterAtLevel={characterLevel0.withoutChoice(choice.path)}
                   onSelect={value => handleChange(choice, value)} />}
         </div>)}
       <PromptDialog show={showFavoredClassPrompt}

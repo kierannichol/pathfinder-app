@@ -8,14 +8,14 @@ import {useNavigate} from "react-router-dom";
 import LoadingBlock from "../components/LoadingBlock.tsx";
 import DeleteIcon from "../components/icons/DeleteIcon.tsx";
 import {classNames} from "../../utils/classNames.ts";
-import {CharacterSummaryModel} from "../model/CharacterSummaryModel.ts";
-import {useCharacterStoreModel} from "../model/ModelContext.tsx";
+import {useCharacterStore} from "../../data/context.tsx";
+import CharacterSummary from "../../data/v8/CharacterSummary.ts";
 
 export default function CharacterList() {
-  const characterStore = useCharacterStoreModel();
+  const characterStore = useCharacterStore();
   const navigate = useNavigate();
 
-  const [ characters, setCharacters ] = useState<CharacterSummaryModel[]>([]);
+  const [ characters, setCharacters ] = useState<CharacterSummary[]>([]);
 
   const [ loadedCharacters, isLoading ] = useAsyncMemo(() => characterStore.list(),
       [characterStore]);
@@ -53,7 +53,7 @@ export default function CharacterList() {
 }
 
 interface CharacterListEntryProps {
-  character: CharacterSummaryModel;
+  character: CharacterSummary;
   onDelete: (id: string) => void;
 }
 

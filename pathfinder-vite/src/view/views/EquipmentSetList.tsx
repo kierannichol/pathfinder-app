@@ -1,4 +1,3 @@
-import {useEquipmentSetStoreModel} from "../model/ModelContext.tsx";
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import useAsyncMemo from "../../utils/useAsyncMemo.tsx";
@@ -8,14 +7,15 @@ import Panel from "../components/Panel.tsx";
 import {classNames} from "../../utils/classNames.ts";
 import DeleteIcon from "../components/icons/DeleteIcon.tsx";
 import {Button} from "react-bootstrap";
-import {EquipmentSetModel} from "../model/EquipmentSetModel.ts";
 import NewEquipmentSetDialog from "../components/character/NewEquipmentSetDialog.tsx";
+import {useEquipmentSetStore} from "../../data/context.tsx";
+import {EquipmentSet} from "../../data/v8/Equipment.ts";
 
 export function EquipmentSetList() {
-  const equipmentSetStore = useEquipmentSetStoreModel();
+  const equipmentSetStore = useEquipmentSetStore();
   const navigate = useNavigate();
 
-  const [ equipmentSets, setEquipmentSets ] = useState<EquipmentSetModel[]>([]);
+  const [ equipmentSets, setEquipmentSets ] = useState<EquipmentSet[]>([]);
 
   const [ loadedEquipmentSets, isLoading ] = useAsyncMemo(() => equipmentSetStore.list(),
       [equipmentSetStore]);
@@ -51,7 +51,7 @@ export function EquipmentSetList() {
 }
 
 interface EquipmentSetListEntryProps {
-  equipmentSet: EquipmentSetModel;
+  equipmentSet: EquipmentSet;
   onDelete: (id: string) => void;
 }
 

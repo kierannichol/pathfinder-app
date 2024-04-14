@@ -1,9 +1,9 @@
 import {Col, Container, Row} from "react-bootstrap";
 import "./LevelStatsDisplay.css";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
+import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
 
 interface LevelStatsDisplayProps {
-  characterAtLevel: CharacterAtLevelModel;
+  characterAtLevel: CharacterAtLevel;
 }
 
 function LevelStatsDisplay({characterAtLevel}: LevelStatsDisplayProps) {

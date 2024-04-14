@@ -3,11 +3,28 @@ import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
 import {Path} from "../../utils/Path.ts";
 import AppliedState from "./AppliedState.ts";
 import {array} from "../../app/pfutils.ts";
+import Database from "./Database.ts";
+import {FeatureSummary} from "./FeatureSummary.ts";
+import React from "react";
 
 export interface ChoiceRef {
+  inputType: ChoiceInputType;
   path: string;
   type: string;
   label: string;
+}
+
+export interface SelectChoiceRef extends ChoiceRef {
+  readonly categories: FeatureSelectCategory[];
+  readonly repeatingIndex: number;
+  options(database: Database, query: string | undefined, filterTag: string | undefined): FeatureSummary[];
+}
+
+export type ChoiceSelectedHandler = (choice: SelectChoiceRef, selected: string|string[]) => void;
+
+export enum ChoiceInputType {
+  Text,
+  Select,
 }
 
 export abstract class ResolvedChoice implements ChoiceRef, ResolvedTrait {
@@ -15,6 +32,7 @@ export abstract class ResolvedChoice implements ChoiceRef, ResolvedTrait {
   abstract type: string;
   abstract label: string;
   abstract children: ResolvedTrait[];
+  abstract readonly inputType: ChoiceInputType;
   abstract applyTo(state: AppliedState): void;
 }
 
@@ -52,7 +70,39 @@ export class MultiSelectChoice implements Trait {
   }
 }
 
-export class ResolvedMultiSelectChoice extends ResolvedChoice {
+abstract class BaseResolvedSelectChoice extends ResolvedChoice {
+  readonly inputType: ChoiceInputType = ChoiceInputType.Select;
+
+  abstract readonly optionTags: string[];
+  abstract readonly featureIds: string[];
+  abstract readonly sortBy: "name" | "none";
+
+  options(database: Database, query: string | undefined, filterTag: string | undefined): FeatureSummary[] {
+    let tags = [...this.optionTags];
+    if (filterTag && filterTag !== '') {
+      tags = tags.map(tag => tag + '+' + filterTag);
+    }
+    return [
+      ...database.query(tags),
+      ...this.featureIds.flatMap(featureId => {
+        const option = database.feature(featureId);
+        return option !== undefined ? [option] : [];
+      })
+    ]
+    .filter(option => !query || option.name.toLowerCase().includes(query.toLowerCase()))
+    .sort((a, b) => {
+      switch (this.sortBy) {
+        case "name":
+          return a.name.localeCompare(b.name);
+        default:
+          return 0;
+      }
+    });
+  }
+}
+
+export class ResolvedMultiSelectChoice extends BaseResolvedSelectChoice implements SelectChoiceRef {
+  readonly inputType: ChoiceInputType = ChoiceInputType.Select;
 
   constructor(public readonly path: string,
               public readonly key: string,
@@ -106,8 +156,8 @@ export class SelectChoice implements Trait {
 
       selectedKey = context.selection(path) as string;
       selected = selectedKey !== undefined
-        ? await context.feature(selectedKey)
-        : undefined;
+          ? await context.feature(selectedKey)
+          : undefined;
     }
 
     context.register(selectedKey);
@@ -138,7 +188,8 @@ export class SelectChoice implements Trait {
   }
 }
 
-export class ResolvedSelectChoice extends ResolvedChoice {
+export class ResolvedSelectChoice extends BaseResolvedSelectChoice implements SelectChoiceRef {
+  readonly inputType: ChoiceInputType = ChoiceInputType.Select;
 
   constructor(public readonly path: string,
               public readonly key: string,
@@ -164,7 +215,7 @@ export class ResolvedSelectChoice extends ResolvedChoice {
   get children(): ResolvedTrait[] {
     return this.selected !== undefined
         ? (this.repeatedChoice !== undefined
-            ? [ this.selected, this.repeatedChoice ] : [ this.selected ])
+            ? [this.selected, this.repeatedChoice] : [this.selected])
         : [];
   }
 }
@@ -186,6 +237,7 @@ export class TextChoice implements Trait {
 }
 
 export class ResolvedTextChoice extends ResolvedChoice {
+  readonly inputType: ChoiceInputType = ChoiceInputType.Text;
   readonly children: ResolvedTrait[] = [];
 
   constructor(public readonly path: string,
@@ -203,6 +255,11 @@ export class ResolvedTextChoice extends ResolvedChoice {
     }
   }
 
+}
+
+export class ChoiceCategory {
+  label: React.ReactNode;
+  tag: string = "";
 }
 
 export class FeatureSelectCategory {

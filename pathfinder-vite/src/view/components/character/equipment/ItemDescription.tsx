@@ -1,8 +1,8 @@
-import {ItemModel} from "../../../model/ItemModel.ts";
+import {Item} from "../../..//Item.ts";
 import styles from "./ItemDescription.module.css";
 
 interface ItemDescriptionProps {
-  item: ItemModel;
+  item: Item;
 }
 
 export function ItemDescription({ item }: ItemDescriptionProps) {

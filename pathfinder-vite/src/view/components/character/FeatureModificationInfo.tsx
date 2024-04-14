@@ -1,4 +1,4 @@
-import FeatureModification from "../../../data/model/FeatureModification.ts";
+import FeatureModification from "../../../data//FeatureModification.ts";
 import FeatureBlock from "./FeatureBlock.tsx";
 import {ButtonBlockGroup} from "../controls/ButtonBlockGroup.tsx";
 import {useMemo} from "react";

@@ -1,24 +1,25 @@
 import React, {useMemo, useState} from "react";
 import {Button, Modal} from "react-bootstrap";
 import styles from "../Dialog.module.scss";
-import {EquipmentModel} from "../../model/EquipmentModel.ts";
-import {ItemOptionModel, ItemSummaryModel} from "../../model/ItemModel.ts";
 import {EquipmentDescription} from "./EquipmentDescription.tsx";
-import {useItemDatabaseModel} from "../../model/ModelContext.tsx";
 import useAsyncMemo from "../../../utils/useAsyncMemo.tsx";
 import LoadingBlock from "../LoadingBlock.tsx";
 import {Currency} from "../character/Currency.tsx";
 import estyles from "./EquipmentEditDialog.module.css";
+import {useItemDatabase} from "../../../data/context.tsx";
+import {Equipment} from "../../../data/v8/Equipment.ts";
+import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
+import {ItemOption} from "../../../data/v8/Item.ts";
 
 interface EquipmentEditDialogProps {
   show: boolean;
-  value: EquipmentModel;
-  onConfirm?: (item: ItemSummaryModel, options: ItemOptionModel[]) => void;
+  value: Equipment;
+  onConfirm?: (item: ItemSummary, options: ItemOption[]) => void;
   onCancel?: () => void;
 }
 
 export function EquipmentEditDialog({ show, value, onConfirm, onCancel }: EquipmentEditDialogProps) {
-  const database = useItemDatabaseModel();
+  const database = useItemDatabase();
 
   const [ selectedOptions, setSelectedOptions ] = useState(value.options);
 
@@ -32,7 +33,7 @@ export function EquipmentEditDialog({ show, value, onConfirm, onCancel }: Equipm
     }
   }, [value, selectedOptions]);
 
-  function handleChangeOptions(options: ItemOptionModel[]) {
+  function handleChangeOptions(options: ItemOption[]) {
     setSelectedOptions(options);
   }
 

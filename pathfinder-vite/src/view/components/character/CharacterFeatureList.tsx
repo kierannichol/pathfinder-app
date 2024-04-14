@@ -3,13 +3,13 @@ import "./CharacterFeatureList.scss";
 import PathfinderSelect from "../controls/SelectBlock.tsx";
 import variants from "../controls/ButtonVariants.module.scss";
 import Expression from "../../../utils/logic/Expression.ts";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
-import {FeatureModel} from "../../model/FeatureModel.ts";
+import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
+import {Feature} from "../..//Feature.ts";
 import FeatureDescription from "./FeatureDescription.tsx";
 
 interface CharacterFeatureListProps {
-  characterAtLevel: CharacterAtLevelModel;
-  features: FeatureModel[];
+  characterAtLevel: CharacterAtLevel;
+  features: Feature[];
 }
 
 export default function CharacterFeatureList({ characterAtLevel, features }: CharacterFeatureListProps) {
@@ -26,8 +26,8 @@ export default function CharacterFeatureList({ characterAtLevel, features }: Cha
 }
 
 interface FeatureButtonLabelProps {
-  characterAtLevel: CharacterAtLevelModel;
-  feature: FeatureModel;
+  characterAtLevel: CharacterAtLevel;
+  feature: Feature;
   type?: string;
 }
 
@@ -50,7 +50,7 @@ function FeatureButtonLabel({ characterAtLevel, feature, type = undefined }: Fea
   </div>;
 }
 
-function determineVariant(feature: FeatureModel) {
+function determineVariant(feature: Feature) {
   for (let tag of feature.tags) {
     if (tag in variants) {
       return tag;

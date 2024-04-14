@@ -1,20 +1,20 @@
 import {useMemo} from "react";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
-import {SelectChoiceModel} from "../../model/ChoiceModel.ts";
-import {useDatabaseModel} from "../../model/ModelContext.tsx";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {useDatabase} from "../../../data/context.tsx";
+import {SelectChoiceRef} from "../../../data/v8/Choice.ts";
 
 interface SelectClassButtonProps {
-  characterAtLevel: CharacterAtLevelModel;
+  characterAtLevel: CharacterAtLevel;
 }
 
 export default function SelectClassButton({ characterAtLevel }: SelectClassButtonProps) {
-  const database = useDatabaseModel();
-  const classChoice = useMemo(() => characterAtLevel.choices.find(choice => choice.type === 'class') as SelectChoiceModel,
+  const database = useDatabase();
+  const classChoice = useMemo(() => characterAtLevel.choices.find(choice => choice.type === 'class') as SelectChoiceRef,
       [characterAtLevel]);
 
   const selectedId = useMemo(() => classChoice !== undefined ? characterAtLevel.selected(classChoice) : undefined, [classChoice, characterAtLevel]);
-  const label = useMemo(() => selectedId !== undefined ? database.name(selectedId) : <i>Select Class</i>, [database, selectedId]);
+  const label = useMemo(() => selectedId !== undefined ? database.name(selectedId as string) : <i>Select Class</i>, [database, selectedId]);
 
   if (classChoice === undefined) {
     return <></>

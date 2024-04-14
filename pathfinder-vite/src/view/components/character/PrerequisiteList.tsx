@@ -6,18 +6,15 @@ import FormulaTreeFormatter, {
   TreeNodeOperator,
   TreeNodeValue
 } from "../../../utils/logic/FormulaTreeFormatter.ts";
-import {CharacterAtLevelModel} from "../../model/CharacterAtLevelModel.ts";
-import {DatabaseModel} from "../../model/DatabaseModel.ts";
-import {
-  PrerequisiteValidationEntryModel,
-  PrerequisiteValidationModel
-} from "../../model/PrerequisiteValidationModel.ts";
 import {classNames} from "../../../utils/classNames.ts";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import Database from "../../../data/v8/Database.ts";
+import {PrerequisiteValidation, PrerequisiteValidationEntry} from "../../../data/v8/PrerequisiteValidation.ts";
 
 interface PrerequisiteListProps {
   formula: string;
-  validation: PrerequisiteValidationModel;
+  validation: PrerequisiteValidation;
 }
 
 function UnknownMark() {
@@ -56,14 +53,14 @@ export default function PrerequisiteList({ formula, validation } : PrerequisiteL
 }
 
 interface PrerequisiteValidationEntryBlockProps {
-  entry: PrerequisiteValidationEntryModel;
+  entry: PrerequisiteValidationEntry;
 }
 
 function PrerequisiteValidationEntryBlock({ entry }: PrerequisiteValidationEntryBlockProps) {
   return <span className={classNames([ entry.valid ? styles.element : styles.elementInvalid ])}>{entry.description}</span>
 }
 
-function formatFormula(featureId: string, formula: Resolvable, maxStacks: number|null, characterAtLevel: CharacterAtLevelModel, pathfinderDb: DatabaseModel): ReactNode {
+function formatFormula(featureId: string, formula: Resolvable, maxStacks: number|null, characterAtLevel: CharacterAtLevel, pathfinderDb: Database): ReactNode {
   const formatter = new FormulaTreeFormatter(variable => {
     let name = pathfinderDb.name(variable);
     return name !== undefined && name !== '' ? name : variable;
