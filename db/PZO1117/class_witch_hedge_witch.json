@@ -1,0 +1,34 @@
+{
+  "id": "class:witch#hedge_witch",
+  "name": "Hedge Witch",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:hex#witch",
+  "maxStacks": 1,
+  "description": {
+    "text": "Among witches, there are those who devote themselves to the care of others and restrict their practices to the healing arts. They often take the place of clerics in rural communities and may wander the countryside servicing the needs of several small communities."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hex#witch",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:witch",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:spontaneous_healing#witch_hedge_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:empathic_healing#witch_hedge_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }]
+        }]
+      }]
+    }
+  }
+}

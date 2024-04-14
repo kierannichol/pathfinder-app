@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#unchained_rogue",
+  "name": "Armor Proficiency (Unchained Rogue)",
+  "tags": ["class_feature", "unchained_rogue", "trait"],
+  "description": {
+    "text": "An Unchained Rogue is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

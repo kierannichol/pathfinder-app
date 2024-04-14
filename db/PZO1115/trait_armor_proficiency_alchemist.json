@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#alchemist",
+  "name": "Armor Proficiency (Alchemist)",
+  "tags": ["class_feature", "alchemist", "trait"],
+  "description": {
+    "text": "An Alchemist is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "class:summoner#spirit_summoner",
+  "name": "Spirit Summoner",
+  "tags": ["archetype", "summoner"],
+  "enabledFormula": "!@modifies:ability:summon_monster_i#summoner AND !@modifies:ability:eidolon#summoner AND !@modifies:ability:transposition#summoner",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:summon_monster_i#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:eidolon#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:transposition#summoner",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:summoner",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spirit#summoner_spirit_summoner", "ability:eidolon#summoner_spirit_summoner"],
+            "linksToRemove": ["ability:summon_monster_i#summoner", "ability:eidolon#summoner"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:hex#summoner_spirit_summoner"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:transposition#summoner"]
+          }]
+        }]
+      }]
+    }
+  }
+}

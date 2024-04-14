@@ -1,0 +1,62 @@
+{
+  "id": "class:paladin#sacred_servant",
+  "name": "Sacred Servant",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:smite_evil#paladin AND !@modifies:ability:aura_of_resolve#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:call_celestial_ally#paladin_sacred_servant"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:smite_evil#paladin_sacred_servant"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

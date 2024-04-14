@@ -1,0 +1,22 @@
+{
+  "id": "race:elf",
+  "name": "Elf",
+  "tags": ["race"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Tall, noble, and often haughty, elves are long-lived and subtle masters of the wilderness. Elves excel in the arcane arts. Often they use their intrinsic link to nature to forge new spells and create wondrous items that, like their creators, seem nearly impervious to the ravages of time. A private and often introverted race, elves can give the impression they are indifferent to the plights of others."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "speed:base",
+            "numberValue": 30
+          }
+        }],
+        "links": ["size:m", "asi:dex_p2", "asi:int_p2", "asi:con_m2"]
+      }]
+    }
+  }
+}

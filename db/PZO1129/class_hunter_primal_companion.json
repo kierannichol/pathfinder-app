@@ -1,0 +1,47 @@
+{
+  "id": "class:hunter#primal_companion",
+  "name": "Primal Companion",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:master_hunter#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:second_animal_focus#hunter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:master_hunter#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_focus#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:second_animal_focus#hunter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:primal_transformation#hunter_primal_companion"],
+            "linksToRemove": ["ability:animal_focus#hunter"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:primal_master#hunter_primal_companion"],
+            "linksToRemove": ["ability:master_hunter#hunter"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:primal_surge#hunter_primal_companion"],
+            "linksToRemove": ["ability:second_animal_focus#hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

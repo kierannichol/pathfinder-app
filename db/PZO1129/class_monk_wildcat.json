@@ -1,0 +1,114 @@
+{
+  "id": "class:monk#wildcat",
+  "name": "Wildcat",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:high_jump#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:diamond_soul#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:high_jump#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ki_pool#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:empty_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_soul#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:ready_for_anything#monk_wildcat"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:brawler_maneuver_training#monk_wildcat", "ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:ki_pool#monk", "ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToRemove": ["ability:high_jump#monk"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:knockout#monk_wildcat"],
+            "linksToRemove": ["ability:improved_evasion#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:ki_pool#monk", "ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat", "ability:knockout#monk_wildcat"],
+            "linksToRemove": ["ability:slow_fall#monk", "ability:abundant_step#monk"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:turn_the_tables#monk_wildcat"],
+            "linksToRemove": ["ability:diamond_soul#monk"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:ki_pool#monk", "ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:improvised_weapon_mastery#monk_wildcat"],
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:dirty_blow#monk_wildcat"],
+            "linksToRemove": ["ability:empty_body#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

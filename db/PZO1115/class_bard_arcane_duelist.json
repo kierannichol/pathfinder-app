@@ -1,0 +1,85 @@
+{
+  "id": "class:bard#arcane_duelist",
+  "name": "Arcane Duelist",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:lore_master#bard AND !@modifies:ability:countersong#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:ability:versatile_performance#bard AND !@modifies:ability:jack_of_all_trades#bard AND !@modifies:ability:well_versed#bard",
+  "maxStacks": 1,
+  "description": {
+    "text": "A master of the martial applications of steel and spell, the arcane duelist blends both into a lethal combination."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:lore_master#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:countersong#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bardic_knowledge#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:jack_of_all_trades#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:arcane_strike#bard_arcane_duelist", "ability:bardic_performance#bard_arcane_duelist"],
+            "linksToRemove": ["ability:bardic_knowledge#bard", "ability:countersong#bard"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["feat:greater_penetrating_strike", "ability:bonus_feat#bard_arcane_duelist"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["feat:combat_casting", "ability:bonus_feat#bard_arcane_duelist", "ability:bonus_feat#bard_arcane_duelist"],
+            "linksToRemove": ["ability:versatile_performance#bard", "ability:well_versed#bard"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:arcane_bond#bard_arcane_duelist"],
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["feat:disruptive", "ability:bonus_feat#bard_arcane_duelist"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["feat:spellbreaker", "ability:bonus_feat#bard_arcane_duelist", "ability:arcane_armor#bard_arcane_duelist"],
+            "linksToRemove": ["ability:versatile_performance#bard", "ability:jack_of_all_trades#bard"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:lore_master#bard"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["feat:penetrating_strike", "ability:bonus_feat#bard_arcane_duelist"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

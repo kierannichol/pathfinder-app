@@ -1,0 +1,21 @@
+{
+  "id": "ability:elemental_focus#kineticist",
+  "name": "Elemental Focus",
+  "tags": ["class_feature", "kineticist", "ability"],
+  "description": {
+    "text": "At 1st level, a kineticist chooses one primary element on which to focus. This element determines how she accesses the raw power of the Ethereal Plane, and grants her access to specific wild talents (see below) and additional class skills. She gains her selected element’s basic utility wild talent (basic telekinesis, basic aerokinesis, etc.) as a bonus wild talent.\nA complete listing of kineticist elements can be found here: Kineticist Elements"
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "kineticist_element",
+        "label": "Kineticist Element",
+        "type": "kineticist_element",
+        "featureSelect": {
+          "optionTags": ["kineticist_element"],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }]
+    }
+  }
+}

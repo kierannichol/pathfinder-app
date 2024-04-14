@@ -1,0 +1,39 @@
+{
+  "id": "class:summoner#master_summoner",
+  "name": "Master Summoner",
+  "tags": ["archetype", "summoner"],
+  "enabledFormula": "!@modifies:ability:bond_senses#summoner AND !@modifies:ability:shield_ally#summoner",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most summoners forge a bond with a single, powerful eidolon, but some summoners seek to control a variety of creatures. The master summoner sacrifices the power of his eidolon in favor of summoning a plethora of otherworldly creatures to aid him."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:bond_senses#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:shield_ally#summoner",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:summoner",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:augment_summoning#summoner_master_summoner"],
+            "linksToRemove": ["ability:bond_senses#summoner"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:summoning_mastery#summoner_master_summoner"],
+            "linksToRemove": ["ability:shield_ally#summoner"]
+          }]
+        }]
+      }]
+    }
+  }
+}

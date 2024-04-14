@@ -1,0 +1,40 @@
+{
+  "id": "class:druid#saurian_shaman",
+  "name": "Saurian Shaman",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:totemic_summons#druid_saurian_shaman"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:bonus_feat#druid_saurian_shaman"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

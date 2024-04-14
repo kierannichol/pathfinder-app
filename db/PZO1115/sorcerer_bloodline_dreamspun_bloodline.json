@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:dreamspun_bloodline",
+  "name": "Dreamspun Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your family is a long line of dreamers, who dream not as ordinary mortals do but rather as those who reach through and touch the supernal realm of dreams and the farthest shores of night. Whether it is a gift or curse is not always clear, but your visions of the past and future call you ineluctably to a life of adventure."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:lullaby#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:combat_precognition#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:solipsism#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:dreamshaper#sorcerer", "ability:nightmare#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:eye_of_somnus#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_expertise", "feat:deceitful", "feat:heighten_spell", "feat:improved_feint", "feat:persuasive", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_expertise", "feat:deceitful", "feat:heighten_spell", "feat:improved_feint", "feat:persuasive", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_expertise", "feat:deceitful", "feat:heighten_spell", "feat:improved_feint", "feat:persuasive", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

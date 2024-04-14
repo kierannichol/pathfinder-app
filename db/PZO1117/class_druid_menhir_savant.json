@@ -1,0 +1,60 @@
+{
+  "id": "class:druid#menhir_savant",
+  "name": "Menhir Savant",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:trackless_step#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trackless_step#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spirit_sense#druid_menhir_savant"],
+            "linksToRemove": ["ability:wild_empathy#druid", "ability:nature_sense#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:place_magic#druid_menhir_savant"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 3,
+            "linksToRemove": ["ability:trackless_step#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:empty_body#druid_menhir_savant"],
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

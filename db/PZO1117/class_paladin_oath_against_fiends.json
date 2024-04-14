@@ -1,0 +1,38 @@
+{
+  "id": "class:paladin#oath_against_fiends",
+  "name": "Oath Against Fiends",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:mercy#paladin AND !@modifies:ability:aura_of_resolve#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mercy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:anchoring_aura#paladin_oath_against_fiends"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:holy_vessel#paladin_oath_against_fiends"],
+            "linksToRemove": ["ability:mercy#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

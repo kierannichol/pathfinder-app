@@ -1,0 +1,59 @@
+{
+  "id": "class:bard#songhealer",
+  "name": "Songhealer",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:frightening_tune#bard AND !@modifies:ability:deadly_performance#bard AND !@modifies:ability:versatile_performance#bard",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:frightening_tune#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:deadly_performance#bard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:versatile_performance#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:enhance_healing#bard_songhealer"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:enhance_healing#bard_songhealer"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:funereal_ballad#bard_songhealer"],
+            "linksToRemove": ["ability:deadly_performance#bard"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:enhance_healing#bard_songhealer"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:enhance_healing#bard_songhealer"],
+            "linksToRemove": ["ability:versatile_performance#bard"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:enhance_healing#bard_songhealer", "ability:bardic_performance#bard_songhealer"],
+            "linksToRemove": ["ability:versatile_performance#bard", "ability:frightening_tune#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

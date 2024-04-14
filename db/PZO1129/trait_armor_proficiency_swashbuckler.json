@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#swashbuckler",
+  "name": "Armor Proficiency (Swashbuckler)",
+  "tags": ["class_feature", "swashbuckler", "trait"],
+  "description": {
+    "text": "A Swashbuckler is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

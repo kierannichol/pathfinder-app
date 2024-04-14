@@ -1,0 +1,53 @@
+{
+  "id": "class:paladin#oath_of_loyalty",
+  "name": "Oath of Loyalty",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:smite_evil#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:loyal_oath#paladin_oath_of_loyalty"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

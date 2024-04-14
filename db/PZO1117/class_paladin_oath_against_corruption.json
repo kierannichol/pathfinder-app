@@ -1,0 +1,47 @@
+{
+  "id": "class:paladin#oath_against_corruption",
+  "name": "Oath Against Corruption",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:holy_champion#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_courage#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:holy_champion#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:aura_of_purity#paladin_oath_against_corruption"],
+            "linksToRemove": ["ability:aura_of_courage#paladin"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:cast_into_the_void#paladin_oath_against_corruption"],
+            "linksToRemove": ["ability:holy_champion#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:cleansing_flame#paladin_oath_against_corruption"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

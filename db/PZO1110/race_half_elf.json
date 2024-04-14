@@ -1,0 +1,22 @@
+{
+  "id": "race:half_elf",
+  "name": "Half-elf",
+  "tags": ["race"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Often caught between the worlds of their progenitor races, half-elves are a race of both grace and contradiction. Their dual heritage and natural gifts often create brilliant diplomats and peacemakers, but half-elves are often susceptible to an intense and even melancholic isolation, realizing that they are never truly part of elven or human society."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "speed:base",
+            "numberValue": 30
+          }
+        }],
+        "links": ["size:m", "asi:any_p2"]
+      }]
+    }
+  }
+}

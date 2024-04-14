@@ -1,0 +1,840 @@
+
+PZO1117#
+class:magusMagusclassbase(3
+favored_class:magusMagusfavored_classbase(I
+ability:magus_arcana#magusMagus Arcanaclass_featuremagusability&
+ability:magus_arcanaMagus Arcana(Y
+trait:weapon_proficiency#magusWeapon Proficiency (Magus)class_featuremagustrait8
+trait:weapon_proficiencyWeapon Proficiency (Magus)(G
+ability:arcane_pool#magusArcane Poolclass_featuremagusability$
+ability:arcane_poolArcane Pool([
+#ability:improved_spell_recall#magusImproved Spell Recallclass_featuremagusability8
+ability:improved_spell_recallImproved Spell Recall(G
+ability:spellstrike#magusSpellstrikeclass_featuremagusability$
+ability:spellstrikeSpellstrike(M
+ability:knowledge_pool#magusKnowledge Poolclass_featuremagusability*
+ability:knowledge_poolKnowledge Pool([
+#ability:improved_spell_combat#magusImproved Spell Combatclass_featuremagusability8
+ability:improved_spell_combatImproved Spell Combat(E
+ability:bonus_feat#magus
+Bonus Featclass_featuremagusability"
+ability:bonus_feat
+Bonus Feat(Y
+"ability:greater_spell_access#magusGreater Spell Accessclass_featuremagusability6
+ability:greater_spell_accessGreater Spell Access(I
+ability:spell_recall#magusSpell Recallclass_featuremagusability&
+ability:spell_recallSpell Recall(Q
+ability:fighter_training#magusFighter Trainingclass_featuremagusability.
+ability:fighter_trainingFighter Training(R
+ability:spellcasting#magusSpell Casting (Magus)class_featuremagusability/
+ability:spellcastingSpell Casting (Magus)(W
+trait:armor_proficiency#magusArmor Proficiency (Magus)class_featuremagustrait6
+trait:armor_proficiencyArmor Proficiency (Magus)(A
+ability:cantrips#magusCantripsclass_featuremagusability
+ability:cantripsCantrips(G
+ability:heavy_armor#magusHeavy Armorclass_featuremagusability$
+ability:heavy_armorHeavy Armor(E
+ability:true_magus#magus
+True Magusclass_featuremagusability"
+ability:true_magus
+True Magus(K
+ability:counterstrike#magusCounterstrikeclass_featuremagusability(
+ability:counterstrikeCounterstrike(Y
+"ability:greater_spell_combat#magusGreater Spell Combatclass_featuremagusability6
+ability:greater_spell_combatGreater Spell Combat(I
+ability:spell_combat#magusSpell Combatclass_featuremagusability&
+ability:spell_combatSpell Combat(I
+ability:medium_armor#magusMedium Armorclass_featuremagusability&
+ability:medium_armorMedium Armor(S
+magus_arcana:arcane_accuracyArcane Accuracyclass_featuremagusmagus_arcanaE
+magus_arcana:familiarFamiliarclass_featuremagusmagus_arcanaM
+magus_arcana:silent_magicSilent Magicclass_featuremagusmagus_arcanae
+magus_arcana:maximized_magicMaximized Magicclass_featuremagusmagus_arcana"@class:magus>=12K
+magus_arcana:pool_strikePool Strikeclass_featuremagusmagus_arcanaà
+magus_arcana:broad_studyBroad Studyclass_featuremagusmagus_arcana";all(@class:magus>=6,"Levels in another spellcasting class")e
+magus_arcana:critical_strikeCritical Strikeclass_featuremagusmagus_arcana"@class:magus>=12Q
+magus_arcana:spell_blendingSpell Blendingclass_featuremagusmagus_arcanaK
+magus_arcana:concentrateConcentrateclass_featuremagusmagus_arcanaM
+magus_arcana:wand_wielderWand Wielderclass_featuremagusmagus_arcanaK
+magus_arcana:still_magicStill Magicclass_featuremagusmagus_arcanad
+magus_arcana:empowered_magicEmpowered Magicclass_featuremagusmagus_arcana"@class:magus>=6M
+magus_arcana:wand_masteryWand Masteryclass_featuremagusmagus_arcanah
+magus_arcana:dispelling_strikeDispelling Strikeclass_featuremagusmagus_arcana"@class:magus>=9[
+magus_arcana:reflection
+Reflectionclass_featuremagusmagus_arcana"@class:magus>=15M
+magus_arcana:spell_shieldSpell Shieldclass_featuremagusmagus_arcanab
+magus_arcana:hasted_assaultHasted Assaultclass_featuremagusmagus_arcana"@class:magus>=9e
+magus_arcana:quickened_magicQuickened Magicclass_featuremagusmagus_arcana"@class:magus>=15K
+magus_arcana:close_rangeClose Rangeclass_featuremagusmagus_arcanaU
+magus_arcana:maneuver_masteryManeuver Masteryclass_featuremagusmagus_arcanab
+feat:grant_initiativeGrant Initiativefeatgeneral"&@ability:cunning_initiative#inquisitor(é
+feat:theurgyTheurgyfeatgeneral"dall(@wis_score>=13,any(@int_score,@cha_score>=13),@spells_per_day:arcane#1,@spells_per_day:divine#1)(u
+feat:evolved_familiarEvolved Familiarfeatgeneral"9all(@int_score>=13,@cha_score>=13,@magus_arcana:familiar)(í
+feat:sunlight_summonsSunlight Summonsfeatgeneral"’all(@any,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature's ally])(Ö
+feat:intimidating_gazeIntimidating Gazefeatgeneral"Gall(@cha_score>=13,@ability:stern_gaze#inquisitor,@skill:intimidate>=5)(F
+feat:spell_hex	Spell Hexfeatgeneral"@ability:major_hex#witch(ä
+feat:spontaneous_metafocusSpontaneous Metafocusfeatgeneral"Dall(@cha_score>=13,0[metamagic feat(s)],@ability:spontaneous_caster)([
+feat:abundant_revelationsAbundant Revelationsfeatgeneral"@ability:mystery#oracle(t
+feat:insightful_gazeInsightful Gazefeatgeneral":all(@ability:stern_gaze#inquisitor,@skill:sense_motive>=5)(.
+feat:antagonize
+Antagonizefeatgeneral(›
+feat:tripping_twirlTripping Twirlfeatcombat"•all(@int_score>=13,@feat:combat_expertise,@feat:improved_trip,@feat:tripping_staff,@feat:weapon_focus#quarterstaff,@feat:weapon_specialization#quarterstaff,@bab>=12)(U
+feat:radiant_chargeRadiant Chargefeatgeneral"@ability:lay_on_hands#paladin(_
+feat:vigilant_eidolonVigilant Eidolonfeatgeneral"#@ability:eidolon#unchained_summoner(W
+feat:sense_link
+Sense Linkfeatgeneral"'@ability:bond_senses#unchained_summoner(_
+feat:implant_bombImplant Bombfeatgeneral"+all(@skill:heal>=5,@discovery:delayed_bomb)(Y
+feat:prophetic_visionaryProphetic Visionaryfeatgeneral"@ability:mystery#oracle(W
+feat:oracular_intuitionOracular Intuitionfeatgeneral"@ability:mystery#oracle(d
+feat:unsanctioned_detectionUnsanctioned Detectionfeatgeneral"@ability:detect_evil#paladin(ù
+feat:tripping_staffTripping Stafffeatcombat"fall(@int_score>=13,@feat:combat_expertise,@feat:improved_trip,@feat:weapon_focus#quarterstaff,@bab>=6)(m
+feat:fast_empathyFast Empathyfeatgeneral"9all(@skill:handle_animal>=5,@ability:wild_empathy#hunter)(î
+feat:starlight_summonsStarlight Summonsfeatgeneral"’all(@any,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature's ally])(d
+feat:undead_masterUndead Masterfeatgeneral".any(@spell:animate_dead,@spell:command_undead)(ì
+feat:warrior_priestWarrior Priestfeatgeneral"[any(@trait:divine_spellcaster[Divine spellcaster],@ability:domains,@ability:mystery#oracle)(O
+feat:painful_anchorPainful Anchorfeatgeneral"@ability:anchoring_aura(–
+feat:versatile_channelerVersatile Channelerfeatgeneral"çany(@ability:channel_energy#warpriest,@class:necromancer,all(@class:cleric,any(@alignment:ng,@alignment:n,@alignment:ne)[Neutral alignment]))(i
+feat:spell_specializationSpell Specializationfeatgeneral"%all(@int_score>=13,@feat:spell_focus)(M
+feat:uncanny_alertnessUncanny Alertnessfeatgeneral"@feat:alertness(ª
+feat:extra_summonsExtra Summonsfeatgeneral"Ñall(@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_iv#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster],@class:summoner>=1)(a
+feat:focused_eidolonFocused Eidolonfeatgeneral"'@ability:shield_ally#unchained_summoner(|
+feat:mystic_strideMystic Stridefeatgeneral"Fall(@dex_score>=15,@feat:nimble_moves,@ability:woodland_stride#hunter)(L
+feat:planar_preservationistPlanar Preservationistfeatgeneral"true(Ç
+feat:extra_cantrips_or_orisonsExtra Cantrips or Orisonsfeatgeneral"4any(@ability:cantrips#magus,@ability:orisons#hunter)(K
+feat:ki_standKi Standfeatgeneral"@ability:ki_pool#unchained_monk(¶
+feat:fire_music
+Fire Musicfeatgeneral"vall(@skill:spellcraft>=5,max(@spells_per_day:bard#*)[Bard spells],"an arcane fire spell from some other spellcasting")(Ø
+feat:sacred_summonsSacred Summonsfeatgeneral"ˆall(@any,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_iv#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])(Ä
+feat:greater_wild_empathyGreater Wild Empathyfeatgeneral"<all(@skill:knowledge_nature>=5,@ability:wild_empathy#hunter)(}
+feat:shaping_focusShaping Focusfeatgeneral"Gall(@ability:wild_shape#skald_totemic_skald,@skill:knowledge_nature>=5)(√
+!feat:greater_spell_specializationGreater Spell Specializationfeatgeneral"oall(@int_score>=13,@feat:spell_focus,@feat:spell_specialization,@spells_per_day#5,!@ability:spontaneous_caster)(T
+feat:judgment_surgeJudgment Surgefeatgeneral"@ability:judgment#inquisitor(8
+feat:piercing_spellPiercing Spellfeat	metamagic(I
+feat:remote_bombRemote Bombfeatgeneral"@discovery:delayed_bomb(ﬂ
+feat:channeled_shield_wallChanneled Shield Wallfeatgeneral"òall(any(@ability:channel_positive_energy>=3,@ability:channel_negative_energy>=3),any(@proficiency:other,@proficiency:light_armor,@proficiency:medium_armor,@proficiency:heavy_armor,@proficiency:buckler,@proficiency:light_shield,@proficiency:heavy_shield,@proficiency:tower_shield))(\
+feat:ultimate_resolveUltimate Resolvefeatgeneral" @ability:aura_of_resolve#paladin(W
+feat:word_of_healingWord of Healingfeatgeneral"@ability:lay_on_hands#paladin(u
+feat:unsanctioned_knowledgeUnsanctioned Knowledgefeatgeneral"-all(@int_score>=13,@spells_per_day:paladin#1)(t
+feat:powerful_shapePowerful Shapefeatgeneral"<all(@ability:wild_shape#skald_totemic_skald,@class:druid>=8)(ø
+feat:detect_expertiseDetect Expertisefeatgeneral"Çall(@int_score>=13,any(@spell:detect_chaos,@ability:detect_evil#paladin,@spell:detect_good,@spell:detect_law,@spell:detect_magic))(W
+feat:reward_of_graceReward of Gracefeatgeneral"@ability:lay_on_hands#paladin([
+feat:die_for_your_masterDie for Your Masterfeatgeneral"@discovery:tumor_familiar(]
+feat:extra_evolutionExtra Evolutionfeatgeneral"#@ability:eidolon#unchained_summoner(ê
+feat:improved_eldritch_heritageImproved Eldritch Heritagefeatgeneral"@all(@cha_score>=15,@feat:eldritch_heritage,@character_level>=11)(n
+feat:wild_speechWild Speechfeatgeneral"<all(@class:druid>=6,@ability:wild_shape#skald_totemic_skald)(¶
+&feat:create_reliquary_arms_and_shields!Create Reliquary Arms and Shieldsfeatgeneral"Hany(@feat:craft_magic_arms_and_armor,@spell:consecrate,@spell:desecrate)(8
+feat:toppling_spellToppling Spellfeat	metamagic(à
+feat:gliding_stepsGliding Stepsfeatgeneral"Rall(@feat:dodge,@feat:mobility,@feat:nimble_moves,@ability:ki_pool#unchained_monk)(o
+feat:spellsong	Spellsongfeatgeneral"Aall(@cha_score>=13,@ability:bardic_performance,@spells_per_day#1)(U
+feat:reward_of_lifeReward of Lifefeatgeneral"@ability:lay_on_hands#paladin(>
+feat:split_hex	Split Hexfeatgeneral"@class:witch>=10(>
+feat:witch_knifeWitch Knifefeatgeneral"@class:witch(G
+feat:accursed_hexAccursed Hexfeatgeneral"@ability:hex#shaman(ã
+feat:eyes_of_judgmentEyes of Judgmentfeatgeneral"Oall(@ability:detect_alignment#warpriest_champion_of_the_faith,@caster_level>=6)(~
+feat:greater_mercyGreater Mercyfeatgeneral"Hall(@cha_score>=13,@ability:lay_on_hands#paladin,@ability:mercy#paladin)(P
+feat:learn_ranger_trapLearn Ranger Trapfeatgeneral"@skill:survival>=5(J
+feat:sin_seerSin Seerfeatgeneral"@ability:detect_undead#paladin(<
+feat:concussive_spellConcussive Spellfeat	metamagic(N
+feat:voice_of_the_sibylVoice of the Sibylfeatgeneral"@cha_score>=15(f
+feat:improved_monster_loreImproved Monster Lorefeatgeneral" @ability:monster_lore#inquisitor(Z
+feat:uncanny_concentrationUncanny Concentrationfeatgeneral"@feat:combat_casting(>
+feat:ensembleEnsemblefeatteamwork"@skill:perform>=5(y
+feat:quick_wild_shapeQuick Wild Shapefeatgeneral"=all(@ability:wild_shape#skald_totemic_skald,@caster_level>=8)(b
+feat:exploit_loreExploit Lorefeatgeneral".all(@ability:monster_lore#inquisitor,@bab>=11)(l
+feat:fearless_auraFearless Aurafeatgeneral"6all(@ability:aura_of_courage#paladin,@caster_level>=8)(h
+feat:thoughtful_discernmentThoughtful Discernmentfeatgeneral" @ability:discern_lies#inquisitor(a
+feat:resilient_eidolonResilient Eidolonfeatgeneral"#@ability:eidolon#unchained_summoner(â
+feat:superior_summoningSuperior Summoningfeatgeneral"Iall(@ability:augment_summoning#summoner_master_summoner,@caster_level>=3)(K
+feat:extra_ranger_trapExtra Ranger Trapfeatgeneral"@ability:trap(|
+feat:thanatopic_spellThanatopic Spellfeat	metamagic">all(@skill:knowledge_religion>=6,@feat:spell_focus#necromancy)(î
+feat:moonlight_summonsMoonlight Summonsfeatgeneral"’all(@any,@ability:summon_natures_ally#bard_animal_speaker,@spell:summon_natures_ally_7,@spell:summon_natures_ally_6,@spell:summon_natures_ally_4,@spell:summon_natures_ally_5,@spell:summon_natures_ally_1,@spell:summon_natures_ally_2,@spell:summon_natures_ally_3,@spell:summon_natures_ally_8,@spell:summon_natures_ally_9[Summon nature's ally])(}
+feat:ricochet_splash_weaponRicochet Splash Weaponfeatgeneral"5all(@dex_score>=13,@ability:throw_anything#alchemist)(g
+feat:advanced_ranger_trapAdvanced Ranger Trapfeatgeneral"#all(@ability:trap,@class:ranger>=5)(Ü
+feat:divine_interferenceDivine Interferencefeatgeneral"Dall(@trait:divine_spellcaster[Divine spellcaster],@caster_level>=10)(n
+feat:deny_death
+Deny Deathfeatgeneral">all(@ability:ki_pool#unchained_monk,@ability:endurance#ranger)(0
+feat:rime_spell
+Rime Spellfeat	metamagic((
+feat:prodigyProdigyfeatgeneral(6
+feat:echoing_spellEchoing Spellfeat	metamagic(X
+feat:extra_arcane_poolExtra Arcane Poolfeatgeneral"@ability:arcane_pool#magus(¶
+feat:create_sanguine_elixirCreate Sanguine Elixirfeatgeneral"^all(@cha_score>=15,@ability:brew_potion#alchemist,@skill:craft#alchemy>=12,@class:sorcerer>=3)(N
+feat:extended_baneExtended Banefeatgeneral"@ability:bane#bloodrager(z
+feat:threnodic_spellThrenodic Spellfeat	metamagic">all(@skill:knowledge_religion>=6,@feat:spell_focus#necromancy)(R
+feat:defending_eidolonDefending Eidolonfeatgeneral"@ability:shield_ally(a
+feat:life_lure	Life Lurefeatgeneral"3@ability:channel_positive_energy#paladin_hospitaler(O
+feat:extra_arcanaExtra Arcanafeatgeneral"@ability:magus_arcana#magus(6
+feat:flaring_spellFlaring Spellfeat	metamagic(`
+feat:split_major_hexSplit Major Hexfeatgeneral"&all(@feat:split_hex,@caster_level>=18)(µ
+feat:skeleton_summonerSkeleton Summonerfeatgeneral"ˆall(@any,@ability:summon_monster_ii#unchained_summoner,@ability:summon_monster_iv#unchained_summoner,@ability:summon_monster_iii#unchained_summoner,@ability:summon_monster_ix#unchained_summoner,@ability:summon_monster_vii#unchained_summoner,@ability:summon_monster#unchained_summoner,@ability:summon_monster_viii#unchained_summoner,@ability:summon_monster_v#unchained_summoner,@ability:summon_monster_vi#unchained_summoner,@ability:summon_monster_vii#summoner,@ability:summon_monster_iii#summoner,@ability:summon_monster_v#summoner,@ability:summon_monster_i#summoner,@ability:summon_monster_ii#summoner,@ability:summon_monster_ix#summoner,@ability:summon_monster_viii#summoner,@ability:summon_monster_vi#summoner,@ability:summon_monster_iv#summoner,@spell:summon_monster_3,@spell:summon_monster_2,@spell:summon_monster_1,@spell:summon_monster_5,@spell:summon_monster_4,@spell:summon_monster_6,@spell:summon_monster_7,@spell:summon_monster_9,@spell:summon_monster_8,@ability:summon_monster#sorcerer[Summon monster])(î
+feat:ultimate_mercyUltimate Mercyfeatgeneral"\all(@cha_score>=19,@feat:greater_mercy,@ability:lay_on_hands#paladin,@ability:mercy#paladin)(l
+feat:favored_judgmentFavored Judgmentfeatgeneral"0all(@wis_score>=13,@ability:judgment#inquisitor)(6
+feat:burning_spellBurning Spellfeat	metamagic(r
+feat:sorcerous_bloodstrikeSorcerous Bloodstrikefeatgeneral",all(@cha_score>=13,@ability:bloodline_power)(m
+feat:quarterstaff_masterQuarterstaff Masterfeatcombat",all(@feat:weapon_focus#quarterstaff,@bab>=5)([
+feat:spell_bluffSpell Blufffeatgeneral")all(@skill:bluff>=5,@skill:spellcraft>=5)(y
+feat:quick_channelQuick Channelfeatgeneral"Call(@skill:knowledge_religion>=5,@ability:channel_energy#warpriest)(N
+feat:pure_faith
+Pure Faithfeatgeneral"@ability:divine_health#paladin(p
+feat:dragonbane_auraDragonbane Aurafeatgeneral"6all(@ability:aura_of_courage#paladin,@caster_level>=8)({
+feat:eldritch_heritageEldritch Heritagefeatgeneral"=all(@cha_score>=13,@feat:skill_focus#the,@character_level>=3)(à
+spell:compassionate_allyCompassionate Allyspellspell	arcanist2bard2cleric2oracle2skald2	sorcerer2
+warpriest2wizard2e
+spell:wooden_phalanxWooden Phalanxspellspell	arcanist9cleric9oracle9	sorcerer9wizard9ñ
+spell:vocal_alterationVocal Alterationspellspell
+alchemist1	arcanist1bard1inquisitor1investigator1skald1	sorcerer1witch1wizard1?
+spell:lend_judgmentLend Judgmentspellspellinquisitor1d
+spell:leashed_shacklesLeashed Shacklesspellspell	arcanist6inquisitor4	sorcerer6wizard6q
+spell:symbol_of_strifeSymbol of Strifespellspell	arcanist9cleric9oracle9	sorcerer9witch9wizard9ê
+spell:badgers_ferocityBadger's Ferocityspellspell	arcanist2cleric3druid3hunter2oracle3ranger2	sorcerer2
+warpriest3wizard2O
+spell:virtuoso_performanceVirtuoso Performancespellspellbard4skald4Y
+spell:control_constructControl Constructspellspell	arcanist7	sorcerer7wizard7K
+spell:toxic_gift
+Toxic Giftspellspell	arcanist3	sorcerer3wizard3t
+spell:wartrain_mountWartrain Mountspellspellbard2druid2hunter1inquisitor1paladin1ranger1skald2a
+spell:frostbite	Frostbitespellspellbloodrager1druid1hunter1magus1shaman1witch1x
+spell:polypurpose_panaceaPolypurpose Panaceaspellspell
+alchemist1	arcanist1investigator1	sorcerer1wizard1j
+spell:overwhelming_griefOverwhelming Griefspellspell	arcanist4bard3skald3	sorcerer4wizard4j
+spell:skinsendSkinsendspellspell
+alchemist2	arcanist2investigator2	sorcerer2witch2wizard2n
+spell:vengeful_outrageVengeful Outragespellspell	arcanist6bard5skald5	sorcerer6witch6wizard6~
+spell:epidemicEpidemicspellspell	arcanist7cleric6druid6hunter6oracle6	sorcerer7
+warpriest6witch6wizard7r
+spell:ice_crystal_teleportIce Crystal Teleportspellspell	arcanist6	sorcerer6	summoner5witch6wizard6l
+"spell:bestow_grace_of_the_championBestow Grace of the Championspellspellcleric7oracle7paladin4é
+spell:decompose_corpseDecompose Corpsespellspell	arcanist1cleric1druid1hunter1oracle1	sorcerer1
+warpriest1witch1wizard1m
+spell:ki_leechKi Leechspellspell	arcanist3cleric3oracle3	sorcerer3
+warpriest3witch3wizard3X
+spell:murderous_commandMurderous Commandspellspellcleric1oracle1
+warpriest1e
+spell:lunar_veil
+Lunar Veilspellspell	arcanist7cleric7oracle7	sorcerer7witch7wizard7°
+spell:control_summoned_creatureControl Summoned Creaturespellspell	arcanist4bard3cleric4oracle4skald3	sorcerer4	summoner3
+warpriest4wizard4Ç
+spell:diagnose_diseaseDiagnose Diseasespellspellcleric1druid1hunter1oracle1paladin1ranger1
+warpriest1witch1O
+spell:lesser_restore_eidolonLesser Restore Eidolonspellspell	summoner2è
+spell:marionette_possessionMarionette Possessionspellspell
+alchemist3	arcanist3investigator3	sorcerer3	summoner3witch3wizard3g
+spell:orb_of_the_voidOrb of the Voidspellspell	arcanist8cleric8oracle8	sorcerer8wizard8;
+spell:shadowbard
+Shadowbardspellspellbard5skald5e
+spell:call_constructCall Constructspellspell	arcanist8cleric8oracle8	sorcerer8wizard8ñ
+spell:ghostly_disguiseGhostly Disguisespellspell
+alchemist2	arcanist2bard2inquisitor2investigator2skald2	sorcerer2witch2wizard2b
+spell:battlemind_linkBattlemind Linkspellspell	arcanist6inquisitor4	sorcerer6wizard6n
+spell:curse_of_disgustCurse of Disgustspellspell	arcanist5bard3skald3	sorcerer5witch5wizard5î
+spell:greater_false_lifeGreater False Lifespellspell
+alchemist4	arcanist4bloodrager4investigator4shaman4	sorcerer4witch4wizard4|
+spell:excruciating_deformationExcruciating Deformationspellspell	arcanist3bloodrager3	sorcerer3witch3wizard3W
+spell:dance_of_a_thousand_cutsDance of a Thousand Cutsspellspellbard6skald6b
+spell:ash_storm	Ash Stormspellspell	arcanist3druid3hunter3	sorcerer3witch3wizard3U
+spell:mass_icy_prisonMass Icy Prisonspellspell	arcanist9	sorcerer9wizard99
+spell:tar_ballTar Ballspellspelldruid2hunter2ä
+spell:plague_carrierPlague Carrierspellspell	arcanist5cleric4druid4hunter4oracle4	sorcerer5
+warpriest4witch5wizard5ä
+spell:echolocationEcholocationspellspell
+alchemist4	arcanist5bard4druid4hunter4investigator4skald4	sorcerer5wizard5q
+spell:icicle_daggerIcicle Daggerspellspell	arcanist1bloodrager1	sorcerer1	summoner1witch1wizard1é
+spell:greater_age_resistanceGreater Age Resistancespellspell
+alchemist5	arcanist7druid7investigator5	sorcerer7witch7wizard7J
+spell:eagle_aerieEagle Aeriespellspelldruid6hunter6	summoner6T
+spell:distressing_toneDistressing Tonespellspellbard2inquisitor2skald2m
+spell:rapid_repairRapid Repairspellspell	arcanist5cleric5oracle5	sorcerer5
+warpriest5wizard5K
+spell:icy_prison
+Icy Prisonspellspell	arcanist5	sorcerer5wizard5J
+spell:unholy_ice
+Unholy Icespellspellcleric5oracle5
+warpriest5V
+spell:ki_shoutKi Shoutspellspell	arcanist7bard5skald5	sorcerer7wizard7
+spell:symbol_of_slowingSymbol of Slowingspellspell	arcanist4cleric4oracle4	sorcerer4
+warpriest4witch4wizard4x
+spell:mad_monkeysMad Monkeysspellspell	arcanist3bard3druid3hunter3skald3	sorcerer3	summoner3wizard3s
+spell:sanctify_corpseSanctify Corpsespellspellcleric1inquisitor1oracle1paladin1
+warpriest1witch1A
+spell:restore_eidolonRestore Eidolonspellspell	summoner3â
+spell:eruptive_pustulesEruptive Pustulesspellspell
+alchemist3	arcanist3bloodrager3investigator3	sorcerer3witch3wizard3A
+spell:divine_pursuitDivine Pursuitspellspellinquisitor5c
+spell:scouring_windsScouring Windsspellspell	arcanist7druid7	sorcerer7witch7wizard7N
+spell:aura_of_doomAura of Doomspellspellcleric4oracle4
+warpriest4{
+spell:know_the_enemyKnow the Enemyspellspellcleric1hunter1inquisitor1oracle1paladin1ranger1
+warpriest1W
+spell:acidic_sprayAcidic Sprayspellspell	arcanist5magus5	sorcerer5wizard5[
+spell:ride_the_lightningRide the Lightningspellspell	arcanist9	sorcerer9wizard9a
+spell:unbreakable_constructUnbreakable Constructspellspell	arcanist5	sorcerer5wizard5á
+spell:blessing_of_the_moleBlessing of the Molespellspellcleric3hunter3inquisitor3oracle3paladin3ranger3
+warpriest3R
+spell:shard_of_chaosShard of Chaosspellspellcleric2oracle2
+warpriest2[
+spell:possess_objectPossess Objectspellspell	arcanist5	sorcerer5witch5wizard5r
+spell:pernicious_poisonPernicious Poisonspellspell	arcanist2druid2hunter2	sorcerer2witch2wizard2á
+spell:undead_anatomy_iUndead Anatomy Ispellspell
+alchemist3	arcanist3bloodrager3investigator3magus3	sorcerer3wizard3á
+spell:fickle_windsFickle Windsspellspell	arcanist5cleric5druid5hunter3oracle5ranger3	sorcerer5
+warpriest5wizard5Ö
+spell:symbol_of_revelationSymbol of Revelationspellspell	arcanist4cleric4oracle4	sorcerer4
+warpriest4witch4wizard4n
+spell:snapdragon_fireworksSnapdragon Fireworksspellspell	arcanist1bard2skald2	sorcerer1wizard1ë
+spell:monstrous_physique_iiMonstrous Physique IIspellspell
+alchemist4	arcanist4bloodrager4investigator4magus4	sorcerer4wizard4e
+spell:transmute_blood_to_acidTransmute Blood To Acidspellspell	arcanist9	sorcerer9wizard9Y
+spell:undead_anatomy_ivUndead Anatomy IVspellspell	arcanist8	sorcerer8wizard8j
+spell:miserable_pityMiserable Pityspellspell	arcanist2bard2skald2	sorcerer2witch2wizard2Ø
+spell:masterwork_transformationMasterwork Transformationspellspell	arcanist2bard2cleric2druid2hunter2oracle2skald2	sorcerer2
+warpriest2witch2wizard2i
+spell:corrosive_consumptionCorrosive Consumptionspellspell	arcanist5magus5	sorcerer5wizard5Ö
+spell:defensive_shockDefensive Shockspellspell
+alchemist2	arcanist2bloodrager2investigator2magus2	sorcerer2wizard2D
+spell:blade_of_dark_triumphBlade of Dark Triumphspellspell(p
+spell:mad_hallucinationMad Hallucinationspellspell	arcanist2bard2skald2	sorcerer2witch2wizard2=
+spell:blood_mist
+Blood Mistspellspelldruid8shaman8y
+spell:acute_sensesAcute Sensesspellspell
+alchemist2bard2hunter2inquisitor2investigator2ranger2skald2t
+spell:reprobationReprobationspellspellcleric5druid5hunter5inquisitor4oracle5paladin4
+warpriest5i
+spell:cursed_earthCursed Earthspellspell	arcanist9cleric9oracle9	sorcerer9witch9wizard9î
+spell:fleshworm_infestationFleshworm Infestationspellspell	arcanist4cleric4inquisitor4oracle4	sorcerer4
+warpriest4witch4wizard4ò
+spell:curse_of_magic_negationCurse of Magic Negationspellspell	arcanist4cleric5inquisitor4oracle5	sorcerer4
+warpriest5witch4wizard4^
+spell:ki_arrowKi Arrowspellspell	arcanist1bard1skald1	sorcerer1witch1wizard1è
+spell:youthful_appearanceYouthful Appearancespellspell
+alchemist1	arcanist1bard1investigator1skald1	sorcerer1witch1wizard1ä
+spell:restore_corpseRestore Corpsespellspell	arcanist1cleric1druid1hunter1oracle1	sorcerer1
+warpriest1witch1wizard1K
+spell:cape_of_waspsCape of Waspsspellspelldruid4hunter4witch4|
+spell:create_demiplaneCreate Demiplanespellspell	arcanist8cleric8oracle8	sorcerer8	summoner6witch8wizard8z
+spell:unadulterated_loathingUnadulterated Loathingspellspell	arcanist3bard2skald2	sorcerer3witch3wizard3p
+spell:distracting_cacophonyDistracting Cacophonyspellspell	arcanist3bard2skald2	sorcerer3wizard3]
+spell:strangling_hairStrangling Hairspellspell	arcanist3	sorcerer3witch3wizard35
+spell:allegroAllegrospellspellbard2skald2B
+spell:summon_elder_wormSummon Elder Wormspellspelldruid98
+spell:arcana_theftArcana Theftspellspellmagus4u
+spell:corrosive_touchCorrosive Touchspellspell	arcanist1bloodrager1magus1	sorcerer1	summoner1wizard1O
+spell:greater_lend_judgmentGreater Lend Judgmentspellspellinquisitor5É
+spell:protective_penumbraProtective Penumbraspellspell	arcanist2cleric2oracle2	sorcerer2
+warpriest2witch2wizard2ü
+spell:summon_minor_monsterSummon Minor Monsterspellspell	arcanist1bard1cleric1oracle1skald1	sorcerer1	summoner1
+warpriest1witch1wizard1ì
+spell:anticipate_perilAnticipate Perilspellspell
+alchemist1	arcanist1bard1hunter1investigator1ranger1skald1	sorcerer1wizard1Å
+spell:greater_create_demiplaneGreater Create Demiplanespellspell	arcanist9cleric9oracle9	sorcerer9witch9wizard9ï
+spell:lesser_age_resistanceLesser Age Resistancespellspell
+alchemist3	arcanist4druid4hunter4investigator3	sorcerer4witch4wizard4j
+spell:oppressive_boredomOppressive Boredomspellspell	arcanist2bard2skald2	sorcerer2wizard2s
+spell:cold_ice_strikeCold Ice Strikespellspell	arcanist6cleric6oracle6	sorcerer6
+warpriest6wizard6M
+spell:fungal_infestationFungal Infestationspellspelldruid3hunter3b
+spell:cushioning_bandsCushioning Bandsspellspell	arcanist2	sorcerer2	summoner2wizard2d
+spell:resonating_wordResonating Wordspellspell	arcanist7bard5skald5	sorcerer7wizard7i
+spell:prediction_of_failurePrediction of Failurespellspell	arcanist8	sorcerer8witch8wizard8M
+spell:malfunctionMalfunctionspellspell	arcanist4	sorcerer4wizard4Ä
+spell:waves_of_ecstasyWaves of Ecstasyspellspell	arcanist7bard6cleric7oracle7skald6	sorcerer7witch7wizard7n
+spell:horn_of_pursuitHorn of Pursuitspellspellbard1hunter1inquisitor1paladin1ranger1skald1@
+spell:word_of_resolveWord of Resolvespellspellpaladin1j
+spell:haunting_mistsHaunting Mistsspellspell	arcanist2bard2skald2	sorcerer2witch2wizard2j
+spell:symbol_of_healingSymbol of Healingspellspellcleric3oracle3paladin4
+warpriest3witch4†
+spell:ride_the_wavesRide The Wavesspellspell	arcanist4bloodrager4cleric4druid4hunter4oracle4shaman4	sorcerer4
+warpriest4witch4wizard4X
+spell:blood_crow_strikeBlood Crow Strikespellspellcleric4oracle4
+warpriest4u
+spell:wall_of_soundWall of Soundspellspell	arcanist5bard4bloodrager4magus4skald4	sorcerer5wizard5t
+spell:serenitySerenityspellspell	arcanist6bard4cleric5oracle5skald4	sorcerer6
+warpriest5wizard6j
+spell:unnatural_lustUnnatural Lustspellspell	arcanist2bard1skald1	sorcerer2witch2wizard2d
+spell:steal_voiceSteal Voicespellspell	arcanist2bard2skald2	sorcerer2witch2wizard2Ö
+spell:lesser_astral_projectionLesser Astral Projectionspellspell	arcanist5cleric5oracle5	sorcerer5
+warpriest5wizard5O
+spell:force_hook_chargeForce Hook Chargespellspellbloodrager3magus3á
+spell:age_resistanceAge Resistancespellspell
+alchemist4	arcanist6druid6hunter6investigator4	sorcerer6witch6wizard6l
+spell:smug_narcissismSmug Narcissismspellspell	arcanist5bard3skald3	sorcerer5witch5wizard5_
+spell:polar_midnightPolar Midnightspellspellcleric9druid9oracle9shaman9witch9|
+spell:anthropomorphic_animalAnthropomorphic Animalspellspell	arcanist3druid3hunter3	sorcerer3witch3wizard3G
+spell:fumbletongueFumbletonguespellspellbard1skald1witch1v
+spell:unprepared_combatantUnprepared Combatantspellspell	arcanist1bard1skald1	sorcerer1witch1wizard1T
+spell:imbue_with_auraImbue with Auraspellspellcleric2oracle2
+warpriest2P
+spell:blade_of_bright_victoryBlade of Bright Victoryspellspellpaladin3A
+spell:primal_screamPrimal Screamspellspellbard4skald4è
+spell:overwhelming_presenceOverwhelming Presencespellspell	arcanist9bard6cleric9inquisitor6oracle9skald6	sorcerer9wizard9F
+spell:holy_iceHoly Icespellspellcleric5oracle5
+warpriest5o
+spell:disguise_otherDisguise Otherspellspell	arcanist2bard2inquisitor2skald2	sorcerer2wizard2ë
+spell:terrible_remorseTerrible Remorsespellspell	arcanist4bard3cleric4inquisitor3oracle4skald3	sorcerer4
+warpriest4wizard4ê
+spell:greater_contagionGreater Contagionspellspell	arcanist6cleric5druid5hunter5oracle5	sorcerer6
+warpriest5witch5wizard6|
+spell:undead_anatomy_iiUndead Anatomy IIspellspell
+alchemist5	arcanist5investigator5magus5	sorcerer5wizard5U
+spell:dance_of_a_hundred_cutsDance of a Hundred Cutsspellspellbard4skald4Ñ
+spell:monstrous_physique_ivMonstrous Physique IVspellspell
+alchemist6	arcanist6investigator6magus6	sorcerer6wizard6s
+spell:forced_quietForced Quietspellspell	arcanist1bard1inquisitor1skald1	sorcerer1witch1wizard1T
+spell:spear_of_puritySpear of Purityspellspellcleric2oracle2
+warpriest2B
+spell:summon_froghemothSummon Froghemothspellspelldruid9l
+spell:conjure_black_puddingConjure Black Puddingspellspell	arcanist6	sorcerer6	summoner5wizard6m
+spell:remove_sicknessRemove Sicknessspellspellcleric1druid1hunter1oracle1
+warpriest1witch1l
+spell:spit_venom
+Spit Venomspellspellcleric4druid3hunter3oracle4shaman4
+warpriest4witch3ç
+spell:rain_of_frogsRain of Frogsspellspell	arcanist3bard3druid3hunter3shaman4skald3	sorcerer3	summoner3witch3wizard3Ü
+spell:vitriolic_mistVitriolic Mistspellspell
+alchemist4	arcanist4bloodrager4investigator4	sorcerer4	summoner4wizard4[
+spell:loathsome_veilLoathsome Veilspellspell	arcanist3	sorcerer3witch3wizard3X
+spell:ice_bodyIce Bodyspellspell	arcanist7shaman7	sorcerer7witch7wizard7<
+spell:cackling_skullCackling Skullspellspellwitch3E
+spell:piercing_shriekPiercing Shriekspellspellbard2skald2è
+spell:monstrous_physique_iMonstrous Physique Ispellspell
+alchemist3	arcanist3bloodrager3investigator3magus3	sorcerer3wizard3u
+spell:soothe_constructSoothe Constructspellspell	arcanist5cleric4oracle4	sorcerer5
+warpriest4wizard5C
+spell:haunting_choirHaunting Choirspellspellbard3skald3|
+spell:major_curseMajor Cursespellspell	arcanist6cleric5oracle5shaman5	sorcerer6
+warpriest5witch5wizard6X
+spell:arrow_of_lawArrow of Lawspellspellcleric2oracle2paladin2
+warpriest2
+spell:symbol_of_sealingSymbol of Sealingspellspell	arcanist6cleric6oracle6	sorcerer6
+warpriest6witch6wizard6é
+spell:ear_piercing_screamEar-Piercing Screamspellspell	arcanist1bard1bloodrager1inquisitor1skald1	sorcerer1witch1wizard1~
+spell:undead_anatomy_iiiUndead Anatomy IIIspellspell
+alchemist6	arcanist6investigator6magus6	sorcerer6wizard6y
+spell:volcanic_stormVolcanic Stormspellspell	arcanist4bloodrager4druid4hunter4	sorcerer4witch4wizard4°
+spell:web_shelterWeb Shelterspellspell	arcanist2cleric2druid2hunter2oracle2ranger2shaman2	sorcerer2	summoner2
+warpriest2witch2wizard2h
+spell:familiar_meldingFamiliar Meldingspellspell	arcanist4shaman4	sorcerer4witch4wizard4J
+spell:dread_bolt
+Dread Boltspellspellcleric2oracle2
+warpriest2Q
+spell:lightning_arcLightning Arcspellspell	arcanist5	sorcerer5wizard5i
+spell:surmount_afflictionSurmount Afflictionspellspellcleric2inquisitor2oracle2
+warpriest2Y
+spell:archons_auraArchon's Auraspellspellcleric3oracle3paladin3
+warpriest3}
+spell:blood_transcriptionBlood Transcriptionspellspell
+alchemist2	arcanist2investigator2magus2witch2wizard2b
+spell:utter_contemptUtter Contemptspellspell	arcanist6bard4skald4	sorcerer6wizard6J
+spell:witnessWitnessspellspellbard3inquisitor3skald3witch3à
+spell:greater_darkvisionGreater Darkvisionspellspell
+alchemist4	arcanist4hunter4investigator4ranger4	sorcerer4wizard4Ä
+spell:joyful_raptureJoyful Rapturespellspell	arcanist7bard5cleric6oracle6skald5	sorcerer7
+warpriest6wizard7f
+spell:shadow_weaponShadow Weaponspellspell	arcanist1bloodrager1	sorcerer1witch1wizard1Ö
+spell:burrowBurrowspellspell
+alchemist3	arcanist3bloodrager3druid3hunter3investigator3ranger3	sorcerer3wizard3ä
+spell:lesser_create_demiplaneLesser Create Demiplanespellspell	arcanist7cleric7oracle7	sorcerer7	summoner5witch7wizard7E
+spell:play_instrumentPlay Instrumentspellspellbard1skald1Ñ
+spell:lesser_animate_deadLesser Animate Deadspellspell	arcanist3cleric2oracle2shaman2	sorcerer3
+warpriest2wizard3Ü
+spell:plague_stormPlague Stormspellspell	arcanist7cleric6druid6hunter6oracle6	sorcerer7
+warpriest6witch6wizard7O
+spell:greater_interrogationGreater Interrogationspellspellinquisitor42
+spell:unholy_swordUnholy Swordspellspell(]
+spell:forbid_actionForbid Actionspellspellcleric1inquisitor1oracle1
+warpriest1U
+spell:exquisite_accompanimentExquisite Accompanimentspellspellbard3skald3x
+spell:mass_daze	Mass Dazespellspell	arcanist4bard4inquisitor4skald4	sorcerer4	summoner4witch4wizard4C
+spell:persuasive_goadPersuasive Goadspellspellinquisitor1W
+spell:caustic_eruptionCaustic Eruptionspellspell	arcanist7	sorcerer7wizard7Y
+spell:sculpt_simulacrumSculpt Simulacrumspellspell	arcanist2	sorcerer2wizard2ê
+spell:countless_eyesCountless Eyesspellspell
+alchemist3	arcanist3bloodrager3inquisitor3investigator3	sorcerer3witch3wizard3e
+spell:symbol_of_mirroringSymbol of Mirroringspellspell	arcanist2	sorcerer2witch2wizard2>
+spell:oracles_vesselOracle's Vesselspellspelloracle4E
+spell:chord_of_shardsChord of Shardsspellspellbard1skald1F
+spell:hex_wardHex Wardspellspellinquisitor1shaman1witch1î
+spell:touch_of_slimeTouch of Slimespellspell
+alchemist4	arcanist4bloodrager4druid4hunter4investigator4	sorcerer4witch4wizard47
+spell:atavismAtavismspellspelldruid4hunter4Ü
+spell:monstrous_physique_iiiMonstrous Physique IIIspellspell
+alchemist5	arcanist5investigator5magus5	sorcerer5wizard5f
+spell:interrogationInterrogationspellspell	arcanist1inquisitor1	sorcerer1witch1wizard1d
+spell:shadow_stepShadow Stepspellspell	arcanist4bard4skald4	sorcerer4witch4wizard4m
+spell:greater_forbid_actionGreater Forbid Actionspellspellcleric5inquisitor5oracle5
+warpriest5^
+spell:sonic_thrustSonic Thrustspellspell	arcanist5bard4skald4	sorcerer5wizard5h
+spell:eldritch_feverEldritch Feverspellspell	arcanist3inquisitor3	sorcerer3witch3wizard3Y
+spell:lesser_simulacrumLesser Simulacrumspellspell	arcanist4	sorcerer4wizard4}
+spell:unshakable_chillUnshakable Chillspellspell	arcanist2bloodrager2druid2hunter2	sorcerer2witch2wizard2
+spell:symbol_of_vulnerabilitySymbol of Vulnerabilityspellspell	arcanist9cleric9oracle9	sorcerer9witch9wizard9ö
+spell:delay_pain
+Delay Painspellspell	arcanist2bard2bloodrager2cleric2inquisitor2oracle2skald2	sorcerer2
+warpriest2witch2wizard2ì
+spell:boiling_bloodBoiling Bloodspellspell	arcanist2bard2bloodrager2cleric2oracle2skald2	sorcerer2
+warpriest2witch2wizard2h
+spell:raise_animal_companionRaise Animal Companionspellspelldruid5hunter4paladin4ranger4u
+spell:frigid_touchFrigid Touchspellspell	arcanist2bloodrager2druid2hunter2magus2	sorcerer2wizard2d
+spell:malicious_spiteMalicious Spitespellspell	arcanist4bard3skald3	sorcerer4wizard4K
+spell:bungleBunglespellspell	arcanist1	sorcerer1witch1wizard1^
+spell:envious_urgeEnvious Urgespellspell	arcanist6bard4skald4	sorcerer6wizard6h
+spell:silk_to_steelSilk To Steelspellspell	arcanist2bard2skald2	sorcerer2witch2wizard2G
+spell:arboreal_hammerArboreal Hammerspellspelldruid4hunter48
+spell:holy_shieldHoly Shieldspellspellpaladin2n
+spell:delusional_prideDelusional Pridespellspell	arcanist1bard1skald1	sorcerer1witch1wizard1T
+spell:summon_minor_allySummon Minor Allyspellspelldruid1hunter1ranger1t
+spell:circle_of_clarityCircle of Clarityspellspell	arcanist7cleric7oracle7shaman8	sorcerer7wizard7I
+spell:burst_of_nettlesBurst of Nettlesspellspelldruid3hunter3R
+spell:vestment_of_the_championVestment of the Championspellspellpaladin2f
+spell:share_memoryShare Memoryspellspell	arcanist2bard2skald2	sorcerer2witch2wizard2s
+spell:howling_agonyHowling Agonyspellspell	arcanist3bloodrager3inquisitor2	sorcerer3witch3wizard3v
+spell:reckless_infatuationReckless Infatuationspellspell	arcanist3bard2skald2	sorcerer3witch3wizard3
+spell:symbol_of_scryingSymbol of Scryingspellspell	arcanist5cleric5oracle5	sorcerer5
+warpriest5witch5wizard5b
+spell:force_punchForce Punchspellspell	arcanist3bloodrager3magus3	sorcerer3wizard3k
+spell:temporary_resurrectionTemporary Resurrectionspellspell	arcanist7	sorcerer7witch7wizard78
+spell:mass_atavismMass Atavismspellspelldruid8<
+witch_hex:summon_spiritSummon Spiritspell	witch_hex(,
+witch_hex:nailsNailsspell	witch_hex(6
+witch_hex:water_lung
+Water Lungspell	witch_hex(7
+witch_hex:witchs_hutWitch's Hutspell	witch_hex(>
+witch_hex:unnerve_beastsUnnerve Beastsspell	witch_hex(4
+witch_hex:hoarfrost	Hoarfrostspell	witch_hex(@
+witch_hex:speak_in_dreamsSpeak in Dreamsspell	witch_hex(@
+witch_hex:prehensile_hairPrehensile Hairspell	witch_hex(8
+witch_hex:cook_peopleCook Peoplespell	witch_hex(4
+witch_hex:beast_eye	Beast Eyespell	witch_hex(8
+witch_hex:child_scentChild-Scentspell	witch_hex(:
+witch_hex:feral_speechFeral Speechspell	witch_hex(:
+witch_hex:poison_steepPoison Steepspell	witch_hex(9
+witch_hex:witchs_brewWitch's Brewspell	witch_hex(<
+witch_hex:dire_prophecyDire Prophecyspell	witch_hex(4
+witch_hex:swamp_hag	Swamp Hagspell	witch_hex(8
+witch_hex:hidden_homeHidden Homespell	witch_hex(D
+witch_hex:beast_of_ill_omenBeast of Ill-Omenspell	witch_hex(@
+witch_hex:infected_woundsInfected Woundsspell	witch_hex(2
+witch_hex:ice_tombIce Tombspell	witch_hex(*
+witch_hex:scarScarspell	witch_hex(K
+ability:silver_tongue#sorcererSilver Tongueabilitybloodline_power(G
+ability:mind_reader#sorcererMind Readerabilitybloodline_power(O
+ ability:detect_thoughts#sorcererDetect Thoughtsabilitybloodline_power(C
+ability:hide_aura#sorcerer	Hide Auraabilitybloodline_power(E
+ability:alter_self#sorcerer
+Alter Selfabilitybloodline_power(A
+ability:outsider#sorcererOutsiderabilitybloodline_power(Q
+%sorcerer_bloodline:rakshasa_bloodlineRakshasa Bloodlinesorcerer_bloodline(A
+ability:fire_ray#sorcererFire Rayabilitybloodline_power(Y
+%ability:elemental_resistance#sorcererElemental Resistanceabilitybloodline_power(I
+ability:efreeti_form#sorcererEfreeti Formabilitybloodline_power(U
+#ability:elemental_movement#sorcererElemental Movementabilitybloodline_power(W
+$ability:power_of_the_efreet#sorcererPower Of The Efreetabilitybloodline_power(O
+$sorcerer_bloodline:efreeti_bloodlineEfreeti Bloodlinesorcerer_bloodline(C
+ability:frost_ray#sorcerer	Frost Rayabilitybloodline_power(H
+ability:waters_fury#sorcererWater's Furyabilitybloodline_power(U
+#ability:power_of_the_marid#sorcererPower Of The Maridabilitybloodline_power(K
+"sorcerer_bloodline:marid_bloodlineMarid Bloodlinesorcerer_bloodline(A
+ability:acid_ray#sorcererAcid Rayabilitybloodline_power(C
+ability:avalanche#sorcerer	Avalancheabilitybloodline_power(Y
+%ability:power_of_the_shaitan#sorcererPower Of The Shaitanabilitybloodline_power(O
+$sorcerer_bloodline:shaitan_bloodlineShaitan Bloodlinesorcerer_bloodline(O
+ ability:horrific_visage#sorcererHorrific Visageabilitybloodline_power(U
+#ability:wretched_endurance#sorcererWretched Enduranceabilitybloodline_power(E
+ability:dread_gaze#sorcerer
+Dread Gazeabilitybloodline_power(K
+ability:dream_walking#sorcererDream Walkingabilitybloodline_power(S
+"ability:fearsome_survival#sorcererFearsome Survivalabilitybloodline_power(Q
+%sorcerer_bloodline:accursed_bloodlineAccursed Bloodlinesorcerer_bloodline(O
+ ability:beguiling_voice#sorcererBeguiling Voiceabilitybloodline_power(C
+ability:fascinate#sorcerer	Fascinateabilitybloodline_power(K
+ability:perfect_voice#sorcererPerfect Voiceabilitybloodline_power(?
+ability:inspire#sorcererInspireabilitybloodline_power(O
+ ability:greater_heroism#sorcererGreater Heroismabilitybloodline_power(K
+ability:grand_maestro#sorcererGrand Maestroabilitybloodline_power(O
+$sorcerer_bloodline:maestro_bloodlineMaestro Bloodlinesorcerer_bloodline(O
+ ability:electricity_ray#sorcererElectricity Rayabilitybloodline_power(C
+ability:whirlwind#sorcerer	Whirlwindabilitybloodline_power(U
+#ability:power_of_the_djinn#sorcererPower Of The Djinnabilitybloodline_power(M
+#sorcerer_bloodline:djinni_bloodlineDjinni Bloodlinesorcerer_bloodline(>
+modifies:ability(Archetype that modifies Fighter Training(E
+modifies:trait1Archetype that modifies Armor Proficiency (Magus)(Í
+class:magus#staff_magusStaff Magus	archetypemagus"≠!@modifies:ability:fighter_training#magus AND !@modifies:trait:armor_proficiency#magus AND !@modifies:ability:heavy_armor#magus AND !@modifies:trait:weapon_proficiency#magus(u
+6ability:weapon_and_armor_proficiency#magus_staff_magusWeapon and Armor Proficiencyclass_featuremagusabilityF
+$ability:weapon_and_armor_proficiencyWeapon and Armor Proficiency(e
+.ability:quarterstaff_defense#magus_staff_magusQuarterstaff Defenseclass_featuremagusability6
+ability:quarterstaff_defenseQuarterstaff Defense(U
+&ability:staff_weapon#magus_staff_magusStaff Weaponclass_featuremagusability&
+ability:staff_weaponStaff Weapon(X
+class:witch#gravewalkerGravewalker	archetypewitch"!@modifies:ability:hex#witch(U
+&ability:spell_poppet#witch_gravewalkerSpell Poppetclass_featurewitchability&
+ability:spell_poppetSpell Poppet(c
+-ability:aura_of_desecration#witch_gravewalkerAura of Desecrationclass_featurewitchability4
+ability:aura_of_desecrationAura of Desecration(Q
+$ability:bonethrall#witch_gravewalker
+Bonethrallclass_featurewitchability"
+ability:bonethrall
+Bonethrall(Y
+(ability:possess_undead#witch_gravewalkerPossess Undeadclass_featurewitchability*
+ability:possess_undeadPossess Undead(h
+class:bard#sound_strikerSound Striker	archetypebard"*!@modifies:ability:inspire_competence#bard(a
+-ability:bardic_performance#bard_sound_strikerBardic Performanceclass_featurebardability2
+ability:bardic_performanceBardic Performance(ì
+class:druid#shark_shamanShark Shaman	archetypedruid"U!@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid(\
+*ability:totemic_summons#druid_shark_shamanTotemic Summonsclass_featuredruidability,
+ability:totemic_summonsTotemic Summons(R
+%ability:bonus_feat#druid_shark_shaman
+Bonus Featclass_featuredruidabilityﬂ
+%class:paladin#oath_against_corruptionOath Against Corruption	archetypepaladin"Ü!@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:aura_of_justice#paladin AND !@modifies:ability:holy_champion#paladin(i
+6ability:aura_of_purity#paladin_oath_against_corruptionAura of Purityclass_featurepaladinability*
+ability:aura_of_purityAura of Purity(k
+7ability:cleansing_flame#paladin_oath_against_corruptionCleansing Flameclass_featurepaladinability,
+ability:cleansing_flameCleansing Flame(q
+:ability:cast_into_the_void#paladin_oath_against_corruptionCast into the Voidclass_featurepaladinability2
+ability:cast_into_the_voidCast into the Void(8
+class:magus#bladebound
+Bladebound	archetypemagus(Ø
+class:bard#celebrity	Celebrity	archetypebard"y!@modifies:ability:lore_master#bard AND !@modifies:ability:inspire_courage#bard AND !@modifies:ability:dirge_of_doom#bard(E
+ability:famous#bard_celebrityFamousclass_featurebardability
+ability:famousFamous(]
+)ability:bardic_performance#bard_celebrityBardic Performanceclass_featurebardabilityQ
+#ability:shining_star#bard_celebrityShining Starclass_featurebardability&
+ability:shining_starShining Star(ﬁ
+"class:alchemist#internal_alchemistInternal Alchemist	archetype	alchemist"ã!@modifies:ability:swift_alchemy#alchemist AND !@modifies:ability:swift_poisoning#alchemist AND !@modifies:ability:throw_anything#alchemist(h
+3ability:breath_mastery#alchemist_internal_alchemistBreath Masteryclass_feature	alchemistability*
+ability:breath_masteryBreath Mastery(p
+7ability:disease_resistance#alchemist_internal_alchemistDisease Resistanceclass_feature	alchemistability2
+ability:disease_resistanceDisease Resistance(f
+2ability:uncanny_dodge#alchemist_internal_alchemistUncanny Dodgeclass_feature	alchemistability(
+ability:uncanny_dodgeUncanny Dodge(ö
+class:alchemist#chirurgeon
+Chirurgeon	archetype	alchemist"X!@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:poison_use#alchemist(d
+-ability:infused_curative#alchemist_chirurgeonInfused Curativeclass_feature	alchemistability.
+ability:infused_curativeInfused Curative(Z
+(ability:anaesthetic#alchemist_chirurgeonAnaestheticclass_feature	alchemistability$
+ability:anaestheticAnaesthetic(d
+-ability:power_over_death#alchemist_chirurgeonPower Over Deathclass_feature	alchemistability.
+ability:power_over_deathPower Over Death(D
+class:alchemist#clone_masterClone Master	archetype	alchemist(T
+&ability:rebirth#alchemist_clone_masterRebirthclass_feature	alchemistability
+ability:rebirthRebirth(8
+class:oracle#stargazer	Stargazer	archetypeoracle(4
+class:ranger#trapperTrapper	archetyperanger(C
+ability:trap#ranger_trapperTrapclass_featurerangerability
+ability:trapTrap(@
+class:alchemist#reanimator
+Reanimator	archetype	alchemist(h
+/ability:simple_reanimation#alchemist_reanimatorSimple Reanimationclass_feature	alchemistability2
+ability:simple_reanimationSimple Reanimation(^
+*ability:create_undead#alchemist_reanimatorCreate Undeadclass_feature	alchemistability(
+ability:create_undeadCreate Undead(n
+2ability:create_greater_undead#alchemist_reanimatorCreate Greater Undeadclass_feature	alchemistability8
+ability:create_greater_undeadCreate Greater Undead(¬
+class:bard#songhealer
+Songhealer	archetypebard"â!@modifies:ability:frightening_tune#bard AND !@modifies:ability:deadly_performance#bard AND !@modifies:ability:versatile_performance#bard(X
+'ability:enhance_healing#bard_songhealerEnhance Healingclass_featurebardability,
+ability:enhance_healingEnhance Healing(^
+*ability:bardic_performance#bard_songhealerBardic Performanceclass_featurebardabilityX
+'ability:funereal_ballad#bard_songhealerFunereal Balladclass_featurebardability,
+ability:funereal_balladFunereal Ballad(:
+class:cleric#separatist
+Separatist	archetypecleric(<
+class:monk#qinggong_monkQinggong Monk	archetypemonk(M
+#ability:ki_power#monk_qinggong_monkKi Powerclass_featuremonkability
+ability:ki_powerKi Power(.
+class:oracle#seerSeer	archetypeoracle(n
+class:paladin#oath_of_charityOath of Charity	archetypepaladin"&!@modifies:ability:divine_bond#paladin(e
+0ability:charitable_mercy#paladin_oath_of_charityCharitable Mercyclass_featurepaladinability.
+ability:charitable_mercyCharitable Mercy(Œ
+class:summoner#evolutionistEvolutionist	archetypesummoner"â!@modifies:ability:makers_call#summoner AND !@modifies:ability:greater_shield_ally#summoner AND !@modifies:ability:transposition#summoner(`
+,ability:mutate_eidolon#summoner_evolutionistMutate Eidolonclass_featuresummonerability*
+ability:mutate_eidolonMutate Eidolon(d
+.ability:evolve_base_form#summoner_evolutionistEvolve Base Formclass_featuresummonerability.
+ability:evolve_base_formEvolve Base Form(\
+*ability:transmogrify#summoner_evolutionistTransmogrifyclass_featuresummonerability&
+ability:transmogrifyTransmogrify(ó
+class:druid#saurian_shamanSaurian Shaman	archetypedruid"U!@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid(^
+,ability:totemic_summons#druid_saurian_shamanTotemic Summonsclass_featuredruidabilityT
+'ability:bonus_feat#druid_saurian_shaman
+Bonus Featclass_featuredruidability4
+class:monk#monk_vows	Monk Vows	archetypemonk(ù
+class:summoner#master_summonerMaster Summoner	archetypesummoner"S!@modifies:ability:bond_senses#summoner AND !@modifies:ability:shield_ally#summoner(c
+/ability:lesser_eidolon#summoner_master_summonerLesser Eidolonclass_featuresummonerability*
+ability:lesser_eidolonLesser Eidolon(i
+2ability:summoning_mastery#summoner_master_summonerSummoning Masteryclass_featuresummonerability0
+ability:summoning_masterySummoning Mastery(i
+2ability:augment_summoning#summoner_master_summonerAugment Summoningclass_featuresummonerability0
+ability:augment_summoningAugment Summoning(^
+class:magus#spellblade
+Spellblade	archetypemagus"$!@modifies:ability:spellstrike#magus(T
+%ability:force_athame#magus_spellbladeForce Athameclass_featuremagusability&
+ability:force_athameForce Athame(≥
+#class:paladin#oath_against_the_wyrmOath Against the Wyrm	archetypepaladin"_!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:holy_champion#paladin(g
+4ability:breath_evasion#paladin_oath_against_the_wyrmBreath Evasionclass_featurepaladinability*
+ability:breath_evasionBreath Evasion(a
+1ability:divine_bond#paladin_oath_against_the_wyrmDivine Bondclass_featurepaladinability$
+ability:divine_bondDivine Bond(u
+;ability:dragon_slaying_strike#paladin_oath_against_the_wyrmDragon-Slaying Strikeclass_featurepaladinability8
+ability:dragon_slaying_strikeDragon-Slaying Strike(>
+class:wizard#scrollmasterScrollmaster	archetypewizard(X
+(ability:scroll_blade#wizard_scrollmasterScroll Bladeclass_featurewizardability&
+ability:scroll_bladeScroll Blade(n
+3ability:improved_scroll_casting#wizard_scrollmasterImproved Scroll Castingclass_featurewizardability<
+ability:improved_scroll_castingImproved Scroll Casting(:
+class:cleric#theologian
+Theologian	archetypecleric(ú
+class:druid#storm_druidStorm Druid	archetypedruid"ﬂ!@modifies:ability:trackless_step#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid(q
+4ability:spontaneous_domain_casting#druid_storm_druidSpontaneous Domain Castingclass_featuredruidabilityB
+"ability:spontaneous_domain_castingSpontaneous Domain Casting(Q
+$ability:windwalker#druid_storm_druid
+Windwalkerclass_featuredruidability"
+ability:windwalker
+Windwalker(Q
+$ability:stormvoice#druid_storm_druid
+Stormvoiceclass_featuredruidability"
+ability:stormvoice
+Stormvoice(_
++ability:eyes_of_the_storm#druid_storm_druidEyes of the Stormclass_featuredruidability0
+ability:eyes_of_the_stormEyes of the Storm(M
+"ability:windlord#druid_storm_druidWindlordclass_featuredruidability
+ability:windlordWindlord(Q
+$ability:storm_lord#druid_storm_druid
+Storm Lordclass_featuredruidability"
+ability:storm_lord
+Storm Lord(@
+class:oracle#planar_oraclePlanar Oracle	archetypeoracle(a
+-ability:final_revelation#oracle_planar_oracleFinal Revelationclass_featureoracleability.
+ability:final_revelationFinal Revelation(J
+class:paladin#oathbound_paladinOathbound Paladin	archetypepaladin(Y
+class:bard#demagogue	Demagogue	archetypebard"#!@modifies:ability:lore_master#bard(E
+ability:famous#bard_demagogueFamousclass_featurebardability]
+)ability:bardic_performance#bard_demagogueBardic Performanceclass_featurebardabilityë
+class:summoner#broodmasterBroodmaster	archetypesummoner"O!@modifies:ability:life_link#summoner AND !@modifies:ability:life_bond#summoner(]
+*ability:eidolon_brood#summoner_broodmasterEidolon Broodclass_featuresummonerability(
+ability:eidolon_broodEidolon Brood(W
+'ability:brood_link#summoner_broodmaster
+Brood Linkclass_featuresummonerability"
+ability:brood_link
+Brood Link(W
+'ability:brood_bond#summoner_broodmaster
+Brood Bondclass_featuresummonerability"
+ability:brood_bond
+Brood Bond(–
+class:druid#dragon_shamanDragon Shaman	archetypedruid"è!@modifies:ability:additional_use_of_wild_shape#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:a_thousand_faces#druid(]
++ability:totemic_summons#druid_dragon_shamanTotemic Summonsclass_featuredruidabilityU
+'ability:dragon_bite#druid_dragon_shamanDragon Biteclass_featuredruidability$
+ability:dragon_biteDragon Bite(S
+&ability:bonus_feat#druid_dragon_shaman
+Bonus Featclass_featuredruidabilityΩ
+class:magus#hexcrafter
+Hexcrafter	archetypemagus"Ç!@modifies:ability:magus_arcana#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:improved_spell_recall#magus(N
+"ability:hex_magus#magus_hexcrafter	Hex Magusclass_featuremagusability 
+ability:hex_magus	Hex Magus(P
+#ability:hex_arcana#magus_hexcrafter
+Hex Arcanaclass_featuremagusability"
+ability:hex_arcana
+Hex Arcana(J
+class:oracle#dual_cursed_oracleDual-Cursed Oracle	archetypeoracle(T
+class:witch#sea_witch	Sea Witch	archetypewitch"!@modifies:ability:hex#witch(c
+,ability:sea_creature_empathy#witch_sea_witchSea Creature Empathyclass_featurewitchability6
+ability:sea_creature_empathySea Creature Empathy(k
+class:alchemist#vivisectionistVivisectionist	archetype	alchemist"!!@modifies:ability:bomb#alchemist(`
+-ability:sneak_attack#alchemist_vivisectionistSneak Attackclass_feature	alchemistability&
+ability:sneak_attackSneak Attack(≠
+class:paladin#oath_of_vengeanceOath of Vengeance	archetypepaladin"a!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:aura_of_justice#paladin(a
+/ability:channel_wrath#paladin_oath_of_vengeanceChannel Wrathclass_featurepaladinability(
+ability:channel_wrathChannel Wrath(g
+2ability:powerful_justice#paladin_oath_of_vengeancePowerful Justiceclass_featurepaladinability.
+ability:powerful_justicePowerful Justice(à
+class:witch#beast_bondedBeast-bonded	archetypewitch"J!@modifies:ability:hex#witch AND !@modifies:ability:witchs_major_hex#witch(`
+,ability:enhanced_familiar#witch_beast_bondedEnhanced Familiarclass_featurewitchability0
+ability:enhanced_familiarEnhanced Familiar(X
+(ability:familiar_form#witch_beast_bondedFamiliar Formclass_featurewitchability(
+ability:familiar_formFamiliar Form(P
+$ability:twin_soul#witch_beast_bonded	Twin Soulclass_featurewitchability 
+ability:twin_soul	Twin Soul(Ÿ
+class:alchemist#preservationistPreservationist	archetype	alchemist"å!@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:poison_use#alchemist AND !@modifies:ability:persistent_mutagen#alchemist(e
+0ability:bottled_ally_i#alchemist_preservationistBottled Ally Iclass_feature	alchemistability*
+ability:bottled_ally_iBottled Ally I(g
+1ability:bottled_ally_ii#alchemist_preservationistBottled Ally IIclass_feature	alchemistability,
+ability:bottled_ally_iiBottled Ally II(i
+2ability:bottled_ally_iii#alchemist_preservationistBottled Ally IIIclass_feature	alchemistability.
+ability:bottled_ally_iiiBottled Ally III(g
+1ability:bottled_ally_iv#alchemist_preservationistBottled Ally IVclass_feature	alchemistability,
+ability:bottled_ally_ivBottled Ally IV(e
+0ability:bottled_ally_v#alchemist_preservationistBottled Ally Vclass_feature	alchemistability*
+ability:bottled_ally_vBottled Ally V(g
+1ability:bottled_ally_vi#alchemist_preservationistBottled Ally VIclass_feature	alchemistability,
+ability:bottled_ally_viBottled Ally VI(≤
+class:bard#geishaGeisha	archetypebard"Å!@modifies:trait:armor_proficiency#bard AND !@modifies:ability:bardic_knowledge#bard AND !@modifies:trait:weapon_proficiency#bard(n
+0ability:weapon_and_armor_proficiency#bard_geishaWeapon and Armor Proficiencyclass_featurebardabilityV
+$ability:geisha_knowledge#bard_geishaGeisha Knowledgeclass_featurebardability.
+ability:geisha_knowledgeGeisha Knowledge(˚
+class:druid#reincarnated_druidReincarnated Druid	archetypedruid"∞!@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:woodland_stride#druid AND !@modifies:ability:timeless_body#druid(j
+4ability:mysterious_stranger#druid_reincarnated_druidMysterious Strangerclass_featuredruidability4
+ability:mysterious_strangerMysterious Stranger(k
+4ability:resist_deaths_touch#druid_reincarnated_druidResist Death's Touchclass_featuredruidability5
+ability:resist_deaths_touchResist Death's Touch(Z
+,ability:cheat_death#druid_reincarnated_druidCheat Deathclass_featuredruidability$
+ability:cheat_deathCheat Death(x
+;ability:tongue_of_the_sun_and_moon#druid_reincarnated_druidTongue of the Sun and Moonclass_featuredruidabilityB
+"ability:tongue_of_the_sun_and_moonTongue of the Sun and Moon(\
+class:druid#pack_lord	Pack Lord	archetypedruid"$!@modifies:ability:nature_bond#druid(M
+!ability:pack_bond#druid_pack_lord	Pack Bondclass_featuredruidability 
+ability:pack_bond	Pack Bond(g
+.ability:improved_empathic_link#druid_pack_lordImproved Empathic Linkclass_featuredruidability:
+ability:improved_empathic_linkImproved Empathic Link(X
+class:witch#hedge_witchHedge Witch	archetypewitch"!@modifies:ability:hex#witch(c
+-ability:spontaneous_healing#witch_hedge_witchSpontaneous Healingclass_featurewitchability4
+ability:spontaneous_healingSpontaneous Healing(]
+*ability:empathic_healing#witch_hedge_witchEmpathic Healingclass_featurewitchability.
+ability:empathic_healingEmpathic Healing(T
+$class:oracle#enlightened_philosopherEnlightened Philosopher	archetypeoracle(k
+7ability:final_revelation#oracle_enlightened_philosopherFinal Revelationclass_featureoracleabilityÂ
+class:bard#animal_speakerAnimal Speaker	archetypebard"§!@modifies:ability:fascinate#bard AND !@modifies:ability:mass_suggestion#bard AND !@modifies:ability:well_versed#bard AND !@modifies:ability:inspire_competence#bard(X
+)ability:animal_friend#bard_animal_speakerAnimal Friendclass_featurebardability(
+ability:animal_friendAnimal Friend(]
++ability:natures_speaker#bard_animal_speakerNature's Speakerclass_featurebardability-
+ability:natures_speakerNature's Speaker(b
+.ability:bardic_performance#bard_animal_speakerBardic Performanceclass_featurebardabilitye
+/ability:summon_natures_ally#bard_animal_speakerSummon Nature's Allyclass_featurebardability5
+ability:summon_natures_allySummon Nature's Ally(ü
+!class:paladin#oath_against_fiendsOath Against Fiends	archetypepaladin"O!@modifies:ability:mercy#paladin AND !@modifies:ability:aura_of_resolve#paladin(e
+2ability:anchoring_aura#paladin_oath_against_fiendsAnchoring Auraclass_featurepaladinability*
+ability:anchoring_auraAnchoring Aura(_
+/ability:holy_vessel#paladin_oath_against_fiendsHoly Vesselclass_featurepaladinability$
+ability:holy_vesselHoly Vessel(B
+class:sorcerer#crossbloodedCrossblooded	archetypesorcerer(m
+class:paladin#oath_of_loyaltyOath of Loyalty	archetypepaladin"%!@modifies:ability:smite_evil#paladin(Y
+*ability:loyal_oath#paladin_oath_of_loyalty
+Loyal Oathclass_featurepaladinability"
+ability:loyal_oath
+Loyal Oath(k
+class:alchemist#mindchemistMindchemist	archetype	alchemist"'!@modifies:ability:poison_use#alchemist(Y
+(ability:cognatogen#alchemist_mindchemist
+Cognatogenclass_feature	alchemistability"
+ability:cognatogen
+Cognatogen(a
+,ability:perfect_recall#alchemist_mindchemistPerfect Recallclass_feature	alchemistability*
+ability:perfect_recallPerfect Recall(ó
+class:druid#menhir_savantMenhir Savant	archetypedruid"÷!@modifies:ability:trackless_step#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:woodland_stride#druid(W
+(ability:spirit_sense#druid_menhir_savantSpirit Senseclass_featuredruidability&
+ability:spirit_senseSpirit Sense(U
+'ability:place_magic#druid_menhir_savantPlace Magicclass_featuredruidability$
+ability:place_magicPlace Magic(S
+&ability:empty_body#druid_menhir_savant
+Empty Bodyclass_featuredruidability"
+ability:empty_body
+Empty Body(<
+class:cleric#undead_lordUndead Lord	archetypecleric(n
+class:alchemist#psychonaut
+Psychonaut	archetype	alchemist",!@modifies:ability:poison_immunity#alchemist(\
+)ability:precognition#alchemist_psychonautPrecognitionclass_feature	alchemistability&
+ability:precognitionPrecognition(`
++ability:psychic_senses#alchemist_psychonautPsychic Sensesclass_feature	alchemistability*
+ability:psychic_sensesPsychic Senses(l
+1ability:remote_consciousness#alchemist_psychonautRemote Consciousnessclass_feature	alchemistability6
+ability:remote_consciousnessRemote Consciousness(l
+1ability:greater_precognition#alchemist_psychonautGreater Precognitionclass_feature	alchemistability6
+ability:greater_precognitionGreater Precognition(j
+0ability:master_precognition#alchemist_psychonautMaster Precognitionclass_feature	alchemistability4
+ability:master_precognitionMaster Precognition(F
+class:oracle#possessed_oraclePossessed Oracle	archetypeoracle(

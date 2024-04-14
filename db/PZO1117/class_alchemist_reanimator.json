@@ -1,0 +1,28 @@
+{
+  "id": "class:alchemist#reanimator",
+  "name": "Reanimator",
+  "tags": ["archetype", "alchemist"],
+  "maxStacks": 1,
+  "description": {
+    "text": "A reanimator is an alchemist who has discovered how to infuse a corpse with a semblance of life. Many work in tandem with necromancers to explore the fine border between the worlds of the living and the dead."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:simple_reanimation#alchemist_reanimator"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:create_undead#alchemist_reanimator"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:create_greater_undead#alchemist_reanimator"]
+          }]
+        }]
+      }]
+    }
+  }
+}

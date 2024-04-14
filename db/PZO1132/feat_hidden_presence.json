@@ -1,0 +1,17 @@
+{
+  "id": "feat:hidden_presence",
+  "name": "Hidden Presence",
+  "tags": ["feat", "general"],
+  "enabledFormula": "any(@int_score,@cha_score\u003e\u003d17,@spell:possession,@spell:greater_possession)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You are adept at hiding within your host.",
+    "sections": {
+      "Benefit": "While possessing another creature, you can hide yourself from divinations and pass through wards such as magic circle against evil or the effects of a forbiddance spell. You must attempt a Will save against the spell (even if it doesn\u0027t normally allow a saving throw). If you succeed, the spell treats you as if you were your host (for instance, divinations would reveal only the host\u0027s alignment, and forbiddance keyed to the host\u0027s alignment wouldn\u0027t damage you). If your saving throw fails, the spell functions against you as normal; if the spell normally allows a save, your previous failure doesn\u0027t count as a failed save against the spell\u0027s normal effects."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

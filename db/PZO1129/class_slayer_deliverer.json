@@ -1,0 +1,56 @@
+{
+  "id": "class:slayer#deliverer",
+  "name": "Deliverer",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:trait:armor_proficiency#slayer AND !@modifies:trait:weapon_proficiency#slayer AND !@modifies:ability:advanced_slayer_talent#slayer AND !@modifies:ability:slayer_talent#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:advanced_slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#slayer_deliverer", "ability:weapon_and_armor_proficiency#slayer_deliverer"],
+            "linksToRemove": ["trait:weapon_proficiency#slayer", "trait:armor_proficiency#slayer"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:determined_zeal#slayer_deliverer"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:true_believer#slayer_deliverer"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:divine_anathema#slayer_deliverer"],
+            "linksToRemove": ["ability:advanced_slayer_talent#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

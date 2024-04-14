@@ -1,0 +1,68 @@
+{
+  "id": "class:druid#wild_whisperer",
+  "name": "Wild Whisperer",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:additional_use_of_wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:wild_shape#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:additional_use_of_wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:inspiration#druid_wild_whisperer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:wild_shape#druid_wild_whisperer"],
+            "linksToRemove": ["ability:resist_natures_lure#druid", "ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:natural_expertise#druid_wild_whisperer"],
+            "linksToRemove": ["ability:wild_shape#druid", "ability:additional_use_of_wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:investigator_talent#druid_wild_whisperer"],
+            "linksToRemove": ["ability:wild_shape#druid", "ability:additional_use_of_wild_shape#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

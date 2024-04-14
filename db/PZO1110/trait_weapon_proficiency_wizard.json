@@ -1,0 +1,38 @@
+{
+  "id": "trait:weapon_proficiency#wizard",
+  "name": "Weapon Proficiency (Wizard)",
+  "tags": ["class_feature", "wizard", "trait"],
+  "description": {
+    "text": "A Wizard is proficient with the club, dagger, heavy crossbow, light crossbow, quarterstaff."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:club",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:quarterstaff",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:light_crossbow",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_crossbow",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:dagger",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

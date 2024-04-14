@@ -1,0 +1,33 @@
+{
+  "id": "trait:armor_proficiency#brawler",
+  "name": "Armor Proficiency (Brawler)",
+  "tags": ["class_feature", "brawler", "trait"],
+  "description": {
+    "text": "A Brawler is proficient with light armor, plus all shields (except tower shields)."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_shield",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:buckler",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_shield",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

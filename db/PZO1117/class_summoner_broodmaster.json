@@ -1,0 +1,41 @@
+{
+  "id": "class:summoner#broodmaster",
+  "name": "Broodmaster",
+  "tags": ["archetype", "summoner"],
+  "enabledFormula": "!@modifies:ability:life_link#summoner AND !@modifies:ability:life_bond#summoner",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most summoners bond with one eidolon for their entire lives, but the broodmaster forges a link with multiple smaller eidolons that make up his brood. Separately, a broodmaster\u0027s eidolons are no match for a summoner\u0027s single eidolon, but taken as a whole, an eidolon brood makes up in quantity what it lacks in individual power."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:life_link#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:life_bond#summoner",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:summoner",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToRemove": ["ability:life_link#summoner"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:eidolon_brood#summoner_broodmaster", "ability:brood_link#summoner_broodmaster"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:brood_bond#summoner_broodmaster"],
+            "linksToRemove": ["ability:life_bond#summoner"]
+          }]
+        }]
+      }]
+    }
+  }
+}

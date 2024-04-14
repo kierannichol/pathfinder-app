@@ -1,0 +1,38 @@
+{
+  "id": "class:paladin#oath_of_vengeance",
+  "name": "Oath of Vengeance",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_positive_energy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:channel_wrath#paladin_oath_of_vengeance"],
+            "linksToRemove": ["ability:channel_positive_energy#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:powerful_justice#paladin_oath_of_vengeance"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

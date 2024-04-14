@@ -1,0 +1,75 @@
+{
+  "id": "class:cavalier#daring_champion",
+  "name": "Daring Champion",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:mount#cavalier AND !@modifies:ability:mighty_charge#cavalier AND !@modifies:ability:cavaliers_charge#cavalier AND !@modifies:trait:weapon_proficiency#cavalier AND !@modifies:ability:expert_trainer#cavalier AND !@modifies:ability:supreme_charge#cavalier AND !@modifies:trait:armor_proficiency#cavalier",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:mount#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:mighty_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:cavaliers_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:expert_trainer#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:supreme_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#cavalier_daring_champion", "ability:weapon_and_armor_proficiency#cavalier_daring_champion", "ability:champions_finesse#cavalier_daring_champion"],
+            "linksToRemove": ["trait:weapon_proficiency#cavalier", "trait:armor_proficiency#cavalier", "ability:mount#cavalier"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:nimble#cavalier_daring_champion"],
+            "linksToRemove": ["ability:cavaliers_charge#cavalier"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:champions_weapon_mastery#cavalier_daring_champion"],
+            "linksToRemove": ["ability:supreme_charge#cavalier"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:panache_and_deeds#cavalier_daring_champion"],
+            "linksToRemove": ["ability:expert_trainer#cavalier"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:advanced_deeds#cavalier_daring_champion"],
+            "linksToRemove": ["ability:mighty_charge#cavalier"]
+          }]
+        }]
+      }]
+    }
+  }
+}

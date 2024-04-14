@@ -1,0 +1,38 @@
+{
+  "id": "class:paladin#shining_knight",
+  "name": "Shining Knight",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:divine_health#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:divine_health#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:skilled_rider#paladin_shining_knight"],
+            "linksToRemove": ["ability:divine_health#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:knights_charge#paladin_shining_knight"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "class:magus#spellblade",
+  "name": "Spellblade",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:spellstrike#magus",
+  "maxStacks": 1,
+  "description": {
+    "text": "A spellblade magus can manifest a ghostly blade of force that can be used as an off-hand weapon."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spellstrike#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:force_athame#magus_spellblade"],
+            "linksToRemove": ["ability:spellstrike#magus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

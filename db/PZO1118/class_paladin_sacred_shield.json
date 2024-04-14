@@ -1,0 +1,60 @@
+{
+  "id": "class:paladin#sacred_shield",
+  "name": "Sacred Shield",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:channel_positive_energy#paladin AND !@modifies:ability:smite_evil#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "When faced by evil, the sacred shield reaches first not for a weapon, but for her trusty shield. With her faith, she can ward others from harm."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_positive_energy#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bastion_of_good#paladin_sacred_shield"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:perfect_bastion#paladin_sacred_shield"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:holy_shield#paladin_sacred_shield"],
+            "linksToRemove": ["ability:smite_evil#paladin", "ability:channel_positive_energy#paladin"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:improved_bastion#paladin_sacred_shield"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

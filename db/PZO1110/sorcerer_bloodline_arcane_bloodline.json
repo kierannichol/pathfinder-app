@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:arcane_bloodline",
+  "name": "Arcane Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Your family has always been skilled in the eldritch art of magic. While many of your relatives were accomplished wizards, your powers developed without the need for study and practice."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:arcane_bond#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:metamagic_adept#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:arcane_apotheosis#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:new_arcana#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:school_power#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:improved_counterspell", "feat:improved_initiative", "feat:iron_will", "feat:scribe_scroll", "feat:skill_focus", "feat:spell_focus", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:improved_counterspell", "feat:improved_initiative", "feat:iron_will", "feat:scribe_scroll", "feat:skill_focus", "feat:spell_focus", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:improved_counterspell", "feat:improved_initiative", "feat:iron_will", "feat:scribe_scroll", "feat:skill_focus", "feat:spell_focus", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

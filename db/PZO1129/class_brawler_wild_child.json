@@ -1,0 +1,79 @@
+{
+  "id": "class:brawler#wild_child",
+  "name": "Wild Child",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:bonus_combat_feat#brawler AND !@modifies:ability:close_weapon_mastery#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "The wild child works with his sworn animal friend to conquer the challenges that lay before them. This kinship could come from being lost in the wilderness and raised by animals or growing up with an exotic pet."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:maneuver_training#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_combat_feat#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:close_weapon_mastery#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:wild_tricks#brawler_wild_child"],
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:animal_companion#brawler_wild_child"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:maneuver_training#brawler_wild_child"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:maneuver_training#brawler_wild_child"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:hunters_tricks#brawler_wild_child", "ability:wild_tricks#brawler_wild_child"],
+            "linksToRemove": ["ability:close_weapon_mastery#brawler", "ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:maneuver_training#brawler_wild_child"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:maneuver_training#brawler_wild_child", "ability:wild_tricks#brawler_wild_child"],
+            "linksToRemove": ["ability:maneuver_training#brawler", "ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:bonus_combat_feat#brawler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:maneuver_training#brawler_wild_child"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

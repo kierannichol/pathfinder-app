@@ -1,0 +1,56 @@
+{
+  "id": "class:druid#reincarnated_druid",
+  "name": "Reincarnated Druid",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:woodland_stride#druid AND !@modifies:ability:timeless_body#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:mysterious_stranger#druid_reincarnated_druid"],
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:resist_deaths_touch#druid_reincarnated_druid"],
+            "linksToRemove": ["ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:cheat_death#druid_reincarnated_druid"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:tongue_of_the_sun_and_moon#druid_reincarnated_druid"],
+            "linksToRemove": ["ability:timeless_body#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

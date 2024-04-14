@@ -1,0 +1,59 @@
+{
+  "id": "class:paladin#ghost_hunter",
+  "name": "Ghost Hunter",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:smite_evil#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:smite_evil#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:exorcise_possession#paladin_ghost_hunter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:speak_to_the_restless#paladin_ghost_hunter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:ghostly_smite#paladin_ghost_hunter"],
+            "linksToRemove": ["ability:smite_evil#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

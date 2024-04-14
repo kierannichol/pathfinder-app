@@ -1,0 +1,22 @@
+{
+  "id": "class:oracle#planar_oracle",
+  "name": "Planar Oracle",
+  "tags": ["archetype", "oracle"],
+  "maxStacks": 1,
+  "description": {
+    "text": "A planar oracle has an affinity with one of the Outer Planes. She is at home on the multiple planes of the Great Beyond, and can eventually become an outsider herself."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:oracle",
+          "stackModifications": [{
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:final_revelation#oracle_planar_oracle"]
+          }]
+        }]
+      }]
+    }
+  }
+}

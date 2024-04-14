@@ -1,0 +1,86 @@
+{
+  "id": "class:monk#monk_of_the_iron_mountain",
+  "name": "Monk of the Iron Mountain",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:high_jump#monk AND !@modifies:ability:tongue_of_the_sun_and_moon#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:improved_evasion#monk AND !@modifies:ability:evasion#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:high_jump#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tongue_of_the_sun_and_moon#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_evasion#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:evasion#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:vow_of_silence#monk_monk_of_the_iron_mountain"],
+            "linksToRemove": ["ability:tongue_of_the_sun_and_moon#monk"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:iron_monk#monk_monk_of_the_iron_mountain"],
+            "linksToRemove": ["ability:evasion#monk"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:bastion_stance#monk_monk_of_the_iron_mountain"],
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:iron_limb_defense#monk_monk_of_the_iron_mountain"],
+            "linksToRemove": ["ability:high_jump#monk"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:adamantine_monk#monk_monk_of_the_iron_mountain"],
+            "linksToRemove": ["ability:improved_evasion#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

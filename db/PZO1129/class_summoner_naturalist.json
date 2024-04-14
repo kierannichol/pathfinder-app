@@ -1,0 +1,73 @@
+{
+  "id": "class:summoner#naturalist",
+  "name": "Naturalist",
+  "tags": ["archetype", "summoner"],
+  "enabledFormula": "!@modifies:ability:greater_shield_ally#summoner AND !@modifies:ability:greater_aspect#summoner AND !@modifies:ability:summon_monster_i#summoner AND !@modifies:ability:shield_ally#summoner AND !@modifies:ability:aspect#summoner AND !@modifies:ability:life_bond#summoner",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:greater_shield_ally#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_aspect#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:summon_monster_i#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:shield_ally#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aspect#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:life_bond#summoner",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:summoner",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:natures_call#summoner_naturalist"],
+            "linksToRemove": ["ability:summon_monster_i#summoner"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:third_animal_focus#summoner_naturalist"],
+            "linksToRemove": ["ability:greater_aspect#summoner"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:animal_focus#summoner_naturalist"],
+            "linksToRemove": ["ability:shield_ally#summoner"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:second_animal_focus#summoner_naturalist"],
+            "linksToRemove": ["ability:aspect#summoner"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:greater_shield_ally#summoner"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:shared_focus#summoner_naturalist"],
+            "linksToRemove": ["ability:life_bond#summoner"]
+          }]
+        }]
+      }]
+    }
+  }
+}

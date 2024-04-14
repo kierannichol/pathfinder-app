@@ -1,0 +1,56 @@
+{
+  "id": "class:fighter#dragoon",
+  "name": "Dragoon",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:armor_training#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+    "text": "These gallant lancers serve in the vanguard of many armies or as knights-errant. They are born leaders and masters of the mounted charge."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:skilled_rider#fighter_dragoon"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:spinning_lance#fighter_dragoon"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:banner#fighter_dragoon"],
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:piercing_lance#fighter_dragoon"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:leaping_lance#fighter_dragoon"],
+            "linksToRemove": ["ability:armor_training#fighter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

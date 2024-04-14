@@ -1,0 +1,71 @@
+{
+  "id": "class:ranger#urban_ranger",
+  "name": "Urban Ranger",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:camouflage#ranger AND !@modifies:ability:favored_terrain#ranger AND !@modifies:ability:endurance#ranger AND !@modifies:ability:hide_in_plain_sight#ranger AND !@modifies:ability:woodland_stride#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "For the urban ranger, the streets and sewers of the city are just as dangerous as the barren wastelands or the deep forests."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:favored_terrain#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:endurance#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:invisibility_trick#ranger_urban_ranger"],
+            "linksToRemove": ["ability:hide_in_plain_sight#ranger"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:favored_community#ranger_urban_ranger", "ability:trapfinding#ranger_urban_ranger"],
+            "linksToRemove": ["ability:favored_terrain#ranger", "ability:endurance#ranger"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:push_through#ranger_urban_ranger"],
+            "linksToRemove": ["ability:woodland_stride#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:blend_in#ranger_urban_ranger"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

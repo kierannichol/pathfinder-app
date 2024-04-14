@@ -1,0 +1,23 @@
+{
+  "id": "trait:armor_proficiency#magus",
+  "name": "Armor Proficiency (Magus)",
+  "tags": ["class_feature", "magus", "trait"],
+  "description": {
+    "text": "A Magus is proficient with light and medium armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:medium_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

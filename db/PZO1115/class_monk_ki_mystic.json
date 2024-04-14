@@ -1,0 +1,82 @@
+{
+  "id": "class:monk#ki_mystic",
+  "name": "Ki Mystic",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:purity_of_body#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk AND !@modifies:ability:diamond_body#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ki_pool#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:empty_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_soul#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:mystic_persistence#monk_ki_mystic"],
+            "linksToRemove": ["ability:empty_body#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:ki_mystic#monk_ki_mystic"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:mystic_insight#monk_ki_mystic"],
+            "linksToRemove": ["ability:purity_of_body#monk"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:mystic_visions#monk_ki_mystic"],
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:mystic_prescience#monk_ki_mystic"],
+            "linksToRemove": ["ability:diamond_soul#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

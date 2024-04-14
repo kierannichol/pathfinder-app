@@ -1,0 +1,42 @@
+{
+  "id": "class:slayer#cutthroat",
+  "name": "Cutthroat",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:slayer_talent#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:street_stalker#slayer_cutthroat"],
+            "linksToRemove": ["ability:track#slayer"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:opportune_target#slayer_cutthroat"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:stab_and_grab#slayer_cutthroat"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

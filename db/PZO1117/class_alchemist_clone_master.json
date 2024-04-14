@@ -1,0 +1,22 @@
+{
+  "id": "class:alchemist#clone_master",
+  "name": "Clone Master",
+  "tags": ["archetype", "alchemist"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Clone masters practice duplicating existing creatures in order to better understand how to create new life."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:rebirth#alchemist_clone_master"]
+          }]
+        }]
+      }]
+    }
+  }
+}

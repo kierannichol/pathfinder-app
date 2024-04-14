@@ -1,0 +1,35 @@
+{
+  "id": "class:ranger#skirmisher",
+  "name": "Skirmisher",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:spellcasting#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Many rangers rely on spells, but there are some who eschew aid from divine powers for their own reasons. Skirmishers rely on their wits, their wisdom, and sometimes even instinct to aid in their quests."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spellcasting#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToRemove": ["ability:spellcasting#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:spellcasting#ranger"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:hunters_tricks#ranger_skirmisher"]
+          }]
+        }]
+      }]
+    }
+  }
+}

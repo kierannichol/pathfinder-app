@@ -1,123 +1,0 @@
-
-PZO11218
-class:alchemist#bogbornBogborn	archetype	alchemist}
-,ability:amphibious_mutagen#alchemist_bogbornAmphibious Mutagenclass:alchemist#bogbornarchetype_featureclass_featureZ
-'class:alchemist#bramble_brewer_half_elfBramble Brewer (Half-elf)	archetype	alchemist
-5ability:briar_bombs#alchemist_bramble_brewer_half_elfBriar Bombs'class:alchemist#bramble_brewer_half_elfarchetype_featureclass_featureZ
-'class:alchemist#deep_bomber_svirfneblinDeep Bomber (Svirfneblin)	archetype	alchemist
-5ability:silent_bomb#alchemist_deep_bomber_svirfneblinSilent Bomb'class:alchemist#deep_bomber_svirfneblinarchetype_featureclass_feature•
-8ability:targeting_bomb#alchemist_deep_bomber_svirfneblinTargeting Bomb'class:alchemist#deep_bomber_svirfneblinarchetype_featureclass_feature‰
-2ability:stonekin#alchemist_deep_bomber_svirfneblinStonekin'class:alchemist#deep_bomber_svirfneblinarchetype_featureclass_feature@
-class:alchemist#fire_bomberFire Bomber	archetype	alchemist
--ability:fire_bombardier#alchemist_fire_bomberFire Bombardierclass:alchemist#fire_bomberarchetype_featureclass_feature}
-,ability:fiery_cocktail#alchemist_fire_bomberFiery Cocktailclass:alchemist#fire_bomberarchetype_featureclass_features
-'ability:fire_body#alchemist_fire_bomber	Fire Bodyclass:alchemist#fire_bomberarchetype_featureclass_feature…
-0ability:improved_fire_body#alchemist_fire_bomberImproved Fire Bodyclass:alchemist#fire_bomberarchetype_featureclass_featureƒ
-/ability:greater_fire_body#alchemist_fire_bomberGreater Fire Bodyclass:alchemist#fire_bomberarchetype_featureclass_featureF
-class:alchemist#plague_bringerPlague Bringer	archetype	alchemist}
-,ability:plague_vial#alchemist_plague_bringerPlague Vialclass:alchemist#plague_bringerarchetype_featureclass_feature‹
-3ability:disease_resistance#alchemist_plague_bringerDisease Resistanceclass:alchemist#plague_bringerarchetype_featureclass_feature:
-class:alchemist#saboteurSaboteur	archetype	alchemist}
-,ability:chameleon_mutagen#alchemist_saboteurChameleon Mutagenclass:alchemist#saboteurarchetype_featureclass_featureh
-feat:blundering_defenseBlundering Defensefeatcombat"+all(@feat:cautious_fighter, @race:halfling)Y
-feat:bullying_blowBullying Blowfeatcombat"&all(@skill:intimidate >= 1, @race:orc)G
-feat:cautious_fighterCautious Fighterfeatcombat"@race:halflingg
-feat:critical_versatilityCritical Versatilityfeatcombat"&all(@class:fighter >= 11, @race:human)]
-feat:dented_helmDented Helmfeatcombat".all(@feat:hard_headed, @bab >= 6, @race:dwarf)ª
-feat:destroyers_blessingDestroyer's Blessingfeatcombat"jall(@race:half_orc OR @race:orc, any(max(@ability:rage#*), max(@ability:bloodrage#*))[Rage class feature])\
-feat:elven_battle_trainingElven Battle Trainingfeatcombat"all(@bab >= 1, @race:elf)7
-feat:fire_hand	Fire Handfeatcombat"@race:goblinX
-feat:gloom_strikeGloom Strikefeatcombat"'all(@feat:blind_fight, @race:fetchling)z
-feat:gnome_weapon_focusGnome Weapon Focusfeatcombat"=all(@bab >= 1, @race:gnome, @feat:martial_weapon_proficiency)G
-feat:goblin_gunslingerGoblin Gunslingerfeatcombat"@race:goblino
-feat:inner_flameInner Flamefeatcombat"@all(@feat:scorching_weapons, @character_level >= 7, @race:ifrit)g
-feat:lucky_strikeLucky Strikefeatcombat"6all(@bab >= 5, @ability:adaptive_luck, @race:halfling)…
-feat:orc_hewer	Orc Hewerfeatcombat"Zall(@str_score >= 13, @feat:cleave, @feat:goblin_cleaver, @feat:power_attack, @race:dwarf)Q
-feat:risky_strikerRisky Strikerfeatcombat"all(@bab >= 1, @race:halfling)F
-feat:scorching_weaponsScorching Weaponsfeatcombat"@race:ifritW
-feat:sea_hunter
-Sea Hunterfeatcombat"*all(@feat:combat_expertise, @race:merfolk)‰
-feat:shatterspellShatterspellfeatcombat"Xall(@rage_power:disruptive, @rage_power:spellbreaker, @race:dwarf, @class:fighter >= 10)r
-feat:taskmaster
-Taskmasterfeatcombat"Eall(@feat:demoralizing_lash, @skill:intimidate >= 5, @race:hobgoblin)P
-feat:vast_hatredVast Hatredfeatcombat"!all(@race:gnome, @ability:hatred)v
-feat:angel_wingsAngel Wingsfeatracialracial"?all(@feat:angelic_blood, @race:aasimar, @character_level >= 10)¨
-feat:celestial_servantCelestial Servantfeatracialracial"eany(@race:aasimar, @ability:animal_companion#hunter, @magus_arcana:familiar, @ability:mount#cavalier)Æ
-feat:improved_channel_forceImproved Channel Forcefeatracialracial"yall(@feat:channel_force, @race:aasimar, (@ability:channel_positive_energy >= 4 OR @ability:channel_negative_energy >= 4))¤
-feat:metallic_wingsMetallic Wingsfeatracialracial"gall(@feat:angelic_blood, @feat:angelic_flesh, @feat:angel_wings, @race:aasimar, @character_level >= 11)N
-feat:catfolk_exemplarCatfolk Exemplarfeatracialracial"@race:catfolkc
-feat:natural_charmerNatural Charmerfeatracialracial"$all(@cha_score >= 17, @race:dhampir)s
-feat:drow_nobilityDrow Nobilityfeatracialracial"8all("Able to use drow spell-like abilities", @race:drow)µ
-feat:noble_spell_resistanceNoble Spell Resistancefeatracialracial"hall(@cha_score >= 13, @wis_score >= 13, @feat:greater_drow_nobility, @character_level >= 13, @race:drow)æ
-feat:umbral_scionUmbral Scionfeatracialracial"¬all(@cha_score >= 13, @wis_score >= 13, @feat:drow_nobility, @feat:greater_drow_nobility, @feat:improved_drow_nobility, "Able to use drow spell-like abilities", @race:drow)
-feat:brewmaster
-Brewmasterfeatracialracial"Jall(@skill:craft#alchemy >= 1, @skill:profession#brewer >= 1, @race:dwarf)e
-feat:dented_helmDented Helmfeatracialracial".all(@feat:hard_headed, @bab >= 6, @race:dwarf)
-feat:orc_hewer	Orc Hewerfeatracialracial"Zall(@str_score >= 13, @feat:cleave, @feat:goblin_cleaver, @feat:power_attack, @race:dwarf)‘
-feat:shatterspellShatterspellfeatracialracial"Xall(@rage_power:disruptive, @rage_power:spellbreaker, @race:dwarf, @class:fighter >= 10)d
-feat:elven_battle_trainingElven Battle Trainingfeatracialracial"all(@bab >= 1, @race:elf)F
-feat:gloom_sightGloom Sightfeatracialracial"@race:fetchling`
-feat:gloom_strikeGloom Strikefeatracialracial"'all(@feat:blind_fight, @race:fetchling)k
-feat:casual_illusionistCasual Illusionistfeatracialracial"&all(@race:gnome, @ability:gnome_magic)‚
-feat:gnome_weapon_focusGnome Weapon Focusfeatracialracial"=all(@bab >= 1, @race:gnome, @feat:martial_weapon_proficiency)X
-feat:vast_hatredVast Hatredfeatracialracial"!all(@race:gnome, @ability:hatred)?
-feat:fire_hand	Fire Handfeatracialracial"@race:goblinA
-feat:fire_tamer
-Fire Tamerfeatracialracial"@race:goblinO
-feat:goblin_gunslingerGoblin Gunslingerfeatracialracial"@race:goblinF
-feat:agile_tongueAgile Tonguefeatracialracial"@race:grippliF
-feat:exiles_pathExile's Pathfeatracialracial"@race:half_elf‡
-feat:half_drow_paragonHalf-Drow Paragonfeatracialracial"Dall(all(@ability:drow_blooded, @ability:drow_magic), @race:half_elf)š
-feat:adaptive_fortuneAdaptive Fortunefeatracialracial"Yall(@feat:fortunate_one, @ability:adaptable_luck, @character_level >= 10, @race:halfling)p
-feat:blundering_defenseBlundering Defensefeatracialracial"+all(@feat:cautious_fighter, @race:halfling)O
-feat:cautious_fighterCautious Fighterfeatracialracial"@race:halflingd
-feat:lucky_healerLucky Healerfeatracialracial"+all(@ability:adaptive_luck, @race:halfling)o
-feat:lucky_strikeLucky Strikefeatracialracial"6all(@bab >= 5, @ability:adaptive_luck, @race:halfling)Y
-feat:risky_strikerRisky Strikerfeatracialracial"all(@bab >= 1, @race:halfling)Û
-feat:blood_vengeanceBlood Vengeancefeatracialracial"›all(@race:half_orc OR @race:orc, (@alignment:ng OR @alignment:cg OR @alignment:n OR @alignment:cn OR @alignment:ne OR @alignment:ce)[Non-lawful alignment])b
-feat:horde_chargeHorde Chargefeatracialracial")any(@bab >= 1, @race:half_orc, @race:orc)t
-feat:deafening_explosionDeafening Explosionfeatracialracial"-all(@ability:bomb#alchemist, @race:hobgoblin)k
-feat:focusing_blowFocusing Blowfeatracialracial"0all(@feat:hobgoblin_discipline, @race:hobgoblin)h
-feat:hobgoblin_disciplineHobgoblin Disciplinefeatracialracial"all(@bab >= 1, @race:hobgoblin)z
-feat:taskmaster
-Taskmasterfeatracialracial"Eall(@feat:demoralizing_lash, @skill:intimidate >= 5, @race:hobgoblin)o
-feat:critical_versatilityCritical Versatilityfeatracialracial"&all(@class:fighter >= 11, @race:human)[
-feat:fast_learnerFast Learnerfeatracialracial""all(@int_score >= 13, @race:human)i
-feat:heroic_willHeroic Willfeatracialracial"2all(@feat:iron_will, @will:base >= 4, @race:human)q
-feat:improvisationImprovisationfeatracialracial"6all(@int_score >= 13, @feat:fast_learner, @race:human)˜
-feat:improved_improvisationImproved Improvisationfeatracialracial"Kall(@int_score >= 13, @feat:fast_learner, @feat:improvisation, @race:human)g
-feat:inexplicable_luckInexplicable Luckfeatracialracial"$all(@feat:defiant_luck, @race:human)£
-feat:intimidating_confidenceIntimidating Confidencefeatracialracial"Tall(@cha_score >= 13, @feat:fearless_curiosity, @skill:intimidate >= 5, @race:human)L
-feat:surge_of_successSurge of Successfeatracialracial"@race:human
-feat:elemental_jauntElemental Jauntfeatracialracial"Pany(@character_level >= 15, @race:ifrit, @race:oread, @race:sylph, @race:undine)w
-feat:inner_flameInner Flamefeatracialracial"@all(@feat:scorching_weapons, @character_level >= 7, @race:ifrit)N
-feat:scorching_weaponsScorching Weaponsfeatracialracial"@race:ifritR
-feat:realistic_likenessRealistic Likenessfeatracialracial"@race:kitsuneg
-feat:draconic_breathDraconic Breathfeatracialracial"(all(@feat:draconic_aspect, @race:kobold)e
-feat:draconic_glideDraconic Glidefeatracialracial"(all(@feat:draconic_aspect, @race:kobold)_
-feat:sea_hunter
-Sea Hunterfeatracialracial"*all(@feat:combat_expertise, @race:merfolk)Û
-feat:blood_vengeanceBlood Vengeancefeatracialracial"›all(@race:half_orc OR @race:orc, (@alignment:ng OR @alignment:cg OR @alignment:n OR @alignment:cn OR @alignment:ne OR @alignment:ce)[Non-lawful alignment])>
-feat:born_alone
-Born Alonefeatracialracial"	@race:orca
-feat:bullying_blowBullying Blowfeatracialracial"&all(@skill:intimidate >= 1, @race:orc)b
-feat:ferocious_actionFerocious Actionfeatracialracial"!all(@ability:ferocity, @race:orc)b
-feat:horde_chargeHorde Chargefeatracialracial")any(@bab >= 1, @race:half_orc, @race:orc)J
-feat:echoes_of_stoneEchoes of Stonefeatracialracial"@race:oread
-feat:elemental_jauntElemental Jauntfeatracialracial"Pany(@character_level >= 15, @race:ifrit, @race:oread, @race:sylph, @race:undine)•
-feat:oread_earth_gliderOread Earth Gliderfeatracialracial"Pall(@feat:oread_burrower, @feat:stony_step, @character_level >= 13, @race:oread)Y
-feat:extra_elemental_assaultExtra Elemental Assaultfeatracialracial"
-@race:suliF
-feat:stoic_pose
-Stoic Posefeatracialracial"@race:svirfneblinB
-feat:cloud_gazerCloud Gazerfeatracialracial"@race:sylph
-feat:elemental_jauntElemental Jauntfeatracialracial"Pany(@character_level >= 15, @race:ifrit, @race:oread, @race:sylph, @race:undine)a
-feat:inner_breathInner Breathfeatracialracial"(all(@character_level >= 11, @race:sylph)H
-feat:carrion_feederCarrion Feederfeatracialracial"@race:tengud
-feat:long_nose_formLong-Nose Formfeatracialracial"'all(@character_level >= 3, @race:tengu)O
-feat:armor_of_the_pitArmor of the Pitfeatracialracial"@race:tiefling
-feat:elemental_jauntElemental Jauntfeatracialracial"Pany(@character_level >= 15, @race:ifrit, @race:oread, @race:sylph, @race:undine)G
-feat:water_skinnedWater Skinnedfeatracialracial"@race:undineE
-feat:shadowy_dashShadowy Dashfeatracialracial"@race:wayango
-feat:focusing_blowFocusing Blowfeatteamworkteamwork"0all(@feat:hobgoblin_discipline, @race:hobgoblin)f
-feat:horde_chargeHorde Chargefeatteamworkteamwork")any(@bab >= 1, @race:half_orc, @race:orc)

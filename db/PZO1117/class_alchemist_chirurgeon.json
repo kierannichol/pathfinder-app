@@ -1,0 +1,42 @@
+{
+  "id": "class:alchemist#chirurgeon",
+  "name": "Chirurgeon",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:poison_use#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "An alchemist who studies anatomy and uses this knowledge to heal is a chirurgeon."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_use#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:infused_curative#alchemist_chirurgeon"],
+            "linksToRemove": ["ability:poison_use#alchemist"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:anaesthetic#alchemist_chirurgeon"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:power_over_death#alchemist_chirurgeon"],
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

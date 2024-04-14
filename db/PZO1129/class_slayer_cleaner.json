@@ -1,0 +1,47 @@
+{
+  "id": "class:slayer#cleaner",
+  "name": "Cleaner",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer AND !@modifies:ability:stalker#slayer AND !@modifies:ability:slayer_talent#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:deceitful#slayer_cleaner"],
+            "linksToRemove": ["ability:track#slayer"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:without_a_trace#slayer_cleaner"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:mislead#slayer_cleaner"],
+            "linksToRemove": ["ability:stalker#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

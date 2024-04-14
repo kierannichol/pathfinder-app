@@ -1,0 +1,63 @@
+{
+  "id": "class:paladin#divine_hunter",
+  "name": "Divine Hunter",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:aura_of_courage#paladin AND !@modifies:ability:aura_of_faith#paladin AND !@modifies:ability:aura_of_resolve#paladin AND !@modifies:ability:aura_of_justice#paladin",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most paladins rush into battle, meeting evil toe-to-toe. The divine hunter prefers to engage evil from afar, striking down her foes before they can threaten her allies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_courage#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_faith#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_resolve#paladin",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_justice#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:shared_precision#paladin_divine_hunter"],
+            "linksToRemove": ["ability:aura_of_courage#paladin"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:divine_bond#paladin_divine_hunter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:distant_mercy#paladin_divine_hunter"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:aura_of_care#paladin_divine_hunter"],
+            "linksToRemove": ["ability:aura_of_resolve#paladin"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:hunters_blessing#paladin_divine_hunter"],
+            "linksToRemove": ["ability:aura_of_justice#paladin"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:righteous_hunter#paladin_divine_hunter"],
+            "linksToRemove": ["ability:aura_of_faith#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

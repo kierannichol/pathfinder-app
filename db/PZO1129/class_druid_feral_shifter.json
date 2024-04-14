@@ -1,0 +1,54 @@
+{
+  "id": "class:druid#feral_shifter",
+  "name": "Feral Shifter",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:venom_immunity#druid AND !@modifies:ability:nature_bond#druid AND !@modifies:ability:a_thousand_faces#druid AND !@modifies:ability:timeless_body#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_bond#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:a_thousand_faces#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:timeless_body#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:animal_focus#druid_feral_shifter"],
+            "linksToRemove": ["ability:nature_bond#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:second_animal_focus#druid_feral_shifter"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:a_thousand_faces#druid"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:timeless_body#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

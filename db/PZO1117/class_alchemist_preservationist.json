@@ -1,0 +1,56 @@
+{
+  "id": "class:alchemist#preservationist",
+  "name": "Preservationist",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:poison_immunity#alchemist AND !@modifies:ability:poison_use#alchemist AND !@modifies:ability:persistent_mutagen#alchemist",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_use#alchemist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:persistent_mutagen#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:bottled_ally_vi#alchemist_preservationist"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:bottled_ally_i#alchemist_preservationist"],
+            "linksToRemove": ["ability:poison_use#alchemist"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bottled_ally_ii#alchemist_preservationist"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:bottled_ally_iii#alchemist_preservationist"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:bottled_ally_iv#alchemist_preservationist"],
+            "linksToRemove": ["ability:poison_immunity#alchemist"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:bottled_ally_v#alchemist_preservationist"],
+            "linksToRemove": ["ability:persistent_mutagen#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

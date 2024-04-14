@@ -1,0 +1,69 @@
+{
+  "id": "class:witch#mountain_witch",
+  "name": "Mountain Witch",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:hex#witch",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hex#witch",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:witch",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch", "ability:mountain_beast_empathy#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch", "ability:hex#witch"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:spellcasting#witch_mountain_witch"],
+            "linksToRemove": ["ability:hex#witch"]
+          }]
+        }]
+      }]
+    }
+  }
+}

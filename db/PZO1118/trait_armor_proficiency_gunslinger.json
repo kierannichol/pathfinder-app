@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#gunslinger",
+  "name": "Armor Proficiency (Gunslinger)",
+  "tags": ["class_feature", "gunslinger", "trait"],
+  "description": {
+    "text": "A Gunslinger is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

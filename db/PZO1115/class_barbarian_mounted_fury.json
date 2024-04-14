@@ -1,0 +1,47 @@
+{
+  "id": "class:barbarian#mounted_fury",
+  "name": "Mounted Fury",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:fast_movement#barbarian AND !@modifies:ability:uncanny_dodge#barbarian AND !@modifies:ability:improved_uncanny_dodge#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Many barbarian tribes are masters of the horse, teaching their members how to ride from a young age. As a result, barbarians from such tribes are even more terrifying when mounted, using their steeds\u0027 speed and strength to great advantage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:fast_rider#barbarian_mounted_fury"],
+            "linksToRemove": ["ability:fast_movement#barbarian"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:bestial_mount#barbarian_mounted_fury"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

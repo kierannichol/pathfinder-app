@@ -1,0 +1,39 @@
+{
+  "id": "class:monk#master_of_many_styles",
+  "name": "Master of Many Styles",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:perfect_self#monk AND !@modifies:ability:flurry_of_blows#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The master of many styles is a collector. For every move, he seeks a counter. For every style, he has a riposte. Ultimately, he seeks perfection through the fusion of styles."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:flurry_of_blows#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bonus_feat#monk_master_of_many_styles", "ability:fuse_style#monk_master_of_many_styles"],
+            "linksToRemove": ["ability:flurry_of_blows#monk"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:perfect_style#monk_master_of_many_styles"],
+            "linksToRemove": ["ability:perfect_self#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:aberrant_bloodline",
+  "name": "Aberrant Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "There is a taint in your blood, one that is alien and bizarre. You tend to think in odd ways, approaching problems from an angle that most would not expect. Over time, this taint manifests itself in your physical form."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:acidic_ray#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:long_limbs#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:aberrant_form#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:unusual_anatomy#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:alien_resistance#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will", "feat:silent_spell", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will", "feat:silent_spell", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:combat_casting", "feat:improved_disarm", "feat:improved_grapple", "feat:improved_initiative", "feat:improved_unarmed_strike", "feat:iron_will", "feat:silent_spell", "feat:skill_focus"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

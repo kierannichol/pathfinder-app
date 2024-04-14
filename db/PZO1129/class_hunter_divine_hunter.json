@@ -1,0 +1,50 @@
+{
+  "id": "class:hunter#divine_hunter",
+  "name": "Divine Hunter",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:teamwork_feat#hunter",
+  "maxStacks": 1,
+  "description": {
+    "text": "While most hunters heed the call of nature and fight to protect its bounty, some are inspired to serve a higher power. These divine hunters use faith to aid them in their struggles, and their faith infuses their animal companions, making these companions champions of their deities."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunter_tactics#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:teamwork_feat#hunter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:domain#hunter_divine_hunter", "ability:otherworldly_companion#hunter_divine_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter", "ability:hunter_tactics#hunter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

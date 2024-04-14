@@ -1,0 +1,38 @@
+{
+  "id": "trait:armor_proficiency#skald",
+  "name": "Armor Proficiency (Skald)",
+  "tags": ["class_feature", "skald", "trait"],
+  "description": {
+    "text": "A Skald is proficient with light and medium armor, plus all shields (except tower shields)."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_shield",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:buckler",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:medium_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_shield",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

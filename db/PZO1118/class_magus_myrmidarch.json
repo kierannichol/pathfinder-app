@@ -1,0 +1,90 @@
+{
+  "id": "class:magus#myrmidarch",
+  "name": "Myrmidarch",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:magus_arcana_normally#magus AND !@modifies:ability:spell_recall#magus AND !@modifies:ability:fighter_training_the_magus_gains#magus AND !@modifies:ability:improved_spell_combat#magus AND !@modifies:ability:improved_spell_recall#magus AND !@modifies:ability:true_magus#magus AND !@modifies:ability:greater_spell_combat#magus",
+  "maxStacks": 1,
+  "description": {
+    "text": "The myrmidarch is a skilled specialist, using magic to supplement and augment his martial mastery. Less inclined to mix the two than a typical magus, the myrmidarch seeks supremacy with blade, bow, and armor."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:magus_arcana_normally#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fighter_training_the_magus_gains#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_spell_combat#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:true_magus#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_spell_combat#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:magus_arcana_normally#magus"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:armor_mastery#magus_myrmidarch"],
+            "linksToRemove": ["ability:true_magus#magus"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:ranged_spellstrike#magus_myrmidarch"],
+            "linksToRemove": ["ability:spell_recall#magus"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:weapon_training#magus_myrmidarch"],
+            "linksToRemove": ["ability:magus_arcana_normally#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:fighter_training#magus_myrmidarch"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:armor_training#magus_myrmidarch"],
+            "linksToRemove": ["ability:improved_spell_combat#magus"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:fighter_training_the_magus_gains#magus"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:improved_spell_recall#magus"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:magus_arcana_normally#magus"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:greater_spell_combat#magus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

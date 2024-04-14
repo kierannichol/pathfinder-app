@@ -1,0 +1,33 @@
+{
+  "id": "trait:armor_proficiency#bard",
+  "name": "Armor Proficiency (Bard)",
+  "tags": ["class_feature", "bard", "trait"],
+  "description": {
+    "text": "A Bard is proficient with light armor, plus all shields (except tower shields)."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_shield",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:buckler",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_shield",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

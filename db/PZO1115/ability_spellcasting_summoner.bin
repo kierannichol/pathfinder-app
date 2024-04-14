@@ -1,0 +1,9 @@
+
+ability:spellcasting#summonerSpell Casting (Summoner)class_featuresummonerability¢
+Summoner can cast spells.ª¼¹ª•’
+%trait:level_1_spells_per_day#summoneri1+if(@class:summoner>1,1,0)+if(@class:summoner>2,1,0)+if(@class:summoner>4,1,0)+if(@class:summoner>8,1,0)ª³°
+%trait:level_2_spells_per_day#summoner†if(@class:summoner>=4,1+if(@class:summoner>4,1,0)+if(@class:summoner>5,1,0)+if(@class:summoner>7,1,0)+if(@class:summoner>11,1,0),null)ª´±
+%trait:level_3_spells_per_day#summoner‡if(@class:summoner>=7,1+if(@class:summoner>7,1,0)+if(@class:summoner>8,1,0)+if(@class:summoner>10,1,0)+if(@class:summoner>14,1,0),null)ª·´
+%trait:level_4_spells_per_day#summonerŠif(@class:summoner>=10,1+if(@class:summoner>10,1,0)+if(@class:summoner>11,1,0)+if(@class:summoner>13,1,0)+if(@class:summoner>17,1,0),null)ª·´
+%trait:level_5_spells_per_day#summonerŠif(@class:summoner>=13,1+if(@class:summoner>13,1,0)+if(@class:summoner>14,1,0)+if(@class:summoner>16,1,0)+if(@class:summoner>18,1,0),null)ª·´
+%trait:level_6_spells_per_day#summonerŠif(@class:summoner>=16,1+if(@class:summoner>16,1,0)+if(@class:summoner>17,1,0)+if(@class:summoner>18,1,0)+if(@class:summoner>19,1,0),null)

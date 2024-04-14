@@ -1,0 +1,83 @@
+{
+  "id": "class:brawler#strangler",
+  "name": "Strangler",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:awesome_blow#brawler AND !@modifies:ability:improved_awesome_blow#brawler AND !@modifies:ability:knockout#brawler AND !@modifies:ability:ac_bonus#brawler AND !@modifies:ability:brawlers_flurry#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "A strangler is trained to choke the life out of her victims with her vise-like grip. Some stranglers are self-taught and are little more than brutish murderers, unhinged sociopaths, or opportunistic alley-bashers. Others are members of murder cults or specialized schools of assassination, trained since the cradle to kill with their bare hands."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:awesome_blow#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_awesome_blow#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:knockout#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ac_bonus#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:brawlers_flurry#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:sleeper_hold#brawler_strangler", "ability:neckbreaker#brawler_strangler"],
+            "linksToRemove": ["ability:knockout#brawler", "ability:awesome_blow#brawler"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:strangle#brawler_strangler"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:practiced_strangler#brawler_strangler"],
+            "linksToRemove": ["ability:brawlers_flurry#brawler"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:improved_awesome_blow#brawler"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:sleeper_hold#brawler_strangler"],
+            "linksToRemove": ["ability:ac_bonus#brawler", "ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:brawlers_flurry#brawler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:sleeper_hold#brawler_strangler"],
+            "linksToRemove": ["ability:knockout#brawler"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:ac_bonus#brawler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:brawlers_flurry#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "class:ranger#shapeshifter",
+  "name": "Shapeshifter",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:camouflage#ranger AND !@modifies:ability:master_hunter#ranger AND !@modifies:ability:favored_terrain#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most rangers venture into the wilderness, but there are some who let the wilderness seep into them. Whether by curse, disease, ancient rite, a slight lycanthropic influence in the blood, or the corrupting influence of chaos, these rangers embrace the wild to transform themselves into something untamed and feral. Shapeshifters are often held in awe, but are even more often feared."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:master_hunter#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:favored_terrain#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:shifters_blessing#ranger_shapeshifter"],
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:master_shifter#ranger_shapeshifter"],
+            "linksToRemove": ["ability:master_hunter#ranger"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:dual_form_shifter#ranger_shapeshifter"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:favored_terrain#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "feat:improved_disarm",
+  "name": "Improved Disarm",
+  "tags": ["feat", "combat"],
+  "enabledFormula": "all(@int_score\u003e\u003d13,@feat:combat_expertise)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You are skilled at knocking weapons from a foe\u0027s grasp.",
+    "sections": {
+      "Benefit": "You do not provoke an attack of opportunity when performing a disarm combat maneuver. In addition, you receive a +2 bonus on checks made to disarm a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to disarm you.",
+      "Normal": "You provoke an attack of opportunity when performing a disarm combat maneuver."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

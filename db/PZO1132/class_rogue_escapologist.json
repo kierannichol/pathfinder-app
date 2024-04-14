@@ -1,0 +1,40 @@
+{
+  "id": "class:rogue#escapologist",
+  "name": "Escapologist",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#rogue AND !@modifies:ability:uncanny_dodge#rogue",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:unfettered_mind#rogue_escapologist"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:uncanny_dodge#rogue"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:impossible_escape#rogue_escapologist"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "class:arcanist#spell_specialist",
+  "name": "Spell Specialist",
+  "tags": ["archetype", "arcanist"],
+  "enabledFormula": "!@modifies:ability:arcanist_exploit#arcanist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Where most arcanists are broad in their study of magic, a spell specialist has her power focused in a few spells. Spell specialists are able to warp and twist the magic of their signature spells in ways other casters cannot."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:arcanist_exploit#arcanist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:arcanist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spellwarp#arcanist_spell_specialist"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:spellwarp#arcanist_spell_specialist"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:spellwarp#arcanist_spell_specialist"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:spellwarp#arcanist_spell_specialist"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

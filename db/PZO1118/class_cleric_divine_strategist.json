@@ -1,0 +1,66 @@
+{
+  "id": "class:cleric#divine_strategist",
+  "name": "Divine Strategist",
+  "tags": ["archetype", "cleric"],
+  "enabledFormula": "!@modifies:ability:channel_energy#cleric",
+  "maxStacks": 1,
+  "description": {
+    "text": "The divine strategist leads the armies of the faithful, not from the front lines but through her clever strategy and tactical acumen."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:channel_energy#cleric",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cleric",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:master_tactician#cleric_divine_strategist"],
+            "linksToRemove": ["ability:channel_energy#cleric"]
+          }]
+        }]
+      }]
+    }
+  }
+}

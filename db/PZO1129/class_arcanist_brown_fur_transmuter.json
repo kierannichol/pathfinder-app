@@ -1,0 +1,43 @@
+{
+  "id": "class:arcanist#brown_fur_transmuter",
+  "name": "Brown-Fur Transmuter",
+  "tags": ["archetype", "arcanist"],
+  "enabledFormula": "!@modifies:ability:magical_supremacy#arcanist AND !@modifies:ability:arcanist_exploit#arcanist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Frequently called “brown-furs,\"these transmutation-focused arcanists are known for transforming themselves into animals. What few realize is that these specialized arcanists excel at turning themselves--and others--into all kinds of creatures."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:magical_supremacy#arcanist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcanist_exploit#arcanist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:arcanist",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:powerful_change#arcanist_brown_fur_transmuter"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:transmutation_supremacy#arcanist_brown_fur_transmuter"],
+            "linksToRemove": ["ability:magical_supremacy#arcanist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:share_transmutation#arcanist_brown_fur_transmuter"],
+            "linksToRemove": ["ability:arcanist_exploit#arcanist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

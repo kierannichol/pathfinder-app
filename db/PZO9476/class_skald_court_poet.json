@@ -1,0 +1,62 @@
+{
+  "id": "class:skald#court_poet",
+  "name": "Court Poet",
+  "tags": ["archetype", "skald"],
+  "enabledFormula": "!@modifies:ability:inspired_rage#skald AND !@modifies:ability:song_of_strength#skald AND !@modifies:ability:well_versed#skald",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:inspired_rage#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:song_of_strength#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:well_versed#skald",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:skald",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:inspired_rage#skald"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:insightful_contemplation#skald_court_poet"],
+            "linksToRemove": ["ability:inspired_rage#skald"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:handling_the_crowd#skald_court_poet"],
+            "linksToRemove": ["ability:well_versed#skald"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:inspired_rage#skald"]
+          }, {
+            "targetStackCount": 4,
+            "linksToRemove": ["ability:inspired_rage#skald"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:song_of_inspiration#skald_court_poet"],
+            "linksToRemove": ["ability:song_of_strength#skald"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:inspired_rage#skald"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:inspired_rage#skald"]
+          }]
+        }]
+      }]
+    }
+  }
+}

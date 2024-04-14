@@ -1,0 +1,76 @@
+{
+  "id": "class:bloodrager#blood_conduit",
+  "name": "Blood Conduit",
+  "tags": ["archetype", "bloodrager"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#bloodrager AND !@modifies:ability:fast_movement#bloodrager AND !@modifies:ability:uncanny_dodge#bloodrager AND !@modifies:ability:bloodline_feat#bloodrager AND !@modifies:ability:indomitable_will#bloodrager",
+  "maxStacks": 1,
+  "description": {
+    "text": "Blood conduits learn to channel their arcane might directly through their flesh, without the need for mystical words or gestures."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bloodline_feat#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:indomitable_will#bloodrager",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:contact_specialist#bloodrager_blood_conduit"],
+            "linksToRemove": ["ability:fast_movement#bloodrager"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:spell_conduit#bloodrager_blood_conduit"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:reflexive_conduit#bloodrager_blood_conduit"],
+            "linksToRemove": ["ability:indomitable_will#bloodrager"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:bloodline_feat#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

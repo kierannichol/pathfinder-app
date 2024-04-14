@@ -1,0 +1,104 @@
+{
+  "id": "class:monk#martial_artist",
+  "name": "Martial Artist",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:slow_fall#monk AND !@modifies:ability:abundant_step#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:empty_body#monk AND !@modifies:ability:diamond_soul#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The martial artist pursues a mastery of pure martial arts without the monastic traditions. He is a master of form, but lacks the ability to harness his ki."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slow_fall#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:abundant_step#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ki_pool#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:empty_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_soul#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:pain_points#monk_martial_artist"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:martial_arts_master#monk_martial_artist", "ability:exploit_weakness#monk_martial_artist"],
+            "linksToRemove": ["ability:slow_fall#monk", "ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:extreme_endurance#monk_martial_artist"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:physical_resistance#monk_martial_artist"],
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:slow_fall#monk", "ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:bonus_feat#monk_martial_artist"],
+            "linksToRemove": ["ability:slow_fall#monk", "ability:abundant_step#monk"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:defensive_roll#monk_martial_artist"],
+            "linksToRemove": ["ability:diamond_soul#monk"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:slow_fall#monk", "ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:slow_fall#monk"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:greater_defensive_roll#monk_martial_artist"],
+            "linksToRemove": ["ability:empty_body#monk"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:perfect_self#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

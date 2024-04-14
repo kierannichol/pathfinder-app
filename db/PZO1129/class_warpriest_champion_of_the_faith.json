@@ -1,0 +1,60 @@
+{
+  "id": "class:warpriest#champion_of_the_faith",
+  "name": "Champion of The Faith",
+  "tags": ["archetype", "warpriest"],
+  "enabledFormula": "!@modifies:ability:sacred_weapon#warpriest AND !@modifies:ability:bonus_feat#warpriest AND !@modifies:ability:channel_energy#warpriest",
+  "maxStacks": 1,
+  "description": {
+    "text": "Champions of the faith are crusaders who use the power of their divine patron to annihilate the faith\u0027s enemies."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:sacred_weapon#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:channel_energy#warpriest",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:sacred_weapon#warpriest_champion_of_the_faith"],
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:detect_alignment#warpriest_champion_of_the_faith"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:smite#warpriest_champion_of_the_faith"],
+            "linksToRemove": ["ability:sacred_weapon#warpriest", "ability:channel_energy#warpriest"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:sacred_weapon#warpriest"]
+          }]
+        }]
+      }]
+    }
+  }
+}

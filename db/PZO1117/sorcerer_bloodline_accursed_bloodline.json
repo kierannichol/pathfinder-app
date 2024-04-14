@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:accursed_bloodline",
+  "name": "Accursed Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "Misfortune, pestilence, and nightmares follow your family like vermin drawn to carrion. Somewhere in your family history, a hag\u0027s foul influence entered your bloodline. You may actually be related to the hag, or you may still be suffering the effects of a curse that a hag laid upon your kin in generations past. Now the hag\u0027s powers are part of your heritage."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:horrific_visage#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:wretched_endurance#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:fearsome_survival#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:dread_gaze#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:dream_walking#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_casting", "feat:deceitful", "feat:defensive_combat_training", "feat:endurance", "feat:great_fortitude", "feat:mounted_combat"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_casting", "feat:deceitful", "feat:defensive_combat_training", "feat:endurance", "feat:great_fortitude", "feat:mounted_combat"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:alertness", "feat:blind_fight", "feat:combat_casting", "feat:deceitful", "feat:defensive_combat_training", "feat:endurance", "feat:great_fortitude", "feat:mounted_combat"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

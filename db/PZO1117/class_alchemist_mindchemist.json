@@ -1,0 +1,33 @@
+{
+  "id": "class:alchemist#mindchemist",
+  "name": "Mindchemist",
+  "tags": ["archetype", "alchemist"],
+  "enabledFormula": "!@modifies:ability:poison_use#alchemist",
+  "maxStacks": 1,
+  "description": {
+    "text": "While most alchemists use mutagens to boost their physical ability at the cost of mental ability, some use alchemy for the opposite purpose--to boost the power of the mind and memory. A mindchemist can reach incredible levels of mental acuity, but suffers lingering debilitating effects to his physique."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:poison_use#alchemist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:alchemist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:cognatogen#alchemist_mindchemist"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:perfect_recall#alchemist_mindchemist"],
+            "linksToRemove": ["ability:poison_use#alchemist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

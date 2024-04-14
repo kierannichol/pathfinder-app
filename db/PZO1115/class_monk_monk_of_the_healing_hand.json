@@ -1,0 +1,55 @@
+{
+  "id": "class:monk#monk_of_the_healing_hand",
+  "name": "Monk of the Healing Hand",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:quivering_palm#monk AND !@modifies:ability:perfect_self#monk AND !@modifies:ability:wholeness_of_body#monk AND !@modifies:ability:diamond_body#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:perfect_self#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wholeness_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:true_sacrifice#monk_monk_of_the_healing_hand"],
+            "linksToRemove": ["ability:perfect_self#monk"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:ancient_healing_hand#monk_monk_of_the_healing_hand"],
+            "linksToRemove": ["ability:wholeness_of_body#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:ki_sacrifice#monk_monk_of_the_healing_hand"],
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:quivering_palm#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

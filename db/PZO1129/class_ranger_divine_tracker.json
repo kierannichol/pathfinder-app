@@ -1,0 +1,30 @@
+{
+  "id": "class:ranger#divine_tracker",
+  "name": "Divine Tracker",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Blessed by his deity, a divine tracker hunts down those he deems deserving of his retribution. His weapon is likely to find purchase in his favored enemy."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:blessings#ranger_divine_tracker"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

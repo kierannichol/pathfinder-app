@@ -1,0 +1,39 @@
+{
+  "id": "class:rogue#counterfeit_mage",
+  "name": "Counterfeit Mage",
+  "tags": ["archetype", "rogue"],
+  "enabledFormula": "!@modifies:ability:rogue_talent#rogue AND !@modifies:ability:trapfinding#rogue",
+  "maxStacks": 1,
+  "description": {
+    "text": "Charlatans and stage magicians use slight of hand to fake magic. A counterfeit mage goes a step further, parroting the motions and activation phrases used by arcane casters to activate wands or other magical accoutrements. While counterfeit mages rarely fool a real wizard, their command of the arcane is enough to convince most lay people."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:rogue_talent#rogue",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:trapfinding#rogue",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:rogue",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:magical_expertise#rogue_counterfeit_mage"],
+            "linksToRemove": ["ability:trapfinding#rogue"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:signature_wand#rogue_counterfeit_mage"],
+            "linksToRemove": ["ability:rogue_talent#rogue"]
+          }]
+        }]
+      }]
+    }
+  }
+}

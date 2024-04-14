@@ -1,0 +1,61 @@
+{
+  "id": "class:skald#totemic_skald",
+  "name": "Totemic Skald",
+  "tags": ["archetype", "skald"],
+  "enabledFormula": "!@modifies:ability:spell_kenning#skald AND !@modifies:ability:uncanny_dodge#skald AND !@modifies:ability:rage_power#skald AND !@modifies:ability:improved_uncanny_dodge#skald",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spell_kenning#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:rage_power#skald",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#skald",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:skald",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:spell_kenning#skald"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:totem#skald_totemic_skald"],
+            "linksToRemove": ["ability:rage_power#skald"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:totem_empathy#skald_totemic_skald"],
+            "linksToRemove": ["ability:uncanny_dodge#skald"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:wild_shape#skald_totemic_skald"],
+            "linksToRemove": ["ability:spell_kenning#skald"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:improved_uncanny_dodge#skald"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:spell_kenning#skald"]
+          }]
+        }]
+      }]
+    }
+  }
+}

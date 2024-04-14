@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:protean_bloodline",
+  "name": "Protean Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You have in your veins the ever-changing wildness of primal chaos, the raw essence of unbound creation. Your mind and spirit burst with the constant inspiration of consummate freedom, though you have difficulty following through on a task when another, new and exciting, catches your interest."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:protoplasm#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:protean_resistances#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:black_tentacles#sorcerer", "ability:avatar_of_chaos#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:reality_wrinkle#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:spatial_tear#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:agile_maneuvers", "feat:defensive_combat_training", "feat:enlarge_spell", "feat:great_fortitude", "feat:improved_great_fortitude", "feat:skill_focus", "feat:spell_focus", "feat:toughness"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:agile_maneuvers", "feat:defensive_combat_training", "feat:enlarge_spell", "feat:great_fortitude", "feat:improved_great_fortitude", "feat:skill_focus", "feat:spell_focus", "feat:toughness"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:agile_maneuvers", "feat:defensive_combat_training", "feat:enlarge_spell", "feat:great_fortitude", "feat:improved_great_fortitude", "feat:skill_focus", "feat:spell_focus", "feat:toughness"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

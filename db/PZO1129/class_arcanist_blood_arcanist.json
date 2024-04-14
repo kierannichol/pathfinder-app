@@ -1,0 +1,47 @@
+{
+  "id": "class:arcanist#blood_arcanist",
+  "name": "Blood Arcanist",
+  "tags": ["archetype", "arcanist"],
+  "enabledFormula": "!@modifies:ability:arcanist_exploits#arcanist AND !@modifies:ability:magical_supremacy#arcanist",
+  "maxStacks": 1,
+  "description": {
+    "text": "Though most arcanists possess only a rudimentary innate arcane gift, the blood arcanist has the full power of a bloodline to draw upon."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:arcanist_exploits#arcanist",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:magical_supremacy#arcanist",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:arcanist",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+          }, {
+            "targetStackCount": 3,
+            "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:bloodline#arcanist_blood_arcanist"],
+            "linksToRemove": ["ability:magical_supremacy#arcanist"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:arcanist_exploits#arcanist"]
+          }]
+        }]
+      }]
+    }
+  }
+}

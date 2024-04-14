@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#summoner",
+  "name": "Armor Proficiency (Summoner)",
+  "tags": ["class_feature", "summoner", "trait"],
+  "description": {
+    "text": "A Summoner is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

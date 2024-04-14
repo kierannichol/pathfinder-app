@@ -1,0 +1,51 @@
+{
+  "id": "class:warpriest#divine_commander",
+  "name": "Divine Commander",
+  "tags": ["archetype", "warpriest"],
+  "enabledFormula": "!@modifies:ability:blessings#warpriest AND !@modifies:ability:bonus_feat#warpriest",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some warpriests are called to lead great armies and face legions of foes. These divine commanders live for war and fight for glory. Their hearts quicken at battle cries, and they charge forth with their deity\u0027s symbol held high. These leaders of armies do so to promote the agenda of their faith, and lead armies of devoted followers willing to give their lives for the cause."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:blessings#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:mount#warpriest_divine_commander"],
+            "linksToRemove": ["ability:blessings#warpriest"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:battle_tactician#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:blessed_mount#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:greater_battle_tactician#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:bless_army#warpriest_divine_commander"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }]
+        }]
+      }]
+    }
+  }
+}

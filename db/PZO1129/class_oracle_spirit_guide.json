@@ -1,0 +1,36 @@
+{
+  "id": "class:oracle#spirit_guide",
+  "name": "Spirit Guide",
+  "tags": ["archetype", "oracle"],
+  "enabledFormula": "!@modifies:ability:revelation#oracle",
+  "maxStacks": 1,
+  "description": {
+    "text": "Through her exploration of the universe\u0027s mysteries, a spirit guide opens connections to the spirit world and forms bonds with the entities that inhabit it."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:revelation#oracle",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:oracle",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:bonded_spirit#oracle_spirit_guide"],
+            "linksToRemove": ["ability:revelation#oracle"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:revelation#oracle"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:revelation#oracle"]
+          }]
+        }]
+      }]
+    }
+  }
+}

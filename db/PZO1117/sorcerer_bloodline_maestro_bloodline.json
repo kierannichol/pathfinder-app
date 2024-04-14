@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:maestro_bloodline",
+  "name": "Maestro Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The spiritual power of art and song runs strongly through your family line. This may be the result of ancient pacts made with azata patrons, or even an inheritance from a lillend or trumpet archon ancestor. It could also be the lingering taint of a less savory heritage, such as from a harpy or a forefather driven to madness by the disquieting gibbering of a shoggoth. However it came to be, your family\u0027s artistic bent shows itself strongly in your magic."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:beguiling_voice#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:fascinate#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:grand_maestro#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:perfect_voice#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:inspire#sorcerer", "ability:greater_heroism#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:deceitful", "feat:greater_spell_focus", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus", "feat:spell_focus", "feat:spellsong", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:deceitful", "feat:greater_spell_focus", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus", "feat:spell_focus", "feat:spellsong", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:deceitful", "feat:greater_spell_focus", "feat:lingering_performance", "feat:persuasive", "feat:skill_focus", "feat:spell_focus", "feat:spellsong", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

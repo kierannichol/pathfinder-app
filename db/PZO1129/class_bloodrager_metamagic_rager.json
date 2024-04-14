@@ -1,0 +1,30 @@
+{
+  "id": "class:bloodrager#metamagic_rager",
+  "name": "Metamagic Rager",
+  "tags": ["archetype", "bloodrager"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#bloodrager",
+  "maxStacks": 1,
+  "description": {
+    "text": "While metamagic is difficult for many bloodragers to utilize, a talented few are able to channel their bloodrage in ways that push their spells to impressive ends."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:meta_rage#bloodrager_metamagic_rager"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

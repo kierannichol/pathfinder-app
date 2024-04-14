@@ -1,0 +1,29 @@
+{
+  "id": "class:slayer#sniper",
+  "name": "Sniper",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:track#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:track#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:accuracy#slayer_sniper"],
+            "linksToRemove": ["ability:track#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

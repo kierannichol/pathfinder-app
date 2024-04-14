@@ -1,0 +1,68 @@
+{
+  "id": "class:warpriest#forgepriest",
+  "name": "Forgepriest",
+  "tags": ["archetype", "warpriest"],
+  "enabledFormula": "!@modifies:ability:blessings#warpriest AND !@modifies:ability:bonus_feat#warpriest AND !@modifies:ability:channel_energy#warpriest",
+  "maxStacks": 1,
+  "description": {
+    "text": "Armorers of exquisite skill, forgepriests take inspiration from their deity to produce the most perfect weapons and armor they can, the better to equip the armies of the faithful."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:blessings#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#warpriest",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:channel_energy#warpriest",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:warpriest",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:blessings#warpriest_forgepriest"],
+            "linksToRemove": ["ability:blessings#warpriest"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest", "ability:craft_magic_arms_and_armor#warpriest_forgepriest"],
+            "linksToRemove": ["ability:bonus_feat#warpriest", "ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:creators_bond#warpriest_forgepriest"],
+            "linksToRemove": ["ability:channel_energy#warpriest"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest", "ability:heat_of_the_forge#warpriest_forgepriest"],
+            "linksToRemove": ["ability:bonus_feat#warpriest", "ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:bonus_feat#warpriest_forgepriest"],
+            "linksToRemove": ["ability:bonus_feat#warpriest"]
+          }]
+        }]
+      }]
+    }
+  }
+}

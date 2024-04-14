@@ -1,0 +1,29 @@
+{
+  "id": "class:paladin#warrior_of_the_holy_light",
+  "name": "Warrior of the Holy Light",
+  "tags": ["archetype", "paladin"],
+  "enabledFormula": "!@modifies:ability:aura_of_faith#paladin",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:aura_of_faith#paladin",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:paladin",
+          "stackModifications": [{
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:shining_light#paladin_warrior_of_the_holy_light"],
+            "linksToRemove": ["ability:aura_of_faith#paladin"]
+          }]
+        }]
+      }]
+    }
+  }
+}

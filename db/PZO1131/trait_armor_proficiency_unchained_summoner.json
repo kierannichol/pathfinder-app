@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#unchained_summoner",
+  "name": "Armor Proficiency (Unchained Summoner)",
+  "tags": ["class_feature", "unchained_summoner", "trait"],
+  "description": {
+    "text": "An Unchained Summoner is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

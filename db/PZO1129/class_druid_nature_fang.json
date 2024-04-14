@@ -1,0 +1,89 @@
+{
+  "id": "class:druid#nature_fang",
+  "name": "Nature Fang",
+  "tags": ["archetype", "druid"],
+  "enabledFormula": "!@modifies:ability:wild_shape#druid AND !@modifies:ability:resist_natures_lure#druid AND !@modifies:ability:venom_immunity#druid AND !@modifies:ability:wild_empathy#druid AND !@modifies:ability:nature_sense#druid AND !@modifies:ability:woodland_stride#druid",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:wild_shape#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:resist_natures_lure#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:venom_immunity#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wild_empathy#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:nature_sense#druid",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:woodland_stride#druid",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:druid",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:studied_target#druid_nature_fang"],
+            "linksToRemove": ["ability:wild_empathy#druid", "ability:nature_sense#druid"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 2,
+            "linksToRemove": ["ability:woodland_stride#druid"]
+          }, {
+            "targetStackCount": 20,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:slayer_talent#druid_nature_fang", "ability:sneak_attack#druid_nature_fang"],
+            "linksToRemove": ["ability:wild_shape#druid", "ability:resist_natures_lure#druid"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 8,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:swift_studied_target#druid_nature_fang"],
+            "linksToRemove": ["ability:venom_immunity#druid"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:wild_shape#druid"]
+          }]
+        }]
+      }]
+    }
+  }
+}

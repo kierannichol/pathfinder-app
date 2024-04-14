@@ -1,0 +1,48 @@
+{
+  "id": "ability:spellcasting#alchemist",
+  "name": "Spell Casting (Alchemist)",
+  "tags": ["class_feature", "alchemist", "ability"],
+  "description": {
+    "text": "Alchemist can cast spells."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "trait:level_0_spells_per_day#alchemist",
+          "formula": "3+if(@class:alchemist\u003e1,1,0)+if(@class:alchemist\u003e5,1,0)"
+        }
+      }, {
+        "setAction": {
+          "targetKey": "trait:level_1_spells_per_day#alchemist",
+          "formula": "1+if(@class:alchemist\u003e1,1,0)+if(@class:alchemist\u003e2,1,0)+if(@class:alchemist\u003e4,1,0)+if(@class:alchemist\u003e8,1,0)"
+        }
+      }, {
+        "setAction": {
+          "targetKey": "trait:level_2_spells_per_day#alchemist",
+          "formula": "if(@class:alchemist\u003e\u003d4,1+if(@class:alchemist\u003e4,1,0)+if(@class:alchemist\u003e5,1,0)+if(@class:alchemist\u003e7,1,0)+if(@class:alchemist\u003e11,1,0),null)"
+        }
+      }, {
+        "setAction": {
+          "targetKey": "trait:level_3_spells_per_day#alchemist",
+          "formula": "if(@class:alchemist\u003e\u003d7,1+if(@class:alchemist\u003e7,1,0)+if(@class:alchemist\u003e8,1,0)+if(@class:alchemist\u003e10,1,0)+if(@class:alchemist\u003e14,1,0),null)"
+        }
+      }, {
+        "setAction": {
+          "targetKey": "trait:level_4_spells_per_day#alchemist",
+          "formula": "if(@class:alchemist\u003e\u003d10,1+if(@class:alchemist\u003e10,1,0)+if(@class:alchemist\u003e11,1,0)+if(@class:alchemist\u003e13,1,0)+if(@class:alchemist\u003e17,1,0),null)"
+        }
+      }, {
+        "setAction": {
+          "targetKey": "trait:level_5_spells_per_day#alchemist",
+          "formula": "if(@class:alchemist\u003e\u003d13,1+if(@class:alchemist\u003e13,1,0)+if(@class:alchemist\u003e14,1,0)+if(@class:alchemist\u003e16,1,0)+if(@class:alchemist\u003e18,1,0),null)"
+        }
+      }, {
+        "setAction": {
+          "targetKey": "trait:level_6_spells_per_day#alchemist",
+          "formula": "if(@class:alchemist\u003e\u003d16,1+if(@class:alchemist\u003e16,1,0)+if(@class:alchemist\u003e17,1,0)+if(@class:alchemist\u003e18,1,0)+if(@class:alchemist\u003e19,1,0),null)"
+        }
+      }]
+    }
+  }
+}

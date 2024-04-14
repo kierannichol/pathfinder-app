@@ -1,0 +1,72 @@
+{
+  "id": "class:barbarian#scarred_rager",
+  "name": "Scarred Rager",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:fast_movement#barbarian AND !@modifies:ability:uncanny_dodge#barbarian AND !@modifies:ability:improved_uncanny_dodge#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some barbarians wear marks of prowess and savagery upon their bodies. The scarred rager believes each wound tells the tales of her prowess and bravery. She augments these ragged trophies with brands and tattoos in order to win the notice and favor of her gods, ancestors, or totem spirits. The scarred rager\u0027s gnarled and exotic appearance terrifies civilized onlookers, but is awe-inspiring to her savage kin."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:terrifying_visage#barbarian_scarred_rager"],
+            "linksToRemove": ["ability:fast_movement#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:tolerance#barbarian_scarred_rager"],
+            "linksToRemove": ["ability:uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:scarification#barbarian_scarred_rager"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:improved_tolerance#barbarian_scarred_rager"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#barbarian"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

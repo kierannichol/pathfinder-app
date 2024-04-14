@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#rogue",
+  "name": "Armor Proficiency (Rogue)",
+  "tags": ["class_feature", "rogue", "trait"],
+  "description": {
+    "text": "A Rogue is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

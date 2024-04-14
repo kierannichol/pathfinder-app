@@ -1,0 +1,18 @@
+{
+  "id": "feat:close_quarters_thrower",
+  "name": "Close-Quarters Thrower",
+  "tags": ["feat", "combat"],
+  "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:dodge,@feat:weapon_focus#selected_thrown_weapon)",
+  "maxStacks": 1,
+  "description": {
+    "text": "You are agile enough to avoid melee attacks while throwing weapons or bombs.",
+    "sections": {
+      "Benefit": "Choose a type of thrown weapon. You do not provoke attacks of opportunity for making ranged attacks using the selected weapon. If you are an alchemist, and you select this feat and choose alchemist bombs, you do not provoke attacks of opportunity for the process of drawing components of, creating, and throwing a bomb.",
+      "Normal": "Making a ranged attack provokes attacks of opportunity."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

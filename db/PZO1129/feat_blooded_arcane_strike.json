@@ -1,0 +1,16 @@
+{
+  "id": "feat:blooded_arcane_strike",
+  "name": "Blooded Arcane Strike",
+  "tags": ["feat", "combat"],
+  "enabledFormula": "all(@ability:arcane_strike#bard_arcane_duelist,max(@spells_per_day:arcane#*)[Arcane spells],@ability:bloodrage#bloodrager)",
+  "maxStacks": 1,
+  "description": {
+    "sections": {
+      "Benefit": "While you are bloodraging, you don\u0027t need to spend a swift action to use your Arcane Strike--it is always in effect. When you use this ability with Vital Strike, Improved Vital Strike, or Greater Vital Strike, the bonus on damage rolls for Arcane Strike is multiplied by the number of times (two, three, or four) you roll damage dice for one of those feats."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

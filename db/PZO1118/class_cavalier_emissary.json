@@ -1,0 +1,66 @@
+{
+  "id": "class:cavalier#emissary",
+  "name": "Emissary",
+  "tags": ["archetype", "cavalier"],
+  "enabledFormula": "!@modifies:ability:greater_banner#cavalier AND !@modifies:ability:tactician#cavalier AND !@modifies:ability:banner#cavalier AND !@modifies:ability:supreme_charge#cavalier AND !@modifies:ability:greater_tactician#cavalier",
+  "maxStacks": 1,
+  "description": {
+    "text": "Cavaliers serve many roles on the battlefield, from bold leaders and shock troops to dashing knights and mounted juggernauts. Some cavaliers, however, focus more on speed and mobility than they do on the raw power of the mounted charge. On foot or in the saddle, the emissary is usually first to meet the enemy, with a pointed lance, a drawn sword, or terms for surrender."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:greater_banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:tactician#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:banner#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:supreme_charge#cavalier",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_tactician#cavalier",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:cavalier",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:in_or_out_of_the_saddle#cavalier_emissary"],
+            "linksToRemove": ["ability:tactician#cavalier"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:erratic_charge#cavalier_emissary"],
+            "linksToRemove": ["ability:supreme_charge#cavalier"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:battlefield_agility#cavalier_emissary"],
+            "linksToRemove": ["ability:banner#cavalier"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:mounted_acrobatics#cavalier_emissary"],
+            "linksToRemove": ["ability:greater_tactician#cavalier"]
+          }, {
+            "targetStackCount": 14,
+            "linksToAdd": ["ability:mounted_dervish#cavalier_emissary"],
+            "linksToRemove": ["ability:greater_banner#cavalier"]
+          }]
+        }]
+      }]
+    }
+  }
+}

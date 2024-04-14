@@ -1,0 +1,47 @@
+{
+  "id": "class:slayer#grave_warden",
+  "name": "Grave Warden",
+  "tags": ["archetype", "slayer"],
+  "enabledFormula": "!@modifies:ability:stalker#slayer AND !@modifies:ability:advanced_slayer_talent#slayer AND !@modifies:ability:slayer_talent#slayer",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:stalker#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:advanced_slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:slayer_talent#slayer",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:slayer",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:holy_water_sprinkler#slayer_grave_warden"],
+            "linksToRemove": ["ability:slayer_talent#slayer"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:death_ward#slayer_grave_warden"],
+            "linksToRemove": ["ability:stalker#slayer"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:dustbringer#slayer_grave_warden"],
+            "linksToRemove": ["ability:advanced_slayer_talent#slayer"]
+          }]
+        }]
+      }]
+    }
+  }
+}

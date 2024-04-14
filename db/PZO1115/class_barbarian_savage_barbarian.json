@@ -1,0 +1,66 @@
+{
+  "id": "class:barbarian#savage_barbarian",
+  "name": "Savage Barbarian",
+  "tags": ["archetype", "barbarian"],
+  "enabledFormula": "!@modifies:ability:trap_sense#barbarian AND !@modifies:ability:damage_reduction#barbarian",
+  "maxStacks": 1,
+  "description": {
+    "text": "Some barbarians are truly savage, having little training in modern arms. These savage barbarians learn to avoid blows and toughen up their skin."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:trap_sense#barbarian",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#barbarian",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:barbarian",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 18,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:naked_courage#barbarian_savage_barbarian"],
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 6,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:natural_toughness#barbarian_savage_barbarian"],
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:damage_reduction#barbarian"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:trap_sense#barbarian"]
+          }]
+        }]
+      }]
+    }
+  }
+}

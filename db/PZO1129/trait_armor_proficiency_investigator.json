@@ -1,0 +1,18 @@
+{
+  "id": "trait:armor_proficiency#investigator",
+  "name": "Armor Proficiency (Investigator)",
+  "tags": ["class_feature", "investigator", "trait"],
+  "description": {
+    "text": "An Investigator is proficient with light armor."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}

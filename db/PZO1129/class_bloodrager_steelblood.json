@@ -1,0 +1,74 @@
+{
+  "id": "class:bloodrager#steelblood",
+  "name": "Steelblood",
+  "tags": ["archetype", "bloodrager"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#bloodrager AND !@modifies:ability:fast_movement#bloodrager AND !@modifies:ability:uncanny_dodge#bloodrager AND !@modifies:ability:damage_reduction#bloodrager AND !@modifies:trait:armor_proficiency#bloodrager",
+  "maxStacks": 1,
+  "description": {
+    "text": "Most bloodragers prefer light armor, but some learn the secret of using heavy armors. These steelbloods plod around the battlefield inspiring fear and delivering carnage from within a steel shell."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:damage_reduction#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:armor_proficiency#bloodrager",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#bloodrager_steelblood", "ability:indomitable_stance#bloodrager_steelblood"],
+            "linksToRemove": ["trait:armor_proficiency#bloodrager", "ability:fast_movement#bloodrager"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:armored_swiftness#bloodrager_steelblood"],
+            "linksToRemove": ["ability:uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:armor_training#bloodrager_steelblood"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:blood_deflection#bloodrager_steelblood"],
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:damage_reduction#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

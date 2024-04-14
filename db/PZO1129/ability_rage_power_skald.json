@@ -1,0 +1,21 @@
+{
+  "id": "ability:rage_power#skald",
+  "name": "Rage Power",
+  "tags": ["class_feature", "skald", "ability"],
+  "description": {
+    "text": "At 3rd level and every 3 levels thereafter, a skald learns a rage power that affects the skald and any allies under the influence of his inspired rage. This cannot be a rage power that requires the creature to spend a standard action or rounds of rage to activate it. For example, the skald cannot choose terrifying howl (which requires a standard action to activate), but can choose knockback (which is made in place of a melee attack).Unless otherwise noted, a skald cannot select an individual rage power more than once.When starting an inspired rage, the skald chooses which rage powers (if any) to add to the song, and all affected allies gain the benefit of these rage powers, using the skald\u0027s level as their effective barbarian level. The skald uses his skald level as his barbarian level for the purpose of selecting rage powers that require a minimum barbarian level. If the rage power\u0027s effects depend on the skald\u0027s ability modifier (such as lesser spirit totem), affected allies use the skald\u0027s ability modifier instead of their own for the purposes of this effect.If a rage power requires another rage power (such as disruptive, which requires superstition), the skald cannot grant that rage power to allies unless he can also grant that power\u0027s prerequisite. He may add multiple rage powers to an inspired rage at the same time using this ability (such as granting superstition and disruptive simultaneously).If a rage power can only be used a certain number of times per day or per rage (such as renewed vigor), each ally affected by the inspired rage song is subject to that limit (with once per rage abilities limited to once per inspired rage).If the skald has rage powers from another source, he (but not his allies) can use those rage powers during an inspired rage. He cannot select a duplicate rage power, unless that rage power can be taken multiple times.If the skald has the ability to rage from another source, he can use his skald rage powers during that rage as well."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "rage_power",
+        "label": "Rage Power",
+        "type": "rage_power",
+        "featureSelect": {
+          "optionTags": ["rage_power"],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+
+!ability:spellcasting#investigatorSpell Casting (Investigator)class_featureinvestigatorability¢
+Investigator can cast spells.ªÈ	Å	ª©¦
+)trait:level_1_spells_per_day#investigatory1+if(@class:investigator>1,1,0)+if(@class:investigator>2,1,0)+if(@class:investigator>4,1,0)+if(@class:investigator>8,1,0)ªËÈ
+)trait:level_2_spells_per_day#investigatoršif(@class:investigator>=4,1+if(@class:investigator>4,1,0)+if(@class:investigator>5,1,0)+if(@class:investigator>7,1,0)+if(@class:investigator>11,1,0),null)ªÌÉ
+)trait:level_3_spells_per_day#investigator›if(@class:investigator>=7,1+if(@class:investigator>7,1,0)+if(@class:investigator>8,1,0)+if(@class:investigator>10,1,0)+if(@class:investigator>14,1,0),null)ªÏÌ
+)trait:level_4_spells_per_day#investigatoržif(@class:investigator>=10,1+if(@class:investigator>10,1,0)+if(@class:investigator>11,1,0)+if(@class:investigator>13,1,0)+if(@class:investigator>17,1,0),null)ªÏÌ
+)trait:level_5_spells_per_day#investigatoržif(@class:investigator>=13,1+if(@class:investigator>13,1,0)+if(@class:investigator>14,1,0)+if(@class:investigator>16,1,0)+if(@class:investigator>18,1,0),null)ªÏÌ
+)trait:level_6_spells_per_day#investigatoržif(@class:investigator>=16,1+if(@class:investigator>16,1,0)+if(@class:investigator>17,1,0)+if(@class:investigator>18,1,0)+if(@class:investigator>19,1,0),null)

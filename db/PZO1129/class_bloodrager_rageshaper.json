@@ -1,0 +1,41 @@
+{
+  "id": "class:bloodrager#rageshaper",
+  "name": "Rageshaper",
+  "tags": ["archetype", "bloodrager"],
+  "enabledFormula": "!@modifies:ability:improved_uncanny_dodge#bloodrager AND !@modifies:ability:blood_sanctuary#bloodrager",
+  "maxStacks": 1,
+  "description": {
+    "text": "All bloodragers blend the unpredictable surge of arcane power with the savage fury of battle lust. For most, their rage is a conduit for the eldritch power locked in their heritage, but for a rageshaper, the latent magical energies in his blood bring about physical transformations and facilitate the blending of arcana and aggression into a deadly synthesis that few other barbarians (or even other bloodragers) can match."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:improved_uncanny_dodge#bloodrager",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:blood_sanctuary#bloodrager",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bloodrager",
+          "stackModifications": [{
+            "targetStackCount": 3,
+            "linksToRemove": ["ability:blood_sanctuary#bloodrager"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:bestial_aspect#bloodrager_rageshaper"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:furious_transformation#bloodrager_rageshaper"],
+            "linksToRemove": ["ability:improved_uncanny_dodge#bloodrager"]
+          }]
+        }]
+      }]
+    }
+  }
+}

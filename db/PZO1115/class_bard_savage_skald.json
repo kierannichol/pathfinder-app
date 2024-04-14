@@ -1,0 +1,29 @@
+{
+  "id": "class:bard#savage_skald",
+  "name": "Savage Skald",
+  "tags": ["archetype", "bard"],
+  "enabledFormula": "!@modifies:ability:fascinate#bard",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:fascinate#bard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:bard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:bardic_performance#bard_savage_skald"],
+            "linksToRemove": ["ability:fascinate#bard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

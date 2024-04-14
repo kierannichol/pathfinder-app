@@ -1,0 +1,40 @@
+{
+  "id": "class:swashbuckler#picaroon",
+  "name": "Picaroon",
+  "tags": ["archetype", "swashbuckler"],
+  "enabledFormula": "!@modifies:ability:panache#swashbuckler AND !@modifies:ability:swashbuckler_finesse#swashbuckler AND !@modifies:trait:weapon_proficiency#swashbuckler",
+  "maxStacks": 1,
+  "description": {
+    "text": "While some swashbucklers take pride in their ability to wear down an opponent with great skill at arms and clever positioning, there are those who use firearms to get in close and hit hard."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:panache#swashbuckler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:swashbuckler_finesse#swashbuckler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:trait:weapon_proficiency#swashbuckler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:swashbuckler",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:weapon_and_armor_proficiency#swashbuckler_picaroon", "ability:panache#swashbuckler_picaroon", "ability:two_weapon_finesse#swashbuckler_picaroon"],
+            "linksToRemove": ["trait:weapon_proficiency#swashbuckler", "ability:panache#swashbuckler", "ability:swashbuckler_finesse#swashbuckler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

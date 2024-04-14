@@ -1,0 +1,66 @@
+{
+  "id": "class:magus#soul_forger",
+  "name": "Soul Forger",
+  "tags": ["archetype", "magus"],
+  "enabledFormula": "!@modifies:ability:spell_recall#magus AND !@modifies:ability:counterstrike#magus AND !@modifies:ability:greater_spell_access#magus AND !@modifies:ability:improved_spell_recall#magus AND !@modifies:ability:knowledge_pool#magus",
+  "maxStacks": 1,
+  "description": {
+    "text": "The soul forger has learned the skill of infusing the raw magical essence of his soul into armaments of surpassing power, combining the mystic arts with the arts of war in a unity of steely perfection."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:counterstrike#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_spell_access#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_spell_recall#magus",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:knowledge_pool#magus",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:magus",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:destructive_counterstrike#magus_soul_forger"],
+            "linksToRemove": ["ability:counterstrike#magus"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:instantaneous_reconstruction#magus_soul_forger"],
+            "linksToRemove": ["ability:greater_spell_access#magus"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:fortify_bond#magus_soul_forger"],
+            "linksToRemove": ["ability:spell_recall#magus"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:master_smith#magus_soul_forger"],
+            "linksToRemove": ["ability:knowledge_pool#magus"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:reforge#magus_soul_forger"],
+            "linksToRemove": ["ability:improved_spell_recall#magus"]
+          }]
+        }]
+      }]
+    }
+  }
+}

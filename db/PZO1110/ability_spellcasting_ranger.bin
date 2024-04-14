@@ -1,0 +1,7 @@
+
+ability:spellcasting#rangerSpell Casting (Ranger)class_featurerangerability¢
+Ranger can cast spells.ª„ª§¤
+#trait:level_1_spells_per_day#ranger}if(@class:ranger>=4,0+if(@class:ranger>4,1,0)+if(@class:ranger>8,1,0)+if(@class:ranger>12,1,0)+if(@class:ranger>16,1,0),null)ª¨¥
+#trait:level_2_spells_per_day#ranger~if(@class:ranger>=7,0+if(@class:ranger>7,1,0)+if(@class:ranger>11,1,0)+if(@class:ranger>15,1,0)+if(@class:ranger>19,1,0),null)ª‘Ž
+#trait:level_3_spells_per_day#rangergif(@class:ranger>=10,0+if(@class:ranger>10,1,0)+if(@class:ranger>14,1,0)+if(@class:ranger>18,1,0),null)ª‘Ž
+#trait:level_4_spells_per_day#rangergif(@class:ranger>=13,0+if(@class:ranger>13,1,0)+if(@class:ranger>17,1,0)+if(@class:ranger>19,1,0),null)

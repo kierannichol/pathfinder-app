@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:stormborn_bloodline",
+  "name": "Stormborn Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "You trace your heritage to fierce and proud spirits of storm and sky, and living lightning sings in your veins."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:thunderstaff#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:stormchild#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:storm_lord#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:shock#sorcerer", "ability:thunderbolt#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:ride_the_lightning#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus", "feat:wind_stance"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus", "feat:wind_stance"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:deadly_aim", "feat:dodge", "feat:enlarge_spell", "feat:far_shot", "feat:great_fortitude", "feat:point_blank_shot", "feat:skill_focus", "feat:wind_stance"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

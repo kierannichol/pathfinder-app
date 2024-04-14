@@ -1,0 +1,29 @@
+{
+  "id": "class:witch#hex_channeler",
+  "name": "Hex Channeler",
+  "tags": ["archetype", "witch"],
+  "enabledFormula": "!@modifies:ability:hex#witch",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hex#witch",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:witch",
+          "stackModifications": [{
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:channel_energy#witch_hex_channeler"],
+            "linksToRemove": ["ability:hex#witch"]
+          }]
+        }]
+      }]
+    }
+  }
+}

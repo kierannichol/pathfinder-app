@@ -1,0 +1,48 @@
+{
+  "id": "class:summoner#evolutionist",
+  "name": "Evolutionist",
+  "tags": ["archetype", "summoner"],
+  "enabledFormula": "!@modifies:ability:makers_call#summoner AND !@modifies:ability:greater_shield_ally#summoner AND !@modifies:ability:transposition#summoner",
+  "maxStacks": 1,
+  "description": {
+    "text": "Changing an eidolon\u0027s evolutions is normally a slow process. As a summoner progresses in levels, his control over his eidolon\u0027s abilities increases. But an evolutionist possesses greater power over his eidolon\u0027s form, and is able to evolve his eidolon and its abilities to meet any challenge or face any threat as it comes up, seemingly on a whim."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:makers_call#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:greater_shield_ally#summoner",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:transposition#summoner",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:summoner",
+          "stackModifications": [{
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:mutate_eidolon#summoner_evolutionist"],
+            "linksToRemove": ["ability:makers_call#summoner"]
+          }, {
+            "targetStackCount": 8,
+            "linksToAdd": ["ability:evolve_base_form#summoner_evolutionist"],
+            "linksToRemove": ["ability:transposition#summoner"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:transmogrify#summoner_evolutionist"],
+            "linksToRemove": ["ability:greater_shield_ally#summoner"]
+          }]
+        }]
+      }]
+    }
+  }
+}

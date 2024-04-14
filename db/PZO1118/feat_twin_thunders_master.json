@@ -1,0 +1,17 @@
+{
+  "id": "feat:twin_thunders_master",
+  "name": "Twin Thunders Master",
+  "tags": ["feat", "combat"],
+  "enabledFormula": "all(any(@race:dwarf,@race:gnome),@ability:defensive_training,any(all(@feat:improved_two_weapon_fighting,@feat:two_weapon_fighting),@ability:flurry_of_blows#unchained_monk),@feat:twin_thunders,@feat:twin_thunders_flurry,@feat:weapon_focus#selected_weapon,@bab\u003e\u003d9)",
+  "maxStacks": 1,
+  "description": {
+    "text": "With thunderous simultaneous strikes, you can batter a mighty giant into submission.",
+    "sections": {
+      "Benefit": "Whenever you deal an opponent extra damage with the Twin Thunders feat, that opponent is shaken for 1 round. You also force that opponent to succeed at a Fortitude saving throw (DC 10 + half your level + your Str modifier) or become staggered for 1 round. If you use this feat to render staggered an opponent that is already staggered, you daze that opponent instead. In a similar way, you can stun an opponent that is already dazed."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

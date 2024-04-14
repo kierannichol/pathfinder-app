@@ -1,0 +1,48 @@
+{
+  "id": "class:ranger#horse_lord",
+  "name": "Horse Lord",
+  "tags": ["archetype", "ranger"],
+  "enabledFormula": "!@modifies:ability:hunters_bond#ranger AND !@modifies:ability:camouflage#ranger AND !@modifies:ability:hide_in_plain_sight#ranger",
+  "maxStacks": 1,
+  "description": {
+    "text": "Rangers of the plains use horses or other riding beasts to hunt their lands, forging a near-mystical relationship with their mounts. Horse lords are unparalleled mounted combatants, the envy of even the most dedicated cavalier."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:hunters_bond#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:camouflage#ranger",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hide_in_plain_sight#ranger",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:ranger",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:spiritual_bond#ranger_horse_lord"],
+            "linksToRemove": ["ability:hide_in_plain_sight#ranger"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:mounted_bond#ranger_horse_lord"],
+            "linksToRemove": ["ability:hunters_bond#ranger"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:strong_bond#ranger_horse_lord"],
+            "linksToRemove": ["ability:camouflage#ranger"]
+          }]
+        }]
+      }]
+    }
+  }
+}

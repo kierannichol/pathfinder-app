@@ -1,0 +1,10 @@
+
+ability:spellcasting#warpriestSpell Casting (Warpriest)class_feature	warpriestability¢
+Warpriest can cast spells.ªÅ	Â	ªca
+&trait:level_0_spells_per_day#warpriest73+if(@class:warpriest>1,1,0)+if(@class:warpriest>5,1,0)ªš—
+&trait:level_1_spells_per_day#warpriestm1+if(@class:warpriest>1,1,0)+if(@class:warpriest>2,1,0)+if(@class:warpriest>4,1,0)+if(@class:warpriest>8,1,0)ª¹¶
+&trait:level_2_spells_per_day#warpriest‹if(@class:warpriest>=4,1+if(@class:warpriest>4,1,0)+if(@class:warpriest>5,1,0)+if(@class:warpriest>7,1,0)+if(@class:warpriest>11,1,0),null)ªº·
+&trait:level_3_spells_per_day#warpriestŒif(@class:warpriest>=7,1+if(@class:warpriest>7,1,0)+if(@class:warpriest>8,1,0)+if(@class:warpriest>10,1,0)+if(@class:warpriest>14,1,0),null)ª½º
+&trait:level_4_spells_per_day#warpriestif(@class:warpriest>=10,1+if(@class:warpriest>10,1,0)+if(@class:warpriest>11,1,0)+if(@class:warpriest>13,1,0)+if(@class:warpriest>17,1,0),null)ª½º
+&trait:level_5_spells_per_day#warpriestif(@class:warpriest>=13,1+if(@class:warpriest>13,1,0)+if(@class:warpriest>14,1,0)+if(@class:warpriest>16,1,0)+if(@class:warpriest>18,1,0),null)ª½º
+&trait:level_6_spells_per_day#warpriestif(@class:warpriest>=16,1+if(@class:warpriest>16,1,0)+if(@class:warpriest>17,1,0)+if(@class:warpriest>18,1,0)+if(@class:warpriest>19,1,0),null)

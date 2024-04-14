@@ -1,0 +1,17 @@
+{
+  "id": "feat:crushing_blow",
+  "name": "Crushing Blow",
+  "tags": ["feat", "combat"],
+  "enabledFormula": "all(@feat:improved_unarmed_strike,@ability:stunning_fist#unchained_monk)",
+  "maxStacks": 1,
+  "description": {
+    "text": "Your focus allows you to smash your enemy\u0027s defenses.",
+    "sections": {
+      "Benefit": "You can make a Stunning Fist attempt as a full-round action. If successful, instead of stunning your target, you reduce the target\u0027s AC by an amount equal to your Wisdom modifier for 1 minute. This penalty does not stack with other penalties applied due to Crushing Blow."
+    }
+  },
+  "stacks": {
+    "fixedStack": {
+    }
+  }
+}

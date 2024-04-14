@@ -1,0 +1,68 @@
+{
+  "id": "sorcerer_bloodline:deep_earth_bloodline",
+  "name": "Deep Earth Bloodline",
+  "tags": ["sorcerer_bloodline"],
+  "maxStacks": 1,
+  "description": {
+    "text": "The echoing cave-songs and the rumble and creak of primal spirits deep below the ground thrum in your soul and in all your family line. You are likely slow, steady, and stable in your thinking, little prone to wandering and preferring to instead find depth in contemplation."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "featureModifications": [{
+          "targetFeatureId": "class:sorcerer",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:tremor#sorcerer"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:rockseer#sorcerer"]
+          }, {
+            "targetStackCount": 20,
+            "linksToAdd": ["ability:strength_of_stone#sorcerer"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:crystal_shard#sorcerer", "ability:bane#sorcerer"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:earth_glide#sorcerer"]
+          }]
+        }]
+      }]
+    }
+  },
+  "conditionalStacks": [{
+    "conditionFormula": "@class:sorcerer\u003e\u003d7",
+    "choices": [{
+      "choiceId": "sorcerer7:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:acrobatic_steps", "feat:alertness", "feat:blind_fight", "feat:forge_ring", "feat:nimble_moves", "feat:skill_focus", "feat:stealthy", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d13",
+    "choices": [{
+      "choiceId": "sorcerer13:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:acrobatic_steps", "feat:alertness", "feat:blind_fight", "feat:forge_ring", "feat:nimble_moves", "feat:skill_focus", "feat:stealthy", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }, {
+    "conditionFormula": "@class:sorcerer\u003e\u003d19",
+    "choices": [{
+      "choiceId": "sorcerer19:bloodline_feat",
+      "label": "Bloodline Feat",
+      "type": "bonus_feat",
+      "featureSelect": {
+        "featureIds": ["feat:acrobatic_steps", "feat:alertness", "feat:blind_fight", "feat:forge_ring", "feat:nimble_moves", "feat:skill_focus", "feat:stealthy", "feat:still_spell"],
+        "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+      }
+    }]
+  }]
+}

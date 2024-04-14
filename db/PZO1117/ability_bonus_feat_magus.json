@@ -1,0 +1,31 @@
+{
+  "id": "ability:bonus_feat#magus",
+  "name": "Bonus Feat",
+  "tags": ["class_feature", "magus", "ability"],
+  "description": {
+    "text": "At 5th level, and every six levels thereafter, a magus gains a bonus feat in addition to those gained from normal advancement. These bonus feats must be selected from those listed as combat, item creation, or metamagic feats. He must meet the prerequisites for these feats as normal."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "choices": [{
+        "choiceId": "magus_bonus_feat",
+        "label": "Magus Bonus Feat",
+        "type": "bonus_feat",
+        "featureSelect": {
+          "optionTags": ["feat+combat", "feat+item_creation", "feat+metamagic"],
+          "categories": [{
+            "label": "Combat",
+            "tag": "combat"
+          }, {
+            "label": "Metamagic",
+            "tag": "metamagic"
+          }, {
+            "label": "Item Creation",
+            "tag": "item_creation"
+          }],
+          "sortBy": "FEATURE_SELECT_CHOICE_SORTBY_NAME"
+        }
+      }]
+    }
+  }
+}

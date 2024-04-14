@@ -1,0 +1,35 @@
+{
+  "id": "class:wizard#siege_mage",
+  "name": "Siege Mage",
+  "tags": ["archetype", "wizard"],
+  "enabledFormula": "!@modifies:ability:arcane_school#wizard AND !@modifies:ability:arcane_bond#wizard",
+  "maxStacks": 1,
+  "description": {
+    "text": "The siege mage combines his arcane mastery with a supernatural link to siege engines."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_school#wizard",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:arcane_bond#wizard",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:wizard",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:siege_engineer#wizard_siege_mage", "ability:siege_engine_bond#wizard_siege_mage", "ability:siege_school#wizard_siege_mage"],
+            "linksToRemove": ["ability:arcane_bond#wizard", "ability:arcane_school#wizard"]
+          }]
+        }]
+      }]
+    }
+  }
+}

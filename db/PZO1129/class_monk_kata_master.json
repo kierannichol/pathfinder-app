@@ -1,0 +1,64 @@
+{
+  "id": "class:monk#kata_master",
+  "name": "Kata Master",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:still_mind#monk AND !@modifies:ability:quivering_palm#monk AND !@modifies:ability:ki_pool#monk AND !@modifies:ability:wholeness_of_body#monk",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:still_mind#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:ki_pool#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:wholeness_of_body#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 16,
+            "linksToAdd": ["ability:ki_pool#monk_kata_master"],
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:menacing_swordplay#monk_kata_master"],
+            "linksToRemove": ["ability:still_mind#monk"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:ki_pool#monk_kata_master"],
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:ki_pool#monk_kata_master", "ability:targeted_strike#monk_kata_master"],
+            "linksToRemove": ["ability:ki_pool#monk", "ability:wholeness_of_body#monk"]
+          }, {
+            "targetStackCount": 10,
+            "linksToAdd": ["ability:ki_pool#monk_kata_master"],
+            "linksToRemove": ["ability:ki_pool#monk"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:dizzying_defense#monk_kata_master"],
+            "linksToRemove": ["ability:quivering_palm#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

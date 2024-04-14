@@ -1,0 +1,118 @@
+{
+  "id": "class:hunter#feral_hunter",
+  "name": "Feral Hunter",
+  "tags": ["archetype", "hunter"],
+  "enabledFormula": "!@modifies:ability:greater_empathic_link#hunter AND !@modifies:ability:bonus_trick#hunter AND !@modifies:ability:improved_empathic_link#hunter AND !@modifies:ability:hunter_tactics#hunter AND !@modifies:ability:speak_with_master#hunter AND !@modifies:ability:teamwork_feat#hunter AND !@modifies:ability:animal_focus#hunter AND !@modifies:ability:precise_companion#hunter AND !@modifies:ability:raise_animal_companion#hunter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:greater_empathic_link#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_trick#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:improved_empathic_link#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:hunter_tactics#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:speak_with_master#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:teamwork_feat#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:animal_focus#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:precise_companion#hunter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:raise_animal_companion#hunter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:hunter",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:feral_focus#hunter_feral_hunter"],
+            "linksToRemove": ["ability:animal_focus#hunter"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:precise_summoned_animal#hunter_feral_hunter"],
+            "linksToRemove": ["ability:precise_companion#hunter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToRemove": ["ability:hunter_tactics#hunter"]
+          }, {
+            "targetStackCount": 4,
+            "linksToAdd": ["ability:wild_shape#hunter_feral_hunter"],
+            "linksToRemove": ["ability:improved_empathic_link#hunter"]
+          }, {
+            "targetStackCount": 6,
+            "linksToAdd": ["ability:summon_pack#hunter_feral_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:bonus_trick#hunter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:summon_pack#hunter_feral_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 10,
+            "linksToRemove": ["ability:raise_animal_companion#hunter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:speak_with_master#hunter"]
+          }, {
+            "targetStackCount": 12,
+            "linksToAdd": ["ability:summon_pack#hunter_feral_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToRemove": ["ability:bonus_trick#hunter"]
+          }, {
+            "targetStackCount": 14,
+            "linksToRemove": ["ability:greater_empathic_link#hunter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:summon_pack#hunter_feral_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 18,
+            "linksToAdd": ["ability:summon_pack#hunter_feral_hunter"],
+            "linksToRemove": ["ability:teamwork_feat#hunter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:bonus_trick#hunter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

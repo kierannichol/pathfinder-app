@@ -1,0 +1,71 @@
+{
+  "id": "class:fighter#crossbowman",
+  "name": "Crossbowman",
+  "tags": ["archetype", "fighter"],
+  "enabledFormula": "!@modifies:ability:armor_training#fighter AND !@modifies:ability:armor_mastery#fighter AND !@modifies:ability:weapon_training#fighter",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:armor_training#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:armor_mastery#fighter",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:weapon_training#fighter",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:fighter",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToAdd": ["ability:meteor_shot#fighter_crossbowman"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 19,
+            "linksToAdd": ["ability:penetrating_shot#fighter_crossbowman"],
+            "linksToRemove": ["ability:armor_mastery#fighter"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:deadshot#fighter_crossbowman"],
+            "linksToRemove": ["ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:crossbow_expert#fighter_crossbowman"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 7,
+            "linksToAdd": ["ability:improved_deadshot#fighter_crossbowman"],
+            "linksToRemove": ["ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 9,
+            "linksToAdd": ["ability:quick_sniper#fighter_crossbowman"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 11,
+            "linksToAdd": ["ability:greater_deadshot#fighter_crossbowman"],
+            "linksToRemove": ["ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter"]
+          }, {
+            "targetStackCount": 13,
+            "linksToAdd": ["ability:safe_shot#fighter_crossbowman"],
+            "linksToRemove": ["ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter", "ability:weapon_training#fighter"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:pinpoint_targeting#fighter_crossbowman"],
+            "linksToRemove": ["ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter", "ability:armor_training#fighter"]
+          }]
+        }]
+      }]
+    }
+  }
+}

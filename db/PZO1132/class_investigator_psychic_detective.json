@@ -1,0 +1,49 @@
+{
+  "id": "class:investigator#psychic_detective",
+  "name": "Psychic Detective",
+  "tags": ["archetype", "investigator"],
+  "enabledFormula": "!@modifies:ability:alchemy#investigator AND !@modifies:ability:poison_immunity#investigator AND !@modifies:ability:investigator_talent#investigator",
+  "maxStacks": 1,
+  "description": {
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:alchemy#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:poison_immunity#investigator",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:investigator_talent#investigator",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:investigator",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:spellcasting#investigator_psychic_detective"],
+            "linksToRemove": ["ability:alchemy#investigator"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:psychic_meddler#investigator_psychic_detective"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:phrenic_dabbler#investigator_psychic_detective"],
+            "linksToRemove": ["ability:investigator_talent#investigator"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:poison_immunity#investigator"]
+          }]
+        }]
+      }]
+    }
+  }
+}

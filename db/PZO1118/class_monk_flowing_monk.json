@@ -1,0 +1,74 @@
+{
+  "id": "class:monk#flowing_monk",
+  "name": "Flowing Monk",
+  "tags": ["archetype", "monk"],
+  "enabledFormula": "!@modifies:ability:quivering_palm#monk AND !@modifies:ability:stunning_fist#monk AND !@modifies:ability:purity_of_body#monk AND !@modifies:ability:fast_movement#monk AND !@modifies:ability:diamond_body#monk AND !@modifies:ability:bonus_feat#monk",
+  "maxStacks": 1,
+  "description": {
+    "text": "The flowing monk is the wind and the river. He knows how the world flows, and forces his enemies to flow with it. Even the most powerful stone breaks under the graceful and persistent pressure of wind and water."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:quivering_palm#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:stunning_fist#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:purity_of_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:fast_movement#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:diamond_body#monk",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:bonus_feat#monk",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:monk",
+          "stackModifications": [{
+            "targetStackCount": 1,
+            "linksToAdd": ["ability:redirection#monk_flowing_monk"],
+            "linksToRemove": ["ability:stunning_fist#monk"]
+          }, {
+            "targetStackCount": 2,
+            "linksToAdd": ["ability:unbalancing_counter#monk_flowing_monk"],
+            "linksToRemove": ["ability:bonus_feat#monk"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:flowing_dodge#monk_flowing_monk"],
+            "linksToRemove": ["ability:fast_movement#monk"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:elusive_target#monk_flowing_monk"],
+            "linksToRemove": ["ability:purity_of_body#monk"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:diamond_body#monk"]
+          }, {
+            "targetStackCount": 15,
+            "linksToAdd": ["ability:volley_spell#monk_flowing_monk"],
+            "linksToRemove": ["ability:quivering_palm#monk"]
+          }]
+        }]
+      }]
+    }
+  }
+}

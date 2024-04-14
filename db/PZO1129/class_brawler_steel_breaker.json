@@ -1,0 +1,60 @@
+{
+  "id": "class:brawler#steel_breaker",
+  "name": "Steel-Breaker",
+  "tags": ["archetype", "brawler"],
+  "enabledFormula": "!@modifies:ability:maneuver_training#brawler AND !@modifies:ability:brawlers_strike#brawler",
+  "maxStacks": 1,
+  "description": {
+    "text": "The steel-breaker studies destruction and practices it as an art form. She knows every defense has a breaking point, and can shatter those defenses with carefully planned strikes."
+  },
+  "stacks": {
+    "fixedStack": {
+      "stacks": [{
+        "effects": [{
+          "setAction": {
+            "targetKey": "modifies:ability:maneuver_training#brawler",
+            "numberValue": 1
+          }
+        }, {
+          "setAction": {
+            "targetKey": "modifies:ability:brawlers_strike#brawler",
+            "numberValue": 1
+          }
+        }],
+        "featureModifications": [{
+          "targetFeatureId": "class:brawler",
+          "stackModifications": [{
+            "targetStackCount": 17,
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 19,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 3,
+            "linksToAdd": ["ability:sunder_training#brawler_steel_breaker"],
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 5,
+            "linksToAdd": ["ability:exploit_weakness#brawler_steel_breaker"],
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 7,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 9,
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 11,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }, {
+            "targetStackCount": 12,
+            "linksToRemove": ["ability:brawlers_strike#brawler"]
+          }, {
+            "targetStackCount": 15,
+            "linksToRemove": ["ability:maneuver_training#brawler"]
+          }]
+        }]
+      }]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "trait:armor_proficiency#cavalier",
+  "name": "Armor Proficiency (Cavalier)",
+  "tags": ["class_feature", "cavalier", "trait"],
+  "description": {
+    "text": "A Cavalier is proficient with all types of armor (light, medium, and heavy), plus all shields (except tower shields)."
+  },
+  "stacks": {
+    "repeatingStack": {
+      "effects": [{
+        "setAction": {
+          "targetKey": "proficiency:light_shield",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:light_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:buckler",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:medium_armor",
+          "numberValue": 1
+        }
+      }, {
+        "setAction": {
+          "targetKey": "proficiency:heavy_shield",
+          "numberValue": 1
+        }
+      }]
+    }
+  }
+}
