@@ -1,8 +1,9 @@
 import React, {ReactNode, useMemo} from "react";
 import styles from "./EntityDescription.module.scss";
-import {Feature, FeatureSummary} from "../..//Feature.ts";
-import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
 import Description from "../../../data/Description.ts";
+import {Feature} from "../../../data/v8/Feature.ts";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {FeatureSummary} from "../../../data/v8/FeatureSummary.ts";
 
 interface FeatureDescriptionProps {
   feature: Feature|FeatureSummary;

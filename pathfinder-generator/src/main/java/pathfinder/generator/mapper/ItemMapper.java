@@ -38,7 +38,9 @@ public class ItemMapper {
 
         if ("Weapon".equals(item.item_type())) {
             if (item.weapon_enhancement_bonus() == null) {
-                if (item.weapon_groups() != null && item.weapon_groups().contains("Double")) {
+                if (item.weapon_type() != null && item.weapon_type().contains("Ranged")) {
+                    builder.addOptionSet(OptionSets.RANGED_WEAPON_ENHANCEMENT_BONUS);
+                }else if (item.weapon_groups() != null && item.weapon_groups().contains("Double")) {
                     builder.addOptionSet(OptionSets.DOUBLE_WEAPON_ENHANCEMENT_BONUS);
                 } else {
                     builder.addOptionSet(OptionSets.SINGLE_WEAPON_ENHANCEMENT_BONUS);

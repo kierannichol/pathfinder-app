@@ -1,5 +1,5 @@
 import CharacterEditor from "../components/character/CharacterEditor.tsx";
-import {Character} from "..//Character.ts";
+import Character from "../../data/v8/Character.ts";
 
 interface CharacterEditProps {
   loaded: Character;

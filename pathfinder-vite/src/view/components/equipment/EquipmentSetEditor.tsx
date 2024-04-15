@@ -9,6 +9,9 @@ import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
 import {ItemOption} from "../../../data/v8/Item.ts";
 import {Equipment, EquipmentSet} from "../../../data/v8/Equipment.ts";
 import {useEquipmentSetStore, useItemDatabase} from "../../../data/context.tsx";
+import {SelectBudgetDialog} from "./SelectBudgetDialog.tsx";
+import {BudgetRemaining} from "./BudgetRemaining.tsx";
+import {Quantity} from "../controls/Quantity.tsx";
 
 interface EquipmentSetEditorProps {
   loaded: EquipmentSet;
@@ -20,6 +23,9 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
   const [ equipmentSet, setEquipmentSet ] = useState(loaded);
 
   const [ showAddItemDialog, setShowAddItemDialog ] = useState(false);
+  const [ showSelectBudgetDialog, setShowSelectBudgetDialog ] = useState(false);
+
+  const [ budget, setBudget ] = useState(loaded.budget);
 
   const equipmentSetStore = useEquipmentSetStore();
 
@@ -89,17 +95,36 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
     });
   }
 
+  function handleShowEditBudgetDialog() {
+    setShowSelectBudgetDialog(true);
+  }
+
+  function handleChangeBudget(value: number|undefined) {
+    setShowSelectBudgetDialog(false);
+    setBudget(value);
+    updateEquipmentSet(async updating => updating.setBudget(value))
+  }
+
   return <div>
     <header>Equipment Set</header>
     <section>
       <label>Equipment Set Name</label>
       <TextInput value={equipmentSet.name} onChange={handleChangeName} />
+      <label>Budget</label>
+      <ButtonBlock onClick={handleShowEditBudgetDialog}>{budget && <Currency gp={budget} />}</ButtonBlock>
+      <SelectBudgetDialog show={showSelectBudgetDialog}
+                          value={budget}
+                          onCancel={() => setShowSelectBudgetDialog(false)}
+                          onConfirm={handleChangeBudget} />
     </section>
     <header>Equipment List</header>
-    <section>
+    <section className={styles.section}>
       <div className={styles.equipmentSummary}>
-        <div><b>Total Weight: {totalWeight} lbs.</b></div>
-        <div><b>Total Cost: <Currency gp={totalCost}/></b></div>
+        <div><b>Total Weight: <Quantity amount={totalWeight} unit="lbs."/></b></div>
+        <div>
+          <div><b>Total Cost: <Currency gp={totalCost}/></b></div>
+          {budget && <div>({<BudgetRemaining budget={budget} totalCost={totalCost}/>} remaining)</div>}
+        </div>
       </div>
       <EquipmentList equipment={equipmentSet.equipment}
                      onClickItem={handleToggleEquipment}
@@ -113,7 +138,7 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
                              onSelect={(item, options) => {
                                setShowAddItemDialog(false);
                                updateEquipmentSet(async es => {
-                                 if (item) return es.add(item, options);
+                                 if (item) return es.add(item.itemId, options.map(o => o.id));
                                  return es;
                                })
                              }}

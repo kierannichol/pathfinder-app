@@ -11,6 +11,7 @@ public class OptionSets {
     public static final OptionSetId SHIELD_ARMOR_MATERIAL = OptionSetId.of(Sources.CORE, "option_set:shield_armor_material");
     public static final OptionSetId SINGLE_WEAPON_ENHANCEMENT_BONUS = OptionSetId.of(Sources.CORE, "option_set:single_weapon_enhancement");
     public static final OptionSetId DOUBLE_WEAPON_ENHANCEMENT_BONUS = OptionSetId.of(Sources.CORE, "option_set:double_weapon_enhancement");
+    public static final OptionSetId RANGED_WEAPON_ENHANCEMENT_BONUS = OptionSetId.of(Sources.CORE, "option_set:ranged_weapon_enhancement");
     public static final OptionSetId LIGHT_WEAPON_MATERIAL = OptionSetId.of(Sources.CORE, "option_set:light_weapon_material");
     public static final OptionSetId ONE_HANDED_WEAPON_MATERIAL = OptionSetId.of(Sources.CORE, "option_set:1h_weapon_material");
     public static final OptionSetId TWO_HANDED_WEAPON_MATERIAL = OptionSetId.of(Sources.CORE, "option_set:2h_weapon_material");

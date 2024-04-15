@@ -6,7 +6,7 @@ import {Link} from "./Link.ts";
 export class FeatureModification implements Trait {
 
   constructor(private readonly targetFeatureId: string,
-              private readonly stackModifications: StackModification[]) {
+              public readonly stackModifications: StackModification[]) {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {
@@ -35,10 +35,10 @@ export class ResolvedFeatureModification implements ResolvedTrait {
 
 export class StackModification implements Trait {
 
-  constructor(private readonly targetFeatureId: string,
-              private readonly targetStackCount: number,
-              private readonly linksToAdd: Link[],
-              private readonly linksToRemove: string[]) {
+  constructor(public readonly targetFeatureId: string,
+              public readonly targetStackCount: number,
+              public readonly linksToAdd: Link[],
+              public readonly linksToRemove: string[]) {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedStackModification> {

@@ -27,7 +27,7 @@ export abstract class EquipmentSetStore {
   }
 
   async create(name: string): Promise<EquipmentSet> {
-    let newEquipmentSet = EquipmentSet.create(name);
+    let newEquipmentSet = EquipmentSet.create(name, this.database);
     await this.save(newEquipmentSet);
     return newEquipmentSet;
   }
@@ -68,6 +68,7 @@ export class FirebaseEquipmentSetStore extends EquipmentSetStore {
     return {
       id: data.id,
       name: data.name,
+      budget: data.budget,
       equipment: data.equipment
     };
   }
@@ -86,6 +87,7 @@ export class FirebaseEquipmentSetStore extends EquipmentSetStore {
       return {
         id: data.id,
         name: data.name,
+        budget: data.budget,
         equipment: data.equipment
       }
     });

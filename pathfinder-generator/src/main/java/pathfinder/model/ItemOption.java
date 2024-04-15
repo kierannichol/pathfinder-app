@@ -2,10 +2,13 @@ package pathfinder.model;
 
 import static pathfinder.util.ListUtils.mapList;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import pathfinder.data.ItemOptionDbo;
+import pathfinder.model.pathfinder.FromSourceBook;
 import pathfinder.model.pathfinder.SourceId;
+import pathfinder.model.pathfinder.Sources;
 
 //    uint32 id = 1;
 //    string name = 2;
@@ -16,14 +19,15 @@ import pathfinder.model.pathfinder.SourceId;
 //    repeated uint32 unique_tags = 7;
 public record ItemOption(String code,
                          String name,
-                         String baseNamePrefix,
-                         String baseNamePostfix,
-                         int pointCost,
-                         double currencyCostBase,
-                         double currencyCostByWeight,
+                         Description description,
+                         @JsonProperty("base_name_prefix") String baseNamePrefix,
+                         @JsonProperty("base_name_postfix") String baseNamePostfix,
+                         @JsonProperty("point_cost") int pointCost,
+                         @JsonProperty("currency_cost_base") double currencyCostBase,
+                         @JsonProperty("currency_cost_by_weight") double currencyCostByWeight,
                          List<String> tags,
-                         String uniqueTag,
-                         SourceId sourceId) {
+                         @JsonProperty("unique_tag") String uniqueTag,
+                         @JsonProperty("source_id") SourceId sourceId) implements FromSourceBook {
 
     public static ItemOption.Builder builder(String code, SourceId sourceId) {
         return new Builder(code, sourceId);
@@ -38,15 +42,24 @@ public record ItemOption(String code,
                 .setPointCost(pointCost)
                 .setCurrencyCost(currencyCostBase)
                 .setCurrencyCostByWeight(currencyCostByWeight)
-                .addAllTags(mapList(tags, t -> sourceId.generate("tag:" + t).number()))
-                .setUniquenessTag(uniqueTag.isBlank() ? 0 : sourceId.generate("tag:" + uniqueTag).number())
+                .addAllTags(mapList(tags, t -> Sources.CORE.generate("tag:" + t).number()))
+                .setUniquenessTag(uniqueTag.isBlank() ? 0 : Sources.CORE.generate("tag:" + uniqueTag).number())
                 .build();
+    }
+
+    @Override
+    public List<String> sources() {
+        if (sourceId == null) {
+            return List.of();
+        }
+        return List.of(sourceId.code());
     }
 
     public static class Builder {
         private final String code;
         private final SourceId sourceId;
         private String name = "";
+        private Description description = Description.empty();
         private String baseNamePrefix = "";
         private String baseNamePostfix = "";
         private int pointCost = 0;
@@ -55,8 +68,16 @@ public record ItemOption(String code,
         private final List<String> tags = new ArrayList<>();
         private String uniquenessTag = "";
 
+        public String getCode() {
+            return code;
+        }
         public Builder setName(String name) {
             this.name = name;
+            return this;
+        }
+
+        public Builder setDescription(String text) {
+            this.description = Description.create(text);
             return this;
         }
 
@@ -98,6 +119,7 @@ public record ItemOption(String code,
         public ItemOption build() {
             return new ItemOption(code,
                     name,
+                    description,
                     baseNamePrefix,
                     baseNamePostfix,
                     pointCost,

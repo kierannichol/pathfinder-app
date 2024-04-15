@@ -9,7 +9,14 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
 import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import pathfinder.model.json.PathfinderJsonModule;
 
 @Slf4j
@@ -26,6 +33,31 @@ public abstract class AbstractScraper implements Scraper {
                 .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
                 .configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true)
                 .registerModule(new PathfinderJsonModule());
+    }
+
+    protected Document fetch(String url) throws IOException {
+        return Jsoup.parse(new URL(url), 20000);
+    }
+
+    protected Elements between(Element root, String startSelector, String endSelector) {
+        Element startElement = root.selectFirst(startSelector);
+        Element endElement = root.selectFirst(endSelector);
+        if (startElement == null || endElement == null) {
+            return new Elements(0);
+        }
+        return between(startElement, endElement);
+    }
+
+    protected Elements between(Element startElement, Element endElement) {
+        List<Element> siblings = new ArrayList<>();
+
+        Element next = startElement.nextElementSibling();
+        while (next != null && !next.equals(endElement)) {
+            siblings.add(next);
+            next = next.nextElementSibling();
+        }
+
+        return new Elements(siblings);
     }
 
     protected <T> void save(String path, T obj) {

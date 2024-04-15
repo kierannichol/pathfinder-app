@@ -11,12 +11,21 @@
 .options {
   display: flex;
   gap: 5px;
+  flex-flow: wrap;
+}
+
+.optionGroup {
+  display: flex;
+  flex-grow: 1;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .option {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 10em;
 }
 
 .selectedOption {

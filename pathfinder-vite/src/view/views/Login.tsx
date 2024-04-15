@@ -4,7 +4,12 @@ import {FormEvent, ReactNode, useEffect, useMemo, useState} from "react";
 import {Button} from "react-bootstrap";
 import * as Icons from "react-bootstrap-icons";
 import {useNavigate} from "react-router-dom";
-import {firebaseLoginWithEmail, firebaseLoginWithGoogle, firebaseResetPassword, firebaseUser} from "../../app/firebase.ts";
+import {
+  firebaseLoginWithEmail,
+  firebaseLoginWithGoogle,
+  firebaseResetPassword,
+  firebaseUser
+} from "../../app/firebase.ts";
 import styles from "./Login.module.scss";
 
 export default function Login() {
@@ -17,9 +22,11 @@ export default function Login() {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
+  const redirectTo = "/equipment";
+
   useEffect(() => {
     if (firebaseUser()) {
-      navigate("/", {replace: true});
+      navigate(redirectTo, {replace: true});
     }
   }, [navigate]);
 
@@ -49,7 +56,7 @@ export default function Login() {
       }
     }
     if (firebaseUser()) {
-      navigate("/");
+      navigate(redirectTo);
     }
   }
 

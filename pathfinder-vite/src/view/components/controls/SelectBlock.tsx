@@ -80,9 +80,11 @@ function SelectBlockItemWithBody({ itemKey, label, scrollTo, bodyFn, disabled, v
   const [ collapsing, setCollapsing ] = useState(false);
   const [ collapsed, setCollapsed ] = useState(!isActive);
 
+  const shouldBeLoaded = onScreen || isActive;
+
   const [ bodyState, setBodyState ] = useState<ReactNode>();
   useEffect(() => {
-    if (!onScreen) {
+    if (!shouldBeLoaded) {
       setBodyState(undefined);
       return;
     }
@@ -106,7 +108,7 @@ function SelectBlockItemWithBody({ itemKey, label, scrollTo, bodyFn, disabled, v
         setBodyState(undefined);
       }
     }
-  }, [itemKey, onScreen, bodyFn])
+  }, [itemKey, shouldBeLoaded, bodyFn])
 
   useEffect(() => {
     if (!scrollTo || !elementRef.current) return;
@@ -164,7 +166,7 @@ function SelectBlockItemWithBody({ itemKey, label, scrollTo, bodyFn, disabled, v
 
   return (
       <div className={classNames(itemClassNames)} ref={elementRef}>
-        {onScreen ? (<>
+        {shouldBeLoaded ? (<>
         <ButtonBlock variant={variant} disabled={disabled} className={classNames(buttonClassNames)} onClick={selectOptionButton}>{label}</ButtonBlock>
         <Accordion.Collapse eventKey={itemKey}
                             appear={isActive}

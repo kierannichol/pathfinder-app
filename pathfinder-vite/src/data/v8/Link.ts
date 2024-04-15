@@ -4,7 +4,7 @@ import AppliedState from "./AppliedState.ts";
 
 export class Link implements Trait {
 
-  constructor(private readonly key: string) {
+  constructor(public readonly key: string) {
   }
 
   async resolve(basePath: string, context: ResolvedEntityContext): Promise<ResolvedTrait> {

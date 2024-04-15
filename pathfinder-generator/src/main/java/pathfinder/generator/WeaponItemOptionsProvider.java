@@ -28,6 +28,7 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
         return Stream.of(
                 createWeaponEnhancementSet(OptionSets.SINGLE_WEAPON_ENHANCEMENT_BONUS, "single_weapon_enhancement"),
                 createWeaponEnhancementSet(OptionSets.DOUBLE_WEAPON_ENHANCEMENT_BONUS, "double_weapon_enhancement"),
+                createWeaponEnhancementSet(OptionSets.RANGED_WEAPON_ENHANCEMENT_BONUS, "ranged_weapon_enhancement"),
                 createWeaponMaterialSet(OptionSets.LIGHT_WEAPON_MATERIAL, "light_weapon_material"),
                 createWeaponMaterialSet(OptionSets.ONE_HANDED_WEAPON_MATERIAL, "1h_weapon_material"),
                 createWeaponMaterialSet(OptionSets.TWO_HANDED_WEAPON_MATERIAL, "2h_weapon_material"),
@@ -49,6 +50,9 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
                 .setPointCurrencyCost(9, 162000)
                 .setPointCurrencyCost(10, 200000)
                 .addTag("weapon_enhancement")
+                .addTag(optionSetId == OptionSets.RANGED_WEAPON_ENHANCEMENT_BONUS
+                        ? "ranged_weapon_special_ability"
+                        : "melee_weapon_special_ability")
                 .addTag(tag)
                 .build();
     }
@@ -62,8 +66,8 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
     @Override
     public Stream<ItemOption> options(SourceId sourceId) {
         return StreamUtils.concat(List.of(
-                enhancements(sourceId),
-                materials(sourceId)
+                materials(sourceId),
+                enhancements(sourceId)
         ));
     }
 
@@ -85,7 +89,7 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
         options.add(ItemOption.builder("double_weapon_option:masterwork", sourceId)
                 .setName("Masterwork")
                 .setBaseNamePrefix("Masterwork")
-                .addTag("single_weapon_enhancement")
+                .addTag("double_weapon_enhancement")
                 .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                 .setCurrencyCostBase(600)
                 .build());
@@ -93,7 +97,7 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
         for (int i = 1; i <= 5; i++) {
             var option = ItemOption.builder("weapon_option:p" + i, sourceId)
                     .setName("+" + i)
-                    .setBaseNamePrefix("+" + i)
+                    .setBaseNamePostfix("+" + i)
                     .addTag("weapon_enhancement")
                     .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                     .setPointCost(i)

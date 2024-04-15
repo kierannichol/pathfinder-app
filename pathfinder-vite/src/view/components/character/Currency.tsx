@@ -1,5 +1,5 @@
-import styles from "./Currency.module.css";
 import {useMemo} from "react";
+import {Quantity} from "../controls/Quantity.tsx";
 
 interface CurrencyProps {
   gp: number;
@@ -8,7 +8,7 @@ interface CurrencyProps {
 export function Currency({ gp }: CurrencyProps) {
   const [ formatted, currency ] = useMemo(() => {
     if (gp === 0) {
-      return []
+      return [ 0, 'gp' ];
     }
     let formatted = gp;
     let currency = "gp";
@@ -30,9 +30,6 @@ export function Currency({ gp }: CurrencyProps) {
     return <span>--</span>
   }
 
-  return <span>{formatted} <div className={styles.gp}>{currency}</div></span>
-}
-
-export function GpIcon() {
-  return <div className={styles.gp}>gp</div>
+  return <Quantity amount={formatted} unit={currency} />
+  // return <span className={styles.text}>{formatted}<div className={styles.gp}>{currency}</div></span>
 }

@@ -36,6 +36,7 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase(app);
 const auth = getAuth(app);
+
 auth.onAuthStateChanged(user => {
   setGoogleToken(user?.uid);
 })
@@ -72,8 +73,8 @@ export function firebaseUser(): User|undefined {
 
 export async function firebaseLoginWithGoogle(): Promise<void> {
   const result = await signInWithPopup(auth, googleAuthProvider);
-  const credential = GoogleAuthProvider.credentialFromResult(result);
-  setGoogleToken(credential?.idToken);
+  const user = result.user;
+  setGoogleToken(user.uid);
 }
 
 export async function firebaseAuthResult(): Promise<void> {

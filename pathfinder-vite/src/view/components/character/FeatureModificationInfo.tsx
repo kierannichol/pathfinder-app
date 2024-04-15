@@ -1,9 +1,9 @@
-import FeatureModification from "../../../data//FeatureModification.ts";
 import FeatureBlock from "./FeatureBlock.tsx";
 import {ButtonBlockGroup} from "../controls/ButtonBlockGroup.tsx";
 import {useMemo} from "react";
 import {PlusLg} from "react-bootstrap-icons";
 import {BiMinus} from "react-icons/bi";
+import {FeatureModification} from "../../../data/v8/FeatureModification.ts";
 
 interface FeatureModificationInfoProps {
   featureModification: FeatureModification;
@@ -21,7 +21,7 @@ export default function FeatureModificationInfo({ featureModification }: Feature
       {stackModification.linksToAdd.map((featureId, i) =>
           <div key={`mod-add-${i}`} className={'d-flex gap-2'}>
             <div className={'d-flex align-items-center'}><PlusLg/></div>
-            <FeatureBlock variant={'blue'} featureId={featureId} />
+            <FeatureBlock variant={'blue'} featureId={featureId.key} />
           </div>)}
       {stackModification.linksToRemove.map((featureId, i) =>
           <div key={`mod-remove-${i}`} className={'d-flex gap-2'}>

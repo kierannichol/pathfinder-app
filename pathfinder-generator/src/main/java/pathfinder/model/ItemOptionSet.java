@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import pathfinder.data.ItemOptionSetDbo;
+import pathfinder.model.pathfinder.Sources;
 
 // message ItemOptionSetDbo {
 //    uint32 id = 1;
@@ -34,7 +35,7 @@ public class ItemOptionSet {
                 .setHasMaxPoints(hasMaxPoints)
                 .setMaxPoints(maxPoints)
                 .putAllPointCurrencyCost(pointCurrencyCost)
-                .addAllOptionTags(mapList(optionTags, t -> id.sourceId().generate("tag:" + t).number()))
+                .addAllOptionTags(mapList(optionTags, t -> Sources.CORE.generate("tag:" + t).number()))
                 .build();
     }
 

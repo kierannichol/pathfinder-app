@@ -19,10 +19,6 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: Equip
 
   const [ selectedOptions, setSelectedOptions ] = useState<ItemOption[]>(value?.options ?? []);
 
-  function handleChangeSelection() {
-    setSelectedOptions([]);
-  }
-
   function handleOptionsChanged(options: ItemOption[]) {
     setSelectedOptions(options);
   }
@@ -60,9 +56,9 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: Equip
                                search={true}
                                value={value?.item.uid}
                                onSelect={handleSelect}
-                               onChangeSelection={handleChangeSelection}
                                onCancel={onCancel}
                                categories={categories}
+                               variant="blue"
                                optionsFn={(query, category) => {
                                  let options = database.summaries()
                                    .filter(item => !query || item.name.toLowerCase().includes(query.toLowerCase()))

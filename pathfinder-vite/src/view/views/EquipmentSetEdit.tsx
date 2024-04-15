@@ -1,6 +1,6 @@
 import {EquipmentSetEditor} from "../components/equipment/EquipmentSetEditor.tsx";
-import {EquipmentSet} from "..//EquipmentSet.ts";
 import React from "react";
+import {EquipmentSet} from "../../data/v8/Equipment.ts";
 
 interface EquipmentSetEditProps {
   loaded: EquipmentSet;

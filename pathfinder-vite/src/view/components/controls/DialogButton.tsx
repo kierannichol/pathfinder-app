@@ -3,8 +3,8 @@ import {GiBookmark} from "react-icons/gi";
 import {Modal} from "react-bootstrap";
 import styles from "../Dialog.module.scss";
 import SpellBookEditor from "../character/SpellBookEditor.tsx";
-import {ChoiceSelectedHandler} from "../..//Choice.ts";
-import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {ChoiceSelectedHandler} from "../../../data/v8/Choice.ts";
 
 interface DialogButtonProps {
   characterAtLevel: CharacterAtLevel;

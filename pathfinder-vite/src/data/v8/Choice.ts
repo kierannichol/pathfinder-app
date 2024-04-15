@@ -20,7 +20,7 @@ export interface SelectChoiceRef extends ChoiceRef {
   options(database: Database, query: string | undefined, filterTag: string | undefined): FeatureSummary[];
 }
 
-export type ChoiceSelectedHandler = (choice: SelectChoiceRef, selected: string|string[]) => void;
+export type ChoiceSelectedHandler = (choice: ChoiceRef, selected: string|string[]) => void;
 
 export enum ChoiceInputType {
   Text,

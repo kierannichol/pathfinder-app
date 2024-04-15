@@ -1,10 +1,10 @@
 import {CharacterChoiceSelectHandler} from "./CharacterEditor.tsx";
 import React, {useMemo} from "react";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
-import {MultiSelectChoice, SelectChoice} from "../..//Choice.ts";
 import {array} from "../../../app/pfutils.ts";
 import {ButtonBlockGroup} from "../controls/ButtonBlockGroup.tsx";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {SelectChoiceRef} from "../../../data/v8/Choice.ts";
 
 interface ArchetypeEditorProps {
   characterAtLevel: CharacterAtLevel;
@@ -12,7 +12,7 @@ interface ArchetypeEditorProps {
 }
 
 export default function ArchetypeEditor({ characterAtLevel, onChange }: ArchetypeEditorProps) {
-  const archetypeChoiceRef = useMemo(() => characterAtLevel.choicesOfType('archetype')[0] as MultiSelectChoice, [characterAtLevel]);
+  const archetypeChoiceRef = useMemo(() => characterAtLevel.choicesOfType('archetype')[0] as SelectChoiceRef, [characterAtLevel]);
   if (!archetypeChoiceRef) {
     return <></>;
   }
@@ -35,7 +35,7 @@ export default function ArchetypeEditor({ characterAtLevel, onChange }: Archetyp
 }
 
 interface ArchetypeButtonProps {
-  choiceRef: SelectChoice;
+  choiceRef: SelectChoiceRef;
   selectedIndex: number;
   characterAtLevel: CharacterAtLevel;
   onChange: CharacterChoiceSelectHandler;

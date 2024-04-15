@@ -23,6 +23,7 @@ public record BasicSource(SourceId sourceId,
                           List<ComplexFeature> races,
                           List<Bloodline> bloodlines,
                           List<ItemData> items,
+                          List<ItemOption> itemOptions,
                           List<ClassModificationFeature> classModificationFeatures,
                           List<ComplexFeature> complexFeatures) implements Source {
 

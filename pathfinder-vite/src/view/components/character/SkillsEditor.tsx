@@ -1,5 +1,5 @@
-import {ChoiceSelectedHandler} from "../..//Choice.ts";
-import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {ChoiceSelectedHandler} from "../../../data/v8/Choice.ts";
 
 interface SkillsEditorProps {
   characterAtLevel: CharacterAtLevel;

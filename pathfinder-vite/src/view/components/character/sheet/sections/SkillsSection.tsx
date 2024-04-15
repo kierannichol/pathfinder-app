@@ -6,7 +6,7 @@ import UnderlinedValue from "../common/UnderlinedValue.tsx";
 import styles from "./SkillsSection.module.scss";
 import {classNames} from "../../../../../utils/classNames.ts";
 import Skills from "../../../../../data/Skills.tsx";
-import {CharacterAtLevel} from "../../../..//CharacterAtLevel.ts";
+import CharacterAtLevel from "../../../../../data/v8/CharacterAtLevel.ts";
 
 export default function SkillsSection({ className, ...divProps }: HTMLAttributes<HTMLDivElement>) {
   const characterAtLevel = useCharacterAtLevel();

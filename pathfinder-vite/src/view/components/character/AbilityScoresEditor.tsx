@@ -4,8 +4,8 @@ import styles from "./AbilityScoresEditor.module.css";
 import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
 import {ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
-import {Choice, ChoiceSelectedHandler, SelectChoice} from "../..//Choice.ts";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {ChoiceSelectedHandler, SelectChoiceRef} from "../../../data/v8/Choice.ts";
 
 const AbilityScoreOptions = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 .map(score => new ChoiceSelectorOption(
@@ -16,7 +16,7 @@ const AbilityScoreOptions = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 
 interface AbilityScoresEditorProps {
   characterAtLevel: CharacterAtLevel;
-  onChange?: (choice: Choice, value: string) => void;
+  onChange?: ChoiceSelectedHandler;
 }
 
 export default function AbilityScoresEditor({ characterAtLevel, onChange }: AbilityScoresEditorProps) {
@@ -34,8 +34,8 @@ export default function AbilityScoresEditor({ characterAtLevel, onChange }: Abil
     </div>
     <div>
       {characterAtLevel.choicesOfType("asi").map(choice => <DataChoiceSelectButton
-          key={choice.key}
-          choiceRef={choice as SelectChoice}
+          key={choice.path}
+          choiceRef={choice as SelectChoiceRef}
           characterAtLevel={characterAtLevel}
           onSelect={selected => onChange?.(choice, selected)}/>)}
     </div>

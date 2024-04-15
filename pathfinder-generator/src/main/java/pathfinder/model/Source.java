@@ -22,5 +22,6 @@ public interface Source {
     List<Bloodline> bloodlines();
     List<Spell> spells();
     List<ItemData> items();
+    List<ItemOption> itemOptions();
 }
 

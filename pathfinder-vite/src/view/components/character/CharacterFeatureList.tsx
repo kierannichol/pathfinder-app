@@ -3,9 +3,9 @@ import "./CharacterFeatureList.scss";
 import PathfinderSelect from "../controls/SelectBlock.tsx";
 import variants from "../controls/ButtonVariants.module.scss";
 import Expression from "../../../utils/logic/Expression.ts";
-import {CharacterAtLevel} from "../..//CharacterAtLevel.ts";
-import {Feature} from "../..//Feature.ts";
 import FeatureDescription from "./FeatureDescription.tsx";
+import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
+import {Feature} from "../../../data/v8/Feature.ts";
 
 interface CharacterFeatureListProps {
   characterAtLevel: CharacterAtLevel;

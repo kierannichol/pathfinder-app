@@ -5,11 +5,12 @@ import {EquipmentDescription} from "./EquipmentDescription.tsx";
 import useAsyncMemo from "../../../utils/useAsyncMemo.tsx";
 import LoadingBlock from "../LoadingBlock.tsx";
 import {Currency} from "../character/Currency.tsx";
-import estyles from "./EquipmentEditDialog.module.css";
+import eStyles from "./EquipmentEditDialog.module.css";
 import {useItemDatabase} from "../../../data/context.tsx";
 import {Equipment} from "../../../data/v8/Equipment.ts";
 import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
 import {ItemOption} from "../../../data/v8/Item.ts";
+import {CurrencyDelta} from "../character/CurrencyDelta.tsx";
 
 interface EquipmentEditDialogProps {
   show: boolean;
@@ -26,12 +27,8 @@ export function EquipmentEditDialog({ show, value, onConfirm, onCancel }: Equipm
   const [ item, loadingItem ] = useAsyncMemo(() => database.load(value.item.itemId),
       [database, value]);
 
-  const itemCost = useMemo(() => {
-    let cost = value.cost;
-    for (let option of selectedOptions) {
-      cost = option.pointCost
-    }
-  }, [value, selectedOptions]);
+  const modified = useMemo(() => Equipment.create(value.item, true, selectedOptions, database),
+      [value, selectedOptions]);
 
   function handleChangeOptions(options: ItemOption[]) {
     setSelectedOptions(options);
@@ -56,9 +53,9 @@ export function EquipmentEditDialog({ show, value, onConfirm, onCancel }: Equipm
     </Modal.Header>
 
     <Modal.Header className={styles.header}>
-      <div className={estyles.equipmentSummary}>
-        <div><b>Weight: {value.weight} lbs.</b></div>
-        <div><b>Cost: <Currency gp={value.cost}/></b></div>
+      <div className={eStyles.equipmentSummary}>
+        <div><b>Weight: {modified.weight} lbs.</b></div>
+        <div><b>Cost: <Currency gp={modified.cost}/>{(value.cost !== modified.cost) && <span> (<CurrencyDelta gp={(modified.cost - value.cost)} />)</span>}</b></div>
       </div>
     </Modal.Header>
 

@@ -8,17 +8,18 @@ import {matchTags} from "../../utils/tags.ts";
 export default interface PackedEquipmentSet {
   id: string;
   name: string;
+  budget: number|null;
   equipment: PackedEquipment[];
 }
 
 export type PackedEquipment = number[];
 
 export class EquipmentSet {
-
   static unpack(itemDb: ItemDatabase, packed: PackedEquipmentSet): EquipmentSet {
     return new EquipmentSet(
         packed.id,
         packed.name,
+        packed.budget ?? undefined,
         packed.equipment?.map(data => Equipment.unpack(itemDb, data)) ?? [],
         itemDb);
   }
@@ -27,18 +28,20 @@ export class EquipmentSet {
     return {
       id: this.id,
       name: this.name,
+      budget: this.budget ?? null,
       equipment: this.equipment.map(e => e.pack())
     }
   }
 
   constructor(public readonly id: string,
               public name: string,
+              public budget: number|undefined,
               public equipment: Equipment[],
               private readonly itemDatabase: ItemDatabase) {
   }
 
   static create(name: string, itemDatabase: ItemDatabase) {
-    return new EquipmentSet(uuidv4(), name, [], itemDatabase);
+    return new EquipmentSet(uuidv4(), name, undefined, [], itemDatabase);
   }
 
   add(itemId: number, optionIds: number[], index: number|undefined = undefined): EquipmentSet {
@@ -60,6 +63,7 @@ export class EquipmentSet {
 
     return new EquipmentSet(this.id,
         this.name,
+        this.budget,
         updated,
         this.itemDatabase);
   }
@@ -67,6 +71,7 @@ export class EquipmentSet {
   remove(uid: string): EquipmentSet {
     return new EquipmentSet(this.id,
         this.name,
+        this.budget,
         this.equipment.filter(e => e.uid !== uid),
         this.itemDatabase);
   }
@@ -74,6 +79,7 @@ export class EquipmentSet {
   modify(uid: string, modifyFn: (deq: Equipment) => Equipment): EquipmentSet {
     return new EquipmentSet(this.id,
         this.name,
+        this.budget,
         this.equipment.map(eq => {
           if (eq.uid === uid) {
             return modifyFn(eq);
@@ -88,7 +94,11 @@ export class EquipmentSet {
     const element = equipment[sourceIndex];
     equipment.splice(sourceIndex, 1);
     equipment.splice(destinationIndex, 0, element);
-    return new EquipmentSet(this.id, this.name, equipment, this.itemDatabase);
+    return new EquipmentSet(this.id, this.name, this.budget, equipment, this.itemDatabase);
+  }
+
+  setBudget(value: number | undefined) {
+    return new EquipmentSet(this.id, this.name, value, this.equipment, this.itemDatabase);
   }
 }
 

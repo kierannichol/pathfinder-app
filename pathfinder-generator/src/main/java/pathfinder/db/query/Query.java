@@ -80,4 +80,7 @@ public class Query {
     public static ItemQuery items() {
         return new ItemQuery(null);
     }
+    public static ItemOptionQuery itemOptions() {
+        return new ItemOptionQuery(null);
+    }
 }

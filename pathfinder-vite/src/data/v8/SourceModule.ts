@@ -5,10 +5,10 @@ import {FeatureSummary} from "./FeatureSummary.ts";
 import {Feature} from "./Feature.ts";
 import {ItemSummary} from "./ItemSummary.ts";
 import {Item, ItemOption, ItemOptionSet} from "./Item.ts";
+import {hasTag} from "../../utils/tags.ts";
 import ItemDbo = data.ItemDbo;
 import FeatureDbo = data.FeatureDbo;
 import SourceModuleItemDatabaseDbo = data.SourceModuleItemDatabaseDbo;
-import {hasTag} from "../../utils/tags.ts";
 
 export default abstract class SourceModule {
   abstract get sourceCode(): string;

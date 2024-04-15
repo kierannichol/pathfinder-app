@@ -82,7 +82,7 @@ public class ArmorItemOptionsProvider implements ItemOptionsProvider {
         for (int i = 1; i <= 5; i++) {
             var option = ItemOption.builder("armor_option:p" + i, sourceId)
                     .setName("+" + i)
-                    .setBaseNamePrefix("+" + i)
+                    .setBaseNamePostfix("+" + i)
                     .addTag("armor_enhancement")
                     .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                     .setPointCost(i)

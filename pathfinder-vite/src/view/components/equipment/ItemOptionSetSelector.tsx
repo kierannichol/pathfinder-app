@@ -22,6 +22,17 @@ export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOpti
     return database.options().filter(option => matchTags(option.tags, optionSet.optionTags));
   }, [database, optionSet]);
 
+  const optionGroups = useMemo(() => {
+    const groups: {[key:number]: ItemOption[]} = {};
+    for (const availableOption of availableOptions) {
+      if (!groups[availableOption.uniquenessTag]) {
+        groups[availableOption.uniquenessTag] = [];
+      }
+      groups[availableOption.uniquenessTag].push(availableOption);
+    }
+    return groups;
+  }, [availableOptions]);
+
   function handleSelectOption(option: ItemOption) {
     const alreadySelected = workingSelectedOptions.find(opt => opt.id === option.id) !== undefined;
     if (alreadySelected) {
@@ -32,7 +43,7 @@ export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOpti
     }
 
     const updated = workingSelectedOptions
-      .filter(opt => opt.uniquenessTag !== option.uniquenessTag);
+      .filter(opt => opt.uniquenessTag === 0 || opt.uniquenessTag !== option.uniquenessTag);
     updated.push(option);
     setWorkingSelectedOptions(updated);
     onChangeOptions?.(updated);
@@ -43,11 +54,14 @@ export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOpti
   }
 
   return <div className={styles.options}>
-    {availableOptions.map(option =>
-        <ButtonBlock key={option.id}
-                     onClick={() => handleSelectOption(option)}
-                     className={styles.option + " " + (isOptionSelected(option) ? styles.selectedOption : "")}>
-      {option.name}
-    </ButtonBlock>)}
+    {Object.entries(optionGroups).map(([gid, optionGroup]) => <div key={gid} className={styles.optionGroup}>
+      {optionGroup.map(option =>
+          <ButtonBlock key={option.id}
+                       onClick={() => handleSelectOption(option)}
+                       className={styles.option + " " + (isOptionSelected(option) ? styles.selectedOption : "")}>
+            {option.name}
+          </ButtonBlock>
+      )}
+    </div>)}
   </div>
 }

@@ -1,5 +1,5 @@
-import {Item} from "../../..//Item.ts";
 import styles from "./ItemDescription.module.css";
+import {Item} from "../../../../data/v8/Item.ts";
 
 interface ItemDescriptionProps {
   item: Item;

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
+import {createHashRouter, RouterProvider,} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import EditorLayoutRoute from "./view/routes/EditorLayoutRoute.tsx";
@@ -11,33 +11,33 @@ import CharacterSheetRoute, {characterSheetLoader} from "./view/routes/Character
 import EquipmentSetListRoute, {equipmentSetListLoader} from "./view/routes/EquipmentSetListRoute.tsx";
 import EquipmentSetEditRoute, {equipmentSetEditLoader} from "./view/routes/EquipmentSetEditRoute.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <EditorLayoutRoute />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <CharacterListRoute />,
         loader: characterListLoader
       },
       {
-        path: "/login",
+        path: "login",
         element: <LoginRoute />,
         loader: loginLoader
       },
       {
-        path: "/character/edit/:id",
+        path: "character/edit/:id",
         element: <CharacterEditRoute />,
         loader: characterEditLoader
       },
       {
-        path: "/equipment",
+        path: "equipment",
         element: <EquipmentSetListRoute />,
         loader: equipmentSetListLoader
       },
       {
-        path: "/equipment/edit/:id",
+        path: "equipment/edit/:id",
         element: <EquipmentSetEditRoute />,
         loader: equipmentSetEditLoader
       }

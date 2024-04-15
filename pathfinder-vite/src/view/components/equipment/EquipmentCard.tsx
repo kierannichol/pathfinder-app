@@ -4,9 +4,9 @@ import styles from "./EquipmentCard.module.css";
 import {Currency} from "../character/Currency.tsx";
 import DeleteIcon from "../icons/DeleteIcon.tsx";
 import React, {MouseEvent, useMemo, useState} from "react";
-import {Equipment} from "../..//Equipment.ts";
 import {CardBlock} from "../cards/CardBlock.tsx";
 import EditIcon from "../icons/EditIcon.tsx";
+import {Equipment} from "../../../data/v8/Equipment.ts";
 
 interface EquipmentCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   equipment: Equipment;

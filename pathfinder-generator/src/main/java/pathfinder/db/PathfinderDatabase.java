@@ -12,6 +12,7 @@ import pathfinder.db.query.BloodlineQuery;
 import pathfinder.db.query.ClassFeatureQuery;
 import pathfinder.db.query.ClassQuery;
 import pathfinder.db.query.FeatQuery;
+import pathfinder.db.query.ItemOptionQuery;
 import pathfinder.db.query.ItemQuery;
 import pathfinder.db.query.NamedEntityQuery;
 import pathfinder.db.query.RaceQuery;
@@ -20,6 +21,7 @@ import pathfinder.db.query.SpellQuery;
 import pathfinder.db.query.WeaponProficiencyQuery;
 import pathfinder.generator.CoreCharacterFeatureProvider;
 import pathfinder.model.Id;
+import pathfinder.model.ItemOption;
 import pathfinder.model.NamedEntity;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.Armor;
@@ -119,6 +121,13 @@ public class PathfinderDatabase {
         return sources.stream()
                 .filter(query::matches)
                 .flatMap(content -> content.items().stream())
+                .filter(query::matches);
+    }
+
+    public Stream<ItemOption> query(ItemOptionQuery query) {
+        return sources.stream()
+                .filter(query::matches)
+                .flatMap(content -> content.itemOptions().stream())
                 .filter(query::matches);
     }
 

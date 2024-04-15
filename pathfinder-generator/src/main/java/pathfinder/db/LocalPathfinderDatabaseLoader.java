@@ -26,6 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import pathfinder.model.BasicSource;
 import pathfinder.model.Id;
+import pathfinder.model.ItemOption;
 import pathfinder.model.Source;
 import pathfinder.model.json.PathfinderJsonModule;
 import pathfinder.model.pathfinder.Archetype;
@@ -57,6 +58,7 @@ public class LocalPathfinderDatabaseLoader {
         Map<SourceId, List<ClassModificationFeature>> classModificationFeaturesBySource = new HashMap<>();
         Map<SourceId, List<ComplexFeature>> complexFeaturesBySource = new HashMap<>();
         Map<SourceId, List<ItemData>> itemsBySource = new HashMap<>();
+        Map<SourceId, List<ItemOption>> itemOptionsBySource = new HashMap<>();
 
         loadFeats().forEach(featData -> {
                     SourceId sourceId = Sources.findSourceByNameOrCode(featData.source());
@@ -115,6 +117,8 @@ public class LocalPathfinderDatabaseLoader {
                         i.armor_special_material(),
                         i.weapon_special_material()));
 
+        loadAllBySource("db/item_option/weapon_special", ItemOption.class, itemOptionsBySource);
+
         loadAllClassFeaturesBySource("db/discovery", Id.of("class:alchemist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
         loadAllClassFeaturesBySource("db/arcanist_exploit", Id.of("class:arcanist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
         loadAllClassFeaturesBySource("db/magus_arcana", Id.of("class:magus"), classFeaturesBySource, Sources.ULTIMATE_MAGIC);
@@ -147,6 +151,7 @@ public class LocalPathfinderDatabaseLoader {
                 racesBySource.getOrDefault(sourceId, List.of()),
                 bloodlinesBySource.getOrDefault(sourceId, List.of()),
                 itemsBySource.getOrDefault(sourceId, List.of()),
+                itemOptionsBySource.getOrDefault(sourceId, List.of()),
                 classModificationFeaturesBySource.getOrDefault(sourceId, List.of()),
                 complexFeaturesBySource.getOrDefault(sourceId, List.of())
         )));

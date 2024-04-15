@@ -1,6 +1,6 @@
 import ButtonBlock from "../controls/ButtonBlock.tsx";
 import {useMemo} from "react";
-import {useDatabase} from "../..//Database.ts";
+import {useDatabase} from "../../../data/context.tsx";
 
 interface FeatureBlockProps {
   featureId: string;

@@ -3,6 +3,7 @@ package pathfinder.generator;
 import java.util.List;
 import java.util.stream.Stream;
 import org.springframework.stereotype.Component;
+import pathfinder.model.ItemOption;
 import pathfinder.model.NamedEntity;
 import pathfinder.model.Source;
 import pathfinder.model.pathfinder.Bloodline;
@@ -59,6 +60,11 @@ public class CoreCharacterSource implements Source {
 
     @Override
     public List<ItemData> items() {
+        return null;
+    }
+
+    @Override
+    public List<ItemOption> itemOptions() {
         return null;
     }
 }

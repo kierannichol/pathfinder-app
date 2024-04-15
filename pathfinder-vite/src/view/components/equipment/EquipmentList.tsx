@@ -1,12 +1,13 @@
 import {DropResult} from "react-beautiful-dnd";
 import React, {useState} from "react";
-import {Equipment} from "../..//Equipment.ts";
-import {ItemOption, ItemSummary} from "../..//Item.ts";
 import {Droppable} from "../cards/Droppable.tsx";
 import {CardBlockList} from "../cards/CardBlockList.tsx";
 import {Draggable} from "../cards/Draggable.tsx";
 import {EquipmentCard} from "./EquipmentCard.tsx";
 import {EquipmentEditDialog} from "./EquipmentEditDialog.tsx";
+import {Equipment} from "../../../data/v8/Equipment.ts";
+import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
+import {ItemOption} from "../../../data/v8/Item.ts";
 
 interface EquipmentListProps {
   equipment: Equipment[];
