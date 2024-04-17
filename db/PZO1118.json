@@ -11,12 +11,68 @@
     "tags": ["favored_class", "base"],
     "maxStacks": 1
   }, {
+    "id": "ability:gunsmith#gunslinger",
+    "name": "Gunsmith",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:gunsmith",
+    "name": "Gunsmith",
+    "maxStacks": 1
+  }, {
+    "id": "ability:nimble#gunslinger",
+    "name": "Nimble",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:nimble",
+    "name": "Nimble",
+    "maxStacks": 1
+  }, {
+    "id": "ability:gun_training#gunslinger",
+    "name": "Gun Training",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:gun_training",
+    "name": "Gun Training",
+    "maxStacks": 1
+  }, {
+    "id": "ability:startling_shot#gunslinger",
+    "name": "Startling Shot",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:startling_shot",
+    "name": "Startling Shot",
+    "maxStacks": 1
+  }, {
+    "id": "trait:weapon_proficiency#gunslinger",
+    "name": "Weapon Proficiency (Gunslinger)",
+    "tags": ["class_feature", "gunslinger", "trait"]
+  }, {
+    "id": "trait:weapon_proficiency",
+    "name": "Weapon Proficiency (Gunslinger)",
+    "maxStacks": 1
+  }, {
+    "id": "trait:armor_proficiency#gunslinger",
+    "name": "Armor Proficiency (Gunslinger)",
+    "tags": ["class_feature", "gunslinger", "trait"]
+  }, {
+    "id": "trait:armor_proficiency",
+    "name": "Armor Proficiency (Gunslinger)",
+    "maxStacks": 1
+  }, {
     "id": "ability:true_grit#gunslinger",
     "name": "True Grit",
     "tags": ["class_feature", "gunslinger", "ability"]
   }, {
     "id": "ability:true_grit",
     "name": "True Grit",
+    "maxStacks": 1
+  }, {
+    "id": "ability:bonus_feat#gunslinger",
+    "name": "Bonus Feat",
+    "tags": ["class_feature", "gunslinger", "ability"]
+  }, {
+    "id": "ability:bonus_feat",
+    "name": "Bonus Feat",
     "maxStacks": 1
   }, {
     "id": "ability:grit#gunslinger",
@@ -33,62 +89,6 @@
   }, {
     "id": "ability:deeds",
     "name": "Deeds",
-    "maxStacks": 1
-  }, {
-    "id": "ability:nimble#gunslinger",
-    "name": "Nimble",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:nimble",
-    "name": "Nimble",
-    "maxStacks": 1
-  }, {
-    "id": "ability:startling_shot#gunslinger",
-    "name": "Startling Shot",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:startling_shot",
-    "name": "Startling Shot",
-    "maxStacks": 1
-  }, {
-    "id": "ability:gunsmith#gunslinger",
-    "name": "Gunsmith",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:gunsmith",
-    "name": "Gunsmith",
-    "maxStacks": 1
-  }, {
-    "id": "trait:armor_proficiency#gunslinger",
-    "name": "Armor Proficiency (Gunslinger)",
-    "tags": ["class_feature", "gunslinger", "trait"]
-  }, {
-    "id": "trait:armor_proficiency",
-    "name": "Armor Proficiency (Gunslinger)",
-    "maxStacks": 1
-  }, {
-    "id": "ability:gun_training#gunslinger",
-    "name": "Gun Training",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:gun_training",
-    "name": "Gun Training",
-    "maxStacks": 1
-  }, {
-    "id": "trait:weapon_proficiency#gunslinger",
-    "name": "Weapon Proficiency (Gunslinger)",
-    "tags": ["class_feature", "gunslinger", "trait"]
-  }, {
-    "id": "trait:weapon_proficiency",
-    "name": "Weapon Proficiency (Gunslinger)",
-    "maxStacks": 1
-  }, {
-    "id": "ability:bonus_feat#gunslinger",
-    "name": "Bonus Feat",
-    "tags": ["class_feature", "gunslinger", "ability"]
-  }, {
-    "id": "ability:bonus_feat",
-    "name": "Bonus Feat",
     "maxStacks": 1
   }, {
     "id": "magus_arcana:lingering_pain",
@@ -208,13 +208,13 @@
     "id": "feat:combat_style_master",
     "name": "Combat Style Master",
     "tags": ["feat", "combat"],
-    "enabledFormula": "any(@feat:improved_unarmed_strike,(@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint+@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style)[style feat(s)]\u003e\u003d2,@bab\u003e\u003d6,@class:monk\u003e\u003d5)",
+    "enabledFormula": "any(@feat:improved_unarmed_strike,(@feat:boar_ferocity+@feat:marid_spirit+@feat:mantis_style+@feat:snake_sidewind+@feat:efreeti_touch+@feat:earth_child_style+@feat:earth_child_binder+@feat:janni_tempest+@feat:panther_style+@feat:dragon_roar+@feat:earth_child_topple+@feat:snapping_turtle_style+@feat:djinni_style+@feat:kirin_strike+@feat:crane_riposte+@feat:snapping_turtle_clutch+@feat:djinni_spirit+@feat:mantis_torment+@feat:dragon_style+@feat:monkey_moves+@feat:tiger_claws+@feat:monkey_shine+@feat:shaitan_earthblast+@feat:shaitan_skin+@feat:kirin_path+@feat:snapping_turtle_shell+@feat:shaitan_style+@feat:monkey_style+@feat:boar_shred+@feat:djinni_spin+@feat:dragon_ferocity+@feat:janni_rush+@feat:panther_claw+@feat:efreeti_style+@feat:mantis_wisdom+@feat:snake_fang+@feat:panther_parry+@feat:tiger_pounce+@feat:marid_style+@feat:tiger_style+@feat:crane_wing+@feat:kirin_style+@feat:snake_style+@feat:marid_coldsnap+@feat:boar_style+@feat:efreeti_stance+@feat:janni_style+@feat:crane_style+@feat:sisterhood_style+@feat:perfect_style+@feat:sisterhood_dedication+@feat:sisterhood_rampart+@feat:unblinking_flame_feint+@feat:pummeling_bully+@feat:jabbing_dancer+@feat:jabbing_style+@feat:pummeling_style+@feat:jabbing_master+@feat:grabbing_style+@feat:grabbing_drag+@feat:pummeling_charge+@feat:grabbing_master)[style feat(s)]\u003e\u003d2,@bab\u003e\u003d6,@class:monk\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:marid_spirit",
     "name": "Marid Spirit",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:marid_style,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:marid_style,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:rending_fury",
@@ -238,7 +238,7 @@
     "id": "feat:merciful_bane",
     "name": "Merciful Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:bane#bloodrager",
+    "enabledFormula": "@spell:bane",
     "maxStacks": 1
   }, {
     "id": "feat:felling_escape",
@@ -286,7 +286,7 @@
     "id": "feat:greater_channel_smite",
     "name": "Greater Channel Smite",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:channel_energy#warpriest,@feat:channel_smite,@bab\u003e\u003d8)",
+    "enabledFormula": "all(@ability:channel_energy#cleric,@feat:channel_smite,@bab\u003e\u003d8)",
     "maxStacks": 1
   }, {
     "id": "feat:vicious_stomp",
@@ -328,7 +328,7 @@
     "id": "feat:efreeti_touch",
     "name": "Efreeti Touch",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:efreeti_style,@feat:efreeti_stance,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:efreeti_style,@feat:efreeti_stance,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
     "maxStacks": 1
   }, {
     "id": "feat:performance_weapon_mastery",
@@ -423,7 +423,7 @@
     "id": "feat:shapeshifting_hunter",
     "name": "Shapeshifting Hunter",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:favored_enemy#ranger,@ability:wild_shape#skald_totemic_skald)",
+    "enabledFormula": "all(@ability:favored_enemy#ranger,@ability:wild_shape#druid)",
     "maxStacks": 1
   }, {
     "id": "feat:sap_adept",
@@ -543,13 +543,13 @@
     "id": "feat:dimensional_maneuvers",
     "name": "Dimensional Maneuvers",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(any(@ability:abundant_step#monk,@ability:dimension_door#sorcerer),@feat:dimensional_agility,@feat:dimensional_assault,@feat:dimensional_dervish,@bab\u003e\u003d9)",
+    "enabledFormula": "all(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility,@feat:dimensional_assault,@feat:dimensional_dervish,@bab\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:hex_strike",
     "name": "Hex Strike",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@ability:hex#shaman,@feat:improved_unarmed_strike)",
+    "enabledFormula": "all(@ability:hex#witch,@feat:improved_unarmed_strike)",
     "maxStacks": 1
   }, {
     "id": "feat:earth_child_topple",
@@ -585,7 +585,7 @@
     "id": "feat:crusaders_flurry",
     "name": "Crusader\u0027s Flurry",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:channel_energy#warpriest,@ability:flurry_of_blows#unchained_monk,@feat:weapon_focus#selected_deity_melee_weapon)",
+    "enabledFormula": "all(@ability:channel_energy#cleric,@ability:flurry_of_blows#unchained_monk,@feat:weapon_focus#selected_deity_melee_weapon)",
     "maxStacks": 1
   }, {
     "id": "feat:cleaving_finish",
@@ -603,13 +603,13 @@
     "id": "feat:channeling_scourge",
     "name": "Channeling Scourge",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:channel_energy#warpriest,@class:inquisitor\u003e\u003d1)",
+    "enabledFormula": "all(@ability:channel_energy#cleric,@class:inquisitor\u003e\u003d1)",
     "maxStacks": 1
   }, {
     "id": "feat:extra_bane",
     "name": "Extra Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:bane#bloodrager",
+    "enabledFormula": "@spell:bane",
     "maxStacks": 1
   }, {
     "id": "feat:two_handed_thrower",
@@ -633,7 +633,7 @@
     "id": "feat:menacing_bane",
     "name": "Menacing Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:bane#bloodrager",
+    "enabledFormula": "@spell:bane",
     "maxStacks": 1
   }, {
     "id": "feat:horse_master",
@@ -651,7 +651,7 @@
     "id": "feat:spell_bane",
     "name": "Spell Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:bane#bloodrager",
+    "enabledFormula": "@spell:bane",
     "maxStacks": 1
   }, {
     "id": "feat:signature_deed",
@@ -674,7 +674,7 @@
     "id": "feat:dispelling_critical",
     "name": "Dispelling Critical",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@ability:arcane_strike#bard_arcane_duelist,@bab\u003e\u003d11,@spell:dispel_magic)",
+    "enabledFormula": "all(@feat:arcane_strike,@bab\u003e\u003d11,@spell:dispel_magic)",
     "maxStacks": 1
   }, {
     "id": "feat:distance_thrower",
@@ -770,7 +770,7 @@
     "id": "feat:djinni_style",
     "name": "Djinni Style",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
+    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:devastating_strike",
@@ -800,7 +800,7 @@
     "id": "feat:guided_hand",
     "name": "Guided Hand",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:channel_energy#warpriest,@feat:channel_smite,@proficiency:selected_deity_weapon)",
+    "enabledFormula": "all(@ability:channel_energy#cleric,@feat:channel_smite,@proficiency:selected_deity_weapon)",
     "maxStacks": 1
   }, {
     "id": "feat:sneaking_precision",
@@ -883,7 +883,7 @@
     "id": "feat:dimensional_dervish",
     "name": "Dimensional Dervish",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(any(@ability:abundant_step#monk,@ability:dimension_door#sorcerer),@feat:dimensional_agility,@feat:dimensional_assault,@bab\u003e\u003d6)",
+    "enabledFormula": "all(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility,@feat:dimensional_assault,@bab\u003e\u003d6)",
     "maxStacks": 1
   }, {
     "id": "feat:dispel_synergy",
@@ -895,13 +895,13 @@
     "id": "feat:djinni_spirit",
     "name": "Djinni Spirit",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:djinni_style,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:djinni_style,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:dimensional_assault",
     "name": "Dimensional Assault",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(any(@ability:abundant_step#monk,@ability:dimension_door#sorcerer),@feat:dimensional_agility)",
+    "enabledFormula": "all(any(@ability:abundant_step#monk,@spell:dimension_door),@feat:dimensional_agility)",
     "maxStacks": 1
   }, {
     "id": "feat:flanking_foil",
@@ -929,7 +929,7 @@
     "id": "feat:coordinated_charge",
     "name": "Coordinated Charge",
     "tags": ["feat", "teamwork"],
-    "enabledFormula": "all((@feat:ensemble+@feat:improved_duck_and_cover+@feat:improved_spell_sharing+@feat:wounded_paw_gambit+@feat:improved_swap_places+@feat:pack_flanking+@feat:share_healing+@feat:intercept_charge+@feat:coordinated_shot+@feat:distracting_charge+@feat:coordinated_defense+@feat:swap_places+@feat:coordinated_maneuvers+@feat:duck_and_cover+@feat:shield_wall+@feat:paired_opportunists+@feat:lookout+@feat:outflank+@feat:shielded_caster+@feat:cavalry_formation+@feat:seize_the_moment+@feat:feint_partner+@feat:improved_back_to_back+@feat:stealth_synergy+@feat:pack_attack+@feat:tandem_trip+@feat:target_of_opportunity+@feat:coordinated_charge+@feat:back_to_back+@feat:escape_route+@feat:broken_wing_gambit+@feat:combat_medic+@feat:improved_feint_partner+@feat:team_pickpocketing+@feat:enfilading_fire)[teamwork feat(s)]\u003e\u003d2,@bab\u003e\u003d10)",
+    "enabledFormula": "all((@feat:ensemble+@feat:cavalry_formation+@feat:seize_the_moment+@feat:feint_partner+@feat:improved_back_to_back+@feat:stealth_synergy+@feat:pack_attack+@feat:tandem_trip+@feat:target_of_opportunity+@feat:coordinated_charge+@feat:back_to_back+@feat:escape_route+@feat:broken_wing_gambit+@feat:combat_medic+@feat:improved_feint_partner+@feat:team_pickpocketing+@feat:enfilading_fire+@feat:coordinated_defense+@feat:swap_places+@feat:coordinated_maneuvers+@feat:duck_and_cover+@feat:shield_wall+@feat:paired_opportunists+@feat:lookout+@feat:outflank+@feat:shielded_caster+@feat:improved_duck_and_cover+@feat:improved_spell_sharing+@feat:wounded_paw_gambit+@feat:improved_swap_places+@feat:pack_flanking+@feat:share_healing+@feat:intercept_charge+@feat:coordinated_shot+@feat:distracting_charge)[teamwork feat(s)]\u003e\u003d2,@bab\u003e\u003d10)",
     "maxStacks": 1
   }, {
     "id": "feat:monkey_moves",
@@ -1012,7 +1012,7 @@
     "id": "feat:shaitan_earthblast",
     "name": "Shaitan Earthblast",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@feat:shaitan_skin,@feat:shaitan_style,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:elemental_fist,@feat:improved_unarmed_strike,@feat:shaitan_skin,@feat:shaitan_style,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
     "maxStacks": 1
   }, {
     "id": "feat:death_from_above",
@@ -1029,7 +1029,7 @@
     "id": "feat:shaitan_skin",
     "name": "Shaitan Skin",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@feat:shaitan_style,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@feat:shaitan_style,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:contingent_channeling",
@@ -1106,13 +1106,13 @@
     "id": "feat:adder_strike",
     "name": "Adder Strike",
     "tags": ["feat", "combat"],
-    "enabledFormula": "all(@slayer_talent:poison_use,@skill:craft#alchemy,@feat:improved_unarmed_strike)",
+    "enabledFormula": "all(@ability:poison_use#rogue_irrigator,@skill:craft#alchemy,@feat:improved_unarmed_strike)",
     "maxStacks": 1
   }, {
     "id": "feat:shaitan_style",
     "name": "Shaitan Style",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
+    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:clustered_shots",
@@ -1142,7 +1142,7 @@
     "id": "feat:dimensional_savant",
     "name": "Dimensional Savant",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@feat:dimensional_agility,@feat:dimensional_assault,@feat:dimensional_dervish,any(@ability:abundant_step#monk,@ability:dimension_door#sorcerer),@bab\u003e\u003d9)",
+    "enabledFormula": "all(@feat:dimensional_agility,@feat:dimensional_assault,@feat:dimensional_dervish,any(@ability:abundant_step#monk,@spell:dimension_door),@bab\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:boar_shred",
@@ -1166,7 +1166,7 @@
     "id": "feat:adept_champion",
     "name": "Adept Champion",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:smite_evil#paladin_sacred_servant,@bab\u003e\u003d5)",
+    "enabledFormula": "all(@ability:smite_evil#paladin,@bab\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:quick_dirty_trick",
@@ -1202,7 +1202,7 @@
     "id": "feat:djinni_spin",
     "name": "Djinni Spin",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:djinni_style,@feat:djinni_spirit,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:djinni_style,@feat:djinni_spirit,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
     "maxStacks": 1
   }, {
     "id": "feat:improved_devastating_strike",
@@ -1250,7 +1250,7 @@
     "id": "feat:pinpoint_poisoner",
     "name": "Pinpoint Poisoner",
     "tags": ["feat", "combat"],
-    "enabledFormula": "any(@slayer_talent:poison_use,@skill:craft#alchemy\u003e\u003d6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,@ability:flurry_of_blows#unchained_monk)",
+    "enabledFormula": "any(@ability:poison_use#rogue_irrigator,@skill:craft#alchemy\u003e\u003d6,@feat:adder_strike,@feat:improved_unarmed_strike,@feat:two_weapon_fighting,@ability:flurry_of_blows#unchained_monk)",
     "maxStacks": 1
   }, {
     "id": "feat:deathless_zealot",
@@ -1310,7 +1310,7 @@
     "id": "feat:efreeti_style",
     "name": "Efreeti Style",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
+    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:raging_deathblow",
@@ -1417,7 +1417,7 @@
     "id": "feat:dimensional_agility",
     "name": "Dimensional Agility",
     "tags": ["feat", "general"],
-    "enabledFormula": "any(@ability:abundant_step#monk,@ability:dimension_door#sorcerer)",
+    "enabledFormula": "any(@ability:abundant_step#monk,@spell:dimension_door)",
     "maxStacks": 1
   }, {
     "id": "feat:tiger_pounce",
@@ -1447,7 +1447,7 @@
     "id": "feat:marid_style",
     "name": "Marid Style",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
+    "enabledFormula": "any(@con_score\u003e\u003d13,@wis_score\u003e\u003d15,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d9,@class:monk\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:slayers_knack",
@@ -1459,7 +1459,7 @@
     "id": "feat:intimidating_bane",
     "name": "Intimidating Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:bane#bloodrager,@feat:dazzling_display,@feat:weapon_focus,@character_level\u003e\u003d8)",
+    "enabledFormula": "all(@spell:bane,@feat:dazzling_display,@feat:weapon_focus,@character_level\u003e\u003d8)",
     "maxStacks": 1
   }, {
     "id": "feat:death_or_glory",
@@ -1477,7 +1477,7 @@
     "id": "feat:double_bane",
     "name": "Double Bane",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:bane#bloodrager,@feat:two_weapon_fighting)",
+    "enabledFormula": "all(@spell:bane,@feat:two_weapon_fighting)",
     "maxStacks": 1
   }, {
     "id": "feat:broken_wing_gambit",
@@ -1495,7 +1495,7 @@
     "id": "feat:branded_for_retribution",
     "name": "Branded for Retribution",
     "tags": ["feat", "general"],
-    "enabledFormula": "@ability:bane#bloodrager",
+    "enabledFormula": "@spell:bane",
     "maxStacks": 1
   }, {
     "id": "feat:drag_down",
@@ -1554,13 +1554,13 @@
     "id": "feat:marid_coldsnap",
     "name": "Marid Coldsnap",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:marid_spirit,@feat:marid_style,@feat:improved_unarmed_strike,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d17,@feat:elemental_fist,@feat:marid_spirit,@feat:marid_style,@feat:improved_unarmed_strike,@bab\u003e\u003d13,@class:monk\u003e\u003d11)",
     "maxStacks": 1
   }, {
     "id": "feat:planar_wild_shape",
     "name": "Planar Wild Shape",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@ability:wild_shape#skald_totemic_skald,@skill:knowledge_planes\u003e\u003d5)",
+    "enabledFormula": "all(@ability:wild_shape#druid,@skill:knowledge_planes\u003e\u003d5)",
     "maxStacks": 1
   }, {
     "id": "feat:boar_style",
@@ -1626,19 +1626,19 @@
     "id": "feat:efreeti_stance",
     "name": "Efreeti Stance",
     "tags": ["feat", "style"],
-    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:efreeti_style,@ability:elemental_fist#monk_monk_of_the_four_winds,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
+    "enabledFormula": "any(@con_score\u003e\u003d15,@wis_score\u003e\u003d15,@feat:efreeti_style,@feat:elemental_fist,@feat:improved_unarmed_strike,@bab\u003e\u003d11,@class:monk\u003e\u003d9)",
     "maxStacks": 1
   }, {
     "id": "feat:raging_hurler",
     "name": "Raging Hurler",
     "tags": ["feat", "general"],
-    "enabledFormula": "all(@trait:rage[Rage class feature],@ability:throw_anything#alchemist)",
+    "enabledFormula": "all(@trait:rage[Rage class feature],@feat:throw_anything)",
     "maxStacks": 1
   }, {
     "id": "feat:enfilading_fire",
     "name": "Enfilading Fire",
     "tags": ["feat", "teamwork"],
-    "enabledFormula": "all(@feat:point_blank_shot,@ability:precise_shot#paladin_divine_hunter,(@feat:ensemble+@feat:improved_duck_and_cover+@feat:improved_spell_sharing+@feat:wounded_paw_gambit+@feat:improved_swap_places+@feat:pack_flanking+@feat:share_healing+@feat:intercept_charge+@feat:coordinated_shot+@feat:distracting_charge+@feat:coordinated_defense+@feat:swap_places+@feat:coordinated_maneuvers+@feat:duck_and_cover+@feat:shield_wall+@feat:paired_opportunists+@feat:lookout+@feat:outflank+@feat:shielded_caster+@feat:cavalry_formation+@feat:seize_the_moment+@feat:feint_partner+@feat:improved_back_to_back+@feat:stealth_synergy+@feat:pack_attack+@feat:tandem_trip+@feat:target_of_opportunity+@feat:coordinated_charge+@feat:back_to_back+@feat:escape_route+@feat:broken_wing_gambit+@feat:combat_medic+@feat:improved_feint_partner+@feat:team_pickpocketing+@feat:enfilading_fire)[teamwork feat(s)])",
+    "enabledFormula": "all(@feat:point_blank_shot,@ability:precise_shot#paladin_divine_hunter,(@feat:ensemble+@feat:cavalry_formation+@feat:seize_the_moment+@feat:feint_partner+@feat:improved_back_to_back+@feat:stealth_synergy+@feat:pack_attack+@feat:tandem_trip+@feat:target_of_opportunity+@feat:coordinated_charge+@feat:back_to_back+@feat:escape_route+@feat:broken_wing_gambit+@feat:combat_medic+@feat:improved_feint_partner+@feat:team_pickpocketing+@feat:enfilading_fire+@feat:coordinated_defense+@feat:swap_places+@feat:coordinated_maneuvers+@feat:duck_and_cover+@feat:shield_wall+@feat:paired_opportunists+@feat:lookout+@feat:outflank+@feat:shielded_caster+@feat:improved_duck_and_cover+@feat:improved_spell_sharing+@feat:wounded_paw_gambit+@feat:improved_swap_places+@feat:pack_flanking+@feat:share_healing+@feat:intercept_charge+@feat:coordinated_shot+@feat:distracting_charge)[teamwork feat(s)])",
     "maxStacks": 1
   }, {
     "id": "feat:righteous_healing",

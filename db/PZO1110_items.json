@@ -393,7 +393,7 @@
     "name": "Light Crossbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 35.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 4.0
   }, {
     "id": 100664409,
@@ -420,7 +420,7 @@
     "name": "Shortbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 30.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 2.0
   }, {
     "id": 100663325,
@@ -701,7 +701,7 @@
     "name": "Hand Crossbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 100.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 2.0
   }, {
     "id": 100664033,
@@ -832,7 +832,7 @@
     "name": "Repeating Heavy Crossbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 400.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 12.0
   }, {
     "id": 100664443,
@@ -1883,7 +1883,7 @@
     "name": "Dart",
     "tags": ["item", "weapon", "slotless"],
     "cost": 0.5,
-    "optionSets": [100665413]
+    "optionSets": [100665459]
   }, {
     "id": 100664531,
     "name": "Scroll Of Cure Moderate Wounds",
@@ -2730,7 +2730,7 @@
     "name": "Repeating Light Crossbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 250.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 6.0
   }, {
     "id": 100664100,
@@ -3736,7 +3736,7 @@
     "name": "Heavy Crossbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 50.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 8.0
   }, {
     "id": 100664130,
@@ -3871,7 +3871,7 @@
     "name": "Shuriken (5)",
     "tags": ["item", "weapon", "slotless"],
     "cost": 1.0,
-    "optionSets": [100665413]
+    "optionSets": [100665459]
   }, {
     "id": 100664716,
     "name": "Potion Of Hideous Laughter",
@@ -4082,7 +4082,7 @@
     "name": "Composite Shortbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 75.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 2.0
   }, {
     "id": 100663578,
@@ -4499,7 +4499,7 @@
     "name": "Halfling Sling Staff",
     "tags": ["item", "weapon", "slotless"],
     "cost": 20.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 3.0
   }, {
     "id": 100664771,
@@ -5263,7 +5263,7 @@
     "id": 100663650,
     "name": "Sling",
     "tags": ["item", "weapon", "slotless"],
-    "optionSets": [100665413]
+    "optionSets": [100665459]
   }, {
     "id": 100664843,
     "name": "Scroll Of Mass Invisibility",
@@ -5279,7 +5279,7 @@
     "name": "Bolas",
     "tags": ["item", "weapon", "slotless"],
     "cost": 5.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 2.0
   }, {
     "id": 100664844,
@@ -6746,7 +6746,7 @@
     "name": "Longbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 75.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 3.0
   }, {
     "id": 100663746,
@@ -7368,7 +7368,7 @@
     "name": "Composite Longbow",
     "tags": ["item", "weapon", "slotless"],
     "cost": 100.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 3.0
   }, {
     "id": 100664255,
@@ -10383,7 +10383,7 @@
     "name": "Blowgun",
     "tags": ["item", "weapon", "slotless"],
     "cost": 2.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 1.0
   }, {
     "id": 100665307,
@@ -10833,7 +10833,7 @@
     "name": "Javelin",
     "tags": ["item", "weapon", "slotless"],
     "cost": 1.0,
-    "optionSets": [100665413],
+    "optionSets": [100665459],
     "weight": 2.0
   }, {
     "id": 100665344,
@@ -10891,19 +10891,47 @@
       "9": 81000.0,
       "10": 100000.0
     },
-    "optionTags": [100665415]
+    "optionGroups": [{
+      "name": "Enhancement Bonus",
+      "optionTags": [100665415],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }, {
+      "name": "Special Abilities",
+      "optionTags": [100665461]
+    }]
   }, {
     "id": 100665412,
-    "optionTags": [100665426]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665426],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665411,
-    "optionTags": [100665417]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665417],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665408,
-    "optionTags": [100665419]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665419],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665404,
-    "optionTags": [100665421]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665421],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665413,
     "hasPoints": true,
@@ -10921,7 +10949,15 @@
       "9": 162000.0,
       "10": 200000.0
     },
-    "optionTags": [100665428, 100665427]
+    "optionGroups": [{
+      "name": "Enhancement Bonus",
+      "optionTags": [100665428, 100665427],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }, {
+      "name": "Special Abilities",
+      "optionTags": [100665457]
+    }]
   }, {
     "id": 100665414,
     "hasPoints": true,
@@ -10939,215 +10975,241 @@
       "9": 162000.0,
       "10": 200000.0
     },
-    "optionTags": [100665428, 100665441]
+    "optionGroups": [{
+      "name": "Enhancement Bonus",
+      "optionTags": [100665428, 100665441],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }, {
+      "name": "Special Abilities",
+      "optionTags": [100665457]
+    }]
+  }, {
+    "id": 100665459,
+    "hasPoints": true,
+    "hasMaxPoints": true,
+    "maxPoints": 10,
+    "pointCurrencyCost": {
+      "1": 2000.0,
+      "2": 8000.0,
+      "3": 18000.0,
+      "4": 32000.0,
+      "5": 50000.0,
+      "6": 72000.0,
+      "7": 98000.0,
+      "8": 128000.0,
+      "9": 162000.0,
+      "10": 200000.0
+    },
+    "optionGroups": [{
+      "name": "Enhancement Bonus",
+      "optionTags": [100665428, 100665460],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }, {
+      "name": "Special Abilities",
+      "optionTags": [100665458]
+    }]
   }, {
     "id": 100665409,
-    "optionTags": [100665432]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665432],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665410,
-    "optionTags": [100665434]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665434],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665405,
-    "optionTags": [100665436]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665436],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }, {
     "id": 100665442,
-    "optionTags": [100665430]
+    "optionGroups": [{
+      "name": "Material",
+      "optionTags": [100665430],
+      "hasMaxSelectable": true,
+      "maxSelectable": 1
+    }]
   }],
   "options": [{
     "id": 100665359,
     "name": "Masterwork",
     "baseNamePrefix": "Masterwork",
     "currencyCost": 150.0,
-    "tags": [100665415],
-    "uniquenessTag": 100665361
+    "tags": [100665415]
   }, {
     "id": 100665362,
     "name": "+1",
-    "baseNamePrefix": "+1",
+    "baseNamePostfix": "+1",
     "pointCost": 1,
-    "tags": [100665415],
-    "uniquenessTag": 100665361
+    "tags": [100665415]
   }, {
     "id": 100665363,
     "name": "+2",
-    "baseNamePrefix": "+2",
+    "baseNamePostfix": "+2",
     "pointCost": 2,
-    "tags": [100665415],
-    "uniquenessTag": 100665361
+    "tags": [100665415]
   }, {
     "id": 100665364,
     "name": "+3",
-    "baseNamePrefix": "+3",
+    "baseNamePostfix": "+3",
     "pointCost": 3,
-    "tags": [100665415],
-    "uniquenessTag": 100665361
+    "tags": [100665415]
   }, {
     "id": 100665365,
     "name": "+4",
-    "baseNamePrefix": "+4",
+    "baseNamePostfix": "+4",
     "pointCost": 4,
-    "tags": [100665415],
-    "uniquenessTag": 100665361
+    "tags": [100665415]
   }, {
     "id": 100665366,
     "name": "+5",
-    "baseNamePrefix": "+5",
+    "baseNamePostfix": "+5",
     "pointCost": 5,
-    "tags": [100665415],
-    "uniquenessTag": 100665361
+    "tags": [100665415]
   }, {
     "id": 100665416,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 5000.0,
-    "tags": [100665417],
-    "uniquenessTag": 100665374
+    "tags": [100665417]
   }, {
     "id": 100665418,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 10000.0,
-    "tags": [100665419],
-    "uniquenessTag": 100665374
+    "tags": [100665419]
   }, {
     "id": 100665420,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 15000.0,
-    "tags": [100665421],
-    "uniquenessTag": 100665374
+    "tags": [100665421]
   }, {
     "id": 100665422,
     "name": "Mithral",
     "baseNamePrefix": "Mithral",
     "currencyCost": 1000.0,
-    "tags": [100665417],
-    "uniquenessTag": 100665374
+    "tags": [100665417]
   }, {
     "id": 100665423,
     "name": "Mithral",
     "baseNamePrefix": "Mithral",
     "currencyCost": 4000.0,
-    "tags": [100665419],
-    "uniquenessTag": 100665374
+    "tags": [100665419]
   }, {
     "id": 100665424,
     "name": "Mithral",
     "baseNamePrefix": "Mithral",
     "currencyCost": 9000.0,
-    "tags": [100665421],
-    "uniquenessTag": 100665374
+    "tags": [100665421]
   }, {
     "id": 100665425,
     "name": "Mithral",
     "baseNamePrefix": "Mithral",
     "currencyCost": 1000.0,
-    "tags": [100665426],
-    "uniquenessTag": 100665374
-  }, {
-    "id": 100665355,
-    "name": "Masterwork",
-    "baseNamePrefix": "Masterwork",
-    "currencyCost": 300.0,
-    "tags": [100665427],
-    "uniquenessTag": 100665349
-  }, {
-    "id": 100665357,
-    "name": "Masterwork",
-    "baseNamePrefix": "Masterwork",
-    "currencyCost": 600.0,
-    "tags": [100665427],
-    "uniquenessTag": 100665349
-  }, {
-    "id": 100665347,
-    "name": "+1",
-    "baseNamePrefix": "+1",
-    "pointCost": 1,
-    "tags": [100665428],
-    "uniquenessTag": 100665349
-  }, {
-    "id": 100665350,
-    "name": "+2",
-    "baseNamePrefix": "+2",
-    "pointCost": 2,
-    "tags": [100665428],
-    "uniquenessTag": 100665349
-  }, {
-    "id": 100665351,
-    "name": "+3",
-    "baseNamePrefix": "+3",
-    "pointCost": 3,
-    "tags": [100665428],
-    "uniquenessTag": 100665349
-  }, {
-    "id": 100665352,
-    "name": "+4",
-    "baseNamePrefix": "+4",
-    "pointCost": 4,
-    "tags": [100665428],
-    "uniquenessTag": 100665349
-  }, {
-    "id": 100665353,
-    "name": "+5",
-    "baseNamePrefix": "+5",
-    "pointCost": 5,
-    "tags": [100665428],
-    "uniquenessTag": 100665349
+    "tags": [100665426]
   }, {
     "id": 100665429,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 60.0,
-    "tags": [100665430],
-    "uniquenessTag": 100665374
+    "tags": [100665430]
   }, {
     "id": 100665431,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 3000.0,
-    "tags": [100665432],
-    "uniquenessTag": 100665374
+    "tags": [100665432]
   }, {
     "id": 100665433,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 3000.0,
-    "tags": [100665434],
-    "uniquenessTag": 100665374
+    "tags": [100665434]
   }, {
     "id": 100665435,
     "name": "Adamantine",
     "baseNamePrefix": "Adamantine",
     "currencyCost": 3000.0,
-    "tags": [100665436],
-    "uniquenessTag": 100665374
+    "tags": [100665436]
   }, {
     "id": 100665437,
     "name": "Silver",
     "baseNamePrefix": "Silver",
     "currencyCost": 2.0,
-    "tags": [100665430],
-    "uniquenessTag": 100665374
+    "tags": [100665430]
   }, {
     "id": 100665438,
     "name": "Silver",
     "baseNamePrefix": "Silver",
     "currencyCost": 20.0,
-    "tags": [100665432],
-    "uniquenessTag": 100665374
+    "tags": [100665432]
   }, {
     "id": 100665439,
     "name": "Silver",
     "baseNamePrefix": "Silver",
     "currencyCost": 90.0,
-    "tags": [100665434],
-    "uniquenessTag": 100665374
+    "tags": [100665434]
   }, {
     "id": 100665440,
     "name": "Silver",
     "baseNamePrefix": "Silver",
     "currencyCost": 180.0,
-    "tags": [100665436],
-    "uniquenessTag": 100665374
+    "tags": [100665436]
+  }, {
+    "id": 100665355,
+    "name": "Masterwork",
+    "baseNamePrefix": "Masterwork",
+    "currencyCost": 300.0,
+    "tags": [100665427]
+  }, {
+    "id": 100665357,
+    "name": "Masterwork",
+    "baseNamePrefix": "Masterwork",
+    "currencyCost": 600.0,
+    "tags": [100665441]
+  }, {
+    "id": 100665347,
+    "name": "+1",
+    "baseNamePostfix": "+1",
+    "pointCost": 1,
+    "tags": [100665428]
+  }, {
+    "id": 100665350,
+    "name": "+2",
+    "baseNamePostfix": "+2",
+    "pointCost": 2,
+    "tags": [100665428]
+  }, {
+    "id": 100665351,
+    "name": "+3",
+    "baseNamePostfix": "+3",
+    "pointCost": 3,
+    "tags": [100665428]
+  }, {
+    "id": 100665352,
+    "name": "+4",
+    "baseNamePostfix": "+4",
+    "pointCost": 4,
+    "tags": [100665428]
+  }, {
+    "id": 100665353,
+    "name": "+5",
+    "baseNamePostfix": "+5",
+    "pointCost": 5,
+    "tags": [100665428]
   }]
 }
