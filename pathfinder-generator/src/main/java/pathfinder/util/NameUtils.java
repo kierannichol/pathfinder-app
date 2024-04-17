@@ -70,7 +70,7 @@ public class NameUtils {
 
         String[] parts = namePart.split(",", 2);
         if (parts.length == 1) {
-            return parts[0];
+            return parts[0] + parenthesesPart;
         }
         return (parts[1].trim() + " " + parts[0].trim()) + parenthesesPart;
     }

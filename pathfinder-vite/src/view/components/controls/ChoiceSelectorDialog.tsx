@@ -73,8 +73,11 @@ export default function ChoiceSelectorDialog({ choiceName, show, value, onSelect
   }, [show, category]);
 
   useEffect(() => {
-    highlight(value);
-  }, [value]);
+    if (show) {
+      setSelected(value);
+      highlight(value);
+    }
+  }, [show]);
 
   const availableOptions: Array<ChoiceSelectorOption> = useMemo(() => {
     let filteredOptions = options;

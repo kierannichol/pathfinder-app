@@ -3,7 +3,7 @@ package pathfinder.db;
 import pathfinder.data.IdDatabaseDbo;
 import pathfinder.data.IdDatabaseDbo.Builder;
 import pathfinder.model.Id;
-import pathfinder.model.IntId;
+import pathfinder.model.id.IntId;
 
 public class SourceModuleIdGenerator implements IdGenerator {
     private final Builder db = IdDatabaseDbo.newBuilder();

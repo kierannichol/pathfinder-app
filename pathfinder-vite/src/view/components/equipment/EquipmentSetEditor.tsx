@@ -5,93 +5,54 @@ import {EquipmentSearchDialog} from "./EquipmentSearchDialog.tsx";
 import {Currency} from "../character/Currency.tsx";
 import {EquipmentList} from "./EquipmentList.tsx";
 import styles from "./EquipmentSetEditor.module.css";
-import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
-import {ItemOption} from "../../../data/v8/Item.ts";
-import {Equipment, EquipmentSet} from "../../../data/v8/Equipment.ts";
-import {useEquipmentSetStore, useItemDatabase} from "../../../data/context.tsx";
+import {Equipment, EquipmentSet} from "@/data/v8/Equipment.ts";
+import {useEquipmentSetStore, useItemDatabase} from "@/data/context.tsx";
 import {SelectBudgetDialog} from "./SelectBudgetDialog.tsx";
 import {BudgetRemaining} from "./BudgetRemaining.tsx";
 import {Quantity} from "../controls/Quantity.tsx";
+import {ItemSummary} from "@/data/v8/ItemSummary.ts";
+import {ItemOptionSummary} from "@/data/v8/ItemOption.ts";
 
 interface EquipmentSetEditorProps {
-  loaded: EquipmentSet;
+  equipmentSet: EquipmentSet;
 }
 
-export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
+export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
   const database = useItemDatabase();
-
-  const [ equipmentSet, setEquipmentSet ] = useState(loaded);
 
   const [ showAddItemDialog, setShowAddItemDialog ] = useState(false);
   const [ showSelectBudgetDialog, setShowSelectBudgetDialog ] = useState(false);
 
-  const [ budget, setBudget ] = useState(loaded.budget);
+  const [ name, setName ] = useState(equipmentSet.name);
+  const [ equipment, setEquipment ] = useState(equipmentSet.equipment);
+  const [ budget, setBudget ] = useState(equipmentSet.budget);
 
   const equipmentSetStore = useEquipmentSetStore();
 
   const totalCost = useMemo(() => {
-    return equipmentSet.equipment
+    return equipment
       .filter(e => e.included)
       .map(e => e.cost)
       .reduce((a, b) => a + b, 0);
-  }, [equipmentSet]);
+  }, [equipment]);
 
   const totalWeight = useMemo(() => {
-    return equipmentSet.equipment
+    return equipment
     .filter(e => e.included)
     .map(e => e.weight)
     .reduce((a, b) => a + b, 0);
-  }, [equipmentSet]);
+  }, [equipment]);
 
   async function updateEquipmentSet(mappingFunction: (equipmentSet: EquipmentSet) => Promise<EquipmentSet>) {
     const updated = await mappingFunction(equipmentSet);
-    setEquipmentSet(updated);
     await equipmentSetStore.save(updated);
   }
 
   function handleChangeName(value: string) {
+    setName(value);
     updateEquipmentSet(async updating => {
       updating.name = value;
       return updating;
-    });
-  }
-
-  function handleRemoveEquipment(uid: string) {
-    updateEquipmentSet(async updating => {
-      return updating.remove(uid);
-    })
-  }
-
-  function handleToggleEquipment(uid: string) {
-    updateEquipmentSet(async updating => {
-      return updating.modify(uid, eq => eq.include(!eq.included));
-    })
-  }
-
-  function handleMoveEquipment(sourceIndex: number, destinationIndex: number) {
-    updateEquipmentSet(async updating => {
-      return updating.move(sourceIndex, destinationIndex);
-    })
-  }
-
-  function handleUpdateItem(uid: string, updatedItem: ItemSummary|undefined, updatedOptions: ItemOption[]) {
-    if (!updatedItem) return;
-    updateEquipmentSet(async updating => {
-      return updating.modify(uid, eq => Equipment.create(
-          updatedItem,
-          eq.included,
-          updatedOptions,
-          database));
-    })
-  }
-
-  function handleDuplicateItem(uid: string) {
-    const toCopyIndex = equipmentSet.equipment.findIndex(eq => eq.uid === uid);
-    if (toCopyIndex < 0) return;
-    const toCopy = equipmentSet.equipment[toCopyIndex];
-
-    updateEquipmentSet(async updating => {
-      return updating.add(toCopy.item.itemId, toCopy.options.map(o => o.id), toCopyIndex+1);
     });
   }
 
@@ -105,11 +66,28 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
     updateEquipmentSet(async updating => updating.setBudget(value))
   }
 
+  function handleChangeEquipment(updated: Equipment[]) {
+    setEquipment(updated);
+    updateEquipmentSet(async equipmentSet =>
+        equipmentSet.setEquipment(updated));
+  }
+
+  function handleSubmitAdd(item: ItemSummary|undefined, options: ItemOptionSummary[]) {
+    setShowAddItemDialog(false);
+    if (!item) return;
+    const updated = [ ...equipment, Equipment.create(item, true, options, database) ];
+    handleChangeEquipment(updated);
+  }
+
+  function handleCancelAdd() {
+    setShowAddItemDialog(false);
+  }
+
   return <div>
     <header>Equipment Set</header>
     <section>
       <label>Equipment Set Name</label>
-      <TextInput value={equipmentSet.name} onChange={handleChangeName} />
+      <TextInput value={name} onChange={handleChangeName} />
       <label>Budget</label>
       <ButtonBlock onClick={handleShowEditBudgetDialog}>{budget && <Currency gp={budget} />}</ButtonBlock>
       <SelectBudgetDialog show={showSelectBudgetDialog}
@@ -126,23 +104,13 @@ export function EquipmentSetEditor({ loaded }: EquipmentSetEditorProps) {
           {budget && <div>({<BudgetRemaining budget={budget} totalCost={totalCost}/>} remaining)</div>}
         </div>
       </div>
-      <EquipmentList equipment={equipmentSet.equipment}
-                     onClickItem={handleToggleEquipment}
-                     onUpdateItem={handleUpdateItem}
-                     onDuplicateItem={handleDuplicateItem}
-                     onDeleteItem={handleRemoveEquipment}
-                     onMoveItem={handleMoveEquipment}
+      <EquipmentList equipment={equipment}
+                     onChange={handleChangeEquipment}
       />
       <ButtonBlock variant="link" onClick={() => setShowAddItemDialog(true)}>+ Add Item</ButtonBlock>
       <EquipmentSearchDialog show={showAddItemDialog}
-                             onSelect={(item, options) => {
-                               setShowAddItemDialog(false);
-                               updateEquipmentSet(async es => {
-                                 if (item) return es.add(item.itemId, options.map(o => o.id));
-                                 return es;
-                               })
-                             }}
-        onCancel={() => setShowAddItemDialog(false)}/>
+                             onSelect={handleSubmitAdd}
+                             onCancel={handleCancelAdd}/>
     </section>
   </div>
 }

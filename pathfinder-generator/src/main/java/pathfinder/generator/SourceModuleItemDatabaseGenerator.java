@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import pathfinder.data.ItemDbo;
 import pathfinder.data.ItemOptionDbo;
 import pathfinder.data.ItemOptionSetDbo;
+import pathfinder.data.ItemOptionSummaryDbo;
 import pathfinder.data.ItemSummaryDbo;
 import pathfinder.data.SourceModuleItemDatabaseDbo;
 import pathfinder.model.Item;
@@ -66,7 +67,7 @@ public class SourceModuleItemDatabaseGenerator {
     }
 
     protected Message createSummaryDatabase(List<ItemSummaryDbo> items, List<ItemOptionSetDbo> itemOptionSets,
-            List<ItemOptionDbo> itemOptions) {
+            List<ItemOptionSummaryDbo> itemOptions) {
         return SourceModuleItemDatabaseDbo.newBuilder()
                 .setSourceId(sourceId.id())
                 .setSourceCode(databaseId())
@@ -94,10 +95,17 @@ public class SourceModuleItemDatabaseGenerator {
                     }
                 });
 
-        List<ItemOptionDbo> itemOptions = new ArrayList<>();
+        List<ItemOptionSummaryDbo> itemOptions = new ArrayList<>();
         streamItemOptions()
                 .distinct()
-                .forEachOrdered(option -> itemOptions.add(option.toDbo()));
+                .forEachOrdered(option -> {
+                    ItemOptionDbo detailed = option.toDbo();
+                    ItemOptionSummaryDbo summary = option.toSummaryDbo();
+
+                    itemOptions.add(summary);
+
+                    writer.write(detailed, Integer.toString(detailed.getId()), relativeOutputPath);
+                });
 
         List<ItemOptionSetDbo> itemOptionSets = new ArrayList<>();
         streamItemOptionSets()

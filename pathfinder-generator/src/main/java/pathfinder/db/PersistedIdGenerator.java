@@ -7,7 +7,7 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import pathfinder.data.IdDatabaseDbo;
 import pathfinder.model.Id;
-import pathfinder.model.IntId;
+import pathfinder.model.id.IntId;
 
 public class PersistedIdGenerator implements IdGenerator {
     private final SourceModuleIdGenerator source;

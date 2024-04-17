@@ -1,25 +1,25 @@
 import React, {useEffect, useMemo, useState} from "react";
 import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
 import {ChoiceSelectorCategory, ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
-import {EquipmentDescription} from "./EquipmentDescription.tsx";
-import {Equipment} from "../../../data/v8/Equipment.ts";
-import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
-import {useItemDatabase} from "../../../data/context.tsx";
-import {ItemOption} from "../../../data/v8/Item.ts";
+import {Equipment} from "@/data/v8/Equipment.ts";
+import {ItemSummary} from "@/data/v8/ItemSummary.ts";
+import {useItemDatabase} from "@/data/context.tsx";
+import {ItemOptionSummary} from "@/data/v8/ItemOption.ts";
+import {DescriptionBlock} from "@/view/components/DescriptionBlock.tsx";
 
 interface EquipmentSearchDialogProps {
   show: boolean;
   value?: Equipment|undefined;
-  onSelect?: (item: ItemSummary|undefined, options: ItemOption[]) => void;
+  onSelect?: (item: ItemSummary|undefined, options: ItemOptionSummary[]) => void;
   onCancel?: () => void;
 }
 
 export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: EquipmentSearchDialogProps) {
   const database = useItemDatabase();
 
-  const [ selectedOptions, setSelectedOptions ] = useState<ItemOption[]>(value?.options ?? []);
+  const [ selectedOptions, setSelectedOptions ] = useState<ItemOptionSummary[]>(value?.options ?? []);
 
-  function handleOptionsChanged(options: ItemOption[]) {
+  function handleOptionsChanged(options: ItemOptionSummary[]) {
     setSelectedOptions(options);
   }
 
@@ -76,9 +76,8 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: Equip
                                          if (!loaded) {
                                            return <></>
                                          }
-                                         return <EquipmentDescription item={loaded}
-                                                                      selectedOptions={selectedOptions}
-                                                                      onChangeOptions={handleOptionsChanged}/>
+
+                                         return <DescriptionBlock description={loaded.description} />
                                        }))
                                }} />
 }

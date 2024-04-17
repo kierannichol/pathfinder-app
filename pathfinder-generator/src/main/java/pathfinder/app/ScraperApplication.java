@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import pathfinder.db.LocalPathfinderDatabaseLoader;
 import pathfinder.db.PathfinderDatabase;
-import pathfinder.scraper.WeaponSpecialAbilityScraper;
+import pathfinder.scraper.ArmorSpecialAbilityScraper;
 
 @SpringBootApplication(scanBasePackages = {
         "pathfinder.app.config",
@@ -36,7 +36,7 @@ public class ScraperApplication {
 //            ctx.getBean(ScrollItemDataGenerator.class).scrape();
 //            ctx.getBean(PotionItemDataGenerator.class).scrape();
 
-            ctx.getBean(WeaponSpecialAbilityScraper.class).scrape();
+            ctx.getBean(ArmorSpecialAbilityScraper.class).scrape();
 
             System.exit(0);
         };

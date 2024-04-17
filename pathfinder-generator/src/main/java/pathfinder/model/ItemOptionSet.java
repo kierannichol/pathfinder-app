@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import pathfinder.data.ItemOptionSetDbo;
-import pathfinder.model.pathfinder.Sources;
 
 // message ItemOptionSetDbo {
 //    uint32 id = 1;
@@ -22,7 +21,7 @@ public class ItemOptionSet {
     private final boolean hasMaxPoints;
     private final int maxPoints;
     private final Map<Integer, Double> pointCurrencyCost;
-    private final List<String> optionTags;
+    private final List<ItemOptionGroup> optionGroups;
 
     public static ItemOptionSet.Builder builder(OptionSetId optionSetId) {
         return new Builder(optionSetId);
@@ -35,7 +34,8 @@ public class ItemOptionSet {
                 .setHasMaxPoints(hasMaxPoints)
                 .setMaxPoints(maxPoints)
                 .putAllPointCurrencyCost(pointCurrencyCost)
-                .addAllOptionTags(mapList(optionTags, t -> Sources.CORE.generate("tag:" + t).number()))
+                .addAllOptionGroups(mapList(optionGroups, ItemOptionGroup::toDbo))
+//                .addAllOptionTags(mapList(optionTags, t -> Sources.CORE.generate("tag:" + t).number()))
                 .build();
     }
 
@@ -45,7 +45,7 @@ public class ItemOptionSet {
         this.hasMaxPoints = builder.hasMaxPoints;
         this.maxPoints = builder.maxPoints;
         this.pointCurrencyCost = builder.pointCurrencyCost;
-        this.optionTags = builder.optionTags;
+        this.optionGroups = builder.optionGroups;
     }
 
     public String code() {
@@ -58,7 +58,7 @@ public class ItemOptionSet {
         private boolean hasMaxPoints = false;
         private int maxPoints = 0;
         private final Map<Integer, Double> pointCurrencyCost = new HashMap<>();
-        private final List<String> optionTags = new ArrayList<>();
+        private final List<ItemOptionGroup> optionGroups = new ArrayList<>();
 
         public Builder setMaxPoints(int maxPoints) {
             this.hasPoints = true;
@@ -73,8 +73,8 @@ public class ItemOptionSet {
             return this;
         }
 
-        public Builder addTag(String tag) {
-            this.optionTags.add(tag);
+        public Builder addOptionGroup(ItemOptionGroup group) {
+            this.optionGroups.add(group);
             return this;
         }
 

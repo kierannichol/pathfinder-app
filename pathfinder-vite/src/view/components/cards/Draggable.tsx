@@ -1,33 +1,34 @@
-import React, {createContext, ReactNode, useContext} from "react";
-import {Draggable as DndDraggable} from "react-beautiful-dnd"
-
-interface DraggableContextState {
-  readonly draggable: boolean;
-  readonly dragging: boolean;
-}
-
-const DraggableContext = createContext<DraggableContextState>({ draggable: false, dragging: false });
-
-export function useDraggableContext(): DraggableContextState {
-  return useContext(DraggableContext);
-}
+import {ReactNode} from "react";
+import {CSS} from '@dnd-kit/utilities';
+import {useSortable} from "@dnd-kit/sortable";
 
 interface DraggableProps {
-  draggableId: string;
-  index: number;
+  id: string|number;
   children: ReactNode;
 }
 
-export function Draggable({ draggableId, index, children }: DraggableProps) {
+export function Draggable({ id, children }: DraggableProps) {
+  const {
+    attributes,
+    listeners,
+    index,
+    isDragging,
+    isSorting,
+    over,
+    setNodeRef,
+    transform,
+    transition,
+  } = useSortable({
+    id: id
+  });
+  const style = {
+    transition: transition,
+    transform: CSS.Translate.toString(transform),
+  }
+
   return (
-      <DndDraggable draggableId={draggableId} index={index}>
-        {(provided, snapshot) => (
-            <div ref={provided.innerRef}
-                 {...provided.draggableProps}
-                 {...provided.dragHandleProps}>
-              <DraggableContext.Provider value={{ draggable: true, dragging: snapshot.isDragging}}>
-                {children}
-              </DraggableContext.Provider>
-            </div>
-        )}</DndDraggable>);
+      <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
+        {children}
+      </div>
+  );
 }

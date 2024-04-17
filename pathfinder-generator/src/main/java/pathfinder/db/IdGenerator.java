@@ -1,6 +1,6 @@
 package pathfinder.db;
 
-import pathfinder.model.IntId;
+import pathfinder.model.id.IntId;
 
 public interface IdGenerator {
 

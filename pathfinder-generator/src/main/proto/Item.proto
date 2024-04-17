@@ -33,7 +33,25 @@ message ItemOptionSetDbo {
     bool has_max_points = 3;
     uint32 max_points = 4;
     map<uint32, double> point_currency_cost = 5;
-    repeated int32 option_tags = 6;
+    repeated ItemOptionGroupDbo option_groups = 6;
+}
+
+message ItemOptionGroupDbo {
+    string name = 1;
+    repeated uint32 option_tags = 2;
+    bool has_max_selectable = 3;
+    uint32 max_selectable = 4;
+}
+
+message ItemOptionSummaryDbo {
+    uint32 id = 1;
+    string name = 2;
+    string base_name_prefix = 3;
+    string base_name_postfix = 4;
+    uint32 point_cost = 5;
+    double currency_cost = 6;
+    repeated uint32 tags = 7;
+    double currency_cost_by_weight = 8;
 }
 
 message ItemOptionDbo {
@@ -44,6 +62,7 @@ message ItemOptionDbo {
     uint32 point_cost = 5;
     double currency_cost = 6;
     repeated uint32 tags = 7;
-    uint32 uniqueness_tag = 8;
-    double currency_cost_by_weight = 9;
+    double currency_cost_by_weight = 8;
+
+    DescriptionDbo description = 100;
 }

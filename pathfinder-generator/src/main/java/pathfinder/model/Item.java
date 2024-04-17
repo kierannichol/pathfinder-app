@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import pathfinder.data.ItemDbo;
 import pathfinder.data.ItemSummaryDbo;
+import pathfinder.model.id.IntId;
 import pathfinder.model.pathfinder.SourceId;
 
 public record Item(IntId id,

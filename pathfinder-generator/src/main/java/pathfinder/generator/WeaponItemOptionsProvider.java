@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import org.springframework.stereotype.Component;
 import pathfinder.model.ItemOption;
+import pathfinder.model.ItemOptionGroup;
 import pathfinder.model.ItemOptionSet;
 import pathfinder.model.OptionSetId;
 import pathfinder.model.pathfinder.Material;
@@ -16,8 +17,6 @@ import pathfinder.util.StreamUtils;
 
 @Component
 public class WeaponItemOptionsProvider implements ItemOptionsProvider {
-    private static final String ENHANCEMENT_BONUS_UNIQUENESS_TAG = "weapon_enhancement_bonus";
-    private static final String MATERIAL_UNIQUENESS_TAG = "material";
 
     @Override
     public Stream<ItemOptionSet> optionSets(SourceId sourceId) {
@@ -49,17 +48,28 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
                 .setPointCurrencyCost(8, 128000)
                 .setPointCurrencyCost(9, 162000)
                 .setPointCurrencyCost(10, 200000)
-                .addTag("weapon_enhancement")
-                .addTag(optionSetId == OptionSets.RANGED_WEAPON_ENHANCEMENT_BONUS
-                        ? "ranged_weapon_special_ability"
-                        : "melee_weapon_special_ability")
-                .addTag(tag)
+                .addOptionGroup(ItemOptionGroup.builder()
+                        .setName("Enhancement Bonus")
+                        .addTag("weapon_enhancement")
+                        .addTag(tag)
+                        .setMaxSelectable(1)
+                        .build())
+                .addOptionGroup(ItemOptionGroup.builder()
+                        .setName("Special Abilities")
+                        .addTag(optionSetId == OptionSets.RANGED_WEAPON_ENHANCEMENT_BONUS
+                                ? "ranged_weapon_special_ability"
+                                : "melee_weapon_special_ability")
+                        .build())
                 .build();
     }
 
     private ItemOptionSet createWeaponMaterialSet(OptionSetId optionSetId, String tag) {
         return ItemOptionSet.builder(optionSetId)
-                .addTag(tag)
+                .addOptionGroup(ItemOptionGroup.builder()
+                        .setName("Material")
+                        .addTag(tag)
+                        .setMaxSelectable(1)
+                        .build())
                 .build();
     }
 
@@ -82,7 +92,6 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
                 .setName("Masterwork")
                 .setBaseNamePrefix("Masterwork")
                 .addTag("single_weapon_enhancement")
-                .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                 .setCurrencyCostBase(300)
                 .build());
 
@@ -90,7 +99,6 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
                 .setName("Masterwork")
                 .setBaseNamePrefix("Masterwork")
                 .addTag("double_weapon_enhancement")
-                .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                 .setCurrencyCostBase(600)
                 .build());
 
@@ -99,7 +107,6 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
                     .setName("+" + i)
                     .setBaseNamePostfix("+" + i)
                     .addTag("weapon_enhancement")
-                    .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                     .setPointCost(i)
                     .build();
             options.add(option);
@@ -130,7 +137,6 @@ public class WeaponItemOptionsProvider implements ItemOptionsProvider {
         ItemOption.Builder builder = ItemOption.builder(code, material.sourceId())
                 .setName(material.name())
                 .setBaseNamePrefix(material.name())
-                .setUniquenessTag(MATERIAL_UNIQUENESS_TAG)
                 .addTag(tag)
                 .setCurrencyCostBase(baseCost);
         material.ifWeightCost(builder::setCurrencyCostByWeight);

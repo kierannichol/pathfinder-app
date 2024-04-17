@@ -118,6 +118,7 @@ public class LocalPathfinderDatabaseLoader {
                         i.weapon_special_material()));
 
         loadAllBySource("db/item_option/weapon_special", ItemOption.class, itemOptionsBySource);
+        loadAllBySource("db/item_option/armor_special", ItemOption.class, itemOptionsBySource);
 
         loadAllClassFeaturesBySource("db/discovery", Id.of("class:alchemist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);
         loadAllClassFeaturesBySource("db/arcanist_exploit", Id.of("class:arcanist"), classFeaturesBySource, Sources.ADVANCED_PLAYERS_GUIDE);

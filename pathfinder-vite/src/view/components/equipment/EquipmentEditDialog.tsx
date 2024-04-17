@@ -6,16 +6,15 @@ import useAsyncMemo from "../../../utils/useAsyncMemo.tsx";
 import LoadingBlock from "../LoadingBlock.tsx";
 import {Currency} from "../character/Currency.tsx";
 import eStyles from "./EquipmentEditDialog.module.css";
-import {useItemDatabase} from "../../../data/context.tsx";
-import {Equipment} from "../../../data/v8/Equipment.ts";
-import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
-import {ItemOption} from "../../../data/v8/Item.ts";
+import {useItemDatabase} from "@/data/context.tsx";
+import {Equipment} from "@/data/v8/Equipment.ts";
 import {CurrencyDelta} from "../character/CurrencyDelta.tsx";
+import {ItemOptionSummary} from "@/data/v8/ItemOption.ts";
 
 interface EquipmentEditDialogProps {
   show: boolean;
   value: Equipment;
-  onConfirm?: (item: ItemSummary, options: ItemOption[]) => void;
+  onConfirm?: (target: Equipment, options: ItemOptionSummary[]) => void;
   onCancel?: () => void;
 }
 
@@ -30,12 +29,12 @@ export function EquipmentEditDialog({ show, value, onConfirm, onCancel }: Equipm
   const modified = useMemo(() => Equipment.create(value.item, true, selectedOptions, database),
       [value, selectedOptions]);
 
-  function handleChangeOptions(options: ItemOption[]) {
+  function handleChangeOptions(options: ItemOptionSummary[]) {
     setSelectedOptions(options);
   }
 
   function handleConfirm() {
-    onConfirm?.(value.item, selectedOptions);
+    onConfirm?.(value, selectedOptions);
   }
 
   return (<Modal

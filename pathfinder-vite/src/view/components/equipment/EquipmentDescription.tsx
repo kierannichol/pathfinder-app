@@ -1,14 +1,15 @@
 import {useMemo} from "react";
 import styles from "./EquipmentDescription.module.css";
-import {onlyDefined} from "../../../app/pfutils.ts";
+import {onlyDefined} from "@/app/pfutils.ts";
 import {ItemOptionSetSelector} from "./ItemOptionSetSelector.tsx";
-import {Item, ItemOption} from "../../../data/v8/Item.ts";
-import {useItemDatabase} from "../../../data/context.tsx";
+import {Item} from "@/data/v8/Item.ts";
+import {useItemDatabase} from "@/data/context.tsx";
+import {ItemOptionSummary} from "@/data/v8/ItemOption.ts";
 
 interface EquipmentDescriptionProps {
   item: Item;
-  selectedOptions: ItemOption[];
-  onChangeOptions: (options: ItemOption[]) => void;
+  selectedOptions: ItemOptionSummary[];
+  onChangeOptions: (options: ItemOptionSummary[]) => void;
 }
 
 export function EquipmentDescription({ item, selectedOptions, onChangeOptions }: EquipmentDescriptionProps) {

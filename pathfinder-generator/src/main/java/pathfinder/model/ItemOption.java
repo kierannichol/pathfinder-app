@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import pathfinder.data.ItemOptionDbo;
+import pathfinder.data.ItemOptionSummaryDbo;
 import pathfinder.model.pathfinder.FromSourceBook;
 import pathfinder.model.pathfinder.SourceId;
 import pathfinder.model.pathfinder.Sources;
@@ -26,7 +27,6 @@ public record ItemOption(String code,
                          @JsonProperty("currency_cost_base") double currencyCostBase,
                          @JsonProperty("currency_cost_by_weight") double currencyCostByWeight,
                          List<String> tags,
-                         @JsonProperty("unique_tag") String uniqueTag,
                          @JsonProperty("source_id") SourceId sourceId) implements FromSourceBook {
 
     public static ItemOption.Builder builder(String code, SourceId sourceId) {
@@ -43,7 +43,20 @@ public record ItemOption(String code,
                 .setCurrencyCost(currencyCostBase)
                 .setCurrencyCostByWeight(currencyCostByWeight)
                 .addAllTags(mapList(tags, t -> Sources.CORE.generate("tag:" + t).number()))
-                .setUniquenessTag(uniqueTag.isBlank() ? 0 : Sources.CORE.generate("tag:" + uniqueTag).number())
+                .setDescription(description.toDbo())
+                .build();
+    }
+
+    public ItemOptionSummaryDbo toSummaryDbo() {
+        return ItemOptionSummaryDbo.newBuilder()
+                .setId(sourceId.generate(code).number())
+                .setName(name)
+                .setBaseNamePrefix(baseNamePrefix)
+                .setBaseNamePostfix(baseNamePostfix)
+                .setPointCost(pointCost)
+                .setCurrencyCost(currencyCostBase)
+                .setCurrencyCostByWeight(currencyCostByWeight)
+                .addAllTags(mapList(tags, t -> Sources.CORE.generate("tag:" + t).number()))
                 .build();
     }
 
@@ -66,11 +79,11 @@ public record ItemOption(String code,
         private double currencyCostBase = 0;
         private double currencyCostByWeight = 0;
         private final List<String> tags = new ArrayList<>();
-        private String uniquenessTag = "";
 
         public String getCode() {
             return code;
         }
+
         public Builder setName(String name) {
             this.name = name;
             return this;
@@ -111,11 +124,6 @@ public record ItemOption(String code,
             return this;
         }
 
-        public Builder setUniquenessTag(String tag) {
-            this.uniquenessTag = tag;
-            return this;
-        }
-
         public ItemOption build() {
             return new ItemOption(code,
                     name,
@@ -126,7 +134,6 @@ public record ItemOption(String code,
                     currencyCostBase,
                     currencyCostByWeight,
                     tags,
-                    uniquenessTag,
                     sourceId);
         }
 

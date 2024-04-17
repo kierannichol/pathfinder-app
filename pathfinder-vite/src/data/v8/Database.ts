@@ -3,8 +3,10 @@ import SourceModule, {SourceModuleItemDatabase} from "./SourceModule.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";
 import {Feature} from "./Feature.ts";
 import {ItemSummary} from "./ItemSummary.ts";
-import {Item, ItemOption, ItemOptionSet} from "./Item.ts";
-import {uniqById} from "../../app/pfutils.ts";
+import {Item} from "./Item.ts";
+import {uniqById} from "@/app/pfutils.ts";
+import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
+import {ItemOptionSet} from "./ItemOptionSet.ts";
 
 export class ItemDatabase {
   constructor(private readonly modules: SourceModuleItemDatabase[]) {
@@ -33,15 +35,29 @@ export class ItemDatabase {
     return undefined;
   }
 
-  options(): ItemOption[] {
-    return this.modules.flatMap(module => module.options());
+  options(optionIds: number[]|undefined = undefined): ItemOptionSummary[] {
+    const all = this.modules.flatMap(module => module.options());
+    if (!optionIds) {
+      return all;
+    }
+    return all.filter(option => optionIds.includes(option.id));
   }
 
-  option(optionId: number): ItemOption|undefined {
+  option(optionId: number): ItemOptionSummary|undefined {
     for (let module of this.modules) {
       const option = module.option(optionId);
       if (option) {
         return option;
+      }
+    }
+    return undefined;
+  }
+
+  async optionDetails(optionId: number): Promise<ItemOption|undefined> {
+    for (let module of this.modules) {
+      const option = module.option(optionId);
+      if (option) {
+        return await module.optionDetails(optionId);
       }
     }
     return undefined;

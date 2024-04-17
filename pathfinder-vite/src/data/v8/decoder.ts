@@ -10,8 +10,11 @@ import {FeatureSummary} from "./FeatureSummary.ts";
 import {Feature} from "./Feature.ts";
 import {FixedStack, RepeatingStack, Stacks} from "./Stacks.ts";
 import {CharacterLevelTemplate, CharacterTemplate} from "./CharacterTemplate.ts";
-import {Item, ItemOption, ItemOptionSet} from "./Item.ts";
+import {Item} from "./Item.ts";
 import {ItemSummary} from "./ItemSummary.ts";
+import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
+import {ItemOptionSet} from "./ItemOptionSet.ts";
+import {ItemOptionGroup} from "./ItemOptionGroup.ts";
 import FeatureSummaryDbo = data.FeatureSummaryDbo;
 import FeatureDbo = data.FeatureDbo;
 import StacksDbo = data.StacksDbo;
@@ -26,8 +29,15 @@ import StackModificationDbo = data.StackModificationDbo;
 import FeatureModificationDbo = data.FeatureModificationDbo;
 import ItemSummaryDbo = data.ItemSummaryDbo;
 import ItemDbo = data.ItemDbo;
-import ItemOptionDbo = data.ItemOptionDbo;
 import ItemOptionSetDbo = data.ItemOptionSetDbo;
+import ItemOptionSummaryDbo = data.ItemOptionSummaryDbo;
+import ItemOptionDbo = data.ItemOptionDbo;
+import DescriptionDbo = data.DescriptionDbo;
+import ItemOptionGroupDbo = data.ItemOptionGroupDbo;
+
+export function decodeDescription(dbo: DescriptionDbo|null|undefined): Description {
+  return new Description(dbo?.text ?? "", dbo?.sections ?? {});
+}
 
 export function decodeFeatureSummary(dbo: FeatureSummaryDbo): FeatureSummary {
   return new FeatureSummary(dbo.id,
@@ -70,7 +80,18 @@ export function decodeItem(dbo: ItemDbo, sourceId: number): Item {
       dbo.weight,
       dbo.tags ?? [],
       dbo.optionSets ?? [],
-      new Description(dbo.description?.text ?? "", dbo.description?.sections ?? {}));
+      decodeDescription(dbo.description));
+}
+
+export function decodeItemOptionSummary(dbo: ItemOptionSummaryDbo): ItemOptionSummary {
+  return new ItemOptionSummary(dbo.id,
+      dbo.name,
+      dbo.baseNamePrefix,
+      dbo.baseNamePostfix,
+      dbo.pointCost,
+      dbo.currencyCost,
+      dbo.currencyCostByWeight,
+      dbo.tags);
 }
 
 export function decodeItemOption(dbo: ItemOptionDbo): ItemOption {
@@ -82,7 +103,15 @@ export function decodeItemOption(dbo: ItemOptionDbo): ItemOption {
       dbo.currencyCost,
       dbo.currencyCostByWeight,
       dbo.tags,
-      dbo.uniquenessTag);
+      decodeDescription(dbo.description));
+}
+
+export function decodeItemOptionGroup(dbo: ItemOptionGroupDbo): ItemOptionGroup {
+  return new ItemOptionGroup(
+      dbo.name,
+      dbo.optionTags,
+      dbo.hasMaxSelectable,
+      dbo.maxSelectable);
 }
 
 export function decodeItemOptionSet(dbo: ItemOptionSetDbo): ItemOptionSet {
@@ -91,7 +120,7 @@ export function decodeItemOptionSet(dbo: ItemOptionSetDbo): ItemOptionSet {
       dbo.hasMaxPoints,
       dbo.maxPoints,
       dbo.pointCurrencyCost,
-      dbo.optionTags);
+      dbo.optionGroups.map(decodeItemOptionGroup));
 }
 
 // function decodeFeatureOptionsTemplate(dbo: FeatureOptionsDbo|undefined|null): FeatureOptionsTemplate|undefined {

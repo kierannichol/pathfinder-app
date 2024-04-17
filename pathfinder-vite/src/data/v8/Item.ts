@@ -12,26 +12,3 @@ export class Item {
   }
 }
 
-export class ItemOption {
-  constructor(public readonly id: number,
-              public readonly name: string,
-              public readonly baseNamePrefix: string,
-              public readonly baseNamePostfix: string,
-              public readonly pointCost: number,
-              public readonly currencyCost: number,
-              public readonly currencyCostByWeight: number,
-              public readonly tags: number[],
-              public readonly uniquenessTag: number) {
-  }
-}
-
-export class ItemOptionSet {
-
-  constructor(public readonly id: number,
-              public readonly hasPoints: boolean,
-              public readonly hasMaxPoints: boolean,
-              public readonly maxPoints: number,
-              public readonly pointCurrencyCosts: {[points:number]:number},
-              public readonly optionTags: number[]) {
-  }
-}

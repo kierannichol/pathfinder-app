@@ -2386,7 +2386,7 @@ export namespace data {
         optionSets?: (data.ItemOptionSetDbo[]|null);
 
         /** SourceModuleItemDatabaseDbo options */
-        options?: (data.ItemOptionDbo[]|null);
+        options?: (data.ItemOptionSummaryDbo[]|null);
     }
 
     /** Represents a SourceModuleItemDatabaseDbo. */
@@ -2411,7 +2411,7 @@ export namespace data {
         public optionSets: data.ItemOptionSetDbo[];
 
         /** SourceModuleItemDatabaseDbo options. */
-        public options: data.ItemOptionDbo[];
+        public options: data.ItemOptionSummaryDbo[];
 
         /**
          * Creates a new SourceModuleItemDatabaseDbo instance using the specified properties.
@@ -2769,8 +2769,8 @@ export namespace data {
         /** ItemOptionSetDbo pointCurrencyCost */
         pointCurrencyCost?: ({ [k: string]: number }|null);
 
-        /** ItemOptionSetDbo optionTags */
-        optionTags?: (number[]|null);
+        /** ItemOptionSetDbo optionGroups */
+        optionGroups?: (data.ItemOptionGroupDbo[]|null);
     }
 
     /** Represents an ItemOptionSetDbo. */
@@ -2797,8 +2797,8 @@ export namespace data {
         /** ItemOptionSetDbo pointCurrencyCost. */
         public pointCurrencyCost: { [k: string]: number };
 
-        /** ItemOptionSetDbo optionTags. */
-        public optionTags: number[];
+        /** ItemOptionSetDbo optionGroups. */
+        public optionGroups: data.ItemOptionGroupDbo[];
 
         /**
          * Creates a new ItemOptionSetDbo instance using the specified properties.
@@ -2878,6 +2878,260 @@ export namespace data {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    /** Properties of an ItemOptionGroupDbo. */
+    interface IItemOptionGroupDbo {
+
+        /** ItemOptionGroupDbo name */
+        name?: (string|null);
+
+        /** ItemOptionGroupDbo optionTags */
+        optionTags?: (number[]|null);
+
+        /** ItemOptionGroupDbo hasMaxSelectable */
+        hasMaxSelectable?: (boolean|null);
+
+        /** ItemOptionGroupDbo maxSelectable */
+        maxSelectable?: (number|null);
+    }
+
+    /** Represents an ItemOptionGroupDbo. */
+    class ItemOptionGroupDbo implements IItemOptionGroupDbo {
+
+        /**
+         * Constructs a new ItemOptionGroupDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IItemOptionGroupDbo);
+
+        /** ItemOptionGroupDbo name. */
+        public name: string;
+
+        /** ItemOptionGroupDbo optionTags. */
+        public optionTags: number[];
+
+        /** ItemOptionGroupDbo hasMaxSelectable. */
+        public hasMaxSelectable: boolean;
+
+        /** ItemOptionGroupDbo maxSelectable. */
+        public maxSelectable: number;
+
+        /**
+         * Creates a new ItemOptionGroupDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ItemOptionGroupDbo instance
+         */
+        public static create(properties?: data.IItemOptionGroupDbo): data.ItemOptionGroupDbo;
+
+        /**
+         * Encodes the specified ItemOptionGroupDbo message. Does not implicitly {@link data.ItemOptionGroupDbo.verify|verify} messages.
+         * @param message ItemOptionGroupDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ItemOptionGroupDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ItemOptionGroupDbo message, length delimited. Does not implicitly {@link data.ItemOptionGroupDbo.verify|verify} messages.
+         * @param message ItemOptionGroupDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ItemOptionGroupDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an ItemOptionGroupDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ItemOptionGroupDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ItemOptionGroupDbo;
+
+        /**
+         * Decodes an ItemOptionGroupDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ItemOptionGroupDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ItemOptionGroupDbo;
+
+        /**
+         * Verifies an ItemOptionGroupDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an ItemOptionGroupDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ItemOptionGroupDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ItemOptionGroupDbo;
+
+        /**
+         * Creates a plain object from an ItemOptionGroupDbo message. Also converts values to other types if specified.
+         * @param message ItemOptionGroupDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ItemOptionGroupDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ItemOptionGroupDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ItemOptionGroupDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    /** Properties of an ItemOptionSummaryDbo. */
+    interface IItemOptionSummaryDbo {
+
+        /** ItemOptionSummaryDbo id */
+        id?: (number|null);
+
+        /** ItemOptionSummaryDbo name */
+        name?: (string|null);
+
+        /** ItemOptionSummaryDbo baseNamePrefix */
+        baseNamePrefix?: (string|null);
+
+        /** ItemOptionSummaryDbo baseNamePostfix */
+        baseNamePostfix?: (string|null);
+
+        /** ItemOptionSummaryDbo pointCost */
+        pointCost?: (number|null);
+
+        /** ItemOptionSummaryDbo currencyCost */
+        currencyCost?: (number|null);
+
+        /** ItemOptionSummaryDbo tags */
+        tags?: (number[]|null);
+
+        /** ItemOptionSummaryDbo currencyCostByWeight */
+        currencyCostByWeight?: (number|null);
+    }
+
+    /** Represents an ItemOptionSummaryDbo. */
+    class ItemOptionSummaryDbo implements IItemOptionSummaryDbo {
+
+        /**
+         * Constructs a new ItemOptionSummaryDbo.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: data.IItemOptionSummaryDbo);
+
+        /** ItemOptionSummaryDbo id. */
+        public id: number;
+
+        /** ItemOptionSummaryDbo name. */
+        public name: string;
+
+        /** ItemOptionSummaryDbo baseNamePrefix. */
+        public baseNamePrefix: string;
+
+        /** ItemOptionSummaryDbo baseNamePostfix. */
+        public baseNamePostfix: string;
+
+        /** ItemOptionSummaryDbo pointCost. */
+        public pointCost: number;
+
+        /** ItemOptionSummaryDbo currencyCost. */
+        public currencyCost: number;
+
+        /** ItemOptionSummaryDbo tags. */
+        public tags: number[];
+
+        /** ItemOptionSummaryDbo currencyCostByWeight. */
+        public currencyCostByWeight: number;
+
+        /**
+         * Creates a new ItemOptionSummaryDbo instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns ItemOptionSummaryDbo instance
+         */
+        public static create(properties?: data.IItemOptionSummaryDbo): data.ItemOptionSummaryDbo;
+
+        /**
+         * Encodes the specified ItemOptionSummaryDbo message. Does not implicitly {@link data.ItemOptionSummaryDbo.verify|verify} messages.
+         * @param message ItemOptionSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: data.ItemOptionSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified ItemOptionSummaryDbo message, length delimited. Does not implicitly {@link data.ItemOptionSummaryDbo.verify|verify} messages.
+         * @param message ItemOptionSummaryDbo message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: data.ItemOptionSummaryDbo, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an ItemOptionSummaryDbo message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns ItemOptionSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): data.ItemOptionSummaryDbo;
+
+        /**
+         * Decodes an ItemOptionSummaryDbo message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns ItemOptionSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): data.ItemOptionSummaryDbo;
+
+        /**
+         * Verifies an ItemOptionSummaryDbo message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an ItemOptionSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns ItemOptionSummaryDbo
+         */
+        public static fromObject(object: { [k: string]: any }): data.ItemOptionSummaryDbo;
+
+        /**
+         * Creates a plain object from an ItemOptionSummaryDbo message. Also converts values to other types if specified.
+         * @param message ItemOptionSummaryDbo
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: data.ItemOptionSummaryDbo, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this ItemOptionSummaryDbo to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for ItemOptionSummaryDbo
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of an ItemOptionDbo. */
     interface IItemOptionDbo {
 
@@ -2902,11 +3156,11 @@ export namespace data {
         /** ItemOptionDbo tags */
         tags?: (number[]|null);
 
-        /** ItemOptionDbo uniquenessTag */
-        uniquenessTag?: (number|null);
-
         /** ItemOptionDbo currencyCostByWeight */
         currencyCostByWeight?: (number|null);
+
+        /** ItemOptionDbo description */
+        description?: (data.DescriptionDbo|null);
     }
 
     /** Represents an ItemOptionDbo. */
@@ -2939,11 +3193,11 @@ export namespace data {
         /** ItemOptionDbo tags. */
         public tags: number[];
 
-        /** ItemOptionDbo uniquenessTag. */
-        public uniquenessTag: number;
-
         /** ItemOptionDbo currencyCostByWeight. */
         public currencyCostByWeight: number;
+
+        /** ItemOptionDbo description. */
+        public description?: (data.DescriptionDbo|null);
 
         /**
          * Creates a new ItemOptionDbo instance using the specified properties.

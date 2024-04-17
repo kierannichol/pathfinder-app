@@ -1,9 +1,8 @@
-import {ItemOption} from "./Item.ts";
 import {ItemDatabase} from "./Database.ts";
 import {ItemSummary} from "./ItemSummary.ts";
 import {v4 as uuidv4} from "uuid";
-import {onlyDefined} from "../../app/pfutils.ts";
-import {matchTags} from "../../utils/tags.ts";
+import {matchTags} from "@/utils/tags.ts";
+import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
 
 export default interface PackedEquipmentSet {
   id: string;
@@ -44,61 +43,22 @@ export class EquipmentSet {
     return new EquipmentSet(uuidv4(), name, undefined, [], itemDatabase);
   }
 
-  add(itemId: number, optionIds: number[], index: number|undefined = undefined): EquipmentSet {
-    const item = this.itemDatabase.summary(itemId);
-    if (!item) {
-      throw new Error("Item not found: " + itemId);
-    }
-    const options = onlyDefined(optionIds.map(oid =>
-        this.itemDatabase.option(oid)));
-
-    const created = Equipment.create(item, true, options, this.itemDatabase);
-
-    const updated = [...this.equipment];
-    if (index !== undefined) {
-      updated.splice(index, 0, created);
-    } else {
-      updated.push(created);
-    }
-
-    return new EquipmentSet(this.id,
-        this.name,
-        this.budget,
-        updated,
-        this.itemDatabase);
+  setBudget(value: number | undefined) {
+    return new EquipmentSet(this.id, this.name, value, this.equipment, this.itemDatabase);
   }
 
-  remove(uid: string): EquipmentSet {
-    return new EquipmentSet(this.id,
-        this.name,
-        this.budget,
-        this.equipment.filter(e => e.uid !== uid),
-        this.itemDatabase);
-  }
-
-  modify(uid: string, modifyFn: (deq: Equipment) => Equipment): EquipmentSet {
-    return new EquipmentSet(this.id,
-        this.name,
-        this.budget,
-        this.equipment.map(eq => {
-          if (eq.uid === uid) {
-            return modifyFn(eq);
-          }
-          return eq;
-        }),
-        this.itemDatabase);
-  }
-
-  move(sourceIndex: number, destinationIndex: number): EquipmentSet {
-    const equipment = [...this.equipment];
-    const element = equipment[sourceIndex];
-    equipment.splice(sourceIndex, 1);
-    equipment.splice(destinationIndex, 0, element);
+  setEquipment(equipment: Equipment[]) {
     return new EquipmentSet(this.id, this.name, this.budget, equipment, this.itemDatabase);
   }
 
-  setBudget(value: number | undefined) {
-    return new EquipmentSet(this.id, this.name, value, this.equipment, this.itemDatabase);
+  add(itemId: number, optionIds: number[]) {
+    const item = this.itemDatabase.summary(itemId);
+    const options = this.itemDatabase.options(optionIds);
+    if (!item) {
+      console.error("No item found with ID #" + itemId);
+      return this;
+    }
+    return this.setEquipment([...this.equipment, Equipment.create(item, true, options, this.itemDatabase)]);
   }
 }
 
@@ -117,7 +77,7 @@ export class Equipment {
 
   static create(item: ItemSummary,
                 included: boolean,
-                options: ItemOption[],
+                options: ItemOptionSummary[],
                 itemDb: ItemDatabase): Equipment {
     let name = item.name;
     for (let option of options) {
@@ -139,8 +99,11 @@ export class Equipment {
 
         let points = 0;
         for (let option of options) {
-          if (matchTags(optionSet.optionTags, option.tags)) {
-            points += option.pointCost;
+          for (let optionGroup of optionSet.optionGroups) {
+            if (matchTags(optionGroup.optionTags, option.tags)) {
+              points += option.pointCost;
+              break;
+            }
           }
         }
 
@@ -166,11 +129,15 @@ export class Equipment {
               public readonly cost: number,
               public readonly weight: number,
               public readonly item: ItemSummary,
-              public readonly options: ItemOption[],
+              public readonly options: ItemOptionSummary[],
               public readonly included: boolean) {
   }
 
   include(include: boolean): Equipment {
     return new Equipment(this.uid, this.name, this.cost, this.weight, this.item, this.options, include);
+  }
+
+  duplicate() {
+    return new Equipment(uuidv4(), this.name, this.cost, this.weight, this.item, this.options, this.included);
   }
 }

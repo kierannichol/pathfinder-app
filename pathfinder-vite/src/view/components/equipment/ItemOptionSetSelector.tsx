@@ -1,67 +1,21 @@
-import styles from "./EquipmentDescription.module.css";
-import ButtonBlock from "../controls/ButtonBlock.tsx";
-import {useMemo, useState} from "react";
-import {matchTags} from "../../../utils/tags.ts";
-import {ItemOption, ItemOptionSet} from "../../../data/v8/Item.ts";
-import {useItemDatabase} from "../../../data/context.tsx";
+import {ItemOptionSummary} from "../../../data/v8/ItemOption.ts";
+import {ItemOptionSet} from "../../../data/v8/ItemOptionSet.ts";
+import {ItemOptionGroupSelector} from "./ItemOptionGroupSelector.tsx";
 
 interface ItemOptionSetSelectorProps {
   optionSet: ItemOptionSet;
-  selectedOptions: ItemOption[];
-  onChangeOptions: (options: ItemOption[]) => void;
+  selectedOptions: ItemOptionSummary[];
+  onChangeOptions: (options: ItemOptionSummary[]) => void;
 }
 
 export function ItemOptionSetSelector({ optionSet, selectedOptions, onChangeOptions }: ItemOptionSetSelectorProps) {
-  const database = useItemDatabase();
 
-  const [ workingSelectedOptions, setWorkingSelectedOptions ] = useState<ItemOption[]>(selectedOptions);
-
-  const availableOptions = useMemo(() => {
-    if (!optionSet) return [];
-
-    return database.options().filter(option => matchTags(option.tags, optionSet.optionTags));
-  }, [database, optionSet]);
-
-  const optionGroups = useMemo(() => {
-    const groups: {[key:number]: ItemOption[]} = {};
-    for (const availableOption of availableOptions) {
-      if (!groups[availableOption.uniquenessTag]) {
-        groups[availableOption.uniquenessTag] = [];
-      }
-      groups[availableOption.uniquenessTag].push(availableOption);
-    }
-    return groups;
-  }, [availableOptions]);
-
-  function handleSelectOption(option: ItemOption) {
-    const alreadySelected = workingSelectedOptions.find(opt => opt.id === option.id) !== undefined;
-    if (alreadySelected) {
-      const updated = workingSelectedOptions.filter(oid => oid.id !== option.id);
-      setWorkingSelectedOptions(updated);
-      onChangeOptions?.(updated);
-      return;
-    }
-
-    const updated = workingSelectedOptions
-      .filter(opt => opt.uniquenessTag === 0 || opt.uniquenessTag !== option.uniquenessTag);
-    updated.push(option);
-    setWorkingSelectedOptions(updated);
-    onChangeOptions?.(updated);
-  }
-
-  function isOptionSelected(option: ItemOption): boolean {
-    return workingSelectedOptions?.map(o => o.id).includes(option.id) ?? false;
-  }
-
-  return <div className={styles.options}>
-    {Object.entries(optionGroups).map(([gid, optionGroup]) => <div key={gid} className={styles.optionGroup}>
-      {optionGroup.map(option =>
-          <ButtonBlock key={option.id}
-                       onClick={() => handleSelectOption(option)}
-                       className={styles.option + " " + (isOptionSelected(option) ? styles.selectedOption : "")}>
-            {option.name}
-          </ButtonBlock>
-      )}
-    </div>)}
+  return <div>
+    {optionSet.optionGroups.map(optionGroup =>
+        <ItemOptionGroupSelector key={optionGroup.name}
+                                 optionSet={optionSet}
+                                 optionGroup={optionGroup}
+                                 selected={selectedOptions.map(option => option.id)}
+                                 onChangeOptions={onChangeOptions} />)}
   </div>
 }

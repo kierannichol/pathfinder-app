@@ -6176,7 +6176,7 @@ export const data = $root.data = (() => {
          * @property {string|null} [sourceCode] SourceModuleItemDatabaseDbo sourceCode
          * @property {Array.<data.ItemSummaryDbo>|null} [items] SourceModuleItemDatabaseDbo items
          * @property {Array.<data.ItemOptionSetDbo>|null} [optionSets] SourceModuleItemDatabaseDbo optionSets
-         * @property {Array.<data.ItemOptionDbo>|null} [options] SourceModuleItemDatabaseDbo options
+         * @property {Array.<data.ItemOptionSummaryDbo>|null} [options] SourceModuleItemDatabaseDbo options
          */
 
         /**
@@ -6231,7 +6231,7 @@ export const data = $root.data = (() => {
 
         /**
          * SourceModuleItemDatabaseDbo options.
-         * @member {Array.<data.ItemOptionDbo>} options
+         * @member {Array.<data.ItemOptionSummaryDbo>} options
          * @memberof data.SourceModuleItemDatabaseDbo
          * @instance
          */
@@ -6273,7 +6273,7 @@ export const data = $root.data = (() => {
                     $root.data.ItemOptionSetDbo.encode(message.optionSets[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             if (message.options != null && message.options.length)
                 for (let i = 0; i < message.options.length; ++i)
-                    $root.data.ItemOptionDbo.encode(message.options[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                    $root.data.ItemOptionSummaryDbo.encode(message.options[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
             return writer;
         };
 
@@ -6331,7 +6331,7 @@ export const data = $root.data = (() => {
                 case 5: {
                         if (!(message.options && message.options.length))
                             message.options = [];
-                        message.options.push($root.data.ItemOptionDbo.decode(reader, reader.uint32()));
+                        message.options.push($root.data.ItemOptionSummaryDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -6397,7 +6397,7 @@ export const data = $root.data = (() => {
                 if (!Array.isArray(message.options))
                     return "options: array expected";
                 for (let i = 0; i < message.options.length; ++i) {
-                    let error = $root.data.ItemOptionDbo.verify(message.options[i]);
+                    let error = $root.data.ItemOptionSummaryDbo.verify(message.options[i]);
                     if (error)
                         return "options." + error;
                 }
@@ -6448,7 +6448,7 @@ export const data = $root.data = (() => {
                 for (let i = 0; i < object.options.length; ++i) {
                     if (typeof object.options[i] !== "object")
                         throw TypeError(".data.SourceModuleItemDatabaseDbo.options: object expected");
-                    message.options[i] = $root.data.ItemOptionDbo.fromObject(object.options[i]);
+                    message.options[i] = $root.data.ItemOptionSummaryDbo.fromObject(object.options[i]);
                 }
             }
             return message;
@@ -6493,7 +6493,7 @@ export const data = $root.data = (() => {
             if (message.options && message.options.length) {
                 object.options = [];
                 for (let j = 0; j < message.options.length; ++j)
-                    object.options[j] = $root.data.ItemOptionDbo.toObject(message.options[j], options);
+                    object.options[j] = $root.data.ItemOptionSummaryDbo.toObject(message.options[j], options);
             }
             return object;
         };
@@ -7288,7 +7288,7 @@ export const data = $root.data = (() => {
          * @property {boolean|null} [hasMaxPoints] ItemOptionSetDbo hasMaxPoints
          * @property {number|null} [maxPoints] ItemOptionSetDbo maxPoints
          * @property {Object.<string,number>|null} [pointCurrencyCost] ItemOptionSetDbo pointCurrencyCost
-         * @property {Array.<number>|null} [optionTags] ItemOptionSetDbo optionTags
+         * @property {Array.<data.ItemOptionGroupDbo>|null} [optionGroups] ItemOptionSetDbo optionGroups
          */
 
         /**
@@ -7301,7 +7301,7 @@ export const data = $root.data = (() => {
          */
         function ItemOptionSetDbo(properties) {
             this.pointCurrencyCost = {};
-            this.optionTags = [];
+            this.optionGroups = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -7349,12 +7349,12 @@ export const data = $root.data = (() => {
         ItemOptionSetDbo.prototype.pointCurrencyCost = $util.emptyObject;
 
         /**
-         * ItemOptionSetDbo optionTags.
-         * @member {Array.<number>} optionTags
+         * ItemOptionSetDbo optionGroups.
+         * @member {Array.<data.ItemOptionGroupDbo>} optionGroups
          * @memberof data.ItemOptionSetDbo
          * @instance
          */
-        ItemOptionSetDbo.prototype.optionTags = $util.emptyArray;
+        ItemOptionSetDbo.prototype.optionGroups = $util.emptyArray;
 
         /**
          * Creates a new ItemOptionSetDbo instance using the specified properties.
@@ -7391,12 +7391,9 @@ export const data = $root.data = (() => {
             if (message.pointCurrencyCost != null && Object.hasOwnProperty.call(message, "pointCurrencyCost"))
                 for (let keys = Object.keys(message.pointCurrencyCost), i = 0; i < keys.length; ++i)
                     writer.uint32(/* id 5, wireType 2 =*/42).fork().uint32(/* id 1, wireType 0 =*/8).uint32(keys[i]).uint32(/* id 2, wireType 1 =*/17).double(message.pointCurrencyCost[keys[i]]).ldelim();
-            if (message.optionTags != null && message.optionTags.length) {
-                writer.uint32(/* id 6, wireType 2 =*/50).fork();
-                for (let i = 0; i < message.optionTags.length; ++i)
-                    writer.int32(message.optionTags[i]);
-                writer.ldelim();
-            }
+            if (message.optionGroups != null && message.optionGroups.length)
+                for (let i = 0; i < message.optionGroups.length; ++i)
+                    $root.data.ItemOptionGroupDbo.encode(message.optionGroups[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             return writer;
         };
 
@@ -7471,14 +7468,9 @@ export const data = $root.data = (() => {
                         break;
                     }
                 case 6: {
-                        if (!(message.optionTags && message.optionTags.length))
-                            message.optionTags = [];
-                        if ((tag & 7) === 2) {
-                            let end2 = reader.uint32() + reader.pos;
-                            while (reader.pos < end2)
-                                message.optionTags.push(reader.int32());
-                        } else
-                            message.optionTags.push(reader.int32());
+                        if (!(message.optionGroups && message.optionGroups.length))
+                            message.optionGroups = [];
+                        message.optionGroups.push($root.data.ItemOptionGroupDbo.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -7539,12 +7531,14 @@ export const data = $root.data = (() => {
                         return "pointCurrencyCost: number{k:uint32} expected";
                 }
             }
-            if (message.optionTags != null && message.hasOwnProperty("optionTags")) {
-                if (!Array.isArray(message.optionTags))
-                    return "optionTags: array expected";
-                for (let i = 0; i < message.optionTags.length; ++i)
-                    if (!$util.isInteger(message.optionTags[i]))
-                        return "optionTags: integer[] expected";
+            if (message.optionGroups != null && message.hasOwnProperty("optionGroups")) {
+                if (!Array.isArray(message.optionGroups))
+                    return "optionGroups: array expected";
+                for (let i = 0; i < message.optionGroups.length; ++i) {
+                    let error = $root.data.ItemOptionGroupDbo.verify(message.optionGroups[i]);
+                    if (error)
+                        return "optionGroups." + error;
+                }
             }
             return null;
         };
@@ -7576,12 +7570,15 @@ export const data = $root.data = (() => {
                 for (let keys = Object.keys(object.pointCurrencyCost), i = 0; i < keys.length; ++i)
                     message.pointCurrencyCost[keys[i]] = Number(object.pointCurrencyCost[keys[i]]);
             }
-            if (object.optionTags) {
-                if (!Array.isArray(object.optionTags))
-                    throw TypeError(".data.ItemOptionSetDbo.optionTags: array expected");
-                message.optionTags = [];
-                for (let i = 0; i < object.optionTags.length; ++i)
-                    message.optionTags[i] = object.optionTags[i] | 0;
+            if (object.optionGroups) {
+                if (!Array.isArray(object.optionGroups))
+                    throw TypeError(".data.ItemOptionSetDbo.optionGroups: array expected");
+                message.optionGroups = [];
+                for (let i = 0; i < object.optionGroups.length; ++i) {
+                    if (typeof object.optionGroups[i] !== "object")
+                        throw TypeError(".data.ItemOptionSetDbo.optionGroups: object expected");
+                    message.optionGroups[i] = $root.data.ItemOptionGroupDbo.fromObject(object.optionGroups[i]);
+                }
             }
             return message;
         };
@@ -7600,7 +7597,7 @@ export const data = $root.data = (() => {
                 options = {};
             let object = {};
             if (options.arrays || options.defaults)
-                object.optionTags = [];
+                object.optionGroups = [];
             if (options.objects || options.defaults)
                 object.pointCurrencyCost = {};
             if (options.defaults) {
@@ -7623,10 +7620,10 @@ export const data = $root.data = (() => {
                 for (let j = 0; j < keys2.length; ++j)
                     object.pointCurrencyCost[keys2[j]] = options.json && !isFinite(message.pointCurrencyCost[keys2[j]]) ? String(message.pointCurrencyCost[keys2[j]]) : message.pointCurrencyCost[keys2[j]];
             }
-            if (message.optionTags && message.optionTags.length) {
-                object.optionTags = [];
-                for (let j = 0; j < message.optionTags.length; ++j)
-                    object.optionTags[j] = message.optionTags[j];
+            if (message.optionGroups && message.optionGroups.length) {
+                object.optionGroups = [];
+                for (let j = 0; j < message.optionGroups.length; ++j)
+                    object.optionGroups[j] = $root.data.ItemOptionGroupDbo.toObject(message.optionGroups[j], options);
             }
             return object;
         };
@@ -7660,6 +7657,694 @@ export const data = $root.data = (() => {
         return ItemOptionSetDbo;
     })();
 
+    data.ItemOptionGroupDbo = (function() {
+
+        /**
+         * Properties of an ItemOptionGroupDbo.
+         * @memberof data
+         * @interface IItemOptionGroupDbo
+         * @property {string|null} [name] ItemOptionGroupDbo name
+         * @property {Array.<number>|null} [optionTags] ItemOptionGroupDbo optionTags
+         * @property {boolean|null} [hasMaxSelectable] ItemOptionGroupDbo hasMaxSelectable
+         * @property {number|null} [maxSelectable] ItemOptionGroupDbo maxSelectable
+         */
+
+        /**
+         * Constructs a new ItemOptionGroupDbo.
+         * @memberof data
+         * @classdesc Represents an ItemOptionGroupDbo.
+         * @implements IItemOptionGroupDbo
+         * @constructor
+         * @param {data.IItemOptionGroupDbo=} [properties] Properties to set
+         */
+        function ItemOptionGroupDbo(properties) {
+            this.optionTags = [];
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ItemOptionGroupDbo name.
+         * @member {string} name
+         * @memberof data.ItemOptionGroupDbo
+         * @instance
+         */
+        ItemOptionGroupDbo.prototype.name = "";
+
+        /**
+         * ItemOptionGroupDbo optionTags.
+         * @member {Array.<number>} optionTags
+         * @memberof data.ItemOptionGroupDbo
+         * @instance
+         */
+        ItemOptionGroupDbo.prototype.optionTags = $util.emptyArray;
+
+        /**
+         * ItemOptionGroupDbo hasMaxSelectable.
+         * @member {boolean} hasMaxSelectable
+         * @memberof data.ItemOptionGroupDbo
+         * @instance
+         */
+        ItemOptionGroupDbo.prototype.hasMaxSelectable = false;
+
+        /**
+         * ItemOptionGroupDbo maxSelectable.
+         * @member {number} maxSelectable
+         * @memberof data.ItemOptionGroupDbo
+         * @instance
+         */
+        ItemOptionGroupDbo.prototype.maxSelectable = 0;
+
+        /**
+         * Creates a new ItemOptionGroupDbo instance using the specified properties.
+         * @function create
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {data.IItemOptionGroupDbo=} [properties] Properties to set
+         * @returns {data.ItemOptionGroupDbo} ItemOptionGroupDbo instance
+         */
+        ItemOptionGroupDbo.create = function create(properties) {
+            return new ItemOptionGroupDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ItemOptionGroupDbo message. Does not implicitly {@link data.ItemOptionGroupDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {data.ItemOptionGroupDbo} message ItemOptionGroupDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ItemOptionGroupDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+            if (message.optionTags != null && message.optionTags.length) {
+                writer.uint32(/* id 2, wireType 2 =*/18).fork();
+                for (let i = 0; i < message.optionTags.length; ++i)
+                    writer.uint32(message.optionTags[i]);
+                writer.ldelim();
+            }
+            if (message.hasMaxSelectable != null && Object.hasOwnProperty.call(message, "hasMaxSelectable"))
+                writer.uint32(/* id 3, wireType 0 =*/24).bool(message.hasMaxSelectable);
+            if (message.maxSelectable != null && Object.hasOwnProperty.call(message, "maxSelectable"))
+                writer.uint32(/* id 4, wireType 0 =*/32).uint32(message.maxSelectable);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ItemOptionGroupDbo message, length delimited. Does not implicitly {@link data.ItemOptionGroupDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {data.ItemOptionGroupDbo} message ItemOptionGroupDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ItemOptionGroupDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an ItemOptionGroupDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.ItemOptionGroupDbo} ItemOptionGroupDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ItemOptionGroupDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ItemOptionGroupDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 2: {
+                        if (!(message.optionTags && message.optionTags.length))
+                            message.optionTags = [];
+                        if ((tag & 7) === 2) {
+                            let end2 = reader.uint32() + reader.pos;
+                            while (reader.pos < end2)
+                                message.optionTags.push(reader.uint32());
+                        } else
+                            message.optionTags.push(reader.uint32());
+                        break;
+                    }
+                case 3: {
+                        message.hasMaxSelectable = reader.bool();
+                        break;
+                    }
+                case 4: {
+                        message.maxSelectable = reader.uint32();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes an ItemOptionGroupDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.ItemOptionGroupDbo} ItemOptionGroupDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ItemOptionGroupDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an ItemOptionGroupDbo message.
+         * @function verify
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ItemOptionGroupDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.optionTags != null && message.hasOwnProperty("optionTags")) {
+                if (!Array.isArray(message.optionTags))
+                    return "optionTags: array expected";
+                for (let i = 0; i < message.optionTags.length; ++i)
+                    if (!$util.isInteger(message.optionTags[i]))
+                        return "optionTags: integer[] expected";
+            }
+            if (message.hasMaxSelectable != null && message.hasOwnProperty("hasMaxSelectable"))
+                if (typeof message.hasMaxSelectable !== "boolean")
+                    return "hasMaxSelectable: boolean expected";
+            if (message.maxSelectable != null && message.hasOwnProperty("maxSelectable"))
+                if (!$util.isInteger(message.maxSelectable))
+                    return "maxSelectable: integer expected";
+            return null;
+        };
+
+        /**
+         * Creates an ItemOptionGroupDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.ItemOptionGroupDbo} ItemOptionGroupDbo
+         */
+        ItemOptionGroupDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.ItemOptionGroupDbo)
+                return object;
+            let message = new $root.data.ItemOptionGroupDbo();
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.optionTags) {
+                if (!Array.isArray(object.optionTags))
+                    throw TypeError(".data.ItemOptionGroupDbo.optionTags: array expected");
+                message.optionTags = [];
+                for (let i = 0; i < object.optionTags.length; ++i)
+                    message.optionTags[i] = object.optionTags[i] >>> 0;
+            }
+            if (object.hasMaxSelectable != null)
+                message.hasMaxSelectable = Boolean(object.hasMaxSelectable);
+            if (object.maxSelectable != null)
+                message.maxSelectable = object.maxSelectable >>> 0;
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an ItemOptionGroupDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {data.ItemOptionGroupDbo} message ItemOptionGroupDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ItemOptionGroupDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.arrays || options.defaults)
+                object.optionTags = [];
+            if (options.defaults) {
+                object.name = "";
+                object.hasMaxSelectable = false;
+                object.maxSelectable = 0;
+            }
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.optionTags && message.optionTags.length) {
+                object.optionTags = [];
+                for (let j = 0; j < message.optionTags.length; ++j)
+                    object.optionTags[j] = message.optionTags[j];
+            }
+            if (message.hasMaxSelectable != null && message.hasOwnProperty("hasMaxSelectable"))
+                object.hasMaxSelectable = message.hasMaxSelectable;
+            if (message.maxSelectable != null && message.hasOwnProperty("maxSelectable"))
+                object.maxSelectable = message.maxSelectable;
+            return object;
+        };
+
+        /**
+         * Converts this ItemOptionGroupDbo to JSON.
+         * @function toJSON
+         * @memberof data.ItemOptionGroupDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ItemOptionGroupDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ItemOptionGroupDbo
+         * @function getTypeUrl
+         * @memberof data.ItemOptionGroupDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ItemOptionGroupDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.ItemOptionGroupDbo";
+        };
+
+        return ItemOptionGroupDbo;
+    })();
+
+    data.ItemOptionSummaryDbo = (function() {
+
+        /**
+         * Properties of an ItemOptionSummaryDbo.
+         * @memberof data
+         * @interface IItemOptionSummaryDbo
+         * @property {number|null} [id] ItemOptionSummaryDbo id
+         * @property {string|null} [name] ItemOptionSummaryDbo name
+         * @property {string|null} [baseNamePrefix] ItemOptionSummaryDbo baseNamePrefix
+         * @property {string|null} [baseNamePostfix] ItemOptionSummaryDbo baseNamePostfix
+         * @property {number|null} [pointCost] ItemOptionSummaryDbo pointCost
+         * @property {number|null} [currencyCost] ItemOptionSummaryDbo currencyCost
+         * @property {Array.<number>|null} [tags] ItemOptionSummaryDbo tags
+         * @property {number|null} [currencyCostByWeight] ItemOptionSummaryDbo currencyCostByWeight
+         */
+
+        /**
+         * Constructs a new ItemOptionSummaryDbo.
+         * @memberof data
+         * @classdesc Represents an ItemOptionSummaryDbo.
+         * @implements IItemOptionSummaryDbo
+         * @constructor
+         * @param {data.IItemOptionSummaryDbo=} [properties] Properties to set
+         */
+        function ItemOptionSummaryDbo(properties) {
+            this.tags = [];
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * ItemOptionSummaryDbo id.
+         * @member {number} id
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.id = 0;
+
+        /**
+         * ItemOptionSummaryDbo name.
+         * @member {string} name
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.name = "";
+
+        /**
+         * ItemOptionSummaryDbo baseNamePrefix.
+         * @member {string} baseNamePrefix
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.baseNamePrefix = "";
+
+        /**
+         * ItemOptionSummaryDbo baseNamePostfix.
+         * @member {string} baseNamePostfix
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.baseNamePostfix = "";
+
+        /**
+         * ItemOptionSummaryDbo pointCost.
+         * @member {number} pointCost
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.pointCost = 0;
+
+        /**
+         * ItemOptionSummaryDbo currencyCost.
+         * @member {number} currencyCost
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.currencyCost = 0;
+
+        /**
+         * ItemOptionSummaryDbo tags.
+         * @member {Array.<number>} tags
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.tags = $util.emptyArray;
+
+        /**
+         * ItemOptionSummaryDbo currencyCostByWeight.
+         * @member {number} currencyCostByWeight
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         */
+        ItemOptionSummaryDbo.prototype.currencyCostByWeight = 0;
+
+        /**
+         * Creates a new ItemOptionSummaryDbo instance using the specified properties.
+         * @function create
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {data.IItemOptionSummaryDbo=} [properties] Properties to set
+         * @returns {data.ItemOptionSummaryDbo} ItemOptionSummaryDbo instance
+         */
+        ItemOptionSummaryDbo.create = function create(properties) {
+            return new ItemOptionSummaryDbo(properties);
+        };
+
+        /**
+         * Encodes the specified ItemOptionSummaryDbo message. Does not implicitly {@link data.ItemOptionSummaryDbo.verify|verify} messages.
+         * @function encode
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {data.ItemOptionSummaryDbo} message ItemOptionSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ItemOptionSummaryDbo.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
+                writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.id);
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
+            if (message.baseNamePrefix != null && Object.hasOwnProperty.call(message, "baseNamePrefix"))
+                writer.uint32(/* id 3, wireType 2 =*/26).string(message.baseNamePrefix);
+            if (message.baseNamePostfix != null && Object.hasOwnProperty.call(message, "baseNamePostfix"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.baseNamePostfix);
+            if (message.pointCost != null && Object.hasOwnProperty.call(message, "pointCost"))
+                writer.uint32(/* id 5, wireType 0 =*/40).uint32(message.pointCost);
+            if (message.currencyCost != null && Object.hasOwnProperty.call(message, "currencyCost"))
+                writer.uint32(/* id 6, wireType 1 =*/49).double(message.currencyCost);
+            if (message.tags != null && message.tags.length) {
+                writer.uint32(/* id 7, wireType 2 =*/58).fork();
+                for (let i = 0; i < message.tags.length; ++i)
+                    writer.uint32(message.tags[i]);
+                writer.ldelim();
+            }
+            if (message.currencyCostByWeight != null && Object.hasOwnProperty.call(message, "currencyCostByWeight"))
+                writer.uint32(/* id 8, wireType 1 =*/65).double(message.currencyCostByWeight);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified ItemOptionSummaryDbo message, length delimited. Does not implicitly {@link data.ItemOptionSummaryDbo.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {data.ItemOptionSummaryDbo} message ItemOptionSummaryDbo message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        ItemOptionSummaryDbo.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an ItemOptionSummaryDbo message from the specified reader or buffer.
+         * @function decode
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {data.ItemOptionSummaryDbo} ItemOptionSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ItemOptionSummaryDbo.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.data.ItemOptionSummaryDbo();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.id = reader.uint32();
+                        break;
+                    }
+                case 2: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.baseNamePrefix = reader.string();
+                        break;
+                    }
+                case 4: {
+                        message.baseNamePostfix = reader.string();
+                        break;
+                    }
+                case 5: {
+                        message.pointCost = reader.uint32();
+                        break;
+                    }
+                case 6: {
+                        message.currencyCost = reader.double();
+                        break;
+                    }
+                case 7: {
+                        if (!(message.tags && message.tags.length))
+                            message.tags = [];
+                        if ((tag & 7) === 2) {
+                            let end2 = reader.uint32() + reader.pos;
+                            while (reader.pos < end2)
+                                message.tags.push(reader.uint32());
+                        } else
+                            message.tags.push(reader.uint32());
+                        break;
+                    }
+                case 8: {
+                        message.currencyCostByWeight = reader.double();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes an ItemOptionSummaryDbo message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {data.ItemOptionSummaryDbo} ItemOptionSummaryDbo
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        ItemOptionSummaryDbo.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an ItemOptionSummaryDbo message.
+         * @function verify
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        ItemOptionSummaryDbo.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.id != null && message.hasOwnProperty("id"))
+                if (!$util.isInteger(message.id))
+                    return "id: integer expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.baseNamePrefix != null && message.hasOwnProperty("baseNamePrefix"))
+                if (!$util.isString(message.baseNamePrefix))
+                    return "baseNamePrefix: string expected";
+            if (message.baseNamePostfix != null && message.hasOwnProperty("baseNamePostfix"))
+                if (!$util.isString(message.baseNamePostfix))
+                    return "baseNamePostfix: string expected";
+            if (message.pointCost != null && message.hasOwnProperty("pointCost"))
+                if (!$util.isInteger(message.pointCost))
+                    return "pointCost: integer expected";
+            if (message.currencyCost != null && message.hasOwnProperty("currencyCost"))
+                if (typeof message.currencyCost !== "number")
+                    return "currencyCost: number expected";
+            if (message.tags != null && message.hasOwnProperty("tags")) {
+                if (!Array.isArray(message.tags))
+                    return "tags: array expected";
+                for (let i = 0; i < message.tags.length; ++i)
+                    if (!$util.isInteger(message.tags[i]))
+                        return "tags: integer[] expected";
+            }
+            if (message.currencyCostByWeight != null && message.hasOwnProperty("currencyCostByWeight"))
+                if (typeof message.currencyCostByWeight !== "number")
+                    return "currencyCostByWeight: number expected";
+            return null;
+        };
+
+        /**
+         * Creates an ItemOptionSummaryDbo message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {data.ItemOptionSummaryDbo} ItemOptionSummaryDbo
+         */
+        ItemOptionSummaryDbo.fromObject = function fromObject(object) {
+            if (object instanceof $root.data.ItemOptionSummaryDbo)
+                return object;
+            let message = new $root.data.ItemOptionSummaryDbo();
+            if (object.id != null)
+                message.id = object.id >>> 0;
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.baseNamePrefix != null)
+                message.baseNamePrefix = String(object.baseNamePrefix);
+            if (object.baseNamePostfix != null)
+                message.baseNamePostfix = String(object.baseNamePostfix);
+            if (object.pointCost != null)
+                message.pointCost = object.pointCost >>> 0;
+            if (object.currencyCost != null)
+                message.currencyCost = Number(object.currencyCost);
+            if (object.tags) {
+                if (!Array.isArray(object.tags))
+                    throw TypeError(".data.ItemOptionSummaryDbo.tags: array expected");
+                message.tags = [];
+                for (let i = 0; i < object.tags.length; ++i)
+                    message.tags[i] = object.tags[i] >>> 0;
+            }
+            if (object.currencyCostByWeight != null)
+                message.currencyCostByWeight = Number(object.currencyCostByWeight);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an ItemOptionSummaryDbo message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {data.ItemOptionSummaryDbo} message ItemOptionSummaryDbo
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        ItemOptionSummaryDbo.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.arrays || options.defaults)
+                object.tags = [];
+            if (options.defaults) {
+                object.id = 0;
+                object.name = "";
+                object.baseNamePrefix = "";
+                object.baseNamePostfix = "";
+                object.pointCost = 0;
+                object.currencyCost = 0;
+                object.currencyCostByWeight = 0;
+            }
+            if (message.id != null && message.hasOwnProperty("id"))
+                object.id = message.id;
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.baseNamePrefix != null && message.hasOwnProperty("baseNamePrefix"))
+                object.baseNamePrefix = message.baseNamePrefix;
+            if (message.baseNamePostfix != null && message.hasOwnProperty("baseNamePostfix"))
+                object.baseNamePostfix = message.baseNamePostfix;
+            if (message.pointCost != null && message.hasOwnProperty("pointCost"))
+                object.pointCost = message.pointCost;
+            if (message.currencyCost != null && message.hasOwnProperty("currencyCost"))
+                object.currencyCost = options.json && !isFinite(message.currencyCost) ? String(message.currencyCost) : message.currencyCost;
+            if (message.tags && message.tags.length) {
+                object.tags = [];
+                for (let j = 0; j < message.tags.length; ++j)
+                    object.tags[j] = message.tags[j];
+            }
+            if (message.currencyCostByWeight != null && message.hasOwnProperty("currencyCostByWeight"))
+                object.currencyCostByWeight = options.json && !isFinite(message.currencyCostByWeight) ? String(message.currencyCostByWeight) : message.currencyCostByWeight;
+            return object;
+        };
+
+        /**
+         * Converts this ItemOptionSummaryDbo to JSON.
+         * @function toJSON
+         * @memberof data.ItemOptionSummaryDbo
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        ItemOptionSummaryDbo.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for ItemOptionSummaryDbo
+         * @function getTypeUrl
+         * @memberof data.ItemOptionSummaryDbo
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        ItemOptionSummaryDbo.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/data.ItemOptionSummaryDbo";
+        };
+
+        return ItemOptionSummaryDbo;
+    })();
+
     data.ItemOptionDbo = (function() {
 
         /**
@@ -7673,8 +8358,8 @@ export const data = $root.data = (() => {
          * @property {number|null} [pointCost] ItemOptionDbo pointCost
          * @property {number|null} [currencyCost] ItemOptionDbo currencyCost
          * @property {Array.<number>|null} [tags] ItemOptionDbo tags
-         * @property {number|null} [uniquenessTag] ItemOptionDbo uniquenessTag
          * @property {number|null} [currencyCostByWeight] ItemOptionDbo currencyCostByWeight
+         * @property {data.DescriptionDbo|null} [description] ItemOptionDbo description
          */
 
         /**
@@ -7750,20 +8435,20 @@ export const data = $root.data = (() => {
         ItemOptionDbo.prototype.tags = $util.emptyArray;
 
         /**
-         * ItemOptionDbo uniquenessTag.
-         * @member {number} uniquenessTag
-         * @memberof data.ItemOptionDbo
-         * @instance
-         */
-        ItemOptionDbo.prototype.uniquenessTag = 0;
-
-        /**
          * ItemOptionDbo currencyCostByWeight.
          * @member {number} currencyCostByWeight
          * @memberof data.ItemOptionDbo
          * @instance
          */
         ItemOptionDbo.prototype.currencyCostByWeight = 0;
+
+        /**
+         * ItemOptionDbo description.
+         * @member {data.DescriptionDbo|null|undefined} description
+         * @memberof data.ItemOptionDbo
+         * @instance
+         */
+        ItemOptionDbo.prototype.description = null;
 
         /**
          * Creates a new ItemOptionDbo instance using the specified properties.
@@ -7807,10 +8492,10 @@ export const data = $root.data = (() => {
                     writer.uint32(message.tags[i]);
                 writer.ldelim();
             }
-            if (message.uniquenessTag != null && Object.hasOwnProperty.call(message, "uniquenessTag"))
-                writer.uint32(/* id 8, wireType 0 =*/64).uint32(message.uniquenessTag);
             if (message.currencyCostByWeight != null && Object.hasOwnProperty.call(message, "currencyCostByWeight"))
-                writer.uint32(/* id 9, wireType 1 =*/73).double(message.currencyCostByWeight);
+                writer.uint32(/* id 8, wireType 1 =*/65).double(message.currencyCostByWeight);
+            if (message.description != null && Object.hasOwnProperty.call(message, "description"))
+                $root.data.DescriptionDbo.encode(message.description, writer.uint32(/* id 100, wireType 2 =*/802).fork()).ldelim();
             return writer;
         };
 
@@ -7881,11 +8566,11 @@ export const data = $root.data = (() => {
                         break;
                     }
                 case 8: {
-                        message.uniquenessTag = reader.uint32();
+                        message.currencyCostByWeight = reader.double();
                         break;
                     }
-                case 9: {
-                        message.currencyCostByWeight = reader.double();
+                case 100: {
+                        message.description = $root.data.DescriptionDbo.decode(reader, reader.uint32());
                         break;
                     }
                 default:
@@ -7948,12 +8633,14 @@ export const data = $root.data = (() => {
                     if (!$util.isInteger(message.tags[i]))
                         return "tags: integer[] expected";
             }
-            if (message.uniquenessTag != null && message.hasOwnProperty("uniquenessTag"))
-                if (!$util.isInteger(message.uniquenessTag))
-                    return "uniquenessTag: integer expected";
             if (message.currencyCostByWeight != null && message.hasOwnProperty("currencyCostByWeight"))
                 if (typeof message.currencyCostByWeight !== "number")
                     return "currencyCostByWeight: number expected";
+            if (message.description != null && message.hasOwnProperty("description")) {
+                let error = $root.data.DescriptionDbo.verify(message.description);
+                if (error)
+                    return "description." + error;
+            }
             return null;
         };
 
@@ -7988,10 +8675,13 @@ export const data = $root.data = (() => {
                 for (let i = 0; i < object.tags.length; ++i)
                     message.tags[i] = object.tags[i] >>> 0;
             }
-            if (object.uniquenessTag != null)
-                message.uniquenessTag = object.uniquenessTag >>> 0;
             if (object.currencyCostByWeight != null)
                 message.currencyCostByWeight = Number(object.currencyCostByWeight);
+            if (object.description != null) {
+                if (typeof object.description !== "object")
+                    throw TypeError(".data.ItemOptionDbo.description: object expected");
+                message.description = $root.data.DescriptionDbo.fromObject(object.description);
+            }
             return message;
         };
 
@@ -8017,8 +8707,8 @@ export const data = $root.data = (() => {
                 object.baseNamePostfix = "";
                 object.pointCost = 0;
                 object.currencyCost = 0;
-                object.uniquenessTag = 0;
                 object.currencyCostByWeight = 0;
+                object.description = null;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -8037,10 +8727,10 @@ export const data = $root.data = (() => {
                 for (let j = 0; j < message.tags.length; ++j)
                     object.tags[j] = message.tags[j];
             }
-            if (message.uniquenessTag != null && message.hasOwnProperty("uniquenessTag"))
-                object.uniquenessTag = message.uniquenessTag;
             if (message.currencyCostByWeight != null && message.hasOwnProperty("currencyCostByWeight"))
                 object.currencyCostByWeight = options.json && !isFinite(message.currencyCostByWeight) ? String(message.currencyCostByWeight) : message.currencyCostByWeight;
+            if (message.description != null && message.hasOwnProperty("description"))
+                object.description = $root.data.DescriptionDbo.toObject(message.description, options);
             return object;
         };
 

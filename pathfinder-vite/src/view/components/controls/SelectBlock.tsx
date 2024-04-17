@@ -4,8 +4,8 @@ import * as Icons from "react-bootstrap-icons";
 import {AccordionEventKey} from "react-bootstrap/AccordionContext";
 import ButtonBlock from "./ButtonBlock.tsx";
 import styles from "./PathfinderSelect.module.scss";
-import {classNames} from "../../../utils/classNames.ts";
-import {useOnScreen} from "../../../utils/useOnScreen.tsx";
+import {classNames} from "@/utils/classNames.ts";
+import {useOnScreen} from "@/utils/useOnScreen.tsx";
 import LoadingBlock from "../LoadingBlock.tsx";
 
 type SelectChildType = ReactElement<SelectBlockItemProps>|ReactElement<SelectBlockItemProps>[];
@@ -17,7 +17,7 @@ interface SelectBlockProps {
 }
 
 const SelectBlock = ({ activeKey, onChange, children }: SelectBlockProps) => {
-  function handleChangeSelection(eventKey: AccordionEventKey) {
+  function handleChangeSelection(eventKey: AccordionEventKey, event: React.SyntheticEvent<unknown>) {
     onChange?.(typeof eventKey === "string" ? eventKey : undefined);
   }
 

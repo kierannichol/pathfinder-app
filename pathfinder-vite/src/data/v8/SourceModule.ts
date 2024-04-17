@@ -1,14 +1,24 @@
 import {fetchProto} from "./loader.tsx";
-import {data} from "../../compiled";
-import {decodeFeature, decodeItem, decodeItemOption, decodeItemOptionSet, decodeItemSummary} from "./decoder.ts";
+import {data} from "@/compiled";
+import {
+  decodeFeature,
+  decodeItem,
+  decodeItemOption,
+  decodeItemOptionSet,
+  decodeItemOptionSummary,
+  decodeItemSummary
+} from "./decoder.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";
 import {Feature} from "./Feature.ts";
 import {ItemSummary} from "./ItemSummary.ts";
-import {Item, ItemOption, ItemOptionSet} from "./Item.ts";
-import {hasTag} from "../../utils/tags.ts";
+import {Item} from "./Item.ts";
+import {hasTag} from "@/utils/tags.ts";
+import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
+import {ItemOptionSet} from "./ItemOptionSet.ts";
 import ItemDbo = data.ItemDbo;
 import FeatureDbo = data.FeatureDbo;
 import SourceModuleItemDatabaseDbo = data.SourceModuleItemDatabaseDbo;
+import ItemOptionDbo = data.ItemOptionDbo;
 
 export default abstract class SourceModule {
   abstract get sourceCode(): string;
@@ -37,7 +47,7 @@ export class SourceModuleItemDatabase {
   constructor(public readonly sourceId: number,
               public readonly sourceCode: string,
               private readonly summaryById: {[id:string]: ItemSummary},
-              private readonly optionsById: {[id:number]: ItemOption},
+              private readonly optionsById: {[id:number]: ItemOptionSummary},
               private readonly optionSetsById: {[id:number]: ItemOptionSet}) {
   }
 
@@ -55,7 +65,7 @@ export class SourceModuleItemDatabase {
     return this.summaryById[id];
   }
 
-  option(optionId: number): ItemOption|undefined {
+  option(optionId: number): ItemOptionSummary|undefined {
     return this.optionsById[optionId];
   }
 
@@ -63,8 +73,14 @@ export class SourceModuleItemDatabase {
     return this.optionSetsById[optionSetId];
   }
 
-  options(): ItemOption[] {
+  options(): ItemOptionSummary[] {
     return Object.values(this.optionsById);
+  }
+
+  async optionDetails(optionId: number): Promise<ItemOption|undefined> {
+    const filename = optionId.toString();
+    const dbo = await fetchProto(`db/${this.sourceCode}/${filename}.bin`, ItemOptionDbo.decode);
+    return decodeItemOption(dbo);
   }
 }
 
@@ -110,9 +126,9 @@ export class ExternalSourceModule extends SourceModule {
     const summaries = dbo.items.map(i => decodeItemSummary(i, dbo.sourceId));
     const summaryMap: {[id:string]:ItemSummary} = {};
     summaries.forEach(summary => summaryMap[summary.itemId] = summary);
-    const optionMap: {[id:number]:ItemOption} = {};
+    const optionMap: {[id:number]:ItemOptionSummary} = {};
     dbo.options.forEach(optionDbo => {
-      const option = decodeItemOption(optionDbo);
+      const option = decodeItemOptionSummary(optionDbo);
       optionMap[option.id] = option;
     });
     const optionSetMap: {[id:number]:ItemOptionSet} = {};

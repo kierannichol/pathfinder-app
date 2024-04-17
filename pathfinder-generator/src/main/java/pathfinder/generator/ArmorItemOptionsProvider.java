@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 import org.springframework.stereotype.Component;
 import pathfinder.model.ItemOption;
+import pathfinder.model.ItemOptionGroup;
 import pathfinder.model.ItemOptionSet;
 import pathfinder.model.OptionSetId;
 import pathfinder.model.pathfinder.Material;
@@ -16,8 +17,6 @@ import pathfinder.util.StreamUtils;
 
 @Component
 public class ArmorItemOptionsProvider implements ItemOptionsProvider {
-    private static final String ENHANCEMENT_BONUS_UNIQUENESS_TAG = "armor_enhancement_bonus";
-    private static final String MATERIAL_UNIQUENESS_TAG = "material";
 
     @Override
     public Stream<ItemOptionSet> optionSets(SourceId sourceId) {
@@ -47,13 +46,25 @@ public class ArmorItemOptionsProvider implements ItemOptionsProvider {
                 .setPointCurrencyCost(8, 64000)
                 .setPointCurrencyCost(9, 81000)
                 .setPointCurrencyCost(10, 100000)
-                .addTag("armor_enhancement")
+                .addOptionGroup(ItemOptionGroup.builder()
+                        .setName("Enhancement Bonus")
+                        .addTag("armor_enhancement")
+                        .setMaxSelectable(1)
+                        .build())
+                .addOptionGroup(ItemOptionGroup.builder()
+                        .setName("Special Abilities")
+                        .addTag("armor_special_ability")
+                        .build())
                 .build();
     }
 
     private ItemOptionSet createArmorMaterialSet(OptionSetId optionSetId, String tag) {
         return ItemOptionSet.builder(optionSetId)
-                .addTag(tag)
+                .addOptionGroup(ItemOptionGroup.builder()
+                        .setName("Material")
+                        .addTag(tag)
+                        .setMaxSelectable(1)
+                        .build())
                 .build();
     }
 
@@ -75,7 +86,6 @@ public class ArmorItemOptionsProvider implements ItemOptionsProvider {
                 .setName("Masterwork")
                 .setBaseNamePrefix("Masterwork")
                 .addTag("armor_enhancement")
-                .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                 .setCurrencyCostBase(150)
                 .build());
 
@@ -84,7 +94,6 @@ public class ArmorItemOptionsProvider implements ItemOptionsProvider {
                     .setName("+" + i)
                     .setBaseNamePostfix("+" + i)
                     .addTag("armor_enhancement")
-                    .setUniquenessTag(ENHANCEMENT_BONUS_UNIQUENESS_TAG)
                     .setPointCost(i)
                     .build();
             options.add(option);
@@ -113,7 +122,6 @@ public class ArmorItemOptionsProvider implements ItemOptionsProvider {
         ItemOption.Builder builder = ItemOption.builder(code, material.sourceId())
                 .setName(material.name())
                 .setBaseNamePrefix(material.name())
-                .setUniquenessTag(MATERIAL_UNIQUENESS_TAG)
                 .addTag(tag)
                 .setCurrencyCostBase(baseCost);
         material.ifWeightCost(builder::setCurrencyCostByWeight);

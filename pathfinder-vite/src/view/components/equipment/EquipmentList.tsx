@@ -1,49 +1,75 @@
-import {DropResult} from "react-beautiful-dnd";
-import React, {useState} from "react";
-import {Droppable} from "../cards/Droppable.tsx";
+import React, {useMemo, useState} from "react";
 import {CardBlockList} from "../cards/CardBlockList.tsx";
-import {Draggable} from "../cards/Draggable.tsx";
 import {EquipmentCard} from "./EquipmentCard.tsx";
 import {EquipmentEditDialog} from "./EquipmentEditDialog.tsx";
-import {Equipment} from "../../../data/v8/Equipment.ts";
-import {ItemSummary} from "../../../data/v8/ItemSummary.ts";
-import {ItemOption} from "../../../data/v8/Item.ts";
+import {Equipment} from "@/data/v8/Equipment.ts";
+
+import {ItemOptionSummary} from "@/data/v8/ItemOption.ts";
+import {DragEndEvent} from "@dnd-kit/core";
+import {Droppable} from "../cards/Droppable.tsx";
+import {arrayMove, SortableContext, verticalListSortingStrategy} from "@dnd-kit/sortable";
+import {useItemDatabase} from "@/data/context.tsx";
 
 interface EquipmentListProps {
   equipment: Equipment[];
-  onDeleteItem?: (uid: string) => void;
-  onClickItem?: (uid: string) => void;
-  onDuplicateItem?: (uid: string) => void;
-  onUpdateItem?: (uid: string, updatedItem: ItemSummary|undefined, updatedOptions: ItemOption[]) => void;
-  onMoveItem?: (sourceIndex: number, destinationIndex: number) => void;
+  onChange?: (changed: Equipment[]) => void;
 }
 
-export function EquipmentList({ equipment, onDeleteItem, onClickItem, onUpdateItem, onDuplicateItem, onMoveItem }: EquipmentListProps) {
+export function EquipmentList({ equipment, onChange }: EquipmentListProps) {
+  const database = useItemDatabase();
+
   const [ equipmentToEdit, setEquipmentToEdit ] = useState<Equipment>();
 
+  const equipmentIds = useMemo(() => equipment.map(e => e.uid),
+      [equipment]);
+
+  function updateEquipmentList(updateFn: (list: Equipment[]) => Equipment[]) {
+    const updated = updateFn(equipment);
+    onChange?.(updated);
+  }
+
   function handleDelete(uid: string) {
-    onDeleteItem?.(uid);
+    updateEquipmentList(list => list.filter(e => e.uid !== uid));
   }
 
   function handleClickItem(uid: string) {
-    onClickItem?.(uid);
+    updateEquipmentList(list => {
+      const updated = [ ...list ];
+      const targetIndex = updated.findIndex(e => e.uid === uid);
+      if (targetIndex < 0) return list;
+      const target = updated[targetIndex];
+      updated[targetIndex] = target.include(!target.included);
+      return updated;
+    });
   }
 
-  function handleDragEnd(result: DropResult) {
-    if (!result.destination
-        || result.source.droppableId !== result.destination.droppableId
-        || result.destination === result.source) return;
+  function handleDragEnd(result: DragEndEvent) {
+    const {active, over} = result;
 
-    onMoveItem?.(result.source.index, result.destination.index);
+    if (active.id !== over?.id) {
+      updateEquipmentList(list => {
+        const oldIndex = list.findIndex(equipment => equipment.uid === active.id)
+        const newIndex = list.findIndex(equipment => equipment.uid === over?.id)
+        return arrayMove(list, oldIndex, newIndex);
+      });
+    }
   }
 
   function handleEditItem(equipment: Equipment) {
     setEquipmentToEdit(equipment);
   }
 
-  function handleFinishEdit(item: ItemSummary, options: ItemOption[]) {
-    if (equipmentToEdit) {
-      onUpdateItem?.(equipmentToEdit.uid, item, options);
+  function handleSubmitEdit(target: Equipment, options: ItemOptionSummary[]) {
+    if (target) {
+      const targetIndex = equipment.findIndex(eq => eq.uid === target.uid);
+      if (targetIndex < 0) {
+        console.warn("Unable to find edited equipment in list");
+        return;
+      }
+
+      const updated = [ ...equipment ];
+      updated[targetIndex] = Equipment.create(target.item, target.included, options, database);
+      onChange?.(updated);
     }
     setEquipmentToEdit(undefined);
   }
@@ -52,27 +78,26 @@ export function EquipmentList({ equipment, onDeleteItem, onClickItem, onUpdateIt
     setEquipmentToEdit(undefined);
   }
 
-  function handleDuplicateItem(uid: string) {
-    onDuplicateItem?.(uid);
-  }
-
   return <div>
-    <Droppable droppableId={"equipmentSet"} onDragEnd={handleDragEnd}>
+    <Droppable id="equipment-set"
+               onDragEnd={handleDragEnd}>
       <CardBlockList>
-        {equipment.map((equipment, index) =>
-          <Draggable key={equipment.uid} draggableId={equipment.uid} index={index}>
+        <SortableContext items={equipmentIds}
+                         strategy={verticalListSortingStrategy}>
+        {equipment.map(equipment =>
              <EquipmentCard equipment={equipment}
+                            key={equipment.uid}
                             disabled={!equipment.included}
                             onClick={() => handleClickItem(equipment.uid)}
-                            onDuplicate={() => handleDuplicateItem(equipment.uid)}
                             onEdit={() => handleEditItem(equipment)}
                             onDelete={() => handleDelete(equipment.uid)} />
-          </Draggable>)}
+        )}
+        </SortableContext>
       </CardBlockList>
     </Droppable>
     {equipmentToEdit && <EquipmentEditDialog show={true}
                                              value={equipmentToEdit}
                                              onCancel={handleCancelEdit}
-                                             onConfirm={handleFinishEdit} />}
+                                             onConfirm={handleSubmitEdit} />}
   </div>
 }

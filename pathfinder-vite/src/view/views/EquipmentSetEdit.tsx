@@ -1,6 +1,6 @@
 import {EquipmentSetEditor} from "../components/equipment/EquipmentSetEditor.tsx";
 import React from "react";
-import {EquipmentSet} from "../../data/v8/Equipment.ts";
+import {EquipmentSet} from "@/data/v8/Equipment.ts";
 
 interface EquipmentSetEditProps {
   loaded: EquipmentSet;
@@ -8,7 +8,7 @@ interface EquipmentSetEditProps {
 
 export default function EquipmentSetEdit({ loaded }: EquipmentSetEditProps) {
   return <main>
-    <EquipmentSetEditor loaded={loaded}/>
+    <EquipmentSetEditor equipmentSet={loaded}/>
     <div className="spacer"/>
   </main>
 }

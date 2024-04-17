@@ -4,7 +4,7 @@ import java.io.Serializable;
 import pathfinder.db.IdGenerator;
 import pathfinder.db.PersistedIdGenerator;
 import pathfinder.db.SourceModuleIdGenerator;
-import pathfinder.model.IntId;
+import pathfinder.model.id.IntId;
 
 public class SourceId implements Serializable {
 
