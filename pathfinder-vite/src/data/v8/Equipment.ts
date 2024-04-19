@@ -64,7 +64,7 @@ export class EquipmentSet {
 
 export class Equipment {
   static unpack(itemDb: ItemDatabase, packed: PackedEquipment): Equipment {
-    const [ id, included, ...optionIds ]: number[] = packed;
+    const [ id, included, quantity, ...optionIds ]: number[] = packed;
     const item = itemDb.summary(id);
     if (!item) throw new Error("Unknown item ID: " + id);
 
@@ -121,6 +121,7 @@ export class Equipment {
   pack(): PackedEquipment {
     return [ this.item.itemId,
               this.included ? 1 : 0,
+              this.quantity,
               ...this.options.map(o => o.id)]
   }
 
@@ -130,7 +131,8 @@ export class Equipment {
               public readonly weight: number,
               public readonly item: ItemSummary,
               public readonly options: ItemOptionSummary[],
-              public readonly included: boolean) {
+              public readonly included: boolean,
+              public readonly quantity: number = 1) {
   }
 
   include(include: boolean): Equipment {

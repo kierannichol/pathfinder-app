@@ -1,9 +1,28 @@
 .equipmentSummary {
   display: flex;
+  font-size: 90%;
 }
 
-.equipmentSummary *:first-child {
+.equipmentSummary > *:first-child {
   flex-grow: 1;
+}
+
+.weightSection {
+  display: flex;
+  flex-grow: 1;
+}
+
+.costSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalCost {
+  text-align: right;
+}
+
+.budgetRemaining {
+  text-align: right;
 }
 
 .section {

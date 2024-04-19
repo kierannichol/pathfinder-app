@@ -7,6 +7,7 @@ import React, {MouseEvent, useMemo, useState} from "react";
 import {CardBlock} from "../cards/CardBlock.tsx";
 import EditIcon from "../icons/EditIcon.tsx";
 import {Equipment} from "@/data/v8/Equipment.ts";
+import {CostedLabel} from "@/view/components/equipment/CostedLabel.tsx";
 
 interface EquipmentCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   equipment: Equipment;
@@ -41,9 +42,8 @@ export function EquipmentCard({ equipment, disabled = false, onClick, onEdit, on
             <div className={classNames([styles.labelSegment, styles.control, styles.editButton])}
                  onClick={onEdit}><EditIcon /></div>}
           <div className={styles.labelSegment + " " + styles.equipmentName} onClick={onClick}>
-            <div>{equipment.name}</div>
+            <CostedLabel name={equipment.name} cost={<Currency gp={equipment.cost}/>} />
           </div>
-          <div className={styles.labelSegment}>(<Currency gp={equipment.cost} />)</div>
           <div className={classNames([styles.labelSegment, styles.control, styles.deleteButton])}
                onClick={startDelete}><DeleteIcon /></div>
         </div>

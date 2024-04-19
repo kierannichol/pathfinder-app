@@ -98,19 +98,23 @@ export function EquipmentSetEditor({ equipmentSet }: EquipmentSetEditorProps) {
     <header>Equipment List</header>
     <section className={styles.section}>
       <div className={styles.equipmentSummary}>
-        <div><b>Total Weight: <Quantity amount={totalWeight} unit="lbs."/></b></div>
-        <div>
-          <div><b>Total Cost: <Currency gp={totalCost}/></b></div>
-          {budget && <div>({<BudgetRemaining budget={budget} totalCost={totalCost}/>} remaining)</div>}
+        <div className={styles.weightSection}>
+          <b>Total Weight: <Quantity amount={totalWeight} unit="lbs."/></b>
+        </div>
+        <div className={styles.costSection}>
+          <div className={styles.totalCost}>
+            <b>Total Cost: <Currency gp={totalCost}/></b>
+          </div>
+          {budget && <div className={styles.budgetRemaining}>(<BudgetRemaining budget={budget} totalCost={totalCost}/> remaining)</div>}
         </div>
       </div>
       <EquipmentList equipment={equipment}
                      onChange={handleChangeEquipment}
       />
       <ButtonBlock variant="link" onClick={() => setShowAddItemDialog(true)}>+ Add Item</ButtonBlock>
-      <EquipmentSearchDialog show={showAddItemDialog}
+      {showAddItemDialog && <EquipmentSearchDialog show={showAddItemDialog}
                              onSelect={handleSubmitAdd}
-                             onCancel={handleCancelAdd}/>
+                             onCancel={handleCancelAdd}/>}
     </section>
   </div>
 }

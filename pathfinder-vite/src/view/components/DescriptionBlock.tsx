@@ -10,9 +10,10 @@ export function DescriptionBlock({ description }: DescriptionBlockProps) {
 
   return <div>
     <p className={styles.text}>{description.text}</p>
-    {Object.entries(description.sections).map(([sectionLabel, sectionText]) => <div>
-      <b>{sectionLabel}</b>
-      <span className={styles.text}>{sectionText}</span>
-    </div>)}
+    {Object.entries(description.sections).map(([sectionLabel, sectionText]) =>
+        <div key={sectionLabel}>
+          <b>{sectionLabel}</b>
+          <div className={styles.text}>{sectionText}</div>
+        </div>)}
   </div>;
 }

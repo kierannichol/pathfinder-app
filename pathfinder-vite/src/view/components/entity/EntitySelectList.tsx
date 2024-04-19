@@ -1,16 +1,15 @@
-import React, {ReactNode, useState} from "react";
+import React, {memo, ReactNode, useEffect, useRef, useState} from "react";
 import {entityId, EntitySelectOption, OptionalEntityId} from "@/view/components/entity/EntitySelectOption.tsx";
 import {AccordionEventKey} from "react-bootstrap/AccordionContext";
 import {Accordion} from "react-bootstrap";
-import styles from "@/view/components/controls/PathfinderSelect.module.scss";
-import useAsyncMemo from "@/utils/useAsyncMemo.tsx";
+import styles from "./EntitySelectList.module.css";
+import {useOnScreen} from "@/utils/useOnScreen.tsx";
 import LoadingBlock from "@/view/components/LoadingBlock.tsx";
 
 interface EntitySelectListProps {
   options: EntitySelectOption[];
   selected?: OptionalEntityId;
   onSelect?: (entityId: OptionalEntityId) => void;
-  onChangeSelection?: (optionId: OptionalEntityId) => void;
 }
 
 export function EntitySelectList({ options, selected, onSelect }: EntitySelectListProps) {
@@ -26,7 +25,7 @@ export function EntitySelectList({ options, selected, onSelect }: EntitySelectLi
   return <Accordion activeKey={activeKey}
                     className={styles.control}
                     onSelect={handleSelect}
-                    flush={false}>
+                    flush={false} >
     {options.map(option =>
         <EntitySelectItem key={option.id} option={option} />
     )}
@@ -37,13 +36,38 @@ interface EntitySelectItemProps {
   option: EntitySelectOption;
 }
 
-function EntitySelectItem({ option }: EntitySelectItemProps) {
-  const [ body ] = useAsyncMemo<ReactNode>(async () => option.bodyFn ? option.bodyFn() : undefined, [option], <LoadingBlock/>)
+const EntitySelectItem = memo(function EntitySelectItem({ option }: EntitySelectItemProps) {
+  const [ body, setBody ] = useState<ReactNode>();
 
-  return <Accordion.Item eventKey={entityId.toKey(option.id)}>
-    <Accordion.Header>{option.label}</Accordion.Header>
+  const elementRef = useRef<HTMLDivElement>(null);
+  const onScreen = useOnScreen(elementRef);
+
+  useEffect(() => {
+    if (!onScreen || !option.bodyFn) {
+      setBody(undefined);
+      return;
+    }
+
+    let mounted = true;
+    setBody(<LoadingBlock/>);
+    option.bodyFn()
+      .then(loadedBody =>
+          mounted && setBody(loadedBody));
+
+    return () => {
+      mounted = false;
+      setBody(undefined);
+    };
+  }, [onScreen, option]);
+
+  return <Accordion.Item eventKey={entityId.toKey(option.id)}
+                         className={styles.item}
+                         ref={elementRef}>
+    <Accordion.Header>
+      <div className={styles.label}>{option.label}</div>
+    </Accordion.Header>
     <Accordion.Body>
       {body}
     </Accordion.Body>
   </Accordion.Item>
-}
+});

@@ -16,12 +16,13 @@ export function EquipmentDescription({ item, selectedOptions, onChangeOptions }:
   const database = useItemDatabase();
 
   const optionSets = useMemo(() => {
+    if (!item) return [];
     return onlyDefined(item.optionSetIds.map(optionSetId =>
         database.optionSet(optionSetId)));
   }, [database, item]);
 
   return <div>
-    <p className={styles.description}>{item.description.text}</p>
+    <p className={styles.description}>{item?.description.text}</p>
     <div className={styles.optionSets}>
       {optionSets.map(optionSet => <ItemOptionSetSelector optionSet={optionSet}
                                                           key={optionSet.id}

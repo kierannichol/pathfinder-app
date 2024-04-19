@@ -62,14 +62,15 @@ export function decodeFeature(dbo: FeatureDbo): Feature {
 }
 
 export function decodeItemSummary(dbo: ItemSummaryDbo, sourceId: number): ItemSummary {
-  return new ItemSummary(dbo.id,
-      sourceId,
-      dbo.name,
-      dbo.cost,
-      dbo.weight,
-      dbo.tags ?? [],
-      dbo.optionSets ?? [],
-      );
+  return new ItemSummary(dbo, sourceId);
+  // return new ItemSummary(dbo.id,
+  //     sourceId,
+  //     dbo.name,
+  //     dbo.cost,
+  //     dbo.weight,
+  //     dbo.tags ?? [],
+  //     dbo.optionSets ?? [],
+  //     );
 }
 
 export function decodeItem(dbo: ItemDbo, sourceId: number): Item {

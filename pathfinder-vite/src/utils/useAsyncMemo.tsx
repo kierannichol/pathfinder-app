@@ -33,6 +33,9 @@ export default function useAsyncMemo<T>(
 
     return () => {
       mounted = false;
+      setResult(undefined);
+      setError(undefined);
+      setLoading(false);
     }
   }, deps);
   return [ result, isLoading, error ];

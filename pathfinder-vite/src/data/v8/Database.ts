@@ -1,5 +1,5 @@
 import Description from "../Description.ts";
-import SourceModule, {SourceModuleItemDatabase} from "./SourceModule.ts";
+import SourceModule from "./SourceModule.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";
 import {Feature} from "./Feature.ts";
 import {ItemSummary} from "./ItemSummary.ts";
@@ -7,9 +7,10 @@ import {Item} from "./Item.ts";
 import {uniqById} from "@/app/pfutils.ts";
 import {ItemOption, ItemOptionSummary} from "./ItemOption.ts";
 import {ItemOptionSet} from "./ItemOptionSet.ts";
+import {SourceItemModule} from "@/data/v8/SourceItemModule.ts";
 
 export class ItemDatabase {
-  constructor(private readonly modules: SourceModuleItemDatabase[]) {
+  constructor(private readonly modules: SourceItemModule[]) {
   }
 
   summaries(): ItemSummary[] {
@@ -167,10 +168,5 @@ export default class Database {
 
   query(tags: string[]): FeatureSummary[] {
     return this.modules.flatMap(module => module.query(tags));
-  }
-
-  async itemDatabase(): Promise<ItemDatabase> {
-    return new ItemDatabase(await Promise.all(this.modules.map(module =>
-        module.itemDatabase())));
   }
 }

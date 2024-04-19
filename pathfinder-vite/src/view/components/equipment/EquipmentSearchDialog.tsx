@@ -1,11 +1,19 @@
-import React, {useEffect, useMemo, useState} from "react";
-import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
-import {ChoiceSelectorCategory, ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
+import React, {useMemo, useState} from "react";
+import {ChoiceSelectorCategory} from "../controls/ChoiceSelectorList.tsx";
 import {Equipment} from "@/data/v8/Equipment.ts";
 import {ItemSummary} from "@/data/v8/ItemSummary.ts";
 import {useItemDatabase} from "@/data/context.tsx";
 import {ItemOptionSummary} from "@/data/v8/ItemOption.ts";
 import {DescriptionBlock} from "@/view/components/DescriptionBlock.tsx";
+import {EntitySelectDialog} from "@/view/components/entity/EntitySelectDialog.tsx";
+import {
+  EntitySelectCategory,
+  EntitySelectOption,
+  OptionalEntityId
+} from "@/view/components/entity/EntitySelectOption.tsx";
+import {EquipmentEditDialog} from "@/view/components/equipment/EquipmentEditDialog.tsx";
+import {Currency} from "@/view/components/character/Currency.tsx";
+import {CostedLabel} from "@/view/components/equipment/CostedLabel.tsx";
 
 interface EquipmentSearchDialogProps {
   show: boolean;
@@ -17,28 +25,21 @@ interface EquipmentSearchDialogProps {
 export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: EquipmentSearchDialogProps) {
   const database = useItemDatabase();
 
-  const [ selectedOptions, setSelectedOptions ] = useState<ItemOptionSummary[]>(value?.options ?? []);
-
-  function handleOptionsChanged(options: ItemOptionSummary[]) {
-    setSelectedOptions(options);
-  }
-
-  useEffect(() => {
-    setSelectedOptions(value?.options ?? []);
-  }, [value]);
-
-  function handleSelect(itemIdAsText: string) {
-    const itemId = parseInt(itemIdAsText);
-    const item = database.summary(itemId);
-    onSelect?.(item, selectedOptions);
-  }
+  const [ equipmentToEdit, setEquipmentToEdit ] = useState<Equipment>();
 
   const categories = useMemo(() => {
     let categories = [
-        new ChoiceSelectorCategory("Weapons", "weapon"),
-        new ChoiceSelectorCategory("Armor", "armor"),
-        new ChoiceSelectorCategory("Potions", "potion"),
-        new ChoiceSelectorCategory("Wands", "wand"),
+        new EntitySelectCategory("Weapons", "weapon"),
+        new EntitySelectCategory("Armor", "armor"),
+        new EntitySelectCategory("Shields", "shield"),
+        new EntitySelectCategory("Belts", "belt"),
+        new EntitySelectCategory("Rings", "ring"),
+        new EntitySelectCategory("Helms", "head"),
+        new EntitySelectCategory("Headbands", "headband"),
+        new EntitySelectCategory("Neck", "neck"),
+        new EntitySelectCategory("Potions", "potion"),
+        new EntitySelectCategory("Wands", "wand"),
+        new EntitySelectCategory("Mundane", "mundane"),
     ];
 
     if (value) {
@@ -51,33 +52,66 @@ export function EquipmentSearchDialog({ show, value, onSelect, onCancel }: Equip
     return categories;
   }, [value]);
 
-  return <ChoiceSelectorDialog choiceName={"Add Item"}
-                               show={show}
-                               search={true}
-                               value={value?.item.uid}
-                               onSelect={handleSelect}
-                               onCancel={onCancel}
-                               categories={categories}
-                               variant="blue"
-                               optionsFn={(query, category) => {
-                                 let options = database.summaries()
-                                   .filter(item => !query || item.name.toLowerCase().includes(query.toLowerCase()))
-                                   .filter(item => !category?.tag || item.tags.includes(category.tag))
-                                   .sort((a, b) => a.name.localeCompare(b.name));
+  function handleSelect(id: OptionalEntityId) {
+    const item = database.summary(id as number);
+    if (item && item.hasOptions) {
+      setEquipmentToEdit(Equipment.create(item, true, [], database));
+      return;
+    }
+    onSelect?.(item, []);
+  }
 
-                                 if (category?.tag === '*' && value) {
-                                   options = [value.item];
-                                 }
+  function handleCancelEdit() {
+    setEquipmentToEdit(undefined);
+  }
 
-                                 return options
-                                   .map(item => new ChoiceSelectorOption(item.uid, item.name, true,
-                                       async () => {
-                                         const loaded = await database.load(item.itemId);
-                                         if (!loaded) {
-                                           return <></>
-                                         }
+  function handleSubmitEdit(target: Equipment, options: ItemOptionSummary[]) {
+    setEquipmentToEdit(undefined);
+    onSelect?.(target.item, options);
+  }
 
-                                         return <DescriptionBlock description={loaded.description} />
-                                       }))
-                               }} />
+  return <>
+    <EntitySelectDialog title="Add Item"
+                             show={show}
+                             search={true}
+                             value={value?.item.itemId}
+                             onSelect={handleSelect}
+                             onCancel={onCancel}
+                             categories={categories}
+                             optionsFn={(query, category) => {
+                               let options = database.summaries()
+                                 .filter(item => !query || item.name.toLowerCase().includes(query.toLowerCase()))
+                                 .filter(item => !category?.tag || item.tags.includes(category.tag))
+                                 .sort((a, b) => a.name.localeCompare(b.name));
+
+                               if (category?.tag === '*' && value) {
+                                 options = [value.item];
+                               }
+
+                               return options
+                                 .map(item => new EntitySelectOption(item.itemId, <ItemOptionName item={item} />, true,
+                                     async () => {
+                                       const loaded = await database.load(item.itemId);
+                                       if (!loaded) {
+                                         return <></>
+                                       }
+
+                                       return <DescriptionBlock description={loaded.description} />
+                                     }))
+                             }} />
+
+      {equipmentToEdit &&
+          <EquipmentEditDialog show={true}
+                               value={equipmentToEdit}
+                               onCancel={handleCancelEdit}
+                               onConfirm={handleSubmitEdit} />}
+    </>
+}
+
+interface ItemOptionNameProps {
+  item: ItemSummary;
+}
+
+function ItemOptionName({ item }: ItemOptionNameProps) {
+  return <CostedLabel name={item.name} cost={<Currency gp={item.cost}/>} />
 }

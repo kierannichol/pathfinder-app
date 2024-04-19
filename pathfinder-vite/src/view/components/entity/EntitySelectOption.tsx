@@ -36,8 +36,8 @@ export class EntitySelectOption {
 export class EntitySelectCategory {
 
   constructor(public readonly label: ReactNode,
-              public readonly tag: number,
-              public readonly key: string = tag.toString()) {
+              public readonly tag: string,
+              public readonly key: string = tag) {
   }
 }
 

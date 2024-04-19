@@ -16,6 +16,9 @@ import {
 import {DescriptionBlock} from "@/view/components/DescriptionBlock.tsx";
 import styles from "./ItemOptionGroupSelector.module.css";
 import {CloseButton} from "react-bootstrap";
+import {CostedLabel} from "@/view/components/equipment/CostedLabel.tsx";
+import {Quantity} from "@/view/components/controls/Quantity.tsx";
+import {CurrencyDelta} from "@/view/components/character/CurrencyDelta.tsx";
 
 interface ItemOptionGroupSelectorProps {
   optionSet: ItemOptionSet;
@@ -142,76 +145,20 @@ function MultiOptionSelector({ optionSet, optionGroup, selected, onChangeOptions
                             .filter(option => option.name.toLowerCase().includes(query?.toLowerCase() ?? ""))
                             .map(option =>
                               new EntitySelectOption(option.id.toString(),
-                                  option.name,
+                                  <OptionNameLabel option={option}/>,
                                   canSelectOption(option),
                                   async () =>
                                       <DescriptionBlock description={(await database.optionDetails(option.id))?.description} />))} />
   </div>
 }
 
-// function MultiOptionSelector({ optionSet, optionGroup, selected, onChangeOptions }: ItemOptionGroupSelectorProps) {
-//   const database = useItemDatabase();
-//   const availableOptions = useMemo(() => database.options()
-//       .filter(option => optionGroup.hasOption(option))
-//       .sort((a, b) => {
-//         let order = a.pointCost - b.pointCost;
-//         if (order === 0) order = a.currencyCost - b.currencyCost;
-//         return order;
-//       }),
-//       [optionGroup, database]);
-//
-//   const totalPointsUsed = useMemo(() => optionSet.calculatePointsUsed(database.options(selected)),
-//     [database, optionSet, selected]);
-//
-//   function handlePressOption(option: ItemOptionSummary) {
-//     const modified = selected.includes(option.id)
-//         ? selected.filter(id => option.id !== id)
-//         : [ ...selected, option.id ];
-//
-//     onChangeOptions?.(onlyDefined(modified.map(id => database.option(id))));
-//   }
-//
-//   return <div className={styles.optionList}>
-//     {availableOptions.map(option =>
-//         <MultiOptionSelectorOption optionSet={optionSet}
-//                                    option={option}
-//                                    key={option.id}
-//                                    totalPointsUsed={totalPointsUsed}
-//                                    selected={selected}
-//                                    onClick={handlePressOption} />
-//     )}
-//   </div>
-// }
-//
-// interface MultiOptionSelectorOptionProps {
-//   optionSet: ItemOptionSet;
-//   option: ItemOptionSummary;
-//   totalPointsUsed: number;
-//   selected: number[];
-//   onClick: (option: ItemOptionSummary) => void;
-// }
-//
-// function MultiOptionSelectorOption({ optionSet, option, totalPointsUsed, selected, onClick }: MultiOptionSelectorOptionProps) {
-//   const isSelected = useMemo(() => selected.includes(option.id),
-//       [selected, option]);
-//
-//   const isDisabled = useMemo(() => !isSelected && (!optionSet.hasMaxPoints || (totalPointsUsed + option.pointCost) > optionSet.maxPoints),
-//       [optionSet, totalPointsUsed, option]);
-//
-//   const costElement = option.pointCost > 0
-//     ? <span>+{option.pointCost} bonus</span>
-//       : <CurrencyDelta gp={option.currencyCost}/>
-//
-//   return <ButtonBlock key={option.id}
-//                disabled={isDisabled}
-//                className={styles.option + " " + (isSelected && buttonStyles.active)}
-//                onClick={() => {
-//                  if (isDisabled) return;
-//                  onClick(option);
-//                }}>
-//     <div className={styles.label}>
-//       <div>{option.name}</div>
-//       <div className={styles.cost}>({costElement})</div>
-//     </div>
-//   </ButtonBlock>
-// }
+interface OptionNameLabelProps {
+    option: ItemOptionSummary;
+}
+
+function OptionNameLabel({ option }: OptionNameLabelProps) {
+  const cost = option.pointCost > 0
+      ? <Quantity amount={'+' + option.pointCost} unit="bonus" />
+      : <CurrencyDelta gp={option.currencyCost} />
+  return <CostedLabel name={option.name} cost={cost} />
+}

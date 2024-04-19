@@ -1,7 +1,7 @@
-import React, {useEffect, useRef, useState} from "react";
-import {Button, Form, InputGroup} from "react-bootstrap";
+import React, {useEffect, useState} from "react";
 import "./SearchBar.scss";
 import {FaMagnifyingGlass} from "react-icons/fa6";
+import {Button, Form, InputGroup} from "react-bootstrap";
 
 interface SearchBarProps {
   query: string;
@@ -14,12 +14,15 @@ export default function SearchBar(props: SearchBarProps) {
 
   useEffect(() => setQueryInput(query), [query]);
 
-  let inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
-
   return (
+      // <div>
+      //   <FaMagnifyingGlass />
+      //   <TextInput value={queryInput}
+      //              placeholder='Search'
+      //              autoFocus={true}
+      //              onEnter={onSearch}
+      //              onChange={setQueryInput} />
+      // </div>
       <Form
           className={'pf-search-bar'}
           onSubmit={event => {
@@ -32,10 +35,10 @@ export default function SearchBar(props: SearchBarProps) {
             <FaMagnifyingGlass />
           </InputGroup.Text>
           <Form.Control
-              ref={inputRef}
               value={queryInput}
               onChange={event => setQueryInput(event.target.value)}
-              placeholder={'Search'} />
+              placeholder={'Search'}
+              autoFocus={true} />
           <Button type={'submit'} variant={'primary'}>Search</Button>
         </InputGroup>
       </Form>

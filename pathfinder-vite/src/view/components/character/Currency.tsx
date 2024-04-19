@@ -8,9 +8,12 @@ interface CurrencyProps {
 export function Currency({ gp }: CurrencyProps) {
   const [ formatted, currency ] = useMemo(() => {
     if (gp === 0) {
-      return [ 0, 'gp' ];
+      return [Intl.NumberFormat().format(0), "gp"];
     }
-    let formatted = gp;
+
+    const sign = gp > 0 ? '' : '-';
+
+    let formatted = Math.abs(gp);
     let currency = "gp";
 
     if (formatted < 1) {
@@ -23,7 +26,7 @@ export function Currency({ gp }: CurrencyProps) {
       currency = "bp";
     }
 
-    return [ Intl.NumberFormat().format(formatted), currency ];
+    return [ sign + Intl.NumberFormat().format(formatted), currency ];
   }, [gp]);
 
   if (gp === 0) {
@@ -31,5 +34,4 @@ export function Currency({ gp }: CurrencyProps) {
   }
 
   return <Quantity amount={formatted} unit={currency} />
-  // return <span className={styles.text}>{formatted}<div className={styles.gp}>{currency}</div></span>
 }

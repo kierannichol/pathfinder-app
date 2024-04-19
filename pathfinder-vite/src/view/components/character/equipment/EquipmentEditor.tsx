@@ -1,17 +1,16 @@
 import React, {ReactNode, useMemo} from "react";
-import useAsyncMemo from "../../../../utils/useAsyncMemo.tsx";
 import LoadingBlock from "../../LoadingBlock.tsx";
-import {array} from "../../../../app/pfutils.ts";
+import {array} from "@/app/pfutils.ts";
 import ChoiceSelectButton from "../../controls/ChoiceSelectButton.tsx";
 import {ChoiceSelectorOption, ChoiceSelectorOptions} from "../../controls/ChoiceSelectorList.tsx";
 import {ItemDescription} from "./ItemDescription.tsx";
 import {ButtonBlockGroup} from "../../controls/ButtonBlockGroup.tsx";
 import {Currency} from "../Currency.tsx";
 import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
-import {useDatabase} from "../../../../data/context.tsx";
-import {ChoiceSelectedHandler, ResolvedMultiSelectChoice, SelectChoiceRef} from "../../../../data/v8/Choice.ts";
-import {ItemSummary} from "../../../../data/v8/ItemSummary.ts";
-import {ItemDatabase} from "../../../../data/v8/Database.ts";
+import {useItemDatabase} from "@/data/context.tsx";
+import {ChoiceSelectedHandler, ResolvedMultiSelectChoice, SelectChoiceRef} from "@/data/v8/Choice.ts";
+import {ItemSummary} from "@/data/v8/ItemSummary.ts";
+import {ItemDatabase} from "@/data/v8/Database.ts";
 
 interface EquipmentEditorProps {
   characterAtLevel: CharacterAtLevel;
@@ -19,10 +18,7 @@ interface EquipmentEditorProps {
 }
 
 export default function EquipmentEditor({characterAtLevel, onChange}: EquipmentEditorProps) {
-  const database = useDatabase();
-
-  const [itemDb] = useAsyncMemo(() => database.itemDatabase(),
-      [database]);
+  const itemDb = useItemDatabase();
 
   const equipmentChoiceRef = useMemo(() => characterAtLevel.choicesOfType('equipment')[0],
       [characterAtLevel]) as ResolvedMultiSelectChoice;
@@ -148,7 +144,7 @@ function ItemChoiceSelectButton({
       dialogVariant={dialogVariant}
       search={true}
       removable={selected !== undefined}
-      optionsFn={(query, category) => itemOptions(query, itemDatabase)}
+      optionsFn={(query) => itemOptions(query, itemDatabase)}
       onSelect={onSelect}
       children={children}/>
 }
