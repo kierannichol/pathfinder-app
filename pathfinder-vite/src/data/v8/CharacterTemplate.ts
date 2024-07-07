@@ -41,9 +41,9 @@ export class ResolvedCharacterTemplateAtLevel {
     this.resolvedLevelTemplates.forEach(levelTemplate => levelTemplate.applyTo(state));
   }
 
-  traverse(actionFn: (descendant: ResolvedTrait, depth: number) => boolean) {
+  traverse(state: AppliedState, actionFn: (descendant: ResolvedTrait, depth: number) => boolean) {
     this.resolvedLevelTemplates.forEach(level =>
-        level.traverse(actionFn));
+        level.traverse(state, actionFn));
   }
 }
 
@@ -73,7 +73,7 @@ export class ResolvedCharacterLevelTemplate {
     this.traits.forEach(trait => trait.applyTo(state));
   }
 
-  traverse(actionFn: (descendant: ResolvedTrait, depth: number) => boolean) {
-    this.traits.forEach(descendant => traverseTrait(descendant, actionFn));
+  traverse(state: AppliedState, actionFn: (descendant: ResolvedTrait, depth: number) => boolean) {
+    this.traits.forEach(descendant => traverseTrait(descendant, state, actionFn));
   }
 }

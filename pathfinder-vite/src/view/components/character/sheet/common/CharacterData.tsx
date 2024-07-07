@@ -1,9 +1,9 @@
 import {useMemo} from "react";
 import {useCharacterAtLevel} from "../CharacterSheet.tsx";
-import {uniq} from "../../../../../app/pfutils.ts";
+import {uniq} from "@/app/pfutils.ts";
 import Alignments from "../../../../../data/Alignments.tsx";
 import CreatureSize from "../../../../../data/CreatureSize.ts";
-import {useDatabase} from "../../../../../data/context.tsx";
+import {useDatabase} from "@/data/context.tsx";
 
 interface CharacterValueProps {
   dataKey: string;
@@ -33,7 +33,7 @@ export const CharismaMod = value("cha_mod");
 
 export const SizeMod = value("size_mod");
 
-export const Value = (props: CharacterValueProps) => <CharacterValue {...props} />
+const Value = (props: CharacterValueProps) => <CharacterValue {...props} />
 
 function value(dataKey: string, lookupFn?: (value: string) => string) {
   return (props: CharacterValueWithoutDataKeyProps) => <CharacterValue dataKey={dataKey}

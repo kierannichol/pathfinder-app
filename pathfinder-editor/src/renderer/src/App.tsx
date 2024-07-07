@@ -4,44 +4,43 @@ import "./App.css";
 import FeatureEditor from "./components/editors/FeatureEditor";
 import MultipleFeaturesEditor from "./components/editors/MultipleFeaturesEditor";
 import {FeatureKey, FeatureRef} from "../../shared/pathfinder";
-import {Sources} from "../../shared/sources";
 
 
 function App() {
-  const [ sourceKeys, setSourceKeys ] = useState<string[]>([]);
+  const [ segmentKeys, setSegmentKeys ] = useState<string[]>([]);
   const [ featureKeys, setFeatureKeys ] = useState<FeatureKey[]>([]);
-  const [ selectedSourceKeys, setSelectedSourceKeys ] = useState<string[]>([]);
+  const [ selectedSegmentKeys, setSelectedSegmentKeys ] = useState<string[]>([]);
   const [ selectedFeatureKey, setSelectedFeatureKey ] = useState<FeatureKey|FeatureKey[]|null>(null);
   const [ feature, setFeature ] = useState<FeatureRef|FeatureRef[]|null>(null);
 
   useEffect(() => {
     (async function () {
-      const loaded = await window.api.list_sources();
-      setSourceKeys(loaded);
+      const loaded = await window.api.list_segments();
+      setSegmentKeys(loaded);
     })();
   }, []);
 
   useEffect(() => {
     (async function () {
-      const loaded = (await Promise.all(selectedSourceKeys.map(window.api.list_features))).flat();
+      const loaded = (await Promise.all(selectedSegmentKeys.map(window.api.list_features))).flat();
       console.log(loaded)
       setFeatureKeys(loaded);
     })();
-  }, [selectedSourceKeys]);
+  }, [selectedSegmentKeys]);
 
-  function handleSelectSourceKey(eventKey: string|string[]|null) {
+  function handleSelectSegmentKey(eventKey: string|string[]|null) {
     if (!eventKey) {
       eventKey = [];
     }
     if (!(eventKey instanceof Array)) {
       eventKey = [eventKey];
     }
-    setSelectedSourceKeys(eventKey);
+    setSelectedSegmentKeys(eventKey);
   }
 
   function handleSelectFeatureKey(eventKey: FeatureKey|FeatureKey[]|null) {
     setSelectedFeatureKey(eventKey);
-    if (selectedSourceKeys && eventKey) {
+    if (selectedSegmentKeys && eventKey) {
       setFeature(null);
 
       if (eventKey instanceof Array) {
@@ -62,18 +61,18 @@ function App() {
 
   }
 
-  if (!sourceKeys) {
+  if (!segmentKeys) {
     return <div>Loading...</div>
   }
 
   return (
     <div className="app-container">
       <div className="entry-nav">
-        <EntryNav entries={sourceKeys}
-                  onSelect={handleSelectSourceKey}
-                  keyToLabelFn={Sources.lookupName} />
+        <EntryNav entries={segmentKeys}
+                  onSelect={handleSelectSegmentKey}
+                  keyToLabelFn={x => x} />
       </div>
-      {selectedSourceKeys.length > 0 && <div className="entry-nav entry-nav-item">
+      {selectedSegmentKeys.length > 0 && <div className="entry-nav entry-nav-item">
         <EntryNav entries={featureKeys.map(featureKeyToString)}
                   onSelect={selected => handleSelectFeatureKey(stringToFeatureKey(selected))}
                   keyToLabelFn={key => key.split('/')[1]} />
@@ -90,7 +89,7 @@ function App() {
 }
 
 function featureKeyToString(key: FeatureKey): string {
-  return key.sourceKey + "/" + key.featureKey;
+  return key.segmentKey + "/" + key.featureKey;
 }
 
 function stringToFeatureKey(key: string|string[]|null): FeatureKey|FeatureKey[]|null {
@@ -104,7 +103,7 @@ function stringToFeatureKey(key: string|string[]|null): FeatureKey|FeatureKey[]|
 
   const parts = key.split('/');
   return {
-    sourceKey: parts[0],
+    segmentKey: parts[0],
     featureKey: parts[1]
   };
 }

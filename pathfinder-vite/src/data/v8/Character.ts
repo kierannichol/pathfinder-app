@@ -1,6 +1,6 @@
 import CharacterAtLevel from "./CharacterAtLevel.ts";
 import Database from "./Database.ts";
-import {timedAsync} from "../../app/pfutils.ts";
+import {timedAsync} from "@/app/pfutils.ts";
 import {CharacterTemplate, ResolvedCharacterTemplate} from "./CharacterTemplate.ts";
 import PackedCharacter, {PackedSelections} from "../PackedCharacter.ts";
 import {Feature, ResolvedFeature} from "./Feature.ts";
@@ -33,12 +33,13 @@ export default class Character {
 
     const templateAtLevel = this.resolvedTemplate?.atLevel(level);
 
+    state.set('character_level', level);
     templateAtLevel?.applyTo(state);
 
     const featuresByKey: {[key:string]:Feature} = {};
     const choices: ResolvedChoice[] = [];
 
-    templateAtLevel?.traverse((descendant: ResolvedTrait) => {
+    templateAtLevel?.traverse(state,(descendant: ResolvedTrait) => {
       if (descendant instanceof ResolvedFeature) {
         const feature = descendant.origin;
         if (state.getAsNumber(feature.key) <= 0) {
@@ -60,15 +61,11 @@ export default class Character {
 
     const features = Object.values(featuresByKey);
 
-    const characterAtLevel = new CharacterAtLevel(level,
+    return new CharacterAtLevel(level,
         this,
         features,
         state.rawState,
         choices);
-
-    // console.log(characterAtLevel);
-
-    return characterAtLevel;
   }
 
   pack(): PackedCharacter {

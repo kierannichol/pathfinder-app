@@ -42,6 +42,10 @@ public class Sources {
             "PZO1132", "Occult Adventures",
             "Pathfinder Roleplaying Game: Occult Adventures", "OGL");
 
+    public static final SourceId THE_INNER_SEA_WORLD_GUIDE = new SourceId(generate("PZO9226"),
+            "PZO9226", "The Inner Sea World Guide",
+            "Pathfinder Campaign Setting: The Inner Sea World Guide");
+
     public static SourceId findSourceByNameOrCode(String search) {
         if (search == null) {
             return null;
@@ -116,6 +120,18 @@ public class Sources {
 //            new Source("PZO1141", "Planar Adventures")
 
             // Companions
-            COMPANION_HEROES_OF_THE_HIGH_COURT
+            COMPANION_HEROES_OF_THE_HIGH_COURT,
+            THE_INNER_SEA_WORLD_GUIDE
     );
+
+    public static void main(String[] args) {
+        for (SourceId source : SOURCES_LIST) {
+            System.out.printf("- name: \"%s\"%n", source.name());
+            System.out.printf("  code: \"%s\"%n", source.code());
+            System.out.printf("  aliases:%n");
+            for (String alias : source.aliases()) {
+                System.out.printf("   - \"%s\"%n", alias);
+            }
+        }
+    }
 }

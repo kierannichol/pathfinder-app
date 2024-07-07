@@ -1,24 +1,25 @@
 import React, {useMemo, useState} from "react";
-import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import PromptDialog from "../PromptDialog.tsx";
-import AbilityScoresEditor from "./AbilityScoresEditor.tsx";
+import DataChoiceSelectButton from "../../controls/DataChoiceSelectButton.tsx";
+import PromptDialog from "../../PromptDialog.tsx";
+import AbilityScoresEditor from "../AbilityScoresEditor.tsx";
 import CharacterLevelEditor from "./CharacterLevelEditor.tsx";
-import SelectClassButton from "./SelectClassButton.tsx";
+import SelectClassButton from "../SelectClassButton.tsx";
 import {Link} from "react-router-dom";
 import {FaFileLines} from "react-icons/fa6";
-import DataChoiceTextInput from "../controls/DataChoiceTextInput.tsx";
-import {isString} from "../../../app/pfutils.ts";
-import {useCharacterStore} from "../../../data/context.tsx";
-import Character from "../../../data/v8/Character.ts";
-import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import DataChoiceTextInput from "../../controls/DataChoiceTextInput.tsx";
+import {isString} from "@/app/pfutils.ts";
+import {useCharacterStore} from "@/data/context.tsx";
+import Character from "../../../../data/v8/Character.ts";
+import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "@/data/v8/Choice.ts";
+import CharacterAtLevel from "@/data/v8/CharacterAtLevel.ts";
 
-interface CharacterEditorProps {
+interface CharacterPlannerProps {
   loaded: Character;
 }
 
 export type CharacterChoiceSelectHandler = (choice: ChoiceRef, value: string|string[]) => void;
 
-export default function CharacterEditor({ loaded }: CharacterEditorProps) {
+export default function CharacterPlanner({ loaded }: CharacterPlannerProps) {
   const [ character, setCharacter ] = useState(loaded);
   const [ showFavoredClassPrompt, setShowFavoredClassPrompt ] = useState(false);
 
@@ -32,6 +33,7 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
   }, [character]);
 
   const characterLevel0 = characterAtLevels[0];
+  console.log(characterLevel0)
 
   async function updateCharacter(mappingFunction: (character: Character) => Promise<Character>) {
     const updated = await mappingFunction(character);
@@ -66,23 +68,19 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
   return <main>
     <header>Character Information</header>
     <section>
-        {characterLevel0.choices
-        .filter(choice => choice.type !== 'ability_score' && choice.type !== 'asi')
-        .map(choice => <div key={choice.path}>
-          <label htmlFor={choice.path}>{choice.label}</label>
-          {choice.inputType === ChoiceInputType.Text &&
-              <DataChoiceTextInput
-                  id={choice.path}
-                  choiceRef={choice as SelectChoiceRef}
-                  characterAtLevel={characterLevel0.withoutChoice(choice.path)}
-                  onSelect={value => handleChange(choice, value)} />}
-          {choice.inputType === ChoiceInputType.Select &&
-              <DataChoiceSelectButton
-                  id={choice.path}
-                  choiceRef={choice as SelectChoiceRef}
-                  characterAtLevel={characterLevel0.withoutChoice(choice.path)}
-                  onSelect={value => handleChange(choice, value)} />}
-        </div>)}
+      <ChoiceInput characterAtLevel={characterLevel0}
+                   choiceKey="character_name"
+                   handleChange={handleChange} />
+      <ChoiceInput characterAtLevel={characterLevel0}
+                   choiceKey="race"
+                   handleChange={handleChange} />
+      <ChoiceInput characterAtLevel={characterLevel0}
+                   choiceKey="favored_class"
+                   handleChange={handleChange} />
+      <ChoiceInput characterAtLevel={characterLevel0}
+                   choiceKey="alignment"
+                   handleChange={handleChange} />
+
       <PromptDialog show={showFavoredClassPrompt}
                     prompt="Change all class levels to favored class?"
                     onCancel={() => setShowFavoredClassPrompt(false)}
@@ -115,4 +113,35 @@ export default function CharacterEditor({ loaded }: CharacterEditorProps) {
       </section>
     </div>)}
   </main>
+}
+
+interface ChoiceInputProps {
+  characterAtLevel: CharacterAtLevel;
+  choiceKey: string;
+  handleChange: (choice: ChoiceRef, value: string) => void;
+}
+
+function ChoiceInput({ characterAtLevel, choiceKey, handleChange }: ChoiceInputProps) {
+    const choice = useMemo(() => characterAtLevel.choice(choiceKey),
+        [characterAtLevel, choiceKey]);
+
+    if (!choice) {
+      return <div>CHOICE NOT FOUND</div>
+    }
+
+    return <div key={choice.path}>
+      <label htmlFor={choice.path}>{choice.label}</label>
+      {choice.inputType === ChoiceInputType.Text &&
+          <DataChoiceTextInput
+              id={choice.path}
+              choiceRef={choice as SelectChoiceRef}
+              characterAtLevel={characterAtLevel.withoutChoice(choice.path)}
+              onSelect={value => handleChange(choice, value)} />}
+      {choice.inputType === ChoiceInputType.Select &&
+          <DataChoiceSelectButton
+              id={choice.path}
+              choiceRef={choice as SelectChoiceRef}
+              characterAtLevel={characterAtLevel.withoutChoice(choice.path)}
+              onSelect={value => handleChange(choice, value)} />}
+    </div>
 }

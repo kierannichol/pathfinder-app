@@ -110,13 +110,3 @@ function formatFormula(featureId: string, formula: Resolvable, maxStacks: number
     <div>{formatNode(tree, 1)}</div>
   </div>
 }
-
-function genAlreadyHasBlock(currentStacks: number, maxStacks: number|null): ReactNode|undefined {
-  if (maxStacks === null || currentStacks < maxStacks) {
-    return undefined;
-  }
-  const message = maxStacks === 1
-      ? 'Must not already have this feature.'
-      : `Cannot have more than ${maxStacks} of this feature.';`
-  return <span key={'already-has'} className={styles.elementInvalid}>{message}</span>;
-}

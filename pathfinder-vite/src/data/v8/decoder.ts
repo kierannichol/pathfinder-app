@@ -1,6 +1,6 @@
 import {AddEffect, SetFormulaEffect, SetNumberEffect} from "./Effect.ts";
 import {Trait} from "./Trait.ts";
-import {data} from "../../compiled";
+import {data} from "@/compiled";
 import Description from "../Description.ts";
 import {Link} from "./Link.ts";
 import {FeatureSelectCategory, MultiSelectChoice, SelectChoice, TextChoice} from "./Choice.ts";
@@ -8,7 +8,7 @@ import {Stack} from "./Stack.ts";
 import {FeatureModification, StackModification} from "./FeatureModification.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";
 import {Feature} from "./Feature.ts";
-import {FixedStack, RepeatingStack, Stacks} from "./Stacks.ts";
+import {ConditionalStack, FixedStack, RepeatingStack, Stacks} from "./Stacks.ts";
 import {CharacterLevelTemplate, CharacterTemplate} from "./CharacterTemplate.ts";
 import {Item} from "./Item.ts";
 import {ItemSummary} from "./ItemSummary.ts";
@@ -50,6 +50,7 @@ export function decodeFeatureSummary(dbo: FeatureSummaryDbo): FeatureSummary {
 }
 
 export function decodeFeature(dbo: FeatureDbo): Feature {
+
   return new Feature(dbo.id,
       dbo.name,
       dbo.label ?? undefined,
@@ -58,7 +59,10 @@ export function decodeFeature(dbo: FeatureDbo): Feature {
       dbo.enabledFormula,
       dbo.maxStacks ?? null,
       new Description(dbo.description?.text ?? "", dbo.description?.sections ?? {}),
-      [ decodeStacks(dbo.id, dbo.stacks ?? new StacksDbo()) ]);
+      [
+          decodeStacks(dbo.id, dbo.stacks ?? new StacksDbo()),
+          ...dbo.conditionalStacks.map(csd => decodeConditionStack(dbo.id, csd))
+      ]);
 }
 
 export function decodeItemSummary(dbo: ItemSummaryDbo, sourceId: number): ItemSummary {
@@ -205,6 +209,12 @@ function decodeStacks(featureId: string, dbo: StacksDbo): Stacks {
     case "repeatingStack": return new RepeatingStack(featureId, decodeStack(dbo.repeatingStack ?? new StackDbo()));
     default: return new RepeatingStack(featureId, Stack.Empty);
   }
+}
+
+function decodeConditionStack(featureId: string, dbo: data.ConditionalStackDbo): ConditionalStack {
+  return new ConditionalStack(featureId,
+      dbo.conditionFormula,
+      decodeStack(dbo));
 }
 
 function decodeFeatureModification(dbo: FeatureModificationDbo): Trait {

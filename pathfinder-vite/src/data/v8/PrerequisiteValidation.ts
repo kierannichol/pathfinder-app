@@ -1,23 +1,28 @@
 export class PrerequisiteValidation {
   static Empty: PrerequisiteValidation = new PrerequisiteValidation([]);
 
-  constructor(public readonly entries: PrerequisiteValidationEntry[] = []) {
+  public readonly entries: PrerequisiteValidationEntry[] = [];
+  private valid: boolean = true;
+
+  constructor(entries: PrerequisiteValidationEntry[] = []) {
+    for (let entry of entries) {
+      this.add(entry.description, entry.valid);
+    }
   }
 
   add(description: string, valid: boolean): PrerequisiteValidation {
     this.entries.push(new PrerequisiteValidationEntry(description, valid));
+    this.valid = this.valid && valid;
     return this;
   }
 
   isValid(): boolean {
-    if (this.entries.length == 0) return true;
-    return this.entries
-    .map(entry => entry.valid)
-    .reduce((prev, next) => prev && next);
+    return this.valid;
   }
 
   isEmpty(): boolean {
-    return this.entries.length === 0;
+    return this.entries.length === 0
+        || (this.entries.length === 1 && this.entries[0].description === "true");
   }
 }
 

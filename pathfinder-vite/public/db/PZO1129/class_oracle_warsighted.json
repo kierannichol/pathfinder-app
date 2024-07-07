@@ -2,7 +2,7 @@
   "id": "class:oracle#warsighted",
   "name": "Warsighted",
   "tags": ["archetype", "oracle"],
-  "enabledFormula": "!@modifies:ability:revelations#oracle",
+  "enabledFormula": "!@modifies:ability:revelation#oracle",
   "maxStacks": 1,
   "description": {
     "text": "A warsighted\u0027s unique gifts are not in strange magical revelations, but in her ability to adapt in the midst of a battle with new fighting techniques. The warsighted is a master of combat, as dedicated as a fighter and as flexible as a brawler."
@@ -12,7 +12,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:revelations#oracle",
+            "targetKey": "modifies:ability:revelation#oracle",
             "numberValue": 1
           }
         }],
@@ -21,16 +21,16 @@
           "stackModifications": [{
             "targetStackCount": 1,
             "linksToAdd": ["ability:martial_flexibility#oracle_warsighted"],
-            "linksToRemove": ["ability:revelations#oracle"]
+            "linksToRemove": ["ability:revelation#oracle"]
           }, {
             "targetStackCount": 7,
-            "linksToRemove": ["ability:revelations#oracle"]
+            "linksToRemove": ["ability:revelation#oracle"]
           }, {
             "targetStackCount": 11,
-            "linksToRemove": ["ability:revelations#oracle"]
+            "linksToRemove": ["ability:revelation#oracle"]
           }, {
             "targetStackCount": 15,
-            "linksToRemove": ["ability:revelations#oracle"]
+            "linksToRemove": ["ability:revelation#oracle"]
           }]
         }]
       }]

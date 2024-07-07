@@ -1,14 +1,24 @@
 import {EntityChoiceSelections} from "./Entity.ts";
 import {Trait} from "./Trait.ts";
+import {BaseDataContext, Resolvable} from "@kierannichol/formula-js";
 
-export type FeatureLoader = (key: string) => Promise<Trait|undefined>;
+export type FeatureLoader = (key: string) => Promise<Trait | undefined>;
 
-export class ResolvedEntityContext {
-  private readonly cache: {[key:string]: Trait} = {};
-  private readonly counts: {[key: string]: number} = {};
+export class ResolvedEntityContext extends BaseDataContext {
+  private readonly cache: { [key: string]: Trait } = {};
+  private readonly counts: { [key: string]: number } = {};
+
+  get(key: string): Resolvable | undefined {
+    return Resolvable.just(this.count(key));
+  }
+
+  keys(): string[] {
+    return Object.keys(this.counts);
+  }
 
   constructor(private readonly featureLoader: FeatureLoader,
               private readonly selections: EntityChoiceSelections) {
+    super();
   }
 
   async feature(key: string): Promise<Trait|undefined> {

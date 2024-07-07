@@ -3,11 +3,11 @@ import SelectionFeatureDescription from "../character/SelectionFeatureDescriptio
 import ChoiceSelectButton from "./ChoiceSelectButton.tsx";
 import {ChoiceSelectorCategory, ChoiceSelectorOption} from "./ChoiceSelectorList.tsx";
 import Description from "../../../data/Description.ts";
-import {useDatabase} from "../../../data/context.tsx";
-import {ChoiceCategory, SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import {useDatabase} from "@/data/context.tsx";
+import {ChoiceCategory, SelectChoiceRef} from "@/data/v8/Choice.ts";
 import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
 import Database from "../../../data/v8/Database.ts";
-import {FeatureSummary} from "../../../data/v8/FeatureSummary.ts";
+import {FeatureSummary} from "@/data/v8/FeatureSummary.ts";
 
 interface DataChoiceSelectButtonProps {
   choiceRef: SelectChoiceRef;
@@ -21,10 +21,11 @@ interface DataChoiceSelectButtonProps {
   dialogVariant?: string|string[];
   descriptionFn?: (description: Description) => ReactNode;
   search?: boolean|"auto";
+  labelPrefix?: ReactNode;
   children?: ReactNode;
 }
 
-export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, children }: DataChoiceSelectButtonProps) {
+export default function DataChoiceSelectButton({ choiceRef, choiceIndex, characterAtLevel, id, onSelect, label, buttonLabel, variant, dialogVariant, descriptionFn, search, labelPrefix, children }: DataChoiceSelectButtonProps) {
   const database = useDatabase();
   const characterWithoutCurrent = useMemo(() => {
     const selected = characterAtLevel.selected(choiceRef);
@@ -44,6 +45,7 @@ export default function DataChoiceSelectButton({ choiceRef, choiceIndex, charact
       buttonLabel={buttonLabel}
       onSelect={handleSelect}
       search={search}
+      labelPrefix={labelPrefix}
       optionsFn={(query: string|undefined, category: ChoiceSelectorCategory|undefined) => {
           return queryOptions(database, choiceRef, query, category)
             .map(summary => featureToChoiceSelectorOption(summary, database, characterWithoutCurrent, descriptionFn, handleSelect))

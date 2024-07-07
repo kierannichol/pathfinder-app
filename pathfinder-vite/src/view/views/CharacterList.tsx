@@ -7,7 +7,7 @@ import styles from "./CharacterList.module.scss";
 import {useNavigate} from "react-router-dom";
 import LoadingBlock from "../components/LoadingBlock.tsx";
 import DeleteIcon from "../components/icons/DeleteIcon.tsx";
-import {classNames} from "../../utils/classNames.ts";
+import {classNames} from "@/utils/classNames.ts";
 import {useCharacterStore} from "../../data/context.tsx";
 import CharacterSummary from "../../data/v8/CharacterSummary.ts";
 
@@ -28,7 +28,7 @@ export default function CharacterList() {
     const created = await characterStore.create({
       'character_name': characterName
     });
-    navigate(`/character/edit/${created.id}`)
+    navigate(`/character/plan/${created.id}`)
   };
 
   const handleDelete = async (characterId: string) => {
@@ -63,7 +63,7 @@ function CharacterListEntry({ character, onDelete }: CharacterListEntryProps) {
       className={styles.character}>
 
     <div className={classNames([styles.nameContainer, 'clickable'])} onClick={() => {
-      navigate(`/character/edit/${character.id}`)
+      navigate(`/character/plan/${character.id}`)
     }}>
       {character.name}
     </div>

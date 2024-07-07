@@ -17,6 +17,7 @@ export default function useAsyncMemo<T>(
 
   useEffect(() => {
     let mounted = true;
+    setLoading(true);
     promiseFn().then(result => {
       if (mounted) {
         setResult(result);

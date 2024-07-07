@@ -2,7 +2,7 @@
   "id": "class:sorcerer#eldritch_scrapper",
   "name": "Eldritch Scrapper",
   "tags": ["archetype", "sorcerer"],
-  "enabledFormula": "!@modifies:ability:sorcerers_bloodline_powers#sorcerer",
+  "enabledFormula": "!@modifies:ability:bloodline_power#sorcerer",
   "maxStacks": 1,
   "description": {
   },
@@ -11,7 +11,7 @@
       "stacks": [{
         "effects": [{
           "setAction": {
-            "targetKey": "modifies:ability:sorcerers_bloodline_powers#sorcerer",
+            "targetKey": "modifies:ability:bloodline_power#sorcerer",
             "numberValue": 1
           }
         }],
@@ -20,13 +20,13 @@
           "stackModifications": [{
             "targetStackCount": 1,
             "linksToAdd": ["ability:martial_flexibility#sorcerer_eldritch_scrapper"],
-            "linksToRemove": ["ability:sorcerers_bloodline_powers#sorcerer"]
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 9,
-            "linksToRemove": ["ability:sorcerers_bloodline_powers#sorcerer"]
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }, {
             "targetStackCount": 15,
-            "linksToRemove": ["ability:sorcerers_bloodline_powers#sorcerer"]
+            "linksToRemove": ["ability:bloodline_power#sorcerer"]
           }]
         }]
       }]

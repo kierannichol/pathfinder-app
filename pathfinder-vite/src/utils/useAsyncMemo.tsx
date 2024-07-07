@@ -16,6 +16,7 @@ export default function useAsyncMemo<T>(
   const [ error, setError ] = useState<Error|undefined>();
 
   useEffect(() => {
+    setLoading(true);
     let mounted = true;
     promiseFn().then(result => {
       if (mounted) {
@@ -35,6 +36,7 @@ export default function useAsyncMemo<T>(
       mounted = false;
       setResult(undefined);
       setError(undefined);
+      console.log("Setting loading to false");
       setLoading(false);
     }
   }, deps);

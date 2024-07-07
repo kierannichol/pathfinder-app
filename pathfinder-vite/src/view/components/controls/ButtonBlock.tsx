@@ -1,8 +1,8 @@
 import React, {ReactNode, useMemo} from "react";
 import styles from "./ButtonBlock.module.scss";
 import variants from "./ButtonVariants.module.scss";
-import {array} from "../../../app/pfutils.ts";
-import {classNames} from "../../../utils/classNames.ts";
+import {array} from "@/app/pfutils.ts";
+import {classNames} from "@/utils/classNames.ts";
 
 interface ButtonBlockProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   variant?: string|string[];

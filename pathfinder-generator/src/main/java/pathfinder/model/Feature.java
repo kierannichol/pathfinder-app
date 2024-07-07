@@ -178,6 +178,11 @@ public record Feature(Id id,
             return this;
         }
 
+        public FeatureBuilder removeTag(String tag) {
+            this.tags.remove(tag.toLowerCase().trim());
+            return this;
+        }
+
         public FeatureBuilder addFixedStack(Stack stack) {
             this.repeatingStack = null;
             this.fixedStack.add(stack);

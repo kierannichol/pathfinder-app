@@ -21,10 +21,11 @@ interface ChoiceSelectButtonProps {
   actionVerb?: string;
   removable?: boolean;
   sortBy?: "none" | "name";
+  labelPrefix?: ReactNode;
   children?: ReactNode;
 }
 
-export default function ChoiceSelectButton({ choiceName, value, id, onSelect, optionsFn, categoriesFn, buttonLabel, children, actionVerb = 'Select', removable = false, variant = 'white', dialogVariant = variant, search = false, sortBy = "none" }: ChoiceSelectButtonProps) {
+export default function ChoiceSelectButton({ choiceName, value, id, onSelect, optionsFn, categoriesFn, buttonLabel, children, actionVerb = 'Select', removable = false, variant = 'white', dialogVariant = variant, search = false, sortBy = "none", labelPrefix = <EditIcon/> }: ChoiceSelectButtonProps) {
   const [removing, setRemoving] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [show, setShow] = useState(false);
@@ -65,7 +66,7 @@ export default function ChoiceSelectButton({ choiceName, value, id, onSelect, op
       [value]);
 
   const actualButtonLabel = children
-      ?? <div className={styles.label}><EditIcon/> {buttonLabel
+      ?? <div className={styles.label}>{labelPrefix} {buttonLabel
           ?? selectedName
           ?? <i>{actionVerb} {choiceName}</i>}
         </div>;

@@ -52,6 +52,7 @@ export class FeatureSummary {
   }
 
   isEnabled(context: DataContext): boolean {
-    return Formula.parse(this.enabledFormula).resolve(context)?.asBoolean() ?? true;
+    return (Formula.parse(this.enabledFormula).resolve(context)?.asBoolean() ?? true)
+        && (this.maxStacks === null || (context.resolve(this.key)?.asNumber() ?? 0) < this.maxStacks);
   }
 }

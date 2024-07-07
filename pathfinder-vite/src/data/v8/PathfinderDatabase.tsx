@@ -19,6 +19,7 @@ const Modules: () => (SourceModule|Promise<SourceModule>)[] = () => [
   loadModule('PZO1131'),
   loadModule('PZO1132'),
   loadModule('PZO9476'),
+  loadModule('PZO9226'),
 ];
 
 const ItemModules: () => (SourceItemModule|Promise<SourceItemModule>)[] = () => [
@@ -32,6 +33,7 @@ const ItemModules: () => (SourceItemModule|Promise<SourceItemModule>)[] = () => 
   loadItemModule('PZO1131'),
   loadItemModule('PZO1132'),
   loadItemModule('PZO9476'),
+  loadItemModule('PZO9226'),
 ];
 
 export async function loadBaseCharacterTemplate(): Promise<CharacterTemplate> {

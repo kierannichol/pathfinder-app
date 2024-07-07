@@ -1,9 +1,12 @@
-import {data} from "./compiled";
-import FeatureDbo = data.FeatureDbo;
 
 export interface FeatureKey {
-  sourceKey: string;
+  segmentKey: string;
   featureKey: string;
+}
+
+export interface RawFeatureData {
+  id: string;
+  name: string;
 }
 
 export function idToKey(id: string): string {
@@ -12,11 +15,11 @@ export function idToKey(id: string): string {
     .replace('#', '_');
 }
 
-export type FeatureRef = FeatureDbo & FeatureKey;
+export type FeatureRef = RawFeatureData & FeatureKey;
 
 export interface PathfinderAPI {
-  list_sources(): Promise<string[]>;
-  list_features(sourceKey: string): Promise<FeatureKey[]>;
+  list_segments(): Promise<string[]>;
+  list_features(segmentKey: string): Promise<FeatureKey[]>;
   load_feature(featureKey: FeatureKey): Promise<FeatureRef>;
   save_feature(model: FeatureRef): Promise<void>;
 }

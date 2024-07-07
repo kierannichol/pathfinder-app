@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex-grow: 1;
+}
+
+.value {
+  display: flex;
+  flex-grow: 1;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  min-height: 32px;
+}
+
+.value>input {
+  height: 100%;
+  text-align: center;
+}
+
+.label {
+  position: absolute;
+
+  font-size: var(--pfcs-header-font-size);
+  font-weight: 700;
+  font-variant-caps: all-petite-caps;
+}

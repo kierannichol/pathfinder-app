@@ -5,7 +5,7 @@ import ChoiceSelectorDialog from "../controls/ChoiceSelectorDialog.tsx";
 import {ChoiceSelectorOption} from "../controls/ChoiceSelectorList.tsx";
 import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
 import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
-import {ChoiceSelectedHandler, SelectChoiceRef} from "../../../data/v8/Choice.ts";
+import {ChoiceSelectedHandler, SelectChoiceRef} from "@/data/v8/Choice.ts";
 
 const AbilityScoreOptions = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 .map(score => new ChoiceSelectorOption(

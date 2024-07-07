@@ -47,7 +47,7 @@ public class GeneratorApplication {
 
             var sources = List.of(
                     Sources.CORE,
-                    Sources.findSourceByNameOrCode("Pathfinder Player Companion: Heroes of the High Court"),
+                    Sources.COMPANION_HEROES_OF_THE_HIGH_COURT,
                     Sources.ADVANCED_PLAYERS_GUIDE,
                     Sources.GAMEMASTERY_GUIDE,
                     Sources.ADVANCED_CLASS_GUIDE,
@@ -56,7 +56,8 @@ public class GeneratorApplication {
                     Sources.ULTIMATE_EQUIPMENT,
                     Sources.UNCHAINED,
                     Sources.OCCULT_ADVENTURES,
-                    Sources.ADVANCED_RACE_GUIDE
+                    Sources.ADVANCED_RACE_GUIDE,
+                    Sources.THE_INNER_SEA_WORLD_GUIDE
             );
 
             for (SourceId sourceId : sources) {

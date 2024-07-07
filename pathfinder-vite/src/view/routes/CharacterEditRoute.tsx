@@ -1,11 +1,11 @@
-import CharacterEdit from "../views/CharacterEdit.tsx";
 import {useLoaderData} from "react-router-dom";
-import {timedAsync} from "../../app/pfutils.ts";
+import {timedAsync} from "@/app/pfutils.ts";
 import Character from "../../data/v8/Character.ts";
 import CharacterStore from "../../data/v8/CharacterStore.ts";
 import Database from "../../data/v8/Database.ts";
 import {withGlobalCharacterStore, withGlobalDatabase} from "../../data/init.tsx";
 import {CharacterStoreContext, DatabaseContext} from "../../data/context.tsx";
+import CharacterEditView from "@/view/views/CharacterEditView.tsx";
 
 interface CharacterEditLoaderData {
   character: Character;
@@ -33,8 +33,8 @@ export async function characterEditLoader({ params }: any): Promise<CharacterEdi
 export default function CharacterEditRoute() {
   const { character, characterStore, database } = useLoaderData() as CharacterEditLoaderData;
   return <DatabaseContext.Provider value={database}>
-      <CharacterStoreContext.Provider value={characterStore}>
-        <CharacterEdit loaded={character} />
-      </CharacterStoreContext.Provider>
-    </DatabaseContext.Provider>
+    <CharacterStoreContext.Provider value={characterStore}>
+      <CharacterEditView loaded={character} />
+    </CharacterStoreContext.Provider>
+  </DatabaseContext.Provider>
 }

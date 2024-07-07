@@ -1,0 +1,19 @@
+.section {
+  border: var(--pf-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 1 1 auto;
+  flex-direction: row;
+  column-gap: var(--pf-gap);
+
+  align-items: stretch;
+}
+
+.col {
+  flex: 1 1 auto;
+  flex-direction: column;
+  row-gap: var(--pf-gap);
+}

@@ -64,6 +64,9 @@ export default class CharacterAtLevel extends BaseDataContext {
     if (result instanceof Resolvable) {
       return result;
     }
+    if (result === "") {
+      return Resolvable.None;
+    }
     return Resolvable.just(result);
   }
 

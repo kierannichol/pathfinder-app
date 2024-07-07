@@ -7,10 +7,16 @@ interface DataChoiceTextInputProps {
   characterAtLevel: CharacterAtLevel;
   id?: string;
   onSelect?: (id: string) => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
+  readonly?: boolean;
 }
 
-export default function DataChoiceTextInput({ choiceRef, characterAtLevel, id, onSelect }: DataChoiceTextInputProps) {
+export default function DataChoiceTextInput({ choiceRef, characterAtLevel, id, onSelect, onFocus, onBlur, readonly = false }: DataChoiceTextInputProps) {
   return <TextInput id={id}
                     value={characterAtLevel.selected(choiceRef) as string}
-                    onChange={onSelect} />
+                    readonly={readonly}
+                    onChange={onSelect}
+                    onFocus={onFocus}
+                    onBlur={onBlur} />
 }

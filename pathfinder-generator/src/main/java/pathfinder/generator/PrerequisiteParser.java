@@ -39,7 +39,7 @@ import pathfinder.util.PatternMapper;
 @RequiredArgsConstructor
 public class PrerequisiteParser {
     private static final Pattern IS_INT_PATTERN = Pattern.compile("-?\\d+");
-    private static final String RACE_GROUP = "(human|dwarf|orc|hobgoblin|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|goblin|catfolk|creature that has the constrict special attack)";
+    private static final String RACE_GROUP = "(human|dwarf|drow|orc|hobgoblin|gnome|halfling|elf|half-elf|half-orc|naga|serpentfolk|tiefling|goblin|catfolk|creature that has the constrict special attack)";
     private static final String CLASS_GROUP = "(barbarian|bard|cleric|druid|fighter|monk|paladin|ranger|rogue|sorcerer|wizard|alchemist|cavalier|gunslinger|inquisitor|magus|omdura|oracle|shifter|summoner|witch|vampire hunter|vigilante|arcanist|bloodrager|brawler|hunter|investigator|shaman|skald|slayer|swashbuckler|warpriest|witch|savage|summoner \\(unchained\\))";
     private static final String SKILL_GROUP = "(" + Skills.ALL.stream().map(Skill::name).map(Pattern::quote).collect(Collectors.joining("|")) + ")";
     private static final String ABILITY_SCORE_GROUP = "(str|strength|dex|dexterity|con|constitution|wis|wisdom|int|intelligence|cha|charisma)";
@@ -74,6 +74,13 @@ public class PrerequisiteParser {
 
             .addReplacement("no levels in a class that has the {NAME}", "!{0}")
             .addReplacement("must be taken at {LEVEL} level", "@character_level==1")
+            .addReplacement("you may only select this feat at {LEVEL} level", "@character_level=={0}")
+            .addReplacement("you may only gain this feat at {LEVEL} level", "@character_level=={0}")
+
+//            .addReplacement("{RACE}", "@race:{0}")
+            .addReplacement("goblin", "@race:goblin")
+            .addReplacement("drow", "@race:drow")
+            .addReplacement("tiefling", "@race:tiefling")
 
             // removals
             .addReplacement("occultist {NUMBER}", "(0)")
@@ -118,6 +125,13 @@ public class PrerequisiteParser {
             .addReplacement("You have no levels in a class that has the grit", "!@ability:grit")
             .addReplacement("Craft Magic Arms and Armor", "@feat:craft_magic_arms_and_armor")
             .addReplacement("proficient with all martial weapons", "@feat:martial_weapon_proficiency")
+            .addReplacement("proficient with {NAME}", "@proficiency:{0}")
+
+            .addReplacement("patron deity is an evil god", "any(@parton_deity:alignment:le,@parton_deity:alignment:ne,@parton_deity:alignment:ce)")
+            .addReplacement("follower of the green faith", "@deity=='Green Faith'")
+            .addReplacement("cannot have a patron deity", "@deity==''")
+
+            .addReplacement("chaotic alignment", "any(@alignment:cg,@alignment:cn,@alignment:ce)")
 
             .addReplacement("divine bond (mount)", "@ability:divine_bond#mount")
             .addReplacement("divine bond (armor)", "@ability:divine_bond#armor")
@@ -127,6 +141,7 @@ public class PrerequisiteParser {
             .addReplacement("rage class feature", "@trait:rage[Rage class feature]")
             .addReplacement("rage or raging song class feature", "any(@trait:rage, @trait:raging_song)[Rage class feature]")
             .addReplacement("able to maintain studied target against two opponents simultaneously", "@ability:studied_target>=2")
+            .addReplacement("mesmerist trick", "@ability:mesmerist_tricks")
 
             .addReplacement("{NAME} as a spell or spell-like ability (including from the {NAME} or {NAME} class features)", "({0} OR {class_feature:1} OR {class_feature:2})")
             .addReplacement("Ability to cast divine spells", "@trait:divine_spellcaster[Divine spellcaster]")

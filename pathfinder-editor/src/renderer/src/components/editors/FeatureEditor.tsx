@@ -7,7 +7,6 @@ import DescriptionEditor from "./DescriptionEditor";
 import {Button} from "react-bootstrap";
 import {FeatureRef} from "../../../../shared/pathfinder";
 import DescriptionDbo = data.DescriptionDbo;
-import FeatureDbo = data.FeatureDbo;
 
 interface FeatureEditorProps {
   feature: FeatureRef;
@@ -23,7 +22,7 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
   const [ enabledFormula, setEnabledFormula ] = useState(feature.enabledFormula);
 
   function handleSave() {
-    const modified = new FeatureDbo({
+    const modified = {
       ...feature,
       id: id,
       name: name,
@@ -31,9 +30,9 @@ export default function FeatureEditor({ feature, onSave }: FeatureEditorProps) {
       tags: tags,
       description: description,
       enabledFormula: enabledFormula
-    }) as FeatureRef;
+    } as FeatureRef;
 
-    modified.sourceKey = feature.sourceKey;
+    modified.segmentKey = feature.segmentKey;
     modified.featureKey = feature.featureKey;
 
     onSave?.(modified);

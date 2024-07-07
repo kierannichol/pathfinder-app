@@ -1,14 +1,14 @@
-import LevelStatsDisplay from "./LevelStatsDisplay.tsx";
+import LevelStatsDisplay from "../LevelStatsDisplay.tsx";
 import {useMemo} from "react";
-import CharacterFeatureList from "./CharacterFeatureList.tsx";
-import DataChoiceSelectButton from "../controls/DataChoiceSelectButton.tsx";
-import SpellBookEditorButton from "./SpellBookEditorButton.tsx";
-import ArchetypeEditor from "./ArchetypeEditor.tsx";
-import {CharacterChoiceSelectHandler} from "./CharacterEditor.tsx";
-import EquipmentEditorButton from "./equipment/EquipmentEditorButton.tsx";
-import CharacterAtLevel from "../../../data/v8/CharacterAtLevel.ts";
-import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "../../../data/v8/Choice.ts";
-import {Feature} from "../../../data/v8/Feature.ts";
+import CharacterFeatureList from "../CharacterFeatureList.tsx";
+import DataChoiceSelectButton from "../../controls/DataChoiceSelectButton.tsx";
+import SpellBookEditorButton from "../SpellBookEditorButton.tsx";
+import ArchetypeEditor from "../ArchetypeEditor.tsx";
+import {CharacterChoiceSelectHandler} from "../edit/CharacterEditor.tsx";
+import EquipmentEditorButton from "../equipment/EquipmentEditorButton.tsx";
+import CharacterAtLevel from "../../../../data/v8/CharacterAtLevel.ts";
+import {ChoiceInputType, ChoiceRef, SelectChoiceRef} from "@/data/v8/Choice.ts";
+import {Feature} from "@/data/v8/Feature.ts";
 
 interface CharacterLevelEditorProps {
   characterAtLevel: CharacterAtLevel;
@@ -24,6 +24,8 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
       .filter(showFeature)
       .filter(feature => notFromChoice(feature, characterAtLevel)),
       [characterChanges]);
+
+  console.log(characterAtLevel)
 
   return <div>
     <ArchetypeEditor characterAtLevel={characterChanges} onChange={onChange} />
@@ -46,7 +48,7 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
     </div>
 
     {characterChanges.choices.filter(choice => showChoice(choice)).filter(choice => choice.inputType === ChoiceInputType.Select).map(choice =>
-        <>
+        <div key={choice.path}>
           <label>{choice.label}</label>
           <DataChoiceSelectButton
               key={choice.path}
@@ -54,7 +56,7 @@ export default function CharacterLevelEditor({ characterAtLevel, characterAtPrev
               search={"auto"}
               characterAtLevel={characterAtLevel}
               onSelect={selected => onChange(choice, selected)} />
-        </>)}
+        </div>)}
 
     {newFeatures.length > 0 && <><label>New Features</label>
     <CharacterFeatureList characterAtLevel={characterAtLevel} features={newFeatures} /></>}

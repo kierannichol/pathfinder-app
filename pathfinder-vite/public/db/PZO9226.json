@@ -1,0 +1,161 @@
+{
+  "sourceId": "PZO9226",
+  "features": [{
+    "id": "feat:harmonic_spell",
+    "name": "Harmonic Spell",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:focused_discipline",
+    "name": "Focused Discipline",
+    "tags": ["feat", "combat"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:stoic",
+    "name": "Stoic",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@feat:iron_will",
+    "maxStacks": 1
+  }, {
+    "id": "feat:mages_tattoo",
+    "name": "Mage\u0027s Tattoo",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@feat:spell_focus",
+    "maxStacks": 1
+  }, {
+    "id": "feat:altitude_affinity",
+    "name": "Altitude Affinity",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@ability:endurance#ranger",
+    "maxStacks": 1
+  }, {
+    "id": "feat:secret_signs",
+    "name": "Secret Signs",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@int_score\u003e\u003d13",
+    "maxStacks": 1
+  }, {
+    "id": "feat:shrewd_tactician",
+    "name": "Shrewd Tactician",
+    "tags": ["feat", "combat"],
+    "enabledFormula": "all(@feat:alertness,@feat:combat_reflexes)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:harrowed",
+    "name": "Harrowed",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:godless_healing",
+    "name": "Godless Healing",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@deity\u003d\u003d\u0027\u0027",
+    "maxStacks": 1
+  }, {
+    "id": "feat:careful_speaker",
+    "name": "Careful Speaker",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@wis_score\u003e\u003d13",
+    "maxStacks": 1
+  }, {
+    "id": "feat:necromantic_affinity",
+    "name": "Necromantic Affinity",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@con_score\u003e\u003d15",
+    "maxStacks": 1
+  }, {
+    "id": "feat:dervish_dance",
+    "name": "Dervish Dance",
+    "tags": ["feat", "combat"],
+    "enabledFormula": "all(@feat:weapon_finesse,@skill:perform#dance\u003e\u003d2,@proficiency:,@scimitar)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:arcane_vendetta",
+    "name": "Arcane Vendetta",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@skill:spellcraft\u003e\u003d1",
+    "maxStacks": 1
+  }, {
+    "id": "feat:totem_spirit",
+    "name": "Totem Spirit",
+    "tags": ["feat", "general"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:flagbearer",
+    "name": "Flagbearer",
+    "tags": ["feat", "combat"],
+    "enabledFormula": "@cha_score\u003e\u003d15",
+    "maxStacks": 1
+  }, {
+    "id": "feat:desperate_battler",
+    "name": "Desperate Battler",
+    "tags": ["feat", "combat"],
+    "maxStacks": 1
+  }, {
+    "id": "feat:island_blood",
+    "name": "Island Blood",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@character_level\u003d\u003d1",
+    "maxStacks": 1
+  }, {
+    "id": "feat:free_spirit",
+    "name": "Free Spirit",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@cha_score\u003e\u003d13,any(@alignment:cg,@alignment:cn,@alignment:ce))",
+    "maxStacks": 1
+  }, {
+    "id": "feat:eldritch_eye",
+    "name": "Eldritch Eye",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@skill:knowledge_arcana\u003e\u003d4,max(@spells_per_day:arcane#*)[Arcane spells])",
+    "maxStacks": 1
+  }, {
+    "id": "feat:fey_foundling",
+    "name": "Fey Foundling",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@character_level\u003d\u003d1",
+    "maxStacks": 1
+  }, {
+    "id": "feat:master_of_falconry",
+    "name": "Master of Falconry",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@cha_score\u003e\u003d13,@feat:animal_affinity,@ability:animal_companion#hunter)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:hamatulatsu",
+    "name": "Hamatulatsu",
+    "tags": ["feat", "combat"],
+    "enabledFormula": "all(@feat:improved_unarmed_strike,@feat:weapon_focus#unarmed_strike)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:survivor",
+    "name": "Survivor",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@con_score\u003e\u003d13,@feat:diehard,@ability:endurance#ranger)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:demon_hunter",
+    "name": "Demon Hunter",
+    "tags": ["feat", "combat"],
+    "enabledFormula": "@skill:knowledge_planes\u003e\u003d6",
+    "maxStacks": 1
+  }, {
+    "id": "feat:wand_dancer",
+    "name": "Wand Dancer",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@dex_score\u003e\u003d13,@feat:dodge,@feat:mobility,@skill:perform#dance\u003e\u003d5)",
+    "maxStacks": 1
+  }, {
+    "id": "feat:green_faith_acolyte",
+    "name": "Green Faith Acolyte",
+    "tags": ["feat", "general"],
+    "enabledFormula": "@deity\u003d\u003d\u0027Green Faith\u0027",
+    "maxStacks": 1
+  }, {
+    "id": "feat:shade_of_the_woodlands",
+    "name": "Shade of the Woodlands",
+    "tags": ["feat", "general"],
+    "enabledFormula": "all(@alignment:ne,any(@parton_deity:alignment:le,@parton_deity:alignment:ne,@parton_deity:alignment:ce))",
+    "maxStacks": 1
+  }]
+}

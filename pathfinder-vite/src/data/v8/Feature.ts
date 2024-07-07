@@ -1,6 +1,6 @@
 import {ResolvedTrait, Trait} from "./Trait.ts";
 import {ResolvedEntityContext} from "./ResolvedEntityContext.ts";
-import {Path} from "../../utils/Path.ts";
+import {Path} from "@/utils/Path.ts";
 import Description from "../Description.ts";
 import AppliedState from "./AppliedState.ts";
 import {FeatureSummary} from "./FeatureSummary.ts";

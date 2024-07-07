@@ -1,4 +1,4 @@
-import {firebaseAuthResult} from "../../app/firebase.ts";
+import {firebaseAuthResult} from "@/app/firebase.ts";
 import Login from "../views/Login.tsx";
 
 export async function loginLoader() {

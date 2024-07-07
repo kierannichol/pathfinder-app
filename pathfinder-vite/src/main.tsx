@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import EditorLayoutRoute from "./view/routes/EditorLayoutRoute.tsx";
 import CharacterListRoute, {characterListLoader} from "./view/routes/CharacterListRoute.tsx";
-import CharacterEditRoute, {characterEditLoader} from "./view/routes/CharacterEditRoute.tsx";
+import CharacterPlannerRoute, {characterPlannerLoader} from "./view/routes/CharacterPlannerRoute.tsx";
 import {loginLoader, LoginRoute} from "./view/routes/LoginRoute.tsx";
 import CharacterSheetRoute, {characterSheetLoader} from "./view/routes/CharacterSheetRoute.tsx";
 import EquipmentSetListRoute, {equipmentSetListLoader} from "./view/routes/EquipmentSetListRoute.tsx";
 import EquipmentSetEditRoute, {equipmentSetEditLoader} from "./view/routes/EquipmentSetEditRoute.tsx";
+import {TestRoute} from "@/view/routes/TestRoute.tsx";
 
 const router = createHashRouter([
   {
@@ -26,10 +27,15 @@ const router = createHashRouter([
         element: <LoginRoute />,
         loader: loginLoader
       },
+      // {
+      //   path: "character/edit/:id",
+      //   element: <CharacterEditRoute />,
+      //   loader: characterEditLoader
+      // },
       {
-        path: "character/edit/:id",
-        element: <CharacterEditRoute />,
-        loader: characterEditLoader
+        path: "character/plan/:id",
+        element: <CharacterPlannerRoute />,
+        loader: characterPlannerLoader
       },
       {
         path: "equipment",
@@ -40,6 +46,10 @@ const router = createHashRouter([
         path: "equipment/edit/:id",
         element: <EquipmentSetEditRoute />,
         loader: equipmentSetEditLoader
+      },
+      {
+        path: "test",
+        element: <TestRoute />
       }
     ]
   },

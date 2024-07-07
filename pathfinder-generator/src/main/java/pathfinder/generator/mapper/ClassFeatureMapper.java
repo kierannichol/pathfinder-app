@@ -1,10 +1,10 @@
 package pathfinder.generator.mapper;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.formula.Formula;
 import org.springframework.stereotype.Component;
 import pathfinder.generator.PrerequisiteParser;
 import pathfinder.model.Choice;
@@ -36,13 +36,24 @@ public class ClassFeatureMapper {
         String prerequisiteFormula = tryParsePrerequisites(feature);
         builder.setEnabledCondition(prerequisiteFormula);
 
+        if (prerequisiteFormula.contains("@ability:grand_discovery#alchemist")) {
+            builder
+                    .removeTag("discovery")
+                    .addTag("grand_discovery");
+
+            prerequisiteFormula = prerequisiteFormula.replace("@ability:grand_discovery#alchemist", "true");
+            prerequisiteFormula = Formula.optimize(prerequisiteFormula);
+            builder.setEnabledCondition(prerequisiteFormula);
+        }
+
         if (feature.effects() != null) {
             feature.effects().forEach(effectFormula -> stack.addEffect(EffectParser.parse(effectFormula)));
         }
 
-        tryCreateFeatureChoice(feature)
-                .or(() -> tryCreateClassSpecificFeatureChoice(feature))
-                .ifPresent(stack::addChoice);
+        Stream.concat(
+                        tryCreateFeatureChoice(feature),
+                        tryCreateClassSpecificFeatureChoice(feature))
+                .forEach(stack::addChoice);
 
         builder.setRepeatingStack(stack.build());
         return Stream.of(builder.build(),
@@ -64,8 +75,8 @@ public class ClassFeatureMapper {
         }
     }
 
-    private Optional<Choice> tryCreateFeatureChoice(ClassFeature feature) {
-        return Optional.ofNullable(switch (feature.id().key) {
+    private Stream<Choice> tryCreateFeatureChoice(ClassFeature feature) {
+        return singleOrMultiple(switch (feature.id().key) {
             case "mercy" -> byTagChoice("mercy", "Mercy");
             case "rogue_talent" -> byTagChoice("rogue_talent", "Rogue Talent");
             case "slayer_talent" -> byTagChoice("slayer_talent", "Slayer Talent");
@@ -75,18 +86,22 @@ public class ClassFeatureMapper {
                     .category("Magus Arcana", "magus_arcana")
                     .category("Hex", "witch_hex");
             case "hex_magus" -> byTagChoice("hex_magus", "Hex Magus", List.of("witch_hex"));
-            case "alchemist_discovery" -> byTagChoice("alchemist_discovery", "Alchemist Discovery");
+            case "alchemist_discovery", "discovery" -> byTagChoice("alchemist_discovery", "Discovery", List.of("discovery"));
+            case "grand_discovery" -> Stream.of(
+                    byTagChoice("alchemist_discovery_1", "Discovery", List.of("discovery")),
+                    byTagChoice("alchemist_discovery_2", "Discovery", List.of("discovery")),
+                    byTagChoice("alchemist_grand_discovery", "Grand Discovery", List.of("grand_discovery")));
             case "arcanist_exploits" -> byTagChoice("arcanist_exploits", "Arcanist Exploits");
             case "bardic_masterpiece" -> byTagChoice("bardic_masterpiece", "Bardic Masterpiece");
             case "rage_power" -> byTagChoice("rage_power", "Rage Power");
             case "warpriest_blessing" -> byTagChoice("warpriest_blessing", "Warpriest Blessing");
             case "elemental_focus", "expanded_element" -> byTagChoice("kineticist_element", "Kineticist Element", List.of("kineticist_element"));
-            default -> null;
-        }).map(Builder::build);
+            default -> Stream.empty();
+        });
     }
 
-    private Optional<Choice> tryCreateClassSpecificFeatureChoice(ClassFeature feature) {
-        return Optional.ofNullable(switch (feature.id().key + "#" + feature.id().option) {
+    private Stream<Choice> tryCreateClassSpecificFeatureChoice(ClassFeature feature) {
+        return Stream.ofNullable(switch (feature.id().key + "#" + feature.id().option) {
             case "bonus_feat#magus" -> FeatureSelectByTagChoice.builder(
                     "magus_bonus_feat",
                     "Magus Bonus Feat",
@@ -107,6 +122,16 @@ public class ClassFeatureMapper {
                     .sortBy(FeatureSelectSortBy.NAME);
             default -> null;
         }).map(Builder::build);
+    }
+
+    private Stream<Choice> singleOrMultiple(Object choiceBuilder) {
+        if (choiceBuilder instanceof Builder builder) {
+            return Stream.of(builder.build());
+        }
+        if (choiceBuilder instanceof Stream<?> stream) {
+            return stream.map(obj -> ((Builder) obj).build());
+        }
+        throw new IllegalArgumentException("Must be Builer or Stream<Builder> but was ");
     }
 
     private FeatureSelectByTagChoice.Builder byTagChoice(String choiceId, String label) {

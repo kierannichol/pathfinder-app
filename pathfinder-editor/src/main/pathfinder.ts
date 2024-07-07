@@ -1,11 +1,10 @@
 import * as path from "path";
 import * as fs from "fs";
-import {data} from "@shared/compiled";
-import {FeatureKey, FeatureRef, idToKey} from "@shared/pathfinder";
-import FeatureDbo = data.FeatureDbo;
-import SourceModuleDbo = data.SourceModuleDbo;
+import {FeatureKey, FeatureRef} from "@shared/pathfinder";
+import YAML from 'yaml'
 
-const DatabaseBasePath = path.join(__dirname, "..", "..", "..", "pathfinder-vite", "public", "db");
+
+const DatabaseBasePath = path.join(__dirname, "..", "..", "..", "pathfinder-generator", "src", "main", "resources", "db");
 
 function list_files(path: string): Promise<string[]> {
   return new Promise((resolve, reject) => {
@@ -17,6 +16,33 @@ function list_files(path: string): Promise<string[]> {
 
       resolve(files);
     });
+  });
+}
+
+function read_yaml<T>(path: string): Promise<T> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, function (err, buffer) {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      const dbo = YAML.parse(buffer.toString());
+      resolve(dbo);
+    });
+  });
+}
+
+function write_yaml<T>(path: string, dbo: T): Promise<void> {
+  return new Promise((resolve, reject) => {
+
+    try {
+      const yaml = YAML.stringify(dbo, null, 2);
+      fs.writeFileSync(path, yaml);
+      resolve();
+    } catch (e) {
+      reject(e);
+    }
   });
 }
 
@@ -53,53 +79,32 @@ function write_proto<T>(path: string, message: T, encodeBinaryFn: (t: T) => Uint
 export const PathfinderProcess = {
 
   async save_feature(event: any, model: FeatureRef): Promise<void> {
-    const filePath = path.join(DatabaseBasePath, model.sourceKey, model.featureKey);
-    const summaryPath = path.join(DatabaseBasePath, model.sourceKey);
-    await write_proto(filePath, model,
-        m => FeatureDbo.encode(m).finish(),
-        m => FeatureDbo.toObject(m));
-
-    const sourceSummary = await read_proto(summaryPath + ".bin", SourceModuleDbo.decode);
-
-    const featureIndex = sourceSummary.features.findIndex(summary =>
-      idToKey(summary.id) === model.featureKey);
-
-    const modifiedFeatures = featureIndex > -1
-        ? sourceSummary.features.with(featureIndex, model)
-        : [ ...sourceSummary.features, model ];
-
-    const modifiedSummary = new SourceModuleDbo({
-      sourceId: sourceSummary.sourceId,
-      features: modifiedFeatures
-    })
-
-    await write_proto(summaryPath, modifiedSummary,
-            m => SourceModuleDbo.encode(m).finish(),
-        m => SourceModuleDbo.toObject(m));
+    const filePath = path.join(DatabaseBasePath, model.segmentKey, model.featureKey) + ".yml";
+    await write_yaml(filePath, model);
   },
 
   async load_feature(event: any, featureKey: FeatureKey): Promise<FeatureRef> {
-    const filePath = path.join(DatabaseBasePath, featureKey.sourceKey, featureKey.featureKey + ".bin");
-    const dbo = await read_proto(filePath, FeatureDbo.decode) as FeatureRef;
-    dbo.sourceKey = featureKey.sourceKey;
+    const filePath = path.join(DatabaseBasePath, featureKey.segmentKey, featureKey.featureKey + ".yml");
+    const dbo = await read_yaml(filePath) as FeatureRef;
+    dbo.segmentKey = featureKey.segmentKey;
     dbo.featureKey = featureKey.featureKey;
     return dbo;
   },
 
-  async list_features(event: any, sourceKey: string): Promise<FeatureKey[]> {
-    const section_path = path.join(DatabaseBasePath, sourceKey);
+  async list_features(event: any, segmentKey: string): Promise<FeatureKey[]> {
+    const section_path = path.join(DatabaseBasePath, segmentKey);
     return (await list_files(section_path))
-        .filter(file => file.endsWith(".bin"))
-        .map(file => file.replace(".bin", ""))
+        .filter(file => file.endsWith(".yml"))
+        .map(file => file.replace(".yml", ""))
         .map(featureKey => {
           return {
-            sourceKey: sourceKey,
+            segmentKey: segmentKey,
             featureKey: featureKey
           };
         });
   },
 
-  async list_sources(): Promise<string[]> {
+  async list_segments(): Promise<string[]> {
     const files = await list_files(DatabaseBasePath);
     return files.filter(file => fs.lstatSync(path.join(DatabaseBasePath, file)).isDirectory());
   }

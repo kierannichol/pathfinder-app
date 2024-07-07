@@ -42,4 +42,8 @@ export default class AppliedState {
         mod.targetFeatureId === featureId
         && mod.targetStackCount === stackNumber);
   }
+
+  asDataContext(): DataContext {
+    return this.dataContext;
+  }
 }

@@ -44,5 +44,4 @@ export class ResolvedStack implements ResolvedTrait {
 
     const modifications = state.modifications(this.featureId, this.stackNumber);
   }
-
 }

@@ -34,7 +34,6 @@ public class CharacterTemplateGenerator {
     private static final Choice CLASS_CHOICE = new FeatureSelectByTagChoice("class", "Class", "class", List.of("class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME);
     private static final Choice FEAT_CHOICE = new FeatureSelectByTagChoice("feat", "Feat", "feat", List.of("feat"), List.of(), FEAT_CATEGORIES, FeatureSelectSortBy.NAME);
     private static final Choice ASI_CHOICE_1 = new FeatureSelectByTagChoice("asi1", "Ability Score Increase", "asi", List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
-    private static final Choice ASI_CHOICE_2 = new FeatureSelectByTagChoice("asi2", "Ability Score Increase", "asi", List.of("asi"), List.of(), List.of(), FeatureSelectSortBy.NAME);
     private static final Choice EQUIPMENT_CHOICE = new FeatureSelectByTagChoice.Builder("equipment", "Equipment", "equipment")
             .optionTag("item")
             .category("All", "")
@@ -61,10 +60,33 @@ public class CharacterTemplateGenerator {
                 level.addEffect(Effect.setFormula(
                         "ability_point_cost:%s".formatted(abilityScore.shortName()),
                         "if(@%s:base==7,-4,0) + if(@%s:base==8,-2,0) + if(@%s:base==9,-1,0) + if(@%s:base==10,0,0) + if(@%s:base==11,1,0) + if(@%s:base==12,2,0) + if(@%s:base==13,3,0) + if(@%s:base==14,5,0) + if(@%s:base==15,7,0) + if(@%s:base==16,10,0) + if(@%s:base==17,13,0) + if(@%s:base==18,17,0)".formatted(abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName(), abilityScore.shortName())));
+
+                level.addChoice(new TextChoice("%s:temp".formatted(abilityScore.shortName()),
+                        "Temporary %s Adjustment".formatted(abilityScore.longName()),
+                        "ability_score"));
+                level.addChoice(new TextChoice("%s:dmg".formatted(abilityScore.shortName()),
+                        "%s Damage".formatted(abilityScore.longName()),
+                        "ability_score"));
+                level.addChoice(new TextChoice("%s:drain".formatted(abilityScore.shortName()),
+                        "%s Drain".formatted(abilityScore.longName()),
+                        "ability_score"));
             }
             level.addEffect(Effect.setFormula("ability_point_cost", "sum(@ability_point_cost:*)"));
 
             level.addChoice(new TextChoice("character_name", "Character Name", "name"));
+
+            level.addChoice(new TextChoice("deity", "Deity", "deity"));
+            level.addChoice(new TextChoice("homeland", "Homeland", "homeland"));
+            level.addChoice(new TextChoice("gender", "Gender", "gender"));
+            level.addChoice(new TextChoice("age", "Age", "age"));
+            level.addChoice(new TextChoice("height", "Height", "height"));
+            level.addChoice(new TextChoice("weight", "Weight", "weight"));
+            level.addChoice(new TextChoice("hair", "Hair", "hair"));
+            level.addChoice(new TextChoice("eyes", "Eyes", "eyes"));
+
+            level.addChoice(new TextChoice("current_hp", "Current HP", "hp"));
+            level.addChoice(new TextChoice("nonlethal_damage", "Nonlethal Damage", "hp"));
+
             level.addChoice(new FeatureSelectByTagChoice("race", "Race", "race", List.of("race"), List.of(), List.of(), FeatureSelectSortBy.NAME));
             level.addChoice(new FeatureSelectByTagChoice("favored_class", "Favored Class", "favored_class", List.of("favored_class"), List.of(), CLASS_CATEGORIES, FeatureSelectSortBy.NAME));
             level.addChoice(new FeatureSelectByTagChoice("alignment", "Alignment", "alignment", List.of("alignment"), List.of(), List.of(), FeatureSelectSortBy.NONE));
@@ -98,7 +120,6 @@ public class CharacterTemplateGenerator {
 
                 if (level.levelNumber() % 4 == 0) {
                     level.addChoice(ASI_CHOICE_1);
-                    level.addChoice(ASI_CHOICE_2);
                 }
             });
         }
